@@ -40,8 +40,8 @@ website:
 format:
   html:
     theme:
-      light: [cosmo, assets/site-light.scss]
-      dark: [darkly, assets/site-dark.scss]
+      light: [cosmo, assets/site-light.scss, assets/callouts.scss]
+      dark: [darkly, assets/site-dark.scss, assets/callouts.scss]
     mainfont: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif
     toc: true
     toc-depth: 3
