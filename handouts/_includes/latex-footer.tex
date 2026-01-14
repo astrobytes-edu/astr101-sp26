@@ -1,0 +1,33 @@
+% _includes/latex-footer.tex
+% Simple “course-official” footer: left = course + term, center = doc title, right = page #
+
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{titling} % provides \thetitle used below
+
+% --- EDIT THESE TWO LINES ONCE (applies everywhere) ---
+\newcommand{\coursefooter}{ASTR 201}
+\newcommand{\termfooter}{Spring 2026} % change term as needed
+% ------------------------------------------------------
+
+\setlength{\headheight}{14pt}
+
+\pagestyle{fancy}
+\fancyhf{} % clear header/footer
+
+% Footer content
+\fancyfoot[L]{\coursefooter\ — \termfooter}
+\fancyfoot[C]{\textit{\thetitle}}
+\fancyfoot[R]{\thepage}
+
+% Optional: thin rule above footer (comment out if you want no line)
+\renewcommand{\footrulewidth}{0.4pt}
+
+% Ensure “plain” pages (often title/first pages) also use the same footer
+\fancypagestyle{plain}{
+  \fancyhf{}
+  \fancyfoot[L]{\coursefooter\ — \termfooter}
+  \fancyfoot[C]{\textit{\thetitle}}
+  \fancyfoot[R]{\thepage}
+  \renewcommand{\footrulewidth}{0.4pt}
+}

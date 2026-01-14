@@ -1,0 +1,436 @@
+---
+title: "ASTR 201 — Lecture 1: The Big Picture"
+subtitle: "Inferring Reality from Light"
+author: "Dr. Anna Rosen"
+# date: "2026-01-XX"
+format: revealjs
+execute:
+  echo: false
+  warning: false
+  message: false
+---
+
+::: {.notes}
+**Instructor note (structure):** This deck is written for a 75‑minute meeting. For a 50‑minute version, skip the “Course Philosophy & Roadmap” block and shorten the TPS activities.
+
+**Reveal speaker notes:** Press **S** during presentation to open speaker view. Notes blocks are written using `::: {.notes}` as documented in Quarto’s Reveal guide. 
+:::
+
+## Today’s puzzle
+
+**We can never visit most objects we study.**  
+So… how do we know anything at all?
+
+- What we *measure* (observables)
+- What we *infer* (physical reality)
+- Why physics + math are the bridge
+
+::: {.notes}
+0–2 min. Set tone: awe + intellectual honesty.
+
+Key line: “Astronomy is inference under extreme constraints.”
+:::
+
+---
+
+## {data-background-image="../images/jwst-deepfield.jpg" data-background-size="cover"}
+
+::: {.notes}
+**Hook image:** JWST First Deep Field (SMACS 0723) or Hubble eXtreme Deep Field.
+
+**Prep:** Download a high-res public-domain/press-release image and save as `images/jwst-deepfield.jpg`.
+
+**Delivery:** Put it full screen. Say nothing for ~10 seconds.
+
+Alt text for accessibility (not visible on slide): Deep space image showing thousands of galaxies of varying sizes and colors, including lensing arcs.
+:::
+
+---
+
+## The “impossible task”
+
+We can’t:
+
+- go there
+- touch it
+- run controlled experiments on it
+
+We *can*:
+
+- collect photons
+- measure patterns in those photons
+- use physics to reconstruct a story
+
+::: {.notes}
+2–5 min. Script (tight):
+
+“Every dot and smudge is a galaxy. Some of that light has traveled ~13 billion years. We will never visit these objects. All we have is the light that reaches us. And yet we infer temperatures, compositions, motions, even histories. How?”
+
+Transition: “First: what do we actually measure?”
+:::
+
+---
+
+## Quick poll (anonymous)
+
+What feels *hardest* about studying objects we can’t visit?
+
+A. We can’t see them clearly enough  
+B. We don’t know how far away they are  
+C. We can only detect light—nothing else  
+D. The physics is too complicated  
+E. All of the above
+
+::: {.notes}
+5–8 min. Validate multiple answers.
+
+Bridge lines:
+- A → resolution limits are real; we get clever.
+- B → distance is foundational; Week 2.
+- C → the deep truth: light is both curse + gift.
+- D → physics is elegant once you learn its “compression.”
+:::
+
+---
+
+## Stars are (mostly) points of light
+
+Even huge telescopes usually **cannot resolve** a star’s disk.
+
+So we live with the “point-source problem.”
+
+::: {.notes}
+8–12 min.
+
+Explain angular resolution qualitatively. Optional analogy:
+
+“The nearest star system is ~270,000× farther than the Sun. If the Sun were that far, it would look ~270,000× smaller—essentially a point.”
+:::
+
+---
+
+## The three observables
+
+For nearly all stars, we directly measure only:
+
+1. **Position** (and changes with time)
+2. **Apparent brightness** (flux)
+3. **Spectrum** (brightness vs wavelength)
+
+::: {.notes}
+12–13 min. This is the anchor slide for the course.
+
+Instructor tip: pause after each item. Make them say it back.
+:::
+
+---
+
+## Observable 1: Position
+
+- where the star is on the sky
+- how it drifts (proper motion)
+- tiny annual wobble (parallax)
+
+::: {.notes}
+13–15 min.
+
+Key message: parallax is geometry → distance.
+
+Don’t go deep yet; tease Week 2.
+:::
+
+---
+
+## Observable 2: Apparent brightness
+
+What the detector measures:
+
+- energy per area per time reaching Earth
+
+But brightness depends on:
+
+- intrinsic power output
+- distance
+
+::: {.notes}
+15–17 min.
+
+Line to plant now: “apparent ≠ intrinsic.”
+
+Optional: mention historical magnitudes as a fun aside.
+:::
+
+---
+
+## Observable 3: Spectrum
+
+Starlight spread into wavelength:
+
+- overall shape (“color”)
+- absorption/emission lines
+- shifts and broadenings
+
+::: {.notes}
+17–18 min.
+
+Promise: spectrum is where the universe hides its receipts.
+:::
+
+---
+
+## Think–Pair–Share 1
+
+From only **position, brightness, spectrum**, what physical properties might we infer?
+
+- **Think** (30 s)
+- **Pair** (60 s)
+- **Share** (2 min)
+
+::: {.notes}
+18–20 min.
+
+Collect guesses without correcting yet. Write them down.
+
+Expected: distance, temperature, composition, size, motion, mass, age.
+Transition: “Let’s see the full ladder.”
+:::
+
+---
+
+## The inference ladder
+
+From 3 observables → many physical properties.
+
+Examples:
+
+- **Distance** (geometry)
+- **Luminosity** (brightness + distance)
+- **Temperature** (spectral shape)
+- **Composition** (lines)
+- **Velocity** (Doppler)
+- **Radius** (luminosity + temperature)
+- **Age** (models + multiple steps)
+
+::: {.notes}
+20–25 min.
+
+You can optionally show a ladder graphic here (instructor-created). If you add one, store as `images/inference-ladder.png` and include it on this slide.
+
+Key message: “Some inferences are one step. Others are a staircase.”
+:::
+
+---
+
+## Think–Pair–Share 2
+
+Why is **distance** relatively “easy,” but **age** is hard?
+
+- **Think** (30 s)
+- **Pair** (90 s)
+
+::: {.notes}
+25–30 min.
+
+Reveal:
+- Distance: geometry (angle + baseline).
+- Age: not directly visible; requires mass, luminosity, temperature, composition + an evolutionary model.
+
+Core idea: chain length → uncertainty.
+:::
+
+---
+
+## Astronomy is forensics
+
+A detective can’t rewind time.
+
+They reconstruct a story from evidence.
+
+We do the same—using **physics** as our toolkit.
+
+::: {.notes}
+30–35 min.
+
+Make it vivid but not cheesy:
+
+“Light is our fingerprint powder.”
+
+Bridge: “Here’s the single equation that captures the core ambiguity.”
+:::
+
+---
+
+## The central relationship
+
+$$F = \frac{L}{4\pi d^2}$$
+
+- $F$ = **flux** (what we measure)
+- $L$ = **luminosity** (what we want)
+- $d$ = **distance** (what we must infer)
+
+::: {.notes}
+35–42 min.
+
+Interpret physically:
+- Same $L$, farther → dimmer.
+- Double $d$ → $F$ drops by 4.
+
+If you want a graphic: add an inverse-square diagram to `images/inverse-square.png` and place it on next slide.
+:::
+
+---
+
+## Inverse-square intuition
+
+Same total light… bigger sphere.
+
+- area $\propto d^2$
+- so flux $\propto 1/d^2$
+
+::: {.notes}
+Show diagram if available: `![](../images/inverse-square.png)`.
+
+If no diagram: do a quick “sphere surface area” gesture.
+:::
+
+---
+
+## Think–Pair–Share 3 (the ambiguity)
+
+Two stars have the **same apparent brightness**.
+
+- Star A: $d=10$ pc
+- Star B: $d=100$ pc
+
+Which has higher **luminosity**? By what factor?
+
+::: {.notes}
+42–47 min.
+
+Expected: $L_B/L_A = (100/10)^2 = 100$.
+
+Key message: “Nearby & dim” can look identical to “far & brilliant.”
+
+Set up next lecture: we need comfort with powers of ten and ratios.
+:::
+
+---
+
+## Why we do “Math Boot Camp”
+
+Astronomy uses numbers that are… ridiculous.
+
+Scientific notation and units are not busywork.
+
+They are **navigation tools**.
+
+::: {.notes}
+47–50 min.
+
+Tone: reassuring, not threatening.
+
+Promise: “By the end of Thursday, you’ll be able to do the ‘how many times bigger/farther’ questions confidently.”
+:::
+
+---
+
+## Course philosophy
+
+This course rewards:
+
+- **process** (show your reasoning)
+- **growth** (iteration over time)
+- **productive struggle** (mistakes = data)
+
+::: {.notes}
+50–55 min.
+
+Keep it grounded: “Science is not a performance; it’s a method.”
+
+If you have specific policy language you want, we can embed it in `course/policies.qmd` and link.
+:::
+
+---
+
+## Roadmap (bird’s-eye)
+
+We’re building an inference engine, layer by layer:
+
+1. **Measurements & stellar properties**
+2. **Stellar evolution**
+3. **Star formation & the ISM**
+4. **Galaxies**
+5. **Cosmology**
+
+::: {.notes}
+55–62 min.
+
+Tell the story: “zoom out” arc.
+
+Avoid promising exact week ranges unless your schedule is finalized.
+:::
+
+---
+
+## Concept check
+
+Which is **directly observable** for a distant star?
+
+A. Mass  
+B. Age  
+C. Apparent brightness  
+D. Luminosity  
+E. Distance
+
+::: {.notes}
+62–67 min.
+
+Answer: C.
+
+Debrief: observable vs inferred.
+:::
+
+---
+
+## The one thing
+
+**Astronomers are inference engines.**
+
+We take limited data—position, brightness, spectrum—  
+and use physics to reconstruct reality.
+
+::: {.notes}
+67–70 min.
+
+Land the plane. Slow down.
+
+One-sentence closer: “The math is not the obstacle; it’s the microscope.”
+:::
+
+---
+
+## Thursday: Math Boot Camp
+
+We’ll practice:
+
+- scientific notation
+- orders of magnitude
+- dimensional analysis
+- ratio reasoning
+- unit conversions (SI / CGS / astro units)
+
+::: {.notes}
+70–75 min.
+
+Optional prep link for scale intuition (verbal only): “Powers of ten” interactive.
+
+End with logistics + questions.
+:::
+
+---
+
+## Questions?
+
+::: {.notes}
+Leave space. Invite questions about course structure *and* the big picture.
+:::

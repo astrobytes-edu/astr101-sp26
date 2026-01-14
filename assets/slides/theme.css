@@ -1,0 +1,247 @@
+/* ==========================================================================
+   assets/slides/theme.css
+   Reveal.js / Quarto slide utilities + layout overrides (NOT typography vars)
+   ========================================================================== */
+
+/* --- Tunable knobs ------------------------------------------------------ */
+:root {
+  /* Logo placement (Quarto reveal 'logo:' renders with .slide-logo) */
+  --slide-logo-h: 80px;
+  --slide-logo-top: 12px;
+  --slide-logo-right: 16px;
+
+  /* “Cosmic” utility palette (matches your old classes) */
+  --cosmic-blue: #1e3a5f;
+  --stellar-blue: #4a90e2;
+  --aurora-teal: #26d0ce;
+  --solar-gold: #ffd700;
+  --nova-orange: #ff6b35;
+  --nebula-purple: #6b46c1;
+}
+
+@media (max-width: 900px) {
+  :root { --slide-logo-h: 56px; }
+}
+
+/* --- Logo (top-right, non-interfering) ---------------------------------- */
+.reveal img.slide-logo,
+.reveal .slide-logo img,
+.reveal .slide-logo,
+.reveal .logo img,
+.reveal .logo {
+  position: fixed !important;
+  top: var(--slide-logo-top) !important;
+  right: var(--slide-logo-right) !important;
+  height: var(--slide-logo-h) !important;
+  width: auto !important;
+  max-width: none !important;
+  object-fit: contain !important;
+  z-index: 10 !important;         /* below slide-number/nav, above content */
+  pointer-events: none !important; /* don’t block links/clicks */
+}
+
+/* --- Readability / overflow --------------------------------------------- */
+.reveal pre code {
+  white-space: pre-wrap;   /* you chose “wrap not scroll” previously */
+  word-break: break-word;
+}
+
+.reveal pre {
+  max-height: 70vh;        /* better than a fixed pixel height */
+  overflow: auto;
+}
+
+.reveal .katex-display,
+.reveal .math.display,
+.reveal .MathJax_Display {
+  overflow-wrap: anywhere;
+}
+
+/* Optional: narrow text container for dense concept slides */
+.reveal .slides section .content-narrow {
+  max-width: 80ch;
+  margin-inline: auto;
+}
+
+/* --- Accessibility: visible keyboard focus ------------------------------ */
+:where(.reveal a, .reveal button, .reveal [role="button"], .reveal [tabindex]):focus-visible {
+  outline: 3px solid Highlight;
+  outline-offset: 2px;
+}
+
+/* --- Reveal fragment helpers -------------------------------------------- */
+/* Fade in then out / current-visible patterns */
+.reveal .slides section .fragment.fade-in-then-out,
+.reveal .slides section .fragment.current-visible {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.reveal .slides section .fragment.fade-in-then-out.current-fragment,
+.reveal .slides section .fragment.current-visible.current-fragment {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* --- Layout helpers ------------------------------------------------------ */
+.reveal .r-stack {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+}
+.reveal .r-stack > * { grid-area: 1/1; }
+
+.reveal .r-fit-text {
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.reveal .columns { gap: 2em; }
+
+.reveal .scrollable {
+  overflow-y: auto;
+  max-height: 70vh;
+}
+
+.reveal .absolute { position: absolute; }
+
+/* Two-column lists (opt-in) */
+.reveal ul.two-columns {
+  columns: 2;
+  column-gap: 2.25rem;
+}
+@media (max-width: 1000px) {
+  .reveal ul.two-columns { columns: 1; }
+}
+
+/* --- Code line highlighting (Quarto line highlights) --------------------- */
+.reveal pre code.has-line-highlights .highlight-line {
+  background-color: rgba(78, 154, 230, 0.2);
+  display: block;
+  margin-right: -1em;
+  margin-left: -1em;
+  padding-right: 1em;
+  padding-left: 0.75em;
+}
+
+/* --- Mermaid centering --------------------------------------------------- */
+.reveal .mermaid {
+  margin: 1em auto;
+  text-align: center;
+}
+
+/* --- Quarto output block spacing ---------------------------------------- */
+.reveal .sourceCode { overflow: visible; }
+.reveal .cell-output-display {
+  margin: 1em 0;
+  overflow: visible;
+}
+
+/* --- Panel tabset styling (works when tabsets appear in slides) ---------- */
+.reveal .panel-tabset { margin-bottom: 1em; }
+
+.reveal .panel-tabset .nav-tabs {
+  display: flex;
+  border-bottom: 2px solid var(--cosmic-blue);
+  margin-bottom: 1em;
+  list-style: none;
+  padding: 0;
+}
+
+.reveal .panel-tabset .nav-tabs li { margin-right: 1em; }
+
+.reveal .panel-tabset .nav-tabs li a {
+  padding: 0.5em 1em;
+  display: block;
+  color: var(--cosmic-blue);
+  border-bottom: 3px solid transparent;
+}
+
+.reveal .panel-tabset .nav-tabs li.active a,
+.reveal .panel-tabset .nav-tabs li a:hover {
+  border-bottom-color: var(--stellar-blue);
+  color: var(--stellar-blue);
+}
+
+/* --- Responsive video embed helper -------------------------------------- */
+.reveal .video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+}
+.reveal .video-container iframe,
+.reveal .video-container object,
+.reveal .video-container embed {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* --- Text utilities (keep your naming) ---------------------------------- */
+.cosmic-blue   { color: var(--cosmic-blue); }
+.stellar-blue  { color: var(--stellar-blue); }
+.aurora-teal   { color: var(--aurora-teal); }
+.solar-gold    { color: var(--solar-gold); }
+.nova-orange   { color: var(--nova-orange); }
+.nebula-purple { color: var(--nebula-purple); }
+
+.bg-cosmic-blue   { background-color: var(--cosmic-blue); }
+.bg-stellar-blue  { background-color: var(--stellar-blue); }
+.bg-aurora-teal   { background-color: var(--aurora-teal); }
+.bg-solar-gold    { background-color: var(--solar-gold); }
+.bg-nova-orange   { background-color: var(--nova-orange); }
+.bg-nebula-purple { background-color: var(--nebula-purple); }
+
+.reveal .emphasis {
+  color: var(--stellar-blue);
+  font-weight: 700;
+  font-style: italic;
+}
+.reveal .subtle {
+  opacity: 0.7;
+  font-size: 0.9em;
+}
+
+/* --- Fun animations (keep, but scoped) ---------------------------------- */
+@keyframes twinkle {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50%      { opacity: 0.5; transform: scale(1.1); }
+}
+.twinkle { animation: twinkle 2s ease-in-out infinite; }
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 20px rgba(38, 208, 206, 0.5); }
+  50%      { box-shadow: 0 0 40px rgba(38, 208, 206, 0.8); }
+}
+.pulse-glow { animation: pulse-glow 2s ease-in-out infinite; }
+
+/* --- Print / PDF export (single unified block) --------------------------- */
+@media print {
+  .reveal .controls,
+  .reveal .progress,
+  .reveal .slide-number {
+    display: none !important;
+  }
+
+  /* Avoid logo overlap on every printed slide */
+  .reveal .slide-logo,
+  .reveal img.slide-logo,
+  .reveal .logo,
+  .reveal .logo img {
+    display: none !important;
+  }
+
+  /* Keep code/math from splitting */
+  .reveal pre,
+  .reveal pre code,
+  .reveal code,
+  .reveal .katex-display,
+  .reveal .MathJax_Display {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  .reveal section { line-height: 1.2; }
+}

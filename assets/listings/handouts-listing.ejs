@@ -1,0 +1,42 @@
+<%
+  // Show the PDF column only if any item declares it has a PDF
+  const anyPdf = items.some(i => i["pdf-download"]);
+%>
+
+<div class="handouts-listing">
+  <table class="table quarto-listing-table">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Handout</th>
+        <th>Focus</th>
+        <th>Due</th>
+        <% if (anyPdf) { %><th>PDF</th><% } %>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% for (const item of items) { %>
+        <tr>
+          <td class="listing-order"><%- item.order ?? "" %></td>
+
+          <td class="listing-title">
+            <a href="<%- item.path %>"><%- item.title %></a>
+          </td>
+
+          <td class="listing-description"><%- item.description ?? "" %></td>
+
+          <td class="listing-due"><%- item.due ?? "" %></td>
+
+          <% if (anyPdf) { %>
+            <td class="listing-pdf">
+              <% if (item["pdf-download"]) { %>
+                <a href="<%- item.path.replace(/\.html$/, '.pdf') %>">PDF</a>
+              <% } %>
+            </td>
+          <% } %>
+        </tr>
+      <% } %>
+    </tbody>
+  </table>
+</div>

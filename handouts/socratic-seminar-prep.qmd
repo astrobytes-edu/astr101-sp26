@@ -1,0 +1,98 @@
+---
+title: "Socratic Seminar Prep — Half-Sheet"
+subtitle: "ASTR 201 — Scholarly Engagement"
+format:
+  pdf:
+    toc: false
+    number-sections: false
+    geometry: margin=0.75in
+    fontsize: 10pt
+    include-in-header: _includes/latex-footer.tex
+  html:
+    toc: false
+    number-sections: false
+---
+
+**Name:** ____________________________  **Date:** ____________________  
+**Seminar topic / “text” (figure, excerpt, dataset):** _______________________________________
+
+---
+
+## 1) My Claim (one sentence)
+
+Write a *specific* claim that you think the “text” supports.
+
+**Claim:**  
+______________________________________________________________________________  
+______________________________________________________________________________
+
+---
+
+## 2) Evidence (two concrete pieces)
+
+Point to *specific* evidence: a quoted phrase, a trend, an axis label + value, a feature in a spectrum, etc.
+
+**Evidence #1 (what I’m pointing to):**  
+______________________________________________________________________________  
+**Why it supports my claim (one sentence):**  
+______________________________________________________________________________
+
+**Evidence #2 (what I’m pointing to):**  
+______________________________________________________________________________  
+**Why it supports my claim (one sentence):**  
+______________________________________________________________________________
+
+---
+
+## 3) Assumption (what must be true for my claim to hold)
+
+Name at least one assumption your inference relies on. (Examples: equilibrium, calibration, geometry, negligible dust, “standard candle” validity, selection effects.)
+
+**Assumption:**  
+______________________________________________________________________________  
+**If this assumption fails, my claim would change like this:**  
+______________________________________________________________________________
+
+---
+
+## 4) Uncertainty (optional but strongly encouraged)
+
+Try a confidence estimate *with a reason*.
+
+**I am about** _______% **confident because**  
+______________________________________________________________________________
+
+---
+
+## 5) Next Measurement (the discriminating test)
+
+If you had one new observation/measurement you could make, what would best test your claim or distinguish between competing explanations?
+
+**Next measurement:**  
+______________________________________________________________________________  
+**What outcome would strengthen my claim?**  
+______________________________________________________________________________  
+**What outcome would weaken my claim?**  
+______________________________________________________________________________
+
+---
+
+## 6) One Question I want to ask the group
+
+Ask something that pushes thinking forward (not a yes/no question).
+
+**Question:**  
+______________________________________________________________________________  
+______________________________________________________________________________
+
+---
+
+## Academic integrity reminder
+
+If this prep is collected for credit, it is part of your course work. **Generative AI tools are not permitted for course-related assessments.** Ask if you’re unsure.
+
+---
+
+<!-- Instructor note (not rendered): For printing as true half-sheets, print 2-up in your PDF print settings.
+quarto render socratic-seminar-prep-halfsheet.qmd --to pdf
+-->

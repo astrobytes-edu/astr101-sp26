@@ -1,0 +1,9 @@
+---
+title: "Slides"
+listing:
+  contents: "."
+  type: table
+  fields: [title, description]
+  sort: "title"
+---
+

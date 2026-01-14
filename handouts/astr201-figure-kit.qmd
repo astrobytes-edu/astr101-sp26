@@ -1,0 +1,130 @@
+---
+title: "Figure Kit"
+subtitle: "ASTR 201 — Socratic Seminar Tools"
+author: "Instructor: Dr. Anna Rosen"
+format:
+  pdf:
+    toc: false
+    number-sections: false
+    geometry: margin=0.9in
+    fontsize: 10pt
+    include-in-header: _includes/latex-footer.tex
+  html:
+    toc: false
+    number-sections: false
+---
+
+## How to Read a Scientific Figure (Micro-Guide)
+
+**Name:** ____________________________  **Date:** ____________________
+
+Astronomy is a science of *inference*. A figure is not “the truth”—it’s a compact argument made out of data, axes, and assumptions.
+
+### Step 0: Identify the figure’s job (one sentence)
+**This figure is trying to show:**  
+______________________________________________________________________________
+
+### Step 1: Read the axes like a scientist
+- **What are the axes?** (write the full variable names, not just symbols)  
+  **x-axis:** ________________________________   **units:** ________________  
+  **y-axis:** ________________________________   **units:** ________________
+
+- **What is *measured* vs *inferred*?**  
+  **Measured (observables):** __________________________________________________  
+  **Inferred (model-dependent):** ______________________________________________
+
+- **What is the scale?** (linear/log; important!)  
+  ☐ linear  ☐ log  ☐ mixed/other: ______________________
+
+### Step 2: Describe the pattern (before you interpret it)
+Use literal description first.
+
+- **Trend:** ___________________________________________________________________  
+- **Scatter / uncertainty:** ___________________________________________________  
+- **Outliers:** ________________________________________________________________  
+- **Range / limits:** __________________________________________________________
+
+If error bars exist: what do they represent? ☐ measurement error ☐ intrinsic scatter ☐ not sure
+
+### Step 3: What claim does the figure support (conservatively)?
+**Conservative claim (supported by what’s shown):**  
+______________________________________________________________________________  
+**Evidence in the figure (point to a specific feature/value/region):**  
+______________________________________________________________________________
+
+### Step 4: Name at least one assumption
+Interpretation requires assumptions. Name one.
+
+**Assumption:** _______________________________________________________________  
+**If this assumption fails, the interpretation might change because:**  
+______________________________________________________________________________
+
+### Step 5: Ask the “discriminating test” question
+What new measurement would best reduce ambiguity?
+
+**Next measurement:** _________________________________________________________  
+**If we saw ________, it would strengthen the claim. If we saw ________, it would weaken it.**
+
+### Quick checklist (for seminar)
+☐ I can say what each axis means and its units.  
+☐ I separated *description* from *interpretation*.  
+☐ I named at least one assumption.  
+☐ I can propose a next measurement.
+
+\newpage
+
+## Socratic Seminar Prep — Half-Sheet
+
+**Name:** ____________________________  **Date:** ____________________  
+**Seminar topic / “text” (figure, excerpt, dataset):** _______________________________________
+
+### 1) My Claim (one sentence)
+Write a *specific* claim that you think the “text” supports.
+
+**Claim:**  
+______________________________________________________________________________  
+______________________________________________________________________________
+
+### 2) Evidence (two concrete pieces)
+Point to *specific* evidence: a quoted phrase, a trend, an axis label + value, a feature in a spectrum, etc.
+
+**Evidence #1 (what I’m pointing to):**  
+______________________________________________________________________________  
+**Why it supports my claim (one sentence):**  
+______________________________________________________________________________
+
+**Evidence #2 (what I’m pointing to):**  
+______________________________________________________________________________  
+**Why it supports my claim (one sentence):**  
+______________________________________________________________________________
+
+### 3) Assumption (what must be true for my claim to hold)
+Name at least one assumption your inference relies on. (Examples: equilibrium, calibration, geometry, negligible dust, “standard candle” validity, selection effects.)
+
+**Assumption:**  
+______________________________________________________________________________  
+**If this assumption fails, my claim would change like this:**  
+______________________________________________________________________________
+
+### 4) Uncertainty (optional but strongly encouraged)
+Try a confidence estimate *with a reason*.
+
+**I am about** _______% **confident because**  
+______________________________________________________________________________
+
+### 5) Next Measurement (the discriminating test)
+If you had one new observation/measurement you could make, what would best test your claim or distinguish between competing explanations?
+
+**Next measurement:**  
+______________________________________________________________________________  
+**What outcome would strengthen my claim?**  
+______________________________________________________________________________  
+**What outcome would weaken my claim?**  
+______________________________________________________________________________
+
+### 6) One Question I want to ask the group
+Ask something that pushes thinking forward (not a yes/no question).
+
+**Question:**  
+______________________________________________________________________________  
+______________________________________________________________________________

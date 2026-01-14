@@ -1,0 +1,59 @@
+/*-- scss:defaults --*/
+$font-family-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif !default;
+$headings-font-weight: 650 !default;
+$font-size-base: 1.25rem !default;
+
+/*-- scss:rules --*/
+code { font-size: 0.95em; }
+
+/* Navbar branding (logo size) */
+.navbar-brand img {
+  max-height: 64px;
+  height: 64px;
+  width: auto;
+}
+
+/* Sidebar + TOC readability */
+#quarto-sidebar {
+  font-size: 1.15rem;
+  line-height: 1.75;
+}
+
+#quarto-sidebar .sidebar-item-text {
+  font-size: 1.15rem;
+}
+
+#quarto-margin-sidebar {
+  font-size: 1.15rem;
+  line-height: 1.5;
+}
+
+#toc-title {
+  font-size: 1.25rem;
+  font-weight: 650;
+}
+
+#TOC a {
+  font-size: 1.15rem;
+}
+
+/* Use more horizontal space on large screens */
+@media (min-width: 1200px) {
+  /* Expand the main body column and reduce extra outer whitespace */
+  .page-columns {
+    grid-template-columns:
+      [screen-start] 1.5rem
+      [screen-start-inset] 1fr
+      [page-start page-start-inset] 2.625rem
+      [body-start-outset] 2.625rem
+      [body-start] 1.5rem
+      [body-content-start] minmax(500px, calc(1150px - 3rem))
+      [body-content-end] 1.5rem
+      [body-end] 2.8rem
+      [body-end-outset] minmax(6rem, 11.6rem)
+      [page-end-inset] 2.8rem
+      [page-end] 1fr
+      [screen-end-inset] 1.5rem
+      [screen-end];
+  }
+}

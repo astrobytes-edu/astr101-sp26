@@ -1,0 +1,105 @@
+---
+title: "Discourse Kit"
+subtitle: "ASTR 201 — Scholarly Engagement"
+author: "Instructor: Dr. Anna Rosen"
+format:
+  pdf:
+    toc: false
+    number-sections: false
+    geometry: margin=0.9in
+    fontsize: 10pt
+    include-in-header: _includes/latex-footer.tex
+  html:
+    toc: false
+    number-sections: false
+---
+
+## Evidence & Reasoning Sentence Starters
+Use these in Socratic Seminar, think–pair–share, and group inquiry activities. The goal is not fancy wording—it’s clear scientific thinking.
+
+### Claim (what you think is true)
+- “A conservative interpretation is that…”
+- “The figure suggests that…”
+- “My current best claim is…”
+
+### Evidence (what you’re pointing to)
+- “I’m basing that on ___ (axis/line/value/quote)…”
+- “In the region where ___, the trend shows…”
+- “The key detail is ___, which indicates…”
+
+### Reasoning (why the evidence supports the claim)
+- “That supports the claim because…”
+- “If ___ increases, then ___ should change because…”
+- “The physical story is: ___ → ___ → ___.”
+
+### Assumptions (what must be true)
+- “This depends on the assumption that…”
+- “We’re implicitly assuming ___ (calibration / geometry / equilibrium / negligible dust)…”
+- “If that assumption fails, the conclusion could change by…”
+
+### Alternative explanations (how to avoid tunnel vision)
+- “Another explanation consistent with the data is…”
+- “A competing model would predict…”
+- “These interpretations differ mainly in the assumption that…”
+
+### Uncertainty (allowed; vagueness is not)
+- “I’m about __% confident because…”
+- “The biggest uncertainty is…”
+- “I’m unsure whether ___ or ___, because the data don’t constrain…”
+
+### Discriminating tests (what would we measure next?)
+- “A measurement that would distinguish these is…”
+- “If we observe ___, it would support model A; if we observe ___, it would support model B.”
+- “The next-best observation would be ___ because it reduces the degeneracy between…”
+
+### Building on others (collaboration moves)
+- “I want to build on what ___ said by adding…”
+- “I agree with ___ under the condition that…”
+- “I interpret that differently because the evidence suggests…”
+
+\newpage
+
+## Common Astronomy Inference Pitfalls
+Astronomy is inference under constraints. These pitfalls are *normal*—the goal is to notice them early and build guardrails.
+
+Use this sheet during problem-solving and seminar.
+
+### 1) Mixing up what’s measured vs what’s inferred
+**Guardrail:** Write “Observable:” and “Inference:” separately.  
+Example: flux is measured; distance is inferred using a model.
+
+### 2) Confusing brightness with luminosity
+- **Brightness (flux)** depends on distance.
+- **Luminosity** is intrinsic power output.  
+**Guardrail:** Ask: “Is this property distance-dependent?”
+
+### 3) Treating a model assumption as a fact
+Examples: circular orbits, equilibrium, “standard candle,” negligible dust.  
+**Guardrail:** Say: “This conclusion holds *if* ____.”
+
+### 4) Over-claiming (data show X → therefore theory Y is true)
+Data usually constrain a *family* of models.  
+**Guardrail:** Ask: “What else could explain this pattern?”
+
+### 5) Ignoring selection effects (“what got into the dataset?”)
+What you observe is shaped by detection limits and survey design.  
+**Guardrail:** Ask: “What might be missing, and why?”
+
+### 6) Forgetting units or axis scaling (especially log axes)
+A straight line on a log plot means something different than on a linear plot.  
+**Guardrail:** Always write the units and identify linear vs log.
+
+### 7) Confusing correlation with causation
+Two quantities can vary together due to a third variable or measurement bias.  
+**Guardrail:** Ask: “What mechanism connects them? What would break the trend?”
+
+### 8) Treating uncertainty as a footnote
+Uncertainty is part of the claim.  
+**Guardrail:** Try: “I’m ~__% confident because…” and name your biggest uncertainty.
+
+### 9) Single-figure tunnel vision
+A great plot can still be misleading without context (calibration, sample, method).  
+**Guardrail:** Ask: “What information is missing that could change interpretation?”
+
+### The most scientific question you can ask
+**“What observation would discriminate between these explanations?”**

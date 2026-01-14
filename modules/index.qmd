@@ -1,0 +1,19 @@
+---
+title: "Modules"
+listing:
+  contents: "."
+  type: table
+  fields: [order, title, description]
+  sort: "order asc"
+  sort-ui: false
+  filter-ui: false
+  field-types:
+    order: number
+  field-display-names:
+    order: "#"
+    title: "Module"
+    description: "What you’ll learn"
+---
+
+These are the narrative lecture text pages (your “course text”).  
+Each module is a `.qmd` file in this folder. Add a new one and it shows up here automatically.

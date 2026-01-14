@@ -1,0 +1,20 @@
+---
+title: "Handouts"
+listing:
+  contents: "."
+  type: table
+  fields: [order, title, description, due]
+  sort: "order asc"
+  sort-ui: false
+  filter-ui: false
+  field-types:
+    order: number
+    due: date
+  field-display-names:
+    order: "#"
+    title: "Handout"
+    description: "Focus"
+    due: "Due"
+---
+
+Handouts are posted here as Quarto pages. For handouts that also have PDFs, Quarto can automatically show “Other Formats” links when you enable additional formats in the handout’s front matter.

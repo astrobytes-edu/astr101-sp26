@@ -1,0 +1,105 @@
+---
+title: "Scholarly Engagement & Seminar Norms"
+subtitle: "ASTR 201 — Astronomy for Science Majors"
+format:
+  pdf:
+    toc: false
+    number-sections: false
+    geometry: margin=1in
+    fontsize: 10pt
+    include-in-header: _includes/latex-footer.tex
+  html:
+    toc: false
+    number-sections: false
+---
+
+**Artifact Header (for course materials)**  
+**Course:** ASTR 201  
+**Module:** [TBD] (used throughout the semester)  
+**Learning Objectives:** Practice scientific reasoning and evidence-based discussion (supports course learning outcomes).  
+**Concept Throughline:** Observables → models → inference, with uncertainty as normal.  
+**Math level:** Astro 201 (equations are allowed, but we always interpret symbols physically).  
+**Mode:** Draft
+
+---
+
+## What is “Scholarly Engagement” (10%)?
+
+In this course, your engagement grade measures something *real*: whether you are practicing the skills scientists use to build understanding together.
+
+You earn Scholarly Engagement credit through:
+- **iClicker participation** during in-class questions (often think–pair–share).
+- **In-class group inquiry activities** (from *Learning Astronomy by Doing Astronomy*).
+- **Socratic Seminars** (a structured discussion where we interpret a shared “text,” often a figure, spectrum, short excerpt, or dataset).
+
+This is not “points for talking.” It’s credit for *doing the intellectual work* of astronomy in community.
+
+---
+
+## What “good engagement” looks like (examples)
+
+During discussion, lab-style activities, or seminar, strong engagement sounds like:
+
+- “My claim is ___, **because** the plot shows ___.”
+- “I’m not fully sure, but I think ___ **under the assumption that** ___.”
+- “Can we check the axis / units / trend again? If that’s true, then ___.”
+- “An alternative explanation could be ___. What observation would separate them?”
+
+You do *not* need to be loud to be engaged. You do need to be *evidence-based* and *constructive*.
+
+---
+
+## Socratic Seminar norms (how we talk like scientists)
+
+In seminar, our goal is **shared inquiry**, not performance.
+
+**1) Anchor claims in evidence.**  
+If you make a claim, point to something specific: a line in the text, a feature in the figure, an axis label, a trend, a number.
+
+**2) Name assumptions out loud.**  
+Astronomy is inference under constraints. Assumptions are part of the job, not something to hide.
+
+**3) Disagree with ideas, not people.**  
+Use: “I interpret it differently because…” not “That’s wrong.”
+
+**4) Share the airtime.**  
+If you’ve spoken a lot, practice listening. If you’ve been quiet, try one contribution:
+a question, a clarification, or one evidence-based claim.
+
+**5) Let uncertainty be normal (but not vague).**  
+Uncertainty is fine. Vague claims are not. Try: “I’m ~70% confident because…”
+
+---
+
+## Practical seminar roles (so everyone can contribute)
+
+Depending on the day, you may be in an **inner circle** (speaking) or **outer circle** (observing + supporting).
+
+Outer circle contributions that count as full engagement:
+- Track where the group used **evidence** well (and where we didn’t).
+- Notice **assumptions** that were stated (or missing).
+- Identify a moment when someone **revised** their thinking.
+- Offer one “what would we measure next?” question during the debrief.
+
+---
+
+## What hurts your Scholarly Engagement grade
+
+- Side conversations during class or seminar.
+- Phone use that distracts you or others.
+- Excessive tardiness and/or absences.
+- Dismissing classmates instead of engaging their reasoning.
+- Speaking without evidence (repeatedly) after redirection.
+
+---
+
+## Academic integrity and AI tools
+
+Your thinking matters here. **Generative AI tools (e.g., ChatGPT, Copilot, Gemini, Claude) are prohibited for course-related assessments.**  
+That includes any for-credit written seminar prep/reflections, if assigned. If you’re unsure whether something counts, ask before submitting.
+
+---
+
+<!-- Instructor note (not rendered): Quarto PDF export:
+quarto render scholarly-engagement-seminar-norms.qmd --to pdf
+-->

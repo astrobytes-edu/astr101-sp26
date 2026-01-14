@@ -1,0 +1,56 @@
+---
+title: "Home"
+format:
+  html:
+    toc: false
+---
+
+::: {.callout-important}
+## Start here
+
+- Read the [Syllabus](course/syllabus.qmd).
+- Check the [Course Schedule](course/schedule.qmd) each week for what’s due.
+- Submit all work on Canvas (link on Canvas/announcements).
+:::
+
+## ASTR 201: Astronomy for Science Majors
+
+ASTR 201 is a **quantitative** astronomy course: we use math and physics to infer what the universe is doing from limited observations.
+
+## Quick links
+
+:::: {.columns}
+::: {.column width="50%"}
+- [Syllabus](course/syllabus.qmd)
+- [Schedule](course/schedule.qmd)
+- [Grading & assessments (syllabus)](course/syllabus.qmd#sec-grading)
+- [Academic integrity & AI policy (syllabus)](course/syllabus.qmd#sec-ai-policy)
+:::
+
+::: {.column width="50%"}
+- [Modules](modules/index.qmd)
+- [Slides](slides/index.qmd)
+- [Handouts](handouts/index.qmd)
+:::
+::::
+
+## How to succeed in this course
+
+- Show your reasoning (steps, units, assumptions).
+- Use homework + grade memos to prepare for exams.
+- Ask for help early (see “Communication & Getting Help” in the syllabus).
+
+::: {.callout-note}
+## Where to get help
+
+- Instructor: during class + office hours
+- Canvas discussion: questions others may share
+- Classmates: collaborate on ideas (submit your own work)
+- SDSU Astronomy Help Room: free tutoring (schedule on Canvas)
+:::
+
+---
+
+## Announcements
+
+This page is for course-wide highlights. For official updates, check Canvas announcements and the Schedule page.

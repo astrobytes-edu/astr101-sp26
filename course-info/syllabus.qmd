@@ -1,0 +1,335 @@
+---
+title: "Syllabus"
+subtitle: "ASTR 201: Astronomy for Science Majors | Spring 2026"
+author: "Dr. Anna Rosen"
+format:
+  html:
+    toc: true
+    toc-depth: 2
+    number-sections: false
+  pdf:
+    toc: false
+    geometry: margin=0.75in
+execute:
+  echo: false
+---
+<!--
+TODO (high priority):
+- Confirm Midterm 1 and Midterm 2 dates (and whether in-class vs evening)
+- Confirm grading weights for Spring 2026 (table below may need adjustment)
+- Finalize/replace the AI policy section with your official ASTR201 version (if desired)
+
+Compilation/Rendering (from the folder containing this file):
+
+Render both HTML + PDF (recommended):
+  quarto render syllabus.qmd
+
+Render only HTML:
+  quarto render syllabus.qmd --to html
+
+Render only PDF:
+  quarto render syllabus.qmd --to pdf
+
+Live preview while editing:
+  quarto preview syllabus.qmd
+
+If PDF rendering fails due to missing LaTeX:
+  quarto install tinytex
+-->
+
+## Course Information {#sec-course-info}
+
+|  |  |
+|---|---|
+| **Instructor** | Dr. Anna Rosen |
+| **Email** | <alrosen@sdsu.edu> |
+| **Office** | Physics 239 |
+| **Office Hours** | Fridays 11:00 am–12:00 pm (and by appointment) |
+| **Class meetings** | Tues/Thurs 12:30–1:45 pm |
+| **Location** | LH 245 |
+| **Course website** | <https://astrobytes-edu.github.io/astr201-sp26> (TBD) |
+| **Platforms:** <br>*(where things happen)* | [Canvas](https://sdsu.instructure.com) *(announcements, submissions, gradebook)*<br>[Course website](https://astrobytes-edu.github.io/astr201-sp26) *(course materials, handouts, assignments)*<br>iClicker *(in-class engagement)* |
+| **Virtual ASTR 201 AI Tutors:** <br>*(for studying, enhanced learning)* | **ASTR 201 Notebook (NotebookLM)** *(grounded in course materials only)* <br>**ASTR 201 Socratic Tutor (Custom GPT)** *(practice coach, not a solution engine)* |
+
+::: {.callout-important}
+## Start Here
+
+- **Where to find things:** check Canvas + the course website (links above).
+- **Weekly cadence:** homework due **Mon 11:59 pm**; grade memo due **Wed 11:59 pm**.
+- **Exams:** closed-note/closed-book; calculator allowed (no phones); formula sheet provided.
+- **Getting help:** see [Getting Help (Office Hours)](#sec-getting-help).
+:::
+
+### Course Description
+
+Directed toward students with a *strong interest* in science and mathematics. This course builds a foundational and quantitative understanding of modern astronomy, spanning: how we infer physical properties from light; gravity and orbital motion; stars and stellar evolution; the interstellar medium and star/planet formation; galaxies and dark matter; and cosmology.
+
+**Prerequisite:** Satisfaction of the SDSU Mathematics/Quantitative Reasoning Assessment requirement.
+
+*Important:* This is a **quantitative** course, but the goal is not rote memorization or “plug-and-chug.” You will use math as a tool to build **physical understanding and intuition** — what an equation means, what assumptions it hides, and how to sanity-check results (units, limits, scaling). Since ASTR 201 is required for Astronomy pre-majors, it is also designed to prepare you for **upper-division Physics and Astronomy courses** by strengthening your habits of scientific modeling, quantitative reasoning, and clear scientific explanation.
+
+::: {.callout-note icon=false}
+## Core Course Throughline: Modern Astronomy = Astrophysics
+
+Modern astronomy *is* astrophysics: we use physics (and math) to infer what the Universe is made of and how it works from limited measurements. We observe (usually photons) and build simplified physical models and quantify uncertainty to test whether the model can explain astrophysical phenomena based on what we measured.
+:::
+
+### Required Materials
+
+- **Required textbook:** Stan Owocki, *Fundamentals of Astrophysics*, **2nd Edition** ([Cambridge University Press](https://www.cambridge.org/9781009618007)). **ISBN:** 9781009618007 (paperback)
+
+- **Required ed-tech:** iClicker (student access) <https://student.iclicker.com/> *(Required for in-class engagement)*
+
+- **Other supplies:** A calculator (non-smartphone) for exams and reliable access to Canvas and the course website.
+
+## Course Learning Outcomes {#sec-outcomes}
+
+By the end of this course, students will be able to:
+
+1. **Infer** the physical properties of celestial objects from electromagnetic radiation by **analyzing wavelength, intensity, and spectral features**, and by **explicitly connecting observed signals to underlying physical processes**.
+
+2. Apply fundamental physical principles—including gravity, conservation laws, and orbital mechanics—to **analyze and quantitatively justify** the motions and interactions of celestial bodies in the solar system and beyond.
+
+3. **Construct and evaluate simplified physical models** of stars and planets using blackbody radiation, spectral lines, and Doppler shifts, and **assess the assumptions and limitations of those models**.
+
+4. **Reason from initial conditions**—such as stellar mass and composition—to predict and explain stellar lifecycles, explicitly linking gravity, nuclear fusion, and energy balance to observed evolutionary outcomes.
+
+5. **Infer** the structure, mass distribution, and evolution of galaxies from **observational evidence—such as rotation curves and luminosity profiles—and evaluate the necessity of dark matter** in explaining galactic dynamics.
+
+6. **Analyze cosmological observations and scaling relations** to develop a physically grounded understanding of the origin, evolution, and large-scale structure of the Universe, including the roles of dark energy and cosmic expansion.
+
+7. Demonstrate how astronomical observations are used to **construct, test, refine, and falsify physical models**, and **articulate how uncertainty, assumptions, and observational limits shape scientific conclusions**.
+
+8. **Use quantitative reasoning and physical principles developed in astronomy** to critically evaluate scientific claims, identify disinformation, and assess real-world challenges involving energy, climate, and space-related science.
+
+## Grading & Assessments {#sec-grading}
+
+| Component | Weight |
+|---|-:|
+| Scholarly Engagement (iClicker + in-class work) | 10% |
+| Homework + Grade Memos | 15% |
+| Growth Memos (3) | 10% |
+| Midterm Exam 1 | 15% |
+| Midterm Exam 2 | 15% |
+| Final Exam (cumulative) | 35% |
+
+<!-- TODO: Fill in all dates once the Spring 2026 calendar + your exam plan are finalized. -->
+### Important Dates {#sec-important-dates}
+
+- **Midterm Exam 1:** Thursday, [TBD]  
+- **Midterm Exam 2:** Thursday, [TBD]  
+- **Final Exam:** Thursday, May 7 — 10:30 a.m.–12:30 p.m.  
+  <!-- TODO: Confirm final exam ROOM. -->
+
+**Course schedule:** The tentative day-by-day schedule (topics, readings, homework calendar) is on the course website: [Schedule page (to be published)](./schedule.qmd) <!-- TODO: Update link once published on the course website. -->
+
+### Grading scale {#sec-grade-scale}
+
+These percentages represent guaranteed thresholds—earning the stated percentage guarantees at least that grade. The instructor reserves the right to adjust borderline grades upward based on effort, improvement, and engagement.
+
+For SDSU’s explanation of grades, see: <https://registrar.sdsu.edu/faculty_staff/courses_grades/explanation-grades>
+
+| Letter grade | Percent range | Explanation |
+|:--|:---|:----|
+| A | 93–100% | Outstanding |
+| A- | 90–92% |  |
+| B+ | 87–89% |  |
+| B | 83–86% | Praiseworthy |
+| B- | 80–82% |  |
+| C+ | 77–79% |  |
+| C | 73–76% | Average |
+| C- | 70–72% |  |
+| D+ | 67–69% |  |
+| D | 63–66% | Minimally Passing |
+| D- | 60–62% |  |
+| F | Below 60% | Failure |
+
+---
+
+### Course Components {#sec-components}
+
+Per SDSU policy, students are expected to spend at least 6 hours per week (a minimum of 2 hours per course credit hour/unit) on coursework outside of class, including reading, homework, and exam preparation for this 3-unit course. (see <https://catalog.sdsu.edu/content.php?catoid=10&navoid=924#credit-hour-or-unit>).
+
+**In this section:**
+- [Scholarly Engagement](#sec-engagement)
+- [Weekly Homework + Grade Memos](#sec-homework)
+- [Growth Memos](#sec-growth-memos)
+- [Exams](#sec-exams)
+
+#### Scholarly Engagement (10%) {#sec-engagement}
+
+Scholarly engagement in this course means making your reasoning *visible*. In practice, that looks like explaining what an equation means in words, carrying units through your work, stating assumptions out loud (even when they feel “obvious”), and being willing to test and revise a claim when evidence disagrees. These habits are what turn astronomy from memorizing facts into doing inference from data—and they’re also what make your learning robust in an era where AI can generate fluent text but can’t replace *your* physical judgment.
+
+Engagement is measured via `iClicker` responses plus observable weekly behaviors.
+
+| **Instructor Score** | **Observable weekly behaviors** |
+|-|---|
+| 5/5 | Prepared (specific questions on readings/notes), engaged in iClicker + activities, contributes to discussion, helps peers reason through problems, uses evidence/units/assumptions in explanations |
+| 4/5 | Prepared, steady effort in activities, contributes occasionally, collaborates respectfully, asks questions when stuck |
+| 3/5 | Inconsistent prep, participates when prompted, limited collaboration/discussion contribution |
+| 2/5 | Frequently unprepared or disengaged, minimal contribution to activities, distracts self/others |
+| 1/5 | Rare attendance/engagement, unprepared when present, does not participate in activities |
+| 0/5 | Habitually absent, no engagement |
+
+**Note:** This rubric is a guideline. Your score reflects overall scholarly contribution, not a single “style” of being present.
+
+**Classroom Norms & Attendance (Professional Scientific Community):** We are all members of a professional academic community. Treat classmates and the instructor with respect; spirited, courteous debate about scientific ideas is welcome, but disrespectful behavior is not. Because active reasoning is the point of being in the room, phones and other non-course device use during class are not permitted—off-task use is distracting and will negatively affect your Scholarly Engagement score.
+
+Formal attendance is not taken, but you cannot earn Scholarly Engagement credit if you are not present and participating. Please arrive on time; repeated tardiness is disruptive and will negatively affect your Scholarly Engagement score.
+
+#### Weekly Homework + Grade Memos (15%) {#sec-homework}
+
+Homework builds quantitative fluency and model-based reasoning. Expect multi-step problems and conceptual questions where **units, assumptions, and physical interpretation** matter as much as the final number. The purpose of homework is **exam preparation and skill-building** through consistent, high-quality practice — not busy work.
+
+**Submission workflow (two-stage):**
+
+1. **Homework Solutions — due Monday 11:59 pm PT (Canvas)**  
+   - Must be uploaded as **one single, readable PDF** (not a photo dump).  
+   - Organize clearly; show work; label final answers.  
+   - **No late submissions:** Instructor solutions will be posted **Tuesday morning**, so late work cannot be accepted.  
+   - **Lowest homework score will be dropped** (to cover one off-week or emergency).
+
+2. **Self-Assessment + Reflection (“Grade Memo”) — due Wednesday 11:59 pm PT (Canvas)**  
+   - You will **self-assess (self-grade)** your work using the **detailed homework rubric** and the posted solutions/guidance.  
+   - You will submit a brief **grade memo (~250–400 words)** that includes:
+     - what you got right (and why),
+     - what broke (and where),
+     - what you learned,
+     - what you will do differently next time.  
+   - Your grade memo must also include:
+     - a **per-problem self-rating** (1–5) with brief justification, and  
+     - **AI and collaboration disclosure** (even if “none”).  
+   - **Vague memos** (e.g., “I need to study more”) will not earn full credit unless they include a **specific error diagnosis** and a **concrete next-step habit**.
+
+**How your homework is graded (Instructor 0–5 score):**  
+I will evaluate your *combined submission* (Monday solutions + Wednesday grade memo) and assign an overall score from **0–5**. Homework is graded primarily on **completion, professionalism, and learning behaviors**, not just final correctness. “Professionalism” here means your work is readable, logically organized, shows steps and units, and reflects honest effort. Your grade memo is graded on the quality of your self-assessment, reflection, and evidence of growth.
+
+| Instructor Score | What it means |
+|-|----|
+| **5** | Complete, readable work with steps/units shown; thoughtful self-assessment aligned with evidence; specific correction + diagnosis + next-step habit; disclosures complete and honest. |
+| **4** | Strong work with minor gaps (some missing steps/units or a thinner memo), but clear effort and genuine reflection. |
+| **3** | Adequate but inconsistent: missing reasoning in multiple places and/or superficial reflection (e.g., “need to study more” without diagnosis). |
+| **2** | Partial/low-quality: many incomplete or unclear solutions and/or missing required memo elements. |
+| **1** | Minimal effort; little usable work or reflection. |
+| **0** | Not submitted, or missing required disclosures, or academic integrity violation. |
+
+**Bottom line:** correct answers matter, but **visible reasoning + honest reflection + improvement over time** matter more. This is how you build exam-ready mastery.
+
+#### Growth Memos (10%) {#sec-growth-memos}
+
+Growth Memos are short, structured reflections (“exam wrappers”) that build **metacognition** — thinking about how you learn so you can study more effectively and improve exam performance. **Learning science shows that structured reflection after feedback helps students plan, monitor, and adjust their learning strategies.** Write these in an **informal, memo-like voice** (not an essay). Honesty and “being real” matter more than polished prose.
+
+You will submit **three** Growth Memos:
+
+- **GM1** — after Midterm 1 (Due: TBD)
+- **GM2** — after Midterm 2 (Due: TBD)
+- **GM3** — pre-final synthesis memo (Due: TBD)
+
+<!-- TODO: Add due dates once exam dates are finalized (recommended: GM1/GM2 due ~1 week after the midterm is returned; GM3 due ~7 days before the final). -->
+
+**Format:** You must use the **provided Growth Memo Template** (posted on the course website/Canvas).
+**Length target:** ~**400–600 words**.
+
+Each memo must include: evidence from your work, 2–3 recurring patterns + likely causes, 2–3 concrete next-step habits (“When I…, I will…”), a verification plan, and a brief learning + AI reflection (even if “no AI used”).
+
+##### Grading (Instructor 0–5; averaged)
+
+Each Growth Memo is scored **0–5** using the rubric below. Your Growth Memos grade (**10%**) is the **average** of your three scores. Missing a memo earns a **0** for that memo.
+
+|   Instructor Score | What it looks like                                                                                  |
+| - | ---- |
+|   **5** | Specific, evidence-based patterns; concrete habit plan; clear verification plan; honest reflection. |
+|   **4** | Strong overall, but one element is thin (evidence, specificity, or verification).                   |
+|   **3** | Some insight, but too general (“study more”) and/or lacks actionable next steps.                    |
+| **2–1** | Minimal effort; mostly summary; little diagnosis or plan.                                           |
+|   **0** | Not submitted or academic integrity violation.                                                      |
+
+#### Exams (65% total) {#sec-exams}
+
+There are two midterm exams (15% each) and one **cumulative** final exam (35%). Exams are **closed-note and closed-book** and emphasize **first-principles reasoning**: you’ll be asked to connect observables to physical models, justify steps from core ideas (e.g., conservation laws, gravity, radiation/scaling arguments), and explain what your result *means* physically (units, assumptions, limiting-case checks) — not just compute a final value. You may use a **calculator** (no phones/smartwatches). A **course formula sheet will be provided with the exam**.
+
+##### Missed Exams {#sec-missed-exams}
+
+There are **no make-up exams** in this course. The only exception is a **serious, documented emergency** (e.g., hospitalization or a verified family emergency). In that case, a make-up may be offered **only at the instructor’s discretion** and may use a **different format** than the original exam. Travel, work obligations, scheduling conflicts, technical issues, or forgetting an exam do **not** qualify. An unexcused absence earns a **zero**.
+
+*Final exam note:* SDSU’s policy states that **no final exam may be given to individual students before the regular scheduled time**; if it is impossible to take the final as scheduled, arrangements must be made with the instructor (typically via an **Incomplete/deferred final** process or **withdrawal** from the course, when applicable). ([SDSU Registrar](https://registrar.sdsu.edu/calendars/finals/fall-2025?utm_source=chatgpt.com))
+
+## Academic Integrity & Generative AI Policy {#sec-ai-policy}
+
+All submitted work in this course must reflect **your own understanding**.
+
+Collaboration is encouraged to discuss concepts and strategies. However, what you submit must be written independently and must represent your unique reasoning. Copying solutions (from classmates, the internet, or solution manuals) is not permitted.
+
+### Generative AI (ChatGPT, Gemini, etc.) {#sec-generative-ai}
+
+::: {.callout-warning}
+## Generative AI rules (enforced)
+
+- **Do not use** general-purpose AI tools to produce, rewrite, or “polish” anything you submit for a grade.
+- **Disclose AI use** whenever a submission asks for AI/collaboration disclosure (e.g., homework grade memos), even if the use was allowed.
+- You are responsible for correctness and for being able to reproduce any reasoning you submit.
+
+**Allowed (study support):**
+- Asking questions to clarify *your own notes* or *assigned readings*
+- Generating practice questions (not answers to assigned problems)
+- Explaining concepts at a different level *for studying*, not for submission
+
+**Not allowed (graded work):**
+- Generating or rewriting homework solutions, derivations, or written explanations you submit
+- Submitting AI-generated reasoning you cannot reproduce on your own
+:::
+
+Generative AI can produce fluent explanations and plausible-looking solutions that are subtly wrong. In a quantitative, model-based course, “sounds right” is not a standard of truth. If you don’t have the physics and quantitative discipline to verify an AI output, you risk learning the wrong thing confidently.
+
+To support effective studying, I may provide course-specific tools grounded in **course materials only** (lecture notes, textbook, vetted sources), such as a NotebookLM notebook and/or a Socratic practice tutor. These are intended as study aids—not solution engines.
+
+Violations of academic integrity will be handled according to university procedures and may be reported to the Center for Student Rights and Responsibilities. More information: <https://sacd.sdsu.edu/student-rights/academic-dishonesty/cheating-and-plagiarism>
+
+## Course Materials (Sharing Policy) {#sec-materials}
+
+Lecture notes, slides, homework assignments, and exams are the intellectual property of the instructor. You may use course materials for your own educational purposes in this course, but you may not reproduce, distribute, share, or post them on any public platform (e.g., Chegg, Course Hero, Discord servers, public GitHub repos) without written permission.
+
+Unauthorized recording or redistribution of class sessions or office hours is prohibited.
+
+## Communication & Getting Help {#sec-communication}
+
+All course-related communication should be sent through Canvas messaging when possible. Include “ASTR 201” in the subject line. I aim to respond within 24–48 hours on weekdays. **Before emailing, check this syllabus and recent Canvas announcements.**
+
+If you encounter difficulties with the assignments or find yourself falling behind, please seek help immediately by:
+
+- Posting your questions on the course *Canvas* discussion page.
+- Speaking with the instructor during class or office hours (preferred).
+- Collaborating with classmates (while ensuring your final submission reflects your own understanding).
+- Attending SDSU’s *Astronomy Help Room* for free tutoring (schedule posted on the Canvas course page).
+
+### Getting Help (Office Hours) {#sec-getting-help}
+
+Office hours are for learning—bring what you’ve tried (notes, attempts, questions) and we’ll work from there. I’ll often guide you by asking questions so you build your own solution skills. You’re welcome to come even if you’re not sure what to ask. Tips: [*How to Use Office Hours* (Cornell)](https://lsc.cornell.edu/consult-with/how-to-use-office-hours/).
+
+## Fostering a Growth Mindset {#sec-growth-mindset}
+
+A **growth mindset** is the belief that intelligence, abilities, and talents are malleable and can be developed through effort and persistence, not fixed traits you're born with. This mindset is key for succeeding in this course. In ASTR 201, you'll encounter challenging concepts that may initially seem overwhelming. **This is normal and expected: it means you're learning.**
+
+Trust the process, embrace the challenge, and discover that you're capable of doing hard things.
+
+## Diversity and Inclusivity Statement {#sec-inclusion}
+
+I consider this classroom to be a place where you will be treated with respect, and I welcome individuals of all ages, backgrounds, beliefs, ethnicities, genders, gender identities, gender expressions, national origins, religious affiliations, sexual orientations, ability, and other visible and non-visible differences. All members of this class are expected to contribute to a respectful, welcoming and inclusive environment for every other member of the class.
+
+## Essential Student Information {#sec-student-info}
+
+For essential information about student academic success, please see the \href{https://docs.google.com/document/d/1rXNpNGs1K7nIxcS73o6R-fxZqPIWQwS9gHD7XpIqjhM/edit?tab=t.0#heading=h.apbuhr7p11ak}{SDSU Student Academic Success Handbook}. 
+
+SDSU provides disability-related accommodations via Student Disability Services: <https://sds.sdsu.edu> (email: <sds@sdsu.edu>). Please allow 10–14 business days for processing.
+
+Class rosters are provided to the instructor with the student’s legal name. Please let the instructor know if you prefer an alternate name and/or gender pronoun.
+
+If you need to be absent from class for a religious observance, please notify me in writing during the first two weeks of the semester so that we can make any necessary arrangements.
+
+## Land Acknowledgement {#sec-land}
+
+San Diego State University sits on Kumeyaay land. The Kumeyaay people have lived in this region for over 10,000 years and continue to live here today.
+
+## Your Responsibility {#sec-responsibility}
+
+This syllabus constitutes our course contract. You are responsible for reading and understanding all policies stated here.

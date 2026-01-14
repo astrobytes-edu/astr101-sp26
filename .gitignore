@@ -1,0 +1,15 @@
+/.quarto/
+_site/
+docs/
+.DS_Store
+**/.DS_Store
+
+# LaTeX build artifacts
+**/*.aux
+**/*.fdb_latexmk
+**/*.fls
+**/*.synctex.gz
+**/*.log
+
+**/*.quarto_ipynb
+

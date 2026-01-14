@@ -1,0 +1,8 @@
+---
+title: "Module 01 — Course Overview & A Tour of the Universe"
+description: "What astronomy measures, what we assume, and how inference actually works."
+order: 1
+---
+
+## The physical story
+...
