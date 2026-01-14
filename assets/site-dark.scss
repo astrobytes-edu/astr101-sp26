@@ -1,0 +1,103 @@
+/*-- scss:defaults --*/
+// ASTR 201 Dark Theme
+// Cosmic color palette (same as slides)
+$cosmic-blue: #1e3a5f;
+$stellar-blue: #4a90e2;
+$aurora-teal: #26d0ce;
+$solar-gold: #ffd700;
+$nova-orange: #ff6b35;
+$nebula-purple: #6b46c1;
+
+// Dark mode background and text overrides
+$body-bg: #0d1117;
+$body-color: #e6edf3;
+
+// Typography - match light theme sizes
+$font-family-sans-serif: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif !default;
+$headings-font-weight: 650 !default;
+$font-size-base: 1.25rem !default;
+
+/*-- scss:rules --*/
+// Headings in stellar blue for dark mode (better contrast)
+h1, h2, h3, h4, h5, h6 {
+  color: $stellar-blue;
+  font-weight: 650;
+}
+
+// Links in aurora teal with lighter hover
+a {
+  color: $aurora-teal;
+
+  &:hover {
+    color: lighten($aurora-teal, 15%);
+  }
+}
+
+// Code blocks - lighter nebula purple for dark backgrounds
+code {
+  font-size: 0.95em;
+  color: lighten($nebula-purple, 20%);
+}
+
+pre {
+  background-color: #161b22;
+}
+
+/* Navbar branding (logo size) */
+.navbar-brand img {
+  max-height: 64px;
+  height: 64px;
+  width: auto;
+}
+
+@media (max-width: 768px) {
+  .navbar-brand img {
+    max-height: 48px;
+    height: 48px;
+  }
+}
+
+/* Sidebar + TOC readability */
+#quarto-sidebar {
+  font-size: 1.15rem;
+  line-height: 1.75;
+}
+
+#quarto-sidebar .sidebar-item-text {
+  font-size: 1.15rem;
+}
+
+#quarto-margin-sidebar {
+  font-size: 1.15rem;
+  line-height: 1.5;
+}
+
+#toc-title {
+  font-size: 1.25rem;
+  font-weight: 650;
+}
+
+#TOC a {
+  font-size: 1.15rem;
+}
+
+/* Use more horizontal space on large screens */
+@media (min-width: 1200px) {
+  /* Expand the main body column and reduce extra outer whitespace */
+  .page-columns {
+    grid-template-columns:
+      [screen-start] 1.5rem
+      [screen-start-inset] 1fr
+      [page-start page-start-inset] 2.625rem
+      [body-start-outset] 2.625rem
+      [body-start] 1.5rem
+      [body-content-start] minmax(500px, calc(1150px - 3rem))
+      [body-content-end] 1.5rem
+      [body-end] 2.8rem
+      [body-end-outset] minmax(6rem, 11.6rem)
+      [page-end-inset] 2.8rem
+      [page-end] 1fr
+      [screen-end-inset] 1.5rem
+      [screen-end];
+  }
+}

@@ -1,16 +1,52 @@
 /*-- scss:defaults --*/
-$font-family-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif !default;
+// ASTR 201 Light Theme
+// Cosmic color palette (same as slides)
+$cosmic-blue: #1e3a5f;
+$stellar-blue: #4a90e2;
+$aurora-teal: #26d0ce;
+$solar-gold: #ffd700;
+$nova-orange: #ff6b35;
+$nebula-purple: #6b46c1;
+
+// Typography - preserve existing large sizes
+$font-family-sans-serif: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif !default;
 $headings-font-weight: 650 !default;
 $font-size-base: 1.25rem !default;
 
 /*-- scss:rules --*/
-code { font-size: 0.95em; }
+// Headings in cosmic blue
+h1, h2, h3, h4, h5, h6 {
+  color: $cosmic-blue;
+  font-weight: 650;
+}
+
+// Links in stellar blue with aurora hover
+a {
+  color: $stellar-blue;
+
+  &:hover {
+    color: $aurora-teal;
+  }
+}
+
+// Code in nebula purple
+code {
+  font-size: 0.95em;
+  color: $nebula-purple;
+}
 
 /* Navbar branding (logo size) */
 .navbar-brand img {
   max-height: 64px;
   height: 64px;
   width: auto;
+}
+
+@media (max-width: 768px) {
+  .navbar-brand img {
+    max-height: 48px;
+    height: 48px;
+  }
 }
 
 /* Sidebar + TOC readability */

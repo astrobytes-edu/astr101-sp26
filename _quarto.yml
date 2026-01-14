@@ -40,8 +40,9 @@ website:
 format:
   html:
     theme:
-      - cosmo
-      - assets/site.scss
+      light: [cosmo, assets/site-light.scss]
+      dark: [darkly, assets/site-dark.scss]
+    mainfont: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif
     toc: true
     toc-depth: 3
     grid:
