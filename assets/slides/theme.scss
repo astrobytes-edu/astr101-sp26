@@ -1,42 +1,16 @@
+// =============================================================================
+// ASTR 201 RevealJS Theme
+// =============================================================================
+// Tailwind-style utility classes for slides
+// See README.md for quick reference
+
 /*-- scss:defaults --*/
 
-/* Palette */
-$cosmic-blue:   #1e3a5f !default;
-$stellar-blue:  #4a90e2 !default;
-$aurora-teal:   #26d0ce !default;
-$solar-gold:    #ffd700 !default;
-$nova-orange:   #ff6b35 !default;
-$nebula-purple: #6b46c1 !default;
-
-/* Base colors (light theme; pair with 'simple' in YAML) */
-$body-bg: #ffffff !default;
-$body-color: #222222 !default;
-
-$link-color: $stellar-blue !default;
-$link-hover-color: $aurora-teal !default;
-
-/* Typography */
-$presentation-heading-font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif !default;
-$presentation-heading-color: $cosmic-blue !default;
-$presentation-heading-font-weight: 650 !default;
-$presentation-line-height: 1.25 !default;
-
-/* Code */
-$code-block-font-size: 0.75em !default;
-$code-color: $nebula-purple !default;
+@import 'variables';
 
 /*-- scss:rules --*/
 
-/* Keep slide content from feeling “too wide” on projectors */
-.reveal .slides section {
-  text-align: left;
-}
-
-/* Links a little more readable in slides */
-.reveal a {
-  text-decoration: none;
-  border-bottom: 2px solid rgba($link-color, 0.25);
-}
-.reveal a:hover {
-  border-bottom-color: rgba($link-hover-color, 0.5);
-}
+@import 'base';
+@import 'typography';
+@import 'colors';
+@import 'layout';

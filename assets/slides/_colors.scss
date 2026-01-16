@@ -1,0 +1,48 @@
+// =============================================================================
+// COLORS - Text color, backgrounds, opacity utilities
+// =============================================================================
+
+// -----------------------------------------------------------------------------
+// Text Colors (Semantic)
+// -----------------------------------------------------------------------------
+.reveal .text-primary { color: $cosmic-blue !important; }
+.reveal .text-secondary { color: $stellar-blue !important; }
+.reveal .text-accent { color: $aurora-teal !important; }
+.reveal .text-muted { color: $muted-color !important; }
+.reveal .text-warning { color: $nova-orange !important; }
+.reveal .text-success { color: $aurora-teal !important; }
+
+// -----------------------------------------------------------------------------
+// Opacity
+// -----------------------------------------------------------------------------
+.reveal .opacity-25 { opacity: 0.25 !important; }
+.reveal .opacity-50 { opacity: 0.50 !important; }
+.reveal .opacity-75 { opacity: 0.75 !important; }
+.reveal .opacity-100 { opacity: 1 !important; }
+
+// -----------------------------------------------------------------------------
+// Background Colors
+// -----------------------------------------------------------------------------
+.reveal .bg-highlight {
+  background-color: $bg-highlight !important;
+  padding: 0.25em 0.5em;
+  border-radius: 0.25em;
+}
+
+.reveal .bg-muted {
+  background-color: $bg-muted !important;
+  padding: 0.25em 0.5em;
+  border-radius: 0.25em;
+}
+
+.reveal .bg-primary {
+  background-color: rgba($cosmic-blue, 0.1) !important;
+  padding: 0.25em 0.5em;
+  border-radius: 0.25em;
+}
+
+.reveal .bg-accent {
+  background-color: rgba($aurora-teal, 0.1) !important;
+  padding: 0.25em 0.5em;
+  border-radius: 0.25em;
+}
