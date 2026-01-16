@@ -66,17 +66,17 @@ typography:
   fonts:
     - family: Inter
       source: google
-      weight: 400..700
+      weight: [400, 500, 600, 700]
     - family: JetBrains Mono
       source: google
-      weight: 400..700
+      weight: [400, 700]
   base:
     family: Inter
     size: 1.15rem
     line-height: 1.4
   headings:
     family: Inter
-    weight: 650
+    weight: 600
   monospace:
     family: JetBrains Mono
   link:
