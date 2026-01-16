@@ -115,7 +115,28 @@ quarto render --profile instructor # Includes answer keys
 
 ## Development Workflow
 
-1. **Create slides** at `modules/module-NN/slides/lecture-NN-topic.qmd`
+### Using Templates
+
+Copy templates to create new lectures quickly:
+
+```bash
+# Create new slides
+cp assets/templates/slides-template.qmd modules/module-02/slides/lecture-03-topic.qmd
+
+# Create new reading
+cp assets/templates/reading-template.qmd modules/module-02/readings/lecture-03-topic.qmd
+```
+
+Then find/replace all `[BRACKETED]` placeholders with actual content.
+
+| Template | Includes |
+|----------|----------|
+| `slides-template.qmd` | RevealJS config, extensions (pointer, spotlight, quiz, roughnotation), placeholder sections |
+| `reading-template.qmd` | Metadata, "Check Yourself" questions, collapsible solutions, reference tables |
+
+### Standard Workflow
+
+1. **Create slides** from template at `modules/module-NN/slides/lecture-NN-topic.qmd`
 2. **Register figures** in `assets/figures.yml` before using `{{< fig >}}`
 3. **Preview** with `quarto preview`
 4. **Verify** with `quarto render` (check for warnings)

@@ -70,6 +70,24 @@ When designing new lectures:
 
 The `_prep/` directories are NOT published (underscore prefix = Quarto ignores).
 
+### Using Templates
+
+Copy templates from `assets/templates/` to create new lectures:
+
+```bash
+# Create new slides
+cp assets/templates/slides-template.qmd modules/module-02/slides/lecture-03-topic.qmd
+
+# Create new reading
+cp assets/templates/reading-template.qmd modules/module-02/readings/lecture-03-topic.qmd
+```
+
+Then find/replace all `[BRACKETED]` placeholders with actual content.
+
+Templates include:
+- **slides-template.qmd** — Full RevealJS config with extensions (pointer, spotlight, quiz, roughnotation), placeholder sections for all common slide types
+- **reading-template.qmd** — Complete metadata, "Check Yourself" questions with collapsible solutions, reference tables
+
 ## File Structure (VERIFY BEFORE ASSUMING)
 ```
 _quarto.yml           # Main config - CHECK PATHS HERE
