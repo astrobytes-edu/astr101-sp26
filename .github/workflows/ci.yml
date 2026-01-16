@@ -1,0 +1,33 @@
+name: CI (Render HTML + check links)
+
+on:
+  pull_request:
+    branches: [ main ]
+  push:
+    branches: [ main ]
+  schedule:
+    - cron: "0 15 * * 1"   # Mondays 15:00 UTC (weekly link-rot patrol)
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  render-and-check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Quarto
+        uses: quarto-dev/quarto-actions/setup@v2
+
+      - name: Render site (HTML only)
+        run: |
+          quarto render --to html
+          touch _site/.nojekyll
+
+      - name: Validate HTML + check links/images
+        uses: anishathalye/proof-html@v2
+        with:
+          directory: _site
