@@ -431,20 +431,12 @@ end
 
 -- {{< eqcard kepler_period >}} - show meaning scaffold only
 function eqcard(args, kwargs)
-  local card_id = args[1]
-  if kwargs and kwargs["id"] then
-    card_id = pandoc.utils.stringify(kwargs["id"])
-  end
-
-  if not card_id then
-    return pandoc.RawBlock("html", '<div class="callout callout-warning"><p><strong>Missing eqcard id</strong></p></div>')
-  end
-
+  -- Use args[1] directly (Quarto args are special Pandoc objects)
   local cards = get_eqcards()
-  local card = cards[card_id]
+  local card = cards[args[1]]
 
   if not card then
-    return pandoc.RawBlock("html", string.format('<div class="callout callout-warning"><p><strong>Missing eqcard:</strong> <code>%s</code></p></div>', card_id))
+    return pandoc.RawBlock("html", string.format('<div class="callout callout-warning"><p><strong>Missing eqcard:</strong> <code>%s</code></p></div>', tostring(args[1] or "nil")))
   end
 
   return pandoc.RawBlock("html", build_meaning_html(card, "Equation meaning", nil))
@@ -452,20 +444,18 @@ end
 
 -- {{< eqrefcard kepler >}} - show meaning + reference link
 function eqrefcard(args, kwargs)
-  local eq_id = args[1]
-  if kwargs and kwargs["eq"] then
-    eq_id = pandoc.utils.stringify(kwargs["eq"])
-  end
-
-  if not eq_id then
-    return pandoc.RawBlock("html", '<div class="callout callout-warning"><p><strong>Missing eqrefcard eq id</strong></p></div>')
-  end
-
+  -- Try direct access without intermediate variable
   local equations = get_equations()
-  local eq = equations[eq_id]
+  local eq = equations[args[1]]  -- Direct access like eqcard does
+
+  if not eq and kwargs and kwargs["eq"] then
+    eq = equations[kwargs["eq"]]
+  end
 
   if not eq then
-    return pandoc.RawBlock("html", string.format('<div class="callout callout-warning"><p><strong>Missing equation:</strong> <code>%s</code></p></div>', eq_id))
+    local keys = {}
+    for k in pairs(equations) do table.insert(keys, k) end
+    return pandoc.RawBlock("html", string.format('<div class="callout callout-warning"><p><strong>Equation not found:</strong> tostring=%s type=%s. Available: %s</p></div>', tostring(args[1]), type(args[1]), table.concat(keys, ", ")))
   end
 
   local cards = get_eqcards()
@@ -480,20 +470,16 @@ end
 
 -- {{< eqshow kepler >}} - title + meaning (use with include for equation)
 function eqshow(args, kwargs)
-  local eq_id = args[1]
-  if kwargs and kwargs["eq"] then
-    eq_id = pandoc.utils.stringify(kwargs["eq"])
-  end
-
-  if not eq_id then
-    return pandoc.RawBlock("html", '<div class="callout callout-warning"><p><strong>Missing eqshow eq id</strong></p></div>')
-  end
-
+  -- Use args[1] directly in table lookup (Quarto args are special Pandoc objects)
   local equations = get_equations()
-  local eq = equations[eq_id]
+  local eq = equations[args[1]]
+
+  if not eq and kwargs and kwargs["eq"] then
+    eq = equations[kwargs["eq"]]
+  end
 
   if not eq then
-    return pandoc.RawBlock("html", string.format('<div class="callout callout-warning"><p><strong>Missing equation:</strong> <code>%s</code></p></div>', eq_id))
+    return pandoc.RawBlock("html", string.format('<div class="callout callout-warning"><p><strong>Missing equation:</strong> <code>%s</code></p></div>', tostring(args[1] or "nil")))
   end
 
   local cards = get_eqcards()
