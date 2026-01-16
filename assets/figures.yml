@@ -47,16 +47,100 @@ figures:
 
   fundamental-dimensions:
     path: /assets/images/module-01/fundamental-dims-nblm.png
-    caption: "The three fundamental dimensions and derived physical quantities"
-    alt: "Table showing Length, Mass, Time dimensions and how they combine to form velocity, force, energy"
+    caption: "The Fundamental Alphabet: constructing physics from [M], [L], and [T]"
+    alt: "Visual equation builder showing how Mass [M], Length [L], and Time [T] combine like building blocks: Velocity = L/T → [L][T]^-1, Acceleration = velocity/time → [L][T]^-2, Force = mass × acceleration → [M][L][T]^-2, Energy = force × distance → [M][L]²[T]^-2. Includes sanity check: if your energy calculation has dimensions [M][L][T]^-1, you missed a velocity term."
     credit: "NotebookLM"
     module: 1
 
   universe-phone-number:
     path: /assets/images/module-01/universe-phone-number-owocki-nblm.png
     caption: "The Universe's Phone Number: (555)-711-2555 maps cosmic scales"
-    alt: "Mnemonic diagram showing scale factors from nucleus to observable universe"
+    alt: "Staircase diagram showing scale factors from nucleus (10^-15 m) through atom, cell, human, Earth, Jupiter, Sun, AU, light-year, parsec, galaxy, to observable universe (10^26 m). Phone number digits encode the multiplication factors between each level."
     credit: "Owocki/NotebookLM"
+    module: 1
+
+  # Dimensional Analysis Protocol (Lecture 02)
+  da-protocol:
+    path: /assets/images/module-01/3-step-dimensional-analysis-protocol.png
+    caption: "The three-step dimensional analysis protocol for building educated guesses"
+    alt: "Flowchart showing Step 1: The Ingredients (list variables M, R and constants G, c, ℏ), Step 2: The Hypothesis (assume Answer ≈ A^α B^β C^γ), Step 3: The Match (solve for exponents to match target dimensions). Icons show beaker, f(x), and balance scale."
+    module: 1
+
+  units-vs-dimensions:
+    path: /assets/images/module-01/units-vs-dimensions-nblm.png
+    caption: "Units are conventions; dimensions are physical reality"
+    alt: "Split diagram contrasting UNITS (The Map) showing ruler, stopwatch, and weights labeled as 'human inventions, fungible, arbitrary' versus DIMENSIONS (The Territory) showing [L], [T], [M] symbols labeled as 'physical realities, invariant, fundamental'. Footer states physical laws must hold regardless of units used."
+    credit: "NotebookLM"
+    module: 1
+
+  physical-constants:
+    path: /assets/images/module-01/physical-constants-nblm.png
+    caption: "Physical constants encode dimensional information about the universe"
+    alt: "Diagram explaining that constants like G and c are not just numbers but conversion factors. Shows c (speed of light) with dimensions [L][T]^-1 as the universal speed limit, and G (gravitational constant) derived from Newton's law with dimensions [M]^-1[L]^3[T]^-2. Highlights the inverse mass term that allows gravity to cancel mass."
+    credit: "NotebookLM"
+    module: 1
+
+  math-toolbox:
+    path: /assets/images/module-01/math-toolbox-nblm.png
+    caption: "The dimensional analysis toolbox for ASTR 201"
+    alt: "Three-panel overview: (1) Reality vs Map - units are conventions, dimensions are physics, (2) The Radar - use scaling relations A ∝ B^α to predict behavior before solving equations, (3) Self-Correction - if dimensions don't match, the physics is wrong. Quote: 'In ASTR 201, we don't just memorize formulas. We interrogate them.'"
+    credit: "NotebookLM"
+    module: 1
+
+  logarithmic-cosmic-scales:
+    path: /assets/images/module-01/logarithmic-cosmic-scales-gemini.png
+    caption: "Cosmic Scales: A Powers of 10 Logarithmic Journey"
+    alt: "Horizontal logarithmic scale from 10^-15 m (femto) to 10^26 m showing icons for atom, DNA helix, cell, grain of sand, human (reference point), mountain, Earth, Sun, solar system, Oort cloud/nearby stars, star cluster, Milky Way, local supercluster, and observable universe. Each step represents multiplication by 10."
+    credit: "Gemini"
+    module: 1
+
+  # Case Study A: Planetary Orbits
+  case-a-orbits-1:
+    path: /assets/images/module-01/case-A-planetary-orbits-dimensional-analysis-1.png
+    caption: "Case Study A: Deriving orbital period from first principles"
+    alt: "Diagram showing planetary orbit with star mass M and orbital radius r. Lists ingredients: Distance r with dimension [L], Star Mass M with dimension [M], Gravity G with dimension [M]^-1[L]^3[T]^-2. Target dimension: Time [T]."
+    module: 1
+
+  case-a-orbits-2:
+    path: /assets/images/module-01/case-A-planetary-orbits-dimensional-analysis-2.png
+    caption: "Recovering Kepler's Third Law through dimensional analysis"
+    alt: "Three-step derivation: Step A (Kill Mass) - multiply G×M to get [L]^3[T]^-2, Step B (Kill Length) - divide by r^3 to get [T]^-2, Step C (Isolate Time) - invert and square root to get P ≈ √(r^3/GM). Result achieved with zero calculus."
+    module: 1
+
+  case-a-orbits-3:
+    path: /assets/images/module-01/case-A-planetary-orbits-dimensional-analysis-3.png
+    caption: "Physical interpretation of the orbital period formula"
+    alt: "Explanation of P ≈ √(r³/GM) showing: The Mass Effect (larger M in denominator → stronger gravity → shorter year) and The Distance Effect (larger r in numerator → longer path and weaker gravity → much longer year). Connection to observation: squaring both sides gives P² ∝ r³, matching Kepler's empirical Third Law exactly."
+    module: 1
+
+  # Case Study B: Black Holes
+  case-b-blackhole-1:
+    path: /assets/images/module-01/case-B-black-hole-dimensional-analysis-nblm-1.png
+    caption: "Case Study B: Finding the event horizon radius"
+    alt: "Diagram with black hole illustration showing curved spacetime. Goal: Find Schwarzschild radius R_sch. Ingredients: Mass M [M], Gravity G [M]^-1[L]^3[T]^-2, Speed of Light c [L][T]^-1. Target dimension: Length [L]."
+    credit: "NotebookLM"
+    module: 1
+
+  case-b-blackhole-2:
+    path: /assets/images/module-01/case-B-black-hole-dimensional-analysis-nblm-2.png
+    caption: "Deriving the Schwarzschild radius through dimensional analysis"
+    alt: "Solution logic: (1) Eliminate Mass: G×M → [L]^3[T]^-2, (2) Eliminate Time: divide by c² → [L], (3) Result: R_sch ≈ GM/c². Image of accretion disk around black hole. Note: General Relativity yields exactly this scaling factor."
+    credit: "NotebookLM"
+    module: 1
+
+  # Case Study C: White Dwarfs
+  case-c-whitedwarf-1:
+    path: /assets/images/module-01/case-C-white-dwarf-dimensional-analysis-nblm-1.png
+    caption: "Advanced Application: Degeneracy pressure in white dwarfs"
+    alt: "Diagram showing compressed electrons in white dwarf. Explains that density is so high electrons are squeezed, quantum mechanics (ℏ) and electron mass (m_e) take over, temperature becomes irrelevant. Matching dimensions for pressure [M][L]^-1[T]^-2 using ℏ, m_e, and number density n gives P_deg ∝ ℏ²n^(5/3)/m_e."
+    credit: "NotebookLM"
+    module: 1
+
+  case-c-whitedwarf-2:
+    path: /assets/images/module-01/case-C-white-dwarf-dimensional-analysis-nblm-2.png
+    caption: "The counter-intuitive white dwarf mass-radius relation"
+    alt: "Shows R ∝ M^(-1/3) derived by equating gravity (P ~ GM²/R⁴) with quantum pressure (P ~ ρ^(5/3)). Diagram compares stellar evolution path and white dwarf sizes: a 0.6 M☉ white dwarf is Earth-sized while a 1.2 M☉ white dwarf is significantly SMALLER than Earth. More mass = smaller size."
+    credit: "NotebookLM"
     module: 1
 
   powers-of-ten:

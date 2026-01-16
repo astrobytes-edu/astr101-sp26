@@ -97,7 +97,17 @@ end
 -- Helper function to parse figure data from YAML file
 local function load_figure_registry()
   local registry = {}
-  local f = io.open("assets/figures.yml", "r")
+
+  -- Try to find the figures.yml file from project root
+  -- Quarto sets QUARTO_PROJECT_DIR when running
+  local project_dir = os.getenv("QUARTO_PROJECT_DIR") or "."
+  local registry_path = project_dir .. "/assets/figures.yml"
+
+  local f = io.open(registry_path, "r")
+  if not f then
+    -- Fallback: try relative path (works from project root)
+    f = io.open("assets/figures.yml", "r")
+  end
   if not f then
     return registry
   end
@@ -175,17 +185,37 @@ function fig(args, kwargs)
   -- Create image element with alt text
   local img = pandoc.Image({pandoc.Str(alt)}, path)
 
-  -- Create figure with caption using simpler constructor
-  local fig_attr = {
-    identifier = "fig-" .. fig_id,
-    classes = {"course-figure"},
-    attributes = {}
-  }
-  local figure = pandoc.Figure(
-    pandoc.Plain({img}),
-    {pandoc.Str(full_caption)},
-    fig_attr
+  -- Create a div containing image and caption (simpler, more portable than Figure)
+  local caption_para = pandoc.Para({pandoc.Emph({pandoc.Str(full_caption)})})
+  local img_para = pandoc.Para({img})
+
+  local figure_div = pandoc.Div(
+    {img_para, caption_para},
+    pandoc.Attr("fig-" .. fig_id, {"figure", "course-figure"})
   )
 
-  return figure
+  return figure_div
+end
+
+-- {{< img id >}} - renders image from registry WITHOUT caption (for slides)
+-- Same registry lookup as fig, but returns bare image element
+function img(args, kwargs)
+  local fig_id = args[1]
+  if not fig_id then
+    return pandoc.Strong({pandoc.Str("[ERROR: img shortcode requires figure ID]")})
+  end
+
+  local registry = get_figure_registry()
+  local fig_data = registry[fig_id]
+
+  if not fig_data then
+    return pandoc.Strong({pandoc.Str("[ERROR: Image '" .. fig_id .. "' not found in registry]")})
+  end
+
+  -- Get figure properties
+  local path = fig_data.path or ""
+  local alt = fig_data.alt or fig_data.caption or ""
+
+  -- Return just the image element (no figure wrapper, no caption)
+  return pandoc.Image({pandoc.Str(alt)}, path)
 end
