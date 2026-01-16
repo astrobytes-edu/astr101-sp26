@@ -1,0 +1,164 @@
+# _quarto.yml
+# ASTR 201 Course Site — LOCKED Skeleton (v1.0)
+# Any changes require an ADR entry in docs/decisions/course-site-decisions.md
+
+project:
+  type: website
+  output-dir: _site
+  preview:
+    port: 4200
+    browser: true
+
+# ---- Site-wide metadata ----
+website:
+  title: "ASTR 201"
+  site-url: "https://YOUR-DEPLOY-URL-HERE" # optional but recommended for canonical links
+  search: true
+
+  # Sidebar is the primary navigation (modules-first contract)
+  sidebar:
+    style: docked
+    search: true
+    collapse-level: 1
+    contents:
+      - href: index.qmd
+        text: Home
+
+      - section: "Course"
+        contents:
+          - href: course-info/syllabus.qmd
+            text: Syllabus
+          - href: course-info/schedule.qmd
+            text: Schedule
+
+      # ---- Modules (landing page = section href; lectures nested under module) ----
+      - section: "Module 1: Foundations (Wks 1–3)"
+        href: modules/module-01.qmd
+        contents:
+          - href: slides/lecture-01-course-overview.qmd
+            text: "Lecture 1: Course Overview"
+          - href: slides/lecture-02-scaling-units.qmd
+            text: "Lecture 2: Scaling & Units"
+          - href: slides/lecture-03-kepler-to-newton.qmd
+            text: "Lecture 3: Kepler → Newton"
+          - href: slides/lecture-04-gravity-orbits.qmd
+            text: "Lecture 4: Gravity & Orbits"
+          - href: slides/lecture-05-light-as-information.qmd
+            text: "Lecture 5: Light as Information"
+          - href: slides/lecture-06-blackbodies-1.qmd
+            text: "Lecture 6: Blackbodies I"
+
+      - section: "Module 2: Inferring Star Properties (Wks 4–7)"
+        href: modules/module-02.qmd
+        contents:
+          - href: slides/lecture-07-distance-parallax.qmd
+            text: "Lecture 7: Distance & Parallax"
+          - href: slides/lecture-08-flux-luminosity-magnitudes.qmd
+            text: "Lecture 8: Flux, Luminosity, Magnitudes"
+          - href: slides/lecture-09-blackbodies-2.qmd
+            text: "Lecture 9: Blackbodies II"
+          - href: slides/lecture-10-spectra-hr-diagram.qmd
+            text: "Lecture 10: Spectra & the H–R Diagram"
+          - href: slides/lecture-11-doppler-proper-motion.qmd
+            text: "Lecture 11: Motions (Doppler + Proper Motion)"
+          - href: slides/lecture-12-binaries-masses.qmd
+            text: "Lecture 12: Binaries & Stellar Masses"
+          - href: slides/lecture-13-optical-depth.qmd
+            text: "Lecture 13: Optical Depth & Radiative Transfer"
+          # EXAM marker (NOT a link): handled by scripts.js using data attributes below
+          - text: "EXAM 1 (in class)"
+            href: "#"
+            # NOTE: href must exist for Quarto sidebar schema. We neutralize + style in JS.
+            # This is the contract-approved workaround to ensure it's not interactive.
+            # DO NOT CHANGE WITHOUT ADR.
+            # JS will set aria-disabled, preventDefault, and add exam-marker classes.
+            # CSS will render it as a non-link marker.
+
+      - section: "Module 3: Stellar Structure & Evolution (Wks 8–12)"
+        href: modules/module-03.qmd
+        contents:
+          - href: slides/lecture-14-timescales-lifetimes.qmd
+            text: "Lecture 14: Ages, Lifetimes, Timescales"
+          - href: slides/lecture-15-hse-virial.qmd
+            text: "Lecture 15: Hydrostatic Equilibrium + Virial"
+          - href: slides/lecture-16-radiation-transport.qmd
+            text: "Lecture 16: Radiation Transport"
+          - href: slides/lecture-17-convection.qmd
+            text: "Lecture 17: Convection"
+          - href: slides/lecture-18-fusion-main-sequence.qmd
+            text: "Lecture 18: Fusion + Main Sequence Scalings"
+          - href: slides/lecture-19-mass-limits.qmd
+            text: "Lecture 19: Min/Max Masses"
+          - text: "SPRING BREAK"
+            href: "#"
+          - href: slides/lecture-20-low-mass-evolution.qmd
+            text: "Lecture 20: Low-mass Evolution → WDs"
+          - href: slides/lecture-21-degeneracy-chandrasekhar.qmd
+            text: "Lecture 21: Degeneracy + Chandrasekhar Limit"
+          - href: slides/lecture-22-core-collapse.qmd
+            text: "Lecture 22: Core-collapse SNe"
+          - text: "EXAM 2 (in class)"
+            href: "#"
+
+      - section: "Module 4: Galaxies & Cosmology (Wks 13–15)"
+        href: modules/module-04.qmd
+        contents:
+          - href: slides/lecture-23-ism-phases.qmd
+            text: "Lecture 23: ISM Phases"
+          - href: slides/lecture-24-star-formation.qmd
+            text: "Lecture 24: Star Formation"
+          - href: slides/lecture-25-milky-way-dark-matter.qmd
+            text: "Lecture 25: Milky Way + Dark Matter"
+          - href: slides/lecture-26-galaxies-hubble-law.qmd
+            text: "Lecture 26: Galaxies + Hubble Law"
+          - href: slides/lecture-27-cosmology-capstone.qmd
+            text: "Lecture 27: Cosmology Capstone"
+
+      - section: "Handouts"
+        contents:
+          - href: handouts/index.qmd
+            text: "All Handouts"
+          # Add individual handouts here as you create them
+          # - href: handouts/handout-01-q1.qmd
+          #   text: "Handout 01: ..."
+
+      - section: "Assignments"
+        contents:
+          - href: assignments/index.qmd
+            text: "All Assignments"
+          # Add individual assignments here
+          # - href: assignments/hw-01.qmd
+          #   text: "HW 01: ..."
+
+format:
+  html:
+    theme:
+      light: assets/theme/site-light.scss
+      dark: assets/theme/site-dark.scss
+    css:
+      - assets/theme/callouts.scss
+      - assets/theme/lecture-cards.scss
+    include-in-header:
+      - assets/partials/head.html
+    include-after-body:
+      - assets/partials/after-body.html
+    toc: true
+    toc-depth: 3
+    smooth-scroll: true
+    code-fold: true
+    code-tools: true
+    link-external-newwindow: true
+
+  pdf:
+    toc: true
+    number-sections: true
+    # Keep PDF styling conservative; avoid fancy CSS expectations.
+    # If you need geometry / fonts later, add via ADR.
+
+# ---- Execution defaults (Python-first) ----
+jupyter: python3
+execute:
+  echo: true
+  warning: false
+  message: false
+  cache: false

@@ -1,0 +1,447 @@
+---
+title: "Quarto Cheat Sheet (Instructor Edition)"
+subtitle: "VS Code · Website + PDF + RevealJS · Python-first"
+draft: true
+format:
+  html:
+    toc: true
+    toc-depth: 2
+    code-fold: true
+    code-tools: true
+    link-external-newwindow: true
+  pdf:
+    toc: true
+    number-sections: true
+execute:
+  echo: true
+  warning: false
+  message: false
+---
+
+## Quick Start: the 80/20
+
+### Install + sanity check
+```bash
+quarto --version
+quarto check
+````
+
+### Render / preview
+
+```bash
+# Single file
+quarto render lecture01.qmd
+quarto render lecture01.qmd --to html
+quarto render lecture01.qmd --to pdf
+
+# Project (website)
+quarto preview
+quarto render
+```
+
+### VS Code muscle memory
+
+* Render / Preview: **Cmd/Ctrl+Shift+K**
+* Run current chunk/cell: **Cmd/Ctrl+Shift+Enter** (or the ▶︎ gutter button)
+
+---
+
+## Fundamentals: how Quarto thinks
+
+* **One source** (`.qmd`) → **many outputs** (`html`, `pdf`, `revealjs`, …).
+* Render pipeline: **execute code → capture outputs → Pandoc typesets**.
+* **Project config** lives in `_quarto.yml` (site-wide); **page config** lives in YAML front matter (file-level).
+
+---
+
+## File Template: the canonical `.qmd`
+
+```yaml
+---
+title: "Lecture 01: The Observable Universe"
+date: today
+format:
+  html: default
+  pdf: default
+jupyter: python3  # Python execution via Jupyter
+execute:
+  echo: true
+  warning: false
+  message: false
+---
+```
+
+---
+
+## Markdown Essentials (Quarto-friendly)
+
+### Headings
+
+```markdown
+# Title (often used as page title)
+## Section
+### Subsection
+```
+
+### Emphasis + code
+
+```markdown
+**bold**  *italic*  `inline code`  ~~strikethrough~~
+```
+
+### Lists (pitfall: blank line before lists)
+
+```markdown
+Paragraph above.
+
+- Bullet
+- Bullet
+
+1. Numbered
+2. Numbered
+```
+
+### Links + images
+
+```markdown
+[Quarto](https://quarto.org)
+
+![Caption + alt text](images/plot.png){#fig-plot width="70%"}
+```
+
+---
+
+## Cross-References (the magic)
+
+### Label rules
+
+* Figures: `fig-...`
+* Tables: `tbl-...`
+* Equations: `eq-...`
+* Sections: `sec-...`
+
+### Sections
+
+```markdown
+## Thermal Equilibrium {#sec-thermal}
+
+See @sec-thermal for details.
+```
+
+### Figures (static images)
+
+```markdown
+![H-R Diagram](images/hr.png){#fig-hr width="65%"}
+As shown in @fig-hr, ...
+```
+
+### Equations
+
+```markdown
+$$
+\nabla^2 \Phi = 4\pi G \rho
+$$ {#eq-poisson}
+
+We’ll use @eq-poisson next.
+```
+
+### Multi-refs
+
+```markdown
+See [@fig-hr; @eq-poisson].
+```
+
+**Pitfall:** labels must match exactly; dashes > underscores for LaTeX safety.
+
+---
+
+## Tables
+
+### Markdown table
+
+```markdown
+| Quantity | Symbol | Units |
+|---:|:---:|:---|
+| Mass | $M$ | $M_\odot$ |
+| Radius | $R$ | $R_\odot$ |
+```
+
+### Tables from code (Python → DataFrame)
+
+```python
+#| label: tbl-sample
+#| tbl-cap: "Example table from Python"
+import pandas as pd
+
+df = pd.DataFrame({"star": ["A", "B"], "mass": [1.0, 2.2]})
+df
+```
+
+Reference in text: `@tbl-sample`.
+
+---
+
+## Code Chunks: options you’ll use daily
+
+### Minimal Python chunk
+
+````python
+```{python}
+import numpy as np
+np.pi
+````
+
+````
+
+### Chunk options (`#|` lines at top of chunk)
+```python
+```{python}
+#| echo: false          # hide code, show results
+#| eval: true           # run or skip
+#| include: true        # include both code+output? (false = run but include nothing)
+#| output: true         # show output (rarely used directly)
+#| warning: false
+#| message: false
+#| cache: true          # speed up rerenders for expensive chunks
+#| label: fig-demo
+#| fig-cap: "A figure generated in Python"
+import matplotlib.pyplot as plt
+plt.plot([0,1],[0,1])
+plt.show()
+````
+
+````
+
+### Global defaults (put in YAML)
+```yaml
+execute:
+  echo: true
+  warning: false
+  message: false
+````
+
+**Pitfall:** options are YAML — use `true/false`, not `YES/NO`, not `=`.
+
+---
+
+## Figures: sizing, alignment, lightbox
+
+### Static image sizing / alignment
+
+```markdown
+![](images/nebula.jpg){#fig-nebula fig-align="center" width="80%"}
+```
+
+### Lightbox (HTML-only zoom-on-click)
+
+```markdown
+![](images/jwst.png){.lightbox width="60%"}
+```
+
+---
+
+## Callouts / Admonitions (use constantly)
+
+### Types: note, tip, warning, caution, important
+
+```markdown
+::: {.callout-tip}
+## Tip: Dimensional Analysis
+Check units before you trust the algebra.
+:::
+```
+
+### Collapsible (HTML; collapses don’t work in RevealJS)
+
+```markdown
+::: {.callout-warning collapse="true"}
+## Common Pitfall
+Lists need a blank line above them.
+:::
+```
+
+---
+
+## PDF Output: practical knobs
+
+### Page breaks
+
+```markdown
+{{< pagebreak >}}
+```
+
+### Number sections (better refs in PDF)
+
+```yaml
+format:
+  pdf:
+    number-sections: true
+```
+
+### Common LaTeX gotchas (fast fixes)
+
+* Unicode errors → use LaTeX commands (`\alpha`, `\times`) or switch engine.
+* `&` in text → escape as `\&`.
+* Overwide tables → split, simplify, or reduce content (LaTeX won’t auto-wrap long tables nicely).
+
+---
+
+## Website Projects: `_quarto.yml` patterns
+
+### Minimal website config
+
+```yaml
+project:
+  type: website
+
+website:
+  title: "ASTR 201"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - href: syllabus.qmd
+        text: Syllabus
+      - text: Lectures
+        menu:
+          - href: lectures/lecture01.qmd
+            text: Lecture 01
+    right:
+      - icon: github
+        href: https://github.com/yourrepo
+  search: true
+
+format:
+  html:
+    theme: cosmo
+    toc: true
+```
+
+### Sidebar (great for course sites)
+
+```yaml
+website:
+  sidebar:
+    style: docked
+    search: true
+    contents:
+      - href: index.qmd
+        text: Home
+      - section: Lectures
+        contents:
+          - href: lectures/lecture01.qmd
+          - href: lectures/lecture02.qmd
+      - section: Assignments
+        contents:
+          - href: assignments/hw01.qmd
+          - href: assignments/hw02.qmd
+```
+
+**Pitfall:** new pages don’t appear until you add them to nav/sidebar.
+
+---
+
+## RevealJS Slides: Quarto slide cheat sheet
+
+### YAML for RevealJS
+
+```yaml
+---
+title: "Lecture 05: Exoplanets"
+format:
+  revealjs:
+    theme: moon
+    slide-number: true
+    incremental: true
+---
+```
+
+### Slide breaks
+
+* Default slide level is `##` headings:
+
+```markdown
+## Slide Title
+Content...
+```
+
+* Or force a slide break:
+
+```markdown
+---
+```
+
+### Speaker notes
+
+```markdown
+::: {.notes}
+Say the quiet part out loud here.
+:::
+```
+
+### Two columns
+
+```markdown
+:::: {.columns}
+::: {.column width="50%"}
+Left content
+:::
+::: {.column width="50%"}
+Right content
+:::
+::::
+```
+
+### Overflow control
+
+```markdown
+## Dense Slide {.smaller .scrollable}
+```
+
+---
+
+## Troubleshooting: fast pattern matches
+
+### “YAML parse error”
+
+* Check indentation, colons, and closing `---`.
+* Use `true/false` booleans.
+
+### “Render worked yesterday; now it hangs”
+
+* Restart VS Code.
+* Restart kernel.
+* Run `quarto render -v` to see where it stalls.
+
+### “PDF fails, HTML works”
+
+* It’s almost always LaTeX: Unicode, special characters, long tables, or missing TeX packages.
+
+### “Cross-ref shows ??”
+
+* Label typo or wrong prefix (`fig-`, `eq-`, `sec-`, …).
+* Label must exist in the same document.
+
+---
+
+## Extensions (quick picks)
+
+* **Lightbox**: click-to-zoom images on HTML pages.
+* **Auto-dark mode**: adds dark mode toggle / respects OS preference.
+* **Code fullscreen**: pop code blocks into full-screen (great for students).
+* **Colab / Pyodide** (optional): “run in browser / run in Colab” workflows for interactive teaching.
+
+(Keep extensions minimal; every dependency is another thing to break mid-semester.)
+
+---
+
+## House Rules for Our Course Site (copy/paste)
+
+1. **Everything important gets an ID** (`sec-`, `fig-`, `eq-`, `tbl-`) so we can link and cross-ref.
+2. **Use callouts for pedagogy**: `tip` for strategy, `warning` for pitfalls, `important` for exam-critical.
+3. **Code defaults**: hide boilerplate, show the part students should learn.
+4. **Figures always have alt text + captions** (accessibility + comprehension).
+5. **Render all outputs before publishing** (HTML + PDF + slides) to catch format-specific failures.
+6. **Never rely on “the figure above”** — always reference `@fig-...`.
+
+---
