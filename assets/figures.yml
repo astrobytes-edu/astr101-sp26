@@ -1,0 +1,151 @@
+# Figure Registry - Single Source of Truth
+# Usage: {{< fig figure-id >}} or {{< fig figure-id caption="Custom" >}}
+#
+# Each figure entry has:
+#   path: path from project root (use /assets/images/...)
+#   caption: default caption text
+#   alt: accessibility text for screen readers
+#   credit: attribution/source (optional)
+#   module: which module uses this primarily (optional, for organization)
+
+figures:
+  # ==============================================================
+  # Common/shared figures (used across multiple modules)
+  # ==============================================================
+
+  hr-diagram:
+    path: /assets/images/common/hr-diagram.png
+    caption: "The Hertzsprung-Russell Diagram showing stellar classification"
+    alt: "H-R diagram plotting luminosity vs temperature for stars"
+    credit: "ESO"
+
+  blackbody-curves:
+    path: /assets/images/common/blackbody-curves.png
+    caption: "Blackbody radiation curves at different temperatures"
+    alt: "Graph showing Planck curves for various temperatures"
+
+  stellar-lifecycle:
+    path: /assets/images/common/stellar-lifecycle.png
+    caption: "Life cycle of stars of different masses"
+    alt: "Diagram showing evolutionary paths for low and high mass stars"
+
+  electromagnetic-spectrum:
+    path: /assets/images/common/em-spectrum.png
+    caption: "The electromagnetic spectrum from radio to gamma rays"
+    alt: "Diagram showing wavelength ranges of electromagnetic radiation"
+
+  # ==============================================================
+  # Module 1: Foundations
+  # ==============================================================
+
+  night-sky:
+    path: /assets/images/common/noirlab-nightsky-mosaic.jpg
+    caption: "The night sky filled with stars"
+    alt: "Photograph of the night sky showing many stars as points of light"
+    credit: "NOIRLab"
+    module: 1
+
+  fundamental-dimensions:
+    path: /assets/images/module-01/fundamental-dims-nblm.png
+    caption: "The three fundamental dimensions and derived physical quantities"
+    alt: "Table showing Length, Mass, Time dimensions and how they combine to form velocity, force, energy"
+    credit: "NotebookLM"
+    module: 1
+
+  universe-phone-number:
+    path: /assets/images/module-01/universe-phone-number-owocki-nblm.png
+    caption: "The Universe's Phone Number: (555)-711-2555 maps cosmic scales"
+    alt: "Mnemonic diagram showing scale factors from nucleus to observable universe"
+    credit: "Owocki/NotebookLM"
+    module: 1
+
+  powers-of-ten:
+    path: /assets/images/module-01/powers-of-ten.png
+    caption: "Cosmic scales span over 40 orders of magnitude"
+    alt: "Logarithmic scale showing sizes from atomic nucleus to observable universe"
+    module: 1
+
+  inverse-square-law:
+    path: /assets/images/module-01/inverse-square-law.png
+    caption: "Light intensity decreases with the square of distance"
+    alt: "Diagram showing how light spreads over increasing area with distance"
+    module: 1
+
+  kepler-orbits:
+    path: /assets/images/module-01/kepler-orbits.png
+    caption: "Kepler's laws of planetary motion"
+    alt: "Elliptical orbit diagram showing equal areas in equal times"
+    module: 1
+
+  # ==============================================================
+  # Module 2: Inferring Star Properties
+  # ==============================================================
+
+  parallax-geometry:
+    path: /assets/images/module-02/parallax-geometry.png
+    caption: "Geometry of stellar parallax measurement"
+    alt: "Diagram showing Earth's orbit and parallax angle to nearby star"
+    module: 2
+
+  spectral-lines:
+    path: /assets/images/module-02/spectral-lines.png
+    caption: "Absorption and emission spectral lines"
+    alt: "Comparison of continuous, absorption, and emission spectra"
+    module: 2
+
+  doppler-shift:
+    path: /assets/images/module-02/doppler-shift.png
+    caption: "Doppler shift of spectral lines reveals stellar motion"
+    alt: "Diagram showing blueshift and redshift of spectral lines"
+    module: 2
+
+  # ==============================================================
+  # Module 3: Stellar Structure & Evolution
+  # ==============================================================
+
+  hydrostatic-equilibrium:
+    path: /assets/images/module-03/hydrostatic-equilibrium.png
+    caption: "Hydrostatic equilibrium balances gravity and pressure"
+    alt: "Diagram showing pressure gradient opposing gravitational force in a star"
+    module: 3
+
+  pp-chain:
+    path: /assets/images/module-03/pp-chain.png
+    caption: "The proton-proton chain converts hydrogen to helium"
+    alt: "Diagram of nuclear fusion reactions in the solar core"
+    module: 3
+
+  stellar-endpoints:
+    path: /assets/images/module-03/stellar-endpoints.png
+    caption: "Stellar remnants depend on initial mass"
+    alt: "Chart showing white dwarf, neutron star, and black hole formation by mass"
+    module: 3
+
+  # ==============================================================
+  # Module 4: Galaxies & Cosmology
+  # ==============================================================
+
+  milky-way-structure:
+    path: /assets/images/module-04/milky-way-structure.png
+    caption: "Structure of the Milky Way galaxy"
+    alt: "Diagram showing disk, bulge, halo, and spiral arms of our galaxy"
+    module: 4
+
+  rotation-curve:
+    path: /assets/images/module-04/rotation-curve.png
+    caption: "Galaxy rotation curves reveal dark matter"
+    alt: "Graph comparing expected Keplerian rotation to observed flat rotation curve"
+    module: 4
+
+  hubble-diagram:
+    path: /assets/images/module-04/hubble-diagram.png
+    caption: "Hubble's law relates distance to recession velocity"
+    alt: "Plot showing linear relationship between galaxy distance and redshift"
+    module: 4
+
+  cmb-map:
+    path: /assets/images/module-04/cmb-map.png
+    caption: "Cosmic microwave background temperature fluctuations"
+    alt: "All-sky map showing tiny temperature variations in the CMB"
+    credit: "ESA/Planck"
+    module: 4

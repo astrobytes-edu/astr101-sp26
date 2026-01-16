@@ -89,3 +89,103 @@ function semester(args, kwargs, meta)
   end
   return pandoc.Str(sem)
 end
+
+-- ==============================================================
+-- Figure shortcode - renders figures from central registry
+-- ==============================================================
+
+-- Helper function to parse figure data from YAML file
+local function load_figure_registry()
+  local registry = {}
+  local f = io.open("assets/figures.yml", "r")
+  if not f then
+    return registry
+  end
+
+  local content = f:read("*all")
+  f:close()
+
+  -- Parse YAML manually (simplified parser for our specific format)
+  local current_fig = nil
+  for line in content:gmatch("[^\n]+") do
+    -- Skip comments and empty lines
+    if not line:match("^%s*#") and not line:match("^%s*$") then
+      -- Check for figure ID (two spaces + name + colon)
+      local fig_id = line:match("^  ([%w%-]+):%s*$")
+      if fig_id then
+        current_fig = fig_id
+        registry[current_fig] = {}
+      elseif current_fig then
+        -- Parse properties (four spaces + key: value)
+        local key, value = line:match("^    ([%w%-]+):%s*(.+)$")
+        if key and value then
+          -- Remove quotes if present
+          value = value:gsub('^"(.+)"$', "%1")
+          value = value:gsub("^'(.+)'$", "%1")
+          registry[current_fig][key] = value
+        end
+      end
+    end
+  end
+
+  return registry
+end
+
+-- Cache the registry to avoid re-reading on every shortcode call
+local _figure_registry = nil
+local function get_figure_registry()
+  if not _figure_registry then
+    _figure_registry = load_figure_registry()
+  end
+  return _figure_registry
+end
+
+-- {{< fig id >}} or {{< fig id caption="Custom caption" >}}
+-- Renders figure from central registry with optional caption override
+function fig(args, kwargs)
+  local fig_id = args[1]
+  if not fig_id then
+    return pandoc.Strong({pandoc.Str("[ERROR: fig shortcode requires figure ID]")})
+  end
+
+  local registry = get_figure_registry()
+  local fig_data = registry[fig_id]
+
+  if not fig_data then
+    return pandoc.Strong({pandoc.Str("[ERROR: Figure '" .. fig_id .. "' not found in registry]")})
+  end
+
+  -- Get figure properties
+  local path = fig_data.path or ""
+  local caption = fig_data.caption or ""
+  local alt = fig_data.alt or caption
+  local credit = fig_data.credit
+
+  -- Allow caption override via kwargs
+  if kwargs and kwargs.caption then
+    caption = pandoc.utils.stringify(kwargs.caption)
+  end
+
+  -- Build full caption with credit if present
+  local full_caption = caption
+  if credit then
+    full_caption = caption .. " (Credit: " .. credit .. ")"
+  end
+
+  -- Create image element with alt text
+  local img = pandoc.Image({pandoc.Str(alt)}, path)
+
+  -- Create figure with caption using simpler constructor
+  local fig_attr = {
+    identifier = "fig-" .. fig_id,
+    classes = {"course-figure"},
+    attributes = {}
+  }
+  local figure = pandoc.Figure(
+    pandoc.Plain({img}),
+    {pandoc.Str(full_caption)},
+    fig_attr
+  )
+
+  return figure
+end
