@@ -1,0 +1,66 @@
+---
+title: "Lecture 2 Reference Tables"
+subtitle: "CGS Units & Astrophysical Constants"
+author: "Dr. Anna Rosen"
+date: "2026-01-22"
+format:
+  pdf:
+    toc: false
+    geometry:
+      - margin=1in
+  html: default
+---
+
+## CGS Unit Reference
+
+| Quantity | CGS Unit | Base Units | SI Conversion |
+|----------|----------|------------|---------------|
+| Force | dyne | g cm s$^{-2}$ | $10^{-5}$ N |
+| Energy | erg | g cm$^2$ s$^{-2}$ | $10^{-7}$ J |
+| Pressure | dyne/cm$^2$ | g cm$^{-1}$ s$^{-2}$ | 0.1 Pa |
+| Luminosity | erg/s | g cm$^2$ s$^{-3}$ | $10^{-7}$ W |
+| Flux | erg cm$^{-2}$ s$^{-1}$ | g s$^{-3}$ | $10^{-3}$ W/m$^2$ |
+
+## Fundamental Physical Constants
+
+| Constant | Symbol | CGS Value |
+|----------|--------|-----------|
+| Gravitational constant | $G$ | $6.67 \times 10^{-8}$ cm$^3$ g$^{-1}$ s$^{-2}$ |
+| Speed of light | $c$ | $3.0 \times 10^{10}$ cm s$^{-1}$ |
+| Stefan-Boltzmann | $\sigma$ | $5.67 \times 10^{-5}$ erg cm$^{-2}$ s$^{-1}$ K$^{-4}$ |
+| Boltzmann constant | $k_B$ | $1.38 \times 10^{-16}$ erg K$^{-1}$ |
+| Planck constant | $h$ | $6.63 \times 10^{-27}$ erg s |
+| Reduced Planck | $\hbar$ | $1.05 \times 10^{-27}$ erg s |
+
+## Astrophysical Constants (Solar Units)
+
+| Quantity | Symbol | CGS Value |
+|----------|--------|-----------|
+| Solar mass | $M_\odot$ | $2.0 \times 10^{33}$ g |
+| Solar radius | $R_\odot$ | $7.0 \times 10^{10}$ cm |
+| Solar luminosity | $L_\odot$ | $3.8 \times 10^{33}$ erg/s |
+| 1 Astronomical Unit | AU | $1.50 \times 10^{13}$ cm |
+| 1 parsec | pc | $3.09 \times 10^{18}$ cm |
+| 1 light-year | ly | $9.46 \times 10^{17}$ cm |
+
+## Key Conversions to Memorize
+
+| Conversion | Factor |
+|------------|--------|
+| 1 J = ? erg | $10^7$ erg |
+| 1 N = ? dyne | $10^5$ dyne |
+| 1 W = ? erg/s | $10^7$ erg/s |
+| 1 m = ? cm | $10^2$ cm |
+| 1 kg = ? g | $10^3$ g |
+
+## Dimensional "Recipes"
+
+| Quantity | Dimensions |
+|----------|------------|
+| Velocity | $[LT^{-1}]$ |
+| Acceleration | $[LT^{-2}]$ |
+| Force | $[MLT^{-2}]$ |
+| Energy | $[ML^2T^{-2}]$ |
+| Pressure | $[ML^{-1}T^{-2}]$ |
+| Luminosity (Power) | $[ML^2T^{-3}]$ |
+| Gravitational constant $G$ | $[M^{-1}L^3T^{-2}]$ |

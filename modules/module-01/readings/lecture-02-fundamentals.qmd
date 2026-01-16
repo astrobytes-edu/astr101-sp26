@@ -5,6 +5,21 @@ author: "Dr. Anna Rosen"
 date: "2026-01-22"
 description: "Four problem-solving tools that transform points of light into physical understanding."
 categories: [foundations, math-tools]
+course: ASTR 201
+module: "1 - Foundations"
+learning-objectives:
+  - Use dimensional analysis to verify equation validity
+  - Apply the ratio method to compare astronomical quantities
+  - Convert between SI and CGS unit systems
+  - Perform order-of-magnitude estimations
+concept-throughline:
+  - Stars are points of light; we infer physics from limited data
+  - Dimensional analysis is the "smoke detector" for invalid equations
+  - Ratios eliminate messy constants; scaling reveals physics
+  - Order-of-magnitude reasoning catches errors before they propagate
+math-level: symbolic_with_interpretation
+mode: Draft
+prerequisites: Basic algebra, scientific notation familiarity (e.g., $10^{33}$), concept of units (meters, seconds, grams)
 ---
 
 ## The Ambiguity of Points of Light
@@ -22,6 +37,8 @@ These aren't just math tricks; they are the scientific radar that allows us to i
 
 ## Tool 1: Dimensional Analysis
 
+{{< fig units-vs-dimensions >}}
+
 ### The Fundamental Trio
 
 Every physical quantity in this course can be broken down into three fundamental dimensions:
@@ -37,6 +54,8 @@ Every physical quantity in this course can be broken down into three fundamental
 ### Derived Quantities
 
 All other physical quantities are combinations of these three:
+
+{{< fig fundamental-dimensions >}}
 
 | Quantity | Dimensions | CGS Unit |
 |----------|------------|----------|
@@ -67,6 +86,8 @@ $$[G] = \frac{[F][r^2]}{[M][m]} = \frac{[MLT^{-2}][L^2]}{[M^2]} = [M^{-1}L^3T^{-
 
 This tells us that $G$ has units of cm$^3$ g$^{-1}$ s$^{-2}$ in CGS—a combination that reflects how gravity connects mass, distance, and time.
 
+{{< fig physical-constants >}}
+
 ::: {.callout-tip}
 ## Check Yourself
 
@@ -81,6 +102,78 @@ $$\left[\frac{r^3}{GM}\right] = \frac{[L^3]}{[M^{-1}L^3T^{-2}][M]} = \frac{[L^3]
 Taking the square root gives $[T]$. ✓
 :::
 :::
+
+### Deriving Formulas from Dimensional Analysis
+
+Dimensional analysis isn't just for checking equations—you can use it to *derive* formulas from first principles. The method follows a systematic protocol:
+
+{{< fig da-protocol >}}
+
+**The Three-Step Protocol:**
+
+1. **Identify the Ingredients:** What variables and constants could possibly matter? List them with their dimensions.
+2. **Form a Hypothesis:** Assume the answer is some product of your ingredients raised to unknown powers: $\text{Answer} \approx A^\alpha B^\beta C^\gamma$
+3. **Match Dimensions:** Solve for the exponents by requiring the dimensions to match your target.
+
+### Case Study A: Planetary Orbits
+
+Let's derive Kepler's Third Law using only dimensional analysis.
+
+{{< fig case-a-orbits-1 >}}
+
+**Step 1 (Ingredients):** For orbital period $P$, the relevant quantities are:
+- Orbital radius $r$ with dimension $[L]$
+- Star mass $M$ with dimension $[M]$
+- Gravitational constant $G$ with dimension $[M^{-1}L^3T^{-2}]$
+
+**Target dimension:** Time $[T]$
+
+{{< fig case-a-orbits-2 >}}
+
+**Step 2–3 (Solve):** By matching dimensions, we find:
+$$P \approx \sqrt{\frac{r^3}{GM}}$$
+
+No calculus required—just careful accounting of dimensions!
+
+{{< fig case-a-orbits-3 >}}
+
+**Physical interpretation:** The equation tells a story. Mass $M$ appears in the denominator: stronger gravity means shorter orbital periods. Distance $r$ appears in the numerator (cubed): farther orbits mean much longer periods. Squaring both sides gives $P^2 \propto r^3$—exactly Kepler's empirical Third Law.
+
+### Case Study B: Black Hole Event Horizon
+
+What's the radius of a black hole? This is where dimensional analysis gets dramatic.
+
+{{< fig case-b-blackhole-1 >}}
+
+**Ingredients:** For the Schwarzschild radius $R_{\rm sch}$:
+- Mass $M$ with dimension $[M]$
+- Gravitational constant $G$ with dimension $[M^{-1}L^3T^{-2}]$
+- Speed of light $c$ with dimension $[LT^{-1}]$ (because nothing escapes!)
+
+**Target dimension:** Length $[L]$
+
+{{< fig case-b-blackhole-2 >}}
+
+**Result:** $R_{\rm sch} \approx GM/c^2$
+
+Einstein's General Relativity yields exactly this scaling (with a factor of 2). We obtained the correct formula without solving his field equations—just from dimensional reasoning!
+
+### Case Study C: White Dwarf Degeneracy Pressure (Advanced)
+
+When a star dies and becomes a white dwarf, quantum mechanics takes over. Temperature becomes irrelevant—only density matters.
+
+{{< fig case-c-whitedwarf-1 >}}
+
+**New ingredients:** Now we need:
+- Planck's constant $\hbar$ (quantum mechanics)
+- Electron mass $m_e$
+- Number density $n$ (particles per volume)
+
+The result: $P_{\rm deg} \propto \hbar^2 n^{5/3} / m_e$
+
+{{< fig case-c-whitedwarf-2 >}}
+
+**The counter-intuitive result:** Combining this with gravitational pressure gives $R \propto M^{-1/3}$. More massive white dwarfs are *smaller*! A 1.2 $M_\odot$ white dwarf is significantly smaller than a 0.6 $M_\odot$ one—the exact opposite of ordinary objects.
 
 ---
 
@@ -145,6 +238,69 @@ The surface area increases by a factor of 4. (The constant $4\pi$ cancels.)
 ---
 
 ## Tool 3: Unit Conversions
+
+### Scientific Notation: The Language of Extremes
+
+Before we discuss unit systems, we need to talk about *how* astronomers write numbers. Consider the mass of the Sun:
+
+$$M_\odot = 1{,}989{,}000{,}000{,}000{,}000{,}000{,}000{,}000{,}000{,}000{,}000 \text{ grams}$$
+
+Writing out all those zeros is tedious, error-prone, and hides the essential information. Scientific notation condenses this to:
+
+$$M_\odot = 2 \times 10^{33} \text{ g}$$
+
+The structure is always the same: a **coefficient** (a number between 1 and 10) multiplied by a **power of ten**. The exponent tells you the magnitude—how many decimal places to move. Positive exponents mean big numbers; negative exponents mean small ones.
+
+**Reading scientific notation:**
+- $3.0 \times 10^{10}$ = 30,000,000,000 (30 billion)
+- $6.67 \times 10^{-8}$ = 0.0000000667
+
+**The algebra of exponents** makes scientific notation powerful:
+
+| Operation | Rule | Example |
+|-----------|------|---------|
+| Multiplication | Add exponents | $10^3 \times 10^5 = 10^8$ |
+| Division | Subtract exponents | $10^{33}/10^{27} = 10^6$ |
+| Powers | Multiply exponents | $(10^3)^2 = 10^6$ |
+
+This is why astrophysical calculations remain manageable despite the enormous numbers involved. Instead of multiplying out 33-digit numbers, we simply add exponents.
+
+### SI Prefixes: Naming the Scales
+
+You already know many SI prefixes from everyday life—kilo (thousand), centi (hundredth), milli (thousandth). Astronomy uses the full range, from the very small to the very large:
+
+| Prefix | Symbol | Factor | Astronomical Example |
+|--------|--------|--------|---------------------|
+| tera | T | $10^{12}$ | THz frequencies (far-infrared) |
+| giga | G | $10^{9}$ | GHz frequencies (radio astronomy) |
+| mega | M | $10^{6}$ | Mpc (megaparsec—galaxy distances) |
+| kilo | k | $10^{3}$ | km (planetary scales) |
+| | | $10^{0}$ | meter, gram, second (human scale) |
+| centi | c | $10^{-2}$ | cm (CGS base unit!) |
+| milli | m | $10^{-3}$ | mm (submillimeter astronomy) |
+| micro | μ | $10^{-6}$ | μm (infrared wavelengths) |
+| nano | n | $10^{-9}$ | nm (visible light: 400–700 nm) |
+| pico | p | $10^{-12}$ | pm (X-ray wavelengths) |
+
+Notice that visible light wavelengths are measured in nanometers (400–700 nm), infrared in micrometers (μm), and radio in centimeters to meters. The prefix immediately tells you what regime you're working in.
+
+**Why this matters:** Astronomy spans over 40 orders of magnitude—from atomic nuclei ($10^{-13}$ cm) to the observable universe ($10^{28}$ cm). Scientific notation and SI prefixes aren't just convenient; they're essential for navigating this vast dynamic range without losing your way.
+
+::: {.callout-tip}
+## Check Yourself
+
+Simplify: $\frac{10^{33} \times 10^{-8}}{10^{20}}$
+
+::: {.callout-note collapse="true"}
+## Solution
+
+Add exponents in numerator: $10^{33} \times 10^{-8} = 10^{25}$
+
+Subtract denominator: $10^{25}/10^{20} = 10^5$
+
+Answer: $10^5$ (or 100,000)
+:::
+:::
 
 ### Why Astronomers Use CGS
 
@@ -256,6 +412,10 @@ The exponent tells the real story; coefficients are refinement.
 
 ### The Universe's Phone Number: (555)-711-2555
 
+{{< fig universe-phone-number >}}
+
+{{< fig logarithmic-cosmic-scales >}}
+
 This mnemonic maps the scales we encounter in astronomy, using human scale (~$10^2$ cm = 1 m) as the reference point:
 
 **Area Code (555) — Going Small**
@@ -332,6 +492,8 @@ An answer of $10^{40}$ s is off by 23 orders of magnitude—something is serious
 ---
 
 ## Connecting the Toolkit
+
+{{< fig math-toolbox >}}
 
 These four tools work together, not separately:
 

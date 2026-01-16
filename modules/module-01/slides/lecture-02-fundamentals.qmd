@@ -11,6 +11,23 @@ execute:
   message: false
 ---
 
+## Learning Objectives
+
+By the end of this lecture, you will be able to:
+
+::: {.incremental}
+- Use dimensional analysis to verify equation validity
+- Apply the ratio method to compare astronomical quantities
+- Convert between SI and CGS unit systems
+- Perform order-of-magnitude estimations
+:::
+
+::: {.notes}
+Read these aloud. Students should write them down or note them.
+:::
+
+---
+
 ## {background-image="/assets/images/common/noirlab-nightsky-mosaic.jpg" background-opacity="0.3"}
 
 ::: {.r-fit-text}
@@ -77,6 +94,16 @@ Tool 1: Dimensional Analysis
 
 ---
 
+## Units vs. Dimensions
+
+{{< img units-vs-dimensions >}}
+
+::: {.notes}
+5–6 min. Key insight: units are human inventions, dimensions are physical reality.
+:::
+
+---
+
 ## The Fundamental Trio
 
 Every physical quantity in this course is built from three ingredients:
@@ -94,7 +121,7 @@ Every physical quantity in this course is built from three ingredients:
 **Dimensions** are invariant physical DNA.
 
 ::: {.notes}
-5–7 min. Emphasize: you can change units, but you can't change what a quantity *is*.
+6–8 min. Emphasize: you can change units, but you can't change what a quantity *is*.
 :::
 
 ---
@@ -110,7 +137,17 @@ Every physical quantity in this course is built from three ingredients:
 | Pressure | $[ML^{-1}T^{-2}]$ | dyne/cm$^2$ |
 
 ::: {.notes}
-7–9 min. These are recipes. Energy = mass × length² / time².
+8–9 min. These are recipes. Energy = mass × length² / time².
+:::
+
+---
+
+## Building Blocks
+
+{{< img fundamental-dimensions >}}
+
+::: {.notes}
+9–10 min. Visual equation builder. Note the sanity check box.
 :::
 
 ---
@@ -121,12 +158,32 @@ If you calculate a star's **mass** and your answer has dimensions of **time**...
 
 . . .
 
-🚨 **The physics is wrong.**
+**The physics is wrong.**
 
 You don't need a calculator to know something's broken.
 
 ::: {.notes}
 9–11 min. This catches errors *before* you waste time computing.
+:::
+
+---
+
+## Prediction: Dimensions of $G$
+
+Newton's law of gravity: $F = \frac{GMm}{r^2}$
+
+**Before I show you:** What dimensions must $G$ have?
+
+A. $[MLT^{-2}]$ (same as force)
+
+B. $[M^{-1}L^3T^{-2}]$
+
+C. $[L^3T^{-2}]$
+
+D. $[MT^{-2}]$
+
+::: {.notes}
+Give students 30 seconds. Cold-call or use iClicker. Common error: forgetting the inverse mass.
 :::
 
 ---
@@ -148,7 +205,17 @@ Solve for $[G]$:
 $$[G] = \frac{[F][r^2]}{[M][m]} = \frac{[MLT^{-2}][L^2]}{[M^2]} = [M^{-1}L^3T^{-2}]$$
 
 ::: {.notes}
-11–14 min. Walk through cancellation slowly. "G has weird units because gravity is weak."
+11–13 min. Walk through cancellation slowly. "G has weird units because gravity is weak."
+:::
+
+---
+
+## Constants Are Physical Quantities
+
+{{< img physical-constants >}}
+
+::: {.notes}
+13–14 min. Constants are not arbitrary numbers—they're conversion factors built into the universe.
 :::
 
 ---
@@ -168,6 +235,100 @@ $$P \propto \sqrt{\frac{r^3}{GM}}$$
 Answer: $[r^3/GM] = [L^3]/[M^{-1}L^3T^{-2}][M] = [L^3]/[L^3T^{-2}] = [T^2]$
 
 Square root gives $[T]$. ✓
+:::
+
+---
+
+## But Wait—How Did We *Get* That Formula?
+
+We just **verified** Kepler's Law.
+
+. . .
+
+But can we **derive** it from first principles?
+
+. . .
+
+Yes. Using only dimensional analysis.
+
+---
+
+## The Protocol
+
+{{< img da-protocol >}}
+
+::: {.notes}
+16–17 min. This is the recipe. We'll use it repeatedly.
+:::
+
+---
+
+## Case Study A: Planetary Orbits
+
+{{< img case-a-orbits-1 >}}
+
+::: {.notes}
+17–18 min. Step 1: Identify ingredients and their dimensions.
+:::
+
+---
+
+## Recovering Kepler's Third Law
+
+{{< img case-a-orbits-2 >}}
+
+::: {.notes}
+18–20 min. Walk through each step. No calculus needed!
+:::
+
+---
+
+## Reading the Equation
+
+{{< img case-a-orbits-3 >}}
+
+::: {.notes}
+20–21 min. The equation tells a story. Mass in denominator = stronger = faster. Distance in numerator = farther = slower.
+:::
+
+---
+
+## Case Study B: Black Hole Event Horizon
+
+{{< img case-b-blackhole-1 >}}
+
+::: {.notes}
+21–22 min. Different ingredients: now we need c because nothing escapes.
+:::
+
+---
+
+## The Schwarzschild Radius
+
+{{< img case-b-blackhole-2 >}}
+
+::: {.notes}
+22–23 min. Einstein's General Relativity gives exactly this scaling. We got it without solving his field equations!
+:::
+
+---
+
+## Advanced: White Dwarf Degeneracy Pressure
+
+{{< img case-c-whitedwarf-1 >}}
+
+::: {.notes}
+23–24 min. (Optional slide) When quantum mechanics enters through ℏ.
+:::
+
+---
+
+## The Counter-Intuitive Result
+
+{{< img case-c-whitedwarf-2 >}}
+
+::: {.notes}
+24–25 min. (Optional) More mass = smaller white dwarf. Counterintuitive but true!
 :::
 
 ---
@@ -272,11 +433,25 @@ $$\frac{V_\odot}{V_\oplus} = \left(\frac{R_\odot}{R_\oplus}\right)^3 = 109^3 \ap
 
 ---
 
-## Check Yourself: Surface Area
+## iClicker: Surface Area Scaling
 
 If you double a nebula's radius, by what factor does its surface area increase?
 
-. . .
+A. 2
+
+B. 4
+
+C. 8
+
+D. 16
+
+::: {.notes}
+Give students 30 seconds. Common error: choosing A (forgetting the square). Answer is B.
+:::
+
+---
+
+## Solution: Surface Area
 
 $$SA \propto R^2$$
 $$\frac{SA_2}{SA_1} = \left(\frac{2R}{R}\right)^2 = 4$$
@@ -292,6 +467,104 @@ Tool 3: Unit Conversions
 :::
 
 *Why astronomers use CGS*
+
+---
+
+## First: Scientific Notation Crash Course
+
+Numbers in astronomy get... absurd.
+
+. . .
+
+**Mass of the Sun:**
+$$1{,}989{,}000{,}000{,}000{,}000{,}000{,}000{,}000{,}000{,}000{,}000 \text{ g}$$
+
+. . .
+
+Nobody writes that. Instead:
+
+$$M_\odot = 2 \times 10^{33} \text{ g}$$
+
+::: {.notes}
+25–26 min. This is the language of big (and small) numbers. Essential skill.
+:::
+
+---
+
+## Reading Scientific Notation
+
+$$a \times 10^n$$
+
+| Part | What it means |
+|------|---------------|
+| $a$ | Coefficient (1–10) |
+| $10^n$ | "Move decimal $n$ places" |
+| $n > 0$ | Big number (move right) |
+| $n < 0$ | Small number (move left) |
+
+. . .
+
+**Example:** $3.0 \times 10^{10}$ = 30,000,000,000 = 30 billion
+
+::: {.notes}
+26–27 min. The exponent tells you the magnitude. The coefficient is refinement.
+:::
+
+---
+
+## Rules of the Game
+
+**Multiplication:** Add exponents
+$$10^3 \times 10^5 = 10^{3+5} = 10^8$$
+
+. . .
+
+**Division:** Subtract exponents
+$$\frac{10^{33}}{10^{27}} = 10^{33-27} = 10^6$$
+
+. . .
+
+**Powers:** Multiply exponents
+$$(10^3)^2 = 10^{3 \times 2} = 10^6$$
+
+::: {.notes}
+27–28 min. These rules make astrophysical math manageable.
+:::
+
+---
+
+## SI Prefixes: The Language of Scale
+
+| Prefix | Symbol | Power | Example |
+|--------|--------|-------|---------|
+| tera | T | $10^{12}$ | THz (infrared) |
+| giga | G | $10^{9}$ | GHz (radio) |
+| mega | M | $10^{6}$ | Mpc (galaxy distances) |
+| kilo | k | $10^{3}$ | km (everyday) |
+| centi | c | $10^{-2}$ | cm (CGS!) |
+| milli | m | $10^{-3}$ | mm (wavelengths) |
+| micro | μ | $10^{-6}$ | μm (infrared) |
+| nano | n | $10^{-9}$ | nm (visible light) |
+
+::: {.notes}
+28–29 min. You already know most of these! Astronomy just uses bigger/smaller ones.
+:::
+
+---
+
+## Astronomy Lives at the Extremes
+
+| Scale | Value | Context |
+|-------|-------|---------|
+| $10^{-13}$ cm | Atomic nucleus | Where fusion happens |
+| $10^{-5}$ cm | Wavelength of light | What we detect |
+| $10^{10}$ cm | Solar radius | A typical star |
+| $10^{18}$ cm | 1 parsec | Distance scale |
+| $10^{28}$ cm | Observable universe | Cosmic horizon |
+
+. . .
+
+**That's 41 orders of magnitude.** Scientific notation isn't optional—it's survival.
 
 ---
 
@@ -493,11 +766,21 @@ When estimating:
 
 ## The Universe's Phone Number
 
-::: {.r-fit-text}
-**(555)-711-2555**
+{{< img universe-phone-number >}}
+
+::: {.notes}
+The staircase shows each multiplication factor. The phone number encodes the jumps between scales.
 :::
 
-A mnemonic for cosmic scales.
+---
+
+## Cosmic Scales: Powers of 10
+
+{{< img logarithmic-cosmic-scales >}}
+
+::: {.notes}
+Another visualization of the same idea. Each step is ×10. Human scale sits in the middle.
+:::
 
 ---
 
@@ -557,6 +840,24 @@ $$\frac{10^6 \times 10^{-1} \times 1}{10^3} = 10^2 \approx 100\text{–}300 \tex
 
 ---
 
+## Prediction: Black Hole Size
+
+**Order of magnitude:** The Schwarzschild radius of a solar-mass black hole is closest to:
+
+A. 1 meter
+
+B. 1 kilometer
+
+C. 100 kilometers
+
+D. 1000 kilometers
+
+::: {.notes}
+Give students 30 seconds. Most will guess too large. Emphasize: black holes are *compact*.
+:::
+
+---
+
 ## Astronomy Example: Schwarzschild Radius
 
 Estimate the radius of a solar-mass black hole:
@@ -612,6 +913,16 @@ Use all four tools together for robust reasoning.
 
 ---
 
+## The Toolbox
+
+{{< img math-toolbox >}}
+
+::: {.notes}
+Key message: We don't just memorize formulas. We interrogate them.
+:::
+
+---
+
 ## Preview: Where You'll Use These
 
 **Module 2:** Stellar distances → ratios everywhere
@@ -634,24 +945,16 @@ Leave time for "what counts as showing work?" and "how strict are units?" questi
 
 ---
 
-## CGS Cheat Sheet (Reference)
+## Reference Tables
 
-| Quantity | CGS Unit | Base Units | SI Conversion |
-|----------|----------|------------|---------------|
-| Force | dyne | g cm s$^{-2}$ | $10^{-5}$ N |
-| Energy | erg | g cm$^2$ s$^{-2}$ | $10^{-7}$ J |
-| Pressure | dyne/cm$^2$ | g cm$^{-1}$ s$^{-2}$ | 0.1 Pa |
-| Luminosity | erg/s | g cm$^2$ s$^{-3}$ | $10^{-7}$ W |
-| Flux | erg cm$^{-2}$ s$^{-1}$ | g s$^{-3}$ | $10^{-3}$ W/m$^2$ |
+**See the Lecture 2 Reference Handout** for:
 
----
+- CGS unit conversions
+- Fundamental physical constants
+- Solar units ($M_\odot$, $R_\odot$, $L_\odot$)
+- Key distance scales (AU, pc)
+- Dimensional "recipes"
 
-## Astro Constants (Reference)
-
-| Constant | CGS Value |
-|----------|-----------|
-| $G$ | $6.67 \times 10^{-8}$ cm$^3$ g$^{-1}$ s$^{-2}$ |
-| $c$ | $3.0 \times 10^{10}$ cm s$^{-1}$ |
-| $\sigma$ | $5.67 \times 10^{-5}$ erg cm$^{-2}$ s$^{-1}$ K$^{-4}$ |
-| $k_B$ | $1.38 \times 10^{-16}$ erg K$^{-1}$ |
-| $h$ | $6.63 \times 10^{-27}$ erg s |
+::: {.notes}
+Direct students to the handout. They should keep it handy for homework.
+:::
