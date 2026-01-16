@@ -117,3 +117,7 @@
 // Max width for readable prose
 .reveal .max-w-prose { max-width: 65ch !important; }
 .reveal .max-w-full { max-width: 100% !important; }
+
+// NOTE: Image trimming is now handled by the img shortcode's trim kwarg
+// Usage: {{< img fig-id trim="0 50% 0 0" >}}
+// See: _extensions/course/shortcodes.lua
