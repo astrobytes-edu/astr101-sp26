@@ -1,0 +1,207 @@
+---
+# =============================================================================
+# ASTR 201 Reading Template
+# =============================================================================
+# Copy to: modules/module-NN/readings/lecture-NN-topic.qmd
+# Then: Find/replace all [PLACEHOLDERS] with actual content
+#
+# Usage:
+#   1. Copy this file to the appropriate module readings directory
+#   2. Rename to lecture-NN-descriptive-topic.qmd
+#   3. Replace all [BRACKETED] placeholders
+#   4. Delete sections you don't need
+#   5. Run: quarto preview path/to/your-reading.qmd
+# =============================================================================
+
+title: "[Title]: [Subtitle]"
+subtitle: "Lecture [N] Reading Companion"
+author: "Dr. Anna Rosen"
+date: "[YYYY-MM-DD]"
+description: "[One-line description - matches slide description]"
+categories: [[module-topic], [secondary-topic]]
+course: ASTR 201
+module: "[N] - [Module Name]"
+
+learning-objectives:
+  - [First objective - matches slides]
+  - [Second objective]
+  - [Third objective]
+  - [Fourth objective if applicable]
+
+concept-throughline:
+  - [Core insight 1 - the thread that connects all concepts]
+  - [Core insight 2]
+  - [Core insight 3]
+  - [Core insight 4 if applicable]
+
+math-level: symbolic_with_interpretation
+mode: Draft
+prerequisites: [What students should already know, e.g., "Basic algebra, scientific notation"]
+---
+
+::: {.callout-important}
+## The Big Idea
+
+**[Core message in one sentence.]** [Second sentence that elaborates or provides context.]
+:::
+
+## [Opening Hook Section Title]
+
+[Opening paragraph that hooks the reader with a question, mystery, or connection to real astronomy. ~2-3 sentences.]
+
+### [Motivating Subsection]
+
+[Expand on the hook. Why does this matter? What problem are we solving? ~1 paragraph.]
+
+[Optional: Include a specific example or scenario that illustrates the problem.]
+
+---
+
+## [Main Section 1: First Major Concept]
+
+{{< fig [figure-id-if-applicable] >}}
+
+### [Subsection: Key Definition or Framework]
+
+[Introduce the core concept. Use paragraph-first structure, not bullet lists.]
+
+[Second paragraph that builds on the first. Include any necessary definitions.]
+
+**[Key term]:** [Definition in plain language, then technical precision.]
+
+### [Subsection: The Details]
+
+[Detailed explanation. Walk through the reasoning step by step.]
+
+| [Column 1 Header] | [Column 2 Header] | [Column 3 Header] |
+|-------------------|-------------------|-------------------|
+| [Data] | [Data] | [Data] |
+| [Data] | [Data] | [Data] |
+| [Data] | [Data] | [Data] |
+
+### Worked Example: [Descriptive Title]
+
+[Set up the problem clearly.]
+
+$$[Main equation or relationship]$$
+
+[Walk through the solution step by step, unpacking each term:]
+
+- $[symbol]$ is [description] with dimensions $[dimensions]$
+- $[symbol]$ is [description]
+
+[Show the calculation:]
+
+$$[Step 1 calculation]$$
+
+$$[Step 2 calculation]$$
+
+[Interpret the result. What does it mean physically?]
+
+::: {.callout-tip}
+## Check Yourself
+
+[Question that tests understanding of the concept just explained.]
+
+::: {.callout-note collapse="true"}
+## Solution
+
+[Clear, step-by-step solution.]
+
+[Final answer with interpretation.]
+:::
+:::
+
+---
+
+## [Main Section 2: Second Major Concept]
+
+[Transition sentence that connects to the previous section.]
+
+### [Subsection Title]
+
+[Content following the same pattern: introduce, explain, example, check.]
+
+{{< fig [figure-id-if-applicable] >}}
+
+### [Another Subsection]
+
+[Continue building the concept. Each subsection should be ~2-4 paragraphs plus any equations/tables.]
+
+### Worked Example: [Descriptive Title]
+
+[Problem statement.]
+
+[Solution with full explanation.]
+
+::: {.callout-tip}
+## Check Yourself
+
+[Practice question.]
+
+::: {.callout-note collapse="true"}
+## Solution
+
+[Solution.]
+:::
+:::
+
+---
+
+## [Main Section 3: Third Major Concept]
+
+[Continue the pattern. Aim for 3-4 main sections total.]
+
+---
+
+## [Main Section 4: Synthesis/Application]
+
+[Final section that ties everything together or shows application.]
+
+### [Connecting the Concepts]
+
+[Explain how the tools/concepts work together.]
+
+| [Tool/Concept] | [Question It Answers] | [When to Use] |
+|----------------|----------------------|---------------|
+| [Item 1] | [Description] | [Context] |
+| [Item 2] | [Description] | [Context] |
+| [Item 3] | [Description] | [Context] |
+
+---
+
+## Reference Tables
+
+### [Reference Category 1]
+
+| [Header 1] | [Header 2] | [Header 3] |
+|------------|------------|------------|
+| [Data] | [Data] | [Data] |
+| [Data] | [Data] | [Data] |
+
+### [Reference Category 2]
+
+| [Header 1] | [Header 2] | [Header 3] |
+|------------|------------|------------|
+| [Data] | [Data] | [Data] |
+| [Data] | [Data] | [Data] |
+
+---
+
+## Summary: [Descriptive Title]
+
+[Final synthesis paragraph that restates the key insights.]
+
+1. **[First key point]** — [One sentence elaboration.]
+
+2. **[Second key point]** — [One sentence elaboration.]
+
+3. **[Third key point]** — [One sentence elaboration.]
+
+4. **[Fourth key point if applicable]** — [One sentence elaboration.]
+
+::: {.callout-tip}
+## Looking Ahead
+
+[Preview of how these concepts connect to upcoming material. ~2-3 sentences.]
+:::

@@ -1,0 +1,325 @@
+---
+# =============================================================================
+# ASTR 201 Slide Template
+# =============================================================================
+# Copy to: modules/module-NN/slides/lecture-NN-topic.qmd
+# Then: Find/replace all [PLACEHOLDERS] with actual content
+#
+# Usage:
+#   1. Copy this file to the appropriate module slides directory
+#   2. Rename to lecture-NN-descriptive-topic.qmd
+#   3. Replace all [BRACKETED] placeholders
+#   4. Delete sections you don't need
+#   5. Run: quarto preview path/to/your-slides.qmd
+# =============================================================================
+
+title: "Lecture [N]: [Title]"
+subtitle: "[Subtitle or Tagline]"
+author: "Dr. Anna Rosen"
+date: "[YYYY-MM-DD]"
+description: "[One-line description for listings - what students will learn]"
+
+format:
+  revealjs:
+    theme: [default, ../../../assets/slides/theme.scss]
+    slide-number: true
+    transition: fade
+    transition-speed: fast
+    background-transition: fade
+    center: false
+    footer: "ASTR 201 • Lecture [N]"
+    chalkboard: true
+    code-line-numbers: true
+    fig-align: center
+    html-math-method: mathjax
+    # Extension configurations
+    pointer:
+      color: "#dc2626"
+      pointerSize: 18
+    spotlight:
+      size: 80
+      fadeInAndOut: 150
+    quiz:
+      shuffleOptions: true
+      defaultCorrect: "✓ Correct!"
+      defaultIncorrect: "✗ Not quite—let's discuss."
+
+revealjs-plugins:
+  - pointer
+  - spotlight
+  - attribution
+  - quiz
+
+filters:
+  - roughnotation
+
+execute:
+  echo: false
+  warning: false
+  message: false
+---
+
+## Learning Objectives
+
+By the end of this lecture, you will be able to:
+
+::: {.incremental}
+- [First objective - use action verbs: explain, calculate, derive, compare...]
+- [Second objective]
+- [Third objective]
+:::
+
+::: {.notes}
+Read these aloud. Students should write them down or note them.
+Estimated time: 1–2 min.
+:::
+
+---
+
+## {background-image="/assets/images/common/noirlab-nightsky-mosaic.jpg" background-opacity="0.2"}
+
+::: {.r-fit-text}
+[Hook: A compelling question or statement]
+:::
+
+::: {.notes}
+0–1 min. Let this sit for 5 seconds. Build curiosity before explaining.
+:::
+
+---
+
+## [First Main Concept] {.center}
+
+::: {.r-fit-text}
+[Section Title]
+:::
+
+*[Brief tagline]*
+
+---
+
+## [Concept Introduction]
+
+[Brief setup - what problem are we solving?]
+
+. . .
+
+::: {.incremental}
+- [Key point 1]
+- [Key point 2]
+- [Key point 3]
+:::
+
+::: {.notes}
+[Timing] min. [Teaching notes - what to emphasize, common misconceptions]
+:::
+
+---
+
+## [Key Equation or Relationship]
+
+$$[LaTeX equation]$$
+
+::: {.fragment}
+Let's unpack each piece:
+
+- $[symbol]$ is [description] ([units])
+- $[symbol]$ is [description] ([units])
+:::
+
+::: {.fragment .highlight-red}
+**The key insight:** [What this equation really tells us]
+:::
+
+::: {.notes}
+Walk through slowly. This is where understanding happens.
+:::
+
+---
+
+## [Visual/Figure Slide]
+
+{{< img [figure-id] >}}
+
+::: {.notes}
+[Description of what to point out in the figure]
+:::
+
+---
+
+## Prediction Question
+
+**Before I show you:** [Question that tests understanding]
+
+:::: {.columns}
+::: {.column width="50%"}
+A. [Option A]
+
+B. [Option B]
+:::
+
+::: {.column width="50%"}
+C. [Option C]
+
+D. [Option D]
+:::
+::::
+
+::: {.notes}
+Give students 30 seconds. Cold-call or use iClicker.
+Answer: [X]. Common error: [describe misconception]
+:::
+
+---
+
+## Concept Check
+
+::: {.quiz}
+[Question stem - clear and specific]
+
+- [ ] [Wrong answer with plausible reasoning]
+- [x] [Correct answer]
+- [ ] [Wrong answer - common misconception]
+- [ ] [Wrong answer]
+:::
+
+::: {.notes}
+Give students time to think. Press **C** to reveal answer.
+:::
+
+---
+
+## Worked Example
+
+**Problem:** [Clear problem statement]
+
+. . .
+
+**Step 1:** [First step with explanation]
+
+$$[Intermediate calculation]$$
+
+. . .
+
+**Step 2:** [Second step]
+
+$$[Final result]$$
+
+::: {.notes}
+Walk through each step. Ask "does this make sense?" at each stage.
+:::
+
+---
+
+## Two-Column Comparison
+
+:::: {.columns}
+::: {.column width="50%"}
+**[Option/Case A]**
+
+[Description or content]
+
+$$[Equation if applicable]$$
+:::
+
+::: {.column width="50%" .fragment}
+**[Option/Case B]**
+
+[Description or content]
+
+$$[Equation if applicable]$$
+:::
+::::
+
+::: {.fragment .mt-2}
+[Synthesis: What the comparison reveals]
+:::
+
+---
+
+## Key Annotation Example
+
+[Statement with key term highlighted using RoughNotation]
+
+[**Key Term**]{.rn rn-type="underline" rn-color="#ff6b6b"} means [definition].
+
+The [**important concept**]{.rn rn-type="box" rn-color="#4ecdc4"} shows us that [explanation].
+
+::: {.notes}
+Press **R** to trigger annotations one at a time.
+:::
+
+---
+
+## {.center}
+
+::: {.r-fit-text}
+[Second Major Section Title]
+:::
+
+*[Tagline]*
+
+---
+
+<!-- Add more slides following the patterns above -->
+
+---
+
+## Summary: Key Takeaways
+
+::: {.incremental}
+1. **[First takeaway]** — [Brief elaboration]
+2. **[Second takeaway]** — [Brief elaboration]
+3. **[Third takeaway]** — [Brief elaboration]
+:::
+
+---
+
+## The Takeaway {.center}
+
+If you forget everything else from today, remember this:
+
+::: {.fragment .fade-up}
+::: {.r-fit-text}
+**[Core message in ~5 words]**
+:::
+:::
+
+::: {.fragment .mt-2}
+[One sentence elaboration]
+:::
+
+::: {.notes}
+This is the core message. Make it memorable.
+:::
+
+---
+
+## Questions?
+
+Common questions at this point:
+
+::: {.incremental}
+- "[Anticipated question 1]"
+- "[Anticipated question 2]"
+- "[Anticipated question 3]"
+:::
+
+::: {.notes}
+Address these directly. Save time for actual questions.
+:::
+
+---
+
+## Looking Ahead
+
+**Next time:** [Preview of next lecture topic]
+
+**Before then:**
+
+- Read: [Reading assignment]
+- Try: [Practice problem or activity]
+
+::: {.notes}
+Connect to what's coming. Build continuity.
+:::
