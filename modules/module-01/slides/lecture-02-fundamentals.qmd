@@ -239,6 +239,87 @@ Frame as empowerment. "You're about to get superpowers."
 
 ---
 
+## Why we're doing this
+
+::: {.callout-note appearance="minimal"}
+### Math as a telescope 🔭
+Astronomy is the art of inferring physical reality from limited measurements.
+
+Today's superpower: **units + dimensions** catch mistakes *before* they become beliefs.
+:::
+
+::: {.incremental}
+- We usually can't touch the system — we observe light, motion, and time.
+- We build simplified models that connect measurements to physics.
+- We sanity-check **(dimensions, units, scaling, limits)** so we don't compute nonsense confidently.
+:::
+
+::: {.notes}
+Emphasize: sanity-checking is not "extra," it's the job. Normalize struggle as part of modeling.
+:::
+
+---
+
+## A quick disclaimer about "borrowed" equations
+
+::: {.callout-warning appearance="minimal"}
+### We will use a few equations *before* we derive them
+Later this semester (and in your physics sequence) you'll learn where they come from.
+
+**Rules for today**
+
+1. Treat them as **reliable tools** (like using a calculator before proving how transistors work).
+2. You do **not** need deep physical intuition yet.
+3. You *do* need to know what each symbol means, and what the equation is claiming.
+:::
+
+::: {.notes}
+This slide prevents "but we haven't learned this!" derailments and sets the epistemic norm:
+we can use trusted relations while building understanding over time.
+:::
+
+---
+
+## How to read any equation (without panic)
+
+::: {.callout-tip appearance="minimal"}
+### The decoding ritual (we'll use this all semester)
+For any equation, ask:
+:::
+
+::: {.incremental}
+1. **What does it predict?** (output)
+2. **What does it depend on?** (inputs)
+3. **What happens if a variable increases?** (direction + scaling)
+4. **What assumptions are hiding?** ("only if…")
+5. **Does it pass unit and limit checks?**
+:::
+
+::: {.notes}
+Tell them: this is your "modeling checklist." Repeat it often so it becomes automatic.
+:::
+
+---
+
+## The four-tool workflow
+
+::: {.callout-note appearance="minimal"}
+### Your survival kit 🧰
+:::
+
+::: {.incremental}
+1. **Dimensional analysis** → "Could this formula possibly be right?"
+2. **Ratio method** → "Compare without big-number pain."
+3. **Unit conversion** → "Translate SI ↔ CGS fluently."
+4. **Order-of-magnitude** → "Sanity-check reality."
+:::
+
+::: {.notes}
+One sentence linking the tools: DA is structure, ratios cancel, unit conversion is language, OOM is plausibility.
+:::
+
+---
+
 ## {.center}
 
 ::: {.r-fit-text}
@@ -327,26 +408,34 @@ You don't need a calculator to know something's broken.
 
 ## Prediction: Dimensions of $G$ {.smaller}
 
-Newton's law of gravity: $F = \frac{GMm}{r^2}$
-
-**Before I show you:** What dimensions must $G$ have?
-
 :::: {.columns}
 ::: {.column width="50%"}
-A. $[MLT^{-2}]$ (same as force)
+**Newton's law of gravity:**
+$$F = \frac{GMm}{r^2}$$
 
-B. $[M^{-1}L^3T^{-2}]$
+::: {.callout-tip .eq-gloss appearance="minimal"}
+**What's in this equation?**
+
+- $F$: gravitational force between two masses
+- $G$: gravitational constant (how strong is gravity?)
+- $M$: mass of the central object (e.g., star)
+- $m$: mass of the orbiting object (e.g., planet with $m \ll M$)
+- $r$: distance between the two masses
+:::
 :::
 
 ::: {.column width="50%"}
-C. $[L^3T^{-2}]$
-
-D. $[MT^{-2}]$
+{{< img planetary-orbit >}}
 :::
 ::::
 
+**Before I show you:** What dimensions must $G$ have?
+
+A. $[MLT^{-2}]$ &emsp; B. $[M^{-1}L^3T^{-2}]$ &emsp; C. $[L^3T^{-2}]$ &emsp; D. $[MT^{-2}]$
+
 ::: {.notes}
 Give students 30 seconds. Cold-call or use iClicker. Common error: forgetting the inverse mass. Answer is **B**.
+Point to the figure: "This shows an orbit — $M$ is the star, $m$ is the planet, $r$ is how far apart they are."
 :::
 
 ---
@@ -426,52 +515,227 @@ Yes. Using only dimensional analysis.
 
 ---
 
-## Case Study A: Planetary Orbits
+## Case A: Orbital period — setup
 
-{{< img case-a-orbits-1 >}}
+### What can the orbital period depend on?
+
+We want a formula for **orbital period** $P$: "time for one orbit."
+
+:::: {.columns}
+::: {.column width="55%"}
+**Ingredients (allowed today):**
+
+- Orbit size $r$ → $[L]$
+- Central mass $M$ → $[M]$
+- Gravity constant $G$ → $[M^{-1}L^{3}T^{-2}]$
+
+**Goal:**
+$$[P] = [T]$$
+:::
+
+::: {.column width="45%"}
+::: {.callout-tip .eq-gloss appearance="minimal"}
+**Equation meaning (gloss)**
+
+- $P$: how long the orbit takes
+- $r$: how big the orbit is
+- $M$: how much mass is pulling
+- $G$: how strongly mass gravitates
+:::
+:::
+::::
 
 ::: {.notes}
-17–18 min. Step 1: Identify ingredients and their dimensions.
+17–18 min. Remind: we are NOT solving the orbit. We're deducing how P scales with r and M.
 :::
 
 ---
 
-## Recovering Kepler's Third Law
+## Case A: Orbital period — solve (slow) {.smaller}
 
-{{< img case-a-orbits-2 >}}
+### Match dimensions to solve for exponents
+
+Assume:
+$$P \propto r^{a}M^{b}G^{c}$$
+
+::: {.incremental}
+Convert to dimensions:
+$$[T] = [L]^a[M]^b\left([M^{-1}L^3T^{-2}]\right)^c = [L]^{a+3c}[M]^{b-c}[T]^{-2c}$$
+
+Match with $[L]^0[M]^0[T]^1$:
+
+- $T:\; 1=-2c \Rightarrow c=-\tfrac12$
+- $M:\; 0=b-c \Rightarrow b=-\tfrac12$
+- $L:\; 0=a+3c \Rightarrow a=\tfrac32$
+
+Therefore:
+$$P \propto \sqrt{\frac{r^{3}}{GM}}$$
+:::
+
+::: {.callout-note appearance="minimal"}
+Dimensional analysis can't determine **pure numbers** like $2\pi$.
+:::
 
 ::: {.notes}
-18–20 min. Walk through each step. No calculus needed!
+18–20 min. Point out the "matching exponents" move explicitly. Students confuse units with dimensions—restate: [L] is "length-ness," not meters specifically.
 :::
 
 ---
 
-## Reading the Equation
+## Case A: Orbital period — interpretation
 
-{{< img case-a-orbits-3 >}}
+$$P \propto \sqrt{\frac{r^{3}}{GM}}$$
+
+:::: {.columns}
+::: {.column width="55%"}
+::: {.incremental}
+- $r \uparrow$ makes $P$ grow fast: $P \propto r^{3/2}$
+- $M \uparrow$ makes $P$ shrink: stronger gravity → faster orbit
+- Unit check intuition: bigger distance → longer time ✅
+:::
+:::
+
+::: {.column width="45%"}
+::: {.callout-tip .eq-gloss appearance="minimal"}
+**What it predicts**
+
+Given $r$, $M$, $G$, it predicts $P$.
+
+**What it's saying**
+
+"Farther orbits take much longer. More mass makes orbits faster."
+:::
+:::
+::::
+
+::: {.callout-note appearance="minimal"}
+Optional "later this semester" add-on:
+$$P = 2\pi\sqrt{\frac{r^{3}}{GM}} \quad \text{(exact for circular orbits)}$$
+:::
 
 ::: {.notes}
-20–21 min. The equation tells a story. Mass in denominator = stronger = faster. Distance in numerator = farther = slower.
+20–21 min. Mention hidden assumptions: roughly circular orbit, central mass dominates, Newtonian gravity.
 :::
 
 ---
 
-## Case Study B: Black Hole Event Horizon
+## Case B: Black hole horizon — setup
 
-{{< img case-b-blackhole-1 >}}
+### What sets the "point of no return"?
+
+We want a characteristic radius $R$ for a black hole (a length scale).
+
+:::: {.columns}
+::: {.column width="55%"}
+**Ingredients:**
+
+- Mass $M$ → $[M]$
+- Gravity $G$ → $[M^{-1}L^3T^{-2}]$
+- Speed of light $c$ → $[LT^{-1}]$
+
+**Goal:**
+$$[R]=[L]$$
+:::
+
+::: {.column width="45%"}
+::: {.callout-tip .eq-gloss appearance="minimal"}
+**Equation meaning (gloss)**
+
+- $c$: speed limit of the universe
+- if escape speed reaches $c$, light can't escape
+- $R$: the radius where that happens
+:::
+:::
+::::
 
 ::: {.notes}
-21–22 min. Different ingredients: now we need c because nothing escapes.
+21–22 min. Frame as "scale-setting": we're not doing GR, we're figuring out how the size must scale with mass.
 :::
 
 ---
 
-## The Schwarzschild Radius
+## Case B: Black hole horizon — solve (slow) {.smaller}
 
-{{< img case-b-blackhole-2 >}}
+Assume:
+$$R \propto G^{a}M^{b}c^{d}$$
+
+::: {.incremental}
+Dimensions:
+$$[L] =([M^{-1}L^3T^{-2}])^a[M]^b([LT^{-1}])^d = [L]^{3a+d}[M]^{-a+b}[T]^{-2a-d}$$
+
+Match with $[L]^1[M]^0[T]^0$:
+
+- $T:\;0=-2a-d \Rightarrow d=-2a$
+- $M:\;0=-a+b \Rightarrow b=a$
+- $L:\;1=3a+d=3a-2a \Rightarrow a=1$
+
+So:
+$$R \propto \frac{GM}{c^2}$$
+:::
+
+::: {.callout-note appearance="minimal"}
+Later-semester "exact" result (Schwarzschild, non-spinning, uncharged):
+$$R_s=\frac{2GM}{c^2}$$
+:::
 
 ::: {.notes}
-22–23 min. Einstein's General Relativity gives exactly this scaling. We got it without solving his field equations!
+22–23 min. Reinforce: DA gives scaling, not factors of 2. Name "Schwarzschild radius" once (no deep dive).
+:::
+
+---
+
+## Case B: Black hole horizon — interpretation
+
+$$R_s=\frac{2GM}{c^2}$$
+
+:::: {.columns}
+::: {.column width="55%"}
+::: {.incremental}
+- $M \uparrow$ → $R_s \uparrow$ **linearly**
+- bigger $c$ would shrink horizons (faster universe makes trapping harder)
+- this sets a **length scale** where escape becomes impossible
+:::
+:::
+
+::: {.column width="45%"}
+::: {.callout-tip .eq-gloss appearance="minimal"}
+**What it predicts**
+
+Given $M$, it predicts the black hole's horizon size.
+
+**What it's saying**
+
+"More mass → bigger region where gravity wins against light."
+:::
+:::
+::::
+
+::: {.notes}
+23–24 min. Call out assumptions gently: non-spinning/uncharged. Students love knowing there's more complexity later.
+:::
+
+---
+
+## Exit ticket (retrieval)
+
+::: {.incremental}
+1. If $F \propto \dfrac{GMm}{r^2}$, what are the dimensions of $F$?
+2. If the mass $M$ doubles, how does $R_s$ change?
+:::
+
+::: {.notes}
+Give 60–90 seconds silent think time. Then pair-share. Collect answers with a quick show-of-hands.
+:::
+
+---
+
+## Exit ticket — solutions
+
+1. $[F] = [MLT^{-2}]$
+2. $R_s \propto M$, so if $M$ doubles, $R_s$ doubles.
+
+::: {.notes}
+Make a point: "We did this without knowing any deep force law derivation—just dimensional consistency."
 :::
 
 ---

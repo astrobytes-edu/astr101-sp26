@@ -95,6 +95,12 @@ figures:
     module: 1
 
   # Case Study A: Planetary Orbits
+  planetary-orbit:
+    path: /assets/images/module-01/planetary-orbit.png
+    caption: "Planetary orbit with central star mass M and orbital radius r"
+    alt: "Diagram showing a planet orbiting a star, with labels for stellar mass M and orbital distance r"
+    module: 1
+
   case-a-orbits-1:
     path: /assets/images/module-01/case-A-planetary-orbits-dimensional-analysis-1.png
     caption: "Case Study A: Deriving orbital period from first principles"

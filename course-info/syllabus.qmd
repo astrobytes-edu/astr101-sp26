@@ -74,7 +74,7 @@ Directed toward students with a *strong interest* in science and mathematics. Th
 ::: {.callout-note icon=false}
 ## Core Course Throughline
 
-Astronomers collect photons for a living. The challenge: translate limited observations into physical understanding—build models, quantify what we know (and don't), test whether those models explain what we see. 
+Astronomers collect photons for a living. The challenge: translate limited observations into physical understanding — build models, quantify what we know (and don't), test whether those models explain what we see. 
 
 *Modern astronomy **is** astrophysics: inferring physical reality from constrained measurements.*
 Astrophysics is the interplay between theory and observation - theorists *predict*, observers *test*, and the loop continues.
@@ -83,15 +83,13 @@ Astrophysics is the interplay between theory and observation - theorists *predic
 
 ### Required Materials
 
-- **Required textbook:** Stan Owocki, *Fundamentals of Astrophysics*, **2nd Edition** ([Cambridge University Press](https://www.cambridge.org/9781009618007)).<br>
-  **ISBN:** 9781009618007 (paperback)
+- **Required textbook:** Stan Owocki, *Fundamentals of Astrophysics*, **2nd Edition** ([Cambridge University Press](https://www.cambridge.org/9781009618007); **ISBN:** 9781009618007)
 
 - **Required ed-tech:** iClicker (student access) <https://student.iclicker.com/> *(Required for in-class engagement)*
 
 - **Other supplies:** A calculator (non-smartphone) for exams and reliable access to Canvas and the course website.
 
 - **Day1Ready Access**: Course materials are provided digitally before classes begin and are free through the add/drop date (February 2, 2026). After that, your account is charged $21.75/unit unless you opt out by 11:59 pm on Feb 2 (see [shopaztecs.com/Day1Ready](https://shopaztecs.com/Day1Ready)).
-
 
 ## Course Learning Outcomes {#sec-outcomes}
 
@@ -105,7 +103,7 @@ By the end of this course, students will be able to:
 
 4. **Reason from initial conditions** — such as stellar mass and composition — to predict and explain stellar lifecycles, explicitly linking gravity, nuclear fusion, and energy balance to observed evolutionary outcomes.
 
-5. **Infer** the structure, mass distribution, and evolution of galaxies from **observational evidence — such as rotation curves and luminosity profiles — and evaluate the necessity of dark matter** in explaining galactic dynamics.
+5. **Infer** the structure, mass distribution, and evolution of galaxies from **observational evidence** — such as rotation curves and luminosity profiles — **and evaluate the necessity of dark matter** in explaining galactic dynamics.
 
 6. **Analyze cosmological observations and scaling relations** to develop a physically grounded understanding of the origin, evolution, and large-scale structure of the Universe, including the roles of dark energy and cosmic expansion.
 
@@ -131,8 +129,7 @@ By the end of this course, students will be able to:
 - **Midterm Exam 2:** Thursday, April 16  
 - **Final Exam:** Thursday, May 7 — 10:30 am–12:30 pm — LH 245  
 
-The tentative day-by-day schedule (topics, readings, homework calendar) is on the course website.<br>
-[Click here for the Course Schedule.](./schedule.qmd)
+The tentative day-by-day schedule (topics, readings, homework calendar) is on the course website. [Click here for the Course Schedule.](./schedule.qmd)
 
 ### Grading scale {#sec-grade-scale}
 
@@ -158,8 +155,7 @@ grades and final course grades. These percentages represent guaranteed threshold
 
 ### Course Components {#sec-components}
 
-Per SDSU policy, students are expected to spend at least 6 hours per week (a minimum of 2 hours per course credit hour/unit) on coursework outside of class, including reading, homework, and exam preparation for this 3-unit course.<br> 
-[[Click here for SDSU’s explanation of *Credit Hour or Unit*.](https://catalog.sdsu.edu/content.php?catoid=10&navoid=924#credit-hour-or-unit>).
+Per SDSU policy, students are expected to spend at least 6 hours per week (a minimum of 2 hours per course credit hour/unit) on coursework outside of class, including reading, homework, and exam preparation for this 3-unit course. [Click here for SDSU’s explanation of *Credit Hour or Unit*.](https://catalog.sdsu.edu/content.php?catoid=10&navoid=924#credit-hour-or-unit>).
 
 **In this section:**
 
@@ -170,40 +166,40 @@ Per SDSU policy, students are expected to spend at least 6 hours per week (a min
 
 #### Scholarly Engagement (10%) {#sec-engagement}
 
-Scholarly engagement in this course means making your reasoning *visible*. In practice, that looks like explaining what an equation means in words, carrying units through your work, stating assumptions out loud (even when they feel “obvious”), and being willing to test and revise a claim when evidence disagrees. These habits are what turn astronomy from memorizing facts into doing inference from data — and they’re also what make your learning robust in an era where AI can generate fluent text but can’t replace *your* physical judgment.
+Scholarly engagement in this course means making your reasoning *visible*. In practice, that looks like explaining what an equation means in words, carrying units through your work, stating assumptions out loud (even when they feel “obvious”), and being willing to test and revise a claim when evidence disagrees. These habits are what turn astronomy from memorizing facts into doing inference from data — and they are also what make your learning robust in an era where AI can generate fluent text but can’t replace *your* physical judgment.
 
 Engagement is measured via `iClicker` responses plus observable weekly behaviors.
 
-| **Instructor Score** | **Observable weekly behaviors** |
+| Instructor Score | Observable weekly behaviors |
 |-|---|
-| 5/5 | Prepared (specific questions on readings/notes), engaged in `iClicker` + activities, contributes to discussion, helps peers reason through problems, uses evidence/units/assumptions in explanations |
-| 4/5 | Prepared, steady effort in activities, contributes occasionally, collaborates respectfully, asks questions when stuck |
-| 3/5 | Inconsistent prep, participates when prompted, limited collaboration/discussion contribution |
-| 2/5 | Frequently unprepared or disengaged, minimal contribution to activities, distracts self/others |
-| 1/5 | Rare attendance/engagement, unprepared when present, does not participate in activities |
-| 0/5 | Habitually absent, no engagement |
+| 5/5 | Prepared (specific questions on readings/notes), engaged in `iClicker` + activities, contributes to discussion, helps peers reason through problems, uses evidence/units/assumptions in explanations. |
+| 4/5 | Prepared, steady effort in activities, contributes occasionally, collaborates respectfully, asks questions when stuck. |
+| 3/5 | Inconsistent prep, participates when prompted, limited collaboration/discussion contribution. |
+| 2/5 | Frequently unprepared or disengaged, minimal contribution to activities, distracts self/others. |
+| 1/5 | Rare attendance/engagement, unprepared when present, does not participate in activities. |
+| 0/5 | Habitually absent, no engagement. |
 
 **Note:** This rubric is a guideline. Your score reflects overall scholarly contribution, not a single “style” of being present.
 
-**Classroom Norms & Attendance (Professional Scientific Community):** We are all members of a professional academic community. Treat classmates and the instructor with respect; spirited, courteous debate about scientific ideas is welcome, but disrespectful behavior is not. Because active reasoning is the point of being in the room, phones and other non-course device use during class are not permitted — off-task use is distracting and will negatively affect your Scholarly Engagement score.
+**Classroom Norms & Attendance (Professional Scientific Community):** We are all members of a professional academic community. Treat classmates and the instructor with respect. Spirited, courteous debate about scientific ideas is welcome, but disrespectful behavior is not. Because active reasoning is the point of being in the room, phones and other non-course device use during class are not permitted — off-task use is distracting and will negatively affect your Scholarly Engagement score.
 
 Formal attendance is not taken, but you cannot earn Scholarly Engagement credit if you are not present and participating. Please arrive on time; repeated tardiness is disruptive and will negatively affect your Scholarly Engagement score.
 
 #### Weekly Homework + Grade Memos (15%) {#sec-homework}
 
-Homework builds quantitative fluency and model-based reasoning. Expect multi-step problems and conceptual questions where **units, assumptions, and physical interpretation** matter as much as the final number. The purpose of homework is **exam preparation and skill-building** through consistent, high-quality practice — not busy work.
+Homework builds quantitative fluency and model-based reasoning. Expect multi-step problems and conceptual questions where **units, assumptions, and physical interpretation** matter as much as the final number. The purpose of homework is **exam preparation and skill-building** through consistent, high-quality practice — *not busy work*.
 
 **Submission workflow (two-stage):**
 
 1. **Homework Solutions — due Monday 11:59 pm PT (Canvas)**  
    - Must be uploaded as **one single, readable PDF** (not a photo dump).  
-   - Organize clearly; show work; label final answers.  
+   - Organize clearly. Show you work. Label final answers.  
    - **No late submissions:** Instructor solutions will be posted **Tuesday morning**, so late work cannot be accepted.  
    - **Lowest homework score will be dropped** (to cover one off-week or emergency).
 
 2. **Self-Assessment + Reflection (“Grade Memo”) — due Wednesday 11:59 pm PT (Canvas)**  
    - You will **self-assess (self-grade)** your work using the **detailed homework rubric** and the posted solutions/guidance.  
-   - You will submit a brief **grade memo (~250–400 words)** that includes:
+   - You will submit a brief **grade memo** that includes:
      - what you got right (and why),
      - what broke (and where),
      - what you learned,
@@ -233,13 +229,11 @@ Growth Memos are short, structured reflections (“exam wrappers”) that build 
 
 You will submit **three** Growth Memos:
 
-- **GM1** — after Midterm 1 (Due: TBD)
-- **GM2** — after Midterm 2 (Due: TBD)
-- **GM3** — pre-final synthesis memo (Due: TBD)
+- **Growth Memo 1** — after Midterm 1 (Due: TBD)
+- **Growth Memo 2** — after Midterm 2 (Due: TBD)
+- **Growth Memo 3** — pre-final synthesis memo (Due: TBD)
 
-<!-- TODO: Add due dates once exam dates are finalized (recommended: GM1/GM2 due ~1 week after the midterm is returned; GM3 due ~7 days before the final). -->
-
-**Format:** You must use the **provided Growth Memo Template** (posted on the course website/Canvas). Each memo must include: evidence from your work, 2–3 recurring patterns + likely causes, 2–3 concrete next-step habits (“When I…, I will…”), a verification plan, and a brief learning + AI reflection (even if “no AI used”).
+**Format:** You must use the **provided Growth Memo Template** (posted on the course website). Each memo must include: evidence from your work, 2–3 recurring patterns + likely causes, 2–3 concrete next-step habits (“When I…, I will…”), a verification plan, and a brief learning + AI reflection (even if “no AI used”).
 
 ##### Grading (Instructor 0–5; averaged)
 
@@ -277,13 +271,13 @@ All submitted work in this course must reflect **your own understanding**. Colla
 - You are responsible for correctness and for being able to reproduce any reasoning you submit.
 
 **Allowed (study support):**
-- Asking questions to clarify *your own notes* or *assigned readings*
-- Generating practice questions (not answers to assigned problems)
-- Explaining concepts at a different level *for studying*, not for submission
+- Asking questions to clarify *your own notes* or *assigned readings*.
+- Generating practice questions (not answers to assigned problems).
+- Explaining concepts at a different level *for studying*, not for submission.
 
 **Not allowed (graded work):**
-- Generating or rewriting homework solutions, derivations, or written explanations you submit
-- Submitting AI-generated reasoning you cannot reproduce on your own
+- Generating or rewriting homework solutions, derivations, or written explanations you submit.
+- Submitting AI-generated reasoning you cannot reproduce on your own.
 :::
 
 Generative AI can produce fluent explanations and plausible-looking solutions that are subtly wrong. In a quantitative, model-based course, “sounds right” is not a standard of truth. If you don’t have the physics and quantitative discipline to verify an AI output, you risk learning the wrong thing confidently.
@@ -305,11 +299,11 @@ If you encounter difficulties with the assignments or find yourself falling behi
 - Posting your questions on the course *Canvas* discussion page.
 - Speaking with the instructor during class or office hours (preferred).
 - Collaborating with classmates (while ensuring your final submission reflects your own understanding).
-- Attending SDSU’s *Astronomy Help Room* for free tutoring (schedule posted on the Canvas course page).
+- Attending SDSU’s *Astronomy Help Room* for free tutoring (schedule posted on Canvas).
 
 ### Getting Help (Office Hours) {#sec-getting-help}
 
-Office hours are for learning — bring what you’ve tried (notes, attempts, questions) and we’ll work from there. I’ll often guide you by asking questions so you build your own solution skills. You’re welcome to come even if you’re not sure what to ask or have non-course related questions.
+Office hours are for learning — bring what you’ve tried (notes, attempts, questions) and we’ll work from there. I’ll often guide you by asking questions so you build your own problem-solving skills. You’re welcome to come even if you’re not sure what to ask or have non-course related questions.
 
 ## Fostering a Growth Mindset {#sec-growth-mindset}
 
