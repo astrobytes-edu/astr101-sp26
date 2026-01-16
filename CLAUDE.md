@@ -127,6 +127,29 @@ ls _site/                  # Verify files rendered
 grep -r "404" _site/       # Check for broken links
 ```
 
+## LLM Lab Protocol (MANDATORY)
+
+**Read and follow `docs/llm-lab-protocol.md` at the start of every session.**
+
+This is non-negotiable. The protocol prevents hallucinated structure, preserves invariants, and keeps you from lying politely.
+
+**Claude's Role:**
+```text
+Your role: Adversarial reviewer and refactor analyst.
+Primary failure mode to avoid: aesthetic coherence overriding correctness.
+```
+
+## Documentation Workflow
+
+| Directory | Purpose | Naming Convention |
+|-----------|---------|-------------------|
+| `docs/contracts/` | Authoritative specifications | `<topic>-playbook.md` |
+| `docs/audits/` | Compliance audits against contracts | `YYYY-MM-DD-<contract>-audit.md` |
+| `docs/decisions/` | Architecture Decision Records | `NNNN-<decision-title>.md` |
+| `docs/plans/` | Implementation plans | `YYYY-MM-DD-<feature>-plan.md` |
+
+**Implementation plans:** Use the `superpowers:writing-plans` skill to generate detailed, bite-sized implementation plans saved to `docs/plans/`.
+
 ## When in Doubt
 **STOP. ASK. VERIFY.**
 
