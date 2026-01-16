@@ -1,18 +1,57 @@
+# modules/module-01/slides/_metadata.yml
+# Shared RevealJS defaults for all lectures in this module
+# Per-lecture overrides go in individual .qmd frontmatter
+
 format:
   revealjs:
-    date-format: "MMMM D, YYYY"
+    # Theme: built-in simple + custom SCSS overrides
     theme: [simple, ../../../assets/theme/slides/theme.scss]
     css: /assets/theme/slides/theme.css
     logo: /assets/astr201-logo.png
-    slide-number: c/t
+    date-format: "MMMM D, YYYY"
+
+    # Slide dimensions (16:9 aspect, optimized for projection)
+    width: 1280
+    height: 720
+    margin: 0.06
+
+    # Navigation
     center: false
+    navigation-mode: linear
+    controls: true
+    progress: true
+    overview: true
+    slide-number: c/t
+
+    # Transitions
     transition: fade
-    # optionally:
-    # logo: /assets/astr201-logo.svg
-    # favicon: /assets/astr201-favicon.ico
-    # toc: true
-    # toc-depth: 2
-    # toc-slide-class: toc-slide
-    # incremental: true
-    # self-contained: true
-    # scrollable: true
+    background-transition: fade
+
+    # Deep-linking (shareable slide URLs)
+    hash: true
+
+    # Teaching niceties
+    menu: true
+    preview-links: true
+
+    # Code ergonomics
+    code-copy: true
+    code-line-numbers: true
+    code-overflow: wrap
+
+    # PDF printing
+    pdf-max-pages-per-slide: 1
+    pdf-separate-fragments: false
+
+    # Plugins (enable per-lecture as needed)
+    chalkboard: false
+
+    # Auto-animate (for equation/diagram morphing)
+    auto-animate: true
+    auto-animate-duration: 0.8
+
+execute:
+  freeze: auto
+  echo: false
+  warning: false
+  message: false
