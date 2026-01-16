@@ -5,11 +5,13 @@ format:
     toc: false
 ---
 
-::: {.callout-important}
-## Start here
+![](assets/astr201-logo.png)
 
-- Read the [Syllabus](course/syllabus.qmd).
-- Check the [Course Schedule](course/schedule.qmd) each week for what’s due.
+::: {.callout-hero}
+## Start Here
+
+- Read the [Syllabus](course-info/syllabus.qmd).
+- Check the [Course Schedule](course-info/schedule.qmd) each week for what's due.
 - Submit all work on Canvas (link on Canvas/announcements).
 :::
 
@@ -17,22 +19,35 @@ format:
 
 ASTR 201 is a **quantitative** astronomy course: we use math and physics to infer what the universe is doing from limited observations.
 
-## Quick links
+## Quick Navigation
 
-:::: {.columns}
-::: {.column width="50%"}
-- [Syllabus](course/syllabus.qmd)
-- [Schedule](course/schedule.qmd)
-- [Grading & assessments (syllabus)](course/syllabus.qmd#sec-grading)
-- [Academic integrity & AI policy (syllabus)](course/syllabus.qmd#sec-ai-policy)
+::: {.dashboard-grid}
+
+::: {.dashboard-tile}
+[<span class="dashboard-tile-icon">📋</span>[Syllabus]{.dashboard-tile-title}](course-info/syllabus.qmd){.dashboard-tile-link}
 :::
 
-::: {.column width="50%"}
-- [Modules](modules/index.qmd)
-- [Slides](slides/index.qmd)
-- [Handouts](handouts/index.qmd)
+::: {.dashboard-tile}
+[<span class="dashboard-tile-icon">📅</span>[Schedule]{.dashboard-tile-title}](course-info/schedule.qmd){.dashboard-tile-link}
 :::
-::::
+
+::: {.dashboard-tile}
+[<span class="dashboard-tile-icon">📝</span>[Homework]{.dashboard-tile-title}](homework/index.qmd){.dashboard-tile-link}
+:::
+
+::: {.dashboard-tile}
+[<span class="dashboard-tile-icon">📄</span>[Handouts]{.dashboard-tile-title}](handouts/index.qmd){.dashboard-tile-link}
+:::
+
+::: {.dashboard-tile}
+[<span class="dashboard-tile-icon">🔭</span>[Explore]{.dashboard-tile-title}](explore/index.qmd){.dashboard-tile-link}
+:::
+
+::: {.dashboard-tile}
+[<span class="dashboard-tile-icon">🆘</span>[Get Help]{.dashboard-tile-title}](course-info/syllabus.qmd#sec-getting-help){.dashboard-tile-link}
+:::
+
+:::
 
 ## How to succeed in this course
 

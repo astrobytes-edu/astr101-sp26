@@ -1,0 +1,15 @@
+<% for (const item of items) { %>
+<div class="reading-card">
+  <h3 class="reading-card-title"><%= item.title %></h3>
+  <% if (item.source) { %>
+  <span class="reading-card-source"><%= item.source %></span>
+  <% } %>
+  <span class="reading-card-date">Assigned: <%= item.date %></span>
+  <p class="reading-card-summary"><%= item.description %></p>
+  <% if (item.path) { %>
+  <a href="<%= item.path %>" class="reading-card-link">
+    View Details &rarr;
+  </a>
+  <% } %>
+</div>
+<% } %>

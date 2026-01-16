@@ -1,0 +1,13 @@
+<% for (const item of items) { %>
+<div class="video-card">
+  <h3 class="video-card-title"><%= item.title %></h3>
+  <span class="video-card-date"><%= item.date %></span>
+  <% if (item.duration) { %>
+  <span class="video-card-duration"><%= item.duration %></span>
+  <% } %>
+  <p class="video-card-summary"><%= item.description %></p>
+  <a href="<%= item.path %>" class="video-card-link">
+    Watch Video &rarr;
+  </a>
+</div>
+<% } %>

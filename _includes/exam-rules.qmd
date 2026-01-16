@@ -1,0 +1,9 @@
+::: {.callout-important}
+## Exam Rules
+
+- **Closed-note and closed-book**
+- **Calculator allowed** (no phones/smartwatches)
+- **Formula sheet provided** with the exam
+- Focus on **first-principles reasoning**: connect observables to physical models, justify steps, explain what results *mean* physically
+- **No make-up exams** except for serious, documented emergencies
+:::

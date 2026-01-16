@@ -1,0 +1,20 @@
+::: {.callout-note}
+## How to Submit
+
+**Homework Solutions — due Monday 11:59 pm PT**
+
+1. Upload as **one single, readable PDF** (not a photo dump)
+2. Organize clearly; show work; label final answers
+3. Include units and state assumptions
+
+**Grade Memo — due Wednesday 11:59 pm PT**
+
+1. Self-assess using the rubric and posted solutions
+2. Write ~250–400 words covering:
+   - What you got right (and why)
+   - What broke (and where)
+   - What you learned
+   - What you'll do differently
+3. Include per-problem self-rating (1–5)
+4. Include AI/collaboration disclosure
+:::

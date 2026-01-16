@@ -1,0 +1,10 @@
+<% for (const item of items) { %>
+<div class="lecture-card">
+  <h3 class="lecture-card-title"><%= item.title %></h3>
+  <span class="lecture-card-date"><%= item.date %></span>
+  <p class="lecture-card-summary"><%= item.description %></p>
+  <a href="<%= item.path %>" target="_blank" rel="noopener" class="lecture-card-link">
+    View Slides &rarr;
+  </a>
+</div>
+<% } %>

@@ -1,0 +1,15 @@
+<% for (const item of items) { %>
+<div class="resource-card">
+  <h3 class="resource-card-title"><%= item.title %></h3>
+  <% if (item.source) { %>
+  <span class="resource-card-source"><%= item.source %></span>
+  <% } %>
+  <% if (item.category) { %>
+  <span class="resource-card-category"><%= item.category %></span>
+  <% } %>
+  <p class="resource-card-summary"><%= item.description %></p>
+  <a href="<%= item.path %>" class="resource-card-link">
+    View Resource &rarr;
+  </a>
+</div>
+<% } %>

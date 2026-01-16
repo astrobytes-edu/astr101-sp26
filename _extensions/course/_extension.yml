@@ -1,0 +1,6 @@
+title: Course Shortcodes
+author: ASTR 201
+version: 1.0.0
+contributes:
+  shortcodes:
+    - shortcodes.lua

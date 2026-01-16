@@ -1,0 +1,8 @@
+| Component | Weight |
+|---|-:|
+| Scholarly Engagement (iClicker + in-class work) | 10% |
+| Homework + Grade Memos | 15% |
+| Growth Memos (3) | 10% |
+| Midterm Exam 1 | 15% |
+| Midterm Exam 2 | 15% |
+| Final Exam (cumulative) | 35% |

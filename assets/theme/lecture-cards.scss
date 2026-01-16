@@ -1,0 +1,343 @@
+/*-- scss:defaults --*/
+// ASTR 201 Document Cards — Reusable across course sites
+// Design tokens imported from _tokens.scss — edit there for site-wide changes
+
+@import 'tokens';
+
+/*-- scss:rules --*/
+
+// === SHARED GRID (all card types) ===
+.lecture-grid,
+.homework-grid,
+.solution-grid,
+.exam-grid,
+.reading-grid,
+.module-grid,
+.handout-grid,
+.document-grid,
+.resource-grid,
+.video-grid,
+.podcast-grid,
+.project-grid,
+.infographic-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+// === BASE CARD MIXIN ===
+@mixin card-base($accent-color) {
+  background: $surface-light;
+  border: 1px solid $border-light;
+  border-left: 4px solid $accent-color;
+  border-radius: $radius-md;
+  padding: 1rem;
+  transition: transform 120ms ease, background-color 120ms ease;
+
+  &:hover {
+    transform: translateY(-1px);
+  }
+}
+
+@mixin card-title {
+  margin: 0 0 0.25rem 0;
+  color: inherit;
+  font-weight: 650;
+}
+
+@mixin card-date {
+  display: block;
+  margin: 0 0 0.5rem 0;
+  color: $muted-light;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+@mixin card-summary {
+  margin: 0 0 0.75rem 0;
+  line-height: 1.5;
+}
+
+@mixin card-link {
+  color: $teal-light;
+  font-weight: 600;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+// === LECTURE CARDS (Indigo accent) ===
+.lecture-card {
+  @include card-base($indigo-light);
+}
+.lecture-card-title { @include card-title; }
+.lecture-card-date { @include card-date; }
+.lecture-card-summary { @include card-summary; }
+.lecture-card-link { @include card-link; }
+
+// === HOMEWORK CARDS (Teal accent) ===
+.homework-card {
+  @include card-base($teal-light);
+}
+.homework-card-title { @include card-title; }
+.homework-card-date { @include card-date; }
+.homework-card-summary { @include card-summary; }
+.homework-card-link { @include card-link; }
+
+// === SOLUTION CARDS (Gold accent) ===
+.solution-card {
+  @include card-base($gold-light);
+}
+.solution-card-title { @include card-title; }
+.solution-card-date { @include card-date; }
+.solution-card-summary { @include card-summary; }
+.solution-card-link { @include card-link; }
+
+// === EXAM CARDS (Rose accent) ===
+.exam-card {
+  @include card-base($rose-light);
+}
+.exam-card-title { @include card-title; }
+.exam-card-date { @include card-date; }
+.exam-card-location {
+  display: block;
+  margin: 0 0 0.5rem 0;
+  color: $muted-light;
+  font-size: 0.9rem;
+  font-style: italic;
+}
+.exam-card-summary { @include card-summary; }
+.exam-card-link { @include card-link; }
+
+// === READING CARDS (Indigo accent, lighter) ===
+.reading-card {
+  @include card-base($indigo-light);
+  border-left-width: 3px;
+}
+.reading-card-title { @include card-title; }
+.reading-card-source {
+  display: block;
+  margin: 0 0 0.25rem 0;
+  color: $muted-light;
+  font-size: 0.85rem;
+  font-style: italic;
+}
+.reading-card-date { @include card-date; }
+.reading-card-summary { @include card-summary; }
+.reading-card-link { @include card-link; }
+
+// === MODULE CARDS (Teal accent) ===
+.module-card {
+  @include card-base($teal-light);
+}
+.module-card-title { @include card-title; }
+.module-card-weeks { @include card-date; }
+.module-card-summary { @include card-summary; }
+.module-card-link { @include card-link; }
+
+// === HANDOUT CARDS (Gold accent) ===
+.handout-card {
+  @include card-base($gold-light);
+}
+.handout-card-title { @include card-title; }
+.handout-card-date { @include card-date; }
+.handout-card-summary { @include card-summary; }
+.handout-card-link { @include card-link; }
+
+// === DOCUMENT CARDS (Slate accent - generic fallback) ===
+.document-card {
+  @include card-base($slate-light);
+}
+.document-card-title { @include card-title; }
+.document-card-date { @include card-date; }
+.document-card-summary { @include card-summary; }
+.document-card-link { @include card-link; }
+
+// === RESOURCE CARDS (Teal accent) ===
+.resource-card {
+  @include card-base($teal-light);
+}
+.resource-card-title { @include card-title; }
+.resource-card-source {
+  display: block;
+  margin: 0 0 0.25rem 0;
+  color: $muted-light;
+  font-size: 0.85rem;
+  font-style: italic;
+}
+.resource-card-category {
+  display: inline-block;
+  margin: 0 0 0.5rem 0;
+  padding: 0.15rem 0.5rem;
+  background: rgba($teal-light, 0.1);
+  border-radius: 4px;
+  color: $teal-light;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+.resource-card-summary { @include card-summary; }
+.resource-card-link { @include card-link; }
+
+// === VIDEO CARDS (Rose accent) ===
+.video-card {
+  @include card-base($rose-light);
+}
+.video-card-title { @include card-title; }
+.video-card-date { @include card-date; }
+.video-card-duration {
+  display: inline-block;
+  margin: 0 0 0.5rem 0;
+  color: $muted-light;
+  font-size: 0.85rem;
+}
+.video-card-summary { @include card-summary; }
+.video-card-link { @include card-link; }
+
+// === PODCAST CARDS (Rose accent) ===
+.podcast-card {
+  @include card-base($rose-light);
+}
+.podcast-card-title { @include card-title; }
+.podcast-card-date { @include card-date; }
+.podcast-card-duration {
+  display: inline-block;
+  margin-right: 0.75rem;
+  color: $muted-light;
+  font-size: 0.85rem;
+}
+.podcast-card-episode {
+  display: inline-block;
+  margin: 0 0 0.5rem 0;
+  color: $muted-light;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+.podcast-card-summary { @include card-summary; }
+.podcast-card-link { @include card-link; }
+
+// === PROJECT CARDS (Gold accent) ===
+.project-card {
+  @include card-base($gold-light);
+}
+.project-card-title { @include card-title; }
+.project-card-date { @include card-date; }
+.project-card-phase {
+  display: inline-block;
+  margin: 0 0 0.5rem 0;
+  padding: 0.15rem 0.5rem;
+  background: rgba($gold-light, 0.15);
+  border-radius: 4px;
+  color: $gold-light;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+.project-card-summary { @include card-summary; }
+.project-card-link { @include card-link; }
+
+// === INFOGRAPHIC CARDS (Indigo accent) ===
+.infographic-card {
+  @include card-base($indigo-light);
+}
+.infographic-card-title { @include card-title; }
+.infographic-card-date { @include card-date; }
+.infographic-card-topic {
+  display: inline-block;
+  margin: 0 0 0.5rem 0;
+  padding: 0.15rem 0.5rem;
+  background: rgba($indigo-light, 0.1);
+  border-radius: 4px;
+  color: $indigo-light;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+.infographic-card-summary { @include card-summary; }
+.infographic-card-link { @include card-link; }
+
+// === DARK MODE OVERRIDES ===
+[data-bs-theme="dark"] {
+  .lecture-card,
+  .homework-card,
+  .solution-card,
+  .exam-card,
+  .reading-card,
+  .module-card,
+  .handout-card,
+  .document-card,
+  .resource-card,
+  .video-card,
+  .podcast-card,
+  .project-card,
+  .infographic-card {
+    background: $surface-dark;
+    border-color: $border-dark;
+  }
+
+  .lecture-card { border-left-color: $indigo-dark; }
+  .homework-card { border-left-color: $teal-dark; }
+  .solution-card { border-left-color: $gold-dark; }
+  .exam-card { border-left-color: $rose-dark; }
+  .reading-card { border-left-color: $indigo-dark; }
+  .module-card { border-left-color: $teal-dark; }
+  .handout-card { border-left-color: $gold-dark; }
+  .document-card { border-left-color: $slate-dark; }
+  .resource-card { border-left-color: $teal-dark; }
+  .video-card { border-left-color: $rose-dark; }
+  .podcast-card { border-left-color: $rose-dark; }
+  .project-card { border-left-color: $gold-dark; }
+  .infographic-card { border-left-color: $indigo-dark; }
+
+  .lecture-card-date,
+  .homework-card-date,
+  .solution-card-date,
+  .exam-card-date,
+  .exam-card-location,
+  .reading-card-date,
+  .reading-card-source,
+  .module-card-weeks,
+  .handout-card-date,
+  .document-card-date,
+  .resource-card-source,
+  .video-card-date,
+  .video-card-duration,
+  .podcast-card-date,
+  .podcast-card-duration,
+  .podcast-card-episode,
+  .project-card-date,
+  .infographic-card-date {
+    color: $muted-dark;
+  }
+
+  .resource-card-category {
+    background: rgba($teal-dark, 0.15);
+    color: $teal-dark;
+  }
+
+  .project-card-phase {
+    background: rgba($gold-dark, 0.15);
+    color: $gold-dark;
+  }
+
+  .infographic-card-topic {
+    background: rgba($indigo-dark, 0.15);
+    color: $indigo-dark;
+  }
+
+  .lecture-card-link,
+  .homework-card-link,
+  .solution-card-link,
+  .exam-card-link,
+  .reading-card-link,
+  .module-card-link,
+  .handout-card-link,
+  .document-card-link,
+  .resource-card-link,
+  .video-card-link,
+  .podcast-card-link,
+  .project-card-link,
+  .infographic-card-link {
+    color: $teal-dark;
+  }
+}

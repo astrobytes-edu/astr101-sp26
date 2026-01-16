@@ -1,0 +1,8 @@
+::: {.callout-tip}
+## Getting Help
+
+- **Office hours:** {{< meta params.office-hours >}} in {{< meta params.office >}}
+- **Email:** [{{< meta params.email >}}](mailto:{{< meta params.email >}}) (include "{{< meta params.course-code >}}" in subject)
+- **Canvas discussions:** Post questions for classmates + instructor
+- **Astronomy Help Room:** Free tutoring (schedule on Canvas)
+:::

@@ -1,0 +1,16 @@
+<% for (const item of items) { %>
+<div class="podcast-card">
+  <h3 class="podcast-card-title"><%= item.title %></h3>
+  <span class="podcast-card-date"><%= item.date %></span>
+  <% if (item.duration) { %>
+  <span class="podcast-card-duration"><%= item.duration %></span>
+  <% } %>
+  <% if (item.episode) { %>
+  <span class="podcast-card-episode">Episode <%= item.episode %></span>
+  <% } %>
+  <p class="podcast-card-summary"><%= item.description %></p>
+  <a href="<%= item.path %>" class="podcast-card-link">
+    Listen Now &rarr;
+  </a>
+</div>
+<% } %>

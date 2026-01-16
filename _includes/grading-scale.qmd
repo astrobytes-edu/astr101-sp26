@@ -1,0 +1,16 @@
+| Letter grade | Percent range | Explanation |
+|:--|:---|:----|
+| A | 93–100% | Outstanding |
+| A- | 90–92% |  |
+| B+ | 87–89% |  |
+| B | 83–86% | Praiseworthy |
+| B- | 80–82% |  |
+| C+ | 77–79% |  |
+| C | 73–76% | Average |
+| C- | 70–72% |  |
+| D+ | 67–69% |  |
+| D | 63–66% | Minimally Passing |
+| D- | 60–62% |  |
+| F | Below 60% | Failure |
+
+*These percentages represent guaranteed thresholds—earning the stated percentage guarantees at least that grade. The instructor reserves the right to adjust borderline grades upward based on effort, improvement, and engagement.*

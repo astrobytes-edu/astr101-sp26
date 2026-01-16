@@ -1,0 +1,25 @@
+# Student Profile Configuration
+# Render with: quarto render --profile student
+# This is the DEFAULT profile (public website)
+
+# Override params for student view
+params:
+  show-solutions: false
+  show-answer-keys: false
+  show-instructor-notes: false
+
+# Student website title
+website:
+  title: "ASTR 201: Astronomy for Science Majors (Spring 2026)"
+
+# Student-specific rendering
+format:
+  html:
+    # Hide instructor-only content
+    include-in-header:
+      - text: |
+          <style>
+          .instructor-only { display: none !important; }
+          .solution-block { display: none !important; }
+          .answer-key { display: none !important; }
+          </style>

@@ -1,11 +1,59 @@
+# ============================================================
+# Course Parameters (Single Source of Truth)
+# ============================================================
+# Change these values once; they propagate everywhere via
+# {{< meta params.X >}} in any .qmd file.
+
+params:
+  # Course identity
+  course-code: "ASTR 201"
+  course-title: "Astronomy for Science Majors"
+  semester: "Spring 2026"
+
+  # Instructor
+  instructor: "Dr. Anna Rosen"
+  email: "alrosen@sdsu.edu"
+  office: "Physics 239"
+  office-hours: "Fridays 11:00 am–12:00 pm (and by appointment)"
+
+  # Class logistics
+  class-time: "Tues/Thurs 12:30–1:45 pm"
+  location: "LH 245"
+
+  # URLs
+  website-url: "https://astrobytes-edu.github.io/astr201-sp26"
+  canvas-url: "https://sdsu.instructure.com"
+
+  # Textbook
+  textbook: "Stan Owocki, *Fundamentals of Astrophysics*, 2nd Edition"
+  textbook-isbn: "9781009618007"
+
+  # Assets (for includes)
+  logo: "assets/astr201-logo.png"
+
+# ============================================================
+
+# Profiles for different audiences
+# Usage: quarto render --profile instructor
+profile:
+  default: student
+  group:
+    - student
+    - instructor
+
+# ============================================================
+
 project:
   type: website
   render:
     - index.qmd
-    - course/*.qmd
+    - course-info/*.qmd
     - handouts/*.qmd
     - modules/*.qmd
     - slides/*.qmd
+    - homework/*.qmd
+    - exams/*.qmd
+    - explore/*.qmd
 
 website:
   title: "ASTR 201: Astronomy for Science Majors (Spring 2026)"
@@ -14,42 +62,86 @@ website:
   sidebar:
     style: "docked"
     search: true
+    collapse-level: 1
+    title: "ASTR 201: Astronomy for Science Majors"
     contents:
       - href: index.qmd
         text: Home
 
-      - section: "Course"
+      - section: "Course Info"
         contents:
-          - course/syllabus.qmd
-          - course/schedule.qmd
+          - course-info/syllabus.qmd
+          - course-info/why-astr201-is-different.qmd
+          - course-info/schedule.qmd
 
-      - section: "Modules"
+      - section: "Module 1: Foundations"
+        href: modules/module-01.qmd
         contents:
-          - modules/index.qmd
+          - slides/lecture-01-course-overview.qmd
+          - slides/lecture-02-fundamentals.qmd
 
-      - section: "Slides"
+      - section: "Module 2: Inferring Star Properties"
+        href: modules/module-02.qmd
+        contents: []
+
+      - section: "Module 3: Stellar Structure & Evolution"
+        href: modules/module-03.qmd
+        contents: []
+
+      - section: "Module 4: Galaxies & Cosmology"
+        href: modules/module-04.qmd
+        contents: []
+
+      - section: "Homework"
         contents:
-          - slides/index.qmd
-          - slides/L01-course-overview.qmd
-          - slides/L02-math-review.qmd
+          - homework/index.qmd
+
+      - section: "Exams"
+        contents:
+          - exams/index.qmd
 
       - section: "Handouts"
         contents:
           - handouts/index.qmd
 
+      - section: "Explore"
+        contents:
+          - explore/index.qmd
+
 format:
   html:
     theme:
-      light: [cosmo, assets/site-light.scss, assets/callouts.scss]
-      dark: [darkly, assets/site-dark.scss, assets/callouts.scss]
+      light:
+        - cosmo
+        - assets/theme/site-light.scss
+        - assets/theme/callouts.scss
+        - assets/theme/lecture-cards.scss
+        - assets/theme/nav-markers.scss
+        - assets/theme/dashboard.scss
+        - assets/theme/collapsible-cards.scss
+      dark:
+        - darkly
+        - assets/theme/site-dark.scss
+        - assets/theme/callouts.scss
+        - assets/theme/lecture-cards.scss
+        - assets/theme/nav-markers.scss
+        - assets/theme/dashboard.scss
+        - assets/theme/collapsible-cards.scss
+    include-in-header: assets/partials/head.html
+    include-after-body: assets/partials/after-body.html
     mainfont: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif
     toc: true
     toc-depth: 3
+    toc-title: "Contents"
+    toc-expand: 2
     grid:
-      sidebar-width: 300px
+      sidebar-width: 320px
       body-width: 1100px
       margin-width: 320px
       gutter-width: 1.5rem
+
+filters:
+  - course
 
 execute:
   freeze: auto

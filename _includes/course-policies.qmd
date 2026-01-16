@@ -1,0 +1,9 @@
+::: {.callout-important}
+## Course Policies Summary
+
+- **Homework:** Due Monday 11:59 pm PT (Canvas, single PDF). No late submissions.
+- **Grade Memo:** Due Wednesday 11:59 pm PT (self-assessment + reflection).
+- **Lowest homework dropped:** Covers one off-week or emergency.
+- **Exams:** Closed-note/closed-book; calculator allowed; formula sheet provided.
+- **No make-up exams** except for serious, documented emergencies.
+:::

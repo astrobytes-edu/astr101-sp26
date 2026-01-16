@@ -1,0 +1,27 @@
+---
+title: "Explore"
+---
+
+## Beyond the Classroom
+
+This section contains optional resources for students who want to explore astronomy further. None of this material is required, but you might find it interesting!
+
+## Astronomy in the News
+
+*Links to recent discoveries and news articles will be posted here.*
+
+## Videos & Documentaries
+
+*Recommended videos and documentaries related to course topics.*
+
+## Beautiful Images
+
+*Stunning images from JWST, Hubble, and other observatories.*
+
+## Useful Resources
+
+- [NASA Astronomy Picture of the Day](https://apod.nasa.gov/)
+- [ESA/Hubble Image Archive](https://esahubble.org/images/)
+- [JWST Image Gallery](https://webbtelescope.org/images)
+- [Astrobites](https://astrobites.org)
+  

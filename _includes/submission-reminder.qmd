@@ -1,0 +1,7 @@
+::: {.callout-warning}
+## Submission Reminder
+
+- **Homework:** Due Monday 11:59 pm PT (Canvas, single PDF)
+- **Grade Memo:** Due Wednesday 11:59 pm PT
+- Late submissions not accepted (solutions posted Tuesday morning)
+:::

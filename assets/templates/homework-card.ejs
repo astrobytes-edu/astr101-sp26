@@ -1,0 +1,10 @@
+<% for (const item of items) { %>
+<div class="homework-card">
+  <h3 class="homework-card-title"><%= item.title %></h3>
+  <span class="homework-card-date">Due: <%= item.date %></span>
+  <p class="homework-card-summary"><%= item.description %></p>
+  <a href="<%= item.path %>" class="homework-card-link">
+    View Assignment &rarr;
+  </a>
+</div>
+<% } %>

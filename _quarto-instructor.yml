@@ -1,0 +1,91 @@
+# Instructor Profile Configuration
+# Render with: quarto render --profile instructor
+# Includes solutions, answer keys, and instructor notes
+
+# Override params for instructor view
+params:
+  show-solutions: true
+  show-answer-keys: true
+  show-instructor-notes: true
+
+# Instructor website title (clearly marked)
+website:
+  title: "ASTR 201 [INSTRUCTOR VERSION]"
+
+# Instructor-specific rendering
+format:
+  html:
+    # Show all content, style instructor-only blocks distinctively
+    include-in-header:
+      - text: |
+          <style>
+          .instructor-only {
+            display: block !important;
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 1rem;
+            margin: 1rem 0;
+          }
+          .instructor-only::before {
+            content: "🔒 INSTRUCTOR ONLY";
+            display: block;
+            font-weight: bold;
+            color: #856404;
+            margin-bottom: 0.5rem;
+          }
+          .solution-block {
+            display: block !important;
+            background: #d4edda;
+            border-left: 4px solid #28a745;
+            padding: 1rem;
+            margin: 1rem 0;
+          }
+          .solution-block::before {
+            content: "✓ SOLUTION";
+            display: block;
+            font-weight: bold;
+            color: #155724;
+            margin-bottom: 0.5rem;
+          }
+          .answer-key {
+            display: block !important;
+            background: #cce5ff;
+            border-left: 4px solid #004085;
+            padding: 1rem;
+            margin: 1rem 0;
+          }
+          .answer-key::before {
+            content: "📝 ANSWER KEY";
+            display: block;
+            font-weight: bold;
+            color: #004085;
+            margin-bottom: 0.5rem;
+          }
+
+          /* Dark mode support */
+          [data-bs-theme="dark"] .instructor-only {
+            background: #332701;
+            border-left-color: #ffc107;
+          }
+          [data-bs-theme="dark"] .instructor-only::before {
+            color: #ffc107;
+          }
+          [data-bs-theme="dark"] .solution-block {
+            background: #0d2818;
+            border-left-color: #28a745;
+          }
+          [data-bs-theme="dark"] .solution-block::before {
+            color: #28a745;
+          }
+          [data-bs-theme="dark"] .answer-key {
+            background: #001a33;
+            border-left-color: #66b3ff;
+          }
+          [data-bs-theme="dark"] .answer-key::before {
+            color: #66b3ff;
+          }
+          </style>
+
+# Output to separate directory
+project:
+  output-dir: _site-instructor

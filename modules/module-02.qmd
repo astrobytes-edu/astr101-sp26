@@ -1,0 +1,40 @@
+---
+title: "Module 2: Inferring Star Properties"
+subtitle: "Weeks 4–7 | From photons to physical properties"
+page-layout: article
+---
+
+## Why this module matters
+
+Now that you have the foundational tools, we turn to the central question of
+observational astronomy: how do we learn about objects we can never touch?
+This module shows you how to extract distance, temperature, composition, and
+motion from nothing but the light that reaches our telescopes.
+
+## Learning objectives
+
+By the end of this module, you will be able to:
+
+- Calculate stellar distances using parallax and standard candles
+- Interpret stellar spectra to determine temperature and composition
+- Apply the H-R diagram to classify stars
+- Measure stellar velocities from Doppler shifts
+
+## Lectures
+
+::: {.lecture-grid}
+
+<!-- Lectures to be added as slides are created -->
+
+:::
+
+## Required reading
+
+- Chapter 3 (pp. 15–24): Distance and Parallax
+- Chapter 5 (pp. 28–35): Stellar Spectra
+
+::: {.callout-frontier}
+- **What causes the solar abundance problem?** Helioseismology and spectroscopy give different answers for the Sun's composition.
+- **Why do stellar models struggle with convection?** We still use mixing-length theory from the 1950s because convection is so hard to model.
+- **Are there stars older than the universe?** Some age estimates exceed 13.8 Gyr — systematic errors or new physics?
+:::

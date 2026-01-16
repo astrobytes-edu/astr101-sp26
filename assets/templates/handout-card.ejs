@@ -1,0 +1,12 @@
+<% for (const item of items) { %>
+<div class="handout-card">
+  <h3 class="handout-card-title"><%= item.title %></h3>
+  <% if (item.date) { %>
+  <span class="handout-card-date"><%= item.date %></span>
+  <% } %>
+  <p class="handout-card-summary"><%= item.description %></p>
+  <a href="<%= item.path %>" class="handout-card-link">
+    View Handout &rarr;
+  </a>
+</div>
+<% } %>

@@ -1,8 +1,9 @@
 ---
-title: "ASTR 201 — Lecture 1: The Big Picture"
+title: "Lecture 1: The Big Picture"
 subtitle: "Inferring Reality from Light"
 author: "Dr. Anna Rosen"
-# date: "2026-01-XX"
+date: "2026-01-20"
+description: "Spoiler alerts: what we'll discover this semester and how we know it."
 format: revealjs
 execute:
   echo: false

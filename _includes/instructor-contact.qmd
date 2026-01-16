@@ -1,0 +1,10 @@
+::: {.callout-note icon=false}
+## Contact Information
+
+|  |  |
+|---|---|
+| **Instructor** | {{< meta params.instructor >}} |
+| **Email** | [{{< meta params.email >}}](mailto:{{< meta params.email >}}) |
+| **Office** | {{< meta params.office >}} |
+| **Office Hours** | {{< meta params.office-hours >}} |
+:::

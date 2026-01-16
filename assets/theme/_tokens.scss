@@ -1,0 +1,65 @@
+// assets/theme/_tokens.scss
+// Observatory Slate Tokens — LOCKED (v1.0)
+//
+// No ad-hoc hex colors outside this file.
+// Semantic roles: Teal=interactive, Indigo=structure, Gold=rare emphasis, Rose=pitfalls.
+
+@use "sass:color";
+
+// ---- Neutrals (Light) ----
+$bg-light: #f7f8fa;
+$surface-light: #ffffff;
+$surface-2-light: #eef1f5;
+$border-light: #d6dbe3;
+$text-light: #16181d;
+$muted-light: #5c6470;
+
+// ---- Neutrals (Dark) ----
+$bg-dark: #0f1115;
+$surface-dark: #16181d;
+$surface-2-dark: #1d2026;
+$border-dark: #2a2f38;
+$text-dark: #e8ecf2;
+$muted-dark: #a8b0bf;
+
+// ---- Semantic Accents (Light) ----
+$teal-light: #2f6f6f;   // interactive
+$indigo-light: #5a5a8a; // structure
+$gold-light: #7f6d44;   // rare emphasis (avoid for body links)
+$mauve-light: #7d6b85;  // cool emphasis alternative
+$rose-light: #9a7b7f;   // pitfalls
+$purple-light: #7c3aed; // frontier/mystery
+$slate-light: #5c6470;  // generic/neutral accent
+
+// ---- Semantic Accents (Dark) ----
+$teal-dark: #5dbfbf;
+$indigo-dark: #9fa1d4;
+$gold-dark: #d8c08b;
+$mauve-dark: #b89ac0;   // cool emphasis alternative
+$rose-dark: #c9a5a8;
+$purple-dark: #a78bfa;
+$slate-dark: #8892a2;
+
+// ---- Typography ----
+$font-sans: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+$font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+
+// ---- Spacing / Radius ----
+$radius-sm: 6px;
+$radius-md: 10px;
+
+// ---- Typography Sizes ----
+$font-size-base: 1.25rem;
+$callout-font-size: 1.25rem;
+$callout-hero-header-size: 1.4rem;
+$callout-icon-size: 1.2em;
+$callout-label-size: 1.1em;
+
+// ---- Focus Ring (Interactive) ----
+$focus-ring-width: 2px;
+
+// Helper mixins
+@mixin focus-ring($color) {
+  outline: none;
+  box-shadow: 0 0 0 $focus-ring-width color.scale($color, $alpha: -0.35);
+}

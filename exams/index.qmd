@@ -1,0 +1,18 @@
+---
+title: "Exams"
+---
+
+## Exam Schedule
+
+| Exam | Topics | Date | Solutions |
+|------|--------|------|-----------|
+| Midterm 1 | Modules 1-2 | TBD | *Posted after exam* |
+| Midterm 2 | Modules 2-3 | TBD | *Posted after exam* |
+| Final | Comprehensive | Finals Week | *Posted after exam* |
+
+## Exam Policies
+
+- **Closed book, closed notes** unless otherwise specified
+- Bring a scientific calculator (no phones or smart devices)
+- Formula sheets will be provided as needed
+- See the [Syllabus](../course-info/syllabus.qmd) for makeup exam policies

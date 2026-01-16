@@ -1,0 +1,47 @@
+/*-- scss:defaults --*/
+// ASTR 201 Nav Markers
+// Design tokens imported from _tokens.scss — edit there for site-wide changes
+
+@import 'tokens';
+
+/*-- scss:rules --*/
+// === BASE MARKER STYLING ===
+.nav-marker {
+  font-style: italic;
+  font-weight: 500;
+  opacity: 0.7;
+  cursor: default !important;
+  text-decoration: none !important;
+  pointer-events: none;
+  color: $muted-light !important;
+  background: transparent;
+}
+
+.nav-marker:focus,
+.nav-marker:focus-visible {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+// === EXAM MARKER ===
+.nav-marker--exam {
+  color: $rose-light !important;
+}
+
+// === SPRING BREAK MARKER ===
+.nav-marker--break {
+  color: $gold-light !important;
+}
+
+// === DARK MODE ===
+[data-bs-theme="dark"] .nav-marker {
+  color: $muted-dark !important;
+}
+
+[data-bs-theme="dark"] .nav-marker--exam {
+  color: $rose-dark !important;
+}
+
+[data-bs-theme="dark"] .nav-marker--break {
+  color: $gold-dark !important;
+}

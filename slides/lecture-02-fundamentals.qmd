@@ -1,8 +1,9 @@
 ---
-title: "ASTR 201 — Lecture 2: Math Boot Camp"
-subtitle: "CGS, Scientific Notation, Units, and Ratios"
+title: "Lecture 2: Math Boot Camp"
+subtitle: "Scientific Notation, Units, Dimensional Analysis, and Ratios"
 author: "Dr. Anna Rosen"
-# date: "2026-01-XX"
+date: "2026-01-22"
+description: "Dimensional analysis as a physicist's superpower."
 format: revealjs
 execute:
   echo: false

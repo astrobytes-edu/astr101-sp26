@@ -1,0 +1,125 @@
+# Course Schedule Data — Single Source of Truth
+# Change semester_start to shift ALL dates automatically
+
+semester_start: 2026-01-20  # First day of class (Tuesday)
+lectures_per_week: 2
+days: [Tue, Thu]
+
+# Academic calendar breaks (no class)
+breaks:
+  - date: 2026-03-16
+    name: "Spring Break"
+    duration: 5  # days (Mon-Fri)
+  - date: 2026-03-31
+    name: "Cesar Chavez Day"
+    duration: 1
+
+# Exams (dates computed from week number, or fixed)
+exams:
+  midterm1:
+    week: 6
+    day: Thu
+    name: "Midterm Exam 1"
+  midterm2:
+    week: 11
+    day: Thu
+    name: "Midterm Exam 2"
+  final:
+    date: 2026-05-07
+    time: "10:30 am – 12:30 pm"
+    name: "Final Exam (Cumulative)"
+
+# Modules with lectures
+modules:
+  - name: "Foundations"
+    weeks: [1, 2, 3]
+    lectures:
+      - title: "Course Overview"
+        reading: "Syllabus"
+      - title: "Scaling & Units"
+        reading: "Ch. 1"
+      - title: "Dimensional Analysis"
+        reading: "Ch. 1"
+      - title: "Kepler's Laws"
+        reading: "Ch. 7.1-7.2"
+      - title: "Newton & Gravity"
+        reading: "Ch. 7.3"
+      - title: "Orbital Mechanics"
+        reading: "Ch. 7.4"
+
+  - name: "Inferring Star Properties"
+    weeks: [4, 5, 6, 7]
+    lectures:
+      - title: "Distance & Parallax"
+        reading: "Ch. 3"
+      - title: "Blackbody Radiation"
+        reading: "Ch. 4.1-4.2"
+      - title: "Stellar Spectra I"
+        reading: "Ch. 4.3-4.4"
+      - title: "Stellar Spectra II"
+        reading: "Ch. 5"
+      - title: "The H-R Diagram"
+        reading: "Ch. 6.1"
+      - title: "Stellar Classification"
+        reading: "Ch. 6.2"
+      - title: "Exam 1 Review"
+        reading: ""
+      - title: "MIDTERM 1"
+        reading: ""
+
+  - name: "Stellar Structure & Evolution"
+    weeks: [8, 9, 10, 11, 12]
+    lectures:
+      - title: "Hydrostatic Equilibrium"
+        reading: "Ch. 8.1"
+      - title: "Energy Transport"
+        reading: "Ch. 8.2"
+      - title: "Nuclear Fusion"
+        reading: "Ch. 8.3"
+      - title: "Main Sequence"
+        reading: "Ch. 9.1"
+      - title: "Post-Main Sequence"
+        reading: "Ch. 9.2"
+      - title: "White Dwarfs"
+        reading: "Ch. 10.1"
+      - title: "Neutron Stars"
+        reading: "Ch. 10.2"
+      - title: "Black Holes"
+        reading: "Ch. 10.3"
+      - title: "Exam 2 Review"
+        reading: ""
+      - title: "MIDTERM 2"
+        reading: ""
+
+  - name: "Galaxies & Cosmology"
+    weeks: [13, 14, 15]
+    lectures:
+      - title: "The Milky Way"
+        reading: "Ch. 11"
+      - title: "Galaxy Types"
+        reading: "Ch. 12.1"
+      - title: "Dark Matter"
+        reading: "Ch. 12.2"
+      - title: "Hubble's Law"
+        reading: "Ch. 13.1"
+      - title: "The Big Bang"
+        reading: "Ch. 13.2"
+      - title: "Final Review"
+        reading: ""
+
+# Homework schedule (computed from week numbers)
+homework:
+  - week: 2
+    title: "HW 1: Scaling & Units"
+  - week: 3
+    title: "HW 2: Kepler & Newton"
+  - week: 5
+    title: "HW 3: Parallax & Radiation"
+  - week: 7
+    title: "HW 4: Spectra & H-R"
+  - week: 9
+    title: "HW 5: Stellar Structure"
+  - week: 11
+    title: "HW 6: Stellar Evolution"
+  - week: 14
+    title: "HW 7: Galaxies & Cosmology"

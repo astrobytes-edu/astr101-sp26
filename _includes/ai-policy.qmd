@@ -1,0 +1,16 @@
+::: {.callout-warning}
+## AI Policy
+
+**Allowed (study support):**
+
+- Clarifying your own notes or assigned readings
+- Generating practice questions (not answers to assigned problems)
+- Explaining concepts at a different level *for studying*
+
+**Not allowed (graded work):**
+
+- Generating or rewriting homework solutions, derivations, or explanations you submit
+- Submitting AI-generated reasoning you cannot reproduce on your own
+
+**Always disclose AI use** in your grade memos, even if the use was allowed.
+:::

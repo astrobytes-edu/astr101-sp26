@@ -1,0 +1,76 @@
+/*-- scss:defaults --*/
+// ASTR 201 Dashboard Tiles
+// Design tokens imported from _tokens.scss — edit there for site-wide changes
+
+@import 'tokens';
+
+/*-- scss:rules --*/
+// === DASHBOARD GRID ===
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+// === DASHBOARD TILE ===
+.dashboard-tile {
+  background: $surface-light;
+  border: 1px solid $border-light;
+  border-radius: $radius-md;
+  padding: 1.5rem 1rem;
+  text-align: center;
+  transition: transform 150ms ease, box-shadow 150ms ease, border-color 150ms ease;
+}
+
+.dashboard-tile:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  border-color: $teal-light;
+}
+
+.dashboard-tile-icon {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.dashboard-tile-title {
+  font-size: 1.1rem;
+  font-weight: 650;
+  color: $indigo-light;
+  margin: 0;
+}
+
+.dashboard-tile-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.dashboard-tile-link:hover {
+  text-decoration: none;
+}
+
+.dashboard-tile-link:hover .dashboard-tile-title {
+  color: $teal-light;
+}
+
+// === DARK MODE ===
+[data-bs-theme="dark"] .dashboard-tile {
+  background: $surface-dark;
+  border-color: $border-dark;
+}
+
+[data-bs-theme="dark"] .dashboard-tile:hover {
+  border-color: $teal-dark;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+[data-bs-theme="dark"] .dashboard-tile-title {
+  color: $indigo-dark;
+}
+
+[data-bs-theme="dark"] .dashboard-tile-link:hover .dashboard-tile-title {
+  color: $teal-dark;
+}

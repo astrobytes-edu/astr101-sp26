@@ -1,0 +1,143 @@
+/*-- scss:defaults --*/
+// ASTR 201 Collapsible Cards — MyST-MD Inspired
+// Design tokens imported from _tokens.scss — edit there for site-wide changes
+
+@import 'tokens';
+
+/*-- scss:rules --*/
+// === COLLAPSIBLE CARD CONTAINER ===
+.collapsible-card {
+  margin: 0.5rem 0;
+  border: none;
+  border-left: 3px solid $teal-light;
+  border-radius: $radius-sm;
+  background: $bg-light;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+// === SUMMARY (clickable header) ===
+.collapsible-card summary {
+  display: flex;
+  align-items: center;
+  padding: 0.875rem 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: $text-light;
+  cursor: pointer;
+  list-style: none;
+  transition: background 150ms ease, color 150ms ease;
+  gap: 0.5rem;
+}
+
+.collapsible-card summary::-webkit-details-marker {
+  display: none;
+}
+
+// Chevron icon
+.collapsible-card summary::before {
+  content: "";
+  width: 0.5rem;
+  height: 0.5rem;
+  border-right: 2px solid $muted-light;
+  border-bottom: 2px solid $muted-light;
+  transform: rotate(-45deg);
+  transition: transform 200ms ease;
+  flex-shrink: 0;
+}
+
+.collapsible-card[open] summary::before {
+  transform: rotate(45deg);
+}
+
+.collapsible-card summary:hover {
+  background: rgba($teal-light, 0.06);
+}
+
+.collapsible-card summary:hover::before {
+  border-color: $teal-light;
+}
+
+// === CONTENT (hidden until opened) ===
+.collapsible-card-content {
+  padding: 0 1rem 1rem 1.5rem;
+  background: $surface-light;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.collapsible-card-content ul {
+  margin: 0.5rem 0 0 0;
+  padding-left: 1.25rem;
+}
+
+.collapsible-card-content li {
+  margin-bottom: 0.375rem;
+  line-height: 1.5;
+  color: $text-light;
+}
+
+.collapsible-card-content p {
+  margin: 0.5rem 0;
+  color: $text-light;
+}
+
+.collapsible-card-content strong {
+  color: $indigo-light;
+  font-weight: 600;
+}
+
+// === CARD GRID (for multiple cards) ===
+.card-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 0.375rem;
+  margin: 1rem 0;
+}
+
+// === ALTERNATE ACCENT COLORS ===
+// Evidence cards use teal (default)
+// Pitfall cards use gold accent
+.card-grid + .card-grid .collapsible-card {
+  border-left-color: $gold-light;
+}
+
+// === DARK MODE ===
+[data-bs-theme="dark"] .collapsible-card {
+  background: rgba($surface-dark, 0.5);
+  border-left-color: $teal-dark;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+[data-bs-theme="dark"] .collapsible-card summary {
+  color: $text-dark;
+}
+
+[data-bs-theme="dark"] .collapsible-card summary::before {
+  border-color: $muted-dark;
+}
+
+[data-bs-theme="dark"] .collapsible-card summary:hover {
+  background: rgba($teal-dark, 0.08);
+}
+
+[data-bs-theme="dark"] .collapsible-card summary:hover::before {
+  border-color: $teal-dark;
+}
+
+[data-bs-theme="dark"] .collapsible-card-content {
+  background: $surface-dark;
+}
+
+[data-bs-theme="dark"] .collapsible-card-content li,
+[data-bs-theme="dark"] .collapsible-card-content p {
+  color: $text-dark;
+}
+
+[data-bs-theme="dark"] .collapsible-card-content strong {
+  color: $indigo-dark;
+}
+
+[data-bs-theme="dark"] .card-grid + .card-grid .collapsible-card {
+  border-left-color: $gold-dark;
+}

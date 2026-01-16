@@ -1,0 +1,6 @@
+|  |  |
+|---|---|
+| **Class meetings** | {{< meta params.class-time >}} |
+| **Location** | {{< meta params.location >}} |
+| **Course website** | [{{< meta params.website-url >}}]({{< meta params.website-url >}}) |
+| **Canvas** | [{{< meta params.canvas-url >}}]({{< meta params.canvas-url >}}) |

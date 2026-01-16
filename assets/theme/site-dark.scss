@@ -1,0 +1,342 @@
+/*-- scss:defaults --*/
+// ASTR 201 Site Theme — DARK
+// Design tokens imported from _tokens.scss — edit there for site-wide changes
+
+@import 'tokens';
+
+// Quarto overrides
+$body-bg: $bg-dark;
+$body-color: $text-dark;
+$link-color: $teal-dark;
+$font-family-sans-serif: $font-sans;
+$headings-font-weight: 650;
+$font-size-base: 1.25rem;
+
+/*-- scss:rules --*/
+// === PAGE BACKGROUND ===
+body {
+  background: $bg-dark;
+  color: $text-dark;
+}
+
+// === HEADINGS (Structure = Indigo) ===
+h1 {
+  color: $indigo-dark;
+  letter-spacing: -0.01em;
+  font-weight: 700;
+}
+
+h2 {
+  color: $indigo-dark;
+  letter-spacing: -0.01em;
+  font-weight: 650;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+h3, h4, h5, h6 {
+  color: $indigo-dark;
+  letter-spacing: -0.01em;
+  font-weight: 600;
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+// === LINKS (Interactive = Teal) ===
+a {
+  color: $teal-dark;
+  text-decoration: underline;
+  text-decoration-color: rgba($teal-dark, 0.3);
+  text-underline-offset: 2px;
+}
+
+a:hover {
+  color: lighten($teal-dark, 10%);
+  text-decoration-color: $teal-dark;
+}
+
+// Nav links: no underline
+.navbar a,
+#quarto-sidebar a,
+.btn,
+.lecture-card-link,
+.nav-link {
+  text-decoration: none;
+}
+
+.navbar a:hover,
+#quarto-sidebar a:hover {
+  text-decoration: none;
+}
+
+// === CODE BLOCKS ===
+code, pre {
+  font-family: $font-mono;
+}
+
+code {
+  font-size: 0.95em;
+  color: lighten($indigo-dark, 10%);
+}
+
+pre {
+  background-color: $surface-dark;
+  border: 1px solid $border-dark;
+  border-radius: $radius-sm;
+}
+
+pre code {
+  color: $text-dark;
+}
+
+// === NAVBAR ===
+.navbar-brand img {
+  max-height: 64px;
+  height: 64px;
+  width: auto;
+}
+
+@media (max-width: 768px) {
+  .navbar-brand img {
+    max-height: 48px;
+    height: 48px;
+  }
+}
+
+// === SIDEBAR ===
+#quarto-sidebar {
+  background: $surface-dark;
+  border-right: 1px solid $border-dark;
+  font-size: 1.1rem;
+  line-height: 1.5;
+  padding-top: 0.5rem;
+}
+
+// === SIDEBAR TITLE (Injected via JS) ===
+.sidebar-title-injected {
+  display: block;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: $indigo-dark;
+  padding: 1rem 1rem 0.75rem 1rem;
+  margin: 0;
+  text-decoration: none;
+  border-bottom: 1px solid $border-dark;
+
+  &:hover {
+    color: $teal-dark;
+    text-decoration: none;
+  }
+}
+
+#quarto-sidebar a {
+  color: $text-dark;
+  padding: 0.5rem 0.75rem;
+  display: block;
+  border-radius: $radius-sm;
+  transition: background 150ms ease;
+}
+
+#quarto-sidebar a:hover {
+  color: $teal-dark;
+  background: rgba($teal-dark, 0.06);
+}
+
+#quarto-sidebar .sidebar-item-text {
+  font-size: 1.1rem;
+  color: $text-dark;
+}
+
+#quarto-sidebar .sidebar-item {
+  margin-bottom: 0.4rem;
+}
+
+// Consistent spacing between sections
+#quarto-sidebar .sidebar-section {
+  margin-bottom: 1rem;
+  padding-top: 0.25rem;
+}
+
+// Section headers (Module titles) - MULTI-LINE support
+#quarto-sidebar .sidebar-section > .sidebar-item > .sidebar-item-container {
+  font-weight: 650;
+  font-size: 1rem;
+  color: $indigo-dark;
+  padding: 0.4rem 0.75rem;
+  margin-bottom: 0.1rem;
+  line-height: 1.2;
+}
+
+// Force multi-line for Module sections
+#quarto-sidebar .sidebar-section > .sidebar-item > .sidebar-item-container .sidebar-item-text {
+  display: block;
+  white-space: normal;
+  word-wrap: break-word;
+}
+
+// Module title line break styling (applied via JS)
+.module-prefix {
+  display: block;
+  font-weight: 600;
+  font-size: 0.85rem;
+  color: $muted-dark;
+  margin-bottom: 0;
+  line-height: 1.2;
+}
+
+.module-title {
+  display: block;
+  font-weight: 650;
+  font-size: 1.05rem;
+  color: $indigo-dark;
+  line-height: 1.2;
+}
+
+// Ensure non-link module items (empty contents) get same padding as links
+#quarto-sidebar .sidebar-item-text.sidebar-link {
+  padding: 0.5rem 0.75rem;
+  display: block;
+}
+
+// Collapse toggle styling
+#quarto-sidebar .collapse-toggle {
+  color: $muted-dark;
+  transition: transform 200ms ease;
+}
+
+#quarto-sidebar .sidebar-section.show > .sidebar-item > .sidebar-item-container .collapse-toggle {
+  transform: rotate(90deg);
+}
+
+// === SIDEBAR ACTIVE STATE (full-width background) ===
+#quarto-sidebar .sidebar-item.active > a,
+#quarto-sidebar .sidebar-item.active > .sidebar-item-container,
+#quarto-sidebar a.active,
+#quarto-sidebar .active > .sidebar-item-text {
+  font-weight: 650;
+  color: $teal-dark;
+  background: rgba($teal-dark, 0.12);
+  border-radius: $radius-sm;
+}
+
+// === TOC (MyST-MD inspired) ===
+#quarto-margin-sidebar {
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+// TOC Title - "Contents" header
+#toc-title,
+.toc-title-container {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: $muted-dark;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid $border-dark;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &::after {
+    content: "▾";
+    font-size: 0.7rem;
+    transition: transform 200ms ease;
+  }
+}
+
+// TOC collapsed state
+.toc-collapsed #toc-title::after,
+.toc-collapsed .toc-title-container::after {
+  transform: rotate(-90deg);
+}
+
+#TOC a {
+  font-size: 0.9rem;
+  color: $muted-dark;
+  padding: 0.2rem 0;
+  display: block;
+  transition: color 150ms ease;
+  text-decoration: none;
+}
+
+#TOC a:hover {
+  color: $teal-dark;
+}
+
+// Active section highlighting (scroll tracking)
+#TOC a.active {
+  font-weight: 600;
+  color: $teal-dark;
+  border-left: 2px solid $teal-dark;
+  padding-left: 0.5rem;
+  margin-left: -0.5rem;
+}
+
+#TOC li {
+  margin-bottom: 0.3rem;
+}
+
+#TOC ul {
+  padding-left: 0.75rem;
+  list-style: none;
+}
+
+#TOC > ul {
+  padding-left: 0;
+}
+
+// === TABLES ===
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1.5rem 0;
+}
+
+th, td {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid $border-dark;
+  text-align: left;
+}
+
+th {
+  font-weight: 650;
+  color: $indigo-dark;
+  border-bottom: 2px solid $border-dark;
+}
+
+tr:hover {
+  background: rgba($teal-dark, 0.04);
+}
+
+// === LAYOUT (larger screens) ===
+@media (min-width: 1200px) {
+  .page-columns {
+    grid-template-columns:
+      [screen-start] 1.5rem
+      [screen-start-inset] 1fr
+      [page-start page-start-inset] 2.625rem
+      [body-start-outset] 2.625rem
+      [body-start] 1.5rem
+      [body-content-start] minmax(500px, calc(1150px - 3rem))
+      [body-content-end] 1.5rem
+      [body-end] 2.8rem
+      [body-end-outset] minmax(6rem, 11.6rem)
+      [page-end-inset] 2.8rem
+      [page-end] 1fr
+      [screen-end-inset] 1.5rem
+      [screen-end];
+  }
+}
+
+// === DARK MODE TOGGLE ICONS ===
+.quarto-color-scheme-toggle:not(.alternate) .bi::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6m0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8M8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0m0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13m8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5M3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8m10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0m-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0m9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707M4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708"/></svg>') !important;
+}
+
+.quarto-color-scheme-toggle.alternate .bi::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278M4.858 1.311A7.27 7.27 0 0 0 1.025 7.71c0 4.02 3.279 7.276 7.319 7.276a7.32 7.32 0 0 0 5.205-2.162q-.506.063-1.029.063c-4.61 0-8.343-3.714-8.343-8.29 0-1.167.242-2.278.681-3.286"/></svg>') !important;
+}

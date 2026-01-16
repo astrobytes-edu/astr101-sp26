@@ -1,0 +1,15 @@
+<% for (const item of items) { %>
+<div class="infographic-card">
+  <h3 class="infographic-card-title"><%= item.title %></h3>
+  <% if (item.date) { %>
+  <span class="infographic-card-date"><%= item.date %></span>
+  <% } %>
+  <% if (item.topic) { %>
+  <span class="infographic-card-topic"><%= item.topic %></span>
+  <% } %>
+  <p class="infographic-card-summary"><%= item.description %></p>
+  <a href="<%= item.path %>" class="infographic-card-link">
+    View Infographic &rarr;
+  </a>
+</div>
+<% } %>

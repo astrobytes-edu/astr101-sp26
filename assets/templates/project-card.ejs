@@ -1,0 +1,13 @@
+<% for (const item of items) { %>
+<div class="project-card">
+  <h3 class="project-card-title"><%= item.title %></h3>
+  <span class="project-card-date">Due: <%= item.date %></span>
+  <% if (item.phase) { %>
+  <span class="project-card-phase"><%= item.phase %></span>
+  <% } %>
+  <p class="project-card-summary"><%= item.description %></p>
+  <a href="<%= item.path %>" class="project-card-link">
+    View Project &rarr;
+  </a>
+</div>
+<% } %>
