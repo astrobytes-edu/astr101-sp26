@@ -198,7 +198,8 @@ function fig(args, kwargs)
 end
 
 -- {{< img id >}} - renders image from registry WITHOUT caption (for slides)
--- Same registry lookup as fig, but returns bare image element
+-- Optional kwargs: width, height, class, trim (like LaTeX)
+-- trim="0 50% 0 0" → clip-path: inset(0 50% 0 0)
 function img(args, kwargs)
   local fig_id = args[1]
   if not fig_id then
@@ -216,6 +217,359 @@ function img(args, kwargs)
   local path = fig_data.path or ""
   local alt = fig_data.alt or fig_data.caption or ""
 
-  -- Return just the image element (no figure wrapper, no caption)
-  return pandoc.Image({pandoc.Str(alt)}, path)
+  -- Build attributes from kwargs
+  local classes = {}
+  local attrs = {}
+
+  if kwargs["class"] then
+    local class_str = pandoc.utils.stringify(kwargs["class"])
+    for class in class_str:gmatch("%S+") do
+      table.insert(classes, class)
+    end
+  end
+
+  if kwargs["width"] then
+    attrs["width"] = pandoc.utils.stringify(kwargs["width"])
+  end
+
+  if kwargs["height"] then
+    attrs["height"] = pandoc.utils.stringify(kwargs["height"])
+  end
+
+  -- trim="top right bottom left" → scale + clip (like LaTeX trim)
+  local trim_val = nil
+  if kwargs["trim"] then
+    local trim_raw = kwargs["trim"]
+    if type(trim_raw) == "string" then
+      trim_val = trim_raw
+    elseif type(trim_raw) == "table" and trim_raw.text then
+      trim_val = trim_raw.text
+    else
+      trim_val = pandoc.utils.stringify(trim_raw)
+    end
+  end
+
+  -- If trim specified, scale image so visible portion fills container
+  if trim_val and trim_val ~= "" then
+    local t, r, b, l = trim_val:match("(%S+)%s+(%S+)%s+(%S+)%s+(%S+)")
+    if t and r and b and l then
+      -- Convert percentages to numbers
+      local function to_num(s)
+        local n = tonumber(s:match("(%d+)"))
+        return n and n/100 or 0
+      end
+      local tn, rn, bn, ln = to_num(t), to_num(r), to_num(b), to_num(l)
+
+      -- Scale factors to make visible portion fill container
+      local scale_x = 1 / (1 - ln - rn)
+      local scale_y = 1 / (1 - tn - bn)
+
+      local img_style = string.format(
+        "transform:scale(%.3f, %.3f); transform-origin:%s %s; clip-path:inset(%s %s %s %s);",
+        scale_x, scale_y,
+        ln > 0 and "right" or "left",
+        tn > 0 and "bottom" or "top",
+        t, r, b, l
+      )
+
+      local img_with_style = pandoc.Image({pandoc.Str(alt)}, path, "",
+        pandoc.Attr("", classes, {style = img_style}))
+      return img_with_style
+    end
+  end
+
+  -- No trim, return plain image
+  local img_elem = pandoc.Image({pandoc.Str(alt)}, path, "", pandoc.Attr("", classes, attrs))
+  return img_elem
+end
+
+-- ==============================================================
+-- Equation System Shortcodes
+-- ==============================================================
+
+-- Load eqcards.yml (meaning scaffolds)
+local function load_eqcards()
+  local cards = {}
+  local project_dir = os.getenv("QUARTO_PROJECT_DIR") or "."
+  local path = project_dir .. "/data/eqcards.yml"
+
+  local f = io.open(path, "r")
+  if not f then
+    f = io.open("data/eqcards.yml", "r")
+  end
+  if not f then return cards end
+
+  local content = f:read("*all")
+  f:close()
+
+  -- Parse YAML (adapted for eqcards format with arrays)
+  local current_id = nil
+  local in_assumptions = false
+
+  for line in content:gmatch("[^\n]+") do
+    if not line:match("^%s*#") and not line:match("^%s*$") then
+      -- Top-level card ID (no indent, ends with colon)
+      local card_id = line:match("^([%w_]+):%s*$")
+      if card_id then
+        current_id = card_id
+        cards[current_id] = { assumptions = {} }
+        in_assumptions = false
+      elseif current_id then
+        -- Nested key-value (2-space indent)
+        local key, val = line:match("^  ([%w_]+):%s*\"(.-)\"$")
+        if not key then
+          key, val = line:match("^  ([%w_]+):%s*(.+)$")
+        end
+        if key and val and val ~= "" then
+          cards[current_id][key] = val
+          in_assumptions = false
+        elseif line:match("^  assumptions:%s*$") then
+          in_assumptions = true
+        elseif in_assumptions then
+          -- Array item (4-space indent with -)
+          local item = line:match("^    %- \"(.-)\"$")
+          if not item then
+            item = line:match("^    %- (.+)$")
+          end
+          if item then
+            table.insert(cards[current_id].assumptions, item)
+          end
+        end
+      end
+    end
+  end
+
+  return cards
+end
+
+-- Load equations.yml (registry)
+local function load_equations()
+  local eqs = {}
+  local project_dir = os.getenv("QUARTO_PROJECT_DIR") or "."
+  local path = project_dir .. "/data/equations.yml"
+
+  local f = io.open(path, "r")
+  if not f then
+    f = io.open("data/equations.yml", "r")
+  end
+  if not f then return eqs end
+
+  local content = f:read("*all")
+  f:close()
+
+  local current_id = nil
+
+  for line in content:gmatch("[^\n]+") do
+    if not line:match("^%s*#") and not line:match("^%s*$") then
+      local eq_id = line:match("^([%w_]+):%s*$")
+      if eq_id then
+        current_id = eq_id
+        eqs[current_id] = {}
+      elseif current_id then
+        local key, val = line:match("^  ([%w_]+):%s*\"(.-)\"$")
+        if not key then
+          key, val = line:match("^  ([%w_]+):%s*(.+)$")
+        end
+        if key and val then
+          eqs[current_id][key] = val
+        end
+      end
+    end
+  end
+
+  return eqs
+end
+
+-- Cache for equation data
+local _eqcards_cache = nil
+local _equations_cache = nil
+
+local function get_eqcards()
+  if not _eqcards_cache then
+    _eqcards_cache = load_eqcards()
+  end
+  return _eqcards_cache
+end
+
+local function get_equations()
+  if not _equations_cache then
+    _equations_cache = load_equations()
+  end
+  return _equations_cache
+end
+
+-- Helper: build meaning card HTML
+local function build_meaning_html(card, title, anchor)
+  local html = string.format([[
+<div class="callout callout-tip eq-gloss" data-callout="tip">
+  <div class="callout-header">
+    <div class="callout-title-container flex-fill">
+      <p class="callout-title">%s</p>
+    </div>
+  </div>
+  <div class="callout-body-container callout-body">
+    <p><strong>What it predicts</strong><br/>%s</p>
+    <p><strong>What it depends on</strong><br/>%s</p>
+    <p><strong>What it's saying</strong><br/>%s</p>
+]], title or "Equation meaning", card.predicts or "", card.depends or "", card.says or "")
+
+  if card.assumptions and #card.assumptions > 0 then
+    html = html .. "    <p><strong>Assumptions</strong></p>\n    <ul>\n"
+    for _, a in ipairs(card.assumptions) do
+      html = html .. "      <li>" .. a .. "</li>\n"
+    end
+    html = html .. "    </ul>\n"
+  end
+
+  if anchor then
+    html = html .. string.format('    <p style="margin-top:0.5rem;"><em>See:</em> <a href="#%s">the equation</a></p>\n', anchor)
+  end
+
+  html = html .. "  </div>\n</div>"
+  return html
+end
+
+-- {{< eqcard kepler_period >}} - show meaning scaffold only
+function eqcard(args, kwargs)
+  local card_id = args[1]
+  if kwargs and kwargs["id"] then
+    card_id = pandoc.utils.stringify(kwargs["id"])
+  end
+
+  if not card_id then
+    return pandoc.RawBlock("html", '<div class="callout callout-warning"><p><strong>Missing eqcard id</strong></p></div>')
+  end
+
+  local cards = get_eqcards()
+  local card = cards[card_id]
+
+  if not card then
+    return pandoc.RawBlock("html", string.format('<div class="callout callout-warning"><p><strong>Missing eqcard:</strong> <code>%s</code></p></div>', card_id))
+  end
+
+  return pandoc.RawBlock("html", build_meaning_html(card, "Equation meaning", nil))
+end
+
+-- {{< eqrefcard kepler >}} - show meaning + reference link
+function eqrefcard(args, kwargs)
+  local eq_id = args[1]
+  if kwargs and kwargs["eq"] then
+    eq_id = pandoc.utils.stringify(kwargs["eq"])
+  end
+
+  if not eq_id then
+    return pandoc.RawBlock("html", '<div class="callout callout-warning"><p><strong>Missing eqrefcard eq id</strong></p></div>')
+  end
+
+  local equations = get_equations()
+  local eq = equations[eq_id]
+
+  if not eq then
+    return pandoc.RawBlock("html", string.format('<div class="callout callout-warning"><p><strong>Missing equation:</strong> <code>%s</code></p></div>', eq_id))
+  end
+
+  local cards = get_eqcards()
+  local card = cards[eq.card]
+
+  if not card then
+    return pandoc.RawBlock("html", string.format('<div class="callout callout-warning"><p><strong>Missing eqcard:</strong> <code>%s</code></p></div>', eq.card or "nil"))
+  end
+
+  return pandoc.RawBlock("html", build_meaning_html(card, eq.title, eq.anchor))
+end
+
+-- {{< eqshow kepler >}} - title + meaning (use with include for equation)
+function eqshow(args, kwargs)
+  local eq_id = args[1]
+  if kwargs and kwargs["eq"] then
+    eq_id = pandoc.utils.stringify(kwargs["eq"])
+  end
+
+  if not eq_id then
+    return pandoc.RawBlock("html", '<div class="callout callout-warning"><p><strong>Missing eqshow eq id</strong></p></div>')
+  end
+
+  local equations = get_equations()
+  local eq = equations[eq_id]
+
+  if not eq then
+    return pandoc.RawBlock("html", string.format('<div class="callout callout-warning"><p><strong>Missing equation:</strong> <code>%s</code></p></div>', eq_id))
+  end
+
+  local cards = get_eqcards()
+  local card = cards[eq.card]
+
+  local blocks = {}
+
+  -- Title
+  table.insert(blocks, pandoc.RawBlock("html", string.format('<p class="eq-title" style="margin:0.4rem 0 0.35rem 0;"><strong>%s</strong></p>', eq.title or "")))
+
+  -- Note about include (Lua cannot dynamically include files)
+  table.insert(blocks, pandoc.RawBlock("html", string.format('<!-- Use: {{< include %s >}} above this shortcode -->', eq.include or "")))
+
+  -- Meaning card
+  if card then
+    table.insert(blocks, pandoc.RawBlock("html", build_meaning_html(card, "Equation meaning", eq.anchor)))
+  else
+    table.insert(blocks, pandoc.RawBlock("html", string.format('<div class="callout callout-warning"><p><strong>Missing eqcard:</strong> <code>%s</code></p></div>', eq.card or "nil")))
+  end
+
+  return blocks
+end
+
+-- {{< eqindex >}} - auto-generated catalog of all equations
+function eqindex(args, kwargs)
+  local equations = get_equations()
+  local cards = get_eqcards()
+
+  if not equations or not next(equations) then
+    return pandoc.RawBlock("html", '<div class="callout callout-warning"><p>No equations found. Expected <code>data/equations.yml</code>.</p></div>')
+  end
+
+  -- Sort keys alphabetically
+  local keys = {}
+  for k in pairs(equations) do
+    table.insert(keys, k)
+  end
+  table.sort(keys)
+
+  local html = '<div class="eq-index">\n'
+
+  for _, k in ipairs(keys) do
+    local eq = equations[k]
+    local card = cards[eq.card]
+
+    html = html .. '<div class="eq-index-item">\n'
+    html = html .. '  <h3 class="eq-index-title" style="margin:0 0 0.35rem 0;">'
+    if eq.anchor then
+      html = html .. string.format('<a href="#%s">%s</a>', eq.anchor, eq.title or k)
+    else
+      html = html .. (eq.title or k)
+    end
+    html = html .. '</h3>\n'
+
+    if card then
+      html = html .. '  <div class="eq-index-gloss">\n'
+      html = html .. string.format('    <p style="margin:0.25rem 0;"><strong>Predicts:</strong> %s</p>\n', card.predicts or "")
+      html = html .. string.format('    <p style="margin:0.25rem 0;"><strong>Depends:</strong> %s</p>\n', card.depends or "")
+      html = html .. string.format('    <p style="margin:0.25rem 0;"><strong>Says:</strong> %s</p>\n', card.says or "")
+      if card.assumptions and #card.assumptions > 0 then
+        html = html .. '    <details style="margin-top:0.35rem;">\n      <summary><strong>Assumptions</strong></summary>\n      <ul style="margin-top:0.35rem;">\n'
+        for _, a in ipairs(card.assumptions) do
+          html = html .. '        <li>' .. a .. '</li>\n'
+        end
+        html = html .. '      </ul>\n    </details>\n'
+      end
+      html = html .. '  </div>\n'
+    else
+      html = html .. string.format('  <div class="callout callout-warning"><p>Missing eqcard: <code>%s</code></p></div>\n', eq.card or "nil")
+    end
+
+    html = html .. string.format('  <p class="eq-index-meta" style="opacity:0.7; margin:0.4rem 0 0; font-size:0.85em;">id: <code>%s</code></p>\n', k)
+    html = html .. '</div>\n'
+  end
+
+  html = html .. '</div>'
+
+  return pandoc.RawBlock("html", html)
 end
