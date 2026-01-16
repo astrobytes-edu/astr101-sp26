@@ -58,6 +58,18 @@ Adversarial reviewer and refactor analyst. STEM Pedagogy and Astrophysics expert
 - Files are at `course-info/`, NOT `course/`
 - Slides are `lecture-*.qmd`, NOT `L*-*.qmd`
 
+## Lecture Development Workflow
+
+When designing new lectures:
+
+1. **Design documents** go in `modules/module-NN/_prep/lecture-NN-design.md`
+2. **Instructor notes** go in `modules/module-NN/_prep/lecture-NN-notes.md`
+3. **Slides** go in `modules/module-NN/slides/lecture-NN-topic.qmd`
+4. **Readings** go in `modules/module-NN/readings/lecture-NN-topic.qmd`
+5. **Figures** are registered in `assets/figures.yml` with `{{< fig id >}}` shortcode
+
+The `_prep/` directories are NOT published (underscore prefix = Quarto ignores).
+
 ## File Structure (VERIFY BEFORE ASSUMING)
 ```
 _quarto.yml           # Main config - CHECK PATHS HERE
@@ -65,13 +77,25 @@ course-info/          # NOT course/
   syllabus.qmd
   schedule.qmd
 modules/
-  module-01.qmd
-slides/
-  lecture-01-course-overview.qmd
-  lecture-02-fundamentals.qmd
+  module-01/
+    index.qmd         # Module hub page
+    _prep/            # Instructor-only (not published)
+      lecture-NN-design.md
+      lecture-NN-notes.md
+    slides/
+      lecture-NN-topic.qmd
+    readings/
+      lecture-NN-topic.qmd
+  module-02/
+  module-03/
+  module-04/
 handouts/
   index.qmd
 assets/
+  figures.yml         # Central figure registry
+  images/
+    common/           # Shared figures
+    module-01/        # Module-specific figures
   site-light.scss
   site-dark.scss
   callouts.scss

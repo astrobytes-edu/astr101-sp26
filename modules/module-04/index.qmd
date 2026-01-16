@@ -2,6 +2,15 @@
 title: "Module 4: Galaxies & Cosmology"
 subtitle: "Weeks 13–15 | The large-scale universe"
 page-layout: article
+listing:
+  - id: module-lectures
+    contents: "slides/*.qmd"
+    template: ../../assets/templates/lecture-card.ejs
+    sort: "date"
+  - id: module-readings
+    contents: "readings/*.qmd"
+    template: ../../assets/templates/reading-card.ejs
+    sort: "date"
 ---
 
 ## Why this module matters
@@ -24,12 +33,18 @@ By the end of this module, you will be able to:
 ## Lectures
 
 ::: {.lecture-grid}
-
-<!-- Lectures to be added as slides are created -->
-
+::: {#module-lectures}
+:::
 :::
 
-## Required reading
+## Lecture Readings
+
+::: {.lecture-grid}
+::: {#module-readings}
+:::
+:::
+
+## Required Textbook Reading
 
 - Chapter 10 (pp. 69–78): The Milky Way
 - Chapter 11 (pp. 79–88): Galaxies and Cosmology

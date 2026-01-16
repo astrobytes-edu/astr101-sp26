@@ -1,7 +1,7 @@
 ---
 title: "Modules"
 listing:
-  contents: "."
+  contents: "module-*/index.qmd"
   type: table
   fields: [order, title, description]
   sort: "order asc"
@@ -12,8 +12,7 @@ listing:
   field-display-names:
     order: "#"
     title: "Module"
-    description: "What you’ll learn"
+    description: "What you'll learn"
 ---
 
-These are the narrative lecture text pages (your “course text”).  
-Each module is a `.qmd` file in this folder. Add a new one and it shows up here automatically.
+Course content is organized into four modules. Each module contains lectures, readings, and supporting materials.

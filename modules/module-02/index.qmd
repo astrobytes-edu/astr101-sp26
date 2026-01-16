@@ -2,6 +2,15 @@
 title: "Module 2: Inferring Star Properties"
 subtitle: "Weeks 4–7 | From photons to physical properties"
 page-layout: article
+listing:
+  - id: module-lectures
+    contents: "slides/*.qmd"
+    template: ../../assets/templates/lecture-card.ejs
+    sort: "date"
+  - id: module-readings
+    contents: "readings/*.qmd"
+    template: ../../assets/templates/reading-card.ejs
+    sort: "date"
 ---
 
 ## Why this module matters
@@ -23,12 +32,18 @@ By the end of this module, you will be able to:
 ## Lectures
 
 ::: {.lecture-grid}
-
-<!-- Lectures to be added as slides are created -->
-
+::: {#module-lectures}
+:::
 :::
 
-## Required reading
+## Lecture Readings
+
+::: {.lecture-grid}
+::: {#module-readings}
+:::
+:::
+
+## Required Textbook Reading
 
 - Chapter 3 (pp. 15–24): Distance and Parallax
 - Chapter 5 (pp. 28–35): Stellar Spectra

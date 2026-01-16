@@ -1,0 +1,17 @@
+format:
+  revealjs:
+    theme: [simple, ../../../assets/slides/theme.scss]
+    css: /assets/slides/theme.css
+    logo: /assets/astr201-logo.png
+    slide-number: c/t
+    center: false
+    transition: fade
+    # optionally:
+    # logo: /assets/astr201-logo.svg
+    # favicon: /assets/astr201-favicon.ico
+    # toc: true
+    # toc-depth: 2
+    # toc-slide-class: toc-slide
+    # incremental: true
+    # self-contained: true
+    # scrollable: true

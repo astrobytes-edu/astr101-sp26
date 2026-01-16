@@ -49,8 +49,10 @@ project:
     - index.qmd
     - course-info/*.qmd
     - handouts/*.qmd
-    - modules/*.qmd
-    - slides/*.qmd
+    - modules/index.qmd
+    - modules/module-*/index.qmd
+    - modules/module-*/slides/*.qmd
+    - modules/module-*/readings/*.qmd
     - homework/*.qmd
     - exams/*.qmd
     - explore/*.qmd
@@ -75,21 +77,21 @@ website:
           - course-info/schedule.qmd
 
       - section: "Module 1: Foundations"
-        href: modules/module-01.qmd
+        href: modules/module-01/index.qmd
         contents:
-          - slides/lecture-01-course-overview.qmd
-          - slides/lecture-02-fundamentals.qmd
+          - modules/module-01/slides/lecture-01-course-overview.qmd
+          - modules/module-01/slides/lecture-02-fundamentals.qmd
 
       - section: "Module 2: Inferring Star Properties"
-        href: modules/module-02.qmd
+        href: modules/module-02/index.qmd
         contents: []
 
       - section: "Module 3: Stellar Structure & Evolution"
-        href: modules/module-03.qmd
+        href: modules/module-03/index.qmd
         contents: []
 
       - section: "Module 4: Galaxies & Cosmology"
-        href: modules/module-04.qmd
+        href: modules/module-04/index.qmd
         contents: []
 
       - section: "Homework"
