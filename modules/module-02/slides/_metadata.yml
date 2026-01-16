@@ -1,5 +1,6 @@
 format:
   revealjs:
+    date-format: "MMMM D, YYYY"
     theme: [simple, ../../../assets/slides/theme.scss]
     css: /assets/slides/theme.css
     logo: /assets/astr201-logo.png

@@ -122,6 +122,7 @@ website:
 
 format:
   html:
+    date-format: "MMMM D, YYYY"
     theme:
       light:
         - cosmo
