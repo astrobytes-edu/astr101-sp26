@@ -1,0 +1,657 @@
+---
+title: "Lecture 2: Tools of the Trade"
+subtitle: "Mastering Astrophysical Reasoning"
+author: "Dr. Anna Rosen"
+date: "2026-01-22"
+description: "Four problem-solving tools that transform points of light into physical understanding."
+format: revealjs
+execute:
+  echo: false
+  warning: false
+  message: false
+---
+
+## {background-image="/assets/images/common/noirlab-nightsky-mosaic.jpg" background-opacity="0.3"}
+
+::: {.r-fit-text}
+The Ambiguity Problem
+:::
+
+::: {.notes}
+Hook: 0–5 min. Start with mystery, not answers.
+:::
+
+---
+
+## Points of Light
+
+When we look at the night sky, stars appear as mere points.
+
+Is that faint red glow...
+
+::: {.incremental}
+- A tiny, nearby dwarf?
+- A massive, distant supergiant?
+:::
+
+. . .
+
+We can't visit them. We can't weigh them directly.
+
+**So how do we know anything about stars?**
+
+::: {.notes}
+Build the tension. They have no depth perception. Everything is a 2D projection.
+:::
+
+---
+
+## Today's Toolkit
+
+Four methods that turn "points of light" into physics:
+
+::: {.incremental}
+1. **Dimensional Analysis** — Is this equation even possible?
+2. **The Ratio Method** — How does this compare to something known?
+3. **Unit Conversions** — What's the numeric value in useful units?
+4. **Order-of-Magnitude** — Does this answer make sense?
+:::
+
+. . .
+
+These aren't math drills—they're *inference tools*.
+
+::: {.notes}
+Frame as empowerment. "You're about to get superpowers."
+:::
+
+---
+
+## {.center}
+
+::: {.r-fit-text}
+Tool 1: Dimensional Analysis
+:::
+
+*The "smoke detector" for physics*
+
+---
+
+## The Fundamental Trio
+
+Every physical quantity in this course is built from three ingredients:
+
+| Dimension | Symbol | Example (CGS) |
+|-----------|--------|---------------|
+| Length | $[L]$ | cm |
+| Mass | $[M]$ | g |
+| Time | $[T]$ | s |
+
+. . .
+
+**Units** are conventions (cm vs AU).
+
+**Dimensions** are invariant physical DNA.
+
+::: {.notes}
+5–7 min. Emphasize: you can change units, but you can't change what a quantity *is*.
+:::
+
+---
+
+## Derived Quantities (CGS)
+
+| Quantity | Dimensions | CGS Unit |
+|----------|------------|----------|
+| Velocity | $[LT^{-1}]$ | cm/s |
+| Acceleration | $[LT^{-2}]$ | cm/s$^2$ |
+| Force | $[MLT^{-2}]$ | dyne (g cm/s$^2$) |
+| Energy | $[ML^2T^{-2}]$ | erg (g cm$^2$/s$^2$) |
+| Pressure | $[ML^{-1}T^{-2}]$ | dyne/cm$^2$ |
+
+::: {.notes}
+7–9 min. These are recipes. Energy = mass × length² / time².
+:::
+
+---
+
+## The Smoke Detector Test
+
+If you calculate a star's **mass** and your answer has dimensions of **time**...
+
+. . .
+
+🚨 **The physics is wrong.**
+
+You don't need a calculator to know something's broken.
+
+::: {.notes}
+9–11 min. This catches errors *before* you waste time computing.
+:::
+
+---
+
+## Worked Example: What are the dimensions of $G$?
+
+Newton's law of gravity:
+$$F = \frac{GMm}{r^2}$$
+
+We know:
+
+- $[F] = [MLT^{-2}]$ (force)
+- $[M], [m] = [M]$ (mass)
+- $[r] = [L]$ (length)
+
+. . .
+
+Solve for $[G]$:
+$$[G] = \frac{[F][r^2]}{[M][m]} = \frac{[MLT^{-2}][L^2]}{[M^2]} = [M^{-1}L^3T^{-2}]$$
+
+::: {.notes}
+11–14 min. Walk through cancellation slowly. "G has weird units because gravity is weak."
+:::
+
+---
+
+## Check Yourself: Orbital Period
+
+Kepler's Third Law gives us:
+$$P \propto \sqrt{\frac{r^3}{GM}}$$
+
+. . .
+
+**Question:** Verify the dimensions work out to time $[T]$.
+
+::: {.notes}
+14–15 min. Give them 30 seconds to think.
+
+Answer: $[r^3/GM] = [L^3]/[M^{-1}L^3T^{-2}][M] = [L^3]/[L^3T^{-2}] = [T^2]$
+
+Square root gives $[T]$. ✓
+:::
+
+---
+
+## {.center}
+
+::: {.r-fit-text}
+Tool 2: The Ratio Method
+:::
+
+*Escaping the "big number" trap*
+
+---
+
+## The Problem with Big Numbers
+
+Mass of the Sun: $M_\odot = 2 \times 10^{33}$ g
+
+Mass of the Earth: $M_\oplus = 6 \times 10^{27}$ g
+
+. . .
+
+**Subtraction:**
+$$M_\odot - M_\oplus = 1.999... \times 10^{33} \text{ g}$$
+
+Useless. Still a giant, meaningless number.
+
+---
+
+## Division Reveals Scale
+
+$$\frac{M_\odot}{M_\oplus} = \frac{2 \times 10^{33}}{6 \times 10^{27}} \approx 333{,}000$$
+
+. . .
+
+**The Sun is 333,000 times more massive than Earth.**
+
+Now *that* is useful information.
+
+::: {.notes}
+17–19 min. Ratios give relative scale. Absolute numbers often don't.
+:::
+
+---
+
+## The Cancellation Trick
+
+Most physical laws are proportionality relationships:
+$$A = kB^n$$
+
+When comparing two systems:
+$$\frac{A_2}{A_1} = \frac{kB_2^n}{kB_1^n} = \left(\frac{B_2}{B_1}\right)^n$$
+
+. . .
+
+**The constant $k$ cancels!**
+
+We don't need to know $G$, $\pi$, or $\sigma$ numerically.
+
+::: {.notes}
+19–22 min. This is the key insight. Constants are "nuisances" that vanish in ratios.
+:::
+
+---
+
+## Worked Example: Solar Volume
+
+The Sun's radius is 109 times Earth's radius:
+$$\frac{R_\odot}{R_\oplus} = 109$$
+
+Volume of a sphere: $V = \frac{4}{3}\pi R^3$
+
+. . .
+
+How many Earths fit inside the Sun?
+
+$$\frac{V_\odot}{V_\oplus} = \left(\frac{R_\odot}{R_\oplus}\right)^3 = 109^3 \approx 1.3 \times 10^6$$
+
+**Over 1 million Earths!**
+
+::: {.notes}
+22–25 min. Notice: we never calculated actual volumes in cm³. Ratios are enough.
+:::
+
+---
+
+## Scaling Intuition
+
+| Scaling | Physical Meaning | Example |
+|---------|------------------|---------|
+| $A \propto B^2$ | Area | Surface area, intensity |
+| $A \propto B^3$ | Volume | Mass (if density constant) |
+| $A \propto B^{-2}$ | Inverse-square | Gravity, light intensity |
+
+. . .
+
+**Small changes in input → big changes in output when $n > 1$**
+
+::: {.notes}
+25–27 min. The power tells the physical story.
+:::
+
+---
+
+## Check Yourself: Surface Area
+
+If you double a nebula's radius, by what factor does its surface area increase?
+
+. . .
+
+$$SA \propto R^2$$
+$$\frac{SA_2}{SA_1} = \left(\frac{2R}{R}\right)^2 = 4$$
+
+**Factor of 4.** (The $4\pi$ cancels.)
+
+---
+
+## {.center}
+
+::: {.r-fit-text}
+Tool 3: Unit Conversions
+:::
+
+*Why astronomers use CGS*
+
+---
+
+## The CGS System
+
+Astronomy uses **CGS** (centimeter-gram-second), not SI.
+
+| Base | CGS | SI |
+|------|-----|---|
+| Length | cm | m |
+| Mass | g | kg |
+| Time | s | s |
+
+. . .
+
+**Derived units:**
+
+- Energy: **erg** (not Joule)
+- Force: **dyne** (not Newton)
+- Luminosity: **erg/s** (not Watt)
+
+::: {.notes}
+27–29 min. Historical convention that stuck. Numbers stay more manageable.
+:::
+
+---
+
+## Why CGS?
+
+Solar luminosity in SI:
+$$L_\odot = 3.8 \times 10^{26} \text{ W}$$
+
+Solar luminosity in CGS:
+$$L_\odot = 3.8 \times 10^{33} \text{ erg/s}$$
+
+. . .
+
+Both are correct. CGS is the community standard for astrophysics.
+
+---
+
+## The Fractional Identity
+
+The key insight: $1 \text{ m} = 100 \text{ cm}$ means:
+
+$$\frac{100 \text{ cm}}{1 \text{ m}} = 1$$
+
+. . .
+
+**Multiplying by 1 doesn't change the physics.**
+
+It only changes how we *write* the number.
+
+::: {.notes}
+29–31 min. Treat units like algebraic variables. They cancel.
+:::
+
+---
+
+## Example 1: Speed
+
+Earth's orbital speed: 30 km/s
+
+Convert to CGS:
+
+$$30 \frac{\text{km}}{\text{s}} \times \frac{10^3 \text{ m}}{1 \text{ km}} \times \frac{10^2 \text{ cm}}{1 \text{ m}}$$
+
+. . .
+
+$$= 30 \times 10^5 \frac{\text{cm}}{\text{s}} = 3 \times 10^6 \text{ cm/s}$$
+
+::: {.notes}
+31–33 min. Walk through unit cancellation explicitly.
+:::
+
+---
+
+## Example 2: Energy (Exponents Matter!)
+
+How many erg in 1 Joule?
+
+$$1 \text{ J} = 1 \text{ kg} \cdot \text{m}^2 \cdot \text{s}^{-2}$$
+
+. . .
+
+$$= (10^3 \text{ g})(10^2 \text{ cm})^2 \text{ s}^{-2}$$
+
+$$= 10^3 \times 10^4 \text{ g cm}^2 \text{ s}^{-2} = 10^7 \text{ erg}$$
+
+::: {.notes}
+33–35 min. Common mistake: forgetting to square the 100.
+:::
+
+---
+
+## Example 3: The Stefan-Boltzmann Constant
+
+SI: $\sigma = 5.67 \times 10^{-8}$ W m$^{-2}$ K$^{-4}$
+
+. . .
+
+Convert to CGS:
+
+- W → erg/s: $\times 10^7$
+- m$^{-2}$ → cm$^{-2}$: $\times 10^{-4}$
+
+. . .
+
+$$\sigma = 5.67 \times 10^{-8} \times 10^7 \times 10^{-4} = 5.67 \times 10^{-5} \text{ erg cm}^{-2} \text{ s}^{-1} \text{ K}^{-4}$$
+
+---
+
+## Key Conversions to Memorize
+
+| Quantity | CGS Value |
+|----------|-----------|
+| 1 parsec | $3.09 \times 10^{18}$ cm |
+| 1 AU | $1.50 \times 10^{13}$ cm |
+| Solar mass $M_\odot$ | $2.0 \times 10^{33}$ g |
+| Solar radius $R_\odot$ | $7.0 \times 10^{10}$ cm |
+| Solar luminosity $L_\odot$ | $3.8 \times 10^{33}$ erg/s |
+
+::: {.notes}
+37–39 min. Pin these to your brain. You'll use them constantly.
+:::
+
+---
+
+## {.center}
+
+::: {.r-fit-text}
+Tool 4: Order-of-Magnitude
+:::
+
+*The power of being "roughly right"*
+
+---
+
+## You Already Do This
+
+"Can I drive there before dinner?"
+
+You estimate:
+
+::: {.incremental}
+- Distance: ~50 miles
+- Speed: ~50 mph
+- Time: ~1 hour
+:::
+
+. . .
+
+No calculator needed. **Good enough.**
+
+::: {.notes}
+39–41 min. Connect to everyday reasoning. This is natural.
+:::
+
+---
+
+## Why It's Essential in Astronomy
+
+Numbers span **40+ orders of magnitude**:
+
+- Nucleus: $10^{-13}$ cm
+- Observable universe: $10^{28}$ cm
+
+. . .
+
+Exact precision can *hide* the physics.
+
+**If you're off by a factor of 2, that's a triumph.**
+
+**If you're off by $10^{10}$, something's wrong.**
+
+---
+
+## The "Rule of 3"
+
+When estimating:
+
+::: {.incremental}
+- Coefficient $< 3$ → round **down** to 1
+- Coefficient $> 3$ → round **up** to 10
+:::
+
+. . .
+
+**Example:**
+
+- $2 \times 10^{33}$ → $10^{33}$
+- $7 \times 10^{10}$ → $10^{11}$
+
+::: {.notes}
+42–44 min. The exponent tells the story. Coefficients are refinement.
+:::
+
+---
+
+## The Universe's Phone Number
+
+::: {.r-fit-text}
+**(555)-711-2555**
+:::
+
+A mnemonic for cosmic scales.
+
+---
+
+## Reading the Phone Number
+
+**Area Code (555):** Three steps DOWN from human scale
+
+- $10^{-5}$ → cells
+- $10^{-5}$ → atoms
+- $10^{-5}$ → nucleus
+
+. . .
+
+**Exchange (711):** Solar system
+
+- $10^{7}$ → Earth
+- $10^{1}$ → Jupiter
+- $10^{1}$ → Sun
+
+---
+
+## Reading the Phone Number (cont.)
+
+**Subscriber (2555):** Cosmos
+
+- $10^{2}$ → 1 AU (Earth-Sun)
+- $10^{5}$ → nearest stars (~1 pc)
+- $10^{5}$ → Milky Way
+- $10^{5}$ → observable universe
+
+. . .
+
+If your calculation gives stellar distance = $10^{11}$ cm...
+
+**That's Sun-sized, not star-distance. Red flag!**
+
+---
+
+## Everyday Example: Piano Tuners in Chicago
+
+How many piano tuners work in Chicago?
+
+::: {.incremental}
+- Population: ~3 million → $10^6$
+- Pianos per household: ~1/20 → $10^{-1}$
+- Tunings per piano per year: ~1
+- Tunings per tuner per year: ~500 → $10^3$
+:::
+
+. . .
+
+$$\frac{10^6 \times 10^{-1} \times 1}{10^3} = 10^2 \approx 100\text{–}300 \text{ tuners}$$
+
+::: {.notes}
+47–49 min. Classic Fermi problem. We got ballpark without exact data.
+:::
+
+---
+
+## Astronomy Example: Schwarzschild Radius
+
+Estimate the radius of a solar-mass black hole:
+$$R \approx \frac{GM}{c^2}$$
+
+. . .
+
+Using CGS:
+
+- $G \approx 10^{-7}$ cm$^3$ g$^{-1}$ s$^{-2}$
+- $M_\odot \approx 10^{33}$ g
+- $c \approx 10^{10}$ cm/s
+
+$$R \approx \frac{10^{-7} \times 10^{33}}{(10^{10})^2} = \frac{10^{26}}{10^{20}} = 10^{6} \text{ cm} = 10 \text{ km}$$
+
+. . .
+
+**Exact answer: 3 km.** We were within a factor of 3. *Success!*
+
+---
+
+## {.center}
+
+::: {.r-fit-text}
+Connecting the Toolkit
+:::
+
+---
+
+## The Problem-Solving Flow
+
+```{mermaid}
+flowchart LR
+    A[Question] --> B[Dimensional Analysis]
+    B -->|Valid?| C[Ratio Method]
+    C -->|Compare| D[Unit Conversion]
+    D -->|Calculate| E[OOM Check]
+    E -->|Sensible?| F[Answer]
+```
+
+Use all four tools together for robust reasoning.
+
+---
+
+## Your New Superpowers
+
+| Tool | Question It Answers |
+|------|---------------------|
+| Dimensional Analysis | Is this equation physically valid? |
+| Ratio Method | How does this compare to something known? |
+| Unit Conversions | What's the numeric value in CGS? |
+| OOM Estimation | Does this answer make sense? |
+
+---
+
+## Preview: Where You'll Use These
+
+**Module 2:** Stellar distances → ratios everywhere
+
+**Module 3:** Stellar structure → dimensional scaling
+
+**Module 4:** Cosmology → OOM across the universe
+
+. . .
+
+These tools are your **scientific radar** for the rest of the course.
+
+---
+
+## Questions?
+
+::: {.notes}
+Leave time for "what counts as showing work?" and "how strict are units?" questions.
+:::
+
+---
+
+## CGS Cheat Sheet (Reference)
+
+| Quantity | CGS Unit | Base Units | SI Conversion |
+|----------|----------|------------|---------------|
+| Force | dyne | g cm s$^{-2}$ | $10^{-5}$ N |
+| Energy | erg | g cm$^2$ s$^{-2}$ | $10^{-7}$ J |
+| Pressure | dyne/cm$^2$ | g cm$^{-1}$ s$^{-2}$ | 0.1 Pa |
+| Luminosity | erg/s | g cm$^2$ s$^{-3}$ | $10^{-7}$ W |
+| Flux | erg cm$^{-2}$ s$^{-1}$ | g s$^{-3}$ | $10^{-3}$ W/m$^2$ |
+
+---
+
+## Astro Constants (Reference)
+
+| Constant | CGS Value |
+|----------|-----------|
+| $G$ | $6.67 \times 10^{-8}$ cm$^3$ g$^{-1}$ s$^{-2}$ |
+| $c$ | $3.0 \times 10^{10}$ cm s$^{-1}$ |
+| $\sigma$ | $5.67 \times 10^{-5}$ erg cm$^{-2}$ s$^{-1}$ K$^{-4}$ |
+| $k_B$ | $1.38 \times 10^{-16}$ erg K$^{-1}$ |
+| $h$ | $6.63 \times 10^{-27}$ erg s |
