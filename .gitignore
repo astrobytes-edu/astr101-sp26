@@ -3,6 +3,9 @@ _site/
 .DS_Store
 **/.DS_Store
 
+# Instructor-only resources (not for students)
+docs/instructor-resources/
+
 # Claude Code / MCP configs
 .claude/
 .playwright-mcp/
