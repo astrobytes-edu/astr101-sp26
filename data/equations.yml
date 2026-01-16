@@ -1,0 +1,15 @@
+# Equation Registry
+# Maps equation ID → include path, anchor, title, eqcard ID
+# Usage: {{< eqrefcard kepler >}} or {{< eqshow kepler >}}
+
+kepler:
+  title: "Kepler scaling (circular orbit)"
+  anchor: "eq-kepler"
+  include: "_includes/equations/kepler.qmd"
+  card: "kepler_period"
+
+schwarzschild:
+  title: "Schwarzschild radius (non-spinning, uncharged)"
+  anchor: "eq-schwarzschild"
+  include: "_includes/equations/schwarzschild.qmd"
+  card: "schwarzschild_radius"

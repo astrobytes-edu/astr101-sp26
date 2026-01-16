@@ -1,0 +1,21 @@
+# Equation Meaning Scaffolds
+# Each entry: predicts, depends, says, assumptions (optional)
+# Usage: Referenced by equations.yml via card field
+
+kepler_period:
+  predicts: "Given \\(r, M\\), it predicts the orbital period \\(P\\)."
+  depends: "Scales as \\(P \\propto r^{3/2}\\) and \\(P \\propto M^{-1/2}\\)."
+  says: "Farther orbits take much longer; more central mass makes orbits faster."
+  assumptions:
+    - "Orbit is approximately circular"
+    - "Central mass dominates (two-body approximation)"
+    - "Newtonian gravity"
+
+schwarzschild_radius:
+  predicts: "Given \\(M\\), it predicts the event horizon radius \\(R_{\\mathrm{sch}}\\)."
+  depends: "Scales as \\(R_{\\mathrm{sch}} \\propto M\\)."
+  says: "More massive objects have larger event horizons—linearly."
+  assumptions:
+    - "Non-rotating (Schwarzschild, not Kerr)"
+    - "Uncharged"
+    - "Spherically symmetric"
