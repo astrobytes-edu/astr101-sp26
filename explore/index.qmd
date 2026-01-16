@@ -12,14 +12,15 @@ This section contains optional resources for students who want to explore astron
 
 ## Videos & Documentaries
 
-*Recommended videos and documentaries related to course topics.*
+- [ESO Public Videos](https://www.eso.org/public/videos/) — Stunning footage from the European Southern Observatory
 
 ## Beautiful Images
 
-*Stunning images from JWST, Hubble, and other observatories.*
+- [ESA Webb Image Gallery](https://esawebb.org/images/) — Latest images from the James Webb Space Telescope
 
 ## Useful Resources
 
+- [NASA Universe](https://science.nasa.gov/universe/) — NASA's portal for all things cosmic
 - [NASA Astronomy Picture of the Day](https://apod.nasa.gov/)
 - [ESA/Hubble Image Archive](https://esahubble.org/images/)
 - [JWST Image Gallery](https://webbtelescope.org/images)
