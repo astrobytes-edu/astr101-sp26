@@ -18,6 +18,7 @@ subtitle: "Lecture [N] Reading Companion"
 author: "Dr. Anna Rosen"
 date: "[YYYY-MM-DD]"
 description: "[One-line description - matches slide description]"
+draft: true  # Set to false when ready to publish
 categories: [[module-topic], [secondary-topic]]
 course: ASTR 201
 module: "[N] - [Module Name]"

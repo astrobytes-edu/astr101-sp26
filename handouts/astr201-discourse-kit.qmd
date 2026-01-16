@@ -2,6 +2,7 @@
 title: "Discourse Kit"
 subtitle: "ASTR 201 — Scholarly Engagement"
 author: "Instructor: Dr. Anna Rosen"
+draft: false
 format:
   pdf:
     toc: false

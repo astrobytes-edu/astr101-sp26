@@ -1,6 +1,7 @@
 ---
 title: "Scholarly Engagement & Seminar Norms"
 subtitle: "ASTR 201 — Astronomy for Science Majors"
+draft: false
 format:
   pdf:
     toc: false

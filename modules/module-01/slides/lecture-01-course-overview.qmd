@@ -4,6 +4,7 @@ subtitle: "Inferring Reality from Light"
 author: "Dr. Anna Rosen"
 date: "2026-01-20"
 description: "Spoiler alerts: what we'll discover this semester and how we know it."
+draft: false
 format: revealjs
 execute:
   echo: false

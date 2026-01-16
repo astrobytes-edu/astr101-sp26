@@ -1,5 +1,6 @@
 ---
 title: "Modules"
+draft: false
 listing:
   contents: "module-*/index.qmd"
   type: table

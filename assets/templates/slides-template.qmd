@@ -18,6 +18,7 @@ subtitle: "[Subtitle or Tagline]"
 author: "Dr. Anna Rosen"
 date: "[YYYY-MM-DD]"
 description: "[One-line description for listings - what students will learn]"
+draft: true  # Set to false when ready to publish
 
 format:
   revealjs:

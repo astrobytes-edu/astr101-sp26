@@ -2,6 +2,7 @@
 title: "Why ASTR 201 is Different"
 subtitle: "ASTR 201: Astronomy for Science Majors | Spring 2026"
 author: "Dr. Anna Rosen"
+draft: false
 format:
   html:
     toc: true

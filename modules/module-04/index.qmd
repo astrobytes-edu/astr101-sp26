@@ -1,6 +1,7 @@
 ---
 title: "Module 4: Galaxies & Cosmology"
 subtitle: "Weeks 13–15 | The large-scale universe"
+draft: false
 page-layout: article
 listing:
   - id: module-lectures

@@ -2,6 +2,7 @@
 title: "ASTR 201 Syllabus"
 subtitle: "Astronomy for Science Majors | Spring 2026"
 author: "Dr. Anna Rosen"
+draft: false
 format:
   html:
     toc: true

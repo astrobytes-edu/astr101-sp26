@@ -1,6 +1,7 @@
 ---
 title: "Module 1: Foundations"
 subtitle: "Weeks 1–3 | The tools we'll use all semester"
+draft: false
 page-layout: article
 listing:
   - id: module-lectures

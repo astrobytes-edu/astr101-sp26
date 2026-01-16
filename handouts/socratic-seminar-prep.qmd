@@ -1,6 +1,7 @@
 ---
 title: "Socratic Seminar Prep — Half-Sheet"
 subtitle: "ASTR 201 — Scholarly Engagement"
+draft: false
 format:
   pdf:
     toc: false
