@@ -79,8 +79,16 @@ website:
       - section: "Module 1: Foundations"
         href: modules/module-01/index.qmd
         contents:
-          - modules/module-01/slides/lecture-01-course-overview.qmd
-          - modules/module-01/slides/lecture-02-fundamentals.qmd
+          - section: "Lecture 1: Course Overview"
+            contents:
+              - text: "Slides"
+                href: modules/module-01/slides/lecture-01-course-overview.qmd
+          - section: "Lecture 2: Tools of the Trade"
+            contents:
+              - text: "Slides"
+                href: modules/module-01/slides/lecture-02-fundamentals.qmd
+              - text: "Reading"
+                href: modules/module-01/readings/lecture-02-fundamentals.qmd
 
       - section: "Module 2: Inferring Star Properties"
         href: modules/module-02/index.qmd
