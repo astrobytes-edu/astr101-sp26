@@ -17,6 +17,23 @@ format:
     code-line-numbers: true
     fig-align: center
     html-math-method: mathjax
+    pointer:
+      color: "#dc2626"
+      pointerSize: 18
+    spotlight:
+      size: 80
+      fadeInAndOut: 150
+    quiz:
+      shuffleOptions: true
+      defaultCorrect: "✓ Correct!"
+      defaultIncorrect: "✗ Not quite—let's discuss."
+revealjs-plugins:
+  - pointer
+  - spotlight
+  - attribution
+  - quiz
+filters:
+  - roughnotation
 execute:
   echo: false
   warning: false
@@ -251,12 +268,12 @@ Every physical quantity in this course is built from three ingredients:
 
 . . .
 
-**Units** are conventions (cm vs AU).
+[**Units**]{.rn rn-type="box" rn-color="#4ecdc4"} are conventions (cm vs AU).
 
-**Dimensions** are invariant physical DNA.
+[**Dimensions**]{.rn rn-type="underline" rn-color="#ff6b6b"} are invariant physical DNA.
 
 ::: {.notes}
-6–8 min. Emphasize: you can change units, but you can't change what a quantity *is*.
+6–8 min. Emphasize: you can change units, but you can't change what a quantity *is*. Press **R** twice to annotate Units then Dimensions.
 :::
 
 ---
@@ -578,20 +595,21 @@ $$\frac{V_\odot}{V_\oplus} = \left(\frac{R_\odot}{R_\oplus}\right)^3 = 109^3 \ap
 
 ---
 
-## iClicker: Surface Area Scaling
+## Concept Check: Surface Area Scaling
 
 If you double a nebula's radius, by what factor does its surface area increase?
 
-A. 2
+::: {.quiz}
+Surface area scales as $R^2$. If radius doubles, surface area becomes...
 
-B. 4
-
-C. 8
-
-D. 16
+- [ ] 2× (linear scaling)
+- [x] 4× (quadratic scaling)
+- [ ] 8× (cubic scaling)
+- [ ] 16× (quartic scaling)
+:::
 
 ::: {.notes}
-Give students 30 seconds. Common error: choosing A (forgetting the square). Answer is B.
+Give students 30 seconds. Press **C** to reveal answer. Common error: choosing A (forgetting the square). Answer is B.
 :::
 
 ---
