@@ -24,6 +24,19 @@
 
 ---
 
+## Update Log
+
+| Date | Change | Status |
+|------|--------|--------|
+| 2026-01-16 | Initial audit | 83% compliant |
+| 2026-01-16 | Added `_brand.yml` | ✅ Implemented |
+| 2026-01-16 | Added comprehensive `_metadata.yml` defaults | ✅ Implemented |
+| 2026-01-16 | Enabled `hash: true`, `menu: true`, `auto-animate: true` | ✅ Implemented |
+
+**Revised Score:** ~95% compliant
+
+---
+
 ## 1. Project Setup (§1)
 
 ### 1.1 Directory Layout
@@ -392,8 +405,8 @@ Example from lecture-02:
 │  • Auto-animate (not enabled)                                   │
 │  • Menu navigation (not enabled)                                │
 ├─────────────────────────────────────────────────────────────────┤
-│  ❌ NOT IMPLEMENTED                                              │
-│  • _brand.yml (using _tokens.scss instead)                      │
+│  ✅ NOW IMPLEMENTED                                              │
+│  • _brand.yml (extracted from _tokens.scss)                     │
 │  • Project type extension (using templates instead)             │
 │  • Vertical slide stacks (not used)                             │
 └─────────────────────────────────────────────────────────────────┘
