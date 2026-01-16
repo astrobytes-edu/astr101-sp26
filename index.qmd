@@ -1,72 +1,119 @@
 ---
-title: "Home"
+title: "ASTR 201: Astronomy for Science Majors"
+subtitle: "Spring 2026"
 draft: false
 format:
   html:
     toc: false
 ---
 
-![](assets/astr201-logo.png)
+::: {.grid}
+::: {.g-col-12 .g-col-md-8}
 
-::: {.callout-hero}
-## Start Here
+## Welcome to ASTR 201
 
-- Read the [Syllabus](course-info/syllabus.qmd).
-- Check the [Course Schedule](course-info/schedule.qmd) each week for what's due.
-- Submit all work on Canvas (link on Canvas/announcements).
+This is not a "tour of the cosmos" course. ASTR 201 is a **quantitative introduction to astrophysics** where you'll learn to think like an astronomer: extracting physical insight from limited observations using mathematics and physics.
+
+Astronomers can't visit stars or hold galaxies in a lab. Instead, we measure light—its brightness, color, spectrum, and timing—and from these constrained observations, we infer masses, temperatures, distances, ages, and compositions. This course teaches you *how* we know what we know about the universe.
+
+You'll develop skills in dimensional analysis, scaling relations, and order-of-magnitude reasoning that apply far beyond astronomy. By the end, you'll be able to estimate the mass of a black hole from orbital data, derive the temperature of a star from its color, and understand why stellar lifetimes span millions to trillions of years.
+
+:::
+::: {.g-col-12 .g-col-md-4}
+
+::: {.card}
+::: {.card-header}
+**Instructor**
+:::
+::: {.card-body}
+**{{< meta params.instructor >}}**
+
+<i class="bi bi-geo-alt"></i> {{< meta params.office >}}
+
+<i class="bi bi-clock"></i> {{< meta params.office-hours >}}
+
+<i class="bi bi-envelope"></i> [{{< meta params.email >}}](mailto:{{< meta params.email >}})
+:::
 :::
 
-## ASTR 201: Astronomy for Science Majors
+:::
+:::
 
-ASTR 201 is a **quantitative** astronomy course: we use math and physics to infer what the universe is doing from limited observations.
+---
+
+::: {.callout-note appearance="simple"}
+## <i class="bi bi-signpost-split"></i> Start Here
+
+1. Read the [Syllabus](course-info/syllabus.qmd) to understand course policies and expectations.
+2. Check the [Schedule](course-info/schedule.qmd) each week for lectures, readings, and due dates.
+3. Submit all assignments on [Canvas]({{< meta params.canvas-url >}}).
+:::
 
 ## Quick Navigation
 
 ::: {.dashboard-grid}
 
 ::: {.dashboard-tile}
-[<span class="dashboard-tile-icon">📋</span>[Syllabus]{.dashboard-tile-title}](course-info/syllabus.qmd){.dashboard-tile-link}
+[<i class="bi bi-file-text dashboard-tile-icon"></i>[Syllabus]{.dashboard-tile-title}](course-info/syllabus.qmd){.dashboard-tile-link}
 :::
 
 ::: {.dashboard-tile}
-[<span class="dashboard-tile-icon">📅</span>[Schedule]{.dashboard-tile-title}](course-info/schedule.qmd){.dashboard-tile-link}
+[<i class="bi bi-calendar3 dashboard-tile-icon"></i>[Schedule]{.dashboard-tile-title}](course-info/schedule.qmd){.dashboard-tile-link}
 :::
 
 ::: {.dashboard-tile}
-[<span class="dashboard-tile-icon">📝</span>[Homework]{.dashboard-tile-title}](homework/index.qmd){.dashboard-tile-link}
+[<i class="bi bi-pencil-square dashboard-tile-icon"></i>[Homework]{.dashboard-tile-title}](homework/index.qmd){.dashboard-tile-link}
 :::
 
 ::: {.dashboard-tile}
-[<span class="dashboard-tile-icon">📄</span>[Handouts]{.dashboard-tile-title}](handouts/index.qmd){.dashboard-tile-link}
+[<i class="bi bi-file-earmark-text dashboard-tile-icon"></i>[Handouts]{.dashboard-tile-title}](handouts/index.qmd){.dashboard-tile-link}
 :::
 
 ::: {.dashboard-tile}
-[<span class="dashboard-tile-icon">🔭</span>[Explore]{.dashboard-tile-title}](explore/index.qmd){.dashboard-tile-link}
+[<i class="bi bi-stars dashboard-tile-icon"></i>[Explore]{.dashboard-tile-title}](explore/index.qmd){.dashboard-tile-link}
 :::
 
 ::: {.dashboard-tile}
-[<span class="dashboard-tile-icon">🆘</span>[Get Help]{.dashboard-tile-title}](course-info/syllabus.qmd#sec-getting-help){.dashboard-tile-link}
+[<i class="bi bi-question-circle dashboard-tile-icon"></i>[Get Help]{.dashboard-tile-title}](course-info/syllabus.qmd#sec-getting-help){.dashboard-tile-link}
 :::
 
 :::
 
-## How to succeed in this course
+## What You'll Explore
 
-- Show your reasoning (steps, units, assumptions).
-- Use homework + grade memos to prepare for exams.
-- Ask for help early (see “Communication & Getting Help” in the syllabus).
+::: {.grid}
+::: {.g-col-12 .g-col-md-6}
+**Module 1: Foundations**
+Dimensional analysis, Kepler's laws, gravity, and blackbody radiation—the essential toolkit.
 
-::: {.callout-note}
-## Where to get help
+**Module 2: Stellar Properties**
+How we measure distances, interpret spectra, and classify stars on the H-R diagram.
+:::
+::: {.g-col-12 .g-col-md-6}
+**Module 3: Stellar Structure & Evolution**
+What holds stars up, what makes them shine, and how they live and die.
 
-- Instructor: during class + office hours
-- Canvas discussion: questions others may share
-- Classmates: collaborate on ideas (submit your own work)
-- SDSU Astronomy Help Room: free tutoring (schedule on Canvas)
+**Module 4: Galaxies & Cosmology**
+Dark matter, the expanding universe, and the cosmic microwave background.
+:::
+:::
+
+## How to Succeed
+
+1. **Show your reasoning.** Steps, units, and assumptions matter more than final answers.
+2. **Use feedback.** Homework and grade memos prepare you for exams.
+3. **Ask early.** Office hours and the discussion board exist for a reason.
+
+::: {.callout-tip appearance="simple"}
+## <i class="bi bi-lightbulb"></i> Getting Help
+
+- **Office hours:** {{< meta params.office-hours >}} in {{< meta params.office >}}
+- **Canvas discussion:** Post questions others might share
+- **SDSU Astronomy Help Room:** Free tutoring (schedule on Canvas)
 :::
 
 ---
 
 ## Announcements
 
-This page is for course-wide highlights. For official updates, check Canvas announcements and the Schedule page.
+Course-wide updates will appear here. For official announcements, check Canvas.

@@ -33,6 +33,7 @@
   font-size: 2rem;
   margin-bottom: 0.5rem;
   display: block;
+  color: $teal-light;
 }
 
 .dashboard-tile-title {
@@ -69,6 +70,10 @@
 
 [data-bs-theme="dark"] .dashboard-tile-title {
   color: $indigo-dark;
+}
+
+[data-bs-theme="dark"] .dashboard-tile-icon {
+  color: $teal-dark;
 }
 
 [data-bs-theme="dark"] .dashboard-tile-link:hover .dashboard-tile-title {

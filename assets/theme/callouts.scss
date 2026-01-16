@@ -62,47 +62,53 @@ $callout-color-warning: darken($rose-light, 10%);
   color: $mauve-dark;
 }
 
-// === STANDARD CALLOUT ICONS (emoji overrides) ===
-.callout-note .callout-icon::before {
-  background-image: none !important;
-  content: "⚡️ " !important;
-  font-size: $callout-icon-size;
-}
-
-.callout-tip .callout-icon::before {
-  background-image: none !important;
-  content: "⭐ " !important;
-  font-size: $callout-icon-size;
-}
-
-.callout-important .callout-icon::before {
-  background-image: none !important;
-  content: "✨ " !important;
-  font-size: $callout-icon-size;
-}
-
-.callout-caution .callout-icon::before {
-  background-image: none !important;
-  content: "💥 " !important;
-  font-size: $callout-icon-size;
-}
-
-.callout-warning .callout-icon::before {
-  background-image: none !important;
-  content: "🚀 " !important;
-  font-size: $callout-icon-size;
-}
+// === STANDARD CALLOUT ICONS (Bootstrap Icons) ===
+// Using Bootstrap Icons font with Unicode values for clean, professional look
 
 .callout .callout-icon {
   background-image: none !important;
 }
 
 .callout .callout-icon::before {
+  font-family: "bootstrap-icons" !important;
+  font-style: normal;
+  font-weight: normal;
+  background-image: none !important;
   margin-right: 0.35em;
+  font-size: $callout-icon-size;
+}
+
+.callout-note .callout-icon::before {
+  content: "\F4C2" !important;  // bi-lightning-charge
+}
+
+.callout-tip .callout-icon::before {
+  content: "\F47B" !important;  // bi-lightbulb
+}
+
+.callout-important .callout-icon::before {
+  content: "\F58D" !important;  // bi-stars
+}
+
+.callout-caution .callout-icon::before {
+  content: "\F33B" !important;  // bi-exclamation-triangle
+}
+
+.callout-warning .callout-icon::before {
+  content: "\F333" !important;  // bi-exclamation-circle
 }
 
 // === CUSTOM CALLOUT TYPES ===
-// Problem - shooting star icon, indigo (structural question)
+// Mixin for custom callout icon styling
+@mixin custom-callout-icon($icon-code) {
+  &::before {
+    font-family: "bootstrap-icons";
+    content: $icon-code;
+    margin-right: 0.4em;
+  }
+}
+
+// Problem - puzzle icon, indigo (structural question)
 .callout-problem {
   border-left: 4px solid $indigo-light;
   background-color: rgba($indigo-light, 0.06);
@@ -113,7 +119,8 @@ $callout-color-warning: darken($rose-light, 10%);
 }
 
 .callout-problem::before {
-  content: "🧠 Problem";
+  font-family: "bootstrap-icons";
+  content: "\F4EF  Problem";  // bi-puzzle
   font-weight: 600;
   color: $indigo-light;
   display: block;
@@ -121,7 +128,7 @@ $callout-color-warning: darken($rose-light, 10%);
   font-size: $callout-label-size;
 }
 
-// Solution - sun icon, gold (key result - rare!)
+// Solution - check-circle icon, gold (key result - rare!)
 .callout-solution {
   border-left: 4px solid $gold-light;
   background-color: rgba($gold-light, 0.08);
@@ -132,7 +139,8 @@ $callout-color-warning: darken($rose-light, 10%);
 }
 
 .callout-solution::before {
-  content: "🔭 Solution";
+  font-family: "bootstrap-icons";
+  content: "\F26A  Solution";  // bi-check-circle
   font-weight: 600;
   color: $gold-light;
   display: block;
@@ -140,7 +148,7 @@ $callout-color-warning: darken($rose-light, 10%);
   font-size: $callout-label-size;
 }
 
-// Sanity Check - scales icon, teal (measurement/verification)
+// Sanity Check - calculator icon, teal (measurement/verification)
 .callout-sanity-check {
   border-left: 4px solid $teal-light;
   background-color: rgba($teal-light, 0.08);
@@ -151,7 +159,8 @@ $callout-color-warning: darken($rose-light, 10%);
 }
 
 .callout-sanity-check::before {
-  content: "🧮 Sanity Check";
+  font-family: "bootstrap-icons";
+  content: "\F1C1  Sanity Check";  // bi-calculator
   font-weight: 600;
   color: $teal-light;
   display: block;
@@ -159,7 +168,7 @@ $callout-color-warning: darken($rose-light, 10%);
   font-size: $callout-label-size;
 }
 
-// TPS (Think-Pair-Share) - speech bubbles icon, indigo (discussion)
+// TPS (Think-Pair-Share) - chat-dots icon, indigo (discussion)
 .callout-tps {
   border-left: 4px solid $indigo-light;
   background-color: rgba($indigo-light, 0.06);
@@ -170,7 +179,8 @@ $callout-color-warning: darken($rose-light, 10%);
 }
 
 .callout-tps::before {
-  content: "💬 Think-Pair-Share";
+  font-family: "bootstrap-icons";
+  content: "\F249  Think-Pair-Share";  // bi-chat-dots
   font-weight: 600;
   color: $indigo-light;
   display: block;
@@ -178,7 +188,7 @@ $callout-color-warning: darken($rose-light, 10%);
   font-size: $callout-label-size;
 }
 
-// Frontier - telescope icon, purple (unsolved mysteries)
+// Frontier - question-diamond icon, purple (unsolved mysteries)
 .callout-frontier {
   border-left: 4px solid $purple-light;
   background: linear-gradient(135deg,
@@ -191,7 +201,8 @@ $callout-color-warning: darken($rose-light, 10%);
 }
 
 .callout-frontier::before {
-  content: "🔭 Open Questions";
+  font-family: "bootstrap-icons";
+  content: "\F505  Open Questions";  // bi-question-diamond
   font-weight: 600;
   color: $purple-light;
   display: block;
