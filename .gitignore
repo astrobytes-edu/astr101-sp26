@@ -4,6 +4,16 @@ docs/
 .DS_Store
 **/.DS_Store
 
+# Claude Code / MCP configs
+.claude/
+.playwright-mcp/
+
+# Temporary test files
+_test-*
+
+# Rendered HTML in source directories (should be in _site/)
+slides/*.html
+
 # LaTeX build artifacts
 **/*.aux
 **/*.fdb_latexmk
