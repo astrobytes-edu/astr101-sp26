@@ -4,9 +4,10 @@ subtitle: "Mastering Astrophysical Reasoning"
 author: "Dr. Anna Rosen"
 date: "2026-01-22"
 description: "Four problem-solving tools that transform points of light into physical understanding."
+draft: false
 format:
   revealjs:
-    theme: [default, ../../../assets/slides/theme.scss]
+    theme: [default, ../../../assets/theme/slides/theme.scss]
     slide-number: true
     transition: fade
     transition-speed: fast

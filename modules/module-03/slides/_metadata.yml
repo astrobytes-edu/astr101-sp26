@@ -1,8 +1,8 @@
 format:
   revealjs:
     date-format: "MMMM D, YYYY"
-    theme: [simple, ../../../assets/slides/theme.scss]
-    css: /assets/slides/theme.css
+    theme: [simple, ../../../assets/theme/slides/theme.scss]
+    css: /assets/theme/slides/theme.css
     logo: /assets/astr201-logo.png
     slide-number: c/t
     center: false

@@ -1,28 +1,13 @@
 // =============================================================================
-// VARIABLES - Color palette, sizing scale, spacing
+// VARIABLES - Typography scale, spacing, RevealJS-specific settings
 // =============================================================================
+// Colors are imported from _tokens-bridge.scss (DO NOT define colors here)
+
+@forward 'tokens-bridge';     // Re-export bridge variables for downstream files
+@use 'tokens-bridge' as *;    // Also use them locally in this file
 
 // -----------------------------------------------------------------------------
-// Color Palette
-// -----------------------------------------------------------------------------
-$cosmic-blue:   #1e3a5f !default;
-$stellar-blue:  #4a90e2 !default;
-$aurora-teal:   #26d0ce !default;
-$solar-gold:    #ffd700 !default;
-$nova-orange:   #ff6b35 !default;
-$nebula-purple: #6b46c1 !default;
-
-// Base colors
-$body-bg: #ffffff !default;
-$body-color: #222222 !default;
-$muted-color: #666666 !default;
-
-// Link colors
-$link-color: $stellar-blue !default;
-$link-hover-color: $aurora-teal !default;
-
-// -----------------------------------------------------------------------------
-// Typography Scale
+// Typography Scale (Slide-specific - relative units for projection)
 // -----------------------------------------------------------------------------
 $text-xs: 0.65em;
 $text-sm: 0.8em;
@@ -42,25 +27,35 @@ $leading-tight: 1.15;
 $leading-normal: 1.4;
 $leading-relaxed: 1.65;
 
-// Presentation typography
-$presentation-heading-font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif !default;
-$presentation-heading-color: $cosmic-blue !default;
+// -----------------------------------------------------------------------------
+// RevealJS Presentation Settings
+// -----------------------------------------------------------------------------
+$presentation-heading-font: $font-sans !default;
+$presentation-heading-color: $heading-color !default;
 $presentation-heading-font-weight: 650 !default;
 $presentation-line-height: 1.25 !default;
 
+// Heading sizes (reduced ~25% from RevealJS defaults for projection readability)
+$presentation-h1-font-size: 1.9em !default;
+$presentation-h2-font-size: 1.25em !default;
+$presentation-h3-font-size: 1.0em !default;
+$presentation-h4-font-size: 0.85em !default;
+
+// Slide margins (default 0.04 = 4%, reduced for more content area)
+$presentation-margin: 0.03 !default;
+
 // Code
 $code-block-font-size: 0.75em !default;
-$code-color: $nebula-purple !default;
 
 // -----------------------------------------------------------------------------
-// Spacing Scale
+// Spacing Scale (Slide-specific)
 // -----------------------------------------------------------------------------
 $space-1: 0.5rem;
 $space-2: 1rem;
 $space-4: 2rem;
 
 // -----------------------------------------------------------------------------
-// Background Colors
+// Background Colors (Derived from bridge colors)
 // -----------------------------------------------------------------------------
-$bg-highlight: rgba($solar-gold, 0.15);
+$bg-highlight: rgba($highlight-color, 0.15);
 $bg-muted: rgba($body-color, 0.05);

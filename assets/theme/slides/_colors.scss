@@ -1,16 +1,28 @@
 // =============================================================================
 // COLORS - Text color, backgrounds, opacity utilities
 // =============================================================================
+// Uses semantic color names from _tokens-bridge.scss
 
 // -----------------------------------------------------------------------------
 // Text Colors (Semantic)
 // -----------------------------------------------------------------------------
-.reveal .text-primary { color: $cosmic-blue !important; }
-.reveal .text-secondary { color: $stellar-blue !important; }
-.reveal .text-accent { color: $aurora-teal !important; }
+// Primary = structure (indigo) - headings, important structural text
+.reveal .text-primary { color: $heading-color !important; }
+
+// Secondary = interactive (teal) - links, clickable elements
+.reveal .text-secondary { color: $link-color !important; }
+
+// Accent = emphasis (teal) - highlighted content
+.reveal .text-accent { color: $accent-color !important; }
+
+// Muted = de-emphasized text
 .reveal .text-muted { color: $muted-color !important; }
-.reveal .text-warning { color: $nova-orange !important; }
-.reveal .text-success { color: $aurora-teal !important; }
+
+// Warning = pitfalls, errors (rose)
+.reveal .text-warning { color: $warning-color !important; }
+
+// Success = positive outcomes (teal)
+.reveal .text-success { color: $accent-color !important; }
 
 // -----------------------------------------------------------------------------
 // Opacity
@@ -36,13 +48,13 @@
 }
 
 .reveal .bg-primary {
-  background-color: rgba($cosmic-blue, 0.1) !important;
+  background-color: rgba($heading-color, 0.1) !important;
   padding: 0.25em 0.5em;
   border-radius: 0.25em;
 }
 
 .reveal .bg-accent {
-  background-color: rgba($aurora-teal, 0.1) !important;
+  background-color: rgba($accent-color, 0.1) !important;
   padding: 0.25em 0.5em;
   border-radius: 0.25em;
 }

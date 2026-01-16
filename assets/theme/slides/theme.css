@@ -6,11 +6,11 @@
 /* --- Tunable knobs ------------------------------------------------------ */
 :root {
   /* Logo placement (Quarto reveal 'logo:' renders with .slide-logo) */
-  --slide-logo-h: 80px;
-  --slide-logo-top: 12px;
-  --slide-logo-right: 16px;
+  --slide-logo-h: 8vh;       /* 8% of slide height - scales with presentation */
+  --slide-logo-bottom: 2vh;
+  --slide-logo-right: 2vw;
 
-  /* “Cosmic” utility palette (matches your old classes) */
+  /* "Cosmic" utility palette (matches your old classes) */
   --cosmic-blue: #1e3a5f;
   --stellar-blue: #4a90e2;
   --aurora-teal: #26d0ce;
@@ -19,20 +19,17 @@
   --nebula-purple: #6b46c1;
 }
 
-@media (max-width: 900px) {
-  :root { --slide-logo-h: 56px; }
-}
-
-/* --- Logo (top-right, non-interfering) ---------------------------------- */
+/* --- Logo (bottom-right, non-interfering) ------------------------------- */
 .reveal img.slide-logo,
 .reveal .slide-logo img,
 .reveal .slide-logo,
 .reveal .logo img,
 .reveal .logo {
   position: fixed !important;
-  top: var(--slide-logo-top) !important;
+  bottom: var(--slide-logo-bottom) !important;
   right: var(--slide-logo-right) !important;
   height: var(--slide-logo-h) !important;
+  max-height: none !important;        /* Override Quarto's max-height: 2.2rem */
   width: auto !important;
   max-width: none !important;
   object-fit: contain !important;
