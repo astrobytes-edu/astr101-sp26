@@ -56,6 +56,7 @@ project:
     - homework/*.qmd
     - exams/*.qmd
     - explore/*.qmd
+  brand: _brand.yml
 
 website:
   title: "ASTR 201: Astronomy for Science Majors (Spring 2026)"
