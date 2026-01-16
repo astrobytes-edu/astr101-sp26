@@ -7,6 +7,7 @@
 /*-- scss:rules --*/
 
 // === SHARED GRID (all card types) ===
+// Grid wrappers — the inner Quarto listing div gets the actual grid
 .lecture-grid,
 .homework-grid,
 .solution-grid,
@@ -20,10 +21,21 @@
 .podcast-grid,
 .project-grid,
 .infographic-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 1rem;
   margin-top: 1rem;
+  margin-bottom: 2rem;
+
+  // Target the Quarto listing container (direct child div with cards)
+  > div {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-flow: row;
+    align-items: start;
+    gap: 1.5rem;
+
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+    }
+  }
 }
 
 // === BASE CARD MIXIN ===
