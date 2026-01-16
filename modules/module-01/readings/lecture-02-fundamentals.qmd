@@ -22,6 +22,57 @@ mode: Draft
 prerequisites: Basic algebra, scientific notation familiarity (e.g., $10^{33}$), concept of units (meters, seconds, grams)
 ---
 
+::: {.callout-important}
+## The Big Idea
+
+**Dimensions are your smoke detector for physics.** If the dimensions on both sides of an equation don't match, the physics is guaranteed to be wrong—no calculation needed.
+:::
+
+## The Fingerprint Test
+
+Every physics mistake leaves a fingerprint. Before you touch a calculator, before you plug in numbers, before you do any actual math—there's a simple test that catches most errors instantly. It's called **dimensional analysis**, and it's about to become your superpower.
+
+### A Student's Mistake
+
+Here's an equation a student wrote for the orbital period of a planet:
+
+$$P = \frac{r^2}{GM}$$
+
+They calculated an answer: $P = 3.5 \times 10^{14}$ ... something. But before you check their arithmetic, ask yourself: *Is this equation even physically possible?*
+
+### The Dimensional Fingerprint
+
+Let's check the dimensions. The orbital period $P$ should have dimensions of time: $[T]$.
+
+- The numerator $r^2$ has dimensions $[L]^2$ (length squared)
+- The denominator $GM$ has dimensions $[L^3 T^{-2}]$ (from combining $G$'s $[M^{-1}L^3T^{-2}]$ with mass $[M]$)
+
+Dividing these:
+
+$$\frac{[L^2]}{[L^3 T^{-2}]} = [L^{-1} T^2]$$
+
+That's not time. It's "time squared per length"—a physically meaningless combination. **The equation is guaranteed to be wrong**, no matter what numbers you plug in.
+
+This is the fingerprint test: if the dimensions don't match what you're looking for, the physics has gone off the rails.
+
+### What You'll Be Able to Do
+
+Dimensional analysis does more than catch errors. It lets you *derive* equations from first principles. Using nothing but dimensional logic, you will:
+
+- **Recover Kepler's Third Law** for planetary orbits—no Newton required
+- **Estimate the size of a black hole's event horizon** from just mass and fundamental constants
+- **Explain the counter-intuitive fact** that more massive white dwarfs are *smaller*, not larger
+
+No calculus required. No formula memorization. Just careful reasoning about what physical quantities *are*.
+
+### About That "Math Person" Thing
+
+If you're thinking "I'm not a math person," pause for a moment. Research shows that mathematical ability is shaped by experience and effort, not fixed at birth. Your brain physically changes when you wrestle with challenging material—that's not metaphor, it's neuroscience (see [Why ASTR 201 is Different](/course-info/why-astr201-is-different.qmd)).
+
+The skills in this reading aren't about talent. They're about learning a language—the language physics uses to describe reality. And like any language, it gets easier with practice.
+
+---
+
 ## The Ambiguity of Points of Light
 
 When we look at the night sky, stars appear as mere points of light with no discernible depth. Is that faint red glow a tiny, nearby dwarf or a massive, distant supergiant? Astronomers cannot physically visit these objects or use a scale to weigh them. Instead, we use a specialized toolkit—the **Tools of the Trade**—to break the ambiguity of the universe.
@@ -547,3 +598,25 @@ Throughout this course, you'll reach for these tools instinctively when analyzin
 | Astronomical unit | AU | $1.50 \times 10^{13}$ cm |
 | Parsec | pc | $3.09 \times 10^{18}$ cm |
 | Light-year | ly | $9.46 \times 10^{17}$ cm |
+
+---
+
+## Summary: Your Four Superpowers
+
+You now have four tools that professional astronomers use every day:
+
+1. **Dimensional Analysis** tells you whether an equation is *possible*. Wrong dimensions = wrong physics, guaranteed.
+
+2. **The Ratio Method** eliminates messy constants. When comparing two systems, focus on how quantities *scale* rather than their absolute values.
+
+3. **Unit Conversions** put numbers into the CGS system astronomers use. Remember: treat units as algebraic variables that cancel.
+
+4. **Order-of-Magnitude Estimation** catches errors before they propagate. Use the Universe's Phone Number (555-711-2555) as your sanity check.
+
+These aren't separate techniques—they're a connected workflow. Before any calculation, check dimensions. During the calculation, use ratios to simplify. After converting to CGS, verify your answer against known scales.
+
+::: {.callout-tip}
+## Looking Ahead
+
+In Module 2, you'll use these tools to determine stellar distances from parallax angles. In Module 3, you'll apply dimensional analysis to derive how a star's luminosity depends on its mass. These four methods will be your constant companions throughout the course.
+:::

@@ -4,7 +4,19 @@ subtitle: "Mastering Astrophysical Reasoning"
 author: "Dr. Anna Rosen"
 date: "2026-01-22"
 description: "Four problem-solving tools that transform points of light into physical understanding."
-format: revealjs
+format:
+  revealjs:
+    theme: [default, ../../../assets/slides/theme.scss]
+    slide-number: true
+    transition: fade
+    transition-speed: fast
+    background-transition: fade
+    center: false
+    footer: "ASTR 201 • Lecture 2"
+    chalkboard: true
+    code-line-numbers: true
+    fig-align: center
+    html-math-method: mathjax
 execute:
   echo: false
   warning: false
@@ -24,6 +36,129 @@ By the end of this lecture, you will be able to:
 
 ::: {.notes}
 Read these aloud. Students should write them down or note them.
+:::
+
+---
+
+## {background-image="/assets/images/common/noirlab-nightsky-mosaic.jpg" background-opacity="0.2"}
+
+::: {.r-fit-text}
+Every physics mistake leaves a fingerprint.
+:::
+
+::: {.notes}
+0–1 min. Let this sit for 5 seconds. Don't explain yet. Build curiosity. This is your hook.
+:::
+
+---
+
+## Spot the Problem
+
+A student calculates the orbital period of Mars using:
+
+$$P = \frac{r^2}{GM}$$
+
+Their answer: $P = 3.5 \times 10^{14}$ ... something.
+
+. . .
+
+**Before you calculate anything:**
+
+Can you tell this equation is *wrong*?
+
+::: {.notes}
+1–2 min. Give students 30 seconds to think. The "something" is intentional—they don't know what units the answer should have. That's the point. Don't reveal yet.
+:::
+
+---
+
+## The Fingerprint
+
+Let's check the dimensions. Period $P$ should be time: [$[T]$]{.text-accent}.
+
+::: {.fragment}
+- $r^2$ has dimensions $[L]^2$
+- $GM$ has dimensions $[L^3 T^{-2}]$
+:::
+
+::: {.fragment}
+$$\frac{r^2}{GM} = \frac{[L^2]}{[L^3 T^{-2}]} = [L^{-1} T^2]$$
+:::
+
+::: {.fragment .highlight-red}
+**That's not time.** It's "time squared per length"—physically meaningless.
+:::
+
+::: {.fragment}
+The equation is [*guaranteed* wrong]{.text-warning .font-bold}. No calculator needed.
+:::
+
+::: {.notes}
+2–4 min. Walk through slowly. Key message: dimensions catch errors before you waste time calculating. This is the "smoke detector" in action.
+:::
+
+---
+
+## What You'll Do Today
+
+Using only dimensional analysis, you will:
+
+::: {.incremental}
+- **Derive** how planets orbit (Kepler's Third Law)
+- **Estimate** the size of a black hole's event horizon
+- **Explain** why white dwarfs get *smaller* when they gain mass
+:::
+
+. . .
+
+No calculus. No memorizing formulas. Just dimensional logic.
+
+::: {.notes}
+4–5 min. Build anticipation. These are genuinely surprising results—especially the white dwarf one. Students should feel "I want to know how to do that."
+:::
+
+---
+
+## About That "Math Person" Thing
+
+You might be thinking: "I'm not a math person."
+
+. . .
+
+Here's the truth:
+
+::: {.incremental}
+- Your brain *physically changes* when you learn hard things
+- The discomfort you feel? That's neurons forming new connections
+- "Math person" is learned, not born—and it can be unlearned
+:::
+
+. . .
+
+This isn't talent. It's a **skill** you're about to learn.
+
+::: {.notes}
+5–6 min. Keep brief but sincere. Reference "Why ASTR 201 is Different" if students have read it. The research is real (Moser et al., Woollett & Maguire).
+:::
+
+---
+
+## But First: Why Do We Need These Tools?
+
+Stars appear as points of light.
+
+We can't visit them. We can't weigh them.
+
+. . .
+
+**So how do we know anything about them?**
+
+. . .
+
+We need a toolkit that extracts physics from limited data.
+
+::: {.notes}
+6–7 min. Transition to the Ambiguity Problem. This bridges the motivation (new) to the framing (existing).
 :::
 
 ---
@@ -156,34 +291,42 @@ Every physical quantity in this course is built from three ingredients:
 
 If you calculate a star's **mass** and your answer has dimensions of **time**...
 
-. . .
-
+::: {.fragment .highlight-red}
 **The physics is wrong.**
+:::
 
+::: {.fragment}
 You don't need a calculator to know something's broken.
+:::
 
 ::: {.notes}
-9–11 min. This catches errors *before* you waste time computing.
+9–11 min. This catches errors *before* you waste time computing. The red highlight draws attention to the key insight.
 :::
 
 ---
 
-## Prediction: Dimensions of $G$
+## Prediction: Dimensions of $G$ {.smaller}
 
 Newton's law of gravity: $F = \frac{GMm}{r^2}$
 
 **Before I show you:** What dimensions must $G$ have?
 
+:::: {.columns}
+::: {.column width="50%"}
 A. $[MLT^{-2}]$ (same as force)
 
 B. $[M^{-1}L^3T^{-2}]$
+:::
 
+::: {.column width="50%"}
 C. $[L^3T^{-2}]$
 
 D. $[MT^{-2}]$
+:::
+::::
 
 ::: {.notes}
-Give students 30 seconds. Cold-call or use iClicker. Common error: forgetting the inverse mass.
+Give students 30 seconds. Cold-call or use iClicker. Common error: forgetting the inverse mass. Answer is **B**.
 :::
 
 ---
@@ -313,22 +456,22 @@ Yes. Using only dimensional analysis.
 
 ---
 
-## Advanced: White Dwarf Degeneracy Pressure
+## Advanced: White Dwarf Degeneracy Pressure {.smaller}
 
 {{< img case-c-whitedwarf-1 >}}
 
 ::: {.notes}
-23–24 min. (Optional slide) When quantum mechanics enters through ℏ.
+23–24 min. **OPTIONAL** — skip if short on time. When quantum mechanics enters through ℏ. Press → to skip to Tool 2, or continue for the payoff.
 :::
 
 ---
 
-## The Counter-Intuitive Result
+## The Counter-Intuitive Result {.smaller}
 
 {{< img case-c-whitedwarf-2 >}}
 
 ::: {.notes}
-24–25 min. (Optional) More mass = smaller white dwarf. Counterintuitive but true!
+24–25 min. **OPTIONAL** — More mass = smaller white dwarf. Counterintuitive but true! This is the "weird radius-mass relation" promised in the intro.
 :::
 
 ---
@@ -346,30 +489,32 @@ Tool 2: The Ratio Method
 ## The Problem with Big Numbers
 
 Mass of the Sun: $M_\odot = 2 \times 10^{33}$ g
-
 Mass of the Earth: $M_\oplus = 6 \times 10^{27}$ g
 
-. . .
+:::: {.columns}
+::: {.column width="50%" .fragment}
+**Subtraction** [fails]{.text-warning}
 
-**Subtraction:**
 $$M_\odot - M_\oplus = 1.999... \times 10^{33} \text{ g}$$
 
 Useless. Still a giant, meaningless number.
+:::
 
----
+::: {.column width="50%" .fragment}
+**Division** [works]{.text-success}
 
-## Division Reveals Scale
+$$\frac{M_\odot}{M_\oplus} \approx 333{,}000$$
 
-$$\frac{M_\odot}{M_\oplus} = \frac{2 \times 10^{33}}{6 \times 10^{27}} \approx 333{,}000$$
+The Sun is **333,000×** more massive than Earth.
+:::
+::::
 
-. . .
-
-**The Sun is 333,000 times more massive than Earth.**
-
-Now *that* is useful information.
+::: {.fragment .mt-2}
+Ratios give relative scale. Absolute numbers often don't.
+:::
 
 ::: {.notes}
-17–19 min. Ratios give relative scale. Absolute numbers often don't.
+17–19 min. Key insight: ratios reveal physical relationships that raw numbers hide.
 :::
 
 ---
@@ -594,15 +739,23 @@ Astronomy uses **CGS** (centimeter-gram-second), not SI.
 
 ## Why CGS?
 
-Solar luminosity in SI:
+:::: {.columns}
+::: {.column width="50%"}
+**SI (Physics textbooks)**
+
 $$L_\odot = 3.8 \times 10^{26} \text{ W}$$
+:::
 
-Solar luminosity in CGS:
+::: {.column width="50%" .fragment}
+**CGS (Astrophysics)**
+
 $$L_\odot = 3.8 \times 10^{33} \text{ erg/s}$$
+:::
+::::
 
-. . .
-
+::: {.fragment}
 Both are correct. CGS is the community standard for astrophysics.
+:::
 
 ---
 
@@ -769,7 +922,7 @@ When estimating:
 {{< img universe-phone-number >}}
 
 ::: {.notes}
-The staircase shows each multiplication factor. The phone number encodes the jumps between scales.
+44–46 min. The staircase shows each multiplication factor. The phone number encodes the jumps between scales. Have students write this down—they'll use it as a sanity check all semester.
 :::
 
 ---
@@ -779,7 +932,7 @@ The staircase shows each multiplication factor. The phone number encodes the jum
 {{< img logarithmic-cosmic-scales >}}
 
 ::: {.notes}
-Another visualization of the same idea. Each step is ×10. Human scale sits in the middle.
+46–47 min. Another visualization of the same idea. Each step is ×10. Human scale sits in the middle. Point out that we're roughly halfway between nucleus and universe on a log scale.
 :::
 
 ---
@@ -925,22 +1078,60 @@ Key message: We don't just memorize formulas. We interrogate them.
 
 ## Preview: Where You'll Use These
 
-**Module 2:** Stellar distances → ratios everywhere
+::: {.incremental}
+- **Module 2:** Stellar distances → ratios everywhere
+- **Module 3:** Stellar structure → dimensional scaling
+- **Module 4:** Cosmology → OOM across the universe
+:::
 
-**Module 3:** Stellar structure → dimensional scaling
+::: {.fragment .mt-2}
+These tools are your [**scientific radar**]{.text-accent} for the rest of the course.
+:::
 
-**Module 4:** Cosmology → OOM across the universe
+---
 
-. . .
+## {.center}
 
-These tools are your **scientific radar** for the rest of the course.
+::: {.r-fit-text}
+One Thing to Remember
+:::
+
+---
+
+## The Takeaway {.center}
+
+If you forget everything else from today, remember this:
+
+::: {.fragment .fade-up}
+::: {.r-fit-text}
+**Dimensions are your smoke detector.**
+:::
+:::
+
+::: {.fragment .mt-2}
+Before trusting any equation, check that both sides have the same dimensions.
+
+If they don't match, the physics is [*guaranteed* to be wrong]{.text-warning .font-bold}.
+:::
+
+::: {.notes}
+48–49 min. This is the core message. Emphasize: dimensional analysis catches errors before they cost you time and points. The fade-up animation and fit-text make this memorable.
+:::
 
 ---
 
 ## Questions?
 
+Common questions at this point:
+
+::: {.incremental}
+- "What counts as showing work on homework?"
+- "How strict are you about units?"
+- "Do we need to memorize the phone number?"
+:::
+
 ::: {.notes}
-Leave time for "what counts as showing work?" and "how strict are units?" questions.
+49–50 min. Address these directly. Work = show dimensional analysis. Units = CGS always. Phone number = useful mnemonic, not required.
 :::
 
 ---
