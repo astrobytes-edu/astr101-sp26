@@ -21,6 +21,11 @@ _test-*
 **/*.fls
 **/*.synctex.gz
 **/*.log
+**/*.tex
+**/*.toc
+**/*.out
+**/*.bbl
+**/*.blg
 
 **/*.quarto_ipynb
 
