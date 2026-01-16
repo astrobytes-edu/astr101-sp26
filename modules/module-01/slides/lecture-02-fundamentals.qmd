@@ -23,6 +23,8 @@ format:
     spotlight:
       size: 80
       fadeInAndOut: 150
+      toggleSpotlightOnMouseDown: true
+      initialPresentationMode: false  # Start in normal mode (can click icons)
     quiz:
       shuffleOptions: true
       defaultCorrect: "✓ Correct!"
