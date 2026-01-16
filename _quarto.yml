@@ -63,7 +63,7 @@ website:
   announcement:
     icon: info-circle
     dismissable: true
-    content: "**Welcome to Spring 2026!** Check the [Schedule](/course-info/schedule.qmd) for the first week's materials."
+    content: "**Welcome to Spring 2026!** Check the [Syllabus](/course-info/syllabus.qmd) and [Schedule](/course-info/schedule.qmd) for important information and the first week's materials."
     type: primary
     position: below-navbar
   navbar:
