@@ -3,8 +3,8 @@
 **Reviewer:** Claude (ASTR 201 Skill Audit Mode)
 **Date:** 2026-01-16
 **Artifacts Reviewed:**
-- `readings/lecture-02-fundamentals.qmd` (~3250 words, 535 lines)
-- `slides/lecture-02-fundamentals.qmd` (~60 slides, 900 lines)
+- `readings/lecture-02-foundations.qmd` (~3250 words, 535 lines)
+- `slides/lecture-02-foundations.qmd` (~60 slides, 900 lines)
 
 ---
 
@@ -28,7 +28,7 @@
 
 ---
 
-## Reading Review: `lecture-02-fundamentals.qmd`
+## Reading Review: `lecture-02-foundations.qmd`
 
 ### What Works Well
 
@@ -172,7 +172,7 @@ Consider varying:
 
 ---
 
-## Slides Review: `lecture-02-fundamentals.qmd`
+## Slides Review: `lecture-02-foundations.qmd`
 
 ### What Works Well
 

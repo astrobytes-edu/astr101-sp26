@@ -18,7 +18,7 @@
 | _metadata.yml (module-01) | `modules/module-01/slides/_metadata.yml` | 1–58 |
 
 ### Files Rendered
-- `modules/module-01/slides/lecture-02-fundamentals.qmd` → success (Output: `_site/modules/module-01/slides/lecture-02-fundamentals.html`)
+- `modules/module-01/slides/lecture-02-foundations.qmd` → success (Output: `_site/modules/module-01/slides/lecture-02-foundations.html`)
 
 ### Commands Executed
 ```
@@ -110,7 +110,7 @@ width: 1280,
 height: 720,
 margin: 6.0e-2,  // 0.06
 ```
-**Source:** `_site/modules/module-01/slides/lecture-02-fundamentals.html` (Reveal.initialize block)
+**Source:** `_site/modules/module-01/slides/lecture-02-foundations.html` (Reveal.initialize block)
 
 ### [FACT] Hash/Deep-linking
 
@@ -399,12 +399,12 @@ Glob: _extensions/**/_extension.yml
 Glob: .github/workflows/*.yml
 
 # Build verification
-quarto render modules/module-01/slides/lecture-02-fundamentals.qmd
+quarto render modules/module-01/slides/lecture-02-foundations.qmd
 
 # HTML analysis
-grep -A 100 'Reveal.initialize' _site/.../lecture-02-fundamentals.html
-grep -E '(pointer|spotlight|quiz|...)' _site/.../lecture-02-fundamentals.html
-grep -E '(width|height|transition|margin)' _site/.../lecture-02-fundamentals.html
+grep -A 100 'Reveal.initialize' _site/.../lecture-02-foundations.html
+grep -E '(pointer|spotlight|quiz|...)' _site/.../lecture-02-foundations.html
+grep -E '(width|height|transition|margin)' _site/.../lecture-02-foundations.html
 
 # Pattern counts
 Grep: '::: {.notes}'       → 86 occurrences

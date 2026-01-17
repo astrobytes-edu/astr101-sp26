@@ -334,7 +334,7 @@ Replace lines 50-60:
 
 **Step 4: Verify SCSS compiles**
 
-Run: `quarto render modules/module-01/slides/lecture-02-fundamentals.qmd 2>&1 | head -10`
+Run: `quarto render modules/module-01/slides/lecture-02-foundations.qmd 2>&1 | head -10`
 Expected: Successful render
 
 **Step 5: Commit**
@@ -369,7 +369,7 @@ rm assets/theme/slides/_tokens-bridge.scss
 
 **Step 3: Verify build still works**
 
-Run: `quarto render modules/module-01/slides/lecture-02-fundamentals.qmd`
+Run: `quarto render modules/module-01/slides/lecture-02-foundations.qmd`
 Expected: Successful render
 
 **Step 4: Commit**
@@ -517,7 +517,7 @@ make render  # or: python scripts/brand-to-scss.py && quarto render
 
 **Expected:** Site renders successfully, slides have correct colors.
 
-**Verify in browser:** Open `_site/modules/module-01/slides/lecture-02-fundamentals.html` and confirm:
+**Verify in browser:** Open `_site/modules/module-01/slides/lecture-02-foundations.html` and confirm:
 - Links are teal (#2f6f6f)
 - Headings use indigo tones
 - Highlight backgrounds are gold-tinted

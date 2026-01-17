@@ -663,7 +663,7 @@ By the end of this module, you will be able to:
 ## Slides
 
 - [L01: Course Overview](../slides/lecture-01-course-overview.qmd)
-- [L02: Math Fundamentals](../slides/lecture-02-fundamentals.qmd)
+- [L02: Math Fundamentals](../slides/lecture-02-foundations.qmd)
 - L03: Gravity & Orbits (coming soon)
 - L04: Light & Blackbodies (coming soon)
 

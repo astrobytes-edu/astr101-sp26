@@ -70,7 +70,7 @@ modules/
 
 slides/
   ├── lecture-01-course-overview.qmd
-  ├── lecture-02-fundamentals.qmd
+  ├── lecture-02-foundations.qmd
   └── ... (unchanged location, new naming may apply)
 ```
 
@@ -252,7 +252,7 @@ website:
           - text: "Lecture 1: Course Overview"
             href: slides/lecture-01-course-overview.qmd
           - text: "Lecture 2: Scaling & Units"
-            href: slides/lecture-02-fundamentals.qmd
+            href: slides/lecture-02-foundations.qmd
           # ... additional lectures
 
       - section: "Module 2: Inferring Star Properties (Wks 4–7)"
@@ -569,7 +569,7 @@ Spoiler alerts: what we'll discover this semester and how we know it.
 
 Dimensional analysis as a physicist's superpower.
 
-[View Slides →](../slides/lecture-02-fundamentals.qmd){target="_blank"}
+[View Slides →](../slides/lecture-02-foundations.qmd){target="_blank"}
 :::
 
 <!-- Additional lecture cards -->

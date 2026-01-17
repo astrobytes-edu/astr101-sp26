@@ -308,12 +308,12 @@ Expected: No errors, warnings about brand/theme are acceptable
 
 **Step 2:** Render a specific lecture to test RevealJS
 
-Run: `quarto render modules/module-01/slides/lecture-02-fundamentals.qmd`
+Run: `quarto render modules/module-01/slides/lecture-02-foundations.qmd`
 Expected: Completes without errors
 
 **Step 3:** Open in browser and verify
 
-Run: `open _site/modules/module-01/slides/lecture-02-fundamentals.html`
+Run: `open _site/modules/module-01/slides/lecture-02-foundations.html`
 
 Check:
 - [ ] Slides render with correct colors

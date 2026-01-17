@@ -139,7 +139,7 @@ Current utilities exceed playbook suggestions:
 
 **Status:** ✅ **Used appropriately**
 
-Found in `lecture-02-fundamentals.qmd`:
+Found in `lecture-02-foundations.qmd`:
 - `::: {.incremental}` for bullet reveals
 - `. . .` for manual pauses
 - Fragment-based equation reveals
@@ -430,7 +430,7 @@ Example from lecture-02:
 
 ### Slide Files
 - `modules/module-01/slides/lecture-01-course-overview.qmd`
-- `modules/module-01/slides/lecture-02-fundamentals.qmd`
+- `modules/module-01/slides/lecture-02-foundations.qmd`
 
 ### Templates
 - `assets/templates/slides-template.qmd` (5892 bytes)

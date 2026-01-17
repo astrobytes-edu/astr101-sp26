@@ -250,12 +250,12 @@ The reading mirrors the slide structure but with expanded explanations:
 ## Implementation Notes
 
 ### Slides File
-- Location: `modules/module-01/slides/lecture-02-fundamentals.qmd`
+- Location: `modules/module-01/slides/lecture-02-foundations.qmd`
 - Format: RevealJS with course theme
 - Target: ~37 slides, ≤35 words/slide average
 
 ### Reading File
-- Location: `modules/module-01/readings/lecture-02-fundamentals.qmd`
+- Location: `modules/module-01/readings/lecture-02-foundations.qmd`
 - Format: Standard Quarto page
 - Target: 1,800-2,200 words
 
