@@ -30,22 +30,31 @@ $leading-relaxed: 1.65;
 // -----------------------------------------------------------------------------
 // RevealJS Presentation Settings
 // -----------------------------------------------------------------------------
+// Reference: https://quarto.org/docs/presentations/revealjs/themes.html
+
 $presentation-heading-font: $font-sans !default;
 $presentation-heading-color: $heading-color !default;
 $presentation-heading-font-weight: 650 !default;
+
+// Body text: projector-readable (default 40px)
+$presentation-font-size-root: 46px !default;
 $presentation-line-height: 1.25 !default;
 
-// Heading sizes (reduced ~25% from RevealJS defaults for projection readability)
-$presentation-h1-font-size: 1.9em !default;
-$presentation-h2-font-size: 1.25em !default;
-$presentation-h3-font-size: 1.0em !default;
-$presentation-h4-font-size: 0.85em !default;
+// Titles: restrained, not shouty (smaller than Reveal defaults)
+// Defaults: H1=2.5em, H2=1.6em, H3=1.3em, H4=1.0em
+$presentation-h1-font-size: 2.05em !default;
+$presentation-h2-font-size: 1.40em !default;
+$presentation-h3-font-size: 1.15em !default;
+$presentation-h4-font-size: 0.95em !default;
+
+// Reduce whitespace between blocks (default 12px)
+$presentation-block-margin: 10px !default;
 
 // Slide margins (default 0.04 = 4%, reduced for more content area)
 $presentation-margin: 0.03 !default;
 
-// Code
-$code-block-font-size: 0.75em !default;
+// Code: readable size (default 0.55em)
+$code-block-font-size: 0.70em !default;
 
 // -----------------------------------------------------------------------------
 // Spacing Scale (Slide-specific)
