@@ -14,9 +14,9 @@ format:
 
 **The universe is weird.** Gravity warps spacetime. Photons don't experience time (in the *proper* relativity sense). Quantum weirdness governs the cores of dead stars — *and* is the reason stars shine at all. We don't know what ~95% of the universe is made of (dark matter + dark energy are still mysterious in their fundamental nature). These ideas *should* feel strange. That's how you know you're learning something real.
 
-This course teaches you how astronomers make sense of the universe — by connecting observations to physics. We see patterns in the chaos; math is the language that describes them, and physics tells us *why* they exist. The goal isn't just knowing what happens, but understanding *why*.
+**This course teaches you how astronomers make sense of the universe** — by connecting observations to physics. We see patterns in the chaos; math is the language that describes them, and physics tells us *why* they exist. The goal isn't just knowing what happens, but understanding *why*.
 
-That takes effort: wrestling with math, sitting with confusion, questioning intuition. **Lean in.** You'll learn to evaluate scientific claims, think quantitatively, and spot nonsense — and you'll leave understanding why the weird stuff *is* actually physical. These are skills that matter far beyond this course.
+**That takes effort:** wrestling with math, sitting with confusion, questioning intuition. **Lean in.** You'll learn to evaluate scientific claims, think quantitatively, and spot nonsense — and you'll leave understanding why the weird stuff *is* actually physical. These are skills that matter far beyond this course.
 :::
 
 ## What This Course Actually Teaches

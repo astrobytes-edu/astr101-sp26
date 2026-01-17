@@ -6,7 +6,6 @@ format:
   revealjs:
     # Theme: built-in simple + custom SCSS overrides
     theme: [simple, ../../../assets/theme/slides/theme.scss]
-    css: /assets/theme/slides/theme.css
     logo: /assets/astr201-logo.png
     date-format: "MMMM D, YYYY"
 

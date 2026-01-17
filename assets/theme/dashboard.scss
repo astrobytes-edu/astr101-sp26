@@ -1,8 +1,9 @@
 /*-- scss:defaults --*/
 // ASTR 201 Dashboard Tiles
-// Design tokens imported from _tokens.scss — edit there for site-wide changes
+// Design tokens: brand colors from generated file, design decisions from hand-authored file
 
-@import 'tokens';
+@import 'tokens_generated';
+@import 'design_tokens';
 
 /*-- scss:rules --*/
 // === DASHBOARD GRID ===

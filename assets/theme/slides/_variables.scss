@@ -1,7 +1,7 @@
 // =============================================================================
 // VARIABLES - Typography scale, spacing, RevealJS-specific settings
 // =============================================================================
-// Colors are imported from _tokens-bridge.scss (DO NOT define colors here)
+// Colors via tokens-bridge.scss (semantic aliases for brand colors)
 
 @forward 'tokens-bridge';     // Re-export bridge variables for downstream files
 @use 'tokens-bridge' as *;    // Also use them locally in this file

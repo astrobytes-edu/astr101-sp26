@@ -22,7 +22,7 @@ draft: true  # Set to false when ready to publish
 
 format:
   revealjs:
-    theme: [default, ../../../assets/slides/theme.scss]
+    theme: [default, ../../../assets/theme/slides/theme.scss]
     slide-number: true
     transition: fade
     transition-speed: fast
