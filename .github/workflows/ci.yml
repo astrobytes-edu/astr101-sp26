@@ -50,6 +50,10 @@ jobs:
           quarto render
           touch _site/.nojekyll
 
+      - name: Normalize RevealJS lazy images for HTML-Proofer
+        run: |
+          python3 scripts/normalize_html_for_proofer.py _site
+
       - name: Validate HTML + check links/images
         uses: anishathalye/proof-html@v2
         with:
@@ -64,6 +68,8 @@ jobs:
           # Allow empty/missing alt for decorative images (logos, icons)
           ignore_empty_alt: true
           ignore_missing_alt: true
+          # RevealJS vendor pages (e.g. speaker view) don't include the site favicon.
+          check_favicon: false
           # External URLs that block automated access (return 403 to bots)
           ignore_url_re: |
             ^https://docs\.google\.com/.*
