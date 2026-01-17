@@ -22,6 +22,27 @@ jobs:
       - name: Set up Quarto
         uses: quarto-dev/quarto-actions/setup@v2
 
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Generate tokens from brand
+        run: |
+          pip install pyyaml
+          python scripts/brand_to_scss.py
+
+      - name: Check tokens are up-to-date
+        run: |
+          if ! git diff --quiet assets/theme/_tokens_generated.scss; then
+            echo "ERROR: _tokens_generated.scss is out of date"
+            echo "Run: python scripts/brand_to_scss.py"
+            echo ""
+            echo "Diff:"
+            git diff assets/theme/_tokens_generated.scss
+            exit 1
+          fi
+
       - name: Render site (HTML only)
         run: |
           quarto render --to html
