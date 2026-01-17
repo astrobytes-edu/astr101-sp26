@@ -29,6 +29,16 @@ jobs:
         with:
           tinytex: true
 
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Generate tokens from brand
+        run: |
+          pip install pyyaml
+          python scripts/brand_to_scss.py
+
       - name: Render site
         run: |
           quarto render
