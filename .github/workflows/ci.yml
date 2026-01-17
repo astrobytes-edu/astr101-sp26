@@ -56,3 +56,8 @@ jobs:
           # (quarto-bootstrap, quarto-search) for light/dark theme handling.
           # Disable strict HTML validation but keep link checking.
           check_html: false
+          # Allow empty/missing alt for decorative images (logos, icons)
+          ignore_empty_alt: true
+          ignore_missing_alt: true
+          # Favicon not required for course site
+          check_favicon: false
