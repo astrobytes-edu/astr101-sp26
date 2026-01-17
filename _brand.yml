@@ -1,6 +1,10 @@
 # _brand.yml
 # Quarto Brand System — Single source of truth for cross-format identity
-# Derived from assets/theme/_tokens.scss (Observatory Slate v1.0)
+# DERIVED FROM assets/theme/_tokens.scss (Observatory Slate v1.0)
+#
+# ⚠️  DRIFT WARNING: Colors here MUST stay in sync with _tokens.scss
+# ⚠️  When updating colors, ALWAYS update _tokens.scss first, then sync here.
+# ⚠️  Run `quarto render` and verify slides still render correctly.
 #
 # Usage: Quarto automatically applies to html, dashboard, revealjs, typst
 # RevealJS uses light mode by default (projectors are bright environments)
@@ -37,6 +41,10 @@ color:
     rose-dark: "#c9a5a8"
     purple-light: "#7c3aed"
     purple-dark: "#a78bfa"
+    mauve-light: "#7d6b85"
+    mauve-dark: "#b89ac0"
+    slate-light: "#5c6470"
+    slate-dark: "#8892a2"
 
   # Semantic color roles
   foreground:
