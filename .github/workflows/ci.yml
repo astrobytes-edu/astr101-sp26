@@ -52,3 +52,7 @@ jobs:
         uses: anishathalye/proof-html@v2
         with:
           directory: _site
+          # Quarto generates non-standard attributes (append-hash) and duplicate IDs
+          # (quarto-bootstrap, quarto-search) for light/dark theme handling.
+          # Disable strict HTML validation but keep link checking.
+          check_html: false

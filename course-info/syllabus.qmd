@@ -155,7 +155,7 @@ grades and final course grades. These percentages represent guaranteed threshold
 
 ### Course Components {#sec-components}
 
-Per SDSU policy, students are expected to spend at least 6 hours per week (a minimum of 2 hours per course credit hour/unit) on coursework outside of class, including reading, homework, and exam preparation for this 3-unit course. [Click here for SDSU’s explanation of *Credit Hour or Unit*.](https://catalog.sdsu.edu/content.php?catoid=10&navoid=924#credit-hour-or-unit>).
+Per SDSU policy, students are expected to spend at least 6 hours per week (a minimum of 2 hours per course credit hour/unit) on coursework outside of class, including reading, homework, and exam preparation for this 3-unit course. [Click here for SDSU's explanation of *Credit Hour or Unit*.](https://catalog.sdsu.edu/content.php?catoid=10&navoid=924#credit-hour-or-unit).
 
 **In this section:**
 
