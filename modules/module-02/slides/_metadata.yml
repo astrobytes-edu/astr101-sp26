@@ -1,4 +1,4 @@
-# modules/module-01/slides/_metadata.yml
+# modules/module-02/slides/_metadata.yml
 # Shared RevealJS defaults for all lectures in this module
 # Per-lecture overrides go in individual .qmd frontmatter
 
@@ -6,18 +6,24 @@ format:
   revealjs:
     # Theme: built-in simple + custom SCSS overrides
     theme: [simple, ../../../assets/theme/slides/theme.scss]
-    logo: /assets/astr201-logo.png
+
+    # Use relative path (no leading /) for GitHub Pages project sites
+    logo: assets/astr201-logo.png
+
     date-format: "MMMM D, YYYY"
 
-    # Slide dimensions (16:9 aspect, optimized for projection)
+    # Geometry + scaling (controls perceived whitespace + "tiny text")
     width: 1280
     height: 720
-    margin: 0.06
-
-    # Navigation
+    margin: 0.05            # default 0.1; reduced for less frame around content
+    min-scale: 0.55         # default 0.2; prevents unreadable shrinking
+    max-scale: 2.0
     center: false
+
+    # Navigation / UX
     navigation-mode: linear
     controls: true
+    controls-layout: bottom-right
     progress: true
     overview: true
     slide-number: c/t
@@ -28,6 +34,7 @@ format:
 
     # Deep-linking (shareable slide URLs)
     hash: true
+    respond-to-hash-changes: true
 
     # Teaching niceties
     menu: true
@@ -37,6 +44,7 @@ format:
     code-copy: true
     code-line-numbers: true
     code-overflow: wrap
+    code-block-height: 650px   # default ~500px; avoids scrollbars
 
     # PDF printing
     pdf-max-pages-per-slide: 1
