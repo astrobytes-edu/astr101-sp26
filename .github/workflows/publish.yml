@@ -25,7 +25,7 @@ jobs:
         uses: actions/configure-pages@v5
 
       - name: Set up Quarto (with TinyTeX for PDF)
-        uses: quarto-dev/quarto-actions/setup@v2.1.9
+        uses: quarto-dev/quarto-actions/setup@v2
         with:
           tinytex: true
 
