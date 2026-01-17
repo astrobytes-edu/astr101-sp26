@@ -3,9 +3,9 @@
 // =============================================================================
 // These are design decisions, not brand identity.
 // Brand colors/typography come from _tokens_generated.scss
+// This file must be @imported AFTER tokens_generated.scss
 
 @use 'sass:color';
-@use 'tokens_generated' as *;
 
 // ---- Spacing & Radius ----
 $radius-sm: 6px;
@@ -21,6 +21,7 @@ $callout-label-size: 1.2em;
 // ---- Focus Ring ----
 $focus-ring-width: 2px;
 
+// Note: focus-ring mixin uses $rose-light from tokens_generated (must be imported first)
 @mixin focus-ring($focus-color: $rose-light) {
   outline: none;
   box-shadow: 0 0 0 $focus-ring-width color.scale($focus-color, $alpha: -35%);

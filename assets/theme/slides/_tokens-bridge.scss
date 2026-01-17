@@ -1,17 +1,18 @@
 // =============================================================================
-// TOKENS BRIDGE - Imports website tokens, creates slide-appropriate aliases
+// TOKENS BRIDGE - Imports generated tokens, creates slide-appropriate aliases
 // =============================================================================
 // This file is the ONLY place where website tokens are imported into slides.
 // Slides use light-mode tokens (projectors are bright environments).
 //
-// Semantic roles (from _tokens.scss):
+// Semantic roles (from _brand.yml via generated tokens):
 // - Teal = interactive (links, actions)
 // - Indigo = structure (headings, organization)
 // - Gold = rare emphasis (use sparingly)
 // - Rose = pitfalls (warnings, errors)
 // - Purple = frontier/mystery (code, special)
 
-@use '../tokens' as t;
+@use '../tokens_generated' as t;
+@use '../design_tokens' as d;
 
 // -----------------------------------------------------------------------------
 // SEMANTIC COLOR ALIASES (Slide Context)
@@ -47,12 +48,16 @@ $border-color: t.$border-light !default;
 $surface-color: t.$surface-2-light !default;
 
 // -----------------------------------------------------------------------------
-// TYPOGRAPHY (from tokens)
+// TYPOGRAPHY (from generated tokens)
 // -----------------------------------------------------------------------------
 $font-sans: t.$font-sans;
 $font-mono: t.$font-mono;
-$radius-sm: t.$radius-sm;
-$radius-md: t.$radius-md;
+
+// -----------------------------------------------------------------------------
+// DESIGN TOKENS (from hand-authored file)
+// -----------------------------------------------------------------------------
+$radius-sm: d.$radius-sm;
+$radius-md: d.$radius-md;
 
 // -----------------------------------------------------------------------------
 // ASTRONOMY ALIASES (Backward Compatibility)

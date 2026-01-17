@@ -1,8 +1,9 @@
 /*-- scss:defaults --*/
 // ASTR 201 Callouts
-// Design tokens imported from _tokens.scss — edit there for site-wide changes
+// Design tokens: brand colors from generated file, design decisions from hand-authored file
 
-@import 'tokens';
+@import 'tokens_generated';
+@import 'design_tokens';
 
 // Override Quarto's callout colors
 $callout-color-note: $indigo-light;
