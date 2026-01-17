@@ -56,9 +56,13 @@ jobs:
           # (quarto-bootstrap, quarto-search) for light/dark theme handling.
           # Disable strict HTML validation but keep link checking.
           check_html: false
+          # Quarto uses <a> tags as UI toggles (sidebar/theme) without href attributes.
+          # These are not broken content links; allow them so CI focuses on real link rot.
+          allow_missing_href: true
           # Allow empty/missing alt for decorative images (logos, icons)
           ignore_empty_alt: true
           ignore_missing_alt: true
           # External URLs that block automated access (return 403 to bots)
           ignore_url_re: |
             ^https://docs\.google\.com/.*
+            ^https://www\.cambridge\.org/9781009618007.*$
