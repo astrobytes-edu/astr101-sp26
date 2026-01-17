@@ -20,7 +20,9 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Set up Quarto
-        uses: quarto-dev/quarto-actions/setup@v2
+        uses: quarto-dev/quarto-actions/setup@v2.1.9
+        with:
+          tinytex: true
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -43,9 +45,9 @@ jobs:
             exit 1
           fi
 
-      - name: Render site (HTML only)
+      - name: Render site (HTML + PDFs)
         run: |
-          quarto render --to html
+          quarto render
           touch _site/.nojekyll
 
       - name: Validate HTML + check links/images
