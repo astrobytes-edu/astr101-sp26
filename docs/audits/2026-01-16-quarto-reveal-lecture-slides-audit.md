@@ -241,6 +241,40 @@ grep found single initialization block per plugin.
 | DRIFT-2 | Purple color present in tokens but not in _brand.yml | `_tokens.scss:31,40` | Low |
 | DRIFT-3 | Mauve color in tokens, absent from brand | `_tokens.scss:29,38` | Low |
 
+### Resolution: DRIFT-1, DRIFT-2, DRIFT-3 (Token/Brand Duplication)
+
+**Status:** ✅ RESOLVED (2026-01-16)
+
+**Solution:** `_brand.yml` is now the single source of truth. SCSS tokens are generated via `scripts/brand_to_scss.py`. CI enforces the generated file stays in sync.
+
+**New Architecture:**
+
+```text
+_brand.yml (EDIT HERE — single source of truth)
+     ↓
+scripts/brand_to_scss.py
+     ↓
+assets/theme/_tokens_generated.scss (GENERATED — do not edit)
+     +
+assets/theme/_design_tokens.scss (hand-authored design decisions)
+     ↓
+slide theme SCSS
+```
+
+**Deleted files:**
+
+- `assets/theme/_tokens.scss` (replaced by generated file)
+
+**Added files:**
+
+- `scripts/brand_to_scss.py` — deterministic generator, validates required keys
+- `scripts/requirements-dev.txt` — PyYAML dependency
+- `assets/theme/_tokens_generated.scss` — generated brand tokens
+- `assets/theme/_design_tokens.scss` — radii, sizing, focus-ring mixin
+- `Makefile` — `make tokens`, `make render`, `make preview`
+
+**CI Guard:** `.github/workflows/ci.yml` now runs the generator and fails if output differs from committed version.
+
 ---
 
 ## 8. Authoring Pattern Coverage
