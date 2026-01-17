@@ -60,6 +60,7 @@ project:
 
 website:
   title: "ASTR 201: Astronomy for Science Majors (Spring 2026)"
+  favicon: assets/astr201-favicon.png
   announcement:
     icon: info-circle
     dismissable: true
