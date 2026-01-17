@@ -14,7 +14,7 @@ format:
 
 This is not a "tour of the cosmos" course. ASTR 201 is a **quantitative introduction to astrophysics** where you'll learn to think like an astronomer: extracting physical insight from limited observations using mathematics and physics.
 
-Astronomers can't visit stars or hold galaxies in a lab. Instead, we measure light—its brightness, color, spectrum, and timing—and from these constrained observations, we infer masses, temperatures, distances, ages, and compositions. This course teaches you *how* we know what we know about the universe.
+Astronomers can't visit stars or hold galaxies in a lab. Instead, we measure light — its brightness, color, spectrum, and timing — and from these constrained observations, we infer masses, temperatures, distances, ages, and compositions. This course teaches you *how* we know *what we know* about the universe.
 
 You'll develop skills in dimensional analysis, scaling relations, and order-of-magnitude reasoning that apply far beyond astronomy. By the end, you'll be able to estimate the mass of a black hole from orbital data, derive the temperature of a star from its color, and understand why stellar lifetimes span millions to trillions of years.
 
@@ -84,17 +84,17 @@ You'll develop skills in dimensional analysis, scaling relations, and order-of-m
 ::: {.grid}
 ::: {.g-col-12 .g-col-md-6}
 **Module 1: Foundations**
-Dimensional analysis, Kepler's laws, gravity, and blackbody radiation—the essential toolkit.
+Gravity, light, and the physics we need to decode stars from a distance.
 
 **Module 2: Stellar Properties**
-How we measure distances, interpret spectra, and classify stars on the H-R diagram.
+Measuring distances to stars, reading their spectra, and classifying them by temperature and luminosity.
 :::
 ::: {.g-col-12 .g-col-md-6}
 **Module 3: Stellar Structure & Evolution**
-What holds stars up, what makes them shine, and how they live and die.
+Where the elements come from — hydrogen fusing into helium, supernovae forging iron and gold, and the black holes left behind.
 
 **Module 4: Galaxies & Cosmology**
-Dark matter, the expanding universe, and the cosmic microwave background.
+The Big Bang, the first three minutes, dark matter, and why the universe is still expanding.
 :::
 :::
 
