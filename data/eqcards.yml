@@ -19,3 +19,21 @@ schwarzschild_radius:
     - "Non-rotating (Schwarzschild, not Kerr)"
     - "Uncharged"
     - "Spherically symmetric"
+
+newton_gravity:
+  predicts: "Given \\(M\\), \\(m\\), and \\(r\\), it predicts the gravitational force \\(F\\)."
+  depends: "Scales as \\(F \\propto Mm/r^2\\)."
+  says: "Gravity weakens with distance squared; stronger between more massive objects."
+  assumptions:
+    - "Point masses or spherically symmetric"
+    - "Newtonian (non-relativistic)"
+    - "No other forces acting"
+
+stefan_boltzmann:
+  predicts: "Given \\(R\\) and \\(T\\), it predicts the luminosity \\(L\\)."
+  depends: "Scales as \\(L \\propto R^2 T^4\\)."
+  says: "Luminosity depends on surface area (\\(R^2\\)) and temperature (\\(T^4\\)). Double the temperature, get 16× the luminosity."
+  assumptions:
+    - "Blackbody radiation"
+    - "Spherical, uniformly radiating surface"
+    - "Effective surface temperature"

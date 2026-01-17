@@ -332,7 +332,7 @@ Tool 1: Dimensional Analysis
 
 ## Units vs. Dimensions
 
-{{< img units-vs-dimensions >}}
+{{< fig units-vs-dimensions >}}
 
 ::: {.notes}
 5–6 min. Key insight: units are human inventions, dimensions are physical reality.
@@ -380,7 +380,7 @@ Every physical quantity in this course is built from three ingredients:
 
 ## Building Blocks
 
-{{< img fundamental-dimensions >}}
+{{< fig fundamental-dimensions >}}
 
 ::: {.notes}
 9–10 min. Visual equation builder. Note the sanity check box.
@@ -425,7 +425,7 @@ $$F = \frac{GMm}{r^2}$$
 :::
 
 ::: {.column width="50%"}
-{{< img planetary-orbit >}}
+{{< fig planetary-orbit >}}
 :::
 ::::
 
@@ -464,7 +464,7 @@ $$[G] = \frac{[F][r^2]}{[M][m]} = \frac{[MLT^{-2}][L^2]}{[M^2]} = [M^{-1}L^3T^{-
 
 ## Constants Are Physical Quantities
 
-{{< img physical-constants >}}
+{{< fig physical-constants >}}
 
 ::: {.notes}
 13–14 min. Constants are not arbitrary numbers—they're conversion factors built into the universe.
@@ -507,7 +507,7 @@ Yes. Using only dimensional analysis.
 
 ## The Protocol
 
-{{< img da-protocol >}}
+{{< fig da-protocol >}}
 
 ::: {.notes}
 16–17 min. This is the recipe. We'll use it repeatedly.
@@ -742,7 +742,7 @@ Make a point: "We did this without knowing any deep force law derivation—just 
 
 ## Advanced: White Dwarf Degeneracy Pressure {.smaller}
 
-{{< img case-c-whitedwarf-1 >}}
+{{< fig case-c-whitedwarf-1 >}}
 
 ::: {.notes}
 23–24 min. **OPTIONAL** — skip if short on time. When quantum mechanics enters through ℏ. Press → to skip to Tool 2, or continue for the payoff.
@@ -752,7 +752,7 @@ Make a point: "We did this without knowing any deep force law derivation—just 
 
 ## The Counter-Intuitive Result {.smaller}
 
-{{< img case-c-whitedwarf-2 >}}
+{{< fig case-c-whitedwarf-2 >}}
 
 ::: {.notes}
 24–25 min. **OPTIONAL** — More mass = smaller white dwarf. Counterintuitive but true! This is the "weird radius-mass relation" promised in the intro.
@@ -864,15 +864,13 @@ $$\frac{V_\odot}{V_\oplus} = \left(\frac{R_\odot}{R_\oplus}\right)^3 = 109^3 \ap
 
 ## Concept Check: Surface Area Scaling
 
+::: {.quiz}
 If you double a nebula's radius, by what factor does its surface area increase?
 
-::: {.quiz}
-Surface area scales as $R^2$. If radius doubles, surface area becomes...
-
-- [ ] 2× (linear scaling)
-- [x] 4× (quadratic scaling)
-- [ ] 8× (cubic scaling)
-- [ ] 16× (quartic scaling)
+- [ ] 2× (the radius doubled)
+- [x] 4× (surface area scales as R²)
+- [ ] 8× (volume scaling)
+- [ ] 16× (that would be R⁴)
 :::
 
 ::: {.notes}
@@ -1204,7 +1202,7 @@ When estimating:
 
 ## The Universe's Phone Number
 
-{{< img universe-phone-number >}}
+{{< fig universe-phone-number >}}
 
 ::: {.notes}
 44–46 min. The staircase shows each multiplication factor. The phone number encodes the jumps between scales. Have students write this down—they'll use it as a sanity check all semester.
@@ -1214,7 +1212,7 @@ When estimating:
 
 ## Cosmic Scales: Powers of 10
 
-{{< img logarithmic-cosmic-scales >}}
+{{< fig logarithmic-cosmic-scales >}}
 
 ::: {.notes}
 46–47 min. Another visualization of the same idea. Each step is ×10. Human scale sits in the middle. Point out that we're roughly halfway between nucleus and universe on a log scale.
@@ -1353,7 +1351,7 @@ Use all four tools together for robust reasoning.
 
 ## The Toolbox
 
-{{< img math-toolbox >}}
+{{< fig math-toolbox >}}
 
 ::: {.notes}
 Key message: We don't just memorize formulas. We interrogate them.

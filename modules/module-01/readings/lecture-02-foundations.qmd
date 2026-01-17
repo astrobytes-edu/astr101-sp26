@@ -29,6 +29,14 @@ prerequisites: Basic algebra, scientific notation familiarity (e.g., $10^{33}$),
 **Dimensions are your smoke detector for physics.** If the dimensions on both sides of an equation don't match, the physics is guaranteed to be wrong—no calculation needed.
 :::
 
+::: {.callout-important}
+## Before and After This Reading
+
+**Before:** You can plug numbers into equations, but you're not sure if the answer makes sense—or if the equation itself is valid.
+
+**After:** You'll spot impossible equations instantly, compare astronomical quantities without messy constants, and sanity-check any answer against the cosmic scale ladder.
+:::
+
 ## The Fingerprint Test
 
 Every physics mistake leaves a fingerprint. Before you touch a calculator, before you plug in numbers, before you do any actual math—there's a simple test that catches most errors instantly. It's called **dimensional analysis**, and it's about to become your superpower.
@@ -89,6 +97,16 @@ These aren't just math tricks; they are the scientific radar that allows us to i
 
 ## Tool 1: Dimensional Analysis
 
+::: {.callout-note}
+## Roadmap
+
+In this section, we'll:
+
+1. Learn the **three fundamental dimensions** that build all physical quantities
+2. Use dimensional analysis as a **"smoke detector"** for invalid equations
+3. **Derive formulas** from first principles—including Kepler's Law and the Schwarzschild radius
+:::
+
 {{< fig units-vs-dimensions >}}
 
 ### The Fundamental Trio
@@ -102,6 +120,12 @@ Every physical quantity in this course can be broken down into three fundamental
 | Time | $[T]$ | Duration |
 
 **Units** are conventions that can be changed (centimeters vs. astronomical units), but **dimensions** are the invariant "DNA" of a physical quantity. You can convert meters to parsecs, but length is still length.
+
+:::{.column-margin}
+**Dimension:** The physical "type" of a quantity (length, mass, time)—invariant under unit changes.
+
+**Unit:** A human-chosen measure of a dimension (cm, AU, parsecs for length).
+:::
 
 ### Derived Quantities
 
@@ -169,7 +193,9 @@ Dimensional analysis isn't just for checking equations—you can use it to *deri
 
 ### Case Study A: Planetary Orbits
 
-Let's derive Kepler's Third Law using only dimensional analysis.
+**What you see:** A planet tracing a steady path around its star, returning to the same position after a regular interval—the orbital period.
+
+**What physics tells us:** That period isn't random. It depends on how far the planet is from its star and how massive the star is. We can derive the exact relationship using dimensional analysis.
 
 {{< fig case-a-orbits-1 >}}
 
@@ -193,7 +219,9 @@ No calculus required—just careful accounting of dimensions!
 
 ### Case Study B: Black Hole Event Horizon
 
-What's the radius of a black hole? This is where dimensional analysis gets dramatic.
+**What you see:** Nothing. Literally. A dark silhouette against the glow of infalling matter—like the famous Event Horizon Telescope image of M87*.
+
+**What physics tells us:** That silhouette has a definite edge—the event horizon, where gravity becomes so strong that even light cannot escape. And we can derive its size using only dimensional analysis.
 
 {{< fig case-b-blackhole-1 >}}
 
@@ -212,7 +240,9 @@ Einstein's General Relativity yields exactly this scaling (with a factor of 2). 
 
 ### Case Study C: White Dwarf Degeneracy Pressure (Advanced)
 
-When a star dies and becomes a white dwarf, quantum mechanics takes over. Temperature becomes irrelevant—only density matters.
+**What you see:** A faint, hot stellar remnant—the exposed core of a dead star—slowly cooling over billions of years.
+
+**What physics tells us:** This object is held up not by heat (like normal stars) but by quantum mechanics. And dimensional analysis reveals something counterintuitive: the more massive a white dwarf, the *smaller* it becomes.
 
 {{< fig case-c-whitedwarf-1 >}}
 
@@ -231,9 +261,27 @@ The result: $P_{\rm deg} \propto \hbar^2 n^{5/3} / m_e$
 
 ## Tool 2: The Ratio Method
 
+::: {.callout-note}
+## Roadmap
+
+In this section, we'll:
+
+1. Escape the **"big number" trap** using ratios instead of absolute values
+2. Master the **cancellation trick** that eliminates messy constants
+3. Build intuition for **scaling laws** and what the power tells you
+:::
+
 ### Escaping the "Big Number" Trap
 
-In astrophysics, we deal with numbers so large they lose intuitive meaning. The mass of the Sun is approximately $2 \times 10^{33}$ g, while the mass of the Earth is roughly $6 \times 10^{27}$ g. If we compare them by subtracting, the result remains a gigantic, messy number ($1.999 \times 10^{33}$ g) that fails to provide any sense of scale.
+In astrophysics, we deal with numbers so large they lose intuitive meaning.
+
+:::{.column-margin}
+**Ratio method:** Comparing quantities by dividing rather than subtracting—cancels constants and reveals relative scales.
+
+**Scaling law:** A power-law relationship showing how one quantity changes with another.
+:::
+
+The mass of the Sun is approximately $2 \times 10^{33}$ g, while the mass of the Earth is roughly $6 \times 10^{27}$ g. If we compare them by subtracting, the result remains a gigantic, messy number ($1.999 \times 10^{33}$ g) that fails to provide any sense of scale.
 
 However, by dividing them, we discover a **unitless relative value**:
 $$\frac{M_\odot}{M_\oplus} = \frac{2 \times 10^{33}}{6 \times 10^{27}} \approx 333{,}000$$
@@ -290,6 +338,22 @@ The surface area increases by a factor of 4. (The constant $4\pi$ cancels.)
 ---
 
 ## Tool 3: Unit Conversions
+
+::: {.callout-note}
+## Roadmap
+
+In this section, we'll:
+
+1. Master **scientific notation**—the language of astronomical numbers
+2. Learn why astronomers use **CGS units** (centimeter-gram-second)
+3. Practice the **fractional identity method** for unit conversions
+:::
+
+:::{.column-margin}
+**CGS:** The centimeter-gram-second unit system used in astrophysics. Energy is measured in **erg**, force in **dyne**.
+
+**Fractional identity:** A fraction equal to 1 (like 100 cm/1 m) used to convert units without changing the physical quantity.
+:::
 
 ### Scientific Notation: The Language of Extremes
 
@@ -392,10 +456,16 @@ $$30 \frac{\text{km}}{\text{s}} \times \frac{10^3 \text{ m}}{1 \text{ km}} \time
 
 **Example 2: Energy Conversion (Exponents Matter!)**
 
-How many erg in 1 Joule?
+**Problem:** How many erg in 1 Joule?
+
+**Solution:**
 $$1 \text{ J} = 1 \text{ kg} \cdot \text{m}^2 \cdot \text{s}^{-2}$$
 
-Converting each unit:
+**Dimensional check:**
+- Left side: $[ML^2T^{-2}]$ (energy)
+- Right side: $[M][L]^2[T]^{-2} = [ML^2T^{-2}]$ ✓
+
+**Conversion:**
 $$= (10^3 \text{ g})(10^2 \text{ cm})^2 \text{ s}^{-2} = 10^3 \times 10^4 \text{ g cm}^2 \text{ s}^{-2} = 10^7 \text{ erg}$$
 
 Note: you must apply the exponent to the *entire* conversion factor. $(10^2)^2 = 10^4$, not $10^2$.
@@ -439,6 +509,22 @@ The coefficient stays at 2, but the exponent decreases from 33 to 30. Since kilo
 ---
 
 ## Tool 4: Order-of-Magnitude Estimation
+
+::: {.callout-note}
+## Roadmap
+
+In this section, we'll:
+
+1. Apply the **"Rule of 3"** for quick order-of-magnitude estimates
+2. Learn the **Universe's Phone Number**—a mnemonic for cosmic scales
+3. Practice **Fermi estimation** with real astronomical examples
+:::
+
+:::{.column-margin}
+**Order of magnitude:** An estimate accurate to within a factor of ~10. In astronomy, being off by a factor of 3 is often a success!
+
+**Fermi estimation:** Breaking a complex problem into simpler estimates that multiply together.
+:::
 
 ### You Already Do This
 
@@ -512,9 +598,13 @@ Our estimate: 100–300 piano tuners. (Actual: roughly 100–200 in Chicago.) We
 
 **Astronomy Example: Schwarzschild Radius**
 
-Estimate the radius of a solar-mass black hole using $R \approx GM/c^2$.
+**Problem:** Estimate the radius of a solar-mass black hole using $R \approx GM/c^2$.
 
-In CGS:
+**Dimensional check:**
+- Left side: $R$ has dimension $[L]$
+- Right side: $[G][M]/[c]^2 = [M^{-1}L^3T^{-2}][M]/[LT^{-1}]^2 = [L^3T^{-2}]/[L^2T^{-2}] = [L]$ ✓
+
+**Calculation (in CGS):**
 
 - $G \approx 7 \times 10^{-8}$ → $10^{-7}$ cm$^3$ g$^{-1}$ s$^{-2}$
 - $M_\odot \approx 2 \times 10^{33}$ → $10^{33}$ g

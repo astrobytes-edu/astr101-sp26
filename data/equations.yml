@@ -13,3 +13,15 @@ schwarzschild:
   anchor: "eq-schwarzschild"
   include: "_includes/equations/schwarzschild.qmd"
   card: "schwarzschild_radius"
+
+newton-gravity:
+  title: "Newton's law of gravity"
+  anchor: "eq-newton-gravity"
+  include: "_includes/equations/newton-gravity.qmd"
+  card: "newton_gravity"
+
+stefan-boltzmann:
+  title: "Stefan-Boltzmann law"
+  anchor: "eq-stefan-boltzmann"
+  include: "_includes/equations/stefan-boltzmann.qmd"
+  card: "stefan_boltzmann"

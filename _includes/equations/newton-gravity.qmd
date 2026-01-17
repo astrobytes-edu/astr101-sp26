@@ -1,0 +1,3 @@
+$$
+F = \frac{GMm}{r^2}
+$$ {#eq-newton-gravity}
