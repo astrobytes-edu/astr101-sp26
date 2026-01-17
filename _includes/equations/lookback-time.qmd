@@ -1,0 +1,4 @@
+$$
+t = \frac{d}{c}
+$$ {#eq-lookback-time}
+

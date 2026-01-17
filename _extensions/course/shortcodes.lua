@@ -361,7 +361,7 @@ local function load_equations()
 
   for line in content:gmatch("[^\n]+") do
     if not line:match("^%s*#") and not line:match("^%s*$") then
-      local eq_id = line:match("^([%w_]+):%s*$")
+      local eq_id = line:match("^([%w_%-]+):%s*$")
       if eq_id then
         current_id = eq_id
         eqs[current_id] = {}

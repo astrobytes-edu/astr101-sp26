@@ -37,3 +37,19 @@ stefan_boltzmann:
     - "Blackbody radiation"
     - "Spherical, uniformly radiating surface"
     - "Effective surface temperature"
+
+flux_luminosity_distance:
+  predicts: "Given \\(L\\) and \\(d\\), it predicts the observed flux \\(F\\) at the detector."
+  depends: "Scales as \\(F \\propto L\\) and \\(F \\propto d^{-2}\\)."
+  says: "Apparent brightness mixes intrinsic power and distance; to infer \\(L\\) from \\(F\\), you must also know \\(d\\)."
+  assumptions:
+    - "Approximately isotropic emission (radiates equally in all directions)"
+    - "Negligible absorption/scattering between source and observer"
+
+lookback_time:
+  predicts: "Given a distance \\(d\\), it predicts the light travel time \\(t\\) (the time between emission and detection)."
+  depends: "Scales as \\(t \\propto d\\) and \\(t \\propto c^{-1}\\)."
+  says: "Light takes time to travel; looking farther away means seeing older light."
+  assumptions:
+    - "Light travels in a straight line at speed \\(c\\) (simplified picture)"
+    - "Ignores cosmological expansion and strong gravitational time-delay effects"

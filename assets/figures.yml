@@ -34,6 +34,26 @@ figures:
     caption: "The electromagnetic spectrum from radio to gamma rays"
     alt: "Diagram showing wavelength ranges of electromagnetic radiation"
 
+  jwst-em-spectrum:
+    path: /assets/images/common/jwst-em-spectrum-ir.png
+    caption: "What to notice: different wavelength bands are different information channels; infrared sits just beyond visible light."
+    alt: "Graphic of the electromagnetic spectrum labeled gamma, X-ray, ultraviolet, visible, infrared, microwave, and radio, with a highlighted visible band and an extended infrared region; includes sketches of several space telescopes."
+
+  jwst-vs-hst-ngc1566:
+    path: /assets/images/common/NGC1566-jwst-vs-hst.jpg
+    caption: "What to notice: the same galaxy can look dramatically different in different bands; dust that hides structure in one band may become transparent in another."
+    alt: "Side-by-side comparison of a spiral galaxy in two different views, showing differing levels of detail and dust structure between the images."
+
+  jwst-vs-hst-arp142:
+    path: /assets/images/common/Arp142-penguin-jwst-vs-hst.jpg
+    caption: "What to notice: changing wavelength reveals different components of the same system (stars, dust, and gas), not a different object."
+    alt: "Side-by-side comparison of a galaxy system in two different views, where one image emphasizes stars and the other emphasizes dust and infrared-bright regions."
+
+  milky-way-panoramic:
+    path: /assets/images/common/eso-milky-way-panoramic.jpg
+    caption: "What to notice: even a ‘pretty picture’ is a measurement—brightness and color patterns carry physical information."
+    alt: "Wide panoramic view of the Milky Way band stretching across a dark night sky, with many stars and dark dust lanes."
+
   # ==============================================================
   # Module 1: Foundations
   # ==============================================================
@@ -85,6 +105,55 @@ figures:
     caption: "The dimensional analysis toolbox for ASTR 201"
     alt: "Three-panel overview: (1) Reality vs Map - units are conventions, dimensions are physics, (2) The Radar - use scaling relations A ∝ B^α to predict behavior before solving equations, (3) Self-Correction - if dimensions don't match, the physics is wrong. Quote: 'In ASTR 201, we don't just memorize formulas. We interrogate them.'"
     credit: "NotebookLM"
+    module: 1
+
+  # Lecture 01 placeholders (swap paths later; captions say what to insert)
+  l1-figure-placeholder:
+    path: /assets/images/common/figure-placeholder.svg
+    caption: "Placeholder figure (swap later)."
+    alt: "A gray dashed rectangle with the words 'Figure placeholder'."
+    module: 1
+
+  l1-rubin-first-light:
+    path: /assets/images/common/figure-placeholder.svg
+    caption: "Spoiler reel: Rubin first light nebula image (Lagoon + Trifid) to discuss emission lines and dust extinction as inferences from measured color/brightness patterns."
+    alt: "Placeholder for a wide-field nebula image used to discuss measured colors and dark dust lanes."
+    module: 1
+
+  l1-distance-ladder:
+    path: /assets/images/common/figure-placeholder.svg
+    caption: "Spoiler reel: distance ladder graphic showing how we extend distance measurements beyond geometric parallax using calibrators (conceptual overview)."
+    alt: "Placeholder for a distance ladder diagram with multiple steps from nearby to far away."
+    module: 1
+
+  l1-origin-elements:
+    path: /assets/images/common/figure-placeholder.svg
+    caption: "Spoiler reel: periodic table origins-of-elements graphic to emphasize that spectra + abundances let us infer where elements were made."
+    alt: "Placeholder for a periodic table styled map indicating different origins for different elements."
+    module: 1
+
+  l1-prism-dispersion:
+    path: /assets/images/common/figure-placeholder.svg
+    caption: "Spoiler reel: prism (or grating) dispersion image showing white light split into a spectrum; used to introduce spectroscopy as measurement."
+    alt: "Placeholder for an image of a prism or grating splitting light into a rainbow."
+    module: 1
+
+  l1-m51-optical-vs-radio:
+    path: /assets/images/common/figure-placeholder.svg
+    caption: "Spoiler reel: same galaxy in optical vs 21-cm radio to contrast starlight with neutral hydrogen gas (different physics, different wavelength)."
+    alt: "Placeholder for a side-by-side comparison of a galaxy in two wavelength bands."
+    module: 1
+
+  l1-pillars-optical-vs-ir:
+    path: /assets/images/common/figure-placeholder.svg
+    caption: "Spoiler reel: Hubble optical vs JWST near-IR 'Pillars of Creation' comparison to show infrared penetrating dust."
+    alt: "Placeholder for a side-by-side comparison of a dusty star-forming region in optical and infrared."
+    module: 1
+
+  l1-crab-multiwavelength:
+    path: /assets/images/common/figure-placeholder.svg
+    caption: "Spoiler reel: Crab Nebula in multiple bands to show that different emission mechanisms dominate at different wavelengths."
+    alt: "Placeholder for a multi-panel figure showing the same object in several wavelength bands."
     module: 1
 
   logarithmic-cosmic-scales:

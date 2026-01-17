@@ -1,0 +1,4 @@
+$$
+F = \frac{L}{4\pi d^2}
+$$ {#eq-flux-luminosity-distance}
+

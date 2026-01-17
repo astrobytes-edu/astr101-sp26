@@ -25,3 +25,15 @@ stefan-boltzmann:
   anchor: "eq-stefan-boltzmann"
   include: "_includes/equations/stefan-boltzmann.qmd"
   card: "stefan_boltzmann"
+
+flux-luminosity-distance:
+  title: "Inverse-square relation (flux, luminosity, distance)"
+  anchor: "eq-flux-luminosity-distance"
+  include: "_includes/equations/flux-luminosity-distance.qmd"
+  card: "flux_luminosity_distance"
+
+lookback-time:
+  title: "Lookback time (light travel time)"
+  anchor: "eq-lookback-time"
+  include: "_includes/equations/lookback-time.qmd"
+  card: "lookback_time"

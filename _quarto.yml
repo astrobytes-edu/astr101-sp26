@@ -87,10 +87,12 @@ website:
       - section: "Module 1: Foundations"
         href: modules/module-01/index.qmd
         contents:
-          - section: "Lecture 1: Course Overview"
+          - section: "Lecture 1: Spoiler Alerts — Big Questions & Cosmic Weirdness"
             contents:
               - text: "Slides"
                 href: modules/module-01/slides/lecture-01-course-overview.qmd
+              - text: "Reading"
+                href: modules/module-01/readings/lecture-01-course-overview.qmd
           - section: "Lecture 2: Tools of the Trade"
             contents:
               - text: "Slides"
