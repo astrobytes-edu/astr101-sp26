@@ -221,3 +221,152 @@ $callout-color-warning: darken($rose-light, 10%);
 [data-bs-theme="dark"] .callout-frontier::before {
   color: $purple-dark;
 }
+
+// ==============================================================
+// PEDAGOGICAL CALLOUTS - ASTR 201
+// ==============================================================
+
+// Check Yourself - retrieval practice prompt
+.callout-check-yourself {
+  border-left: 4px solid $teal-light;
+  background-color: rgba($teal-light, 0.06);
+  padding: 1rem;
+  margin: 1rem 0;
+  border-radius: 0.25rem;
+  font-size: $callout-font-size !important;
+}
+
+.callout-check-yourself::before {
+  font-family: "bootstrap-icons";
+  content: "\F3FE  Check Yourself";  // bi-hand-index
+  font-weight: 600;
+  color: $teal-light;
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: $callout-label-size;
+}
+
+[data-bs-theme="dark"] .callout-check-yourself {
+  border-left-color: $teal-dark;
+  background-color: rgba($teal-dark, 0.08);
+}
+
+[data-bs-theme="dark"] .callout-check-yourself::before {
+  color: $teal-dark;
+}
+
+// Deep Dive - optional advanced content (collapsed by default)
+.callout-deep-dive {
+  border-left: 4px solid $indigo-light;
+  background-color: rgba($indigo-light, 0.04);
+  padding: 1rem;
+  margin: 1rem 0;
+  border-radius: 0.25rem;
+  font-size: $callout-font-size !important;
+}
+
+.callout-deep-dive::before {
+  font-family: "bootstrap-icons";
+  content: "\F5AB  Deep Dive";  // bi-telescope
+  font-weight: 600;
+  color: $indigo-light;
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: $callout-label-size;
+}
+
+[data-bs-theme="dark"] .callout-deep-dive {
+  border-left-color: $indigo-dark;
+  background-color: rgba($indigo-dark, 0.08);
+}
+
+[data-bs-theme="dark"] .callout-deep-dive::before {
+  color: $indigo-dark;
+}
+
+// Worked Example - step-by-step calculation
+.callout-worked-example {
+  border-left: 4px solid $indigo-light;
+  background-color: rgba($indigo-light, 0.04);
+  padding: 1rem;
+  margin: 1rem 0;
+  border-radius: 0.25rem;
+  font-size: $callout-font-size !important;
+}
+
+.callout-worked-example::before {
+  font-family: "bootstrap-icons";
+  content: "\F4C9  Worked Example";  // bi-pencil-square
+  font-weight: 600;
+  color: $indigo-light;
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: $callout-label-size;
+}
+
+[data-bs-theme="dark"] .callout-worked-example {
+  border-left-color: $indigo-dark;
+  background-color: rgba($indigo-dark, 0.08);
+}
+
+[data-bs-theme="dark"] .callout-worked-example::before {
+  color: $indigo-dark;
+}
+
+// Key Insight - core conceptual takeaway
+.callout-key-insight {
+  border-left: 4px solid $gold-light;
+  background-color: rgba($gold-light, 0.06);
+  padding: 1rem;
+  margin: 1rem 0;
+  border-radius: 0.25rem;
+  font-size: $callout-font-size !important;
+}
+
+.callout-key-insight::before {
+  font-family: "bootstrap-icons";
+  content: "\F47C  Key Insight";  // bi-lightbulb-fill
+  font-weight: 600;
+  color: $gold-light;
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: $callout-label-size;
+}
+
+[data-bs-theme="dark"] .callout-key-insight {
+  border-left-color: $gold-dark;
+  background-color: rgba($gold-dark, 0.08);
+}
+
+[data-bs-theme="dark"] .callout-key-insight::before {
+  color: $gold-dark;
+}
+
+// Misconception Alert - common error to surface and correct
+.callout-misconception {
+  border-left: 4px solid $rose-light;
+  background-color: rgba($rose-light, 0.06);
+  padding: 1rem;
+  margin: 1rem 0;
+  border-radius: 0.25rem;
+  font-size: $callout-font-size !important;
+}
+
+.callout-misconception::before {
+  font-family: "bootstrap-icons";
+  content: "\F32A  Misconception Alert";  // bi-exclamation-diamond
+  font-weight: 600;
+  color: $rose-light;
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: $callout-label-size;
+}
+
+[data-bs-theme="dark"] .callout-misconception {
+  border-left-color: $rose-dark;
+  background-color: rgba($rose-dark, 0.08);
+}
+
+[data-bs-theme="dark"] .callout-misconception::before {
+  color: $rose-dark;
+}
