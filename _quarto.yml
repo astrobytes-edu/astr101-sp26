@@ -74,9 +74,6 @@ website:
     search: true
     collapse-level: 1
     pinned: true
-    tools:
-      - icon: layout-sidebar-inset
-        href: "#"
     title: "ASTR 201: Astronomy for Science Majors"
     contents:
       - href: index.qmd

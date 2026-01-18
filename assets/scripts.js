@@ -230,46 +230,11 @@
     });
   }
 
-  // 6) Sidebar toggle functionality
-  function setupSidebarToggle() {
-    // Quarto doesn't pass id attribute to sidebar tools, so find by icon class
-    const toggleBtn = document.querySelector('.bi-layout-sidebar-inset')?.closest('a');
-    const sidebar = document.getElementById('quarto-sidebar');
-    const body = document.body;
-
-    if (!toggleBtn || !sidebar) return;
-
-    // Prevent default link behavior
-    toggleBtn.addEventListener('click', function(e) {
-      e.preventDefault();
-      body.classList.toggle('sidebar-collapsed');
-
-      // Store preference
-      const isCollapsed = body.classList.contains('sidebar-collapsed');
-      try {
-        localStorage.setItem('astr201-sidebar-collapsed', isCollapsed ? 'true' : 'false');
-      } catch (e) {
-        // localStorage not available
-      }
-    });
-
-    // Restore preference
-    try {
-      const savedState = localStorage.getItem('astr201-sidebar-collapsed');
-      if (savedState === 'true') {
-        body.classList.add('sidebar-collapsed');
-      }
-    } catch (e) {
-      // localStorage not available
-    }
-  }
-
   // Re-apply on DOM ready
   document.addEventListener("DOMContentLoaded", function() {
     injectSidebarTitle();
     applySidebarRules();
     applyModuleTitleBreaks();
     makeCustomCalloutsCollapsible();
-    setupSidebarToggle();
   });
 })();
