@@ -363,6 +363,8 @@ The oxygen lines ([OIII] at 496–501 nm) come from "forbidden" transitions that
 **Key insight for now:** Each element has a unique "fingerprint" of emission wavelengths. Detecting specific wavelengths tells you which atoms are present.
 :::
 
+*We'll return to why these exact wavelengths appear once we've met spectra.*
+
 **Transition:** If colors encode *what's there*, how do we figure out *how far away* it is?
 
 ---
@@ -458,6 +460,16 @@ Why is spectroscopy more powerful than just measuring total brightness?
 
 But *why* do atoms produce light at specific wavelengths rather than a continuous rainbow? The answer is quantum mechanics: electrons in atoms can only occupy certain discrete energy levels. When an electron jumps between levels, it absorbs or emits a photon of *exactly* the right energy—and energy determines wavelength. Each element's unique ladder of energy levels creates its unique spectral fingerprint.
 
+Here's something crucial: those fingerprints are *stable*—hydrogen always produces the same pattern of wavelengths. But when the source moves toward or away from us, the entire fingerprint **shifts** in wavelength. Moving toward us? The wavelengths compress (shift blue). Moving away? They stretch (shift red). This is the **Doppler effect**, and it's how we measure the speeds of stars, galaxies, and the expanding universe itself—using light alone.
+
+::: {.callout-tip title="Why the Doppler Effect Matters"}
+If spectroscopy reveals *what something is made of*, the Doppler shift reveals *how it's moving*. Together, they let us turn distant points of light into physical systems we can understand.
+
+The Doppler effect may seem abstract now. That's fine—we're just tagging it as important. When we return to it later, you'll see it power some of the most dramatic inferences in astronomy: measuring dark matter, mapping the expanding universe, detecting planets around other stars.
+
+For now: **recognize the name**, not the details.
+:::
+
 **Transition:** The rainbow from a prism shows visible light. But visible light is just a tiny slice of all the light that exists...
 
 ---
@@ -509,6 +521,8 @@ The next three spoilers show how wavelength *choice* reveals different physics i
 The **21-cm line** arises from the hyperfine structure of hydrogen. The electron and proton can have parallel or anti-parallel spins. When an electron "flips" from parallel to anti-parallel, it emits a photon with wavelength 21.1 cm (frequency 1420 MHz).
 
 This transition is "forbidden"—extremely unlikely on short timescales—but there's so much hydrogen in the universe that we detect it easily. The 21-cm line traces *neutral atomic* hydrogen specifically; ionized hydrogen doesn't emit it.
+
+**Doppler connection:** The 21-cm line has a precise rest wavelength. When hydrogen gas is moving toward or away from us, the line shifts—and the amount of shift tells us how fast the gas is moving. This is how astronomers measure **galaxy rotation curves**: hydrogen on one side of a spinning galaxy is blueshifted (approaching); hydrogen on the other side is redshifted (receding). The Doppler effect turns a single spectral line into a velocity map.
 :::
 
 **Transition:** Optical shows stars, but what if dust is blocking our view of where stars are *born*?
@@ -557,9 +571,9 @@ This transition is "forbidden"—extremely unlikely on short timescales—but th
 
 {{< fig lsst-cosmic-treasure-chest >}}
 
-**What do we measure?** Velocities. We measure how fast stars orbit within galaxies and how fast galaxies move within clusters—all from Doppler shifts in their spectra. We also measure how light bends as it passes near massive objects (gravitational lensing).
+**What do we measure?** Velocities—and here's how. When we spread starlight into a spectrum, we see absorption lines at specific wavelengths (the fingerprints from Spoiler 4). If those lines appear shifted from their laboratory (at-rest) wavelengths, the source is moving: **lines shift → velocity**. This is the Doppler effect in action. We measure how fast stars orbit within galaxies and how fast galaxies move within clusters—all by detecting tiny wavelength shifts in their spectra. We also measure how light bends as it passes near massive objects (gravitational lensing).
 
-**Why velocities matter:** Here's the critical chain of reasoning. Objects in orbit are constantly accelerating (changing direction). Acceleration requires a force. In space, the only force acting at these scales is gravity. And gravitational force depends on mass. So: **measured velocity → implied acceleration → required gravitational force → required mass**.
+**Why velocities matter:** Here's the critical inference chain. Objects in orbit are constantly accelerating (changing direction). Acceleration requires a force. In space, the only force acting at these scales is gravity. And gravitational force depends on mass. So: **Doppler shift → velocity → acceleration → gravitational force → mass**. The Doppler effect is what makes this chain possible—it converts light into velocities.
 
 **What do we infer?** Galaxies rotate too fast. Stars in the outer regions orbit at speeds that should fling them into intergalactic space—unless there's far more mass than we can see. The same is true for galaxy clusters: galaxies move too fast to be held together by visible matter alone. When we calculate the mass required to explain the observed motions, it exceeds the visible mass by a factor of ~6. We infer the presence of **dark matter**—matter that doesn't emit, absorb, or reflect light, but does exert gravitational pull.
 
@@ -615,7 +629,7 @@ Only 5% of the universe is made of the stuff we understand. The rest is dark—b
 
 {{< fig universe-history-nasa >}}
 
-**What do we measure?** Distances to objects across cosmic history (using the distance ladder from Spoiler 2) and their recession speeds (from redshifts). By comparing distance and redshift for objects at different epochs, we reconstruct how the universe has expanded over time.
+**What do we measure?** Two things: distances to objects across cosmic history (using the distance ladder from Spoiler 2) and their recession speeds. How do we get recession speeds? Through **redshift**—the Doppler shift we introduced in Spoiler 4. When we spread a galaxy's light into a spectrum, its spectral lines appear shifted toward longer (redder) wavelengths compared to laboratory (at-rest) values. The amount of shift tells us how fast the galaxy is moving away. By combining distances with redshifts for objects at different epochs, we reconstruct how the universe has expanded over time.
 
 **What do we infer?**
 
@@ -825,6 +839,10 @@ where:
 :::
 
 Since $c$ is constant, wavelength and frequency are **inversely related**: longer wavelength means lower frequency, and vice versa.
+
+::: {.column-margin}
+**Doppler preview:** If a light source moves toward you, the wavelengths you receive are *compressed* (shifted blue). If it moves away, wavelengths are *stretched* (shifted red). The speed of light stays constant—what changes is the wavelength. We'll see this **Doppler effect** power major discoveries: dark matter, the expanding universe, and exoplanets.
+:::
 
 ::: {.callout-worked-example title="Visible Light Frequencies"}
 Red light has wavelength $\lambda \approx 700$ nm $= 7 \times 10^{-5}$ cm. What's its frequency?
