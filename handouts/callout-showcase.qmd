@@ -1,0 +1,89 @@
+---
+title: "Pedagogical Callout Showcase"
+subtitle: "Visual reference for ASTR 201 callout types"
+format: html
+---
+
+## Active Learning Callouts
+
+::: {.callout-check-yourself}
+**Sample prompt:** A star appears to wobble periodically. Which observable is this?
+:::
+
+::: {.callout-prediction}
+Before reading further, predict: what color will a 10,000 K star appear?
+:::
+
+::: {.callout-tps}
+**Think:** What determines a star's color?
+**Pair:** Compare your answer with a neighbor.
+**Share:** One insight from your discussion.
+:::
+
+## Content Callouts
+
+::: {.callout-key-insight}
+**Physics tells you what relationships are allowed.** The inverse-square law isn't arbitrary—it's geometry.
+:::
+
+::: {.callout-worked-example}
+**Problem:** Calculate the frequency of red light (λ = 700 nm).
+
+**Solution:**
+$\nu = c/\lambda = (3 \times 10^{10}\ \text{cm/s}) / (7 \times 10^{-5}\ \text{cm}) = 4.3 \times 10^{14}\ \text{Hz}$
+:::
+
+::: {.callout-deep-dive collapse="true"}
+The inverse-square law follows from geometry: a sphere's surface area is $4\pi r^2$. As light spreads over larger spheres, the energy per unit area drops as $1/r^2$.
+:::
+
+::: {.callout-the-more-you-know collapse="true"}
+Henrietta Leavitt discovered the period-luminosity relation for Cepheids in 1912 while cataloging variable stars in the Magellanic Clouds. She was paid 30 cents per hour.
+:::
+
+## Structural Callouts
+
+::: {.callout-roadmap}
+| Section | Topic | Time |
+|---------|-------|------|
+| 1.1 | The Four Observables | 10 min |
+| 1.2 | The Spoiler Reel | 20 min |
+:::
+
+::: {.callout-summary}
+**Key points from this section:**
+
+- We measure four things directly: flux, position, wavelength, timing
+- Everything else is inferred through models
+- The gap between measurement and knowledge is where physics lives
+:::
+
+::: {.callout-why-this-matters}
+Distance measurements aren't just bookkeeping—they give us the age of the universe. Without Cepheids and supernovae, we wouldn't know we live in a 13.8-billion-year-old cosmos.
+:::
+
+## Metacognitive Callouts
+
+::: {.callout-misconception}
+**"Astronomers measure the temperature of stars directly."**
+
+Wrong. We measure the spectrum (wavelength distribution). Temperature is *inferred* from Wien's Law.
+:::
+
+::: {.callout-problem}
+A star at 10 pc has apparent magnitude m = 5. What is its absolute magnitude M?
+:::
+
+::: {.callout-solution}
+M = m - 5 log(d/10) = 5 - 5 log(1) = 5
+:::
+
+::: {.callout-sanity-check}
+**Units check:** Does $L = 4\pi r^2 \sigma T^4$ give watts?
+
+$[\text{m}^2][\text{W/m}^2\text{K}^4][\text{K}^4] = [\text{W}]$ ✓
+:::
+
+::: {.callout-frontier}
+**Hubble Tension:** Different methods give different values for $H_0$. Is this measurement error or new physics?
+:::
