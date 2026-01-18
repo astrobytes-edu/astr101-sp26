@@ -34,6 +34,12 @@ By the end of this lecture, you will be able to:
 4. **Explain** why the finite speed of light makes astronomy a "lookback time" science
 5. **Give** a one-sentence reason why wavelength matters: different wavelengths reveal different physics
 
+::: {.callout-note title="A Note on First Exposure (Read This Once, Then Relax)"}
+This reading is designed to *prime* your brain, not test it. You will encounter many terms, images, and equations before you fully understand them—and that is intentional. Every technical term introduced here will be revisited later, slowly and carefully, when it actually matters.
+
+For now, your only job is pattern recognition: notice how astronomers move from **what we measure** to **what we infer**, and how physics makes that step legitimate. Understanding will come later; recognition comes first.
+:::
+
 ---
 
 ## Spoiler Alerts: The Universe Is Weird (How Do We Know?)
@@ -285,9 +291,9 @@ Each builds on the one before. **Watch for the pattern**, not the details.
 
 ---
 
-### Mini-Glossary: Scan Before You Continue
+### Mini-Glossary (Orientation Only)
 
-*You'll encounter these terms in what follows. Don't memorize—just orient yourself.*
+*This glossary is here to help you recognize terms when you see them—not to memorize them. Every term below will be reintroduced later, in context, with time to understand it properly. For now, just scan and move on.*
 
 | Term | One-Line Definition |
 |------|---------------------|
@@ -663,6 +669,8 @@ Today's images were *conclusions*—answers to questions we haven't formally ask
 
 That framework—*measurement → model → inference → test*—is the decoder ring.
 :::
+
+If this reading felt overwhelming in places, that's not a warning sign—it's evidence that your brain has been introduced to a new landscape. You are not expected to carry these details yet. You *are* expected to recognize them when we meet them again, with tools in hand.
 
 ---
 
