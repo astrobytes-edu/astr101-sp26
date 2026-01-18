@@ -135,10 +135,140 @@
     });
   }
 
+  // 5) Make custom callouts collapsible
+  // Quarto's built-in callouts support collapse="true" natively, but custom
+  // callout types (e.g., .callout-deep-dive) don't. This transforms them
+  // into <details>/<summary> structure.
+  function makeCustomCalloutsCollapsible() {
+    // Custom callout types that should support collapse
+    const customCalloutTypes = [
+      'callout-deep-dive',
+      'callout-the-more-you-know',
+      'callout-worked-example'
+    ];
+
+    customCalloutTypes.forEach(function(calloutClass) {
+      const callouts = document.querySelectorAll('.' + calloutClass + '[data-collapse="true"]');
+
+      callouts.forEach(function(callout) {
+        // Skip if already transformed
+        if (callout.querySelector('details')) return;
+
+        // Get the title from title attribute (Quarto renders title="" as standard HTML attr)
+        const customTitle = callout.getAttribute('title');
+
+        // Default titles by callout type
+        const defaultTitles = {
+          'callout-deep-dive': 'Deep Dive',
+          'callout-the-more-you-know': 'The More You Know',
+          'callout-worked-example': 'Worked Example'
+        };
+
+        const baseTitle = defaultTitles[calloutClass] || 'Details';
+        // If custom title is supplied:
+        // - If it already starts with base title, use it as-is
+        // - Otherwise, format as "Base Title: Custom Title"
+        let title = baseTitle;
+        if (customTitle) {
+          if (customTitle.toLowerCase().startsWith(baseTitle.toLowerCase())) {
+            title = customTitle; // Already includes base title
+          } else {
+            title = baseTitle + ': ' + customTitle;
+          }
+        }
+
+        // Get icons by callout type (Bootstrap Icons Unicode)
+        const icons = {
+          'callout-deep-dive': '\uF5AB',      // bi-telescope
+          'callout-the-more-you-know': '\uF431', // bi-info-circle
+          'callout-worked-example': '\uF4C9'  // bi-pencil-square
+        };
+        const icon = icons[calloutClass] || '';
+
+        // Capture current content
+        const content = callout.innerHTML;
+
+        // Check if should start open
+        const startOpen = callout.getAttribute('data-collapse') === 'false';
+
+        // Build new structure
+        const details = document.createElement('details');
+        if (startOpen) {
+          details.setAttribute('open', '');
+        }
+
+        const summary = document.createElement('summary');
+        summary.className = 'callout-header-custom';
+
+        // Add icon span if we have one
+        if (icon) {
+          const iconSpan = document.createElement('span');
+          iconSpan.className = 'callout-icon-custom';
+          iconSpan.textContent = icon + ' ';
+          summary.appendChild(iconSpan);
+        }
+
+        const titleSpan = document.createElement('span');
+        titleSpan.className = 'callout-title-custom';
+        titleSpan.textContent = title;
+        summary.appendChild(titleSpan);
+
+        const body = document.createElement('div');
+        body.className = 'callout-body-custom';
+        body.innerHTML = content;
+
+        details.appendChild(summary);
+        details.appendChild(body);
+
+        // Replace callout content
+        callout.innerHTML = '';
+        callout.appendChild(details);
+
+        // Mark as transformed
+        callout.classList.add('callout-collapsible-transformed');
+      });
+    });
+  }
+
+  // 6) Sidebar toggle functionality
+  function setupSidebarToggle() {
+    const toggleBtn = document.getElementById('sidebar-toggle');
+    const sidebar = document.getElementById('quarto-sidebar');
+    const body = document.body;
+
+    if (!toggleBtn || !sidebar) return;
+
+    // Prevent default link behavior
+    toggleBtn.addEventListener('click', function(e) {
+      e.preventDefault();
+      body.classList.toggle('sidebar-collapsed');
+
+      // Store preference
+      const isCollapsed = body.classList.contains('sidebar-collapsed');
+      try {
+        localStorage.setItem('astr201-sidebar-collapsed', isCollapsed ? 'true' : 'false');
+      } catch (e) {
+        // localStorage not available
+      }
+    });
+
+    // Restore preference
+    try {
+      const savedState = localStorage.getItem('astr201-sidebar-collapsed');
+      if (savedState === 'true') {
+        body.classList.add('sidebar-collapsed');
+      }
+    } catch (e) {
+      // localStorage not available
+    }
+  }
+
   // Re-apply on DOM ready
   document.addEventListener("DOMContentLoaded", function() {
     injectSidebarTitle();
     applySidebarRules();
     applyModuleTitleBreaks();
+    makeCustomCalloutsCollapsible();
+    setupSidebarToggle();
   });
 })();

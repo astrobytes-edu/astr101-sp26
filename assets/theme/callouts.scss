@@ -265,7 +265,8 @@ $callout-color-warning: darken($rose-light, 10%);
   font-size: $callout-font-size !important;
 }
 
-.callout-deep-dive::before {
+// Default header for non-collapsible Deep Dive
+.callout-deep-dive:not(.callout-collapsible-transformed)::before {
   font-family: "bootstrap-icons";
   content: "\F5AB  Deep Dive";  // bi-telescope
   font-weight: 600;
@@ -275,12 +276,62 @@ $callout-color-warning: darken($rose-light, 10%);
   font-size: $callout-label-size;
 }
 
+// Hide ::before when transformed to collapsible
+.callout-deep-dive.callout-collapsible-transformed::before {
+  display: none !important;
+}
+
+// Collapsible structure styling
+.callout-deep-dive.callout-collapsible-transformed {
+  padding: 0;
+
+  details {
+    summary {
+      padding: 1rem;
+      cursor: pointer;
+      font-weight: 600;
+      color: $indigo-light;
+      font-size: $callout-label-size;
+      list-style: none; // Remove default triangle
+
+      &::-webkit-details-marker {
+        display: none;
+      }
+
+      // Add custom expand/collapse indicator
+      &::after {
+        content: "\F282"; // bi-chevron-down
+        font-family: "bootstrap-icons";
+        float: right;
+        transition: transform 0.2s ease;
+      }
+
+      .callout-icon-custom {
+        font-family: "bootstrap-icons";
+        margin-right: 0.3em;
+      }
+    }
+
+    &[open] summary::after {
+      transform: rotate(180deg);
+    }
+
+    .callout-body-custom {
+      padding: 0 1rem 1rem 1rem;
+    }
+  }
+}
+
 [data-bs-theme="dark"] .callout-deep-dive {
   border-left-color: $indigo-dark;
   background-color: rgba($indigo-dark, 0.08);
 }
 
-[data-bs-theme="dark"] .callout-deep-dive::before {
+[data-bs-theme="dark"] .callout-deep-dive:not(.callout-collapsible-transformed)::before {
+  color: $indigo-dark;
+}
+
+[data-bs-theme="dark"] .callout-deep-dive.callout-collapsible-transformed details summary {
   color: $indigo-dark;
 }
 
@@ -381,7 +432,8 @@ $callout-color-warning: darken($rose-light, 10%);
   font-size: $callout-font-size !important;
 }
 
-.callout-the-more-you-know::before {
+// Default header for non-collapsible
+.callout-the-more-you-know:not(.callout-collapsible-transformed)::before {
   font-family: "bootstrap-icons";
   content: "\F431  The More You Know";  // bi-info-circle
   font-weight: 600;
@@ -391,12 +443,61 @@ $callout-color-warning: darken($rose-light, 10%);
   font-size: $callout-label-size;
 }
 
+// Hide ::before when transformed to collapsible
+.callout-the-more-you-know.callout-collapsible-transformed::before {
+  display: none !important;
+}
+
+// Collapsible structure styling
+.callout-the-more-you-know.callout-collapsible-transformed {
+  padding: 0;
+
+  details {
+    summary {
+      padding: 1rem;
+      cursor: pointer;
+      font-weight: 600;
+      color: $purple-light;
+      font-size: $callout-label-size;
+      list-style: none;
+
+      &::-webkit-details-marker {
+        display: none;
+      }
+
+      &::after {
+        content: "\F282"; // bi-chevron-down
+        font-family: "bootstrap-icons";
+        float: right;
+        transition: transform 0.2s ease;
+      }
+
+      .callout-icon-custom {
+        font-family: "bootstrap-icons";
+        margin-right: 0.3em;
+      }
+    }
+
+    &[open] summary::after {
+      transform: rotate(180deg);
+    }
+
+    .callout-body-custom {
+      padding: 0 1rem 1rem 1rem;
+    }
+  }
+}
+
 [data-bs-theme="dark"] .callout-the-more-you-know {
   border-left-color: $purple-dark;
   background-color: rgba($purple-dark, 0.08);
 }
 
-[data-bs-theme="dark"] .callout-the-more-you-know::before {
+[data-bs-theme="dark"] .callout-the-more-you-know:not(.callout-collapsible-transformed)::before {
+  color: $purple-dark;
+}
+
+[data-bs-theme="dark"] .callout-the-more-you-know.callout-collapsible-transformed details summary {
   color: $purple-dark;
 }
 
