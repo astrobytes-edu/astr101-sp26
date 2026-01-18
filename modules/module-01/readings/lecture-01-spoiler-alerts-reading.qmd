@@ -192,7 +192,7 @@ Suppose you observe two stars of the same type (same intrinsic properties), but 
 
 If they're truly identical, the fainter one must be farther away. But how much farther? This is where physics enters. Light spreads out as it travels, and the amount of light you receive decreases with the **square** of the distance. So if Star B is 4× fainter than Star A, Star B must be **2× farther away** (because $2^2 = 4$).
 
-That's one measurement (relative brightness), one physical law (the inverse-square law), one inference (relative distance). This is what "decoding" means.
+That's one measurement (relative brightness), one physical law (the **inverse-square law**), one inference (relative distance). This is what "decoding" means.
 
 ::: {.callout-check-yourself title="Quick Check"}
 A third star of the same type appears **9× fainter** than the reference star. How much farther away is it?
@@ -470,7 +470,7 @@ The next three spoilers show how wavelength *choice* reveals different physics i
 
 **What do we infer?** The optical image shows where the *stars* are. The radio image shows where *cold hydrogen gas* lives. They don't perfectly overlap.
 
-**What physics makes this legal?** Stars emit thermal radiation from their hot surfaces (peaks in visible). Neutral hydrogen emits at exactly 21 cm due to a quantum mechanical transition in cold atomic gas.
+**What physics makes this legal?** Stars emit **thermal radiation** from their hot surfaces (peaks in visible). Neutral hydrogen emits at exactly 21 cm due to a quantum mechanical transition in cold atomic gas.
 
 **Key insight:** Same object + different wavelength = different physical component revealed.
 
@@ -536,7 +536,7 @@ This transition is "forbidden"—extremely unlikely on short timescales—but th
 
 {{< fig desi-3d-map >}}
 
-**The cosmic web:** When we map millions of galaxies in 3D (using redshifts for distances), we see that galaxies aren't scattered randomly—they're organized into a **cosmic web** of filaments, walls, and vast empty voids. This architecture is dark matter's signature at the largest scales. And it's still evolving: gravity pulls matter from voids into filaments, from filaments into clusters. **The largest structures in the universe are still collapsing.**
+**The cosmic web:** When we map millions of galaxies in 3D (using **redshifts** for distances), we see that galaxies aren't scattered randomly—they're organized into a **cosmic web** of filaments, walls, and vast empty voids. This architecture is dark matter's signature at the largest scales. And it's still evolving: gravity pulls matter from voids into filaments, from filaments into clusters. **The largest structures in the universe are still collapsing.**
 
 ::: {.callout-key-insight}
 **We don't know what most of the universe is made of—and it's not sitting still.**
@@ -837,7 +837,7 @@ The constant $h$ (Planck's constant) signals we're in **quantum territory**—at
 
 Classical physics treated light as a continuous wave, but experiments showed that light comes in discrete energy packets called **photons**. The energy of each photon is set by its frequency (or equivalently, its wavelength).
 
-**We'll unpack *why* this happens in Module 2** when we study atomic spectra and blackbody radiation. For now, the key message is: photon energy depends on wavelength, and shorter wavelength means higher energy.
+**We'll unpack *why* this happens in Module 2** when we study atomic spectra and **blackbody** radiation. For now, the key message is: photon energy depends on wavelength, and shorter wavelength means higher energy.
 :::
 
 ::: {.callout-key-insight title="What the Energy Equation Tells Us"}
