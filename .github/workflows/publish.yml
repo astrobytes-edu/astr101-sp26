@@ -29,6 +29,10 @@ jobs:
         with:
           tinytex: true
 
+      - name: Install LaTeX packages for PDF
+        run: |
+          tlmgr install titling
+
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
