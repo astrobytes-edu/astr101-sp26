@@ -11,7 +11,7 @@ module: "1 - Foundations"
 learning-objectives:
   - State the course thesis: pretty pictures → measurements → models → inferences
   - Explain why astronomy is fundamentally about inference from constrained measurements
-  - Name the physical quantities astronomers care about (distance, time, mass/energy, temperature)
+  - Name the physical quantities astronomers care about (distance, time, speed, mass, energy/luminosity, temperature)
   - Explain why the speed of light makes astronomy a "lookback time" science
   - Give a one-sentence reason why wavelength matters for revealing different physics
 Concept-Throughline:
@@ -30,7 +30,7 @@ By the end of this lecture, you will be able to:
 
 1. **State** the course thesis in one sentence: *pretty pictures → measurements → models → inferences*
 2. **Explain** why astronomy is fundamentally about inferring physical reality from constrained measurements
-3. **Name** the key physical quantities astronomers care about: distance, time, speed, mass, energy, temperature
+3. **Name** the key physical quantities astronomers care about: distance, time, speed, mass, energy/luminosity, temperature
 4. **Explain** why the finite speed of light makes astronomy a "lookback time" science
 5. **Give** a one-sentence reason why wavelength matters: different wavelengths reveal different physics
 
@@ -383,7 +383,7 @@ The ladder's power comes from its self-consistency: multiple methods overlap in 
 ::: {.callout-deep-dive title="The Physics Detail" collapse="true"}
 - **Big Bang nucleosynthesis** (~3 minutes after the Big Bang): Produced H, He, trace Li
 - **Stellar core fusion** (over millions–billions of years): H → He → C → O → ... up to Fe
-- **Type Ia supernovae**: Major producers of iron-peak elements (Fe, Ni, Co)
+- **Type Ia supernovae**: Major producers of iron-peak elements—each explosion synthesizes ~0.6 $M_\odot$ of ⁵⁶Ni (which decays to ⁵⁶Fe)
 - **Core-collapse supernovae**: Produce elements up to Fe, plus some heavier via rapid neutron capture
 - **Neutron star mergers**: Primary site for r-process elements (Au, Pt, U)—confirmed in 2017
 
@@ -576,7 +576,7 @@ Notice that **none of the quantities below appear in the observables list**. Eve
 | **Time** | $t$ | Duration or epoch | (context-dependent) | s (or yr) |
 | **Speed** | $v$ | Rate of motion | Doppler shift (wavelength) | cm/s |
 | **Mass** | $M$ | Amount of matter | Orbital motion (position + timing) | g (or $M_\odot$) |
-| **Luminosity** | $L$ | Energy output per time | Flux (brightness) + distance | erg/s (or $L_\odot$) |
+| **Energy / Luminosity** | $E$, $L$ | Total energy; energy output per time | Flux (brightness) + distance | erg; erg/s (or $L_\odot$) |
 | **Temperature** | $T$ | Thermal energy scale | Spectrum/color (wavelength) | K |
 
 ::: {.column-margin}
@@ -586,6 +586,10 @@ Notice that **none of the quantities below appear in the observables list**. Eve
 Every value in the "How We Infer It" column connects back to one or more of the four observables via a physical model. That's the course thesis in table form.
 
 These quantities are connected by physical laws. Mass determines gravity. Temperature determines spectrum. Distance relates flux to luminosity. You'll build the network of relationships throughout the semester.
+
+::: {.column-margin}
+**Energy vs. Luminosity:** You know *energy* from physics—the capacity to do work, measured in erg or Joules. In astronomy, we often use *luminosity*: energy emitted per unit time (power), measured in erg/s or $L_\odot$. A star's luminosity tells you how fast it's radiating energy. The two are related: total energy output = luminosity × time.
+:::
 
 ---
 
@@ -641,7 +645,7 @@ where:
 
 Since $c$ is constant, wavelength and frequency are **inversely related**: longer wavelength means lower frequency, and vice versa.
 
-::: {.callout-worked-example title=" Visible Light Frequencies"}
+::: {.callout-worked-example title="Visible Light Frequencies"}
 Red light has wavelength $\lambda \approx 700$ nm $= 7 \times 10^{-5}$ cm. What's its frequency?
 
 **Calculate:**
@@ -698,7 +702,7 @@ Classical physics treated light as a continuous wave, but experiments showed tha
 This is why different wavelengths reveal different physics: **it takes hot, energetic processes to produce high-energy photons**.
 :::
 
-::: {.callout-worked-example title=" Comparing Photon Energies"}
+::: {.callout-worked-example title="Comparing Photon Energies"}
 How much more energy does an X-ray photon carry compared to a radio photon?
 
 **Given:**
@@ -762,7 +766,7 @@ This is why thermal cameras "see" people in the dark (we glow in IR) and why the
 ::: {.callout-check-yourself}
 Why do X-ray telescopes see different objects than optical telescopes?
 
-*(Think about what temperatures are needed to produce X-ray vs. visible photons...)*
+*(Think first… then check: X-ray photons have much higher energy than optical photons, requiring much hotter sources. X-ray telescopes detect million-degree plasma—gas in galaxy clusters, matter falling into black holes, stellar coronae—while optical telescopes see stellar surfaces at thousands of degrees. Different wavelengths = different temperature regimes = different objects visible.)*
 :::
 
 ---
@@ -952,6 +956,11 @@ If you can answer all four with reasoning (not just recall): you're ready.
    - (b) If you later determine that the blue star is twice as far away as the red star, what can you conclude about their intrinsic luminosities? (Hint: think about the inverse-square law.)
    - (c) What additional measurement would help you confirm the temperature difference?
 
+9. **Connecting Observables to Quantities.** For each quantity below, state which observable(s) you would need to measure and what physical model connects them:
+   - (a) Distance to a nearby star
+   - (b) Temperature of a star
+   - (c) Mass of a binary star system
+
 ::: {.callout-note title="Answers" collapse="true"}
 **1.** (a) measured, (b) inferred, (c) measured, (d) inferred, (e) measured
 
@@ -968,6 +977,8 @@ If you can answer all four with reasoning (not just recall): you're ready.
 **7.** (a) $t = d/c = (4 \times 10^{18} \text{ cm})/(3 \times 10^{10} \text{ cm/s}) \approx 1.3 \times 10^8$ s. Converting: $(1.3 \times 10^8 \text{ s})/(3 \times 10^7 \text{ s/yr}) \approx 4.3$ years. (b) (cm)/(cm/s) = s ✓. (c) Yes—Proxima Centauri is ~4.2 light-years away, matching our calculation. (d) You're seeing it as it *was* 4.3 years ago. The light left the star then; you're looking into the past.
 
 **8.** (a) Blue star is hotter. (b) If they appear equally bright but the blue star is 2× farther, it must be 4× more luminous (inverse-square law: $4\times$ distance at same flux requires $4\times$ luminosity). (c) A spectrum would reveal absorption lines whose patterns depend on temperature.
+
+**9.** (a) **Position** (measured over time as Earth orbits) + parallax geometry → distance. (b) **Wavelength** (spectrum or color) + Wien's law or blackbody fitting → temperature. (c) **Position** + **Timing** (orbital motion over time) + Kepler's laws/Newton's gravity → mass.
 :::
 
 ---
