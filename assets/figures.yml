@@ -271,6 +271,14 @@ figures:
     credit: "NASA"
     module: 1
 
+  # DESI 3D Galaxy Map
+  desi-3d-map:
+    path: /assets/images/module-01/DESI-Universe-3D-Map.jpg
+    caption: "**What to notice:** The cosmic web—galaxies aren't scattered randomly. They cluster into filaments, walls, and voids. You are at the center; colors show distance (cyan = nearby, red = billions of light-years away). Gravity is still pulling these structures together."
+    alt: "3D map of galaxy distribution from DESI showing the cosmic web structure. Galaxies form filaments and clusters connected by walls, with large voids between. Color gradient from cyan (nearby) through yellow to red (distant) shows lookback time up to 2.5 billion years. 'You Are Here' marks Earth's position at center."
+    credit: "DESI Collaboration/NOIRLab/NSF/AURA/Kitt Peak"
+    module: 1
+
   # Case Study A: Planetary Orbits
   planetary-orbit:
     path: /assets/images/module-01/planetary-orbit.png

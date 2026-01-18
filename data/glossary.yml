@@ -182,3 +182,53 @@ speed_of_light:
   context: "A universal constant—the speed limit of the universe. Nothing with mass can reach this speed."
   first_use: "Lecture 1"
   module: 1
+
+# Cosmology (Spoilers 9-10)
+dark-matter:
+  term: "Dark Matter"
+  definition: "Invisible matter that does not emit, absorb, or reflect light but exerts gravitational influence."
+  context: "Dark matter outweighs ordinary matter ~5:1 and is essential for explaining galaxy rotation curves and cosmic structure formation."
+  first_use: "Lecture 1"
+  module: 1
+
+dark-energy:
+  term: "Dark Energy"
+  definition: "The unknown cause of the accelerating expansion of the universe, comprising ~68% of the cosmic energy budget."
+  context: "Often modeled as a cosmological constant (Λ), but its physical origin remains one of the deepest mysteries in physics."
+  first_use: "Lecture 1"
+  module: 1
+
+hubble-constant:
+  term: "Hubble Constant (H₀)"
+  definition: "The current expansion rate of the universe, approximately 70 km/s/Mpc."
+  context: "A galaxy 1 Mpc away recedes at ~70 km/s; one 10 Mpc away recedes at ~700 km/s. The inverse of H₀ gives a rough estimate of the universe's age."
+  first_use: "Lecture 1"
+  module: 1
+
+rotation-curve:
+  term: "Rotation Curve"
+  definition: "A plot of orbital speed versus distance from a galaxy's center."
+  context: "Flat rotation curves—where speed stays constant at large radii—are the primary evidence for dark matter halos around galaxies."
+  first_use: "Lecture 1"
+  module: 1
+
+redshift-cosmological:
+  term: "Redshift (Cosmological)"
+  definition: "The stretching of light wavelengths due to the expansion of space."
+  context: "More distant galaxies show larger redshifts because light has traveled through more expanding space to reach us."
+  first_use: "Lecture 1"
+  module: 1
+
+lcdm:
+  term: "ΛCDM"
+  definition: "The standard cosmological model: Λ (cosmological constant/dark energy) + CDM (Cold Dark Matter)."
+  context: "Fits observations remarkably well with only six free parameters, but leaves dark matter and dark energy unexplained."
+  first_use: "Lecture 1"
+  module: 1
+
+cosmic-web:
+  term: "Cosmic Web"
+  definition: "The large-scale structure of the universe: galaxies arranged in filaments, walls, and clusters, separated by vast voids."
+  context: "The cosmic web is still evolving—gravity continues to pull matter from voids into filaments and clusters."
+  first_use: "Lecture 1"
+  module: 1
