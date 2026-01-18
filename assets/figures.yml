@@ -135,8 +135,8 @@ figures:
   # Spoiler 2: Distance Ladder
   cosmic-distance-ladder:
     path: /assets/images/module-01/cosmic-distance-ladder-nblm.png
-    caption: "**What to notice:** Each rung calibrates the next. Parallax (geometry) → Cepheids (pulsation physics) → Type Ia supernovae (explosion physics). Range extends from ~1 kpc to >1 Gpc."
-    alt: "Three-rung ladder diagram: Rung 1 shows parallax using Earth's orbit baseline reaching ~1 kpc, Rung 2 shows Cepheid variables with period-luminosity relation reaching ~30 Mpc, Rung 3 shows Type Ia supernovae with consistent peak brightness reaching >1 Gpc."
+    caption: "**What to notice:** Each rung calibrates the next. Parallax (geometry) → Cepheids (standard candles) → Supernovae (Chandrasekhar limit) → Hubble Flow (cosmology). We infer the infinite from the infinitesimal."
+    alt: "Four-rung ladder diagram titled 'The Cosmic Distance Ladder: Building on the Shoulders of Physics'. From bottom to top: Rung 1 Geometry (Parallax), Rung 2 Physics (Cepheids/Standard Candles), Rung 3 Physics (Supernovae/Chandrasekhar Limit), Rung 4 Cosmology (Hubble Flow). Footer text: Our understanding of the vastest scales relies on the microscopic atom."
     credit: "Course illustration (A. Rosen)"
     module: 1
 
@@ -253,6 +253,22 @@ figures:
     caption: "Cosmic Scales: A Powers of 10 Logarithmic Journey"
     alt: "Horizontal logarithmic scale from 10^-15 m (femto) to 10^26 m showing icons for atom, DNA helix, cell, grain of sand, human (reference point), mountain, Earth, Sun, solar system, Oort cloud/nearby stars, star cluster, Milky Way, local supercluster, and observable universe. Each step represents multiplication by 10."
     credit: "Gemini"
+    module: 1
+
+  # Rubin Observatory First Light
+  lsst-cosmic-treasure-chest:
+    path: /assets/images/module-01/lsst-cosmic-treasure-chest-zoom.jpg
+    caption: "**What to notice:** A single deep-field image contains thousands of galaxies at different distances—each a snapshot from a different cosmic era. This is Rubin Observatory's first light 'Cosmic Treasure Chest'."
+    alt: "Deep-field image from Rubin Observatory showing thousands of galaxies of various shapes, sizes, and colors against the dark background of space. Spiral galaxies, elliptical galaxies, and distant faint objects are visible throughout the field."
+    credit: "Rubin Observatory/NSF/AURA"
+    module: 1
+
+  # Cosmic Timeline
+  universe-history-nasa:
+    path: /assets/images/module-01/universe-history-nasa.png
+    caption: "**What to notice:** The universe has a history. Inflation (10⁻³² s) → First Particles (1 μs) → First Nuclei (3 min) → First Light (380,000 yr) → First Stars (200 Myr) → Galaxies (400 Myr) → Dark Energy (10 Gyr) → Today (13.8 Gyr)."
+    alt: "NASA timeline diagram titled 'History of the Universe' showing cosmic evolution as an expanding cone from left to right. Major epochs labeled: Inflation (initial expansion), First Particles (neutrons, protons, electrons form), First Nuclei (helium and hydrogen form), First Light (the first atoms form), First Stars (gas and dust condense), Galaxies & Dark Matter (galaxies form in dark matter cradles), Dark Energy (expansion accelerates), Today (humans observe the universe at 13.8 billion years)."
+    credit: "NASA"
     module: 1
 
   # Case Study A: Planetary Orbits
