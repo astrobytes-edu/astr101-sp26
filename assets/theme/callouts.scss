@@ -370,3 +370,148 @@ $callout-color-warning: darken($rose-light, 10%);
 [data-bs-theme="dark"] .callout-misconception::before {
   color: $rose-dark;
 }
+
+// The More You Know - optional interesting info (collapsed by default)
+.callout-the-more-you-know {
+  border-left: 4px solid $purple-light;
+  background-color: rgba($purple-light, 0.04);
+  padding: 1rem;
+  margin: 1rem 0;
+  border-radius: 0.25rem;
+  font-size: $callout-font-size !important;
+}
+
+.callout-the-more-you-know::before {
+  font-family: "bootstrap-icons";
+  content: "\F431  The More You Know";  // bi-info-circle
+  font-weight: 600;
+  color: $purple-light;
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: $callout-label-size;
+}
+
+[data-bs-theme="dark"] .callout-the-more-you-know {
+  border-left-color: $purple-dark;
+  background-color: rgba($purple-dark, 0.08);
+}
+
+[data-bs-theme="dark"] .callout-the-more-you-know::before {
+  color: $purple-dark;
+}
+
+// Why This Matters - motivation and relevance
+.callout-why-this-matters {
+  border-left: 4px solid $mauve-light;
+  background-color: rgba($mauve-light, 0.04);
+  padding: 1rem;
+  margin: 1rem 0;
+  border-radius: 0.25rem;
+  font-size: $callout-font-size !important;
+}
+
+.callout-why-this-matters::before {
+  font-family: "bootstrap-icons";
+  content: "\F1DB  Why This Matters";  // bi-bullseye
+  font-weight: 600;
+  color: $mauve-light;
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: $callout-label-size;
+}
+
+[data-bs-theme="dark"] .callout-why-this-matters {
+  border-left-color: $mauve-dark;
+  background-color: rgba($mauve-dark, 0.06);
+}
+
+[data-bs-theme="dark"] .callout-why-this-matters::before {
+  color: $mauve-dark;
+}
+
+// Roadmap - navigation and orientation
+.callout-roadmap {
+  border-left: 4px solid $slate-light;
+  background-color: rgba($slate-light, 0.04);
+  padding: 1rem;
+  margin: 1rem 0;
+  border-radius: 0.25rem;
+  font-size: $callout-font-size !important;
+}
+
+.callout-roadmap::before {
+  font-family: "bootstrap-icons";
+  content: "\F5D6  Roadmap";  // bi-signpost-2
+  font-weight: 600;
+  color: $slate-light;
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: $callout-label-size;
+}
+
+[data-bs-theme="dark"] .callout-roadmap {
+  border-left-color: $slate-dark;
+  background-color: rgba($slate-dark, 0.06);
+}
+
+[data-bs-theme="dark"] .callout-roadmap::before {
+  color: $slate-dark;
+}
+
+// Prediction - pre-reading prediction prompt
+.callout-prediction {
+  border-left: 4px solid $indigo-light;
+  background-color: rgba($indigo-light, 0.04);
+  padding: 1rem;
+  margin: 1rem 0;
+  border-radius: 0.25rem;
+  font-size: $callout-font-size !important;
+}
+
+.callout-prediction::before {
+  font-family: "bootstrap-icons";
+  content: "\F504  Prediction";  // bi-question-circle
+  font-weight: 600;
+  color: $indigo-light;
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: $callout-label-size;
+}
+
+[data-bs-theme="dark"] .callout-prediction {
+  border-left-color: $indigo-dark;
+  background-color: rgba($indigo-dark, 0.08);
+}
+
+[data-bs-theme="dark"] .callout-prediction::before {
+  color: $indigo-dark;
+}
+
+// Summary - section wrap-up
+.callout-summary {
+  border-left: 4px solid $slate-light;
+  background-color: rgba($slate-light, 0.04);
+  padding: 1rem;
+  margin: 1rem 0;
+  border-radius: 0.25rem;
+  font-size: $callout-font-size !important;
+}
+
+.callout-summary::before {
+  font-family: "bootstrap-icons";
+  content: "\F233  Summary";  // bi-card-checklist
+  font-weight: 600;
+  color: $slate-light;
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: $callout-label-size;
+}
+
+[data-bs-theme="dark"] .callout-summary {
+  border-left-color: $slate-dark;
+  background-color: rgba($slate-dark, 0.06);
+}
+
+[data-bs-theme="dark"] .callout-summary::before {
+  color: $slate-dark;
+}
