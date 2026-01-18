@@ -116,7 +116,6 @@ The answer is the thesis of this course:
 Every gorgeous astronomical image you've ever seen is actually a dataset. The colors, the shapes, the bright spots and dark lanes—all of it encodes physical information. The job of an astronomer is to *decode* that information using physics and mathematics.
 
 ::: {.column-margin}
-<!-- IMAGE: Simple diagram showing telescope pointing at star, with arrow labeled "photons" coming from star to telescope, and arrow labeled "data" going from telescope to computer. Caption: "Pretty pictures are data." -->
 **Pretty pictures are data.** Astronomical images are built from photon counts, not snapshots. Colors are often assigned to make invisible wavelengths visible to human eyes.
 :::
 
@@ -149,6 +148,12 @@ Let's sharpen what each one means:
 
 ::: {.column-margin}
 **Key insight:** Timing unlocks physics that static measurements miss. Variability reveals masses (through orbits), sizes (through eclipses), and internal structure (through pulsations).
+:::
+
+::: {.callout-tip title="✋ Check Yourself"}
+A star appears to wobble periodically in its position on the sky. Which of the four observables is this, and what might we infer from it?
+
+*(Think first... then check: This is **Position** (tracked over time via **Timing**). We might infer the star has an unseen companion—a planet or another star—whose gravitational pull causes the wobble.)*
 :::
 
 ### What's NOT on This List
@@ -405,6 +410,12 @@ Iron (Fe) is special: it's the most tightly bound nucleus. Fusion *to* iron rele
 
 **The breakthrough:** A prism doesn't just make rainbows—it gives you the power to **decode** what's hidden inside the light. This is **spectroscopy**, and it's the most powerful tool in the astronomer's toolkit.
 
+::: {.callout-tip title="✋ Check Yourself"}
+Why is spectroscopy more powerful than just measuring total brightness?
+
+*(Think first... then check: Spectroscopy spreads light into its component wavelengths, giving you brightness **as a function of wavelength**—thousands of data points instead of one. This reveals temperature, composition, and motion that a single brightness measurement cannot.)*
+:::
+
 **Transition:** The rainbow from a prism shows visible light. But visible light is just a tiny slice of all the light that exists...
 
 ---
@@ -601,19 +612,17 @@ The **light-year**—the distance light travels in one year—is roughly $10^{18
 
 Light is an electromagnetic wave—oscillating electric and magnetic fields propagating through space. Like any wave, it has a **wavelength** ($\lambda$): the distance between successive crests.
 
-<!-- IMAGE: Simple wave diagram with wavelength λ labeled as crest-to-crest distance, direction of propagation shown with arrow -->
-
 The relationship between wavelength, frequency, and speed is:
 
-$$
-\boxed{c = \lambda \nu}
-$$
+{{< include /_includes/equations/wave-relation.qmd >}}
 
 where:
 
 - $c$ = speed of light ($3 \times 10^{10}$ cm/s) — constant
 - $\lambda$ = wavelength (cm)
 - $\nu$ = frequency (Hz = cycles per second)
+
+{{< eqrefcard wave-relation >}}
 
 ::: {.column-margin}
 **Hertz (Hz):** Unit of frequency; 1 Hz = 1 cycle per second. Named after Heinrich Hertz, who first demonstrated electromagnetic waves.
@@ -641,15 +650,21 @@ Blue light ($\lambda \approx 400$ nm) has higher frequency: $\nu \approx 7.5 \ti
 **Pattern:** Shorter wavelength → higher frequency.
 :::
 
+::: {.callout-tip title="✋ Check Yourself"}
+Radio waves have wavelengths of ~1 meter. Visible light has wavelengths of ~500 nm ($5 \times 10^{-5}$ cm). Which has higher frequency, and by roughly how much?
+
+*(Think first... then check: Visible light has **much** higher frequency. Since $\nu = c/\lambda$, shorter wavelength means higher frequency. Visible light's wavelength is about $10^7$ times smaller than radio, so its frequency is about $10^7$ times higher.)*
+:::
+
 ### Photon Energy: Where Quantum Mechanics Enters
 
 Light isn't just a wave—it also comes in discrete packets called **photons**. Each photon carries a specific amount of energy:
 
-$$
-\boxed{E = h\nu = \frac{hc}{\lambda}}
-$$
+{{< include /_includes/equations/photon-energy.qmd >}}
 
 where $h = 6.63 \times 10^{-27}$ erg·s is **Planck's constant**.
+
+{{< eqrefcard photon-energy >}}
 
 ::: {.column-margin}
 **When you see $h$, quantum mechanics is involved.** Planck's constant is the signature of the quantum world. Its appearance tells you that classical physics alone cannot explain what's happening.
@@ -689,7 +704,6 @@ Combining $c = \lambda\nu$ and $E = h\nu$, we understand the EM spectrum as a **
 | Gamma-ray | < 0.01 nm | > $10^{-8}$ erg | Extreme events |
 
 ::: {.column-margin}
-<!-- IMAGE: Vertical thermometer-style diagram showing temperature increasing upward, wavelength decreasing upward, with labels for each EM band -->
 **Temperature ladder:** Cold things glow at long wavelengths; hot things at short wavelengths. Physics, not convention.
 :::
 
@@ -700,11 +714,11 @@ This hierarchy emerges from physics: hotter objects emit higher-energy (shorter-
 ::: {.callout-note title="🔬 Deep Dive: Wien's Law (Optional)" collapse="true"}
 The relationship between temperature and peak emission wavelength is quantified by **Wien's displacement law**:
 
-$$
-\lambda_{\text{peak}} = \frac{b}{T}
-$$
+{{< include /_includes/equations/wien-displacement.qmd >}}
 
-where $b = 0.29$ cm·K.
+where $b = 0.29$ cm·K is Wien's displacement constant.
+
+{{< eqrefcard wien-displacement >}}
 
 **Examples:**
 
@@ -754,7 +768,6 @@ For the Sun, this seems like a curiosity. For distant objects, it becomes transf
 This isn't a limitation—it's a **feature**. We can directly observe cosmic history by looking at objects at different distances.
 
 ::: {.column-margin}
-<!-- IMAGE: Concentric shells around Earth at increasing distances, labeled with lookback times: local → millions of years → billions of years → cosmic dawn → CMB (Big Bang + 380,000 years) -->
 **Cosmic horizons:** Each distance shell is a different epoch in cosmic history.
 :::
 

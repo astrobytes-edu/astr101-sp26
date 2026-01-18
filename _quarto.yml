@@ -90,7 +90,7 @@ website:
           - section: "Lecture 1: Spoiler Alerts — The Universe Is Weird"
             contents:
               - text: "Slides"
-                href: modules/module-01/slides/lecture-01-spoiler-alerts.qmd
+                href: modules/module-01/slides/lecture-01-course-overview.qmd
               - text: "Reading"
                 href: modules/module-01/readings/lecture-01-spoiler-alerts-reading.qmd
           - section: "Lecture 2: Tools of the Trade"
