@@ -232,7 +232,8 @@
 
   // 6) Sidebar toggle functionality
   function setupSidebarToggle() {
-    const toggleBtn = document.getElementById('sidebar-toggle');
+    // Quarto doesn't pass id attribute to sidebar tools, so find by icon class
+    const toggleBtn = document.querySelector('.bi-layout-sidebar-inset')?.closest('a');
     const sidebar = document.getElementById('quarto-sidebar');
     const body = document.body;
 
