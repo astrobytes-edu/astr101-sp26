@@ -253,10 +253,10 @@ Throughout this course, equations serve two purposes:
 1. **Orientation equations** — Show the *relationship* (what depends on what). You won't calculate with these yet; just notice the structure.
 2. **Working equations** — You'll use these to solve problems. We'll practice them explicitly.
 
-For now, the inverse-square law ($F = L/4\pi d^2$) is a **working equation**—you'll calculate with it soon. The wave relation ($c = \lambda\nu$) and photon energy ($E = h\nu$) are **orientation equations** for now; they become working tools in Module 2.
+For now, the inverse-square law ($F = L/4\pi d^2$) is a **working equation**—you'll calculate with it soon. The wave relation ($c = \lambda\nu$) and photon energy ($E = h\nu$) are **orientation equations** for now; they become working tools once we develop atomic spectra.
 :::
 
-*We'll return to the inverse-square law quantitatively later in Module 1 when we build the distance ladder step by step.*
+*We'll return to the inverse-square law quantitatively when we build the distance ladder step by step.*
 
 ::: {.callout-prediction title="Prediction Moment"}
 Look at the first image in the spoiler reel below (the colorful nebulae). Before reading the explanation, jot down:
@@ -356,7 +356,7 @@ Take 60 seconds. Stretch. Then continue—watching for the pattern, not memorizi
 :::
 
 ::: {.callout-deep-dive title="Deep Dive: Hydrogen's Atomic Fingerprint" collapse="true"}
-The red glow comes from hydrogen's "H-alpha" (Hα) transition at 656.3 nm. When an electron in a hydrogen atom drops from the n=3 to n=2 energy level, it releases a photon with exactly this wavelength. This isn't arbitrary—it's set by quantum mechanics. (We'll explore atomic transitions in Module 2.)
+The red glow comes from hydrogen's "H-alpha" (Hα) transition at 656.3 nm. When an electron in a hydrogen atom drops from the n=3 to n=2 energy level, it releases a photon with exactly this wavelength. This isn't arbitrary—it's set by quantum mechanics. (We'll explore atomic transitions when we develop the physics of spectra.)
 
 The oxygen lines ([OIII] at 496–501 nm) come from "forbidden" transitions that only occur in extremely low-density gas—conditions impossible in Earth laboratories but common in space. The very presence of these lines tells us about gas density.
 
@@ -602,7 +602,7 @@ Only 5% of the universe is made of the stuff we understand. The rest is dark—b
 
 **What it might be:** A new type of particle that interacts via gravity but not electromagnetism. Candidates include WIMPs (Weakly Interacting Massive Particles), axions, and others. Despite decades of searching, we haven't detected dark matter particles directly—yet.
 
-**Connection to Course:** In Module 4, we'll derive galaxy rotation curves and see how dark matter changes everything we thought we knew about cosmic structure.
+**Connection to Course:** Later, we'll derive galaxy rotation curves and see how dark matter changes everything we thought we knew about cosmic structure.
 :::
 
 **Key insight:** Motion reveals mass. Gravity causes acceleration; we measure velocities; the math tells us how much mass is required. Most of it is invisible—but the universe is not static, and gravity is still the architect, still building today.
@@ -672,7 +672,7 @@ We don't know. Options include:
 
 The simplest model (**ΛCDM**) treats dark energy as a cosmological constant. It fits observations remarkably well—but we have no physical understanding of why it has the value it does.
 
-**Connection to Course:** Module 4 will develop the Hubble law, explore evidence for dark energy, and discuss the fate of the universe (spoiler: it keeps expanding forever, growing colder and emptier).
+**Connection to Course:** We'll develop the Hubble law, explore evidence for dark energy, and discuss the fate of the universe (spoiler: it keeps expanding forever, growing colder and emptier).
 :::
 
 **Key insight:** We can measure the age and fate of the universe—using the same tools we used to measure the distance to a nearby star. The method scales.
@@ -862,7 +862,7 @@ where $h = 6.63 \times 10^{-27}$ erg·s is **Planck's constant**.
 {{< eqrefcard photon-energy >}}
 
 ::: {.column-margin}
-**The constant $h$ signals quantum territory.** Atoms behave by different rules than everyday objects. We'll explore *why* in Module 2; for now, the key result is that photon energy depends on wavelength.
+**The constant $h$ signals quantum territory.** Atoms behave by different rules than everyday objects. We'll explore *why* when we study atomic spectra; for now, the key result is that photon energy depends on wavelength.
 :::
 
 ::: {.callout-the-more-you-know title="What Planck's Constant Means"}
@@ -870,7 +870,7 @@ The constant $h$ (Planck's constant) signals we're in **quantum territory**—at
 
 Classical physics treated light as a continuous wave, but experiments showed that light comes in discrete energy packets called **photons**. The energy of each photon is set by its frequency (or equivalently, its wavelength).
 
-**We'll unpack *why* this happens in Module 2** when we study atomic spectra and **blackbody** radiation. For now, the key message is: photon energy depends on wavelength, and shorter wavelength means higher energy.
+**We'll unpack *why* this happens** when we study atomic spectra and **blackbody** radiation. For now, the key message is: photon energy depends on wavelength, and shorter wavelength means higher energy.
 :::
 
 ::: {.callout-key-insight title="What the Energy Equation Tells Us"}
@@ -883,7 +883,7 @@ Classical physics treated light as a continuous wave, but experiments showed tha
 This is why different wavelengths reveal different physics: **it takes hot, energetic processes to produce high-energy photons**.
 :::
 
-*We'll return to photon energy in Module 2 when we explore why atoms emit light at specific wavelengths—and how this reveals stellar composition.*
+*We'll return to photon energy when we explore why atoms emit light at specific wavelengths—and how this reveals stellar composition.*
 
 ::: {.callout-worked-example title="Comparing Photon Energies"}
 How much more energy does an X-ray photon carry compared to a radio photon?
@@ -1085,7 +1085,7 @@ If you can answer all four with reasoning (not just recall): you're ready.
 ### ✅ Section 1.4: Light as Messenger
 - [ ] I can use $c = \lambda \nu$ to predict how frequency changes when wavelength changes
 - [ ] I can use $E = hc/\lambda$ to explain why X-ray telescopes see hotter objects than optical telescopes
-- [ ] I understand that the constant $h$ signals we're in quantum territory (details in Module 2)
+- [ ] I understand that the constant $h$ signals we're in quantum territory (details to come)
 
 ### ✅ Section 1.5: Lookback Time
 - [ ] I can explain why observing a galaxy 10 million light-years away means seeing it 10 million years in the past
