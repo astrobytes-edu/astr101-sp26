@@ -151,6 +151,8 @@ local function get_figure_registry()
 end
 
 -- {{< fig id >}} or {{< fig id caption="Custom caption" >}}
+-- {{< fig id layout="aside" >}} for side-by-side layout (image left, caption right)
+-- {{< fig id layout="aside" width="40%" >}} with custom image width
 -- Renders figure from central registry with optional caption override
 function fig(args, kwargs)
   local fig_id = args[1]
@@ -186,9 +188,17 @@ function fig(args, kwargs)
     full_caption = full_caption .. " (Credit: " .. credit .. ")"
   end
 
-  -- Create image element with alt text
-  local img = pandoc.Image({pandoc.Str(alt)}, path)
-  local img_para = pandoc.Para({img})
+  -- Check for layout parameter
+  local layout = nil
+  if kwargs and kwargs.layout then
+    layout = pandoc.utils.stringify(kwargs.layout)
+  end
+
+  -- Check for width parameter (used with aside layout)
+  local width = nil
+  if kwargs and kwargs.width then
+    width = pandoc.utils.stringify(kwargs.width)
+  end
 
   -- Parse caption as markdown to support formatting like **bold**
   local caption_doc = pandoc.read(full_caption, "markdown")
@@ -201,6 +211,37 @@ function fig(args, kwargs)
       caption_inlines = first_block.content or {}
     end
   end
+
+  -- Side-by-side layout: image left, caption right
+  if layout == "aside" then
+    local width_style = width and string.format(' style="max-width: %s;"', width) or ""
+
+    -- Convert caption markdown to HTML for proper rendering
+    local caption_html = full_caption
+    local caption_doc = pandoc.read(full_caption, "markdown")
+    if caption_doc and caption_doc.blocks and #caption_doc.blocks > 0 then
+      -- Write just the inlines as HTML (strip wrapping <p> tags)
+      caption_html = pandoc.write(caption_doc, "html")
+      -- Remove outer <p> tags if present
+      caption_html = caption_html:gsub("^<p>(.+)</p>%s*$", "%1")
+    end
+
+    local html = string.format([[
+<div id="fig-%s" class="figure course-figure figure-aside">
+  <div class="figure-content"%s>
+    <img src="%s" alt="%s">
+  </div>
+  <div class="figure-caption">
+    <p><em>%s</em></p>
+  </div>
+</div>
+]], fig_id, width_style, path, alt, caption_html)
+    return pandoc.RawBlock("html", html)
+  end
+
+  -- Default vertical layout: image on top, caption below
+  local img = pandoc.Image({pandoc.Str(alt)}, path)
+  local img_para = pandoc.Para({img})
 
   -- Wrap in italics for figure caption styling
   local caption_para = pandoc.Para({pandoc.Emph(caption_inlines)})

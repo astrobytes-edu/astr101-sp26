@@ -396,7 +396,7 @@ Iron (Fe) is special: it's the most tightly bound nucleus. Fusion *to* iron rele
 
 ### Spoiler 4: Dispersion — The Key to Everything
 
-{{< fig prism-spectrum >}}
+{{< fig prism-spectrum layout="aside" width="45%" >}}
 
 **What do we measure?** When "white" light passes through a prism (or diffraction grating), it spreads into a rainbow.
 
