@@ -3,8 +3,8 @@
 # Usage: Referenced by equations.yml via card field
 
 kepler_period:
-  predicts: "Given \\(r, M\\), it predicts the orbital period \\(P\\)."
-  depends: "Scales as \\(P \\propto r^{3/2}\\) and \\(P \\propto M^{-1/2}\\)."
+  predicts: "Given $r, M$, it predicts the orbital period $P$."
+  depends: "Scales as $P \\propto r^{3/2}$ and $P \\propto M^{-1/2}$."
   says: "Farther orbits take much longer; more central mass makes orbits faster."
   assumptions:
     - "Orbit is approximately circular"
@@ -12,8 +12,8 @@ kepler_period:
     - "Newtonian gravity"
 
 schwarzschild_radius:
-  predicts: "Given \\(M\\), it predicts the event horizon radius \\(R_{\\mathrm{sch}}\\)."
-  depends: "Scales as \\(R_{\\mathrm{sch}} \\propto M\\)."
+  predicts: "Given $M$, it predicts the event horizon radius $R_{\\mathrm{sch}}$."
+  depends: "Scales as $R_{\\mathrm{sch}} \\propto M$."
   says: "More massive objects have larger event horizons—linearly."
   assumptions:
     - "Non-rotating (Schwarzschild, not Kerr)"
@@ -21,8 +21,8 @@ schwarzschild_radius:
     - "Spherically symmetric"
 
 newton_gravity:
-  predicts: "Given \\(M\\), \\(m\\), and \\(r\\), it predicts the gravitational force \\(F\\)."
-  depends: "Scales as \\(F \\propto Mm/r^2\\)."
+  predicts: "Given $M$, $m$, and $r$, it predicts the gravitational force $F$."
+  depends: "Scales as $F \\propto Mm/r^2$."
   says: "Gravity weakens with distance squared; stronger between more massive objects."
   assumptions:
     - "Point masses or spherically symmetric"
@@ -30,50 +30,50 @@ newton_gravity:
     - "No other forces acting"
 
 stefan_boltzmann:
-  predicts: "Given \\(R\\) and \\(T\\), it predicts the luminosity \\(L\\)."
-  depends: "Scales as \\(L \\propto R^2 T^4\\)."
-  says: "Luminosity depends on surface area (\\(R^2\\)) and temperature (\\(T^4\\)). Double the temperature, get 16× the luminosity."
+  predicts: "Given $R$ and $T$, it predicts the luminosity $L$."
+  depends: "Scales as $L \\propto R^2 T^4$."
+  says: "Luminosity depends on surface area ($R^2$) and temperature ($T^4$). Double the temperature, get 16× the luminosity."
   assumptions:
     - "Blackbody radiation"
     - "Spherical, uniformly radiating surface"
     - "Effective surface temperature"
 
 flux_luminosity_distance:
-  predicts: "Given \\(L\\) and \\(d\\), it predicts the observed flux \\(F\\) at the detector."
-  depends: "Scales as \\(F \\propto L\\) and \\(F \\propto d^{-2}\\)."
-  says: "Apparent brightness mixes intrinsic power and distance; to infer \\(L\\) from \\(F\\), you must also know \\(d\\)."
+  predicts: "Given $L$ and $d$, it predicts the observed flux $F$ at the detector."
+  depends: "Scales as $F \\propto L$ and $F \\propto d^{-2}$."
+  says: "Apparent brightness mixes intrinsic power and distance; to infer $L$ from $F$, you must also know $d$."
   assumptions:
     - "Approximately isotropic emission (radiates equally in all directions)"
     - "Negligible absorption/scattering between source and observer"
 
 lookback_time:
-  predicts: "Given a distance \\(d\\), it predicts the light travel time \\(t\\) (the time between emission and detection)."
-  depends: "Scales as \\(t \\propto d\\) and \\(t \\propto c^{-1}\\)."
+  predicts: "Given a distance $d$, it predicts the light travel time $t$ (the time between emission and detection)."
+  depends: "Scales as $t \\propto d$ and $t \\propto c^{-1}$."
   says: "Light takes time to travel; looking farther away means seeing older light."
   assumptions:
-    - "Light travels in a straight line at speed \\(c\\) (simplified picture)"
+    - "Light travels in a straight line at speed $c$ (simplified picture)"
     - "Ignores cosmological expansion and strong gravitational time-delay effects"
 
 wave_relation:
-  predicts: "Given any two of \\(c\\), \\(\\lambda\\), \\(\\nu\\), it predicts the third."
-  depends: "\\(\\lambda \\propto \\nu^{-1}\\) (inverse relationship at fixed \\(c\\))."
+  predicts: "Given any two of $c$, $\\lambda$, $\\nu$, it predicts the third."
+  depends: "$\\lambda \\propto \\nu^{-1}$ (inverse relationship at fixed $c$)."
   says: "Wavelength and frequency are two ways of describing the same wave; longer wavelength means lower frequency."
   assumptions:
-    - "Light travels in vacuum at speed \\(c\\)"
+    - "Light travels in vacuum at speed $c$"
     - "Applies to all electromagnetic radiation"
 
 photon_energy:
-  predicts: "Given wavelength \\(\\lambda\\) (or frequency \\(\\nu\\)), it predicts the energy \\(E\\) of a single photon."
-  depends: "\\(E \\propto \\nu\\) and \\(E \\propto \\lambda^{-1}\\)."
-  says: "Shorter wavelength = higher energy photon. The constant \\(h\\) signals quantum mechanics is at work."
+  predicts: "Given wavelength $\\lambda$ (or frequency $\\nu$), it predicts the energy $E$ of a single photon."
+  depends: "$E \\propto \\nu$ and $E \\propto \\lambda^{-1}$."
+  says: "Shorter wavelength = higher energy photon. The constant $h$ signals quantum mechanics is at work."
   assumptions:
     - "Light comes in discrete packets (photons)"
     - "Each photon carries energy proportional to its frequency"
     - "This is a quantum mechanical result—classical physics cannot predict it"
 
 wien_displacement:
-  predicts: "Given temperature \\(T\\), it predicts the peak wavelength \\(\\lambda_{\\text{peak}}\\) of thermal emission."
-  depends: "\\(\\lambda_{\\text{peak}} \\propto T^{-1}\\)."
+  predicts: "Given temperature $T$, it predicts the peak wavelength $\\lambda_{\\text{peak}}$ of thermal emission."
+  depends: "$\\lambda_{\\text{peak}} \\propto T^{-1}$."
   says: "Hotter objects peak at shorter wavelengths (bluer); cooler objects peak at longer wavelengths (redder)."
   assumptions:
     - "Object radiates as a blackbody (or approximately so)"

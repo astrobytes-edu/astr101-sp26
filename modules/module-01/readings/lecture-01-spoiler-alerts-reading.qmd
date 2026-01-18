@@ -658,6 +658,8 @@ Radio waves have wavelengths of ~1 meter. Visible light has wavelengths of ~500 
 
 ### Photon Energy: Where Quantum Mechanics Enters
 
+{{< term photon >}}
+
 Light isn't just a wave—it also comes in discrete packets called **photons**. Each photon carries a specific amount of energy:
 
 {{< include /_includes/equations/photon-energy.qmd >}}
@@ -846,6 +848,14 @@ If yes to all four: you're ready.
 
 ---
 
+## Glossary
+
+The terms below are the foundational vocabulary for this lecture. Each includes a short definition and context for how the term is used in astronomy.
+
+{{< glossary module=1 >}}
+
+---
+
 ## Self-Assessment Checklist
 
 ### ✅ Section 1.1: The Course Thesis
@@ -879,8 +889,3 @@ If yes to all four: you're ready.
 
 ---
 
-*Instructor Reference (verify before publishing):*
-- NASA Science: "Visualization: From Energy to Image"
-- NASA SVS: "Periodic Table of Element Origins" (svs.gsfc.nasa.gov/13873)
-- NASA Science: "Three Steps to the Hubble Constant"
-- STScI: Hubble/JWST Pillars of Creation comparison

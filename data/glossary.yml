@@ -1,0 +1,184 @@
+# Glossary Registry
+# Terms and definitions for ASTR 201
+# Usage: {{< term id >}} for inline term with margin note
+#        {{< glossary >}} for full glossary section
+#
+# Each term has:
+#   term: display name
+#   definition: short definition (1-2 sentences)
+#   context: (optional) additional context or formula
+#   first_use: (optional) where term is first introduced
+#   module: (optional) which module introduces this
+
+# =============================================================
+# Module 1: Foundations
+# =============================================================
+
+# Core Concepts
+inference:
+  term: "Inference"
+  definition: "Drawing conclusions about quantities we cannot directly access (like a star's temperature) from quantities we can measure (like its color)."
+  context: "Inference requires a model—a physical relationship connecting observable to unobservable."
+  first_use: "Lecture 1"
+  module: 1
+
+observable:
+  term: "Observable"
+  definition: "A quantity that can be directly measured—brightness, position, wavelength, timing."
+  context: "Astronomers have remarkably few types of observables; nearly everything else is inferred."
+  first_use: "Lecture 1"
+  module: 1
+
+model:
+  term: "Model"
+  definition: "A mathematical relationship encoding physical assumptions that connects what we measure to what we want to know."
+  context: "Models can be tested by comparing their predictions to new observations."
+  first_use: "Lecture 1"
+  module: 1
+
+# Light and Radiation
+photon:
+  term: "Photon"
+  definition: "A discrete packet of electromagnetic energy; the quantum of light."
+  context: "Each photon carries energy $E = h\\nu$, where $h$ is Planck's constant and $\\nu$ is frequency."
+  first_use: "Lecture 1"
+  module: 1
+
+wavelength:
+  term: "Wavelength (λ)"
+  definition: "The spatial period of a light wave—the distance between successive crests."
+  context: "Measured in nanometers (nm) for visible light, centimeters for radio. Related to frequency by $c = \\lambda\\nu$."
+  first_use: "Lecture 1"
+  module: 1
+
+frequency:
+  term: "Frequency (ν)"
+  definition: "The number of wave cycles passing a point per second, measured in Hertz (Hz)."
+  context: "Higher frequency means higher energy photons: $E = h\\nu$."
+  first_use: "Lecture 1"
+  module: 1
+
+spectrum:
+  term: "Spectrum"
+  definition: "Brightness measured as a function of wavelength—the distribution of light across different colors/energies."
+  context: "A spectrum contains far more information than a single brightness measurement."
+  first_use: "Lecture 1"
+  module: 1
+
+spectroscopy:
+  term: "Spectroscopy"
+  definition: "The technique of spreading light into its component wavelengths to analyze composition, temperature, and motion."
+  context: "Spectroscopy transformed astronomy from cataloging what's there to understanding what it's made of."
+  first_use: "Lecture 1"
+  module: 1
+
+# Brightness and Distance
+flux:
+  term: "Flux (F)"
+  definition: "The amount of light energy arriving at a detector per unit time per unit area."
+  context: "Measured in erg s⁻¹ cm⁻². Flux depends on both luminosity and distance: $F = L/(4\\pi d^2)$."
+  first_use: "Lecture 1"
+  module: 1
+
+luminosity:
+  term: "Luminosity (L)"
+  definition: "The total light energy emitted by a source per unit time—its intrinsic brightness."
+  context: "Measured in erg/s or solar luminosities ($L_\\odot$). Luminosity is what the object emits; flux is what we receive."
+  first_use: "Lecture 1"
+  module: 1
+
+standard_candle:
+  term: "Standard candle"
+  definition: "An object whose intrinsic luminosity can be determined independently, allowing distance to be calculated from observed brightness."
+  context: "Examples: Cepheid variables (period → luminosity), Type Ia supernovae (consistent peak brightness)."
+  first_use: "Lecture 1"
+  module: 1
+
+inverse_square_law:
+  term: "Inverse-square law"
+  definition: "The principle that flux decreases with the square of distance: double the distance, quarter the brightness."
+  context: "$F = L/(4\\pi d^2)$. This geometric spreading is why distance determination is central to astronomy."
+  first_use: "Lecture 1"
+  module: 1
+
+# Atomic Physics
+emission:
+  term: "Emission"
+  definition: "Light produced and sent out by a source, often at specific wavelengths determined by atomic transitions."
+  context: "Emission lines appear bright against a darker background."
+  first_use: "Lecture 1"
+  module: 1
+
+absorption:
+  term: "Absorption"
+  definition: "Light removed from a beam by intervening material, often at specific wavelengths where atoms absorb photons."
+  context: "Absorption lines appear dark against a brighter continuum."
+  first_use: "Lecture 1"
+  module: 1
+
+ionized:
+  term: "Ionized"
+  definition: "An atom that has lost one or more electrons, leaving it with a net positive charge."
+  context: "Ionization requires energy (heat or UV radiation). Ionized gas emits different spectral lines than neutral gas."
+  first_use: "Lecture 1"
+  module: 1
+
+neutral:
+  term: "Neutral"
+  definition: "An atom with equal numbers of protons and electrons, having no net electric charge."
+  context: "Neutral hydrogen emits at 21 cm (radio); ionized hydrogen emits at 656 nm (optical)."
+  first_use: "Lecture 1"
+  module: 1
+
+# Thermal Radiation
+thermal_radiation:
+  term: "Thermal radiation"
+  definition: "Light emitted by an object due to its temperature—all objects above absolute zero emit thermal radiation."
+  context: "Hotter objects emit more light at shorter wavelengths (Wien's law)."
+  first_use: "Lecture 1"
+  module: 1
+
+blackbody:
+  term: "Blackbody"
+  definition: "An idealized object that absorbs all incident radiation and emits a characteristic spectrum determined only by its temperature."
+  context: "Stars approximate blackbodies. The blackbody spectrum peaks at $\\lambda_{\\text{peak}} = b/T$ (Wien's law)."
+  first_use: "Lecture 1"
+  module: 1
+
+# Dust and Extinction
+extinction:
+  term: "Extinction"
+  definition: "The dimming of light by dust through a combination of absorption and scattering."
+  context: "Extinction is wavelength-dependent: blue light is extinguished more than red (interstellar reddening)."
+  first_use: "Lecture 1"
+  module: 1
+
+# Time and Distance
+lookback_time:
+  term: "Lookback time"
+  definition: "The time light takes to travel from a distant object to us—we see the object as it was that long ago."
+  context: "Looking at the Andromeda Galaxy (2.5 million light-years away), we see it as it was 2.5 million years ago."
+  first_use: "Lecture 1"
+  module: 1
+
+light_year:
+  term: "Light-year"
+  definition: "The distance light travels in one year—approximately $10^{18}$ cm or about 63,000 AU."
+  context: "A unit of distance, not time. Proxima Centauri is 4.2 light-years away."
+  first_use: "Lecture 1"
+  module: 1
+
+# Constants
+planck_constant:
+  term: "Planck's constant (h)"
+  definition: "A fundamental constant that relates photon energy to frequency: $h = 6.63 \\times 10^{-27}$ erg·s."
+  context: "The appearance of $h$ in an equation signals that quantum mechanics is involved."
+  first_use: "Lecture 1"
+  module: 1
+
+speed_of_light:
+  term: "Speed of light (c)"
+  definition: "The speed at which light travels in vacuum: $c = 3 \\times 10^{10}$ cm/s."
+  context: "A universal constant—the speed limit of the universe. Nothing with mass can reach this speed."
+  first_use: "Lecture 1"
+  module: 1

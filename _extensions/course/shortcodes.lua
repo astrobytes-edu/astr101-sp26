@@ -121,17 +121,17 @@ local function load_figure_registry()
     -- Skip comments and empty lines
     if not line:match("^%s*#") and not line:match("^%s*$") then
       -- Check for figure ID (two spaces + name + colon)
-      local fig_id = line:match("^  ([%w%-]+):%s*$")
+      local fig_id = line:match("^  ([%w%-_]+):%s*$")
       if fig_id then
         current_fig = fig_id
         registry[current_fig] = {}
       elseif current_fig then
         -- Parse properties (four spaces + key: value)
-        local key, value = line:match("^    ([%w%-]+):%s*(.+)$")
+        local key, value = line:match("^    ([%w%-_]+):%s*(.+)$")
         if key and value then
           -- Remove quotes if present
-          value = value:gsub('^"(.+)"$', "%1")
-          value = value:gsub("^'(.+)'$", "%1")
+          value = value:gsub('^"(.-)"$', "%1")
+          value = value:gsub("^'(.-)'$", "%1")
           registry[current_fig][key] = value
         end
       end
@@ -172,22 +172,38 @@ function fig(args, kwargs)
   local credit = fig_data.credit
 
   -- Allow caption override via kwargs
+  -- Only override if kwargs.caption has actual content (not empty Inlines list)
   if kwargs and kwargs.caption then
-    caption = pandoc.utils.stringify(kwargs.caption)
+    local caption_override = pandoc.utils.stringify(kwargs.caption)
+    if caption_override ~= "" then
+      caption = caption_override
+    end
   end
 
   -- Build full caption with credit if present
   local full_caption = caption
   if credit then
-    full_caption = caption .. " (Credit: " .. credit .. ")"
+    full_caption = full_caption .. " (Credit: " .. credit .. ")"
   end
 
   -- Create image element with alt text
   local img = pandoc.Image({pandoc.Str(alt)}, path)
-
-  -- Create a div containing image and caption (simpler, more portable than Figure)
-  local caption_para = pandoc.Para({pandoc.Emph({pandoc.Str(full_caption)})})
   local img_para = pandoc.Para({img})
+
+  -- Parse caption as markdown to support formatting like **bold**
+  local caption_doc = pandoc.read(full_caption, "markdown")
+  local caption_inlines = {}
+  if caption_doc and caption_doc.blocks and #caption_doc.blocks > 0 then
+    local first_block = caption_doc.blocks[1]
+    if first_block.content then
+      caption_inlines = first_block.content
+    elseif first_block.t == "Plain" or first_block.t == "Para" then
+      caption_inlines = first_block.content or {}
+    end
+  end
+
+  -- Wrap in italics for figure caption styling
+  local caption_para = pandoc.Para({pandoc.Emph(caption_inlines)})
 
   local figure_div = pandoc.Div(
     {img_para, caption_para},
@@ -287,6 +303,18 @@ end
 -- Equation System Shortcodes
 -- ==============================================================
 
+-- Process YAML escape sequences in double-quoted strings
+local function process_yaml_escapes(s)
+  if not s then return s end
+  -- Process common YAML escape sequences
+  s = s:gsub("\\\\", "\000BACKSLASH\000")  -- Placeholder for literal backslash
+  s = s:gsub("\\n", "\n")
+  s = s:gsub("\\t", "\t")
+  s = s:gsub("\\\"", '"')
+  s = s:gsub("\000BACKSLASH\000", "\\")    -- Restore single backslash
+  return s
+end
+
 -- Load eqcards.yml (meaning scaffolds)
 local function load_eqcards()
   local cards = {}
@@ -321,7 +349,7 @@ local function load_eqcards()
           key, val = line:match("^  ([%w_]+):%s*(.+)$")
         end
         if key and val and val ~= "" then
-          cards[current_id][key] = val
+          cards[current_id][key] = process_yaml_escapes(val)
           in_assumptions = false
         elseif line:match("^  assumptions:%s*$") then
           in_assumptions = true
@@ -332,7 +360,7 @@ local function load_eqcards()
             item = line:match("^    %- (.+)$")
           end
           if item then
-            table.insert(cards[current_id].assumptions, item)
+            table.insert(cards[current_id].assumptions, process_yaml_escapes(item))
           end
         end
       end
@@ -371,7 +399,7 @@ local function load_equations()
           key, val = line:match("^  ([%w_]+):%s*(.+)$")
         end
         if key and val then
-          eqs[current_id][key] = val
+          eqs[current_id][key] = process_yaml_escapes(val)
         end
       end
     end
@@ -398,8 +426,23 @@ local function get_equations()
   return _equations_cache
 end
 
+-- Helper: convert LaTeX delimiters for HTML context
+-- MathJax processes $...$ in raw HTML but may miss \(...\)
+local function convert_latex_delimiters(text)
+  if not text then return "" end
+  -- Convert \( to $ and \) to $ for inline math
+  text = text:gsub("\\%(", "$")
+  text = text:gsub("\\%)", "$")
+  return text
+end
+
 -- Helper: build meaning card HTML
 local function build_meaning_html(card, title, anchor)
+  -- Convert LaTeX delimiters in all fields
+  local predicts = convert_latex_delimiters(card.predicts or "")
+  local depends = convert_latex_delimiters(card.depends or "")
+  local says = convert_latex_delimiters(card.says or "")
+
   local html = string.format([[
 <div class="callout callout-tip eq-gloss" data-callout="tip">
   <div class="callout-header">
@@ -411,12 +454,12 @@ local function build_meaning_html(card, title, anchor)
     <p><strong>What it predicts</strong><br/>%s</p>
     <p><strong>What it depends on</strong><br/>%s</p>
     <p><strong>What it's saying</strong><br/>%s</p>
-]], title or "Equation meaning", card.predicts or "", card.depends or "", card.says or "")
+]], title or "Equation meaning", predicts, depends, says)
 
   if card.assumptions and #card.assumptions > 0 then
     html = html .. "    <p><strong>Assumptions</strong></p>\n    <ul>\n"
     for _, a in ipairs(card.assumptions) do
-      html = html .. "      <li>" .. a .. "</li>\n"
+      html = html .. "      <li>" .. convert_latex_delimiters(a) .. "</li>\n"
     end
     html = html .. "    </ul>\n"
   end
@@ -556,6 +599,179 @@ function eqindex(args, kwargs)
   end
 
   html = html .. '</div>'
+
+  return pandoc.RawBlock("html", html)
+end
+
+-- ==============================================================
+-- Glossary System Shortcodes
+-- ==============================================================
+
+-- Load glossary.yml
+local function load_glossary()
+  local terms = {}
+  local project_dir = os.getenv("QUARTO_PROJECT_DIR") or "."
+  local path = project_dir .. "/data/glossary.yml"
+
+  local f = io.open(path, "r")
+  if not f then
+    f = io.open("data/glossary.yml", "r")
+  end
+  if not f then return terms end
+
+  local content = f:read("*all")
+  f:close()
+
+  -- Parse YAML (adapted for glossary format)
+  local current_id = nil
+  for line in content:gmatch("[^\n]+") do
+    if not line:match("^%s*#") and not line:match("^%s*$") then
+      -- Top-level term ID (no indent, ends with colon)
+      local term_id = line:match("^([%w_]+):%s*$")
+      if term_id then
+        current_id = term_id
+        terms[current_id] = {}
+      elseif current_id then
+        -- Nested key-value (2-space indent)
+        local key, val = line:match("^  ([%w_]+):%s*\"(.-)\"$")
+        if not key then
+          key, val = line:match("^  ([%w_]+):%s*(.+)$")
+        end
+        if key and val and val ~= "" then
+          -- Remove surrounding quotes if present
+          val = val:gsub('^"(.+)"$', "%1")
+          terms[current_id][key] = process_yaml_escapes(val)
+        end
+      end
+    end
+  end
+
+  return terms
+end
+
+-- Cache
+local _glossary_cache = nil
+local function get_glossary()
+  if not _glossary_cache then
+    _glossary_cache = load_glossary()
+  end
+  return _glossary_cache
+end
+
+-- {{< term id >}} - inline term with margin definition
+-- Returns the term name and creates a margin note with definition
+function term(args, kwargs)
+  local term_id = args[1]
+  if not term_id then
+    return pandoc.Strong({pandoc.Str("[ERROR: term requires ID]")})
+  end
+
+  local glossary = get_glossary()
+  local entry = glossary[term_id]
+
+  if not entry then
+    return pandoc.Strong({pandoc.Str("[Unknown term: " .. term_id .. "]")})
+  end
+
+  local term_name = entry.term or term_id
+  local definition = entry.definition or ""
+
+  -- Parse definition as markdown (handles LaTeX)
+  local def_doc = pandoc.read(definition, "markdown")
+  local def_inlines = {}
+  if def_doc and def_doc.blocks and #def_doc.blocks > 0 then
+    local first = def_doc.blocks[1]
+    if first.content then
+      def_inlines = first.content
+    end
+  end
+
+  -- Create margin note with definition
+  local margin_content = {
+    pandoc.Strong({pandoc.Str(term_name .. ":")}),
+    pandoc.Space(),
+  }
+  for _, inline in ipairs(def_inlines) do
+    table.insert(margin_content, inline)
+  end
+
+  local margin_note = pandoc.Span(
+    margin_content,
+    pandoc.Attr("", {"column-margin", "term-definition"})
+  )
+
+  -- Return term in bold + margin note (Quarto processes .column-margin class)
+  return {pandoc.Strong({pandoc.Str(term_name)}), margin_note}
+end
+
+-- {{< defn id >}} - just the definition (for manual placement)
+function defn(args, kwargs)
+  local term_id = args[1]
+  if not term_id then
+    return pandoc.Str("")
+  end
+
+  local glossary = get_glossary()
+  local entry = glossary[term_id]
+
+  if not entry then
+    return pandoc.Str("")
+  end
+
+  local definition = entry.definition or ""
+
+  -- Parse as markdown
+  local def_doc = pandoc.read(definition, "markdown")
+  if def_doc and def_doc.blocks and #def_doc.blocks > 0 then
+    local first = def_doc.blocks[1]
+    if first.content then
+      return first.content
+    end
+  end
+
+  return pandoc.Str(definition)
+end
+
+-- {{< glossary >}} or {{< glossary module=1 >}} - full glossary section
+function glossary(args, kwargs)
+  local glossary_data = get_glossary()
+  local filter_module = nil
+
+  if kwargs and kwargs.module then
+    filter_module = tonumber(pandoc.utils.stringify(kwargs.module))
+  end
+
+  if not glossary_data or not next(glossary_data) then
+    return pandoc.RawBlock("html", '<div class="callout callout-warning"><p>No glossary found.</p></div>')
+  end
+
+  -- Sort keys alphabetically by term name
+  local sorted = {}
+  for id, entry in pairs(glossary_data) do
+    -- Filter by module if specified
+    if not filter_module or (entry.module and tonumber(entry.module) == filter_module) then
+      table.insert(sorted, {id = id, entry = entry, sort_key = (entry.term or id):lower()})
+    end
+  end
+  table.sort(sorted, function(a, b) return a.sort_key < b.sort_key end)
+
+  local html = '<div class="glossary">\n<dl>\n'
+
+  for _, item in ipairs(sorted) do
+    local entry = item.entry
+    local term_name = entry.term or item.id
+    local definition = convert_latex_delimiters(entry.definition or "")
+    local context = convert_latex_delimiters(entry.context or "")
+
+    html = html .. string.format('  <dt id="glossary-%s"><strong>%s</strong></dt>\n', item.id, term_name)
+    html = html .. string.format('  <dd>%s', definition)
+    if context ~= "" then
+      html = html .. string.format(' <em>%s</em>', context)
+    end
+    html = html .. '</dd>\n'
+  end
+
+  html = html .. '</dl>\n</div>'
 
   return pandoc.RawBlock("html", html)
 end
