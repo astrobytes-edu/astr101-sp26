@@ -74,3 +74,4 @@ jobs:
           ignore_url_re: |
             ^https://docs\.google\.com/.*
             ^https://www\.cambridge\.org/9781009618007.*$
+            ^https://shopaztecs\.com/.*$
