@@ -173,9 +173,9 @@ Notice what you *cannot* directly measure:
 Every single one of these fundamental properties must be *inferred* by combining measurements with physical models. The gap between "what we measure" and "what we want to know" is bridged by **physics**. That bridge takes the form of **models**—mathematical relationships that connect observables to physical quantities. We'll formalize this in Section 1.3.
 
 ::: {.callout-tip title="✋ Check Yourself"}
-Without looking, name the six key physical quantities astronomers care about.
+A student claims: "Astronomers measured the temperature of that star to be 5,800 K." Is this statement technically accurate? If not, what did astronomers actually measure, and how did they get from that measurement to temperature?
 
-*(Check: distance, time, speed, mass, luminosity, temperature)*
+*(Think first... then check: The statement is imprecise. Astronomers measured the star's **spectrum** or **color** (wavelength distribution). They inferred temperature using the physical relationship between temperature and peak emission wavelength—hotter objects emit bluer light. Temperature is never directly measured; it's always inferred from wavelength observations via a model.)*
 :::
 
 ### A Taste of What "Decoding" Means
@@ -318,11 +318,11 @@ Each builds on the one before. **Watch for the pattern**, not the details.
 :::
 
 ::: {.callout-note title="🔬 The Physics Detail (Optional)" collapse="true"}
-The red glow comes from hydrogen's "H-alpha" (Hα) transition at 656.3 nm. When an electron in a hydrogen atom drops from the n=3 to n=2 energy level, it releases a photon with exactly this wavelength. This isn't arbitrary—it's set by quantum mechanics.
-
-The appearance of Planck's constant ($h$) in the underlying equations is your signal that **quantum mechanics** is at work. Classical physics cannot explain why atoms emit at discrete wavelengths rather than continuous colors.
+The red glow comes from hydrogen's "H-alpha" (Hα) transition at 656.3 nm. When an electron in a hydrogen atom drops from the n=3 to n=2 energy level, it releases a photon with exactly this wavelength. This isn't arbitrary—it's set by quantum mechanics. (We'll explore atomic transitions in Module 2.)
 
 The oxygen lines ([OIII] at 496–501 nm) come from "forbidden" transitions that only occur in extremely low-density gas—conditions impossible in Earth laboratories but common in space. The very presence of these lines tells us about gas density.
+
+**Key insight for now:** Each element has a unique "fingerprint" of emission wavelengths. Detecting specific wavelengths tells you which atoms are present.
 :::
 
 **Transition:** If colors encode *what's there*, how do we figure out *how far away* it is?
@@ -563,20 +563,27 @@ An equation forces precision: What's constant? What's assumed? What are the unit
 
 ### The Physical Quantities We Care About
 
-Throughout this course, we'll work with these core quantities:
+Here's the distinction that makes astronomy both hard and fascinating:
 
-| Quantity | Symbol | What it measures | CGS Units |
-|----------|--------|------------------|-----------|
-| **Distance** | $d$ | How far away | cm (or pc, ly) |
-| **Time** | $t$ | Duration or epoch | s (or yr) |
-| **Speed** | $v$ | Rate of motion | cm/s |
-| **Mass** | $M$ | Amount of matter | g (or $M_\odot$) |
-| **Luminosity** | $L$ | Energy output per time | erg/s (or $L_\odot$) |
-| **Temperature** | $T$ | Thermal energy scale | K |
+- **The Four Observables** (Section 1.1): What we *can* directly measure—brightness, position, wavelength, timing.
+- **The Six Core Quantities** (below): What we actually *want* to know about stars and galaxies.
+
+Notice that **none of the quantities below appear in the observables list**. Every single one must be *inferred* by combining measurements with physical models. That gap—between what we measure and what we want to know—is where physics lives.
+
+| Quantity | Symbol | What it measures | How We Infer It | CGS Units |
+|----------|--------|------------------|-----------------|-----------|
+| **Distance** | $d$ | How far away | Parallax (position), standard candles (brightness) | cm (or pc, ly) |
+| **Time** | $t$ | Duration or epoch | (context-dependent) | s (or yr) |
+| **Speed** | $v$ | Rate of motion | Doppler shift (wavelength) | cm/s |
+| **Mass** | $M$ | Amount of matter | Orbital motion (position + timing) | g (or $M_\odot$) |
+| **Luminosity** | $L$ | Energy output per time | Flux (brightness) + distance | erg/s (or $L_\odot$) |
+| **Temperature** | $T$ | Thermal energy scale | Spectrum/color (wavelength) | K |
 
 ::: {.column-margin}
 **Solar units** ($M_\odot$, $L_\odot$, $R_\odot$) are often more intuitive than CGS for stellar astronomy. "This star is 10 $M_\odot$" means "10 times the Sun's mass."
 :::
+
+Every value in the "How We Infer It" column connects back to one or more of the four observables via a physical model. That's the course thesis in table form.
 
 These quantities are connected by physical laws. Mass determines gravity. Temperature determines spectrum. Distance relates flux to luminosity. You'll build the network of relationships throughout the semester.
 
@@ -634,20 +641,21 @@ where:
 
 Since $c$ is constant, wavelength and frequency are **inversely related**: longer wavelength means lower frequency, and vice versa.
 
-::: {.callout-note title="🧮 Example: Visible Light Frequencies"}
-Red light has wavelength $\lambda \approx 700$ nm $= 7 \times 10^{-5}$ cm.
+::: {.callout-note title="🧮 Worked Example: Visible Light Frequencies"}
+Red light has wavelength $\lambda \approx 700$ nm $= 7 \times 10^{-5}$ cm. What's its frequency?
 
-What's its frequency?
-
+**Calculate:**
 $$
 \nu = \frac{c}{\lambda} = \frac{3 \times 10^{10} \text{ cm/s}}{7 \times 10^{-5} \text{ cm}} \approx 4.3 \times 10^{14} \text{ Hz}
 $$
 
 That's 430 trillion oscillations per second!
 
-Blue light ($\lambda \approx 400$ nm) has higher frequency: $\nu \approx 7.5 \times 10^{14}$ Hz.
+**Unit check:** $\dfrac{\text{cm/s}}{\text{cm}} = \dfrac{1}{\text{s}} = \text{Hz}$ ✓
 
-**Pattern:** Shorter wavelength → higher frequency.
+**Limiting case:** Blue light ($\lambda \approx 400$ nm) has *shorter* wavelength. Since $\nu = c/\lambda$, shorter λ means *higher* ν. Without calculating: blue should have roughly $(700/400) \approx 1.7×$ higher frequency. Check: $\nu_\text{blue} \approx 7.5 \times 10^{14}$ Hz, which is indeed ~1.7× larger. ✓
+
+**Pattern:** Shorter wavelength → higher frequency. This inverse relationship will appear throughout the course.
 :::
 
 ::: {.callout-tip title="✋ Check Yourself"}
@@ -669,17 +677,15 @@ where $h = 6.63 \times 10^{-27}$ erg·s is **Planck's constant**.
 {{< eqrefcard photon-energy >}}
 
 ::: {.column-margin}
-**When you see $h$, quantum mechanics is involved.** Planck's constant is the signature of the quantum world. Its appearance tells you that classical physics alone cannot explain what's happening.
+**The constant $h$ signals quantum territory.** Atoms behave by different rules than everyday objects. We'll explore *why* in Module 2; for now, the key result is that photon energy depends on wavelength.
 :::
 
 ::: {.callout-important title="💡 What Planck's Constant Means"}
-The appearance of $h$ in this equation signals that **quantum mechanics** is at work.
+The constant $h$ (Planck's constant) signals we're in **quantum territory**—atoms and light behave by different rules than everyday objects.
 
-Classical physics treats light as a continuous wave. But experiments showed that light comes in discrete energy packets—photons—and the energy of each packet is set by its frequency (or wavelength).
+Classical physics treated light as a continuous wave, but experiments showed that light comes in discrete energy packets called **photons**. The energy of each photon is set by its frequency (or equivalently, its wavelength).
 
-**This is not something you could predict from classical physics.** It's a fundamental feature of quantum mechanics. The constant $h$ sets the scale of quantum effects.
-
-When we use $E = h\nu$ to understand why atoms emit at specific wavelengths, or why hot objects glow at characteristic colors, we're using quantum mechanics—even if we don't write down the full theory.
+**We'll unpack *why* this happens in Module 2** when we study atomic spectra and blackbody radiation. For now, the key message is: photon energy depends on wavelength, and shorter wavelength means higher energy.
 :::
 
 ::: {.callout-important title="💡 What the Energy Equation Tells Us"}
@@ -690,6 +696,28 @@ When we use $E = h\nu$ to understand why atoms emit at specific wavelengths, or 
 - Gamma-ray photons (λ ~ $10^{-12}$ cm) carry enormous energies (~$10^{-6}$ erg)
 
 This is why different wavelengths reveal different physics: **it takes hot, energetic processes to produce high-energy photons**.
+:::
+
+::: {.callout-note title="🧮 Worked Example: Comparing Photon Energies"}
+How much more energy does an X-ray photon carry compared to a radio photon?
+
+**Given:**
+
+- X-ray: $\lambda_\text{X} = 1$ nm $= 10^{-7}$ cm
+- Radio: $\lambda_\text{R} = 1$ m $= 10^2$ cm
+
+**Calculate the ratio:**
+
+Since $E = hc/\lambda$, the ratio of energies is:
+$$
+\frac{E_\text{X-ray}}{E_\text{radio}} = \frac{hc/\lambda_\text{X}}{hc/\lambda_\text{R}} = \frac{\lambda_\text{R}}{\lambda_\text{X}} = \frac{10^2 \text{ cm}}{10^{-7} \text{ cm}} = 10^9
+$$
+
+**Unit check:** The $hc$ cancels, and cm/cm is dimensionless. ✓
+
+**Limiting case:** What if we used *gamma rays* instead ($\lambda \sim 10^{-10}$ cm)? The ratio becomes $10^2/10^{-10} = 10^{12}$—a trillion times more energy than radio. The pattern holds: shorter λ → higher E.
+
+**Interpretation:** X-ray photons carry a *billion* times more energy than radio photons. This explains why X-ray emission requires million-degree plasma, while radio emission can come from cold gas. Energy determines what processes can produce the light.
 :::
 
 ### The Electromagnetic Spectrum: A Temperature Ladder
@@ -838,12 +866,12 @@ You'll spend far more time with equations, graphs, and reasoning than with eyepi
 ---
 
 ::: {.callout-tip title="✋ Final Check"}
-1. Can you state the course thesis in one sentence?
-2. Can you name the four types of direct measurements?
-3. Can you explain why shorter wavelength means higher photon energy?
-4. Can you explain why looking at distant objects means looking into the past?
+1. An Astro 101 student says "astronomy is about looking at pretty space pictures." How would you correct them using the framework from this lecture?
+2. A news headline reads "Scientists measure the mass of a distant black hole." What did they actually measure, and what model connected that measurement to mass?
+3. If you double a photon's wavelength, what happens to its energy? Explain using $E = hc/\lambda$.
+4. The Andromeda Galaxy is 2.5 million light-years away. When you observe it tonight, are you seeing it as it is *now*? Explain.
 
-If yes to all four: you're ready.
+If you can answer all four with reasoning (not just recall): you're ready.
 :::
 
 ---
@@ -851,29 +879,28 @@ If yes to all four: you're ready.
 ## Self-Assessment Checklist
 
 ### ✅ Section 1.1: The Course Thesis
-- [ ] I can state the course thesis in one sentence
-- [ ] I can name the four types of direct measurements (brightness, position, wavelength, timing)
-- [ ] I can give an example of something *inferred*, not directly measured
-- [ ] I understand the "4× fainter = 2× farther" example
+- [ ] I can explain to a friend why "astronomy is about looking at pretty pictures" misses the point
+- [ ] I can identify which of the four observables (brightness, position, wavelength, timing) would help answer a specific question
+- [ ] I can explain why "astronomers measured a star's temperature" is technically imprecise—and what they actually measured
+- [ ] I can predict relative distances from relative brightness using the inverse-square relationship
 
 ### ✅ Section 1.2: The Spoiler Reel
-- [ ] I understand the three-question framework: measure / infer / physics
-- [ ] I recognize the spoilers are conclusions I'll learn to justify
-- [ ] I can describe the narrative arc from colors → distances → elements → multiwavelength
+- [ ] I can apply the three-question framework (measure / infer / physics) to a new astronomical image
+- [ ] I recognize that the spoilers are conclusions I'll learn to *justify*, not just memorize
+- [ ] I can explain why different wavelengths reveal different physical components
 
 ### ✅ Section 1.3: The Decoder Ring
-- [ ] I can sketch the inference pipeline: Signal → Measurement → Model → Inference → Prediction → Test
-- [ ] I understand why physics and math are both essential
+- [ ] I can trace how a measurement becomes an inference using the pipeline: Signal → Measurement → Model → Inference → Prediction → Test
+- [ ] I can explain why physics provides the *relationships* and math makes assumptions *explicit*
 
 ### ✅ Section 1.4: Light as Messenger
-- [ ] I can state the speed of light in CGS units
-- [ ] I understand $c = \lambda \nu$ (shorter λ → higher ν)
-- [ ] I understand $E = hc/\lambda$ (shorter λ → higher energy)
-- [ ] I know that $h$ (Planck's constant) signals quantum mechanics
+- [ ] I can use $c = \lambda \nu$ to predict how frequency changes when wavelength changes
+- [ ] I can use $E = hc/\lambda$ to explain why X-ray telescopes see hotter objects than optical telescopes
+- [ ] I understand that the constant $h$ signals we're in quantum territory (details in Module 2)
 
 ### ✅ Section 1.5: Lookback Time
-- [ ] I can explain why looking at distant objects means looking into the past
-- [ ] I understand that distance is effectively a "time dial"
+- [ ] I can explain why observing a galaxy 10 million light-years away means seeing it 10 million years in the past
+- [ ] I can use distance as a "time dial" to reason about cosmic history
 
 **All boxes checked?** You're ready for the Math Boot Camp!
 
@@ -901,16 +928,22 @@ If yes to all four: you're ready.
 ### Quick Calculations
 
 5. **Wavelength and Frequency.** The hydrogen-alpha emission line has a wavelength of $\lambda = 656$ nm ($6.56 \times 10^{-5}$ cm).
-   - (a) Calculate its frequency $\nu$ using $c = \lambda \nu$ with $c = 3 \times 10^{10}$ cm/s.
-   - (b) Is this visible light, infrared, or ultraviolet? (Visible light spans roughly 400–700 nm.)
+   - (a) **Calculate:** Find its frequency $\nu$ using $c = \lambda \nu$ with $c = 3 \times 10^{10}$ cm/s.
+   - (b) **Unit check:** Show that your units cancel correctly to give Hz (s⁻¹).
+   - (c) **Limiting case:** Radio waves have $\lambda \sim 1$ m. Without calculating, predict: should their frequency be higher or lower than Hα? By roughly what factor? Then verify with a quick estimate.
+   - (d) **Classification:** Is Hα visible light, infrared, or ultraviolet? (Visible spans ~400–700 nm.)
 
-6. **Photon Energy.** Compare the energy of an X-ray photon ($\lambda = 1$ nm) to a radio photon ($\lambda = 1$ m).
-   - (a) Which has higher energy, and by what factor?
-   - (b) Use $E = hc/\lambda$ to explain your answer in terms of the relationship between wavelength and energy.
+6. **Photon Energy.** Compare the energy of an X-ray photon ($\lambda = 1$ nm = $10^{-7}$ cm) to a radio photon ($\lambda = 1$ m = $10^2$ cm).
+   - (a) **Calculate:** Find the ratio of X-ray to radio photon energy using $E = hc/\lambda$.
+   - (b) **Unit check:** Show that $hc/\lambda$ gives energy in ergs.
+   - (c) **Limiting case:** If you halved the X-ray wavelength, what would happen to its energy? Explain without calculating.
+   - (d) **Interpretation:** Why do X-ray telescopes observe different objects than radio telescopes? (One sentence connecting photon energy to source temperature.)
 
 7. **Lookback Calculation.** Light travels at $c = 3 \times 10^{10}$ cm/s. The nearest star (Proxima Centauri) is about $4 \times 10^{18}$ cm away.
-   - (a) How long does light take to travel from Proxima Centauri to Earth? Give your answer in seconds, then convert to years. (1 year ≈ $3 \times 10^7$ s)
-   - (b) If you observe Proxima Centauri tonight, how old is the light you're seeing?
+   - (a) **Calculate:** How long does light take to travel from Proxima Centauri to Earth? Give your answer in seconds, then convert to years. (1 year ≈ $3 \times 10^7$ s)
+   - (b) **Unit check:** Show that distance/speed gives time in seconds.
+   - (c) **Sanity check:** Is your answer in the right ballpark? (Hint: Proxima Centauri is often quoted as "about 4 light-years away.")
+   - (d) **Interpretation:** If you observe Proxima Centauri tonight, are you seeing it as it is *now* or as it *was*? Explain.
 
 ### Synthesis
 
@@ -928,11 +961,11 @@ If yes to all four: you're ready.
 
 **4.** The explosion occurred 2.5 million years ago. The light has been traveling toward us for 2.5 million years—we're seeing the past.
 
-**5.** (a) $\nu = c/\lambda = (3 \times 10^{10})/(6.56 \times 10^{-5}) \approx 4.6 \times 10^{14}$ Hz. (b) 656 nm is visible (red light).
+**5.** (a) $\nu = c/\lambda = (3 \times 10^{10} \text{ cm/s})/(6.56 \times 10^{-5} \text{ cm}) \approx 4.6 \times 10^{14}$ Hz. (b) Units: (cm/s)/(cm) = 1/s = Hz ✓. (c) Radio has *lower* frequency. Since $\nu = c/\lambda$ and radio λ is ~$10^7$ times larger than Hα, radio ν is ~$10^7$ times smaller: $\nu_\text{radio} \sim 3 \times 10^8$ Hz. (d) 656 nm is visible (red light).
 
-**6.** (a) X-ray has higher energy by a factor of $10^9$ (one billion). (b) Since $E \propto 1/\lambda$, shorter wavelength means higher energy. X-ray wavelength is $10^9$ times shorter than radio.
+**6.** (a) $E \propto 1/\lambda$, so $E_\text{X-ray}/E_\text{radio} = \lambda_\text{radio}/\lambda_\text{X-ray} = 10^2 / 10^{-7} = 10^9$. X-ray photons carry a billion times more energy. (b) $[h][c]/[\lambda] = (\text{erg·s})(\text{cm/s})/(\text{cm}) = \text{erg}$ ✓. (c) Halving wavelength doubles energy (inverse relationship). (d) X-ray photons require high-energy processes (hot plasma at millions of K); radio photons come from cold gas and magnetic fields.
 
-**7.** (a) $t = d/c = (4 \times 10^{18})/(3 \times 10^{10}) \approx 1.3 \times 10^8$ s $\approx 4.3$ years. (b) The light is about 4.3 years old.
+**7.** (a) $t = d/c = (4 \times 10^{18} \text{ cm})/(3 \times 10^{10} \text{ cm/s}) \approx 1.3 \times 10^8$ s. Converting: $(1.3 \times 10^8 \text{ s})/(3 \times 10^7 \text{ s/yr}) \approx 4.3$ years. (b) (cm)/(cm/s) = s ✓. (c) Yes—Proxima Centauri is ~4.2 light-years away, matching our calculation. (d) You're seeing it as it *was* 4.3 years ago. The light left the star then; you're looking into the past.
 
 **8.** (a) Blue star is hotter. (b) If they appear equally bright but the blue star is 2× farther, it must be 4× more luminous (inverse-square law: $4\times$ distance at same flux requires $4\times$ luminosity). (c) A spectrum would reveal absorption lines whose patterns depend on temperature.
 :::
