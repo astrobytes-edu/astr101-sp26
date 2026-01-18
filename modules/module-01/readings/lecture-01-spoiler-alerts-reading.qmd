@@ -396,7 +396,7 @@ Iron (Fe) is special: it's the most tightly bound nucleus. Fusion *to* iron rele
 
 ### Spoiler 4: Dispersion — The Key to Everything
 
-{{< fig prism-spectrum layout="aside" width="45%" >}}
+{{< fig prism-spectrum layout="aside" >}}
 
 **What do we measure?** When "white" light passes through a prism (or diffraction grating), it spreads into a rainbow.
 
@@ -422,7 +422,7 @@ Why is spectroscopy more powerful than just measuring total brightness?
 
 ### Spoiler 5: The Electromagnetic Spectrum — A Map of Physical Processes
 
-{{< fig em-spectrum-temperature >}}
+{{< fig em-spectrum-temperature layout="aside" >}}
 
 **What do we measure?** Photons across the *entire* electromagnetic spectrum—from radio waves with wavelengths of meters to gamma rays smaller than atoms.
 
