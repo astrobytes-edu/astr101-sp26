@@ -148,7 +148,7 @@ Let's sharpen what each one means:
 
 **Position** is where an object appears on the sky, measured in angles. This is purely geometric—we're mapping locations on a celestial sphere. But position becomes powerful when we track *changes*: the annual wobble from Earth's orbit (parallax), the slow drift across the sky (proper motion), or the periodic wobble caused by an unseen companion.
 
-**Wavelength** is the key to spectroscopy. By spreading light into its component wavelengths, we transform a single brightness measurement into thousands of data points—brightness as a function of wavelength. This spectral information encodes temperature (through the overall color), composition (through absorption and emission lines), and motion (through Doppler shifts).
+**Wavelength** is the key to spectroscopy. By spreading light into its component wavelengths, we transform a single brightness measurement into thousands of data points—brightness as a function of wavelength. This spectral information encodes temperature (through the overall color), composition (through **absorption** and **emission** lines), and motion (through Doppler shifts).
 
 **Timing** is special: it's both a measurement in its own right (when did this pulse arrive?) and a way to extract additional information from the other three. A star whose brightness varies periodically tells us something a constant star doesn't. An object whose position shifts tells us about motion. Timing transforms static snapshots into dynamic movies.
 
@@ -320,7 +320,7 @@ Each builds on the one before. **Watch for the pattern**, not the details.
 
 **What do we measure?** Structured colors at specific wavelengths. Red light at 656 nm. Blue-green light at 496–501 nm. Dark regions where light is blocked.
 
-**What do we infer?** The red regions contain hydrogen gas that's been heated and ionized by nearby hot stars. The blue-green regions contain oxygen. The dark lanes contain dust—tiny solid particles that absorb and scatter starlight.
+**What do we infer?** The red regions contain hydrogen gas that's been heated and **ionized** by nearby hot stars. The blue-green regions contain oxygen. The dark lanes contain dust—tiny solid particles that absorb and scatter starlight.
 
 **What physics makes this legal?** Atoms emit light at specific wavelengths, not random colors. Each element has a unique "fingerprint" of wavelengths determined by its atomic structure. When we see red light at exactly 656 nm, we know hydrogen is present.
 
@@ -470,7 +470,7 @@ The next three spoilers show how wavelength *choice* reveals different physics i
 
 **What do we infer?** The optical image shows where the *stars* are. The radio image shows where *cold hydrogen gas* lives. They don't perfectly overlap.
 
-**What physics makes this legal?** Stars emit **thermal radiation** from their hot surfaces (peaks in visible). Neutral hydrogen emits at exactly 21 cm due to a quantum mechanical transition in cold atomic gas.
+**What physics makes this legal?** Stars emit **thermal radiation** from their hot surfaces (peaks in visible). **Neutral** hydrogen emits at exactly 21 cm due to a quantum mechanical transition in cold atomic gas.
 
 **Key insight:** Same object + different wavelength = different physical component revealed.
 
@@ -553,7 +553,7 @@ Only 5% of the universe is made of the stuff we understand. The rest is dark—b
 ::: {.callout-deep-dive title="Evidence for Dark Matter" collapse="true"}
 **The evidence for dark matter:**
 
-1. **Galaxy rotation curves**: Stars at large radii orbit at roughly constant speed, not the declining speed expected if mass were concentrated in the visible center. This "flat rotation curve" implies mass extending far beyond the visible disk.
+1. **Galaxy rotation curves**: Stars at large radii orbit at roughly constant speed, not the declining speed expected if mass were concentrated in the visible center. This "flat **rotation curve**" implies mass extending far beyond the visible disk.
 
 2. **Galaxy cluster dynamics**: Fritz Zwicky noticed in the 1930s that galaxies in the Coma Cluster move too fast—the cluster should have flown apart long ago unless there's ~10× more mass than visible.
 
@@ -637,7 +637,7 @@ We don't know. Options include:
 - **Quintessence:** A dynamic field that changes over time
 - **Modified gravity:** Perhaps general relativity needs revision on cosmic scales
 
-The simplest model (ΛCDM) treats dark energy as a cosmological constant. It fits observations remarkably well—but we have no physical understanding of why it has the value it does.
+The simplest model (**ΛCDM**) treats dark energy as a cosmological constant. It fits observations remarkably well—but we have no physical understanding of why it has the value it does.
 
 **Connection to Course:** Module 4 will develop the Hubble law, explore evidence for dark energy, and discuss the fate of the universe (spoiler: it keeps expanding forever, growing colder and emptier).
 :::
@@ -779,7 +779,7 @@ where:
 
 - $c$ = speed of light ($3 \times 10^{10}$ cm/s) — constant
 - $\lambda$ = wavelength (cm)
-- $\nu$ = frequency (Hz = cycles per second)
+- $\nu$ = **frequency** (Hz = cycles per second)
 
 {{< eqrefcard wave-relation >}}
 
