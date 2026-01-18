@@ -426,22 +426,22 @@ local function get_equations()
   return _equations_cache
 end
 
--- Helper: convert LaTeX delimiters for HTML context
--- MathJax processes $...$ in raw HTML but may miss \(...\)
-local function convert_latex_delimiters(text)
+-- Helper: convert $...$ math to HTML spans that MathJax will process
+-- MathJax doesn't auto-process $...$ in raw HTML blocks, so we wrap in spans
+local function convert_math_for_html(text)
   if not text then return "" end
-  -- Convert \( to $ and \) to $ for inline math
-  text = text:gsub("\\%(", "$")
-  text = text:gsub("\\%)", "$")
+  -- Convert $...$ to <span class="math inline">\(...\)</span>
+  -- This is the format Pandoc outputs and MathJax is configured to process
+  text = text:gsub("%$([^$]+)%$", '<span class="math inline">\\(%1\\)</span>')
   return text
 end
 
 -- Helper: build meaning card HTML
 local function build_meaning_html(card, title, anchor)
   -- Convert LaTeX delimiters in all fields
-  local predicts = convert_latex_delimiters(card.predicts or "")
-  local depends = convert_latex_delimiters(card.depends or "")
-  local says = convert_latex_delimiters(card.says or "")
+  local predicts = convert_math_for_html(card.predicts or "")
+  local depends = convert_math_for_html(card.depends or "")
+  local says = convert_math_for_html(card.says or "")
 
   local html = string.format([[
 <div class="callout callout-tip eq-gloss" data-callout="tip">
@@ -459,7 +459,7 @@ local function build_meaning_html(card, title, anchor)
   if card.assumptions and #card.assumptions > 0 then
     html = html .. "    <p><strong>Assumptions</strong></p>\n    <ul>\n"
     for _, a in ipairs(card.assumptions) do
-      html = html .. "      <li>" .. convert_latex_delimiters(a) .. "</li>\n"
+      html = html .. "      <li>" .. convert_math_for_html(a) .. "</li>\n"
     end
     html = html .. "    </ul>\n"
   end
@@ -760,8 +760,8 @@ function glossary(args, kwargs)
   for _, item in ipairs(sorted) do
     local entry = item.entry
     local term_name = entry.term or item.id
-    local definition = convert_latex_delimiters(entry.definition or "")
-    local context = convert_latex_delimiters(entry.context or "")
+    local definition = convert_math_for_html(entry.definition or "")
+    local context = convert_math_for_html(entry.context or "")
 
     html = html .. string.format('  <dt id="glossary-%s"><strong>%s</strong></dt>\n', item.id, term_name)
     html = html .. string.format('  <dd>%s', definition)

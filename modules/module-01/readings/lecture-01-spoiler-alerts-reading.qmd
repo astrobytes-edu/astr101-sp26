@@ -848,14 +848,6 @@ If yes to all four: you're ready.
 
 ---
 
-## Glossary
-
-The terms below are the foundational vocabulary for this lecture. Each includes a short definition and context for how the term is used in astronomy.
-
-{{< glossary module=1 >}}
-
----
-
 ## Self-Assessment Checklist
 
 ### ✅ Section 1.1: The Course Thesis
@@ -888,4 +880,68 @@ The terms below are the foundational vocabulary for this lecture. Each includes 
 **Some unchecked?** Review those sections—these ideas are the foundation.
 
 ---
+
+## Practice Problems
+
+### Conceptual Questions
+
+1. **Observable vs. Inferred.** For each quantity, state whether it is *directly measured* or *inferred*:
+   - (a) The brightness of a star
+   - (b) The temperature of a star
+   - (c) The position of a star on the sky
+   - (d) The distance to a star
+   - (e) The wavelength of light from a star
+
+2. **The Inference Pipeline.** A student claims: "We know the Sun is made of hydrogen because we can see it." What's wrong with this statement? Explain what we actually measure and how we infer the Sun's composition.
+
+3. **Standard Candles.** Why do astronomers need "standard candles" to measure distances? What problem do they solve?
+
+4. **Lookback Time.** The Andromeda Galaxy is about 2.5 million light-years away. If an astronomer observes a supernova in Andromeda tonight, when did that explosion actually occur? Explain your reasoning.
+
+### Quick Calculations
+
+5. **Wavelength and Frequency.** The hydrogen-alpha emission line has a wavelength of $\lambda = 656$ nm ($6.56 \times 10^{-5}$ cm).
+   - (a) Calculate its frequency $\nu$ using $c = \lambda \nu$ with $c = 3 \times 10^{10}$ cm/s.
+   - (b) Is this visible light, infrared, or ultraviolet? (Visible light spans roughly 400–700 nm.)
+
+6. **Photon Energy.** Compare the energy of an X-ray photon ($\lambda = 1$ nm) to a radio photon ($\lambda = 1$ m).
+   - (a) Which has higher energy, and by what factor?
+   - (b) Use $E = hc/\lambda$ to explain your answer in terms of the relationship between wavelength and energy.
+
+7. **Lookback Calculation.** Light travels at $c = 3 \times 10^{10}$ cm/s. The nearest star (Proxima Centauri) is about $4 \times 10^{18}$ cm away.
+   - (a) How long does light take to travel from Proxima Centauri to Earth? Give your answer in seconds, then convert to years. (1 year ≈ $3 \times 10^7$ s)
+   - (b) If you observe Proxima Centauri tonight, how old is the light you're seeing?
+
+### Synthesis
+
+8. **Putting It Together.** Imagine you observe two stars that appear equally bright in your telescope, but one is blue and one is red.
+   - (a) Based on Wien's law (hotter → bluer), which star has the higher surface temperature?
+   - (b) If you later determine that the blue star is twice as far away as the red star, what can you conclude about their intrinsic luminosities? (Hint: think about the inverse-square law.)
+   - (c) What additional measurement would help you confirm the temperature difference?
+
+::: {.callout-note title="Answers" collapse="true"}
+**1.** (a) measured, (b) inferred, (c) measured, (d) inferred, (e) measured
+
+**2.** We don't "see" hydrogen—we measure the *spectrum* (brightness vs. wavelength) and observe absorption lines at specific wavelengths. We *infer* composition by matching those wavelengths to known atomic transitions.
+
+**3.** Standard candles have known intrinsic luminosity $L$. By measuring apparent brightness $F$ and using $F = L/(4\pi d^2)$, we can solve for distance $d$. Without knowing $L$, brightness alone can't distinguish "intrinsically faint and nearby" from "intrinsically luminous and far away."
+
+**4.** The explosion occurred 2.5 million years ago. The light has been traveling toward us for 2.5 million years—we're seeing the past.
+
+**5.** (a) $\nu = c/\lambda = (3 \times 10^{10})/(6.56 \times 10^{-5}) \approx 4.6 \times 10^{14}$ Hz. (b) 656 nm is visible (red light).
+
+**6.** (a) X-ray has higher energy by a factor of $10^9$ (one billion). (b) Since $E \propto 1/\lambda$, shorter wavelength means higher energy. X-ray wavelength is $10^9$ times shorter than radio.
+
+**7.** (a) $t = d/c = (4 \times 10^{18})/(3 \times 10^{10}) \approx 1.3 \times 10^8$ s $\approx 4.3$ years. (b) The light is about 4.3 years old.
+
+**8.** (a) Blue star is hotter. (b) If they appear equally bright but the blue star is 2× farther, it must be 4× more luminous (inverse-square law: $4\times$ distance at same flux requires $4\times$ luminosity). (c) A spectrum would reveal absorption lines whose patterns depend on temperature.
+:::
+
+---
+
+## Glossary
+
+The terms below are the foundational vocabulary for this lecture. Each includes a short definition and context for how the term is used in astronomy.
+
+{{< glossary module=1 >}}
 
