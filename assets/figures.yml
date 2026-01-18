@@ -156,6 +156,13 @@ figures:
     module: 1
 
   # Spoiler 4: Prism/Spectroscopy
+  quantum-barcode:
+    path: /assets/images/common/quantum-barcode-spectroscopy-nlbm.png
+    caption: "**What to notice:** Atoms have quantized energy levels like rungs on a ladder. Electrons jumping between rungs absorb or emit photons of *exact* energies—creating unique spectral fingerprints. Hot dense sources produce continuous spectra; cool gas in front absorbs specific wavelengths; hot thin gas emits specific wavelengths."
+    alt: "Diagram titled 'The Quantum Barcode' showing three parts: Left - an atom with quantized energy levels depicted as a ladder, with electrons occupying specific rungs. Center - 'The Photon Exchange' showing electrons absorbing or emitting photons of exact energy when jumping between levels. Right - 'Three Ways to See the Universe': continuous spectrum (rainbow from hot dense source), absorption spectrum (rainbow with dark lines from cool gas absorbing), and emission spectrum (bright lines on dark background from hot thin gas)."
+    credit: "Course illustration (A. Rosen)"
+    module: 1
+
   prism-spectrum:
     path: /assets/images/module-01/prism-spectrum-nblm.png
     caption: "**What to notice:** A prism reveals that 'white' light contains many wavelengths. Blue bends more (shorter λ, higher energy); red bends less (longer λ, lower energy)."

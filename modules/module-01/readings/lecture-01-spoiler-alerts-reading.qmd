@@ -40,6 +40,8 @@ This reading is designed to *prime* your brain, not test it. You will encounter 
 For now, your only job is pattern recognition: notice how astronomers move from **what we measure** to **what we infer**, and how physics makes that step legitimate. Understanding will come later; recognition comes first.
 :::
 
+Think of this reading as a movie trailer: you'll see flashes of ideas, characters, and conflicts that won't make full sense until you've seen the whole film. The semester is the movie. Today, we're just building anticipation.
+
 ---
 
 ## Spoiler Alerts: The Universe Is Weird (How Do We Know?)
@@ -128,6 +130,8 @@ Every gorgeous astronomical image you've ever seen is actually a dataset. The co
 ### The Four Things We Can Actually Measure
 
 Here's the humbling truth that makes astronomy both challenging and beautiful: from our cosmic vantage point, staring at points of light billions of kilometers away, we can directly measure only **four types of things**.
+
+*Reading tip: Treat the tables in this reading as reference maps—don't memorize them. You'll revisit each one when it matters.*
 
 ::: {.callout-important title="The Astronomer's Toolkit: Four Direct Measurements"}
 | What We Measure | What It Means | What It Tells Us |
@@ -243,6 +247,17 @@ If you can determine $L$ independently (from pulsation period, spectral type, or
 **Connection to Spoiler 2:** The cosmic distance ladder (Section 1.2) is built entirely on this relationship. Every "standard candle"—Cepheids, Type Ia supernovae—works because we can determine $L$ independently and then solve for $d$.
 :::
 
+::: {.callout-tip title="Two Modes of Reading Equations"}
+Throughout this course, equations serve two purposes:
+
+1. **Orientation equations** — Show the *relationship* (what depends on what). You won't calculate with these yet; just notice the structure.
+2. **Working equations** — You'll use these to solve problems. We'll practice them explicitly.
+
+For now, the inverse-square law ($F = L/4\pi d^2$) is a **working equation**—you'll calculate with it soon. The wave relation ($c = \lambda\nu$) and photon energy ($E = h\nu$) are **orientation equations** for now; they become working tools in Module 2.
+:::
+
+*We'll return to the inverse-square law quantitatively later in Module 1 when we build the distance ladder step by step.*
+
 ::: {.callout-prediction title="Prediction Moment"}
 Look at the first image in the spoiler reel below (the colorful nebulae). Before reading the explanation, jot down:
 
@@ -312,6 +327,18 @@ Each builds on the one before. **Watch for the pattern**, not the details.
 | **Dark energy** | The unknown driver of accelerating cosmic expansion; ~68% of the universe |
 | **Redshift** | Stretching of light wavelengths; for distant galaxies, caused by cosmic expansion |
 
+::: {.callout-summary title="Checkpoint: Pause and Breathe"}
+If your brain feels full, that's working as intended.
+
+You've just scanned a glossary of unfamiliar terms, and ten spoilers are coming. Here's what to remember:
+
+- **You are not expected to retain details.** Recognition, not recall.
+- **Every term reappears later**, with context and time to understand.
+- **The goal is pattern recognition:** *What do we measure? What do we infer? What physics makes it legal?*
+
+Take 60 seconds. Stretch. Then continue—watching for the pattern, not memorizing the parts.
+:::
+
 ---
 
 ### Spoiler 1: Nebulae — Color as Encoded Physics
@@ -328,7 +355,7 @@ Each builds on the one before. **Watch for the pattern**, not the details.
 **Key insight:** Color isn't decoration—it's encoded physics. Specific wavelengths = specific atoms = specific conditions.
 :::
 
-::: {.callout-deep-dive title="The Physics Detail" collapse="true"}
+::: {.callout-deep-dive title="Deep Dive: Hydrogen's Atomic Fingerprint" collapse="true"}
 The red glow comes from hydrogen's "H-alpha" (Hα) transition at 656.3 nm. When an electron in a hydrogen atom drops from the n=3 to n=2 energy level, it releases a photon with exactly this wavelength. This isn't arbitrary—it's set by quantum mechanics. (We'll explore atomic transitions in Module 2.)
 
 The oxygen lines ([OIII] at 496–501 nm) come from "forbidden" transitions that only occur in extremely low-density gas—conditions impossible in Earth laboratories but common in space. The very presence of these lines tells us about gas density.
@@ -356,7 +383,7 @@ The oxygen lines ([OIII] at 496–501 nm) come from "forbidden" transitions that
 
 **Key insight:** Distance is *inferred* from brightness. To measure farther, we need brighter standard candles.
 
-::: {.callout-deep-dive title="The Physics Detail" collapse="true"}
+::: {.callout-deep-dive title="Deep Dive: How the Distance Ladder Works" collapse="true"}
 The **cosmic distance ladder** works in steps:
 
 1. **Radar** (Solar System): Bounce radio waves off planets; measure round-trip time → distance directly
@@ -391,7 +418,7 @@ The ladder's power comes from its self-consistency: multiple methods overlap in 
 
 **Key insight:** Stars don't just shine—they manufacture the periodic table.
 
-::: {.callout-deep-dive title="The Physics Detail" collapse="true"}
+::: {.callout-deep-dive title="Deep Dive: Nucleosynthesis Sites" collapse="true"}
 - **Big Bang nucleosynthesis** (~3 minutes after the Big Bang): Produced H, He, trace Li
 - **Stellar core fusion** (over millions–billions of years): H → He → C → O → ... up to Fe
 - **Type Ia supernovae**: Major producers of iron-peak elements—each explosion synthesizes ~0.6 $M_\odot$ of ⁵⁶Ni (which decays to ⁵⁶Fe)
@@ -426,6 +453,10 @@ Why is spectroscopy more powerful than just measuring total brightness?
 
 *(Think first... then check: Spectroscopy spreads light into its component wavelengths, giving you brightness **as a function of wavelength**—thousands of data points instead of one. This reveals temperature, composition, and motion that a single brightness measurement cannot.)*
 :::
+
+{{< fig quantum-barcode >}}
+
+But *why* do atoms produce light at specific wavelengths rather than a continuous rainbow? The answer is quantum mechanics: electrons in atoms can only occupy certain discrete energy levels. When an electron jumps between levels, it absorbs or emits a photon of *exactly* the right energy—and energy determines wavelength. Each element's unique ladder of energy levels creates its unique spectral fingerprint.
 
 **Transition:** The rainbow from a prism shows visible light. But visible light is just a tiny slice of all the light that exists...
 
@@ -474,7 +505,7 @@ The next three spoilers show how wavelength *choice* reveals different physics i
 
 **Key insight:** Same object + different wavelength = different physical component revealed.
 
-::: {.callout-deep-dive title="The Physics Detail" collapse="true"}
+::: {.callout-deep-dive title="Deep Dive: The 21-cm Hydrogen Line" collapse="true"}
 The **21-cm line** arises from the hyperfine structure of hydrogen. The electron and proton can have parallel or anti-parallel spins. When an electron "flips" from parallel to anti-parallel, it emits a photon with wavelength 21.1 cm (frequency 1420 MHz).
 
 This transition is "forbidden"—extremely unlikely on short timescales—but there's so much hydrogen in the universe that we detect it easily. The 21-cm line traces *neutral atomic* hydrogen specifically; ionized hydrogen doesn't emit it.
@@ -597,6 +628,8 @@ Only 5% of the universe is made of the stuff we understand. The rest is dark—b
 If you know how fast galaxies are receding and how far away they are, you can "run the movie backward" to find when everything was in the same place—the Big Bang. Careful measurements give 13.8 billion years.
 
 The *acceleration* was discovered in 1998 by measuring Type Ia supernovae at large distances. These "standard candles" appeared fainter than expected—meaning they were farther away than a decelerating universe would predict. The universe's expansion is speeding up, not slowing down.
+
+This was not predicted—in fact, it contradicted the prevailing expectation that gravity should be *decelerating* expansion. The universe broke the model, and cosmology had to revise. That's how science works: when observations surprise us, we update.
 
 ::: {.callout-key-insight}
 **The universe is 13.8 billion years old, it's expanding, and that expansion is accelerating.**
@@ -850,6 +883,8 @@ Classical physics treated light as a continuous wave, but experiments showed tha
 This is why different wavelengths reveal different physics: **it takes hot, energetic processes to produce high-energy photons**.
 :::
 
+*We'll return to photon energy in Module 2 when we explore why atoms emit light at specific wavelengths—and how this reveals stellar composition.*
+
 ::: {.callout-worked-example title="Comparing Photon Energies"}
 How much more energy does an X-ray photon carry compared to a radio photon?
 
@@ -993,17 +1028,19 @@ Let's recap what we've covered:
 ::: {.callout-roadmap title="Course Arc Preview"}
 | Module | Big Question | Key Tools |
 |--------|--------------|-----------|
-| **1** (Weeks 1–5) | How do we measure stars? | Distance, luminosity, temperature, spectra, H-R diagram |
-| **2** (Weeks 6–10) | How do stars live and die? | Nuclear physics, stellar structure, remnants |
-| **3** (Weeks 11–13) | Where do stars come from? | ISM, star formation, planets |
-| **4** (Weeks 14–15) | How does the universe work? | Galaxies, dark matter, cosmology |
+| **1** | How do we measure stars? | Distance, luminosity, temperature, spectra, H-R diagram |
+| **2** | How do stars live and die? | Nuclear physics, stellar structure, remnants |
+| **3** | Where do stars come from? | ISM, star formation, planets |
+| **4** | How does the universe work? | Galaxies, dark matter, cosmology |
 
 Today's spoilers touched all four modules. Now we build the tools to understand them.
 :::
 
 **Next class:** The Math Boot Camp—units, scaling, order-of-magnitude estimation, and the ratio method. Not hazing; tools that make precise reasoning possible.
 
-**Week 2:** Our first real inference problem: *How do we measure distance to objects we can't reach?*
+**Coming soon:** Our first real inference problem: *How do we measure distance to objects we can't reach?*
+
+Today you saw the spoilers. Now we build the tools to understand them—one inference at a time.
 
 ---
 
