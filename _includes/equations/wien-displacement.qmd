@@ -1,0 +1,4 @@
+$$
+\lambda_{\text{peak}} = \frac{b}{T}
+$$ {#eq-wien-displacement}
+

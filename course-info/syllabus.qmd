@@ -91,7 +91,7 @@ Astrophysics is the interplay between theory and observation - theorists *predic
 
 - **Day1Ready Access**: Course materials are provided digitally before classes begin and are free through the add/drop date (February 2, 2026). After that, your account is charged $21.75/unit unless you opt out by 11:59 pm on Feb 2 (see [shopaztecs.com/Day1Ready](https://shopaztecs.com/Day1Ready)).
 
-## Course Learning Outcomes {#sec-outcomes}
+## Student Learning Outcomes {#sec-outcomes}
 
 By the end of this course, students will be able to:
 

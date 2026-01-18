@@ -37,3 +37,21 @@ lookback-time:
   anchor: "eq-lookback-time"
   include: "_includes/equations/lookback-time.qmd"
   card: "lookback_time"
+
+wave-relation:
+  title: "Wave relation (speed, wavelength, frequency)"
+  anchor: "eq-wave-relation"
+  include: "_includes/equations/wave-relation.qmd"
+  card: "wave_relation"
+
+photon-energy:
+  title: "Photon energy (Planck relation)"
+  anchor: "eq-photon-energy"
+  include: "_includes/equations/photon-energy.qmd"
+  card: "photon_energy"
+
+wien-displacement:
+  title: "Wien's displacement law"
+  anchor: "eq-wien-displacement"
+  include: "_includes/equations/wien-displacement.qmd"
+  card: "wien_displacement"

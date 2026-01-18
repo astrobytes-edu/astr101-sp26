@@ -1,0 +1,4 @@
+$$
+E = h\nu = \frac{hc}{\lambda}
+$$ {#eq-photon-energy}
+

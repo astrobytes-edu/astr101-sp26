@@ -1,0 +1,4 @@
+$$
+c = \lambda \nu
+$$ {#eq-wave-relation}
+
