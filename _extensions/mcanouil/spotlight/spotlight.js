@@ -188,7 +188,10 @@ var RevealSpotlight = window.RevealSpotlight || (function () {
         drawBoard.canvas.requestPointerLock();
       }
       container.style.opacity = 1;
-      container.style['pointer-events'] = null;
+      // Never intercept clicks (menus/chalkboard/outline must remain clickable).
+      // Spotlight rendering is driven by global mouse events, so pointer events
+      // on the overlay are unnecessary and harmful.
+      container.style['pointer-events'] = 'none';
       document.body.style.cursor = spotlightCursor;
       if (mouseEvt) {
         showSpotlight(mouseEvt);
