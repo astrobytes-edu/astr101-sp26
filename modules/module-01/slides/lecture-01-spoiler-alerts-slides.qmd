@@ -206,11 +206,11 @@ How do systems change with time?
 
 ---
 
-## The “Impossible” Knowledge Problem {background-image="/assets/images/common/milky-way-panoramic.jpg" background-opacity="0.2"}
+## The “Impossible” Knowledge Problem {background-image="/assets/images/common/eso-milky-way-panoramic.jpg" background-opacity="0.2"}
 
 ::: {.bg-muted .p-2}
 
-::: {.text-center .text-xl .font-semibold .mt-0}
+::: {.text-center .text-lg .font-semibold .mt-0}
 We claim to know real physical things…
 :::
 
@@ -244,7 +244,7 @@ Bridge question: “So what did we actually measure, and what model makes the in
 Pretty Pictures Aren’t the Point. They’re data.
 :::
 
-::: {.text-center .text-xl .font-semibold .mt-2}
+::: {.text-center .text-lg .font-semibold .mt-2}
 Pretty pictures → measurements → models → inferences
 :::
 
@@ -333,38 +333,74 @@ $F = L/(4\\pi d^2)$.
 
 ---
 
-## Six Core Quantities (Inferred) — Part 1 {background-color="black"}
+## Prediction: How Do We Know the Sun’s Temperature? {background-color="black"}
 
-::: {.table-scroll .text-sm}
-| What we want (inferred) | We measure | Model “bridge” (examples) |
-|---|---|---|
-| **Distance** | brightness **or** position | inverse-square law **or** parallax geometry |
-| **Temperature** | wavelength (spectrum/color) | blackbody/Wien-type models |
-| **Mass** | position + timing (orbits) | gravity/orbital dynamics |
+The Sun’s surface temperature is about **5,800 K**.
+
+Based on the “four observables,” how did astronomers figure this out?
+
+::: {.bg-muted .p-2}
+**Commit to one answer before we move on:**
+
+- A) Sent a thermometer on a spacecraft
+- B) Measured the wavelength/spectrum of sunlight
+- C) Calculated from the Sun’s size and distance
+- D) Estimated based on “how hot it looks”
 :::
 
-::: notes
-7–8 min.
+::: {.notes}
+~7–8 min. Give ~45 seconds. **Don’t reveal yet.**
 
-Don’t ask them to memorize the table today.
+Prompt: “Temperature is not one of the four observables. So which observable could possibly connect to temperature?”
 :::
 
 ---
 
-## Six Core Quantities (Inferred) — Part 2 {background-color="black"}
+## Prediction Reveal: Temperature Is Inferred from Spectrum {background-color="black"}
 
-::: {.table-scroll .text-sm}
-| What we want (inferred) | We measure | Model “bridge” (examples) |
-|---|---|---|
-| **Luminosity (energy output)** | brightness + distance | $L = 4\\pi d^2 F$ |
-| **Composition** | wavelength (spectral lines) | atomic “fingerprints” |
-| **Time / age** | timing **or** distance (lookback) | light-travel time; evolution/expansion models |
+::: {.bg-muted .p-2}
+- **Measure:** the spectrum/color of sunlight (brightness vs. wavelength)
+- **Infer:** the Sun’s surface temperature (~5,800 K)
+- **Physics:** blackbody/Wien-type models connect peak wavelength to temperature
+:::
+
+::: {.text-sm .text-muted}
+Temperature is **never** directly measured.
 :::
 
 ::: {.notes}
-8–9 min.
+~8–9 min.
 
-Use it as a promise: “Every tool we learn this semester is a new, better bridge from the four observables to these physical quantities.”
+Land the punchline: “We didn’t stick a thermometer in the Sun. We measured *wavelength* and used physics to infer temperature.”
+
+If you want one sentence to repeat all semester: “Observable → model → inference.”
+:::
+
+---
+
+## The Six Core Quantities We Infer {background-color="black"}
+
+::: {.table-scroll .text-sm}
+| What we infer | We measure | Model “bridge” (examples) |
+|---|---|---|
+| **Distance** | brightness **or** position | inverse-square law **or** parallax geometry |
+| **Time** | timing **or** distance | lookback time; evolution/expansion models |
+| **Speed** | wavelength (shifts) | Doppler effect |
+| **Mass** | position + timing (orbits) | gravity/orbital dynamics |
+| **Luminosity (energy output)** | brightness + distance | $L = 4\\pi d^2 F$ |
+| **Temperature** | wavelength (spectrum/color) | blackbody/Wien-type models |
+:::
+
+::: {.text-sm .text-muted}
+None of these are direct observables. Every one is inferred.
+:::
+
+::: {.notes}
+~9–10 min.
+
+Don’t ask them to memorize this today. Use it as a promise: “Every tool we learn this semester is a new, better bridge from the four observables to these quantities.”
+
+If students ask about composition: acknowledge it’s also inferred from wavelength (spectral lines), but today’s “six” list is the course’s core quantity set.
 :::
 
 ---
@@ -386,6 +422,27 @@ Which can astronomers *directly* measure for a distant star?
 Give ~20–30 seconds: “Don’t overthink—what can we measure *directly*?”
 
 Then confirm: **apparent brightness** is a direct measurement; temperature/mass/age are inferences.
+:::
+
+---
+
+## Quick Check: The Six Quantities {background-color="#1a1a2e"}
+
+::: {.quiz}
+Which list correctly names the six core physical quantities astronomers infer?
+
+- [ ] brightness, position, wavelength, timing, mass, age
+- [x] distance, time, speed, mass, luminosity, temperature
+- [ ] distance, speed, mass, luminosity, temperature, composition
+- [ ] flux, position, spectrum, timing, energy, density
+:::
+
+::: {.notes}
+~10–11 min. Give ~30 seconds.
+
+Correct: distance, time, speed, mass, luminosity, temperature.
+
+If they ask about composition: it’s a major application of spectroscopy, but it is not part of the “six core quantities” list for this lecture’s LO.
 :::
 
 ---
@@ -418,19 +475,28 @@ The Hertzsprung-Russell diagram is one of astronomy's greatest tools—and it's 
 For each image, don’t memorize details—identify the move.
 :::
 
-::: {.layout-triad .mt-2}
-::: {.triad-item}
+::: {.layout-grid-2 .mt-2}
+
+::: {.bg-muted .p-2}
 **Measure**  
 What do we directly observe?
 :::
-::: {.triad-item}
+
+::: {.bg-muted .p-2}
 **Infer**  
 What physical claim do we make?
 :::
-::: {.triad-item}
+
+::: {.bg-muted .p-2}
 **Physics**  
 What model makes it “legal”?
 :::
+
+::: {.bg-muted .p-2}
+**Why it matters later**  
+Which future tool/idea does this set up?
+:::
+
 :::
 
 ::: {.notes}
@@ -450,15 +516,10 @@ Orientation: “This is the repeatable structure for the whole course.”
 ::: {.column width="40%"}
 
 ::: {.bg-muted .p-2}
-**Measure:** colors at specific wavelengths
-:::
-
-::: {.bg-muted .p-2 .mt-1}
-**Infer:** composition + dust structure
-:::
-
-::: {.bg-muted .p-2 .mt-1}
-**Physics:** atoms emit/absorb at specific wavelengths (“fingerprints”)
+- **Measure:** colors at specific wavelengths
+- **Infer:** composition + dust structure
+- **Physics:** atoms emit/absorb at specific wavelengths (“fingerprints”)
+- **Why it matters later:** spectral fingerprints let us map composition across space
 :::
 :::
 ::::
@@ -525,15 +586,10 @@ Correct: each element has a unique set of wavelengths it can emit/absorb (a spec
 ::: {.column width="40%"}
 
 ::: {.bg-muted .p-2}
-**Measure:** apparent brightness (flux) of “milepost” objects
-:::
-
-::: {.bg-muted .p-2 .mt-1}
-**Infer:** distance far beyond geometry alone
-:::
-
-::: {.bg-muted .p-2 .mt-1}
-**Physics:** inverse-square law + standard candles
+- **Measure:** apparent brightness (flux) of “milepost” objects
+- **Infer:** distance far beyond geometry alone
+- **Physics:** inverse-square law + standard candles
+- **Why it matters later:** most cosmic distances rely on this ladder chain
 :::
 :::
 ::::
@@ -603,7 +659,19 @@ Over the next 10 years, Rubin will detect up to 100,000 of these stars extending
 
 ## Spoiler 3: Origin of the Elements {background-color="black"}
 
-{{< img periodic-table-origins >}}
+:::: {.columns}
+::: {.column width="60%"}
+{{< img periodic-table-origins class="img-center" >}}
+:::
+::: {.column width="40%"}
+::: {.bg-muted .p-2}
+- **Measure:** element fingerprints in spectra
+- **Infer:** where the elements were made (“cosmic ovens”)
+- **Physics:** nuclear reactions have specific products
+- **Why it matters later:** “starstuff” is an inference we can test with spectra
+:::
+:::
+::::
 
 ::: {.notes}
 15–17 min.
@@ -621,7 +689,19 @@ Over the next 10 years, Rubin will detect up to 100,000 of these stars extending
 
 ## Spoiler 4: Spectroscopy {background-color="black"}
 
-{{< img prism-spectrum >}}
+:::: {.columns}
+::: {.column width="60%"}
+{{< img prism-spectrum class="img-center" >}}
+:::
+::: {.column width="40%"}
+::: {.bg-muted .p-2}
+- **Measure:** brightness as a function of wavelength (a spectrum)
+- **Infer:** temperature, composition, and motion
+- **Physics:** quantized energy levels → specific wavelengths
+- **Why it matters later:** spectroscopy is the “master key” we’ll keep using
+:::
+:::
+::::
 
 ::: {.notes}
 17–19 min.
@@ -633,7 +713,7 @@ Over the next 10 years, Rubin will detect up to 100,000 of these stars extending
 
 ---
 
-## {background-color="black"}
+## Spectroscopy: A Quantum Barcode {background-color="black"}
 
 {{< img quantum-barcode >}}
 
@@ -692,7 +772,19 @@ Land: temperature is an inference; wavelength/spectrum is the measurement channe
 
 ## Spoiler 5: The EM Spectrum {background-color="black"}
 
-{{< img em-spectrum-temperature >}}
+:::: {.columns}
+::: {.column width="60%"}
+{{< img em-spectrum-temperature class="img-center" >}}
+:::
+::: {.column width="40%"}
+::: {.bg-muted .p-2}
+- **Measure:** photons across many wavelengths
+- **Infer:** physical conditions (especially temperature/energy scale)
+- **Physics:** photon energy depends on wavelength ($E \\propto 1/\\lambda$)
+- **Why it matters later:** different telescopes see different physics, not “better pictures”
+:::
+:::
+::::
 
 ::: {.notes}
 24–26 min.
@@ -708,12 +800,47 @@ Land: temperature is an inference; wavelength/spectrum is the measurement channe
 
 ---
 
+## Prediction: Same Galaxy, Different Wavelength {background-color="black"}
+
+You’re about to see the Whirlpool Galaxy (M51) at two wavelengths: **visible light** and **radio (21-cm)**.
+
+::: {.bg-muted .p-2}
+**Prediction:** Will the two images look the same?
+
+- [ ] Yes — same galaxy, same appearance
+- [ ] No — they’ll show different structures
+:::
+
+::: {.notes}
+~26 min. Give ~30 seconds to commit.
+
+Prompt: “Same object, two wavelengths. Do you expect the same structures to light up?”
+
+Advance immediately to the reveal slide.
+:::
+
+---
+
 ## Spoiler 6: Same Galaxy, Different Physics {background-color="black"}
 
-{{< img m51-optical-radio >}}
+:::: {.columns}
+::: {.column width="60%"}
+{{< img m51-optical-radio class="img-center" >}}
+:::
+::: {.column width="40%"}
+::: {.bg-muted .p-2}
+- **Measure:** optical starlight vs. 21-cm radio emission
+- **Infer:** stars and cold gas live in different places
+- **Physics:** different emission mechanisms dominate at different wavelengths
+- **Why it matters later:** “same object” can mean many different datasets
+:::
+:::
+::::
 
 ::: {.notes}
 26–28 min.
+
+If you predicted “No,” you were right: the two images emphasize different physical components.
 
 Left (optical): Stars and dust lanes.
 Right (radio/21-cm): Cold neutral hydrogen gas.
@@ -723,9 +850,39 @@ Right (radio/21-cm): Cold neutral hydrogen gas.
 
 ---
 
+## Pattern Check: Can You Spot the Panel? {background-color="black"}
+
+::: {.bg-muted .p-2}
+Pick one spoiler and say (to yourself): **Measure → Infer → Physics → Why it matters later**.
+:::
+
+::: {.text-sm .text-muted}
+If you can do this for even one example, you’re on track.
+:::
+
+::: {.notes}
+~28 min. Actual 20–30 second pause.
+
+Don’t cold-call; this is consolidation, not assessment.
+:::
+
+---
+
 ## Spoiler 7: Infrared Beats Dust {background-color="black"}
 
-{{< img pillars-hubble-jwst >}}
+:::: {.columns}
+::: {.column width="60%"}
+{{< img pillars-hubble-jwst class="img-center" >}}
+:::
+::: {.column width="40%"}
+::: {.bg-muted .p-2}
+- **Measure:** optical vs. infrared views of the same region
+- **Infer:** newborn stars can hide inside dusty clouds
+- **Physics:** dust blocks/scatters short wavelengths more than long wavelengths
+- **Why it matters later:** infrared is a star-formation detector
+:::
+:::
+::::
 
 ::: {.notes}
 28–30 min.
@@ -740,7 +897,19 @@ Right (JWST infrared): Thousands of hidden newborn stars.
 
 ## Spoiler 8: Many Windows, One Truth {background-color="black"}
 
-{{< img crab-multiwavelength >}}
+:::: {.columns}
+::: {.column width="60%"}
+{{< img crab-multiwavelength class="img-center" >}}
+:::
+::: {.column width="40%"}
+::: {.bg-muted .p-2}
+- **Measure:** the Crab Nebula at multiple wavelengths
+- **Infer:** multiple components coexist (gas, dust, magnetic fields, hot plasma)
+- **Physics:** different wavelengths trace different emission mechanisms
+- **Why it matters later:** we need multi-wavelength “cross-checks,” not single pictures
+:::
+:::
+::::
 
 ::: {.notes}
 30–32 min.
@@ -757,56 +926,53 @@ Right (JWST infrared): Thousands of hidden newborn stars.
 
 ## Spoiler 9: The Dark Universe {background-color="black"}
 
-{{< img lsst-cosmic-treasure-chest >}}
+:::: {.columns}
+::: {.column width="60%"}
+{{< img desi-3d-map class="img-center" >}}
+:::
+::: {.column width="40%"}
+::: {.bg-muted .p-2}
+- **Measure:** velocities (from Doppler shifts)
+- **Infer:** galaxies need more mass than we can see → dark matter
+- **Physics:** gravity links orbital speed to mass ($v^2 = GM/r$)
+- **Why it matters later:** the “missing mass” problem shapes modern cosmology
+:::
+:::
+::::
 
 ::: {.notes}
 32–34 min.
 
-**Measure:** Velocities via Doppler shifts.
+Point first to: the filaments, then the voids.
 
-**Infer:** Galaxies rotate too fast. ~6× more mass than we can see.
+**Measure:** Velocities via Doppler shifts (spectral lines shift → speeds).
+
+**Infer:** There must be more mass than we can see (dark matter). In galaxies, rotation curves imply ~5–6× more mass than visible matter. At the largest scales, the cosmic web’s structure also points to invisible mass shaping gravity.
 
 **Physics:** $v^2 = GM/r$. Measure $v$ and $r$, solve for $M$.
 
-**Key insight:** We don't know what most of the universe is made of.
-:::
+**Cosmic recipe (today):** 5% atoms • 27% dark matter • 68% dark energy.
 
----
-
-## The Cosmic Web {background-color="black"}
-
-{{< img desi-3d-map >}}
-
-::: {.notes}
-34–36 min.
-
-Galaxies form filaments, walls, voids—the cosmic web.
-
-Dark matter's signature at the largest scales. And it's still evolving: gravity is still pulling structures together.
-:::
-
----
-
-## The Cosmic Recipe (Today) {background-image="/assets/images/module-01/DESI-Universe-3D-Map.jpg" background-opacity="0.3"}
-
-::: {.bg-muted .p-2 .text-center}
-::: {.text-xl .font-semibold .mt-0}
-5% atoms • 27% dark matter • 68% dark energy
-:::
-::: {.text-base .text-muted .mt-1}
-Only 5% is stuff we understand.
-:::
-:::
-
-::: {.notes}
-36–37 min. The cosmic recipe.
+**Key insight:** We don’t know what most of the universe is made of.
 :::
 
 ---
 
 ## Spoiler 10: Cosmic History {background-color="black"}
 
-{{< img universe-history-nasa >}}
+:::: {.columns}
+::: {.column width="60%"}
+{{< img universe-history-nasa class="img-center" >}}
+:::
+::: {.column width="40%"}
+::: {.bg-muted .p-2}
+- **Measure:** distances + redshifts (recession speeds) of galaxies
+- **Infer:** the universe’s age and that expansion is accelerating
+- **Physics:** expansion models traced back to a common origin
+- **Why it matters later:** surprise observations force model revision (dark energy is a placeholder name)
+:::
+:::
+::::
 
 ::: {.notes}
 37–40 min.
@@ -822,25 +988,33 @@ Only 5% is stuff we understand.
 
 ---
 
-## Connecting the Dots {background-image="/assets/images/module-01/universe-history-nasa.png" background-opacity="0.2"}
+## Spoiler Reel Synthesis: The Pattern Repeats {background-image="/assets/images/module-01/universe-history-nasa.png" background-opacity="0.2"}
 
-::: {.text-center .text-xl .font-semibold .mt-2}
-Connecting the Dots
+::: {.text-center .text-lg .font-semibold .mt-2}
+Spoiler Reel Synthesis: The Pattern Repeats
 :::
 
 ::: {.text-center .text-base .text-muted .mt-1}
-One idea powers multiple spoilers.
+Every spoiler followed the same structure: Measure → Infer → Physics.
+:::
+
+::: {.bg-muted .p-2 .text-center .mt-2}
+**Which observable appeared most often?**
+
+*(Hint: it starts with “W”.)*
 :::
 
 ::: {.notes}
 40–41 min. **SYNTHESIS MOMENT**
 
-"You just saw the Doppler effect show up in Spoiler 9 (dark matter) and Spoiler 10 (expansion). Let's make that connection explicit."
+Ask: “Which of the four observables kept showing up?” → **Wavelength** (spectrum).
+
+Bridge: “Spectroscopy is the workhorse of astronomy. Now let’s connect two spoilers using one wavelength idea: Doppler shifts.”
 :::
 
 ---
 
-## {background-color="black"}
+## Doppler: The Fingerprint Shifts {background-color="black"}
 
 :::: {.columns}
 ::: {.column width="60%"}
@@ -863,7 +1037,7 @@ The fingerprint stays the same — just shifted.
 
 ---
 
-## {background-image="/assets/images/module-01/DESI-Universe-3D-Map.jpg" background-opacity="0.2"}
+## Connecting the Dots: Doppler Shows Up Everywhere {background-image="/assets/images/module-01/DESI-Universe-3D-Map.jpg" background-opacity="0.2"}
 
 **Where Doppler Appears:**
 
@@ -880,27 +1054,66 @@ One idea. Many applications.
 
 ::: {.notes}
 43–44 min.
+
+Say: “You don’t need to understand Doppler today. You need to recognize that it matters—and that it’s a wavelength measurement.”
 :::
 
 ---
 
-## {background-color="black"}
+## Lookback Time: Distance Is a Time Dial {background-color="black"}
 
-{{< img universe-time-machine >}}
+:::: {.columns}
+::: {.column width="55%"}
+{{< img universe-time-machine class="img-center" >}}
+:::
+::: {.column width="45%"}
+::: {.table-scroll .text-sm}
+| Object | You see it as it was… |
+|---|---|
+| The Moon | 1.3 seconds ago |
+| The Sun | 8.3 minutes ago |
+| Andromeda | 2.5 million years ago |
+| Distant galaxies | billions of years ago |
+:::
+
+::: {.bg-muted .p-2 .text-center .mt-2}
+**Looking far away means looking into the past.**
+:::
+:::
+::::
 
 ::: {.notes}
-44–46 min. **LOOKBACK TIME**
+44–46 min.
 
-- Sun: 8.3 minutes ago
-- Andromeda: 2.5 million years ago
-- Distant galaxies: billions of years ago
+Point first to “now,” then walk outward (Moon → Sun → Andromeda → distant galaxies).
 
-**Distance is a time dial.** Looking far away means looking into the past.
+Land: this isn’t a limitation—it’s a feature. Distance is a time dial.
 :::
 
 ---
 
-## {background-image="/assets/images/module-01/em-spectrum-nblm.png" background-opacity="0.2"}
+## Quick Check: Lookback Time {background-color="#1a1a2e"}
+
+::: {.quiz}
+You observe a galaxy **100 million light-years** away.
+
+When did the light you’re seeing *leave* that galaxy?
+
+- [x] 100 million years ago
+- [ ] Right now
+- [ ] 13.8 billion years ago
+- [ ] It depends on the telescope
+:::
+
+::: {.notes}
+~46 min. Give ~30 seconds.
+
+Correct: 100 million light-years means the light traveled for 100 million years.
+:::
+
+---
+
+## Orientation: The Wave Relation {background-image="/assets/images/module-01/em-spectrum-nblm.png" background-opacity="0.2"}
 
 $$c = \lambda \nu$$
 
@@ -911,7 +1124,7 @@ $$c = \lambda \nu$$
 :::
 
 ::: {.notes}
-46–48 min. **EXACT SCRIPT:**
+~47 min. **EXACT SCRIPT:**
 
 "When you see equations today, I'm not asking you to use them yet. Some equations are here just to show relationships. Others become tools later. Today, you're just learning what exists — not how to wield it."
 
@@ -920,22 +1133,29 @@ $$c = \lambda \nu$$
 
 ---
 
-## {background-image="/assets/images/module-01/em-spectrum-nblm.png" background-opacity="0.2"}
+## Orientation: Photon Energy {background-image="/assets/images/module-01/em-spectrum-nblm.png" background-opacity="0.2"}
 
 $$E = h\nu = \frac{hc}{\lambda}$$
 
+:::: {.columns}
+::: {.column width="50%"}
 ::: {.incremental}
 - $E$ = photon energy
-- $h$ = Planck's constant (quantum physics!)
-- Shorter $\lambda$ → higher $\nu$ → **higher energy**
+- $h$ = Planck’s constant
+- Shorter $\lambda$ → higher energy
 :::
 
 ::: {.fragment}
 **X-rays probe million-degree plasma. Radio probes cold gas.**
 :::
+:::
+::: {.column width="50%"}
+{{< img energy-wavelength-connection width="95%" class="img-center" >}}
+:::
+::::
 
 ::: {.notes}
-48–49 min. **THE PUNCHLINE:**
+~48 min. **THE PUNCHLINE:**
 
 This is why different wavelengths reveal different physics. It takes hot, violent processes to produce high-energy (short-wavelength) photons.
 
@@ -948,21 +1168,62 @@ This is why different wavelengths reveal different physics. It takes hot, violen
 
 ---
 
-## The Decoder Ring {background-color="black"}
+## Prediction: X-ray vs. Radio Energy {background-color="black"}
+
+Compare: an X-ray photon ($\\lambda \\approx 1\\ \\text{nm}$) vs. a radio photon ($\\lambda \\approx 1\\ \\text{m}$).
+
+::: {.quiz}
+How much more energy does the X-ray have?
+
+- [ ] $10^5$ times more
+- [x] $10^9$ times more
+- [ ] $10^{-9}$ times more (less energy)
+:::
+
+::: {.notes}
+~49 min. Give ~45 seconds.
+
+Ratio reasoning: since $E \\propto 1/\\lambda$, the energy ratio is the inverse wavelength ratio:
+$1\\ \\text{m} / 1\\ \\text{nm} = 10^9$.
+:::
+
+---
+
+## The Decoder-Ring Pipeline {background-color="black"}
+
+::: {.bg-muted .p-2}
+**Signal** → **Measurement** → **Model** → **Inference** → **Prediction** → **Test** → revise
+:::
 
 {{< img decoder-ring >}}
 
 ::: {.notes}
 49–51 min.
 
-Signal → Measurement → Model → Inference → Correction
+Walk one concrete example through the pipeline (pick any spoiler).
 
-When tests fail, we revise models. **That's science.**
+Land: when tests fail, we revise models. **That’s science.**
 :::
 
 ---
 
-## {background-color="black"}
+## What You Can Do Now {background-color="black"}
+
+::: {.bg-muted .p-2}
+- Thesis: pretty pictures → measurements → models → inferences
+- Observables: brightness, position, wavelength, timing
+- Six quantities: distance, time, speed, mass, luminosity, temperature
+- Spoiler panel: Measure → Infer → Physics → Why it matters later
+- Lookback time: distance is a time dial
+:::
+
+::: {.notes}
+~1 minute. Read the list once, then say: “Recognition, not mastery.”
+:::
+
+---
+
+## The Tools We Build Answer Big Questions {background-color="black"}
 
 {{< img answering-big-questions >}}
 
@@ -979,7 +1240,7 @@ When tests fail, we revise models. **That's science.**
 ## Recognition, not retention {background-image="/assets/images/common/eso-milky-way-panoramic.jpg" background-opacity="0.25"}
 
 ::: {.bg-muted .p-2 .text-center}
-::: {.text-xl .font-semibold .mt-0}
+::: {.text-lg .font-semibold .mt-0}
 Recognition, not retention.
 :::
 
@@ -1000,26 +1261,7 @@ You are expected to recognize ideas when we return.
 
 ---
 
-## Quick Check {background-color="#1a1a2e"}
-
-::: {.quiz}
-A headline says: "Scientists measure the temperature of a distant star."
-
-What did they actually *measure*?
-
-- [ ] Temperature directly
-- [x] Spectrum or color
-- [ ] Mass
-- [ ] Age
-:::
-
-::: {.notes}
-54–55 min.
-:::
-
----
-
-## {background-image="/assets/images/module-01/math-toolbox-nblm.png" background-opacity="0.2"}
+## Next Time: Math Boot Camp {background-image="/assets/images/module-01/math-toolbox-nblm.png" background-opacity="0.2"}
 
 **Thursday: Math Boot Camp**
 
@@ -1031,18 +1273,14 @@ What did they actually *measure*?
 :::
 
 ::: {.fragment}
-::: {.text-center .text-xl .font-semibold .mt-2}
+::: {.text-center .text-lg .font-semibold .mt-2}
 The math is not the obstacle — it’s the microscope.
 :::
 :::
 
 ---
 
-## {background-image="/assets/images/common/noirlab-nightsky-mosaic.jpg" background-opacity="0.4"}
-
-::: {.text-center .text-xl .font-semibold .mt-2}
-Questions?
-:::
+## Questions? {background-image="/assets/images/common/noirlab-nightsky-mosaic.jpg" background-opacity="0.4"}
 
 ::: {.notes}
 Leave time for questions about the big picture.
