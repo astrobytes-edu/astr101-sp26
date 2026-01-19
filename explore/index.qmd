@@ -13,6 +13,7 @@ This section contains optional resources for students who want to explore astron
 
 ## Videos & Documentaries
 
+- **[Astronomy Videos](astro-videos.qmd)** — Curated videos organized by topic (start here!)
 - [ESO Public Videos](https://www.eso.org/public/videos/) — Stunning footage from the European Southern Observatory
 
 ## Beautiful Images

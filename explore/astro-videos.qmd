@@ -1,0 +1,107 @@
+---
+title: "Astronomy Videos"
+description: "Curated collection of astronomical videos organized by topic"
+draft: false
+---
+
+A curated collection of videos that bring the cosmos to life. These are optional viewing—but if you want to see the universe in motion, start here.
+
+---
+
+## Cosmic Scale & Deep Fields
+
+### Rubin Observatory: Cosmic Treasure Chest
+
+{{< video https://youtu.be/Gitit3LwQ20 >}}
+
+Made from over 1,100 images captured by NSF-DOE Vera C. Rubin Observatory, this video begins with a close-up of two galaxies then zooms out to reveal about **10 million galaxies**.
+
+Those 10 million galaxies are roughly **0.05%** of the approximately 20 billion galaxies Rubin Observatory will capture during its 10-year Legacy Survey of Space and Time.
+
+::: {.callout-note title="Why This Matters"}
+Every point of light in this video is a galaxy—not a star, a *galaxy*. Each contains hundreds of billions of stars. And we're going to learn how to read the light from all of them.
+:::
+
+**Credit:** NSF–DOE Vera C. Rubin Observatory
+
+---
+
+## Nebulae & Star Formation
+
+### Rubin Observatory: Trifid and Lagoon Nebulae
+
+{{< video https://youtu.be/MIJfPOGnDFg >}}
+
+Made from more than 678 exposures taken by NSF–DOE Vera C. Rubin Observatory in just over seven hours of observing time, this video explores details in the region containing the Trifid nebula (top) and the Lagoon nebula, which are several thousand light-years away from Earth.
+
+::: {.callout-note title="Reading the Colors"}
+This iconic first-release image from Rubin Observatory captures the vivid interplay of nebulae, dust, and star clusters in Sagittarius.
+
+- **Rich reds and pinks** trace hydrogen-alpha emission (656 nm), pinpointing regions of active star formation and ionized gas
+- **Blue and turquoise tones** correspond to reflected starlight and glowing oxygen ([OIII], 495–501 nm)
+- **Dark lanes and golden clouds** reveal dense, dusty regions where visible light is heavily absorbed, causing stars to appear reddened
+
+The diversity of colors across the field demonstrates how visible wavelengths uncover the complex physics of ionization, scattering, and extinction in the galactic plane.
+:::
+
+**Credit:** NSF–DOE Vera C. Rubin Observatory
+
+---
+
+## Variable Stars & Time-Domain Astronomy
+
+### Rubin Observatory: Rhythms in the Stars
+
+{{< video https://youtu.be/eS6FXc350Bs >}}
+
+This video showcases **46 subtly pulsating RR Lyrae variable stars** in an early glimpse of the dynamic sky Rubin will reveal.
+
+Over the next 10 years, Rubin will detect up to about **100,000 of these stars** extending out to more than a million light-years away, allowing scientists to map the outer reaches of our Galaxy and explore the structure of the Galactic halo that surrounds the Milky Way and extends nearly halfway to our closest neighbor, the Andromeda galaxy.
+
+::: {.callout-note title="Why Variable Stars Matter"}
+RR Lyrae stars are **standard candles**—their pulsation period tells us their intrinsic luminosity. Compare that to how bright they *appear*, and we can calculate their distance. This is the cosmic distance ladder in action.
+:::
+
+**Credit:** NSF–DOE Vera C. Rubin Observatory
+
+---
+
+## Stellar Populations & the HR Diagram
+
+### Hubble: Omega Centauri HR Diagram
+
+{{< video https://youtu.be/1JPDN8qoRjs >}}
+
+A Hubble Space Telescope color image of the core of the globular star cluster Omega Centauri is used to construct a Hertzsprung-Russell diagram. Watch as hundreds of thousands of stars are sorted by two observables—brightness and color—and a striking pattern emerges.
+
+::: {.callout-note title="Pattern Recognition in Action"}
+The HR diagram is one of astronomy's most powerful tools, and it's built entirely from things we can *measure*: how bright a star appears and what color it is. No magic—just careful observation and pattern recognition.
+
+This is how astronomers work: sort the data, find the structure, discover the physics.
+:::
+
+**Credit:** NASA, ESA, and G. Bacon (STScI)
+
+---
+
+## Multi-Wavelength Astronomy
+
+*Videos showing the same objects at different wavelengths coming soon.*
+
+---
+
+## Galaxies & Cosmology
+
+*Videos about galaxy dynamics and the expanding universe coming soon.*
+
+---
+
+## Space Telescopes
+
+*Videos about JWST, Hubble, and other observatories coming soon.*
+
+---
+
+::: {.callout-tip title="Suggest a Video"}
+Found an amazing astronomy video you think should be here? Let Dr. Rosen know!
+:::

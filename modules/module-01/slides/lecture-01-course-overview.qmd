@@ -1,432 +1,824 @@
 ---
-title: "Lecture 1: The Big Picture"
-subtitle: "Inferring Reality from Light"
+title: "Lecture 1: Spoiler Alerts"
+subtitle: "The Universe Is Weird — How Do We Know?"
 author: "Dr. Anna Rosen"
 date: "2026-01-20"
-description: "Spoiler alerts: what we'll discover this semester and how we know it."
+description: "A trailer for the semester: how astronomers turn photons into physical claims."
 draft: false
-format: revealjs
+
+format:
+  revealjs:
+    footer: "ASTR 201 • Lecture 1 • Dr. Anna Rosen"
+    chalkboard: true
+
+revealjs-plugins:
+  - pointer
+  - spotlight
+  - attribution
+  - quiz
+
+filters:
+  - roughnotation
+
 execute:
   echo: false
   warning: false
   message: false
 ---
 
-::: {.notes}
-**Instructor note (structure):** This deck is written for a 75‑minute meeting. For a 50‑minute version, skip the “Course Philosophy & Roadmap” block and shorten the TPS activities.
+## Today's Thesis
 
-**Reveal speaker notes:** Press **S** during presentation to open speaker view. Notes blocks are written using `::: {.notes}` as documented in Quarto’s Reveal guide. 
+> **Pretty pictures → measurements → models → inferences**
+
+::: {.fragment}
+Every gorgeous astronomical image is actually a *dataset*.
+
+The job of an astronomer is to *decode* that information using physics.
 :::
 
-## Today’s puzzle
-
-**We can never visit most objects we study.**  
-So… how do we know anything at all?
-
-- What we *measure* (observables)
-- What we *infer* (physical reality)
-- Why physics + math are the bridge
-
 ::: {.notes}
-0–2 min. Set tone: awe + intellectual honesty.
+0–2 min. **EXACT SCRIPT — read or paraphrase closely:**
 
-Key line: “Astronomy is inference under extreme constraints.”
+"This reading — and this lecture — are a trailer, not the movie. You're going to see big ideas before you know how they work. That's intentional. Your job today is recognition, not mastery. We will come back to everything slowly, with tools in hand."
+
+Pause after delivering the thesis. Let it land.
 :::
 
 ---
 
-## {data-background-image="../images/jwst-deepfield.jpg" data-background-size="cover"}
+## Learning Objectives
+
+By the end of this lecture, you will be able to:
+
+::: {.incremental}
+1. **State** the course thesis: *pretty pictures → measurements → models → inferences*
+2. **Name** the four things astronomers can directly measure
+3. **Explain** why physics is the "decoder ring" that makes inference legal
+4. **Recognize** how wavelength reveals different physics
+5. **Describe** why looking far away means looking into the past
+:::
 
 ::: {.notes}
-**Hook image:** JWST First Deep Field (SMACS 0723) or Hubble eXtreme Deep Field.
-
-**Prep:** Download a high-res public-domain/press-release image and save as `images/jwst-deepfield.jpg`.
-
-**Delivery:** Put it full screen. Say nothing for ~10 seconds.
-
-Alt text for accessibility (not visible on slide): Deep space image showing thousands of galaxies of varying sizes and colors, including lensing arcs.
+2–3 min. Read these aloud. Students should write them down.
 :::
 
 ---
 
-## The “impossible task”
+## {.center}
 
-We can’t:
-
-- go there
-- touch it
-- run controlled experiments on it
-
-We *can*:
-
-- collect photons
-- measure patterns in those photons
-- use physics to reconstruct a story
-
-::: {.notes}
-2–5 min. Script (tight):
-
-“Every dot and smudge is a galaxy. Some of that light has traveled ~13 billion years. We will never visit these objects. All we have is the light that reaches us. And yet we infer temperatures, compositions, motions, even histories. How?”
-
-Transition: “First: what do we actually measure?”
+::: {.r-fit-text}
+What This Course Is Really About
 :::
 
 ---
 
-## Quick poll (anonymous)
+## This Course Is NOT…
 
-What feels *hardest* about studying objects we can’t visit?
-
-A. We can’t see them clearly enough  
-B. We don’t know how far away they are  
-C. We can only detect light—nothing else  
-D. The physics is too complicated  
-E. All of the above
+::: {.incremental}
+- Memorizing how many moons each planet has
+- Identifying constellations
+- Space trivia and fun facts
+- Looking at pretty pictures and saying "wow, cool"
+- Astro 101 with equations sprinkled on top
+:::
 
 ::: {.notes}
-5–8 min. Validate multiple answers.
-
-Bridge lines:
-- A → resolution limits are real; we get clever.
-- B → distance is foundational; Week 2.
-- C → the deep truth: light is both curse + gift.
-- D → physics is elegant once you learn its “compression.”
+3–5 min. Deliver with energy — this sets expectations.
 :::
 
 ---
 
-## Stars are (mostly) points of light
+## This Course IS…
 
-Even huge telescopes usually **cannot resolve** a star’s disk.
+::: {.incremental}
+- **How do we know** what we claim to know?
+- What can we actually **measure** from billions of km away?
+- How do **physics and math** turn limited measurements into understanding?
+- Why should we **believe** any of these cosmic claims?
+:::
 
-So we live with the “point-source problem.”
+::: {.fragment}
+This is astronomy as a *quantitative science*.
+:::
 
 ::: {.notes}
-8–12 min.
-
-Explain angular resolution qualitatively. Optional analogy:
-
-“The nearest star system is ~270,000× farther than the Sun. If the Sun were that far, it would look ~270,000× smaller—essentially a point.”
+5–7 min. Emphasize the shift from "what's out there" to "how do we know."
 :::
 
 ---
 
-## The three observables
+## The Four Observables
 
-For nearly all stars, we directly measure only:
-
-1. **Position** (and changes with time)
-2. **Apparent brightness** (flux)
-3. **Spectrum** (brightness vs wavelength)
+{{< img four-observables >}}
 
 ::: {.notes}
-12–13 min. This is the anchor slide for the course.
+7–9 min. This is the anchor slide for the course.
 
-Instructor tip: pause after each item. Make them say it back.
+Pause after revealing the image. Say: "From billions of kilometers away, staring at points of light, we can directly measure only *four types of things*. Everything else — mass, temperature, distance, age — is a calculation."
 :::
 
 ---
 
-## Observable 1: Position
+## What Each Observable Tells Us
 
-- where the star is on the sky
-- how it drifts (proper motion)
-- tiny annual wobble (parallax)
+| Observable | What It Means |
+|------------|---------------|
+| **Brightness** | Energy arriving at our detector |
+| **Position** | Where it appears (and how that changes) |
+| **Wavelength** | Which "colors" of light are present |
+| **Timing** | When things happen and how they change |
+
+::: {.fragment}
+**That's it. Everything else is inferred.**
+:::
 
 ::: {.notes}
-13–15 min.
-
-Key message: parallax is geometry → distance.
-
-Don’t go deep yet; tease Week 2.
+9–11 min. Walk through each row. Emphasize that this list is *exhaustive* — there's nothing else we can directly access.
 :::
 
 ---
 
-## Observable 2: Apparent brightness
+## What's NOT Directly Measurable
 
-What the detector measures:
-
-- energy per area per time reaching Earth
-
-But brightness depends on:
-
-- intrinsic power output
-- distance
+| Property | How We Infer It |
+|----------|-----------------|
+| Temperature | From spectrum/color |
+| Distance | From parallax or standard candles |
+| Luminosity | From brightness + distance |
+| Mass | From orbital motion |
+| Age | From stellar evolution models |
 
 ::: {.notes}
-15–17 min.
-
-Line to plant now: “apparent ≠ intrinsic.”
-
-Optional: mention historical magnitudes as a fun aside.
+11–13 min. Drive home the gap between "what we measure" and "what we want to know." That gap is where physics lives.
 :::
 
 ---
 
-## Observable 3: Spectrum
+## Quick Check
 
-Starlight spread into wavelength:
+::: {.quiz}
+Which quantity can astronomers *directly measure* for a distant star?
 
-- overall shape (“color”)
-- absorption/emission lines
-- shifts and broadenings
+- [ ] Temperature
+- [ ] Mass
+- [x] Apparent brightness
+- [ ] Age
+:::
 
 ::: {.notes}
-17–18 min.
+13–14 min. Give students 30 seconds. Press **C** to reveal answer.
 
-Promise: spectrum is where the universe hides its receipts.
+Answer: C (Apparent brightness). Common error: choosing temperature — that's inferred from spectrum.
 :::
 
 ---
 
-## Think–Pair–Share 1
+## {.center}
 
-From only **position, brightness, spectrum**, what physical properties might we infer?
+::: {.r-fit-text}
+The Decoder Ring
+:::
 
-- **Think** (30 s)
-- **Pair** (60 s)
-- **Share** (2 min)
+*How do we get from measurements to reality?*
+
+---
+
+## The Scientific Method in Astronomy
+
+{{< img decoder-ring >}}
 
 ::: {.notes}
-18–20 min.
+14–17 min. Walk through the cycle:
 
-Collect guesses without correcting yet. Write them down.
+1. **Signal** — photons arrive from distant objects
+2. **Measurement** — we quantify brightness, position, wavelength, timing
+3. **Model** — we apply physical relationships
+4. **Inference** — model + measurement yields something we couldn't directly measure
+5. **Prediction** — the model tells us what *else* should be true
+6. **Test** — we compare predictions to new observations
 
-Expected: distance, temperature, composition, size, motion, mass, age.
-Transition: “Let’s see the full ladder.”
+When tests fail, we revise models. That's how science progresses.
 :::
 
 ---
 
-## The inference ladder
+## Science Is Corrigible
 
-From 3 observables → many physical properties.
+When predictions fail, we don't hide — we revise.
 
-Examples:
+. . .
 
-- **Distance** (geometry)
-- **Luminosity** (brightness + distance)
-- **Temperature** (spectral shape)
-- **Composition** (lines)
-- **Velocity** (Doppler)
-- **Radius** (luminosity + temperature)
-- **Age** (models + multiple steps)
+::: {.fragment}
+**Example:** In 1998, astronomers expected the universe's expansion to be *slowing down*.
+
+They found it was *speeding up*.
+:::
+
+::: {.fragment}
+Cosmology had to invent "dark energy" to explain the data.
+:::
 
 ::: {.notes}
-20–25 min.
+17–19 min. Plant the seed for Script E later.
 
-You can optionally show a ladder graphic here (instructor-created). If you add one, store as `images/inference-ladder.png` and include it on this slide.
-
-Key message: “Some inferences are one step. Others are a staircase.”
+Key message: failed predictions drive model revision. That's not a bug — it's the feature.
 :::
 
 ---
 
-## Think–Pair–Share 2
+## The Six Core Quantities
 
-Why is **distance** relatively “easy,” but **age** is hard?
-
-- **Think** (30 s)
-- **Pair** (90 s)
+| Quantity | Symbol | How We Infer It |
+|----------|--------|-----------------|
+| Distance | $d$ | Parallax, standard candles |
+| Time | $t$ | (context-dependent) |
+| Speed | $v$ | Doppler shift |
+| Mass | $M$ | Orbital motion |
+| Luminosity | $L$ | Brightness + distance |
+| Temperature | $T$ | Spectrum/color |
 
 ::: {.notes}
-25–30 min.
-
-Reveal:
-- Distance: geometry (angle + baseline).
-- Age: not directly visible; requires mass, luminosity, temperature, composition + an evolutionary model.
-
-Core idea: chain length → uncertainty.
+19–21 min. Quick reference table. Every entry connects back to the four observables via a physical model.
 :::
 
 ---
 
-## Astronomy is forensics
+## {.center}
 
-A detective can’t rewind time.
+::: {.r-fit-text}
+The Spoiler Reel
+:::
 
-They reconstruct a story from evidence.
+*What we'll learn to say — and how we'll earn the right to say it*
 
-We do the same—using **physics** as our toolkit.
+---
+
+## How to Read the Spoilers
+
+For each image, we ask three questions:
+
+::: {.incremental}
+1. **What do we measure?**
+2. **What do we infer?**
+3. **What physics makes that legal?**
+:::
+
+::: {.fragment}
+You're not expected to understand everything yet.
+
+That's what the semester is for.
+:::
 
 ::: {.notes}
-30–35 min.
-
-Make it vivid but not cheesy:
-
-“Light is our fingerprint powder.”
-
-Bridge: “Here’s the single equation that captures the core ambiguity.”
+21–22 min. Set the frame. Emphasize pattern recognition over comprehension.
 :::
 
 ---
 
-## The central relationship
+## Spoiler 1: Nebulae
 
-$$F = \frac{L}{4\pi d^2}$$
-
-- $F$ = **flux** (what we measure)
-- $L$ = **luminosity** (what we want)
-- $d$ = **distance** (what we must infer)
+{{< img forensic-nebula >}}
 
 ::: {.notes}
-35–42 min.
+22–24 min. Let the image sit for 5 seconds before speaking.
 
-Interpret physically:
-- Same $L$, farther → dimmer.
-- Double $d$ → $F$ drops by 4.
+**Measure:** Colors at specific wavelengths — red at 656 nm, blue-green at 500 nm.
 
-If you want a graphic: add an inverse-square diagram to `images/inverse-square.png` and place it on next slide.
+**Infer:** Red = ionized hydrogen. Blue-green = oxygen. Dark lanes = dust blocking light.
+
+**Physics:** Atoms emit at specific wavelengths. Each element has a unique fingerprint.
 :::
 
 ---
 
-## Inverse-square intuition
+## Spoiler 1: The Inference
 
-Same total light… bigger sphere.
+::: {.incremental}
+- **Measure:** Structured colors at specific wavelengths
+- **Infer:** Hydrogen (red), oxygen (blue-green), dust (dark)
+- **Physics:** Atoms emit at exact wavelengths — spectral fingerprints
+:::
 
-- area $\propto d^2$
-- so flux $\propto 1/d^2$
+::: {.fragment}
+**Key insight:** Color isn't decoration — it's encoded physics.
+:::
 
 ::: {.notes}
-Show diagram if available: `![](../images/inverse-square.png)`.
-
-If no diagram: do a quick “sphere surface area” gesture.
+24–25 min. Walk through each bullet. The fragments pace the reveal.
 :::
 
 ---
 
-## Think–Pair–Share 3 (the ambiguity)
+## Quick Check
 
-Two stars have the **same apparent brightness**.
+::: {.quiz}
+Why do nebulae glow at specific colors rather than all colors?
 
-- Star A: $d=10$ pc
-- Star B: $d=100$ pc
-
-Which has higher **luminosity**? By what factor?
+- [ ] Telescopes filter out other colors
+- [ ] Hot gas always glows red
+- [x] Each element emits light at specific wavelengths
+- [ ] The colors are added artificially
+:::
 
 ::: {.notes}
-42–47 min.
+25–26 min. Give 30 seconds. Press **C** to reveal.
 
-Expected: $L_B/L_A = (100/10)^2 = 100$.
-
-Key message: “Nearby & dim” can look identical to “far & brilliant.”
-
-Set up next lecture: we need comfort with powers of ten and ratios.
+Answer: C. Common error: thinking colors are artificially added (they're mapped, but the wavelengths are real).
 :::
 
 ---
 
-## Why we do “Math Boot Camp”
+## Spoiler 2: The Distance Ladder
 
-Astronomy uses numbers that are… ridiculous.
-
-Scientific notation and units are not busywork.
-
-They are **navigation tools**.
+{{< img cosmic-distance-ladder >}}
 
 ::: {.notes}
-47–50 min.
+26–28 min.
 
-Tone: reassuring, not threatening.
+**Measure:** Apparent brightness of "milepost" objects — Cepheids, supernovae.
 
-Promise: “By the end of Thursday, you’ll be able to do the ‘how many times bigger/farther’ questions confidently.”
+**Infer:** Distances far beyond geometry — out to billions of light-years.
+
+**Physics:** Inverse-square law. If you know luminosity and measure flux, you can calculate distance.
 :::
 
 ---
 
-## Course philosophy
+## Spoiler 2: The Inference
 
-This course rewards:
+::: {.incremental}
+- **Measure:** Apparent brightness of standard candles
+- **Infer:** Distances to billions of light-years
+- **Physics:** $F = L / 4\pi d^2$ — the inverse-square law
+:::
 
-- **process** (show your reasoning)
-- **growth** (iteration over time)
-- **productive struggle** (mistakes = data)
+::: {.fragment}
+**Key insight:** Distance is *inferred* from brightness.
+:::
 
 ::: {.notes}
-50–55 min.
-
-Keep it grounded: “Science is not a performance; it’s a method.”
-
-If you have specific policy language you want, we can embed it in `course/policies.qmd` and link.
+28–29 min. The inverse-square law will become a working tool in coming weeks.
 :::
 
 ---
 
-## Roadmap (bird’s-eye)
+## Spoiler 3: Origin of the Elements
 
-We’re building an inference engine, layer by layer:
-
-1. **Measurements & stellar properties**
-2. **Stellar evolution**
-3. **Star formation & the ISM**
-4. **Galaxies**
-5. **Cosmology**
+{{< img periodic-table-origins >}}
 
 ::: {.notes}
-55–62 min.
+29–31 min.
 
-Tell the story: “zoom out” arc.
+**Measure:** Spectral fingerprints + meteorite abundances.
 
-Avoid promising exact week ranges unless your schedule is finalized.
+**Infer:** Different cosmic events made different elements.
+
+**Physics:** Nuclear reactions require specific conditions and produce specific products.
 :::
 
 ---
 
-## Concept check
+## Spoiler 3: The Inference
 
-Which is **directly observable** for a distant star?
+::: {.incremental}
+- **Measure:** Element fingerprints in spectra
+- **Infer:** Periodic table = fossil record of astrophysical processes
+- **Physics:** Nuclear reactions have specific products
+:::
 
-A. Mass  
-B. Age  
-C. Apparent brightness  
-D. Luminosity  
-E. Distance
+::: {.fragment}
+**Key insight:** Stars don't just shine — they manufacture atoms.
+:::
 
 ::: {.notes}
-62–67 min.
-
-Answer: C.
-
-Debrief: observable vs inferred.
+31–32 min. "You are made of star-stuff" is not poetry — it's spectroscopy.
 :::
 
 ---
 
-## The one thing
+## Spoiler 4: The Power of Spectroscopy
 
-**Astronomers are inference engines.**
-
-We take limited data—position, brightness, spectrum—  
-and use physics to reconstruct reality.
+{{< img prism-spectrum >}}
 
 ::: {.notes}
-67–70 min.
+32–34 min. **CRITICAL SLIDE — deliver Script C:**
 
-Land the plane. Slow down.
-
-One-sentence closer: “The math is not the obstacle; it’s the microscope.”
+"This slide is one of the most important in the entire course. Spectroscopy is how astronomy stops being pictures and starts being physics. If one idea from today sticks, let it be this one."
 :::
 
 ---
 
-## Thursday: Math Boot Camp
+## Spoiler 4: The Quantum Barcode
 
-We’ll practice:
-
-- scientific notation
-- orders of magnitude
-- dimensional analysis
-- ratio reasoning
-- unit conversions (SI / CGS / astro units)
+{{< img quantum-barcode >}}
 
 ::: {.notes}
-70–75 min.
+34–36 min.
 
-Optional prep link for scale intuition (verbal only): “Powers of ten” interactive.
+**Measure:** Light spread into wavelengths.
 
-End with logistics + questions.
+**Infer:** Temperature (from shape), composition (from lines), motion (from shifts).
+
+**Physics:** Atoms have quantized energy levels. Electrons jumping between levels emit/absorb photons at exact energies.
+:::
+
+---
+
+## Spoiler 4: The Inference
+
+::: {.incremental}
+- **Measure:** Brightness as a function of wavelength
+- **Infer:** Temperature, composition, velocity
+- **Physics:** Quantized atomic energy levels → spectral fingerprints
+:::
+
+::: {.fragment}
+**Key insight:** A prism transforms one brightness into thousands of data points.
+:::
+
+::: {.notes}
+36–37 min. Spectroscopy is astronomy's most powerful tool.
+:::
+
+---
+
+## Think–Pair–Share
+
+**Why is spectroscopy the most powerful tool in astronomy?**
+
+::: {.incremental}
+1. **Think** (30 seconds): What does a spectrum reveal that a single brightness measurement cannot?
+2. **Pair** (90 seconds): Discuss with your neighbor
+3. **Share**: I'll call on a few pairs
+:::
+
+::: {.notes}
+37–40 min. Give full time for each phase. Expected answers: temperature, composition, motion, multiple data points instead of one.
+:::
+
+---
+
+## Spoiler 5: The EM Spectrum
+
+{{< img em-spectrum-temperature >}}
+
+::: {.notes}
+40–42 min.
+
+**Measure:** Photons across all wavelengths — radio to gamma.
+
+**Infer:** Different wavelengths = different temperatures = different physics.
+
+**Physics:** Hotter processes produce higher-energy (shorter-wavelength) photons.
+:::
+
+---
+
+## Spoiler 5: The Inference
+
+::: {.incremental}
+- **Measure:** Photons from radio to gamma rays
+- **Infer:** Different wavelengths probe different temperatures
+- **Physics:** Photon energy $\propto 1/\lambda$
+:::
+
+::: {.fragment}
+**Key insight:** The EM spectrum is a *temperature ladder*.
+:::
+
+---
+
+## Spoiler 6: Same Galaxy, Different Physics
+
+{{< img m51-optical-radio >}}
+
+::: {.notes}
+42–44 min.
+
+**Left (optical):** Stars and dust lanes.
+
+**Right (radio/21-cm):** Cold neutral hydrogen gas.
+
+Same object, completely different view. Wavelength choice reveals which physical component you see.
+:::
+
+---
+
+## Spoiler 7: Infrared Beats Dust
+
+{{< img pillars-hubble-jwst >}}
+
+::: {.notes}
+44–46 min.
+
+**Left (Hubble optical):** Dark, opaque pillars.
+
+**Right (JWST infrared):** Thousands of embedded newborn stars revealed.
+
+Dust absorbs visible light but is transparent to infrared. What you can't see at one wavelength might be brilliantly visible at another.
+:::
+
+---
+
+## Spoiler 8: Many Windows, One Truth
+
+{{< img crab-multiwavelength >}}
+
+::: {.notes}
+46–48 min.
+
+The Crab Nebula looks completely different at each wavelength:
+
+- **Radio:** Magnetic fields + relativistic electrons
+- **Infrared:** Warm dust
+- **Optical:** Ionized gas from 1054 CE supernova
+- **X-ray:** Hot plasma and pulsar jets
+
+Only by combining wavelengths do we understand the full system.
+:::
+
+---
+
+## Spoiler 9: The Dark Universe
+
+{{< img lsst-cosmic-treasure-chest >}}
+
+::: {.notes}
+48–50 min.
+
+**Measure:** Velocities via Doppler shifts. Light bending via lensing.
+
+**Infer:** Galaxies move too fast. Stars orbit too fast. There's ~6× more mass than we can see.
+
+**Physics:** Newton's gravity: $v^2 = GM/r$. Measure $v$ and $r$, solve for $M$. The extra mass is real.
+:::
+
+---
+
+## The Cosmic Web
+
+{{< img desi-3d-map >}}
+
+::: {.notes}
+50–51 min.
+
+Galaxies form filaments, walls, and voids — the cosmic web. This is dark matter's signature at the largest scales. And it's still evolving: gravity is still pulling structures together.
+:::
+
+---
+
+## Spoiler 10: Cosmic History
+
+{{< img universe-history-nasa >}}
+
+::: {.notes}
+51–53 min. **Include Script E:**
+
+**Measure:** Distances to supernovae + their redshifts.
+
+**Infer:** Universe is 13.8 billion years old. Expansion was slowing, then started *accelerating* ~5 billion years ago.
+
+**Physics:** Inverse-square law + Hubble's law.
+
+"This result was not predicted. The universe did something we didn't expect, and cosmology had to revise its models. That's not a failure of science — that's how science works."
+:::
+
+---
+
+## Spoiler 10: The Inference
+
+::: {.incremental}
+- **Measure:** Supernova brightness + redshift
+- **Infer:** Age = 13.8 Gyr; expansion is *accelerating*
+- **Physics:** Inverse-square law + Hubble's law
+:::
+
+::: {.fragment}
+**Key insight:** The method scales from the nearest star to the edge of the universe.
+:::
+
+---
+
+## {.center}
+
+::: {.r-fit-text}
+The Doppler Effect
+:::
+
+*Motion encoded in wavelength*
+
+---
+
+## Spectral Fingerprints Shift
+
+When a source moves toward you: wavelengths **compress** (blueshift).
+
+When a source moves away: wavelengths **stretch** (redshift).
+
+. . .
+
+The pattern stays the same — just shifted.
+
+::: {.notes}
+53–55 min. **EXACT SCRIPT — deliver Script D:**
+
+"The Doppler effect is hard. Many students try to avoid it. Don't. This single idea powers huge parts of astronomy — dark matter, galaxy motion, and the expansion of the universe. You do not need to understand it today. You do need to recognize that it matters."
+:::
+
+---
+
+## Where Doppler Appears Later
+
+::: {.incremental}
+- **Galaxy rotation curves** → evidence for dark matter
+- **Cosmic expansion** → galaxies receding
+- **Exoplanet detection** → stars wobbling from planetary tugs
+- **Binary stars** → measuring masses
+:::
+
+::: {.fragment}
+One idea. Many applications.
+:::
+
+::: {.notes}
+55–56 min. Quick preview — we'll return to each in detail.
+:::
+
+---
+
+## {.center}
+
+::: {.r-fit-text}
+Light: The Cosmic Messenger
+:::
+
+---
+
+## The Speed of Light
+
+$$c = 3 \times 10^{10} \text{ cm/s}$$
+
+::: {.incremental}
+- Fast enough to circle Earth 7.5× per second
+- But **finite** — light takes time to travel
+:::
+
+::: {.notes}
+56–57 min. Emphasize: fast but finite. That finiteness has consequences.
+:::
+
+---
+
+## Lookback Time
+
+{{< img universe-time-machine >}}
+
+::: {.notes}
+57–59 min.
+
+- Sun: 8.3 minutes ago
+- Andromeda: 2.5 million years ago
+- Distant galaxies: billions of years ago
+
+Distance is a time dial. Looking far away means looking into the past.
+:::
+
+---
+
+## Light as a Wave
+
+$$c = \lambda \nu$$
+
+::: {.incremental}
+- $c$ = speed of light (constant)
+- $\lambda$ = wavelength
+- $\nu$ = frequency
+:::
+
+::: {.fragment}
+Longer wavelength ↔ lower frequency
+
+Shorter wavelength ↔ higher frequency
+:::
+
+::: {.notes}
+59–61 min. **EXACT SCRIPT — deliver Script B:**
+
+"When you see equations today, I'm not asking you to use them yet. Some equations are here just to show relationships. Others become tools later. Today, you're just learning what exists — not how to wield it."
+:::
+
+---
+
+## EM Spectrum as a Map
+
+| Wavelength | Energy | Typical Source |
+|------------|--------|----------------|
+| Radio (m) | Low | Cold gas |
+| Infrared (μm) | ↓ | Dust, cool stars |
+| Visible (nm) | ↓ | Stellar surfaces |
+| X-ray (nm) | High | Million-K plasma |
+
+::: {.fragment}
+**Key insight:** Wavelength tells you about temperature.
+:::
+
+::: {.notes}
+61–62 min. Quick reference. Different wavelengths = different temperature regimes.
+:::
+
+---
+
+## {.center}
+
+::: {.r-fit-text}
+Closing
+:::
+
+---
+
+## The Pattern
+
+::: {.incremental}
+1. **Measure** — brightness, position, wavelength, timing
+2. **Model** — apply physical relationships
+3. **Infer** — quantities we can't directly access
+4. **Test** — predictions vs. new observations
+:::
+
+::: {.fragment}
+When tests fail, we revise. That's science.
+:::
+
+::: {.notes}
+62–63 min. Recap the core framework.
+:::
+
+---
+
+## What to Remember Today
+
+If this felt overwhelming at moments, **that's a sign this worked**.
+
+. . .
+
+::: {.fragment}
+You are not expected to remember details yet.
+
+You are expected to **recognize ideas** when we return to them.
+:::
+
+::: {.fragment}
+By the end of the semester, you'll be able to say these things with confidence.
+:::
+
+::: {.notes}
+63–65 min. **EXACT SCRIPT — deliver Script F:**
+
+"If this felt overwhelming at moments, that's a sign this worked. You are not expected to remember details yet. You are expected to recognize ideas when we return to them — and by the end of the semester, you'll be able to say these things with confidence."
+
+Slow down here. This is the emotional close.
+:::
+
+---
+
+## Quick Check (Final)
+
+::: {.quiz}
+A news headline says: "Scientists measure the temperature of a distant star."
+
+What did they actually *measure*?
+
+- [ ] The star's temperature directly
+- [x] The star's spectrum or color
+- [ ] The star's mass
+- [ ] The star's age
+:::
+
+::: {.notes}
+65–66 min. Give 30 seconds. Press **C** to reveal.
+
+Answer: B. Temperature is *inferred* from spectrum, not directly measured.
+:::
+
+---
+
+## Looking Ahead
+
+**Thursday: Math Boot Camp**
+
+::: {.incremental}
+- Scientific notation
+- Orders of magnitude
+- Dimensional analysis
+- Ratio reasoning
+:::
+
+::: {.fragment}
+The math is not the obstacle — it's the microscope.
+:::
+
+::: {.notes}
+66–68 min. Build anticipation for next session. Connect to today's theme.
 :::
 
 ---
@@ -434,5 +826,5 @@ End with logistics + questions.
 ## Questions?
 
 ::: {.notes}
-Leave space. Invite questions about course structure *and* the big picture.
+68–70 min. Leave space for genuine questions about the big picture.
 :::

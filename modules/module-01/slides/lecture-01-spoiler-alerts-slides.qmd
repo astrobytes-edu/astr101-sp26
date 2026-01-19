@@ -1,0 +1,726 @@
+---
+title: "Lecture 1: Spoiler Alerts"
+subtitle: "The Universe Is Weird — How Do We Know?"
+author: "Dr. Anna Rosen"
+date: "2026-01-20"
+description: "A trailer for the semester: how astronomers turn photons into physical claims."
+draft: false
+
+format:
+  revealjs:
+    footer: "ASTR 201 • Lecture 1 • Dr. Anna Rosen"
+    chalkboard: true
+
+revealjs-plugins:
+  - pointer
+  - spotlight
+  - attribution
+  - quiz
+
+filters:
+  - roughnotation
+
+execute:
+  echo: false
+  warning: false
+  message: false
+---
+
+## {background-image="/assets/images/common/noirlab-nightsky-mosaic.jpg" background-opacity="0.6"}
+
+::: {.r-fit-text}
+What do you see?
+:::
+
+::: {.notes}
+0–1 min. **Let this sit for 5 seconds in silence.**
+
+Don't answer. Just let students look. They're thinking "stars, maybe the Milky Way."
+
+Then advance to the video.
+:::
+
+---
+
+## {background-color="black"}
+
+{{< video https://youtu.be/Gitit3LwQ20 width="100%" height="100%" >}}
+
+::: {.notes}
+1–3 min. **Play video without introduction.**
+
+Made from over 1,100 images captured by NSF-DOE Vera C. Rubin Observatory. Begins with two galaxies, zooms out to reveal 10 million galaxies—roughly 0.05% of the 20 billion Rubin will capture.
+
+**After video (THE REVEAL):** "Those aren't stars. Those are *galaxies*. Every single point of light is a galaxy—each one containing hundreds of billions of stars. And we're going to learn how to read them."
+:::
+
+---
+
+## {background-image="/assets/images/common/eso-milky-way-panoramic.jpg" background-opacity="0.3"}
+
+> "The cosmos is within us. We are made of star-stuff."
+>
+> — Carl Sagan
+
+::: {.fragment}
+This course is about **how we know that**.
+:::
+
+::: {.notes}
+3–4 min. Let the quote land. Pause.
+
+The iron in your blood was forged in a star. The calcium in your bones came from a different dying star. You are literally made of stellar debris.
+
+**Transition:** "We'll come back to this—Spoiler 3 will show you exactly where every element came from. For now, the question is: how do we *know* any of this?"
+:::
+
+---
+
+## {background-color="black"}
+
+{{< img three-big-questions >}}
+
+::: {.notes}
+1–2 min. Three questions drive modern astronomy—and we answer all of them the same way: inference from signals.
+:::
+
+---
+
+## {background-image="/assets/images/common/eso-milky-way-panoramic.jpg" background-opacity="0.3"}
+
+::: {.r-fit-text}
+This Is a Trailer
+:::
+
+**Recognition, not mastery.**
+
+::: {.notes}
+2–3 min. **EXACT SCRIPT:**
+
+"This reading — and this lecture — are a trailer, not the movie. You're going to see big ideas before you know how they work. That's intentional. Your job today is recognition, not mastery. We will come back to everything slowly, with tools in hand."
+:::
+
+---
+
+## {background-image="/assets/images/common/milky-way-panoramic.jpg" background-opacity="0.2"}
+
+::: {.r-fit-text}
+Pretty pictures → measurements → models → inferences
+:::
+
+::: {.fragment}
+Every gorgeous image is a **dataset**.
+
+The job is to **decode** it using physics.
+:::
+
+::: {.notes}
+3–4 min. This is the thesis of the course.
+:::
+
+---
+
+## {background-color="black"}
+
+{{< img four-observables >}}
+
+::: {.notes}
+4–6 min.
+
+From billions of kilometers away, we can directly measure only **four things**:
+
+1. **Brightness** — energy arriving at detector
+2. **Position** — where on the sky (and changes)
+3. **Wavelength** — which "colors" are present
+4. **Timing** — when things change
+
+**Everything else—mass, temperature, distance, age—is a calculation.**
+:::
+
+---
+
+## {background-color="black"}
+
+:::: {.columns}
+::: {.column width="50%"}
+{{< img four-observables >}}
+:::
+::: {.column width="50%"}
+**What's NOT Directly Measurable:**
+
+| Property | Inferred From |
+|----------|---------------|
+| Temperature | Spectrum |
+| Distance | Parallax/brightness |
+| Mass | Orbital motion |
+| Age | Models |
+:::
+::::
+
+::: {.notes}
+6–7 min. The gap between "what we measure" and "what we want to know" is where physics lives.
+:::
+
+---
+
+## Quick Check {background-color="#1a1a2e"}
+
+::: {.quiz}
+Which can astronomers *directly* measure for a distant star?
+
+- [ ] Temperature
+- [x] Apparent brightness
+- [ ] Mass
+- [ ] Age
+:::
+
+::: {.notes}
+7–8 min. Give 30 seconds. Answer: apparent brightness.
+:::
+
+---
+
+## {background-color="black"}
+
+{{< video https://youtu.be/1JPDN8qoRjs width="100%" height="100%" >}}
+
+::: {.notes}
+8–9 min. **HR Diagram construction from Omega Centauri.**
+
+Watch what happens when astronomers sort stars by two observables: brightness and color. A pattern emerges.
+
+The Hertzsprung-Russell diagram is one of astronomy's greatest tools—and it's built entirely from *things we can measure*. No magic. Just careful observation and pattern recognition.
+
+**Key message:** Astronomers are pattern hunters. Sort the data, find the structure, discover the physics.
+:::
+
+---
+
+## {background-image="/assets/images/module-01/lsst-cosmic-treasure-chest-zoom.jpg" background-opacity="0.3"}
+
+::: {.r-fit-text}
+The Spoiler Reel
+:::
+
+For each image: **Measure → Infer → Physics**
+
+::: {.notes}
+9–10 min. You're not expected to understand yet. That's what the semester is for.
+:::
+
+---
+
+## Spoiler 1: Nebulae {background-color="black"}
+
+{{< img forensic-nebula >}}
+
+::: {.notes}
+10–12 min.
+
+**Measure:** Colors at specific wavelengths—red at 656 nm, blue-green at 500 nm.
+
+**Infer:** Red = hydrogen, blue-green = oxygen, dark lanes = dust.
+
+**Physics:** Atoms emit at specific wavelengths. Each element has a unique fingerprint.
+
+**Key insight:** Color isn't decoration—it's encoded physics.
+:::
+
+---
+
+## {background-color="black"}
+
+{{< video https://youtu.be/MIJfPOGnDFg width="100%" height="100%" >}}
+
+::: {.notes}
+11–13 min. **Trifid and Lagoon Nebulae from Rubin Observatory.**
+
+Made from 678 exposures in just over seven hours. Point out:
+
+- **Rich reds and pinks** = hydrogen-alpha emission (656 nm) — active star formation
+- **Blue and turquoise** = reflected starlight and glowing oxygen ([OIII], 495–501 nm)
+- **Dark lanes and golden clouds** = dense dust absorbing visible light
+
+This is exactly what we just discussed: color = physics.
+:::
+
+---
+
+## Quick Check {background-color="#1a1a2e"}
+
+::: {.quiz}
+Why do nebulae glow at *specific* colors?
+
+- [ ] Telescopes filter other colors
+- [x] Each element emits at specific wavelengths
+- [ ] Hot gas always glows red
+- [ ] Colors are added artificially
+:::
+
+::: {.notes}
+11–12 min.
+:::
+
+---
+
+## Spoiler 2: The Distance Ladder {background-color="black"}
+
+{{< img cosmic-distance-ladder >}}
+
+::: {.notes}
+12–14 min.
+
+**Measure:** Apparent brightness of "standard candles."
+
+**Infer:** Distances to billions of light-years.
+
+**Physics:** Inverse-square law: $F = L / 4\pi d^2$.
+
+**Key insight:** Distance is inferred from brightness.
+:::
+
+---
+
+## {background-color="black"}
+
+{{< img standard-candles >}}
+
+::: {.notes}
+14–15 min.
+
+Cepheids pulse with period related to luminosity.
+Type Ia supernovae have consistent peak brightness.
+
+Measure flux + know luminosity → calculate distance.
+:::
+
+---
+
+## {background-color="black"}
+
+{{< video https://youtu.be/eS6FXc350Bs width="100%" height="100%" >}}
+
+::: {.notes}
+15–17 min. **46 pulsating RR Lyrae stars from Rubin Observatory.**
+
+Watch the stars pulse. RR Lyrae are **standard candles** — their pulsation period tells us their intrinsic luminosity.
+
+Over the next 10 years, Rubin will detect up to 100,000 of these stars extending more than a million light-years away, mapping the outer reaches of our Galaxy.
+
+**This is the cosmic distance ladder in action.** Measure how bright they appear, know how bright they are, calculate how far.
+:::
+
+---
+
+## Spoiler 3: Origin of the Elements {background-color="black"}
+
+{{< img periodic-table-origins >}}
+
+::: {.notes}
+15–17 min.
+
+**Measure:** Spectral fingerprints.
+
+**Infer:** The periodic table is a fossil record of cosmic processes.
+
+**Physics:** Nuclear reactions have specific products.
+
+**Key insight:** Stars don't just shine—they manufacture atoms. You are starstuff.
+:::
+
+---
+
+## Spoiler 4: Spectroscopy {background-color="black"}
+
+{{< img prism-spectrum >}}
+
+::: {.notes}
+17–19 min.
+
+**CRITICAL SLIDE — EXACT SCRIPT:**
+
+"This slide is one of the most important in the entire course. Spectroscopy is how astronomy stops being pictures and starts being physics. If one idea from today sticks, let it be this one."
+:::
+
+---
+
+## {background-color="black"}
+
+{{< img quantum-barcode >}}
+
+::: {.notes}
+19–21 min.
+
+**Measure:** Brightness vs. wavelength.
+
+**Infer:** Temperature, composition, velocity.
+
+**Physics:** Atoms have quantized energy levels. Electron jumps → photons at exact wavelengths.
+
+A prism transforms one brightness into thousands of data points.
+:::
+
+---
+
+## Think–Pair–Share {background-image="/assets/images/module-01/prism-spectrum-nblm.png" background-opacity="0.15"}
+
+**Why is spectroscopy the most powerful tool in astronomy?**
+
+::: {.incremental}
+1. **Think** (30 s): What does a spectrum reveal that brightness alone cannot?
+2. **Pair** (90 s): Discuss with neighbor
+3. **Share**: I'll call on pairs
+:::
+
+::: {.notes}
+21–24 min. Expected answers: reveals temperature, composition, velocity; transforms one measurement into thousands of data points.
+:::
+
+---
+
+## Spoiler 5: The EM Spectrum {background-color="black"}
+
+{{< img em-spectrum-temperature >}}
+
+::: {.notes}
+24–26 min.
+
+**Measure:** Photons across all wavelengths.
+
+**Infer:** Different wavelengths = different temperatures.
+
+**Physics:** Hotter → shorter wavelength.
+
+**Key insight:** The EM spectrum is a temperature ladder.
+:::
+
+---
+
+## Spoiler 6: Same Galaxy, Different Physics {background-color="black"}
+
+{{< img m51-optical-radio >}}
+
+::: {.notes}
+26–28 min.
+
+Left (optical): Stars and dust lanes.
+Right (radio/21-cm): Cold neutral hydrogen gas.
+
+**Key insight:** Same object + different wavelength = different component visible.
+:::
+
+---
+
+## Spoiler 7: Infrared Beats Dust {background-color="black"}
+
+{{< img pillars-hubble-jwst >}}
+
+::: {.notes}
+28–30 min.
+
+Left (Hubble optical): Dark, opaque pillars.
+Right (JWST infrared): Thousands of hidden newborn stars.
+
+**Key insight:** What you can't see at one wavelength might be brilliant at another.
+:::
+
+---
+
+## Spoiler 8: Many Windows, One Truth {background-color="black"}
+
+{{< img crab-multiwavelength >}}
+
+::: {.notes}
+30–32 min.
+
+- Radio = magnetic fields
+- Infrared = warm dust
+- Optical = ionized gas from 1054 CE supernova
+- X-ray = hot plasma and pulsar jets
+
+**Key insight:** Only by combining wavelengths do we understand complex systems.
+:::
+
+---
+
+## Spoiler 9: The Dark Universe {background-color="black"}
+
+{{< img lsst-cosmic-treasure-chest >}}
+
+::: {.notes}
+32–34 min.
+
+**Measure:** Velocities via Doppler shifts.
+
+**Infer:** Galaxies rotate too fast. ~6× more mass than we can see.
+
+**Physics:** $v^2 = GM/r$. Measure $v$ and $r$, solve for $M$.
+
+**Key insight:** We don't know what most of the universe is made of.
+:::
+
+---
+
+## The Cosmic Web {background-color="black"}
+
+{{< img desi-3d-map >}}
+
+::: {.notes}
+34–36 min.
+
+Galaxies form filaments, walls, voids—the cosmic web.
+
+Dark matter's signature at the largest scales. And it's still evolving: gravity is still pulling structures together.
+:::
+
+---
+
+## {background-image="/assets/images/module-01/DESI-Universe-3D-Map.jpg" background-opacity="0.3"}
+
+::: {.r-fit-text}
+5% atoms • 27% dark matter • 68% dark energy
+:::
+
+Only 5% is stuff we understand.
+
+::: {.notes}
+36–37 min. The cosmic recipe.
+:::
+
+---
+
+## Spoiler 10: Cosmic History {background-color="black"}
+
+{{< img universe-history-nasa >}}
+
+::: {.notes}
+37–40 min.
+
+**Measure:** Supernova brightness + redshift.
+
+**Infer:** Universe is 13.8 Gyr old. Expansion is accelerating.
+
+**EXACT SCRIPT:**
+
+"This result was not predicted. The universe did something we didn't expect, and cosmology had to revise its models. That's not a failure of science — that's how science works."
+:::
+
+---
+
+## {background-image="/assets/images/module-01/universe-history-nasa.png" background-opacity="0.2"}
+
+::: {.r-fit-text}
+Connecting the Dots
+:::
+
+*One idea powers multiple spoilers*
+
+::: {.notes}
+40–41 min. **SYNTHESIS MOMENT**
+
+"You just saw the Doppler effect show up in Spoiler 9 (dark matter) and Spoiler 10 (expansion). Let's make that connection explicit."
+:::
+
+---
+
+## {background-color="black"}
+
+:::: {.columns}
+::: {.column width="60%"}
+{{< img quantum-barcode >}}
+:::
+::: {.column width="40%"}
+**Toward you →** wavelengths compress (blueshift)
+
+**Away from you →** wavelengths stretch (redshift)
+
+The fingerprint stays the same — just shifted.
+:::
+::::
+
+::: {.notes}
+41–43 min. **EXACT SCRIPT:**
+
+"The Doppler effect is hard. Many students try to avoid it. Don't. This single idea powers huge parts of astronomy — dark matter, galaxy motion, and the expansion of the universe. You do not need to understand it today. You do need to recognize that it matters."
+:::
+
+---
+
+## {background-image="/assets/images/module-01/DESI-Universe-3D-Map.jpg" background-opacity="0.2"}
+
+**Where Doppler Appears:**
+
+::: {.incremental}
+- Galaxy rotation curves → **dark matter**
+- Cosmic expansion → **accelerating universe**
+- Star wobbles → **exoplanets**
+- Binary stars → **masses**
+:::
+
+::: {.fragment}
+One idea. Many applications.
+:::
+
+::: {.notes}
+43–44 min.
+:::
+
+---
+
+## {background-color="black"}
+
+{{< img universe-time-machine >}}
+
+::: {.notes}
+44–46 min. **LOOKBACK TIME**
+
+- Sun: 8.3 minutes ago
+- Andromeda: 2.5 million years ago
+- Distant galaxies: billions of years ago
+
+**Distance is a time dial.** Looking far away means looking into the past.
+:::
+
+---
+
+## {background-image="/assets/images/module-01/em-spectrum-nblm.png" background-opacity="0.2"}
+
+$$c = \lambda \nu$$
+
+::: {.incremental}
+- $c$ = speed of light (constant)
+- $\lambda$ = wavelength
+- $\nu$ = frequency
+:::
+
+::: {.notes}
+46–48 min. **EXACT SCRIPT:**
+
+"When you see equations today, I'm not asking you to use them yet. Some equations are here just to show relationships. Others become tools later. Today, you're just learning what exists — not how to wield it."
+
+**Orientation note (for reference):** Units check: wavelength (cm) × frequency (1/s) = cm/s = speed ✓. Longer wavelength ↔ lower frequency (inverse relationship). We'll scaffold this fully in the Light & Spectra lectures.
+:::
+
+---
+
+## {background-image="/assets/images/module-01/em-spectrum-nblm.png" background-opacity="0.2"}
+
+$$E = h\nu = \frac{hc}{\lambda}$$
+
+::: {.incremental}
+- $E$ = photon energy
+- $h$ = Planck's constant (quantum physics!)
+- Shorter $\lambda$ → higher $\nu$ → **higher energy**
+:::
+
+::: {.fragment}
+**X-rays probe million-degree plasma. Radio probes cold gas.**
+:::
+
+::: {.notes}
+48–49 min. **THE PUNCHLINE:**
+
+This is why different wavelengths reveal different physics. It takes hot, violent processes to produce high-energy (short-wavelength) photons.
+
+- Radio photons: cold gas, magnetic fields
+- Visible photons: stellar surfaces (~5000 K)
+- X-ray photons: million-degree plasma, black hole accretion
+
+**Key insight:** The EM spectrum isn't arbitrary—it's a temperature/energy ladder organized by physics.
+:::
+
+---
+
+## The Decoder Ring {background-color="black"}
+
+{{< img decoder-ring >}}
+
+::: {.notes}
+49–51 min.
+
+Signal → Measurement → Model → Inference → Correction
+
+When tests fail, we revise models. **That's science.**
+:::
+
+---
+
+## {background-color="black"}
+
+{{< img answering-big-questions >}}
+
+::: {.notes}
+50–52 min. The tools we'll learn answer humanity's biggest questions:
+
+- Distance measurements give the universe's age
+- Spectroscopy proves our stellar origins
+- Atmospheric analysis searches for life
+:::
+
+---
+
+## {background-image="/assets/images/common/eso-milky-way-panoramic.jpg" background-opacity="0.25"}
+
+::: {.r-fit-text}
+Recognition, not retention.
+:::
+
+You are not expected to remember details yet.
+
+You are expected to **recognize ideas** when we return.
+
+::: {.notes}
+52–54 min. **EXACT SCRIPT:**
+
+"If this felt overwhelming at moments, that's a sign this worked. You are not expected to remember details yet. You are expected to recognize ideas when we return to them — and by the end of the semester, you'll be able to say these things with confidence."
+:::
+
+---
+
+## Quick Check {background-color="#1a1a2e"}
+
+::: {.quiz}
+A headline says: "Scientists measure the temperature of a distant star."
+
+What did they actually *measure*?
+
+- [ ] Temperature directly
+- [x] Spectrum or color
+- [ ] Mass
+- [ ] Age
+:::
+
+::: {.notes}
+54–55 min.
+:::
+
+---
+
+## {background-image="/assets/images/module-01/math-toolbox-nblm.png" background-opacity="0.2"}
+
+**Thursday: Math Boot Camp**
+
+::: {.incremental}
+- Scientific notation
+- Orders of magnitude
+- Dimensional analysis
+- Ratio reasoning
+:::
+
+::: {.fragment}
+::: {.r-fit-text}
+The math is not the obstacle — it's the microscope.
+:::
+:::
+
+---
+
+## {background-image="/assets/images/common/noirlab-nightsky-mosaic.jpg" background-opacity="0.4"}
+
+::: {.r-fit-text}
+Questions?
+:::
+
+::: {.notes}
+Leave time for questions about the big picture.
+:::
