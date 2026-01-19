@@ -1,0 +1,29 @@
+# Media Registry — Single Source of Truth for videos/embeds
+# Usage (slides): {{< media id >}}
+#
+# Fields:
+#   url: canonical URL (YouTube/Vimeo/local file)
+#   caption: optional short description (not necessarily displayed)
+#   credit: REQUIRED (use "TBD" if unknown; empty allowed)
+
+media:
+  rubin-zoomout-galaxies:
+    url: "https://youtu.be/Gitit3LwQ20"
+    caption: "Rubin Observatory zoom-out: galaxies revealed at scale"
+    credit: "NSF-DOE Vera C. Rubin Observatory"
+
+  hr-diagram-omega-centauri:
+    url: "https://youtu.be/1JPDN8qoRjs"
+    caption: "HR diagram construction from Omega Centauri"
+    credit: "TBD"
+
+  trifid-lagoon-rubin:
+    url: "https://youtu.be/MIJfPOGnDFg"
+    caption: "Trifid and Lagoon Nebulae (Rubin Observatory)"
+    credit: "NSF-DOE Vera C. Rubin Observatory"
+
+  rr-lyrae-rubin:
+    url: "https://youtu.be/eS6FXc350Bs"
+    caption: "RR Lyrae stars (Rubin Observatory)"
+    credit: "NSF-DOE Vera C. Rubin Observatory"
+

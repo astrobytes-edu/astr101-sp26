@@ -104,6 +104,8 @@ Use spotlight for *sustained* attention (walking through details) and pointer fo
 
 Adds attribution text along the slide edge—perfect for crediting astronomy images without cluttering the slide.
 
+**Note:** In this repo we prefer **registry-based on-slide credits** for media (`assets/media.yml` + `{{< media ... >}}`) and slide images (`assets/figures.yml` + `{{< img ... >}}`). The attribution plugin is optional and not required for credits to appear.
+
 ### Usage
 
 Add `data-attribution` to images or slides:

@@ -1,8 +1,8 @@
 // =============================================================================
 // ASTR 201 RevealJS Theme
 // =============================================================================
-// Tailwind-style utility classes for slides
-// See README.md for quick reference
+// Slide design system: safe defaults + utilities + layout primitives
+// Contract + usage guide: assets/theme/slides/README.md
 
 /*-- scss:defaults --*/
 
@@ -11,7 +11,11 @@
 /*-- scss:rules --*/
 
 @import 'base';
+@import 'reveal-safety';
+@import 'readability';
 @import 'typography';
 @import 'colors';
 @import 'layout';
+@import 'images';
+@import 'layouts';
 @import 'callouts';

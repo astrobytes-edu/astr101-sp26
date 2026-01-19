@@ -2,23 +2,6 @@
 // CALLOUTS & EQUATION GLOSS — Modern minimal styling for slides
 // =============================================================================
 
-// --- Global slide typography + spacing tweaks (subtle) ---
-.reveal {
-  line-height: 1.25;
-}
-
-.reveal section {
-  // Slightly reduce default bottom margins on paragraphs/lists
-  p { margin: 0.4rem 0 0.7rem 0; }
-  ul, ol { margin: 0.4rem 0 0.8rem 1.2rem; }
-  li { margin: 0.18rem 0; }
-}
-
-// Make math blocks a touch tighter on slides
-.reveal .math.display {
-  margin: 0.7rem 0;
-}
-
 // --- Callout polish: consistent width + compact padding ---
 .reveal .callout {
   border-radius: 14px;
@@ -66,55 +49,4 @@
 
 .reveal .eq-gloss li {
   margin: 0.12rem 0;
-}
-
-// --- Two-column alignment helper: reduce awkward vertical gaps ---
-.reveal .columns {
-  gap: 1.0rem;
-  align-items: start;
-}
-
-// --- Incremental reveals: slightly softer entrance ---
-.reveal .slides section .fragment {
-  opacity: 0.18;
-}
-.reveal .slides section .fragment.visible {
-  opacity: 1;
-}
-
-// --- Optional: "compact" variant for dense slides ---
-// Add .compact to a slide:
-//
-// ## Title {.compact}
-//
-.reveal section.compact {
-  font-size: 0.92em;
-}
-.reveal section.compact .math.display {
-  margin: 0.55rem 0;
-}
-.reveal section.compact .callout {
-  padding: 0.6rem 0.8rem;
-  margin: 0.55rem 0;
-}
-
-// --- Equation Index grid (for course-info/equations.qmd) ---
-.eq-index {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1rem;
-}
-
-.eq-index-item {
-  border-radius: 14px;
-  padding: 0.9rem 1.0rem;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
-}
-
-.eq-index-title a {
-  text-decoration: none;
-}
-
-.eq-index-gloss p {
-  line-height: 1.2;
 }

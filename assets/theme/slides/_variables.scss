@@ -64,6 +64,13 @@ $space-2: 1rem;
 $space-4: 2rem;
 
 // -----------------------------------------------------------------------------
+// Breakpoints (Slide-specific)
+// -----------------------------------------------------------------------------
+// NOTE: RevealJS uses a fixed canvas with scaling; these are viewport-based
+// fallbacks for narrow displays and print/PDF rendering.
+$bp-narrow: 900px;
+
+// -----------------------------------------------------------------------------
 // Background Colors (Derived from bridge colors)
 // -----------------------------------------------------------------------------
 $bg-highlight: rgba($highlight-color, 0.15);

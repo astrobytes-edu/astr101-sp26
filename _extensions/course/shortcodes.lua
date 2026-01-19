@@ -94,6 +94,23 @@ end
 -- Figure shortcode - renders figures from central registry
 -- ==============================================================
 
+local function normalize_yaml_value(value)
+  if not value then return value end
+  value = value:gsub("^%s+", ""):gsub("%s+$", "")
+
+  -- Quoted strings: capture content up to closing quote, ignore trailing comments.
+  local dq = value:match('^"([^"]*)"')
+  if dq ~= nil then return dq end
+
+  local sq = value:match("^'([^']*)'")
+  if sq ~= nil then return sq end
+
+  -- Unquoted: strip inline comments.
+  value = value:gsub("%s+#.*$", "")
+  value = value:gsub("^%s+", ""):gsub("%s+$", "")
+  return value
+end
+
 -- Helper function to parse figure data from YAML file
 local function load_figure_registry()
   local registry = {}
@@ -129,10 +146,7 @@ local function load_figure_registry()
         -- Parse properties (four spaces + key: value)
         local key, value = line:match("^    ([%w%-_]+):%s*(.+)$")
         if key and value then
-          -- Remove quotes if present
-          value = value:gsub('^"(.-)"$', "%1")
-          value = value:gsub("^'(.-)'$", "%1")
-          registry[current_fig][key] = value
+          registry[current_fig][key] = normalize_yaml_value(value)
         end
       end
     end
@@ -148,6 +162,87 @@ local function get_figure_registry()
     _figure_registry = load_figure_registry()
   end
   return _figure_registry
+end
+
+-- ==============================================================
+-- Media registry - videos/embeds (for slides)
+-- ==============================================================
+
+-- Helper function to parse media data from YAML file
+local function load_media_registry()
+  local registry = {}
+
+  local project_dir = os.getenv("QUARTO_PROJECT_DIR") or "."
+  local registry_path = project_dir .. "/assets/media.yml"
+
+  local f = io.open(registry_path, "r")
+  if not f then
+    f = io.open("assets/media.yml", "r")
+  end
+  if not f then
+    return registry
+  end
+
+  local content = f:read("*all")
+  f:close()
+
+  local in_media = false
+  local current_id = nil
+
+  for line in content:gmatch("[^\n]+") do
+    if not line:match("^%s*#") and not line:match("^%s*$") then
+      if line:match("^media:%s*$") then
+        in_media = true
+        current_id = nil
+      elseif in_media then
+        local media_id = line:match("^  ([%w%-_]+):%s*$")
+        if media_id then
+          current_id = media_id
+          registry[current_id] = {}
+        elseif current_id then
+          local key, value = line:match("^    ([%w%-_]+):%s*(.+)$")
+          if key and value then
+            registry[current_id][key] = normalize_yaml_value(value)
+          end
+        end
+      end
+    end
+  end
+
+  return registry
+end
+
+local _media_registry = nil
+local function get_media_registry()
+  if not _media_registry then
+    _media_registry = load_media_registry()
+  end
+  return _media_registry
+end
+
+local function escape_html(s)
+  if not s then return "" end
+  s = tostring(s)
+  s = s:gsub("&", "&amp;")
+  s = s:gsub("<", "&lt;")
+  s = s:gsub(">", "&gt;")
+  s = s:gsub('"', "&quot;")
+  return s
+end
+
+local function extract_youtube_id(url)
+  if not url or url == "" then return nil end
+
+  local id = url:match("youtu%.be/([%w%-%_]+)")
+  if id then return id end
+
+  id = url:match("youtube%.com/embed/([%w%-%_]+)")
+  if id then return id end
+
+  id = url:match("[?&]v=([%w%-%_]+)")
+  if id then return id end
+
+  return nil
 end
 
 -- {{< fig id >}} or {{< fig id caption="Custom caption" >}}
@@ -184,7 +279,7 @@ function fig(args, kwargs)
 
   -- Build full caption with credit if present
   local full_caption = caption
-  if credit then
+  if credit and credit ~= "" then
     full_caption = full_caption .. " (Credit: " .. credit .. ")"
   end
 
@@ -273,6 +368,7 @@ function img(args, kwargs)
   -- Get figure properties
   local path = fig_data.path or ""
   local alt = fig_data.alt or fig_data.caption or ""
+  local credit = fig_data.credit or ""
 
   -- Build attributes from kwargs
   local classes = {}
@@ -329,15 +425,136 @@ function img(args, kwargs)
         t, r, b, l
       )
 
-      local img_with_style = pandoc.Image({pandoc.Str(alt)}, path, "",
-        pandoc.Attr("", classes, {style = img_style}))
+      local class_attr = ""
+      if #classes > 0 then
+        class_attr = string.format(' class="%s"', escape_html(table.concat(classes, " ")))
+      end
+
+      local width_attr = ""
+      if attrs["width"] then
+        width_attr = string.format(' width="%s"', escape_html(attrs["width"]))
+      end
+
+      local height_attr = ""
+      if attrs["height"] then
+        height_attr = string.format(' height="%s"', escape_html(attrs["height"]))
+      end
+
+      if credit and credit ~= "" then
+        local html = string.format([[
+<div class="media-block media-image">
+  <img src="%s" alt="%s"%s%s%s style="%s">
+  <div class="media-credit">Credit: %s</div>
+</div>
+]], escape_html(path), escape_html(alt), class_attr, width_attr, height_attr, escape_html(img_style), escape_html(credit))
+        return pandoc.RawBlock("html", html)
+      end
+
+      local img_with_style = pandoc.Image({pandoc.Str(alt)}, path, "", pandoc.Attr("", classes, {style = img_style}))
       return img_with_style
     end
   end
 
   -- No trim, return plain image
+  if credit and credit ~= "" then
+    local class_attr = ""
+    if #classes > 0 then
+      class_attr = string.format(' class="%s"', escape_html(table.concat(classes, " ")))
+    end
+
+    local width_attr = ""
+    if attrs["width"] then
+      width_attr = string.format(' width="%s"', escape_html(attrs["width"]))
+    end
+
+    local height_attr = ""
+    if attrs["height"] then
+      height_attr = string.format(' height="%s"', escape_html(attrs["height"]))
+    end
+
+    local html = string.format([[
+<div class="media-block media-image">
+  <img src="%s" alt="%s"%s%s%s>
+  <div class="media-credit">Credit: %s</div>
+</div>
+]], escape_html(path), escape_html(alt), class_attr, width_attr, height_attr, escape_html(credit))
+    return pandoc.RawBlock("html", html)
+  end
+
   local img_elem = pandoc.Image({pandoc.Str(alt)}, path, "", pandoc.Attr("", classes, attrs))
   return img_elem
+end
+
+-- {{< media id >}} - renders media from registry WITH credit (for slides)
+-- Optional kwargs: width, height, class
+function media(args, kwargs)
+  local media_id = args[1]
+  if not media_id then
+    return pandoc.Strong({pandoc.Str("[ERROR: media shortcode requires media ID]")})
+  end
+
+  local registry = get_media_registry()
+  local media_data = registry[media_id]
+
+  if not media_data then
+    return pandoc.Strong({pandoc.Str("[ERROR: Media '" .. media_id .. "' not found in registry]")})
+  end
+
+  local url = media_data.url or ""
+  local credit = media_data.credit
+
+  if credit == nil then
+    return pandoc.Strong({pandoc.Str("[ERROR: Media '" .. media_id .. "' missing required field: credit]")})
+  end
+
+  local classes = {"media-block", "media-video"}
+  if kwargs and kwargs["class"] then
+    local class_str = pandoc.utils.stringify(kwargs["class"])
+    for class in class_str:gmatch("%S+") do
+      table.insert(classes, class)
+    end
+  end
+
+  local width = "100%"
+  local height = nil
+  local height_set = false
+  if kwargs and kwargs["width"] then
+    width = pandoc.utils.stringify(kwargs["width"])
+  end
+  if kwargs and kwargs["height"] then
+    height = pandoc.utils.stringify(kwargs["height"])
+    height_set = true
+  end
+
+  local class_attr = string.format(' class="%s"', escape_html(table.concat(classes, " ")))
+
+  local credit_html = ""
+  if credit ~= "" then
+    credit_html = string.format('\n  <div class="media-credit">Credit: %s</div>', escape_html(credit))
+  end
+
+  local yt_id = extract_youtube_id(url)
+  if yt_id then
+    local src = "https://www.youtube-nocookie.com/embed/" .. yt_id
+    local style_attr = string.format(' style="width:%s;%s"', escape_html(width), height_set and (" height:" .. escape_html(height) .. ";") or " aspect-ratio:16/9;")
+    local html = string.format([[
+<div%s%s>
+  <iframe class="media-embed" src="%s" title="YouTube video" frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen></iframe>%s
+</div>
+]], class_attr, style_attr, escape_html(src), credit_html)
+    return pandoc.RawBlock("html", html)
+  end
+
+  -- Fallback: render as iframe for unknown providers
+  local style_attr = string.format(' style="width:%s;%s"', escape_html(width), height_set and (" height:" .. escape_html(height) .. ";") or " aspect-ratio:16/9;")
+  local html = string.format([[
+<div%s%s>
+  <iframe class="media-embed" src="%s" title="Embedded media" frameborder="0" allowfullscreen></iframe>%s
+</div>
+]], class_attr, style_attr, escape_html(url), credit_html)
+  return pandoc.RawBlock("html", html)
 end
 
 -- ==============================================================

@@ -183,6 +183,7 @@ var RevealSpotlight = window.RevealSpotlight || (function () {
     isSpotlightOn = isOn;
     var container = drawBoard.container;
     if (isOn) {
+      document.body.classList.add("spotlight-on");
       if (lockPointerInsideCanvas && document.pointerLockElement != drawBoard.canvas) {
         drawBoard.canvas.requestPointerLock();
       }
@@ -193,6 +194,7 @@ var RevealSpotlight = window.RevealSpotlight || (function () {
         showSpotlight(mouseEvt);
       }
     } else {
+      document.body.classList.remove("spotlight-on");
       container.style.opacity = 0;
       container.style['pointer-events'] = 'none';
       document.body.style.cursor = presentingCursor;

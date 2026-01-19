@@ -10,6 +10,20 @@ format:
   revealjs:
     footer: "ASTR 201 • Lecture 1 • Dr. Anna Rosen"
     chalkboard: true
+    title-slide-attributes:
+      data-background-image: "/assets/images/common/cosmic-cliffs-jwst.png"
+      data-background-opacity: "0.5"
+    pointer:
+      key: "q"
+      color: "#5dbfbf"
+      pointerSize: 18
+      alwaysVisible: true
+    spotlight:
+      size: 80
+      toggleSpotlightOnMouseDown: true
+      presentingCursor: "crosshair"
+      initialPresentationMode: true
+      fadeInAndOut: 100
 
 revealjs-plugins:
   - pointer
@@ -26,10 +40,10 @@ execute:
   message: false
 ---
 
-## {background-image="/assets/images/common/noirlab-nightsky-mosaic.jpg" background-opacity="0.6"}
+## {background-image="/assets/images/common/noirlab-nightsky-mosaic.jpg" background-opacity="1"}
 
-::: {.r-fit-text}
-What do you see?
+::: {.text-center .text-base .font-medium style="color: #a8b0bf; text-shadow: 0 2px 10px rgba(0,0,0,0.55); margin-top: 1vh;"}
+When you look up at the night sky, what do you see?
 :::
 
 ::: {.notes}
@@ -44,19 +58,20 @@ Then advance to the video.
 
 ## {background-color="black"}
 
-{{< video https://youtu.be/Gitit3LwQ20 width="100%" height="100%" >}}
+{{< media rubin-zoomout-galaxies width="100%" height="100%" >}}
 
 ::: {.notes}
 1–3 min. **Play video without introduction.**
 
 Made from over 1,100 images captured by NSF-DOE Vera C. Rubin Observatory. Begins with two galaxies, zooms out to reveal 10 million galaxies—roughly 0.05% of the 20 billion Rubin will capture.
 
-**After video (THE REVEAL):** "Those aren't stars. Those are *galaxies*. Every single point of light is a galaxy—each one containing hundreds of billions of stars. And we're going to learn how to read them."
+**After video (THE REVEAL):** "Those aren't ALL stars. Those are *galaxies*. Every single point of light is a galaxy—each one containing hundreds of billions of stars. And we're going to learn how to read them."
 :::
 
+<!---
 ---
 
-## {background-image="/assets/images/common/eso-milky-way-panoramic.jpg" background-opacity="0.3"}
+## {background-image="/assets/images/common/eso-milky-way-panoramic.jpg" background-opacity="0.75"}
 
 > "The cosmos is within us. We are made of star-stuff."
 >
@@ -75,10 +90,10 @@ The iron in your blood was forged in a star. The calcium in your bones came from
 :::
 
 ---
-
-## {background-color="black"}
-
 {{< img three-big-questions >}}
+--->
+
+## {background-image="/assets/images/module-01/three-big-questions-nblm.png" background-opacity="1"}
 
 ::: {.notes}
 1–2 min. Three questions drive modern astronomy—and we answer all of them the same way: inference from signals.
@@ -182,7 +197,7 @@ Which can astronomers *directly* measure for a distant star?
 
 ## {background-color="black"}
 
-{{< video https://youtu.be/1JPDN8qoRjs width="100%" height="100%" >}}
+{{< media hr-diagram-omega-centauri width="100%" height="100%" >}}
 
 ::: {.notes}
 8–9 min. **HR Diagram construction from Omega Centauri.**
@@ -230,7 +245,7 @@ For each image: **Measure → Infer → Physics**
 
 ## {background-color="black"}
 
-{{< video https://youtu.be/MIJfPOGnDFg width="100%" height="100%" >}}
+{{< media trifid-lagoon-rubin width="100%" height="100%" >}}
 
 ::: {.notes}
 11–13 min. **Trifid and Lagoon Nebulae from Rubin Observatory.**
@@ -298,7 +313,7 @@ Measure flux + know luminosity → calculate distance.
 
 ## {background-color="black"}
 
-{{< video https://youtu.be/eS6FXc350Bs width="100%" height="100%" >}}
+{{< media rr-lyrae-rubin width="100%" height="100%" >}}
 
 ::: {.notes}
 15–17 min. **46 pulsating RR Lyrae stars from Rubin Observatory.**
