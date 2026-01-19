@@ -218,6 +218,12 @@ figures:
     credit: "Course illustration (A. Rosen)"
     module: 1
 
+  decoding-the-cosmos-infographic:
+    path: /assets/images/module-01/decoding-the-cosmos-infographic.png
+    caption: "**What to notice:** A big-picture map of the course thesis: light → measurements → models → physical claims."
+    alt: "Infographic titled 'Decoding the Cosmos: How Astronomers Turn Light into Reality' showing four observables (brightness, position, wavelength, timing) feeding into an inference pipeline and a 'decoder ring' that connects signals to inferences; includes callouts that pretty pictures are datasets, physics makes inference legal, wavelength maps to a temperature ladder, and distance is a time dial."
+    module: 1
+
   # Section 1.4: Light properties
   energy-wavelength-connection:
     path: /assets/images/module-01/energy-wavelength-connection.png

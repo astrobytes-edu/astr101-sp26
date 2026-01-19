@@ -1,6 +1,6 @@
 ---
-title: "Lecture 1: Spoiler Alerts"
-subtitle: "The Universe Is Weird — How Do We Know?"
+title: "Spoiler Alert: The Universe Is Weird"
+subtitle: "How Do We Know What We Know?"
 author: "Dr. Anna Rosen"
 date: "2026-01-20"
 description: "A trailer for the semester: how astronomers turn photons into physical claims."
@@ -42,23 +42,39 @@ execute:
 
 ## {background-image="/assets/images/common/noirlab-nightsky-mosaic.jpg" background-opacity="1"}
 
-::: {.text-center .text-base .font-medium style="color: #a8b0bf; text-shadow: 0 2px 10px rgba(0,0,0,0.55); margin-top: 1vh;"}
-When you look up at the night sky, what do you see?
+::: {.flex .flex-col .justify-between .w-full .pt-2 .pb-4 style="height: 70vh;"}
+
+::: {.text-center .text-lg .font-medium .text-muted}
+When you look up at the night sky,<br> what do you see?
+:::
+
+::: {.text-center .text-lg .font-medium .text-muted .mb-0}
+What do you *assume* you’re seeing?
+:::
+
 :::
 
 ::: {.notes}
 0–1 min. **Let this sit for 5 seconds in silence.**
 
-Don't answer. Just let students look. They're thinking "stars, maybe the Milky Way."
+Don’t answer out loud. Just let students look.
+
+Prompt: “Write 2–3 words: what you see, and what you’re assuming.”
 
 Then advance to the video.
 :::
 
 ---
 
-## {background-color="black"}
+## {.full-bleed background-color="black"}
 
+::: {style="position: relative; height: 100%;"}
 {{< media rubin-zoomout-galaxies width="100%" height="100%" >}}
+<div class="text-xs font-semibold text-muted"
+     style="position:absolute; left:0.9rem; bottom:2.8rem; text-shadow:0 1px 8px rgba(0,0,0,0.55);">
+  The Cosmic Treasure Chest
+</div>
+:::
 
 ::: {.notes}
 1–3 min. **Play video without introduction.**
@@ -68,117 +84,292 @@ Made from over 1,100 images captured by NSF-DOE Vera C. Rubin Observatory. Begin
 **After video (THE REVEAL):** "Those aren't ALL stars. Those are *galaxies*. Every single point of light is a galaxy—each one containing hundreds of billions of stars. And we're going to learn how to read them."
 :::
 
-<!---
 ---
 
-## {background-image="/assets/images/common/eso-milky-way-panoramic.jpg" background-opacity="0.75"}
+## Today Is a Trailer: Learning Objectives {background-image="/assets/images/common/cosmic-cliffs-jwst.png" background-opacity="0.4"}
 
-> "The cosmos is within us. We are made of star-stuff."
->
-> — Carl Sagan
+::: {.bg-muted .p-2}
+
+**By the end of today, you can…**
+
+- State the course thesis: **pretty pictures → measurements → models → inferences**
+- Name the 4 direct observables: **brightness, position, wavelength, timing**
+- Explain why light matters: **wavelength** + **lookback time**
+
+:::
+
+::: notes
+Fast. Say the “trailer” speech verbally here if you want.
+:::
+
+---
+
+## Today: Roadmap {background-image="/assets/images/common/cosmic-cliffs-jwst.png" background-opacity="0.4"}
+
+::: {.bg-muted .p-2}
+
+1. The thesis (what this course is really about)
+2. The “four observables” constraint
+3. Spoiler reel: **Measure → Infer → Physics**
+4. Decoder ring: prediction → test → revise
+
+::: {.text-center .text-lg .font-semibold .mt-2}
+Focus on: recognition, not mastery.
+:::
+
+:::
+
+::: notes
+One pass now; we’ll return to each piece slowly.
+:::
+
+---
+
+## {.full-bleed background-image="/assets/images/module-01/decoding-the-cosmos-infographic.png" background-opacity="1" background-size="contain" background-position="center" background-color="black"}
+
+::: notes
+Don’t read the small text on this infographic. It’s a **map**, not a quiz.
+
+Point once to each region (quick tour):
+
+1) **Left: “The Inference Pipeline”**
+   - These are the only four kinds of things we can directly measure from far away:
+     **brightness**, **position**, **wavelength**, **timing**.
+   - Everything else we talk about in astronomy is built from these + physics.
+
+2) **Middle: the telescope**
+   - Telescopes don’t “take pictures” the way your phone does.
+   - They collect **photons** and turn them into numbers: counts, angles, spectra, time series.
+
+3) **Right: “The Decoder Ring”**
+   - The decoder ring is the move we repeat all semester:
+     **signal → measurement → model → inference**.
+   - The key promise of the course: we’ll make the “model” step explicit, so you can see what assumptions are being made.
+
+4) **Bottom: two ideas to tag for later**
+   - **Wavelength is physics**: different wavelengths show different temperatures/processes.
+   - **Distance is a time dial**: because light takes time to travel, looking farther means looking farther into the past.
+
+Close the slide with:
+“Today is just the trailer. If you recognize these ingredients when they show up later, you’re doing it right.”
+:::
+
+---
+
+## NASA Astrophysics Three Big Questions {background-color="black"}
+
+{{< img three-big-questions width="95%" class="img-center" >}}
+
+::: {.text-center .text-sm .text-muted .mt-1}
+Pick one: which question are you most curious about?
+:::
+
+::: notes
+Quick hand poll, then: “Same method every time: Measure → Infer → model-check.”
+:::
+
+---
+
+## Astronomy is about inferring physical reality from constrained measurements {background-image="/assets/images/common/eso-milky-way-panoramic.jpg" background-opacity="0.25"}
+
+::: {.text-center .text-sm .text-muted .mt-1}
+We cannot touch the stars; we can only decode the light they send us.
+:::
+
+::: {.layout-grid-2 .mt-2}
+
+::: {.bg-muted .p-2}
+**Measure**  
+What do we directly observe?
+:::
+
+::: {.bg-muted .p-2}
+**Infer**  
+Turn signals into physical claims.
+:::
+
+::: {.bg-muted .p-2}
+**Balance**  
+What relationships must hold (and why)?
+:::
+
+::: {.bg-muted .p-2}
+**Evolve**  
+How do systems change with time?
+:::
+
+:::
+
+::: notes
+10–20 seconds. “Today we mostly live in Measure/Infer. Balance/Evolve is where we’re headed once we have tools.”
+:::
+
+---
+
+## The “Impossible” Knowledge Problem {background-image="/assets/images/common/milky-way-panoramic.jpg" background-opacity="0.2"}
+
+::: {.bg-muted .p-2}
+
+::: {.text-center .text-xl .font-semibold .mt-0}
+We claim to know real physical things…
+:::
+
+::: {.incremental}
+- The Sun’s surface temperature is about **5,800 K**
+- The universe is about **13.8 billion years** old
+- You are made of **stellar debris**
+:::
 
 ::: {.fragment}
-This course is about **how we know that**.
+::: {.text-center .text-base .text-muted .mt-2}
+But we have never touched the evidence.
+:::
 :::
 
-::: {.notes}
-3–4 min. Let the quote land. Pause.
-
-The iron in your blood was forged in a star. The calcium in your bones came from a different dying star. You are literally made of stellar debris.
-
-**Transition:** "We'll come back to this—Spoiler 3 will show you exactly where every element came from. For now, the question is: how do we *know* any of this?"
 :::
 
----
-{{< img three-big-questions >}}
---->
+::: notes
+Keep it tight.
 
-## {background-image="/assets/images/module-01/three-big-questions-nblm.png" background-opacity="1"}
+“None of those came from direct contact: no thermometers in stars, no tape measures to galaxies.”
 
-::: {.notes}
-1–2 min. Three questions drive modern astronomy—and we answer all of them the same way: inference from signals.
+Bridge question: “So what did we actually measure, and what model makes the inference legitimate?”
 :::
 
 ---
 
-## {background-image="/assets/images/common/eso-milky-way-panoramic.jpg" background-opacity="0.3"}
+## How We Turn Light Into Reality {background-image="/assets/images/common/cosmic-cliffs-jwst.png" background-opacity="0.2"}
 
-::: {.r-fit-text}
-This Is a Trailer
+::: {.text-center .text-base .text-muted .mt-0}
+Pretty Pictures Aren’t the Point. They’re data.
 :::
 
-**Recognition, not mastery.**
-
-::: {.notes}
-2–3 min. **EXACT SCRIPT:**
-
-"This reading — and this lecture — are a trailer, not the movie. You're going to see big ideas before you know how they work. That's intentional. Your job today is recognition, not mastery. We will come back to everything slowly, with tools in hand."
-:::
-
----
-
-## {background-image="/assets/images/common/milky-way-panoramic.jpg" background-opacity="0.2"}
-
-::: {.r-fit-text}
+::: {.text-center .text-xl .font-semibold .mt-2}
 Pretty pictures → measurements → models → inferences
 :::
 
 ::: {.fragment}
-Every gorgeous image is a **dataset**.
-
-The job is to **decode** it using physics.
+::: {.text-center .text-base .text-muted .mt-2}
+An **inference** = a conclusion about something we can’t directly access, using what we *can* measure + a physical model.
+:::
 :::
 
-::: {.notes}
-3–4 min. This is the thesis of the course.
-:::
-
----
-
-## {background-color="black"}
-
-{{< img four-observables >}}
-
-::: {.notes}
-4–6 min.
-
-From billions of kilometers away, we can directly measure only **four things**:
-
-1. **Brightness** — energy arriving at detector
-2. **Position** — where on the sky (and changes)
-3. **Wavelength** — which "colors" are present
-4. **Timing** — when things change
-
-**Everything else—mass, temperature, distance, age—is a calculation.**
+::: notes
+Point forward: “Next we name what we can actually measure directly (only four kinds of things).”
 :::
 
 ---
 
-## {background-color="black"}
+## The Four Things We Can Actually Measure (Directly) {background-color="black"}
 
 :::: {.columns}
-::: {.column width="50%"}
-{{< img four-observables >}}
+::: {.column width="60%"}
+{{< img four-observables class="img-center" >}}
 :::
-::: {.column width="50%"}
-**What's NOT Directly Measurable:**
+::: {.column width="40%"}
 
-| Property | Inferred From |
-|----------|---------------|
-| Temperature | Spectrum |
-| Distance | Parallax/brightness |
-| Mass | Orbital motion |
-| Age | Models |
+**Direct observables (inputs):**
+
+::: {.incremental}
+- **Brightness** (flux)
+- **Position** (angles + changes)
+- **Wavelength** (spectrum/color)
+- **Timing** (variability)
+:::
+
+::: {.text-sm .text-muted .mt-2}
+Everything else is inferred using physics.
+:::
 :::
 ::::
 
 ::: {.notes}
-6–7 min. The gap between "what we measure" and "what we want to know" is where physics lives.
+4–6 min.
+
+These four are the only “inputs” the universe gives us.
+
+Don’t over-explain yet—just name them and point to each icon in the figure.
+
+If you want a one-liner to land: “Everything else we care about is a calculation.”
 :::
 
 ---
 
-## Quick Check {background-color="#1a1a2e"}
+## Models Are the Bridge (“Decoder Ring”) {background-color="black"}
+
+::: {.text-center .text-base .text-muted .mt-0}
+Pretty pictures → measurements → **models** → inferences
+:::
+
+:::: {.columns .mt-2}
+::: {.column width="45%"}
+**What we can directly measure:**
+
+- **Brightness** (flux)
+- **Position** (angles + changes)
+- **Wavelength** (spectrum/color)
+- **Timing** (variability)
+:::
+::: {.column width="55%"}
+**What a model does:**
+
+- A **model** is a mathematical relationship that encodes physical assumptions.
+- It’s the “decoder ring” that turns an observable into a physical claim.
+
+::: {.text-sm .text-muted .mt-2}
+Without models, astronomy is just a catalog of points of light.
+:::
+:::
+::::
+
+::: {.notes}
+6–7 min.
+
+Say explicitly: “An inference is only as strong as the model that connects what we measured to what we’re claiming.”
+
+Concrete anchor (optional, don’t derive): the inverse-square law connects measured flux to luminosity and distance:
+$F = L/(4\\pi d^2)$.
+:::
+
+---
+
+## Six Core Quantities (Inferred) — Part 1 {background-color="black"}
+
+::: {.table-scroll .text-sm}
+| What we want (inferred) | We measure | Model “bridge” (examples) |
+|---|---|---|
+| **Distance** | brightness **or** position | inverse-square law **or** parallax geometry |
+| **Temperature** | wavelength (spectrum/color) | blackbody/Wien-type models |
+| **Mass** | position + timing (orbits) | gravity/orbital dynamics |
+:::
+
+::: notes
+7–8 min.
+
+Don’t ask them to memorize the table today.
+:::
+
+---
+
+## Six Core Quantities (Inferred) — Part 2 {background-color="black"}
+
+::: {.table-scroll .text-sm}
+| What we want (inferred) | We measure | Model “bridge” (examples) |
+|---|---|---|
+| **Luminosity (energy output)** | brightness + distance | $L = 4\\pi d^2 F$ |
+| **Composition** | wavelength (spectral lines) | atomic “fingerprints” |
+| **Time / age** | timing **or** distance (lookback) | light-travel time; evolution/expansion models |
+:::
+
+::: {.notes}
+8–9 min.
+
+Use it as a promise: “Every tool we learn this semester is a new, better bridge from the four observables to these physical quantities.”
+:::
+
+---
+
+## Quick Check: What Can We Measure Directly? {background-color="#1a1a2e"}
 
 ::: {.quiz}
 Which can astronomers *directly* measure for a distant star?
@@ -190,14 +381,24 @@ Which can astronomers *directly* measure for a distant star?
 :::
 
 ::: {.notes}
-7–8 min. Give 30 seconds. Answer: apparent brightness.
+7–8 min.
+
+Give ~20–30 seconds: “Don’t overthink—what can we measure *directly*?”
+
+Then confirm: **apparent brightness** is a direct measurement; temperature/mass/age are inferences.
 :::
 
 ---
 
-## {background-color="black"}
+## {.full-bleed background-color="black"}
 
+::: {style="position: relative; height: 100%;"}
 {{< media hr-diagram-omega-centauri width="100%" height="100%" >}}
+<div class="text-xs font-semibold text-muted"
+     style="position:absolute; left:0.9rem; top:0.6rem; text-shadow:0 1px 8px rgba(0,0,0,0.55);">
+  From Observables to Patterns: The H–R Diagram
+</div>
+:::
 
 ::: {.notes}
 8–9 min. **HR Diagram construction from Omega Centauri.**
@@ -211,41 +412,76 @@ The Hertzsprung-Russell diagram is one of astronomy's greatest tools—and it's 
 
 ---
 
-## {background-image="/assets/images/module-01/lsst-cosmic-treasure-chest-zoom.jpg" background-opacity="0.3"}
+## The Spoiler Reel: Watch the Inference Pattern {background-image="/assets/images/module-01/lsst-cosmic-treasure-chest-zoom.jpg" background-opacity="0.3"}
 
-::: {.r-fit-text}
-The Spoiler Reel
+::: {.text-center .text-base .text-muted .mt-0}
+For each image, don’t memorize details—identify the move.
 :::
 
-For each image: **Measure → Infer → Physics**
+::: {.layout-triad .mt-2}
+::: {.triad-item}
+**Measure**  
+What do we directly observe?
+:::
+::: {.triad-item}
+**Infer**  
+What physical claim do we make?
+:::
+::: {.triad-item}
+**Physics**  
+What model makes it “legal”?
+:::
+:::
 
 ::: {.notes}
-9–10 min. You're not expected to understand yet. That's what the semester is for.
+9–10 min.
+
+Orientation: “This is the repeatable structure for the whole course.”
 :::
 
 ---
 
 ## Spoiler 1: Nebulae {background-color="black"}
 
-{{< img forensic-nebula >}}
+:::: {.columns}
+::: {.column width="60%"}
+{{< img forensic-nebula class="img-center" >}}
+:::
+::: {.column width="40%"}
+
+::: {.bg-muted .p-2}
+**Measure:** colors at specific wavelengths
+:::
+
+::: {.bg-muted .p-2 .mt-1}
+**Infer:** composition + dust structure
+:::
+
+::: {.bg-muted .p-2 .mt-1}
+**Physics:** atoms emit/absorb at specific wavelengths (“fingerprints”)
+:::
+:::
+::::
 
 ::: {.notes}
 10–12 min.
 
-**Measure:** Colors at specific wavelengths—red at 656 nm, blue-green at 500 nm.
+**Measure:** colors at specific wavelengths (e.g., red Hα; blue-green [OIII]).
 
-**Infer:** Red = hydrogen, blue-green = oxygen, dark lanes = dust.
+**Infer:** hydrogen vs oxygen emission; dark lanes = dust blocking light.
 
-**Physics:** Atoms emit at specific wavelengths. Each element has a unique fingerprint.
+**Physics:** atomic physics: discrete transitions → discrete wavelengths.
 
 **Key insight:** Color isn't decoration—it's encoded physics.
 :::
 
 ---
 
-## {background-color="black"}
+## {.full-bleed background-color="black"}
 
+::: {style="position: relative; height: 100%;"}
 {{< media trifid-lagoon-rubin width="100%" height="100%" >}}
+:::
 
 ::: {.notes}
 11–13 min. **Trifid and Lagoon Nebulae from Rubin Observatory.**
@@ -261,7 +497,7 @@ This is exactly what we just discussed: color = physics.
 
 ---
 
-## Quick Check {background-color="#1a1a2e"}
+## Quick Check: Why Specific Colors? {background-color="#1a1a2e"}
 
 ::: {.quiz}
 Why do nebulae glow at *specific* colors?
@@ -274,31 +510,67 @@ Why do nebulae glow at *specific* colors?
 
 ::: {.notes}
 11–12 min.
+
+Correct: each element has a unique set of wavelengths it can emit/absorb (a spectral fingerprint).
 :::
 
 ---
 
-## Spoiler 2: The Distance Ladder {background-color="black"}
+## Spoiler 2: The Distance Ladder — How Far Is Far? {background-color="black"}
 
-{{< img cosmic-distance-ladder >}}
+:::: {.columns}
+::: {.column width="60%"}
+{{< img cosmic-distance-ladder class="img-center" >}}
+:::
+::: {.column width="40%"}
+
+::: {.bg-muted .p-2}
+**Measure:** apparent brightness (flux) of “milepost” objects
+:::
+
+::: {.bg-muted .p-2 .mt-1}
+**Infer:** distance far beyond geometry alone
+:::
+
+::: {.bg-muted .p-2 .mt-1}
+**Physics:** inverse-square law + standard candles
+:::
+:::
+::::
 
 ::: {.notes}
 12–14 min.
 
-**Measure:** Apparent brightness of "standard candles."
+**Measure:** apparent brightness (flux) of objects whose true luminosity we can determine (“standard candles”).
 
-**Infer:** Distances to billions of light-years.
+**Infer:** distances much farther than parallax can reach.
 
-**Physics:** Inverse-square law: $F = L / 4\pi d^2$.
+**Physics:** inverse-square law: $F = L / (4\\pi d^2)$.
 
 **Key insight:** Distance is inferred from brightness.
 :::
 
 ---
 
-## {background-color="black"}
+## Standard Candles: Measure $F$, Know $L$, Infer $d$ {background-color="black"}
 
-{{< img standard-candles >}}
+:::: {.columns}
+::: {.column width="60%"}
+{{< img standard-candles class="img-center" >}}
+:::
+::: {.column width="40%"}
+
+::: {.incremental}
+- **Measure:** flux $F$
+- **Model:** $F = \\dfrac{L}{4\\pi d^2}$
+- **Infer:** distance $d$
+:::
+
+::: {.text-sm .text-muted .mt-2}
+A dim nearby source can look like a bright distant one—models break the tie.
+:::
+:::
+::::
 
 ::: {.notes}
 14–15 min.
@@ -311,9 +583,11 @@ Measure flux + know luminosity → calculate distance.
 
 ---
 
-## {background-color="black"}
+## {.full-bleed background-color="black"}
 
+::: {style="position: relative; height: 100%;"}
 {{< media rr-lyrae-rubin width="100%" height="100%" >}}
+:::
 
 ::: {.notes}
 15–17 min. **46 pulsating RR Lyrae stars from Rubin Observatory.**
@@ -373,6 +647,29 @@ Over the next 10 years, Rubin will detect up to 100,000 of these stars extending
 **Physics:** Atoms have quantized energy levels. Electron jumps → photons at exact wavelengths.
 
 A prism transforms one brightness into thousands of data points.
+:::
+
+---
+
+## Quick Check: What Does “Temperature” Really Come From? {background-color="#1a1a2e"}
+
+::: {.quiz}
+A headline says: “Scientists measure the temperature of a distant star.”
+
+What did they most directly measure?
+
+- [ ] Brightness
+- [ ] Position
+- [x] Wavelength (spectrum/color)
+- [ ] Timing
+:::
+
+::: notes
+~1 min.
+
+Now this is fair: we’ve introduced spectra as “brightness vs wavelength.”
+
+Land: temperature is an inference; wavelength/spectrum is the measurement channel that carries temperature information.
 :::
 
 ---
@@ -490,13 +787,16 @@ Dark matter's signature at the largest scales. And it's still evolving: gravity 
 
 ---
 
-## {background-image="/assets/images/module-01/DESI-Universe-3D-Map.jpg" background-opacity="0.3"}
+## The Cosmic Recipe (Today) {background-image="/assets/images/module-01/DESI-Universe-3D-Map.jpg" background-opacity="0.3"}
 
-::: {.r-fit-text}
+::: {.bg-muted .p-2 .text-center}
+::: {.text-xl .font-semibold .mt-0}
 5% atoms • 27% dark matter • 68% dark energy
 :::
-
+::: {.text-base .text-muted .mt-1}
 Only 5% is stuff we understand.
+:::
+:::
 
 ::: {.notes}
 36–37 min. The cosmic recipe.
@@ -522,13 +822,15 @@ Only 5% is stuff we understand.
 
 ---
 
-## {background-image="/assets/images/module-01/universe-history-nasa.png" background-opacity="0.2"}
+## Connecting the Dots {background-image="/assets/images/module-01/universe-history-nasa.png" background-opacity="0.2"}
 
-::: {.r-fit-text}
+::: {.text-center .text-xl .font-semibold .mt-2}
 Connecting the Dots
 :::
 
-*One idea powers multiple spoilers*
+::: {.text-center .text-base .text-muted .mt-1}
+One idea powers multiple spoilers.
+:::
 
 ::: {.notes}
 40–41 min. **SYNTHESIS MOMENT**
@@ -674,15 +976,21 @@ When tests fail, we revise models. **That's science.**
 
 ---
 
-## {background-image="/assets/images/common/eso-milky-way-panoramic.jpg" background-opacity="0.25"}
+## Recognition, not retention {background-image="/assets/images/common/eso-milky-way-panoramic.jpg" background-opacity="0.25"}
 
-::: {.r-fit-text}
+::: {.bg-muted .p-2 .text-center}
+::: {.text-xl .font-semibold .mt-0}
 Recognition, not retention.
 :::
 
+::: {.text-base .text-muted .mt-2}
 You are not expected to remember details yet.
+:::
 
-You are expected to **recognize ideas** when we return.
+::: {.text-base .font-semibold .mt-1}
+You are expected to recognize ideas when we return.
+:::
+:::
 
 ::: {.notes}
 52–54 min. **EXACT SCRIPT:**
@@ -723,8 +1031,8 @@ What did they actually *measure*?
 :::
 
 ::: {.fragment}
-::: {.r-fit-text}
-The math is not the obstacle — it's the microscope.
+::: {.text-center .text-xl .font-semibold .mt-2}
+The math is not the obstacle — it’s the microscope.
 :::
 :::
 
@@ -732,7 +1040,7 @@ The math is not the obstacle — it's the microscope.
 
 ## {background-image="/assets/images/common/noirlab-nightsky-mosaic.jpg" background-opacity="0.4"}
 
-::: {.r-fit-text}
+::: {.text-center .text-xl .font-semibold .mt-2}
 Questions?
 :::
 
