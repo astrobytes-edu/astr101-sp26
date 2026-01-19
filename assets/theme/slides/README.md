@@ -146,3 +146,53 @@ Example:
 ## {background-color="black"}
 {{< media rubin-zoomout-galaxies width="100%" height="100%" >}}
 ```
+
+## Typography Utilities (Additions)
+
+- `.text-xxs` → `0.42em` (use for micro-footnotes like media/image credits).
+
+## Typography Utilities (Reference)
+
+These are defined in `assets/theme/slides/_variables.scss` and exposed as utility classes in `assets/theme/slides/_typography.scss`.
+
+### Text sizes
+
+All sizes are relative to the slide base font size (RevealJS root is configured in `assets/theme/slides/_variables.scss`).
+
+| Class | Size |
+|---|---|
+| `.text-xxs` | `0.42em` |
+| `.text-xs` | `0.65em` |
+| `.text-sm` | `0.8em` |
+| `.text-base` | `1em` |
+| `.text-lg` | `1.2em` |
+| `.text-xl` | `1.5em` |
+
+### Font weights
+
+| Class | Weight |
+|---|---|
+| `.font-normal` | `400` |
+| `.font-medium` | `500` |
+| `.font-semibold` | `600` |
+| `.font-bold` | `700` |
+
+### Line heights
+
+| Class | Line height |
+|---|---|
+| `.leading-none` | `1.0` |
+| `.leading-tight` | `1.15` |
+| `.leading-normal` | `1.4` |
+| `.leading-relaxed` | `1.65` |
+
+### Text style helpers
+
+| Class | Effect |
+|---|---|
+| `.italic` | italic |
+| `.not-italic` | normal |
+| `.uppercase` | UPPERCASE |
+| `.lowercase` | lowercase |
+| `.capitalize` | Capitalize Words |
+| `.normal-case` | normal casing |
