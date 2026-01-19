@@ -20,12 +20,15 @@ var RevealSpotlight = window.RevealSpotlight || (function () {
   var drawBoard;
   var isSpotlightOn = true;
   var isCursorOn = true;
+  var isChalkboardOn = false;
 
   var lastMouseMoveEvent;
 
   function onRevealJsReady(event) {
     configure();
     drawBoard = setupCanvas();
+
+    addChalkboardInterlock();
 
     addWindowResizeListener();
 
@@ -41,6 +44,69 @@ var RevealSpotlight = window.RevealSpotlight || (function () {
 
     setSpotlight(false);
     setCursor(!initialPresentationMode);
+  }
+
+  function isChalkboardVisible() {
+    var chalkboardEl = document.getElementById('chalkboard');
+    if (!chalkboardEl) return false;
+
+    // reveal-chalkboard toggles via inline style (visibility/opacity).
+    var computed = window.getComputedStyle ? window.getComputedStyle(chalkboardEl) : null;
+    var visibility = (computed && computed.visibility) || chalkboardEl.style.visibility;
+    var display = (computed && computed.display) || chalkboardEl.style.display;
+    var opacity = (computed && computed.opacity) || chalkboardEl.style.opacity;
+
+    if (display === 'none') return false;
+    if (visibility === 'hidden') return false;
+    if (opacity === '0') return false;
+
+    return true;
+  }
+
+  function updateChalkboardState() {
+    isChalkboardOn = isChalkboardVisible();
+    if (isChalkboardOn) {
+      setSpotlight(false);
+    }
+  }
+
+  function addChalkboardInterlock() {
+    function tryAttach() {
+      var chalkboardEl = document.getElementById('chalkboard');
+      if (!chalkboardEl) return false;
+
+      updateChalkboardState();
+
+      if (window.MutationObserver) {
+        var observer = new MutationObserver(function () {
+          updateChalkboardState();
+        });
+        observer.observe(chalkboardEl, { attributes: true, attributeFilter: ['style', 'class'] });
+      }
+
+      // Also listen for reveal-chalkboard's broadcast events (belt + suspenders).
+      document.addEventListener('broadcast', function (e) {
+        var content = e && (e.content || e.detail);
+        var type = content && content.type;
+        if (type === 'showChalkboard' || type === 'closeChalkboard') {
+          updateChalkboardState();
+        }
+      }, false);
+
+      return true;
+    }
+
+    if (tryAttach()) return;
+
+    var attempts = 0;
+    var maxAttempts = 50;
+    var intervalMs = 100;
+    var timer = window.setInterval(function () {
+      attempts += 1;
+      if (tryAttach() || attempts >= maxAttempts) {
+        window.clearInterval(timer);
+      }
+    }, intervalMs);
   }
 
   function configure() {
@@ -138,7 +204,7 @@ var RevealSpotlight = window.RevealSpotlight || (function () {
 
   function addMouseMoveListener() {
     window.addEventListener('mousemove', function (e) {
-      if(isSpotlightOn) {
+      if(isSpotlightOn && !isChalkboardOn) {
         showSpotlight(e);
       }
       lastMouseMoveEvent = e;
@@ -149,12 +215,14 @@ var RevealSpotlight = window.RevealSpotlight || (function () {
 
     window.addEventListener("mousedown", function (e) {
       if (!isCursorOn) {
+        if (isChalkboardOn) return;
         setSpotlight(true, e);
       }
     }, false);
 
     window.addEventListener("mouseup", function (e) {
       if (!isCursorOn) {
+        if (isChalkboardOn) return;
         setSpotlight(false, e);
       }
     }, false);
@@ -164,12 +232,14 @@ var RevealSpotlight = window.RevealSpotlight || (function () {
 
     window.addEventListener("keydown", function (e) {
       if (!isCursorOn && e.keyCode === keyCode) {
+        if (isChalkboardOn) return;
         setSpotlight(true, lastMouseMoveEvent);
       }
     }, false);
 
     window.addEventListener("keyup", function (e) {
       if (!isCursorOn && e.keyCode === keyCode) {
+        if (isChalkboardOn) return;
         setSpotlight(false);
       }
     }, false);
@@ -180,6 +250,9 @@ var RevealSpotlight = window.RevealSpotlight || (function () {
   }
 
   function setSpotlight(isOn, mouseEvt) {
+    if (isOn && isChalkboardOn) {
+      isOn = false;
+    }
     isSpotlightOn = isOn;
     var container = drawBoard.container;
     if (isOn) {
