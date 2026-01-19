@@ -116,7 +116,7 @@ Main explanation …
 - Disable prose max-measure: add `{.no-measure}` to the slide heading.
 - Scroll when truly necessary: wrap in `::: {.scroll-y}` or `::: {.table-scroll}`.
 - Full-bleed background/media: add `{.full-bleed}` to the slide heading.
-- Spotlight + chalkboard: spotlight is auto-disabled whenever the chalkboard overlay is visible (so drawing/clicking never triggers spotlight).
+- Spotlight + chalkboard: spotlight is auto-disabled whenever reveal-chalkboard is active for drawing (either the full chalkboard overlay or the on-slide notes-canvas drawing mode), so drawing/clicking never triggers spotlight.
 
 ## What NOT to Do (Contract)
 

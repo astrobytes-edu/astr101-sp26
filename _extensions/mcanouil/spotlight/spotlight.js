@@ -46,6 +46,16 @@ var RevealSpotlight = window.RevealSpotlight || (function () {
     setCursor(!initialPresentationMode);
   }
 
+  function isNotesCanvasInDrawingMode() {
+    var notesEl = document.getElementById('notescanvas');
+    if (!notesEl) return false;
+
+    // reveal-chalkboard uses pointer-events to toggle "drawing" on the notes canvas.
+    var computed = window.getComputedStyle ? window.getComputedStyle(notesEl) : null;
+    var pointerEvents = (computed && computed.pointerEvents) || notesEl.style.pointerEvents;
+    return pointerEvents && pointerEvents !== 'none';
+  }
+
   function isChalkboardVisible() {
     var chalkboardEl = document.getElementById('chalkboard');
     if (!chalkboardEl) return false;
@@ -64,34 +74,56 @@ var RevealSpotlight = window.RevealSpotlight || (function () {
   }
 
   function updateChalkboardState() {
-    isChalkboardOn = isChalkboardVisible();
+    // "Chalkboard mode" includes both:
+    // - the full chalkboard overlay (B)
+    // - the notes canvas drawing overlay (C)
+    isChalkboardOn = isChalkboardVisible() || isNotesCanvasInDrawingMode();
     if (isChalkboardOn) {
       setSpotlight(false);
     }
   }
 
   function addChalkboardInterlock() {
+    var broadcastListenerAdded = false;
+    var notesObserverAdded = false;
+    var chalkboardObserverAdded = false;
+
+    function observeEl(el) {
+      if (!window.MutationObserver || !el) return;
+      var observer = new MutationObserver(function () {
+        updateChalkboardState();
+      });
+      observer.observe(el, { attributes: true, attributeFilter: ['style', 'class'] });
+    }
+
     function tryAttach() {
+      var notesEl = document.getElementById('notescanvas');
       var chalkboardEl = document.getElementById('chalkboard');
-      if (!chalkboardEl) return false;
+      if (!notesEl && !chalkboardEl) return false;
 
-      updateChalkboardState();
+      if (notesEl && !notesObserverAdded) {
+        observeEl(notesEl);
+        notesObserverAdded = true;
+      }
 
-      if (window.MutationObserver) {
-        var observer = new MutationObserver(function () {
-          updateChalkboardState();
-        });
-        observer.observe(chalkboardEl, { attributes: true, attributeFilter: ['style', 'class'] });
+      if (chalkboardEl && !chalkboardObserverAdded) {
+        observeEl(chalkboardEl);
+        chalkboardObserverAdded = true;
       }
 
       // Also listen for reveal-chalkboard's broadcast events (belt + suspenders).
-      document.addEventListener('broadcast', function (e) {
-        var content = e && (e.content || e.detail);
-        var type = content && content.type;
-        if (type === 'showChalkboard' || type === 'closeChalkboard') {
-          updateChalkboardState();
-        }
-      }, false);
+      if (!broadcastListenerAdded) {
+        document.addEventListener('broadcast', function (e) {
+          var content = e && (e.content || e.detail);
+          var type = content && content.type;
+          if (type === 'showChalkboard' || type === 'closeChalkboard') {
+            updateChalkboardState();
+          }
+        }, false);
+        broadcastListenerAdded = true;
+      }
+
+      updateChalkboardState();
 
       return true;
     }
