@@ -137,9 +137,47 @@ All demos share common styling and utilities:
 
 ---
 
+## Build Priority (ASTR 101 Spring 2026)
+
+Demos prioritized by course schedule alignment. First class: Jan 21, 2026.
+
+### Immediate (Week 2–3)
+
+| Priority | Demo | Course Week | Topic |
+|----------|------|-------------|-------|
+| 🔴 | **Kepler's Laws Sandbox** | Week 3 (Feb 2–6) | Gravity & orbits, Kepler's laws |
+
+### High Priority (Weeks 4–5)
+
+| Priority | Demo | Course Week | Topic |
+|----------|------|-------------|-------|
+| 🟠 | **Blackbody Radiation** | Week 4 (Feb 9–13) | Light & radiation, EM spectrum |
+| 🟠 | **Electromagnetic Spectrum** | Week 4 (Feb 9–13) | Light & radiation |
+| 🟠 | **Telescope Resolution** | Week 5 (Feb 17–20) | Telescopes |
+
+### Medium Priority (Weeks 8–10)
+
+| Priority | Demo | Course Week | Topic |
+|----------|------|-------------|-------|
+| 🟡 | **Parallax & Distance** | Week 8 (Mar 9–13) | Measuring stars |
+| 🟡 | **Inverse Square Law** | Week 8 (Mar 9–13) | Luminosity |
+| 🟡 | **HR Diagram Explorer** | Week 8 (Mar 9–13) | H-R diagram |
+| 🟡 | **Binary Star Orbits** | Week 9 (Mar 16–20) | Binary stars, stellar masses |
+
+### Later (Weeks 14–16)
+
+| Priority | Demo | Course Week | Topic |
+|----------|------|-------------|-------|
+| 🟢 | **Galaxy Rotation Curves** | Week 14 (Apr 20–24) | Dark matter |
+| 🟢 | **Hubble's Law Explorer** | Week 15 (Apr 27–May 1) | Cosmology, Big Bang |
+| 🟢 | **Redshift & Expansion** | Week 15 (Apr 27–May 1) | Cosmology |
+| 🟢 | **Cosmic Microwave Background** | Week 16 (May 4–6) | Early universe |
+
+---
+
 ## Demo Roadmap
 
-Future demos under consideration, organized by topic area:
+Full catalog of planned demos, organized by topic area:
 
 ### Foundational Concepts
 
