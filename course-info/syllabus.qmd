@@ -102,8 +102,8 @@ By the end of this course, students will be able to:
 
 ### Important Dates {#sec-important-dates}
 
-- **Module 1 Exam:** Monday, February 23 (Chapters 1-8)
-- **Module 2 Exam:** Monday, April 6 (Chapters 16-21)
+- **Module 1 Exam:** Monday, March 2 (Chapters 1-8)
+- **Module 2 Exam:** Monday, April 20 (Chapters 16-21)
 - **Final Exam:** Friday, May 8, 10:30 AM – 12:30 PM (Comprehensive)
 
 See the [Course Schedule](./schedule.qmd) for the full weekly calendar.
