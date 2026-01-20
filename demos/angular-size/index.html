@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Angular Size Demo | AstroEd</title>
+  <link rel="stylesheet" href="../_assets/astro-theme.css">
+  <style>
+    /* Demo-specific styles */
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+    }
+
+    body {
+      font-family: var(--font-main);
+      background: var(--space-black);
+      color: var(--text-primary);
+    }
+
+    .demo-wrapper {
+      min-height: 100vh;
+      position: relative;
+    }
+
+    #starfield {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+    }
+
+    .demo-content {
+      position: relative;
+      z-index: 1;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 1.5rem;
+    }
+
+    .demo-header {
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+
+    .demo-title {
+      font-size: 1.75rem;
+      margin: 0 0 0.5rem 0;
+      color: var(--text-primary);
+    }
+
+    .demo-subtitle {
+      font-size: 1rem;
+      color: var(--text-secondary);
+      margin: 0;
+    }
+
+    /* Main visualization */
+    .viz-panel {
+      background: rgba(18, 18, 31, 0.9);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    #angular-size-svg {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* Readout panel */
+    .readout-panel {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .readout-item {
+      background: rgba(18, 18, 31, 0.9);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    .readout-label {
+      font-size: 0.75rem;
+      color: var(--text-secondary);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 0.5rem;
+    }
+
+    .readout-value {
+      font-family: var(--font-mono);
+      font-size: 1.5rem;
+      color: var(--accent-gold);
+    }
+
+    .readout-unit {
+      font-size: 0.875rem;
+      color: var(--text-muted);
+    }
+
+    /* Controls */
+    .controls-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .control-card {
+      background: rgba(18, 18, 31, 0.9);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      padding: 1rem;
+    }
+
+    .control-card.full-width {
+      grid-column: 1 / -1;
+    }
+
+    .control-title {
+      font-size: 0.875rem;
+      color: var(--text-secondary);
+      margin-bottom: 0.75rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .control-value {
+      font-family: var(--font-mono);
+      color: var(--accent-blue);
+    }
+
+    /* Presets */
+    .presets-section {
+      margin-top: 0.75rem;
+    }
+
+    .presets-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .presets-label {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      margin-bottom: 0.25rem;
+    }
+
+    .preset-btn {
+      font-size: 0.75rem;
+      padding: 0.25rem 0.5rem;
+      background: var(--space-light);
+      border: 1px solid var(--border-color);
+      border-radius: 4px;
+      color: var(--text-secondary);
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+
+    .preset-btn:hover {
+      background: var(--space-medium);
+      color: var(--text-primary);
+      border-color: var(--accent-blue);
+    }
+
+    .preset-btn.active {
+      background: var(--accent-blue);
+      color: var(--space-black);
+      border-color: var(--accent-blue);
+    }
+
+    .preset-btn.easter-egg {
+      border-style: dashed;
+      opacity: 0.8;
+    }
+
+    .preset-btn.easter-egg:hover {
+      opacity: 1;
+    }
+
+    /* Time evolution */
+    .time-control {
+      margin-top: 1rem;
+      padding-top: 1rem;
+      border-top: 1px solid var(--border-color);
+    }
+
+    .time-label {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      margin-top: 0.25rem;
+    }
+
+    /* Reference guide */
+    .reference-guide {
+      background: rgba(18, 18, 31, 0.9);
+      border-left: 3px solid var(--accent-blue);
+      padding: 1rem;
+      margin-top: 1rem;
+      border-radius: 0 8px 8px 0;
+      font-size: 0.875rem;
+    }
+
+    .reference-guide strong {
+      color: var(--accent-gold);
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      .readout-panel {
+        grid-template-columns: 1fr;
+      }
+
+      .controls-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .demo-content {
+        padding: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="demo-wrapper">
+    <canvas id="starfield"></canvas>
+
+    <div class="demo-content">
+      <header class="demo-header">
+        <h1 class="demo-title">Angular Size</h1>
+        <p class="demo-subtitle">Why things look big or small depends on size <em>and</em> distance</p>
+      </header>
+
+      <!-- Main Visualization -->
+      <div class="viz-panel">
+        <svg id="angular-size-svg" viewBox="0 0 800 300" preserveAspectRatio="xMidYMid meet">
+          <!-- Background elements -->
+          <defs>
+            <!-- Glow filter for objects -->
+            <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+              <feGaussianBlur stdDeviation="4" result="blur"/>
+              <feMerge>
+                <feMergeNode in="blur"/>
+                <feMergeNode in="SourceGraphic"/>
+              </feMerge>
+            </filter>
+
+            <!-- Sun gradient -->
+            <radialGradient id="sunGradient">
+              <stop offset="0%" stop-color="#fff5cc"/>
+              <stop offset="70%" stop-color="#ffcc00"/>
+              <stop offset="100%" stop-color="#ff8c00"/>
+            </radialGradient>
+
+            <!-- Moon gradient -->
+            <radialGradient id="moonGradient" cx="30%" cy="30%">
+              <stop offset="0%" stop-color="#f0f0f8"/>
+              <stop offset="100%" stop-color="#c0c0d0"/>
+            </radialGradient>
+          </defs>
+
+          <!-- Angle arc and lines (drawn behind object) -->
+          <g id="angle-display">
+            <line id="angle-line-top" class="angle-lines" x1="80" y1="150" x2="700" y2="150"/>
+            <line id="angle-line-bottom" class="angle-lines" x1="80" y1="150" x2="700" y2="150"/>
+            <path id="angle-arc" class="angle-arc" d=""/>
+            <text id="angle-text" x="120" y="150" fill="#f4d03f" font-size="14" font-family="var(--font-mono)"></text>
+          </g>
+
+          <!-- Observer (eye) -->
+          <g id="observer" transform="translate(80, 150)">
+            <circle cx="0" cy="0" r="20" fill="#252538" stroke="#5dade2" stroke-width="2"/>
+            <circle cx="5" cy="0" r="8" fill="#5dade2"/>
+            <circle cx="7" cy="-2" r="2" fill="#fff"/>
+            <text x="0" y="35" text-anchor="middle" fill="#a0a0b0" font-size="12">Observer</text>
+          </g>
+
+          <!-- Celestial object -->
+          <g id="celestial-object">
+            <circle id="object-circle" cx="600" cy="150" r="40" fill="url(#sunGradient)" filter="url(#glow)"/>
+          </g>
+
+          <!-- Distance indicator -->
+          <g id="distance-indicator">
+            <line x1="100" y1="250" x2="600" y2="250" stroke="#606070" stroke-width="1"/>
+            <line x1="100" y1="245" x2="100" y2="255" stroke="#606070" stroke-width="1"/>
+            <line x1="600" y1="245" x2="600" y2="255" stroke="#606070" stroke-width="1"/>
+            <text id="distance-label" x="350" y="270" text-anchor="middle" fill="#a0a0b0" font-size="12"></text>
+          </g>
+
+          <!-- Size indicator (on object) -->
+          <g id="size-indicator">
+            <line id="size-line" x1="600" y1="110" x2="600" y2="190" stroke="#f4d03f" stroke-width="1" stroke-dasharray="4 2"/>
+            <text id="size-label" x="620" y="150" fill="#f4d03f" font-size="11"></text>
+          </g>
+        </svg>
+      </div>
+
+      <!-- Readout Panel -->
+      <div class="readout-panel">
+        <div class="readout-item">
+          <div class="readout-label">Angular Size</div>
+          <div class="readout-value" id="angular-size-value">0.53</div>
+          <div class="readout-unit" id="angular-size-unit">degrees</div>
+        </div>
+        <div class="readout-item">
+          <div class="readout-label">Physical Size</div>
+          <div class="readout-value" id="size-value">1.39</div>
+          <div class="readout-unit" id="size-unit">million km</div>
+        </div>
+        <div class="readout-item">
+          <div class="readout-label">Distance</div>
+          <div class="readout-value" id="distance-value">150</div>
+          <div class="readout-unit" id="distance-unit">million km</div>
+        </div>
+      </div>
+
+      <!-- Controls -->
+      <div class="controls-grid">
+        <div class="control-card">
+          <div class="control-title">
+            Distance
+            <span class="control-value" id="distance-display">150 Mkm</span>
+          </div>
+          <input type="range" id="distance-slider" class="astro-slider" min="0" max="1000" value="500">
+        </div>
+
+        <div class="control-card">
+          <div class="control-title">
+            Physical Size
+            <span class="control-value" id="size-display">1.39 Mkm</span>
+          </div>
+          <input type="range" id="size-slider" class="astro-slider" min="0" max="1000" value="500">
+        </div>
+
+        <div class="control-card full-width">
+          <div class="control-title">Presets</div>
+
+          <div class="presets-section">
+            <div class="presets-label">Astronomical Objects</div>
+            <div class="presets-row" id="astro-presets"></div>
+          </div>
+
+          <div class="presets-section">
+            <div class="presets-label">Everyday Objects (try these!)</div>
+            <div class="presets-row" id="easter-presets"></div>
+          </div>
+
+          <!-- Time Evolution (Moon only) -->
+          <div class="time-control" id="time-control" style="display: none;">
+            <div class="control-title">
+              Time Evolution (Moon)
+              <span class="control-value" id="time-display">Today</span>
+            </div>
+            <input type="range" id="time-slider" class="astro-slider" min="-4000" max="1000" value="0">
+            <div class="time-label">
+              <span>4 billion years ago</span>
+              <span>1 billion years from now</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Reference Guide -->
+      <div class="reference-guide">
+        <strong>Thumb rule:</strong> Your thumb at arm's length covers about <strong>2°</strong> of sky.
+        The Sun and Moon each cover about <strong>0.5°</strong> — a quarter of your thumb width!
+      </div>
+    </div>
+  </div>
+
+  <script src="../_assets/astro-utils.js"></script>
+  <script src="../_assets/starfield.js"></script>
+  <script src="angular-size.js"></script>
+</body>
+</html>
