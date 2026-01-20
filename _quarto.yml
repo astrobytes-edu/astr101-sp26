@@ -6,8 +6,8 @@
 
 params:
   # Course identity
-  course-code: "ASTR 201"
-  course-title: "Astronomy for Science Majors"
+  course-code: "ASTR 101"
+  course-title: "Principles of Astronomy"
   semester: "Spring 2026"
 
   # Instructor
@@ -17,19 +17,20 @@ params:
   office-hours: "Fridays 11:00 am–12:00 pm (and by appointment)"
 
   # Class logistics
-  class-time: "Tues/Thurs 12:30–1:45 pm"
-  location: "LH 245"
+  class-time: "MWF 10:00–10:50 AM"
+  location: "LH 345"
 
   # URLs
-  website-url: "https://astrobytes-edu.github.io/astr201-sp26"
+  website-url: "https://astrobytes-edu.github.io/astr101-sp26"
   canvas-url: "https://sdsu.instructure.com"
 
   # Textbook
-  textbook: "Stan Owocki, *Fundamentals of Astrophysics*, 2nd Edition"
-  textbook-isbn: "9781009618007"
+  textbook: "Freedman, Geller & Kaufmann, *Universe*, 11th Edition (2019)"
+  textbook-supplement: "Fleisch & Kregenow, *A Student's Guide to the Mathematics of Astronomy*, 1st Edition"
+  textbook-platform: "https://achieve.macmillanlearning.com"
 
   # Assets (for includes)
-  logo: "assets/astr201-logo.png"
+  logo: "assets/astr101-logo.png"
 
 # ============================================================
 
@@ -59,8 +60,8 @@ project:
   brand: _brand.yml
 
 website:
-  title: "ASTR 201: Astronomy for Science Majors (Spring 2026)"
-  favicon: assets/astr201-favicon.png
+  title: "ASTR 101: Principles of Astronomy (Spring 2026)"
+  favicon: assets/astro101-favicon.png
   announcement:
     icon: info-circle
     dismissable: true
@@ -68,13 +69,13 @@ website:
     type: primary
     position: below-navbar
   navbar:
-    logo: assets/astr201-logo.png
+    logo: assets/astr101-logo.png
   sidebar:
     style: "docked"
     search: true
     collapse-level: 1
     pinned: true
-    title: "ASTR 201: Astronomy for Science Majors"
+    title: "ASTR 101: Principles of Astronomy"
     contents:
       - href: index.qmd
         text: Home
@@ -82,7 +83,7 @@ website:
       - section: "Course Info"
         contents:
           - course-info/syllabus.qmd
-          - course-info/why-astr201-is-different.qmd
+          - course-info/why-astr101-is-different.qmd
           - course-info/schedule.qmd
 
       - section: "Module 1: Foundations"
