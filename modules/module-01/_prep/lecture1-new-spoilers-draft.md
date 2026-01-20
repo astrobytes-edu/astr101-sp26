@@ -1,6 +1,6 @@
 # Lecture 1: Additional Spoilers — Draft
 
-**Course:** ASTR 201  
+**Course:** ASTR 101  
 **Module:** Week 1 — Course Introduction  
 **Purpose:** Two additional spoilers to add to Section 1.2 (The Spoiler Reel)  
 **Placement:** After Spoiler 8 (Crab Nebula), before the Spoiler Reel Summary  

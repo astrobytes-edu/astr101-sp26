@@ -3,7 +3,7 @@ title: "Lecture 2 Reference Tables"
 subtitle: "CGS Units & Astrophysical Constants"
 author: "Dr. Anna Rosen"
 date: "2026-01-22"
-draft: false
+draft: true
 format:
   pdf:
     toc: false

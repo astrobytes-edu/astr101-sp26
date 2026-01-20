@@ -1,6 +1,6 @@
 ---
 # =============================================================================
-# ASTR 201 Slide Template
+# ASTR 101 Slide Template
 # =============================================================================
 # Copy to: modules/module-NN/slides/lecture-NN-topic.qmd
 # Then: Find/replace all [PLACEHOLDERS] with actual content
@@ -28,7 +28,7 @@ format:
     transition-speed: fast
     background-transition: fade
     center: false
-    footer: "ASTR 201 • Lecture [N]"
+    footer: "ASTR 101 • Lecture [N]"
     chalkboard: true
     code-line-numbers: true
     fig-align: center

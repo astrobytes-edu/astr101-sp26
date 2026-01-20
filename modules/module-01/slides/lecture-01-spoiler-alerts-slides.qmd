@@ -4,11 +4,11 @@ subtitle: "How Do We Know What We Know?"
 author: "Dr. Anna Rosen"
 date: "2026-01-20"
 description: "A trailer for the semester: how astronomers turn photons into physical claims."
-draft: false
+draft: true
 
 format:
   revealjs:
-    footer: "ASTR 201 • Lecture 1 • Dr. Anna Rosen"
+    footer: "ASTR 101 • Lecture 1 • Dr. Anna Rosen"
     chalkboard: true
     title-slide-attributes:
       data-background-image: "/assets/images/common/cosmic-cliffs-jwst.png"

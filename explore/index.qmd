@@ -1,6 +1,6 @@
 ---
 title: "Explore"
-draft: false
+draft: true
 ---
 
 ## Beyond the Classroom

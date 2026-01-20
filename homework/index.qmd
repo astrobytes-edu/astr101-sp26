@@ -1,6 +1,6 @@
 ---
 title: "Homework"
-draft: false
+draft: true
 ---
 
 ## Assignments

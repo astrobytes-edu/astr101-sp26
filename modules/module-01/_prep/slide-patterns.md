@@ -1,4 +1,4 @@
-# ASTR 201 — Quarto Slide Pattern Library (RevealJS Output)
+# ASTR 101 — Quarto Slide Pattern Library (RevealJS Output)
 
 Purpose: reusable, consistent slide layouts for Quarto `.qmd` lecture decks. These patterns avoid raw RevealJS `<section>` and bespoke HTML grids. Prefer Quarto blocks (`:::`, `::::`) and small, repeatable class + style choices.
 

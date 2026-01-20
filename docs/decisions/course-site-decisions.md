@@ -1,12 +1,12 @@
 ---
-title: "ASTR 201 Course Site Decision Log (ADR Index)"
+title: "ASTR 101 Course Site Decision Log (ADR Index)"
 version: "1.0.0"
 date: "2026-01-14"
 status: "ACTIVE"
 owner: "Dr. Anna Rosen"
 ---
 
-# ASTR 201 Course Site Decision Log (ADR Index)
+# ASTR 101 Course Site Decision Log (ADR Index)
 
 This file records **binding decisions** for the course site.
 

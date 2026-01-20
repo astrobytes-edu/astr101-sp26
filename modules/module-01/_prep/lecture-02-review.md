@@ -1,6 +1,6 @@
 # Expert Review: Lecture 2 Materials
 
-**Reviewer:** Claude (ASTR 201 Skill Audit Mode)
+**Reviewer:** Claude (ASTR 101 Skill Audit Mode)
 **Date:** 2026-01-16
 **Artifacts Reviewed:**
 - `readings/lecture-02-foundations.qmd` (~3250 words, 535 lines)
@@ -10,7 +10,7 @@
 
 ## Executive Summary
 
-**Overall Assessment:** Strong foundational materials with excellent explanatory narrative and pedagogical structure. Both artifacts successfully convey the "Measure → Infer" theme and treat students as scientists-in-training. However, both significantly exceed length targets, and several structural improvements would align them better with ASTR 201 skill guidelines.
+**Overall Assessment:** Strong foundational materials with excellent explanatory narrative and pedagogical structure. Both artifacts successfully convey the "Measure → Infer" theme and treat students as scientists-in-training. However, both significantly exceed length targets, and several structural improvements would align them better with ASTR 101 skill guidelines.
 
 | Criterion | Reading | Slides |
 |-----------|---------|--------|
@@ -62,7 +62,7 @@ The reading lacks the required YAML header per `artifact-formats.md`:
 
 ```yaml
 ---
-Course: ASTR 201
+Course: ASTR 101
 Module: 1 - Foundations
 Learning Objectives:
   - Use dimensional analysis to verify equation validity
@@ -445,7 +445,7 @@ Both artifacts should share the same concept throughline. Currently, neither dec
 
 ## Summary
 
-These are **strong teaching materials** that capture the ASTR 201 voice: warm, rigorous, curious, and empowering. The core pedagogical structure is sound, and the content is technically accurate.
+These are **strong teaching materials** that capture the ASTR 101 voice: warm, rigorous, curious, and empowering. The core pedagogical structure is sound, and the content is technically accurate.
 
 The main issues are **structural compliance** (missing headers, slide count, word limits) rather than content quality. Addressing the high-priority items will bring both artifacts into full compliance with course standards.
 

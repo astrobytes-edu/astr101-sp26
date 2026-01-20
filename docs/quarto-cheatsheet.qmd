@@ -295,7 +295,7 @@ project:
   type: website
 
 website:
-  title: "ASTR 201"
+  title: "ASTR 101"
   navbar:
     left:
       - href: index.qmd

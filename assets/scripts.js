@@ -1,5 +1,5 @@
 // assets/scripts.js
-// ASTR 201 Course Site — Navigation Behavior Contract
+// ASTR 101 Course Site — Navigation Behavior Contract
 //
 // Responsibilities:
 // 1) Force ALL lecture slide links in sidebar to open in a new tab.
@@ -108,7 +108,7 @@
     const titleEl = document.createElement("a");
     titleEl.href = "/";
     titleEl.className = "sidebar-title-injected";
-    titleEl.textContent = "ASTR 201";
+    titleEl.textContent = "ASTR 101";
 
     // Insert before menu container
     menuContainer.parentNode.insertBefore(titleEl, menuContainer);

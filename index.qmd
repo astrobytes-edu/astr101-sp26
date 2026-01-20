@@ -1,7 +1,7 @@
 ---
-title: "ASTR 201: Astronomy for Science Majors"
+title: "ASTR 101: Principles of Astronomy"
 subtitle: "Spring 2026"
-draft: false
+draft: true
 format:
   html:
     toc: false
@@ -10,9 +10,9 @@ format:
 ::: {.grid}
 ::: {.g-col-12 .g-col-md-8}
 
-## Welcome to ASTR 201
+## Welcome to ASTR 101
 
-This is not a "tour of the cosmos" course. ASTR 201 is a **quantitative introduction to astrophysics** where you'll learn to think like an astronomer: extracting physical insight from limited observations using mathematics and physics.
+This is not a "tour of the cosmos" course. ASTR 101 is a **quantitative introduction to astrophysics** where you'll learn to think like an astronomer: extracting physical insight from limited observations using mathematics and physics.
 
 Astronomers can't visit stars or hold galaxies in a lab. Instead, we measure light — its brightness, color, spectrum, and timing — and from these constrained observations, we infer masses, temperatures, distances, ages, and compositions. This course teaches you *how* we know *what we know* about the universe.
 

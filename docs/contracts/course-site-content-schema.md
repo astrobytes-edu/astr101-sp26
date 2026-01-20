@@ -1,5 +1,5 @@
 ---
-title: "ASTR 201 Course Site Content Schema Contract"
+title: "ASTR 101 Course Site Content Schema Contract"
 version: "1.0.0"
 date: "2026-01-14"
 status: "LOCKED"

@@ -1,4 +1,4 @@
-# ASTR 201 Media Registry + On-Slide Credits — Implementation Plan
+# ASTR 101 Media Registry + On-Slide Credits — Implementation Plan
 
 > **For Codex:** REQUIRED SUB-SKILL: Use `superpowers:executing-plans` to implement this plan task-by-task.
 

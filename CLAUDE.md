@@ -1,4 +1,4 @@
-# ASTR 201 Course Website - Claude Instructions
+# ASTR 101 Course Website - Claude Instructions
 
 ## Prime Directive
 **Correctness > invariants > reproducibility > clarity > elegance > speed.**
@@ -53,7 +53,7 @@ Adversarial reviewer and refactor analyst. STEM Pedagogy and Astrophysics expert
 - ❌ Using Quarto features without checking docs
 
 ## Project Context
-- Quarto-based course website for ASTR 201 (Spring 2026)
+- Quarto-based course website for ASTR 101 (Spring 2026)
 - RevealJS slides with custom astronomy styling
 - Files are at `course-info/`, NOT `course/`
 - Slides are `lecture-*.qmd`, NOT `L*-*.qmd`

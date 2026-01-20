@@ -1,4 +1,4 @@
-# ASTR 201 Teaching Tools (RevealJS) — Spec + UX Contract
+# ASTR 101 Teaching Tools (RevealJS) — Spec + UX Contract
 
 **Status:** Draft  
 **Owner:** Anna (instructor)  
@@ -10,7 +10,7 @@ Dominant: **Architectural exploration** + **Design system / UX contract** + **Do
 
 ## 1) Problem Statement
 
-ASTR 201 lectures rely on a small set of “teaching affordances” during live presentation:
+ASTR 101 lectures rely on a small set of “teaching affordances” during live presentation:
 
 - a visible pointer (laser)
 - a spotlight (attention funnel)

@@ -1,7 +1,7 @@
 [project]
 name = "astr201-sp26"
 version = "0.1.0"
-description = "ASTR 201 Course Website - Spring 2026"
+description = "ASTR 101 Course Website - Spring 2026"
 requires-python = ">=3.11"
 
 [project.optional-dependencies]

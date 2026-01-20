@@ -1,14 +1,14 @@
-# Why ASTR 201 is Different - Design Document
+# Why ASTR 101 is Different - Design Document
 
 **Created:** 2026-01-15
 **Status:** Implemented
-**File:** `course-info/why-astr201-is-different.qmd`
+**File:** `course-info/why-astr101-is-different.qmd`
 
 ---
 
 ## Goal
 
-Create an ASTR 201 version of the "Why This Course is Different" page (similar to ASTR 596) that:
+Create an ASTR 101 version of the "Why This Course is Different" page (similar to ASTR 596) that:
 - Explains the course philosophy to students
 - Motivates them to engage with the challenge
 - Addresses growth mindset and productive struggle
@@ -50,7 +50,7 @@ Create an ASTR 201 version of the "Why This Course is Different" page (similar t
 
 ## Implementation
 
-- File created: `course-info/why-astr201-is-different.qmd`
+- File created: `course-info/why-astr101-is-different.qmd`
 - Added to sidebar in `_quarto.yml` under "Course Info"
 - Image: `assets/growth-mindset.jpeg`
 - Renders successfully

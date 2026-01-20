@@ -5,7 +5,7 @@
 
 ```markdown
 ---
-title: "ASTR 201 Course Site Acceptance Screenshots (Golden Views)"
+title: "ASTR 101 Course Site Acceptance Screenshots (Golden Views)"
 version: "1.0.0"
 date: "2026-01-14"
 status: "LOCKED (Release Gate)"

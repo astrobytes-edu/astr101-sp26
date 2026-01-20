@@ -1,6 +1,6 @@
 ---
 # =============================================================================
-# ASTR 201 Reading Template
+# ASTR 101 Reading Template
 # =============================================================================
 # Copy to: modules/module-NN/readings/lecture-NN-topic.qmd
 # Then: Find/replace all [PLACEHOLDERS] with actual content
@@ -20,7 +20,7 @@ date: "[YYYY-MM-DD]"
 description: "[One-line description - matches slide description]"
 draft: true  # Set to false when ready to publish
 categories: [[module-topic], [secondary-topic]]
-course: ASTR 201
+course: ASTR 101
 module: "[N] - [Module Name]"
 
 learning-objectives:

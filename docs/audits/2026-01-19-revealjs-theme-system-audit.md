@@ -1,4 +1,4 @@
-# ASTR 201 RevealJS Theme System Audit (Design System + Frontend Engineering)
+# ASTR 101 RevealJS Theme System Audit (Design System + Frontend Engineering)
 
 **Audit scope:** `assets/theme/**` (site themes + slides theme system) with implementation focused on `assets/theme/slides/**`.
 

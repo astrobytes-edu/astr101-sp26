@@ -26,7 +26,7 @@
 # RevealJS uses light mode by default (projectors are bright environments)
 
 meta:
-  name: "ASTR 201 Observatory Slate"
+  name: "ASTR 101 Observatory Slate"
 
 color:
   palette:

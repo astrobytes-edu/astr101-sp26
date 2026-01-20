@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Schedule Generator for ASTR 201
+Schedule Generator for ASTR 101
 Reads data/schedule.yml and generates computed dates.
 
 Usage:

@@ -6,7 +6,7 @@ date: "2026-01-20"
 description: "A trailer for the semester: how astronomers turn photons into physical claims (and how we stay honest about assumptions)."
 draft: false
 categories: [course-overview, foundations]
-course: ASTR 201
+course: ASTR 101
 module: "1 - Foundations"
 learning-objectives:
   - Explain the course thesis: measurement → model → inference
@@ -289,7 +289,7 @@ It becomes 5× larger. In this model, \(t \propto d\).
 
 ---
 
-## How to Succeed in ASTR 201 (Without Guessing)
+## How to Succeed in ASTR 101 (Without Guessing)
 
 ::: {.callout-note}
 ## Roadmap
@@ -312,7 +312,7 @@ In practice, that means you will repeatedly do three things:
 The course logistics are built to reward those habits. For the official policy language and due dates, use:
 
 - [Syllabus](/course-info/syllabus.qmd)
-- [Why ASTR 201 is Different](/course-info/why-astr201-is-different.qmd)
+- [Why ASTR 101 is Different](/course-info/why-astr101-is-different.qmd)
 
 Two concrete logistics that matter right away (and are easy to forget):
 

@@ -1,8 +1,8 @@
 ---
-title: ASTR 201 - Using AI Assistance Wisely + How to Study Like a Scientist
-# subtitle: "ASTR 201 — XXX "
+title: ASTR 101 - Using AI Assistance Wisely + How to Study Like a Scientist
+# subtitle: "ASTR 101 — XXX "
 author: "Instructor: Dr. Anna Rosen"
-draft: false
+draft: true
 format:
   pdf:
     toc: false
@@ -15,14 +15,14 @@ format:
     number-sections: false
 ---
 
-**Course Website:** [https://astrobytes-edu.github.io/astr201-sp26](https://astrobytes-edu.github.io/astr201-sp26)
+**Course Website:** [https://astrobytes-edu.github.io/astr101-sp26](https://astrobytes-edu.github.io/astr101-sp26)
 *(Links to the AI tools are posted on the course website homepage and syllabus.)*
 
 ---
 
 ## Why this handout exists
 
-In ASTR 201, your superpower isn’t memorizing astronomy trivia — it’s **inferring physical reality from limited measurements**. That skill requires you to practice:
+In ASTR 101, your superpower isn’t memorizing astronomy trivia — it’s **inferring physical reality from limited measurements**. That skill requires you to practice:
 
 - explaining your reasoning clearly,
 - carrying units,
@@ -45,7 +45,7 @@ Use it to:
 - generate study guides, concept maps, flash cards, podcasts, and retrieval questions,
 - locate where a concept is explained in the notes.
 
-### 2) ASTR 201 Socratic Tutor (Custom GPT) — **Practice Coach**
+### 2) ASTR 101 Socratic Tutor (Custom GPT) — **Practice Coach**
 
 **Best for:** turning passive reading into active reasoning.
 The Socratic tutor should:
@@ -214,7 +214,7 @@ Start with a solved example, then redo it with fewer hints, then do a new one. (
 
 ---
 
-# A weekly study routine that fits ASTR 201
+# A weekly study routine that fits ASTR 101
 
 ## Before class (10–15 minutes)
 

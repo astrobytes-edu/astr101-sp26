@@ -1,6 +1,6 @@
 # Quarto RevealJS Extensions Guide
 
-A curated set of extensions for ASTR 201 lectures. This stack emphasizes **clarity**, **attention direction**, and **active learning**—not gimmicks.
+A curated set of extensions for ASTR 101 lectures. This stack emphasizes **clarity**, **attention direction**, and **active learning**—not gimmicks.
 
 ## Installed Extensions
 
@@ -347,14 +347,14 @@ format:
 
 ---
 
-## ASTR 201 Recommended Configuration
+## ASTR 101 Recommended Configuration
 
 Here's a complete YAML header using the curated stack:
 
 ```yaml
 ---
 title: "Lecture N: Topic"
-subtitle: "ASTR 201: Astronomy for Science Majors"
+subtitle: "ASTR 101: Principles of Astronomy"
 date: "2026-XX-XX"
 format:
   revealjs:
@@ -363,7 +363,7 @@ format:
     transition: fade
     transition-speed: fast
     center: false
-    footer: "ASTR 201 • Dr. Rosen"
+    footer: "ASTR 101 • Dr. Rosen"
     chalkboard: true
     code-line-numbers: true
     fig-align: center

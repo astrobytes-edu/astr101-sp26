@@ -671,7 +671,7 @@ contributes:
         preview-links: true
         code-copy: true
         code-line-numbers: true
-        footer: "ASTR 201 • SDSU"
+        footer: "ASTR 101 • SDSU"
         logo: assets/logo.svg
 ```
 

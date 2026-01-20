@@ -1,6 +1,7 @@
 ---
 title: "Pedagogical Callout Showcase"
-subtitle: "Visual reference for ASTR 201 callout types"
+subtitle: "Visual reference for ASTR 101 callout types"
+draft: true
 format: html
 ---
 

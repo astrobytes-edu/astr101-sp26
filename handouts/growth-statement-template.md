@@ -1,5 +1,5 @@
 ---
-title: ASTR 201 — Growth Statement Template (GS1 / GS2 / GS3)
+title: ASTR 101 — Growth Statement Template (GS1 / GS2 / GS3)
 subtitle: "Due: 2 days (Wednesday) after HW submission by 11:59 PM"
 author: "Instructor: Dr. Anna Rosen"
 format:
@@ -168,7 +168,7 @@ If **No**:
 If **Yes** (check all that apply):
 
 * [ ] Course NotebookLM Notebook (course-grounded)
-* [ ] ASTR 201 Socratic Tutor (Custom GPT)
+* [ ] ASTR 101 Socratic Tutor (Custom GPT)
 * [ ] Other: ________
 
 **8.2 What did you use AI for?** (check all that apply)

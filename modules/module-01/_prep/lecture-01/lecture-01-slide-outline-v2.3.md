@@ -1,4 +1,4 @@
-# ASTR 201 Lecture 01: Spoiler Alerts — The Universe Is Weird
+# ASTR 101 Lecture 01: Spoiler Alerts — The Universe Is Weird
 
 ## Comprehensive Slide Deck Outline v2.3 (Quarto RevealJS)
 
@@ -74,7 +74,7 @@
 ### Artifact Header
 
 ```yaml
-Course: ASTR 201 (Astronomy for Science Majors)
+Course: ASTR 101 (Principles of Astronomy)
 Module: Module 1 — Foundations (Lecture 1 of 2)
 Learning Objectives:
   1. State the course thesis: pretty pictures → measurements → models → inferences

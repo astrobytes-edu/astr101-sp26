@@ -1,6 +1,6 @@
-# ASTR 201 Pedagogical Contract
+# ASTR 101 Pedagogical Contract
 
-*A durable, enforceable quality bar for all ASTR 201 learning artifacts (slides, readings, worksheets, homework, solutions).*  
+*A durable, enforceable quality bar for all ASTR 101 learning artifacts (slides, readings, worksheets, homework, solutions).*  
 Version: v1.0 • Status: Active • Owner: Instructor
 
 ---
@@ -55,7 +55,7 @@ That implies:
 
 ---
 
-## 3) ASTR 201 Math Grammar (Symbolic-with-Interpretation)
+## 3) ASTR 101 Math Grammar (Symbolic-with-Interpretation)
 
 ### 3.1 Equation contract (every time an equation appears)
 Each equation must come with:

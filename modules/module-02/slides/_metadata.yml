@@ -8,7 +8,7 @@ format:
     theme: [simple, ../../../assets/theme/slides/theme.scss]
 
     # Use relative path (no leading /) for GitHub Pages project sites
-    logo: assets/astr201-logo.png
+    logo: assets/astr101-logo.png
 
     date-format: "MMMM D, YYYY"
 

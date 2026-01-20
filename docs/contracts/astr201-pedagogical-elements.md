@@ -1,4 +1,4 @@
-# ASTR 201 Pedagogical Elements Contract
+# ASTR 101 Pedagogical Elements Contract
 
 *Semantic callout types for consistent pedagogy across all course materials.*
 
@@ -8,7 +8,7 @@ Version: v1.0 • Status: Active • Owner: Instructor
 
 ## Overview
 
-This contract defines the callout types available in ASTR 201 and when to use each. All callouts use Bootstrap Icons (no emojis) for a clean, professional appearance.
+This contract defines the callout types available in ASTR 101 and when to use each. All callouts use Bootstrap Icons (no emojis) for a clean, professional appearance.
 
 ---
 

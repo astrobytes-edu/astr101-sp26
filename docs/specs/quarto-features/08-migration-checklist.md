@@ -33,8 +33,8 @@ website:
 
   params:
     # Course identification
-    course-number: "ASTR 201"
-    course-title: "Astronomy for Science Majors"
+    course-number: "ASTR 101"
+    course-title: "Principles of Astronomy"
     semester: "Spring 2026"
 
     # Instructor

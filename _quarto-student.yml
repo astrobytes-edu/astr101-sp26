@@ -10,7 +10,7 @@ params:
 
 # Student website title
 website:
-  title: "ASTR 201: Astronomy for Science Majors (Spring 2026)"
+  title: "ASTR 101: Principles of Astronomy (Spring 2026)"
 
 # Student-specific rendering
 format:

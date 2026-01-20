@@ -1,8 +1,8 @@
-# ASTR 201 MyST-MD Inspired UI Design
+# ASTR 101 MyST-MD Inspired UI Design
 
 > **Reference Site:** https://astrobytes-edu.github.io/astr596-modeling-universe/
 
-**Goal:** Modernize the ASTR 201 Quarto course website to match MyST-MD's clean, professional aesthetic.
+**Goal:** Modernize the ASTR 101 Quarto course website to match MyST-MD's clean, professional aesthetic.
 
 **License:** CC BY-NC-SA 4.0
 
@@ -15,7 +15,7 @@
 **Before:** Flat module names on single lines, no header
 
 **After:**
-- **ASTR 201 logo** at top of sidebar (links to homepage)
+- **ASTR 101 logo** at top of sidebar (links to homepage)
 - **Module titles on two lines:**
   - "Module 1:" (smaller, muted)
   - "Foundations" (larger, indigo)
@@ -68,7 +68,7 @@ sidebar:
   search: true
   collapse-level: 1
   logo: assets/astr201-logo.png  # Sidebar header logo
-  title: "ASTR 201"              # Sidebar title text
+  title: "ASTR 101"              # Sidebar title text
 ```
 
 ### `_quarto.yml` TOC Options
@@ -137,7 +137,7 @@ function applyModuleTitleBreaks() {
 ## Validation Checklist
 
 - [x] Module titles display on two lines
-- [x] ASTR 201 logo in sidebar
+- [x] ASTR 101 logo in sidebar
 - [x] More whitespace between sections
 - [x] TOC has "Contents" header
 - [x] Light mode styling works

@@ -1,7 +1,7 @@
-# ASTR 201 Quarto/RevealJS Slide System — Audit Report
+# ASTR 101 Quarto/RevealJS Slide System — Audit Report
 
 **Audit Date:** 2026-01-16
-**Git SHA:** 1e7ae9f (main, clean working tree except `course-info/why-astr201-is-different.qmd`)
+**Git SHA:** 1e7ae9f (main, clean working tree except `course-info/why-astr101-is-different.qmd`)
 **Quarto Version:** 1.8.26 (Pandoc 3.6.3, Dart Sass 1.87.0)
 
 ---
@@ -11,7 +11,7 @@
 ### Files Read (Mandatory)
 | File | Path | Lines |
 |------|------|-------|
-| CLAUDE.md | `/Users/anna/Teaching/astr201-sp26/CLAUDE.md` | 1–157 |
+| CLAUDE.md | `/Users/anna/Teaching/astr101-sp26/CLAUDE.md` | 1–157 |
 | Playbook | `docs/contracts/quarto-reveal-lecture-slides-playbook.md` | 1–771 |
 | _quarto.yml | Project root | 1–171 |
 | _brand.yml | Project root | 1–86 |
@@ -22,8 +22,8 @@
 
 ### Commands Executed
 ```
-git rev-parse --show-toplevel   → /Users/anna/Teaching/astr201-sp26
-git status --porcelain          → M course-info/why-astr201-is-different.qmd
+git rev-parse --show-toplevel   → /Users/anna/Teaching/astr101-sp26
+git status --porcelain          → M course-info/why-astr101-is-different.qmd
 quarto --version                → 1.8.26
 quarto check                    → OK (Python 3.9.6, no R)
 quarto render <lecture-02>      → success

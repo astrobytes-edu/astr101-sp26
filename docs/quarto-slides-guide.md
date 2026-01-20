@@ -279,7 +279,7 @@ $code-color: #0d9488;
 ---
 format:
   revealjs:
-    footer: "ASTR 201 • Dr. Rosen"
+    footer: "ASTR 101 • Dr. Rosen"
     logo: images/logo.png
 ---
 ```
@@ -639,12 +639,12 @@ The deck looks great when these are true:
 
 ---
 
-## 10. ASTR 201 Starter Template
+## 10. ASTR 101 Starter Template
 
 ```yaml
 ---
 title: "Lecture Title"
-subtitle: "ASTR 201: Astronomy for Science Majors"
+subtitle: "ASTR 101: Principles of Astronomy"
 date: "2026-01-22"
 format:
   revealjs:
@@ -653,7 +653,7 @@ format:
     transition: fade
     background-transition: fade
     center: false
-    footer: "ASTR 201 • Dr. Rosen"
+    footer: "ASTR 101 • Dr. Rosen"
     chalkboard: true
     code-line-numbers: true
     fig-align: center
@@ -691,4 +691,4 @@ Answer: 16× (T⁴)
 - [RevealJS Fragments](https://revealjs.com/fragments/)
 - [RevealJS Vertical Slides](https://revealjs.com/vertical-slides/)
 - [Quarto RevealJS Plugins](https://quarto.org/docs/extensions/revealjs.html)
-- [ASTR 201 Slide Utilities](../assets/slides/README.md)
+- [ASTR 101 Slide Utilities](../assets/slides/README.md)

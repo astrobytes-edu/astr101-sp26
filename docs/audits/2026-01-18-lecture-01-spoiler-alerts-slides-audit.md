@@ -1,4 +1,4 @@
-# ASTR 201 Lecture Audit: Lecture 1 Slides (REVISED - POST-FIX)
+# ASTR 101 Lecture Audit: Lecture 1 Slides (REVISED - POST-FIX)
 
 **File:** `modules/module-01/slides/lecture-01-spoiler-alerts-slides.qmd`
 **Audit Date:** 2026-01-18 (revised after fixes applied)

@@ -2,7 +2,7 @@
 
 > **For Claude:** REQUIRED SUB-SKILL: Use superpowers:executing-plans to implement this plan task-by-task.
 
-**Goal:** Replace emoji-based callout workarounds with a semantic, icon-based callout system for ASTR 201 pedagogical elements.
+**Goal:** Replace emoji-based callout workarounds with a semantic, icon-based callout system for ASTR 101 pedagogical elements.
 
 **Architecture:** Extend `assets/theme/callouts.scss` with new custom callout classes using Bootstrap Icons. Each callout type has a semantic name, consistent styling, and appropriate icon. Create a contract document specifying when to use each type.
 
@@ -21,7 +21,7 @@ Append to `assets/theme/callouts.scss`:
 
 ```scss
 // ==============================================================
-// PEDAGOGICAL CALLOUTS - ASTR 201
+// PEDAGOGICAL CALLOUTS - ASTR 101
 // ==============================================================
 
 // Check Yourself - retrieval practice prompt
@@ -442,7 +442,7 @@ Create `handouts/callout-showcase.qmd`:
 ```markdown
 ---
 title: "Pedagogical Callout Showcase"
-subtitle: "Visual reference for ASTR 201 callout types"
+subtitle: "Visual reference for ASTR 101 callout types"
 format: html
 ---
 
@@ -556,7 +556,7 @@ git commit -m "docs(callouts): Add callout showcase page for visual reference"
 Create `docs/contracts/astr201-pedagogical-elements.md`:
 
 ```markdown
-# ASTR 201 Pedagogical Elements Contract
+# ASTR 101 Pedagogical Elements Contract
 
 *Semantic callout types for consistent pedagogy across all course materials.*
 
@@ -566,7 +566,7 @@ Version: v1.0 • Status: Active • Owner: Instructor
 
 ## Overview
 
-This contract defines the callout types available in ASTR 201 and when to use each. All callouts use Bootstrap Icons (no emojis) for a clean, professional appearance.
+This contract defines the callout types available in ASTR 101 and when to use each. All callouts use Bootstrap Icons (no emojis) for a clean, professional appearance.
 
 ---
 

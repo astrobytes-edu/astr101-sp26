@@ -9,7 +9,7 @@
 1. **Combats "science is done" misconception** — Students often think physics/astronomy is a closed book of facts
 2. **Models scientific thinking** — Real scientists work at the frontier of the unknown
 3. **Sparks curiosity** — Unsolved problems are more interesting than solved ones
-4. **Connects to course theme** — "The universe is weird" from why-astr201-is-different.qmd
+4. **Connects to course theme** — "The universe is weird" from why-astr101-is-different.qmd
 
 ---
 

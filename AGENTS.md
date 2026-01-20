@@ -1,6 +1,6 @@
-# ASTR 201 (Spring 2026) — Agent Guide
+# ASTR 101 (Spring 2026) — Agent Guide
 
-This repo is a Quarto website + RevealJS slide system for **ASTR 201: Astronomy for Science Majors**. The agent supports course logistics, planning, writing, brainstorming, and website/CI maintenance.
+This repo is a Quarto website + RevealJS slide system for **ASTR 101: Principles of Astronomy**. The agent supports course logistics, planning, writing, brainstorming, and website/CI maintenance.
 
 ## Prime Directive
 

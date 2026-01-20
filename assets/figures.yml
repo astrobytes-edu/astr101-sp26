@@ -102,8 +102,8 @@ figures:
 
   math-toolbox:
     path: /assets/images/module-01/math-toolbox-nblm.png
-    caption: "The dimensional analysis toolbox for ASTR 201"
-    alt: "Three-panel overview: (1) Reality vs Map - units are conventions, dimensions are physics, (2) The Radar - use scaling relations A ∝ B^α to predict behavior before solving equations, (3) Self-Correction - if dimensions don't match, the physics is wrong. Quote: 'In ASTR 201, we don't just memorize formulas. We interrogate them.'"
+    caption: "The dimensional analysis toolbox for ASTR 101"
+    alt: "Three-panel overview: (1) Reality vs Map - units are conventions, dimensions are physics, (2) The Radar - use scaling relations A ∝ B^α to predict behavior before solving equations, (3) Self-Correction - if dimensions don't match, the physics is wrong. Quote: 'In ASTR 101, we don't just memorize formulas. We interrogate them.'"
     credit: "Course illustration (A. Rosen)"
     module: 1
 

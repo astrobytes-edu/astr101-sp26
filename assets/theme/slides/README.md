@@ -1,4 +1,4 @@
-# ASTR 201 RevealJS Theme (Slides)
+# ASTR 101 RevealJS Theme (Slides)
 
 This folder is the **single entrypoint** for slide styling: `assets/theme/slides/theme.scss`.
 

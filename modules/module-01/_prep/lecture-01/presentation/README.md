@@ -1,4 +1,4 @@
-# ASTR 201 Lecture 01: Spoiler Alerts — The Universe Is Weird
+# ASTR 101 Lecture 01: Spoiler Alerts — The Universe Is Weird
 
 ## Presentation Files
 

@@ -1,6 +1,6 @@
 ---
 title: "Spoiler Alerts — The Universe Is Weird"
-subtitle: "ASTR 201: Astronomy for Science Majors | Lecture 01"
+subtitle: "ASTR 101: Principles of Astronomy | Lecture 01"
 author: ""
 format:
   revealjs:

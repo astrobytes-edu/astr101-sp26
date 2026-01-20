@@ -1,9 +1,9 @@
-# ASTR 201: Astronomy for Science Majors
+# ASTR 101: Principles of Astronomy
 
-Course website for ASTR 201 (Spring 2026) at San Diego State University.
+Course website for ASTR 101 (Spring 2026) at San Diego State University.
 
 **Instructor:** Dr. Anna Rosen
-**Live Site:** [astrobytes-edu.github.io/astr201-sp26](https://astrobytes-edu.github.io/astr201-sp26)
+**Live Site:** [astrobytes-edu.github.io/astr101-sp26](https://astrobytes-edu.github.io/astr101-sp26)
 
 ## Quick Start
 
@@ -23,7 +23,7 @@ Requires [Quarto](https://quarto.org/) v1.4+.
 ## Project Structure
 
 ```text
-astr201-sp26/
+astr101-sp26/
 ├── _quarto.yml              # Main config + course params
 ├── _extensions/course/      # Custom Lua shortcodes
 ├── _includes/               # Reusable content blocks
@@ -96,7 +96,7 @@ Single source of truth in `_quarto.yml`:
 
 ```yaml
 params:
-  course-code: "ASTR 201"
+  course-code: "ASTR 101"
   instructor: "Dr. Anna Rosen"
   semester: "Spring 2026"
   # ... more params

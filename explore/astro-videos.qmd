@@ -1,7 +1,7 @@
 ---
 title: "Astronomy Videos"
 description: "Curated collection of astronomical videos organized by topic"
-draft: false
+draft: true
 ---
 
 A curated collection of videos that bring the cosmos to life. These are optional viewing—but if you want to see the universe in motion, start here.

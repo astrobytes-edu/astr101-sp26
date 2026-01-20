@@ -4,9 +4,9 @@ subtitle: "Lecture 2 Reading Companion"
 author: "Dr. Anna Rosen"
 date: "2026-01-22"
 description: "Four problem-solving tools that transform points of light into physical understanding."
-draft: false
+draft: true
 categories: [foundations, math-tools]
-course: ASTR 201
+course: ASTR 101
 module: "1 - Foundations"
 learning-objectives:
   - Use dimensional analysis to verify equation validity
@@ -76,7 +76,7 @@ No calculus required. No formula memorization. Just careful reasoning about what
 
 ### About That "Math Person" Thing
 
-If you're thinking "I'm not a math person," pause for a moment. Research shows that mathematical ability is shaped by experience and effort, not fixed at birth. Your brain physically changes when you wrestle with challenging material—that's not metaphor, it's neuroscience (see [Why ASTR 201 is Different](/course-info/why-astr201-is-different.qmd)).
+If you're thinking "I'm not a math person," pause for a moment. Research shows that mathematical ability is shaped by experience and effort, not fixed at birth. Your brain physically changes when you wrestle with challenging material—that's not metaphor, it's neuroscience (see [Why ASTR 101 is Different](/course-info/why-astr101-is-different.qmd)).
 
 The skills in this reading aren't about talent. They're about learning a language—the language physics uses to describe reality. And like any language, it gets easier with practice.
 

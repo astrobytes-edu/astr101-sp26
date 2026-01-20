@@ -1,5 +1,5 @@
 ---
-title: "ASTR 201 Course Site Design Contract"
+title: "ASTR 101 Course Site Design Contract"
 version: "1.0.0"
 date: "2026-01-14"
 status: "LOCKED (Implementation Contract)"
@@ -7,9 +7,9 @@ owner: "Dr. Anna Rosen"
 scope: ["website", "modules", "handouts", "slides", "pdf"]
 ---
 
-# ASTR 201 Course Site Design Contract (LOCKED)
+# ASTR 101 Course Site Design Contract (LOCKED)
 
-This document is a **hard contract** that governs the visual system, semantic color roles, typography, spacing, and component styling for the ASTR 201 Quarto course site.
+This document is a **hard contract** that governs the visual system, semantic color roles, typography, spacing, and component styling for the ASTR 101 Quarto course site.
 
 **If implementation deviates from this contract, it is a bug.**  
 Changes require an ADR in `docs/decisions/course-site-decisions.md`.
@@ -227,7 +227,7 @@ No silent changes.
 
 ## 10. Relationship to Other Docs
 
-- **ASTR 201 Modules UI/UX Design Specification v1.0** describes IA and page structure.
+- **ASTR 101 Modules UI/UX Design Specification v1.0** describes IA and page structure.
 - This document is the **visual contract** and supersedes any styling guidance elsewhere if conflicts arise.
 
 ---

@@ -70,7 +70,7 @@ Copy everything below into a file named `lecture-starter.qmd`.
 
 ```yaml
 ---
-title: "ASTR 201 — Lecture Starter"
+title: "ASTR 101 — Lecture Starter"
 subtitle: "Quarto + reveal.js: the whole toolkit"
 author: "Dr. Anna Rosen"
 

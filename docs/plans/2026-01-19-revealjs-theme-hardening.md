@@ -1,8 +1,8 @@
-# ASTR 201 RevealJS Theme Hardening — Implementation Plan
+# ASTR 101 RevealJS Theme Hardening — Implementation Plan
 
 > **For Codex:** REQUIRED SUB-SKILLS: `superpowers:writing-plans`, `superpowers:executing-plans`
 
-**Goal:** Make the ASTR 201 RevealJS slide theme (SCSS) DRY, layout-safe, and robust for repeated Codex-driven deck generation (40–50 decks) without manual formatting fixes.
+**Goal:** Make the ASTR 101 RevealJS slide theme (SCSS) DRY, layout-safe, and robust for repeated Codex-driven deck generation (40–50 decks) without manual formatting fixes.
 
 **Architecture:** Keep `_brand.yml` as the single source of truth for brand tokens → `assets/theme/_tokens_generated.scss`, then bridge to slide-semantic aliases in `assets/theme/slides/_tokens-bridge.scss`. Build slide theme rules as a small set of composable primitives (images, layouts, typography rhythm, reveal safety), imported via `assets/theme/slides/theme.scss`.
 

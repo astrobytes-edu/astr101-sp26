@@ -1,6 +1,6 @@
 ---
 title: "Lecture 1: Spoiler Alerts — The Universe Is Weird (How Do We Know?)"
-subtitle: "ASTR 201 • Module 1 Kickoff • 55–60 min"
+subtitle: "ASTR 101 • Module 1 Kickoff • 55–60 min"
 author: "Dr. Anna Rosen"
 ---
 
@@ -223,7 +223,7 @@ By the end of class, students should be able to:
 ---
 
 title: "Lecture 1: Spoiler Alerts — Big Questions & Cosmic Weirdness"
-course: "ASTR 201 • Module 1 Kickoff"
+course: "ASTR 101 • Module 1 Kickoff"
 time: "55–60 minutes"
 ---------------------
 

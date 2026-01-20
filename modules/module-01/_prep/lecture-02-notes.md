@@ -2,7 +2,7 @@
 
 ## Artifact Header: The Tools of the Trade — Mastering Astrophysical Reasoning (Overview)
 
-**Course:** ASTR 201 (Sophomore Astronomy)
+**Course:** ASTR 101 (Sophomore Astronomy)
 **Module:** Foundations of Astronomy / Problem Solving Tools
 **Learning Objectives:**
 
@@ -177,7 +177,7 @@ The surface area ($SA$) of a sphere is given by $SA = 4\pi R^2$, where $R$ is th
 * Visual: [SOURCE_FIGURE] Section 1.2.1 (p. 13) — Fundamental Dimensions table — Source: SGMA.
 * Visual: [SOURCE_FIGURE] Figure 1.1 (p. 53) — Universe's Phone Number Graphic — Source: Owocki.
 * Visual: [ADD_FIGURE_EXTERNAL]
-  * What to find: A flowchart of the ASTR 201 "Chain of Inference."
+  * What to find: A flowchart of the ASTR 101 "Chain of Inference."
   * Purpose: Show how tools (Ratio method/Parallax) turn observables into physics.
   * Must show: Telescope measurements $\rightarrow$ Ratios $\rightarrow$ Physical Models (L, M, R).
   * Takeaway: We use geometric and mathematical tools to "see" inside stars.
@@ -186,7 +186,7 @@ The surface area ($SA$) of a sphere is given by $SA = 4\pi R^2$, where $R$ is th
 
 ## Artifact Header: The Mechanics of Measurement — Unit Conversions and Problem-Solving
 
-**Course:** ASTR 201 (Sophomore Astronomy)  
+**Course:** ASTR 101 (Sophomore Astronomy)  
 **Module:** Tools of the Trade / Fundamentals
 **Math Level:** Astro 201 (Equations unpacked, interpretation prioritized).  
 **Mode:** LECTURE_DRAFT
@@ -311,7 +311,7 @@ $$
 
 ## Artifact Header: The Ratio Method and Proportional Reasoning — Measuring Cosmic Scale
 
-**Course:** ASTR 201 (Sophomore Astronomy)
+**Course:** ASTR 101 (Sophomore Astronomy)
 **Module:** Fundamentals
 **Lecture:** Tools of the Trade / Foundations of Astronomy
 **Math Level:** Astro 201 (Equations unpacked, interpretation prioritized).  
@@ -427,7 +427,7 @@ $$
 
 ## Artifact Header: Scaling the Cosmos — The Mathematical Power of the Ratio Method
 
-**Course:** ASTR 201 (Sophomore Astronomy)
+**Course:** ASTR 101 (Sophomore Astronomy)
 **Module:** Fundamentals
 **Lecture:** Tools of the Trade / Quantitative Reasoning
 **Math Level:** Astro 201 (Equations unpacked, interpretation prioritized).
@@ -547,7 +547,7 @@ $$\frac{A_2}{A_1} = \frac{k B_2^n}{k B_1^n}$$
 
 ## Artifact Header: The Art of the Rough Guess — Order-of-Magnitude Estimation
 
-**Course:** ASTR 201 (Sophomore Astronomy) 
+**Course:** ASTR 101 (Sophomore Astronomy) 
 **Module:** Fundamentals
 **Lecture**: Tools of the Trade / Quantitative Reasoning
 **Math Level:** Astro 201 (Equations unpacked, interpretation prioritized).  
@@ -651,7 +651,7 @@ $$R \approx \frac{GM}{c^2}$$.
    * *Answer:* No. $10^{17} \text{ s}$ is approximately $13.6 \text{ Gyr}$. $10^{40} \text{ s}$ is many orders of magnitude larger than the age of the universe ($14 \text{ Gyr} \approx 4 \times 10^{17} \text{ s}$).
 2. **Predict:** Using the "Rule of 3," how would you round the number $2.8 \times 10^8$?
    * *Answer:* Round the coefficient $2.8$ down to $1$. The estimate is $10^8$.
-3. **Misconception:** A student says, "Estimation is just guessing." How does the "Invariant Core" of ASTR 201 argue against this?
+3. **Misconception:** A student says, "Estimation is just guessing." How does the "Invariant Core" of ASTR 101 argue against this?
    * *Answer:* Estimation is not guessing; it is **scientific reasoning** based on the language of constraints (math) and the scaling of physical laws to identify the "salient features" of the universe.
 
 ---

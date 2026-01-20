@@ -1,14 +1,14 @@
 ---
-title: "ASTR 201 Course Site Feature Contract"
+title: "ASTR 101 Course Site Feature Contract"
 version: "1.0.0"
 date: "2026-01-14"
 status: "LOCKED (Implementation Contract)"
 owner: "Dr. Anna Rosen"
 ---
 
-# ASTR 201 Course Site Feature Contract (LOCKED)
+# ASTR 101 Course Site Feature Contract (LOCKED)
 
-This document defines the **functional capabilities** and **non-goals** of the ASTR 201 Quarto site.
+This document defines the **functional capabilities** and **non-goals** of the ASTR 101 Quarto site.
 
 **If implementation deviates from this contract, it is a bug.**  
 Changes require an ADR.
@@ -36,7 +36,7 @@ Applies to:
 - Modules MUST have dedicated landing pages.
 
 This contract is aligned with the approved spec:  
-“ASTR 201 Modules UI/UX Design Specification v1.0”.
+“ASTR 101 Modules UI/UX Design Specification v1.0”.
 
 ### 1.2 Navigation Behavior (MUST)
 

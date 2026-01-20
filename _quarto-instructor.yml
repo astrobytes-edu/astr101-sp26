@@ -10,7 +10,7 @@ params:
 
 # Instructor website title (clearly marked)
 website:
-  title: "ASTR 201 [INSTRUCTOR VERSION]"
+  title: "ASTR 101 [INSTRUCTOR VERSION]"
 
 # Instructor-specific rendering
 format:

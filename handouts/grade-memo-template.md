@@ -1,5 +1,5 @@
 ---
-title: ASTR 201 — Grade Memo + AI Disclosure Template (Wednesdays)
+title: ASTR 101 — Grade Memo + AI Disclosure Template (Wednesdays)
 subtitle: "Due: 2 days (Wednesday) after HW submission by 11:59 PM"
 author: "Instructor: Dr. Anna Rosen"
 format:
@@ -102,7 +102,7 @@ If **Yes**, complete the fields below.
 ### E1. Tools used (check all that apply)
 
 * [ ] Course NotebookLM Notebook (grounded in course materials)
-* [ ] ASTR 201 Socratic Tutor (Custom GPT)
+* [ ] ASTR 101 Socratic Tutor (Custom GPT)
 * [ ] Other AI tool(s): ______________________
 
 ### E2. What you used AI for (check all that apply)

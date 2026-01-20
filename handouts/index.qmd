@@ -1,6 +1,6 @@
 ---
 title: "Handouts"
-draft: false
+draft: true
 listing:
   contents: "."
   type: table

@@ -1,4 +1,4 @@
--- Course-specific shortcodes for ASTR 201
+-- Course-specific shortcodes for ASTR 101
 -- Usage: {{< shortcode arg1 arg2 >}}
 
 -- {{< due "2026-02-15" >}} → "**Due:** Feb 15, 2026"

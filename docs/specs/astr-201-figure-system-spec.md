@@ -1,13 +1,13 @@
 # ASTR201 Figure System Spec
 
-*A design/spec contract for how figures are stored, referenced, rendered, attributed, and audited across ASTR 201 materials.*  
+*A design/spec contract for how figures are stored, referenced, rendered, attributed, and audited across ASTR 101 materials.*  
 Version: v1.0 • Status: Proposed → Active upon adoption
 
 ---
 
 ## 1) Purpose
 
-Figures are not decoration. In ASTR 201 they function as **data**: diagrams, plots, images, tables-as-figures, and annotated schematics that students must learn to read.
+Figures are not decoration. In ASTR 101 they function as **data**: diagrams, plots, images, tables-as-figures, and annotated schematics that students must learn to read.
 
 This spec standardizes a figure system that:
 - enforces **accessibility** (alt text)
@@ -102,7 +102,7 @@ kepler_orbits_overview:
   anchor: "fig-kepler-orbits"
   alt: "A schematic showing a small planet orbiting a much more massive star at radius r, labeling orbital period P."
   cap: "**What to notice:** period depends on orbit size and central mass; this figure defines the symbols we use in the derivation."
-  credit: "ASTR 201"
+  credit: "ASTR 101"
   license: "CC-BY-4.0"
 
 schwarzschild_cartoon:
@@ -112,7 +112,7 @@ schwarzschild_cartoon:
   anchor: "fig-schwarzschild"
   alt: "A diagram of a black hole with a labeled event horizon radius Rs and an arrow indicating light cannot escape from inside the horizon."
   cap: "**What to notice:** the horizon is a radius scale; our goal is to predict how it scales with mass."
-  credit: "ASTR 201"
+  credit: "ASTR 101"
   license: "CC-BY-4.0"
 
 unit_reference_table:
@@ -122,7 +122,7 @@ unit_reference_table:
   anchor: "fig-unit-table"
   alt: "A reference table listing common SI and CGS unit conversions used in the course."
   cap: "Use this table to translate between SI and CGS; watch for squared/cubed factors."
-  credit: "ASTR 201"
+  credit: "ASTR 101"
   license: "CC-BY-4.0"
 ```
 

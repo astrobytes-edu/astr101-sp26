@@ -1,8 +1,8 @@
 ---
 title: "Figure Kit"
-subtitle: "ASTR 201 — Socratic Seminar Tools"
+subtitle: "ASTR 101 — Socratic Seminar Tools"
 author: "Instructor: Dr. Anna Rosen"
-draft: false
+draft: true
 format:
   pdf:
     toc: false

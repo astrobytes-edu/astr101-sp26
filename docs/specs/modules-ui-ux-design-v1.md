@@ -1,4 +1,4 @@
-# ASTR 201 Modules UI/UX Design Specification
+# ASTR 101 Modules UI/UX Design Specification
 
 **Version:** 1.0
 **Date:** 2026-01-14
@@ -9,7 +9,7 @@
 
 ## 1. Executive Summary
 
-This document specifies the UI/UX design for restructuring the ASTR 201 course website around **modules as the primary organizational unit**. The goal is to unify navigation, provide cognitive scaffolding, and enable progressive disclosure of course content.
+This document specifies the UI/UX design for restructuring the ASTR 101 course website around **modules as the primary organizational unit**. The goal is to unify navigation, provide cognitive scaffolding, and enable progressive disclosure of course content.
 
 ### Design Principles
 

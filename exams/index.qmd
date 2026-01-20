@@ -1,6 +1,6 @@
 ---
 title: "Exams"
-draft: false
+draft: true
 ---
 
 ## Exam Schedule

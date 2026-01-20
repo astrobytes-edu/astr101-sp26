@@ -4,9 +4,9 @@ subtitle: "How Do We Know What We Know?"
 author: "Dr. Anna Rosen"
 date: "2026-01-20"
 description: "A trailer for the semester: how astronomers turn photons into physical claims (and how we stay honest about assumptions)."
-draft: false
+draft: true
 categories: [course-overview, foundations]
-course: ASTR 201
+course: ASTR 101
 module: "1 - Foundations"
 learning-objectives:
   - State the course thesis: pretty pictures → measurements → models → inferences

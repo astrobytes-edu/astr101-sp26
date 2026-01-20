@@ -1,7 +1,7 @@
 ---
 title: "Module 2: Inferring Star Properties"
 subtitle: "Weeks 4–7 | From photons to physical properties"
-draft: false
+draft: true
 page-layout: article
 listing:
   - id: module-lectures

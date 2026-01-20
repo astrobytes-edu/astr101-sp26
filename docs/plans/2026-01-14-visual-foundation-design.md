@@ -2,7 +2,7 @@
 
 > **For Claude:** REQUIRED SUB-SKILL: Use superpowers:executing-plans to implement this plan task-by-task.
 
-**Goal:** Harden the ASTR 201 course site aesthetic with stronger visual hierarchy, improved typography, and polished UI components before adding content.
+**Goal:** Harden the ASTR 101 course site aesthetic with stronger visual hierarchy, improved typography, and polished UI components before adding content.
 
 **Architecture:** Layer improvements onto existing Observatory Slate theme. Add new CSS components (hero callout, dashboard tiles, collapsible cards) while fixing base typography and spacing. No breaking changes to existing content.
 

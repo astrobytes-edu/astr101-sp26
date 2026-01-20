@@ -200,7 +200,7 @@ The syntax is `{{< include PATH >}}` where PATH is relative to your project root
 
 ```markdown
 ---
-title: "ASTR 201 Syllabus"
+title: "ASTR 101 Syllabus"
 ---
 
 ## Instructor

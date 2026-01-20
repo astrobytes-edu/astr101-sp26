@@ -117,8 +117,8 @@ This contains everything shared by both profiles:
 # GLOBAL PARAMETERS (shared by both profiles)
 # ═══════════════════════════════════════════════════════════════
 params:
-  course-code: "ASTR 201"
-  course-title: "Astronomy for Science Majors"
+  course-code: "ASTR 101"
+  course-title: "Principles of Astronomy"
   semester: "Spring 2026"
   instructor: "Dr. Anna Rosen"
   email: "alrosen@sdsu.edu"
@@ -151,7 +151,7 @@ project:
 # WEBSITE CONFIGURATION (shared base, can be overridden)
 # ═══════════════════════════════════════════════════════════════
 website:
-  title: "ASTR 201: Astronomy for Science Majors (Spring 2026)"
+  title: "ASTR 101: Principles of Astronomy (Spring 2026)"
   navbar:
     logo: assets/astr201-logo.png
   sidebar:
@@ -201,7 +201,7 @@ params:
 
 # Keep the standard title (explicit for clarity)
 website:
-  title: "ASTR 201: Astronomy for Science Majors (Spring 2026)"
+  title: "ASTR 101: Principles of Astronomy (Spring 2026)"
 
 # ═══════════════════════════════════════════════════════════════
 # THE KEY PART: CSS that HIDES instructor content
@@ -269,7 +269,7 @@ params:
 # Anyone looking at the site immediately knows it's not public
 # ═══════════════════════════════════════════════════════════════
 website:
-  title: "ASTR 201 [INSTRUCTOR VERSION]"
+  title: "ASTR 101 [INSTRUCTOR VERSION]"
 
 # ═══════════════════════════════════════════════════════════════
 # OUTPUT TO SEPARATE DIRECTORY

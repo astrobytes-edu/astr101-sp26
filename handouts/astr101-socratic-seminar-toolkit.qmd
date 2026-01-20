@@ -1,8 +1,8 @@
 ---
 title: "Socratic Seminar Toolkit"
-subtitle: "ASTR 201 — Scholarly Engagement"
+subtitle: "ASTR 101 — Scholarly Engagement"
 author: "Instructor: Dr. Anna Rosen"
-draft: false
+draft: true
 format:
   pdf:
     toc: false

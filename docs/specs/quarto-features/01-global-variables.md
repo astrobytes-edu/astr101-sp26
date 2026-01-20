@@ -104,8 +104,8 @@ params:
   # ─────────────────────────────────────────────────────────
   # Course Identity
   # ─────────────────────────────────────────────────────────
-  course-code: "ASTR 201"
-  course-title: "Astronomy for Science Majors"
+  course-code: "ASTR 101"
+  course-title: "Principles of Astronomy"
   semester: "Spring 2026"
   year: "2026"
 
@@ -132,7 +132,7 @@ params:
   # ─────────────────────────────────────────────────────────
   # Important URLs
   # ─────────────────────────────────────────────────────────
-  website-url: "https://astrobytes-edu.github.io/astr201-sp26"
+  website-url: "https://astrobytes-edu.github.io/astr101-sp26"
   canvas-url: "https://sdsu.instructure.com"
   # Add more as needed: discord-url, piazza-url, github-url
 

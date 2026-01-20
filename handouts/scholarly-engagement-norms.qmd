@@ -1,7 +1,7 @@
 ---
 title: "Scholarly Engagement & Seminar Norms"
-subtitle: "ASTR 201 — Astronomy for Science Majors"
-draft: false
+subtitle: "ASTR 101 — Principles of Astronomy"
+draft: true
 format:
   pdf:
     toc: false
@@ -15,7 +15,7 @@ format:
 ---
 
 **Artifact Header (for course materials)**  
-**Course:** ASTR 201  
+**Course:** ASTR 101  
 **Module:** [TBD] (used throughout the semester)  
 **Learning Objectives:** Practice scientific reasoning and evidence-based discussion (supports course learning outcomes).  
 **Concept Throughline:** Observables → models → inference, with uncertainty as normal.  

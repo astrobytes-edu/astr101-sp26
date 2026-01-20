@@ -1,8 +1,8 @@
 ---
-title: "Why ASTR 201 is Different"
-subtitle: "ASTR 201: Astronomy for Science Majors | Spring 2026"
+title: "Why ASTR 101 is Different"
+subtitle: "ASTR 101: Principles of Astronomy | Spring 2026"
 author: "Dr. Anna Rosen"
-draft: false
+draft: true
 format:
   html:
     toc: true

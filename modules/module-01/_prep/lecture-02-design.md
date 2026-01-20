@@ -10,7 +10,7 @@
 
 ## Overview
 
-A single comprehensive lecture introducing four problem-solving tools that students will use throughout ASTR 201. Organized as a "Four Tools Framework" where each tool is explicitly named and practiced.
+A single comprehensive lecture introducing four problem-solving tools that students will use throughout ASTR 101. Organized as a "Four Tools Framework" where each tool is explicitly named and practiced.
 
 ## Learning Objectives
 

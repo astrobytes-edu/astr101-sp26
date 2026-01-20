@@ -1,8 +1,8 @@
-# ASTR 201 Website Visual Redesign Implementation Plan
+# ASTR 101 Website Visual Redesign Implementation Plan
 
 > **For Claude:** REQUIRED SUB-SKILL: Use superpowers:executing-plans to implement this plan task-by-task.
 
-**Goal:** Transform the ASTR 201 Quarto course website into a modern, visually polished site with unified cosmic branding, custom callouts, dark mode, and improved information architecture.
+**Goal:** Transform the ASTR 101 Quarto course website into a modern, visually polished site with unified cosmic branding, custom callouts, dark mode, and improved information architecture.
 
 **Architecture:** Extend existing Quarto site with Inter font, cosmic color palette (matching slides), 9 custom astronomy-themed callouts, dark mode toggle, module-based navigation, auto "This Week" feature, and redesigned homepage inspired by ASTR 596.
 
@@ -42,7 +42,7 @@ Run: `mv assets/site.scss assets/site-light.scss`
 Create `assets/site-dark.scss`:
 
 ```scss
-// ASTR 201 Dark Theme
+// ASTR 101 Dark Theme
 // Cosmic color palette (same as slides)
 
 $cosmic-blue: #1e3a5f;
@@ -97,7 +97,7 @@ pre {
 Update `assets/site-light.scss`:
 
 ```scss
-// ASTR 201 Light Theme
+// ASTR 101 Light Theme
 // Cosmic color palette (same as slides)
 
 $cosmic-blue: #1e3a5f;
@@ -192,7 +192,7 @@ git commit -m "feat: add Inter font, cosmic colors, and dark mode toggle"
 Create `assets/callouts.scss`:
 
 ```scss
-// ASTR 201 Custom Callouts
+// ASTR 101 Custom Callouts
 // 9 astronomy-themed callout types
 
 // Color variables (use existing cosmic palette)
@@ -448,7 +448,7 @@ Create `_extensions/thisweek/_extension.yml`:
 
 ```yaml
 title: This Week
-author: ASTR 201
+author: ASTR 101
 version: 1.0.0
 contributes:
   filters:
@@ -460,7 +460,7 @@ contributes:
 Create `_extensions/thisweek/thisweek.lua`:
 
 ```lua
--- This Week filter for ASTR 201
+-- This Week filter for ASTR 101
 -- Automatically displays current week's content based on date
 
 local semester_start = os.time({year=2026, month=1, day=20})
@@ -827,7 +827,7 @@ Replace the sidebar section in `_quarto.yml`:
 
 ```yaml
 website:
-  title: "ASTR 201"
+  title: "ASTR 101"
   navbar:
     logo: assets/astr201-logo.png
     search: true
@@ -884,7 +884,7 @@ Replace contents of `index.qmd`:
 
 ```markdown
 ---
-title: "ASTR 201: Astronomy for Science Majors"
+title: "ASTR 101: Principles of Astronomy"
 subtitle: "SDSU | Spring 2026 | Tue/Thu | Room TBD"
 format:
   html:
@@ -893,7 +893,7 @@ format:
 
 ![](/assets/astr201-logo.png){width="400px" fig-align="center"}
 
-**Welcome to ASTR 201!** This is a quantitative astronomy course: we use math and physics to infer what the universe is doing from limited observations. You'll learn to think like an astrophysicist — extracting meaning from light.
+**Welcome to ASTR 101!** This is a quantitative astronomy course: we use math and physics to infer what the universe is doing from limited observations. You'll learn to think like an astrophysicist — extracting meaning from light.
 
 ::: {.this-week}
 :::
@@ -1004,7 +1004,7 @@ Create `_includes/footer.html`:
 ```html
 <footer class="custom-footer">
   <div class="footer-content">
-    <p><strong>ASTR 201: Astronomy for Science Majors</strong> | Spring 2026 | Dr. Anna Rosen</p>
+    <p><strong>ASTR 101: Principles of Astronomy</strong> | Spring 2026 | Dr. Anna Rosen</p>
     <p>
       <a href="/course-info/syllabus.html">Syllabus</a> ·
       <a href="/course-info/schedule.html">Schedule</a> ·

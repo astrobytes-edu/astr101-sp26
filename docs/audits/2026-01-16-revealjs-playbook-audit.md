@@ -1,4 +1,4 @@
-# ASTR 201 Codebase Audit Report
+# ASTR 101 Codebase Audit Report
 
 ## Compliance with Quarto + reveal.js Lecture Slides Playbook
 
