@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Moon Phases Demo | AstroEd</title>
+  <link rel="stylesheet" href="../_assets/astro-theme.css">
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+    }
+
+    body {
+      font-family: var(--font-main);
+      background: var(--space-black);
+      color: var(--text-primary);
+    }
+
+    .demo-wrapper {
+      min-height: 100vh;
+      position: relative;
+    }
+
+    #starfield {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+    }
+
+    .demo-content {
+      position: relative;
+      z-index: 1;
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 1.5rem;
+    }
+
+    .demo-header {
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+
+    .demo-title {
+      font-size: 1.75rem;
+      margin: 0 0 0.5rem 0;
+    }
+
+    .demo-subtitle {
+      font-size: 1rem;
+      color: var(--text-secondary);
+      margin: 0;
+    }
+
+    /* Two-panel layout */
+    .viz-layout {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .viz-panel {
+      background: rgba(18, 18, 31, 0.9);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 1rem;
+    }
+
+    .panel-title {
+      font-size: 0.875rem;
+      color: var(--text-secondary);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 0.75rem;
+      text-align: center;
+    }
+
+    #orbital-svg, #phase-svg {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* Readouts */
+    .readout-panel {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .readout-item {
+      background: rgba(18, 18, 31, 0.9);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    .readout-label {
+      font-size: 0.75rem;
+      color: var(--text-secondary);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 0.5rem;
+    }
+
+    .readout-value {
+      font-family: var(--font-mono);
+      font-size: 1.25rem;
+      color: var(--accent-gold);
+    }
+
+    .readout-value.phase-name {
+      font-family: var(--font-main);
+      font-size: 1.1rem;
+    }
+
+    /* Controls */
+    .controls-panel {
+      background: rgba(18, 18, 31, 0.9);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      padding: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .controls-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      justify-content: center;
+    }
+
+    .phase-btn {
+      font-size: 0.875rem;
+      padding: 0.5rem 1rem;
+      background: var(--space-light);
+      border: 1px solid var(--border-color);
+      border-radius: 6px;
+      color: var(--text-secondary);
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+
+    .phase-btn:hover {
+      background: var(--space-medium);
+      color: var(--text-primary);
+      border-color: var(--accent-blue);
+    }
+
+    .phase-btn.active {
+      background: var(--accent-blue);
+      color: var(--space-black);
+      border-color: var(--accent-blue);
+    }
+
+    /* Key insight */
+    .insight-box {
+      background: rgba(18, 18, 31, 0.9);
+      border-left: 3px solid var(--accent-green);
+      padding: 1rem;
+      border-radius: 0 8px 8px 0;
+      font-size: 0.9rem;
+    }
+
+    .insight-box strong {
+      color: var(--accent-green);
+    }
+
+    /* Draggable hint */
+    .drag-hint {
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.75rem;
+      margin-top: 0.5rem;
+    }
+
+    /* Moon in SVG */
+    .moon-draggable {
+      cursor: grab;
+    }
+
+    .moon-draggable:active {
+      cursor: grabbing;
+    }
+
+    /* Responsive */
+    @media (max-width: 700px) {
+      .viz-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .readout-panel {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="demo-wrapper">
+    <canvas id="starfield"></canvas>
+
+    <div class="demo-content">
+      <header class="demo-header">
+        <h1 class="demo-title">Moon Phases</h1>
+        <p class="demo-subtitle">The phase shows how much of the lit half we see from Earth</p>
+      </header>
+
+      <!-- Two-panel visualization -->
+      <div class="viz-layout">
+        <!-- Orbital view -->
+        <div class="viz-panel">
+          <div class="panel-title">View from Above (North Pole)</div>
+          <svg id="orbital-svg" viewBox="0 0 400 400" preserveAspectRatio="xMidYMid meet">
+            <defs>
+              <!-- Sun glow -->
+              <radialGradient id="sunGlow" cx="50%" cy="50%" r="50%">
+                <stop offset="0%" stop-color="#fff5cc"/>
+                <stop offset="60%" stop-color="#ffcc00"/>
+                <stop offset="100%" stop-color="#ff8c00"/>
+              </radialGradient>
+
+              <!-- Earth gradient -->
+              <radialGradient id="earthGradient" cx="30%" cy="30%">
+                <stop offset="0%" stop-color="#6bb5e0"/>
+                <stop offset="100%" stop-color="#2a5a8a"/>
+              </radialGradient>
+
+              <!-- Moon lit side -->
+              <radialGradient id="moonLit" cx="30%" cy="30%">
+                <stop offset="0%" stop-color="#f5f5fa"/>
+                <stop offset="100%" stop-color="#c8c8d8"/>
+              </radialGradient>
+
+              <!-- Clip for moon phases -->
+              <clipPath id="moonClip">
+                <circle cx="0" cy="0" r="15"/>
+              </clipPath>
+            </defs>
+
+            <!-- Sunlight arrows -->
+            <g id="sunlight-arrows" opacity="0.4">
+              <line x1="0" y1="100" x2="80" y2="100" stroke="#ffcc00" stroke-width="2" marker-end="url(#arrowhead)"/>
+              <line x1="0" y1="200" x2="80" y2="200" stroke="#ffcc00" stroke-width="2"/>
+              <line x1="0" y1="300" x2="80" y2="300" stroke="#ffcc00" stroke-width="2"/>
+              <text x="10" y="60" fill="#ffcc00" font-size="11">Sunlight</text>
+            </g>
+
+            <!-- Sun (off-screen left, show edge) -->
+            <circle cx="-60" cy="200" r="80" fill="url(#sunGlow)" opacity="0.8"/>
+
+            <!-- Moon's orbit -->
+            <circle cx="200" cy="200" r="120" fill="none" stroke="#404060" stroke-width="1" stroke-dasharray="4 4" opacity="0.6"/>
+
+            <!-- Earth -->
+            <g id="earth-group" transform="translate(200, 200)">
+              <circle r="25" fill="url(#earthGradient)" filter="url(#glow)"/>
+              <text y="45" text-anchor="middle" fill="#a0a0b0" font-size="11">Earth</text>
+            </g>
+
+            <!-- Moon (draggable) -->
+            <g id="moon-group" class="moon-draggable">
+              <!-- Dark side (always visible as background) -->
+              <circle id="moon-dark" cx="320" cy="200" r="15" fill="#3a3a4a"/>
+              <!-- Lit side (clipped to show phase in orbital view) -->
+              <circle id="moon-lit" cx="320" cy="200" r="15" fill="url(#moonLit)"/>
+              <!-- Terminator line (boundary between lit and dark) -->
+              <ellipse id="moon-terminator" cx="320" cy="200" rx="0" ry="15" fill="#3a3a4a"/>
+            </g>
+
+            <!-- Observer's view direction indicator -->
+            <g id="view-indicator" opacity="0.5">
+              <path d="M 200 175 L 200 140" stroke="#5dade2" stroke-width="1" stroke-dasharray="3 3"/>
+              <text x="200" y="130" text-anchor="middle" fill="#5dade2" font-size="9">Your view</text>
+            </g>
+          </svg>
+          <div class="drag-hint">Drag the Moon around Earth's orbit</div>
+        </div>
+
+        <!-- Phase view (as seen from Earth) -->
+        <div class="viz-panel">
+          <div class="panel-title">As Seen from Earth</div>
+          <svg id="phase-svg" viewBox="0 0 200 200" preserveAspectRatio="xMidYMid meet">
+            <defs>
+              <radialGradient id="moonSurface" cx="30%" cy="30%">
+                <stop offset="0%" stop-color="#f0f0f5"/>
+                <stop offset="100%" stop-color="#b8b8c8"/>
+              </radialGradient>
+
+              <!-- Earthshine (faint illumination of dark side) -->
+              <radialGradient id="earthshine" cx="70%" cy="30%">
+                <stop offset="0%" stop-color="#2a3a4a"/>
+                <stop offset="100%" stop-color="#1a1a2a"/>
+              </radialGradient>
+            </defs>
+
+            <!-- Moon disk -->
+            <g transform="translate(100, 100)">
+              <!-- Dark side with earthshine -->
+              <circle r="60" fill="url(#earthshine)"/>
+
+              <!-- Lit portion (will be updated by JS) -->
+              <path id="lit-portion" d="" fill="url(#moonSurface)"/>
+            </g>
+          </svg>
+        </div>
+      </div>
+
+      <!-- Readouts -->
+      <div class="readout-panel">
+        <div class="readout-item">
+          <div class="readout-label">Phase</div>
+          <div class="readout-value phase-name" id="phase-name">Full Moon</div>
+        </div>
+        <div class="readout-item">
+          <div class="readout-label">Illumination</div>
+          <div class="readout-value" id="illumination">100%</div>
+        </div>
+        <div class="readout-item">
+          <div class="readout-label">Days Since New Moon</div>
+          <div class="readout-value" id="days-since-new">14.8</div>
+        </div>
+      </div>
+
+      <!-- Phase presets -->
+      <div class="controls-panel">
+        <div class="controls-row">
+          <button class="phase-btn" data-angle="180">New Moon</button>
+          <button class="phase-btn" data-angle="270">First Quarter</button>
+          <button class="phase-btn" data-angle="0">Full Moon</button>
+          <button class="phase-btn" data-angle="90">Third Quarter</button>
+        </div>
+      </div>
+
+      <!-- Key insight -->
+      <div class="insight-box">
+        <strong>Key insight:</strong> The Sun always lights exactly half of the Moon.
+        Phases show <em>how much of that lit half faces Earth</em> — it's geometry, not shadow.
+        Earth's shadow only matters during lunar eclipses (rare!).
+      </div>
+    </div>
+  </div>
+
+  <script src="../_assets/astro-utils.js"></script>
+  <script src="../_assets/starfield.js"></script>
+  <script src="moon-phases.js"></script>
+</body>
+</html>
