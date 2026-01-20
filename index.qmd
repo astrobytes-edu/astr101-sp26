@@ -21,19 +21,16 @@ No prior physics or astronomy background is required, just curiosity and a willi
 :::
 ::: {.g-col-12 .g-col-md-4}
 
-::: {.card}
-::: {.card-header}
-**Instructor**
-:::
-::: {.card-body}
+::: {.callout-note appearance="minimal"}
+## Instructor
+
 **{{< meta params.instructor >}}**
 
-<i class="bi bi-geo-alt"></i> {{< meta params.office >}}
+{{< meta params.office >}}
 
-<i class="bi bi-clock"></i> {{< meta params.office-hours >}}
+{{< meta params.office-hours >}}
 
-<i class="bi bi-envelope"></i> [{{< meta params.email >}}](mailto:{{< meta params.email >}})
-:::
+[{{< meta params.email >}}](mailto:{{< meta params.email >}})
 :::
 
 :::
@@ -42,7 +39,7 @@ No prior physics or astronomy background is required, just curiosity and a willi
 ---
 
 ::: {.callout-note appearance="simple"}
-## <i class="bi bi-signpost-split"></i> Start Here
+## Start Here
 
 1. Read the [Syllabus](course-info/syllabus.qmd) to understand course policies and expectations.
 2. Check the [Schedule](course-info/schedule.qmd) each week for lectures, readings, and due dates.
@@ -79,24 +76,40 @@ No prior physics or astronomy background is required, just curiosity and a willi
 
 :::
 
-## What You'll Explore
+## Course Modules
 
 ::: {.grid}
+
 ::: {.g-col-12 .g-col-md-4}
-**Module 1: Observing the Sky & Solar System**
+::: {.module-card}
+[**Module 1: Observing the Sky & Solar System**](modules/module-01/index.qmd){.module-card-link}
+
+[Weeks 1–6]{.module-card-weeks}
 
 How do we navigate the night sky? Why do the Moon's phases change? What keeps planets in orbit? This module builds your astronomical toolkit: celestial coordinates, gravity and orbits, and how telescopes and light reveal the universe.
 :::
-::: {.g-col-12 .g-col-md-4}
-**Module 2: Stars & Stellar Evolution**
-
-Stars are not eternal — they are born, live, and die. You'll learn how the Sun generates energy through nuclear fusion, how we measure stellar distances and properties, and how stars evolve from formation to their final fates as white dwarfs, neutron stars, or black holes.
 :::
-::: {.g-col-12 .g-col-md-4}
-**Module 3: Galaxies & Cosmology**
 
-Zoom out to the largest scales: our Milky Way galaxy, billions of other galaxies, and the universe as a whole. You'll explore evidence for dark matter, the expanding universe, and the Big Bang — the story of cosmic origins written in light that has traveled billions of years to reach us.
+::: {.g-col-12 .g-col-md-4}
+::: {.module-card}
+[**Module 2: Stars & Stellar Evolution**](modules/module-02/index.qmd){.module-card-link}
+
+[Weeks 7–12]{.module-card-weeks}
+
+Stars are not eternal — they are born, live, and die. Learn how the Sun generates energy through nuclear fusion, how we measure stellar distances and properties, and how stars evolve from formation to their final fates.
 :::
+:::
+
+::: {.g-col-12 .g-col-md-4}
+::: {.module-card}
+[**Module 3: Galaxies & Cosmology**](modules/module-03/index.qmd){.module-card-link}
+
+[Weeks 13–16]{.module-card-weeks}
+
+Zoom out to the largest scales: our Milky Way, billions of other galaxies, and the universe as a whole. Explore evidence for dark matter, the expanding universe, and the Big Bang — cosmic origins written in light.
+:::
+:::
+
 :::
 
 ## How to Succeed
@@ -106,7 +119,7 @@ Zoom out to the largest scales: our Milky Way galaxy, billions of other galaxies
 3. **Use your resources.** Office hours, the discussion board, and the Astronomy Help Room are there for you.
 
 ::: {.callout-tip appearance="simple"}
-## <i class="bi bi-lightbulb"></i> Getting Help
+## Getting Help
 
 - **Office hours:** {{< meta params.office-hours >}} in {{< meta params.office >}}
 - **Canvas discussion:** Post questions others might share
