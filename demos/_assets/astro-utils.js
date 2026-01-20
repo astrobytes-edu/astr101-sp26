@@ -1,0 +1,580 @@
+/**
+ * AstroEd Demos - Shared Utilities
+ * Common functionality for interactive astronomy visualizations
+ */
+
+// ============================================
+// Number Formatting
+// ============================================
+
+/**
+ * Format a number in scientific notation for display
+ * @param {number} value - The number to format
+ * @param {number} precision - Significant figures (default 3)
+ * @returns {string} Formatted string like "1.5 × 10⁸"
+ */
+function formatScientific(value, precision = 3) {
+  if (value === 0) return '0';
+
+  const exponent = Math.floor(Math.log10(Math.abs(value)));
+  const mantissa = value / Math.pow(10, exponent);
+
+  // Use superscript for exponent
+  const superscripts = '⁰¹²³⁴⁵⁶⁷⁸⁹';
+  const superMinus = '⁻';
+
+  let expStr = '';
+  const expAbs = Math.abs(exponent);
+  if (exponent < 0) expStr += superMinus;
+
+  String(expAbs).split('').forEach(d => {
+    expStr += superscripts[parseInt(d)];
+  });
+
+  const mantissaStr = mantissa.toPrecision(precision);
+
+  if (exponent === 0) return mantissaStr;
+  if (exponent === 1 && mantissa === 1) return '10';
+  if (mantissa === 1) return `10${expStr}`;
+
+  return `${mantissaStr} × 10${expStr}`;
+}
+
+/**
+ * Format a number with appropriate units
+ * @param {number} value - Value in base units (km for distance)
+ * @param {string} type - 'distance' | 'angle' | 'time'
+ * @returns {object} { value: string, unit: string }
+ */
+function formatWithUnits(value, type) {
+  switch (type) {
+    case 'distance':
+      return formatDistance(value);
+    case 'angle':
+      return formatAngle(value);
+    case 'time':
+      return formatTime(value);
+    default:
+      return { value: value.toFixed(2), unit: '' };
+  }
+}
+
+/**
+ * Format distance with appropriate units (km input)
+ */
+function formatDistance(km) {
+  const AU = 1.496e8; // km
+  const LY = 9.461e12; // km
+  const PC = 3.086e13; // km
+
+  if (km >= PC) {
+    return { value: (km / PC).toPrecision(3), unit: 'pc' };
+  } else if (km >= LY) {
+    return { value: (km / LY).toPrecision(3), unit: 'ly' };
+  } else if (km >= AU * 0.1) {
+    return { value: (km / AU).toPrecision(3), unit: 'AU' };
+  } else if (km >= 1e6) {
+    return { value: formatScientific(km, 3), unit: 'km' };
+  } else if (km >= 1) {
+    return { value: km.toLocaleString(undefined, { maximumFractionDigits: 1 }), unit: 'km' };
+  } else {
+    return { value: (km * 1000).toFixed(1), unit: 'm' };
+  }
+}
+
+/**
+ * Format angle in degrees/arcminutes/arcseconds
+ * @param {number} degrees - Angle in degrees
+ */
+function formatAngle(degrees) {
+  if (degrees >= 1) {
+    return { value: degrees.toFixed(2), unit: '°' };
+  } else if (degrees >= 1/60) {
+    const arcmin = degrees * 60;
+    return { value: arcmin.toFixed(1), unit: "'" };
+  } else {
+    const arcsec = degrees * 3600;
+    return { value: arcsec.toFixed(1), unit: '"' };
+  }
+}
+
+/**
+ * Format time in appropriate units
+ * @param {number} years - Time in years
+ */
+function formatTime(years) {
+  const absYears = Math.abs(years);
+  const sign = years < 0 ? '-' : '+';
+
+  if (absYears >= 1e9) {
+    return { value: `${sign}${(absYears / 1e9).toFixed(1)}`, unit: 'Gyr' };
+  } else if (absYears >= 1e6) {
+    return { value: `${sign}${(absYears / 1e6).toFixed(1)}`, unit: 'Myr' };
+  } else if (absYears >= 1000) {
+    return { value: `${sign}${(absYears / 1000).toFixed(1)}`, unit: 'kyr' };
+  } else {
+    return { value: `${sign}${absYears.toFixed(0)}`, unit: 'years' };
+  }
+}
+
+
+// ============================================
+// Angular Size Calculations
+// ============================================
+
+/**
+ * Calculate angular size in degrees
+ * @param {number} diameter - Physical diameter (any units)
+ * @param {number} distance - Distance in same units as diameter
+ * @returns {number} Angular size in degrees
+ */
+function angularSize(diameter, distance) {
+  // Angular size in radians = diameter / distance (small angle approx)
+  // Convert to degrees
+  return (diameter / distance) * (180 / Math.PI);
+}
+
+/**
+ * Calculate distance needed for a given angular size
+ * @param {number} diameter - Physical diameter
+ * @param {number} angularDeg - Desired angular size in degrees
+ * @returns {number} Required distance
+ */
+function distanceForAngularSize(diameter, angularDeg) {
+  const angularRad = angularDeg * (Math.PI / 180);
+  return diameter / angularRad;
+}
+
+
+// ============================================
+// Animation Utilities
+// ============================================
+
+/**
+ * Create a smooth animation loop
+ * @param {function} callback - Called each frame with (deltaTime, totalTime)
+ * @returns {object} Controller with start(), stop(), isRunning
+ */
+function createAnimationLoop(callback) {
+  let animationId = null;
+  let startTime = null;
+  let lastTime = null;
+  let running = false;
+
+  function frame(timestamp) {
+    if (!startTime) startTime = timestamp;
+    if (!lastTime) lastTime = timestamp;
+
+    const deltaTime = (timestamp - lastTime) / 1000; // seconds
+    const totalTime = (timestamp - startTime) / 1000;
+    lastTime = timestamp;
+
+    callback(deltaTime, totalTime);
+
+    if (running) {
+      animationId = requestAnimationFrame(frame);
+    }
+  }
+
+  return {
+    start() {
+      if (!running) {
+        running = true;
+        startTime = null;
+        lastTime = null;
+        animationId = requestAnimationFrame(frame);
+      }
+    },
+    stop() {
+      running = false;
+      if (animationId) {
+        cancelAnimationFrame(animationId);
+        animationId = null;
+      }
+    },
+    get isRunning() {
+      return running;
+    },
+    reset() {
+      startTime = null;
+      lastTime = null;
+    }
+  };
+}
+
+/**
+ * Ease in-out cubic for smooth transitions
+ */
+function easeInOutCubic(t) {
+  return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+}
+
+/**
+ * Linear interpolation
+ */
+function lerp(start, end, t) {
+  return start + (end - start) * t;
+}
+
+/**
+ * Animate a value from start to end over duration
+ * @param {number} start - Starting value
+ * @param {number} end - Ending value
+ * @param {number} duration - Duration in ms
+ * @param {function} onUpdate - Called with current value
+ * @param {function} onComplete - Called when done
+ */
+function animateValue(start, end, duration, onUpdate, onComplete) {
+  const startTime = performance.now();
+
+  function update(currentTime) {
+    const elapsed = currentTime - startTime;
+    const progress = Math.min(elapsed / duration, 1);
+    const easedProgress = easeInOutCubic(progress);
+    const currentValue = lerp(start, end, easedProgress);
+
+    onUpdate(currentValue);
+
+    if (progress < 1) {
+      requestAnimationFrame(update);
+    } else if (onComplete) {
+      onComplete();
+    }
+  }
+
+  requestAnimationFrame(update);
+}
+
+
+// ============================================
+// Slider Helpers
+// ============================================
+
+/**
+ * Create a logarithmic slider for astronomical scales
+ * @param {HTMLInputElement} slider - The range input element
+ * @param {number} minValue - Minimum actual value
+ * @param {number} maxValue - Maximum actual value
+ * @param {function} onChange - Called with actual value
+ */
+function createLogSlider(slider, minValue, maxValue, onChange) {
+  const minLog = Math.log10(minValue);
+  const maxLog = Math.log10(maxValue);
+
+  // Set slider to 0-1000 range for smooth control
+  slider.min = 0;
+  slider.max = 1000;
+
+  function sliderToValue(sliderVal) {
+    const fraction = sliderVal / 1000;
+    const logVal = minLog + fraction * (maxLog - minLog);
+    return Math.pow(10, logVal);
+  }
+
+  function valueToSlider(value) {
+    const logVal = Math.log10(value);
+    const fraction = (logVal - minLog) / (maxLog - minLog);
+    return Math.round(fraction * 1000);
+  }
+
+  slider.addEventListener('input', () => {
+    const value = sliderToValue(parseFloat(slider.value));
+    onChange(value);
+  });
+
+  return {
+    getValue: () => sliderToValue(parseFloat(slider.value)),
+    setValue: (value) => {
+      slider.value = valueToSlider(value);
+      onChange(value);
+    }
+  };
+}
+
+/**
+ * Create a linear slider with formatting
+ * @param {HTMLInputElement} slider - The range input element
+ * @param {HTMLElement} display - Element to show formatted value
+ * @param {function} formatter - Function to format value for display
+ * @param {function} onChange - Called with value on change
+ */
+function createLinearSlider(slider, display, formatter, onChange) {
+  function update() {
+    const value = parseFloat(slider.value);
+    if (display && formatter) {
+      display.textContent = formatter(value);
+    }
+    if (onChange) {
+      onChange(value);
+    }
+  }
+
+  slider.addEventListener('input', update);
+
+  return {
+    getValue: () => parseFloat(slider.value),
+    setValue: (value) => {
+      slider.value = value;
+      update();
+    },
+    update
+  };
+}
+
+
+// ============================================
+// DOM Utilities
+// ============================================
+
+/**
+ * Create an SVG element with attributes
+ * @param {string} tag - SVG element tag name
+ * @param {object} attrs - Attributes to set
+ * @returns {SVGElement}
+ */
+function createSVGElement(tag, attrs = {}) {
+  const el = document.createElementNS('http://www.w3.org/2000/svg', tag);
+  for (const [key, value] of Object.entries(attrs)) {
+    el.setAttribute(key, value);
+  }
+  return el;
+}
+
+/**
+ * Query selector with error if not found
+ */
+function $(selector, parent = document) {
+  const el = parent.querySelector(selector);
+  if (!el) {
+    console.warn(`Element not found: ${selector}`);
+  }
+  return el;
+}
+
+/**
+ * Query selector all
+ */
+function $$(selector, parent = document) {
+  return Array.from(parent.querySelectorAll(selector));
+}
+
+
+// ============================================
+// Drag Handling
+// ============================================
+
+/**
+ * Make an SVG element draggable within a circle (for orbital motion)
+ * @param {SVGElement} element - Element to make draggable
+ * @param {object} center - { x, y } center of orbit
+ * @param {number} radius - Orbital radius
+ * @param {function} onDrag - Called with angle in radians
+ */
+function makeOrbitalDraggable(element, center, radius, onDrag) {
+  let isDragging = false;
+
+  function getAngle(event) {
+    const svg = element.ownerSVGElement;
+    const pt = svg.createSVGPoint();
+    pt.x = event.clientX;
+    pt.y = event.clientY;
+    const svgP = pt.matrixTransform(svg.getScreenCTM().inverse());
+
+    return Math.atan2(svgP.y - center.y, svgP.x - center.x);
+  }
+
+  function updatePosition(angle) {
+    const x = center.x + radius * Math.cos(angle);
+    const y = center.y + radius * Math.sin(angle);
+    element.setAttribute('cx', x);
+    element.setAttribute('cy', y);
+    if (onDrag) onDrag(angle);
+  }
+
+  element.addEventListener('mousedown', (e) => {
+    isDragging = true;
+    e.preventDefault();
+  });
+
+  element.addEventListener('touchstart', (e) => {
+    isDragging = true;
+    e.preventDefault();
+  });
+
+  document.addEventListener('mousemove', (e) => {
+    if (isDragging) {
+      const angle = getAngle(e);
+      updatePosition(angle);
+    }
+  });
+
+  document.addEventListener('touchmove', (e) => {
+    if (isDragging && e.touches.length === 1) {
+      const touch = e.touches[0];
+      const angle = getAngle(touch);
+      updatePosition(angle);
+    }
+  });
+
+  document.addEventListener('mouseup', () => {
+    isDragging = false;
+  });
+
+  document.addEventListener('touchend', () => {
+    isDragging = false;
+  });
+
+  return {
+    setAngle: updatePosition
+  };
+}
+
+
+// ============================================
+// Astronomical Constants
+// ============================================
+
+const ASTRO = {
+  // Distances (km)
+  AU: 1.496e8,           // Astronomical Unit
+  LIGHT_YEAR: 9.461e12,  // Light year
+  PARSEC: 3.086e13,      // Parsec
+  EARTH_MOON: 384400,    // Earth-Moon distance
+
+  // Sizes (km)
+  SUN_DIAMETER: 1.392e6,
+  MOON_DIAMETER: 3474,
+  EARTH_DIAMETER: 12742,
+  JUPITER_DIAMETER: 139820,
+
+  // Angular sizes (degrees, as seen from Earth)
+  SUN_ANGULAR: 0.53,
+  MOON_ANGULAR: 0.52,
+
+  // Time
+  SYNODIC_MONTH: 29.53,  // days
+  SIDEREAL_MONTH: 27.32, // days
+
+  // Moon recession rate (cm/year, for time evolution)
+  MOON_RECESSION_RATE: 3.8,
+
+  // Orbital parameters
+  MOON_ORBITAL_TILT: 5.145, // degrees
+};
+
+
+// ============================================
+// Preset Data for Angular Size Demo
+// ============================================
+
+const ANGULAR_SIZE_PRESETS = {
+  // Astronomical objects
+  sun: {
+    name: 'Sun',
+    diameter: ASTRO.SUN_DIAMETER,
+    distance: ASTRO.AU,
+    category: 'astronomical',
+    description: 'Our star, 150 million km away'
+  },
+  moon: {
+    name: 'Moon',
+    diameter: ASTRO.MOON_DIAMETER,
+    distance: ASTRO.EARTH_MOON,
+    category: 'astronomical',
+    description: 'Earth\'s natural satellite'
+  },
+  jupiter: {
+    name: 'Jupiter',
+    diameter: ASTRO.JUPITER_DIAMETER,
+    distance: 628.7e6, // at opposition
+    category: 'astronomical',
+    description: 'The largest planet (at opposition)'
+  },
+  andromeda: {
+    name: 'Andromeda Galaxy',
+    diameter: 2.2e18, // ~220,000 ly diameter in km
+    distance: 2.537e19, // ~2.5 million ly in km
+    category: 'astronomical',
+    description: 'Nearest large galaxy, 2.5 million light-years'
+  },
+
+  // Easter eggs - everyday objects
+  basketball_10m: {
+    name: 'Basketball (10m)',
+    diameter: 0.000239, // 23.9 cm in km
+    distance: 0.01, // 10m in km
+    category: 'easter-egg',
+    description: 'A basketball 10 meters away'
+  },
+  quarter_arms: {
+    name: 'Quarter (arm\'s length)',
+    diameter: 0.0000243, // 24.3 mm in km
+    distance: 0.0007, // ~70cm arm's length in km
+    category: 'easter-egg',
+    description: 'A US quarter held at arm\'s length'
+  },
+  thumb_arms: {
+    name: 'Your thumb (arm\'s length)',
+    diameter: 0.00002, // ~2cm thumb width in km
+    distance: 0.0007, // ~70cm
+    category: 'easter-egg',
+    description: 'Your thumb at arm\'s length ≈ 2°'
+  },
+  soccer_20m: {
+    name: 'Soccer ball (20m)',
+    diameter: 0.00022, // 22 cm in km
+    distance: 0.02, // 20m in km
+    category: 'easter-egg',
+    description: 'A soccer ball across the field'
+  },
+  airplane_10km: {
+    name: 'Airplane (10 km up)',
+    diameter: 0.06, // ~60m wingspan in km
+    distance: 10, // 10 km altitude
+    category: 'easter-egg',
+    description: 'Commercial jet at cruising altitude'
+  }
+};
+
+
+// ============================================
+// Export for use in demos
+// ============================================
+
+// Make available globally for standalone HTML files
+if (typeof window !== 'undefined') {
+  window.AstroUtils = {
+    // Formatting
+    formatScientific,
+    formatWithUnits,
+    formatDistance,
+    formatAngle,
+    formatTime,
+
+    // Calculations
+    angularSize,
+    distanceForAngularSize,
+
+    // Animation
+    createAnimationLoop,
+    easeInOutCubic,
+    lerp,
+    animateValue,
+
+    // Sliders
+    createLogSlider,
+    createLinearSlider,
+
+    // DOM
+    createSVGElement,
+    $,
+    $$,
+
+    // Drag
+    makeOrbitalDraggable,
+
+    // Constants
+    ASTRO,
+    ANGULAR_SIZE_PRESETS
+  };
+}
