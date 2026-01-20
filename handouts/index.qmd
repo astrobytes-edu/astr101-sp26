@@ -18,4 +18,12 @@ listing:
     due: "Due"
 ---
 
-Handouts are posted here as Quarto pages. For handouts that also have PDFs, Quarto can automatically show “Other Formats” links when you enable additional formats in the handout’s front matter.
+This section contains reference materials to support your learning throughout the semester.
+
+**Coming soon:**
+
+- **Formula Sheets** — Key equations organized by topic for quick reference
+- **Concept Maps** — Visual guides showing how astronomy concepts connect
+- **Exam Review Guides** — Study aids for each exam
+
+Handouts are posted as web pages with downloadable PDF versions when available.
