@@ -1,0 +1,81 @@
+{
+  "planets": [
+    {
+      "name": "Earth",
+      "tilt": 23.5,
+      "color": "#4a90d9",
+      "features": "continents",
+      "description": "Familiar seasons, 23.5° tilt",
+      "orbitalRadius": 1.0,
+      "orbitalPeriod": 1.0,
+      "perihelion": 0.983,
+      "aphelion": 1.017
+    },
+    {
+      "name": "Mars",
+      "tilt": 25.2,
+      "color": "#c1440e",
+      "features": "mars",
+      "description": "Similar tilt to Earth, 687-day year",
+      "orbitalRadius": 1.52,
+      "orbitalPeriod": 1.88,
+      "perihelion": 1.38,
+      "aphelion": 1.67
+    },
+    {
+      "name": "Uranus",
+      "tilt": 97.8,
+      "color": "#b5e3e3",
+      "features": "banded",
+      "description": "Extreme tilt—poles face Sun",
+      "orbitalRadius": 19.2,
+      "orbitalPeriod": 84.0,
+      "perihelion": 18.3,
+      "aphelion": 20.1
+    },
+    {
+      "name": "Venus",
+      "tilt": 177.4,
+      "color": "#e6c88a",
+      "features": "clouds",
+      "description": "Retrograde rotation, nearly upside-down",
+      "orbitalRadius": 0.72,
+      "orbitalPeriod": 0.615,
+      "perihelion": 0.718,
+      "aphelion": 0.728
+    },
+    {
+      "name": "Jupiter",
+      "tilt": 3.1,
+      "color": "#d4a574",
+      "features": "banded",
+      "description": "Minimal tilt—almost no seasons",
+      "orbitalRadius": 5.2,
+      "orbitalPeriod": 11.86,
+      "perihelion": 4.95,
+      "aphelion": 5.46
+    },
+    {
+      "name": "Saturn",
+      "tilt": 26.7,
+      "color": "#e8d5a0",
+      "features": "banded",
+      "description": "Earth-like tilt, 29-year orbit",
+      "orbitalRadius": 9.5,
+      "orbitalPeriod": 29.4,
+      "perihelion": 9.02,
+      "aphelion": 10.05
+    },
+    {
+      "name": "Neptune",
+      "tilt": 28.3,
+      "color": "#4169e1",
+      "features": "banded",
+      "description": "Earth-like tilt, 165-year orbit",
+      "orbitalRadius": 30.0,
+      "orbitalPeriod": 164.8,
+      "perihelion": 29.8,
+      "aphelion": 30.3
+    }
+  ]
+}
