@@ -86,7 +86,7 @@ website:
           - course-info/why-astr101-is-different.qmd
           - course-info/schedule.qmd
 
-      - section: "Module 1: Foundations"
+      - section: "Module 1: Observing the Sky & Solar System"
         href: modules/module-01/index.qmd
         contents:
           - section: "Lecture 1: Spoiler Alerts — The Universe Is Weird"
@@ -104,16 +104,12 @@ website:
               - text: "Reference Tables"
                 href: handouts/lecture-02-reference-tables.qmd
 
-      - section: "Module 2: Inferring Star Properties"
+      - section: "Module 2: Stars & Stellar Evolution"
         href: modules/module-02/index.qmd
         contents: []
 
-      - section: "Module 3: Stellar Structure & Evolution"
+      - section: "Module 3: Galaxies & Cosmology"
         href: modules/module-03/index.qmd
-        contents: []
-
-      - section: "Module 4: Galaxies & Cosmology"
-        href: modules/module-04/index.qmd
         contents: []
 
       - section: "Homework"

@@ -2,7 +2,7 @@
 title: "Course Schedule"
 subtitle: "ASTR 101: Principles of Astronomy (Spring 2026)"
 author: "Dr. Anna Rosen"
-draft: true
+draft: false
 format:
   html:
     toc: true

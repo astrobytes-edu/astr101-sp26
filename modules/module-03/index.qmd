@@ -1,7 +1,7 @@
 ---
-title: "Module 3: Stellar Structure & Evolution"
-subtitle: "Weeks 8–12 | How stars work and how they die"
-draft: true
+title: "Module 3: Galaxies & Cosmology"
+subtitle: "Weeks 13–16 | The large-scale universe"
+draft: false
 page-layout: article
 listing:
   - id: module-lectures
@@ -16,19 +16,16 @@ listing:
 
 ## Why this module matters
 
-Stars are not static points of light—they are dynamic nuclear furnaces held
-in delicate balance by gravity and pressure. This module takes you inside
-stars to understand how they generate energy, how they evolve over billions
-of years, and why they eventually die.
+We've studied individual stars, but stars are just building blocks. In this final module, we zoom out to understand stellar remnants, the Milky Way, external galaxies, and the universe as a whole. We'll see how galaxy motions reveal dark matter, and how the expansion of space tells us about cosmic history.
 
 ## Learning objectives
 
 By the end of this module, you will be able to:
 
-- Explain hydrostatic equilibrium and the virial theorem
-- Derive main-sequence scaling relations
-- Describe the evolutionary paths of low- and high-mass stars
-- Calculate the Chandrasekhar limit for white dwarfs
+- Describe the end states of stellar evolution (white dwarfs, neutron stars, black holes)
+- Explain the structure of the Milky Way and evidence for dark matter
+- Apply the Hubble law to describe cosmic expansion
+- Describe the Big Bang model and evidence from the cosmic microwave background
 
 ## Lectures
 
@@ -46,14 +43,15 @@ By the end of this module, you will be able to:
 
 ## Required Textbook Reading
 
-- Chapter 8 (pp. 47–55): Stellar Structure
-- Chapter 9 (pp. 56–68): Stellar Evolution
+- Chapters 20–21: Stellar Death (supernovae, neutron stars, black holes)
+- Chapters 22–23: Milky Way and Galaxies
+- Chapters 24–25: Active Galaxies and Cosmology
+- Chapters 26–27: The Big Bang and Early Universe
 
 ::: {.callout-frontier}
-- **What triggers core-collapse supernovae?** We know massive stars explode, but the exact mechanism that revives the stalled shock is still debated.
-- **Why do some massive stars collapse directly to black holes?** The "island of explodability" is not fully understood.
-- **What is the maximum neutron star mass?** Above ~2-3 M☉ they collapse to black holes, but the exact limit depends on unknown nuclear physics.
-- **What is the equation of state of ultra-dense matter?** We can't recreate neutron star cores in labs.
+- **What is dark matter?** It makes up ~27% of the universe, but we've never detected a dark matter particle directly.
+- **Why is there more matter than antimatter?** The Big Bang should have made equal amounts — where did the antimatter go?
+- **Is the Hubble tension real?** Local and CMB measurements of H₀ disagree by ~5σ. Systematic error or new physics?
 :::
 
 

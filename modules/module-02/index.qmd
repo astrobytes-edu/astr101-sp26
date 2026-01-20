@@ -1,7 +1,7 @@
 ---
-title: "Module 2: Inferring Star Properties"
-subtitle: "Weeks 4–7 | From photons to physical properties"
-draft: true
+title: "Module 2: Stars & Stellar Evolution"
+subtitle: "Weeks 7–12 | How stars work and how they die"
+draft: false
 page-layout: article
 listing:
   - id: module-lectures
@@ -16,19 +16,16 @@ listing:
 
 ## Why this module matters
 
-Now that you have the foundational tools, we turn to the central question of
-observational astronomy: how do we learn about objects we can never touch?
-This module shows you how to extract distance, temperature, composition, and
-motion from nothing but the light that reaches our telescopes.
+Stars are not static points of light—they are dynamic nuclear furnaces held in delicate balance by gravity and pressure. This module takes you inside stars to understand how they generate energy, how we measure their properties, and how they evolve over billions of years.
 
 ## Learning objectives
 
 By the end of this module, you will be able to:
 
-- Calculate stellar distances using parallax and standard candles
-- Interpret stellar spectra to determine temperature and composition
-- Apply the H-R diagram to classify stars
-- Measure stellar velocities from Doppler shifts
+- Explain how the Sun generates energy through nuclear fusion
+- Calculate stellar distances using parallax and the H-R diagram
+- Describe how binary stars reveal stellar masses
+- Trace stellar evolution from birth to death for different mass stars
 
 ## Lectures
 
@@ -46,11 +43,13 @@ By the end of this module, you will be able to:
 
 ## Required Textbook Reading
 
-- Chapter 3 (pp. 15–24): Distance and Parallax
-- Chapter 5 (pp. 28–35): Stellar Spectra
+- Chapter 16: The Sun
+- Chapter 17: Measuring Stars (parallax, luminosity, H-R diagram)
+- Chapter 18: Star Formation and the Interstellar Medium
+- Chapters 19–20: Stellar Evolution and Stellar Death
 
 ::: {.callout-frontier}
-- **What causes the solar abundance problem?** Helioseismology and spectroscopy give different answers for the Sun's composition.
-- **Why do stellar models struggle with convection?** We still use mixing-length theory from the 1950s because convection is so hard to model.
-- **Are there stars older than the universe?** Some age estimates exceed 13.8 Gyr — systematic errors or new physics?
+- **What triggers core-collapse supernovae?** We know massive stars explode, but the exact mechanism is still debated.
+- **What is the maximum neutron star mass?** Above ~2-3 M☉ they collapse to black holes, but the exact limit depends on unknown nuclear physics.
+- **Why do some massive stars collapse directly to black holes?** The "island of explodability" is not fully understood.
 :::
