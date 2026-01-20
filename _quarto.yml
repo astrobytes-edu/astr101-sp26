@@ -57,6 +57,12 @@ project:
     - activities/*.qmd
     - exams/*.qmd
     - explore/*.qmd
+    - demos/index.qmd
+  resources:
+    - "demos/**/*.html"
+    - "demos/**/*.js"
+    - "demos/**/*.css"
+    - "demos/**/*.json"
   brand: _brand.yml
 
 website:
@@ -123,6 +129,10 @@ website:
       - section: "Handouts"
         contents:
           - handouts/index.qmd
+
+      - section: "Demos"
+        contents:
+          - demos/index.qmd
 
       - section: "Explore"
         contents:
