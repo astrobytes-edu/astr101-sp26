@@ -25,7 +25,7 @@ This playbook is organized by: **(A) core settings**, **(B) core reveal features
 ### 1.1 Recommended directory layout
 
 ```text
-astr201-slides/
+astr101-slides/
   _quarto.yml
   _brand.yml               # cross-format brand (optional but recommended)
   _metadata.yml            # deck-level defaults shared across lectures
@@ -625,7 +625,7 @@ One line in `_quarto.yml`:
 
 ```yaml
 project:
-  type: astr201slides
+  type: astr101slides
 ```
 
 …automatically provides:
@@ -641,17 +641,17 @@ project:
 Create:
 
 ```text
-_extensions/astr201slides/
+_extensions/astr101slides/
   _extension.yml
   theme.scss
   assets/
     logo.svg
 ```
 
-Example `_extensions/astr201slides/_extension.yml`:
+Example `_extensions/astr101slides/_extension.yml`:
 
 ```yaml
-title: "ASTR201 Slides"
+title: "ASTR101 Slides"
 author: "Dr. Anna Rosen"
 version: 1.0.0
 quarto-required: ">=1.5.0"
@@ -679,8 +679,8 @@ contributes:
 
 Create a GitHub repo containing:
 
-- `_extensions/astr201slides/…`
-- a root `_quarto.yml` that sets `project: type: astr201slides`
+- `_extensions/astr101slides/…`
+- a root `_quarto.yml` that sets `project: type: astr101slides`
 - an `index.qmd` or `lecture.qmd` starter file
 
 Then you can bootstrap a new project with:
@@ -698,7 +698,7 @@ Do it if you want:
 
 ---
 
-## 10) ASTR201 “perfect lecture deck” checklist
+## 10) ASTR101 "perfect lecture deck" checklist
 
 ### 10.1 Before class (5 minutes)
 

@@ -1,0 +1,447 @@
+---
+title: "The Cosmic Distance Builder"
+subtitle: "Build a space map that actually fits somewhere"
+description: "Scaling, ratios, and proportional reasoning with the Solar System"
+date: 2026-01-24
+order: 1
+draft: false
+format:
+  html:
+    toc: true
+  pdf:
+    geometry: margin=0.75in
+---
+
+## The Challenge
+
+The distance from SDSU to downtown Los Angeles is about **190 km** (120 miles). If your classroom is 12 meters long, what scale would you need to fit that trip inside the room?
+
+$$
+\text{Scale} = \frac{190 \text{ km}}{12 \text{ m}} \approx 16 \text{ km per meter}
+$$
+
+That's manageable — each meter represents about 16 km.
+
+But what if you wanted to map the **Solar System**? The distance from Earth to the Sun is **$1.5 \times 10^8$ km** (that's 150,000,000 km — we'll learn to write this properly below). That's almost a million times farther than SDSU to LA!
+
+Today, you'll build a *physical* scale model of the Solar System that fits in our available space — and discover why every diagram you've ever seen of the Solar System is lying to you.
+
+---
+
+## Learning Goals
+
+By the end of this activity, you should be able to:
+
+1. Read and write numbers in **scientific notation** (e.g., $1.5 \times 10^8$ km)
+2. Define a **scale** as a ratio and use **unit cancellation** to convert distances
+3. Explain why it's impossible to show planet sizes and distances accurately on one model
+
+---
+
+## Math Background: Units, Scientific Notation, and Proportions
+
+### Why Units Matter
+
+In astronomy (and all science), **units are not optional** — they're part of the answer. "150" is meaningless. "150 km" and "150 million km" are *very* different things.
+
+**Rule:** Always write units with every number. This prevents errors and makes your work checkable.
+
+### Scientific Notation: How Scientists Write Big (and Small) Numbers
+
+Astronomy deals with enormous numbers. Writing "150,000,000 km" is tedious and error-prone (did you count the zeros correctly?). Instead, scientists use **scientific notation**:
+
+$$
+1.5 \times 10^8 \text{ km}
+$$
+
+This means: $1.5$ multiplied by $10$ eight times, or $1.5 \times 100{,}000{,}000$.
+
+#### How to Read Scientific Notation
+
+The exponent tells you how many places to move the decimal point:
+
+| Scientific Notation | Expanded Form | In Words |
+|---------------------|---------------|----------|
+| $10^6$ | 1,000,000 | one million |
+| $10^7$ | 10,000,000 | ten million |
+| $10^8$ | 100,000,000 | one hundred million |
+| $10^9$ | 1,000,000,000 | one billion |
+
+#### Converting Between Forms
+
+| In Words | Scientific Notation |
+|----------|---------------------|
+| 150 million km | $1.5 \times 10^8$ km |
+| 50 million km | $5 \times 10^7$ km |
+| 10 million km | $1 \times 10^7$ km (or just $10^7$) |
+| 1.39 million km | $1.39 \times 10^6$ km |
+
+::: {.callout-note}
+## Why Bother?
+Scientific notation makes multiplication and division *much* easier. To multiply: add the exponents. To divide: subtract them.
+
+$$
+\frac{1.5 \times 10^8}{5 \times 10^7} = \frac{1.5}{5} \times 10^{8-7} = 0.3 \times 10^1 = 0.3 \times 10 = 3
+$$
+
+*(The last step: $10^1$ just means $10$, and $0.3 \times 10 = 3$.)*
+:::
+
+#### Try It: Scientific Notation Practice
+
+Convert these to scientific notation (answers at bottom of page):
+
+1. 4,500,000 km = $\_\_\_ \times 10^{\_\_}$ km
+2. 300,000,000 m/s (speed of light) = $\_\_\_ \times 10^{\_\_}$ m/s
+
+Now try these divisions (subtract exponents!):
+
+3. $\dfrac{3 \times 10^9}{10^6} = \_\_\_ \times 10^{\_\_}$
+
+4. $\dfrac{6 \times 10^{12}}{2 \times 10^4} = \_\_\_ \times 10^{\_\_}$
+
+::: {.callout-tip collapse="true"}
+## Answers
+1. $4.5 \times 10^6$ km
+2. $3 \times 10^8$ m/s
+3. $3 \times 10^{9-6} = 3 \times 10^3 = 3000$
+4. $\frac{6}{2} \times 10^{12-4} = 3 \times 10^8$
+:::
+
+### Unit Cancellation: Your Best Friend
+
+When you multiply or divide quantities, units cancel just like numbers do. This is called **dimensional analysis**, and it's how scientists check their work.
+
+**The key idea:** Set up your calculation so unwanted units cancel, leaving only the units you want.
+
+**Example:** Convert $1.5 \times 10^8$ km (the Earth-Sun distance) to meters on a map, using the scale "1 m = $5 \times 10^7$ km."
+
+First, rewrite the scale as a **conversion factor** (a fraction equal to 1):
+
+$$
+\frac{1 \text{ m}}{5 \times 10^7 \text{ km}} = 1 \quad \text{(because 1 m on the map equals } 5 \times 10^7 \text{ km in reality)}
+$$
+
+Now multiply your real distance by this conversion factor:
+
+$$
+1.5 \times 10^8 \text{ km} \times \frac{1 \text{ m}}{5 \times 10^7 \text{ km}} = \frac{1.5 \times 10^8}{5 \times 10^7} \text{ m} = \frac{1.5}{5} \times 10^{8-7} \text{ m} = 0.3 \times 10^1 \text{ m} = 3 \text{ m}
+$$
+
+**Notice:** The "km" units cancel (one on top, one on bottom), leaving only meters — exactly what we want!
+
+::: {.callout-tip}
+## Self-Check: Did Your Units Cancel?
+If your answer has weird units like "km²" or "meters per km," something went wrong. Go back and check that units in the numerator cancel with units in the denominator.
+:::
+
+### What is a Scale?
+
+A **scale** is a ratio that relates real distances to map distances:
+
+> "1 meter on the map = $5 \times 10^7$ km in reality" (that's 50 million km)
+
+You can write this as a conversion factor in two ways:
+
+- $\dfrac{1 \text{ m}}{5 \times 10^7 \text{ km}}$ — use this to convert **real → map**
+- $\dfrac{5 \times 10^7 \text{ km}}{1 \text{ m}}$ — use this to convert **map → real**
+
+Choose whichever version makes the units you don't want cancel out.
+
+### Key Insight: Bigger Scale Number = Smaller Map
+
+This is counterintuitive! If your scale says "1 m = $10^8$ km" instead of "1 m = $5 \times 10^7$ km," your map gets *smaller*, not bigger. Why? Because each meter now represents more real distance, so you need fewer meters total.
+
+| Scale | 1 AU ($1.5 \times 10^8$ km) becomes... |
+|-------|----------------------------------------|
+| 1 m = $10^7$ km | 15 meters |
+| 1 m = $5 \times 10^7$ km | 3 meters |
+| 1 m = $10^8$ km | 1.5 meters |
+
+### Quick Reference: The Formula
+
+$$
+\text{Map distance} = \text{Real distance} \times \frac{1 \text{ m}}{\text{Scale (in km per m)}}
+$$
+
+Or equivalently:
+
+$$
+\text{Map distance} = \frac{\text{Real distance}}{\text{Scale}}
+$$
+
+**Pro tip:** When dividing in scientific notation, subtract the exponents: $10^8 \div 10^7 = 10^{8-7} = 10^1 = 10$.
+
+---
+
+## Materials (per group)
+
+- **1-meter piece of string or yarn** (your measuring tool)
+- Masking tape or sticky notes
+- Marker
+- This worksheet
+
+::: {.callout-tip}
+## Measuring Tip
+Lay your 1-meter string along the ground to measure distances. Mark each planet's position with tape and the planet's name.
+:::
+
+---
+
+## Worked Example: How to Use a Scale
+
+Let's practice with **Scale S2: 1 m = $5 \times 10^7$ km** (that's 50 million km).
+
+**Question:** How far is Earth from the Sun on our map?
+
+**Step 1:** Write down the real distance in scientific notation.
+Earth is 1 AU from the Sun. One AU = $1.5 \times 10^8$ km.
+
+**Step 2:** Set up the proportion.
+$$
+\text{Map distance} = \frac{\text{Real distance}}{\text{Scale}} = \frac{1.5 \times 10^8 \text{ km}}{5 \times 10^7 \text{ km per meter}}
+$$
+
+**Step 3:** Calculate (divide the numbers, subtract the exponents).
+$$
+\text{Map distance} = \frac{1.5}{5} \times 10^{8-7} = 0.3 \times 10^1 = 3 \text{ meters}
+$$
+
+**Answer:** At Scale S2, Earth would be placed **3 meters** from the Sun on our map.
+
+::: {.callout-tip}
+## Does This Make Sense?
+Let's check: 3 meters is about 10 feet — roughly the width of a small room. That seems reasonable for a "walkable" scale model. If you got 3 km or 0.003 m, something went wrong!
+:::
+
+---
+
+## Part A — Choose a Scale That Fits (10 minutes)
+
+You are designing a "Solar System Walkway" that must fit in:
+
+**Available space:** ________ meters *(your instructor will tell you)*
+
+### Step A1: Pick ONE scale
+
+| Scale | 1 meter on the map = | In Words | Notes |
+|-------|---------------------|----------|-------|
+| **S1** | $10^7$ km | 10 million km | Large map — will it fit? |
+| **S2** | $5 \times 10^7$ km | 50 million km | Medium map (recommended) |
+| **S3** | $10^8$ km | 100 million km | Compact map |
+| **S4** | _________ km | _________ | Design your own |
+
+**Our group chose: Scale ____**
+
+### Step A2: Calculate 1 AU on your map
+
+The Earth–Sun distance is **1 AU = $1.5 \times 10^8$ km** (150 million km).
+
+$$
+\text{Map distance for 1 AU} = \frac{1.5 \times 10^8 \text{ km}}{\text{your scale (km per meter)}} = \underline{\phantom{0000}} \text{ meters}
+$$
+
+### Step A3: Feasibility check
+
+Neptune is about **30 AU** from the Sun.
+
+**Neptune on our map = 30 × (your 1 AU distance) = _______ meters**
+
+✅ Does Neptune fit in our available space? **YES / NO**
+
+*If NO, choose a different scale and recalculate.*
+
+---
+
+## Part B — Build Your Solar System Map (20 minutes)
+
+Place tape markers on the ground at each planet's position.
+
+### Data Table
+
+**How to calculate:** Multiply each planet's AU distance by your "1 AU in meters" value from Part A.
+
+| Planet | Distance from Sun (AU) | Map Distance (m) |
+|--------|----------------------:|----------------:|
+| Mercury | 0.39 | |
+| Venus | 0.72 | |
+| Earth | 1.00 | |
+| Mars | 1.52 | |
+| Jupiter | 5.20 | |
+| Saturn | 9.58 | |
+| Uranus | 19.2 | |
+| Neptune | 30.1 | |
+
+::: {.callout-warning}
+## Sanity Check Before You Tape!
+Before placing markers, verify:
+
+- ✅ Mercury has the **smallest** map distance (it's closest to the Sun)
+- ✅ Neptune has the **largest** map distance (it's farthest)
+- ✅ Earth's distance matches your "1 AU in meters" from Part A
+- ✅ Jupiter is about **5× farther** than Earth (since 5.2 AU ÷ 1 AU ≈ 5)
+
+If any of these are wrong, check your calculations!
+:::
+
+### Show one example calculation (using scientific notation)
+
+Pick one planet (not Earth) and show your full calculation:
+
+**Planet:** _____________
+
+**Step 1:** Convert AU to km using $1 \text{ AU} = 1.5 \times 10^8$ km:
+
+Planet distance = _______ AU × $1.5 \times 10^8$ km/AU = $\_\_\_ \times 10^{\_\_}$ km
+
+**Step 2:** Divide by your scale to get map distance:
+
+$$
+\text{Map distance} = \frac{\_\_\_ \times 10^{\_\_} \text{ km}}{\_\_\_ \times 10^{\_\_} \text{ km/m}} = \_\_\_ \times 10^{\_\_} \text{ m} = \_\_\_\_\_ \text{ m}
+$$
+
+---
+
+## Part C — The Two-Scale Trap (10 minutes)
+
+Here's the problem every astronomy diagram hides from you.
+
+### C1: How big would the Sun be on your map?
+
+The real Sun has a diameter of **$1.39 \times 10^6$ km**.
+
+**Step 1:** At your scale, how many km does **1 centimeter** represent?
+
+Your scale: 1 m = $\_\_\_ \times 10^{\_\_}$ km
+
+So: 1 cm = (your scale) ÷ $10^2$ = $\_\_\_ \times 10^{\_\_}$ km
+
+**Step 2:** How many centimeters is the Sun?
+
+$$
+\text{Sun diameter on map} = \frac{1.39 \times 10^6 \text{ km}}{\_\_\_ \times 10^{\_\_} \text{ km/cm}} = \_\_\_ \times 10^{\_\_} \text{ cm} = \_\_\_\_\_ \text{ cm}
+$$
+
+### C2: The reality check
+
+At your scale:
+
+- Could you even *see* the Sun as a dot? **YES / NO**
+- What about Earth (diameter: $1.27 \times 10^4$ km)? Would it be visible? **YES / NO**
+
+::: {.callout-tip}
+## Size Reference
+- 3 cm ≈ ping-pong ball
+- 1 cm ≈ marble
+- 0.1 cm = 1 mm ≈ grain of sand
+- 0.01 cm = 0.1 mm ≈ invisible to naked eye
+:::
+
+### C3: Group discussion (2-3 sentences)
+
+Why is it impossible to show **planet sizes** and **planet distances** accurately on the same model?
+
+*Hint: Compare your Sun size (a few cm?) to Neptune's distance (tens of meters?).*
+
+---
+
+## Part D — Quick Check (If Time Permits)
+
+Answer without a calculator — estimation is a skill!
+
+1. If you double the scale (1 m now represents twice as many km), what happens to all map distances?
+
+2. Jupiter is at 5.2 AU. Earth is at 1 AU. How many times farther from the Sun is Jupiter than Earth?
+
+3. If your Earth marker is at _______ m, where should Mars (1.52 AU) be?
+
+---
+
+## Early Finishers: Go Bigger!
+
+Done with the Solar System? Try these challenges to see just how empty space really is.
+
+### Challenge 1: Exoplanets (Easier)
+
+Some exoplanets orbit *much* closer to their stars than Mercury does:
+
+- **Hot Jupiter:** 0.05 AU from its star
+- **Super-Earth:** 0.02 AU from its star
+
+Where would these go on your map? *(Hint: How many centimeters is 0.05 AU at your scale?)*
+
+### Challenge 2: The Nearest Star (Medium)
+
+The closest star to the Sun is **Proxima Centauri**, about **4.2 light-years** away.
+
+**Useful fact:** 1 light-year ≈ 63,000 AU
+
+At your scale, how far away would Proxima Centauri be? Where on Earth would you have to travel to place that marker?
+
+### Challenge 3: The Milky Way (Hard)
+
+The center of our galaxy is about **26,000 light-years** from the Sun.
+
+At your scale, how far is that? Express your answer in a unit that makes sense (km? Earth circumferences? Distances to the Moon?).
+
+::: {.callout-tip}
+## Reality Check
+If your answers seem absurdly large, you're doing it right. Space is absurdly empty.
+:::
+
+---
+
+## Turn In
+
+One worksheet per group with:
+
+- [ ] Your chosen scale
+- [ ] Completed distance table
+- [ ] One example calculation (showing your work)
+- [ ] Part C explanation (2-3 sentences)
+
+---
+
+::: {.callout-note collapse="true"}
+## Answer Key (Scale S2: 1 m = $5 \times 10^7$ km)
+
+**1 AU = 3 meters**
+
+| Planet | Distance (AU) | Map Distance (m) |
+|--------|-------------:|----------------:|
+| Mercury | 0.39 | 1.17 |
+| Venus | 0.72 | 2.16 |
+| Earth | 1.00 | 3.00 |
+| Mars | 1.52 | 4.56 |
+| Jupiter | 5.20 | 15.6 |
+| Saturn | 9.58 | 28.7 |
+| Uranus | 19.2 | 57.6 |
+| Neptune | 30.1 | 90.3 |
+
+**Part C (Sun size):**
+- 1 cm = $5 \times 10^5$ km (that's 500,000 km)
+- Sun diameter = $\dfrac{1.39 \times 10^6 \text{ km}}{5 \times 10^5 \text{ km/cm}} = 2.78$ cm (about the size of a ping-pong ball)
+- Earth = $\dfrac{1.27 \times 10^4 \text{ km}}{5 \times 10^5 \text{ km/cm}} = 0.025$ cm — **invisible**
+
+**Part D answers:**
+1. All distances are *halved*
+2. Jupiter is 5.2× farther than Earth
+3. Mars = 1.52 × (Earth distance)
+
+**Early Finisher Challenges (Scale S2):**
+
+*Challenge 1 — Exoplanets:*
+- Hot Jupiter at 0.05 AU = 0.05 × 3 m = 15 cm from the star
+- Super-Earth at 0.02 AU = 0.02 × 3 m = 6 cm from the star
+
+*Challenge 2 — Proxima Centauri:*
+- 4.2 light-years × 63,000 AU/ly = 264,600 AU
+- At 3 m per AU: 264,600 × 3 = **793,800 meters ≈ 794 km**
+- That's roughly the distance from San Diego to **San Francisco**!
+
+*Challenge 3 — Galactic Center:*
+- $2.6 \times 10^4$ ly × $6.3 \times 10^4$ AU/ly = $1.64 \times 10^9$ AU
+- At 3 m per AU: $4.9 \times 10^9$ m = **$4.9 \times 10^6$ km**
+- That's about **13× the Earth-Moon distance** ($3.84 \times 10^5$ km)
+- Or about **3% of the Earth-Sun distance** ($1.5 \times 10^8$ km)
+:::

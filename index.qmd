@@ -59,7 +59,7 @@ No prior physics or astronomy background is required, just curiosity and a willi
 :::
 
 ::: {.dashboard-tile}
-[<i class="bi bi-pencil-square dashboard-tile-icon"></i>[Homework]{.dashboard-tile-title}](homework/index.qmd){.dashboard-tile-link}
+[<i class="bi bi-pencil-square dashboard-tile-icon"></i>[Activities]{.dashboard-tile-title}](activities/index.qmd){.dashboard-tile-link}
 :::
 
 ::: {.dashboard-tile}

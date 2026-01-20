@@ -1,0 +1,23 @@
+---
+title: "Friday Activities"
+draft: false
+---
+
+## In-Class Activities
+
+Friday classes feature hands-on activities, group problem-solving, and think-pair-share exercises. Activity worksheets will be posted here throughout the semester.
+
+| Activity | Date | Topic |
+|----------|------|-------|
+| *Coming soon* | | |
+
+## What to Expect
+
+- **Group work:** You'll work in small groups to solve problems and discuss concepts
+- **Worksheets:** Bring a pencil and calculator to class
+- **Participation:** These activities are part of your iClicker/participation grade
+
+::: {.callout-tip}
+## Tip
+Fridays are a great time to ask questions and work through tricky concepts with your classmates!
+:::

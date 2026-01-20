@@ -54,7 +54,7 @@ project:
     - modules/module-*/index.qmd
     - modules/module-*/slides/*.qmd
     - modules/module-*/readings/*.qmd
-    - homework/*.qmd
+    - activities/*.qmd
     - exams/*.qmd
     - explore/*.qmd
   brand: _brand.yml
@@ -112,9 +112,9 @@ website:
         href: modules/module-03/index.qmd
         contents: []
 
-      - section: "Homework"
+      - section: "Activities"
         contents:
-          - homework/index.qmd
+          - activities/index.qmd
 
       - section: "Exams"
         contents:
