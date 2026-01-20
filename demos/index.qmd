@@ -153,36 +153,3 @@ Why does axial tilt—not distance from the Sun—cause seasons? Explore with di
 :::
 
 :::
-
----
-
-## Using Demos in Class
-
-These demos are designed for flexibility:
-
-- **Lecture mode**: Open fullscreen on the projector, demonstrate concepts live
-- **Student exploration**: Share links for homework or in-class activities
-- **Embedded in activities**: Demos appear inline in worksheets using shortcodes
-
-### Embedding in Quarto Documents
-
-Use the `demo` shortcode to embed any demo:
-
-```markdown
-{{< demo angular-size >}}
-{{< demo moon-phases height="400px" >}}
-{{< demo eclipse-geometry height="600px" >}}
-{{< demo seasons height="600px" >}}
-```
-
----
-
-## About These Demos
-
-Built with vanilla HTML, CSS, and JavaScript for maximum portability. No frameworks, no server required. These demos work anywhere and will continue to work for years to come.
-
-**Source code**: Each demo is self-contained in its own folder under `/demos/`.
-
-**Accessibility**: Keyboard navigable, screen reader labels, respects reduced motion preferences.
-
-**Future plans**: Additional demos for stellar evolution, spectroscopy, and cosmology are in development.
