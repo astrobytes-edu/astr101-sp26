@@ -1,6 +1,6 @@
 ---
 title: "Module 3: Galaxies & Cosmology"
-subtitle: "Weeks 13–16 | The large-scale universe"
+subtitle: "Weeks 14–16 | The large-scale universe"
 draft: false
 page-layout: article
 listing:
@@ -16,14 +16,14 @@ listing:
 
 ## Why this module matters
 
-We've studied individual stars, but stars are just building blocks. In this final module, we zoom out to understand stellar remnants, the Milky Way, external galaxies, and the universe as a whole. We'll see how galaxy motions reveal dark matter, and how the expansion of space tells us about cosmic history.
+We've studied individual stars, but stars are just building blocks. In this final module, we zoom out to the largest scales: the Milky Way, billions of external galaxies, and the universe as a whole. We'll see how galaxy motions reveal dark matter, and how the expansion of space tells us about cosmic origins.
 
 ## Learning objectives
 
 By the end of this module, you will be able to:
 
-- Describe the end states of stellar evolution (white dwarfs, neutron stars, black holes)
 - Explain the structure of the Milky Way and evidence for dark matter
+- Classify galaxies and describe how we measure their distances
 - Apply the Hubble law to describe cosmic expansion
 - Describe the Big Bang model and evidence from the cosmic microwave background
 
@@ -43,7 +43,6 @@ By the end of this module, you will be able to:
 
 ## Required Textbook Reading
 
-- Chapters 20–21: Stellar Death (supernovae, neutron stars, black holes)
 - Chapters 22–23: Milky Way and Galaxies
 - Chapters 24–25: Active Galaxies and Cosmology
 - Chapter 26: The Big Bang and Early Universe

@@ -1,6 +1,6 @@
 ---
 title: "Module 2: Stars & Stellar Evolution"
-subtitle: "Weeks 7–12 | How stars work and how they die"
+subtitle: "Weeks 7–13 | How stars work and how they die"
 draft: false
 page-layout: article
 listing:
@@ -46,7 +46,7 @@ By the end of this module, you will be able to:
 - Chapter 16: The Sun
 - Chapter 17: Measuring Stars (parallax, luminosity, H-R diagram)
 - Chapter 18: Star Formation and the Interstellar Medium
-- Chapters 19–20: Stellar Evolution and Stellar Death
+- Chapters 19–21: Stellar Evolution, Stellar Death, and Black Holes
 
 ::: {.callout-frontier}
 - **What triggers core-collapse supernovae?** We know massive stars explode, but the exact mechanism is still debated.
