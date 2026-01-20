@@ -141,37 +141,48 @@ All demos share common styling and utilities:
 
 Demos prioritized by course schedule alignment. First class: Jan 21, 2026.
 
-### Immediate (Week 2–3)
+**Legend:** ✅ Verified | 🔶 Implemented (needs verification) | ☐ Not started
 
-| Priority | Demo | Course Week | Topic |
-|----------|------|-------------|-------|
-| 🔴 | **Kepler's Laws Sandbox** | Week 3 (Feb 2–6) | Gravity & orbits, Kepler's laws |
+### Implemented (Verification Pending)
+
+| Status | Demo | Course Week | Topic |
+|--------|------|-------------|-------|
+| 🔶 | **Angular Size** | Week 1–2 | Scale of the universe |
+| 🔶 | **Moon Phases** | Week 2 | Lunar cycle, geometry vs shadows |
+| 🔶 | **Eclipse Geometry** | Week 2 | Why eclipses don't happen monthly |
+| 🔶 | **Seasons** | Week 2 | Axial tilt, NOT distance |
+
+### Immediate (Week 3)
+
+| Status | Demo | Course Week | Topic |
+|--------|------|-------------|-------|
+| ☐ | **Kepler's Laws Sandbox** | Week 3 (Feb 2–6) | Gravity & orbits, Kepler's laws |
 
 ### High Priority (Weeks 4–5)
 
-| Priority | Demo | Course Week | Topic |
-|----------|------|-------------|-------|
-| 🟠 | **Blackbody Radiation** | Week 4 (Feb 9–13) | Light & radiation, EM spectrum |
-| 🟠 | **Electromagnetic Spectrum** | Week 4 (Feb 9–13) | Light & radiation |
-| 🟠 | **Telescope Resolution** | Week 5 (Feb 17–20) | Telescopes |
+| Status | Demo | Course Week | Topic |
+|--------|------|-------------|-------|
+| ☐ | **Blackbody Radiation** | Week 4 (Feb 9–13) | Light & radiation, EM spectrum |
+| ☐ | **Electromagnetic Spectrum** | Week 4 (Feb 9–13) | Light & radiation |
+| ☐ | **Telescope Resolution** | Week 5 (Feb 17–20) | Telescopes |
 
 ### Medium Priority (Weeks 8–10)
 
-| Priority | Demo | Course Week | Topic |
-|----------|------|-------------|-------|
-| 🟡 | **Parallax & Distance** | Week 8 (Mar 9–13) | Measuring stars |
-| 🟡 | **Inverse Square Law** | Week 8 (Mar 9–13) | Luminosity |
-| 🟡 | **HR Diagram Explorer** | Week 8 (Mar 9–13) | H-R diagram |
-| 🟡 | **Binary Star Orbits** | Week 9 (Mar 16–20) | Binary stars, stellar masses |
+| Status | Demo | Course Week | Topic |
+|--------|------|-------------|-------|
+| ☐ | **Parallax & Distance** | Week 8 (Mar 9–13) | Measuring stars |
+| ☐ | **Inverse Square Law** | Week 8 (Mar 9–13) | Luminosity |
+| ☐ | **HR Diagram Explorer** | Week 8 (Mar 9–13) | H-R diagram |
+| ☐ | **Binary Star Orbits** | Week 9 (Mar 16–20) | Binary stars, stellar masses |
 
 ### Later (Weeks 14–16)
 
-| Priority | Demo | Course Week | Topic |
-|----------|------|-------------|-------|
-| 🟢 | **Galaxy Rotation Curves** | Week 14 (Apr 20–24) | Dark matter |
-| 🟢 | **Hubble's Law Explorer** | Week 15 (Apr 27–May 1) | Cosmology, Big Bang |
-| 🟢 | **Redshift & Expansion** | Week 15 (Apr 27–May 1) | Cosmology |
-| 🟢 | **Cosmic Microwave Background** | Week 16 (May 4–6) | Early universe |
+| Status | Demo | Course Week | Topic |
+|--------|------|-------------|-------|
+| ☐ | **Galaxy Rotation Curves** | Week 14 (Apr 20–24) | Dark matter |
+| ☐ | **Hubble's Law Explorer** | Week 15 (Apr 27–May 1) | Cosmology, Big Bang |
+| ☐ | **Redshift & Expansion** | Week 15 (Apr 27–May 1) | Cosmology |
+| ☐ | **Cosmic Microwave Background** | Week 16 (May 4–6) | Early universe |
 
 ---
 

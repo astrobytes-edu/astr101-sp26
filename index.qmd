@@ -71,6 +71,10 @@ No prior physics or astronomy background is required, just curiosity and a willi
 :::
 
 ::: {.dashboard-tile}
+[<i class="bi bi-play-circle dashboard-tile-icon"></i>[Demos]{.dashboard-tile-title}](demos/index.qmd){.dashboard-tile-link}
+:::
+
+::: {.dashboard-tile}
 [<i class="bi bi-question-circle dashboard-tile-icon"></i>[Get Help]{.dashboard-tile-title}](course-info/syllabus.qmd#sec-getting-help){.dashboard-tile-link}
 :::
 

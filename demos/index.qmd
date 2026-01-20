@@ -136,6 +136,22 @@ Why don't eclipses happen every month? Explore orbital tilt, nodes, and run 1000
 </div>
 :::
 
+:::{.demo-card}
+<div class="demo-preview">🌍</div>
+<div class="demo-info">
+<h3 class="demo-title">Seasons</h3>
+<p class="demo-description">
+Why does axial tilt—not distance from the Sun—cause seasons? Explore with different planets and watch a year unfold.
+</p>
+<a href="seasons/" class="demo-link">Open Demo →</a>
+<div class="demo-concepts">
+<span class="concept-tag">seasons</span>
+<span class="concept-tag">axial tilt</span>
+<span class="concept-tag">day length</span>
+</div>
+</div>
+:::
+
 :::
 
 ---
@@ -155,7 +171,8 @@ Use the `demo` shortcode to embed any demo:
 ```markdown
 {{< demo angular-size >}}
 {{< demo moon-phases height="400px" >}}
-{{< demo eclipse-geometry >}}
+{{< demo eclipse-geometry height="600px" >}}
+{{< demo seasons height="600px" >}}
 ```
 
 ---
