@@ -1,111 +1,72 @@
 ---
-title: "Course Schedule & Important Dates"
-subtitle: "ASTR 201: Astronomy for Science Majors (Spring 2026)"
+title: "Course Schedule"
+subtitle: "ASTR 101: Principles of Astronomy (Spring 2026)"
 author: "Dr. Anna Rosen"
-draft: false
+draft: true
 format:
   html:
     toc: true
     toc-depth: 2
-    number-sections: false
-  pdf:
-    toc: true
-    geometry: margin=1in
-    fontsize: 11pt
 ---
 
-## How to read this schedule
+## How to use this schedule
 
-This course repeats one story all semester:
+- **Mon & Wed:** Lecture (new content)
+- **Friday:** In-class activity (hands-on practice)
+- **Homework:** Assigned Wednesdays, due Tuesdays 11:59 PM via Achieve
 
-**Measure → Infer → Balance → Evolve**
+> **Note:** Friday activities will be updated as the semester progresses.
 
-Reading labels:
+## Important Dates
 
-- **Required:** expected reading from the *Fundamentals of Astrophysics* () textbook and the lecture readings posted in the **Module** landing pages.
-- **Recommended:** optional material from the textbook that we will "skim."
-- **Optional practice:** end-of-chapter *Questions & Exercises* (only assigned when stated)
-
-> Page totals are estimates from the Table of Contents page ranges.
-
-## Important dates
-
-- **First class:** Tue **Jan 20, 2026**
-- **Exam 1 (in class):** Thu **Mar 5, 2026**
-- **Exam 2 (in class):** Thu **Apr 16, 2026**
-- **Spring Break (no class):** Tue **Mar 31** & Thu **Apr 2**
-- **Last class (synthesis + optional review):** Tue **May 5**
-- **Final Exam:** Thu **May 7** 10:30 am - 12:30 pm | **Room:** LH 249
+- **First class:** Wed Jan 21, 2026
+- **Module 1 Exam:** Mon Feb 23 (Chapters 1-8)
+- **Module 2 Exam:** Mon Apr 6 (Chapters 16-21)
+- **Spring Break:** Mar 16-20 (no class)
+- **Last class:** Wed May 6
+- **Final Exam:** Fri May 8, 10:30 AM – 12:30 PM (Comprehensive)
 
 ---
 
-# Course schedule
+## Module 1: Observing the Sky & Solar System (Weeks 1-6)
 
-## Module 1 — Foundations (Weeks 1–3)
-
-| Week | Dates | Topics (in class) | Required Reading | Recommended  |
-|:-|:--|:-----|:--|:-|
-| 1 | Jan 20 & 22 | Spoiler Alerts: overview + how we know<br>Scaling, units, dimensional analysis | FoA Ch 1  |  |
-| 2 | Jan 27 & 29 | Kepler → Newton → Einstein (empirical vs physical laws)<br>Gravity/orbits; energy & angular momentum (1st pass) | Ch 7 (pp. 43–46) | 4 |
-| 3 | Feb 3 & 5 | Light as information (preview)<br>Blackbodies (deep 1): spectrum + peak wavelength | Ch 4.1–4.3 (pp. 25–27) | 3 |
-
----
-
-## Module 2 — Inferring the properties of stars (Weeks 4–7)
-
-| Week | Dates | Topics (in class) | Required Reading | Recommended Reading |
-|:-|:--|:-----|:--|:-|
-| 4 | Feb 10 & 12 | Distance: angular size + parallax + solid angle<br>Luminosity/flux; magnitudes & distance modulus | Ch 2 (pp. 11–16) + Ch 3 (pp. 19–21) | 9 |
-| 5 | Feb 17 & 19 | Blackbodies (deep 2): color → temperature; Stefan–Boltzmann; radius<br>Spectra: composition + ionization; H–R diagram meaning | Ch 4.4 (p. 28) + Ch 5 (p. 32) + Ch 6 (pp. 35–40) | 8 |
-| 6 | Feb 24 & 26 | Motions: proper motion + Doppler (SR only as needed)<br>Binaries: measuring stellar masses (core methods) | Ch 9 (pp. 54–56) + Ch 10.1–10.3 (pp. 59–63) | 8 |
-| 7 | Mar 3 & 5 | Intensity vs flux; mean free path; optical depth (RT vocabulary)<br>Thu: **EXAM 1** | Ch 12.1–12.2 (pp. 74–76) | 3 |
+| Week | Dates | Mon & Wed Topics | Fri Activity | Chapters |
+|:-----|:------|:-----------------|:-------------|:---------|
+| 1 | Jan 21-23 | (Wed only) Course intro, Scale of universe | — | Ch 1 |
+| 2 | Jan 26-30 | Celestial sphere, coordinates; Moon phases, eclipses | Activity 1 | Ch 2-3 |
+| 3 | Feb 2-6 | Gravity & orbits, Kepler's laws | Activity 2 | Ch 4 |
+| 4 | Feb 9-13 | Light & radiation, EM spectrum | Activity 3 | Ch 5 |
+| 5 | Feb 17-20 | (No Mon - Presidents Day) Spectra, Doppler; Telescopes | Activity 4 | Ch 5-6 |
+| 6 | Feb 23-27 | **Mon: MODULE 1 EXAM**; Solar system, planets | Activity 5 | Ch 7-8 |
 
 ---
 
-## Module 3 — Stellar structure, evolution, and the stellar graveyard (Weeks 8–12)
+## Module 2: Stars & Stellar Evolution (Weeks 7-12)
 
-> This module includes hydrostatic equilibrium, transport, fusion, scaling relations, and **stellar endpoints** (white dwarfs / neutron stars / black holes).  
-> We also cover **minimum and maximum stellar masses**, including a short Quantum Mechanics/de Broglie motivation for the minimum mass.
-
-| Week | Dates | Topics (in class) | Required reading (Core) | Core pages |
-|:-|:--|:-----|:--|:-|
-| 8 | Mar 10 & 12 | Ages & lifetimes; timescale reasoning<br>Hydrostatic equilibrium + virial temperature (thermal lens) | Ch 8 (pp. 49–51) + Ch 15 (pp. 101–104) | 7 |
-| 9 | Mar 17 & 19 | Radiation transport: diffusion, radiation pressure, atmosphere vs depth<br>Radiative vs convective envelopes | Ch 16 (pp. 107–110) + Ch 17 (pp. 112–116) | 9 |
-| 10 | Mar 24 & 26 | Fusion ignition + main-sequence scalings<br>Min/max masses: brown dwarfs (QM + de Broglie) & Eddington limit | Ch 18 (pp. 120–124) | 5 |
-| Spring Break | Mar 31 & Apr 2 | — No class — | — | — |
-| 11 | Apr 7 & 9 | Low-mass evolution → white dwarfs<br>Degeneracy pressure + Chandrasekhar limit (conceptual QM/stat-phys) | Ch 19 (pp. 128–134) | 7 |
-| 12 | Apr 14 & 16 | High-mass evolution → core-collapse supernovae<br>Neutron stars + black holes; where GR matters (conceptual)<br>Thu: **EXAM 2** | Ch 20.1–20.5 (pp. 137–143) | 7 |
+| Week | Dates | Mon & Wed Topics | Fri Activity | Chapters |
+|:-----|:------|:-----------------|:-------------|:---------|
+| 7 | Mar 2-6 | The Sun, fusion, solar activity | Activity 6 | Ch 16 |
+| 8 | Mar 9-13 | Measuring stars: parallax, luminosity, H-R diagram | Activity 7 | Ch 17 |
+| 9 | Mar 16-20 | **SPRING BREAK — No class** | — | — |
+| 10 | Mar 23-27 | Binary stars, stellar masses; Interstellar medium | Activity 8 | Ch 17-18 |
+| 11 | Mar 30 - Apr 3 | Star formation; Stellar evolution, red giants | Activity 9 | Ch 18-19 |
+| 12 | Apr 6-10 | **Mon: MODULE 2 EXAM**; Stellar death, white dwarfs | Activity 10 | Ch 19-20 |
 
 ---
 
-## Module 4 — Galaxies & cosmology (includes ISM + star formation) (Weeks 13–15)
+## Module 3: Galaxies & Cosmology (Weeks 13-16)
 
-| Week | Dates | Topics (in class) | Required reading (Core) | Core pages |
-|:-|:--|:-----|:--|:-|
-| 13 | Apr 21 & 23 | ISM phases; heating vs cooling (thermal balance)<br>Star formation: Jeans criterion; IMF; angular momentum → disks<br>Extinction/reddening (here) | Ch 21 (pp. 155–163) + Ch 22 (pp. 166–171) + Ch 12.3 (pp. 77–78) | 17 |
-| 14 | Apr 28 & 30 | Milky Way: rotation curve → dark matter<br>External galaxies + Hubble law; large-scale structure + lensing | Ch 26 (pp. 201–210) + Ch 27.1–27.3 (pp. 213–217) + Ch 29 (pp. 232–238) | 22 |
-| 15 | May 5 | Cosmology capstone: expansion dynamics → CMB → early eras<br>Synthesis + optional review | Ch 30 (pp. 243–248) + Ch 32.2–32.4 (pp. 261–264) | 10 |
+| Week | Dates | Mon & Wed Topics | Fri Activity | Chapters |
+|:-----|:------|:-----------------|:-------------|:---------|
+| 13 | Apr 13-17 | Supernovae, neutron stars, black holes | Activity 11 | Ch 20-21 |
+| 14 | Apr 20-24 | Milky Way structure, dark matter; Galaxies | Activity 12 | Ch 22-23 |
+| 15 | Apr 27 - May 1 | Active galaxies, quasars; Cosmology, Big Bang | Activity 13 | Ch 24-25 |
+| 16 | May 4-6 | Early universe, dark energy; **Wed: Review** | — | Ch 26-27 |
 
 ---
 
-<!---
-## Weekly required reading totals (core pages)
+## Final Exam
 
-| Week | Core pages |
-|---:|---:|
-| 1 | 5 |
-| 2 | 4 |
-| 3 | 3 |
-| 4 | 9 |
-| 5 | 8 |
-| 6 | 8 |
-| 7 | 3 |
-| 8 | 7 |
-| 9 | 9 |
-| 10 | 5 |
-| 11 | 7 |
-| 12 | 7 |
-| 13 | 17 |
-| 14 | 22 |
-| 15 | 10 |
---->
+**Friday, May 8, 10:30 AM – 12:30 PM**
+
+Comprehensive exam covering all chapters (1-8, 16-27).
