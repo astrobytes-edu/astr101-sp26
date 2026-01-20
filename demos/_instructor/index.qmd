@@ -1,0 +1,133 @@
+---
+title: "Demo Instructor Guide"
+subtitle: "How to use interactive demos in ASTR 101"
+page-layout: article
+toc: true
+---
+
+::: {.callout-note}
+## Instructor-Only Page
+This page is not linked from the main navigation. Share the direct URL with TAs and co-instructors only.
+:::
+
+## Quick Links
+
+| Demo | Student URL | Embed Code |
+|------|-------------|------------|
+| Angular Size | `/demos/angular-size/` | `{{</* demo angular-size */>}}` |
+| Moon Phases | `/demos/moon-phases/` | `{{</* demo moon-phases height="450px" */>}}` |
+| Eclipse Geometry | `/demos/eclipse-geometry/` | `{{</* demo eclipse-geometry height="600px" */>}}` |
+| Seasons | `/demos/seasons/` | `{{</* demo seasons height="600px" */>}}` |
+
+---
+
+## Using Demos in Class
+
+### Lecture Mode
+Open the demo fullscreen on the projector and demonstrate concepts live. All demos support:
+
+- Keyboard navigation (arrow keys, Enter)
+- Touch/mouse interaction
+- Responsive sizing
+
+### Student Exploration
+Share direct URLs for homework or in-class activities. Demos work on phones, tablets, and computers.
+
+### Embedding in Activities
+Use the `demo` shortcode to embed demos inline in Quarto documents:
+
+```markdown
+{{</* demo angular-size */>}}
+{{</* demo moon-phases height="450px" */>}}
+```
+
+The `height` parameter is optional (default: 500px).
+
+---
+
+## Pedagogical Notes
+
+### Angular Size
+
+**Key misconception:** Students often think angular size is just about distance.
+
+**Teaching points:**
+
+- Start with "Why do Sun and Moon look the same size?"
+- The 400× size / 400× distance coincidence enables total eclipses
+- Moon recession means this won't last forever
+- Thumb at arm's length ≈ 2° is a useful reference
+
+**Good questions:**
+
+- If Moon were half as far, how would angular size change?
+- Why do we measure galaxies in degrees but planets in arcseconds?
+
+### Moon Phases
+
+**Key misconception:** Phases are caused by Earth's shadow.
+
+**Teaching points:**
+
+- Phases are geometry (viewing angle), not shadows
+- Earth's shadow only touches Moon during eclipses (~2×/year)
+- "Quarter" refers to orbit position, not illumination fraction
+- Have students predict phase before dragging
+
+**Demo sequence:** New → First Quarter → Full → Third Quarter
+
+### Eclipse Geometry
+
+**Key misconception:** Eclipses should happen every month.
+
+**Teaching points:**
+
+- The 5° orbital tilt is why eclipses don't happen monthly
+- Nodes are where Moon's orbit crosses ecliptic
+- Set tilt to 0° to show what would happen without it
+- Run 1000-year simulation to demonstrate frequency
+
+**Numbers to know:**
+
+- Solar eclipses: 2–5 per year (but narrow path)
+- Lunar eclipses: 0–3 per year (visible from half Earth)
+
+### Seasons
+
+**Key misconception:** Seasons are caused by distance from Sun.
+
+**Teaching points:**
+
+- Earth is CLOSEST to Sun in January (Northern winter!)
+- If distance caused seasons, both hemispheres would have summer together
+- Tilt causes: (1) longer days, (2) more direct sunlight
+- Compare Earth (23.5°) to Uranus (98°) for extreme contrast
+
+**Killer question:** "If distance causes seasons, why is it winter in the Northern Hemisphere when Earth is closest to the Sun?"
+
+---
+
+## Technical Notes
+
+**Stack:** Pure HTML/CSS/JavaScript — no frameworks, no server required.
+
+**Portability:** Each demo is self-contained. Copy the folder anywhere and it works.
+
+**Accessibility:**
+
+- Keyboard navigable
+- Screen reader labels (aria-label attributes)
+- Respects `prefers-reduced-motion`
+
+**Source:** Each demo lives in `/demos/<name>/index.html`
+
+---
+
+## Demo Development Roadmap
+
+See [demos/README.md](/demos/README.md) for:
+
+- Full roadmap of planned demos
+- Build priority by course week
+- Technical specifications
+- Design philosophy

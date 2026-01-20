@@ -1,0 +1,113 @@
+---
+title: "Activities Instructor Guide"
+subtitle: "Facilitation notes and answer keys for ASTR 101 activities"
+page-layout: article
+toc: true
+---
+
+::: {.callout-note}
+## Instructor-Only Page
+This page is not linked from the main navigation. Share the direct URL with TAs and co-instructors only.
+:::
+
+## Activity Overview
+
+Friday activities are designed for collaborative learning. Students work in small groups while instructors circulate to facilitate discussion.
+
+---
+
+## Current Activities
+
+### Cosmic Distance Builder
+
+**File:** [cosmic-distance-builder.qmd](/activities/cosmic-distance-builder.qmd)
+
+**Duration:** 50 minutes
+
+**Learning objectives:**
+
+- Practice scientific notation conversions
+- Build intuition for astronomical scales
+- Connect familiar objects to cosmic distances
+
+**Facilitation tips:**
+
+- Circulate during Part 1 to catch notation errors early
+- For Part 2, encourage estimation before calculation
+- The "surprise" in Part 3 is how tiny the Solar System looks at galactic scales
+
+**Common student struggles:**
+
+- Confusing 10^6 and 10^-6
+- Forgetting to convert units before comparing
+- Not recognizing when to use small angle formula
+
+---
+
+## Activity Design Principles
+
+### Structure
+
+Each activity follows a consistent pattern:
+
+1. **Warm-up** (5 min) — Low-stakes entry point
+2. **Core exploration** (30 min) — Main concepts, group work
+3. **Synthesis** (10 min) — Connect to bigger picture
+4. **Extension** (if time) — Challenge problems
+
+### Facilitation Model
+
+- **Don't lecture** — Ask questions that lead students to discover
+- **Embrace productive struggle** — Resist giving answers too quickly
+- **Target misconceptions** — Know the common wrong answers and why they're wrong
+- **Encourage peer teaching** — Students explaining to each other is powerful
+
+### Grading
+
+Activities are graded for completion/effort, not correctness. This encourages risk-taking and authentic struggle.
+
+---
+
+## Planned Activities
+
+| Week | Activity | Status |
+|------|----------|--------|
+| 1 | Cosmic Distance Builder | ✅ Ready |
+| 2 | Moon Phase Predictions | 🔶 Draft |
+| 3 | Kepler's Laws Exploration | ☐ Planned |
+| 4 | Blackbody Matching Game | ☐ Planned |
+| 5 | Build a Telescope | ☐ Planned |
+
+---
+
+## Answer Keys
+
+::: {.callout-warning}
+## Coming Soon
+Answer keys will be added here as activities are finalized.
+:::
+
+<!--
+### Cosmic Distance Builder — Answers
+
+**Part 1: Scientific Notation Practice**
+1. 3.84 × 10^8 m
+2. 1.5 × 10^11 m
+3. 4.2 × 10^16 m
+
+**Part 2: Scale Comparisons**
+- Sun-Earth / Earth-Moon ratio: ~390
+- Nearest star / Sun-Earth ratio: ~270,000
+
+**Part 3: The Cosmic Zoom-Out**
+- Solar System at 1 AU scale: ~40 AU diameter
+- At galactic scale: effectively a point
+-->
+
+---
+
+## Resources
+
+- [Demo Instructor Guide](/demos/_instructor/) — How to use interactive demos
+- [demos/README.md](/demos/README.md) — Demo technical documentation
+- [Course Schedule](/course-info/schedule.qmd) — Activity timing in semester

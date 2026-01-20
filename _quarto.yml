@@ -55,9 +55,11 @@ project:
     - modules/module-*/slides/*.qmd
     - modules/module-*/readings/*.qmd
     - activities/*.qmd
+    - activities/_instructor/index.qmd
     - exams/*.qmd
     - explore/*.qmd
     - demos/index.qmd
+    - demos/_instructor/index.qmd
   resources:
     - "demos/**/*.html"
     - "demos/**/*.js"
