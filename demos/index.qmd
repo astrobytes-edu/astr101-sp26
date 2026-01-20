@@ -1,0 +1,171 @@
+---
+title: "Interactive Demos"
+subtitle: "Explore astronomy concepts through interactive visualizations"
+page-layout: full
+toc: false
+---
+
+<style>
+.demo-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.demo-card {
+  background: #12121f;
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.demo-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.4);
+}
+
+.demo-preview {
+  height: 200px;
+  background: #0a0a14;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4rem;
+}
+
+.demo-info {
+  padding: 1.5rem;
+}
+
+.demo-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0 0 0.5rem 0;
+  color: #e8e8f0;
+}
+
+.demo-description {
+  color: #a0a0b0;
+  font-size: 0.9rem;
+  margin: 0 0 1rem 0;
+  line-height: 1.5;
+}
+
+.demo-link {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background: #5dade2;
+  color: #0a0a14;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 500;
+  transition: background 0.2s;
+}
+
+.demo-link:hover {
+  background: #7bc0eb;
+}
+
+.demo-concepts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.concept-tag {
+  font-size: 0.75rem;
+  padding: 0.25rem 0.5rem;
+  background: rgba(93, 173, 226, 0.2);
+  color: #5dade2;
+  border-radius: 4px;
+}
+</style>
+
+These interactive demos let you explore fundamental astronomy concepts hands-on. Each demo works on phones, tablets, and computers.
+
+:::{.demo-gallery}
+
+:::{.demo-card}
+<div class="demo-preview">📐</div>
+<div class="demo-info">
+<h3 class="demo-title">Angular Size</h3>
+<p class="demo-description">
+Why do the Sun and Moon look the same size in our sky? Explore how physical size and distance combine to create apparent size.
+</p>
+<a href="angular-size/" class="demo-link">Open Demo →</a>
+<div class="demo-concepts">
+<span class="concept-tag">angular size</span>
+<span class="concept-tag">scale</span>
+<span class="concept-tag">Moon recession</span>
+</div>
+</div>
+:::
+
+:::{.demo-card}
+<div class="demo-preview">🌙</div>
+<div class="demo-info">
+<h3 class="demo-title">Moon Phases</h3>
+<p class="demo-description">
+Drag the Moon around Earth and watch phases change in real-time. See why phases are geometry, not shadows.
+</p>
+<a href="moon-phases/" class="demo-link">Open Demo →</a>
+<div class="demo-concepts">
+<span class="concept-tag">lunar phases</span>
+<span class="concept-tag">geometry</span>
+<span class="concept-tag">illumination</span>
+</div>
+</div>
+:::
+
+:::{.demo-card}
+<div class="demo-preview">🌑</div>
+<div class="demo-info">
+<h3 class="demo-title">Eclipse Geometry</h3>
+<p class="demo-description">
+Why don't eclipses happen every month? Explore orbital tilt, nodes, and run 1000-year simulations to count eclipses.
+</p>
+<a href="eclipse-geometry/" class="demo-link">Open Demo →</a>
+<div class="demo-concepts">
+<span class="concept-tag">eclipses</span>
+<span class="concept-tag">orbital tilt</span>
+<span class="concept-tag">nodes</span>
+</div>
+</div>
+:::
+
+:::
+
+---
+
+## Using Demos in Class
+
+These demos are designed for flexibility:
+
+- **Lecture mode**: Open fullscreen on the projector, demonstrate concepts live
+- **Student exploration**: Share links for homework or in-class activities
+- **Embedded in activities**: Demos appear inline in worksheets using shortcodes
+
+### Embedding in Quarto Documents
+
+Use the `demo` shortcode to embed any demo:
+
+```markdown
+{{< demo angular-size >}}
+{{< demo moon-phases height="400px" >}}
+{{< demo eclipse-geometry >}}
+```
+
+---
+
+## About These Demos
+
+Built with vanilla HTML, CSS, and JavaScript for maximum portability. No frameworks, no server required. These demos work anywhere and will continue to work for years to come.
+
+**Source code**: Each demo is self-contained in its own folder under `/demos/`.
+
+**Accessibility**: Keyboard navigable, screen reader labels, respects reduced motion preferences.
+
+**Future plans**: Additional demos for stellar evolution, spectroscopy, and cosmology are in development.
