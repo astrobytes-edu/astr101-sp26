@@ -1,0 +1,7 @@
+title: Demo
+author: ASTR 101
+version: 1.0.0
+quarto-required: ">=1.3.0"
+contributes:
+  shortcodes:
+    - demo.lua
