@@ -94,7 +94,7 @@ How do we navigate the night sky? Why do the Moon's phases change? What keeps pl
 ::: {.module-card}
 [**Module 2: Stars & Stellar Evolution**](modules/module-02/index.qmd){.module-card-link}
 
-[Weeks 7–12]{.module-card-weeks}
+[Weeks 7–13]{.module-card-weeks}
 
 Stars are not eternal — they are born, live, and die. Learn how the Sun generates energy through nuclear fusion, how we measure stellar distances and properties, and how stars evolve from formation to their final fates.
 :::
@@ -104,7 +104,7 @@ Stars are not eternal — they are born, live, and die. Learn how the Sun genera
 ::: {.module-card}
 [**Module 3: Galaxies & Cosmology**](modules/module-03/index.qmd){.module-card-link}
 
-[Weeks 13–16]{.module-card-weeks}
+[Weeks 14–16]{.module-card-weeks}
 
 Zoom out to the largest scales: our Milky Way, billions of other galaxies, and the universe as a whole. Explore evidence for dark matter, the expanding universe, and the Big Bang — cosmic origins written in light.
 :::
