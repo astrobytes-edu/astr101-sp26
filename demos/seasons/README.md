@@ -83,6 +83,8 @@ The right panel shows Earth from space with current illumination:
 | **Axial Tilt** | Slider | 0° – 90° | 23.5° (Earth) |
 | **Latitude** | Slider | –90° – +90° | 40°N |
 
+**Why 40°N?** This latitude passes through Philadelphia, Denver, Madrid, and Beijing—cities students may recognize. At 40°N, seasons are distinct (not too polar, not too equatorial), making it an ideal teaching reference.
+
 Adjust each to explore how seasons change.
 
 ### Season Presets
