@@ -33,7 +33,7 @@ execute:
 
 - **Homework:** Complete on Achieve, due **Tuesdays 11:59 PM**
 - **Reading:** LearningCurve on Achieve (completion-based)
-- **In class:** Bring iClicker; Fridays are activity days
+- **In class:** Bring iClicker; most Fridays include activities
 - **Exams:** Closed-note, calculator allowed, formula sheet provided
 - **Questions?** Check Canvas announcements, then [office hours](#sec-getting-help)
 :::
@@ -67,6 +67,8 @@ Astrophysics is the interplay between theory and observation - theorists *predic
 
 - **iClicker:** Required for in-class engagement. Register at <https://student.iclicker.com/>
 
+- **Lecture slides:** Posted on the [course website](https://astrobytes-edu.github.io/astr101-sp26) under each module.
+
 - **Calculator:** Non-smartphone calculator for exams.
 
 ## Student Learning Outcomes {#sec-outcomes}
@@ -95,7 +97,7 @@ By the end of this course, students will be able to:
 |---|-:|
 | LearningCurve Reading (Achieve) | 10% |
 | Weekly Homework (Achieve) | 15% |
-| Scholarly Engagement (iClicker + Friday activities) | 10% |
+| Scholarly Engagement (iClicker + in-class activities) | 10% |
 | Module Exam 1 | 15% |
 | Module Exam 2 | 15% |
 | Final Exam (cumulative) | 35% |
@@ -143,21 +145,22 @@ Per SDSU policy, students are expected to spend at least 6 hours per week (a min
 
 #### Scholarly Engagement (10%) {#sec-engagement}
 
-Engagement is measured through **iClicker responses** during lecture and **Friday in-class activities**.
+Scholarly engagement measures how you make your reasoning visible through class participation and observable learning behaviors. Engagement is assessed through **iClicker responses** and **weekly observable behaviors**.
 
-**Scoring:**
+| Score | Observable Behaviors |
+|:------|:---------------------|
+| **5/5** | Prepared (specific questions on readings/notes), engaged in iClicker + activities, contributes to discussion, helps peers reason through problems, uses evidence/units/assumptions in explanations |
+| **4/5** | Prepared, steady effort in activities, contributes occasionally, collaborates respectfully, asks questions when stuck |
+| **3/5** | Inconsistent preparation, participates when prompted, limited collaboration/discussion contribution |
+| **2/5** | Frequently unprepared or disengaged, minimal contribution to activities, distracts self/others |
+| **1/5** | Rare attendance/engagement, unprepared when present, does not participate in activities |
+| **0/5** | Habitual absence, no engagement |
 
-- **75% participation** — you answered the questions
-- **25% correctness** — you got them right
+This rubric is a guideline — your overall scholarly contribution matters more than conforming to a single engagement style.
 
-**To earn credit:**
+Attendance is not formally taken, but you cannot earn engagement credit if you are not present and participating.
 
-- Must answer at least 75% of questions in a class period
-- Attendance is not formally taken, but you cannot earn credit if you're not present
-
-**Friday activities:** Hands-on practice applying lecture concepts. Activities are designed to be completed during class time with your peers.
-
-**Classroom norms:** Phones and off-task devices are not permitted during class. Respect your classmates and contribute to our learning community.
+**Classroom norms:** Phones and off-task devices are not permitted during class. Be punctual. Respect your classmates and contribute to our learning community.
 
 #### Weekly Homework (15%) {#sec-homework}
 
@@ -165,7 +168,7 @@ Homework is completed on **Macmillan Achieve** and is auto-graded. Assignments r
 
 **Details:**
 
-- **10 assignments** throughout the semester
+- **~10 assignments** throughout the semester
 - **Due Tuesdays at 11:59 PM** via Achieve
 - **5 attempts allowed** per question
 - **Lowest 2 scores dropped** — this policy handles emergencies, so no extensions are granted
@@ -193,32 +196,38 @@ There are **no make-up exams** in this course. The only exception is a **serious
 
 *Final exam note:* SDSU’s policy states that **no final exam may be given to individual students before the regular scheduled time**; if it is impossible to take the final as scheduled, arrangements must be made with the instructor (typically via an **Incomplete/deferred final** process or **withdrawal** from the course, when applicable). ([Spring 2026 Final Exam Calendar](https://registrar.sdsu.edu/calendars/finals/spring-2026))
 
-## Academic Integrity & Generative AI Policy {#sec-ai-policy}
+## Academic Integrity & AI Policy {#sec-ai-policy}
 
-All submitted work in this course must reflect **your own understanding**. Collaboration is strongly encouraged to discuss concepts and strategies. However, what you submit must be written independently and must represent your unique reasoning. Copying solutions (from classmates, the internet, generative AI, or solution manuals) is not permitted. Violations of academic integrity will be handled according to university procedures and may be reported to the [Center for Student Rights and Responsibilities](https://sacd.sdsu.edu/student-rights/academic-dishonesty/cheating-and-plagiarism).
+All submitted work must reflect **your own understanding**. Collaboration is encouraged for discussing concepts, but what you submit must represent your own reasoning. Violations will be handled according to [university procedures](https://sacd.sdsu.edu/student-rights/academic-dishonesty/cheating-and-plagiarism).
 
-### Generative AI (ChatGPT, Gemini, Claude, etc.) {#sec-generative-ai}
+### Course-Provided AI Tools (Approved) {#sec-approved-ai}
 
-::: {.callout-important}
-## Generative AI rules (enforced)
+::: {.callout-tip}
+## Approved AI Tools
 
-- **Do not use** general-purpose AI tools to produce, rewrite, or “polish” anything you submit for a grade.
-- **Disclose AI use** whenever a submission asks for AI/collaboration disclosure (e.g., homework grade memos), even if the use was allowed.
-- You are responsible for correctness and for being able to reproduce any reasoning you submit.
+**Achieve AI Tutor** — Enabled for homework support. This Socratic-style tutor asks guiding questions to help you think through problems; it won't give you answers. Use it when you're stuck and need a nudge. Your submitted work must still reflect your own reasoning.
 
-**Allowed (study support):**
-- Asking questions to clarify *your own notes* or *assigned readings*.
-- Generating practice questions (not answers to assigned problems).
-- Explaining concepts at a different level *for studying*, not for submission.
-
-**Not allowed (graded work):**
-- Generating or rewriting homework solutions, derivations, or written explanations you submit.
-- Submitting AI-generated reasoning you cannot reproduce on your own.
+**ASTR 101 NotebookLM** — A private notebook grounded in course materials only (invitation via Canvas). Use for reviewing concepts, not generating solutions.
 :::
 
-Generative AI can produce fluent explanations and plausible-looking solutions that are subtly wrong. In a quantitative, model-based course, “sounds right” is not a standard of truth. If you don’t have the physics and quantitative discipline to verify an AI output, you risk learning the wrong thing confidently.
+### External AI Tools (Not Allowed for Graded Work) {#sec-external-ai}
 
-To support effective studying, I will provide course-specific tools grounded in **course materials only** (lecture notes, textbook, vetted sources), that includes a private **ASTR 101 NotebookLM notebook** (invitation via your email address linked to Canvas). This resource is intended as study aids — not solution engines.
+::: {.callout-important}
+## External AI Rules
+
+**Do not use** ChatGPT, Gemini, Claude, or similar tools to produce, rewrite, or "polish" anything you submit. These tools can generate fluent explanations that are subtly wrong — and in a quantitative course, "sounds right" isn't a standard of truth.
+
+**Allowed for studying:**
+
+- Clarifying your own notes or assigned readings
+- Generating practice questions (not answers to assigned problems)
+- Explaining concepts at a different level
+
+**Not allowed:**
+
+- Generating or rewriting homework solutions you submit
+- Submitting reasoning you cannot reproduce on your own
+:::
 
 ## Course Materials (Sharing Policy) {#sec-materials}
 

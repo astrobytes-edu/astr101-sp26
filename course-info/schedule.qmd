@@ -11,11 +11,12 @@ format:
 
 ## How to use this schedule
 
-- **Mon & Wed:** Lecture (new content)
-- **Friday:** In-class activity (hands-on practice)
-- **Homework:** Assigned Wednesdays, due Tuesdays 11:59 PM via Achieve
+- **Lectures:** Mon & Wed (new content)
+- **Fridays:** Most weeks include an in-class activity; reviews before exams
+- **Homework:** ~10 assignments due Tuesdays via Achieve; lowest 2 dropped; no HW assigned the week before exams
+- **LearningCurve:** Due before Monday lectures
 
-> **Note:** Friday activities will be updated as the semester progresses.
+**Textbook:** Freedman, Geller & Kaufmann, *Universe* 11th ed (2019)
 
 ## Important Dates
 
@@ -30,38 +31,38 @@ format:
 
 ## Module 1: Observing the Sky & Solar System (Weeks 1-6)
 
-| Week | Dates | Mon & Wed Topics | Fri Activity | Chapters |
-|:-----|:------|:-----------------|:-------------|:---------|
-| 1 | Jan 21-23 | Course intro; Scale of universe | — | Ch 1 |
-| 2 | Jan 26-30 | Celestial sphere, coordinates; Moon phases, eclipses | Activity 1 | Ch 2-3 |
-| 3 | Feb 2-6 | Gravity & orbits, Kepler's laws | Activity 2 | Ch 4 |
-| 4 | Feb 9-13 | Light & radiation, EM spectrum | Activity 3 | Ch 5 |
-| 5 | Feb 17-20 | (No Mon - Presidents Day) Spectra, Doppler; Telescopes | Activity 4 | Ch 5-6 |
-| 6 | Feb 23-27 | Solar system, planets | **Fri: Module 1 Review** | Ch 7-8 |
+| Week | Dates | Topics | Chapters |
+|:-----|:------|:-------|:---------|
+| 1 | Jan 21-23 | Course intro; Scale of universe | Ch 1 |
+| 2 | Jan 26-30 | Celestial sphere, coordinates; Moon phases, eclipses | Ch 2-3 |
+| 3 | Feb 2-6 | Gravity & orbits, Kepler's laws | Ch 4 |
+| 4 | Feb 9-13 | Light & radiation, EM spectrum | Ch 5 |
+| 5 | Feb 17-20 | (No Mon - Presidents Day) Spectra, Doppler; Telescopes | Ch 5-6 |
+| 6 | Feb 23-27 | Solar system, planets; **Fri: Review** | Ch 7-8 |
 
 ---
 
 ## Module 2: Stars & Stellar Evolution (Weeks 7-13)
 
-| Week | Dates | Mon & Wed Topics | Fri Activity | Chapters |
-|:-----|:------|:-----------------|:-------------|:---------|
-| 7 | Mar 2-6 | **Mon: MODULE 1 EXAM**; The Sun, fusion, solar activity | Activity 5 | Ch 16 |
-| 8 | Mar 9-13 | Measuring stars: parallax, luminosity, H-R diagram | Activity 6 | Ch 17 |
-| 9 | Mar 16-20 | Binary stars, stellar masses; Interstellar medium | Activity 7 | Ch 17-18 |
-| 10 | Mar 23-27 | Star formation; Stellar evolution, red giants | Fri: Break starts | Ch 18-19 |
-| 11 | Mar 30 – Apr 3 | **SPRING BREAK — No class** | — | — |
-| 12 | Apr 6-10 | Stellar death, white dwarfs, neutron stars | Activity 8 | Ch 19-20 |
-| 13 | Apr 13-17 | Supernovae, black holes | **Fri: Module 2 Review** | Ch 20-21 |
+| Week | Dates | Topics | Chapters |
+|:-----|:------|:-------|:---------|
+| 7 | Mar 2-6 | **Mon: MODULE 1 EXAM**; The Sun, fusion, solar activity | Ch 16 |
+| 8 | Mar 9-13 | Measuring stars: parallax, luminosity, H-R diagram | Ch 17 |
+| 9 | Mar 16-20 | Binary stars, stellar masses; Interstellar medium | Ch 17-18 |
+| 10 | Mar 23-27 | Star formation; Stellar evolution, red giants | Ch 18-19 |
+| 11 | Mar 27 – Apr 5 | **SPRING BREAK — No class** | — |
+| 12 | Apr 6-10 | Stellar death, white dwarfs, neutron stars | Ch 19-20 |
+| 13 | Apr 13-17 | Supernovae, black holes; **Fri: Review** | Ch 20-21 |
 
 ---
 
 ## Module 3: Galaxies & Cosmology (Weeks 14-16)
 
-| Week | Dates | Mon & Wed Topics | Fri Activity | Chapters |
-|:-----|:------|:-----------------|:-------------|:---------|
-| 14 | Apr 20-24 | **Mon: MODULE 2 EXAM**; Milky Way structure, dark matter | Activity 9 | Ch 22-23 |
-| 15 | Apr 27 – May 1 | Galaxies, active galaxies, quasars; Cosmology, Big Bang | Activity 10 | Ch 24-25 |
-| 16 | May 4-6 | Early universe, dark energy; **Wed: Review** | — | Ch 26 |
+| Week | Dates | Topics | Chapters |
+|:-----|:------|:-------|:---------|
+| 14 | Apr 20-24 | **Mon: MODULE 2 EXAM**; Milky Way structure, dark matter | Ch 22-23 |
+| 15 | Apr 27 – May 1 | Galaxies, active galaxies, quasars; Cosmology, Big Bang | Ch 24-25 |
+| 16 | May 4-6 | Early universe, dark energy; **Wed: Review** | Ch 26 |
 
 ---
 
