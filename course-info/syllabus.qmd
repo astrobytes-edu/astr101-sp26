@@ -1,6 +1,6 @@
 ---
-title: "ASTR 201 Syllabus"
-subtitle: "Astronomy for Science Majors | Spring 2026"
+title: "ASTR 101 Syllabus"
+subtitle: "Principles of Astronomy | Spring 2026"
 author: "Dr. Anna Rosen"
 draft: false
 format:
@@ -14,29 +14,6 @@ format:
 execute:
   echo: false
 ---
-<!--
-TODO (high priority):
-- Confirm Midterm 1 and Midterm 2 dates (and whether in-class vs evening)
-- Confirm grading weights for Spring 2026 (table below may need adjustment)
-- Finalize/replace the AI policy section with your official ASTR201 version (if desired)
-
-Compilation/Rendering (from the folder containing this file):
-
-Render both HTML + PDF (recommended):
-  quarto render syllabus.qmd
-
-Render only HTML:
-  quarto render syllabus.qmd --to html
-
-Render only PDF:
-  quarto render syllabus.qmd --to pdf
-
-Live preview while editing:
-  quarto preview syllabus.qmd
-
-If PDF rendering fails due to missing LaTeX:
-  quarto install tinytex
--->
 
 ## Course Information {#sec-course-info}
 
@@ -46,20 +23,19 @@ If PDF rendering fails due to missing LaTeX:
 | **Email** | <alrosen@sdsu.edu> |
 | **Office** | Physics 239 |
 | **Office Hours** | Fridays 11:00 am–12:00 pm (and by appointment) |
-| **Class meetings** | Tues/Thurs 12:30–1:45 pm |
-| **Location** | LH 245 |
-| **Course website** | <https://astrobytes-edu.github.io/astr201-sp26> |
-| **Platforms:** <br>*(where things happen)* | [Canvas](https://sdsu.instructure.com) *(announcements, submissions, gradebook)*<br>[Course website](https://astrobytes-edu.github.io/astr201-sp26) *(course materials, handouts, assignments)*<br>[iClicker](https://student.iclicker.com/) *(in-class scholarly engagement)* |
-| **Virtual ASTR 201 AI Tutor:** <br>*(for studying, enhanced learning)* | **ASTR 201 NotebookLM Notebook** <br>*(Grounded in course materials only. Invitation via your SDSU email.)* |
-<!--- <br>**ASTR 201 Socratic Tutor (Custom GPT)** *(practice coach, not a solution engine)*-->
+| **Class meetings** | Mon/Wed/Fri 10:00–10:50 am |
+| **Location** | LH 345 |
+| **Course website** | <https://astrobytes-edu.github.io/astr101-sp26> |
+| **Platforms** | [Canvas](https://sdsu.instructure.com) *(announcements, gradebook)*<br>[Achieve](https://www.macmillanlearning.com/college/us/digital/achieve) *(homework, readings)*<br>[iClicker](https://student.iclicker.com/) *(in-class engagement)* |
 
 ::: {.callout-hero}
 ## Start Here
 
-- **Where to find things:** check Canvas + the course website (links above).
-- **Weekly cadence:** homework due **Mon 11:59 pm**; grade memo due **Wed 11:59 pm**.
-- **Exams:** closed-note/closed-book; calculator allowed (no phones); formula sheet provided.
-- **Getting help:** see [Getting Help (Office Hours)](#sec-getting-help). Before emailing, check this syllabus and recent Canvas announcements.
+- **Homework:** Complete on Achieve, due **Tuesdays 11:59 PM**
+- **Reading:** LearningCurve on Achieve (completion-based)
+- **In class:** Bring iClicker; Fridays are activity days
+- **Exams:** Closed-note, calculator allowed, formula sheet provided
+- **Questions?** Check Canvas announcements, then [office hours](#sec-getting-help)
 :::
 
 ### Course Description
@@ -68,7 +44,7 @@ Directed toward students with a *strong interest* in science and mathematics. Th
 
 **Prerequisite:** Satisfaction of the SDSU Mathematics/Quantitative Reasoning Assessment requirement.
 
-**Important:** This is a **quantitative** course: we’ll use math to build **physical understanding and intuition**, not rote memorization or “plug-and-chug.” You’ll practice interpreting equations, stating assumptions, and sanity-checking results (units, limits, scaling); as a required course for Astronomy pre-majors, ASTR 201 is also designed to prepare you for **upper-division Physics and Astronomy** coursework through scientific modeling, quantitative reasoning, and clear scientific explanation.
+**Important:** This is a **quantitative** course: we’ll use math to build **physical understanding and intuition**, not rote memorization or “plug-and-chug.” You’ll practice interpreting equations, stating assumptions, and sanity-checking results (units, limits, scaling); as a required course for Astronomy pre-majors, ASTR 101 is also designed to prepare you for **upper-division Physics and Astronomy** coursework through scientific modeling, quantitative reasoning, and clear scientific explanation.
 
 
 ::: {.callout-note icon=false}
@@ -83,13 +59,15 @@ Astrophysics is the interplay between theory and observation - theorists *predic
 
 ### Required Materials
 
-- **Required textbook:** Stan Owocki, *Fundamentals of Astrophysics*, **2nd Edition** ([Cambridge University Press](https://www.cambridge.org/9781009618007); **ISBN:** 9781009618007)
+- **Required textbook:** Freedman, Geller & Kaufmann, *Universe*, 11th Edition (2019) — via [Macmillan Achieve](https://achieve.macmillanlearning.com)
 
-- **Required ed-tech:** iClicker (student access) <https://student.iclicker.com/> *(Required for in-class engagement)*
+- **Recommended supplement:** Fleisch & Kregenow, *A Student's Guide to the Mathematics of Astronomy*, 1st Edition
 
-- **Other supplies:** A calculator (non-smartphone) for exams and reliable access to Canvas and the course website.
+- **Achieve platform access:** Required for homework and LearningCurve reading assignments. Access provided through **Day1Ready** — materials are free through the add/drop date (February 2, 2026). After that, your account is charged unless you opt out by 11:59 PM on Feb 2. See [shopaztecs.com/Day1Ready](https://shopaztecs.com/Day1Ready).
 
-- **Day1Ready Access**: Course materials are provided digitally before classes begin and are free through the add/drop date (February 2, 2026). After that, your account is charged $21.75/unit unless you opt out by 11:59 pm on Feb 2 (see [shopaztecs.com/Day1Ready](https://shopaztecs.com/Day1Ready)).
+- **iClicker:** Required for in-class engagement. Register at <https://student.iclicker.com/>
+
+- **Calculator:** Non-smartphone calculator for exams.
 
 ## Student Learning Outcomes {#sec-outcomes}
 
@@ -115,21 +93,20 @@ By the end of this course, students will be able to:
 
 | Component | Weight |
 |---|-:|
-| Scholarly Engagement (iClicker + in-class work) | 10% |
-| Homework + Grade Memos | 15% |
-| Growth Memos (3) | 10% |
-| Midterm Exam 1 | 15% |
-| Midterm Exam 2 | 15% |
+| LearningCurve Reading (Achieve) | 10% |
+| Weekly Homework (Achieve) | 15% |
+| Scholarly Engagement (iClicker + Friday activities) | 10% |
+| Module Exam 1 | 15% |
+| Module Exam 2 | 15% |
 | Final Exam (cumulative) | 35% |
 
-<!-- TODO: Fill in all dates once the Spring 2026 calendar + your exam plan are finalized. -->
-### Important Dates and Course Schedule{#sec-important-dates}
+### Important Dates {#sec-important-dates}
 
-- **Midterm Exam 1:** Thursday, March 5  
-- **Midterm Exam 2:** Thursday, April 16  
-- **Final Exam:** Thursday, May 7 — 10:30 am–12:30 pm — LH 245  
+- **Module 1 Exam:** Monday, February 23 (Chapters 1-8)
+- **Module 2 Exam:** Monday, April 6 (Chapters 16-21)
+- **Final Exam:** Friday, May 8, 10:30 AM – 12:30 PM (Comprehensive)
 
-The tentative day-by-day schedule (topics, readings, homework calendar) is on the course website. [Click here for the Course Schedule.](./schedule.qmd)
+See the [Course Schedule](./schedule.qmd) for the full weekly calendar.
 
 ### Grading scale {#sec-grade-scale}
 
@@ -160,96 +137,55 @@ Per SDSU policy, students are expected to spend at least 6 hours per week (a min
 **In this section:**
 
 - [Scholarly Engagement](#sec-engagement)
-- [Weekly Homework + Grade Memos](#sec-homework)
-- [Growth Memos](#sec-growth-memos)
+- [Weekly Homework](#sec-homework)
+- [LearningCurve Reading](#sec-learningcurve)
 - [Exams](#sec-exams)
 
 #### Scholarly Engagement (10%) {#sec-engagement}
 
-Scholarly engagement in this course means making your reasoning *visible*. In practice, that looks like explaining what an equation means in words, carrying units through your work, stating assumptions out loud (even when they feel “obvious”), and being willing to test and revise a claim when evidence disagrees. These habits are what turn astronomy from memorizing facts into doing inference from data — and they are also what make your learning robust in an era where AI can generate fluent text but can’t replace *your* physical judgment.
+Engagement is measured through **iClicker responses** during lecture and **Friday in-class activities**.
 
-Engagement is measured via `iClicker` responses plus observable weekly behaviors.
+**Scoring:**
 
-| Instructor Score | Observable weekly behaviors |
-|-|---|
-| 5/5 | Prepared (specific questions on readings/notes), engaged in `iClicker` + activities, contributes to discussion, helps peers reason through problems, uses evidence/units/assumptions in explanations. |
-| 4/5 | Prepared, steady effort in activities, contributes occasionally, collaborates respectfully, asks questions when stuck. |
-| 3/5 | Inconsistent prep, participates when prompted, limited collaboration/discussion contribution. |
-| 2/5 | Frequently unprepared or disengaged, minimal contribution to activities, distracts self/others. |
-| 1/5 | Rare attendance/engagement, unprepared when present, does not participate in activities. |
-| 0/5 | Habitually absent, no engagement. |
+- **75% participation** — you answered the questions
+- **25% correctness** — you got them right
 
-**Note:** This rubric is a guideline. Your score reflects overall scholarly contribution, not a single “style” of being present.
+**To earn credit:**
 
-**Classroom Norms & Attendance (Professional Scientific Community):** We are all members of a professional academic community. Treat classmates and the instructor with respect. Spirited, courteous debate about scientific ideas is welcome, but disrespectful behavior is not. Because active reasoning is the point of being in the room, phones and other non-course device use during class are not permitted — off-task use is distracting and will negatively affect your Scholarly Engagement score.
+- Must answer at least 75% of questions in a class period
+- Attendance is not formally taken, but you cannot earn credit if you're not present
 
-Formal attendance is not taken, but you cannot earn Scholarly Engagement credit if you are not present and participating. Please arrive on time; repeated tardiness is disruptive and will negatively affect your Scholarly Engagement score.
+**Friday activities:** Hands-on practice applying lecture concepts. Activities are designed to be completed during class time with your peers.
 
-#### Weekly Homework + Grade Memos (15%) {#sec-homework}
+**Classroom norms:** Phones and off-task devices are not permitted during class. Respect your classmates and contribute to our learning community.
 
-Homework builds quantitative fluency and model-based reasoning. Expect multi-step problems and conceptual questions where **units, assumptions, and physical interpretation** matter as much as the final number. The purpose of homework is **exam preparation and skill-building** through consistent, high-quality practice — *not busy work*.
+#### Weekly Homework (15%) {#sec-homework}
 
-**Submission workflow (two-stage):**
+Homework is completed on **Macmillan Achieve** and is auto-graded. Assignments reinforce lecture material and prepare you for exams.
 
-1. **Homework Solutions — due Monday 11:59 pm PT (Canvas)**  
-   - Must be uploaded as **one single, readable PDF** (not a photo dump).  
-   - Organize clearly. Show you work. Label final answers.  
-   - **No late submissions:** Instructor solutions will be posted **Tuesday morning**, so late work cannot be accepted.  
-   - **Lowest homework score will be dropped** (to cover one off-week or emergency).
+**Details:**
 
-2. **Self-Assessment + Reflection (“Grade Memo”) — due Wednesday 11:59 pm PT (Canvas)**  
-   - You will **self-assess (self-grade)** your work using the **detailed homework rubric** and the posted solutions/guidance.  
-   - You will submit a brief **grade memo** that includes:
-     - what you got right (and why),
-     - what broke (and where),
-     - what you learned,
-     - what you will do differently next time.  
-   - Your grade memo must also include:
-     - a **per-problem self-rating** (1–5) with brief justification, and  
-     - **AI and collaboration disclosure** (even if “none”).  
-   - **Vague memos** (e.g., “I need to study more”) will not earn full credit unless they include a **specific error diagnosis** and a **concrete next-step habit**.
+- **10 assignments** throughout the semester
+- **Due Tuesdays at 11:59 PM** via Achieve
+- **5 attempts allowed** per question
+- **Lowest 2 scores dropped** — this policy handles emergencies, so no extensions are granted
+- Mix of multiple choice, numerical, and visual questions
 
-**How your homework is graded (Instructor 0–5 score):**  
-I will evaluate your **combined submission** (Monday solutions + Wednesday grade memo) and assign an overall score from **0–5**. Homework is graded primarily on **completion, professionalism, and learning behaviors**, not just final correctness. “Professionalism” here means your work is readable, logically organized, shows steps and units, and reflects honest effort. Your grade memo is graded on the quality of your self-assessment, reflection, and evidence of growth.
+**Bottom line:** Consistent practice builds exam readiness. The drop policy means you don't need to stress about one bad week.
 
-| Instructor Score | What it means |
-|-|----|
-| **5** | Complete, readable work with steps/units shown; thoughtful self-assessment aligned with evidence; specific correction + diagnosis + next-step habit; disclosures complete and honest. |
-| **4** | Strong work with minor gaps (some missing steps/units or a thinner memo), but clear effort and genuine reflection. |
-| **3** | Adequate but inconsistent: missing reasoning in multiple places and/or superficial reflection (e.g., “need to study more” without diagnosis). |
-| **2** | Partial/low-quality: many incomplete or unclear solutions and/or missing required memo elements. |
-| **1** | Minimal effort; little usable work or reflection. |
-| **0** | Not submitted, or missing required disclosures, or academic integrity violation. |
+#### LearningCurve Reading (10%) {#sec-learningcurve}
 
-**Bottom line:** correct answers matter, but **visible reasoning + honest reflection + improvement over time** matter more. This is how you build exam-ready mastery.
+**LearningCurve** is an adaptive reading tool in Achieve. It adjusts to your level and helps you engage with the textbook before lecture.
 
-#### Growth Memos (10%) {#sec-growth-memos}
+**Details:**
 
-Growth Memos are short, structured reflections (“exam wrappers”) that build **metacognition** — *thinking about how you learn* so you can study more effectively and improve exam performance. Learning science shows that structured reflection after feedback helps students plan, monitor, and adjust their learning strategies. Write these in an **informal, memo-like voice** (not an essay). Honesty and “being real” matter more than polished prose.
-
-You will submit **three** Growth Memos:
-
-- **Growth Memo 1** — after Midterm 1 (Due: TBD)
-- **Growth Memo 2** — after Midterm 2 (Due: TBD)
-- **Growth Memo 3** — pre-final synthesis memo (Due: TBD)
-
-**Format:** You must use the **provided Growth Memo Template** (posted on the course website). Each memo must include: evidence from your work, 2–3 recurring patterns + likely causes, 2–3 concrete next-step habits (“When I…, I will…”), a verification plan, and a brief learning + AI reflection (even if “no AI used”).
-
-##### Grading (Instructor 0–5; averaged)
-
-Each Growth Memo is scored **0–5** using the rubric below. Your Growth Memos grade (**10%**) is the **average** of your three scores. Missing a memo earns a **0** for that memo.
-
-|   Instructor Score | What it looks like                                                                                  |
-| - | ---- |
-|   **5** | Specific, evidence-based patterns; concrete habit plan; clear verification plan; honest reflection. |
-|   **4** | Strong overall, but one element is thin (evidence, specificity, or verification).                   |
-|   **3** | Some insight, but too general (“study more”) and/or lacks actionable next steps.                    |
-| **2–1** | Minimal effort; mostly summary; little diagnosis or plan.                                           |
-|   **0** | Not submitted or academic integrity violation.                                                      |
+- **Completion-based grading** — keep working until you reach the target
+- **Unlimited attempts** — no penalty for wrong answers
+- **All chapters available** throughout the semester
 
 #### Exams (65% total) {#sec-exams}
 
-There are two midterm exams (15% each) and one **cumulative** final exam (35%). Exams are **closed-note and closed-book** and emphasize **first-principles reasoning**: you’ll be asked to connect observables to physical models, justify steps from core ideas (e.g., conservation laws, gravity, radiation/scaling arguments), and explain what your result *means* physically (units, assumptions, limiting-case checks) — not just compute a final value. You may use a **calculator** (no phones/smartwatches).A **course formula sheet** will be provided with the exam.
+There are two module exams (15% each) and one **cumulative** final exam (35%). Exams are **closed-note and closed-book**. You may use a **calculator** (no phones/smartwatches). A **course formula sheet** will be provided with the exam.
 
 ##### Missed Exams {#sec-missed-exams}
 
@@ -282,7 +218,7 @@ All submitted work in this course must reflect **your own understanding**. Colla
 
 Generative AI can produce fluent explanations and plausible-looking solutions that are subtly wrong. In a quantitative, model-based course, “sounds right” is not a standard of truth. If you don’t have the physics and quantitative discipline to verify an AI output, you risk learning the wrong thing confidently.
 
-To support effective studying, I will provide course-specific tools grounded in **course materials only** (lecture notes, textbook, vetted sources), that includes a private **ASTR 201 NotebookLM notebook** (invitation via your email address linked to Canvas). This resource is intended as study aids — not solution engines.
+To support effective studying, I will provide course-specific tools grounded in **course materials only** (lecture notes, textbook, vetted sources), that includes a private **ASTR 101 NotebookLM notebook** (invitation via your email address linked to Canvas). This resource is intended as study aids — not solution engines.
 
 ## Course Materials (Sharing Policy) {#sec-materials}
 
@@ -292,7 +228,7 @@ Unauthorized recording or redistribution of class sessions or office hours is pr
 
 ## Communication & Getting Help {#sec-communication}
 
-All course-related communication should be sent through Canvas messaging when possible. Include “ASTR 201” in the subject line. I aim to respond within 24-48 hours on weekdays. **Before emailing, check this syllabus and recent Canvas announcements.**
+All course-related communication should be sent through Canvas messaging when possible. Include “ASTR 101” in the subject line. I aim to respond within 24-48 hours on weekdays. **Before emailing, check this syllabus and recent Canvas announcements.**
 
 If you encounter difficulties with the assignments or find yourself falling behind, please seek help immediately by:
 
@@ -307,7 +243,7 @@ Office hours are for learning — bring what you’ve tried (notes, attempts, qu
 
 ## Fostering a Growth Mindset {#sec-growth-mindset}
 
-A **growth mindset** is the belief that intelligence, abilities, and talents are malleable and can be developed through effort and persistence, not fixed traits you're born with. This mindset is key for succeeding in this course. In ASTR 201, you'll encounter challenging concepts that may initially seem overwhelming. **This is normal and expected: it means you're learning.**
+A **growth mindset** is the belief that intelligence, abilities, and talents are malleable and can be developed through effort and persistence, not fixed traits you're born with. This mindset is key for succeeding in this course. In ASTR 101, you'll encounter challenging concepts that may initially seem overwhelming. **This is normal and expected: it means you're learning.**
 
 *Trust the process, embrace the challenge, and discover that you're capable of doing hard things.*
 
