@@ -79,6 +79,32 @@ Explains why eclipses don't happen every month despite favorable phases occurrin
 
 ---
 
+### 4. Seasons
+
+**Concept:** Axial tilt causes seasons, NOT distance from the Sun.
+
+Addresses the classic misconception that many adults still hold — demonstrating through full mechanism and embedded misconception-busters why the ~23.5° tilt of Earth's axis is the true cause of seasons.
+
+**Features:**
+
+- Two-panel layout: orbital view + globe view
+- Planet presets (Earth, Mars, Uranus, Venus, Jupiter, Saturn, Neptune)
+- Season presets (equinoxes and solstices)
+- Day length and sun altitude calculations
+- Toggleable overlays (celestial equator, ecliptic, latitude bands, terminator)
+- Observer latitude selection
+- Animate Year functionality
+
+**Key formulas:**
+
+- Sun declination: $\delta = 23.5° \times \sin\left(\frac{2\pi(d-80)}{365}\right)$
+- Day length: $\cos H = -\tan(\phi) \times \tan(\delta)$
+- Sun altitude: $90° - |\text{latitude} - \delta|$
+
+📁 [`seasons/`](seasons/)
+
+---
+
 ## Embedding in Quarto
 
 Use the `{{< demo >}}` shortcode to embed demos in Quarto documents:
@@ -87,12 +113,15 @@ Use the `{{< demo >}}` shortcode to embed demos in Quarto documents:
 {{< demo angular-size >}}
 {{< demo moon-phases height="450px" >}}
 {{< demo eclipse-geometry height="600px" >}}
+{{< demo seasons height="600px" >}}
 ```
 
 Or link directly to standalone pages:
+
 - `demos/angular-size/index.html`
 - `demos/moon-phases/index.html`
 - `demos/eclipse-geometry/index.html`
+- `demos/seasons/index.html`
 
 ---
 
@@ -119,7 +148,6 @@ Future demos under consideration, organized by topic area:
 | **Parallax & Distance** | Stellar parallax as distance measurement | $d = 1/p$ (parsecs) | 101 |
 | **Inverse Square Law** | Brightness falls off with distance squared | $F = L / 4\pi d^2$ | 101 |
 | **Blackbody Radiation** | Temperature determines color and total power | Wien: $\lambda_{\max} = b/T$; Stefan-Boltzmann: $L \propto R^2 T^4$ | 101/201 |
-| **Seasons** | Tilt causes seasons, NOT distance (misconception buster) | Axial tilt = 23.5° | 101 |
 | **Tides** | Differential gravity from Moon and Sun | $F_{\text{tidal}} \propto M/d^3$ | 101 |
 | **Light Travel Time** | Looking far = looking back in time | $t = d/c$ | 101 |
 | **Cosmic Distance Ladder** | Chain of methods: parallax → Cepheids → Type Ia → Hubble | Multi-step | 201 |
