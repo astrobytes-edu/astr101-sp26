@@ -46,7 +46,7 @@ By the end of this module, you will be able to:
 - Chapters 20–21: Stellar Death (supernovae, neutron stars, black holes)
 - Chapters 22–23: Milky Way and Galaxies
 - Chapters 24–25: Active Galaxies and Cosmology
-- Chapters 26–27: The Big Bang and Early Universe
+- Chapter 26: The Big Bang and Early Universe
 
 ::: {.callout-frontier}
 - **What is dark matter?** It makes up ~27% of the universe, but we've never detected a dark matter particle directly.

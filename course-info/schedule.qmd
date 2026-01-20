@@ -61,7 +61,7 @@ format:
 |:-----|:------|:-----------------|:-------------|:---------|
 | 14 | Apr 20-24 | **Mon: MODULE 2 EXAM**; Milky Way structure, dark matter | Activity 9 | Ch 22-23 |
 | 15 | Apr 27 – May 1 | Galaxies, active galaxies, quasars; Cosmology, Big Bang | Activity 10 | Ch 24-25 |
-| 16 | May 4-6 | Early universe, dark energy; **Wed: Review** | — | Ch 26-27 |
+| 16 | May 4-6 | Early universe, dark energy; **Wed: Review** | — | Ch 26 |
 
 ---
 
@@ -69,4 +69,4 @@ format:
 
 **Friday, May 8, 10:30 AM – 12:30 PM**
 
-Comprehensive exam covering all chapters (1-8, 16-27).
+Comprehensive exam covering all chapters (1-8, 16-26).
