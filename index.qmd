@@ -12,11 +12,11 @@ format:
 
 ## Welcome to ASTR 101
 
-This is not a "tour of the cosmos" course. ASTR 101 is a **quantitative introduction to astrophysics** where you'll learn to think like an astronomer: extracting physical insight from limited observations using mathematics and physics.
+Explore the universe — from planets and stars to galaxies and the Big Bang. ASTR 101 is an introductory astronomy course that satisfies the **SDSU General Education requirement in Natural Sciences / Physical Science (Area 5A)**.
 
-Astronomers can't visit stars or hold galaxies in a lab. Instead, we measure light — its brightness, color, spectrum, and timing — and from these constrained observations, we infer masses, temperatures, distances, ages, and compositions. This course teaches you *how* we know *what we know* about the universe.
+This course goes beyond a "tour of the cosmos." You'll learn *how* astronomers know what they know: how we measure distances across space, decode the messages hidden in starlight, and piece together the life cycles of stars. Along the way, you'll develop **quantitative reasoning skills** — working with data, units, and scientific arguments — that apply far beyond astronomy.
 
-You'll develop skills in dimensional analysis, scaling relations, and order-of-magnitude reasoning that apply far beyond astronomy. By the end, you'll be able to estimate the mass of a black hole from orbital data, derive the temperature of a star from its color, and understand why stellar lifetimes span millions to trillions of years.
+No prior physics or astronomy background is required, just curiosity and a willingness to engage with numbers and scientific thinking.
 
 :::
 ::: {.g-col-12 .g-col-md-4}
@@ -46,7 +46,7 @@ You'll develop skills in dimensional analysis, scaling relations, and order-of-m
 
 1. Read the [Syllabus](course-info/syllabus.qmd) to understand course policies and expectations.
 2. Check the [Schedule](course-info/schedule.qmd) each week for lectures, readings, and due dates.
-3. Submit all assignments on [Canvas]({{< meta params.canvas-url >}}).
+3. Complete homework and readings on [Achieve](https://achieve.macmillanlearning.com).
 :::
 
 ## Quick Navigation
@@ -82,27 +82,28 @@ You'll develop skills in dimensional analysis, scaling relations, and order-of-m
 ## What You'll Explore
 
 ::: {.grid}
-::: {.g-col-12 .g-col-md-6}
-**Module 1: Foundations**
-We can’t visit stars or study them in a lab — so how do we learn anything real about them? This module builds the core toolkit: gravity and orbits (how motion encodes mass), plus the physics of light (how information survives a trip across space).
+::: {.g-col-12 .g-col-md-4}
+**Module 1: Observing the Sky & Solar System**
 
-**Module 2: Stellar Properties**
-We start by learning to measure what looks unmeasurable: distances to stars, and spectra that reveal temperature, composition, and motion. Then a pattern snaps into focus: plot temperature against luminosity and stars fall into distinct regions. The H–R diagram isn’t just classification — it’s the first clue that stars change over time.
+How do we navigate the night sky? Why do the Moon's phases change? What keeps planets in orbit? This module builds your astronomical toolkit: celestial coordinates, gravity and orbits, and how telescopes and light reveal the universe.
 :::
-::: {.g-col-12 .g-col-md-6}
-**Module 3: Stellar Structure & Evolution**
-What’s happening inside a star is a balancing act: gravity pulling in, pressure pushing out, and nuclear fusion rewriting the periodic table. Stars fuse hydrogen into helium and (in later stages) build heavier nuclei; their deaths spread those elements into space. The finale depends on mass — ending as a white dwarf, a neutron star, or a black hole.
+::: {.g-col-12 .g-col-md-4}
+**Module 2: Stars & Stellar Evolution**
 
-**Module 4: Galaxies & Cosmology**
-We zoom out from stars to the universe itself: a hot beginning, the *first three minutes* when the lightest elements formed, and an expanding cosmos we can measure in multiple ways. Galaxy motions point to unseen mass (dark matter), and the expansion appears to be speeding up (dark energy). Together they dominate the universe’s budget — and we can measure their effects far better than we understand their nature.
+Stars are not eternal — they are born, live, and die. You'll learn how the Sun generates energy through nuclear fusion, how we measure stellar distances and properties, and how stars evolve from formation to their final fates as white dwarfs, neutron stars, or black holes.
+:::
+::: {.g-col-12 .g-col-md-4}
+**Module 3: Galaxies & Cosmology**
+
+Zoom out to the largest scales: our Milky Way galaxy, billions of other galaxies, and the universe as a whole. You'll explore evidence for dark matter, the expanding universe, and the Big Bang — the story of cosmic origins written in light that has traveled billions of years to reach us.
 :::
 :::
 
 ## How to Succeed
 
-1. **Show your reasoning.** Steps, units, and assumptions matter more than final answers.
-2. **Use feedback.** Homework and grade memos prepare you for exams.
-3. **Ask early.** Office hours and the discussion board exist for a reason.
+1. **Stay current.** Complete LearningCurve readings before lecture and homework by the deadline.
+2. **Engage in class.** Bring your iClicker, participate in Friday activities, and ask questions.
+3. **Use your resources.** Office hours, the discussion board, and the Astronomy Help Room are there for you.
 
 ::: {.callout-tip appearance="simple"}
 ## <i class="bi bi-lightbulb"></i> Getting Help
@@ -111,4 +112,3 @@ We zoom out from stars to the universe itself: a hot beginning, the *first three
 - **Canvas discussion:** Post questions others might share
 - **SDSU Astronomy Help Room:** Free tutoring (schedule on Canvas)
 :::
-
