@@ -19,6 +19,9 @@ _test-*
 # Quarto outputs to _site/, so HTML in source dirs is accidental
 **/*.html
 
+# Exception: Demo HTML files are source files, not generated output
+!demos/**/*.html
+
 # LaTeX build artifacts
 **/*.aux
 **/*.fdb_latexmk
