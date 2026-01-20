@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eclipse Geometry Demo | AstroEd</title>
+  <link rel="stylesheet" href="../_assets/astro-theme.css">
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+    }
+
+    body {
+      font-family: var(--font-main);
+      background: var(--space-black);
+      color: var(--text-primary);
+    }
+
+    .demo-wrapper {
+      min-height: 100vh;
+      position: relative;
+    }
+
+    #starfield {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+    }
+
+    .demo-content {
+      position: relative;
+      z-index: 1;
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 1.5rem;
+    }
+
+    .demo-header {
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+
+    .demo-title {
+      font-size: 1.75rem;
+      margin: 0 0 0.5rem 0;
+    }
+
+    .demo-subtitle {
+      font-size: 1rem;
+      color: var(--text-secondary);
+      margin: 0;
+    }
+
+    /* Two-view layout */
+    .viz-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .viz-panel {
+      background: rgba(18, 18, 31, 0.9);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 1rem;
+    }
+
+    .panel-title {
+      font-size: 0.875rem;
+      color: var(--text-secondary);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 0.75rem;
+      text-align: center;
+    }
+
+    #top-view-svg, #side-view-svg {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .drag-hint {
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.75rem;
+      margin-top: 0.5rem;
+    }
+
+    /* Status display */
+    .status-panel {
+      background: rgba(18, 18, 31, 0.9);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      padding: 1rem;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+
+    .eclipse-status {
+      font-size: 1.5rem;
+      font-weight: 600;
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      display: inline-block;
+    }
+
+    .eclipse-status.miss {
+      background: rgba(236, 112, 99, 0.2);
+      color: var(--accent-red);
+    }
+
+    .eclipse-status.solar {
+      background: rgba(244, 208, 63, 0.2);
+      color: var(--accent-gold);
+    }
+
+    .eclipse-status.lunar {
+      background: rgba(88, 214, 141, 0.2);
+      color: var(--accent-green);
+    }
+
+    .status-detail {
+      margin-top: 0.5rem;
+      font-size: 0.875rem;
+      color: var(--text-secondary);
+    }
+
+    /* Controls grid */
+    .controls-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .control-card {
+      background: rgba(18, 18, 31, 0.9);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      padding: 1rem;
+    }
+
+    .control-card.full-width {
+      grid-column: 1 / -1;
+    }
+
+    .control-title {
+      font-size: 0.875rem;
+      color: var(--text-secondary);
+      margin-bottom: 0.75rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .control-value {
+      font-family: var(--font-mono);
+      color: var(--accent-blue);
+    }
+
+    /* Simulation panel */
+    .sim-controls {
+      display: flex;
+      gap: 0.5rem;
+      margin-bottom: 1rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .sim-btn {
+      font-size: 0.875rem;
+      padding: 0.5rem 1rem;
+      background: var(--space-light);
+      border: 1px solid var(--border-color);
+      border-radius: 6px;
+      color: var(--text-secondary);
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+
+    .sim-btn:hover {
+      background: var(--space-medium);
+      color: var(--text-primary);
+      border-color: var(--accent-blue);
+    }
+
+    .sim-btn.primary {
+      background: var(--accent-blue);
+      color: var(--space-black);
+      border-color: var(--accent-blue);
+    }
+
+    .sim-btn.primary:hover {
+      background: #7bc0eb;
+    }
+
+    .sim-btn:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+
+    /* Stats display */
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .stat-item {
+      text-align: center;
+      padding: 0.75rem;
+      background: var(--space-deep);
+      border-radius: 6px;
+    }
+
+    .stat-label {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      margin-bottom: 0.25rem;
+    }
+
+    .stat-value {
+      font-family: var(--font-mono);
+      font-size: 1.25rem;
+      color: var(--accent-gold);
+    }
+
+    /* Insight box */
+    .insight-box {
+      background: rgba(18, 18, 31, 0.9);
+      border-left: 3px solid var(--accent-blue);
+      padding: 1rem;
+      border-radius: 0 8px 8px 0;
+      font-size: 0.9rem;
+    }
+
+    .insight-box strong {
+      color: var(--accent-blue);
+    }
+
+    /* Responsive */
+    @media (max-width: 700px) {
+      .viz-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .controls-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .stats-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* Node markers */
+    .node-marker {
+      fill: var(--accent-gold);
+      filter: drop-shadow(0 0 4px var(--accent-gold));
+    }
+
+    .node-label {
+      font-size: 10px;
+      fill: var(--accent-gold);
+    }
+
+    .moon-draggable {
+      cursor: grab;
+    }
+
+    .moon-draggable:active {
+      cursor: grabbing;
+    }
+
+    /* Eclipse log table */
+    .eclipse-log-panel {
+      margin-top: 1rem;
+      max-height: 300px;
+      overflow-y: auto;
+      background: var(--space-deep);
+      border-radius: 6px;
+      padding: 0.5rem;
+    }
+
+    .eclipse-log-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.8rem;
+    }
+
+    .eclipse-log-table th {
+      text-align: left;
+      padding: 0.5rem;
+      background: var(--space-light);
+      color: var(--text-secondary);
+      font-weight: 500;
+      position: sticky;
+      top: 0;
+    }
+
+    .eclipse-log-table td {
+      padding: 0.4rem 0.5rem;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .eclipse-log-table tr.solar td {
+      color: var(--accent-gold);
+    }
+
+    .eclipse-log-table tr.lunar td {
+      color: var(--accent-green);
+    }
+
+    .eclipse-log-table tr:hover td {
+      background: rgba(255,255,255,0.05);
+    }
+  </style>
+</head>
+<body>
+  <div class="demo-wrapper">
+    <canvas id="starfield"></canvas>
+
+    <div class="demo-content">
+      <header class="demo-header">
+        <h1 class="demo-title">Eclipse Geometry</h1>
+        <p class="demo-subtitle">Why eclipses don't happen every month</p>
+      </header>
+
+      <!-- Status display -->
+      <div class="status-panel">
+        <div class="eclipse-status miss" id="eclipse-status">NO ECLIPSE</div>
+        <div class="status-detail" id="status-detail">Moon is 3.2° above the ecliptic plane</div>
+      </div>
+
+      <!-- Two-view visualization -->
+      <div class="viz-layout">
+        <!-- Top-down view -->
+        <div class="viz-panel">
+          <div class="panel-title">View from Above</div>
+          <svg id="top-view-svg" viewBox="0 0 400 400" preserveAspectRatio="xMidYMid meet">
+            <defs>
+              <radialGradient id="sunGlow">
+                <stop offset="0%" stop-color="#fff5cc"/>
+                <stop offset="60%" stop-color="#ffcc00"/>
+                <stop offset="100%" stop-color="#ff8c00"/>
+              </radialGradient>
+              <radialGradient id="earthGradient" cx="30%" cy="30%">
+                <stop offset="0%" stop-color="#6bb5e0"/>
+                <stop offset="100%" stop-color="#2a5a8a"/>
+              </radialGradient>
+            </defs>
+
+            <!-- Sun direction indicator -->
+            <g opacity="0.4">
+              <line x1="0" y1="200" x2="80" y2="200" stroke="#ffcc00" stroke-width="2"/>
+              <text x="10" y="180" fill="#ffcc00" font-size="11">To Sun</text>
+            </g>
+
+            <!-- Sun glow (partial, off-screen) -->
+            <circle cx="-80" cy="200" r="100" fill="url(#sunGlow)" opacity="0.6"/>
+
+            <!-- Earth's orbital plane (ecliptic) - horizontal line -->
+            <line x1="100" y1="200" x2="300" y2="200" stroke="#5dade2" stroke-width="2" opacity="0.4" stroke-dasharray="8 4"/>
+            <text x="305" y="204" fill="#5dade2" font-size="10" opacity="0.6">Ecliptic</text>
+
+            <!-- Moon's tilted orbit -->
+            <ellipse id="moon-orbit" cx="200" cy="200" rx="100" ry="100"
+                     fill="none" stroke="#606080" stroke-width="1" stroke-dasharray="4 4" opacity="0.6"/>
+
+            <!-- Node markers (where orbit crosses ecliptic) -->
+            <circle id="ascending-node" class="node-marker" cx="300" cy="200" r="6"/>
+            <text class="node-label" x="308" y="204">Node</text>
+            <circle id="descending-node" class="node-marker" cx="100" cy="200" r="6"/>
+            <text class="node-label" x="70" y="204">Node</text>
+
+            <!-- Earth -->
+            <g transform="translate(200, 200)">
+              <circle r="20" fill="url(#earthGradient)"/>
+              <text y="35" text-anchor="middle" fill="#a0a0b0" font-size="10">Earth</text>
+            </g>
+
+            <!-- Moon (draggable) -->
+            <g id="moon-top" class="moon-draggable">
+              <circle id="moon-top-circle" cx="300" cy="200" r="10" fill="#c8c8d8"/>
+            </g>
+
+            <!-- Eclipse zone indicator (near nodes) -->
+            <g id="eclipse-zone" opacity="0.2">
+              <path d="" fill="#58d68d" id="eclipse-zone-path"/>
+            </g>
+          </svg>
+          <div class="drag-hint">Drag the Moon around its orbit</div>
+        </div>
+
+        <!-- Side view -->
+        <div class="viz-panel">
+          <div class="panel-title">Side View (Looking Along Ecliptic)</div>
+          <svg id="side-view-svg" viewBox="0 0 400 200" preserveAspectRatio="xMidYMid meet">
+            <!-- Ecliptic plane (horizontal line) -->
+            <line x1="20" y1="100" x2="380" y2="100" stroke="#5dade2" stroke-width="2" opacity="0.5"/>
+            <text x="340" y="115" fill="#5dade2" font-size="10" opacity="0.6">Ecliptic</text>
+
+            <!-- Sun direction -->
+            <g opacity="0.4">
+              <circle cx="30" cy="100" r="15" fill="#ffcc00"/>
+              <text x="25" y="135" fill="#ffcc00" font-size="10">Sun</text>
+            </g>
+
+            <!-- Earth -->
+            <g transform="translate(200, 100)">
+              <circle r="15" fill="url(#earthGradient)"/>
+              <text y="30" text-anchor="middle" fill="#a0a0b0" font-size="10">Earth</text>
+            </g>
+
+            <!-- Moon's tilted path (sinusoidal) -->
+            <path id="moon-path-side" d="" fill="none" stroke="#606080" stroke-width="1" stroke-dasharray="4 4" opacity="0.6"/>
+
+            <!-- Nodes on side view -->
+            <circle id="node-side-1" class="node-marker" cx="100" cy="100" r="4"/>
+            <circle id="node-side-2" class="node-marker" cx="300" cy="100" r="4"/>
+
+            <!-- Moon position (side view) -->
+            <circle id="moon-side" cx="300" cy="100" r="8" fill="#c8c8d8"/>
+
+            <!-- Height indicator -->
+            <g id="height-indicator">
+              <line id="height-line" x1="300" y1="100" x2="300" y2="100" stroke="#f4d03f" stroke-width="1" stroke-dasharray="2 2"/>
+              <text id="height-label" x="310" y="95" fill="#f4d03f" font-size="10"></text>
+            </g>
+          </svg>
+        </div>
+      </div>
+
+      <!-- Controls -->
+      <div class="controls-grid">
+        <!-- Tilt control -->
+        <div class="control-card">
+          <div class="control-title">
+            Orbital Tilt
+            <span class="control-value" id="tilt-display">5.1°</span>
+          </div>
+          <input type="range" id="tilt-slider" class="astro-slider" min="0" max="100" value="51">
+          <div style="display: flex; justify-content: space-between; font-size: 0.7rem; color: var(--text-muted); margin-top: 0.25rem;">
+            <span>0° (eclipse every month!)</span>
+            <span>10°</span>
+          </div>
+        </div>
+
+        <!-- Phase info -->
+        <div class="control-card">
+          <div class="control-title">
+            Current Phase
+            <span class="control-value" id="phase-display">Full Moon</span>
+          </div>
+          <div style="display: flex; gap: 0.5rem; margin-top: 0.5rem;">
+            <button class="sim-btn" id="btn-new-moon">New Moon</button>
+            <button class="sim-btn" id="btn-full-moon">Full Moon</button>
+          </div>
+        </div>
+
+        <!-- Simulation controls -->
+        <div class="control-card full-width">
+          <div class="control-title">Long-Term Simulation</div>
+          <div class="sim-controls">
+            <button class="sim-btn" id="btn-animate-month">Animate 1 Month</button>
+            <button class="sim-btn" id="btn-animate-year">Animate 1 Year</button>
+            <button class="sim-btn" id="btn-stop">Stop</button>
+          </div>
+
+          <div style="margin-top: 1rem;">
+            <div class="control-title">
+              Simulate Years
+              <span class="control-value" id="sim-years-display">10</span>
+            </div>
+            <input type="range" id="sim-years-slider" class="astro-slider" min="0" max="100" value="33">
+            <div style="display: flex; justify-content: space-between; font-size: 0.7rem; color: var(--text-muted); margin-top: 0.25rem;">
+              <span>1</span>
+              <span>10</span>
+              <span>100</span>
+              <span>1000</span>
+            </div>
+          </div>
+
+          <div class="sim-controls" style="margin-top: 0.75rem;">
+            <button class="sim-btn primary" id="btn-run-sim">Run Simulation</button>
+            <button class="sim-btn" id="btn-toggle-log">Show Log</button>
+          </div>
+
+          <div class="stats-grid" id="stats-panel" style="display: none;">
+            <div class="stat-item">
+              <div class="stat-label">Total Solar<br><small style="opacity:0.6">(+partial)</small></div>
+              <div class="stat-value" id="stat-solar">0</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-label">Total Lunar<br><small style="opacity:0.6">(+partial)</small></div>
+              <div class="stat-value" id="stat-lunar">0</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-label">Years Simulated</div>
+              <div class="stat-value" id="stat-years">0</div>
+            </div>
+          </div>
+
+          <!-- Eclipse Log Table -->
+          <div id="eclipse-log-panel" class="eclipse-log-panel" style="display: none;">
+            <table id="eclipse-log-table" class="eclipse-log-table">
+              <tr><th>Year</th><th>Type</th><th>Details</th></tr>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- Insight -->
+      <div class="insight-box">
+        <strong>Key insight:</strong> The Moon's orbit is tilted ~5° from Earth's orbital plane.
+        This small tilt means the Moon usually passes <em>above</em> or <em>below</em> the Sun/Earth's shadow.
+        Eclipses only happen when the Moon is near a <strong>node</strong> (where orbits cross) during new or full moon.
+      </div>
+    </div>
+  </div>
+
+  <script src="../_assets/astro-utils.js"></script>
+  <script src="../_assets/starfield.js"></script>
+  <script src="eclipse-geometry.js"></script>
+</body>
+</html>
