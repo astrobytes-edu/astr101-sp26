@@ -859,6 +859,132 @@
   }
 
   // ============================================
+  // Keyboard Navigation
+  // ============================================
+
+  function setupKeyboard() {
+    // Planet group keyboard controls
+    elements.planetGroup.addEventListener('keydown', (event) => {
+      const P = orbitalPeriod(state.a, state.M);
+      let delta = 0;
+      let jumpAngle = null;
+
+      switch (event.key) {
+        case 'ArrowLeft':
+          delta = event.shiftKey ? -0.01 : -0.05;
+          break;
+        case 'ArrowRight':
+          delta = event.shiftKey ? 0.01 : 0.05;
+          break;
+        case 'Home':
+          jumpAngle = 0;  // Perihelion
+          break;
+        case 'End':
+          jumpAngle = Math.PI;  // Aphelion
+          break;
+        case ' ':
+          event.preventDefault();
+          if (state.playing) {
+            stopAnimation();
+          } else {
+            startAnimation();
+          }
+          return;
+        default:
+          return;
+      }
+
+      event.preventDefault();
+      stopAnimation();
+
+      if (jumpAngle !== null) {
+        state.theta = jumpAngle;
+        const M = trueToMeanAnomaly(state.theta, state.e);
+        state.t = ((M + 2 * Math.PI) % (2 * Math.PI)) / (2 * Math.PI) * P;
+      } else if (delta !== 0) {
+        // Convert current position to mean anomaly, adjust, convert back
+        const M = trueToMeanAnomaly(state.theta, state.e);
+        const newM = (M + delta * 2 * Math.PI + 2 * Math.PI) % (2 * Math.PI);
+        state.theta = meanToTrueAnomaly(newM, state.e);
+        state.t = newM / (2 * Math.PI) * P;
+      }
+
+      update();
+      announcePosition();
+    });
+
+    // Focus styling
+    elements.planetGroup.addEventListener('focus', () => {
+      elements.planet.setAttribute('stroke', 'var(--accent-gold)');
+      elements.planet.setAttribute('stroke-width', '3');
+    });
+
+    elements.planetGroup.addEventListener('blur', () => {
+      elements.planet.removeAttribute('stroke');
+      elements.planet.removeAttribute('stroke-width');
+    });
+
+    // Global keyboard shortcuts
+    document.addEventListener('keydown', (event) => {
+      if (event.target.tagName === 'INPUT' || event.target.tagName === 'SELECT') return;
+
+      switch (event.key) {
+        case 'k':
+        case 'K':
+          elements.btnKeplerMode.click();
+          break;
+        case 'n':
+        case 'N':
+          elements.btnNewtonMode.click();
+          break;
+        case '1':
+          selectPresetByIndex(0);
+          break;
+        case '2':
+          selectPresetByIndex(1);
+          break;
+        case '3':
+          selectPresetByIndex(2);
+          break;
+        case '4':
+          selectPresetByIndex(3);
+          break;
+        case '5':
+          selectPresetByIndex(4);
+          break;
+        case '6':
+          selectPresetByIndex(5);
+          break;
+      }
+    });
+  }
+
+  function selectPresetByIndex(index) {
+    const presets = Array.from(elements.presetButtons);
+    if (index < presets.length) {
+      presets[index].click();
+    }
+  }
+
+  function announcePosition() {
+    const r = orbitalRadius(state.a, state.e, state.theta);
+    const v = orbitalVelocity(state.a, r, state.M);
+    const phasePct = ((state.theta / (2 * Math.PI)) * 100).toFixed(0);
+
+    let position = 'orbit';
+    if (Math.abs(state.theta) < 0.1) position = 'perihelion';
+    else if (Math.abs(state.theta - Math.PI) < 0.1) position = 'aphelion';
+
+    elements.statusAnnounce.textContent =
+      `${position}, distance ${r.toFixed(2)} AU, velocity ${v.toFixed(1)} km/s, ${phasePct}% through orbit`;
+
+    // Update ARIA attributes
+    elements.planetGroup.setAttribute('aria-valuenow', Math.round(state.theta * 180 / Math.PI));
+    elements.planetGroup.setAttribute('aria-valuetext',
+      `${position}, ${r.toFixed(2)} AU from star`);
+  }
+
+  // ============================================
   // Initialization
   // ============================================
 
@@ -872,6 +998,7 @@
     setupAnimation();
     setupPlanetDrag();
     setupTimeline();
+    setupKeyboard();
 
     // Initialize starfield
     const starfieldCanvas = document.getElementById('starfield');
