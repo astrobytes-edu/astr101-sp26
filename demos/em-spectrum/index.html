@@ -1,0 +1,880 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EM Spectrum Explorer | AstroEd</title>
+  <link rel="stylesheet" href="../_assets/astro-theme.css">
+  <link rel="stylesheet" href="../_assets/katex/katex.min.css">
+  <style>
+    /* Demo-specific styles */
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+    }
+
+    body {
+      font-family: var(--font-main);
+      background: var(--space-black);
+      color: var(--text-primary);
+    }
+
+    .demo-wrapper {
+      min-height: 100vh;
+      position: relative;
+    }
+
+    #starfield {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+    }
+
+    .demo-content {
+      position: relative;
+      z-index: 1;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 1.5rem;
+    }
+
+    .demo-header {
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+
+    .demo-title {
+      font-size: 1.75rem;
+      margin: 0 0 0.5rem 0;
+      color: var(--text-primary);
+    }
+
+    .demo-subtitle {
+      font-size: 1rem;
+      color: var(--text-secondary);
+      margin: 0;
+    }
+
+    /* Mode Toggle Tabs */
+    .mode-tabs {
+      display: flex;
+      justify-content: center;
+      gap: 0;
+      margin-bottom: 1.5rem;
+      background: rgba(18, 18, 31, 0.9);
+      border-radius: 8px;
+      padding: 0.25rem;
+      width: fit-content;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .mode-tab {
+      padding: 0.5rem 1.25rem;
+      font-size: 0.875rem;
+      font-weight: 500;
+      border: none;
+      background: transparent;
+      color: var(--text-secondary);
+      cursor: pointer;
+      transition: all 0.2s ease;
+      border-radius: 6px;
+    }
+
+    .mode-tab:hover:not(.active) {
+      color: var(--text-primary);
+      background: var(--space-light);
+    }
+
+    .mode-tab.active {
+      background: var(--accent-blue);
+      color: var(--space-black);
+    }
+
+    .mode-tab:focus {
+      outline: 2px solid var(--accent-gold);
+      outline-offset: 2px;
+    }
+
+    /* Main Spectrum Panel */
+    .spectrum-panel {
+      background: rgba(18, 18, 31, 0.95);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    /* EM Spectrum Bar */
+    .em-spectrum-container {
+      position: relative;
+      margin-bottom: 1rem;
+    }
+
+    .em-spectrum-bar {
+      height: 60px;
+      border-radius: 8px;
+      position: relative;
+      cursor: pointer;
+      background: linear-gradient(to right,
+        #800000 0%,       /* Radio - dark red */
+        #cc3300 8%,       /* Microwave - orange-red */
+        #ff3300 15%,      /* Far IR - red */
+        #ff0000 22%,      /* IR - red */
+        #ff0000 28%,      /* Near IR */
+        #ff0000 32%,      /* Visible red edge */
+        #ff4500 34%,
+        #ffa500 37%,
+        #ffff00 40%,
+        #00ff00 44%,
+        #00ffff 48%,
+        #0000ff 52%,
+        #4b0082 55%,      /* Visible violet edge */
+        #8b00ff 58%,      /* UV */
+        #9932cc 65%,      /* X-ray - purple */
+        #4b0082 80%,      /* Hard X-ray */
+        #1a0033 100%      /* Gamma - deep purple/black */
+      );
+      box-shadow: 0 0 20px rgba(100, 100, 255, 0.3);
+    }
+
+    .em-spectrum-bar::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      border-radius: 8px;
+      background: linear-gradient(to bottom,
+        rgba(255, 255, 255, 0.1) 0%,
+        transparent 50%,
+        rgba(0, 0, 0, 0.2) 100%
+      );
+      pointer-events: none;
+    }
+
+    /* Band Labels */
+    .band-labels {
+      display: flex;
+      justify-content: space-between;
+      padding: 0.5rem 0;
+      font-size: 0.7rem;
+      color: var(--text-muted);
+    }
+
+    .band-label {
+      text-align: center;
+      cursor: pointer;
+      padding: 0.25rem 0.5rem;
+      border-radius: 4px;
+      transition: all 0.2s ease;
+    }
+
+    .band-label:hover {
+      color: var(--text-primary);
+      background: var(--space-light);
+    }
+
+    .band-label.active {
+      color: var(--accent-gold);
+      background: var(--space-medium);
+    }
+
+    /* Wavelength Scale */
+    .wavelength-scale {
+      display: flex;
+      justify-content: space-between;
+      padding: 0.25rem 0;
+      font-family: var(--font-mono);
+      font-size: 0.65rem;
+      color: var(--text-muted);
+    }
+
+    .wavelength-tick {
+      text-align: center;
+      position: relative;
+    }
+
+    .wavelength-tick::before {
+      content: '';
+      position: absolute;
+      top: -8px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 1px;
+      height: 6px;
+      background: var(--text-muted);
+    }
+
+    /* Size Comparison */
+    .size-comparison {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      padding: 0.5rem 0;
+      font-size: 0.6rem;
+      color: var(--text-muted);
+      opacity: 0.8;
+    }
+
+    .size-item {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.25rem;
+    }
+
+    .size-icon {
+      font-size: 1rem;
+    }
+
+    /* Selection Marker */
+    .selection-marker {
+      position: absolute;
+      top: -10px;
+      width: 4px;
+      height: calc(100% + 20px);
+      background: var(--accent-gold);
+      transform: translateX(-50%);
+      pointer-events: none;
+      display: none;
+      z-index: 10;
+      box-shadow: 0 0 10px var(--accent-gold);
+    }
+
+    .selection-marker::after {
+      content: attr(data-label);
+      position: absolute;
+      top: -20px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 0.7rem;
+      color: var(--accent-gold);
+      white-space: nowrap;
+      background: var(--space-black);
+      padding: 0.15rem 0.4rem;
+      border-radius: 4px;
+    }
+
+    /* Band Highlight Overlay */
+    .band-highlight {
+      position: absolute;
+      top: 0;
+      height: 100%;
+      background: rgba(255, 255, 255, 0.2);
+      border: 2px solid var(--accent-gold);
+      border-radius: 4px;
+      pointer-events: none;
+      display: none;
+    }
+
+    /* Mode Content Panels */
+    .mode-content {
+      display: none;
+    }
+
+    .mode-content.active {
+      display: block;
+    }
+
+    /* Explore Mode */
+    .band-info-panel {
+      background: var(--space-medium);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      padding: 1rem;
+      min-height: 120px;
+    }
+
+    .band-info-title {
+      font-size: 1.1rem;
+      color: var(--accent-gold);
+      margin: 0 0 0.5rem 0;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .band-info-wavelength {
+      font-family: var(--font-mono);
+      font-size: 0.9rem;
+      color: var(--accent-blue);
+      margin-bottom: 0.5rem;
+    }
+
+    .band-info-description {
+      color: var(--text-secondary);
+      line-height: 1.5;
+      margin: 0;
+    }
+
+    .band-info-examples {
+      margin-top: 0.75rem;
+      padding-top: 0.75rem;
+      border-top: 1px solid var(--border-color);
+      font-size: 0.875rem;
+    }
+
+    .band-info-examples strong {
+      color: var(--text-primary);
+    }
+
+    /* Convert Mode */
+    .converter-panel {
+      background: var(--space-medium);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      padding: 1.5rem;
+    }
+
+    .converter-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+    }
+
+    .converter-input-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .converter-label {
+      font-size: 0.75rem;
+      color: var(--text-secondary);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .converter-input-row {
+      display: flex;
+      gap: 0.5rem;
+    }
+
+    .converter-input {
+      flex: 1;
+      padding: 0.5rem;
+      font-family: var(--font-mono);
+      font-size: 1rem;
+      background: var(--space-deep);
+      border: 1px solid var(--border-color);
+      border-radius: 6px;
+      color: var(--text-primary);
+      text-align: right;
+    }
+
+    .converter-input:focus {
+      outline: none;
+      border-color: var(--accent-blue);
+      box-shadow: 0 0 8px rgba(93, 173, 226, 0.3);
+    }
+
+    .converter-unit-select {
+      padding: 0.5rem;
+      background: var(--space-light);
+      border: 1px solid var(--border-color);
+      border-radius: 6px;
+      color: var(--text-primary);
+      cursor: pointer;
+      min-width: 70px;
+    }
+
+    .converter-unit-select:focus {
+      outline: 2px solid var(--accent-blue);
+    }
+
+    .converter-result {
+      font-family: var(--font-mono);
+      font-size: 1.25rem;
+      color: var(--accent-gold);
+      padding: 0.5rem;
+      background: var(--space-deep);
+      border: 1px solid var(--border-color);
+      border-radius: 6px;
+      text-align: right;
+    }
+
+    .converter-formula {
+      margin-top: 1rem;
+      padding-top: 1rem;
+      border-top: 1px solid var(--border-color);
+      text-align: center;
+    }
+
+    .formula-display {
+      font-family: var(--font-mono);
+      color: var(--accent-blue);
+      margin: 0.5rem 0;
+    }
+
+    /* Telescopes Mode */
+    .telescopes-panel {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      gap: 0.75rem;
+    }
+
+    .telescope-card {
+      background: var(--space-medium);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      padding: 0.75rem;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      text-align: center;
+    }
+
+    .telescope-card:hover {
+      border-color: var(--accent-blue);
+      background: var(--space-light);
+    }
+
+    .telescope-card.active {
+      border-color: var(--accent-gold);
+      background: rgba(244, 208, 63, 0.1);
+    }
+
+    .telescope-card:focus {
+      outline: 2px solid var(--accent-gold);
+      outline-offset: 2px;
+    }
+
+    .telescope-icon {
+      font-size: 1.5rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .telescope-name {
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: var(--text-primary);
+      margin-bottom: 0.25rem;
+    }
+
+    .telescope-band {
+      font-size: 0.65rem;
+      color: var(--text-muted);
+    }
+
+    .telescope-info-panel {
+      margin-top: 1rem;
+      background: var(--space-medium);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      padding: 1rem;
+      display: none;
+    }
+
+    .telescope-info-panel.visible {
+      display: block;
+    }
+
+    /* Objects Mode */
+    .objects-panel {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+      gap: 0.75rem;
+    }
+
+    .object-card {
+      background: var(--space-medium);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      padding: 0.75rem;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      text-align: center;
+    }
+
+    .object-card:hover {
+      border-color: var(--accent-blue);
+      background: var(--space-light);
+    }
+
+    .object-card.active {
+      border-color: var(--accent-gold);
+      background: rgba(244, 208, 63, 0.1);
+    }
+
+    .object-card:focus {
+      outline: 2px solid var(--accent-gold);
+      outline-offset: 2px;
+    }
+
+    .object-icon {
+      font-size: 1.5rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .object-name {
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: var(--text-primary);
+    }
+
+    .object-info-panel {
+      margin-top: 1rem;
+      background: var(--space-medium);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      padding: 1rem;
+      display: none;
+    }
+
+    .object-info-panel.visible {
+      display: block;
+    }
+
+    /* Readout Panel */
+    .readout-panel {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0.75rem;
+      margin-top: 1rem;
+    }
+
+    .readout-item {
+      background: rgba(18, 18, 31, 0.9);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      padding: 0.75rem;
+      text-align: center;
+    }
+
+    .readout-label {
+      font-size: 0.7rem;
+      color: var(--text-secondary);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 0.25rem;
+    }
+
+    .readout-value {
+      font-family: var(--font-mono);
+      font-size: 1.1rem;
+      color: var(--accent-gold);
+    }
+
+    .readout-unit {
+      font-size: 0.7rem;
+      color: var(--text-muted);
+      margin-left: 0.25rem;
+    }
+
+    /* Insight Box */
+    .insight-box {
+      background: rgba(18, 18, 31, 0.9);
+      border-left: 3px solid var(--accent-gold);
+      padding: 1rem;
+      border-radius: 0 8px 8px 0;
+      margin-top: 1rem;
+      font-size: 0.875rem;
+      line-height: 1.5;
+    }
+
+    .insight-box h4 {
+      margin: 0 0 0.5rem 0;
+      color: var(--accent-gold);
+      font-size: 0.875rem;
+    }
+
+    .insight-box p {
+      margin: 0;
+      color: var(--text-secondary);
+    }
+
+    .insight-box .formula {
+      font-family: var(--font-mono);
+      color: var(--accent-blue);
+      margin: 0.5rem 0;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .mode-tabs {
+        flex-wrap: wrap;
+        width: 100%;
+      }
+
+      .mode-tab {
+        flex: 1 1 auto;
+        text-align: center;
+      }
+
+      .converter-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .readout-panel {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .telescopes-panel,
+      .objects-panel {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    /* Screen reader only */
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    /* Focus indicators */
+    .mode-tab:focus-visible,
+    .telescope-card:focus-visible,
+    .object-card:focus-visible,
+    .band-label:focus-visible {
+      outline: 2px solid var(--accent-gold);
+      outline-offset: 2px;
+    }
+  </style>
+</head>
+<body>
+  <div class="demo-wrapper">
+    <canvas id="starfield"></canvas>
+
+    <div class="demo-content">
+      <header class="demo-header">
+        <h1 class="demo-title">Electromagnetic Spectrum Explorer</h1>
+        <p class="demo-subtitle">Discover how light reveals the universe across all wavelengths</p>
+      </header>
+
+      <!-- Mode Tabs -->
+      <div class="mode-tabs" role="tablist" aria-label="Exploration modes">
+        <button class="mode-tab active" id="tab-explore" role="tab" aria-selected="true" aria-controls="panel-explore" tabindex="0">Explore</button>
+        <button class="mode-tab" id="tab-convert" role="tab" aria-selected="false" aria-controls="panel-convert" tabindex="-1">Convert</button>
+        <button class="mode-tab" id="tab-telescopes" role="tab" aria-selected="false" aria-controls="panel-telescopes" tabindex="-1">Telescopes</button>
+        <button class="mode-tab" id="tab-objects" role="tab" aria-selected="false" aria-controls="panel-objects" tabindex="-1">Objects</button>
+      </div>
+
+      <!-- Main Spectrum Panel -->
+      <div class="spectrum-panel">
+        <!-- EM Spectrum Bar -->
+        <div class="em-spectrum-container">
+          <div class="em-spectrum-bar" id="spectrum-bar" role="slider"
+               aria-label="Electromagnetic spectrum" aria-valuemin="0" aria-valuemax="100"
+               tabindex="0">
+            <div class="selection-marker" id="selection-marker" data-label="500 nm"></div>
+            <div class="band-highlight" id="band-highlight"></div>
+          </div>
+
+          <!-- Band Labels -->
+          <div class="band-labels" id="band-labels">
+            <span class="band-label" data-band="radio" tabindex="0">Radio</span>
+            <span class="band-label" data-band="microwave" tabindex="0">Microwave</span>
+            <span class="band-label" data-band="infrared" tabindex="0">Infrared</span>
+            <span class="band-label" data-band="visible" tabindex="0">Visible</span>
+            <span class="band-label" data-band="ultraviolet" tabindex="0">UV</span>
+            <span class="band-label" data-band="xray" tabindex="0">X-ray</span>
+            <span class="band-label" data-band="gamma" tabindex="0">Gamma</span>
+          </div>
+
+          <!-- Wavelength Scale -->
+          <div class="wavelength-scale">
+            <span class="wavelength-tick">10 km</span>
+            <span class="wavelength-tick">1 m</span>
+            <span class="wavelength-tick">1 mm</span>
+            <span class="wavelength-tick">1 um</span>
+            <span class="wavelength-tick">1 nm</span>
+            <span class="wavelength-tick">1 pm</span>
+            <span class="wavelength-tick">10 fm</span>
+          </div>
+
+          <!-- Size Comparison -->
+          <div class="size-comparison">
+            <div class="size-item">
+              <span class="size-icon">&#x1F3D7;</span>
+              <span>Buildings</span>
+            </div>
+            <div class="size-item">
+              <span class="size-icon">&#x1F9CD;</span>
+              <span>Humans</span>
+            </div>
+            <div class="size-item">
+              <span class="size-icon">&#x1F41E;</span>
+              <span>Insects</span>
+            </div>
+            <div class="size-item">
+              <span class="size-icon">&#x1F9EB;</span>
+              <span>Cells</span>
+            </div>
+            <div class="size-item">
+              <span class="size-icon">&#x269B;</span>
+              <span>Molecules</span>
+            </div>
+            <div class="size-item">
+              <span class="size-icon">&#x26AA;</span>
+              <span>Atoms</span>
+            </div>
+            <div class="size-item">
+              <span class="size-icon">&#x2B55;</span>
+              <span>Nuclei</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mode Content Panels -->
+
+        <!-- Explore Mode -->
+        <div class="mode-content active" id="panel-explore" role="tabpanel" aria-labelledby="tab-explore">
+          <div class="band-info-panel" id="band-info">
+            <h3 class="band-info-title" id="band-title">Click a band to explore</h3>
+            <div class="band-info-wavelength" id="band-wavelength"></div>
+            <p class="band-info-description" id="band-description">
+              Select any region of the electromagnetic spectrum above to learn about its properties,
+              how we detect it, and what it reveals about the universe.
+            </p>
+            <div class="band-info-examples" id="band-examples"></div>
+          </div>
+        </div>
+
+        <!-- Convert Mode -->
+        <div class="mode-content" id="panel-convert" role="tabpanel" aria-labelledby="tab-convert">
+          <div class="converter-panel">
+            <div class="converter-grid">
+              <div class="converter-input-group">
+                <label class="converter-label" for="input-wavelength">Wavelength</label>
+                <div class="converter-input-row">
+                  <input type="number" class="converter-input" id="input-wavelength"
+                         value="500" step="any" aria-describedby="wavelength-desc">
+                  <select class="converter-unit-select" id="unit-wavelength" aria-label="Wavelength unit">
+                    <option value="km">km</option>
+                    <option value="m">m</option>
+                    <option value="mm">mm</option>
+                    <option value="um">um</option>
+                    <option value="nm" selected>nm</option>
+                    <option value="pm">pm</option>
+                    <option value="fm">fm</option>
+                  </select>
+                </div>
+                <span id="wavelength-desc" class="sr-only">Enter wavelength value</span>
+              </div>
+
+              <div class="converter-input-group">
+                <label class="converter-label" for="input-frequency">Frequency</label>
+                <div class="converter-input-row">
+                  <input type="number" class="converter-input" id="input-frequency"
+                         value="" step="any" aria-describedby="frequency-desc">
+                  <select class="converter-unit-select" id="unit-frequency" aria-label="Frequency unit">
+                    <option value="Hz">Hz</option>
+                    <option value="kHz">kHz</option>
+                    <option value="MHz">MHz</option>
+                    <option value="GHz">GHz</option>
+                    <option value="THz" selected>THz</option>
+                    <option value="PHz">PHz</option>
+                    <option value="EHz">EHz</option>
+                  </select>
+                </div>
+                <span id="frequency-desc" class="sr-only">Frequency value (calculated from wavelength)</span>
+              </div>
+
+              <div class="converter-input-group">
+                <label class="converter-label" for="input-energy">Photon Energy</label>
+                <div class="converter-input-row">
+                  <input type="number" class="converter-input" id="input-energy"
+                         value="" step="any" aria-describedby="energy-desc">
+                  <select class="converter-unit-select" id="unit-energy" aria-label="Energy unit">
+                    <option value="erg">erg</option>
+                    <option value="J">J</option>
+                    <option value="eV" selected>eV</option>
+                    <option value="keV">keV</option>
+                    <option value="MeV">MeV</option>
+                  </select>
+                </div>
+                <span id="energy-desc" class="sr-only">Photon energy value (calculated)</span>
+              </div>
+            </div>
+
+            <div class="converter-formula">
+              <div class="formula-display" id="formula-display"></div>
+              <span style="color: var(--text-muted); font-size: 0.8rem;">
+                c = &#x03BB;&#x03BD; and E = h&#x03BD; = hc/&#x03BB;
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Telescopes Mode -->
+        <div class="mode-content" id="panel-telescopes" role="tabpanel" aria-labelledby="tab-telescopes">
+          <div class="telescopes-panel" id="telescopes-grid">
+            <!-- Telescope cards will be populated by JavaScript -->
+          </div>
+          <div class="telescope-info-panel" id="telescope-info">
+            <h3 id="telescope-info-name" style="color: var(--accent-gold); margin: 0 0 0.5rem 0;"></h3>
+            <p id="telescope-info-range" style="font-family: var(--font-mono); color: var(--accent-blue); margin: 0 0 0.5rem 0;"></p>
+            <p id="telescope-info-location" style="color: var(--text-secondary); margin: 0 0 0.5rem 0;"></p>
+            <p id="telescope-info-science" style="color: var(--text-secondary); margin: 0;"></p>
+          </div>
+        </div>
+
+        <!-- Objects Mode -->
+        <div class="mode-content" id="panel-objects" role="tabpanel" aria-labelledby="tab-objects">
+          <div class="objects-panel" id="objects-grid">
+            <!-- Object cards will be populated by JavaScript -->
+          </div>
+          <div class="object-info-panel" id="object-info">
+            <h3 id="object-info-name" style="color: var(--accent-gold); margin: 0 0 0.5rem 0;"></h3>
+            <p id="object-info-bands" style="font-family: var(--font-mono); color: var(--accent-blue); margin: 0 0 0.5rem 0;"></p>
+            <p id="object-info-why" style="color: var(--text-secondary); margin: 0 0 0.5rem 0;"></p>
+            <p id="object-info-telescope" style="color: var(--text-muted); font-size: 0.85rem; margin: 0;"></p>
+          </div>
+        </div>
+
+        <!-- Readout Panel -->
+        <div class="readout-panel" id="readout-panel">
+          <div class="readout-item">
+            <div class="readout-label">Wavelength</div>
+            <div class="readout-value" id="readout-wavelength">500<span class="readout-unit">nm</span></div>
+          </div>
+          <div class="readout-item">
+            <div class="readout-label">Frequency</div>
+            <div class="readout-value" id="readout-frequency">600<span class="readout-unit">THz</span></div>
+          </div>
+          <div class="readout-item">
+            <div class="readout-label">Energy</div>
+            <div class="readout-value" id="readout-energy">2.48<span class="readout-unit">eV</span></div>
+          </div>
+          <div class="readout-item">
+            <div class="readout-label">Band</div>
+            <div class="readout-value" id="readout-band">Visible</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Insight Box -->
+      <div class="insight-box" id="insight-box">
+        <h4>Light as a Cosmic Messenger</h4>
+        <p>
+          Every part of the electromagnetic spectrum reveals different information about the universe.
+          By observing in multiple wavelengths, astronomers build a complete picture of cosmic objects.
+        </p>
+      </div>
+
+      <!-- Screen reader announcements -->
+      <div id="status-announce" aria-live="polite" aria-atomic="true" class="sr-only"></div>
+    </div>
+  </div>
+
+  <script src="../_assets/katex/katex.min.js"></script>
+  <script src="../_assets/astro-utils.js"></script>
+  <script src="../_assets/starfield.js"></script>
+  <script src="telescope-data.js"></script>
+  <script src="object-data.js"></script>
+  <script src="em-spectrum.js"></script>
+</body>
+</html>
