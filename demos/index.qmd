@@ -152,4 +152,68 @@ Why does axial tilt—not distance from the Sun—cause seasons? Explore with di
 </div>
 :::
 
+:::{.demo-card}
+<div class="demo-preview">🌡️</div>
+<div class="demo-info">
+<h3 class="demo-title">Blackbody Radiation</h3>
+<p class="demo-description">
+See how temperature determines a star's color and brightness. Adjust temperature and watch the spectrum shift from red to blue.
+</p>
+<a href="blackbody-radiation/" class="demo-link">Open Demo →</a>
+<div class="demo-concepts">
+<span class="concept-tag">blackbody radiation</span>
+<span class="concept-tag">Wien's law</span>
+<span class="concept-tag">stellar colors</span>
+</div>
+</div>
+:::
+
+:::{.demo-card}
+<div class="demo-preview">🌈</div>
+<div class="demo-info">
+<h3 class="demo-title">EM Spectrum Explorer</h3>
+<p class="demo-description">
+Journey across the electromagnetic spectrum from radio waves to gamma rays. Discover what each type of light reveals about the universe.
+</p>
+<a href="em-spectrum/" class="demo-link">Open Demo →</a>
+<div class="demo-concepts">
+<span class="concept-tag">electromagnetic spectrum</span>
+<span class="concept-tag">wavelength</span>
+<span class="concept-tag">multiwavelength astronomy</span>
+</div>
+</div>
+:::
+
+:::{.demo-card}
+<div class="demo-preview">🔭</div>
+<div class="demo-info">
+<h3 class="demo-title">Telescope Resolution</h3>
+<p class="demo-description">
+Why do bigger telescopes see finer detail? Explore the diffraction limit and see how aperture and wavelength affect resolution.
+</p>
+<a href="telescope-resolution/" class="demo-link">Open Demo →</a>
+<div class="demo-concepts">
+<span class="concept-tag">angular resolution</span>
+<span class="concept-tag">diffraction limit</span>
+<span class="concept-tag">aperture</span>
+</div>
+</div>
+:::
+
+:::{.demo-card}
+<div class="demo-preview">📏</div>
+<div class="demo-info">
+<h3 class="demo-title">Stellar Parallax</h3>
+<p class="demo-description">
+How do astronomers measure distances to nearby stars? Move Earth around its orbit and watch stars shift against the background.
+</p>
+<a href="parallax-distance/" class="demo-link">Open Demo →</a>
+<div class="demo-concepts">
+<span class="concept-tag">parallax</span>
+<span class="concept-tag">parsec</span>
+<span class="concept-tag">distance measurement</span>
+</div>
+</div>
+:::
+
 :::
