@@ -274,7 +274,10 @@
   // ============================================
 
   /**
-   * Draw the Planck spectrum on canvas
+   * Draw the Planck spectrum on canvas (LOG-LOG plot)
+   * X-axis: log(wavelength)
+   * Y-axis: log(intensity) - shows characteristic asymmetry
+   *         Wien side slope ~ +3, Rayleigh-Jeans slope = -4
    */
   function drawSpectrum() {
     const canvas = elements.spectrumCanvas;
@@ -297,7 +300,7 @@
     ctx.strokeStyle = 'rgba(255, 255, 255, 0.1)';
     ctx.lineWidth = 1;
 
-    // Vertical grid lines (wavelength)
+    // Vertical grid lines (wavelength decades)
     for (let i = 0; i <= 10; i++) {
       const x = (i / 10) * width;
       ctx.beginPath();
@@ -306,7 +309,7 @@
       ctx.stroke();
     }
 
-    // Horizontal grid lines
+    // Horizontal grid lines (intensity decades)
     for (let i = 0; i <= 5; i++) {
       const y = (i / 5) * height;
       ctx.beginPath();
@@ -320,10 +323,13 @@
     const lambda_min_log = Math.log10(state.lambda_min);
     const lambda_max_log = Math.log10(state.lambda_max);
 
-    // Find max value for normalization
-    let maxB = 0;
+    // Calculate Planck values and find log range
     const lambdas = [];
     const values = [];
+    const logValues = [];
+    let maxB = 0;
+    let maxLogB = -Infinity;
+    let minLogB = Infinity;
 
     for (let i = 0; i < numPoints; i++) {
       const t = i / (numPoints - 1);
@@ -333,42 +339,90 @@
 
       lambdas.push(lambda);
       values.push(B);
+
       if (B > maxB) maxB = B;
+
+      // Calculate log values (handle zeros)
+      if (B > 0) {
+        const logB = Math.log10(B);
+        logValues.push(logB);
+        if (logB > maxLogB) maxLogB = logB;
+        if (logB < minLogB) minLogB = logB;
+      } else {
+        logValues.push(null);
+      }
     }
 
-    // Draw spectrum curve
+    // Set y-axis range: show ~6 decades below peak
+    const yLogMax = maxLogB;
+    const yLogMin = maxLogB - 6;  // 6 decades dynamic range
+
+    // Draw spectrum curve (LOG-LOG)
     ctx.beginPath();
     ctx.strokeStyle = '#5dade2';
     ctx.lineWidth = 2;
 
+    let started = false;
     for (let i = 0; i < numPoints; i++) {
       const x = (i / (numPoints - 1)) * width;
-      const y = height - (values[i] / maxB) * height * 0.9 - height * 0.05;
 
-      if (i === 0) {
+      if (logValues[i] === null || logValues[i] < yLogMin) {
+        // Skip points below threshold or zero
+        if (started) {
+          ctx.stroke();
+          ctx.beginPath();
+          started = false;
+        }
+        continue;
+      }
+
+      // Map log value to y position (inverted: high values at top)
+      const yNorm = (logValues[i] - yLogMin) / (yLogMax - yLogMin);
+      const y = height - yNorm * height * 0.85 - height * 0.05;
+
+      if (!started) {
         ctx.moveTo(x, y);
+        started = true;
       } else {
         ctx.lineTo(x, y);
       }
     }
     ctx.stroke();
 
-    // Fill under curve with gradient
-    ctx.lineTo(width, height);
-    ctx.lineTo(0, height);
-    ctx.closePath();
+    // Fill under curve with gradient (approximate - connect to bottom)
+    ctx.beginPath();
+    let firstX = null, lastX = null;
+    for (let i = 0; i < numPoints; i++) {
+      const x = (i / (numPoints - 1)) * width;
+      if (logValues[i] !== null && logValues[i] >= yLogMin) {
+        const yNorm = (logValues[i] - yLogMin) / (yLogMax - yLogMin);
+        const y = height - yNorm * height * 0.85 - height * 0.05;
+        if (firstX === null) {
+          firstX = x;
+          ctx.moveTo(x, y);
+        } else {
+          ctx.lineTo(x, y);
+        }
+        lastX = x;
+      }
+    }
+    if (firstX !== null && lastX !== null) {
+      ctx.lineTo(lastX, height);
+      ctx.lineTo(firstX, height);
+      ctx.closePath();
 
-    const gradient = ctx.createLinearGradient(0, 0, width, 0);
-    gradient.addColorStop(0, 'rgba(138, 43, 226, 0.3)');    // UV
-    gradient.addColorStop(0.2, 'rgba(0, 0, 255, 0.3)');     // Blue
-    gradient.addColorStop(0.35, 'rgba(0, 255, 0, 0.3)');    // Green
-    gradient.addColorStop(0.5, 'rgba(255, 255, 0, 0.3)');   // Yellow
-    gradient.addColorStop(0.65, 'rgba(255, 127, 0, 0.3)');  // Orange
-    gradient.addColorStop(0.8, 'rgba(255, 0, 0, 0.3)');     // Red
-    gradient.addColorStop(1, 'rgba(139, 0, 0, 0.2)');       // IR
+      const gradient = ctx.createLinearGradient(0, 0, width, 0);
+      gradient.addColorStop(0, 'rgba(138, 43, 226, 0.3)');    // UV
+      gradient.addColorStop(0.2, 'rgba(0, 0, 255, 0.3)');     // Blue
+      gradient.addColorStop(0.35, 'rgba(0, 255, 0, 0.3)');    // Green
+      gradient.addColorStop(0.5, 'rgba(255, 255, 0, 0.3)');   // Yellow
+      gradient.addColorStop(0.65, 'rgba(255, 127, 0, 0.3)');  // Orange
+      gradient.addColorStop(0.8, 'rgba(255, 0, 0, 0.3)');     // Red
+      gradient.addColorStop(1, 'rgba(139, 0, 0, 0.2)');       // IR
 
-    ctx.fillStyle = gradient;
-    ctx.fill();
+      ctx.fillStyle = gradient;
+      ctx.fill();
+    }
 
     // Draw peak marker if enabled
     if (state.overlays.peak) {
@@ -451,12 +505,12 @@
       }
     });
 
-    // Y-axis label
+    // Y-axis label (log scale)
     ctx.save();
     ctx.translate(15, height / 2);
     ctx.rotate(-Math.PI / 2);
     ctx.textAlign = 'center';
-    ctx.fillText('Intensity', 0, 0);
+    ctx.fillText('log Intensity', 0, 0);
     ctx.restore();
   }
 
