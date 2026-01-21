@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Telescope Resolution Sandbox | AstroEd</title>
+  <link rel="stylesheet" href="../_assets/astro-theme.css">
+  <link rel="stylesheet" href="../_assets/katex/katex.min.css">
+  <style>
+    /* Demo-specific styles */
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+    }
+
+    body {
+      font-family: var(--font-main);
+      background: var(--space-black);
+      color: var(--text-primary);
+    }
+
+    .demo-wrapper {
+      min-height: 100vh;
+      position: relative;
+    }
+
+    #starfield {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+    }
+
+    .demo-content {
+      position: relative;
+      z-index: 1;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 1.5rem;
+    }
+
+    .demo-header {
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+
+    .demo-title {
+      font-size: 1.75rem;
+      margin: 0 0 0.5rem 0;
+      color: var(--text-primary);
+    }
+
+    .demo-subtitle {
+      font-size: 1rem;
+      color: var(--text-secondary);
+      margin: 0;
+    }
+
+    /* Mode Toggle (101/201) */
+    .mode-toggle {
+      display: flex;
+      justify-content: center;
+      gap: 0;
+      margin-bottom: 1rem;
+    }
+
+    .mode-btn {
+      padding: 0.5rem 1.5rem;
+      font-size: 0.875rem;
+      font-weight: 600;
+      border: 2px solid var(--border-color);
+      background: var(--space-light);
+      color: var(--text-secondary);
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .mode-btn:first-child {
+      border-radius: 6px 0 0 6px;
+      border-right: 1px solid var(--border-color);
+    }
+
+    .mode-btn:last-child {
+      border-radius: 0 6px 6px 0;
+      border-left: 1px solid var(--border-color);
+    }
+
+    .mode-btn.active {
+      background: var(--accent-gold);
+      color: var(--space-black);
+      border-color: var(--accent-gold);
+    }
+
+    .mode-btn:hover:not(.active) {
+      background: var(--space-medium);
+      color: var(--text-primary);
+    }
+
+    .mode-btn:focus {
+      outline: 2px solid var(--accent-gold);
+      outline-offset: 2px;
+    }
+
+    /* Main visualization layout */
+    .main-viz {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .viz-panel {
+      background: rgba(18, 18, 31, 0.9);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .viz-panel.single-view {
+      grid-column: 1 / -1;
+    }
+
+    .viz-title {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 0.5rem;
+      text-align: center;
+    }
+
+    #resolution-canvas {
+      width: 100%;
+      max-width: 400px;
+      height: 300px;
+      display: block;
+      border-radius: 8px;
+      background: #050510;
+    }
+
+    #compare-canvas {
+      width: 100%;
+      max-width: 400px;
+      height: 300px;
+      display: block;
+      border-radius: 8px;
+      background: #050510;
+    }
+
+    /* Resolution status indicator */
+    .resolution-status {
+      margin-top: 0.75rem;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      text-align: center;
+      transition: all 0.3s ease;
+    }
+
+    .resolution-status.resolved {
+      background: rgba(88, 214, 141, 0.2);
+      color: var(--accent-green);
+      border: 1px solid var(--accent-green);
+    }
+
+    .resolution-status.unresolved {
+      background: rgba(236, 112, 99, 0.2);
+      color: var(--accent-red);
+      border: 1px solid var(--accent-red);
+    }
+
+    .resolution-status.marginal {
+      background: rgba(244, 208, 63, 0.2);
+      color: var(--accent-gold);
+      border: 1px solid var(--accent-gold);
+    }
+
+    /* Readout panel */
+    .readout-panel {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0.75rem;
+      margin-bottom: 1rem;
+    }
+
+    .readout-item {
+      background: rgba(18, 18, 31, 0.9);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      padding: 0.75rem;
+      text-align: center;
+    }
+
+    .readout-label {
+      font-size: 0.7rem;
+      color: var(--text-secondary);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 0.25rem;
+    }
+
+    .readout-value {
+      font-family: var(--font-mono);
+      font-size: 1.25rem;
+      color: var(--accent-gold);
+    }
+
+    .readout-unit {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+    }
+
+    /* Controls grid */
+    .controls-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .control-card {
+      background: rgba(18, 18, 31, 0.9);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      padding: 1rem;
+    }
+
+    .control-card.full-width {
+      grid-column: 1 / -1;
+    }
+
+    .control-title {
+      font-size: 0.875rem;
+      color: var(--text-secondary);
+      margin-bottom: 0.75rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .control-value {
+      font-family: var(--font-mono);
+      color: var(--accent-blue);
+    }
+
+    .slider-labels {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.65rem;
+      color: var(--text-muted);
+      margin-top: 0.25rem;
+    }
+
+    /* Wavelength selector */
+    .wavelength-selector {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 0.5rem;
+    }
+
+    .wavelength-btn {
+      font-size: 0.75rem;
+      padding: 0.35rem 0.6rem;
+      background: var(--space-light);
+      border: 1px solid var(--border-color);
+      border-radius: 4px;
+      color: var(--text-secondary);
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+
+    .wavelength-btn:hover {
+      background: var(--space-medium);
+      color: var(--text-primary);
+      border-color: var(--accent-blue);
+    }
+
+    .wavelength-btn.active {
+      background: var(--accent-blue);
+      color: var(--space-black);
+      border-color: var(--accent-blue);
+    }
+
+    .wavelength-btn:focus {
+      outline: 2px solid var(--accent-gold);
+      outline-offset: 2px;
+    }
+
+    /* Atmosphere toggle */
+    .atmosphere-controls {
+      margin-top: 0.75rem;
+      padding-top: 0.75rem;
+      border-top: 1px solid var(--border-color);
+    }
+
+    .toggle-row {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .toggle-label {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.8rem;
+      color: var(--text-secondary);
+      cursor: pointer;
+    }
+
+    .toggle-label input {
+      accent-color: var(--accent-blue);
+    }
+
+    .seeing-control {
+      display: none;
+      margin-top: 0.5rem;
+      padding: 0.5rem;
+      background: var(--space-medium);
+      border-radius: 6px;
+    }
+
+    .seeing-control.visible {
+      display: block;
+    }
+
+    /* Presets */
+    .presets-panel {
+      background: rgba(18, 18, 31, 0.9);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      padding: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .presets-section {
+      margin-bottom: 0.75rem;
+    }
+
+    .presets-section:last-child {
+      margin-bottom: 0;
+    }
+
+    .presets-label {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      margin-bottom: 0.25rem;
+    }
+
+    .presets-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .preset-btn {
+      font-size: 0.75rem;
+      padding: 0.25rem 0.5rem;
+      background: var(--space-light);
+      border: 1px solid var(--border-color);
+      border-radius: 4px;
+      color: var(--text-secondary);
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+
+    .preset-btn:hover {
+      background: var(--space-medium);
+      color: var(--text-primary);
+      border-color: var(--accent-blue);
+    }
+
+    .preset-btn.active {
+      background: var(--accent-blue);
+      color: var(--space-black);
+      border-color: var(--accent-blue);
+    }
+
+    .preset-btn:focus {
+      outline: 2px solid var(--accent-gold);
+      outline-offset: 2px;
+    }
+
+    /* Compare mode toggle */
+    .compare-toggle {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-top: 0.75rem;
+      padding-top: 0.75rem;
+      border-top: 1px solid var(--border-color);
+    }
+
+    .compare-select {
+      padding: 0.35rem 0.5rem;
+      background: var(--space-light);
+      border: 1px solid var(--border-color);
+      border-radius: 4px;
+      color: var(--text-primary);
+      font-size: 0.8rem;
+      cursor: pointer;
+    }
+
+    .compare-select:focus {
+      outline: 2px solid var(--accent-blue);
+    }
+
+    /* Binary separation control */
+    .separation-control {
+      margin-top: 0.75rem;
+      padding-top: 0.75rem;
+      border-top: 1px solid var(--border-color);
+    }
+
+    /* Insight box */
+    .insight-box {
+      background: rgba(18, 18, 31, 0.9);
+      border-left: 3px solid var(--accent-gold);
+      padding: 1rem;
+      border-radius: 0 8px 8px 0;
+      font-size: 0.875rem;
+      line-height: 1.5;
+    }
+
+    .insight-box h4 {
+      margin: 0 0 0.5rem 0;
+      color: var(--accent-gold);
+      font-size: 0.875rem;
+    }
+
+    .insight-box p {
+      margin: 0 0 0.5rem 0;
+      color: var(--text-secondary);
+    }
+
+    .insight-box p:last-child {
+      margin-bottom: 0;
+    }
+
+    .insight-box .formula {
+      font-family: var(--font-mono);
+      color: var(--accent-blue);
+      margin: 0.5rem 0;
+    }
+
+    /* Math mode only elements */
+    .math-mode-only {
+      display: none;
+    }
+
+    body.math-mode .math-mode-only {
+      display: block;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .main-viz {
+        grid-template-columns: 1fr;
+      }
+
+      .controls-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .readout-panel {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    /* Screen reader only */
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="demo-wrapper">
+    <canvas id="starfield"></canvas>
+
+    <div class="demo-content">
+      <header class="demo-header">
+        <h1 class="demo-title">Telescope Resolution Sandbox</h1>
+        <p class="demo-subtitle">Explore how aperture, wavelength, and atmosphere limit what we can resolve</p>
+      </header>
+
+      <!-- Mode Toggle (101/201) -->
+      <div class="mode-toggle">
+        <button class="mode-btn active" id="btn-101-mode">101 MODE</button>
+        <button class="mode-btn" id="btn-201-mode">MATH MODE</button>
+      </div>
+
+      <!-- Main Visualization -->
+      <div class="main-viz" id="main-viz">
+        <div class="viz-panel single-view" id="primary-panel">
+          <div class="viz-title">Simulated View <span id="telescope-name-display">(Hubble Space Telescope)</span></div>
+          <canvas id="resolution-canvas" role="img" aria-label="Simulated telescope view showing diffraction pattern"></canvas>
+          <div class="resolution-status resolved" id="resolution-status">RESOLVED - Stars clearly separated</div>
+        </div>
+        <div class="viz-panel" id="compare-panel" style="display: none;">
+          <div class="viz-title">Compare: <span id="compare-name-display">Keck Telescope</span></div>
+          <canvas id="compare-canvas" role="img" aria-label="Comparison telescope view"></canvas>
+          <div class="resolution-status resolved" id="compare-status">RESOLVED</div>
+        </div>
+      </div>
+
+      <!-- Readouts -->
+      <div class="readout-panel">
+        <div class="readout-item">
+          <div class="readout-label">Diffraction Limit</div>
+          <div class="readout-value" id="diff-limit-readout">0.047</div>
+          <div class="readout-unit">arcsec</div>
+        </div>
+        <div class="readout-item">
+          <div class="readout-label">Effective Resolution</div>
+          <div class="readout-value" id="eff-res-readout">0.047</div>
+          <div class="readout-unit">arcsec</div>
+        </div>
+        <div class="readout-item">
+          <div class="readout-label">Binary Separation</div>
+          <div class="readout-value" id="separation-readout">0.10</div>
+          <div class="readout-unit">arcsec</div>
+        </div>
+        <div class="readout-item">
+          <div class="readout-label">Aperture</div>
+          <div class="readout-value" id="aperture-readout">2.4</div>
+          <div class="readout-unit">m</div>
+        </div>
+      </div>
+
+      <!-- Controls -->
+      <div class="controls-grid">
+        <div class="control-card">
+          <div class="control-title">
+            Aperture (D)
+            <span class="control-value" id="aperture-display">2.4 m</span>
+          </div>
+          <input type="range" id="aperture-slider" class="astro-slider" min="0" max="1000" value="500"
+                 aria-label="Aperture slider" aria-valuemin="0.1" aria-valuemax="30" aria-valuenow="2.4">
+          <div class="slider-labels">
+            <span>0.1 m (4")</span>
+            <span>30 m (ELT)</span>
+          </div>
+        </div>
+
+        <div class="control-card">
+          <div class="control-title">
+            Wavelength
+            <span class="control-value" id="wavelength-display">550 nm (Visible)</span>
+          </div>
+          <div class="wavelength-selector">
+            <button class="wavelength-btn" data-lambda="3e-5" data-name="UV (300 nm)">UV</button>
+            <button class="wavelength-btn active" data-lambda="5.5e-5" data-name="Visible (550 nm)">Visible</button>
+            <button class="wavelength-btn" data-lambda="2.2e-4" data-name="Near-IR (2.2 um)">Near-IR</button>
+            <button class="wavelength-btn" data-lambda="1e-3" data-name="Mid-IR (10 um)">Mid-IR</button>
+            <button class="wavelength-btn" data-lambda="21" data-name="Radio (21 cm)">Radio</button>
+          </div>
+
+          <div class="atmosphere-controls">
+            <div class="toggle-row">
+              <label class="toggle-label">
+                <input type="checkbox" id="toggle-atmosphere"> Include Atmosphere
+              </label>
+            </div>
+            <div class="seeing-control" id="seeing-control">
+              <div class="control-title">
+                Seeing
+                <span class="control-value" id="seeing-display">1.0"</span>
+              </div>
+              <input type="range" id="seeing-slider" class="astro-slider" min="50" max="300" value="100"
+                     aria-label="Atmospheric seeing slider">
+              <div class="slider-labels">
+                <span>0.5" (excellent)</span>
+                <span>3.0" (poor)</span>
+              </div>
+              <div class="toggle-row" style="margin-top: 0.5rem;">
+                <label class="toggle-label">
+                  <input type="checkbox" id="toggle-ao"> Adaptive Optics (AO)
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="control-card full-width">
+          <div class="control-title">Binary Star Separation</div>
+          <div class="control-title">
+            <span>Separation</span>
+            <span class="control-value" id="binary-display">0.10 arcsec</span>
+          </div>
+          <input type="range" id="binary-slider" class="astro-slider" min="0" max="1000" value="200"
+                 aria-label="Binary star separation slider">
+          <div class="slider-labels">
+            <span>0.01" (very close)</span>
+            <span>2.0" (wide)</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Presets -->
+      <div class="presets-panel">
+        <div class="presets-section">
+          <div class="presets-label">Optical Telescopes</div>
+          <div class="presets-row" id="telescope-presets">
+            <button class="preset-btn" data-d="0.007" data-name="Human Eye (7mm)">Eye</button>
+            <button class="preset-btn" data-d="0.05" data-name="Binoculars (50mm)">Binoculars</button>
+            <button class="preset-btn" data-d="0.2" data-name="Amateur (200mm)">Amateur</button>
+            <button class="preset-btn active" data-d="2.4" data-name="Hubble (2.4m)">Hubble</button>
+            <button class="preset-btn" data-d="6.5" data-name="JWST (6.5m)">JWST</button>
+            <button class="preset-btn" data-d="10" data-name="Keck (10m)">Keck</button>
+            <button class="preset-btn" data-d="30" data-name="TMT (30m)">TMT</button>
+            <button class="preset-btn" data-d="39" data-name="ELT (39m)">ELT</button>
+          </div>
+        </div>
+
+        <div class="presets-section">
+          <div class="presets-label">Radio / Interferometers</div>
+          <div class="presets-row">
+            <button class="preset-btn" data-d="100" data-name="GBT (100m)">GBT</button>
+            <button class="preset-btn" data-d="305" data-name="Arecibo (305m)">Arecibo</button>
+            <button class="preset-btn" data-d="36000" data-name="VLA (36km baseline)" data-lambda="21">VLA</button>
+            <button class="preset-btn" data-d="10000000" data-name="EHT (Earth diameter)" data-lambda="0.13">EHT</button>
+          </div>
+        </div>
+
+        <div class="compare-toggle">
+          <label class="toggle-label">
+            <input type="checkbox" id="toggle-compare"> Compare Mode
+          </label>
+          <select class="compare-select" id="compare-telescope" disabled>
+            <option value="0.007">Human Eye (7mm)</option>
+            <option value="0.05">Binoculars (50mm)</option>
+            <option value="0.2">Amateur (200mm)</option>
+            <option value="2.4">Hubble (2.4m)</option>
+            <option value="6.5">JWST (6.5m)</option>
+            <option value="10" selected>Keck (10m)</option>
+            <option value="30">TMT (30m)</option>
+            <option value="39">ELT (39m)</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Insight Box -->
+      <div class="insight-box" id="insight-box">
+        <h4>The Rayleigh Criterion</h4>
+        <p>Two point sources are just resolved when the central maximum of one Airy disk falls on the first minimum of the other.</p>
+        <p>Larger apertures collect more light AND resolve finer details. Space telescopes avoid atmospheric blurring entirely.</p>
+        <div class="formula math-mode-only" id="formula-rayleigh"></div>
+        <div class="formula math-mode-only" id="formula-airy"></div>
+      </div>
+
+      <!-- Screen reader announcements -->
+      <div id="status-announce" aria-live="polite" aria-atomic="true" class="sr-only"></div>
+    </div>
+  </div>
+
+  <script src="../_assets/katex/katex.min.js"></script>
+  <script src="../_assets/astro-utils.js"></script>
+  <script src="../_assets/starfield.js"></script>
+  <script src="telescope-data.js"></script>
+  <script src="resolution.js"></script>
+</body>
+</html>
