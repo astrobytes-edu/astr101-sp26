@@ -538,6 +538,45 @@ const ANGULAR_SIZE_PRESETS = {
 
 
 // ============================================
+// KaTeX Math Rendering
+// ============================================
+
+/**
+ * Render KaTeX math to an element
+ * @param {string} selector - CSS selector for target element
+ * @param {string} latex - LaTeX string to render
+ * @param {boolean} displayMode - true for display style, false for inline
+ */
+function renderMath(selector, latex, displayMode = false) {
+  const element = document.querySelector(selector);
+  if (element && window.katex) {
+    katex.render(latex, element, {
+      throwOnError: false,
+      displayMode: displayMode
+    });
+  }
+}
+
+/**
+ * Render all elements with data-math attribute
+ * Scans the DOM for elements with data-math="latex string"
+ * Use data-math-display attribute for display mode (block) equations
+ */
+function renderAllMath() {
+  document.querySelectorAll('[data-math]').forEach(el => {
+    const latex = el.getAttribute('data-math');
+    const displayMode = el.hasAttribute('data-math-display');
+    if (window.katex) {
+      katex.render(latex, el, {
+        throwOnError: false,
+        displayMode: displayMode
+      });
+    }
+  });
+}
+
+
+// ============================================
 // Export for use in demos
 // ============================================
 
@@ -572,6 +611,10 @@ if (typeof window !== 'undefined') {
 
     // Drag
     makeOrbitalDraggable,
+
+    // Math rendering (KaTeX)
+    renderMath,
+    renderAllMath,
 
     // Constants
     ASTRO,
