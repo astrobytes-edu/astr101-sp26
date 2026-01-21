@@ -386,7 +386,7 @@
     elements.perihelionLabel.setAttribute('y', SVG_CENTER.y + 15);
 
     const periDist = perihelion(state.a, state.e);
-    elements.perihelionLabel.textContent = `Perihelion (${periDist.toFixed(2)} AU)`;
+    elements.perihelionLabel.textContent = `Perihelion (${periDist.toPrecision(3)} AU)`;
 
     // Aphelion (farthest, right side, θ = π)
     const aphX = SVG_CENTER.x + (rx + c);
@@ -396,7 +396,7 @@
     elements.aphelionLabel.setAttribute('y', SVG_CENTER.y + 15);
 
     const aphDist = aphelion(state.a, state.e);
-    elements.aphelionLabel.textContent = `Aphelion (${aphDist.toFixed(2)} AU)`;
+    elements.aphelionLabel.textContent = `Aphelion (${aphDist.toPrecision(3)} AU)`;
 
     elements.apsidesGroup.style.display = state.overlays.apsides ? 'block' : 'none';
   }
@@ -418,7 +418,7 @@
     const midY = (SVG_CENTER.y + pos.y) / 2 - 10;
     elements.distanceText.setAttribute('x', midX);
     elements.distanceText.setAttribute('y', midY);
-    elements.distanceText.textContent = `r = ${r.toFixed(3)} AU`;
+    elements.distanceText.textContent = `r = ${r.toPrecision(3)} AU`;
   }
 
   /**
@@ -503,31 +503,31 @@
     const acc = gravitationalAccel(r, state.M);
     const P = orbitalPeriod(state.a, state.M);
 
-    elements.distanceValue.textContent = r.toFixed(4);
-    elements.periodValue.textContent = P.toFixed(2);
+    elements.distanceValue.textContent = r.toPrecision(3);
+    elements.periodValue.textContent = P.toPrecision(3);
 
     // Velocity and acceleration depend on unit mode
     if (state.units === '101') {
-      elements.velocityValue.textContent = v.toFixed(2);
+      elements.velocityValue.textContent = v.toPrecision(3);
       elements.velocityUnit.textContent = 'km/s';
 
       // Scientific notation for acceleration (m/s²)
-      elements.accelValue.textContent = acc.toExponential(2);
+      elements.accelValue.textContent = acc.toPrecision(3);
       elements.accelUnit.textContent = 'm/s²';
     } else {
       // 201 mode: CGS
-      elements.velocityValue.textContent = (v * 1e5).toExponential(2);
+      elements.velocityValue.textContent = (v * 1e5).toPrecision(3);
       elements.velocityUnit.textContent = 'cm/s';
 
-      elements.accelValue.textContent = (acc * 100).toExponential(2);
+      elements.accelValue.textContent = (acc * 100).toPrecision(3);
       elements.accelUnit.textContent = 'cm/s²';
     }
 
     // Update Newton mode values in insight box
     if (state.mode === 'newton') {
       elements.newtonValues.innerHTML =
-        `v = √(GM(2/r - 1/a)) = ${v.toFixed(2)} km/s<br>` +
-        `a = GM/r² = ${acc.toExponential(2)} m/s²`;
+        `v = √(GM(2/r - 1/a)) = ${v.toPrecision(3)} km/s<br>` +
+        `a = GM/r² = ${acc.toPrecision(3)} m/s²`;
     }
   }
 
@@ -540,7 +540,7 @@
 
     elements.timelineProgress.style.width = `${fraction * 100}%`;
     elements.timelineHandle.style.left = `${fraction * 100}%`;
-    elements.phaseDisplay.textContent = `${state.t.toFixed(2)} / ${P.toFixed(2)} yr`;
+    elements.phaseDisplay.textContent = `${state.t.toPrecision(3)} / ${P.toPrecision(3)} yr`;
   }
 
   /**
