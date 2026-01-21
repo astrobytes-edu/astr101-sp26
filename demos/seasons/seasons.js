@@ -683,11 +683,9 @@
         const tilt = parseFloat(preset.el.getAttribute('data-tilt'));
         state.currentPlanet = preset.planet;
 
-        // Handle Venus and Uranus special cases (tilt > 90)
-        // For simplicity, we cap at 90 for the slider but store actual value
-        const displayTilt = Math.min(tilt, 90);
-        state.axialTilt = displayTilt;
-        elements.tiltSlider.value = displayTilt;
+        // Store actual tilt value (0-180° range now supported)
+        state.axialTilt = tilt;
+        elements.tiltSlider.value = tilt;
 
         updatePlanetPresetHighlight(preset.el);
         update();
