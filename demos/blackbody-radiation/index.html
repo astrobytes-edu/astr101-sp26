@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blackbody Radiation Sandbox | AstroEd</title>
+  <link rel="stylesheet" href="../_assets/astro-theme.css">
+  <link rel="stylesheet" href="../_assets/katex/katex.min.css">
+  <style>
+    /* Demo-specific styles */
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+    }
+
+    body {
+      font-family: var(--font-main);
+      background: var(--space-black);
+      color: var(--text-primary);
+    }
+
+    .demo-wrapper {
+      min-height: 100vh;
+      position: relative;
+    }
+
+    #starfield {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+    }
+
+    .demo-content {
+      position: relative;
+      z-index: 1;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 1.5rem;
+    }
+
+    .demo-header {
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+
+    .demo-title {
+      font-size: 1.75rem;
+      margin: 0 0 0.5rem 0;
+      color: var(--text-primary);
+    }
+
+    .demo-subtitle {
+      font-size: 1rem;
+      color: var(--text-secondary);
+      margin: 0;
+    }
+
+    /* Mode Toggle (101/201) */
+    .mode-toggle {
+      display: flex;
+      justify-content: center;
+      gap: 0;
+      margin-bottom: 1rem;
+    }
+
+    .mode-btn {
+      padding: 0.5rem 1.5rem;
+      font-size: 0.875rem;
+      font-weight: 600;
+      border: 2px solid var(--border-color);
+      background: var(--space-light);
+      color: var(--text-secondary);
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .mode-btn:first-child {
+      border-radius: 6px 0 0 6px;
+      border-right: 1px solid var(--border-color);
+    }
+
+    .mode-btn:last-child {
+      border-radius: 0 6px 6px 0;
+      border-left: 1px solid var(--border-color);
+    }
+
+    .mode-btn.active {
+      background: var(--accent-gold);
+      color: var(--space-black);
+      border-color: var(--accent-gold);
+    }
+
+    .mode-btn:hover:not(.active) {
+      background: var(--space-medium);
+      color: var(--text-primary);
+    }
+
+    /* Main layout: spectrum + star preview side by side */
+    .main-viz {
+      display: grid;
+      grid-template-columns: 1fr 200px;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .spectrum-panel {
+      background: rgba(18, 18, 31, 0.9);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 1rem;
+    }
+
+    .star-preview {
+      background: rgba(18, 18, 31, 0.9);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    #spectrum-canvas {
+      width: 100%;
+      height: 300px;
+      display: block;
+    }
+
+    #star-circle {
+      border-radius: 50%;
+      box-shadow: 0 0 30px currentColor;
+      transition: all 0.3s ease;
+    }
+
+    .star-label {
+      margin-top: 0.5rem;
+      font-size: 0.875rem;
+      color: var(--text-secondary);
+      text-align: center;
+    }
+
+    /* EM band bar */
+    .em-band-bar {
+      background: rgba(18, 18, 31, 0.9);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      padding: 0.5rem 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .em-band-labels {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.7rem;
+      color: var(--text-muted);
+      margin-bottom: 0.25rem;
+    }
+
+    .em-band-gradient {
+      height: 24px;
+      border-radius: 4px;
+      position: relative;
+      background: linear-gradient(to right,
+        #8b00ff 0%,      /* UV */
+        #4b0082 8%,
+        #0000ff 16%,     /* Blue */
+        #00ff00 33%,     /* Green */
+        #ffff00 50%,     /* Yellow */
+        #ff7f00 66%,     /* Orange */
+        #ff0000 75%,     /* Red */
+        #8b0000 85%,     /* IR */
+        #2d0000 100%     /* Far IR */
+      );
+    }
+
+    .em-peak-marker {
+      position: absolute;
+      top: -5px;
+      width: 2px;
+      height: calc(100% + 10px);
+      background: var(--accent-gold);
+      transform: translateX(-50%);
+    }
+
+    .em-peak-marker::after {
+      content: attr(data-label);
+      position: absolute;
+      top: -18px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 0.65rem;
+      color: var(--accent-gold);
+      white-space: nowrap;
+    }
+
+    /* Readout panel */
+    .readout-panel {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0.75rem;
+      margin-bottom: 1rem;
+    }
+
+    .readout-item {
+      background: rgba(18, 18, 31, 0.9);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      padding: 0.75rem;
+      text-align: center;
+    }
+
+    .readout-label {
+      font-size: 0.7rem;
+      color: var(--text-secondary);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 0.25rem;
+    }
+
+    .readout-value {
+      font-family: var(--font-mono);
+      font-size: 1.25rem;
+      color: var(--accent-gold);
+    }
+
+    .readout-unit {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+    }
+
+    /* Temperature slider */
+    .temp-control {
+      background: rgba(18, 18, 31, 0.9);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      padding: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .temp-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 0.5rem;
+    }
+
+    .temp-value {
+      font-family: var(--font-mono);
+      font-size: 1.5rem;
+      color: var(--accent-gold);
+    }
+
+    .temp-labels {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.65rem;
+      color: var(--text-muted);
+      margin-top: 0.25rem;
+    }
+
+    .scale-toggle {
+      display: flex;
+      gap: 0.25rem;
+    }
+
+    .scale-btn {
+      padding: 0.25rem 0.5rem;
+      font-size: 0.7rem;
+      background: var(--space-light);
+      border: 1px solid var(--border-color);
+      border-radius: 4px;
+      color: var(--text-muted);
+      cursor: pointer;
+    }
+
+    .scale-btn.active {
+      background: var(--accent-blue);
+      color: var(--space-black);
+      border-color: var(--accent-blue);
+    }
+
+    /* Presets */
+    .presets-panel {
+      background: rgba(18, 18, 31, 0.9);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      padding: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .presets-section {
+      margin-bottom: 0.75rem;
+    }
+
+    .presets-section:last-child {
+      margin-bottom: 0;
+    }
+
+    .presets-label {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      margin-bottom: 0.25rem;
+    }
+
+    .presets-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .preset-btn {
+      font-size: 0.75rem;
+      padding: 0.25rem 0.5rem;
+      background: var(--space-light);
+      border: 1px solid var(--border-color);
+      border-radius: 4px;
+      color: var(--text-secondary);
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+
+    .preset-btn:hover {
+      background: var(--space-medium);
+      color: var(--text-primary);
+      border-color: var(--accent-blue);
+    }
+
+    .preset-btn.active {
+      background: var(--accent-blue);
+      color: var(--space-black);
+      border-color: var(--accent-blue);
+    }
+
+    /* CMB redshift slider (hidden by default) */
+    .cmb-controls {
+      display: none;
+      margin-top: 0.5rem;
+      padding-top: 0.5rem;
+      border-top: 1px solid var(--border-color);
+    }
+
+    .cmb-controls.visible {
+      display: block;
+    }
+
+    /* Animation controls */
+    .animation-controls {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 1rem;
+      background: rgba(18, 18, 31, 0.9);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      margin-bottom: 1rem;
+    }
+
+    .anim-btn {
+      display: flex;
+      align-items: center;
+      gap: 0.25rem;
+      padding: 0.5rem 0.75rem;
+      background: var(--space-light);
+      border: 1px solid var(--border-color);
+      border-radius: 6px;
+      color: var(--text-secondary);
+      cursor: pointer;
+      font-size: 0.875rem;
+      transition: all 0.15s ease;
+    }
+
+    .anim-btn:hover:not(:disabled) {
+      background: var(--space-medium);
+      color: var(--text-primary);
+      border-color: var(--accent-blue);
+    }
+
+    .anim-btn:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+
+    .anim-btn.primary {
+      background: var(--accent-blue);
+      color: var(--space-black);
+      border-color: var(--accent-blue);
+    }
+
+    .speed-control {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-left: auto;
+      font-size: 0.875rem;
+      color: var(--text-secondary);
+    }
+
+    .speed-control select {
+      padding: 0.25rem 0.5rem;
+      background: var(--space-light);
+      border: 1px solid var(--border-color);
+      border-radius: 4px;
+      color: var(--text-primary);
+      cursor: pointer;
+    }
+
+    /* Overlays row */
+    .overlays-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 0.75rem;
+      padding-top: 0.75rem;
+      border-top: 1px solid var(--border-color);
+    }
+
+    .overlay-toggle {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.75rem;
+      color: var(--text-secondary);
+      cursor: pointer;
+    }
+
+    .overlay-toggle input {
+      accent-color: var(--accent-blue);
+    }
+
+    /* Insight box */
+    .insight-box {
+      background: rgba(18, 18, 31, 0.9);
+      border-left: 3px solid var(--accent-gold);
+      padding: 1rem;
+      border-radius: 0 8px 8px 0;
+      font-size: 0.875rem;
+      line-height: 1.5;
+    }
+
+    .insight-box h4 {
+      margin: 0 0 0.5rem 0;
+      color: var(--accent-gold);
+      font-size: 0.875rem;
+    }
+
+    .insight-box .formula {
+      font-family: var(--font-mono);
+      color: var(--accent-blue);
+      margin: 0.5rem 0;
+    }
+
+    /* Math mode only elements */
+    .math-mode-only {
+      display: none;
+    }
+
+    body.math-mode .math-mode-only {
+      display: block;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .main-viz {
+        grid-template-columns: 1fr;
+      }
+
+      .star-preview {
+        order: -1;
+      }
+
+      .readout-panel {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    /* Screen reader only */
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="demo-wrapper">
+    <canvas id="starfield"></canvas>
+
+    <div class="demo-content">
+      <header class="demo-header">
+        <h1 class="demo-title">Blackbody Radiation Sandbox</h1>
+        <p class="demo-subtitle">Explore how temperature determines a star's spectrum and color</p>
+      </header>
+
+      <!-- Mode Toggle (101/201) -->
+      <div class="mode-toggle">
+        <button class="mode-btn active" id="btn-101-mode">101 MODE</button>
+        <button class="mode-btn" id="btn-201-mode">MATH MODE</button>
+      </div>
+
+      <!-- Main Visualization -->
+      <div class="main-viz">
+        <div class="spectrum-panel">
+          <canvas id="spectrum-canvas"></canvas>
+        </div>
+        <div class="star-preview">
+          <div id="star-circle" style="width: 80px; height: 80px; background: #fff5cc;"
+               role="img" aria-label="Star preview showing color at current temperature"></div>
+          <div class="star-label" id="star-type-label">Sun-like (G2V)</div>
+        </div>
+      </div>
+
+      <!-- EM Band Bar -->
+      <div class="em-band-bar">
+        <div class="em-band-labels">
+          <span>UV</span>
+          <span>Violet</span>
+          <span>Blue</span>
+          <span>Green</span>
+          <span>Yellow</span>
+          <span>Orange</span>
+          <span>Red</span>
+          <span>IR</span>
+        </div>
+        <div class="em-band-gradient">
+          <div class="em-peak-marker" id="peak-marker" style="left: 50%;" data-label="502 nm"></div>
+        </div>
+      </div>
+
+      <!-- Readouts -->
+      <div class="readout-panel">
+        <div class="readout-item">
+          <div class="readout-label">Temperature</div>
+          <div class="readout-value" id="temp-readout">5,778</div>
+          <div class="readout-unit">K</div>
+        </div>
+        <div class="readout-item">
+          <div class="readout-label">Peak Wavelength</div>
+          <div class="readout-value" id="lambda-readout">502</div>
+          <div class="readout-unit">nm</div>
+        </div>
+        <div class="readout-item">
+          <div class="readout-label">Luminosity</div>
+          <div class="readout-value" id="lum-readout">1.00</div>
+          <div class="readout-unit" id="lum-unit">L<sub>&#x2609;</sub></div>
+        </div>
+        <div class="readout-item">
+          <div class="readout-label">Color</div>
+          <div class="readout-value" id="color-readout" style="background: #fff5cc; width: 40px; height: 20px; border-radius: 4px; margin: 0 auto;"></div>
+          <div class="readout-unit" id="color-label">White</div>
+        </div>
+      </div>
+
+      <!-- Temperature Control -->
+      <div class="temp-control">
+        <div class="temp-header">
+          <span>Temperature</span>
+          <span class="temp-value" id="temp-display">5,778 K</span>
+          <div class="scale-toggle">
+            <button class="scale-btn active" id="btn-log-scale">Log</button>
+            <button class="scale-btn" id="btn-linear-scale">Linear</button>
+          </div>
+        </div>
+        <input type="range" id="temp-slider" class="astro-slider" min="0" max="1000" value="500"
+               aria-label="Temperature slider" aria-valuemin="2.7" aria-valuemax="1000000" aria-valuenow="5778">
+        <div class="temp-labels">
+          <span>2.7 K (CMB)</span>
+          <span>10&#x2076; K (Neutron Star)</span>
+        </div>
+      </div>
+
+      <!-- Presets -->
+      <div class="presets-panel">
+        <div class="presets-section">
+          <div class="presets-label">Stars</div>
+          <div class="presets-row">
+            <button class="preset-btn" data-t="34000" data-name="O star (&#x03B6; Oph)">O</button>
+            <button class="preset-btn" data-t="12000" data-name="B star (Rigel)">B</button>
+            <button class="preset-btn" data-t="9600" data-name="A star (Vega)">A</button>
+            <button class="preset-btn active" data-t="5778" data-name="Sun (G2V)">Sun</button>
+            <button class="preset-btn" data-t="5200" data-name="K star (&#x03B1; Cen B)">K</button>
+            <button class="preset-btn" data-t="3000" data-name="M dwarf (Proxima)">M</button>
+            <button class="preset-btn" data-t="3500" data-name="Red Giant (Betelgeuse)">Red Giant</button>
+          </div>
+        </div>
+
+        <div class="presets-section">
+          <div class="presets-label">Compact Objects</div>
+          <div class="presets-row">
+            <button class="preset-btn" data-t="25000" data-name="White Dwarf (Sirius B)">White Dwarf</button>
+            <button class="preset-btn" data-t="1000000" data-name="Neutron Star">Neutron Star</button>
+          </div>
+        </div>
+
+        <div class="presets-section">
+          <div class="presets-label">Cold Objects</div>
+          <div class="presets-row">
+            <button class="preset-btn" data-t="250" data-name="Brown Dwarf">Brown Dwarf</button>
+            <button class="preset-btn" data-t="300" data-name="Warm Dust">Dust</button>
+            <button class="preset-btn" data-t="125" data-name="Jupiter">Jupiter</button>
+            <button class="preset-btn" data-t="288" data-name="Earth">Earth</button>
+          </div>
+        </div>
+
+        <div class="presets-section">
+          <div class="presets-label">Cosmic Microwave Background</div>
+          <div class="presets-row">
+            <button class="preset-btn" data-t="2.725" data-name="CMB Today (z=0)" data-cmb="0">Today</button>
+            <button class="preset-btn" data-t="30" data-name="CMB at z=10" data-cmb="10">z=10</button>
+            <button class="preset-btn" data-t="3000" data-name="Recombination (z&#x2248;1100)" data-cmb="1100">Recombination</button>
+          </div>
+          <div class="cmb-controls" id="cmb-controls">
+            <div class="temp-header">
+              <span>Redshift (z)</span>
+              <span class="temp-value" id="z-display">0</span>
+            </div>
+            <input type="range" id="z-slider" class="astro-slider" min="0" max="1100" value="0">
+          </div>
+        </div>
+
+        <div class="overlays-row">
+          <label class="overlay-toggle">
+            <input type="checkbox" id="toggle-peak" checked> Peak marker
+          </label>
+          <label class="overlay-toggle">
+            <input type="checkbox" id="toggle-em-bands" checked> EM bands
+          </label>
+          <label class="overlay-toggle">
+            <input type="checkbox" id="toggle-luminosity"> Show luminosity as size
+          </label>
+          <label class="overlay-toggle math-mode-only">
+            <input type="checkbox" id="toggle-planck-terms"> Planck term breakdown
+          </label>
+        </div>
+      </div>
+
+      <!-- Animation Controls -->
+      <div class="animation-controls">
+        <button class="anim-btn primary" id="btn-play">&#x25B6; Play</button>
+        <button class="anim-btn" id="btn-pause" disabled>&#x23F8; Pause</button>
+        <button class="anim-btn" id="btn-cycle">&#x21BB; Cycle Presets</button>
+        <div class="speed-control">
+          <label>Speed:</label>
+          <select id="speed-select">
+            <option value="0.5">0.5x</option>
+            <option value="1" selected>1x</option>
+            <option value="2">2x</option>
+            <option value="5">5x</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Insight Box -->
+      <div class="insight-box" id="insight-box">
+        <h4>Wien's Displacement Law</h4>
+        <p>Hotter objects peak at shorter wavelengths (bluer). Cooler objects peak at longer wavelengths (redder).</p>
+        <p>The Sun peaks in green-yellow but appears white because it emits across all visible colors.</p>
+        <div class="formula math-mode-only" id="formula-wien"></div>
+        <div class="formula math-mode-only" id="formula-planck"></div>
+      </div>
+
+      <!-- Screen reader announcements -->
+      <div id="status-announce" aria-live="polite" aria-atomic="true" class="sr-only"></div>
+    </div>
+  </div>
+
+  <script src="../_assets/katex/katex.min.js"></script>
+  <script src="../_assets/astro-utils.js"></script>
+  <script src="../_assets/starfield.js"></script>
+  <script src="blackbody.js"></script>
+</body>
+</html>
