@@ -511,9 +511,9 @@
       elements.velocityValue.textContent = v.toFixed(2);
       elements.velocityUnit.textContent = 'km/s';
 
-      // Convert m/s² to mm/s² for readability
-      elements.accelValue.textContent = (acc * 1000).toFixed(3);
-      elements.accelUnit.textContent = 'mm/s²';
+      // Scientific notation for acceleration (m/s²)
+      elements.accelValue.textContent = acc.toExponential(2);
+      elements.accelUnit.textContent = 'm/s²';
     } else {
       // 201 mode: CGS
       elements.velocityValue.textContent = (v * 1e5).toExponential(2);
@@ -527,7 +527,7 @@
     if (state.mode === 'newton') {
       elements.newtonValues.innerHTML =
         `v = √(GM(2/r - 1/a)) = ${v.toFixed(2)} km/s<br>` +
-        `a = GM/r² = ${(acc * 1000).toFixed(3)} mm/s²`;
+        `a = GM/r² = ${acc.toExponential(2)} m/s²`;
     }
   }
 
