@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kepler's Laws Sandbox | AstroEd</title>
+  <link rel="stylesheet" href="../_assets/astro-theme.css">
+  <style>
+    /* Demo-specific styles */
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+    }
+
+    body {
+      font-family: var(--font-main);
+      background: var(--space-black);
+      color: var(--text-primary);
+    }
+
+    .demo-wrapper {
+      min-height: 100vh;
+      position: relative;
+    }
+
+    #starfield {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+    }
+
+    .demo-content {
+      position: relative;
+      z-index: 1;
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 1.5rem;
+    }
+
+    .demo-header {
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+
+    .demo-title {
+      font-size: 1.75rem;
+      margin: 0 0 0.5rem 0;
+      color: var(--text-primary);
+    }
+
+    .demo-subtitle {
+      font-size: 1rem;
+      color: var(--text-secondary);
+      margin: 0;
+    }
+
+    /* Mode Toggle */
+    .mode-toggle {
+      display: flex;
+      justify-content: center;
+      gap: 0;
+      margin-bottom: 1rem;
+    }
+
+    .mode-btn {
+      padding: 0.5rem 1.5rem;
+      font-size: 0.875rem;
+      font-weight: 600;
+      border: 2px solid var(--border-color);
+      background: var(--space-light);
+      color: var(--text-secondary);
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .mode-btn:first-child {
+      border-radius: 6px 0 0 6px;
+      border-right: 1px solid var(--border-color);
+    }
+
+    .mode-btn:last-child {
+      border-radius: 0 6px 6px 0;
+      border-left: 1px solid var(--border-color);
+    }
+
+    .mode-btn.active {
+      background: var(--accent-gold);
+      color: var(--space-black);
+      border-color: var(--accent-gold);
+    }
+
+    .mode-btn:hover:not(.active) {
+      background: var(--space-medium);
+      color: var(--text-primary);
+    }
+
+    /* Main visualization */
+    .viz-panel {
+      background: rgba(18, 18, 31, 0.9);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    #orbit-svg {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* Readout panel */
+    .readout-panel {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0.75rem;
+      margin-bottom: 1rem;
+    }
+
+    .readout-item {
+      background: rgba(18, 18, 31, 0.9);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      padding: 0.75rem;
+      text-align: center;
+    }
+
+    .readout-label {
+      font-size: 0.7rem;
+      color: var(--text-secondary);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 0.25rem;
+    }
+
+    .readout-value {
+      font-family: var(--font-mono);
+      font-size: 1.25rem;
+      color: var(--accent-gold);
+    }
+
+    .readout-unit {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+    }
+
+    /* Unit toggle */
+    .unit-toggle {
+      display: flex;
+      justify-content: flex-end;
+      gap: 0.25rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .unit-btn {
+      padding: 0.25rem 0.5rem;
+      font-size: 0.7rem;
+      background: var(--space-light);
+      border: 1px solid var(--border-color);
+      border-radius: 4px;
+      color: var(--text-muted);
+      cursor: pointer;
+    }
+
+    .unit-btn.active {
+      background: var(--accent-blue);
+      color: var(--space-black);
+      border-color: var(--accent-blue);
+    }
+
+    /* Timeline */
+    .timeline-panel {
+      background: rgba(18, 18, 31, 0.9);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      padding: 0.75rem 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .timeline-header {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      margin-bottom: 0.5rem;
+    }
+
+    .timeline-track {
+      position: relative;
+      height: 24px;
+      background: var(--space-medium);
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .timeline-progress {
+      position: absolute;
+      height: 100%;
+      background: var(--accent-blue);
+      border-radius: 4px 0 0 4px;
+      opacity: 0.3;
+    }
+
+    .timeline-handle {
+      position: absolute;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 16px;
+      height: 16px;
+      background: var(--accent-gold);
+      border-radius: 50%;
+      cursor: grab;
+    }
+
+    .timeline-markers {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.65rem;
+      color: var(--text-muted);
+      margin-top: 0.25rem;
+    }
+
+    /* Controls */
+    .controls-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .control-card {
+      background: rgba(18, 18, 31, 0.9);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      padding: 1rem;
+    }
+
+    .control-card.full-width {
+      grid-column: 1 / -1;
+    }
+
+    .control-title {
+      font-size: 0.875rem;
+      color: var(--text-secondary);
+      margin-bottom: 0.75rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .control-value {
+      font-family: var(--font-mono);
+      color: var(--accent-blue);
+    }
+
+    .slider-labels {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.65rem;
+      color: var(--text-muted);
+      margin-top: 0.25rem;
+    }
+
+    /* Animation controls */
+    .animation-controls {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 1rem;
+      background: rgba(18, 18, 31, 0.9);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      margin-bottom: 1rem;
+    }
+
+    .anim-btn {
+      display: flex;
+      align-items: center;
+      gap: 0.25rem;
+      padding: 0.5rem 0.75rem;
+      background: var(--space-light);
+      border: 1px solid var(--border-color);
+      border-radius: 6px;
+      color: var(--text-secondary);
+      cursor: pointer;
+      font-size: 0.875rem;
+      transition: all 0.15s ease;
+    }
+
+    .anim-btn:hover:not(:disabled) {
+      background: var(--space-medium);
+      color: var(--text-primary);
+      border-color: var(--accent-blue);
+    }
+
+    .anim-btn:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+
+    .anim-btn.primary {
+      background: var(--accent-blue);
+      color: var(--space-black);
+      border-color: var(--accent-blue);
+    }
+
+    .speed-control {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-left: auto;
+      font-size: 0.875rem;
+      color: var(--text-secondary);
+    }
+
+    .speed-control select {
+      padding: 0.25rem 0.5rem;
+      background: var(--space-light);
+      border: 1px solid var(--border-color);
+      border-radius: 4px;
+      color: var(--text-primary);
+      cursor: pointer;
+    }
+
+    /* Presets */
+    .presets-section {
+      margin-top: 0.75rem;
+    }
+
+    .presets-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .presets-label {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      margin-bottom: 0.25rem;
+    }
+
+    .preset-btn {
+      font-size: 0.75rem;
+      padding: 0.25rem 0.5rem;
+      background: var(--space-light);
+      border: 1px solid var(--border-color);
+      border-radius: 4px;
+      color: var(--text-secondary);
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+
+    .preset-btn:hover {
+      background: var(--space-medium);
+      color: var(--text-primary);
+      border-color: var(--accent-blue);
+    }
+
+    .preset-btn.active {
+      background: var(--accent-blue);
+      color: var(--space-black);
+      border-color: var(--accent-blue);
+    }
+
+    /* Overlays */
+    .overlays-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 0.75rem;
+      padding-top: 0.75rem;
+      border-top: 1px solid var(--border-color);
+    }
+
+    .overlay-toggle {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.75rem;
+      color: var(--text-secondary);
+      cursor: pointer;
+    }
+
+    .overlay-toggle input {
+      accent-color: var(--accent-blue);
+    }
+
+    /* Insight box */
+    .insight-box {
+      background: rgba(18, 18, 31, 0.9);
+      border-left: 3px solid var(--accent-gold);
+      padding: 1rem;
+      border-radius: 0 8px 8px 0;
+      font-size: 0.875rem;
+      line-height: 1.5;
+    }
+
+    .insight-box.kepler-mode .newton-content,
+    .insight-box.newton-mode .kepler-content {
+      display: none;
+    }
+
+    .insight-box h4 {
+      margin: 0 0 0.5rem 0;
+      color: var(--accent-gold);
+      font-size: 0.875rem;
+    }
+
+    .insight-box .formula {
+      font-family: var(--font-mono);
+      color: var(--accent-blue);
+      margin: 0.5rem 0;
+    }
+
+    /* Newton-mode specific */
+    .newton-only {
+      display: none;
+    }
+
+    body.newton-mode .newton-only {
+      display: block;
+    }
+
+    body.newton-mode .kepler-only {
+      opacity: 0.5;
+    }
+
+    /* Responsive */
+    @media (max-width: 700px) {
+      .readout-panel {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .controls-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .demo-content {
+        padding: 1rem;
+      }
+    }
+
+    /* Screen reader only */
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="demo-wrapper">
+    <canvas id="starfield"></canvas>
+
+    <div class="demo-content">
+      <header class="demo-header">
+        <h1 class="demo-title">Kepler's Laws Sandbox</h1>
+        <p class="demo-subtitle">Explore orbital mechanics: empirical patterns and physical laws</p>
+      </header>
+
+      <!-- Mode Toggle -->
+      <div class="mode-toggle">
+        <button class="mode-btn active" id="btn-kepler-mode">KEPLER MODE</button>
+        <button class="mode-btn" id="btn-newton-mode">NEWTON MODE</button>
+      </div>
+
+      <!-- Main Visualization -->
+      <div class="viz-panel">
+        <svg id="orbit-svg" viewBox="0 0 600 400" preserveAspectRatio="xMidYMid meet">
+          <defs>
+            <!-- Star (Sun) gradient -->
+            <radialGradient id="starGradient">
+              <stop offset="0%" stop-color="#fff5cc"/>
+              <stop offset="70%" stop-color="#ffcc00"/>
+              <stop offset="100%" stop-color="#ff8c00"/>
+            </radialGradient>
+
+            <!-- Planet gradient -->
+            <radialGradient id="planetGradient" cx="30%" cy="30%">
+              <stop offset="0%" stop-color="#7ec8e3"/>
+              <stop offset="100%" stop-color="#4a90d9"/>
+            </radialGradient>
+
+            <!-- Glow filter -->
+            <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+              <feGaussianBlur stdDeviation="3" result="blur"/>
+              <feMerge>
+                <feMergeNode in="blur"/>
+                <feMergeNode in="SourceGraphic"/>
+              </feMerge>
+            </filter>
+
+            <!-- Arrow marker for vectors -->
+            <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+              <polygon points="0 0, 10 3.5, 0 7" fill="currentColor"/>
+            </marker>
+          </defs>
+
+          <!-- Orbit ellipse -->
+          <ellipse id="orbit-path" cx="300" cy="200" rx="200" ry="150"
+                   fill="none" stroke="var(--text-muted)" stroke-width="1"
+                   stroke-dasharray="4 4" opacity="0.5"/>
+
+          <!-- Equal areas wedge (toggleable) -->
+          <g id="equal-areas-group" style="display: none;">
+            <path id="equal-areas-wedge" fill="rgba(93, 173, 226, 0.2)"
+                  stroke="var(--accent-blue)" stroke-width="1"/>
+          </g>
+
+          <!-- Foci markers -->
+          <g id="foci-group">
+            <circle id="focus-1" cx="300" cy="200" r="4" fill="var(--accent-gold)"/>
+            <circle id="focus-2" cx="300" cy="200" r="3" fill="var(--text-muted)" opacity="0.5"/>
+            <text id="focus-1-label" x="300" y="215" text-anchor="middle"
+                  fill="var(--text-muted)" font-size="10">Focus (Star)</text>
+          </g>
+
+          <!-- Apsides markers -->
+          <g id="apsides-group">
+            <circle id="perihelion-marker" cx="100" cy="200" r="4" fill="var(--accent-gold)"/>
+            <text id="perihelion-label" x="100" y="220" text-anchor="middle"
+                  fill="var(--accent-gold)" font-size="9">Perihelion</text>
+            <circle id="aphelion-marker" cx="500" cy="200" r="4" fill="var(--accent-blue)"/>
+            <text id="aphelion-label" x="500" y="220" text-anchor="middle"
+                  fill="var(--accent-blue)" font-size="9">Aphelion</text>
+          </g>
+
+          <!-- Star at focus -->
+          <circle id="star" cx="300" cy="200" r="20" fill="url(#starGradient)" filter="url(#glow)"/>
+
+          <!-- Distance line (r) -->
+          <line id="distance-line" x1="300" y1="200" x2="400" y2="200"
+                stroke="var(--text-muted)" stroke-width="1" stroke-dasharray="3 3"/>
+
+          <!-- Velocity vector (Newton mode) -->
+          <g id="velocity-vector" class="newton-only" style="display: none;">
+            <line id="velocity-line" x1="400" y1="200" x2="400" y2="150"
+                  stroke="#2ecc71" stroke-width="2" marker-end="url(#arrowhead)"/>
+            <text id="velocity-label" x="410" y="145" fill="#2ecc71" font-size="10">v</text>
+          </g>
+
+          <!-- Force vector (Newton mode) -->
+          <g id="force-vector" class="newton-only" style="display: none;">
+            <line id="force-line" x1="400" y1="200" x2="350" y2="200"
+                  stroke="#e74c3c" stroke-width="2" marker-end="url(#arrowhead)"/>
+            <text id="force-label" x="360" y="190" fill="#e74c3c" font-size="10">F</text>
+          </g>
+
+          <!-- Planet (draggable) -->
+          <g id="planet-group" class="planet-draggable"
+             role="slider" aria-label="Planet position on orbit"
+             aria-valuemin="0" aria-valuemax="360" aria-valuenow="0"
+             tabindex="0">
+            <circle id="planet" cx="400" cy="200" r="12" fill="url(#planetGradient)"/>
+          </g>
+
+          <!-- Distance label -->
+          <text id="distance-text" x="350" y="195" text-anchor="middle"
+                fill="var(--text-muted)" font-size="10">r = 1.00 AU</text>
+        </svg>
+      </div>
+
+      <!-- Unit toggle -->
+      <div class="unit-toggle">
+        <button class="unit-btn active" id="btn-unit-101">101</button>
+        <button class="unit-btn" id="btn-unit-201">201</button>
+      </div>
+
+      <!-- Readout Panel -->
+      <div class="readout-panel">
+        <div class="readout-item">
+          <div class="readout-label">Distance (r)</div>
+          <div class="readout-value" id="distance-value">1.00</div>
+          <div class="readout-unit">AU</div>
+        </div>
+        <div class="readout-item">
+          <div class="readout-label">Velocity (v)</div>
+          <div class="readout-value" id="velocity-value">29.8</div>
+          <div class="readout-unit" id="velocity-unit">km/s</div>
+        </div>
+        <div class="readout-item">
+          <div class="readout-label">Acceleration</div>
+          <div class="readout-value" id="accel-value">5.93</div>
+          <div class="readout-unit" id="accel-unit">mm/s²</div>
+        </div>
+        <div class="readout-item">
+          <div class="readout-label">Period (P)</div>
+          <div class="readout-value" id="period-value">1.00</div>
+          <div class="readout-unit">years</div>
+        </div>
+      </div>
+
+      <!-- Timeline -->
+      <div class="timeline-panel">
+        <div class="timeline-header">
+          <span>Orbital Phase</span>
+          <span id="phase-display">0.00 / 1.00 yr</span>
+        </div>
+        <div class="timeline-track" id="timeline-track">
+          <div class="timeline-progress" id="timeline-progress" style="width: 0%"></div>
+          <div class="timeline-handle" id="timeline-handle" style="left: 0%"></div>
+        </div>
+        <div class="timeline-markers">
+          <span>Perihelion</span>
+          <span>Aphelion</span>
+          <span>Perihelion</span>
+        </div>
+      </div>
+
+      <!-- Animation Controls -->
+      <div class="animation-controls">
+        <button class="anim-btn primary" id="btn-play">▶ Play</button>
+        <button class="anim-btn" id="btn-pause" disabled>⏸ Pause</button>
+        <button class="anim-btn" id="btn-reset">⟲ Reset</button>
+        <div class="speed-control">
+          <label>Speed:</label>
+          <select id="speed-select">
+            <option value="0.1">0.1×</option>
+            <option value="0.5">0.5×</option>
+            <option value="1" selected>1×</option>
+            <option value="2">2×</option>
+            <option value="5">5×</option>
+            <option value="10">10×</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Controls -->
+      <div class="controls-grid">
+        <div class="control-card">
+          <div class="control-title">
+            Semi-major Axis (a)
+            <span class="control-value" id="a-display">1.00 AU</span>
+          </div>
+          <input type="range" id="a-slider" class="astro-slider" min="0" max="1000" value="250">
+          <div class="slider-labels">
+            <span>0.3 AU</span>
+            <span>40 AU</span>
+          </div>
+        </div>
+
+        <div class="control-card">
+          <div class="control-title">
+            Eccentricity (e)
+            <span class="control-value" id="e-display">0.017</span>
+          </div>
+          <input type="range" id="e-slider" class="astro-slider" min="0" max="990" value="17">
+          <div class="slider-labels">
+            <span>0 (circle)</span>
+            <span>0.99</span>
+          </div>
+        </div>
+
+        <div class="control-card newton-only" id="mass-control" style="display: none;">
+          <div class="control-title">
+            Star Mass (M★)
+            <span class="control-value" id="mass-display">1.0 M☉</span>
+          </div>
+          <input type="range" id="mass-slider" class="astro-slider" min="10" max="1000" value="100">
+          <div class="slider-labels">
+            <span>0.1 M☉</span>
+            <span>10 M☉</span>
+          </div>
+        </div>
+
+        <div class="control-card full-width">
+          <div class="control-title">Presets</div>
+
+          <div class="presets-section">
+            <div class="presets-label">Solar System</div>
+            <div class="presets-row">
+              <button class="preset-btn" data-a="0.387" data-e="0.206">Mercury</button>
+              <button class="preset-btn" data-a="0.723" data-e="0.007">Venus</button>
+              <button class="preset-btn active" data-a="1.000" data-e="0.017">Earth</button>
+              <button class="preset-btn" data-a="1.524" data-e="0.093">Mars</button>
+              <button class="preset-btn" data-a="5.203" data-e="0.049">Jupiter</button>
+              <button class="preset-btn" data-a="39.48" data-e="0.249">Pluto</button>
+            </div>
+          </div>
+
+          <div class="presets-section">
+            <div class="presets-label">Extreme Orbits</div>
+            <div class="presets-row">
+              <button class="preset-btn" data-a="17.8" data-e="0.967">Halley's Comet</button>
+              <button class="preset-btn" data-a="1.0" data-e="0.0">Circular</button>
+              <button class="preset-btn" data-a="5.0" data-e="0.9">High Eccentricity</button>
+            </div>
+          </div>
+
+          <div class="overlays-row">
+            <label class="overlay-toggle">
+              <input type="checkbox" id="toggle-foci" checked> Foci
+            </label>
+            <label class="overlay-toggle">
+              <input type="checkbox" id="toggle-apsides" checked> Apsides
+            </label>
+            <label class="overlay-toggle">
+              <input type="checkbox" id="toggle-equal-areas"> Equal Areas
+            </label>
+            <label class="overlay-toggle newton-only" style="display: none;">
+              <input type="checkbox" id="toggle-vectors"> Vectors
+            </label>
+          </div>
+        </div>
+      </div>
+
+      <!-- Insight Box -->
+      <div class="insight-box kepler-mode" id="insight-box">
+        <div class="kepler-content">
+          <h4>Kepler's Laws (1609–1619)</h4>
+          <p>Empirical patterns discovered from Tycho Brahe's observations:</p>
+          <p><strong>Law 1:</strong> Planets orbit in <em>ellipses</em> with the Sun at one focus.</p>
+          <p><strong>Law 2:</strong> A line from Sun to planet sweeps <em>equal areas in equal times</em>.</p>
+          <p class="formula">Law 3: P² = a³ (years, AU)</p>
+          <p style="color: var(--text-muted); margin-top: 0.75rem;">
+            These are <em>descriptions</em> of what we observe. But <em>why</em>?
+            Toggle to Newton Mode to find out →
+          </p>
+        </div>
+        <div class="newton-content" style="display: none;">
+          <h4>Newton's Insight (1687)</h4>
+          <p>One law explains all three of Kepler's patterns:</p>
+          <p class="formula">F = GMm/r²</p>
+          <p>Gravity weakens with distance squared. This single force law <em>mathematically implies</em> all of Kepler's empirical laws!</p>
+          <p style="margin-top: 0.75rem;"><strong>Current values:</strong></p>
+          <p class="formula" id="newton-values">
+            v = √(GM(2/r - 1/a)) = 29.8 km/s<br>
+            a = GM/r² = 5.93 mm/s²
+          </p>
+        </div>
+      </div>
+
+      <!-- Screen reader announcements -->
+      <div id="status-announce" aria-live="polite" aria-atomic="true" class="sr-only"></div>
+    </div>
+  </div>
+
+  <script src="../_assets/astro-utils.js"></script>
+  <script src="../_assets/starfield.js"></script>
+  <script src="keplers-laws.js"></script>
+</body>
+</html>
