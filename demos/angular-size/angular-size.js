@@ -525,6 +525,77 @@
   }
 
   // ============================================
+  // Keyboard Navigation
+  // ============================================
+
+  function setupKeyboard() {
+    document.addEventListener('keydown', (event) => {
+      // Only handle if not focused on a slider
+      if (event.target.tagName === 'INPUT') return;
+
+      const logStep = event.shiftKey ? 0.02 : 0.1;  // Finer control with Shift
+      let distanceMultiplier = 1;
+      let sizeMultiplier = 1;
+      let presetKey = null;
+
+      switch (event.key) {
+        case 'ArrowLeft':
+          distanceMultiplier = Math.pow(10, -logStep);
+          break;
+        case 'ArrowRight':
+          distanceMultiplier = Math.pow(10, logStep);
+          break;
+        case 'ArrowUp':
+          sizeMultiplier = Math.pow(10, logStep);
+          break;
+        case 'ArrowDown':
+          sizeMultiplier = Math.pow(10, -logStep);
+          break;
+        case '1':
+          presetKey = 'sun';
+          break;
+        case '2':
+          presetKey = 'moon';
+          break;
+        case '3':
+          presetKey = 'jupiter';
+          break;
+        case '4':
+          presetKey = 'venus';
+          break;
+        case '5':
+          presetKey = 'mars';
+          break;
+        case '6':
+          presetKey = 'andromeda';
+          break;
+        default:
+          return;
+      }
+
+      event.preventDefault();
+
+      if (presetKey) {
+        selectPreset(presetKey);
+      } else {
+        if (distanceMultiplier !== 1) {
+          state.distance = Math.max(DISTANCE_MIN, Math.min(DISTANCE_MAX,
+            state.distance * distanceMultiplier));
+          elements.distanceSlider.value = valueToLogSlider(state.distance, DISTANCE_MIN, DISTANCE_MAX);
+          clearPresetSelection();
+        }
+        if (sizeMultiplier !== 1) {
+          state.diameter = Math.max(SIZE_MIN, Math.min(SIZE_MAX,
+            state.diameter * sizeMultiplier));
+          elements.sizeSlider.value = valueToLogSlider(state.diameter, SIZE_MIN, SIZE_MAX);
+          clearPresetSelection();
+        }
+        update();
+      }
+    });
+  }
+
+  // ============================================
   // Main Update
   // ============================================
 
@@ -541,6 +612,7 @@
     initElements();
     setupSliders();
     setupPresets();
+    setupKeyboard();
 
     // Initialize starfield
     const starfieldCanvas = document.getElementById('starfield');
