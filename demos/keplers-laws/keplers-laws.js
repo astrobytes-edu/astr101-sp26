@@ -458,6 +458,43 @@
   }
 
   /**
+   * Update equal areas wedge visualization (Kepler's 2nd Law)
+   * Shows that equal areas are swept in equal times
+   */
+  function updateEqualAreas() {
+    if (!state.overlays.equalAreas) {
+      elements.equalAreasGroup.style.display = 'none';
+      return;
+    }
+
+    elements.equalAreasGroup.style.display = 'block';
+
+    // Draw a wedge from a fixed time ago to current position
+    const P = orbitalPeriod(state.a, state.M);
+    const sweepTime = P * 0.1;  // 10% of orbit
+
+    const currentM = trueToMeanAnomaly(state.theta, state.e);
+    const startM = currentM - (sweepTime / P) * 2 * Math.PI;
+    const startTheta = meanToTrueAnomaly(startM, state.e);
+
+    // Build SVG path for wedge
+    const scale = SVG_SCALE / Math.max(state.a, 1);
+    const numPoints = 30;
+    let pathD = `M ${SVG_CENTER.x} ${SVG_CENTER.y}`;
+
+    for (let i = 0; i <= numPoints; i++) {
+      const t = i / numPoints;
+      const theta = startTheta + t * (state.theta - startTheta);
+      const r = orbitalRadius(state.a, state.e, theta);
+      const pos = orbitalToSvg(r, theta);
+      pathD += ` L ${pos.x} ${pos.y}`;
+    }
+
+    pathD += ' Z';
+    elements.equalAreasWedge.setAttribute('d', pathD);
+  }
+
+  /**
    * Update readout displays
    */
   function updateReadouts() {
@@ -525,6 +562,7 @@
     updateApsidesMarkers();
     updateDistanceLine();
     updateVectors();
+    updateEqualAreas();
     updateReadouts();
     updateTimeline();
     updateSliderDisplays();
