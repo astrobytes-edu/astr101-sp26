@@ -39,6 +39,11 @@
   // 90 = Third Quarter, 180 = New Moon, 270 = First Quarter
   let moonAngle = 0;
 
+  // Animation state
+  let isAnimating = false;
+  let animationId = null;
+  let animationSpeed = 5;  // Default to 5x speed
+
   // ============================================
   // DOM Elements
   // ============================================
@@ -519,6 +524,87 @@
   }
 
   // ============================================
+  // Animation
+  // ============================================
+
+  function startAnimation() {
+    if (isAnimating) return;
+
+    isAnimating = true;
+    document.getElementById('btn-play').disabled = true;
+    document.getElementById('btn-pause').disabled = false;
+
+    let lastTime = performance.now();
+
+    function animate(currentTime) {
+      if (!isAnimating) return;
+
+      const delta = (currentTime - lastTime) / 1000;  // seconds
+      lastTime = currentTime;
+
+      // Move Moon based on speed setting
+      // 360 degrees / 29.53 days = 12.19 degrees per day
+      // At 1x speed, 1 second = 1 day
+      const degreesPerSecond = 12.19 * animationSpeed;
+      moonAngle = (moonAngle + degreesPerSecond * delta) % 360;
+
+      update();
+
+      animationId = requestAnimationFrame(animate);
+    }
+
+    animationId = requestAnimationFrame(animate);
+  }
+
+  function stopAnimation() {
+    isAnimating = false;
+    if (animationId) {
+      cancelAnimationFrame(animationId);
+      animationId = null;
+    }
+    document.getElementById('btn-play').disabled = false;
+    document.getElementById('btn-pause').disabled = true;
+  }
+
+  function stepForward() {
+    stopAnimation();
+    // Jump to next named phase (45° increments)
+    const currentPhaseIndex = Math.round(moonAngle / 45) % 8;
+    const nextAngle = ((currentPhaseIndex + 1) % 8) * 45;
+
+    AstroUtils.animateValue(moonAngle, moonAngle + ((nextAngle - moonAngle + 360) % 360), 300, (val) => {
+      moonAngle = val % 360;
+      update();
+    });
+  }
+
+  function stepBackward() {
+    stopAnimation();
+    const currentPhaseIndex = Math.round(moonAngle / 45) % 8;
+    const prevAngle = ((currentPhaseIndex - 1 + 8) % 8) * 45;
+
+    let diff = prevAngle - moonAngle;
+    if (diff > 180) diff -= 360;
+    if (diff < -180) diff += 360;
+
+    AstroUtils.animateValue(moonAngle, moonAngle + diff, 300, (val) => {
+      moonAngle = ((val % 360) + 360) % 360;
+      update();
+    });
+  }
+
+  function setupAnimationControls() {
+    document.getElementById('btn-play').addEventListener('click', startAnimation);
+    document.getElementById('btn-pause').addEventListener('click', stopAnimation);
+    document.getElementById('btn-step-forward').addEventListener('click', stepForward);
+    document.getElementById('btn-step-back').addEventListener('click', stepBackward);
+
+    document.getElementById('speed-select').addEventListener('change', (e) => {
+      animationSpeed = parseFloat(e.target.value);
+    });
+  }
+
+  // ============================================
   // Initialization
   // ============================================
 
@@ -528,6 +614,7 @@
     setupPresets();
     setupTimeline();
     setupKeyboard();
+    setupAnimationControls();
 
     // Initialize starfield
     const starfieldCanvas = document.getElementById('starfield');

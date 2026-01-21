@@ -306,6 +306,76 @@
       .timeline-phase span { display: none; }
       .phase-icon { width: 24px; height: 24px; }
     }
+
+    /* Animation Controls */
+    .animation-controls {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 1rem;
+      background: rgba(18, 18, 31, 0.9);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      margin-bottom: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .anim-btn {
+      display: flex;
+      align-items: center;
+      gap: 0.25rem;
+      padding: 0.5rem 0.75rem;
+      background: var(--space-light);
+      border: 1px solid var(--border-color);
+      border-radius: 6px;
+      color: var(--text-secondary);
+      cursor: pointer;
+      font-size: 0.875rem;
+      transition: all 0.15s ease;
+    }
+
+    .anim-btn:hover:not(:disabled) {
+      background: var(--space-medium);
+      color: var(--text-primary);
+      border-color: var(--accent-blue);
+    }
+
+    .anim-btn:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+
+    .anim-btn.primary {
+      background: var(--accent-blue);
+      color: var(--space-black);
+      border-color: var(--accent-blue);
+    }
+
+    .anim-btn.primary:hover:not(:disabled) {
+      background: #7bc0eb;
+    }
+
+    .btn-icon {
+      font-size: 0.75rem;
+    }
+
+    .speed-control {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-left: auto;
+      font-size: 0.875rem;
+      color: var(--text-secondary);
+    }
+
+    .speed-control select {
+      padding: 0.25rem 0.5rem;
+      background: var(--space-light);
+      border: 1px solid var(--border-color);
+      border-radius: 4px;
+      color: var(--text-primary);
+      cursor: pointer;
+    }
   </style>
 </head>
 <body>
@@ -480,6 +550,30 @@
             <div class="phase-icon waning-crescent"></div>
             <span>Crescent</span>
           </button>
+        </div>
+      </div>
+
+      <!-- Animation Controls -->
+      <div class="animation-controls">
+        <button class="anim-btn primary" id="btn-play">
+          <span class="btn-icon">▶</span> Play
+        </button>
+        <button class="anim-btn" id="btn-pause" disabled>
+          <span class="btn-icon">⏸</span> Pause
+        </button>
+        <button class="anim-btn" id="btn-step-back">
+          <span class="btn-icon">⏮</span>
+        </button>
+        <button class="anim-btn" id="btn-step-forward">
+          <span class="btn-icon">⏭</span>
+        </button>
+        <div class="speed-control">
+          <label>Speed:</label>
+          <select id="speed-select">
+            <option value="1">1x</option>
+            <option value="5" selected>5x</option>
+            <option value="10">10x</option>
+          </select>
         </div>
       </div>
 
