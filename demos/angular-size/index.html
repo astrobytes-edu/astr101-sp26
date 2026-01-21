@@ -292,7 +292,8 @@
 
           <!-- Celestial object -->
           <g id="celestial-object">
-            <circle id="object-circle" cx="600" cy="150" r="40" fill="url(#sunGradient)" filter="url(#glow)"/>
+            <circle id="object-circle" cx="600" cy="150" r="40" fill="url(#sunGradient)" filter="url(#glow)"
+                    role="img" aria-label="Sun at 1 AU, angular size 0.53 degrees"/>
           </g>
 
           <!-- Distance indicator -->
@@ -381,6 +382,23 @@
         <strong>Thumb rule:</strong> Your thumb at arm's length covers about <strong>2°</strong> of sky.
         The Sun and Moon each cover about <strong>0.5°</strong> — a quarter of your thumb width!
       </div>
+
+      <!-- Screen reader announcements -->
+      <div id="status-announce" aria-live="polite" aria-atomic="true" class="sr-only"></div>
+
+      <style>
+        .sr-only {
+          position: absolute;
+          width: 1px;
+          height: 1px;
+          padding: 0;
+          margin: -1px;
+          overflow: hidden;
+          clip: rect(0, 0, 0, 0);
+          white-space: nowrap;
+          border: 0;
+        }
+      </style>
     </div>
   </div>
 

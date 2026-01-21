@@ -354,6 +354,17 @@
     // Slider displays
     elements.distanceDisplay.textContent = formatShort(state.distance);
     elements.sizeDisplay.textContent = formatShort(state.diameter);
+
+    // Update ARIA for celestial object
+    const objectCircle = document.getElementById('object-circle');
+    if (objectCircle) {
+      const preset = PRESETS[state.activePreset];
+      const name = preset ? preset.name : 'Object';
+      const angleF = formatAngle(calculateAngularSize(state.diameter, state.distance));
+      const distF = formatDistance(state.distance);
+      objectCircle.setAttribute('aria-label',
+        `${name} at ${distF.value} ${distF.unit}, angular size ${angleF.value} ${angleF.unit}`);
+    }
   }
 
   function updateObjectAppearance() {
