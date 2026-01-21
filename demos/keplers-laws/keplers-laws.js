@@ -418,7 +418,7 @@
     const midY = (SVG_CENTER.y + pos.y) / 2 - 10;
     elements.distanceText.setAttribute('x', midX);
     elements.distanceText.setAttribute('y', midY);
-    elements.distanceText.textContent = `r = ${r.toFixed(2)} AU`;
+    elements.distanceText.textContent = `r = ${r.toFixed(3)} AU`;
   }
 
   /**
@@ -503,16 +503,16 @@
     const acc = gravitationalAccel(r, state.M);
     const P = orbitalPeriod(state.a, state.M);
 
-    elements.distanceValue.textContent = r.toFixed(2);
+    elements.distanceValue.textContent = r.toFixed(4);
     elements.periodValue.textContent = P.toFixed(2);
 
     // Velocity and acceleration depend on unit mode
     if (state.units === '101') {
-      elements.velocityValue.textContent = v.toFixed(1);
+      elements.velocityValue.textContent = v.toFixed(2);
       elements.velocityUnit.textContent = 'km/s';
 
       // Convert m/s² to mm/s² for readability
-      elements.accelValue.textContent = (acc * 1000).toFixed(2);
+      elements.accelValue.textContent = (acc * 1000).toFixed(3);
       elements.accelUnit.textContent = 'mm/s²';
     } else {
       // 201 mode: CGS
@@ -526,8 +526,8 @@
     // Update Newton mode values in insight box
     if (state.mode === 'newton') {
       elements.newtonValues.innerHTML =
-        `v = √(GM(2/r - 1/a)) = ${v.toFixed(1)} km/s<br>` +
-        `a = GM/r² = ${(acc * 1000).toFixed(2)} mm/s²`;
+        `v = √(GM(2/r - 1/a)) = ${v.toFixed(2)} km/s<br>` +
+        `a = GM/r² = ${(acc * 1000).toFixed(3)} mm/s²`;
     }
   }
 
