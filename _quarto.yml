@@ -65,6 +65,7 @@ project:
     - "demos/**/*.js"
     - "demos/**/*.css"
     - "demos/**/*.json"
+    - "assets/iClicker_Course_QRCode-ASTR101.png"
   brand: _brand.yml
 
 website:
