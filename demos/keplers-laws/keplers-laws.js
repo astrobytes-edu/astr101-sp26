@@ -534,7 +534,329 @@
   // Controls
   // ============================================
 
-  // TODO: implement in Task 4
+  /**
+   * Convert slider value (0-1000) to logarithmic actual value
+   */
+  function logSliderToValue(sliderVal, min, max) {
+    const minLog = Math.log10(min);
+    const maxLog = Math.log10(max);
+    const fraction = sliderVal / 1000;
+    return Math.pow(10, minLog + fraction * (maxLog - minLog));
+  }
+
+  /**
+   * Convert actual value to slider position (0-1000)
+   */
+  function valueToLogSlider(value, min, max) {
+    const minLog = Math.log10(min);
+    const maxLog = Math.log10(max);
+    const logVal = Math.log10(value);
+    return Math.round(((logVal - minLog) / (maxLog - minLog)) * 1000);
+  }
+
+  /**
+   * Setup orbital parameter sliders
+   */
+  function setupSliders() {
+    // Semi-major axis (logarithmic)
+    elements.aSlider.addEventListener('input', () => {
+      state.a = logSliderToValue(parseFloat(elements.aSlider.value), A_MIN, A_MAX);
+      clearPresetHighlight();
+      update();
+    });
+
+    // Eccentricity (linear, 0-990 maps to 0-0.99)
+    elements.eSlider.addEventListener('input', () => {
+      state.e = parseFloat(elements.eSlider.value) / 1000;
+      clearPresetHighlight();
+      update();
+    });
+
+    // Star mass (linear in Newton mode)
+    elements.massSlider.addEventListener('input', () => {
+      state.M = parseFloat(elements.massSlider.value) / 100;
+      update();
+    });
+  }
+
+  /**
+   * Clear preset button highlighting
+   */
+  function clearPresetHighlight() {
+    elements.presetButtons.forEach(btn => btn.classList.remove('active'));
+  }
+
+  /**
+   * Setup preset buttons
+   */
+  function setupPresets() {
+    elements.presetButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const a = parseFloat(btn.dataset.a);
+        const e = parseFloat(btn.dataset.e);
+
+        state.a = a;
+        state.e = e;
+        state.theta = 0;  // Reset to perihelion
+        state.t = 0;
+
+        // Update sliders to match
+        elements.aSlider.value = valueToLogSlider(a, A_MIN, A_MAX);
+        elements.eSlider.value = Math.round(e * 1000);
+
+        // Highlight active preset
+        clearPresetHighlight();
+        btn.classList.add('active');
+
+        update();
+      });
+    });
+  }
+
+  /**
+   * Setup overlay toggles
+   */
+  function setupOverlays() {
+    elements.toggleFoci.addEventListener('change', () => {
+      state.overlays.foci = elements.toggleFoci.checked;
+      update();
+    });
+
+    elements.toggleApsides.addEventListener('change', () => {
+      state.overlays.apsides = elements.toggleApsides.checked;
+      update();
+    });
+
+    elements.toggleEqualAreas.addEventListener('change', () => {
+      state.overlays.equalAreas = elements.toggleEqualAreas.checked;
+      elements.equalAreasGroup.style.display = state.overlays.equalAreas ? 'block' : 'none';
+      update();
+    });
+
+    elements.toggleVectors.addEventListener('change', () => {
+      state.overlays.vectors = elements.toggleVectors.checked;
+      update();
+    });
+  }
+
+  /**
+   * Setup mode toggle (Kepler/Newton)
+   */
+  function setupModeToggle() {
+    elements.btnKeplerMode.addEventListener('click', () => {
+      state.mode = 'kepler';
+      elements.btnKeplerMode.classList.add('active');
+      elements.btnNewtonMode.classList.remove('active');
+
+      // Hide Newton-only elements
+      elements.massControl.style.display = 'none';
+      elements.toggleVectors.parentElement.style.display = 'none';
+      document.body.classList.remove('newton-mode');
+
+      // Update insight box
+      elements.insightBox.classList.add('kepler-mode');
+      elements.insightBox.classList.remove('newton-mode');
+      elements.insightBox.querySelector('.kepler-content').style.display = 'block';
+      elements.insightBox.querySelector('.newton-content').style.display = 'none';
+
+      update();
+    });
+
+    elements.btnNewtonMode.addEventListener('click', () => {
+      state.mode = 'newton';
+      elements.btnNewtonMode.classList.add('active');
+      elements.btnKeplerMode.classList.remove('active');
+
+      // Show Newton-only elements
+      elements.massControl.style.display = 'block';
+      elements.toggleVectors.parentElement.style.display = 'flex';
+      document.body.classList.add('newton-mode');
+
+      // Update insight box
+      elements.insightBox.classList.remove('kepler-mode');
+      elements.insightBox.classList.add('newton-mode');
+      elements.insightBox.querySelector('.kepler-content').style.display = 'none';
+      elements.insightBox.querySelector('.newton-content').style.display = 'block';
+
+      update();
+    });
+  }
+
+  /**
+   * Setup unit toggle (101/201)
+   */
+  function setupUnitToggle() {
+    elements.btnUnit101.addEventListener('click', () => {
+      state.units = '101';
+      elements.btnUnit101.classList.add('active');
+      elements.btnUnit201.classList.remove('active');
+      update();
+    });
+
+    elements.btnUnit201.addEventListener('click', () => {
+      state.units = '201';
+      elements.btnUnit201.classList.add('active');
+      elements.btnUnit101.classList.remove('active');
+      update();
+    });
+  }
+
+  /**
+   * Setup animation controls
+   */
+  function setupAnimation() {
+    elements.btnPlay.addEventListener('click', startAnimation);
+    elements.btnPause.addEventListener('click', stopAnimation);
+    elements.btnReset.addEventListener('click', resetAnimation);
+
+    elements.speedSelect.addEventListener('change', () => {
+      state.speed = parseFloat(elements.speedSelect.value);
+    });
+  }
+
+  /**
+   * Start orbital animation
+   */
+  function startAnimation() {
+    if (state.playing) return;
+
+    state.playing = true;
+    elements.btnPlay.disabled = true;
+    elements.btnPause.disabled = false;
+
+    let lastTime = performance.now();
+
+    function animate(currentTime) {
+      if (!state.playing) return;
+
+      const dt = (currentTime - lastTime) / 1000;  // seconds
+      lastTime = currentTime;
+
+      // Advance time
+      const P = orbitalPeriod(state.a, state.M);
+      state.t += dt * state.speed;
+
+      // Convert time to mean anomaly, then to true anomaly
+      const meanAnomaly = (2 * Math.PI * state.t / P) % (2 * Math.PI);
+      state.theta = meanToTrueAnomaly(meanAnomaly, state.e);
+
+      update();
+
+      state.animationId = requestAnimationFrame(animate);
+    }
+
+    state.animationId = requestAnimationFrame(animate);
+  }
+
+  /**
+   * Stop animation
+   */
+  function stopAnimation() {
+    state.playing = false;
+    if (state.animationId) {
+      cancelAnimationFrame(state.animationId);
+      state.animationId = null;
+    }
+    elements.btnPlay.disabled = false;
+    elements.btnPause.disabled = true;
+  }
+
+  /**
+   * Reset to perihelion
+   */
+  function resetAnimation() {
+    stopAnimation();
+    state.theta = 0;
+    state.t = 0;
+    update();
+  }
+
+  /**
+   * Setup planet drag interaction
+   */
+  function setupPlanetDrag() {
+    let isDragging = false;
+
+    function getAngleFromEvent(event) {
+      const svg = elements.orbitSvg;
+      const pt = svg.createSVGPoint();
+      const clientX = event.touches ? event.touches[0].clientX : event.clientX;
+      const clientY = event.touches ? event.touches[0].clientY : event.clientY;
+      pt.x = clientX;
+      pt.y = clientY;
+      const svgP = pt.matrixTransform(svg.getScreenCTM().inverse());
+
+      // Angle from star to cursor
+      return Math.atan2(SVG_CENTER.y - svgP.y, svgP.x - SVG_CENTER.x);
+    }
+
+    elements.planetGroup.addEventListener('mousedown', (e) => {
+      isDragging = true;
+      stopAnimation();
+      e.preventDefault();
+    });
+
+    elements.planetGroup.addEventListener('touchstart', (e) => {
+      isDragging = true;
+      stopAnimation();
+      e.preventDefault();
+    });
+
+    document.addEventListener('mousemove', (e) => {
+      if (!isDragging) return;
+      state.theta = getAngleFromEvent(e);
+      // Update time to match position
+      const P = orbitalPeriod(state.a, state.M);
+      const M = trueToMeanAnomaly(state.theta, state.e);
+      state.t = (M / (2 * Math.PI)) * P;
+      if (state.t < 0) state.t += P;
+      update();
+    });
+
+    document.addEventListener('touchmove', (e) => {
+      if (!isDragging) return;
+      state.theta = getAngleFromEvent(e);
+      const P = orbitalPeriod(state.a, state.M);
+      const M = trueToMeanAnomaly(state.theta, state.e);
+      state.t = (M / (2 * Math.PI)) * P;
+      if (state.t < 0) state.t += P;
+      update();
+    });
+
+    document.addEventListener('mouseup', () => { isDragging = false; });
+    document.addEventListener('touchend', () => { isDragging = false; });
+  }
+
+  /**
+   * Setup timeline scrubbing
+   */
+  function setupTimeline() {
+    let isDragging = false;
+
+    function updateFromPosition(clientX) {
+      const rect = elements.timelineTrack.getBoundingClientRect();
+      let fraction = (clientX - rect.left) / rect.width;
+      fraction = Math.max(0, Math.min(1, fraction));
+
+      const P = orbitalPeriod(state.a, state.M);
+      state.t = fraction * P;
+      const meanAnomaly = 2 * Math.PI * fraction;
+      state.theta = meanToTrueAnomaly(meanAnomaly, state.e);
+      update();
+    }
+
+    elements.timelineTrack.addEventListener('mousedown', (e) => {
+      isDragging = true;
+      stopAnimation();
+      updateFromPosition(e.clientX);
+    });
+
+    document.addEventListener('mousemove', (e) => {
+      if (isDragging) updateFromPosition(e.clientX);
+    });
+
+    document.addEventListener('mouseup', () => { isDragging = false; });
+  }
 
   // ============================================
   // Initialization
@@ -542,6 +864,24 @@
 
   function init() {
     initElements();
+    setupSliders();
+    setupPresets();
+    setupOverlays();
+    setupModeToggle();
+    setupUnitToggle();
+    setupAnimation();
+    setupPlanetDrag();
+    setupTimeline();
+
+    // Initialize starfield
+    const starfieldCanvas = document.getElementById('starfield');
+    if (starfieldCanvas && window.Starfield) {
+      Starfield.create(starfieldCanvas, {
+        starCount: 150,
+        twinkleSpeed: 0.01
+      });
+    }
+
     update();
     console.log('Kepler\'s Laws Sandbox initialized');
   }
