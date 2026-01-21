@@ -62,7 +62,88 @@
 
   function initElements() {
     elements = {
-      // TODO: populate in Task 2
+      // SVG elements
+      orbitSvg: document.getElementById('orbit-svg'),
+      orbitPath: document.getElementById('orbit-path'),
+      planetGroup: document.getElementById('planet-group'),
+      planet: document.getElementById('planet'),
+      star: document.getElementById('star'),
+
+      // Foci and apsides
+      fociGroup: document.getElementById('foci-group'),
+      focus1: document.getElementById('focus-1'),
+      focus2: document.getElementById('focus-2'),
+      focus1Label: document.getElementById('focus-1-label'),
+      apsidesGroup: document.getElementById('apsides-group'),
+      perihelionMarker: document.getElementById('perihelion-marker'),
+      perihelionLabel: document.getElementById('perihelion-label'),
+      aphelionMarker: document.getElementById('aphelion-marker'),
+      aphelionLabel: document.getElementById('aphelion-label'),
+
+      // Overlays
+      equalAreasGroup: document.getElementById('equal-areas-group'),
+      equalAreasWedge: document.getElementById('equal-areas-wedge'),
+      velocityVector: document.getElementById('velocity-vector'),
+      velocityLine: document.getElementById('velocity-line'),
+      forceVector: document.getElementById('force-vector'),
+      forceLine: document.getElementById('force-line'),
+
+      // Distance line
+      distanceLine: document.getElementById('distance-line'),
+      distanceText: document.getElementById('distance-text'),
+
+      // Mode buttons
+      btnKeplerMode: document.getElementById('btn-kepler-mode'),
+      btnNewtonMode: document.getElementById('btn-newton-mode'),
+
+      // Unit buttons
+      btnUnit101: document.getElementById('btn-unit-101'),
+      btnUnit201: document.getElementById('btn-unit-201'),
+
+      // Readouts
+      distanceValue: document.getElementById('distance-value'),
+      velocityValue: document.getElementById('velocity-value'),
+      velocityUnit: document.getElementById('velocity-unit'),
+      accelValue: document.getElementById('accel-value'),
+      accelUnit: document.getElementById('accel-unit'),
+      periodValue: document.getElementById('period-value'),
+
+      // Timeline
+      timelineTrack: document.getElementById('timeline-track'),
+      timelineProgress: document.getElementById('timeline-progress'),
+      timelineHandle: document.getElementById('timeline-handle'),
+      phaseDisplay: document.getElementById('phase-display'),
+
+      // Animation controls
+      btnPlay: document.getElementById('btn-play'),
+      btnPause: document.getElementById('btn-pause'),
+      btnReset: document.getElementById('btn-reset'),
+      speedSelect: document.getElementById('speed-select'),
+
+      // Sliders
+      aSlider: document.getElementById('a-slider'),
+      aDisplay: document.getElementById('a-display'),
+      eSlider: document.getElementById('e-slider'),
+      eDisplay: document.getElementById('e-display'),
+      massSlider: document.getElementById('mass-slider'),
+      massDisplay: document.getElementById('mass-display'),
+      massControl: document.getElementById('mass-control'),
+
+      // Presets
+      presetButtons: document.querySelectorAll('.preset-btn'),
+
+      // Overlay toggles
+      toggleFoci: document.getElementById('toggle-foci'),
+      toggleApsides: document.getElementById('toggle-apsides'),
+      toggleEqualAreas: document.getElementById('toggle-equal-areas'),
+      toggleVectors: document.getElementById('toggle-vectors'),
+
+      // Insight box
+      insightBox: document.getElementById('insight-box'),
+      newtonValues: document.getElementById('newton-values'),
+
+      // Accessibility
+      statusAnnounce: document.getElementById('status-announce')
     };
   }
 
@@ -219,7 +300,235 @@
   // Rendering
   // ============================================
 
-  // TODO: implement in Task 3
+  /**
+   * Convert orbital coordinates to SVG coordinates
+   * Origin at star, x points right, y points up in orbital plane
+   */
+  function orbitalToSvg(r, theta) {
+    // Calculate focus offset for star position
+    const c = focusOffset(state.a, state.e);
+    // Scale factor: shrink large orbits, expand small ones
+    const scale = SVG_SCALE / Math.max(state.a, 1);
+
+    // Orbital position relative to ellipse center
+    const x_orb = r * Math.cos(theta);
+    const y_orb = r * Math.sin(theta);
+
+    // SVG coordinates (star at focus, which is offset from center)
+    return {
+      x: SVG_CENTER.x + (x_orb) * scale,
+      y: SVG_CENTER.y - (y_orb) * scale  // Flip y for SVG
+    };
+  }
+
+  /**
+   * Update the orbit ellipse path
+   */
+  function updateOrbitPath() {
+    const scale = SVG_SCALE / Math.max(state.a, 1);
+    const rx = state.a * scale;
+    const ry = semiMinorAxis(state.a, state.e) * scale;
+    const c = focusOffset(state.a, state.e) * scale;
+
+    // Ellipse centered so star is at left focus
+    elements.orbitPath.setAttribute('cx', SVG_CENTER.x + c);
+    elements.orbitPath.setAttribute('cy', SVG_CENTER.y);
+    elements.orbitPath.setAttribute('rx', rx);
+    elements.orbitPath.setAttribute('ry', ry);
+  }
+
+  /**
+   * Update planet position
+   */
+  function updatePlanetPosition() {
+    const r = orbitalRadius(state.a, state.e, state.theta);
+    const pos = orbitalToSvg(r, state.theta);
+
+    elements.planet.setAttribute('cx', pos.x);
+    elements.planet.setAttribute('cy', pos.y);
+  }
+
+  /**
+   * Update foci markers
+   */
+  function updateFociMarkers() {
+    const scale = SVG_SCALE / Math.max(state.a, 1);
+    const c = focusOffset(state.a, state.e) * scale;
+
+    // Star at focus 1 (left focus for our orientation)
+    elements.star.setAttribute('cx', SVG_CENTER.x);
+    elements.star.setAttribute('cy', SVG_CENTER.y);
+    elements.focus1.setAttribute('cx', SVG_CENTER.x);
+    elements.focus1.setAttribute('cy', SVG_CENTER.y);
+    elements.focus1Label.setAttribute('x', SVG_CENTER.x);
+    elements.focus1Label.setAttribute('y', SVG_CENTER.y + 35);
+
+    // Focus 2 (empty focus, right side)
+    elements.focus2.setAttribute('cx', SVG_CENTER.x + 2 * c);
+    elements.focus2.setAttribute('cy', SVG_CENTER.y);
+
+    elements.fociGroup.style.display = state.overlays.foci ? 'block' : 'none';
+  }
+
+  /**
+   * Update apsides markers
+   */
+  function updateApsidesMarkers() {
+    const scale = SVG_SCALE / Math.max(state.a, 1);
+    const c = focusOffset(state.a, state.e) * scale;
+    const rx = state.a * scale;
+
+    // Perihelion (closest, left side of ellipse, θ = 0)
+    const periX = SVG_CENTER.x - (rx - c);
+    elements.perihelionMarker.setAttribute('cx', periX);
+    elements.perihelionMarker.setAttribute('cy', SVG_CENTER.y);
+    elements.perihelionLabel.setAttribute('x', periX);
+    elements.perihelionLabel.setAttribute('y', SVG_CENTER.y + 15);
+
+    const periDist = perihelion(state.a, state.e);
+    elements.perihelionLabel.textContent = `Perihelion (${periDist.toFixed(2)} AU)`;
+
+    // Aphelion (farthest, right side, θ = π)
+    const aphX = SVG_CENTER.x + (rx + c);
+    elements.aphelionMarker.setAttribute('cx', aphX);
+    elements.aphelionMarker.setAttribute('cy', SVG_CENTER.y);
+    elements.aphelionLabel.setAttribute('x', aphX);
+    elements.aphelionLabel.setAttribute('y', SVG_CENTER.y + 15);
+
+    const aphDist = aphelion(state.a, state.e);
+    elements.aphelionLabel.textContent = `Aphelion (${aphDist.toFixed(2)} AU)`;
+
+    elements.apsidesGroup.style.display = state.overlays.apsides ? 'block' : 'none';
+  }
+
+  /**
+   * Update distance line from star to planet
+   */
+  function updateDistanceLine() {
+    const r = orbitalRadius(state.a, state.e, state.theta);
+    const pos = orbitalToSvg(r, state.theta);
+
+    elements.distanceLine.setAttribute('x1', SVG_CENTER.x);
+    elements.distanceLine.setAttribute('y1', SVG_CENTER.y);
+    elements.distanceLine.setAttribute('x2', pos.x);
+    elements.distanceLine.setAttribute('y2', pos.y);
+
+    // Position label at midpoint
+    const midX = (SVG_CENTER.x + pos.x) / 2;
+    const midY = (SVG_CENTER.y + pos.y) / 2 - 10;
+    elements.distanceText.setAttribute('x', midX);
+    elements.distanceText.setAttribute('y', midY);
+    elements.distanceText.textContent = `r = ${r.toFixed(2)} AU`;
+  }
+
+  /**
+   * Update velocity and force vectors (Newton mode)
+   */
+  function updateVectors() {
+    if (state.mode !== 'newton' || !state.overlays.vectors) {
+      elements.velocityVector.style.display = 'none';
+      elements.forceVector.style.display = 'none';
+      return;
+    }
+
+    const r = orbitalRadius(state.a, state.e, state.theta);
+    const pos = orbitalToSvg(r, state.theta);
+    const v = orbitalVelocity(state.a, r, state.M);
+    const vAngle = velocityAngle(state.theta, state.e);
+
+    // Scale vectors for visibility
+    const vScale = 2;  // pixels per km/s
+    const vLen = v * vScale;
+
+    // Velocity vector (tangent to orbit)
+    elements.velocityVector.style.display = 'block';
+    elements.velocityLine.setAttribute('x1', pos.x);
+    elements.velocityLine.setAttribute('y1', pos.y);
+    elements.velocityLine.setAttribute('x2', pos.x + vLen * Math.cos(vAngle));
+    elements.velocityLine.setAttribute('y2', pos.y - vLen * Math.sin(vAngle));
+
+    // Force vector (toward star)
+    const forceAngle = Math.atan2(SVG_CENTER.y - pos.y, SVG_CENTER.x - pos.x);
+    const fLen = 40;  // Fixed length for visibility
+    elements.forceVector.style.display = 'block';
+    elements.forceLine.setAttribute('x1', pos.x);
+    elements.forceLine.setAttribute('y1', pos.y);
+    elements.forceLine.setAttribute('x2', pos.x + fLen * Math.cos(forceAngle));
+    elements.forceLine.setAttribute('y2', pos.y + fLen * Math.sin(forceAngle));
+  }
+
+  /**
+   * Update readout displays
+   */
+  function updateReadouts() {
+    const r = orbitalRadius(state.a, state.e, state.theta);
+    const v = orbitalVelocity(state.a, r, state.M);
+    const acc = gravitationalAccel(r, state.M);
+    const P = orbitalPeriod(state.a, state.M);
+
+    elements.distanceValue.textContent = r.toFixed(2);
+    elements.periodValue.textContent = P.toFixed(2);
+
+    // Velocity and acceleration depend on unit mode
+    if (state.units === '101') {
+      elements.velocityValue.textContent = v.toFixed(1);
+      elements.velocityUnit.textContent = 'km/s';
+
+      // Convert m/s² to mm/s² for readability
+      elements.accelValue.textContent = (acc * 1000).toFixed(2);
+      elements.accelUnit.textContent = 'mm/s²';
+    } else {
+      // 201 mode: CGS
+      elements.velocityValue.textContent = (v * 1e5).toExponential(2);
+      elements.velocityUnit.textContent = 'cm/s';
+
+      elements.accelValue.textContent = (acc * 100).toExponential(2);
+      elements.accelUnit.textContent = 'cm/s²';
+    }
+
+    // Update Newton mode values in insight box
+    if (state.mode === 'newton') {
+      elements.newtonValues.innerHTML =
+        `v = √(GM(2/r - 1/a)) = ${v.toFixed(1)} km/s<br>` +
+        `a = GM/r² = ${(acc * 1000).toFixed(2)} mm/s²`;
+    }
+  }
+
+  /**
+   * Update timeline display
+   */
+  function updateTimeline() {
+    const P = orbitalPeriod(state.a, state.M);
+    const fraction = (state.t % P) / P;
+
+    elements.timelineProgress.style.width = `${fraction * 100}%`;
+    elements.timelineHandle.style.left = `${fraction * 100}%`;
+    elements.phaseDisplay.textContent = `${state.t.toFixed(2)} / ${P.toFixed(2)} yr`;
+  }
+
+  /**
+   * Update slider displays
+   */
+  function updateSliderDisplays() {
+    elements.aDisplay.textContent = `${state.a.toFixed(2)} AU`;
+    elements.eDisplay.textContent = state.e.toFixed(3);
+    elements.massDisplay.textContent = `${state.M.toFixed(1)} M☉`;
+  }
+
+  /**
+   * Main update function
+   */
+  function update() {
+    updateOrbitPath();
+    updatePlanetPosition();
+    updateFociMarkers();
+    updateApsidesMarkers();
+    updateDistanceLine();
+    updateVectors();
+    updateReadouts();
+    updateTimeline();
+    updateSliderDisplays();
+  }
 
   // ============================================
   // Controls
@@ -233,6 +542,7 @@
 
   function init() {
     initElements();
+    update();
     console.log('Kepler\'s Laws Sandbox initialized');
   }
 
