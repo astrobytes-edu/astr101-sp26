@@ -240,10 +240,18 @@
     const illum = getIllumination(moonAngle);
     const name = getPhaseName(moonAngle);
     const days = getDaysSinceNew(moonAngle);
+    const moonGroupEl = document.getElementById('moon-group');
 
     phaseName.textContent = name;
     illumination.textContent = Math.round(illum * 100) + '%';
     daysSinceNew.textContent = days.toFixed(1);
+
+    // Update ARIA attributes for accessibility
+    if (moonGroupEl) {
+      moonGroupEl.setAttribute('aria-valuenow', Math.round(moonAngle));
+      moonGroupEl.setAttribute('aria-valuetext',
+        `${name}, ${Math.round(illum * 100)}% illuminated, Day ${days.toFixed(0)} of lunar cycle`);
+    }
 
     // Update button states
     phaseButtons.forEach(btn => {

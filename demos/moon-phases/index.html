@@ -265,7 +265,14 @@
             </g>
 
             <!-- Moon (draggable) -->
-            <g id="moon-group" class="moon-draggable">
+            <g id="moon-group" class="moon-draggable"
+               role="slider"
+               aria-label="Moon position on orbit"
+               aria-valuemin="0"
+               aria-valuemax="360"
+               aria-valuenow="0"
+               aria-valuetext="Full Moon, 100% illuminated"
+               tabindex="0">
               <!-- Dark side (always visible as background) -->
               <circle id="moon-dark" cx="320" cy="200" r="15" fill="#3a3a4a"/>
               <!-- Lit side (clipped to show phase in orbital view) -->
@@ -344,6 +351,23 @@
         Phases show <em>how much of that lit half faces Earth</em> — it's geometry, not shadow.
         Earth's shadow only matters during lunar eclipses (rare!).
       </div>
+
+      <!-- Screen reader announcements -->
+      <div id="status-announce" aria-live="polite" aria-atomic="true" class="sr-only"></div>
+
+      <style>
+        .sr-only {
+          position: absolute;
+          width: 1px;
+          height: 1px;
+          padding: 0;
+          margin: -1px;
+          overflow: hidden;
+          clip: rect(0, 0, 0, 0);
+          white-space: nowrap;
+          border: 0;
+        }
+      </style>
     </div>
   </div>
 
