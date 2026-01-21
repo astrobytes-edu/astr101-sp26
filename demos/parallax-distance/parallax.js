@@ -874,6 +874,10 @@
         case 'J':
           jumpToJanuary();
           break;
+        case 'y':
+        case 'Y':
+          jumpToJuly();
+          break;
         case 'ArrowRight':
           // Increase distance
           setDistance(state.distance_pc * (event.shiftKey ? 1.01 : 1.1));
