@@ -48,6 +48,7 @@
   let litPortion;
   let phaseName, illumination, daysSinceNew;
   let phaseButtons;
+  let timelineDirection, timelineDay, timelinePhases;
 
   function initElements() {
     orbitalSvg = document.getElementById('orbital-svg');
@@ -65,6 +66,10 @@
     daysSinceNew = document.getElementById('days-since-new');
 
     phaseButtons = document.querySelectorAll('.phase-btn');
+
+    timelineDirection = document.getElementById('timeline-direction');
+    timelineDay = document.getElementById('timeline-day');
+    timelinePhases = document.querySelectorAll('.timeline-phase');
   }
 
   // ============================================
@@ -262,12 +267,42 @@
   }
 
   /**
+   * Update the timeline strip
+   */
+  function updateTimeline() {
+    const normalized = ((moonAngle % 360) + 360) % 360;
+    const days = getDaysSinceNew(moonAngle);
+
+    // Update direction indicator
+    const isWaxing = normalized > 180 || normalized === 0;
+    if (timelineDirection) {
+      timelineDirection.textContent = isWaxing ? 'WAXING →' : '← WANING';
+      timelineDirection.classList.toggle('waning', !isWaxing);
+    }
+
+    // Update day counter
+    if (timelineDay) {
+      timelineDay.textContent = `Day ${days.toFixed(1)} of ${SYNODIC_MONTH}`;
+    }
+
+    // Update active phase in timeline
+    if (timelinePhases) {
+      timelinePhases.forEach(phase => {
+        const phaseAngle = parseFloat(phase.dataset.angle);
+        const diff = Math.abs(((normalized - phaseAngle + 180) % 360) - 180);
+        phase.classList.toggle('active', diff < 22.5);
+      });
+    }
+  }
+
+  /**
    * Main update function
    */
   function update() {
     updateOrbitalView();
     updatePhaseView();
     updateReadouts();
+    updateTimeline();
   }
 
   // ============================================
@@ -360,6 +395,31 @@
         });
       });
     });
+  }
+
+  // ============================================
+  // Timeline Strip
+  // ============================================
+
+  function setupTimeline() {
+    if (timelinePhases) {
+      timelinePhases.forEach(phase => {
+        phase.addEventListener('click', () => {
+          const targetAngle = parseFloat(phase.dataset.angle);
+
+          // Animate to target
+          const startAngle = moonAngle;
+          let diff = targetAngle - startAngle;
+          if (diff > 180) diff -= 360;
+          if (diff < -180) diff += 360;
+
+          AstroUtils.animateValue(startAngle, startAngle + diff, 400, (value) => {
+            moonAngle = ((value % 360) + 360) % 360;
+            update();
+          });
+        });
+      });
+    }
   }
 
   // ============================================
@@ -466,6 +526,7 @@
     initElements();
     setupDrag();
     setupPresets();
+    setupTimeline();
     setupKeyboard();
 
     // Initialize starfield

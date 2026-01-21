@@ -200,6 +200,112 @@
         grid-template-columns: 1fr;
       }
     }
+
+    /* Timeline Strip */
+    .timeline-panel {
+      background: rgba(18, 18, 31, 0.9);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      padding: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .timeline-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 0.75rem;
+      font-size: 0.875rem;
+    }
+
+    .timeline-direction {
+      color: var(--accent-gold);
+      font-weight: 600;
+    }
+
+    .timeline-direction.waning {
+      color: var(--accent-blue);
+    }
+
+    .timeline-day {
+      color: var(--text-secondary);
+      font-family: var(--font-mono);
+    }
+
+    .timeline-strip {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 0.25rem;
+    }
+
+    .timeline-phase {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.25rem;
+      padding: 0.5rem;
+      background: transparent;
+      border: 2px solid transparent;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      flex: 1;
+      min-width: 0;
+    }
+
+    .timeline-phase:hover {
+      background: rgba(93, 173, 226, 0.1);
+      border-color: var(--accent-blue);
+    }
+
+    .timeline-phase.active {
+      background: rgba(244, 208, 63, 0.2);
+      border-color: var(--accent-gold);
+    }
+
+    .timeline-phase span {
+      font-size: 0.65rem;
+      color: var(--text-muted);
+      white-space: nowrap;
+    }
+
+    .timeline-phase.active span {
+      color: var(--accent-gold);
+    }
+
+    /* Phase icons */
+    .phase-icon {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      position: relative;
+      background: #3a3a4a;
+      overflow: hidden;
+    }
+
+    .phase-icon::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      width: 50%;
+      height: 100%;
+      background: #e8e8f0;
+    }
+
+    .phase-icon.new-moon::after { display: none; }
+    .phase-icon.full-moon::after { width: 100%; left: 0; border-radius: 50%; }
+    .phase-icon.first-quarter::after { left: 50%; }
+    .phase-icon.third-quarter::after { left: 0; }
+    .phase-icon.waxing-crescent::after { left: 50%; width: 25%; border-radius: 0 50% 50% 0; }
+    .phase-icon.waning-crescent::after { left: 25%; width: 25%; border-radius: 50% 0 0 50%; }
+    .phase-icon.waxing-gibbous::after { left: 25%; width: 75%; border-radius: 50% 50% 50% 50%; }
+    .phase-icon.waning-gibbous::after { left: 0; width: 75%; border-radius: 50% 50% 50% 50%; }
+
+    @media (max-width: 600px) {
+      .timeline-phase span { display: none; }
+      .phase-icon { width: 24px; height: 24px; }
+    }
   </style>
 </head>
 <body>
@@ -332,6 +438,48 @@
         <div class="readout-item">
           <div class="readout-label">Days Since New Moon</div>
           <div class="readout-value" id="days-since-new">14.8</div>
+        </div>
+      </div>
+
+      <!-- Phase Timeline -->
+      <div class="timeline-panel">
+        <div class="timeline-header">
+          <span class="timeline-direction" id="timeline-direction">WAXING →</span>
+          <span class="timeline-day" id="timeline-day">Day 0 of 29.5</span>
+        </div>
+        <div class="timeline-strip" id="timeline-strip">
+          <button class="timeline-phase" data-angle="180" title="New Moon">
+            <div class="phase-icon new-moon"></div>
+            <span>New</span>
+          </button>
+          <button class="timeline-phase" data-angle="225" title="Waxing Crescent">
+            <div class="phase-icon waxing-crescent"></div>
+            <span>Crescent</span>
+          </button>
+          <button class="timeline-phase" data-angle="270" title="First Quarter">
+            <div class="phase-icon first-quarter"></div>
+            <span>1st Qtr</span>
+          </button>
+          <button class="timeline-phase" data-angle="315" title="Waxing Gibbous">
+            <div class="phase-icon waxing-gibbous"></div>
+            <span>Gibbous</span>
+          </button>
+          <button class="timeline-phase" data-angle="0" title="Full Moon">
+            <div class="phase-icon full-moon"></div>
+            <span>Full</span>
+          </button>
+          <button class="timeline-phase" data-angle="45" title="Waning Gibbous">
+            <div class="phase-icon waning-gibbous"></div>
+            <span>Gibbous</span>
+          </button>
+          <button class="timeline-phase" data-angle="90" title="Third Quarter">
+            <div class="phase-icon third-quarter"></div>
+            <span>3rd Qtr</span>
+          </button>
+          <button class="timeline-phase" data-angle="135" title="Waning Crescent">
+            <div class="phase-icon waning-crescent"></div>
+            <span>Crescent</span>
+          </button>
         </div>
       </div>
 
