@@ -363,6 +363,102 @@
   }
 
   // ============================================
+  // Keyboard Navigation
+  // ============================================
+
+  function setupKeyboard() {
+    const moonGroup = document.getElementById('moon-group');
+
+    moonGroup.addEventListener('keydown', (event) => {
+      let delta = 0;
+      let jump = null;
+
+      switch (event.key) {
+        case 'ArrowLeft':
+          delta = event.shiftKey ? -1 : -5;
+          break;
+        case 'ArrowRight':
+          delta = event.shiftKey ? 1 : 5;
+          break;
+        case 'ArrowUp':
+          delta = event.shiftKey ? -1 : -5;
+          break;
+        case 'ArrowDown':
+          delta = event.shiftKey ? 1 : 5;
+          break;
+        case 'Home':
+          jump = 0;  // Full Moon
+          break;
+        case 'End':
+          jump = 180;  // New Moon
+          break;
+        case '1':
+          jump = 180;  // New Moon
+          break;
+        case '2':
+          jump = 225;  // Waxing Crescent
+          break;
+        case '3':
+          jump = 270;  // First Quarter
+          break;
+        case '4':
+          jump = 315;  // Waxing Gibbous
+          break;
+        case '5':
+          jump = 0;    // Full Moon
+          break;
+        case '6':
+          jump = 45;   // Waning Gibbous
+          break;
+        case '7':
+          jump = 90;   // Third Quarter
+          break;
+        case '8':
+          jump = 135;  // Waning Crescent
+          break;
+        default:
+          return;  // Don't prevent default for other keys
+      }
+
+      event.preventDefault();
+
+      if (jump !== null) {
+        // Animate to jump position
+        const startAngle = moonAngle;
+        let diff = jump - startAngle;
+        if (diff > 180) diff -= 360;
+        if (diff < -180) diff += 360;
+
+        AstroUtils.animateValue(startAngle, startAngle + diff, 300, (value) => {
+          moonAngle = ((value % 360) + 360) % 360;
+          update();
+        });
+      } else if (delta !== 0) {
+        moonAngle = ((moonAngle + delta) % 360 + 360) % 360;
+        update();
+
+        // Announce change for screen readers
+        const announce = document.getElementById('status-announce');
+        if (announce) {
+          const name = getPhaseName(moonAngle);
+          const illum = getIllumination(moonAngle);
+          announce.textContent = `${name}, ${Math.round(illum * 100)}% illuminated`;
+        }
+      }
+    });
+
+    // Visual focus indicator
+    moonGroup.addEventListener('focus', () => {
+      moonGroup.style.outline = '2px solid var(--accent-blue)';
+      moonGroup.style.outlineOffset = '4px';
+    });
+
+    moonGroup.addEventListener('blur', () => {
+      moonGroup.style.outline = 'none';
+    });
+  }
+
+  // ============================================
   // Initialization
   // ============================================
 
@@ -370,6 +466,7 @@
     initElements();
     setupDrag();
     setupPresets();
+    setupKeyboard();
 
     // Initialize starfield
     const starfieldCanvas = document.getElementById('starfield');
