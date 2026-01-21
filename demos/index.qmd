@@ -6,11 +6,60 @@ toc: false
 ---
 
 <style>
+.wip-banner {
+  background: linear-gradient(135deg, #2d1f3d 0%, #1a1a2e 100%);
+  border: 1px solid #f4d03f;
+  border-left: 4px solid #f4d03f;
+  border-radius: 8px;
+  padding: 1rem 1.5rem;
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.wip-banner-icon {
+  font-size: 1.5rem;
+}
+
+.wip-banner-text {
+  color: #e8e8f0;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.wip-banner-text strong {
+  color: #f4d03f;
+}
+
+.demo-section {
+  margin-bottom: 3rem;
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.section-icon {
+  font-size: 1.5rem;
+}
+
+.section-title {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #e8e8f0;
+  margin: 0;
+}
+
 .demo-gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-  margin-top: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
 }
 
 .demo-card {
@@ -27,20 +76,20 @@ toc: false
 }
 
 .demo-preview {
-  height: 200px;
+  height: 160px;
   background: #0a0a14;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 4rem;
+  font-size: 3.5rem;
 }
 
 .demo-info {
-  padding: 1.5rem;
+  padding: 1.25rem;
 }
 
 .demo-title {
-  font-size: 1.25rem;
+  font-size: 1.1rem;
   font-weight: 600;
   margin: 0 0 0.5rem 0;
   color: #e8e8f0;
@@ -48,19 +97,20 @@ toc: false
 
 .demo-description {
   color: #a0a0b0;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   margin: 0 0 1rem 0;
   line-height: 1.5;
 }
 
 .demo-link {
   display: inline-block;
-  padding: 0.5rem 1rem;
+  padding: 0.4rem 0.9rem;
   background: #5dade2;
   color: #0a0a14;
   text-decoration: none;
   border-radius: 6px;
   font-weight: 500;
+  font-size: 0.9rem;
   transition: background 0.2s;
 }
 
@@ -71,35 +121,52 @@ toc: false
 .demo-concepts {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5rem;
-  margin-top: 1rem;
+  gap: 0.4rem;
+  margin-top: 0.75rem;
 }
 
 .concept-tag {
-  font-size: 0.75rem;
-  padding: 0.25rem 0.5rem;
+  font-size: 0.7rem;
+  padding: 0.2rem 0.4rem;
   background: rgba(93, 173, 226, 0.2);
   color: #5dade2;
   border-radius: 4px;
 }
 </style>
 
+:::{.wip-banner}
+<span class="wip-banner-icon">🚧</span>
+<span class="wip-banner-text">
+<strong>Work in Progress:</strong> These demos are under active development for Spring 2026. Some features may be incomplete or change before the semester begins. Feedback welcome!
+</span>
+:::
+
 These interactive demos let you explore fundamental astronomy concepts hands-on. Each demo works on phones, tablets, and computers.
+
+<!-- ============================================ -->
+<!-- EARTH & SKY -->
+<!-- ============================================ -->
+
+:::{.demo-section}
+<div class="section-header">
+<span class="section-icon">🌍</span>
+<h2 class="section-title">Earth & Sky</h2>
+</div>
 
 :::{.demo-gallery}
 
 :::{.demo-card}
-<div class="demo-preview">📐</div>
+<div class="demo-preview">🌍</div>
 <div class="demo-info">
-<h3 class="demo-title">Angular Size</h3>
+<h3 class="demo-title">Seasons</h3>
 <p class="demo-description">
-Why do the Sun and Moon look the same size in our sky? Explore how physical size and distance combine to create apparent size.
+Why does axial tilt—not distance from the Sun—cause seasons? Explore with different planets and watch a year unfold.
 </p>
-<a href="angular-size/" class="demo-link">Open Demo →</a>
+<a href="seasons/" class="demo-link">Open Demo →</a>
 <div class="demo-concepts">
-<span class="concept-tag">angular size</span>
-<span class="concept-tag">scale</span>
-<span class="concept-tag">Moon recession</span>
+<span class="concept-tag">seasons</span>
+<span class="concept-tag">axial tilt</span>
+<span class="concept-tag">day length</span>
 </div>
 </div>
 :::
@@ -125,7 +192,7 @@ Drag the Moon around Earth and watch phases change in real-time. See why phases 
 <div class="demo-info">
 <h3 class="demo-title">Eclipse Geometry</h3>
 <p class="demo-description">
-Why don't eclipses happen every month? Explore orbital tilt, nodes, and run 1000-year simulations to count eclipses.
+Why don't eclipses happen every month? Explore orbital tilt, nodes, and run 1000-year simulations.
 </p>
 <a href="eclipse-geometry/" class="demo-link">Open Demo →</a>
 <div class="demo-concepts">
@@ -136,50 +203,80 @@ Why don't eclipses happen every month? Explore orbital tilt, nodes, and run 1000
 </div>
 :::
 
-:::{.demo-card}
-<div class="demo-preview">🌍</div>
-<div class="demo-info">
-<h3 class="demo-title">Seasons</h3>
-<p class="demo-description">
-Why does axial tilt—not distance from the Sun—cause seasons? Explore with different planets and watch a year unfold.
-</p>
-<a href="seasons/" class="demo-link">Open Demo →</a>
-<div class="demo-concepts">
-<span class="concept-tag">seasons</span>
-<span class="concept-tag">axial tilt</span>
-<span class="concept-tag">day length</span>
-</div>
-</div>
 :::
+:::
+
+<!-- ============================================ -->
+<!-- LIGHT & SPECTRA -->
+<!-- ============================================ -->
+
+:::{.demo-section}
+<div class="section-header">
+<span class="section-icon">🌈</span>
+<h2 class="section-title">Light & Spectra</h2>
+</div>
+
+:::{.demo-gallery}
 
 :::{.demo-card}
 <div class="demo-preview">🌡️</div>
 <div class="demo-info">
 <h3 class="demo-title">Blackbody Radiation</h3>
 <p class="demo-description">
-See how temperature determines a star's color and brightness. Adjust temperature and watch the spectrum shift from red to blue.
+See how temperature determines a star's color and spectrum. Watch the Planck curve shift from infrared to ultraviolet.
 </p>
 <a href="blackbody-radiation/" class="demo-link">Open Demo →</a>
 <div class="demo-concepts">
-<span class="concept-tag">blackbody radiation</span>
+<span class="concept-tag">blackbody</span>
 <span class="concept-tag">Wien's law</span>
-<span class="concept-tag">stellar colors</span>
+<span class="concept-tag">Planck function</span>
 </div>
 </div>
 :::
 
 :::{.demo-card}
-<div class="demo-preview">🌈</div>
+<div class="demo-preview">📡</div>
 <div class="demo-info">
 <h3 class="demo-title">EM Spectrum Explorer</h3>
 <p class="demo-description">
-Journey across the electromagnetic spectrum from radio waves to gamma rays. Discover what each type of light reveals about the universe.
+Journey from radio waves to gamma rays. See which telescopes observe each band and what objects emit there.
 </p>
 <a href="em-spectrum/" class="demo-link">Open Demo →</a>
 <div class="demo-concepts">
-<span class="concept-tag">electromagnetic spectrum</span>
+<span class="concept-tag">EM spectrum</span>
 <span class="concept-tag">wavelength</span>
-<span class="concept-tag">multiwavelength astronomy</span>
+<span class="concept-tag">multiwavelength</span>
+</div>
+</div>
+:::
+
+:::
+:::
+
+<!-- ============================================ -->
+<!-- TELESCOPES & OBSERVATION -->
+<!-- ============================================ -->
+
+:::{.demo-section}
+<div class="section-header">
+<span class="section-icon">🔭</span>
+<h2 class="section-title">Telescopes & Observation</h2>
+</div>
+
+:::{.demo-gallery}
+
+:::{.demo-card}
+<div class="demo-preview">📐</div>
+<div class="demo-info">
+<h3 class="demo-title">Angular Size</h3>
+<p class="demo-description">
+Why do the Sun and Moon look the same size? Explore how physical size and distance combine to create apparent size.
+</p>
+<a href="angular-size/" class="demo-link">Open Demo →</a>
+<div class="demo-concepts">
+<span class="concept-tag">angular size</span>
+<span class="concept-tag">scale</span>
+<span class="concept-tag">small angle formula</span>
 </div>
 </div>
 :::
@@ -189,13 +286,44 @@ Journey across the electromagnetic spectrum from radio waves to gamma rays. Disc
 <div class="demo-info">
 <h3 class="demo-title">Telescope Resolution</h3>
 <p class="demo-description">
-Why do bigger telescopes see finer detail? Explore the diffraction limit and see how aperture and wavelength affect resolution.
+Why do bigger telescopes see finer detail? Explore diffraction limits, seeing, and adaptive optics.
 </p>
 <a href="telescope-resolution/" class="demo-link">Open Demo →</a>
 <div class="demo-concepts">
-<span class="concept-tag">angular resolution</span>
-<span class="concept-tag">diffraction limit</span>
-<span class="concept-tag">aperture</span>
+<span class="concept-tag">resolution</span>
+<span class="concept-tag">diffraction</span>
+<span class="concept-tag">Rayleigh criterion</span>
+</div>
+</div>
+:::
+
+:::
+:::
+
+<!-- ============================================ -->
+<!-- ORBITS & DISTANCES -->
+<!-- ============================================ -->
+
+:::{.demo-section}
+<div class="section-header">
+<span class="section-icon">🪐</span>
+<h2 class="section-title">Orbits & Distances</h2>
+</div>
+
+:::{.demo-gallery}
+
+:::{.demo-card}
+<div class="demo-preview">🪐</div>
+<div class="demo-info">
+<h3 class="demo-title">Kepler's Laws</h3>
+<p class="demo-description">
+Drag planets around elliptical orbits. See how speed changes with distance and why P² = a³.
+</p>
+<a href="keplers-laws/" class="demo-link">Open Demo →</a>
+<div class="demo-concepts">
+<span class="concept-tag">Kepler's laws</span>
+<span class="concept-tag">elliptical orbits</span>
+<span class="concept-tag">orbital period</span>
 </div>
 </div>
 :::
@@ -205,15 +333,16 @@ Why do bigger telescopes see finer detail? Explore the diffraction limit and see
 <div class="demo-info">
 <h3 class="demo-title">Stellar Parallax</h3>
 <p class="demo-description">
-How do astronomers measure distances to nearby stars? Move Earth around its orbit and watch stars shift against the background.
+How do astronomers measure distances to nearby stars? Watch stars shift as Earth orbits the Sun.
 </p>
 <a href="parallax-distance/" class="demo-link">Open Demo →</a>
 <div class="demo-concepts">
 <span class="concept-tag">parallax</span>
 <span class="concept-tag">parsec</span>
-<span class="concept-tag">distance measurement</span>
+<span class="concept-tag">Gaia mission</span>
 </div>
 </div>
 :::
 
+:::
 :::
