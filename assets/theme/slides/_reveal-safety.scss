@@ -97,23 +97,22 @@ body.spotlight-on .cursor-dot {
 }
 
 .reveal .media-credit {
-  position: absolute;
-  right: 0.9rem;
-  bottom: 0.55rem;
-  max-width: 55%;
-  font-size: $text-xxs;
+  position: static;
+  margin-top: 0.15rem;
+  max-width: 100%;
+  font-size: 0.36em;
   line-height: 1.15;
   letter-spacing: 0.01em;
   opacity: 0.85;
   text-align: right;
   pointer-events: none;
   color: rgba($body-color, 0.6);
-  text-shadow: 0 1px 6px rgba(0,0,0,0.25);
+  text-shadow: none;
 }
 
 .reveal .slides section[data-background-color="black"] .media-credit {
   color: rgba(255,255,255,0.65);
-  text-shadow: 0 1px 8px rgba(0,0,0,0.55);
+  text-shadow: none;
 }
 
 // ---------------------------------------------------------------------------

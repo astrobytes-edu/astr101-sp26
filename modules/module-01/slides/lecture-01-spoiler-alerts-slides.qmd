@@ -13,32 +13,6 @@ format:
     title-slide-attributes:
       data-background-image: "/assets/images/common/cosmic-cliffs-jwst.png"
       data-background-opacity: "0.5"
-    include-after-body:
-      text: |
-        <script>
-        document.addEventListener('DOMContentLoaded', function() {
-          const qrDiv = document.createElement('div');
-          qrDiv.id = 'iclicker-qr';
-          qrDiv.style.cssText = 'position: fixed; top: calc(100vh - 420px); left: 1.5rem; text-align: center; z-index: 9999;';
-          qrDiv.innerHTML = `
-            <img src="/assets/iClicker_Course_QRCode-ASTR101.png" width="280" style="border: 2px solid white; border-radius: 4px;">
-            <div style="font-size: 3em; color: black; margin-top: 0.5rem; font-weight: bold;">
-              <a href="https://join.iclicker.com/ASES" target="_blank" style="color: black; text-decoration: underline; cursor: pointer;">join.iclicker.com/ASES</a>
-            </div>
-          `;
-          document.body.appendChild(qrDiv);
-
-          // Function to check if on title slide
-          function updateQRVisibility() {
-            const indices = Reveal.getIndices();
-            qrDiv.style.display = indices.h === 0 && indices.v === 0 ? 'block' : 'none';
-          }
-
-          // Check on ready and on slide change
-          Reveal.on('ready', updateQRVisibility);
-          Reveal.on('slidechanged', updateQRVisibility);
-        });
-        </script>
     pointer:
       key: "q"
       color: "#5dbfbf"
@@ -66,20 +40,36 @@ execute:
   message: false
 ---
 
-<!----------------------------------------------------------------------------
-  PART 1: THE HOOK (5 min)
-  Goal: Capture attention and create wonder
------------------------------------------------------------------------------>
+## Join iClicker {background-color="black"}
+
+::: {.text-center}
+{{< img iclicker-qr-astr101 width="36%" class="img-center" >}}
+
+::: {.text-xl .font-semibold .mt-2}
+[join.iclicker.com/ASES](https://join.iclicker.com/ASES)
+:::
+
+::: {.text-sm .text-muted .mt-2}
+If you can’t scan: open the link and enter the course code **ASES**.
+:::
+:::
+
+::: {.notes}
+Take 30–60 seconds at the very start to get everyone connected.
+Then move on immediately—don’t troubleshoot at the podium; have students flag you after class if needed.
+:::
+
+---
 
 ## {background-image="/assets/images/common/noirlab-nightsky-mosaic.jpg" background-opacity="1"}
 
 ::: {data-attribution="NOIRLab/NSF/AURA" data-attribution-position="bottom right"}
 :::
 
-::: {.flex .flex-col .w-full .pt-2 style="height: 65vh;"}
+::: {.flex .flex-col .w-full .pt-2 style="height: 60vh;"}
 
 ::: {.text-center .text-lg .font-medium .text-muted}
-When you look up at the night sky, what do you see?
+When you look up at the night sky,<br> what do you see?
 :::
 
 ::: {.text-center .text-lg .font-medium .text-muted style="margin-top: auto;"}
@@ -113,9 +103,9 @@ Advance to the video without explanation.
 ::: {.notes}
 1–3 min. **Play video without introduction.**
 
-Made from over 1,100 images captured by NSF-DOE Vera C. Rubin Observatory.
+Made from over a thousand images captured by NSF-DOE Vera C. Rubin Observatory.
 
-Begins with two galaxies, zooms out to reveal 10 million galaxies—roughly 0.05% of the 20 billion Rubin will capture.
+Begins with two galaxies, zooms out to reveal millions of galaxies—just a tiny fraction of what Rubin will capture over its survey.
 
 **Let the video do the work. Don't narrate over it.**
 :::
@@ -140,11 +130,14 @@ Each one containing **hundreds of billions** of stars.
 :::
 
 ::: {.fragment .text-sm}
-You just saw **10 million galaxies** — and that's only 0.05% of what one telescope will find.
+You just saw **millions of galaxies** — and that’s only a **tiny fraction** of what one telescope will find.
 :::
 :::
-
 ::::
+
+:::{.text-xs}
+[Interactive Image (Click)](https://rubinobservatory.org/news/rubin-first-look/cosmic-treasure-chest){.text-muted}
+:::
 
 ::: {.notes}
 **THE REVEAL (3 min):**
@@ -172,6 +165,10 @@ We can't send a probe to most of what we study.
 So how do astronomers know *anything* about objects trillions of kilometers away?
 :::
 
+::: {.fragment .text-center .text-sm .text-muted .mt-2}
+(Later today: why astronomers switch to **light-years** (and **parsecs**) for cosmic distances.)
+:::
+
 ::: {.notes}
 4–5 min.
 
@@ -183,11 +180,6 @@ Don't answer it yet — just plant the question.
 :::
 
 ---
-
-<!----------------------------------------------------------------------------
-  PART 2: THE COURSE PROMISE (8 min)
-  Goal: Establish the course thesis and framework
------------------------------------------------------------------------------>
 
 ## Today Is a Trailer {background-image="/assets/images/common/cosmic-cliffs-jwst.png" background-opacity="0.4"}
 
@@ -215,11 +207,11 @@ Emphasize: Recognition, not retention.
 
 ## The Course Thesis {background-color="black"}
 
-::: {.text-center .text-xl .font-semibold .mt-4}
-[Pretty pictures → measurements → models → inferences]{.rn rn-type="underline" rn-color="#5dbfbf"}
+::: {.text-center .text-lg .font-semibold .mt-4}
+[Pretty pictures → measurements →<br> models → inferences]{.rn rn-type="underline" rn-color="#5dbfbf"}
 :::
 
-::: {.fragment .bg-muted .p-2 .mt-4}
+::: {.fragment .text-sm .bg-muted .p-2 .mt-4}
 **What this means:**
 
 - Astronomical images aren't just beautiful — they're **data**
@@ -247,11 +239,11 @@ Astronomy is the art of inferring physical reality from constrained measurements
 :::
 
 ::: {.bg-muted .p-2 .mt-4}
-**The constraint:** We can only study the light that reaches us.
+**Constraint:** We can only study the light that reaches us.
 
 - No thermometers in the Sun
 - No tape measures to galaxies
-- No scales to weigh stars
+- No scales to weigh
 
 Everything we claim to know is **inferred from light**.
 :::
@@ -288,7 +280,7 @@ Close with: "Today is just the trailer. If you recognize these ingredients later
 
 ## NASA's Three Big Questions {background-color="black"}
 
-{{< img three-big-questions width="85%" class="img-center" >}}
+{{< img three-big-questions width="70%" class="img-center" >}}
 
 ::: {.text-center .text-sm .text-muted .mt-1}
 **Think:** Which question are you most curious about?
@@ -306,32 +298,24 @@ Don't linger. This is motivation, not content.
 
 ---
 
-<!----------------------------------------------------------------------------
-  PART 3: THE FOUR OBSERVABLES (10 min)
-  Goal: Establish that only 4 things can be directly measured
------------------------------------------------------------------------------>
+## What Can We Actually Measure?
 
-## What Can We Actually Measure? {background-color="black"}
-
-::: {.text-center .text-lg .font-semibold}
+::: {.text-center .text-base .font-semibold .text-muted}
 From billions of kilometers away, we can directly measure only **four things**.
 :::
 
-::: {.fragment .bg-muted .p-2 .mt-4}
-::: {.incremental}
-1. **How bright?** — brightness (energy per second per area)
-2. **Where is it?** — position (angles on the sky)
-3. **What color?** — wavelength (spectrum)
-4. **When does it change?** — timing (variability)
-:::
-:::
+{{< img four-direct-observables-nblm width="70%" class="img-center" >}}
 
-::: {.fragment .text-center .text-base .text-muted .mt-2}
-Everything else — distance, mass, temperature, age — is **calculated**.
-:::
 
 ::: {.notes}
 10–12 min.
+
+1. **How bright?** — brightness (energy emitted per second per area)
+2. **Where is it?** — position (angles on the sky)
+3. **What color?** — wavelength (spectrum)
+4. **When does it change?** — timing (variability)
+
+Everything else — distance, mass, temperature, age — is **calculated**.
 
 Emphasize: "These are the only inputs the universe gives us. Everything else is a calculation."
 
@@ -393,18 +377,13 @@ Temperature, mass, and age are all *inferences* — they require models to calcu
 
 ---
 
-<!----------------------------------------------------------------------------
-  PART 4: THE SPOILER REEL (20 min)
-  Goal: Show the Measure → Infer → Physics pattern repeatedly
------------------------------------------------------------------------------>
-
 ## The Spoiler Reel {background-image="/assets/images/module-01/lsst-cosmic-treasure-chest-zoom.jpg" background-opacity="0.3"}
 
-::: {.text-center .text-lg .text-muted}
-For each image, don't memorize details — identify the pattern.
+::: {.text-center .text-xs .text-muted}
+*For each image, don't memorize details — identify the pattern.*
 :::
 
-::: {.layout-grid-2 .mt-2}
+::: {.layout-grid-2 .mt-4}
 
 ::: {.bg-muted .p-2}
 **What do we measure?**
@@ -421,22 +400,23 @@ For each image, don't memorize details — identify the pattern.
 :::
 
 ::: {.fragment .text-center .text-base .font-semibold .mt-2}
-Same pattern every time: **Observable → Model → Physical Reality**
+Same pattern every time:<br> **Observable → Model → Physical Reality**
 :::
 
 ::: {.notes}
 14–15 min.
 
-Orientation: "This is the repeatable structure for the whole course. I'm going to show you 6 examples. For each one, ask yourself: what did we measure, and what did we conclude?"
+Orientation: "This is the repeatable structure for the whole course. I'm going to show you 7 examples. For each one, ask yourself: what did we measure, and what did we conclude?"
 :::
 
 ---
 
-## Spoiler 1: Nebulae — Colors Are Chemistry {background-color="black"}
+### Spoiler 1: Nebulae — Colors Are Chemistry
 
 :::: {.columns style="column-gap: 2rem;"}
 ::: {.column width="60%"}
 {{< img forensic-nebula class="img-center" >}}
+
 :::
 ::: {.column width="40%"}
 
@@ -448,14 +428,13 @@ Orientation: "This is the repeatable structure for the whole course. I'm going t
 **The physics:** Each element emits/absorbs at unique wavelengths — a "spectral fingerprint"
 :::
 
-::: {.fragment .text-sm .text-muted .mt-2}
+:::
+::::
+::: {.fragment .text-xs .text-muted .mt-2}
 *Red = hydrogen (656 nm)*
 *Blue-green = oxygen (500 nm)*
 *Dark lanes = dust blocking light*
 :::
-
-:::
-::::
 
 ::: {.notes}
 15–17 min.
@@ -551,7 +530,7 @@ A prism reveals that white light contains many wavelengths. By measuring brightn
 
 ## The Quantum Barcode {background-color="black"}
 
-{{< img quantum-barcode >}}
+{{< img quantum-barcode width="80%" class="img-center" >}}
 
 ::: {.notes}
 21–22 min.
@@ -569,28 +548,28 @@ The pattern of lines is unique to each element — like a barcode or fingerprint
 
 ---
 
-## Spoiler 3: The Distance Ladder {background-color="black"}
+## Spoiler 3: The Cosmic Distance Ladder {background-color="black"}
 
 :::: {.columns .text-sm style="column-gap: 2rem;"}
-::: {.column width="60%"}
+::: {.column width="55%"}
 {{< img cosmic-distance-ladder class="img-center" >}}
 :::
-::: {.column width="40%"}
+::: {.column width="45%"}
 
 ::: {.bg-muted .p-2}
 **We measure:** How bright an object appears (flux)
 
 **We infer:** How far away it is
 
-**The physics:** Light spreads out as it travels — if you know the true brightness, you can calculate distance
-:::
-
-::: {.fragment .text-sm .text-muted .mt-2}
-*A dim nearby source can look identical to a bright distant one — physics breaks the tie.*
+**The physics:** Light spreads out as it travels<br> — if you know the true brightness, you can calculate distance
 :::
 
 :::
 ::::
+
+::: {.fragment .text-center .text-sm .text-muted .mt-2}
+*A dim nearby source can look identical to a bright distant one<br> — physics breaks the tie.*
+:::
 
 ::: {.notes}
 22–24 min.
@@ -605,20 +584,21 @@ The "ladder" means each method calibrates the next — nearby stars calibrate va
 ## Standard Candles: Know the Brightness, Calculate the Distance {background-color="black"}
 
 :::: {.columns style="column-gap: 2rem;"}
-::: {.column width="60%"}
+::: {.column width="50%"}
 {{< img standard-candles class="img-center" >}}
+
+:::{.text-xs}
+- Pulsating stars (period → luminosity)
+- Exploding white dwarfs<br> (same mass → same brightness)
 :::
-::: {.column width="40%"}
+:::
+::: {.column width="50%" .text-sm}
 
-**The key idea:**
-
-If you know how bright something *actually is* (luminosity), and you measure how bright it *appears* (flux), you can calculate distance.
+**The key idea:** If you know how bright something *actually is* (luminosity), and you measure how bright it *appears* (flux), you can calculate distance.
 
 ::: {.fragment .bg-muted .p-2 .mt-2}
 **Standard candles:** Objects whose true brightness we can predict from physics.
 
-- Pulsating stars (period → luminosity)
-- Exploding white dwarfs (same mass → same brightness)
 :::
 
 :::
@@ -655,10 +635,12 @@ Over 10 years, Rubin will detect up to 100,000 of these stars extending more tha
 ## Spoiler 4: Same Galaxy, Different Physics {background-color="black"}
 
 :::: {.columns style="column-gap: 2rem;" .text-sm}
-::: {.column width="60%"}
+::: {.column width="45%"}
 {{< img m51-optical-radio class="img-center" >}}
+
 :::
-::: {.column width="40%"}
+
+::: {.column width="55%"}
 ::: {.bg-muted}
 **We measure:** The same galaxy at different wavelengths
 
@@ -667,14 +649,14 @@ Over 10 years, Rubin will detect up to 100,000 of these stars extending more tha
 **The physics:** Different emission processes dominate at different wavelengths
 :::
 
-::: {.fragment .mt-2}
+:::
+::::
+
+::: {.text-xs .text-muted}
 **Left (optical):** Stars and dust lanes
 
 **Right (radio):** Cold hydrogen gas
 :::
-
-:::
-::::
 
 ::: {.notes}
 26–28 min.
@@ -695,7 +677,7 @@ This is why astronomers need many kinds of telescopes — not for "better" pictu
 {{< img pillars-hubble-jwst class="img-center" >}}
 :::
 ::: {.column width="40%"}
-::: {.bg-muted .text-sm}
+::: {.bg-muted .text-xs}
 **We measure:** Optical vs infrared light from the same region
 
 **We infer:** Newborn stars can hide inside dusty clouds
@@ -703,7 +685,7 @@ This is why astronomers need many kinds of telescopes — not for "better" pictu
 **The physics:** Dust blocks/scatters short wavelengths more than long wavelengths
 :::
 
-::: {.fragment .text-sm .mt-2}
+::: {.fragment .text-xs .mt-2}
 **Left (Hubble):** Dark, opaque pillars
 
 **Right (JWST):** Thousands of hidden newborn stars revealed
@@ -724,7 +706,33 @@ This is why JWST was built to see infrared — to peer into star-forming regions
 
 ---
 
-## Spoiler 6: The Dark Universe {.compact background-color="black"}
+## Spoiler 6: Hidden Mass — The Dark Matter Problem {.compact background-color="black"}
+
+:::: {.columns style="column-gap: 2rem;"}
+::: {.column width="60%"}
+{{< img lsst-cosmic-treasure-chest class="img-center" >}}
+:::
+::: {.column width="40%"}
+::: {.bg-muted .text-sm}
+**We measure:** how galaxies and stars move (from spectra over time)
+
+**We infer:** extra unseen mass (“dark matter”)
+
+**The physics:** gravity links motion to mass; if objects move too fast, there must be more mass than we can see
+:::
+:::
+::::
+
+::: {.notes}
+30–31 min.
+
+"Dark matter is an inference from motion: we measure how things move (using Doppler shifts), and gravity tells us how much mass must be there."
+"When the required mass is bigger than the stars + gas we can see, we’ve discovered missing mass: dark matter."
+:::
+
+---
+
+## Spoiler 7: The Cosmic Web — Mapping the Universe in 3D {.compact background-color="black"}
 
 :::: {.columns style="column-gap: 2rem;"}
 ::: {.column width="60%"}
@@ -732,35 +740,75 @@ This is why JWST was built to see infrared — to peer into star-forming regions
 :::
 ::: {.column width="40%"}
 ::: {.bg-muted .text-sm}
-**We measure:** How fast galaxies are moving (from wavelength shifts)
+**We measure:** spectra (wavelength shifts) → redshifts → distances → 3D positions
 
-**We infer:** There must be more mass than we can see — "dark matter"
+**We infer:** the cosmic web (filaments + voids) and expansion-history constraints
 
-**The physics:** Gravity connects orbital speed to mass. Fast motion requires more gravity, which requires more mass.
-:::
-
-::: {.fragment .text-center .text-sm .text-muted .mt-2}
-Only ~5% of the universe is ordinary matter. The rest is invisible.
+**The physics:** gravity + cosmic expansion shape large-scale structure; mapping it tests cosmological models
 :::
 
 :::
 ::::
 
 ::: {.notes}
-30–33 min.
+31–33 min.
 
 Point to: filaments (where galaxies cluster), voids (empty spaces).
 
-"We measure velocities using wavelength shifts — the Doppler effect. When we calculate how much mass is needed to explain those speeds, we get 5-6 times more mass than the stars and gas we can see."
-
-Cosmic recipe: 5% atoms, 27% dark matter, 68% dark energy.
-
-"We don't know what most of the universe is made of. That's not a failure — that's a frontier."
+"We measure spectra and get redshifts—wavelengths stretched by cosmic expansion. Redshift gives us distance, so we can map galaxies in 3D."
+"The pattern isn’t random—gravity and expansion sculpt this web."
 :::
 
 ---
 
-## Spoiler Synthesis: The Pattern Repeats {background-image="/assets/images/module-01/universe-history-nasa.png" background-opacity="0.2"}
+## Spoiler 8: The Universe Is "Dark" {background-color="black"}
+::: {.text-center .text-sm}
+*Dark Matter + Dark Energy*
+:::
+
+:::: {.columns style="column-gap: 2rem;"}
+::: {.column width="60%"}
+::: {.bg-muted .text-sm}
+**We measure:** how the expansion rate changes with time *(distance + redshift)*
+
+**We infer:** the expansion is accelerating → “dark energy”
+
+**The physics:** gravity + cosmic expansion link energy content to expansion. 
+
+*Acceleration implies a component that acts like “repulsive gravity”*
+
+:::
+:::
+::: {.column width="40%"}
+{{< img universe-contents-nasa class="img-center" >}}
+:::
+::::
+
+**Big question:** *How does dark energy evolve?*
+
+::: {.notes}
+33–34 min.
+
+“We don’t start with a ‘dark energy meter’. We measure distances + redshifts, build an expansion history, and then infer what kind of energy content could produce it.”
+
+Quantitative anchor (as shown in the NASA graphic): ~5% normal matter, ~27% dark matter, ~68% dark energy.
+
+Emphasize: “We can describe the universe with numbers — but we still don’t know what ~95% of it *is*.”
+:::
+
+---
+
+## History of the Universe {background-color="black"}
+
+{{< img universe-history-nasa width="85%" class="img-center" >}}
+
+::: {.notes}
+Say: "This is the punchline: the universe has a history—and by the end of this course, you’ll be able to explain the story on this timeline, and how we know it."
+:::
+
+---
+
+## Spoiler Synthesis: The Pattern Repeats {background-color="black"}
 
 ::: {.text-center .text-lg .font-semibold}
 Every spoiler followed the same structure:
@@ -785,11 +833,6 @@ Ask: "Which of the four observables kept showing up?" → **Wavelength** (spectr
 :::
 
 ---
-
-<!----------------------------------------------------------------------------
-  PART 5: TWO BIG IDEAS (5 min)
-  Goal: Establish lookback time and wavelength-energy connection
------------------------------------------------------------------------------>
 
 ## Lookback Time: Distance Is a Time Machine {background-color="black"}
 
@@ -834,12 +877,6 @@ A **light-year** is a unit of **distance**, not time.
 
 ::: {.bg-muted .p-2 .mt-4}
 **Definition:** The distance light travels in one year.
-
-::: {.text-sm}
-- Light speed: 300,000 km/s (3 × 10⁵ km/s)
-- One year: ~31.5 million seconds (3.15 × 10⁷ s)
-- **1 light-year ≈ 9.5 trillion km (9.5 × 10¹² km)**
-:::
 :::
 
 ::: {.fragment .text-center .text-muted .mt-2}
@@ -859,6 +896,24 @@ The scientific notation here previews Thursday's math boot camp:
 - 9.5 × 10¹² = 9,500,000,000,000 (9.5 trillion)
 
 This is why we need scientific notation — these numbers are unwieldy otherwise.
+
+Note: astronomers often use **parsecs** in practice; **light-years** are common in outreach because they’re intuitive.
+:::
+
+---
+
+## How big is a light-year? {background-color="black"}
+
+::: {.bg-muted .p-2 .mt-2}
+::: {.text-sm}
+- Light speed: 300,000 km/s (3 × 10⁵ km/s)
+- One year: ~31.5 million seconds (3.15 × 10⁷ s)
+- **1 light-year ≈ 9.5 trillion km (9.5 × 10¹² km)**
+:::
+:::
+
+::: {.notes}
+Do this. This is the first “math moment” and sets up Thursday’s math boot camp. Time-box to ~60–90 seconds.
 :::
 
 ---
@@ -896,7 +951,7 @@ A light-year is the distance light travels in one year. If something is 100 mill
 
 **The key relationship:**
 
-Shorter wavelength = Higher energy = Hotter source
+For thermal light: shorter wavelength = higher photon energy = hotter source
 
 ::: {.bg-muted .text-sm .mt-2}
 - **Gamma/X-ray:** Million-degree plasma, black holes
@@ -917,14 +972,11 @@ This is why different telescopes see different physics — not just "better pict
 "The electromagnetic spectrum isn't arbitrary — it's organized by energy. Hot, violent processes produce short wavelengths (X-rays, gamma rays). Cold, quiet processes produce long wavelengths (radio)."
 
 This is why we need X-ray telescopes for black holes and radio telescopes for cold gas.
+
+Note: some emission is non-thermal (not a simple thermometer). We’ll learn those cases later.
 :::
 
 ---
-
-<!----------------------------------------------------------------------------
-  PART 6: WRAP-UP (2 min)
-  Goal: Consolidate and preview next time
------------------------------------------------------------------------------>
 
 ## What You Can Recognize Now {background-color="black"}
 
