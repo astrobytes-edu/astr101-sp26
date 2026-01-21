@@ -867,12 +867,72 @@
   }
 
   // ============================================
+  // Keyboard Navigation
+  // ============================================
+
+  function setupKeyboard() {
+    document.addEventListener('keydown', (event) => {
+      // Only handle if not focused on an input
+      if (event.target.tagName === 'INPUT') return;
+
+      let dayDelta = 0;
+      let jumpDay = null;
+
+      switch (event.key) {
+        case 'ArrowLeft':
+          dayDelta = event.shiftKey ? -30 : -1;
+          break;
+        case 'ArrowRight':
+          dayDelta = event.shiftKey ? 30 : 1;
+          break;
+        case 'e':
+        case 'E':
+          // Jump to nearest equinox
+          const distToMar = Math.abs(state.dayOfYear - 80);
+          const distToSep = Math.abs(state.dayOfYear - 266);
+          jumpDay = distToMar < distToSep ? 80 : 266;
+          break;
+        case 's':
+        case 'S':
+          // Jump to nearest solstice
+          const distToJun = Math.abs(state.dayOfYear - 172);
+          const distToDec = Math.min(Math.abs(state.dayOfYear - 356), Math.abs(state.dayOfYear + 9));
+          jumpDay = distToJun < distToDec ? 172 : 356;
+          break;
+        case ' ':
+          event.preventDefault();
+          if (state.animating) {
+            stopAnimation();
+          } else {
+            animateYear();
+          }
+          return;
+        default:
+          return;
+      }
+
+      event.preventDefault();
+      stopAnimation();
+
+      if (jumpDay !== null) {
+        animateToDay(jumpDay);
+      } else if (dayDelta !== 0) {
+        state.dayOfYear = ((state.dayOfYear + dayDelta) % 365 + 365) % 365;
+        elements.dateSlider.value = state.dayOfYear;
+        updateSeasonPresetHighlight();
+        update();
+      }
+    });
+  }
+
+  // ============================================
   // Initialization
   // ============================================
 
   function init() {
     initElements();
     setupControls();
+    setupKeyboard();
 
     // Initialize starfield if available
     const starfieldCanvas = document.getElementById('starfield');
