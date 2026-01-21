@@ -39,6 +39,30 @@ Gravitational acceleration: a = GM/r²
 - `keplers-laws.js` - Physics, rendering, and interaction logic
 - `README.md` - This documentation
 
+## Controls
+
+### Mouse/Touch
+
+- **Drag planet** around orbit to change position
+- **Click timeline** to jump to orbital phase
+- **Adjust sliders** for orbital parameters
+
+### Keyboard
+
+- **Arrow Left/Right**: Move planet along orbit (Shift for fine control)
+- **Home**: Jump to perihelion
+- **End**: Jump to aphelion
+- **Space**: Play/Pause animation
+- **K**: Kepler Mode
+- **N**: Newton Mode
+- **1-6**: Quick preset selection
+
+### Accessibility
+
+- Full keyboard navigation
+- Screen reader announcements for position changes
+- ARIA attributes on interactive elements
+
 ## Usage
 
 ```html

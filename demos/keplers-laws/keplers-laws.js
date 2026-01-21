@@ -1007,7 +1007,9 @@
   function announcePosition() {
     const r = orbitalRadius(state.a, state.e, state.theta);
     const v = orbitalVelocity(state.a, r, state.M);
-    const phasePct = ((state.theta / (2 * Math.PI)) * 100).toFixed(0);
+    // Normalize theta to [0, 2*PI) to avoid negative percentages
+    const normalizedTheta = ((state.theta % (2 * Math.PI)) + 2 * Math.PI) % (2 * Math.PI);
+    const phasePct = ((normalizedTheta / (2 * Math.PI)) * 100).toFixed(0);
 
     let position = 'orbit';
     if (Math.abs(state.theta) < 0.1) position = 'perihelion';
@@ -1020,6 +1022,38 @@
     elements.planetGroup.setAttribute('aria-valuenow', Math.round(state.theta * 180 / Math.PI));
     elements.planetGroup.setAttribute('aria-valuetext',
       `${position}, ${r.toFixed(2)} AU from star`);
+  }
+
+  // ============================================
+  // Physics Validation
+  // ============================================
+
+  /**
+   * Validate physics calculations against known values
+   * Uncomment the call in init() for debugging
+   */
+  function validatePhysics() {
+    console.log('=== Physics Validation ===');
+
+    // Earth: P = 1 year, v = 29.78 km/s, a = 5.93 mm/s²
+    const earthP = orbitalPeriod(1.0, 1.0);
+    const earthV = orbitalVelocity(1.0, 1.0, 1.0);
+    const earthA = gravitationalAccel(1.0, 1.0);
+    console.log(`Earth (a=1AU, M=1M☉):`);
+    console.log(`  Period: ${earthP.toFixed(4)} yr (expected: 1.0000)`);
+    console.log(`  Velocity: ${earthV.toFixed(2)} km/s (expected: 29.78)`);
+    console.log(`  Accel: ${(earthA*1000).toFixed(2)} mm/s² (expected: 5.93)`);
+
+    // Jupiter: P = 11.86 years
+    const jupP = orbitalPeriod(5.203, 1.0);
+    console.log(`Jupiter (a=5.203AU): Period = ${jupP.toFixed(2)} yr (expected: 11.86)`);
+
+    // Kepler's 3rd Law: P² = a³
+    const p2 = earthP * earthP;
+    const a3 = 1.0 * 1.0 * 1.0;
+    console.log(`Kepler 3rd Law: P²=${p2.toFixed(4)}, a³=${a3.toFixed(4)} (should match)`);
+
+    console.log('=========================');
   }
 
   // ============================================
