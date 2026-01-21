@@ -284,6 +284,12 @@
       border-color: var(--accent-blue);
     }
 
+    /* Focus indicators for accessibility */
+    .mode-btn:focus, .preset-btn:focus, .anim-btn:focus, .scale-btn:focus {
+      outline: 2px solid var(--accent-gold);
+      outline-offset: 2px;
+    }
+
     /* Presets */
     .presets-panel {
       background: rgba(18, 18, 31, 0.9);
@@ -511,7 +517,7 @@
       <!-- Main Visualization -->
       <div class="main-viz">
         <div class="spectrum-panel">
-          <canvas id="spectrum-canvas"></canvas>
+          <canvas id="spectrum-canvas" role="img" aria-label="Planck spectrum curve showing intensity vs wavelength"></canvas>
         </div>
         <div class="star-preview">
           <div id="star-circle" style="width: 80px; height: 80px; background: #fff5cc;"

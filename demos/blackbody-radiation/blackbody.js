@@ -186,6 +186,7 @@
     cyclingPresets: false,
     speed: 1.0,
     animationId: null,
+    cycleTimeoutId: null,  // Separate ID for preset cycling to prevent memory leak
     currentPreset: null,
 
     // Display ranges
@@ -860,6 +861,10 @@
       cancelAnimationFrame(state.animationId);
       state.animationId = null;
     }
+    if (state.cycleTimeoutId) {
+      clearTimeout(state.cycleTimeoutId);
+      state.cycleTimeoutId = null;
+    }
     elements.btnPlay.disabled = false;
     elements.btnPause.disabled = true;
   }
@@ -887,7 +892,7 @@
       presets[currentIndex].click();
       currentIndex = (currentIndex + 1) % presets.length;
 
-      state.animationId = setTimeout(nextPreset, 2000 / state.speed);
+      state.cycleTimeoutId = setTimeout(nextPreset, 2000 / state.speed);
     }
 
     nextPreset();
