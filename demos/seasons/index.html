@@ -556,7 +556,10 @@
             </g>
 
             <!-- Earth with tilted axis -->
-            <g id="earth-orbital" class="earth-marker">
+            <g id="earth-orbital" class="earth-marker"
+               role="img"
+               aria-label="Earth position on orbit"
+               aria-roledescription="Earth at current date position">
               <circle id="earth-orbital-circle" cx="200" cy="55" r="15" fill="url(#earthDayGradient)"/>
               <!-- Axis indicator (arrow pointing to Polaris) -->
               <g id="axis-indicator">
@@ -799,6 +802,23 @@
         If distance caused seasons, both hemispheres would have summer simultaneously.
         Instead, axial tilt means one hemisphere gets more direct sunlight while the other gets less—creating opposite seasons.
       </div>
+
+      <!-- Screen reader announcements -->
+      <div id="status-announce" aria-live="polite" aria-atomic="true" class="sr-only"></div>
+
+      <style>
+        .sr-only {
+          position: absolute;
+          width: 1px;
+          height: 1px;
+          padding: 0;
+          margin: -1px;
+          overflow: hidden;
+          clip: rect(0, 0, 0, 0);
+          white-space: nowrap;
+          border: 0;
+        }
+      </style>
     </div>
   </div>
 

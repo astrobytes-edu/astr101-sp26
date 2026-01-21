@@ -613,6 +613,20 @@
 
     const latStr = state.latitude >= 0 ? `${state.latitude}°N` : `${-state.latitude}°S`;
     elements.latitudeDisplay.textContent = latStr;
+
+    // Update ARIA for Earth position
+    const earthOrbital = document.getElementById('earth-orbital');
+    if (earthOrbital) {
+      const seasonN = getSeasonNorth(state.dayOfYear);
+      earthOrbital.setAttribute('aria-label',
+        `Earth at ${dayOfYearToDate(state.dayOfYear)}, ${seasonN} in Northern Hemisphere`);
+    }
+
+    // Announce significant changes
+    const announce = document.getElementById('status-announce');
+    if (announce && !state.animating) {
+      announce.textContent = `${dayOfYearToDate(state.dayOfYear)}, Northern ${getSeasonNorth(state.dayOfYear)}`;
+    }
   }
 
   // ============================================
