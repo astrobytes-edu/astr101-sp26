@@ -131,10 +131,10 @@ In ASTR 101, numbers aren’t decoration—they’re how we turn **points of lig
 
 | Scale             |                     Distance |     Light travel time |
 | ----------------- | ---------------------------: | --------------------: |
-| Earth–Moon        |    $3.84\times10^8,\text{m}$ |   $\sim 1.3,\text{s}$ |
-| 1 AU (Earth–Sun)  | $1.50\times10^{11},\text{m}$ | $\sim 8.3,\text{min}$ |
-| 1 light-year (ly) | $9.46\times10^{15},\text{m}$ |                1 year |
-| 1 parsec (pc)     | $3.09\times10^{16},\text{m}$ | $\sim 3.26,\text{yr}$ |
+| Earth–Moon        |    $3.84\times10^8\,\text{m}$ |   $\sim 1.3\,\text{s}$ |
+| 1 AU (Earth–Sun)  | $1.50\times10^{11}\,\text{m}$ | $\sim 8.3\,\text{min}$ |
+| 1 light-year (ly) | $9.46\times10^{15}\,\text{m}$ |                1 year |
+| 1 parsec (pc)     | $3.09\times10^{16}\,\text{m}$ | $\sim 3.26\,\text{yr}$ |
 
 : {.text-sm}
 :::
@@ -233,11 +233,11 @@ Muscle memory matters for notation fluency.
 ::: {.column width="55%"}
 **Big number**
 
-$300{,}000{,}000\,\text{m/s} = 3.0\times10^8\,\text{m/s}$
+$300{,}000{,}000\\,\text{m/s} = 3.0\times10^8\\,\text{m/s}$
 
 **Small number**
 
-$0.000000001\,\text{s} = 1.0\times10^{-9}\,\text{s}$
+$0.000000001\\,\text{s} = 1.0\times10^{-9}\\,\text{s}$
 :::
 
 ::: {.column width="45%"}
@@ -304,7 +304,7 @@ Stress: these are *power-of-ten labels*. They’re not extra information; they a
 
 ---
 
-## Order-of-magnitude estimation (ROM)
+## Order-of-magnitude estimation (OoM)
 
 When exact arithmetic is annoying, estimate on purpose.
 
@@ -312,12 +312,12 @@ When exact arithmetic is annoying, estimate on purpose.
 
 - Round coefficients to nearby easy numbers.
 - For a **rough order-of-magnitude**:
-  - coefficient $<,3$ → round to 1
-  - coefficient $>,3$ → round to 10
+  - coefficient $< 3$ → round to 1
+  - coefficient $> 3$ → round to 10
 :::
 
 ::: {.callout-warning appearance="minimal"}
-**ROM is not “sloppy.”** It’s a controlled approximation for staying in the right cosmic zip code.
+**OoM is not "sloppy."** It's a controlled approximation for staying in the right cosmic zip code.
 :::
 
 ---
@@ -375,11 +375,11 @@ A conversion factor is an equality written as a fraction.
 
 Example:
 
-$$1,\text{m} \leftrightarrow 100,\text{cm}$$
+$$1\,\text{m} \leftrightarrow 100\,\text{cm}$$
 
 so you can use
 
-$$\frac{100,\text{cm}}{1,\text{m}}=1 \quad \text{or} \quad \frac{1,\text{m}}{100,\text{cm}}=1.$$
+$$\frac{100\,\text{cm}}{1\,\text{m}}=1 \quad \text{or} \quad \frac{1\,\text{m}}{100\,\text{cm}}=1.$$
 
 ::: {.notes}
 1 min. Emphasize: conversion factor = 1. You're not changing the quantity, just the label.
@@ -407,7 +407,7 @@ Put the unit you want to **remove** in the denominator.
 
 ## Example: minutes → hours (structure, not memorization)
 
-$$1000\,\text{min}\times\frac{1\,\text{hr}}{60\,\text{min}} = \frac{1000}{60}\,\text{hr}\approx 16.7\,\text{hr}$$
+$$1000\\,\text{min}\times\frac{1\\,\text{hr}}{60\\,\text{min}} = \frac{1000}{60}\\,\text{hr}\approx 16.7\\,\text{hr}$$
 
 ::: {.fragment}
 **Sanity check:** hours are bigger units than minutes, so the number should get smaller. ✓
@@ -418,11 +418,11 @@ $$1000\,\text{min}\times\frac{1\,\text{hr}}{60\,\text{min}} = \frac{1000}{60}\,\
 ## Stop & Solve 2: Unit conversion chains {#stop-solve-2}
 
 ::: {.incremental}
-**A)** Convert $60,\text{mph}$ to $\text{m/s}$.
+**A)** Convert $60\,\text{mph}$ to $\text{m/s}$.
 
 **B)** Convert $0.5^\circ$ to arcseconds.
 
-(Use: $1,\text{mile}=1.6,\text{km}$, $1,\text{hr}=3600,\text{s}$, $1^\circ=60,\text{arcmin}$, $1,\text{arcmin}=60,\text{arcsec}$.)
+(Use: $1\,\text{mile}=1.6\,\text{km}$, $1\,\text{hr}=3600\,\text{s}$, $1^\circ=60\,\text{arcmin}$, $1\,\text{arcmin}=60\,\text{arcsec}$.)
 :::
 
 ::: {.fragment .mt-2 .text-sm}
@@ -437,7 +437,7 @@ When a unit is squared or cubed, the conversion factor gets squared/cubed too.
 
 Example idea:
 
-$$1\,\text{m}=100\,\text{cm}\;\Rightarrow\;1\,\text{m}^3=(100\,\text{cm})^3=10^6\,\text{cm}^3.$$
+$$1\\,\text{m}=100\\,\text{cm}\;\Rightarrow\;1\\,\text{m}^3=(100\\,\text{cm})^3=10^6\\,\text{cm}^3.$$
 
 ::: {.notes}
 This is a classic student trap. Do this once slowly.
@@ -451,9 +451,9 @@ Some “named” SI units are shortcuts:
 
 ::: {.incremental}
 
-- $1,\text{N} = 1,\text{kg},\text{m}/\text{s}^2$
-- $1,\text{J} = 1,\text{N},\text{m} = 1,\text{kg},\text{m}^2/\text{s}^2$
-- $1,\text{W} = 1,\text{J}/\text{s} = 1,\text{kg},\text{m}^2/\text{s}^3$
+- $1\,\text{N} = 1\,\text{kg}\,\text{m}/\text{s}^2$
+- $1\,\text{J} = 1\,\text{N}\,\text{m} = 1\,\text{kg}\,\text{m}^2/\text{s}^2$
+- $1\,\text{W} = 1\,\text{J}/\text{s} = 1\,\text{kg}\,\text{m}^2/\text{s}^3$
 :::
 
 ::: {.notes}
@@ -632,15 +632,50 @@ So:
 
 Light speed:
 
-$$c\approx 3\times10^8,\text{m/s}$$
+$$c\approx 3\times10^8\text{m/s}$$
 
 Seconds per year:
 
-$$1,\text{yr}\approx 3.15\times10^7,\text{s}$$
+$$1\,\text{yr}\approx 3.15\times10^7\text{s}$$
 
 So distance in one year:
 
-$$1,\text{ly}=c\times(1,\text{yr})\approx (3\times10^8)(3.15\times10^7),\text{m}\approx 9.5\times10^{15},\text{m}.$$
+$$1\,\text{ly}=c\times(1 \text{yr})\approx (3\times10^8)(3.15\times10^7)\text{m}\approx 9.5\times10^{15}\text{m}.$$
+
+---
+
+## What a Light-Year Really Means
+
+::: {.columns}
+::: {.column width="55%"}
+A light-year is **not** a time—it's a **distance**.
+
+It's how far light travels in one year:
+
+$$1\,\text{ly} \approx 9.5 \times 10^{15}\,\text{m}$$
+
+That's about **9.5 trillion kilometers**.
+:::
+
+::: {.column width="45%"}
+::: {.callout-tip appearance="minimal"}
+### Why use light-years?
+
+Because saying "Proxima Centauri is $4 \times 10^{16}$ meters away" is painful.
+
+Saying "4.2 light-years" is memorable.
+:::
+:::
+:::
+
+::: {.fragment}
+When we say a star is 100 light-years away, we're also saying we see it **as it was 100 years ago**.
+:::
+
+::: {.notes}
+1 min. Reinforce the light-year misconception. Distance = time dial is the key insight.
+Connect to the opening theme: we see the past, not the present.
+:::
 
 ---
 
@@ -667,7 +702,7 @@ Connect to the "distance = time dial" concept from Lecture 1.
 
 ## Stop & Solve 4: Earth's orbital "speed" {#stop-solve-4}
 
-Earth moves around the Sun at about $29.8,\text{km/s}$.
+Earth moves around the Sun at about $29.8\,\text{km/s}$.
 
 How far does Earth travel in **one minute**? (Answer in meters.)
 
@@ -712,9 +747,9 @@ We'll explore this in detail in Module 2. For now, just note the pattern.
 
 | Unit | What it's good for     | Useful fact                                                           |
 | ---- | ---------------------- | --------------------------------------------------------------------- |
-| AU   | solar system distances | $1,\text{AU}\approx 1.50\times10^{11},\text{m}$                       |
-| ly   | "how far light goes"   | $1,\text{ly}\approx 9.46\times10^{15},\text{m}$                       |
-| pc   | star/galaxy distances  | $1,\text{pc}\approx 3.09\times10^{16},\text{m}\approx 3.26,\text{ly}$ |
+| AU   | solar system distances | $1\,\text{AU}\approx 1.50\times10^{11}\,\text{m}$                       |
+| ly   | "how far light goes"   | $1\,\text{ly}\approx 9.46\times10^{15}\,\text{m}$                       |
+| pc   | star/galaxy distances  | $1\,\text{pc}\approx 3.09\times10^{16}\,\text{m}\approx 3.26\,\text{ly}$ |
 
 ---
 
@@ -769,8 +804,8 @@ Use these only if you want to show a full worked path. Otherwise keep momentum.
 
 ## Solution 0 {#solution-0}
 
-- $2,\text{AU}$: $2\times 8.3,\text{min}\approx 16.6,\text{min}$
-- $0.5,\text{AU}$: $0.5\times 8.3,\text{min}\approx 4.15,\text{min}$
+- $2\,\text{AU}$: $2\times 8.3\,\text{min}\approx 16.6\,\text{min}$
+- $0.5\,\text{AU}$: $0.5\times 8.3\,\text{min}\approx 4.15\,\text{min}$
 
 [← Back](#stop-solve-0)
 
@@ -798,13 +833,13 @@ Use these only if you want to show a full worked path. Otherwise keep momentum.
 
 ## Solution 2 {#solution-2}
 
-### A) $60,\text{mph} \to \text{m/s}$
+### A) $60\,\text{mph} \to \text{m/s}$
 
-$$60,\frac{\text{mile}}{\text{hr}}\times\frac{1.6,\text{km}}{1,\text{mile}}\times\frac{1000,\text{m}}{1,\text{km}}\times\frac{1,\text{hr}}{3600,\text{s}}\approx 26.7,\text{m/s}$$
+$$60,\frac{\text{mile}}{\text{hr}}\times\frac{1.6\,\text{km}}{1\,\text{mile}}\times\frac{1000\,\text{m}}{1\,\text{km}}\times\frac{1\,\text{hr}}{3600\,\text{s}}\approx 26.7\,\text{m/s}$$
 
 ### B) $0.5^\circ \to \text{arcsec}$
 
-$$0.5^\circ\times\frac{60,\text{arcmin}}{1^\circ}\times\frac{60,\text{arcsec}}{1,\text{arcmin}}=1800,\text{arcsec}$$
+$$0.5^\circ\times\frac{60\,\text{arcmin}}{1^\circ}\times\frac{60\,\text{arcsec}}{1\,\text{arcmin}}=1800\,\text{arcsec}$$
 
 [← Back](#stop-solve-2)
 
@@ -830,11 +865,11 @@ So the Sun's volume is about **1.3 million Earth volumes**.
 
 ## Solution 4 {#solution-4}
 
-$$29.8,\text{km/s} = 2.98\times10^4,\text{m/s}$$
+$$29.8\,\text{km/s} = 2.98\times10^4\,\text{m/s}$$
 
-One minute is $60,\text{s}$, so
+One minute is $60\,\text{s}$, so
 
-$$\text{distance}=vt=(2.98\times10^4,\text{m/s})(60,\text{s})\approx 1.79\times10^6,\text{m}.$$
+$$\text{distance}=vt=(2.98\times10^4\,\text{m/s})(60\,\text{s})\approx 1.79\times10^6\,\text{m}.$$
 
 That's about **1800 km** in one minute.
 
