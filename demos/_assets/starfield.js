@@ -34,23 +34,36 @@ function createStarfield(canvas, options = {}) {
   let running = false;
 
   /**
-   * Initialize stars with random positions and properties
+   * Initialize stars with depth layers
    */
   function initStars() {
     stars = [];
     const { width, height } = canvas;
 
-    for (let i = 0; i < config.starCount; i++) {
-      stars.push({
-        x: Math.random() * width,
-        y: Math.random() * height,
-        size: config.minSize + Math.random() * (config.maxSize - config.minSize),
-        color: config.colors[Math.floor(Math.random() * config.colors.length)],
-        twinklePhase: Math.random() * Math.PI * 2,
-        twinkleSpeed: config.twinkleSpeed * (0.5 + Math.random()),
-        baseOpacity: 0.5 + Math.random() * 0.5
-      });
-    }
+    // Create 3 depth layers
+    const layers = [
+      { count: Math.floor(config.starCount * 0.5), minSize: 0.3, maxSize: 0.8, baseOpacity: 0.3, speed: 0.5 },  // Far
+      { count: Math.floor(config.starCount * 0.35), minSize: 0.5, maxSize: 1.2, baseOpacity: 0.5, speed: 1.0 }, // Mid
+      { count: Math.floor(config.starCount * 0.15), minSize: 1.0, maxSize: 2.5, baseOpacity: 0.7, speed: 1.5 }  // Near
+    ];
+
+    layers.forEach((layer, layerIndex) => {
+      for (let i = 0; i < layer.count; i++) {
+        stars.push({
+          x: Math.random() * width,
+          y: Math.random() * height,
+          size: layer.minSize + Math.random() * (layer.maxSize - layer.minSize),
+          color: config.colors[Math.floor(Math.random() * config.colors.length)],
+          twinklePhase: Math.random() * Math.PI * 2,
+          twinkleSpeed: config.twinkleSpeed * layer.speed * (0.5 + Math.random()),
+          baseOpacity: layer.baseOpacity + Math.random() * 0.2,
+          layer: layerIndex
+        });
+      }
+    });
+
+    // Sort by layer (far stars render first)
+    stars.sort((a, b) => a.layer - b.layer);
   }
 
   /**
