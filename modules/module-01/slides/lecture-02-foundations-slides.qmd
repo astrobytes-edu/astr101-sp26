@@ -704,7 +704,7 @@ $$= 100^3\,\text{cm}^3 = 10^6\,\text{cm}^3$$ ✓
 :::
 
 ::: {.fragment}
-**Pro tip:** Parentheses are your best friend—wrap the whole unit before raising to a power.
+**Pro tip:** Parentheses are your best friend—wrap the number *and* unit together: $(100\,\text{cm})^3$, not $100\,\text{cm}^3$.
 :::
 
 ::: {.notes}
