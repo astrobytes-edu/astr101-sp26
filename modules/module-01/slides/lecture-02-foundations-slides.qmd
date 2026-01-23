@@ -65,7 +65,27 @@ By the end of this lecture, you will be able to:
 :::
 
 ::: {.notes}
-Set the tone: “This is not a math test. It’s a navigation toolkit for the universe.”
+Set the tone: "This is not a math test. It's a navigation toolkit for the universe."
+:::
+
+---
+
+## A Word Before We Begin
+
+::: {.callout-warning appearance="minimal"}
+### Don't panic about the equations!
+
+Today I'll show you **examples** using formulas we haven't covered yet. You're **not expected to understand them fully**—we'll learn each one properly when its topic comes up.
+
+For now, focus on the *method*, not the formula.
+:::
+
+::: {.fragment}
+Think of it like watching a cooking demo before you have all the ingredients. You're learning the *technique*—the details come later.
+:::
+
+::: {.notes}
+30 sec. This is important framing. Students often freeze when they see unfamiliar equations. Reassure them: today is about building comfort with the tools, not mastering every formula.
 :::
 
 ---
