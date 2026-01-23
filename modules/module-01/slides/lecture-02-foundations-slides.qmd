@@ -1206,7 +1206,7 @@ When you see a big number or a scaling question, you'll know which tool to reach
 If you move **twice as far** from a light source, brightness becomes...
 
 - [ ] Half (1/2)
-- [x] One-quarter (1/4)
+- [ ] One-quarter (1/4)
 - [ ] One-eighth (1/8)
 - [ ] The same
 :::
