@@ -487,7 +487,7 @@ Comparing two cases cancels $k$:
 $$\frac{A_2}{A_1}=\left(\frac{B_2}{B_1}\right)^n.$$
 
 ::: {.fragment}
-**Takeaway:** you learn the scaling story without hunting constants.
+**What this says:** The ratio tells you how quantities scale—no need to look up constants. If you know how one system behaves, you can predict any other.
 :::
 
 ---
@@ -553,6 +553,8 @@ If you move twice as far from a light source:
 $$\text{brightness}\propto \frac{1}{d^2}$$
 
 $$\frac{B_2}{B_1}=\left(\frac{d_1}{d_2}\right)^2=\left(\frac{1}{2}\right)^2=\frac{1}{4}$$
+
+**What this says:** Double the distance → brightness drops to 1/4. Triple → 1/9. The falloff is *fast*.
 :::
 
 ::: {.column width="45%"}
@@ -561,7 +563,7 @@ $$\frac{B_2}{B_1}=\left(\frac{d_1}{d_2}\right)^2=\left(\frac{1}{2}\right)^2=\fra
 :::
 
 ::: {.callout-note appearance="minimal"}
-This is why distance is *hard* in astronomy: small distance errors become big brightness errors.
+Astronomers call this brightness measurement **flux** — the energy arriving per second per unit area (W/m²). This is why distance is *hard* in astronomy: small distance errors become big flux errors.
 :::
 
 ::: {.notes}
@@ -612,6 +614,8 @@ Tool 4: Rate Problems
 Most rate problems are one equation with three rearrangements:
 
 $$\text{amount} = \text{rate}\times\text{time}$$
+
+**What this says:** If you know any two of these, you can find the third. Distance, speed, time — they're all connected.
 
 So:
 
@@ -714,6 +718,29 @@ We'll explore this in detail in Module 2. For now, just note the pattern.
 
 ---
 
+## What to Take Away
+
+::: {.callout-note appearance="minimal"}
+### Recognition, not retention
+
+You don't need to memorize formulas. You need to **recognize patterns**:
+
+- Powers of ten compress cosmic scales
+- Ratios reveal relationships without constants
+- Units keep your equations honest
+- Rates connect distance, time, and speed
+:::
+
+::: {.fragment}
+When you see a big number or a scaling question, you'll know which tool to reach for.
+:::
+
+::: {.notes}
+1 min. Reinforce: this is a toolkit, not a test. Recognition matters more than memorization.
+:::
+
+---
+
 ## Exit Ticket {background-color="#1a1a2e"}
 
 ::: {.quiz}
@@ -747,6 +774,10 @@ Use these only if you want to show a full worked path. Otherwise keep momentum.
 
 [← Back](#stop-solve-0)
 
+::: {.notes}
+30 sec. Simple proportional reasoning — distance scales linearly with light-time.
+:::
+
 ---
 
 ## Solution 1 {#solution-1}
@@ -758,6 +789,10 @@ Use these only if you want to show a full worked path. Otherwise keep momentum.
 3. $(2\times10^{-4})^3 = 2^3\times10^{-12}=8\times10^{-12}$
 
 [← Back](#stop-solve-1)
+
+::: {.notes}
+30 sec. Key pattern: multiply coefficients, add/subtract exponents, then normalize.
+:::
 
 ---
 
@@ -773,15 +808,23 @@ $$0.5^\circ\times\frac{60,\text{arcmin}}{1^\circ}\times\frac{60,\text{arcsec}}{1
 
 [← Back](#stop-solve-2)
 
+::: {.notes}
+45 sec. Emphasize unit cancellation — watch the units disappear step by step.
+:::
+
 ---
 
 ## Solution 3 {#solution-3}
 
 $$109^3 \approx (1.09\times10^2)^3 = 1.09^3\times10^6\approx 1.3\times10^6.$$
 
-So the Sun’s volume is about **1.3 million Earth volumes**.
+So the Sun's volume is about **1.3 million Earth volumes**.
 
 [← Back](#stop-solve-3)
+
+::: {.notes}
+30 sec. The cube makes a huge difference — radius ratio of 109 becomes volume ratio of 1.3 million.
+:::
 
 ---
 
@@ -793,6 +836,10 @@ One minute is $60,\text{s}$, so
 
 $$\text{distance}=vt=(2.98\times10^4,\text{m/s})(60,\text{s})\approx 1.79\times10^6,\text{m}.$$
 
-That’s about **1800 km** in one minute.
+That's about **1800 km** in one minute.
 
 [← Back](#stop-solve-4)
+
+::: {.notes}
+30 sec. Rate × time = distance. Earth covers almost 2000 km every minute — cosmic speeds are fast!
+:::
