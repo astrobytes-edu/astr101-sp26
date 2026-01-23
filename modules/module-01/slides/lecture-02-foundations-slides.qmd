@@ -946,13 +946,13 @@ $$\frac{I_\text{Mars}}{I_\text{Earth}} = \left(\frac{d_\text{Earth}}{d_\text{Mar
 ::: {.fragment}
 **Answer:** Mars receives only **44% as much sunlight** as Earth—less than half!
 
-This is why Mars is so cold, and why solar panels on Mars rovers need to be larger.
+This is why solar panels on Mars rovers need to be so large. (Mars is cold mostly because its thin atmosphere can't trap heat—but less sunlight doesn't help!)
 :::
 
 ::: {.notes}
 2 min. Walk through carefully. Note the d terms flip because brightness is *inversely* proportional to d².
 Students often get confused about which distance goes on top—remind them: farther away = less light.
-Real-world consequence: Mars surface temperature averages −60°C.
+Note: Mars is cold (−60°C average) mainly due to its thin atmosphere (~1% of Earth's), not just distance. But less sunlight does mean solar panels must be larger.
 :::
 
 ---
