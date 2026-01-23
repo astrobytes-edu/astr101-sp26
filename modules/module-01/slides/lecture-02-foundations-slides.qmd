@@ -891,30 +891,63 @@ So:
 
 ---
 
-## Example: building a light-year (units + rate)
+## Worked Example: Building a Light-Year {.smaller}
 
-Light speed:
+**Problem:** How far does light travel in one year? (In meters)
 
-$$c\approx 3\times10^8\text{m/s}$$
+::: {.columns}
+::: {.column width="50%"}
+**Step 1: Identify the rate equation**
 
-Seconds per year:
+$$\text{distance} = \text{speed} \times \text{time}$$
 
-$$1\,\text{yr}\approx 3.15\times10^7\text{s}$$
+**Step 2: Gather your values**
 
-So distance in one year:
+- Speed of light: $c = 3 \times 10^8\,\text{m/s}$
+- Time: $1\,\text{year}$
 
-$$1\,\text{ly}=c\times(1 \text{yr})\approx (3\times10^8)(3.15\times10^7)\text{m}\approx 9.5\times10^{15}\text{m}.$$
+But wait—the units don't match! We need time in **seconds**.
+:::
+
+::: {.column width="50%"}
+**Step 3: Convert 1 year → seconds**
+
+$$1\,\text{yr} \times \frac{365\,\text{days}}{1\,\text{yr}} \times \frac{24\,\text{hr}}{1\,\text{day}} \times \frac{3600\,\text{s}}{1\,\text{hr}}$$
+
+$$= 365 \times 24 \times 3600\,\text{s}$$
+
+$$\approx 3.15 \times 10^7\,\text{s}$$
+:::
+:::
+
+---
+
+## Worked Example: Building a Light-Year (continued) {.smaller}
+
+**Step 4: Multiply using scientific notation**
+
+$$1\,\text{ly} = c \times t = (3 \times 10^8\,\text{m/s}) \times (3.15 \times 10^7\,\text{s})$$
 
 ::: {.fragment}
 ::: {.callout-tip appearance="minimal"}
-### The payoff
-
-Remember: this is why distance = looking back in time. Light from a star 100 light-years away left **100 years ago**.
+### Scientific notation multiplication rule
+**Multiply coefficients, add exponents:** $(a \times 10^m) \times (b \times 10^n) = (a \times b) \times 10^{m+n}$
 :::
+:::
+
+::: {.fragment}
+$$= (3 \times 3.15) \times 10^{8+7}\,\text{m}$$
+$$= 9.45 \times 10^{15}\,\text{m}$$
+:::
+
+::: {.fragment}
+**Answer:** $1\,\text{ly} \approx 9.5 \times 10^{15}\,\text{m}$ (about 9.5 trillion kilometers)
 :::
 
 ::: {.notes}
-30 sec. Brief callback to the opening motivation. The calculation justifies the concept.
+3 min total for both slides. Walk through each step deliberately.
+Emphasize: (1) unit conversion chain, (2) scientific notation multiplication rule, (3) units cancel (s/s = 1).
+This is a template for ALL rate problems: distance = speed × time.
 :::
 
 ---
