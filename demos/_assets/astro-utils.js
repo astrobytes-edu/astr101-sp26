@@ -485,6 +485,19 @@ if (typeof document !== 'undefined' && !document.getElementById('astro-success-s
  * @param {number} maxValue - Maximum actual value
  * @param {function} onChange - Called with actual value
  */
+/**
+ * Update slider progress indicator for WebKit browsers
+ * Sets the --slider-progress CSS custom property
+ * @param {HTMLInputElement} slider - The range input element
+ */
+function updateSliderProgress(slider) {
+  const min = parseFloat(slider.min) || 0;
+  const max = parseFloat(slider.max) || 100;
+  const value = parseFloat(slider.value);
+  const percentage = ((value - min) / (max - min)) * 100;
+  slider.style.setProperty('--slider-progress', percentage + '%');
+}
+
 function createLogSlider(slider, minValue, maxValue, onChange) {
   const minLog = Math.log10(minValue);
   const maxLog = Math.log10(maxValue);
@@ -506,14 +519,19 @@ function createLogSlider(slider, minValue, maxValue, onChange) {
   }
 
   slider.addEventListener('input', () => {
+    updateSliderProgress(slider);
     const value = sliderToValue(parseFloat(slider.value));
     onChange(value);
   });
+
+  // Initialize progress indicator
+  updateSliderProgress(slider);
 
   return {
     getValue: () => sliderToValue(parseFloat(slider.value)),
     setValue: (value) => {
       slider.value = valueToSlider(value);
+      updateSliderProgress(slider);
       onChange(value);
     }
   };
@@ -528,6 +546,7 @@ function createLogSlider(slider, minValue, maxValue, onChange) {
  */
 function createLinearSlider(slider, display, formatter, onChange) {
   function update() {
+    updateSliderProgress(slider);
     const value = parseFloat(slider.value);
     if (display && formatter) {
       display.textContent = formatter(value);
@@ -538,6 +557,9 @@ function createLinearSlider(slider, display, formatter, onChange) {
   }
 
   slider.addEventListener('input', update);
+
+  // Initialize progress indicator
+  updateSliderProgress(slider);
 
   return {
     getValue: () => parseFloat(slider.value),
@@ -840,6 +862,7 @@ if (typeof window !== 'undefined') {
     showSuccessIndicator,
 
     // Sliders
+    updateSliderProgress,
     createLogSlider,
     createLinearSlider,
 

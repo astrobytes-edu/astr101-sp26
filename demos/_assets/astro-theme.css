@@ -337,6 +337,43 @@
   box-shadow: 0 0 25px rgba(78, 205, 196, 0.6);
 }
 
+/* Firefox: Track fill (left of thumb) */
+.astro-slider::-moz-range-progress {
+  background: var(--cosmic-teal);
+  border-radius: 3px;
+  height: 6px;
+}
+
+/* WebKit: Use linear-gradient via JS to show progress
+   Set --slider-progress custom property (0-100) via JavaScript:
+   slider.style.setProperty('--slider-progress', percentage + '%');
+*/
+.astro-slider {
+  --slider-progress: 50%;
+}
+
+.astro-slider::-webkit-slider-runnable-track {
+  background: linear-gradient(
+    to right,
+    var(--cosmic-teal) 0%,
+    var(--cosmic-teal) var(--slider-progress),
+    var(--space-light) var(--slider-progress),
+    var(--space-light) 100%
+  );
+  border-radius: 3px;
+  height: 6px;
+}
+
+.astro-slider:hover::-webkit-slider-runnable-track {
+  background: linear-gradient(
+    to right,
+    var(--cosmic-teal) 0%,
+    var(--cosmic-teal) var(--slider-progress),
+    var(--space-medium) var(--slider-progress),
+    var(--space-medium) 100%
+  );
+}
+
 /* Slider value display */
 .slider-with-value {
   display: flex;
