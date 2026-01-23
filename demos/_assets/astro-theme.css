@@ -796,15 +796,6 @@
 /* ============================================
    Accessibility
    ============================================ */
-@media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-  }
-}
 
 /* Focus styles */
 .astro-btn:focus-visible,
@@ -828,10 +819,16 @@
 }
 
 /* ============================================
-   Animation Utilities
+   Animation Utilities - Enhanced
    ============================================ */
+
+/* Fade animations */
 .fade-in {
   animation: fadeIn var(--transition-medium) ease-out;
+}
+
+.fade-out {
+  animation: fadeOut var(--transition-medium) ease-out forwards;
 }
 
 @keyframes fadeIn {
@@ -839,13 +836,103 @@
   to { opacity: 1; }
 }
 
+@keyframes fadeOut {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+/* Pulse animations */
 .pulse {
-  animation: pulse 2s infinite;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.pulse-subtle {
+  animation: pulse-subtle 3s ease-in-out infinite;
 }
 
 @keyframes pulse {
   0%, 100% { opacity: 1; }
-  50% { opacity: 0.7; }
+  50% { opacity: 0.6; }
+}
+
+@keyframes pulse-subtle {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.8; transform: scale(1.02); }
+}
+
+/* Glow pulse (for celestial objects) */
+.glow-pulse {
+  animation: glow-pulse 4s ease-in-out infinite;
+}
+
+@keyframes glow-pulse {
+  0%, 100% { filter: drop-shadow(0 0 20px currentColor); }
+  50% { filter: drop-shadow(0 0 30px currentColor); }
+}
+
+/* Twinkle (for stars) */
+.twinkle {
+  animation: twinkle 2s ease-in-out infinite;
+  animation-delay: calc(var(--twinkle-delay, 0) * 1s);
+}
+
+@keyframes twinkle {
+  0%, 100% { opacity: var(--star-opacity, 0.8); }
+  50% { opacity: calc(var(--star-opacity, 0.8) * 0.4); }
+}
+
+/* Scale animations */
+.pop-in {
+  animation: pop-in 0.3s ease-out;
+}
+
+@keyframes pop-in {
+  0% { transform: scale(0.8); opacity: 0; }
+  70% { transform: scale(1.05); }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+/* Slide animations */
+.slide-up {
+  animation: slide-up var(--transition-medium) ease-out;
+}
+
+@keyframes slide-up {
+  from { transform: translateY(10px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* Value change highlight */
+.value-flash {
+  animation: value-flash 0.3s ease-out;
+}
+
+@keyframes value-flash {
+  0% { color: var(--cosmic-teal); transform: scale(1.05); }
+  100% { color: inherit; transform: scale(1); }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .fade-in,
+  .fade-out,
+  .pulse,
+  .pulse-subtle,
+  .glow-pulse,
+  .twinkle,
+  .pop-in,
+  .slide-up,
+  .value-flash {
+    animation: none;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }
 
 /* ============================================
