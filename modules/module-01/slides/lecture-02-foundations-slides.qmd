@@ -351,11 +351,11 @@ Muscle memory matters for notation fluency.
 ::: {.column width="55%"}
 **Big number**
 
-$300{,}000{,}000\\,\text{m/s} = 3.0\times10^8\\,\text{m/s}$
+$300{,}000{,}000\,\text{m/s} = 3.0\times10^8\,\text{m/s}$
 
 **Small number**
 
-$0.000000001\\,\text{s} = 1.0\times10^{-9}\\,\text{s}$
+$0.000000001\,\text{s} = 1.0\times10^{-9}\,\text{s}$
 :::
 
 ::: {.column width="45%"}
@@ -375,14 +375,25 @@ $0.000000001\\,\text{s} = 1.0\times10^{-9}\\,\text{s}$
 
 ::: {.incremental}
 
-- Multiply: $(a\times10^m)(b\times10^n)=(ab)\times10^{m+n}$
-- Divide: $\dfrac{a\times10^m}{b\times10^n}=\left(\dfrac{a}{b}\right)\times10^{m-n}$
-- Powers: $(a\times10^m)^k = a^k\times10^{mk}$
+- **Multiply:** $(a\times10^m)(b\times10^n)=(ab)\times10^{m+n}$
+  - *Multiply the coefficients, add the exponents*
+- **Divide:** $\dfrac{a\times10^m}{b\times10^n}=\left(\dfrac{a}{b}\right)\times10^{m-n}$
+  - *Divide the coefficients, subtract the exponents*
+- **Powers:** $(a\times10^m)^k = a^k\times10^{mk}$
+  - *Raise the coefficient to the power, multiply the exponent*
+:::
+
+::: {.fragment}
+::: {.callout-tip appearance="minimal"}
+### Why this works
+Exponents are a shorthand for repeated multiplication. Adding exponents = multiplying powers of ten: $10^3 \times 10^2 = 10^{3+2} = 10^5$.
+:::
 :::
 
 ::: {.notes}
-Make them say the rule out loud once. Muscle memory matters.
+2 min. Make them say each rule out loud once. Emphasize the pattern: coefficients do normal math, exponents follow their own rules.
 :::
+
 
 ---
 
@@ -584,7 +595,7 @@ Put the unit you want to **remove** in the denominator.
 
 ## Example: minutes → hours (structure, not memorization)
 
-$$1000\\,\text{min}\times\frac{1\\,\text{hr}}{60\\,\text{min}} = \frac{1000}{60}\\,\text{hr}\approx 16.7\\,\text{hr}$$
+$$1000\,\text{min}\times\frac{1\,\text{hr}}{60\,\text{min}} = \frac{1000}{60}\,\text{hr}\approx 16.7\,\text{hr}$$
 
 ::: {.fragment}
 **Sanity check:** hours are bigger units than minutes, so the number should get smaller. ✓
@@ -612,12 +623,34 @@ $$1000\\,\text{min}\times\frac{1\\,\text{hr}}{60\\,\text{min}} = \frac{1000}{60}
 
 When a unit is squared or cubed, the conversion factor gets squared/cubed too.
 
-Example idea:
+::: {.columns}
+::: {.column width="50%"}
+**The trap:** Students often write
 
-$$1\\,\text{m}=100\\,\text{cm}\;\Rightarrow\;1\\,\text{m}^3=(100\\,\text{cm})^3=10^6\\,\text{cm}^3.$$
+$$1\,\text{m}^3 = 100\,\text{cm}^3$$ ❌
+
+**Why it's wrong:** You're converting *each* dimension.
+:::
+
+::: {.column width="50%"}
+**The right way:**
+
+$$1\,\text{m} = 100\,\text{cm}$$
+
+$$1\,\text{m}^3 = (1\,\text{m})^3 = (100\,\text{cm})^3$$
+
+$$= 100^3\,\text{cm}^3 = 10^6\,\text{cm}^3$$ ✓
+:::
+:::
+
+::: {.fragment}
+::: {.callout-warning appearance="minimal"}
+**Rule:** When converting $\text{m}^n$, raise the conversion factor to the $n$th power too.
+:::
+:::
 
 ::: {.notes}
-This is a classic student trap. Do this once slowly.
+2 min. This is a classic student trap. Walk through slowly. Emphasize: a cubic meter is a cube with sides of 100 cm each, so the volume is $100 \times 100 \times 100$.
 :::
 
 ---
@@ -690,16 +723,35 @@ Tool 3: The Ratio Method
 
 ## Absolute vs. ratio (why ratios are magic)
 
-Many physics relationships look like
+::: {.columns}
+::: {.column width="55%"}
+**The hard way:** Calculate Jupiter's surface gravity.
 
-$$A = k B^n$$
+- Need: $G = 6.67 \times 10^{-11}$, mass, radius...
+- Lots of numbers, easy to make mistakes.
 
-Comparing two cases cancels $k$:
+**The ratio way:** Compare Jupiter to Earth.
 
-$$\frac{A_2}{A_1}=\left(\frac{B_2}{B_1}\right)^n.$$
+- Jupiter is 318× Earth's mass, 11× Earth's radius
+- We know Earth's gravity (9.8 m/s²)
+:::
+
+::: {.column width="45%"}
+::: {.fragment}
+::: {.callout-tip appearance="minimal"}
+### The pattern
+If $A = k B^n$, then comparing two cases:
+
+$$\frac{A_2}{A_1}=\left(\frac{B_2}{B_1}\right)^n$$
+
+The constant $k$ cancels!
+:::
+:::
+:::
+:::
 
 ::: {.fragment}
-**What this says:** The ratio tells you how quantities scale—no need to look up constants. If you know how one system behaves, you can predict any other.
+**What this says:** Ratios let you compare systems using only the *relationship* between quantities—no need to look up constants.
 :::
 
 ---
@@ -788,9 +840,22 @@ If you move twice as far from a light source:
 
 $$\text{brightness}\propto \frac{1}{d^2}$$
 
-$$\frac{B_2}{B_1}=\left(\frac{d_1}{d_2}\right)^2=\left(\frac{1}{2}\right)^2=\frac{1}{4}$$
+::: {.fragment}
+::: {.callout-warning appearance="minimal"}
+### Watch the flip!
+Because brightness is *inversely* proportional to $d^2$, the ratio flips:
 
-**What this says:** Double the distance → brightness drops to 1/4. Triple → 1/9. The falloff is *fast*.
+$$\frac{B_2}{B_1}=\left(\frac{d_1}{d_2}\right)^2$$
+
+Farther distance on bottom → smaller brightness.
+:::
+:::
+
+::: {.fragment}
+**Example:** $d_2 = 2d_1$ (twice as far)
+
+$$\frac{B_2}{B_1}=\left(\frac{d_1}{2d_1}\right)^2=\left(\frac{1}{2}\right)^2=\frac{1}{4}$$
+:::
 :::
 
 ::: {.column width="45%"}
@@ -838,16 +903,20 @@ Real-world consequence: Mars surface temperature averages −60°C.
 
 ## Applying the Pattern: Distance from Brightness
 
-**What we measure:** Brightness (flux) — how much light arrives at our detector
+**What we measure:** Brightness (flux $F$) — how much light arrives at our detector (W/m²)
 
-**What physics says:** Inverse-square law: $F = L / 4\pi d^2$
+**What physics says:** Inverse-square law relates flux, luminosity, and distance:
 
-**What we conclude:** If we know a star's true luminosity $L$ and measure its flux $F$, we can calculate distance $d$
+$$F = \frac{L}{4\pi d^2}$$
+
+where $L$ = luminosity (total power output, in Watts) and $d$ = distance
+
+**What we conclude:** If we know a star's true luminosity $L$ and measure its flux $F$, we can solve for distance $d$
 
 ::: {.fragment}
 ::: {.callout-tip appearance="minimal"}
 ### The inference chain
-Observable (flux) → Model (inverse-square) → Physical property (distance)
+Observable ($F$) → Model (inverse-square) → Physical property ($d$)
 :::
 :::
 
@@ -878,15 +947,30 @@ Most rate problems are one equation with three rearrangements:
 
 $$\text{amount} = \text{rate}\times\text{time}$$
 
-**What this says:** If you know any two of these, you can find the third. Distance, speed, time — they're all connected.
-
-So:
-
+::: {.columns}
+::: {.column width="50%"}
 ::: {.incremental}
+- **Find rate:** $\text{rate}=\dfrac{\text{amount}}{\text{time}}$
+  - *"How fast?"*
+- **Find time:** $\text{time}=\dfrac{\text{amount}}{\text{rate}}$
+  - *"How long?"*
+- **Find amount:** $\text{amount}=\text{rate}\times\text{time}$
+  - *"How much/far?"*
+:::
+:::
 
-- $\text{rate}=\dfrac{\text{amount}}{\text{time}}$
-- $\text{time}=\dfrac{\text{amount}}{\text{rate}}$
-- $\text{amount}=\text{rate}\times\text{time}$
+::: {.column width="50%"}
+::: {.callout-tip appearance="minimal"}
+### Astronomy examples
+- **Distance** = speed × time
+- **Energy** = power × time
+- **Mass loss** = rate × time
+:::
+:::
+:::
+
+::: {.fragment}
+**What this says:** If you know any two of these, you can find the third. This single pattern solves most "how far/fast/long" questions.
 :::
 
 ---
@@ -1101,16 +1185,22 @@ Use these only if you want to show a full worked path. Otherwise keep momentum.
 
 ## Solution 1 {#solution-1}
 
-1. $(3\times10^5)(4\times10^3) = 12\times10^{8} = 1.2\times10^9$
+**Step 1: Multiply the coefficients**
+$$3 \times 4 = 12$$
 
-2. $(8\times10^7)/(2\times10^{12}) = 4\times10^{-5}$
+**Step 2: Add the exponents**
+$$10^5 \times 10^3 = 10^{5+3} = 10^8$$
 
-3. $(2\times10^{-4})^3 = 2^3\times10^{-12}=8\times10^{-12}$
+**Step 3: Combine**
+$$12 \times 10^8$$
+
+**Step 4: Normalize** (coefficient should be between 1 and 10)
+$$12 \times 10^8 = 1.2 \times 10^9$$
 
 [← Back](#stop-solve-1)
 
 ::: {.notes}
-30 sec. Key pattern: multiply coefficients, add/subtract exponents, then normalize.
+1 min. Walk through each step deliberately. The normalization step catches students—remind them that $12 = 1.2 \times 10^1$, so we add 1 to the exponent.
 :::
 
 ---
