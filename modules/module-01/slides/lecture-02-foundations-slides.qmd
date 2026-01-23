@@ -119,7 +119,7 @@ In ASTR 101, numbers aren’t decoration—they’re how we turn **points of lig
 2. **Units + conversions** → translate cleanly
 3. **Ratio method** → compare without drowning in zeros
 4. **Rate problems** → connect distance, time, and speed
-   :::
+:::
 
 ---
 
