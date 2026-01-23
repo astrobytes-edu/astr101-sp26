@@ -152,6 +152,12 @@ We see them **as they were**.
 :::
 :::
 
+::: {.callout-warning appearance="minimal"}
+### Common trap
+A **light-year** is a *distance*, not a time—even though "year" is in the name.
+It's how far light travels in one year: about 9.5 trillion km.
+:::
+
 ::: {.notes}
 Don't over-precision-police here; emphasize *scale literacy*. You can refine numbers later.
 :::
@@ -193,6 +199,10 @@ Tool 1: Scientific Notation
 
 *Because the universe refuses to be written out in longhand*
 
+::: {.notes}
+0.5 min. Section transition. Let the tagline land.
+:::
+
 ---
 
 ## Scientific notation = brain-friendly compression
@@ -210,6 +220,11 @@ means:
 - $n$ is the **order of magnitude** (the scale)
 :::
 
+::: {.notes}
+2 min. Walk through each bullet. Have students repeat: "a is the coefficient, n is the order of magnitude."
+Muscle memory matters for notation fluency.
+:::
+
 ---
 
 ## Converting: decimal ↔ scientific notation
@@ -218,11 +233,11 @@ means:
 ::: {.column width="55%"}
 **Big number**
 
-$300{,}000{,}000;\text{m/s} = 3.0\times10^8;\text{m/s}$
+$300{,}000{,}000\,\text{m/s} = 3.0\times10^8\,\text{m/s}$
 
 **Small number**
 
-$0.000000001;\text{s} = 1.0\times10^{-9};\text{s}$
+$0.000000001\,\text{s} = 1.0\times10^{-9}\,\text{s}$
 :::
 
 ::: {.column width="45%"}
@@ -315,6 +330,10 @@ Tool 2: Units & Conversions
 
 *Units are the meaning of a number*
 
+::: {.notes}
+0.5 min. Section transition. Let the tagline land.
+:::
+
 ---
 
 ## Units vs. Dimensions (very light intro)
@@ -362,6 +381,11 @@ so you can use
 
 $$\frac{100,\text{cm}}{1,\text{m}}=1 \quad \text{or} \quad \frac{1,\text{m}}{100,\text{cm}}=1.$$
 
+::: {.notes}
+1 min. Emphasize: conversion factor = 1. You're not changing the quantity, just the label.
+This is the key insight for the factor-label method.
+:::
+
 ---
 
 ## The factor-label method (foolproof)
@@ -383,7 +407,7 @@ Put the unit you want to **remove** in the denominator.
 
 ## Example: minutes → hours (structure, not memorization)
 
-$$1000,\text{min}\times\frac{1,\text{hr}}{60,\text{min}};=;\frac{1000}{60},\text{hr}\approx 16.7,\text{hr}$$
+$$1000\,\text{min}\times\frac{1\,\text{hr}}{60\,\text{min}} = \frac{1000}{60}\,\text{hr}\approx 16.7\,\text{hr}$$
 
 ::: {.fragment}
 **Sanity check:** hours are bigger units than minutes, so the number should get smaller. ✓
@@ -413,7 +437,7 @@ When a unit is squared or cubed, the conversion factor gets squared/cubed too.
 
 Example idea:
 
-$$1,\text{m}=100,\text{cm};\Rightarrow;1,\text{m}^3=(100,\text{cm})^3=10^6,\text{cm}^3.$$
+$$1\,\text{m}=100\,\text{cm}\;\Rightarrow\;1\,\text{m}^3=(100\,\text{cm})^3=10^6\,\text{cm}^3.$$
 
 ::: {.notes}
 This is a classic student trap. Do this once slowly.
@@ -445,6 +469,10 @@ Tool 3: The Ratio Method
 :::
 
 *Compare systems without calculator misery*
+
+::: {.notes}
+0.5 min. Section transition. Let the tagline land.
+:::
 
 ---
 
@@ -571,7 +599,11 @@ Refer back to Lecture 1. We'll use this pattern all semester.
 Tool 4: Rate Problems
 :::
 
-*Change per time is basically the universe’s favorite sentence structure*
+*Change per time is basically the universe's favorite sentence structure*
+
+::: {.notes}
+0.5 min. Section transition. Let the tagline land.
+:::
 
 ---
 
@@ -661,12 +693,23 @@ For any quantitative astronomy question:
 
 ---
 
+## The Cosmic Distance Ladder
+
+{{< img cosmic-distance-ladder >}}
+
+::: {.notes}
+1 min. Preview of coming attractions. Each rung calibrates the next.
+We'll explore this in detail in Module 2. For now, just note the pattern.
+:::
+
+---
+
 ## Quick Reference: Astronomy unit ladder
 
-| Unit | What it’s good for     | Useful fact                                                           |
+| Unit | What it's good for     | Useful fact                                                           |
 | ---- | ---------------------- | --------------------------------------------------------------------- |
 | AU   | solar system distances | $1,\text{AU}\approx 1.50\times10^{11},\text{m}$                       |
-| ly   | “how far light goes”   | $1,\text{ly}\approx 9.46\times10^{15},\text{m}$                       |
+| ly   | "how far light goes"   | $1,\text{ly}\approx 9.46\times10^{15},\text{m}$                       |
 | pc   | star/galaxy distances  | $1,\text{pc}\approx 3.09\times10^{16},\text{m}\approx 3.26,\text{ly}$ |
 
 ---
