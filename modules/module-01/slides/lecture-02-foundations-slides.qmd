@@ -66,14 +66,22 @@ Set the tone: “This is not a math test. It’s a navigation toolkit for the un
 
 ---
 
-## {background-image="/assets/images/common/noirlab-nightsky-mosaic.jpg" background-opacity="0.18"}
+<!-- Figure: night-sky from assets/figures.yml -->
+## {background-image="/assets/images/common/noirlab-nightsky-mosaic.jpg" background-opacity="0.2"}
 
 ::: {.r-fit-text}
-Astronomy is the art of making sense of absurd numbers.
+If the Sun were a grapefruit in San Francisco...
+:::
+
+::: {.fragment}
+...Earth would be a **pinhead** 15 meters away.
+
+The nearest star? Another grapefruit **in Hawaii**.
 :::
 
 ::: {.notes}
-Pause. Let them feel the “absurd.” Then: “We’re going to tame it with a small toolbox.”
+0–1 min. Pause after the first line. Let them picture it. Then reveal the fragments.
+This establishes *why* we need powers of ten—ordinary language can't hold these scales.
 :::
 
 ---
@@ -145,7 +153,18 @@ We see them **as they were**.
 :::
 
 ::: {.notes}
-Don’t over-precision-police here; emphasize *scale literacy*. You can refine numbers later.
+Don't over-precision-police here; emphasize *scale literacy*. You can refine numbers later.
+:::
+
+---
+
+## The Universe's Phone Number
+
+{{< img universe-phone-number >}}
+
+::: {.notes}
+1 min. Walk through a few steps on the ladder. Emphasize: each step is ×10.
+The phone number mnemonic: (555)-711-2555 maps the multiplication factors.
 :::
 
 ---
@@ -472,12 +491,27 @@ Estimate $109^3$.
 
 ## Inverse-square intuition (brightness)
 
+::: {.columns}
+::: {.column width="55%"}
 If you move twice as far from a light source:
 
-$$\text{brightness}\propto \frac{1}{d^2}\quad\Rightarrow\quad \frac{B_2}{B_1}=\left(\frac{d_1}{d_2}\right)^2=\left(\frac{1}{2}\right)^2=\frac{1}{4}.$$
+$$\text{brightness}\propto \frac{1}{d^2}$$
+
+$$\frac{B_2}{B_1}=\left(\frac{d_1}{d_2}\right)^2=\left(\frac{1}{2}\right)^2=\frac{1}{4}$$
+:::
+
+::: {.column width="45%"}
+{{< img inverse-square-law >}}
+:::
+:::
 
 ::: {.callout-note appearance="minimal"}
 This is why distance is *hard* in astronomy: small distance errors become big brightness errors.
+:::
+
+::: {.notes}
+2 min. Draw attention to the diagram. Light spreads over area = 4πd².
+Double the distance → 4× the area → 1/4 the brightness per unit area.
 :::
 
 ---
