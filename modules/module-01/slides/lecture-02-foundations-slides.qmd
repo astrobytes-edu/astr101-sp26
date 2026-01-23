@@ -652,17 +652,19 @@ $$1000\,\text{min}\times\frac{1\,\text{hr}}{60\,\text{min}} = \frac{1000}{60}\,\
 
 ## Stop & Solve 2: Unit conversion chains {#stop-solve-2}
 
-::: {.callout-note appearance="minimal"}
-### Quick vocab: angular units
-Astronomers measure tiny angles in **arcminutes** (1/60 of a degree) and **arcseconds** (1/60 of an arcminute). The Moon is about 30 arcmin wide; a star's disk is less than 0.05 arcsec.
-:::
-
 ::: {.incremental}
 **A)** Convert $60\,\text{mph}$ to $\text{m/s}$.
 
 **B)** Convert $0.5^\circ$ to arcseconds.
 
 (Use: $1\,\text{mile}=1.6\,\text{km}$, $1\,\text{hr}=3600\,\text{s}$, $1^\circ=60\,\text{arcmin}$, $1\,\text{arcmin}=60\,\text{arcsec}$.)
+:::
+
+<br>
+
+::: {.callout-note appearance="minimal"}
+### Quick vocab: angular units
+Astronomers measure tiny angles in **arcminutes** (1/60 of a degree) and **arcseconds** (1/60 of an arcminute). The Moon is about 30 arcmin wide; a star's disk is less than 0.05 arcsec.
 :::
 
 ::: {.fragment .mt-2 .text-sm}
