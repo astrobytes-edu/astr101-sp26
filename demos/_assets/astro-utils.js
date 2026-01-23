@@ -245,6 +245,183 @@ function animateValue(start, end, duration, onUpdate, onComplete) {
   requestAnimationFrame(update);
 }
 
+/**
+ * Animate a numeric value change with visual feedback
+ * @param {HTMLElement} element - Element displaying the value
+ * @param {number} newValue - New value to display
+ * @param {function} formatter - Function to format value for display
+ * @param {object} options - Animation options
+ */
+function animateValueChange(element, newValue, formatter, options = {}) {
+  const {
+    duration = 300,
+    flashColor = '#4ECDC4',
+    pulseScale = 1.05
+  } = options;
+
+  const currentText = element.textContent;
+  const currentValue = parseFloat(currentText.replace(/[^\d.-]/g, '')) || 0;
+
+  if (Math.abs(newValue - currentValue) < 0.0001) {
+    element.textContent = formatter ? formatter(newValue) : newValue;
+    return;
+  }
+
+  const startTime = performance.now();
+
+  function update(currentTime) {
+    const elapsed = currentTime - startTime;
+    const progress = Math.min(elapsed / duration, 1);
+    const easedProgress = easeInOutCubic(progress);
+    const displayValue = lerp(currentValue, newValue, easedProgress);
+
+    element.textContent = formatter ? formatter(displayValue) : displayValue.toFixed(2);
+
+    if (progress < 1) {
+      requestAnimationFrame(update);
+    }
+  }
+
+  element.style.transition = 'transform 0.15s ease-out, color 0.15s ease-out';
+  element.style.transform = `scale(${pulseScale})`;
+  element.style.color = flashColor;
+
+  setTimeout(() => {
+    element.style.transform = 'scale(1)';
+    element.style.color = '';
+  }, 150);
+
+  requestAnimationFrame(update);
+}
+
+function createAnimatedValue(element, formatter) {
+  let currentValue = 0;
+
+  return {
+    setValue(newValue) {
+      animateValueChange(element, newValue, formatter);
+      currentValue = newValue;
+    },
+    getValue() {
+      return currentValue;
+    },
+    setInstant(newValue) {
+      element.textContent = formatter ? formatter(newValue) : newValue;
+      currentValue = newValue;
+    }
+  };
+}
+
+function addRippleEffect(element, options = {}) {
+  const {
+    color = 'rgba(78, 205, 196, 0.3)',
+    duration = 400
+  } = options;
+
+  element.style.position = 'relative';
+  element.style.overflow = 'hidden';
+
+  element.addEventListener('click', (e) => {
+    const rect = element.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+
+    const ripple = document.createElement('span');
+    ripple.style.cssText = `
+      position: absolute;
+      border-radius: 50%;
+      background: ${color};
+      transform: scale(0);
+      animation: ripple-effect ${duration}ms ease-out;
+      pointer-events: none;
+      left: ${x}px;
+      top: ${y}px;
+      width: 10px;
+      height: 10px;
+      margin-left: -5px;
+      margin-top: -5px;
+    `;
+
+    element.appendChild(ripple);
+    setTimeout(() => ripple.remove(), duration);
+  });
+}
+
+if (typeof document !== 'undefined' && !document.getElementById('astro-ripple-styles')) {
+  const style = document.createElement('style');
+  style.id = 'astro-ripple-styles';
+  style.textContent = `
+    @keyframes ripple-effect {
+      to {
+        transform: scale(20);
+        opacity: 0;
+      }
+    }
+  `;
+  document.head.appendChild(style);
+}
+
+function showSuccessIndicator(targetElement, message = '', options = {}) {
+  const {
+    duration = 2000,
+    position = 'top'
+  } = options;
+
+  const indicator = document.createElement('div');
+  indicator.className = 'success-indicator-popup';
+  indicator.innerHTML = `
+    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+      <path d="M13.5 4.5L6 12L2.5 8.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    ${message ? `<span>${message}</span>` : ''}
+  `;
+
+  indicator.style.cssText = `
+    position: absolute;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(80, 250, 123, 0.2);
+    color: #50FA7B;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 6px 12px;
+    border-radius: 9999px;
+    border: 1px solid rgba(80, 250, 123, 0.4);
+    animation: success-pop 0.3s ease-out;
+    z-index: 1000;
+    pointer-events: none;
+  `;
+
+  const rect = targetElement.getBoundingClientRect();
+  const parentRect = targetElement.offsetParent?.getBoundingClientRect() || { left: 0, top: 0 };
+
+  (targetElement.offsetParent || document.body).appendChild(indicator);
+
+  const indicatorRect = indicator.getBoundingClientRect();
+  indicator.style.left = `${rect.left - parentRect.left + rect.width / 2 - indicatorRect.width / 2}px`;
+  indicator.style.top = `${rect.top - parentRect.top - indicatorRect.height - 8}px`;
+
+  setTimeout(() => {
+    indicator.style.opacity = '0';
+    indicator.style.transition = 'opacity 0.3s ease';
+    setTimeout(() => indicator.remove(), 300);
+  }, duration);
+}
+
+if (typeof document !== 'undefined' && !document.getElementById('astro-success-styles')) {
+  const style = document.createElement('style');
+  style.id = 'astro-success-styles';
+  style.textContent = `
+    @keyframes success-pop {
+      0% { transform: scale(0.8); opacity: 0; }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); opacity: 1; }
+    }
+  `;
+  document.head.appendChild(style);
+}
+
 
 // ============================================
 // Slider Helpers
@@ -599,6 +776,12 @@ if (typeof window !== 'undefined') {
     easeInOutCubic,
     lerp,
     animateValue,
+
+    // Micro-interactions
+    animateValueChange,
+    createAnimatedValue,
+    addRippleEffect,
+    showSuccessIndicator,
 
     // Sliders
     createLogSlider,
