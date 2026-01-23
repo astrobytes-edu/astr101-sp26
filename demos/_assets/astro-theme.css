@@ -43,11 +43,14 @@
   --accent-red: var(--nova-pink);
   --accent-gold: var(--stellar-amber);
 
-  /* Glow effects */
-  --glow-sun: 0 0 60px rgba(255, 204, 0, 0.6), 0 0 120px rgba(255, 140, 0, 0.3);
+  /* Glow effects - Cosmic Nebula */
+  --glow-teal: 0 0 20px rgba(78, 205, 196, 0.4);
+  --glow-magenta: 0 0 20px rgba(199, 146, 234, 0.4);
+  --glow-amber: 0 0 30px rgba(255, 184, 108, 0.5);
+  --glow-sun: 0 0 60px rgba(255, 184, 108, 0.6), 0 0 120px rgba(255, 184, 108, 0.3);
   --glow-moon: 0 0 20px rgba(232, 232, 240, 0.3);
   --glow-earth: 0 0 30px rgba(74, 144, 217, 0.4);
-  --glow-accent: 0 0 10px var(--accent-blue);
+  --glow-accent: 0 0 15px var(--cosmic-teal);
 
   /* Spacing */
   --space-xs: 4px;
