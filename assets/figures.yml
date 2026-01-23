@@ -403,9 +403,10 @@ figures:
     module: 1
 
   inverse-square-law:
-    path: /assets/images/module-01/inverse-square-law.png
-    caption: "Light intensity decreases with the square of distance"
-    alt: "Diagram showing how light spreads over increasing area with distance"
+    path: /assets/images/module-01/inverse-square-law-gemini.png
+    caption: "Brightness & the Inverse-Square Law: Double the distance → 4× the area → ¼ the flux"
+    alt: "Spherical geometry diagram showing light from a central source spreading over increasing surface area. At radius r, area is 4πr². At radius 2r, area is 16πr², so flux drops to 1/4. Equations show F(r) = L/4πr² and F(2r) = F(r)/4."
+    credit: "A. Rosen / Gemini"
     module: 1
 
   kepler-orbits:
