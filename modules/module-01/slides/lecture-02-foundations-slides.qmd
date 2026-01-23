@@ -347,6 +347,66 @@ Tool 2: Units & Conversions
 
 ---
 
+## What's a Physical Quantity?
+
+A **physical quantity** = a number + a unit
+
+::: {.columns}
+::: {.column width="50%"}
+::: {.callout-tip appearance="minimal"}
+### ✓ Physical quantities
+- 3 meters
+- 5.9 × 10²⁴ kg
+- 300,000 km/s
+:::
+:::
+
+::: {.column width="50%"}
+::: {.callout-warning appearance="minimal"}
+### ✗ Not physical quantities
+- "3" (three what?)
+- "really far"
+- "super hot"
+:::
+:::
+:::
+
+::: {.fragment}
+**The unit is not optional.** Without it, the number is meaningless.
+:::
+
+::: {.notes}
+1 min. This seems obvious, but students often drop units mid-calculation.
+Emphasize: a number without a unit is like a sentence without a verb.
+:::
+
+---
+
+## What's a Physical Constant?
+
+A **physical constant** is a number that nature gives us—it doesn't change.
+
+::: {.incremental}
+- **Speed of light:** $c = 3 \times 10^8$ m/s — the universe's speed limit
+- **Gravitational constant:** $G = 6.67 \times 10^{-11}$ m³/(kg·s²) — how strong gravity is
+- **Planck's constant:** $h = 6.63 \times 10^{-34}$ J·s — the "graininess" of energy
+:::
+
+::: {.fragment}
+::: {.callout-note appearance="minimal"}
+### Why do constants matter?
+
+They're **conversion factors** between different physical quantities. The speed of light $c$ converts between distance and time. That's why light-years work!
+:::
+:::
+
+::: {.notes}
+1.5 min. Don't dwell on the numbers—emphasize the *concept*.
+Constants are nature's rules, not human choices. We discover them, we don't invent them.
+:::
+
+---
+
 ## Units vs. Dimensions (very light intro)
 
 ::: {.columns}
@@ -490,7 +550,7 @@ Tool 3: The Ratio Method
 
 Many physics relationships look like
 
-$$A = k,B^n$$
+$$A = k B^n$$
 
 Comparing two cases cancels $k$:
 
