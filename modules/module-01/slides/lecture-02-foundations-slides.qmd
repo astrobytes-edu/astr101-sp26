@@ -253,19 +253,20 @@ Make them say the rule out loud once. Muscle memory matters.
 
 ---
 
-## Stop & Solve 1: Powers of ten (quick) {#stop-solve-1}
+## Quick Check: Scientific Notation {#stop-solve-1 background-color="#1a1a2e"}
 
-Do these in your head; keep answers in scientific notation.
+::: {.quiz}
+What is $(3 \times 10^5)(4 \times 10^3)$?
 
-::: {.incremental}
+- [ ] $7 \times 10^8$
+- [ ] $12 \times 10^{15}$
+- [x] $1.2 \times 10^9$
+- [ ] $1.2 \times 10^8$
+:::
 
-1. $(3\times10^5)(4\times10^3)$
-2. $(8\times10^7)/(2\times10^{12})$
-3. $(2\times10^{-4})^3$
-   :::
-
-::: {.fragment .mt-2 .text-sm}
-[→ Solution](#solution-1)
+::: {.notes}
+1-2 min. Give them 30 seconds to think.
+Rule: multiply coefficients, add exponents. $3 \times 4 = 12$, $5 + 3 = 8$, then normalize.
 :::
 
 ---
@@ -473,18 +474,44 @@ $$\frac{A_2}{A_1}=\left(\frac{B_2}{B_1}\right)^n.$$
 
 ---
 
-## Stop & Solve 3: “How many Earths fit inside the Sun?” {#stop-solve-3}
+## Quick Check: Volume Ratio {#stop-solve-3 background-color="#1a1a2e"}
 
-Given $R_\odot/R_\oplus \approx 109$.
+The Sun's radius is about 109× Earth's radius. How many Earths fit inside the Sun?
 
-Use only ratios:
+::: {.quiz}
+Using $V \propto R^3$, what is $V_\odot / V_\oplus$?
 
-$$\frac{V_\odot}{V_\oplus}=\left(\frac{R_\odot}{R_\oplus}\right)^3.$$
+- [ ] About 109
+- [ ] About 12,000
+- [x] About 1.3 million
+- [ ] About 109 million
+:::
 
-Estimate $109^3$.
+::: {.notes}
+1-2 min. $109^3 \approx 1.3 \times 10^6$.
+Key insight: volume grows as the *cube* of radius—much faster than area or length.
+:::
 
-::: {.fragment .mt-2 .text-sm}
-[→ Solution](#solution-3)
+---
+
+## Applying the Pattern: Comparing Stars
+
+**What we measure:** Brightness ratio of two stars (same apparent brightness)
+
+**What physics says:** Inverse-square law means equal brightness at different distances implies different luminosities
+
+**What we conclude:** A star 10× further away but equally bright must be **100× more luminous**
+
+::: {.fragment}
+::: {.callout-tip appearance="minimal"}
+### The ratio shortcut
+$\frac{L_2}{L_1} = \left(\frac{d_2}{d_1}\right)^2 = 10^2 = 100$
+:::
+:::
+
+::: {.notes}
+1 min. Second use of Observable → Model → Inference.
+Ratios + inverse-square = powerful tool for stellar comparison.
 :::
 
 ---
@@ -512,6 +539,28 @@ This is why distance is *hard* in astronomy: small distance errors become big br
 ::: {.notes}
 2 min. Draw attention to the diagram. Light spreads over area = 4πd².
 Double the distance → 4× the area → 1/4 the brightness per unit area.
+:::
+
+---
+
+## Applying the Pattern: Distance from Brightness
+
+**What we measure:** Brightness (flux) — how much light arrives at our detector
+
+**What physics says:** Inverse-square law: $F = L / 4\pi d^2$
+
+**What we conclude:** If we know a star's true luminosity $L$ and measure its flux $F$, we can calculate distance $d$
+
+::: {.fragment}
+::: {.callout-tip appearance="minimal"}
+### The inference chain
+Observable (flux) → Model (inverse-square) → Physical property (distance)
+:::
+:::
+
+::: {.notes}
+1 min. This is the first explicit use of the Observable → Model → Inference pattern.
+Refer back to Lecture 1. We'll use this pattern all semester.
 :::
 
 ---
@@ -559,7 +608,28 @@ $$1,\text{ly}=c\times(1,\text{yr})\approx (3\times10^8)(3.15\times10^7),\text{m}
 
 ---
 
-## Stop & Solve 4: Earth’s orbital “speed” {#stop-solve-4}
+## Applying the Pattern: Lookback Time
+
+**What we measure:** Distance to a galaxy (in light-years)
+
+**What physics says:** Light travels at $c = 3 \times 10^8$ m/s (finite speed)
+
+**What we conclude:** A galaxy 2.5 million light-years away → we see it as it was **2.5 million years ago**
+
+::: {.fragment}
+::: {.callout-note appearance="minimal"}
+Distance is a time machine. The further we look, the further back in time we see.
+:::
+:::
+
+::: {.notes}
+1 min. Third use of Observable → Model → Inference.
+Connect to the "distance = time dial" concept from Lecture 1.
+:::
+
+---
+
+## Stop & Solve 4: Earth's orbital "speed" {#stop-solve-4}
 
 Earth moves around the Sun at about $29.8,\text{km/s}$.
 
@@ -601,13 +671,20 @@ For any quantitative astronomy question:
 
 ---
 
-## Exit Ticket (30 seconds)
+## Exit Ticket {background-color="#1a1a2e"}
 
-::: {.incremental}
+::: {.quiz}
+If you move **twice as far** from a light source, brightness becomes...
 
-1. Which is bigger: $3\times10^6$ or $3\times10^{-6}$?
-2. If you convert meters → kilometers, does the number get bigger or smaller?
-3. If distance doubles, brightness becomes...?
+- [ ] Half (1/2)
+- [x] One-quarter (1/4)
+- [ ] One-eighth (1/8)
+- [ ] The same
+:::
+
+::: {.notes}
+30 seconds. Quick pulse check before dismissal.
+Inverse-square: $1/2^2 = 1/4$.
 :::
 
 ---
