@@ -217,6 +217,57 @@ function lerp(start, end, t) {
 }
 
 /**
+ * Ease out cubic - fast start, slow end
+ */
+function easeOutCubic(t) {
+  return 1 - Math.pow(1 - t, 3);
+}
+
+/**
+ * Ease in cubic - slow start, fast end
+ */
+function easeInCubic(t) {
+  return t * t * t;
+}
+
+/**
+ * Ease out elastic - bouncy overshoot
+ */
+function easeOutElastic(t) {
+  const c4 = (2 * Math.PI) / 3;
+  return t === 0 ? 0 : t === 1 ? 1 :
+    Math.pow(2, -10 * t) * Math.sin((t * 10 - 0.75) * c4) + 1;
+}
+
+/**
+ * Ease out back - slight overshoot
+ */
+function easeOutBack(t) {
+  const c1 = 1.70158;
+  const c3 = c1 + 1;
+  return 1 + c3 * Math.pow(t - 1, 3) + c1 * Math.pow(t - 1, 2);
+}
+
+/**
+ * Custom easing for Kepler's 2nd law (faster at perihelion)
+ */
+function keplerianEasing(t, eccentricity = 0.5) {
+  const M = t * 2 * Math.PI;
+  let E = M;
+
+  for (let i = 0; i < 5; i++) {
+    E = E - (E - eccentricity * Math.sin(E) - M) / (1 - eccentricity * Math.cos(E));
+  }
+
+  const trueAnomaly = 2 * Math.atan2(
+    Math.sqrt(1 + eccentricity) * Math.sin(E / 2),
+    Math.sqrt(1 - eccentricity) * Math.cos(E / 2)
+  );
+
+  return (trueAnomaly + Math.PI) / (2 * Math.PI);
+}
+
+/**
  * Animate a value from start to end over duration
  * @param {number} start - Starting value
  * @param {number} end - Ending value
@@ -774,6 +825,11 @@ if (typeof window !== 'undefined') {
     // Animation
     createAnimationLoop,
     easeInOutCubic,
+    easeOutCubic,
+    easeInCubic,
+    easeOutElastic,
+    easeOutBack,
+    keplerianEasing,
     lerp,
     animateValue,
 
