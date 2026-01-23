@@ -515,19 +515,54 @@ This is a classic student trap. Do this once slowly.
 
 ---
 
-## Compound units (units built from units)
+## Compound Units: Building Blocks
 
-Some “named” SI units are shortcuts:
+Physics has only **three base dimensions**: length $[L]$, mass $[M]$, time $[T]$.
+
+Everything else is built from combinations:
 
 ::: {.incremental}
+- **Velocity** = distance / time → $[L]/[T]$
+- **Acceleration** = velocity / time → $[L]/[T^2]$
+- **Force** = mass × acceleration → $[M][L]/[T^2]$
+:::
 
-- $1\,\text{N} = 1\,\text{kg}\,\text{m}/\text{s}^2$
-- $1\,\text{J} = 1\,\text{N}\,\text{m} = 1\,\text{kg}\,\text{m}^2/\text{s}^2$
-- $1\,\text{W} = 1\,\text{J}/\text{s} = 1\,\text{kg}\,\text{m}^2/\text{s}^3$
+::: {.fragment}
+::: {.callout-tip appearance="minimal"}
+### The building principle
+Complex quantities are just base dimensions multiplied and divided. If you know the recipe, you can always check your work.
+:::
 :::
 
 ::: {.notes}
-Tiny pitch: “If the unit looks unfamiliar, rewrite it in base units.”
+1 min. Walk through how velocity becomes acceleration becomes force.
+This is dimensional analysis in miniature—combinations of base units.
+:::
+
+---
+
+## Reference: Common Physical Quantities {.smaller}
+
+| Quantity | Dimension | SI Unit | Named Unit |
+|----------|-----------|---------|------------|
+| Length | $[L]$ | m | meter |
+| Mass | $[M]$ | kg | kilogram |
+| Time | $[T]$ | s | second |
+| Velocity | $[L][T]^{-1}$ | m/s | — |
+| Acceleration | $[L][T]^{-2}$ | m/s² | — |
+| Force | $[M][L][T]^{-2}$ | kg·m/s² | Newton (N) |
+| Energy | $[M][L]^2[T]^{-2}$ | kg·m²/s² | Joule (J) |
+| Power | $[M][L]^2[T]^{-3}$ | kg·m²/s³ | Watt (W) |
+| Pressure | $[M][L]^{-1}[T]^{-2}$ | kg/(m·s²) | Pascal (Pa) |
+
+::: {.callout-note appearance="minimal"}
+**Named units are shortcuts.** A Newton is just kg·m/s². A Joule is just kg·m²/s².
+If a unit looks unfamiliar, rewrite it in base units!
+:::
+
+::: {.notes}
+30 sec. Don't memorize this table—use it as a reference.
+The point: all units reduce to combinations of length, mass, and time.
 :::
 
 ---
