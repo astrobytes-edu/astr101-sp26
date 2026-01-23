@@ -170,6 +170,8 @@ Don't over-precision-police here; emphasize *scale literacy*. You can refine num
 
 ## The Speed of Light: Nature's Speed Limit
 
+::: {.columns}
+::: {.column width="55%"}
 Light is the fastest thing in the universe. Nothing can travel faster.
 
 $$c = 300{,}000\,\text{km/s} = 3 \times 10^8\,\text{m/s}$$
@@ -180,15 +182,20 @@ $$c = 300{,}000\,\text{km/s} = 3 \times 10^8\,\text{m/s}$$
 - Light reaches the **Moon** in 1.3 seconds
 - Light reaches the **Sun** in 8.3 minutes
 :::
+:::
 
-::: {.fragment}
-::: {.callout-note appearance="minimal"}
-This speed limit has a profound consequence: **information takes time to travel**. When you look at something far away, you're seeing it as it *was*, not as it *is*.
+::: {.column width="45%"}
+{{< img lsst-cosmic-treasure-chest >}}
+
+::: {.fragment .text-sm}
+Every galaxy in this image is a **time capsule**. The light we see left millions to billions of years ago—we're seeing them as they *were*, not as they *are*.
+:::
 :::
 :::
 
 ::: {.notes}
 1.5 min. Build the speed of light from familiar to cosmic scales.
+Point to the Rubin Observatory deep field: "Each of these galaxies is at a different distance, so we're seeing them at different ages. The farthest ones appear as they were billions of years ago."
 This sets up the key insight: distance = looking back in time.
 :::
 
