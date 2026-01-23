@@ -102,6 +102,8 @@ website:
             text: "Module 1 Overview"
           - href: modules/module-01/slides/lecture-01-spoiler-alerts-slides.qmd
             text: "Lecture 1: Spoiler Alerts — The Universe Is Weird"
+          - href: modules/module-01/slides/lecture-02-foundations-slides.qmd
+            text: "Lecture 2: Tools of the Trade"
 
       - section: "Module 2: Stars & Stellar Evolution"
         href: modules/module-02/index.qmd
