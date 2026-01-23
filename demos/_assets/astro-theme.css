@@ -172,6 +172,57 @@
 }
 
 /* ============================================
+   Value Cards (numeric readouts)
+   ============================================ */
+.value-card {
+  background: var(--space-deep);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-md);
+  padding: var(--space-md);
+  text-align: center;
+}
+
+.value-card__label {
+  font-size: var(--font-size-sm);
+  color: var(--text-secondary);
+  margin-bottom: var(--space-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.value-card__value {
+  font-family: var(--font-mono);
+  font-size: var(--font-size-xl);
+  font-weight: 600;
+  color: var(--text-primary);
+  line-height: 1.2;
+}
+
+.value-card__unit {
+  font-size: var(--font-size-sm);
+  color: var(--text-muted);
+  margin-left: 0.25em;
+}
+
+.value-card__secondary {
+  font-size: var(--font-size-sm);
+  color: var(--text-muted);
+  margin-top: var(--space-xs);
+}
+
+.value-card--highlight .value-card__value {
+  color: var(--cosmic-teal);
+}
+
+.value-card--warn .value-card__value {
+  color: var(--stellar-amber);
+}
+
+.value-card--success .value-card__value {
+  color: var(--nebula-green);
+}
+
+/* ============================================
    Visualization Canvas
    ============================================ */
 .viz-container {
