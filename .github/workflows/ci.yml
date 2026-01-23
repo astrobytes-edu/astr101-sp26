@@ -71,7 +71,10 @@ jobs:
           # RevealJS vendor pages (e.g. speaker view) don't include the site favicon.
           check_favicon: false
           # External URLs that block automated access (return 403 to bots)
+          # RevealJS internal slide navigation uses #/slide-id format which doesn't
+          # match element IDs directly (IDs are slide-id without the /)
           ignore_url_re: |
             ^https://docs\.google\.com/.*
             ^https://www\.cambridge\.org/9781009618007.*$
             ^https://shopaztecs\.com/.*$
+            ^#/.*$
