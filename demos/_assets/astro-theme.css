@@ -569,30 +569,40 @@
   color: var(--accent-gold);
 }
 
-/* Status indicators */
+/* Status indicators - Cosmic Nebula */
 .status-indicator {
   display: inline-flex;
   align-items: center;
   gap: var(--space-xs);
-  padding: var(--space-xs) var(--space-sm);
-  border-radius: var(--border-radius-sm);
+  padding: var(--space-sm) var(--space-md);
+  border-radius: 9999px;
   font-size: var(--font-size-sm);
-  font-weight: 500;
+  font-weight: 600;
+  transition: all var(--transition-fast);
 }
 
 .status-indicator.success {
-  background: rgba(88, 214, 141, 0.2);
-  color: var(--accent-green);
+  background: rgba(80, 250, 123, 0.15);
+  color: var(--nebula-green);
+  border: 1px solid rgba(80, 250, 123, 0.3);
 }
 
 .status-indicator.error {
-  background: rgba(236, 112, 99, 0.2);
-  color: var(--accent-red);
+  background: rgba(255, 121, 198, 0.15);
+  color: var(--nova-pink);
+  border: 1px solid rgba(255, 121, 198, 0.3);
 }
 
 .status-indicator.warning {
-  background: rgba(244, 208, 63, 0.2);
-  color: var(--accent-gold);
+  background: rgba(255, 184, 108, 0.15);
+  color: var(--stellar-amber);
+  border: 1px solid rgba(255, 184, 108, 0.3);
+}
+
+.status-indicator.info {
+  background: rgba(78, 205, 196, 0.15);
+  color: var(--cosmic-teal);
+  border: 1px solid rgba(78, 205, 196, 0.3);
 }
 
 /* ============================================
