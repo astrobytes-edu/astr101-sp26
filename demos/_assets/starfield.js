@@ -19,6 +19,7 @@ function createStarfield(canvas, options = {}) {
     maxSize: options.maxSize || 2,
     twinkleSpeed: options.twinkleSpeed || 0.02,
     twinkleAmount: options.twinkleAmount || 0.3,
+    shootingStars: options.shootingStars !== false,
     colors: options.colors || [
       '#ffffff',  // White
       '#ffe4c4',  // Warm white (like Betelgeuse)
@@ -32,6 +33,9 @@ function createStarfield(canvas, options = {}) {
   let stars = [];
   let animationId = null;
   let running = false;
+  let shootingStar = null;
+  let lastShootingStarTime = 0;
+  const shootingStarInterval = 30000 + Math.random() * 30000;
 
   /**
    * Initialize stars with depth layers
@@ -97,23 +101,92 @@ function createStarfield(canvas, options = {}) {
   }
 
   /**
+   * Draw a shooting star
+   */
+  function drawShootingStar(star, time) {
+    const progress = (time - star.startTime) / star.duration;
+    if (progress > 1) {
+      shootingStar = null;
+      return;
+    }
+
+    const x = star.startX + (star.endX - star.startX) * progress;
+    const y = star.startY + (star.endY - star.startY) * progress;
+
+    const opacity = progress < 0.2 ? progress * 5 : (1 - progress) * 1.25;
+
+    const trailLength = 50;
+    const gradient = ctx.createLinearGradient(
+      x - star.dirX * trailLength,
+      y - star.dirY * trailLength,
+      x, y
+    );
+    gradient.addColorStop(0, 'transparent');
+    gradient.addColorStop(1, `rgba(255, 255, 255, ${opacity})`);
+
+    ctx.beginPath();
+    ctx.moveTo(x - star.dirX * trailLength, y - star.dirY * trailLength);
+    ctx.lineTo(x, y);
+    ctx.strokeStyle = gradient;
+    ctx.lineWidth = 1.5;
+    ctx.stroke();
+
+    ctx.beginPath();
+    ctx.arc(x, y, 2, 0, Math.PI * 2);
+    ctx.fillStyle = `rgba(255, 255, 255, ${opacity})`;
+    ctx.fill();
+  }
+
+  /**
+   * Maybe spawn a shooting star
+   */
+  function maybeSpawnShootingStar(time) {
+    if (shootingStar || !config.shootingStars) return;
+    if (time - lastShootingStarTime < shootingStarInterval) return;
+
+    const { width, height } = canvas;
+
+    const fromTop = Math.random() > 0.5;
+    const startX = fromTop ? Math.random() * width : width;
+    const startY = fromTop ? 0 : Math.random() * height * 0.5;
+
+    const angle = Math.PI * 0.6 + Math.random() * 0.4;
+    const speed = 200 + Math.random() * 100;
+
+    shootingStar = {
+      startTime: time,
+      duration: 800 + Math.random() * 400,
+      startX,
+      startY,
+      endX: startX + Math.cos(angle) * speed,
+      endY: startY + Math.sin(angle) * speed,
+      dirX: Math.cos(angle),
+      dirY: Math.sin(angle)
+    };
+
+    lastShootingStarTime = time;
+  }
+
+  /**
    * Render one frame
    */
   function render(time) {
     const { width, height } = canvas;
 
-    // Clear with background color
     ctx.fillStyle = config.backgroundColor;
     ctx.fillRect(0, 0, width, height);
 
-    // Draw each star
     stars.forEach(star => {
-      // Calculate twinkle effect
       const twinkle = Math.sin(time * star.twinkleSpeed + star.twinklePhase);
       const opacity = star.baseOpacity + twinkle * config.twinkleAmount;
-
       drawStar(star, opacity);
     });
+
+    // Shooting stars
+    maybeSpawnShootingStar(time);
+    if (shootingStar) {
+      drawShootingStar(shootingStar, time);
+    }
   }
 
   /**
