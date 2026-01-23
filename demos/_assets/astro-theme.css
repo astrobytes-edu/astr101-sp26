@@ -606,6 +606,86 @@
 }
 
 /* ============================================
+   Chart & Graph Styling
+   ============================================ */
+.chart-axis {
+  stroke: var(--text-secondary);
+  stroke-width: 2;
+}
+
+.chart-axis-label {
+  font-family: var(--font-main);
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  fill: var(--text-secondary);
+}
+
+.chart-tick {
+  stroke: var(--text-secondary);
+  stroke-width: 1;
+}
+
+.chart-tick-label {
+  font-family: var(--font-mono);
+  font-size: var(--font-size-xs);
+  fill: var(--text-muted);
+}
+
+.chart-grid {
+  stroke: rgba(255, 255, 255, 0.08);
+  stroke-width: 1;
+}
+
+.chart-line {
+  fill: none;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.chart-line--primary {
+  stroke: var(--cosmic-teal);
+}
+
+.chart-line--secondary {
+  stroke: var(--soft-magenta);
+}
+
+.chart-line--warm {
+  stroke: var(--stellar-amber);
+}
+
+.chart-area {
+  opacity: 0.2;
+}
+
+.chart-area--primary {
+  fill: var(--cosmic-teal);
+}
+
+/* Peak/reference markers */
+.chart-marker {
+  stroke-width: 2;
+  stroke-dasharray: 4 2;
+}
+
+.chart-marker--reference {
+  stroke: var(--stellar-amber);
+}
+
+.chart-marker-label {
+  font-family: var(--font-mono);
+  font-size: var(--font-size-xs);
+  fill: var(--stellar-amber);
+}
+
+/* Visible spectrum band highlight */
+.spectrum-visible-band {
+  fill: url(#visible-spectrum-gradient);
+  opacity: 0.3;
+}
+
+/* ============================================
    Celestial Objects (SVG)
    ============================================ */
 .celestial-sun {
