@@ -278,7 +278,7 @@
 }
 
 /* ============================================
-   Sliders
+   Sliders - Cosmic Nebula
    ============================================ */
 .astro-slider {
   -webkit-appearance: none;
@@ -289,7 +289,7 @@
   border-radius: 3px;
   outline: none;
   cursor: pointer;
-  transition: var(--transition-fast);
+  transition: background var(--transition-fast);
 }
 
 .astro-slider:hover {
@@ -301,29 +301,41 @@
   appearance: none;
   width: 20px;
   height: 20px;
-  background: var(--accent-blue);
+  background: var(--space-deep);
+  border: 2px solid var(--cosmic-teal);
   border-radius: 50%;
   cursor: pointer;
-  box-shadow: var(--glow-accent);
-  transition: var(--transition-fast);
+  box-shadow: var(--glow-teal);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
 }
 
 .astro-slider::-webkit-slider-thumb:hover {
-  transform: scale(1.1);
-  box-shadow: 0 0 15px var(--accent-blue);
+  transform: scale(1.15);
+  box-shadow: 0 0 25px rgba(78, 205, 196, 0.6);
+}
+
+.astro-slider::-webkit-slider-thumb:active {
+  transform: scale(1.2);
+  background: var(--cosmic-teal);
 }
 
 .astro-slider::-moz-range-thumb {
   width: 20px;
   height: 20px;
-  background: var(--accent-blue);
-  border: none;
+  background: var(--space-deep);
+  border: 2px solid var(--cosmic-teal);
   border-radius: 50%;
   cursor: pointer;
-  box-shadow: var(--glow-accent);
+  box-shadow: var(--glow-teal);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
 }
 
-/* Slider with value display */
+.astro-slider::-moz-range-thumb:hover {
+  transform: scale(1.15);
+  box-shadow: 0 0 25px rgba(78, 205, 196, 0.6);
+}
+
+/* Slider value display */
 .slider-with-value {
   display: flex;
   align-items: center;
@@ -334,11 +346,11 @@
 .slider-value {
   font-family: var(--font-mono);
   font-size: var(--font-size-sm);
-  color: var(--accent-gold);
-  min-width: 80px;
+  color: var(--stellar-amber);
+  min-width: 90px;
   text-align: right;
   background: var(--space-deep);
-  padding: var(--space-xs) var(--space-sm);
+  padding: var(--space-sm) var(--space-md);
   border-radius: var(--border-radius-sm);
   border: 1px solid var(--border-color);
 }
