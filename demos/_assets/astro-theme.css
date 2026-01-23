@@ -116,40 +116,59 @@
 }
 
 /* ============================================
-   Typography
+   Typography - Enhanced
    ============================================ */
 .demo-title {
-  font-size: var(--font-size-xl);
+  font-size: var(--font-size-2xl);
   font-weight: 600;
   color: var(--text-primary);
   margin: 0 0 var(--space-sm) 0;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.02em;
+  line-height: var(--line-height-tight);
 }
 
 .demo-subtitle {
   font-size: var(--font-size-md);
   color: var(--text-secondary);
   margin: 0 0 var(--space-lg) 0;
+  line-height: var(--line-height-normal);
 }
 
 .demo-label {
   font-size: var(--font-size-sm);
   color: var(--text-secondary);
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 0.05em;
   margin-bottom: var(--space-xs);
+  line-height: var(--line-height-tight);
 }
 
 .demo-value {
   font-family: var(--font-mono);
-  font-size: var(--font-size-lg);
-  color: var(--accent-gold);
+  font-size: var(--font-size-xl);
+  font-weight: 600;
+  color: var(--stellar-amber);
+  line-height: var(--line-height-tight);
+}
+
+.demo-value-large {
+  font-family: var(--font-mono);
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1;
 }
 
 .demo-unit {
   font-size: var(--font-size-sm);
   color: var(--text-muted);
   margin-left: var(--space-xs);
+}
+
+.demo-secondary {
+  font-size: var(--font-size-sm);
+  color: var(--text-muted);
+  font-family: var(--font-mono);
 }
 
 /* ============================================
