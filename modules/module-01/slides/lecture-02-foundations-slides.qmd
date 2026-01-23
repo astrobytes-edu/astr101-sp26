@@ -74,13 +74,13 @@ Set the tone: “This is not a math test. It’s a navigation toolkit for the un
 ## {background-image="/assets/images/common/noirlab-nightsky-mosaic.jpg" background-opacity="0.2"}
 
 ::: {.r-fit-text}
-If the Sun were a grapefruit in San Francisco...
+If the Sun were a cantaloupe in San Francisco...
 :::
 
 ::: {.fragment}
 ...Earth would be a **pinhead** 15 meters away.
 
-The nearest star? Another grapefruit **in Hawaii**.
+The nearest star? Another cantaloupe **in Hawaii**.
 :::
 
 ::: {.notes}
