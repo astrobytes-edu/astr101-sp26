@@ -16,3 +16,31 @@
 .reveal a:hover {
   border-bottom-color: rgba($link-hover-color, 0.5);
 }
+
+// -----------------------------------------------------------------------------
+// Title Slide Styling
+// -----------------------------------------------------------------------------
+.reveal .quarto-title-block {
+  text-align: left;
+}
+
+.reveal .quarto-title-block .title {
+  font-size: 2.2em;
+  font-weight: 700;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+.reveal .quarto-title-block .subtitle {
+  font-size: 1.3em;
+  font-weight: 500;
+  color: #4ECDC4; // cosmic-teal
+  margin-top: 0.3em;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+}
+
+.reveal .quarto-title-block .author,
+.reveal .quarto-title-block .date {
+  font-size: 0.9em;
+  color: rgba(255, 255, 255, 0.85);
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}

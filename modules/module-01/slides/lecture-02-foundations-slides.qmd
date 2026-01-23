@@ -5,6 +5,10 @@ author: "Dr. Anna Rosen"
 date: "2026-01-23"
 description: "ASTR 101 math essentials: scientific notation, SI prefixes, units & conversions, ratio method, and rate problems—framed through cosmic scales."
 draft: true
+title-slide-attributes:
+  data-background-image: "/assets/images/common/cosmic-cliffs-jwst.png"
+  data-background-size: "cover"
+  data-background-opacity: "0.4"
 format:
   revealjs:
     theme: [default, ../../../assets/theme/slides/theme.scss]
