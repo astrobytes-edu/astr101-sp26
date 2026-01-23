@@ -1,0 +1,288 @@
+---
+title: "Lecture 2 Solutions: Math Survival Kit"
+subtitle: "Practice Problem Solutions"
+author: "Dr. Anna Rosen"
+date: "2026-01-23"
+description: "Solutions to the Lecture 2 practice problems."
+draft: true
+course: ASTR 101
+module: "1 - Foundations"
+---
+
+## Scientific Notation & Prefixes
+
+### Problem 1: Express in Scientific Notation
+
+**(a) 4,500,000,000 years (age of the solar system)**
+
+Count decimal places from the first digit to get the exponent:
+$$4,500,000,000 = 4.5 \times 10^9 \text{ years}$$
+
+---
+
+**(b) 0.00000000656 m (wavelength of H-alpha)**
+
+Count decimal places moving right to get negative exponent:
+$$0.00000000656 = 6.56 \times 10^{-9} \text{ m} = 656 \text{ nm}$$
+
+(This is the famous hydrogen-alpha emission line in the red part of the visible spectrum.)
+
+---
+
+### Problem 2: Calculate
+
+**(a) $(2 \times 10^{30})(3 \times 10^8)$**
+
+1. Multiply coefficients: $2 \times 3 = 6$
+2. Add exponents: $10^{30} \times 10^8 = 10^{38}$
+3. Combine: $6 \times 10^{38}$
+
+**Answer:** $6 \times 10^{38}$
+
+---
+
+**(b) $\frac{9 \times 10^{15}}{3 \times 10^7}$**
+
+1. Divide coefficients: $9 / 3 = 3$
+2. Subtract exponents: $10^{15} / 10^7 = 10^{15-7} = 10^{8}$
+3. Combine: $3 \times 10^8$
+
+**Answer:** $3 \times 10^8$
+
+---
+
+**(c) $(4 \times 10^3)^2$**
+
+1. Square the coefficient: $4^2 = 16$
+2. Multiply the exponent by 2: $(10^3)^2 = 10^{6}$
+3. Combine: $16 \times 10^6$
+4. Normalize: $16 = 1.6 \times 10^1$, so $16 \times 10^6 = 1.6 \times 10^7$
+
+**Answer:** $1.6 \times 10^7$
+
+---
+
+### Problem 3: SI Prefixes
+
+**A radio telescope observes at 1.4 GHz. Express in Hz.**
+
+The prefix "giga" means $10^9$:
+$$1.4 \text{ GHz} = 1.4 \times 10^9 \text{ Hz}$$
+
+**Answer:** $1.4 \times 10^9$ Hz
+
+---
+
+## Unit Conversions
+
+### Problem 4: Speed of Light
+
+**Convert $c = 3 \times 10^8$ m/s to km/hr.**
+
+$$3 \times 10^8 \frac{\text{m}}{\text{s}} \times \frac{1 \text{ km}}{1000 \text{ m}} \times \frac{3600 \text{ s}}{1 \text{ hr}}$$
+
+$$= 3 \times 10^8 \times \frac{3600}{1000} \frac{\text{km}}{\text{hr}} = 3 \times 10^8 \times 3.6 \frac{\text{km}}{\text{hr}}$$
+
+$$= 10.8 \times 10^8 \frac{\text{km}}{\text{hr}} = 1.08 \times 10^9 \frac{\text{km}}{\text{hr}}$$
+
+**Answer:** $c \approx 1.08 \times 10^9$ km/hr (about 1 billion km per hour)
+
+**Unit check:** m/s × (km/m) × (s/hr) = km/hr ✓
+
+---
+
+### Problem 5: Wavelength Conversion
+
+**Red light has wavelength 700 nm. Express in:**
+
+**(a) meters**
+
+$$700 \text{ nm} \times \frac{10^{-9} \text{ m}}{1 \text{ nm}} = 700 \times 10^{-9} \text{ m} = 7.0 \times 10^{-7} \text{ m}$$
+
+---
+
+**(b) micrometers (μm)**
+
+$$700 \text{ nm} \times \frac{1 \text{ μm}}{1000 \text{ nm}} = 0.70 \text{ μm}$$
+
+Or equivalently: $7.0 \times 10^{-7}$ m × $\frac{10^6 \text{ μm}}{1 \text{ m}} = 0.70$ μm
+
+**Answers:** (a) $7.0 \times 10^{-7}$ m, (b) 0.70 μm
+
+---
+
+### Problem 6: Distance to Proxima Centauri
+
+**Proxima Centauri is 4.2 light-years away.**
+
+**(a) Convert to parsecs**
+
+Using 1 pc ≈ 3.26 ly:
+$$4.2 \text{ ly} \times \frac{1 \text{ pc}}{3.26 \text{ ly}} = \frac{4.2}{3.26} \text{ pc} \approx 1.29 \text{ pc}$$
+
+---
+
+**(b) Convert to meters**
+
+Using 1 ly = $9.46 \times 10^{15}$ m:
+$$4.2 \text{ ly} \times \frac{9.46 \times 10^{15} \text{ m}}{1 \text{ ly}} = 4.2 \times 9.46 \times 10^{15} \text{ m}$$
+$$\approx 39.7 \times 10^{15} \text{ m} = 3.97 \times 10^{16} \text{ m}$$
+
+**Answers:** (a) ≈ 1.29 pc, (b) ≈ $4.0 \times 10^{16}$ m
+
+---
+
+## Ratio Method
+
+### Problem 7: Telescope Comparison
+
+**30-meter telescope vs. Hubble (2.4 m). How much more light?**
+
+Light-collecting area scales as $A \propto D^2$:
+
+$$\frac{A_{30\text{m}}}{A_{\text{Hubble}}} = \left(\frac{D_{30\text{m}}}{D_{\text{Hubble}}}\right)^2 = \left(\frac{30}{2.4}\right)^2 = (12.5)^2 = 156$$
+
+**Answer:** The 30-meter telescope collects about **156× more light** than Hubble.
+
+---
+
+### Problem 8: Planet Volumes
+
+**Jupiter's radius is 11× Earth's. How many Earths fit inside?**
+
+Volume scales as $V \propto R^3$:
+
+$$\frac{V_\text{Jupiter}}{V_\text{Earth}} = \left(\frac{R_\text{Jupiter}}{R_\text{Earth}}\right)^3 = (11)^3 = 1331$$
+
+**Answer:** About **1,330 Earths** could fit inside Jupiter.
+
+---
+
+### Problem 9: Inverse-Square Brightness
+
+**Star X appears 16× fainter than identical Star Y. How much farther is Star X?**
+
+For identical stars, brightness ratio depends only on distance:
+$$\frac{B_X}{B_Y} = \left(\frac{d_Y}{d_X}\right)^2$$
+
+Star X is fainter, so it's farther away. Given $B_X = B_Y / 16$:
+$$\frac{1}{16} = \left(\frac{d_Y}{d_X}\right)^2$$
+
+Taking the square root:
+$$\frac{d_Y}{d_X} = \frac{1}{4}$$
+
+Therefore:
+$$\frac{d_X}{d_Y} = 4$$
+
+**Answer:** Star X is **4× farther away** than Star Y.
+
+**Check:** 4× farther → $4^2 = 16$× dimmer ✓
+
+---
+
+## Rate Problems
+
+### Problem 10: Light Travel Time to Neptune
+
+**Neptune is 30 AU from the Sun. How long for light to travel?**
+
+**Given:**
+- Distance: $d = 30$ AU $= 30 \times 1.50 \times 10^{11}$ m $= 4.5 \times 10^{12}$ m
+- Speed of light: $c = 3 \times 10^8$ m/s
+
+**Calculate time:**
+$$t = \frac{d}{c} = \frac{4.5 \times 10^{12} \text{ m}}{3 \times 10^8 \text{ m/s}} = 1.5 \times 10^4 \text{ s} = 15{,}000 \text{ s}$$
+
+**Convert to hours:**
+$$15{,}000 \text{ s} \times \frac{1 \text{ hr}}{3600 \text{ s}} \approx 4.2 \text{ hours}$$
+
+**Answer:** About **4.2 hours** (or ~250 minutes)
+
+**Sanity check:** We know light takes ~8 minutes for 1 AU. For 30 AU: $30 \times 8 = 240$ minutes ≈ 4 hours ✓
+
+---
+
+### Problem 11: Earth's Orbital Distance per Day
+
+**Earth moves at 30 km/s. How far in one day?**
+
+**Step 1: Convert speed to useful units**
+$$v = 30 \text{ km/s}$$
+
+**Step 2: Calculate distance**
+$$d = v \times t = 30 \frac{\text{km}}{\text{s}} \times 1 \text{ day}$$
+
+Convert 1 day to seconds: $1 \text{ day} = 24 \times 3600 = 86{,}400$ s
+
+$$d = 30 \times 86{,}400 \text{ km} = 2.59 \times 10^6 \text{ km}$$
+
+**Step 3: Convert to AU**
+$$d = 2.59 \times 10^6 \text{ km} \times \frac{1 \text{ AU}}{1.5 \times 10^8 \text{ km}} \approx 0.017 \text{ AU}$$
+
+**Answer:** Earth travels about **0.017 AU** (or 2.6 million km) per day.
+
+**Check:** Earth's orbit is $2\pi \times 1$ AU ≈ 6.3 AU. Dividing by 365 days gives ~0.017 AU/day ✓
+
+---
+
+### Problem 12: Signal Delay to Mars
+
+**Mars is 1.5 AU from Earth. How long for a radio signal?**
+
+**Given:**
+- Distance: $d = 1.5$ AU $= 1.5 \times 1.50 \times 10^{11}$ m $= 2.25 \times 10^{11}$ m
+- Speed of light: $c = 3 \times 10^8$ m/s
+
+**Calculate:**
+$$t = \frac{d}{c} = \frac{2.25 \times 10^{11} \text{ m}}{3 \times 10^8 \text{ m/s}} = 7.5 \times 10^2 \text{ s} = 750 \text{ s}$$
+
+**Convert to minutes:**
+$$750 \text{ s} \times \frac{1 \text{ min}}{60 \text{ s}} = 12.5 \text{ min}$$
+
+**Answer:** About **12.5 minutes** one-way (so ~25 minutes for a round-trip conversation!)
+
+---
+
+## Synthesis
+
+### Problem 13: Betelgeuse Supernova
+
+**Betelgeuse is 700 ly away. A supernova occurred in 1300 CE.**
+
+**(a) When will we see it?**
+
+Light from the supernova takes 700 years to reach us:
+$$1300 + 700 = 2000 \text{ CE}$$
+
+**Answer:** We would have seen it around **2000 CE** (which means if it happened in 1300, we've already missed it—unless it hasn't happened yet!).
+
+**Note:** This is a trick question. If we haven't seen a supernova from Betelgeuse yet, the explosion hasn't happened within the last 700 years. We can only know about events after their light reaches us.
+
+---
+
+**(b) If we observe the supernova, what is the lookback time?**
+
+Lookback time = time light took to travel from source to us = **700 years**
+
+The explosion happened 700 years before we see it.
+
+---
+
+### Problem 14: Dimensional Check
+
+**Is $v = d \cdot t$ dimensionally correct for velocity?**
+
+**Check dimensions:**
+- Left side: Velocity $[v] = [L]/[T] = [LT^{-1}]$
+- Right side: $[d \cdot t] = [L] \times [T] = [LT]$
+
+**Compare:**
+$$[LT^{-1}] \neq [LT]$$
+
+**Answer:** **No**, the equation is dimensionally incorrect.
+
+- The student wrote multiplication when they should have written division.
+- The correct equation is $v = d/t$ (velocity = distance ÷ time)
+- Dimensional check of correct equation: $[L]/[T] = [LT^{-1}]$ ✓
+
+**Lesson:** Dimensional analysis catches this error immediately—no calculation needed.

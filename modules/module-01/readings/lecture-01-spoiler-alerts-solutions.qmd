@@ -1,0 +1,207 @@
+---
+title: "Lecture 1 Solutions: Spoiler Alerts"
+subtitle: "Practice Problem Solutions"
+author: "Dr. Anna Rosen"
+date: "2026-01-20"
+description: "Solutions to the Lecture 1 practice problems."
+draft: true
+course: ASTR 101
+module: "1 - Foundations"
+---
+
+## Conceptual Questions
+
+### Problem 1: Observable vs. Inferred
+
+For each quantity, state whether it is *directly measured* or *inferred*:
+
+| Quantity | Answer |
+|----------|--------|
+| (a) The brightness of a star | **Directly measured** — we count photons arriving at our detector |
+| (b) The temperature of a star | **Inferred** — from spectrum or color using physics (hotter = bluer) |
+| (c) The position of a star on the sky | **Directly measured** — we record where it appears in our images |
+| (d) The distance to a star | **Inferred** — from parallax, standard candles, or other methods |
+| (e) The wavelength of light from a star | **Directly measured** — we spread light into a spectrum and measure which wavelengths are present |
+
+---
+
+### Problem 2: The Inference Pipeline
+
+**Question:** A student claims: "We know the Sun is made of hydrogen because we can see it." What's wrong with this statement?
+
+**Solution:**
+
+The statement conflates *measurement* with *inference*. We don't "see" hydrogen directly.
+
+**What we actually measure:** The Sun's spectrum—brightness as a function of wavelength. When we spread sunlight through a spectrograph, we observe dark absorption lines at specific wavelengths.
+
+**How we infer composition:** Those absorption lines appear at wavelengths that match hydrogen's atomic fingerprint (e.g., the Balmer series at 656 nm, 486 nm, etc.). The physics of atomic energy levels tells us that only hydrogen atoms can absorb at those exact wavelengths.
+
+**The inference chain:** Spectrum (measurement) → absorption line wavelengths (measurement) → atomic physics model → hydrogen present (inference).
+
+---
+
+### Problem 3: Standard Candles
+
+**Question:** Why do astronomers need "standard candles" to measure distances? What problem do they solve?
+
+**Solution:**
+
+**The problem:** Brightness alone cannot tell us distance. A faint nearby candle and a brilliant distant lighthouse can appear equally bright. To determine distance from brightness, we need to know the object's *intrinsic luminosity*—how much light it actually emits.
+
+**What standard candles provide:** Objects whose luminosity we can determine independently. For example:
+- Cepheid variables: pulsation period tells us luminosity
+- Type Ia supernovae: explosion physics predicts consistent peak brightness
+
+**How they work:** Once we know luminosity $L$ and measure flux $F$, the inverse-square law ($F = L/4\pi d^2$) lets us solve for distance $d$.
+
+**Without standard candles,** we could only measure distances geometrically (parallax), which fails beyond ~100 parsecs. Standard candles extend our reach to billions of light-years.
+
+---
+
+### Problem 4: Lookback Time
+
+**Question:** The Andromeda Galaxy is about 2.5 million light-years away. If an astronomer observes a supernova in Andromeda tonight, when did that explosion actually occur?
+
+**Solution:**
+
+The explosion occurred **2.5 million years ago**.
+
+**Reasoning:** A light-year is the distance light travels in one year. If Andromeda is 2.5 million light-years away, its light takes 2.5 million years to reach us. When we observe the supernova "tonight," we're seeing light that left Andromeda 2.5 million years ago—before *Homo sapiens* existed.
+
+**Key insight:** Looking far away = looking back in time. The supernova we see "now" is ancient history for anyone in Andromeda.
+
+---
+
+## Calculations
+
+### Problem 5: Relative Brightness
+
+**Question:** Two identical stars are observed. Star A appears 9× brighter than Star B. Using the inverse-square law, how many times farther away is Star B?
+
+**Solution:**
+
+**Given:** Stars are identical (same luminosity $L$). Star A appears 9× brighter than Star B.
+
+**The inverse-square law:** $F = \frac{L}{4\pi d^2}$
+
+**For identical stars:** The ratio of fluxes depends only on distance:
+$$\frac{F_A}{F_B} = \frac{d_B^2}{d_A^2}$$
+
+**Solve for distance ratio:**
+$$9 = \frac{d_B^2}{d_A^2}$$
+$$\frac{d_B}{d_A} = \sqrt{9} = 3$$
+
+**Answer:** Star B is **3× farther away** than Star A.
+
+**Check:** If Star B is 3× farther, its light spreads over $3^2 = 9$ times more area, so we receive 1/9 the flux. Star A appears 9× brighter. ✓
+
+---
+
+### Problem 6: Light Travel Time
+
+**Question:** Light travels at $3 \times 10^8$ m/s. The Sun is about $1.5 \times 10^{11}$ m away. How long does light take to travel from the Sun to Earth?
+
+**Solution:**
+
+**Given:**
+- Speed of light: $c = 3 \times 10^8$ m/s
+- Distance to Sun: $d = 1.5 \times 10^{11}$ m
+
+**Using:** $\text{time} = \frac{\text{distance}}{\text{speed}}$
+
+$$t = \frac{d}{c} = \frac{1.5 \times 10^{11} \text{ m}}{3 \times 10^8 \text{ m/s}}$$
+
+**Calculate:**
+$$t = \frac{1.5}{3} \times 10^{11-8} \text{ s} = 0.5 \times 10^3 \text{ s} = 500 \text{ s}$$
+
+**Convert to minutes:**
+$$500 \text{ s} \times \frac{1 \text{ min}}{60 \text{ s}} = 8.3 \text{ min}$$
+
+**Answer:** Light takes **500 seconds**, or about **8.3 minutes**, to travel from the Sun to Earth.
+
+**Unit check:** $\frac{\text{m}}{\text{m/s}} = \text{s}$ ✓
+
+---
+
+### Problem 7: Building a Light-Year
+
+**Question:** Using $c = 3 \times 10^8$ m/s and 1 year ≈ $3.15 \times 10^7$ s, calculate the distance light travels in one year.
+
+**Solution:**
+
+**Given:**
+- Speed of light: $c = 3 \times 10^8$ m/s
+- Time: $t = 3.15 \times 10^7$ s
+
+**Using:** $\text{distance} = \text{speed} \times \text{time}$
+
+$$d = c \times t = (3 \times 10^8 \text{ m/s}) \times (3.15 \times 10^7 \text{ s})$$
+
+**Calculate (multiply coefficients, add exponents):**
+$$d = (3 \times 3.15) \times 10^{8+7} \text{ m} = 9.45 \times 10^{15} \text{ m}$$
+
+**Answer:** One light-year ≈ $9.5 \times 10^{15}$ m (about 9.5 trillion kilometers).
+
+**Unit check:** $\frac{\text{m}}{\text{s}} \times \text{s} = \text{m}$ ✓
+
+---
+
+## Synthesis
+
+### Problem 8: The Course Thesis
+
+**Question:** In 2-3 sentences, explain the course thesis to a friend who has never taken astronomy.
+
+**Sample Solution:**
+
+"Every beautiful space image you've seen is actually scientific data. Astronomers can only measure four things directly—how bright something is, where it appears, what colors of light it emits, and how those change over time. Everything else we claim to know about stars, galaxies, and the universe (their temperatures, distances, ages, compositions) is figured out by combining those measurements with the laws of physics."
+
+**Key elements a good answer should include:**
+- Images = data, not just pretty pictures
+- Limited direct measurements (the four observables)
+- Physics connects measurements to inferences
+- Everything interesting is inferred, not directly measured
+
+---
+
+### Problem 9: Connecting Wavelength to Physics
+
+**Question:** Explain why observing the same galaxy at optical and radio wavelengths reveals different information.
+
+**Solution:**
+
+**Optical wavelengths (~500 nm)** show where the **stars** are. Hot stellar surfaces (thousands of degrees) emit thermal radiation that peaks in visible light. The spiral arms, bright center, and stellar populations are all visible.
+
+**Radio wavelengths (21 cm)** show where **cold hydrogen gas** is. Neutral hydrogen atoms emit at exactly 21 cm due to a quantum mechanical spin-flip transition. This gas can extend far beyond the visible stellar disk.
+
+**Why they differ:** Different physical processes produce different wavelengths.
+- Stars: thermal radiation from hot surfaces → visible light
+- Cold gas: atomic transition in neutral hydrogen → radio waves
+
+**The key insight:** Same object, different wavelength = different physical component revealed. This is why astronomers need telescopes spanning the entire electromagnetic spectrum—each wavelength probes different physics.
+
+---
+
+### Problem 10: Dark Matter Evidence
+
+**Question:** A student says, "If we can't see dark matter, how do we know it exists?" Describe one piece of evidence.
+
+**Solution:**
+
+**One compelling piece of evidence: Galaxy rotation curves**
+
+**What we measure:** The velocities of stars and gas at different distances from a galaxy's center, using the Doppler effect. When we spread the light into a spectrum, absorption lines appear shifted—redshifted if moving away, blueshifted if approaching.
+
+**What we find:** Stars in the outer regions of galaxies orbit at roughly the same speed as stars closer to the center. They don't slow down with distance.
+
+**What physics predicts without dark matter:** If most mass is concentrated in the visible center (where we see stars), orbital speed should decrease with distance—just like planets in our solar system (Mercury orbits faster than Neptune).
+
+**The inference:** For outer stars to orbit so fast, there must be much more mass than we can see—mass extending far beyond the visible galaxy. We call this invisible mass "dark matter."
+
+**The inference chain:**
+- Doppler shifts → stellar velocities (measurement)
+- Newton's gravity → mass required to explain velocities (model)
+- Mass required >> visible mass → dark matter exists (inference)
+
+**Key point:** We detect dark matter through its *gravitational effects* on things we can see—not by seeing dark matter itself.
