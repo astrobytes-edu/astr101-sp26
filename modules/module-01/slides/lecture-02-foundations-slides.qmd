@@ -785,7 +785,7 @@ Tool 3: The Ratio Method
 ::: {.column width="55%"}
 **The hard way:** Calculate Jupiter's surface gravity.
 
-- Need: $G = 6.67 \times 10^{-11}$, mass, radius...
+- Need: $G = 6.67 \times 10^{-11}\,\text{N}\cdot\text{m}^2/\text{kg}^2$, mass, radius...
 - Lots of numbers, easy to make mistakes.
 
 **The ratio way:** Compare Jupiter to Earth.
