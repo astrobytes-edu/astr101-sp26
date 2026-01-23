@@ -714,6 +714,30 @@ $$\frac{A_2}{A_1}=\left(\frac{B_2}{B_1}\right)^n.$$
 
 ---
 
+## Worked Example: Telescope Collecting Area {.smaller}
+
+**Problem:** The Keck telescope has a 10-meter diameter mirror. The Hubble Space Telescope has a 2.4-meter diameter mirror. How much more light can Keck collect?
+
+::: {.fragment}
+**Setup:** Light-collecting area scales as $A \propto D^2$ (area of a circle)
+:::
+
+::: {.fragment}
+**Ratio method:**
+$$\frac{A_\text{Keck}}{A_\text{Hubble}} = \left(\frac{D_\text{Keck}}{D_\text{Hubble}}\right)^2 = \left(\frac{10}{2.4}\right)^2 \approx (4.2)^2 \approx 17$$
+:::
+
+::: {.fragment}
+**Answer:** Keck collects about **17× more light** than Hubble—no need to calculate actual areas!
+:::
+
+::: {.notes}
+2 min. Walk through step by step. Emphasize: we never needed to know $\pi$ or calculate actual square meters.
+The ratio $D_2/D_1$ does all the work. Students often want to compute $\pi r^2$ for both—show them this shortcut.
+:::
+
+---
+
 ## Quick Check: Volume Ratio {#stop-solve-3 background-color="#1a1a2e"}
 
 The Sun's radius is about 109× Earth's radius. How many Earths fit inside the Sun?
@@ -781,6 +805,33 @@ Astronomers call this brightness measurement **flux** — the energy arriving pe
 ::: {.notes}
 2 min. Draw attention to the diagram. Light spreads over area = 4πd².
 Double the distance → 4× the area → 1/4 the brightness per unit area.
+:::
+
+---
+
+## Worked Example: Mars Sunlight {.smaller}
+
+**Problem:** Mars orbits at 1.5 AU from the Sun. Earth orbits at 1 AU. How does the intensity of sunlight on Mars compare to Earth?
+
+::: {.fragment}
+**Setup:** Sunlight intensity follows the inverse-square law: $I \propto 1/d^2$
+:::
+
+::: {.fragment}
+**Ratio method:**
+$$\frac{I_\text{Mars}}{I_\text{Earth}} = \left(\frac{d_\text{Earth}}{d_\text{Mars}}\right)^2 = \left(\frac{1}{1.5}\right)^2 = \left(\frac{2}{3}\right)^2 = \frac{4}{9} \approx 0.44$$
+:::
+
+::: {.fragment}
+**Answer:** Mars receives only **44% as much sunlight** as Earth—less than half!
+
+This is why Mars is so cold, and why solar panels on Mars rovers need to be larger.
+:::
+
+::: {.notes}
+2 min. Walk through carefully. Note the d terms flip because brightness is *inversely* proportional to d².
+Students often get confused about which distance goes on top—remind them: farther away = less light.
+Real-world consequence: Mars surface temperature averages −60°C.
 :::
 
 ---
@@ -1035,7 +1086,7 @@ Use these only if you want to show a full worked path. Otherwise keep momentum.
 
 ### A) $60\,\text{mph} \to \text{m/s}$
 
-$$60,\frac{\text{mile}}{\text{hr}}\times\frac{1.6\,\text{km}}{1\,\text{mile}}\times\frac{1000\,\text{m}}{1\,\text{km}}\times\frac{1\,\text{hr}}{3600\,\text{s}}\approx 26.7\,\text{m/s}$$
+$$60 \frac{\text{mile}}{\text{hr}}\times\frac{1.6\,\text{km}}{1\,\text{mile}}\times\frac{1000\,\text{m}}{1\,\text{km}}\times\frac{1\,\text{hr}}{3600\,\text{s}}\approx 26.7\,\text{m/s}$$
 
 ### B) $0.5^\circ \to \text{arcsec}$
 
