@@ -273,22 +273,35 @@ These aren't abstract math exercises. They're the tools that let us decode the u
 
 ## The Universe's Phone Number
 
+::: {.columns}
+::: {.column width="55%"}
 {{< img universe-phone-number >}}
+:::
+
+::: {.column width="45%"}
+Each step on this ladder is a **factor of 10**.
+
+From your desk to the edge of the observable universe takes about **27 steps**.
+
+::: {.fragment}
+::: {.callout-tip appearance="minimal"}
+### The mnemonic
+(555)-711-2555 encodes the multipliers at each scale jump. Astronomers really do use phone-number tricks to navigate cosmic scales!
+:::
+:::
+:::
+:::
 
 ::: {.notes}
-1 min. Walk through a few steps on the ladder. Emphasize: each step is ×10.
-The phone number mnemonic: (555)-711-2555 maps the multiplication factors.
+1.5 min. Walk through a few steps on the ladder. Point out: human → Earth → Sun → nearest star → galaxy → observable universe. Each step is ×10, and it takes ~27 of these to span everything.
 :::
 
 ---
 
-## 40 Orders of Magnitude
-
-{{< img logarithmic-cosmic-scales >}}
+## {background-image="/assets/images/module-01/logarithmic-cosmic-scales-gemini.png" background-size="contain" background-color="#0a0a14"}
 
 ::: {.notes}
-1 min. Let the image sink in. From atoms to the observable universe — each tick is ×10.
-This is why we need scientific notation: ordinary numbers can't hold this range.
+1 min. Full-screen image—let it breathe. From atoms to the observable universe, each tick is ×10. This is why we need scientific notation: ordinary numbers can't hold 40+ orders of magnitude.
 :::
 
 ---
