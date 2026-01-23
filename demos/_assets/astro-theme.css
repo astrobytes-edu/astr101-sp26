@@ -24,14 +24,24 @@
   --mars-red: #d9534f;
   --jupiter-tan: #d4a574;
 
-  /* UI colors */
-  --text-primary: #e8e8f0;
-  --text-secondary: #a0a0b0;
-  --text-muted: #606070;
-  --accent-blue: #5dade2;
-  --accent-green: #58d68d;
-  --accent-red: #ec7063;
-  --accent-gold: #f4d03f;
+  /* UI colors - Cosmic Nebula Palette */
+  --text-primary: #F8F8F2;
+  --text-secondary: #BFBFBF;
+  --text-muted: #6272A4;
+
+  /* Accent colors */
+  --cosmic-teal: #4ECDC4;
+  --soft-magenta: #C792EA;
+  --stellar-amber: #FFB86C;
+  --nebula-green: #50FA7B;
+  --nova-pink: #FF79C6;
+  --ice-blue: #8BE9FD;
+
+  /* Legacy aliases (backwards compatibility) */
+  --accent-blue: var(--cosmic-teal);
+  --accent-green: var(--nebula-green);
+  --accent-red: var(--nova-pink);
+  --accent-gold: var(--stellar-amber);
 
   /* Glow effects */
   --glow-sun: 0 0 60px rgba(255, 204, 0, 0.6), 0 0 120px rgba(255, 140, 0, 0.3);
