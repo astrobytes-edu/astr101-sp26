@@ -425,7 +425,7 @@
 }
 
 /* ============================================
-   Presets
+   Presets - Cosmic Nebula
    ============================================ */
 .presets-container {
   display: flex;
@@ -435,30 +435,50 @@
 }
 
 .preset-btn {
+  font-family: var(--font-main);
   font-size: var(--font-size-sm);
-  padding: var(--space-xs) var(--space-sm);
+  font-weight: 500;
+  padding: var(--space-sm) var(--space-md);
+  min-height: 44px;
   background: var(--space-light);
   border: 1px solid var(--border-color);
-  border-radius: var(--border-radius-sm);
+  border-radius: 9999px; /* Pill shape */
   color: var(--text-secondary);
   cursor: pointer;
-  transition: var(--transition-fast);
+  transition: all var(--transition-fast);
 }
 
 .preset-btn:hover {
   background: var(--space-medium);
   color: var(--text-primary);
-  border-color: var(--accent-gold);
+  border-color: var(--cosmic-teal);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.preset-btn:active {
+  transform: scale(0.98);
 }
 
 .preset-btn.active {
-  background: var(--accent-gold);
+  background: var(--cosmic-teal);
   color: var(--space-black);
-  border-color: var(--accent-gold);
+  border-color: var(--cosmic-teal);
+  font-weight: 600;
 }
 
 .preset-btn.easter-egg {
   border-style: dashed;
+  border-color: var(--soft-magenta);
+}
+
+.preset-btn.easter-egg:hover {
+  border-color: var(--soft-magenta);
+  box-shadow: var(--glow-magenta);
+}
+
+.preset-btn.easter-egg.active {
+  background: var(--soft-magenta);
+  border-style: solid;
 }
 
 /* ============================================
