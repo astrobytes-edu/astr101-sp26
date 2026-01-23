@@ -164,6 +164,113 @@ Don't over-precision-police here; emphasize *scale literacy*. You can refine num
 
 ---
 
+## The Speed of Light: Nature's Speed Limit
+
+Light is the fastest thing in the universe. Nothing can travel faster.
+
+$$c = 300{,}000\,\text{km/s} = 3 \times 10^8\,\text{m/s}$$
+
+::: {.incremental}
+- Light travels **1 meter** in about 3 nanoseconds
+- Light crosses **Earth's diameter** in 0.04 seconds
+- Light reaches the **Moon** in 1.3 seconds
+- Light reaches the **Sun** in 8.3 minutes
+:::
+
+::: {.fragment}
+::: {.callout-note appearance="minimal"}
+This speed limit has a profound consequence: **information takes time to travel**. When you look at something far away, you're seeing it as it *was*, not as it *is*.
+:::
+:::
+
+::: {.notes}
+1.5 min. Build the speed of light from familiar to cosmic scales.
+This sets up the key insight: distance = looking back in time.
+:::
+
+---
+
+## What a Light-Year Really Means
+
+A **light-year** is a *distance*, not a time—even though "year" is in the name.
+
+::: {.columns}
+::: {.column width="55%"}
+It's how far light travels in one year:
+
+$$1\,\text{ly} \approx 9.5 \times 10^{15}\,\text{m}$$
+
+That's about **9.5 trillion kilometers**.
+:::
+
+::: {.column width="45%"}
+::: {.callout-tip appearance="minimal"}
+### Why use light-years?
+
+"Proxima Centauri is $4 \times 10^{16}$ m away" is painful.
+
+"4.2 light-years" is memorable.
+:::
+:::
+:::
+
+---
+
+## Distance Is a Time Machine
+
+::: {.columns}
+::: {.column width="55%"}
+Because light takes time to travel, **looking far away = looking back in time**.
+
+| Object | Distance | You see it as it was... |
+|--------|----------|-------------------------|
+| Moon | 1.3 light-sec | 1.3 seconds ago |
+| Sun | 8.3 light-min | 8.3 minutes ago |
+| Proxima Centauri | 4.2 ly | 4.2 years ago |
+| Andromeda Galaxy | 2.5 Mly | 2.5 million years ago |
+:::
+
+::: {.column width="45%"}
+::: {.callout-warning appearance="minimal"}
+### Mind-bending implication
+
+The further we look, the further back in time we see.
+
+The most distant galaxies show us the universe as it was **billions of years ago**.
+:::
+:::
+:::
+
+::: {.notes}
+1.5 min. Let this sink in. Distance is literally a time dial.
+This is why these math tools matter: we need them to decode cosmic history.
+:::
+
+---
+
+## Why We Need These Tools
+
+These cosmic scales are why we need a **math survival kit**:
+
+::: {.incremental}
+- **Scientific notation** — to write $9{,}500{,}000{,}000{,}000{,}000$ m as $9.5 \times 10^{15}$ m
+- **Unit conversions** — to translate between meters, km, AU, and light-years
+- **Ratios** — to compare without drowning in zeros
+- **Rate problems** — to connect distance, speed, and time
+:::
+
+::: {.fragment}
+::: {.callout-note appearance="minimal"}
+These aren't abstract math exercises. They're the tools that let us decode the universe.
+:::
+:::
+
+::: {.notes}
+1 min. This is the "why we're doing this" slide. Connect the motivation to the tools.
+:::
+
+---
+
 ## The Universe's Phone Number
 
 {{< img universe-phone-number >}}
@@ -747,39 +854,16 @@ So distance in one year:
 
 $$1\,\text{ly}=c\times(1 \text{yr})\approx (3\times10^8)(3.15\times10^7)\text{m}\approx 9.5\times10^{15}\text{m}.$$
 
----
-
-## What a Light-Year Really Means
-
-::: {.columns}
-::: {.column width="55%"}
-A light-year is **not** a time—it's a **distance**.
-
-It's how far light travels in one year:
-
-$$1\,\text{ly} \approx 9.5 \times 10^{15}\,\text{m}$$
-
-That's about **9.5 trillion kilometers**.
-:::
-
-::: {.column width="45%"}
-::: {.callout-tip appearance="minimal"}
-### Why use light-years?
-
-Because saying "Proxima Centauri is $4 \times 10^{16}$ meters away" is painful.
-
-Saying "4.2 light-years" is memorable.
-:::
-:::
-:::
-
 ::: {.fragment}
-When we say a star is 100 light-years away, we're also saying we see it **as it was 100 years ago**.
+::: {.callout-tip appearance="minimal"}
+### The payoff
+
+Remember: this is why distance = looking back in time. Light from a star 100 light-years away left **100 years ago**.
+:::
 :::
 
 ::: {.notes}
-1 min. Reinforce the light-year misconception. Distance = time dial is the key insight.
-Connect to the opening theme: we see the past, not the present.
+30 sec. Brief callback to the opening motivation. The calculation justifies the concept.
 :::
 
 ---
