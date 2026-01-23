@@ -1,0 +1,644 @@
+---
+title: "Lecture 2: Tools of the Trade"
+subtitle: "Math + Cosmic Scales Survival Kit"
+author: "Dr. Anna Rosen"
+date: "2026-01-23"
+description: "ASTR 101 math essentials: scientific notation, SI prefixes, units & conversions, ratio method, and rate problems—framed through cosmic scales."
+draft: true
+format:
+  revealjs:
+    theme: [default, ../../../assets/theme/slides/theme.scss]
+    smaller: true
+    slide-number: true
+    transition: fade
+    transition-speed: fast
+    background-transition: fade
+    center: false
+    footer: "ASTR 101 • Lecture 2"
+    chalkboard: true
+    code-line-numbers: true
+    fig-align: center
+    html-math-method: mathjax
+    pointer:
+      color: "#dc2626"
+      pointerSize: 18
+    spotlight:
+      size: 80
+      fadeInAndOut: 150
+      toggleSpotlightOnMouseDown: true
+      initialPresentationMode: false
+    quiz:
+      shuffleOptions: true
+      defaultCorrect: "✓ Correct!"
+      defaultIncorrect: "✗ Not quite—let's fix it."
+
+revealjs-plugins:
+  - pointer
+  - spotlight
+  - attribution
+  - quiz
+
+filters:
+  - roughnotation
+execute:
+  echo: false
+  warning: false
+  message: false
+---
+
+## Learning Objectives
+
+By the end of this lecture, you will be able to:
+
+::: {.incremental}
+
+- Read and **calculate with scientific notation** (powers of ten)
+- Use **SI prefixes** (kilo-, mega-, micro-, …) to translate scale
+- Set up **unit conversions** so units cancel (factor-label method)
+- Use the **ratio method** to compare planets/stars without big-number pain
+- Solve simple **rate problems** (distance = speed × time; amount = rate × time)
+- Use the astronomy “distance ladder” units: **AU, light-year, parsec**
+:::
+
+::: {.notes}
+Set the tone: “This is not a math test. It’s a navigation toolkit for the universe.”
+:::
+
+---
+
+## {background-image="/assets/images/common/noirlab-nightsky-mosaic.jpg" background-opacity="0.18"}
+
+::: {.r-fit-text}
+Astronomy is the art of making sense of absurd numbers.
+:::
+
+::: {.notes}
+Pause. Let them feel the “absurd.” Then: “We’re going to tame it with a small toolbox.”
+:::
+
+---
+
+## Why we’re doing this
+
+::: {.callout-note appearance="minimal"}
+
+### Math as a telescope 🔭
+
+In ASTR 101, numbers aren’t decoration—they’re how we turn **points of light** into **physical reality**.
+:::
+
+::: {.incremental}
+
+- Units keep your equations honest.
+- Ratios cancel constants and reveal relationships.
+- Rates connect motion, time, and change.
+- Powers of ten let your brain hold the cosmos.
+:::
+
+---
+
+## Today’s Toolkit
+
+::: {.callout-note appearance="minimal"}
+
+### Four survival tools 🧰
+
+:::
+
+::: {.incremental}
+
+1. **Scientific notation + prefixes** → speak “cosmic scale”
+2. **Units + conversions** → translate cleanly
+3. **Ratio method** → compare without drowning in zeros
+4. **Rate problems** → connect distance, time, and speed
+   :::
+
+---
+
+## Cosmic Scales in One Slide
+
+::: {.columns}
+::: {.column width="58%"}
+**A few anchor distances** (order-of-magnitude is enough today):
+
+| Scale             |                     Distance |     Light travel time |
+| ----------------- | ---------------------------: | --------------------: |
+| Earth–Moon        |    $3.84\times10^8,\text{m}$ |   $\sim 1.3,\text{s}$ |
+| 1 AU (Earth–Sun)  | $1.50\times10^{11},\text{m}$ | $\sim 8.3,\text{min}$ |
+| 1 light-year (ly) | $9.46\times10^{15},\text{m}$ |                1 year |
+| 1 parsec (pc)     | $3.09\times10^{16},\text{m}$ | $\sim 3.26,\text{yr}$ |
+
+: {.text-sm}
+:::
+
+::: {.column width="42%"}
+::: {.callout-tip appearance="minimal"}
+
+### The key idea
+
+Distance and time *mix* in astronomy because information travels at a finite speed.
+
+We don’t see things **as they are**.
+We see them **as they were**.
+:::
+:::
+:::
+
+::: {.notes}
+Don’t over-precision-police here; emphasize *scale literacy*. You can refine numbers later.
+:::
+
+---
+
+## Stop & Solve 0: Light-time intuition {#stop-solve-0}
+
+Light takes about **8.3 minutes** to travel 1 AU.
+
+::: {.incremental}
+
+- How long does it take light to reach us from something at **2 AU**?
+- How long from **0.5 AU**?
+:::
+
+::: {.fragment .mt-2 .text-sm}
+[→ Solution](#solution-0)
+:::
+
+---
+
+## {.center}
+
+::: {.r-fit-text}
+Tool 1: Scientific Notation
+:::
+
+*Because the universe refuses to be written out in longhand*
+
+---
+
+## Scientific notation = brain-friendly compression
+
+A number written as
+
+$$a\times 10^n$$
+
+means:
+
+::: {.incremental}
+
+- $a$ is the **coefficient** (usually between 1 and 10)
+- $10^n$ tells you how many places the decimal moves
+- $n$ is the **order of magnitude** (the scale)
+:::
+
+---
+
+## Converting: decimal ↔ scientific notation
+
+::: {.columns}
+::: {.column width="55%"}
+**Big number**
+
+$300{,}000{,}000;\text{m/s} = 3.0\times10^8;\text{m/s}$
+
+**Small number**
+
+$0.000000001;\text{s} = 1.0\times10^{-9};\text{s}$
+:::
+
+::: {.column width="45%"}
+::: {.callout-tip appearance="minimal"}
+
+### Direction rule
+
+- $n>0$ → move decimal **right** (bigger)
+- $n<0$ → move decimal **left** (smaller)
+:::
+:::
+:::
+
+---
+
+## Operations (no calculator vibe)
+
+::: {.incremental}
+
+- Multiply: $(a\times10^m)(b\times10^n)=(ab)\times10^{m+n}$
+- Divide: $\dfrac{a\times10^m}{b\times10^n}=\left(\dfrac{a}{b}\right)\times10^{m-n}$
+- Powers: $(a\times10^m)^k = a^k\times10^{mk}$
+:::
+
+::: {.notes}
+Make them say the rule out loud once. Muscle memory matters.
+:::
+
+---
+
+## Stop & Solve 1: Powers of ten (quick) {#stop-solve-1}
+
+Do these in your head; keep answers in scientific notation.
+
+::: {.incremental}
+
+1. $(3\times10^5)(4\times10^3)$
+2. $(8\times10^7)/(2\times10^{12})$
+3. $(2\times10^{-4})^3$
+   :::
+
+::: {.fragment .mt-2 .text-sm}
+[→ Solution](#solution-1)
+:::
+
+---
+
+## SI Prefixes: the language of scale
+
+| Prefix | Symbol |    Factor |
+| ------ | -----: | --------: |
+| tera   |      T | $10^{12}$ |
+| giga   |      G |  $10^{9}$ |
+| mega   |      M |  $10^{6}$ |
+| kilo   |      k |  $10^{3}$ |
+| milli  |      m | $10^{-3}$ |
+| micro  |  $\mu$ | $10^{-6}$ |
+| nano   |      n | $10^{-9}$ |
+
+::: {.notes}
+Stress: these are *power-of-ten labels*. They’re not extra information; they are the exponent.
+:::
+
+---
+
+## Order-of-magnitude estimation (ROM)
+
+When exact arithmetic is annoying, estimate on purpose.
+
+::: {.incremental}
+
+- Round coefficients to nearby easy numbers.
+- For a **rough order-of-magnitude**:
+  - coefficient $<,3$ → round to 1
+  - coefficient $>,3$ → round to 10
+:::
+
+::: {.callout-warning appearance="minimal"}
+**ROM is not “sloppy.”** It’s a controlled approximation for staying in the right cosmic zip code.
+:::
+
+---
+
+## {.center}
+
+::: {.r-fit-text}
+Tool 2: Units & Conversions
+:::
+
+*Units are the meaning of a number*
+
+---
+
+## Units vs. Dimensions (very light intro)
+
+::: {.columns}
+::: {.column width="55%"}
+**Units** are human choices:
+
+- meters vs kilometers vs AU
+
+**Dimensions** are the *type* of quantity:
+
+- length $[L]$, time $[T]$, mass $[M]$
+
+Examples:
+
+- speed: $[L/T]$
+- area: $[L^2]$
+- volume: $[L^3]$
+:::
+
+::: {.column width="45%"}
+::: {.callout-note appearance="minimal"}
+
+### Why mention dimensions?
+
+Not to do a full “dimension analysis” unit…
+
+…but because **unit mistakes are the #1 avoidable error** in astronomy problems.
+:::
+:::
+:::
+
+---
+
+## Conversion factors = “multiply by 1”
+
+A conversion factor is an equality written as a fraction.
+
+Example:
+
+$$1,\text{m} \leftrightarrow 100,\text{cm}$$
+
+so you can use
+
+$$\frac{100,\text{cm}}{1,\text{m}}=1 \quad \text{or} \quad \frac{1,\text{m}}{100,\text{cm}}=1.$$
+
+---
+
+## The factor-label method (foolproof)
+
+1. Write what you’re given.
+
+2. Multiply by conversion factors arranged so **units cancel**.
+
+3. Check that your final units match what you wanted.
+
+::: {.callout-tip appearance="minimal"}
+
+### Selection rule
+
+Put the unit you want to **remove** in the denominator.
+:::
+
+---
+
+## Example: minutes → hours (structure, not memorization)
+
+$$1000,\text{min}\times\frac{1,\text{hr}}{60,\text{min}};=;\frac{1000}{60},\text{hr}\approx 16.7,\text{hr}$$
+
+::: {.fragment}
+**Sanity check:** hours are bigger units than minutes, so the number should get smaller. ✓
+:::
+
+---
+
+## Stop & Solve 2: Unit conversion chains {#stop-solve-2}
+
+::: {.incremental}
+**A)** Convert $60,\text{mph}$ to $\text{m/s}$.
+
+**B)** Convert $0.5^\circ$ to arcseconds.
+
+(Use: $1,\text{mile}=1.6,\text{km}$, $1,\text{hr}=3600,\text{s}$, $1^\circ=60,\text{arcmin}$, $1,\text{arcmin}=60,\text{arcsec}$.)
+:::
+
+::: {.fragment .mt-2 .text-sm}
+[→ Solution](#solution-2)
+:::
+
+---
+
+## Exponents matter in unit conversions
+
+When a unit is squared or cubed, the conversion factor gets squared/cubed too.
+
+Example idea:
+
+$$1,\text{m}=100,\text{cm};\Rightarrow;1,\text{m}^3=(100,\text{cm})^3=10^6,\text{cm}^3.$$
+
+::: {.notes}
+This is a classic student trap. Do this once slowly.
+:::
+
+---
+
+## Compound units (units built from units)
+
+Some “named” SI units are shortcuts:
+
+::: {.incremental}
+
+- $1,\text{N} = 1,\text{kg},\text{m}/\text{s}^2$
+- $1,\text{J} = 1,\text{N},\text{m} = 1,\text{kg},\text{m}^2/\text{s}^2$
+- $1,\text{W} = 1,\text{J}/\text{s} = 1,\text{kg},\text{m}^2/\text{s}^3$
+:::
+
+::: {.notes}
+Tiny pitch: “If the unit looks unfamiliar, rewrite it in base units.”
+:::
+
+---
+
+## {.center}
+
+::: {.r-fit-text}
+Tool 3: The Ratio Method
+:::
+
+*Compare systems without calculator misery*
+
+---
+
+## Absolute vs. ratio (why ratios are magic)
+
+Many physics relationships look like
+
+$$A = k,B^n$$
+
+Comparing two cases cancels $k$:
+
+$$\frac{A_2}{A_1}=\left(\frac{B_2}{B_1}\right)^n.$$
+
+::: {.fragment}
+**Takeaway:** you learn the scaling story without hunting constants.
+:::
+
+---
+
+## Scaling patterns you’ll use all semester
+
+| Scaling         | Meaning                  | Where it shows up                 |
+| --------------- | ------------------------ | --------------------------------- |
+| $\propto R^2$   | area grows fast          | telescope area, surface area      |
+| $\propto R^3$   | volume grows *very* fast | planet volumes, “how many Earths” |
+| $\propto 1/r^2$ | inverse-square           | brightness, gravity               |
+
+---
+
+## Stop & Solve 3: “How many Earths fit inside the Sun?” {#stop-solve-3}
+
+Given $R_\odot/R_\oplus \approx 109$.
+
+Use only ratios:
+
+$$\frac{V_\odot}{V_\oplus}=\left(\frac{R_\odot}{R_\oplus}\right)^3.$$
+
+Estimate $109^3$.
+
+::: {.fragment .mt-2 .text-sm}
+[→ Solution](#solution-3)
+:::
+
+---
+
+## Inverse-square intuition (brightness)
+
+If you move twice as far from a light source:
+
+$$\text{brightness}\propto \frac{1}{d^2}\quad\Rightarrow\quad \frac{B_2}{B_1}=\left(\frac{d_1}{d_2}\right)^2=\left(\frac{1}{2}\right)^2=\frac{1}{4}.$$
+
+::: {.callout-note appearance="minimal"}
+This is why distance is *hard* in astronomy: small distance errors become big brightness errors.
+:::
+
+---
+
+## {.center}
+
+::: {.r-fit-text}
+Tool 4: Rate Problems
+:::
+
+*Change per time is basically the universe’s favorite sentence structure*
+
+---
+
+## The rate template
+
+Most rate problems are one equation with three rearrangements:
+
+$$\text{amount} = \text{rate}\times\text{time}$$
+
+So:
+
+::: {.incremental}
+
+- $\text{rate}=\dfrac{\text{amount}}{\text{time}}$
+- $\text{time}=\dfrac{\text{amount}}{\text{rate}}$
+- $\text{amount}=\text{rate}\times\text{time}$
+:::
+
+---
+
+## Example: building a light-year (units + rate)
+
+Light speed:
+
+$$c\approx 3\times10^8,\text{m/s}$$
+
+Seconds per year:
+
+$$1,\text{yr}\approx 3.15\times10^7,\text{s}$$
+
+So distance in one year:
+
+$$1,\text{ly}=c\times(1,\text{yr})\approx (3\times10^8)(3.15\times10^7),\text{m}\approx 9.5\times10^{15},\text{m}.$$
+
+---
+
+## Stop & Solve 4: Earth’s orbital “speed” {#stop-solve-4}
+
+Earth moves around the Sun at about $29.8,\text{km/s}$.
+
+How far does Earth travel in **one minute**? (Answer in meters.)
+
+::: {.fragment .mt-2 .text-sm}
+[→ Solution](#solution-4)
+:::
+
+---
+
+## Putting it together: a problem-solving checklist
+
+::: {.callout-note appearance="minimal"}
+
+### The decoding ritual
+
+For any quantitative astronomy question:
+:::
+
+::: {.incremental}
+
+1. **What am I finding?** (write target with units)
+2. **What am I given?** (write givens with units)
+3. **Pick the tool:** conversion, ratio, or rate
+4. **Do the unit cancellation** (this is your error detector)
+5. **Sanity check:** bigger unit → smaller number? right power of ten?
+:::
+
+---
+
+## Quick Reference: Astronomy unit ladder
+
+| Unit | What it’s good for     | Useful fact                                                           |
+| ---- | ---------------------- | --------------------------------------------------------------------- |
+| AU   | solar system distances | $1,\text{AU}\approx 1.50\times10^{11},\text{m}$                       |
+| ly   | “how far light goes”   | $1,\text{ly}\approx 9.46\times10^{15},\text{m}$                       |
+| pc   | star/galaxy distances  | $1,\text{pc}\approx 3.09\times10^{16},\text{m}\approx 3.26,\text{ly}$ |
+
+---
+
+## Exit Ticket (30 seconds)
+
+::: {.incremental}
+
+1. Which is bigger: $3\times10^6$ or $3\times10^{-6}$?
+2. If you convert meters → kilometers, does the number get bigger or smaller?
+3. If distance doubles, brightness becomes...?
+:::
+
+---
+
+## Solutions
+
+::: {.notes}
+Use these only if you want to show a full worked path. Otherwise keep momentum.
+:::
+
+---
+
+## Solution 0 {#solution-0}
+
+- $2,\text{AU}$: $2\times 8.3,\text{min}\approx 16.6,\text{min}$
+- $0.5,\text{AU}$: $0.5\times 8.3,\text{min}\approx 4.15,\text{min}$
+
+[← Back](#stop-solve-0)
+
+---
+
+## Solution 1 {#solution-1}
+
+1. $(3\times10^5)(4\times10^3) = 12\times10^{8} = 1.2\times10^9$
+
+2. $(8\times10^7)/(2\times10^{12}) = 4\times10^{-5}$
+
+3. $(2\times10^{-4})^3 = 2^3\times10^{-12}=8\times10^{-12}$
+
+[← Back](#stop-solve-1)
+
+---
+
+## Solution 2 {#solution-2}
+
+### A) $60,\text{mph} \to \text{m/s}$
+
+$$60,\frac{\text{mile}}{\text{hr}}\times\frac{1.6,\text{km}}{1,\text{mile}}\times\frac{1000,\text{m}}{1,\text{km}}\times\frac{1,\text{hr}}{3600,\text{s}}\approx 26.7,\text{m/s}$$
+
+### B) $0.5^\circ \to \text{arcsec}$
+
+$$0.5^\circ\times\frac{60,\text{arcmin}}{1^\circ}\times\frac{60,\text{arcsec}}{1,\text{arcmin}}=1800,\text{arcsec}$$
+
+[← Back](#stop-solve-2)
+
+---
+
+## Solution 3 {#solution-3}
+
+$$109^3 \approx (1.09\times10^2)^3 = 1.09^3\times10^6\approx 1.3\times10^6.$$
+
+So the Sun’s volume is about **1.3 million Earth volumes**.
+
+[← Back](#stop-solve-3)
+
+---
+
+## Solution 4 {#solution-4}
+
+$$29.8,\text{km/s} = 2.98\times10^4,\text{m/s}$$
+
+One minute is $60,\text{s}$, so
+
+$$\text{distance}=vt=(2.98\times10^4,\text{m/s})(60,\text{s})\approx 1.79\times10^6,\text{m}.$$
+
+That’s about **1800 km** in one minute.
+
+[← Back](#stop-solve-4)
