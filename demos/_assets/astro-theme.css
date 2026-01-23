@@ -273,8 +273,10 @@
 
 .control-label {
   font-size: var(--font-size-sm);
+  font-weight: 500;
   color: var(--text-secondary);
-  min-width: 100px;
+  min-width: 120px;
+  line-height: var(--line-height-normal);
 }
 
 /* ============================================
