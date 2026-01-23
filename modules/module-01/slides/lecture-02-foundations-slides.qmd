@@ -912,15 +912,15 @@ $$\frac{B_2}{B_1}=\left(\frac{d_1}{d_2}\right)^2$$
 
 ::: {.column width="55%"}
 {{< img inverse-square-law >}}
+
+::: {.callout-note appearance="minimal"}
+Astronomers call this **flux** — energy per second per area (W/m²).
+:::
 :::
 :::
 
 ::: {.fragment}
 **Example:** Twice as far → $\dfrac{B_2}{B_1}=\left(\dfrac{1}{2}\right)^2=\dfrac{1}{4}$ the brightness.
-:::
-
-::: {.callout-note appearance="minimal"}
-Astronomers call this brightness measurement **flux** — energy per second per area (W/m²).
 :::
 
 ::: {.notes}
