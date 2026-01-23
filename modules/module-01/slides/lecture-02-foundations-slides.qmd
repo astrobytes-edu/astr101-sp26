@@ -895,7 +895,7 @@ Ratios + inverse-square = powerful tool for stellar comparison.
 ## Inverse-square intuition (brightness)
 
 ::: {.columns}
-::: {.column width="55%"}
+::: {.column width="45%"}
 If you move twice as far from a light source:
 
 $$\text{brightness}\propto \frac{1}{d^2}$$
@@ -906,25 +906,21 @@ $$\text{brightness}\propto \frac{1}{d^2}$$
 Because brightness is *inversely* proportional to $d^2$, the ratio flips:
 
 $$\frac{B_2}{B_1}=\left(\frac{d_1}{d_2}\right)^2$$
-
-Farther distance on bottom → smaller brightness.
 :::
-:::
-
-::: {.fragment}
-**Example:** $d_2 = 2d_1$ (twice as far)
-
-$$\frac{B_2}{B_1}=\left(\frac{d_1}{2d_1}\right)^2=\left(\frac{1}{2}\right)^2=\frac{1}{4}$$
 :::
 :::
 
-::: {.column width="45%"}
+::: {.column width="55%"}
 {{< img inverse-square-law >}}
 :::
 :::
 
+::: {.fragment}
+**Example:** Twice as far → $\dfrac{B_2}{B_1}=\left(\dfrac{1}{2}\right)^2=\dfrac{1}{4}$ the brightness.
+:::
+
 ::: {.callout-note appearance="minimal"}
-Astronomers call this brightness measurement **flux** — the energy arriving per second per unit area (W/m²). This is why distance is *hard* in astronomy: small distance errors become big flux errors.
+Astronomers call this brightness measurement **flux** — energy per second per area (W/m²).
 :::
 
 ::: {.notes}
