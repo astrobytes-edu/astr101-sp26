@@ -356,46 +356,65 @@
 }
 
 /* ============================================
-   Buttons
+   Buttons - Cosmic Nebula
    ============================================ */
 .astro-btn {
   font-family: var(--font-main);
   font-size: var(--font-size-sm);
-  padding: var(--space-sm) var(--space-md);
-  border: 1px solid var(--border-color);
-  border-radius: var(--border-radius-sm);
-  background: var(--space-medium);
-  color: var(--text-primary);
+  font-weight: 500;
+  padding: var(--space-sm) var(--space-lg);
+  min-height: 44px;
+  border: 1px solid var(--cosmic-teal);
+  border-radius: 9999px; /* Pill shape */
+  background: transparent;
+  color: var(--cosmic-teal);
   cursor: pointer;
-  transition: var(--transition-fast);
+  transition: all var(--transition-fast);
   white-space: nowrap;
 }
 
 .astro-btn:hover {
-  background: var(--space-light);
-  border-color: var(--accent-blue);
+  background: rgba(78, 205, 196, 0.15);
+  box-shadow: var(--glow-teal);
 }
 
 .astro-btn:active {
-  transform: translateY(1px);
+  transform: scale(0.98);
+  background: rgba(78, 205, 196, 0.25);
 }
 
-.astro-btn.active {
-  background: var(--accent-blue);
-  border-color: var(--accent-blue);
-  color: var(--space-black);
+.astro-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
 }
 
+.astro-btn.active,
 .astro-btn.primary {
-  background: var(--accent-blue);
-  border-color: var(--accent-blue);
+  background: var(--cosmic-teal);
   color: var(--space-black);
-  font-weight: 500;
+  border-color: var(--cosmic-teal);
 }
 
+.astro-btn.active:hover,
 .astro-btn.primary:hover {
-  background: #7bc0eb;
-  box-shadow: var(--glow-accent);
+  background: #6ad4cc;
+  box-shadow: 0 0 20px rgba(78, 205, 196, 0.5);
+}
+
+/* Secondary button variant */
+.astro-btn.secondary {
+  border-color: var(--soft-magenta);
+  color: var(--soft-magenta);
+}
+
+.astro-btn.secondary:hover {
+  background: rgba(199, 146, 234, 0.15);
+  box-shadow: var(--glow-magenta);
+}
+
+.astro-btn.secondary.active {
+  background: var(--soft-magenta);
+  color: var(--space-black);
 }
 
 /* Button group */
