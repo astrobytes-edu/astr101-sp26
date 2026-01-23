@@ -686,7 +686,7 @@ $$1\,\text{m}^3 = 100\,\text{cm}^3$$ ❌
 **Why it's wrong:** You're converting *each* dimension.
 :::
 
-::: {.column width="50%"}
+::: {.column width="50%" .fragment}
 **The right way:**
 
 $$1\,\text{m} = 100\,\text{cm}$$
@@ -703,8 +703,12 @@ $$= 100^3\,\text{cm}^3 = 10^6\,\text{cm}^3$$ ✓
 :::
 :::
 
+::: {.fragment}
+**Pro tip:** Parentheses are your best friend—wrap the whole unit before raising to a power.
+:::
+
 ::: {.notes}
-2 min. This is a classic student trap. Walk through slowly. Emphasize: a cubic meter is a cube with sides of 100 cm each, so the volume is $100 \times 100 \times 100$.
+2 min. This is a classic student trap. Show the trap first, ask "what's wrong here?" Give them 10 seconds. Then reveal the right way. Walk through slowly. Emphasize: a cubic meter is a cube with sides of 100 cm each, so the volume is $100 \times 100 \times 100$.
 :::
 
 ---
