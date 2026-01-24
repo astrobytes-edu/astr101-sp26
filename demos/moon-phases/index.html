@@ -5,79 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Moon Phases Demo | AstroEd</title>
   <link rel="stylesheet" href="../_assets/astro-theme.css">
+  <link rel="stylesheet" href="../_assets/demo-shell.css">
+  <link rel="stylesheet" href="../_assets/demo-legacy.css">
   <style>
-    html, body {
-      margin: 0;
-      padding: 0;
-      height: 100%;
-    }
-
-    body {
-      font-family: var(--font-main);
-      background: var(--space-black);
-      color: var(--text-primary);
-    }
-
-    .demo-wrapper {
-      min-height: 100vh;
-      position: relative;
-    }
-
-    #starfield {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: 0;
-    }
-
-    .demo-content {
-      position: relative;
-      z-index: 1;
-      max-width: 1000px;
-      margin: 0 auto;
-      padding: 1.5rem;
-    }
-
-    .demo-header {
-      text-align: center;
-      margin-bottom: 1.5rem;
-    }
-
-    .demo-title {
-      font-size: 1.75rem;
-      margin: 0 0 0.5rem 0;
-    }
-
-    .demo-subtitle {
-      font-size: 1rem;
-      color: var(--text-secondary);
-      margin: 0;
+    :root {
+      --demo-max-width: 1000px;
     }
 
     /* Two-panel layout */
     .viz-layout {
       display: grid;
       grid-template-columns: 1.5fr 1fr;
-      gap: 1rem;
-      margin-bottom: 1rem;
-    }
-
-    .viz-panel {
-      background: rgba(18, 18, 31, 0.9);
-      border: 1px solid var(--border-color);
-      border-radius: 12px;
-      padding: 1rem;
-    }
-
-    .panel-title {
-      font-size: 0.875rem;
-      color: var(--text-secondary);
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      margin-bottom: 0.75rem;
-      text-align: center;
+      margin-bottom: var(--space-md);
     }
 
     #orbital-svg, #phase-svg {
@@ -88,37 +27,7 @@
 
     /* Readouts */
     .readout-panel {
-      display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 1rem;
-      margin-bottom: 1rem;
-    }
-
-    .readout-item {
-      background: rgba(18, 18, 31, 0.9);
-      border: 1px solid var(--border-color);
-      border-radius: 8px;
-      padding: 1rem;
-      text-align: center;
-    }
-
-    .readout-label {
-      font-size: 0.75rem;
-      color: var(--text-secondary);
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      margin-bottom: 0.5rem;
-    }
-
-    .readout-value {
-      font-family: var(--font-mono);
-      font-size: 1.25rem;
-      color: var(--accent-gold);
-    }
-
-    .readout-value.phase-name {
-      font-family: var(--font-main);
-      font-size: 1.1rem;
     }
 
     /* Controls */
@@ -135,29 +44,6 @@
       flex-wrap: wrap;
       gap: 0.5rem;
       justify-content: center;
-    }
-
-    .phase-btn {
-      font-size: 0.875rem;
-      padding: 0.5rem 1rem;
-      background: var(--space-light);
-      border: 1px solid var(--border-color);
-      border-radius: 6px;
-      color: var(--text-secondary);
-      cursor: pointer;
-      transition: all 0.15s ease;
-    }
-
-    .phase-btn:hover {
-      background: var(--space-medium);
-      color: var(--text-primary);
-      border-color: var(--accent-blue);
-    }
-
-    .phase-btn.active {
-      background: var(--accent-blue);
-      color: var(--space-black);
-      border-color: var(--accent-blue);
     }
 
     /* Key insight */
@@ -199,6 +85,18 @@
       .readout-panel {
         grid-template-columns: 1fr;
       }
+    }
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
     }
 
     /* Timeline Strip */
@@ -719,24 +617,11 @@
 
       <!-- Screen reader announcements -->
       <div id="status-announce" aria-live="polite" aria-atomic="true" class="sr-only"></div>
-
-      <style>
-        .sr-only {
-          position: absolute;
-          width: 1px;
-          height: 1px;
-          padding: 0;
-          margin: -1px;
-          overflow: hidden;
-          clip: rect(0, 0, 0, 0);
-          white-space: nowrap;
-          border: 0;
-        }
-      </style>
     </div>
   </div>
 
   <script src="../_assets/astro-utils.js"></script>
+  <script src="../_assets/demo-polish.js"></script>
   <script src="../_assets/starfield.js"></script>
   <script src="../_assets/challenge-engine.js"></script>
   <script src="moon-phases.js"></script>
