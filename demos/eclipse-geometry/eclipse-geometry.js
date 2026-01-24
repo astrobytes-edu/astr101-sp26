@@ -754,14 +754,15 @@
       initialState: { moonAngle: 0, nodeAngle: 90 },
       check: (demoState) => {
         const phase = getPhase(demoState.moonAngle);
-        const height = Math.abs(getMoonEclipticHeight(demoState.moonAngle, demoState.orbitalTilt, demoState.nodeAngle));
+        const rawHeight = getMoonEclipticHeight(demoState.moonAngle, demoState.orbitalTilt, demoState.nodeAngle);
+        const height = Math.abs(rawHeight);
         const isFullMoon = phase === 'Full Moon';
         const noEclipse = height > PARTIAL_LUNAR_THRESHOLD;
 
         if (isFullMoon && noEclipse) {
           return {
             correct: true,
-            message: `The Moon is ${height.toFixed(1)}° from the ecliptic — it passes ${height > 0 ? 'above' : 'below'} Earth's shadow! This is why eclipses don't happen every month: the 5° orbital tilt means the Moon usually misses the shadow.`
+            message: `The Moon is ${height.toFixed(1)}° from the ecliptic — it passes ${rawHeight > 0 ? 'above' : 'below'} Earth's shadow! This is why eclipses don't happen every month: the 5° orbital tilt means the Moon usually misses the shadow.`
           };
         } else if (isFullMoon) {
           return {
