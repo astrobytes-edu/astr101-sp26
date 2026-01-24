@@ -602,6 +602,31 @@
     document.getElementById('speed-select').addEventListener('change', (e) => {
       animationSpeed = parseFloat(e.target.value);
     });
+
+    // Reset button
+    document.getElementById('btn-reset').addEventListener('click', () => {
+      stopAnimation();
+
+      // Reset to Full Moon (angle 0)
+      AstroUtils.animateValue(moonAngle, 0, 300, (val) => {
+        moonAngle = ((val % 360) + 360) % 360;
+        update();
+      });
+
+      // Hide shadow if shown
+      const shadowToggle = document.getElementById('show-shadow-toggle');
+      const shadowGroup = document.getElementById('earth-shadow-group');
+      if (shadowToggle && shadowGroup) {
+        shadowToggle.checked = false;
+        shadowGroup.style.display = 'none';
+      }
+
+      // Announce reset for screen readers
+      const announce = document.getElementById('status-announce');
+      if (announce) {
+        announce.textContent = 'Reset to Full Moon position.';
+      }
+    });
   }
 
   // ============================================
