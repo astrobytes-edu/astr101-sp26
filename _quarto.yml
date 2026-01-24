@@ -112,6 +112,8 @@ website:
                 text: "Lecture 1 Reading"
               - href: modules/module-01/readings/lecture-02-foundations-reading.qmd
                 text: "Lecture 2 Reading"
+              - href: modules/module-01/readings/lecture-03-sky-is-a-map.qmd
+                text: "Lecture 3 Reading"
 
       - section: "Module 2: Stars & Stellar Evolution"
         href: modules/module-02/index.qmd
