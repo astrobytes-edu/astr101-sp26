@@ -24,6 +24,32 @@ prerequisites: Comfort reading simple algebraic symbols; familiarity with basic 
 Astronomical images are data. We decode them using physics to infer what we cannot directly measure.
 :::
 
+::: {.callout-important title="How to Use This Reading"}
+**Choose a path (no wrong choice):**
+
+- **Core Path (~15 min):** get the course “throughline” and the main tools.
+- **Full Read (~35–45 min):** everything, including all spoilers + examples.
+- **Reference Mode (as needed):** jump to the [Glossary](#glossary) and re-check figures/definitions while doing homework.
+
+**Core Path (read these sections):**
+
+- [The Big Idea](#the-big-idea)
+- [The Four Observables](#the-four-observables)
+- Two sample spoilers: [Spoiler 1](#spoiler-1-nebulae--color-as-encoded-physics) + [Spoiler 2](#spoiler-2-the-distance-ladder--how-far-is-far)
+- [Light: The Cosmic Messenger](#light-the-cosmic-messenger)
+- [Recognition, Not Retention](#recognition-not-retention)
+
+**Skim (good to glance at):**
+
+- The rest of the [Spoiler Reel](#the-spoiler-reel) (especially images + captions)
+
+**Optional Deep Dives:**
+
+- The “Deep Dive” boxes (equation-heavy expansions) — great for confidence-building, not required on first pass.
+
+**Reassurance:** This is a preview, not a mastery test. Your goal is **recognition, not memorization**.
+:::
+
 ---
 
 ## You Are Starstuff
@@ -102,6 +128,15 @@ That's it. Four types of measurements. **Everything else is inferred.**
 
 {{< fig four-observables >}}
 
+::: {.callout-check-yourself title="Check Yourself 1 — Which Observable?"}
+An astronomer reports that a star's light dims by 1% every 3.5 days like clockwork. Which of the four observables is being measured?
+
+- (a) Position
+- (b) Brightness
+- (c) Wavelength
+- (d) Mass
+:::
+
 ::: {.column-margin}
 **Observable:** A quantity that can be directly measured—brightness, position, wavelength. Astronomers have remarkably few types of observables; nearly everything else is inferred.
 :::
@@ -130,10 +165,13 @@ Notice what you *cannot* directly measure:
 
 Every single one of these fundamental properties must be *inferred* by combining measurements with physical models. The gap between "what we measure" and "what we want to know" is bridged by **physics**.
 
-::: {.callout-tip title="Check Yourself" collapse="true"}
-A star appears to wobble periodically in its position on the sky. Which of the four observables is this, and what might we infer from it?
+::: {.callout-check-yourself title="Check Yourself 2 — Position (and Timing)"}
+A star appears to wobble periodically in its position on the sky. Which observable is being measured?
 
-**Answer:** This is **Position** (tracked over time via **Timing**). We might infer the star has an unseen companion—a planet or another star—whose gravitational pull causes the wobble.
+- (a) Brightness
+- (b) Position
+- (c) Wavelength
+- (d) Temperature
 :::
 
 ---
@@ -218,10 +256,8 @@ where:
 
 Why do atoms produce light at specific wavelengths rather than a continuous rainbow? The answer is quantum mechanics: electrons in atoms can only occupy certain discrete energy levels. When an electron jumps between levels, it absorbs or emits a photon of *exactly* the right energy—and energy determines wavelength. Each element's unique ladder of energy levels creates its unique spectral fingerprint.
 
-::: {.callout-tip title="Check Yourself" collapse="true"}
+::: {.callout-check-yourself title="Check Yourself 3 — Why Spectroscopy Wins"}
 Why is spectroscopy more powerful than just measuring total brightness?
-
-**Answer:** Spectroscopy spreads light into component wavelengths, giving you brightness **as a function of wavelength**—thousands of data points instead of one. This reveals temperature, composition, and motion that a single brightness measurement cannot.
 :::
 
 ---
@@ -316,10 +352,13 @@ Each rung calibrates the next. Parallax calibrates Cepheids; Cepheids calibrate 
 {{< fig standard-candles >}}
 :::
 
-::: {.callout-tip title="Check Yourself" collapse="true"}
-A student claims: "Astronomers measured the temperature of that star to be 5,800 K." Is this statement technically accurate? If not, what did astronomers actually measure?
+::: {.callout-check-yourself title="Check Yourself 4 — What Was Actually Measured?"}
+A student claims: "Astronomers measured the temperature of that star to be 5,800 K." What did astronomers *actually* measure?
 
-**Answer:** The statement is imprecise. Astronomers measured the star's **spectrum** or **color** (wavelength distribution). They inferred temperature using the physical relationship between temperature and peak emission wavelength—hotter objects emit bluer light. Temperature is never directly measured; it's always inferred from wavelength observations via a model.
+- (a) Temperature directly, using a thermometer
+- (b) The star's spectrum or color (wavelength distribution)
+- (c) The star's mass and size
+- (d) The distance to the star
 :::
 
 ---
@@ -356,6 +395,10 @@ $$1 \text{ light-year} \approx 9.5 \times 10^{15} \text{ m}$$
 That's about 9.5 trillion kilometers.
 
 When we say "Proxima Centauri is 4.2 light-years away," we mean its light traveled for 4.2 years to reach us—and we're seeing it as it was 4.2 years ago.
+
+::: {.callout-check-yourself title="Check Yourself 5 — Light-Travel Time"}
+Proxima Centauri is 4.2 light-years away. If a powerful laser on Proxima Centauri is turned on today, how long until we could see it from Earth?
+:::
 
 ### Distance Is a Time Machine
 
@@ -396,10 +439,8 @@ The key insight: **wavelength tells you about temperature and energy**.
 
 Shorter wavelength = higher energy = hotter or more violent source. This is why X-ray telescopes see different objects than optical telescopes—they're sensitive to different physics.
 
-::: {.callout-tip title="Check Yourself" collapse="true"}
+::: {.callout-check-yourself title="Check Yourself 6 — Why X-ray Telescopes See Different Stuff"}
 Why do X-ray telescopes observe different objects than optical telescopes?
-
-**Answer:** X-ray photons have much higher energy than optical photons, requiring much hotter sources. X-ray telescopes detect million-degree plasma—gas in galaxy clusters, matter falling into black holes—while optical telescopes see stellar surfaces at thousands of degrees. Different wavelengths = different temperature regimes = different objects visible.
 :::
 
 ---
@@ -454,34 +495,59 @@ Today you saw the spoilers. Now we build the tools to understand them—one infe
 
 ### Conceptual Questions
 
-1. **Observable vs. Inferred.** For each quantity, state whether it is *directly measured* or *inferred*:
-   - (a) The brightness of a star
-   - (b) The temperature of a star
-   - (c) The position of a star on the sky
-   - (d) The distance to a star
-   - (e) The wavelength of light from a star
+<!-- Conceptual / Recognition / O→M→I / ⭐ -->
+**1.** ⭐ **Observable vs. Inferred.** For each quantity, state whether it is *directly measured* or *inferred*:
 
-2. **The Inference Pipeline.** A student claims: "We know the Sun is made of hydrogen because we can see it." What's wrong with this statement? Explain what we actually measure and how we infer composition.
+| Quantity | Measured or Inferred? |
+|----------|----------------------|
+| (a) The brightness of a star | |
+| (b) The temperature of a star | |
+| (c) The position of a star on the sky | |
+| (d) The distance to a star | |
+| (e) The wavelength of light from a star | |
 
-3. **Standard Candles.** Why do astronomers need "standard candles" to measure distances? What problem do they solve?
+<!-- Conceptual / Connection / O→M→I / ⭐⭐ -->
+**2.** ⭐⭐ **The Inference Pipeline.** A student claims: “We know the Sun is made of hydrogen because we can see it.” What’s wrong with this statement? Explain what we actually measure and how we infer composition.
 
-4. **Lookback Time.** The Andromeda Galaxy is about 2.5 million light-years away. If an astronomer observes a supernova in Andromeda tonight, when did that explosion actually occur?
+<!-- Conceptual / Application / O→M→I / ⭐⭐ -->
+**3.** ⭐⭐ **Standard Candles.** Why do astronomers need “standard candles” to measure distances? What problem do they solve?
+
+<!-- Conceptual / Application / — / ⭐ -->
+**4.** ⭐ **Lookback Time.** The Andromeda Galaxy is about 2.5 million light-years away. If an astronomer observes a supernova in Andromeda tonight, when did that explosion actually occur?
+
+<!-- Conceptual / Recognition / O→M→I / ⭐ -->
+**5.** ⭐ **Four Observables.** An astronomer reports: “We measured the star’s spectrum and found absorption lines shifted toward the red.” Which of the four observables (brightness, position, wavelength, timing) is being measured here? What might be inferred from this observation?
 
 ### Calculations
 
-5. **Relative Brightness.** Two identical stars are observed. Star A appears 9× brighter than Star B. Using the inverse-square law, how many times farther away is Star B compared to Star A?
+<!-- Calculation / Application / O→M→I / ⭐⭐ -->
+**6.** ⭐⭐ **Relative Brightness.** Two identical stars are observed. Star A appears 9× brighter than Star B. Using the inverse-square law, how many times farther away is Star B compared to Star A?
 
-6. **Light Travel Time.** Light travels at $3 \times 10^8$ m/s. The Sun is about $1.5 \times 10^{11}$ m away from Earth. How long does light take to travel from the Sun to Earth? Give your answer in seconds, then convert to minutes.
+<!-- Calculation / Application / — / ⭐ -->
+**7.** ⭐ **Light Travel Time.** Light travels at $3 \times 10^8$ m/s. The Sun is about $1.5 \times 10^{11}$ m away from Earth. How long does light take to travel from the Sun to Earth? Give your answer in seconds, then convert to minutes.
 
-7. **Building a Light-Year.** Using the speed of light ($c = 3 \times 10^8$ m/s) and the fact that one year is approximately $3.15 \times 10^7$ seconds, calculate the distance light travels in one year. Express your answer in meters.
+<!-- Calculation / Application / — / ⭐⭐ -->
+**8.** ⭐⭐ **Building a Light-Year.** Using the speed of light ($c = 3 \times 10^8$ m/s) and the fact that one year is approximately $3.15 \times 10^7$ seconds, calculate the distance light travels in one year. Express your answer in meters.
+
+<!-- Calculation / Application / — / ⭐ -->
+**9.** ⭐ **Inverse-Square Reasoning.** A star moves from 10 light-years away to 40 light-years away (4× the original distance). By what factor does its apparent brightness change?
+
+<!-- Calculation / Application / — / ⭐⭐ -->
+**10.** ⭐⭐ **Lookback Time Calculation.** A galaxy is 50 million light-years away. If we observe it today, when did the light we're seeing actually leave that galaxy?
 
 ### Synthesis
 
-8. **The Course Thesis.** In 2-3 sentences, explain the course thesis "pretty pictures → measurements → models → inferences" to a friend who has never taken astronomy.
+<!-- Synthesis / Connection / O→M→I / ⭐⭐ -->
+**11.** ⭐⭐ **The Course Thesis.** In 2-3 sentences, explain the course thesis “pretty pictures → measurements → models → inferences” to a friend who has never taken astronomy.
 
-9. **Connecting Wavelength to Physics.** Explain why observing the same galaxy at optical and radio wavelengths reveals different information. What physical components are visible at each wavelength, and why?
+<!-- Synthesis / Connection / O→M→I / ⭐⭐ -->
+**12.** ⭐⭐ **Connecting Wavelength to Physics.** Explain why observing the same galaxy at optical and radio wavelengths reveals different information. What physical components are visible at each wavelength, and why?
 
-10. **Dark Matter Evidence.** A student says, "If we can't see dark matter, how do we know it exists?" Describe one piece of observational evidence for dark matter, clearly stating what is *measured* and what is *inferred*.
+<!-- Synthesis / Connection / O→M→I / ⭐⭐⭐ -->
+**13.** ⭐⭐⭐ **Dark Matter Evidence.** A student says, “If we can’t see dark matter, how do we know it exists?” Describe one piece of observational evidence for dark matter, clearly stating what is *measured* and what is *inferred*.
+
+<!-- Synthesis / Connection / O→M→I / ⭐⭐⭐ -->
+**14.** ⭐⭐⭐ **Observable → Model → Inference.** A star’s position on the sky changes periodically over several years. Using the Observable → Model → Inference pattern from this reading: (a) identify which observable is being measured, (b) explain what physical model connects this to unseen objects, and (c) state what you might infer about the star.
 
 ---
 
