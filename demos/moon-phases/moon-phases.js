@@ -605,6 +605,82 @@
   }
 
   // ============================================
+  // Shadow Toggle
+  // ============================================
+
+  /**
+   * Show insight popup when shadow is first toggled on
+   */
+  let shadowInsightShown = false;
+
+  function showShadowInsight() {
+    if (shadowInsightShown) return;
+    shadowInsightShown = true;
+
+    // Create popup
+    const popup = document.createElement('div');
+    popup.className = 'insight-popup';
+    popup.innerHTML = `
+      <div class="insight-popup-content">
+        <strong>Key Observation:</strong> Earth's shadow always points
+        <em>away</em> from the Sun. The Moon is almost never in the shadow —
+        that's why phases are NOT caused by Earth's shadow!
+        <button class="insight-close" aria-label="Close">Got it!</button>
+      </div>
+    `;
+    popup.style.cssText = `
+      position: fixed;
+      bottom: 2rem;
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(46, 204, 113, 0.95);
+      color: #1a1a2e;
+      padding: 1rem 1.5rem;
+      border-radius: 8px;
+      max-width: 400px;
+      z-index: 1000;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+      animation: slideUp 0.3s ease-out;
+    `;
+
+    document.body.appendChild(popup);
+
+    popup.querySelector('.insight-close').addEventListener('click', () => {
+      popup.remove();
+    });
+
+    // Auto-dismiss after 8 seconds
+    setTimeout(() => {
+      if (popup.parentNode) {
+        popup.remove();
+      }
+    }, 8000);
+  }
+
+  function setupShadowToggle() {
+    const shadowToggle = document.getElementById('show-shadow-toggle');
+    const shadowGroup = document.getElementById('earth-shadow-group');
+
+    if (shadowToggle && shadowGroup) {
+      shadowToggle.addEventListener('change', () => {
+        shadowGroup.style.display = shadowToggle.checked ? 'block' : 'none';
+
+        if (shadowToggle.checked) {
+          showShadowInsight();
+        }
+
+        // Announce for screen readers
+        const announce = document.getElementById('status-announce');
+        if (announce) {
+          announce.textContent = shadowToggle.checked
+            ? "Earth's shadow cone is now visible. Notice it points away from the Sun and rarely touches the Moon."
+            : "Earth's shadow cone hidden.";
+        }
+      });
+    }
+  }
+
+  // ============================================
   // Initialization
   // ============================================
 
@@ -615,6 +691,7 @@
     setupTimeline();
     setupKeyboard();
     setupAnimationControls();
+    setupShadowToggle();
 
     // Initialize starfield
     const starfieldCanvas = document.getElementById('starfield');
