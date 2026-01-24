@@ -1,0 +1,134 @@
+/* Legacy class bridge.
+   Purpose: demos historically used many ad-hoc button/readout classes and per-demo CSS overrides.
+   This file maps those legacy classnames onto the Cosmic Nebula component system. */
+
+/* ----------------------------
+   Readouts (legacy)
+   ---------------------------- */
+
+.readout-item {
+  background: var(--space-deep);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-md);
+  padding: var(--space-md);
+  text-align: center;
+}
+
+.readout-label {
+  font-size: var(--font-size-sm);
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: var(--space-xs);
+  line-height: var(--line-height-tight);
+}
+
+.readout-value {
+  font-family: var(--font-mono);
+  font-size: var(--font-size-xl);
+  font-weight: 600;
+  color: var(--stellar-amber);
+  line-height: var(--line-height-tight);
+}
+
+.readout-unit {
+  font-size: var(--font-size-sm);
+  color: var(--text-muted);
+}
+
+/* Moon phases: allow the phase name readout to remain prose-like */
+.readout-value.phase-name {
+  font-family: var(--font-main);
+  font-size: var(--font-size-lg);
+  color: var(--text-primary);
+}
+
+/* ----------------------------
+   Buttons (legacy)
+   ---------------------------- */
+
+.mode-toggle {
+  display: flex;
+  justify-content: center;
+  gap: 0;
+  margin-bottom: var(--space-md);
+}
+
+.mode-btn,
+.anim-btn,
+.sim-btn,
+.phase-btn,
+.unit-btn {
+  font-family: var(--font-main);
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  padding: var(--space-sm) var(--space-lg);
+  min-height: 44px;
+  border: 1px solid var(--border-color);
+  background: var(--space-light);
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+/* Toggle groups */
+.mode-btn:first-child {
+  border-radius: 9999px 0 0 9999px;
+  border-right-width: 0;
+}
+
+.mode-btn:last-child {
+  border-radius: 0 9999px 9999px 0;
+}
+
+.mode-btn:hover:not(.active),
+.anim-btn:hover:not(.active):not(:disabled),
+.sim-btn:hover:not(.active):not(:disabled),
+.phase-btn:hover:not(.active):not(:disabled),
+.unit-btn:hover:not(.active):not(:disabled) {
+  background: var(--space-medium);
+  color: var(--text-primary);
+  border-color: var(--cosmic-teal);
+  box-shadow: var(--glow-teal);
+}
+
+.mode-btn.active,
+.unit-btn.active,
+.anim-btn.primary,
+.sim-btn.primary,
+.phase-btn.active {
+  background: var(--cosmic-teal);
+  color: var(--space-black);
+  border-color: var(--cosmic-teal);
+}
+
+.mode-btn:disabled,
+.anim-btn:disabled,
+.sim-btn:disabled,
+.phase-btn:disabled,
+.unit-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+/* Danger buttons used in some demos */
+.sim-btn.danger {
+  border-color: rgba(255, 121, 198, 0.5);
+}
+
+.sim-btn.danger:hover:not(:disabled) {
+  border-color: var(--nova-pink);
+  box-shadow: 0 0 20px rgba(255, 121, 198, 0.35);
+}
+
+/* Focus visibility */
+.mode-btn:focus-visible,
+.anim-btn:focus-visible,
+.sim-btn:focus-visible,
+.phase-btn:focus-visible,
+.unit-btn:focus-visible {
+  outline: 2px solid var(--cosmic-teal);
+  outline-offset: 2px;
+}
+

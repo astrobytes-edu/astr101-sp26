@@ -479,6 +479,128 @@ if (typeof document !== 'undefined' && !document.getElementById('astro-success-s
 // ============================================
 
 /**
+ * Add a lightweight tooltip above a range slider while interacting.
+ * Intended for demos that already use `.astro-slider`.
+ *
+ * @param {HTMLInputElement} slider - The range input element
+ * @param {function} formatter - Optional (value:number) => string formatter
+ * @param {object} options - Optional options
+ * @returns {{destroy: function}} Cleanup handle
+ */
+function addSliderTooltip(slider, formatter, options = {}) {
+  const {
+    offsetY = -30,
+    thumbWidth = 20
+  } = options;
+
+  if (typeof document === 'undefined' || !slider) {
+    return { destroy() {} };
+  }
+
+  const prefersReducedMotion =
+    typeof window !== 'undefined' &&
+    typeof window.matchMedia === 'function' &&
+    window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  const container = slider.closest('.slider-with-value') || slider.parentElement;
+  if (!container) {
+    return { destroy() {} };
+  }
+
+  if (getComputedStyle(container).position === 'static') {
+    container.style.position = 'relative';
+  }
+
+  const tooltip = document.createElement('div');
+  tooltip.className = 'astro-slider-tooltip';
+  tooltip.style.cssText = `
+    position: absolute;
+    top: ${offsetY}px;
+    left: 0;
+    transform: translateX(-50%);
+    opacity: 0;
+    pointer-events: none;
+    z-index: 20;
+    font-family: var(--font-mono, monospace);
+    font-size: 12px;
+    color: var(--text-primary, #F8F8F2);
+    background: var(--space-deep, #12121f);
+    border: 1px solid var(--border-color, rgba(255,255,255,0.1));
+    border-radius: 9999px;
+    padding: 4px 10px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+    transition: ${prefersReducedMotion ? 'none' : 'opacity 150ms ease-out'};
+  `;
+  container.appendChild(tooltip);
+
+  function parseNumber(value) {
+    const n = typeof value === 'string' ? parseFloat(value) : Number(value);
+    return Number.isFinite(n) ? n : 0;
+  }
+
+  function formatValue(value) {
+    if (typeof formatter === 'function') return formatter(value);
+    return String(value);
+  }
+
+  function update() {
+    const min = parseNumber(slider.min || 0);
+    const max = parseNumber(slider.max || 100);
+    const value = parseNumber(slider.value);
+    const denom = max - min || 1;
+    const percent = (value - min) / denom;
+
+    const sliderRect = slider.getBoundingClientRect();
+    const containerRect = container.getBoundingClientRect();
+
+    const trackWidth = sliderRect.width - thumbWidth;
+    const left = (sliderRect.left - containerRect.left) + (thumbWidth / 2) + (percent * trackWidth);
+
+    tooltip.style.left = `${left}px`;
+    tooltip.textContent = formatValue(value);
+  }
+
+  function show() {
+    update();
+    tooltip.style.opacity = '1';
+  }
+
+  function hide() {
+    tooltip.style.opacity = '0';
+  }
+
+  const onInput = () => update();
+  const onPointerDown = () => show();
+  const onPointerUp = () => hide();
+  const onFocus = () => show();
+  const onBlur = () => hide();
+
+  slider.addEventListener('input', onInput);
+  slider.addEventListener('pointerdown', onPointerDown);
+  slider.addEventListener('pointerup', onPointerUp);
+  slider.addEventListener('pointercancel', onPointerUp);
+  slider.addEventListener('focus', onFocus);
+  slider.addEventListener('blur', onBlur);
+
+  // Keep tooltip positioned if layout changes while focused/active.
+  const onWindowResize = () => update();
+  window.addEventListener('resize', onWindowResize);
+
+  return {
+    destroy() {
+      window.removeEventListener('resize', onWindowResize);
+      slider.removeEventListener('input', onInput);
+      slider.removeEventListener('pointerdown', onPointerDown);
+      slider.removeEventListener('pointerup', onPointerUp);
+      slider.removeEventListener('pointercancel', onPointerUp);
+      slider.removeEventListener('focus', onFocus);
+      slider.removeEventListener('blur', onBlur);
+      tooltip.remove();
+    }
+  };
+}
+
+/**
  * Create a logarithmic slider for astronomical scales
  * @param {HTMLInputElement} slider - The range input element
  * @param {number} minValue - Minimum actual value
@@ -863,6 +985,7 @@ if (typeof window !== 'undefined') {
 
     // Sliders
     updateSliderProgress,
+    addSliderTooltip,
     createLogSlider,
     createLinearSlider,
 
