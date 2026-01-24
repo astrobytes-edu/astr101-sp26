@@ -30,8 +30,16 @@
       slider.addEventListener('input', () => window.AstroUtils.updateSliderProgress(slider), { passive: true });
     }
 
+    // Tooltips: opt-in only, because many demos use "0–1000" sliders internally mapped to physical values.
+    // Use `data-tooltip-source="#some-element"` on the slider to show the *displayed* value.
     if (!prefersReducedMotion() && window.AstroUtils?.addSliderTooltip) {
-      window.AstroUtils.addSliderTooltip(slider);
+      const sourceSelector = slider.dataset.tooltipSource;
+      if (sourceSelector) {
+        const source = document.querySelector(sourceSelector);
+        if (source) {
+          window.AstroUtils.addSliderTooltip(slider, () => source.textContent.trim());
+        }
+      }
     }
   }
 
@@ -47,4 +55,3 @@
     document.querySelectorAll('input[type="range"].astro-slider').forEach(initSlider);
   });
 })();
-
