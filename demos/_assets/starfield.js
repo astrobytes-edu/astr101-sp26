@@ -33,6 +33,8 @@ function createStarfield(canvas, options = {}) {
   let stars = [];
   let animationId = null;
   let running = false;
+  let logicalWidth = 0;
+  let logicalHeight = 0;
   let shootingStar = null;
   let lastShootingStarTime = 0;
   const shootingStarInterval = 30000 + Math.random() * 30000;
@@ -42,7 +44,8 @@ function createStarfield(canvas, options = {}) {
    */
   function initStars() {
     stars = [];
-    const { width, height } = canvas;
+    const width = logicalWidth;
+    const height = logicalHeight;
 
     // Create 3 depth layers
     const layers = [
@@ -144,7 +147,8 @@ function createStarfield(canvas, options = {}) {
     if (shootingStar || !config.shootingStars) return;
     if (time - lastShootingStarTime < shootingStarInterval) return;
 
-    const { width, height } = canvas;
+    const width = logicalWidth;
+    const height = logicalHeight;
 
     const fromTop = Math.random() > 0.5;
     const startX = fromTop ? Math.random() * width : width;
@@ -171,7 +175,8 @@ function createStarfield(canvas, options = {}) {
    * Render one frame
    */
   function render(time) {
-    const { width, height } = canvas;
+    const width = logicalWidth;
+    const height = logicalHeight;
 
     ctx.fillStyle = config.backgroundColor;
     ctx.fillRect(0, 0, width, height);
@@ -206,10 +211,14 @@ function createStarfield(canvas, options = {}) {
     const rect = canvas.getBoundingClientRect();
     const dpr = window.devicePixelRatio || 1;
 
-    canvas.width = rect.width * dpr;
-    canvas.height = rect.height * dpr;
+    logicalWidth = rect.width;
+    logicalHeight = rect.height;
 
-    ctx.scale(dpr, dpr);
+    canvas.width = Math.round(logicalWidth * dpr);
+    canvas.height = Math.round(logicalHeight * dpr);
+
+    // Reset the transform on every resize (avoid compounding scale)
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
 
     // Reinitialize stars for new size
     initStars();
