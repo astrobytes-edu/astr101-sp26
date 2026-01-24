@@ -100,10 +100,18 @@ website:
         contents:
           - href: modules/module-01/index.qmd
             text: "Module 1 Overview"
-          - href: modules/module-01/slides/lecture-01-spoiler-alerts-slides.qmd
-            text: "Lecture 1: Spoiler Alerts — The Universe Is Weird"
-          - href: modules/module-01/slides/lecture-02-foundations-slides.qmd
-            text: "Lecture 2: Tools of the Trade"
+          - section: "Slides"
+            contents:
+              - href: modules/module-01/slides/lecture-01-spoiler-alerts-slides.qmd
+                text: "Lecture 1: Spoiler Alerts"
+              - href: modules/module-01/slides/lecture-02-foundations-slides.qmd
+                text: "Lecture 2: Tools of the Trade"
+          - section: "Readings"
+            contents:
+              - href: modules/module-01/readings/lecture-01-spoiler-alerts-reading.qmd
+                text: "Lecture 1 Reading"
+              - href: modules/module-01/readings/lecture-02-foundations-reading.qmd
+                text: "Lecture 2 Reading"
 
       - section: "Module 2: Stars & Stellar Evolution"
         href: modules/module-02/index.qmd
