@@ -1,0 +1,61 @@
+:root {
+  --demo-max-width: 900px;
+}
+
+/* Visualization sizing */
+#angular-size-svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Readout layout */
+.readout-panel {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+/* Controls layout */
+.controls-grid {
+  grid-template-columns: 1fr 1fr;
+}
+
+/* Time evolution (Moon only) */
+.time-control {
+  margin-top: var(--space-md);
+  padding-top: var(--space-md);
+  border-top: 1px solid var(--border-color);
+}
+
+.time-label {
+  display: flex;
+  justify-content: space-between;
+  font-size: var(--font-size-sm);
+  color: var(--text-muted);
+  margin-top: var(--space-xs);
+}
+
+/* Reference guide */
+.reference-guide {
+  background: rgba(18, 18, 31, 0.92);
+  border-left: 4px solid var(--cosmic-teal);
+  padding: var(--space-md);
+  margin-top: var(--space-md);
+  border-radius: 0 var(--border-radius-md) var(--border-radius-md) 0;
+  font-size: var(--font-size-md);
+  line-height: var(--line-height-normal);
+}
+
+.reference-guide strong {
+  color: var(--stellar-amber);
+}
+
+@media (max-width: 600px) {
+  .readout-panel {
+    grid-template-columns: 1fr;
+  }
+
+  .controls-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
