@@ -665,6 +665,240 @@
   }
 
   // ============================================
+  // Challenge Mode
+  // ============================================
+
+  /**
+   * Eclipse Challenges - 5 pedagogically appropriate challenges
+   * Teaching: solar/lunar eclipse setup, orbital inclination, umbra/penumbra, totality
+   */
+  const ECLIPSE_CHALLENGES = [
+    {
+      id: 'solar-eclipse-setup',
+      prompt: 'Position the Moon to create a solar eclipse. Drag the Moon to the correct phase and make sure it is near a node.',
+      hint: 'Solar eclipses happen at NEW MOON when the Moon passes between Earth and Sun. The Moon must also be near a node (where its tilted orbit crosses the ecliptic plane).',
+      initialState: { moonAngle: 90, nodeAngle: 0 },
+      check: (demoState) => {
+        const phase = getPhase(demoState.moonAngle);
+        const height = Math.abs(getMoonEclipticHeight(demoState.moonAngle, demoState.orbitalTilt, demoState.nodeAngle));
+        const isNewMoon = phase === 'New Moon';
+        const nearNode = height < PARTIAL_SOLAR_THRESHOLD;
+
+        if (isNewMoon && nearNode) {
+          const eclipseType = height < TOTAL_SOLAR_THRESHOLD ? 'total' : 'partial';
+          return {
+            correct: true,
+            message: `Solar eclipse achieved! The Moon is at new moon AND only ${height.toFixed(2)}° from the ecliptic — that's a ${eclipseType} solar eclipse!`
+          };
+        } else if (isNewMoon) {
+          return {
+            correct: false,
+            close: true,
+            message: `You have new moon (correct phase!), but the Moon is ${height.toFixed(1)}° from the ecliptic — too far for an eclipse. Move closer to a node.`
+          };
+        } else if (nearNode) {
+          return {
+            correct: false,
+            close: true,
+            message: `The Moon is near a node (good!), but it's at ${phase}. Solar eclipses only happen at new moon.`
+          };
+        }
+        return {
+          correct: false,
+          close: false,
+          message: `You need BOTH new moon (Moon between Earth and Sun) AND proximity to a node. Currently at ${phase}.`
+        };
+      }
+    },
+    {
+      id: 'lunar-eclipse-setup',
+      prompt: 'Position the Moon to create a lunar eclipse. Remember: lunar eclipses happen when Earth blocks sunlight from reaching the Moon.',
+      hint: 'Lunar eclipses happen at FULL MOON when the Moon passes through Earth\'s shadow. The Moon must be near a node so it doesn\'t pass above or below the shadow.',
+      initialState: { moonAngle: 270, nodeAngle: 0 },
+      check: (demoState) => {
+        const phase = getPhase(demoState.moonAngle);
+        const height = Math.abs(getMoonEclipticHeight(demoState.moonAngle, demoState.orbitalTilt, demoState.nodeAngle));
+        const isFullMoon = phase === 'Full Moon';
+        const nearNode = height < PARTIAL_LUNAR_THRESHOLD;
+
+        if (isFullMoon && nearNode) {
+          const eclipseType = height < TOTAL_LUNAR_THRESHOLD ? 'total' : 'partial';
+          return {
+            correct: true,
+            message: `Lunar eclipse achieved! The Moon is at full moon AND passing through Earth's shadow — that's a ${eclipseType} lunar eclipse!`
+          };
+        } else if (isFullMoon) {
+          return {
+            correct: false,
+            close: true,
+            message: `You have full moon (correct phase!), but the Moon is ${height.toFixed(1)}° from the ecliptic — it misses Earth's shadow.`
+          };
+        } else if (nearNode) {
+          return {
+            correct: false,
+            close: true,
+            message: `The Moon is near a node, but it's at ${phase}. Lunar eclipses only happen at full moon.`
+          };
+        }
+        return {
+          correct: false,
+          close: false,
+          message: `You need BOTH full moon (Moon opposite the Sun) AND proximity to a node. Currently at ${phase}.`
+        };
+      }
+    },
+    {
+      id: 'why-not-every-month',
+      prompt: 'Demonstrate why eclipses don\'t happen every month: Find a full moon position that does NOT cause a lunar eclipse.',
+      hint: 'Most full moons don\'t cause eclipses because the Moon\'s orbit is tilted ~5°. Try positioning the Moon at full moon but FAR from the nodes — it will pass above or below Earth\'s shadow.',
+      initialState: { moonAngle: 0, nodeAngle: 90 },
+      check: (demoState) => {
+        const phase = getPhase(demoState.moonAngle);
+        const height = Math.abs(getMoonEclipticHeight(demoState.moonAngle, demoState.orbitalTilt, demoState.nodeAngle));
+        const isFullMoon = phase === 'Full Moon';
+        const noEclipse = height > PARTIAL_LUNAR_THRESHOLD;
+
+        if (isFullMoon && noEclipse) {
+          return {
+            correct: true,
+            message: `The Moon is ${height.toFixed(1)}° from the ecliptic — it passes ${height > 0 ? 'above' : 'below'} Earth's shadow! This is why eclipses don't happen every month: the 5° orbital tilt means the Moon usually misses the shadow.`
+          };
+        } else if (isFullMoon) {
+          return {
+            correct: false,
+            close: true,
+            message: `That's a full moon with an eclipse! The Moon is only ${height.toFixed(1)}° from the ecliptic. Try adjusting the node angle or tilt so the full moon is farther from the ecliptic plane.`
+          };
+        }
+        return {
+          correct: false,
+          close: false,
+          message: `First position the Moon at full moon, then make sure it's far from the nodes.`
+        };
+      }
+    },
+    {
+      id: 'tilt-experiment',
+      prompt: 'Experiment: Set the orbital tilt to 0° and observe what would happen. With no tilt, would eclipses be rare or common?',
+      hint: 'Use the "Orbital Tilt" slider to set tilt to 0°. Then check: at new moon and full moon positions, how far is the Moon from the ecliptic?',
+      initialState: { moonAngle: 180, orbitalTilt: 5.145, nodeAngle: 0 },
+      check: (demoState) => {
+        const tiltIsZero = demoState.orbitalTilt < 0.5;
+        const phase = getPhase(demoState.moonAngle);
+
+        if (tiltIsZero) {
+          return {
+            correct: true,
+            message: `With zero tilt, the Moon always stays in the ecliptic plane! Every new moon would be a solar eclipse and every full moon would be a lunar eclipse. The real ~5° tilt is what makes eclipses rare special events.`
+          };
+        } else if (demoState.orbitalTilt < 2) {
+          return {
+            correct: false,
+            close: true,
+            message: `Getting closer! Tilt is ${demoState.orbitalTilt.toFixed(1)}°. Set it all the way to 0° to see what would happen without any orbital tilt.`
+          };
+        }
+        return {
+          correct: false,
+          close: false,
+          message: `Current tilt is ${demoState.orbitalTilt.toFixed(1)}°. Use the Orbital Tilt slider to reduce it to 0°.`
+        };
+      }
+    },
+    {
+      id: 'eclipse-statistics',
+      prompt: 'Run a 10-year simulation and count the eclipses. Are total eclipses more common than partial eclipses?',
+      hint: 'Click "Run Simulation" with at least 10 years selected. Watch the statistics panel — it shows total vs partial eclipses for both solar and lunar types.',
+      initialState: { moonAngle: 0, nodeAngle: 0, orbitalTilt: 5.145 },
+      check: (demoState) => {
+        const hasRunSim = demoState.yearsSimulated >= 9;
+        const totalSolar = demoState.totalSolarEclipses;
+        const partialSolar = demoState.partialSolarEclipses;
+        const totalLunar = demoState.totalLunarEclipses;
+        const partialLunar = demoState.partialLunarEclipses;
+        const allEclipses = totalSolar + partialSolar + totalLunar + partialLunar;
+
+        if (hasRunSim && allEclipses > 0) {
+          const totalCount = totalSolar + totalLunar;
+          const partialCount = partialSolar + partialLunar;
+          const eclipsesPerYear = (allEclipses / demoState.yearsSimulated).toFixed(1);
+
+          return {
+            correct: true,
+            message: `In ${demoState.yearsSimulated.toFixed(0)} years: ${totalSolar + partialSolar} solar eclipses (${totalSolar} total), ${totalLunar + partialLunar} lunar eclipses (${totalLunar} total). That's about ${eclipsesPerYear} eclipses per year — rare compared to 12+ new/full moons per year! Partial eclipses (${partialCount}) are more common than total eclipses (${totalCount}) because they require less precise alignment.`
+          };
+        } else if (demoState.yearsSimulated > 0) {
+          return {
+            correct: false,
+            close: true,
+            message: `You've simulated ${demoState.yearsSimulated.toFixed(1)} years. Run at least 10 years to get meaningful statistics.`
+          };
+        }
+        return {
+          correct: false,
+          close: false,
+          message: `Use the simulation controls to run a 10+ year simulation. Set years with the slider, then click "Run Simulation".`
+        };
+      }
+    }
+  ];
+
+  let challengeEngine = null;
+
+  /**
+   * Set up challenge mode integration
+   */
+  function setupChallengeMode() {
+    const container = document.getElementById('challenge-container');
+    const btn = document.getElementById('btn-challenges');
+
+    if (!container || !btn || typeof ChallengeEngine === 'undefined') {
+      console.warn('Challenge mode not available: missing container, button, or ChallengeEngine');
+      return;
+    }
+
+    challengeEngine = ChallengeEngine.create({
+      challenges: ECLIPSE_CHALLENGES,
+      getState: () => ({
+        moonAngle: state.moonAngle,
+        nodeAngle: state.nodeAngle,
+        orbitalTilt: state.orbitalTilt,
+        yearsSimulated: state.yearsSimulated,
+        totalSolarEclipses: state.totalSolarEclipses,
+        partialSolarEclipses: state.partialSolarEclipses,
+        totalLunarEclipses: state.totalLunarEclipses,
+        partialLunarEclipses: state.partialLunarEclipses
+      }),
+      setState: (newState) => {
+        if (newState.moonAngle !== undefined) {
+          state.moonAngle = newState.moonAngle;
+        }
+        if (newState.nodeAngle !== undefined) {
+          state.nodeAngle = newState.nodeAngle;
+        }
+        if (newState.orbitalTilt !== undefined) {
+          state.orbitalTilt = newState.orbitalTilt;
+          elements.tiltSlider.value = newState.orbitalTilt * 10;
+          elements.tiltDisplay.textContent = newState.orbitalTilt.toFixed(1) + '°';
+        }
+        update();
+      },
+      container: container
+    });
+
+    // Toggle challenge mode on button click
+    btn.addEventListener('click', () => {
+      if (challengeEngine.isActive()) {
+        challengeEngine.stop();
+        btn.textContent = 'Challenge Mode';
+      } else {
+        challengeEngine.start();
+        btn.textContent = 'Exit Challenges';
+      }
+    });
+  }
+
+  // ============================================
   // Initialization
   // ============================================
 
@@ -691,6 +925,9 @@
     const defaultYears = 10;
     elements.simYearsSlider.value = yearsToSlider(defaultYears);
     elements.simYearsDisplay.textContent = formatYears(defaultYears);
+
+    // Set up challenge mode
+    setupChallengeMode();
 
     // Initial update
     update();

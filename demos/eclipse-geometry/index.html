@@ -334,6 +334,9 @@
         <p class="demo-subtitle">Why eclipses don't happen every month</p>
       </header>
 
+      <!-- Challenge container (populated by JS when challenge mode is active) -->
+      <div id="challenge-container"></div>
+
       <!-- Status display -->
       <div class="status-panel">
         <div class="eclipse-status miss" id="eclipse-status">NO ECLIPSE</div>
@@ -493,6 +496,7 @@
           <div class="sim-controls" style="margin-top: 0.75rem;">
             <button class="sim-btn primary" id="btn-run-sim">Run Simulation</button>
             <button class="sim-btn" id="btn-toggle-log">Show Log</button>
+            <button class="sim-btn" id="btn-challenges">Challenge Mode</button>
           </div>
 
           <div class="stats-grid" id="stats-panel" style="display: none;">
@@ -571,6 +575,7 @@
 
   <script src="../_assets/astro-utils.js"></script>
   <script src="../_assets/starfield.js"></script>
+  <script src="../_assets/challenge-engine.js"></script>
   <script src="eclipse-geometry.js"></script>
 </body>
 </html>
