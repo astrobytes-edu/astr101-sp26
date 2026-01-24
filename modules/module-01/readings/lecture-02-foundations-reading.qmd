@@ -19,10 +19,27 @@ math-level: symbolic_with_interpretation
 prerequisites: Basic algebra, familiarity with exponents
 ---
 
-::: {.callout-important}
+::: {.callout-important #the-big-idea}
 ## The Big Idea
 
 Math isn't decoration—it's how we turn points of light into physical understanding.
+:::
+
+::: {.callout-important title="How to Use This Reading (Read → Revisit → Reuse)" collapse="true"}
+This page is both (1) the **assigned reading** and (2) your **reference manual** for math tools. You should expect to come back to it multiple times—before lecture, after lecture, and while doing practice problems.
+
+**Default expectation (best):** Read the whole page before class (including **Check Yourself**). Then return to it later when you work the **Practice Problems**.
+
+**If you're short on time before class (~15 min):** Do the **Musts for today** so you can participate now—then come back and finish the rest.
+
+- **Musts for today:** The Big Idea • Scientific Notation basics • Unit Conversions (factor-label method) • The Ratio Method
+- **Non-negotiable:** Stop and answer every **Check Yourself** question you encounter in these sections (don't just read past them).
+
+**Skim now, read carefully later:** Rate Problems, Reference Tables. Skimming is a *preview*—you'll get much more from it after lecture.
+
+**Reference mode (always):** Use the [Reference Tables](#reference-tables) while you work: physical constants, astronomical constants, distance conversions.
+
+**Reassurance:** This is a toolkit, not a memorization test. You'll internalize these methods through practice, not cramming.
 :::
 
 ---
@@ -70,10 +87,13 @@ Here's a mnemonic for navigating cosmic scales, using human scale (~1 m) as the 
 
 If your calculation gives a stellar distance of $10^{9}$ m, the phone number tells you that's Sun-sized, not star-distance. Immediate red flag!
 
-::: {.callout-tip title="Check Yourself" collapse="true"}
+::: {.callout-check-yourself title="Check Yourself — Light-Travel Time Scaling"}
 Light takes about 8.3 minutes to travel 1 AU. How long would it take light to reach something at 2 AU? At 0.5 AU?
+:::
 
-**Answer:** Light-travel time scales linearly with distance.
+::: {.callout-tip title="Solution" collapse="true"}
+Light-travel time scales linearly with distance.
+
 - 2 AU: $2 \times 8.3$ min = **16.6 minutes**
 - 0.5 AU: $0.5 \times 8.3$ min = **4.15 minutes**
 :::
@@ -137,10 +157,11 @@ SI prefixes attach to units to indicate powers of ten:
 
 **Example:** Visible light spans 400–700 nm. The prefix "nano" ($10^{-9}$) tells you immediately these are very short wavelengths—about 1000× smaller than a human hair.
 
-::: {.callout-tip title="Check Yourself" collapse="true"}
+::: {.callout-check-yourself title="Check Yourself — Scientific Notation"}
 What is $(3 \times 10^5)(4 \times 10^3)$ in proper scientific notation?
+:::
 
-**Solution:**
+::: {.callout-tip title="Solution" collapse="true"}
 1. Multiply coefficients: $3 \times 4 = 12$
 2. Add exponents: $10^5 \times 10^3 = 10^{8}$
 3. Combine: $12 \times 10^8$
@@ -231,10 +252,11 @@ Astronomers use specialized distance units because cosmic scales span many order
 A **light-year** is a unit of **distance**, not time—even though "year" is in the name. It's how far light travels in one year.
 :::
 
-::: {.callout-tip title="Check Yourself" collapse="true"}
+::: {.callout-check-yourself title="Check Yourself — Unit Conversion"}
 Convert 1 parsec to light-years using the values in the table.
+:::
 
-**Solution:**
+::: {.callout-tip title="Solution" collapse="true"}
 $$1 \text{ pc} = 3.09 \times 10^{16} \text{ m}$$
 $$1 \text{ ly} = 9.46 \times 10^{15} \text{ m}$$
 
@@ -263,15 +285,17 @@ The Sun is about **330,000 times more massive** than Earth. *Now* we have intuit
 **Ratio method:** Compare quantities by dividing rather than subtracting. Constants cancel and relative scales become clear.
 :::
 
-::: {.callout-check-yourself title="Check Yourself" collapse="true"}
+::: {.callout-check-yourself title="Check Yourself — Why Ratios?"}
 When comparing two astronomical quantities, which approach gives you more useful insight?
 
 - (a) Subtract them to find the difference
 - (b) Divide them to find the ratio
 - (c) Add them together
 - (d) It doesn't matter—both give the same information
+:::
 
-**Answer:** **(b) Divide them to find the ratio.** Subtracting cosmic numbers like $2 \times 10^{30} - 6 \times 10^{24}$ still gives an impossibly large number with no intuitive meaning. But the ratio $330,000$ tells you immediately that the Sun is 330,000 times more massive than Earth—that's useful!
+::: {.callout-tip title="Solution" collapse="true"}
+**(b) Divide them to find the ratio.** Subtracting cosmic numbers like $2 \times 10^{30} - 6 \times 10^{24}$ still gives an impossibly large number with no intuitive meaning. But the ratio $330,000$ tells you immediately that the Sun is 330,000 times more massive than Earth — that's useful!
 :::
 
 ### The Cancellation Trick
@@ -348,10 +372,12 @@ $$\frac{I_\text{Mars}}{I_\text{Earth}} = \left(\frac{d_\text{Earth}}{d_\text{Mar
 
 Mars receives only **44% as much sunlight** as Earth.
 
-::: {.callout-tip title="Check Yourself" collapse="true"}
+::: {.callout-check-yourself title="Check Yourself — Volume Scaling"}
 The Sun's radius is about 109× Earth's radius. Using $V \propto R^3$, what is $V_\odot / V_\oplus$?
+:::
 
-**Answer:** $(109)^3 \approx 1.3 \times 10^6$. The Sun's volume is about **1.3 million** times Earth's volume.
+::: {.callout-tip title="Solution" collapse="true"}
+$(109)^3 \approx 1.3 \times 10^6$. The Sun's volume is about **1.3 million** times Earth's volume.
 :::
 
 ---
@@ -425,10 +451,11 @@ That's acceleration, not velocity! The equation is dimensionally wrong—don't b
 
 **The smoke detector principle:** Before plugging in numbers, check that dimensions match your target. Wrong dimensions = guaranteed wrong physics.
 
-::: {.callout-tip title="Check Yourself" collapse="true"}
+::: {.callout-check-yourself title="Check Yourself — Rate Problem"}
 Earth moves around the Sun at about 29.8 km/s. How far does Earth travel in one minute?
+:::
 
-**Solution:**
+::: {.callout-tip title="Solution" collapse="true"}
 - Speed: $v = 29.8$ km/s $= 2.98 \times 10^4$ m/s
 - Time: $t = 60$ s
 
@@ -507,36 +534,36 @@ When you see a big number or a scaling question, you'll know which tool to reach
 ### Scientific Notation & Prefixes
 
 <!-- Calculation / Recognition / — / ⭐ -->
-**1.** ⭐ **Express in scientific notation:**
+**1.** **Express in scientific notation:**
 
 - (a) 4,500,000,000 years (age of the solar system)
 - (b) 0.00000000656 m (wavelength of H-alpha)
 
 <!-- Calculation / Application / — / ⭐ -->
-**2.** ⭐ **Calculate (express answer in proper scientific notation):**
+**2.** **Calculate (express answer in proper scientific notation):**
 
 - (a) $(2 \times 10^{30})(3 \times 10^8)$
 - (b) $\frac{9 \times 10^{15}}{3 \times 10^7}$
 - (c) $(4 \times 10^3)^2$
 
 <!-- Calculation / Recognition / — / ⭐ -->
-**3.** ⭐ **SI Prefixes.** A radio telescope observes at a frequency of 1.4 GHz. Express this frequency in Hz using scientific notation.
+**3.** **SI Prefixes.** A radio telescope observes at a frequency of 1.4 GHz. Express this frequency in Hz using scientific notation.
 
 ### Unit Conversions
 
 <!-- Calculation / Application / — / ⭐⭐ -->
-**4.** ⭐⭐ **Speed of light.** Convert the speed of light from m/s to km/hr.
+**4.** **Speed of light.** Convert the speed of light from m/s to km/hr.
 
 - $c = 3 \times 10^8$ m/s
 
 <!-- Calculation / Application / — / ⭐ -->
-**5.** ⭐ **Wavelength conversion.** Red light has a wavelength of 700 nm. Express this in:
+**5.** **Wavelength conversion.** Red light has a wavelength of 700 nm. Express this in:
 
 - (a) meters
 - (b) micrometers (μm)
 
 <!-- Calculation / Application / — / ⭐⭐ -->
-**6.** ⭐⭐ **Distance to Proxima Centauri.** Proxima Centauri is 4.2 light-years away.
+**6.** **Distance to Proxima Centauri.** Proxima Centauri is 4.2 light-years away.
 
 - (a) Convert this to parsecs
 - (b) Convert this to meters
@@ -544,41 +571,41 @@ When you see a big number or a scaling question, you'll know which tool to reach
 ### Ratio Method
 
 <!-- Calculation / Application / — / ⭐⭐ -->
-**7.** ⭐⭐ **Telescope comparison.** A new telescope has a mirror diameter of 30 meters. The Hubble Space Telescope has a diameter of 2.4 meters. How much more light can the new telescope collect?
+**7.** **Telescope comparison.** A new telescope has a mirror diameter of 30 meters. The Hubble Space Telescope has a diameter of 2.4 meters. How much more light can the new telescope collect?
 
 <!-- Calculation / Application / — / ⭐⭐ -->
-**8.** ⭐⭐ **Planet volumes.** Jupiter's radius is about 11× Earth's radius. How many Earths could fit inside Jupiter?
+**8.** **Planet volumes.** Jupiter's radius is about 11× Earth's radius. How many Earths could fit inside Jupiter?
 
 <!-- Calculation / Application / O→M→I / ⭐⭐ -->
-**9.** ⭐⭐ **Inverse-square brightness.** Two identical stars are observed. Star X appears 16× fainter than Star Y. How many times farther away is Star X?
+**9.** **Inverse-square brightness.** Two identical stars are observed. Star X appears 16× fainter than Star Y. How many times farther away is Star X?
 
 ### Rate Problems
 
 <!-- Calculation / Application / — / ⭐⭐ -->
-**10.** ⭐⭐ **Light travel time.** How long does light take to travel from the Sun to Neptune, which orbits at about 30 AU? Give your answer in hours.
+**10.** **Light travel time.** How long does light take to travel from the Sun to Neptune, which orbits at about 30 AU? Give your answer in hours.
 
 <!-- Calculation / Application / — / ⭐⭐ -->
-**11.** ⭐⭐ **Earth's orbital speed.** Earth orbits the Sun at about 30 km/s. How far does Earth travel in one day? Express your answer in AU.
+**11.** **Earth's orbital speed.** Earth orbits the Sun at about 30 km/s. How far does Earth travel in one day? Express your answer in AU.
 
 <!-- Calculation / Application / — / ⭐⭐ -->
-**12.** ⭐⭐ **Signal delay.** The Mars rover is 1.5 AU from Earth. How long does a radio signal take to reach the rover? (Radio waves travel at the speed of light.)
+**12.** **Signal delay.** The Mars rover is 1.5 AU from Earth. How long does a radio signal take to reach the rover? (Radio waves travel at the speed of light.)
 
 ### Synthesis & Conceptual
 
 <!-- Synthesis / Connection / O→M→I / ⭐⭐⭐ -->
-**13.** ⭐⭐⭐ **Putting it together.** The star Betelgeuse is about 700 light-years away. A supernova occurred there in the year 1300 CE.
+**13.** **Putting it together.** The star Betelgeuse is about 700 light-years away. A supernova occurred there in the year 1300 CE.
 
 - (a) When will we see it on Earth?
 - (b) If we observe the supernova, what is the lookback time?
 
 <!-- Conceptual / Application / — / ⭐⭐ -->
-**14.** ⭐⭐ **Dimensional check.** A student writes the equation $v = d \cdot t$ for velocity. Is this dimensionally correct? Explain using $[L]$, $[M]$, $[T]$ notation.
+**14.** **Dimensional check.** A student writes the equation $v = d \cdot t$ for velocity. Is this dimensionally correct? Explain using $[L]$, $[M]$, $[T]$ notation.
 
 <!-- Conceptual / Connection / — / ⭐⭐ -->
-**15.** ⭐⭐ **Why Ratios?** The Sun's mass is $2 \times 10^{30}$ kg and Earth's mass is $6 \times 10^{24}$ kg. Why is calculating the *ratio* of these masses more useful than calculating their *difference*? What does the ratio tell you that the difference doesn't?
+**15.** **Why Ratios?** The Sun's mass is $2 \times 10^{30}$ kg and Earth's mass is $6 \times 10^{24}$ kg. Why is calculating the *ratio* of these masses more useful than calculating their *difference*? What does the ratio tell you that the difference doesn't?
 
 <!-- Conceptual / Application / — / ⭐⭐ -->
-**16.** ⭐⭐ **Sanity Check.** A student calculates the distance to a nearby star and gets $10^9$ m. Using the "Universe's Phone Number" from this reading, explain why this answer must be wrong. What order of magnitude should a stellar distance be?
+**16.** **Sanity Check.** A student calculates the distance to a nearby star and gets $10^9$ m. Using the "Universe's Phone Number" from this reading, explain why this answer must be wrong. What order of magnitude should a stellar distance be?
 
 ---
 
