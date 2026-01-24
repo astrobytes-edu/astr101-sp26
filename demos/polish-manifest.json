@@ -2,6 +2,9 @@
   "polished": [
     "angular-size",
     "blackbody-radiation",
-    "keplers-laws"
+    "em-spectrum",
+    "keplers-laws",
+    "parallax-distance",
+    "telescope-resolution"
   ]
 }
