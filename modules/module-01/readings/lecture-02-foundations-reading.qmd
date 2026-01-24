@@ -263,6 +263,17 @@ The Sun is about **330,000 times more massive** than Earth. *Now* we have intuit
 **Ratio method:** Compare quantities by dividing rather than subtracting. Constants cancel and relative scales become clear.
 :::
 
+::: {.callout-check-yourself title="Check Yourself" collapse="true"}
+When comparing two astronomical quantities, which approach gives you more useful insight?
+
+- (a) Subtract them to find the difference
+- (b) Divide them to find the ratio
+- (c) Add them together
+- (d) It doesn't matter—both give the same information
+
+**Answer:** **(b) Divide them to find the ratio.** Subtracting cosmic numbers like $2 \times 10^{30} - 6 \times 10^{24}$ still gives an impossibly large number with no intuitive meaning. But the ratio $330,000$ tells you immediately that the Sun is 330,000 times more massive than Earth—that's useful!
+:::
+
 ### The Cancellation Trick
 
 Most astrophysical laws are proportionality relationships. Consider a general power law:
@@ -495,53 +506,79 @@ When you see a big number or a scaling question, you'll know which tool to reach
 
 ### Scientific Notation & Prefixes
 
-1. **Express in scientific notation:**
-   - (a) 4,500,000,000 years (age of the solar system)
-   - (b) 0.00000000656 m (wavelength of H-alpha)
+<!-- Calculation / Recognition / — / ⭐ -->
+**1.** ⭐ **Express in scientific notation:**
 
-2. **Calculate (express answer in proper scientific notation):**
-   - (a) $(2 \times 10^{30})(3 \times 10^8)$
-   - (b) $\frac{9 \times 10^{15}}{3 \times 10^7}$
-   - (c) $(4 \times 10^3)^2$
+- (a) 4,500,000,000 years (age of the solar system)
+- (b) 0.00000000656 m (wavelength of H-alpha)
 
-3. **SI Prefixes.** A radio telescope observes at a frequency of 1.4 GHz. Express this frequency in Hz using scientific notation.
+<!-- Calculation / Application / — / ⭐ -->
+**2.** ⭐ **Calculate (express answer in proper scientific notation):**
+
+- (a) $(2 \times 10^{30})(3 \times 10^8)$
+- (b) $\frac{9 \times 10^{15}}{3 \times 10^7}$
+- (c) $(4 \times 10^3)^2$
+
+<!-- Calculation / Recognition / — / ⭐ -->
+**3.** ⭐ **SI Prefixes.** A radio telescope observes at a frequency of 1.4 GHz. Express this frequency in Hz using scientific notation.
 
 ### Unit Conversions
 
-4. **Speed of light.** Convert the speed of light from m/s to km/hr.
-   - $c = 3 \times 10^8$ m/s
+<!-- Calculation / Application / — / ⭐⭐ -->
+**4.** ⭐⭐ **Speed of light.** Convert the speed of light from m/s to km/hr.
 
-5. **Wavelength conversion.** Red light has a wavelength of 700 nm. Express this in:
-   - (a) meters
-   - (b) micrometers (μm)
+- $c = 3 \times 10^8$ m/s
 
-6. **Distance to Proxima Centauri.** Proxima Centauri is 4.2 light-years away.
-   - (a) Convert this to parsecs
-   - (b) Convert this to meters
+<!-- Calculation / Application / — / ⭐ -->
+**5.** ⭐ **Wavelength conversion.** Red light has a wavelength of 700 nm. Express this in:
+
+- (a) meters
+- (b) micrometers (μm)
+
+<!-- Calculation / Application / — / ⭐⭐ -->
+**6.** ⭐⭐ **Distance to Proxima Centauri.** Proxima Centauri is 4.2 light-years away.
+
+- (a) Convert this to parsecs
+- (b) Convert this to meters
 
 ### Ratio Method
 
-7. **Telescope comparison.** A new telescope has a mirror diameter of 30 meters. The Hubble Space Telescope has a diameter of 2.4 meters. How much more light can the new telescope collect?
+<!-- Calculation / Application / — / ⭐⭐ -->
+**7.** ⭐⭐ **Telescope comparison.** A new telescope has a mirror diameter of 30 meters. The Hubble Space Telescope has a diameter of 2.4 meters. How much more light can the new telescope collect?
 
-8. **Planet volumes.** Jupiter's radius is about 11× Earth's radius. How many Earths could fit inside Jupiter?
+<!-- Calculation / Application / — / ⭐⭐ -->
+**8.** ⭐⭐ **Planet volumes.** Jupiter's radius is about 11× Earth's radius. How many Earths could fit inside Jupiter?
 
-9. **Inverse-square brightness.** Two identical stars are observed. Star X appears 16× fainter than Star Y. How many times farther away is Star X?
+<!-- Calculation / Application / O→M→I / ⭐⭐ -->
+**9.** ⭐⭐ **Inverse-square brightness.** Two identical stars are observed. Star X appears 16× fainter than Star Y. How many times farther away is Star X?
 
 ### Rate Problems
 
-10. **Light travel time.** How long does light take to travel from the Sun to Neptune, which orbits at about 30 AU? Give your answer in hours.
+<!-- Calculation / Application / — / ⭐⭐ -->
+**10.** ⭐⭐ **Light travel time.** How long does light take to travel from the Sun to Neptune, which orbits at about 30 AU? Give your answer in hours.
 
-11. **Earth's orbital speed.** Earth orbits the Sun at about 30 km/s. How far does Earth travel in one day? Express your answer in AU.
+<!-- Calculation / Application / — / ⭐⭐ -->
+**11.** ⭐⭐ **Earth's orbital speed.** Earth orbits the Sun at about 30 km/s. How far does Earth travel in one day? Express your answer in AU.
 
-12. **Signal delay.** The Mars rover is 1.5 AU from Earth. How long does a radio signal take to reach the rover? (Radio waves travel at the speed of light.)
+<!-- Calculation / Application / — / ⭐⭐ -->
+**12.** ⭐⭐ **Signal delay.** The Mars rover is 1.5 AU from Earth. How long does a radio signal take to reach the rover? (Radio waves travel at the speed of light.)
 
-### Synthesis
+### Synthesis & Conceptual
 
-13. **Putting it together.** The star Betelgeuse is about 700 light-years away. A supernova occurred there in the year 1300 CE.
-    - (a) When will we see it on Earth?
-    - (b) If we observe the supernova, what is the lookback time?
+<!-- Synthesis / Connection / O→M→I / ⭐⭐⭐ -->
+**13.** ⭐⭐⭐ **Putting it together.** The star Betelgeuse is about 700 light-years away. A supernova occurred there in the year 1300 CE.
 
-14. **Dimensional check.** A student writes the equation $v = d \cdot t$ for velocity. Is this dimensionally correct? Explain using $[L]$, $[M]$, $[T]$ notation.
+- (a) When will we see it on Earth?
+- (b) If we observe the supernova, what is the lookback time?
+
+<!-- Conceptual / Application / — / ⭐⭐ -->
+**14.** ⭐⭐ **Dimensional check.** A student writes the equation $v = d \cdot t$ for velocity. Is this dimensionally correct? Explain using $[L]$, $[M]$, $[T]$ notation.
+
+<!-- Conceptual / Connection / — / ⭐⭐ -->
+**15.** ⭐⭐ **Why Ratios?** The Sun's mass is $2 \times 10^{30}$ kg and Earth's mass is $6 \times 10^{24}$ kg. Why is calculating the *ratio* of these masses more useful than calculating their *difference*? What does the ratio tell you that the difference doesn't?
+
+<!-- Conceptual / Application / — / ⭐⭐ -->
+**16.** ⭐⭐ **Sanity Check.** A student calculates the distance to a nearby star and gets $10^9$ m. Using the "Universe's Phone Number" from this reading, explain why this answer must be wrong. What order of magnitude should a stellar distance be?
 
 ---
 

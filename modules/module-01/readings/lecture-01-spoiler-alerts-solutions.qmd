@@ -73,9 +73,23 @@ The explosion occurred **2.5 million years ago**.
 
 ---
 
+### Problem 5: Four Observables
+
+**Question:** An astronomer reports: "We measured the star's spectrum and found absorption lines shifted toward the red." Which of the four observables is being measured here? What might be inferred from this observation?
+
+**Solution:**
+
+**Observable being measured:** **Wavelength** — the astronomer is using spectroscopy to spread light into its component wavelengths and measure where absorption lines appear.
+
+**What can be inferred:** The redshift of the absorption lines indicates the star is **moving away from us** (Doppler effect). The amount of shift tells us the velocity. If the shift changes periodically, we might infer an orbiting companion (planet or another star).
+
+**Key insight:** Wavelength measurements reveal motion toward/away from us through the Doppler shift—something position measurements cannot easily detect.
+
+---
+
 ## Calculations
 
-### Problem 5: Relative Brightness
+### Problem 6: Relative Brightness
 
 **Question:** Two identical stars are observed. Star A appears 9× brighter than Star B. Using the inverse-square law, how many times farther away is Star B?
 
@@ -98,7 +112,7 @@ $$\frac{d_B}{d_A} = \sqrt{9} = 3$$
 
 ---
 
-### Problem 6: Light Travel Time
+### Problem 7: Light Travel Time
 
 **Question:** Light travels at $3 \times 10^8$ m/s. The Sun is about $1.5 \times 10^{11}$ m away. How long does light take to travel from the Sun to Earth?
 
@@ -124,7 +138,7 @@ $$500 \text{ s} \times \frac{1 \text{ min}}{60 \text{ s}} = 8.3 \text{ min}$$
 
 ---
 
-### Problem 7: Building a Light-Year
+### Problem 8: Building a Light-Year
 
 **Question:** Using $c = 3 \times 10^8$ m/s and 1 year ≈ $3.15 \times 10^7$ s, calculate the distance light travels in one year.
 
@@ -147,9 +161,44 @@ $$d = (3 \times 3.15) \times 10^{8+7} \text{ m} = 9.45 \times 10^{15} \text{ m}$
 
 ---
 
+### Problem 9: Inverse-Square Reasoning
+
+**Question:** A star moves from 10 light-years away to 40 light-years away (4× the original distance). By what factor does its apparent brightness change?
+
+**Solution:**
+
+**Given:** Distance increases by a factor of 4 (from 10 ly to 40 ly).
+
+**The inverse-square law:** Brightness $\propto 1/d^2$
+
+**Calculate the change:**
+$$\frac{B_\text{final}}{B_\text{initial}} = \left(\frac{d_\text{initial}}{d_\text{final}}\right)^2 = \left(\frac{10}{40}\right)^2 = \left(\frac{1}{4}\right)^2 = \frac{1}{16}$$
+
+**Answer:** The brightness drops to **1/16 of the original** (16× fainter).
+
+**Key insight:** Distance × 4 → Brightness ÷ 16. The inverse-square law means brightness falls off *much faster* than distance increases.
+
+---
+
+### Problem 10: Lookback Time Calculation
+
+**Question:** A galaxy is 50 million light-years away. When did the light we're seeing actually leave that galaxy?
+
+**Solution:**
+
+**Given:** Distance = 50 million light-years = 50 Mly
+
+**Reasoning:** A light-year is the distance light travels in one year. If the galaxy is 50 million light-years away, the light took 50 million years to reach us.
+
+**Answer:** The light left the galaxy **50 million years ago**.
+
+**Context:** When we observe this galaxy today, we're seeing it as it was during the Eocene epoch on Earth—before humans, before apes, when early whales were just returning to the oceans. The galaxy we see "now" may look very different today.
+
+---
+
 ## Synthesis
 
-### Problem 8: The Course Thesis
+### Problem 11: The Course Thesis
 
 **Question:** In 2-3 sentences, explain the course thesis to a friend who has never taken astronomy.
 
@@ -165,7 +214,7 @@ $$d = (3 \times 3.15) \times 10^{8+7} \text{ m} = 9.45 \times 10^{15} \text{ m}$
 
 ---
 
-### Problem 9: Connecting Wavelength to Physics
+### Problem 12: Connecting Wavelength to Physics
 
 **Question:** Explain why observing the same galaxy at optical and radio wavelengths reveals different information.
 
@@ -183,7 +232,7 @@ $$d = (3 \times 3.15) \times 10^{8+7} \text{ m} = 9.45 \times 10^{15} \text{ m}$
 
 ---
 
-### Problem 10: Dark Matter Evidence
+### Problem 13: Dark Matter Evidence
 
 **Question:** A student says, "If we can't see dark matter, how do we know it exists?" Describe one piece of evidence.
 
@@ -205,3 +254,33 @@ $$d = (3 \times 3.15) \times 10^{8+7} \text{ m} = 9.45 \times 10^{15} \text{ m}$
 - Mass required >> visible mass → dark matter exists (inference)
 
 **Key point:** We detect dark matter through its *gravitational effects* on things we can see—not by seeing dark matter itself.
+
+---
+
+### Problem 14: Observable → Model → Inference
+
+**Question:** A star's position on the sky changes periodically over several years. Using the Observable → Model → Inference pattern: (a) identify which observable is being measured, (b) explain what physical model connects this to unseen objects, and (c) state what you might infer about the star.
+
+**Solution:**
+
+**(a) Observable being measured:** **Position** (tracked over time via **Timing**)
+
+We measure the star's apparent location on the sky at multiple epochs and detect a periodic wobble in its position.
+
+**(b) Physical model:**
+
+Newton's laws of gravity and orbital mechanics. If a star has an unseen companion (planet or another star), both objects orbit their common center of mass. The visible star traces out a small orbit, appearing to wobble from our perspective. The wobble period equals the orbital period, and the wobble size depends on the companion's mass and orbital distance.
+
+**(c) What we infer:**
+
+The star has an **unseen companion**—most likely a planet or a dim stellar companion. From the period and amplitude of the wobble, we can infer:
+- The orbital period of the companion
+- A lower limit on the companion's mass
+- The shape (eccentricity) of the orbit
+
+**The complete inference chain:**
+- Position changes over time → periodic wobble (measurement)
+- Gravitational two-body problem → star orbits center of mass (model)
+- Wobble detected → unseen companion exists (inference)
+
+**Key insight:** We can detect objects we cannot see directly by observing their gravitational effects on objects we *can* see. This is how many exoplanets were first discovered (the "astrometric" method).

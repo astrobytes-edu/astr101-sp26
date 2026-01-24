@@ -286,3 +286,56 @@ $$[LT^{-1}] \neq [LT]$$
 - Dimensional check of correct equation: $[L]/[T] = [LT^{-1}]$ ✓
 
 **Lesson:** Dimensional analysis catches this error immediately—no calculation needed.
+
+---
+
+### Problem 15: Why Ratios?
+
+**Question:** The Sun's mass is $2 \times 10^{30}$ kg and Earth's mass is $6 \times 10^{24}$ kg. Why is calculating the *ratio* of these masses more useful than calculating their *difference*?
+
+**Solution:**
+
+**The difference:**
+$$M_\odot - M_\oplus = 2 \times 10^{30} - 6 \times 10^{24} \approx 2 \times 10^{30} \text{ kg}$$
+
+This tells us almost nothing useful—the Sun is heavier by "about the Sun's mass." The difference is essentially the larger number, giving no intuitive sense of scale.
+
+**The ratio:**
+$$\frac{M_\odot}{M_\oplus} = \frac{2 \times 10^{30}}{6 \times 10^{24}} = \frac{2}{6} \times 10^{6} \approx 333{,}000$$
+
+This tells us the Sun is about **330,000 times more massive** than Earth—an immediately meaningful comparison.
+
+**Why ratios are more useful:**
+1. **Human-sized numbers:** Ratios compress cosmic scales into digestible numbers
+2. **Intuitive meaning:** "330,000×" is easier to grasp than "$2 \times 10^{30}$ kg"
+3. **Constants cancel:** In physics equations, ratios often eliminate unknown constants
+4. **Scale-independent:** Ratios work regardless of unit choice
+
+**The takeaway:** When comparing cosmic quantities, always divide—never subtract.
+
+---
+
+### Problem 16: Sanity Check
+
+**Question:** A student calculates the distance to a nearby star and gets $10^9$ m. Using the "Universe's Phone Number," explain why this answer must be wrong.
+
+**Solution:**
+
+**The Phone Number check:**
+
+The mnemonic (555)-711-2555 tells us:
+- $10^9$ m = Sun's radius (the "1" in "711")
+- Nearby stars are at ~$10^{16}$ m (the first "5" in "2555")
+
+**The problem:** $10^9$ m is about 1.5 million km—roughly twice the Sun's radius. That's far too small for an interstellar distance!
+
+**What the answer should be:**
+- The nearest star (Proxima Centauri) is about 4 light-years ≈ $4 \times 10^{16}$ m
+- Any stellar distance should be at least $10^{16}$ m
+
+**The error:** The student's answer is off by a factor of about $10^7$ (ten million). Possible causes:
+- Unit conversion error (forgot to convert AU or ly to meters)
+- Exponent arithmetic mistake (10^16 ÷ 10^7 = 10^9)
+- Used the wrong formula
+
+**Lesson:** The Phone Number mnemonic is a quick sanity check. If your stellar distance is less than $10^{16}$ m, something went wrong.
