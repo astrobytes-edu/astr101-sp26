@@ -706,6 +706,170 @@
   }
 
   // ============================================
+  // Challenge Mode
+  // ============================================
+
+  /**
+   * Phase challenge definitions
+   * Uses the ChallengeEngine.create() factory with getState/setState callbacks
+   */
+  const PHASE_CHALLENGES = [
+    {
+      id: 'full-moon',
+      prompt: 'Set the Moon to show a Full Moon phase',
+      hint: 'Full Moon occurs when the Moon is on the opposite side of Earth from the Sun. In our diagram, that means the Moon should be on the right side (angle near 0 degrees).',
+      check: (state) => {
+        const angle = ((state.moonAngle % 360) + 360) % 360;
+        const isFullMoon = angle < 22.5 || angle > 337.5;
+        const isClose = angle < 45 || angle > 315;
+        return {
+          correct: isFullMoon,
+          close: isClose && !isFullMoon,
+          message: isFullMoon
+            ? 'Perfect! At Full Moon, we see 100% of the lit half because the Moon is opposite the Sun from our perspective.'
+            : isClose
+              ? 'Getting close! Move the Moon to be directly opposite the Sun (right side of the orbit).'
+              : 'The Full Moon is when the Moon is on the opposite side of Earth from the Sun.'
+        };
+      }
+    },
+    {
+      id: 'new-moon',
+      prompt: 'Position the Moon for a New Moon',
+      hint: 'New Moon occurs when the Moon is between Earth and the Sun. In our diagram, move the Moon to the left side, toward the Sun.',
+      check: (state) => {
+        const angle = ((state.moonAngle % 360) + 360) % 360;
+        const isNewMoon = angle > 157.5 && angle < 202.5;
+        const isClose = angle > 135 && angle < 225;
+        return {
+          correct: isNewMoon,
+          close: isClose && !isNewMoon,
+          message: isNewMoon
+            ? 'Correct! At New Moon, the lit half faces away from Earth, so we see only the dark side.'
+            : isClose
+              ? 'Almost there! Position the Moon directly between Earth and the Sun.'
+              : 'New Moon is when the Moon is between Earth and the Sun (left side of diagram).'
+        };
+      }
+    },
+    {
+      id: 'first-quarter',
+      prompt: 'Find the First Quarter Moon position',
+      hint: 'First Quarter (half-lit on the right side) occurs when the Moon has traveled 1/4 of its orbit from New Moon. That puts it at the bottom of our diagram (angle around 270 degrees).',
+      check: (state) => {
+        const angle = ((state.moonAngle % 360) + 360) % 360;
+        const isFirstQuarter = angle > 247.5 && angle < 292.5;
+        const isClose = angle > 225 && angle < 315;
+        return {
+          correct: isFirstQuarter,
+          close: isClose && !isFirstQuarter,
+          message: isFirstQuarter
+            ? 'That\'s First Quarter! We see the right half lit because we\'re viewing the Moon from the side.'
+            : isClose
+              ? 'You\'re in the right area. First Quarter is exactly 90 degrees from New Moon.'
+              : 'First Quarter is 1/4 of the way around the orbit from New Moon (bottom of diagram).'
+        };
+      }
+    },
+    {
+      id: 'waning-gibbous',
+      prompt: 'Adjust to show a Waning Gibbous',
+      hint: 'Waning Gibbous occurs after Full Moon but before Third Quarter. The Moon is more than half lit, with the left side bright. Look for angles between 22.5 and 67.5 degrees.',
+      check: (state) => {
+        const angle = ((state.moonAngle % 360) + 360) % 360;
+        const isWaningGibbous = angle > 22.5 && angle < 67.5;
+        const isClose = (angle > 0 && angle < 90) && !isWaningGibbous;
+        return {
+          correct: isWaningGibbous,
+          close: isClose,
+          message: isWaningGibbous
+            ? 'Excellent! Waning Gibbous shows more than half lit, but shrinking (waning) toward Third Quarter.'
+            : isClose
+              ? 'You\'re close! Waning Gibbous is between Full Moon and Third Quarter.'
+              : '"Waning" means shrinking, "Gibbous" means more than half. Find the position after Full but before Third Quarter.'
+        };
+      }
+    },
+    {
+      id: 'shadow-challenge',
+      prompt: 'Shadow Challenge: Will Earth\'s shadow touch the Moon? (Toggle shadow on to check!)',
+      hint: 'First, turn on "Show Earth\'s Shadow" in the controls. Then position the Moon where the shadow actually reaches. Earth\'s shadow points away from the Sun.',
+      initialState: { showShadow: true },
+      check: (state) => {
+        // First check if shadow is visible
+        if (!state.showShadow) {
+          return {
+            correct: false,
+            close: false,
+            message: 'Turn on "Show Earth\'s Shadow" first to see where the shadow actually is!'
+          };
+        }
+
+        const angle = ((state.moonAngle % 360) + 360) % 360;
+        // Shadow points right (opposite Sun), Moon is in shadow zone when angle is near 0 (full moon)
+        const inShadowZone = angle < 30 || angle > 330;
+
+        return {
+          correct: inShadowZone,
+          close: false,
+          message: inShadowZone
+            ? 'Yes! The Moon CAN enter Earth\'s shadow here — this is a lunar eclipse! But notice: this only happens when the Moon is at Full Moon AND near the shadow. Most of the orbit, the shadow is nowhere near the Moon. Phases are NOT caused by the shadow!'
+            : 'Look at where the shadow points — it always points away from the Sun. Move the Moon into that shadow zone (hint: it\'s near Full Moon position).'
+        };
+      }
+    }
+  ];
+
+  let challengeEngine = null;
+
+  /**
+   * Set up challenge mode with ChallengeEngine
+   */
+  function setupChallengeMode() {
+    const container = document.getElementById('challenge-container');
+    const btn = document.getElementById('btn-challenges');
+
+    if (!container || !btn || typeof ChallengeEngine === 'undefined') {
+      console.warn('Challenge mode not available: missing container, button, or ChallengeEngine');
+      return;
+    }
+
+    challengeEngine = ChallengeEngine.create({
+      challenges: PHASE_CHALLENGES,
+      getState: () => ({
+        moonAngle: moonAngle,
+        showShadow: document.getElementById('show-shadow-toggle')?.checked || false
+      }),
+      setState: (newState) => {
+        if (newState.showShadow !== undefined) {
+          const toggle = document.getElementById('show-shadow-toggle');
+          const shadowGroup = document.getElementById('earth-shadow-group');
+          if (toggle && shadowGroup) {
+            toggle.checked = newState.showShadow;
+            shadowGroup.style.display = newState.showShadow ? 'block' : 'none';
+          }
+        }
+        if (newState.moonAngle !== undefined) {
+          moonAngle = newState.moonAngle;
+          update();
+        }
+      },
+      container: container
+    });
+
+    // Toggle challenge mode on button click
+    btn.addEventListener('click', () => {
+      if (challengeEngine.isActive()) {
+        challengeEngine.stop();
+        btn.classList.remove('active');
+      } else {
+        challengeEngine.start();
+        btn.classList.add('active');
+      }
+    });
+  }
+
+  // ============================================
   // Initialization
   // ============================================
 
@@ -717,6 +881,7 @@
     setupKeyboard();
     setupAnimationControls();
     setupShadowToggle();
+    setupChallengeMode();
 
     // Initialize starfield
     const starfieldCanvas = document.getElementById('starfield');

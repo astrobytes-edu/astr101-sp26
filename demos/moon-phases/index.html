@@ -425,6 +425,9 @@
         <p class="demo-subtitle">The phase shows how much of the lit half we see from Earth</p>
       </header>
 
+      <!-- Challenge mode container (populated by JS) -->
+      <div id="challenge-container"></div>
+
       <!-- Two-panel visualization -->
       <div class="viz-layout">
         <!-- Orbital view -->
@@ -641,6 +644,9 @@
             <option value="10">10x</option>
           </select>
         </div>
+        <button class="anim-btn" id="btn-challenges" style="margin-left: auto;">
+          <span class="btn-icon">&#127919;</span> Challenges
+        </button>
       </div>
 
       <!-- Phase presets -->
@@ -732,6 +738,7 @@
 
   <script src="../_assets/astro-utils.js"></script>
   <script src="../_assets/starfield.js"></script>
+  <script src="../_assets/challenge-engine.js"></script>
   <script src="moon-phases.js"></script>
 </body>
 </html>
