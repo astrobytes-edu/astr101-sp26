@@ -232,3 +232,74 @@ cosmic-web:
   context: "The cosmic web is still evolving—gravity continues to pull matter from voids into filaments and clusters."
   first_use: "Lecture 1"
   module: 1
+
+# Sky Geometry (Lecture 3)
+celestial_sphere:
+  term: "Celestial sphere"
+  definition: "An imaginary sphere centered on the observer onto which all celestial objects are projected."
+  context: "A coordinate system for directions on the sky, not a representation of actual distances."
+  first_use: "Lecture 3"
+  module: 1
+
+celestial_pole:
+  term: "Celestial pole"
+  definition: "A point on the celestial sphere directly above Earth’s geographic pole."
+  context: "Stars appear to circle the celestial poles due to Earth’s rotation."
+  first_use: "Lecture 3"
+  module: 1
+
+celestial_equator:
+  term: "Celestial equator"
+  definition: "Earth’s equator projected outward onto the celestial sphere."
+  context: "A great circle that divides the celestial sphere into northern and southern hemispheres."
+  first_use: "Lecture 3"
+  module: 1
+
+ecliptic:
+  term: "Ecliptic"
+  definition: "The Sun’s apparent yearly path across the celestial sphere, corresponding to the plane of Earth’s orbit."
+  context: "Tilted by about 23.5° relative to the celestial equator; the zodiac constellations lie along it."
+  first_use: "Lecture 3"
+  module: 1
+
+horizon:
+  term: "Horizon"
+  definition: "The great circle that marks the boundary between directions above and below your local ground plane."
+  context: "Depends on your location on Earth."
+  first_use: "Lecture 3"
+  module: 1
+
+zenith:
+  term: "Zenith"
+  definition: "The point on the celestial sphere directly overhead for a given observer."
+  context: "Depends on your location on Earth."
+  first_use: "Lecture 3"
+  module: 1
+
+great_circle:
+  term: "Great circle"
+  definition: "Any circle on a sphere whose plane passes through the sphere’s center."
+  context: "The celestial equator, ecliptic, and horizon are all great circles."
+  first_use: "Lecture 3"
+  module: 1
+
+solstice:
+  term: "Solstice"
+  definition: "A time when the Sun reaches its farthest angular distance north or south of the celestial equator, producing the longest or shortest day."
+  context: "Occurs around June 21 and December 21; from Latin for 'Sun stands still'."
+  first_use: "Lecture 3"
+  module: 1
+
+equinox:
+  term: "Equinox"
+  definition: "A time when the Sun crosses the celestial equator, making day and night approximately equal in length worldwide."
+  context: "Occurs around March 20 and September 22; exact day length depends slightly on refraction and the Sun’s finite size."
+  first_use: "Lecture 3"
+  module: 1
+
+angular_size:
+  term: "Angular size"
+  definition: "The angle an object subtends as seen by an observer, measured in degrees, arcminutes, or arcseconds."
+  context: "Angular size depends on physical size and distance; for small angles, θ (radians) ≈ d/D."
+  first_use: "Lecture 3"
+  module: 1
