@@ -58,7 +58,8 @@
 .anim-btn,
 .sim-btn,
 .phase-btn,
-.unit-btn {
+.unit-btn,
+.scale-btn {
   font-family: var(--font-main);
   font-size: var(--font-size-sm);
   font-weight: 600;
@@ -85,7 +86,8 @@
 .anim-btn:hover:not(.active):not(:disabled),
 .sim-btn:hover:not(.active):not(:disabled),
 .phase-btn:hover:not(.active):not(:disabled),
-.unit-btn:hover:not(.active):not(:disabled) {
+.unit-btn:hover:not(.active):not(:disabled),
+.scale-btn:hover:not(.active):not(:disabled) {
   background: var(--space-medium);
   color: var(--text-primary);
   border-color: var(--cosmic-teal);
@@ -94,6 +96,7 @@
 
 .mode-btn.active,
 .unit-btn.active,
+.scale-btn.active,
 .anim-btn.primary,
 .sim-btn.primary,
 .phase-btn.active {
@@ -106,7 +109,8 @@
 .anim-btn:disabled,
 .sim-btn:disabled,
 .phase-btn:disabled,
-.unit-btn:disabled {
+.unit-btn:disabled,
+.scale-btn:disabled {
   opacity: 0.4;
   cursor: not-allowed;
   box-shadow: none;
@@ -127,8 +131,8 @@
 .anim-btn:focus-visible,
 .sim-btn:focus-visible,
 .phase-btn:focus-visible,
-.unit-btn:focus-visible {
+.unit-btn:focus-visible,
+.scale-btn:focus-visible {
   outline: 2px solid var(--cosmic-teal);
   outline-offset: 2px;
 }
-
