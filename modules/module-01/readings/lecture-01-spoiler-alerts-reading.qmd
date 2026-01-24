@@ -18,7 +18,7 @@ math-level: symbolic_with_interpretation
 prerequisites: Comfort reading simple algebraic symbols; familiarity with basic units (meters, seconds)
 ---
 
-::: {.callout-important}
+::: {.callout-important #the-big-idea}
 ## The Big Idea
 
 Astronomical images are data. We decode them using physics to infer what we cannot directly measure.
@@ -35,7 +35,7 @@ Astronomical images are data. We decode them using physics to infer what we cann
 
 - [The Big Idea](#the-big-idea)
 - [The Four Observables](#the-four-observables)
-- Two sample spoilers: [Spoiler 1](#spoiler-1-nebulae--color-as-encoded-physics) + [Spoiler 2](#spoiler-2-the-distance-ladder--how-far-is-far)
+- Two sample spoilers: [Spoiler 1](#spoiler-1-nebulae-color-as-encoded-physics) + [Spoiler 2](#spoiler-2-the-distance-ladder-how-far-is-far)
 - [Light: The Cosmic Messenger](#light-the-cosmic-messenger)
 - [Recognition, Not Retention](#recognition-not-retention)
 
