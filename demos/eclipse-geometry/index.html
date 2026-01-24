@@ -525,6 +525,47 @@
         This small tilt means the Moon usually passes <em>above</em> or <em>below</em> the Sun/Earth's shadow.
         Eclipses only happen when the Moon is near a <strong>node</strong> (where orbits cross) during new or full moon.
       </div>
+
+      <!-- Cross-demo navigation -->
+      <div class="demo-nav">
+        <a href="../moon-phases/" class="demo-nav-link">
+          ← Back to Moon Phases
+          <span class="demo-nav-hint">Review how phases work</span>
+        </a>
+      </div>
+
+      <style>
+        .demo-nav {
+          margin-top: 1.5rem;
+          text-align: center;
+        }
+
+        .demo-nav-link {
+          display: inline-flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 0.25rem;
+          padding: 0.75rem 1.5rem;
+          background: var(--space-light);
+          border: 1px solid var(--border-color);
+          border-radius: 8px;
+          color: var(--text-secondary);
+          text-decoration: none;
+          font-size: 0.9rem;
+          transition: all 0.2s ease;
+        }
+
+        .demo-nav-link:hover {
+          background: var(--space-medium);
+          border-color: var(--cosmic-teal, #4ecdc4);
+          color: var(--text-primary);
+        }
+
+        .demo-nav-hint {
+          font-size: 0.75rem;
+          opacity: 0.7;
+        }
+      </style>
     </div>
   </div>
 

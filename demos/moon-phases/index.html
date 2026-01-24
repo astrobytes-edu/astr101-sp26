@@ -670,6 +670,47 @@
         Earth's shadow only matters during lunar eclipses (rare!).
       </div>
 
+      <!-- Cross-demo navigation -->
+      <div class="demo-nav">
+        <a href="../eclipse-geometry/" class="demo-nav-link">
+          Continue to Eclipse Geometry →
+          <span class="demo-nav-hint">Why don't eclipses happen every month?</span>
+        </a>
+      </div>
+
+      <style>
+        .demo-nav {
+          margin-top: 1.5rem;
+          text-align: center;
+        }
+
+        .demo-nav-link {
+          display: inline-flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 0.25rem;
+          padding: 0.75rem 1.5rem;
+          background: var(--space-light);
+          border: 1px solid var(--border-color);
+          border-radius: 8px;
+          color: var(--text-secondary);
+          text-decoration: none;
+          font-size: 0.9rem;
+          transition: all 0.2s ease;
+        }
+
+        .demo-nav-link:hover {
+          background: var(--space-medium);
+          border-color: var(--cosmic-teal, #4ecdc4);
+          color: var(--text-primary);
+        }
+
+        .demo-nav-hint {
+          font-size: 0.75rem;
+          opacity: 0.7;
+        }
+      </style>
+
       <!-- Screen reader announcements -->
       <div id="status-announce" aria-live="polite" aria-atomic="true" class="sr-only"></div>
 
