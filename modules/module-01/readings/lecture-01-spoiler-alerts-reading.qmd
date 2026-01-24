@@ -24,30 +24,23 @@ prerequisites: Comfort reading simple algebraic symbols; familiarity with basic 
 Astronomical images are data. We decode them using physics to infer what we cannot directly measure.
 :::
 
-::: {.callout-important title="How to Use This Reading"}
-**Choose a path (no wrong choice):**
+::: {.callout-important title="How to Use This Reading (Read → Revisit → Reuse)" collapse="true"}
+This page is both (1) the **assigned reading** and (2) your **reference manual** for the course. You should expect to come back to it multiple times — before lecture, after lecture, and while doing practice problems and studying.
 
-- **Core Path (~15 min):** get the course “throughline” and the main tools.
-- **Full Read (~35–45 min):** everything, including all spoilers + examples.
-- **Reference Mode (as needed):** jump to the [Glossary](#glossary) and re-check figures/definitions while doing homework.
+**Default expectation (best):** Read the whole page before class (including **Check Yourself**). Then return to it later when you work the **Practice Problems**.
 
-**Core Path (read these sections):**
+**If you're short on time before class (~15 min):** Do the **Musts for today** so you can participate now — then come back and finish the rest.
 
-- [The Big Idea](#the-big-idea)
-- [The Four Observables](#the-four-observables)
-- Two sample spoilers: [Spoiler 1](#spoiler-1-nebulae-color-as-encoded-physics) + [Spoiler 2](#spoiler-2-the-distance-ladder-how-far-is-far)
-- [Light: The Cosmic Messenger](#light-the-cosmic-messenger)
-- [Recognition, Not Retention](#recognition-not-retention)
+- **Musts for today:** The Big Idea • The Four Observables • Spoiler 1 + Spoiler 2 • Light: The Cosmic Messenger • Recognition, Not Retention
+- **Non-negotiable:** Stop and answer every **Check Yourself** question you encounter in these sections (don't just read past them).
 
-**Skim (good to glance at):**
+**Skim now, read carefully later:** The rest of the Spoiler Reel (especially figures + captions). Skimming is a *preview* — you'll get much more from it after lecture.
 
-- The rest of the [Spoiler Reel](#the-spoiler-reel) (especially images + captions)
+**Deep Dives (important, not urgent):** Equation-heavy expansions that deepen understanding. You don't need them for first contact, but you *will* want them when you're doing calculations and practice problems — plan to revisit them.
 
-**Optional Deep Dives:**
+**Reference mode (always):** Use this page like a guide while you work: jump to figures, definitions, and the Glossary whenever you get stuck.
 
-- The “Deep Dive” boxes (equation-heavy expansions) — great for confidence-building, not required on first pass.
-
-**Reassurance:** This is a preview, not a mastery test. Your goal is **recognition, not memorization**.
+**Reassurance:** This is a preview, not a mastery test. Your goal is recognition now — understanding grows through revisiting and practice.
 :::
 
 ---
@@ -62,13 +55,13 @@ The iron in your blood was forged inside a star that exploded before our Sun exi
 
 You are, quite literally, made of stellar debris.
 
-This course is about **how we know that**—and what else we can learn by carefully decoding the light that reaches us from across the cosmos.
+This course is about **how we know that** — and what else we can learn by carefully decoding the light that reaches us from across the cosmos.
 
 {{< fig three-big-questions >}}
 
 ### The Central Question
 
-Think about this: every piece of information you've ever heard about the cosmos—the Sun's temperature, the age of the universe, the composition of a distant star—none of it came from collecting samples. We can't scoop up a piece of a star. We can't fly to the edge of the universe with a tape measure. We're stuck here on Earth, looking up at points of light.
+Think about this: every piece of information you've ever heard about the cosmos — the Sun's temperature, the age of the universe, the composition of a distant star — none of it came from collecting samples. We can't scoop up a piece of a star. We can't fly to the edge of the universe with a tape measure. We're stuck here on Earth, looking up at points of light.
 
 And yet, somehow, we know that:
 
@@ -83,7 +76,7 @@ The answer is the thesis of this course:
 
 > **Pretty pictures → measurements → models → inferences**
 
-Every gorgeous astronomical image you've ever seen is actually a dataset. The colors, shapes, bright spots and dark lanes—all of it encodes physical information. The job of an astronomer is to *decode* that information using physics and mathematics.
+Every gorgeous astronomical image you've ever seen is actually a dataset. The colors, shapes, bright spots and dark lanes — all of it encodes physical information. The job of an astronomer is to *decode* that information using physics and mathematics.
 
 ::: {.column-margin}
 **Inference:** Drawing conclusions about quantities we cannot directly access (like a star's temperature) from quantities we *can* measure (like its color).
@@ -91,7 +84,7 @@ Every gorgeous astronomical image you've ever seen is actually a dataset. The co
 
 ### What This Course Is NOT
 
-Let me be direct about what this course is—and isn't.
+Let me be direct about what this course is — and isn't.
 
 **This course is NOT:**
 
@@ -107,7 +100,7 @@ Let me be direct about what this course is—and isn't.
 - How do **physics and math** turn limited measurements into profound understanding?
 - Why should we **believe** any of these cosmic claims?
 
-This is astronomy as a *quantitative science*. There will be equations. There will be calculations. There will be moments when your intuition fails and the math reveals something surprising. That's not a bug—that's the feature.
+This is astronomy as a *quantitative science*. There will be equations. There will be calculations. There will be moments when your intuition fails and the math reveals something surprising. That's not a bug — that's the feature.
 
 ---
 
@@ -137,15 +130,19 @@ An astronomer reports that a star's light dims by 1% every 3.5 days like clockwo
 - (d) Mass
 :::
 
-::: {.column-margin}
-**Observable:** A quantity that can be directly measured—brightness, position, wavelength. Astronomers have remarkably few types of observables; nearly everything else is inferred.
+::: {.callout-tip title="Solution" collapse="true"}
+**(b) Brightness.** The star's light "dims" — that's a change in brightness. The "every 3.5 days" tells us about timing, but the quantity being measured is how much light arrives (brightness/flux). Mass is not directly measurable — it must be inferred.
 :::
 
-**Brightness** (also called *flux*) is the rate at which light energy arrives at your detector—photons per second per unit area. We count photons. This raw signal depends on two things we can't disentangle from brightness alone: how luminous the source truly is, and how far away it is. A dim nearby candle and a brilliant distant lighthouse can appear equally bright.
+::: {.column-margin}
+**Observable:** A quantity that can be directly measured — brightness, position, wavelength. Astronomers have remarkably few types of observables; nearly everything else is inferred.
+:::
+
+**Brightness** (also called *flux*) is the rate at which light energy arrives at your detector — photons per second per unit area. We count photons. This raw signal depends on two things we can't disentangle from brightness alone: how luminous the source truly is, and how far away it is. A dim nearby candle and a brilliant distant lighthouse can appear equally bright.
 
 **Position** is where an object appears on the sky, measured in angles. Position becomes powerful when we track *changes*: the annual wobble from Earth's orbit (parallax), the slow drift across the sky (proper motion), or the periodic wobble caused by an unseen companion.
 
-**Wavelength** is the key to spectroscopy. By spreading light into its component wavelengths, we transform a single brightness measurement into thousands of data points—brightness as a function of wavelength. This spectral information encodes temperature (through overall color), composition (through absorption and emission lines), and motion (through Doppler shifts).
+**Wavelength** is the key to spectroscopy. By spreading light into its component wavelengths, we transform a single brightness measurement into thousands of data points — brightness as a function of wavelength. This spectral information encodes temperature (through overall color), composition (through absorption and emission lines), and motion (through Doppler shifts).
 
 **Timing** is both a measurement in its own right and a way to extract additional information from the other three. A star whose brightness varies periodically tells us something a constant star doesn't. An object whose position shifts tells us about motion. Timing transforms static snapshots into dynamic movies.
 
@@ -174,6 +171,10 @@ A star appears to wobble periodically in its position on the sky. Which observab
 - (d) Temperature
 :::
 
+::: {.callout-tip title="Solution" collapse="true"}
+**(b) Position.** We measure where the star appears on the sky and track how that position changes over time. The "periodically" tells us timing is involved, but the observable itself is position. Temperature is *not* an observable — it's inferred from wavelength measurements.
+:::
+
 ---
 
 ## The Spoiler Reel
@@ -184,7 +185,7 @@ What follows is a tour through some of the most spectacular astronomical images 
 2. **What do we infer?**
 3. **What physics makes that inference legal?**
 
-**You are not expected to understand all the answers yet.** That's what the rest of the semester is for. Today, we're giving you the spoilers—showing you where we're headed. By the end of the course, you'll have *earned* the right to say these things with confidence.
+**You are not expected to understand all the answers yet.** That's what the rest of the semester is for. Today, we're giving you the spoilers — showing you where we're headed. By the end of the course, you'll have *earned* the right to say these things with confidence.
 
 ::: {.column-margin}
 **The pattern to watch for:** Every spoiler follows the same structure: measurement → model → inference. By the end of this course, you'll fill in the "what physics" part yourself.
@@ -198,12 +199,12 @@ What follows is a tour through some of the most spectacular astronomical images 
 
 **What do we measure?** Structured colors at specific wavelengths. Red light at 656 nm. Blue-green light at 496–501 nm. Dark regions where light is blocked.
 
-**What do we infer?** The red regions contain hydrogen gas heated and ionized by nearby hot stars. The blue-green regions contain oxygen. The dark lanes contain dust—tiny solid particles that absorb and scatter starlight.
+**What do we infer?** The red regions contain hydrogen gas heated and ionized by nearby hot stars. The blue-green regions contain oxygen. The dark lanes contain dust — tiny solid particles that absorb and scatter starlight.
 
 **What physics makes this legal?** Atoms emit light at specific wavelengths, not random colors. Each element has a unique "fingerprint" of wavelengths determined by its atomic structure. When we see red light at exactly 656 nm, we know hydrogen is present.
 
 ::: {.column-margin}
-**Key insight:** Color isn't decoration—it's encoded physics. Specific wavelengths = specific atoms = specific conditions.
+**Key insight:** Color isn't decoration — it's encoded physics. Specific wavelengths = specific atoms = specific conditions.
 :::
 
 ---
@@ -212,9 +213,9 @@ What follows is a tour through some of the most spectacular astronomical images 
 
 {{< fig cosmic-distance-ladder >}}
 
-**What do we measure?** Apparent brightnesses of certain "milepost" objects—stars that pulsate in predictable ways, or stellar explosions that reach consistent peak brightness.
+**What do we measure?** Apparent brightnesses of certain "milepost" objects — stars that pulsate in predictable ways, or stellar explosions that reach consistent peak brightness.
 
-**What do we infer?** Distances far beyond what geometry alone can reach—out to billions of light-years.
+**What do we infer?** Distances far beyond what geometry alone can reach — out to billions of light-years.
 
 **What physics makes this legal?** If you know how bright something truly is (its luminosity) and measure how bright it *appears* (its flux), the inverse-square law lets you calculate distance.
 
@@ -244,20 +245,30 @@ where:
 
 {{< fig prism-spectrum >}}
 
-**What do we measure?** When "white" light passes through a prism, it spreads into a rainbow—each color corresponding to a different wavelength.
+**What do we measure?** When "white" light passes through a prism, it spreads into a rainbow — each color corresponding to a different wavelength.
 
 **What do we infer?** Light contains many wavelengths simultaneously. "White" is a mixture.
 
 **What physics makes this legal?** Different wavelengths travel at different speeds through glass, causing them to bend by different amounts and separate spatially.
 
-**Why this matters:** A prism doesn't just make rainbows—it gives you the power to **decode** what's hidden inside light. This is **spectroscopy**, and it's the most powerful tool in the astronomer's toolkit.
+**Why this matters:** A prism doesn't just make rainbows — it gives you the power to **decode** what's hidden inside light. This is **spectroscopy**, and it's the most powerful tool in the astronomer's toolkit.
 
 {{< fig quantum-barcode >}}
 
-Why do atoms produce light at specific wavelengths rather than a continuous rainbow? The answer is quantum mechanics: electrons in atoms can only occupy certain discrete energy levels. When an electron jumps between levels, it absorbs or emits a photon of *exactly* the right energy—and energy determines wavelength. Each element's unique ladder of energy levels creates its unique spectral fingerprint.
+Why do atoms produce light at specific wavelengths rather than a continuous rainbow? The answer is quantum mechanics: electrons in atoms can only occupy certain discrete energy levels. When an electron jumps between levels, it absorbs or emits a photon of *exactly* the right energy — and energy determines wavelength. Each element's unique ladder of energy levels creates its unique spectral fingerprint.
 
 ::: {.callout-check-yourself title="Check Yourself 3 — Why Spectroscopy Wins"}
 Why is spectroscopy more powerful than just measuring total brightness?
+:::
+
+::: {.callout-tip title="Solution" collapse="true"}
+Total brightness gives you **one number**. Spectroscopy spreads light into its component wavelengths, giving you **thousands of data points** — brightness as a function of wavelength. This reveals:
+
+- **Temperature** (from the overall color/peak wavelength)
+- **Composition** (from absorption and emission lines at specific wavelengths)
+- **Motion** (from Doppler shifts of spectral lines)
+
+One measurement vs. a wealth of encoded physics.
 :::
 
 ---
@@ -300,15 +311,15 @@ Why is spectroscopy more powerful than just measuring total brightness?
 
 **What do we measure?** Velocities of stars and galaxies. When we spread starlight into a spectrum, absorption lines appear at specific wavelengths (we'll learn to read these spectral fingerprints in Module 2). If those lines shift from their laboratory (at-rest) positions, the source is moving. This is the Doppler effect in action.
 
-**What we find:** Stars in the outer regions of galaxies orbit at speeds that should fling them into intergalactic space—unless there's far more mass than we can see.
+**What we find:** Stars in the outer regions of galaxies orbit at speeds that should fling them into intergalactic space — unless there's far more mass than we can see.
 
-**What do we infer?** The presence of **dark matter**—matter that doesn't emit, absorb, or reflect light, but does exert gravitational pull. When we calculate the mass required to explain observed motions, it exceeds visible mass by about 6:1.
+**What do we infer?** The presence of **dark matter** — matter that doesn't emit, absorb, or reflect light, but does exert gravitational pull. When we calculate the mass required to explain observed motions, it exceeds visible mass by about 6:1.
 
-**What physics makes this legal?** Newton's law of gravity tells us orbital speed depends on enclosed mass. Measure velocity and radius, solve for mass. The math is unambiguous. The extra mass is real—we detect it through the motions it causes.
+**What physics makes this legal?** Newton's law of gravity tells us orbital speed depends on enclosed mass. Measure velocity and radius, solve for mass. The math is unambiguous. The extra mass is real — we detect it through the motions it causes.
 
 {{< fig desi-3d-map >}}
 
-**The cosmic web:** When we map millions of galaxies in 3D (using redshifts for distances), galaxies aren't scattered randomly—they're organized into a cosmic web of filaments, walls, and vast empty voids. This architecture is dark matter's signature at the largest scales.
+**The cosmic web:** When we map millions of galaxies in 3D (using redshifts for distances), galaxies aren't scattered randomly — they're organized into a cosmic web of filaments, walls, and vast empty voids. This architecture is dark matter's signature at the largest scales.
 
 ::: {.column-margin}
 **The cosmic recipe:**
@@ -324,17 +335,17 @@ Why is spectroscopy more powerful than just measuring total brightness?
 
 {{< fig universe-history-nasa >}}
 
-**What do we measure?** Distances to objects across cosmic history (using the distance ladder) and their recession speeds (through redshift—the Doppler shift of their spectral lines).
+**What do we measure?** Distances to objects across cosmic history (using the distance ladder) and their recession speeds (through redshift — the Doppler shift of their spectral lines).
 
 **What do we infer?**
 
-1. The universe is **13.8 billion years old**—traced back from the observed expansion rate.
+1. The universe is **13.8 billion years old** — traced back from the observed expansion rate.
 2. The expansion was initially slowing down (gravity pulling matter together), but about 5 billion years ago, it started **speeding up**.
 3. Something is pushing the universe apart faster and faster. We call it **dark energy**.
 
-**What physics makes this legal?** If you know how fast galaxies are receding and how far away they are, you can "run the movie backward" to find when everything was in the same place—the Big Bang.
+**What physics makes this legal?** If you know how fast galaxies are receding and how far away they are, you can "run the movie backward" to find when everything was in the same place — the Big Bang.
 
-The *acceleration* was discovered in 1998 by measuring Type Ia supernovae at large distances. These standard candles appeared fainter than expected—meaning farther away than a decelerating universe would predict. The universe's expansion is speeding up, not slowing down.
+The *acceleration* was discovered in 1998 by measuring Type Ia supernovae at large distances. These standard candles appeared fainter than expected — meaning farther away than a decelerating universe would predict. The universe's expansion is speeding up, not slowing down.
 
 ::: {.callout-note title="Deep Dive: The Cosmic Distance Ladder" collapse="true"}
 The cosmic distance ladder works in steps, each rung calibrating the next:
@@ -347,7 +358,7 @@ The cosmic distance ladder works in steps, each rung calibrating the next:
 
 4. **Type Ia supernovae** (distant universe): Thermonuclear explosions of white dwarfs with consistent peak luminosity → visible across billions of light-years
 
-Each rung calibrates the next. Parallax calibrates Cepheids; Cepheids calibrate Type Ia supernovae. This is how we reach across the cosmos—one calibration at a time.
+Each rung calibrates the next. Parallax calibrates Cepheids; Cepheids calibrate Type Ia supernovae. This is how we reach across the cosmos — one calibration at a time.
 
 {{< fig standard-candles >}}
 :::
@@ -361,11 +372,15 @@ A student claims: "Astronomers measured the temperature of that star to be 5,800
 - (d) The distance to the star
 :::
 
+::: {.callout-tip title="Solution" collapse="true"}
+**(b) The star's spectrum or color (wavelength distribution).** You can't put a thermometer on a star. Astronomers measure which wavelengths of light the star emits and in what amounts. Temperature is then *inferred* using physics: hotter objects emit more blue light (shorter wavelengths), cooler objects emit more red light (longer wavelengths).
+:::
+
 ---
 
 ## Light: The Cosmic Messenger
 
-Everything we know about the universe beyond Earth comes from **light**—electromagnetic radiation traveling across the cosmos carrying information.
+Everything we know about the universe beyond Earth comes from **light** — electromagnetic radiation traveling across the cosmos carrying information.
 
 ### The Speed of Light
 
@@ -385,7 +400,7 @@ To build intuition:
 ### What's a Light-Year?
 
 ::: {.callout-warning}
-A **light-year** is a unit of **distance**, not time—even though "year" is in the name.
+A **light-year** is a unit of **distance**, not time — even though "year" is in the name.
 :::
 
 A light-year is how far light travels in one year:
@@ -394,10 +409,14 @@ $$1 \text{ light-year} \approx 9.5 \times 10^{15} \text{ m}$$
 
 That's about 9.5 trillion kilometers.
 
-When we say "Proxima Centauri is 4.2 light-years away," we mean its light traveled for 4.2 years to reach us—and we're seeing it as it was 4.2 years ago.
+When we say "Proxima Centauri is 4.2 light-years away," we mean its light traveled for 4.2 years to reach us — and we're seeing it as it was 4.2 years ago.
 
 ::: {.callout-check-yourself title="Check Yourself 5 — Light-Travel Time"}
 Proxima Centauri is 4.2 light-years away. If a powerful laser on Proxima Centauri is turned on today, how long until we could see it from Earth?
+:::
+
+::: {.callout-tip title="Solution" collapse="true"}
+**4.2 years.** A light-year is the *distance* light travels in one year. If Proxima Centauri is 4.2 light-years away, light from there takes 4.2 years to reach us — no exceptions, no shortcuts. The speed of light is the cosmic speed limit.
 :::
 
 ### Distance Is a Time Machine
@@ -414,7 +433,7 @@ Light's finite speed has a profound consequence: **looking far away = looking ba
 | Andromeda Galaxy | 2.5 million light-years | 2.5 million years ago |
 | Distant galaxies | 10+ billion light-years | When the universe was young |
 
-This isn't a limitation—it's a **feature**. We can directly observe cosmic history by looking at objects at different distances.
+This isn't a limitation — it's a **feature**. We can directly observe cosmic history by looking at objects at different distances.
 
 ::: {.column-margin}
 **Lookback time:** The time light takes to travel from an object to us. We see distant objects as they were in the past.
@@ -437,10 +456,14 @@ The key insight: **wavelength tells you about temperature and energy**.
 | X-ray (0.01 – 10 nm) | Hot plasma (millions of K) |
 | Gamma-ray (< 0.01 nm) | Extreme events |
 
-Shorter wavelength = higher energy = hotter or more violent source. This is why X-ray telescopes see different objects than optical telescopes—they're sensitive to different physics.
+Shorter wavelength = higher energy = hotter or more violent source. This is why X-ray telescopes see different objects than optical telescopes — they're sensitive to different physics.
 
 ::: {.callout-check-yourself title="Check Yourself 6 — Why X-ray Telescopes See Different Stuff"}
 Why do X-ray telescopes observe different objects than optical telescopes?
+:::
+
+::: {.callout-tip title="Solution" collapse="true"}
+**Different wavelengths reveal different temperatures and physical processes.** X-rays are emitted by extremely hot material (millions of degrees) — like gas falling into black holes or the aftermath of stellar explosions. Optical light comes from cooler sources (thousands of degrees) — like stellar surfaces. Same sky, different physics made visible.
 :::
 
 ---
@@ -476,17 +499,17 @@ Let's recap what we've covered:
 ::: {.callout-important}
 ## You Are Not Expected to Memorize This
 
-Today was a **trailer**—like a movie preview. You're not expected to master anything today. You're expected to *recognize* these ideas when they return.
+Today was a **trailer** — like a movie preview. You're not expected to master anything today. You're expected to *recognize* these ideas when they return.
 
-When these concepts come back—and they will—you'll think "I've seen this before." That's the goal. Recognition comes first; understanding follows.
+When these concepts come back — *and they will* — you'll think "I've seen this before." That's the goal. Recognition comes first; understanding follows.
 :::
 
 ::: {.callout-note title="Looking Ahead"}
-**Next time:** The Math Boot Camp—scientific notation, unit conversions, ratios, and rate problems. These are the tools that let us decode cosmic numbers without drowning in zeros.
+**Next time:** The Math Boot Camp — scientific notation, unit conversions, ratios, and rate problems. These are the tools that let us decode cosmic numbers without drowning in zeros.
 
 **Coming soon:** Our first real inference problem: *How do we measure distance to objects we can't reach?*
 
-Today you saw the spoilers. Now we build the tools to understand them—one inference at a time.
+Today you saw the spoilers. Now we build the tools to understand them — one inference at a time.
 :::
 
 ---
@@ -496,7 +519,7 @@ Today you saw the spoilers. Now we build the tools to understand them—one infe
 ### Conceptual Questions
 
 <!-- Conceptual / Recognition / O→M→I / ⭐ -->
-**1.** ⭐ **Observable vs. Inferred.** For each quantity, state whether it is *directly measured* or *inferred*:
+**1.** **Observable vs. Inferred.** For each quantity, state whether it is *directly measured* or *inferred*:
 
 | Quantity | Measured or Inferred? |
 |----------|----------------------|
@@ -507,47 +530,47 @@ Today you saw the spoilers. Now we build the tools to understand them—one infe
 | (e) The wavelength of light from a star | |
 
 <!-- Conceptual / Connection / O→M→I / ⭐⭐ -->
-**2.** ⭐⭐ **The Inference Pipeline.** A student claims: “We know the Sun is made of hydrogen because we can see it.” What’s wrong with this statement? Explain what we actually measure and how we infer composition.
+**2.** **The Inference Pipeline.** A student claims: “We know the Sun is made of hydrogen because we can see it.” What’s wrong with this statement? Explain what we actually measure and how we infer composition.
 
 <!-- Conceptual / Application / O→M→I / ⭐⭐ -->
-**3.** ⭐⭐ **Standard Candles.** Why do astronomers need “standard candles” to measure distances? What problem do they solve?
+**3.** **Standard Candles.** Why do astronomers need “standard candles” to measure distances? What problem do they solve?
 
 <!-- Conceptual / Application / — / ⭐ -->
-**4.** ⭐ **Lookback Time.** The Andromeda Galaxy is about 2.5 million light-years away. If an astronomer observes a supernova in Andromeda tonight, when did that explosion actually occur?
+**4.** **Lookback Time.** The Andromeda Galaxy is about 2.5 million light-years away. If an astronomer observes a supernova in Andromeda tonight, when did that explosion actually occur?
 
 <!-- Conceptual / Recognition / O→M→I / ⭐ -->
-**5.** ⭐ **Four Observables.** An astronomer reports: “We measured the star’s spectrum and found absorption lines shifted toward the red.” Which of the four observables (brightness, position, wavelength, timing) is being measured here? What might be inferred from this observation?
+**5.** **Four Observables.** An astronomer reports: “We measured the star’s spectrum and found absorption lines shifted toward the red.” Which of the four observables (brightness, position, wavelength, timing) is being measured here? What might be inferred from this observation?
 
 ### Calculations
 
 <!-- Calculation / Application / O→M→I / ⭐⭐ -->
-**6.** ⭐⭐ **Relative Brightness.** Two identical stars are observed. Star A appears 9× brighter than Star B. Using the inverse-square law, how many times farther away is Star B compared to Star A?
+**6.** **Relative Brightness.** Two identical stars are observed. Star A appears 9× brighter than Star B. Using the inverse-square law, how many times farther away is Star B compared to Star A?
 
 <!-- Calculation / Application / — / ⭐ -->
-**7.** ⭐ **Light Travel Time.** Light travels at $3 \times 10^8$ m/s. The Sun is about $1.5 \times 10^{11}$ m away from Earth. How long does light take to travel from the Sun to Earth? Give your answer in seconds, then convert to minutes.
+**7.** **Light Travel Time.** Light travels at $3 \times 10^8$ m/s. The Sun is about $1.5 \times 10^{11}$ m away from Earth. How long does light take to travel from the Sun to Earth? Give your answer in seconds, then convert to minutes.
 
 <!-- Calculation / Application / — / ⭐⭐ -->
-**8.** ⭐⭐ **Building a Light-Year.** Using the speed of light ($c = 3 \times 10^8$ m/s) and the fact that one year is approximately $3.15 \times 10^7$ seconds, calculate the distance light travels in one year. Express your answer in meters.
+**8.** **Building a Light-Year.** Using the speed of light ($c = 3 \times 10^8$ m/s) and the fact that one year is approximately $3.15 \times 10^7$ seconds, calculate the distance light travels in one year. Express your answer in meters.
 
 <!-- Calculation / Application / — / ⭐ -->
-**9.** ⭐ **Inverse-Square Reasoning.** A star moves from 10 light-years away to 40 light-years away (4× the original distance). By what factor does its apparent brightness change?
+**9.** **Inverse-Square Reasoning.** A star moves from 10 light-years away to 40 light-years away (4× the original distance). By what factor does its apparent brightness change?
 
 <!-- Calculation / Application / — / ⭐⭐ -->
-**10.** ⭐⭐ **Lookback Time Calculation.** A galaxy is 50 million light-years away. If we observe it today, when did the light we're seeing actually leave that galaxy?
+**10.** **Lookback Time Calculation.** A galaxy is 50 million light-years away. If we observe it today, when did the light we're seeing actually leave that galaxy?
 
 ### Synthesis
 
 <!-- Synthesis / Connection / O→M→I / ⭐⭐ -->
-**11.** ⭐⭐ **The Course Thesis.** In 2-3 sentences, explain the course thesis “pretty pictures → measurements → models → inferences” to a friend who has never taken astronomy.
+**11.** **The Course Thesis.** In 2-3 sentences, explain the course thesis “pretty pictures → measurements → models → inferences” to a friend who has never taken astronomy.
 
 <!-- Synthesis / Connection / O→M→I / ⭐⭐ -->
-**12.** ⭐⭐ **Connecting Wavelength to Physics.** Explain why observing the same galaxy at optical and radio wavelengths reveals different information. What physical components are visible at each wavelength, and why?
+**12.** **Connecting Wavelength to Physics.** Explain why observing the same galaxy at optical and radio wavelengths reveals different information. What physical components are visible at each wavelength, and why?
 
 <!-- Synthesis / Connection / O→M→I / ⭐⭐⭐ -->
-**13.** ⭐⭐⭐ **Dark Matter Evidence.** A student says, “If we can’t see dark matter, how do we know it exists?” Describe one piece of observational evidence for dark matter, clearly stating what is *measured* and what is *inferred*.
+**13.** **Dark Matter Evidence.** A student says, “If we can’t see dark matter, how do we know it exists?” Describe one piece of observational evidence for dark matter, clearly stating what is *measured* and what is *inferred*.
 
 <!-- Synthesis / Connection / O→M→I / ⭐⭐⭐ -->
-**14.** ⭐⭐⭐ **Observable → Model → Inference.** A star’s position on the sky changes periodically over several years. Using the Observable → Model → Inference pattern from this reading: (a) identify which observable is being measured, (b) explain what physical model connects this to unseen objects, and (c) state what you might infer about the star.
+**14.** **Observable → Model → Inference.** A star’s position on the sky changes periodically over several years. Using the Observable → Model → Inference pattern from this reading: (a) identify which observable is being measured, (b) explain what physical model connects this to unseen objects, and (c) state what you might infer about the star.
 
 ---
 
