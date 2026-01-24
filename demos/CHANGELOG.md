@@ -6,6 +6,29 @@ Format based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ---
 
+## [2.0.1] - 2026-01-24
+
+### Demo Suite Finish + Guardrails
+
+#### Added
+
+- Shared demo layout shell: `_assets/demo-shell.css`
+- Legacy class bridge for consistent styling without per-demo overrides: `_assets/demo-legacy.css`
+- Shared micro-interactions wiring (ripples + slider progress + opt-in slider tooltips): `_assets/demo-polish.js`
+- Migration guardrails:
+  - `demos/polish-manifest.json` (tracks which demos are “fully migrated”)
+  - `scripts/check_demo_polish.py` (enforces required shared assets + blocks legacy inline overrides)
+
+#### Fixed
+
+- Starfield canvas resize scaling bug (prevents transform accumulation on repeated resizes): `_assets/starfield.js`
+
+#### Changed
+
+- All 9 demos now use the shared shell + polish assets (see `demos/polish-manifest.json`):
+  - `angular-size`, `blackbody-radiation`, `eclipse-geometry`, `em-spectrum`, `keplers-laws`, `moon-phases`, `parallax-distance`, `seasons`, `telescope-resolution`
+- Slider tooltips are opt-in (to avoid showing raw slider values when sliders map to physical values). Add `data-tooltip-source="#some-display-id"` on the slider to display the corresponding formatted readout text.
+
 ## [2.0.0] - 2026-01-22
 
 ### Visual Polish Release
