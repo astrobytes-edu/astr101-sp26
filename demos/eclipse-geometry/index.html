@@ -5,79 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Eclipse Geometry Demo | AstroEd</title>
   <link rel="stylesheet" href="../_assets/astro-theme.css">
+  <link rel="stylesheet" href="../_assets/demo-shell.css">
+  <link rel="stylesheet" href="../_assets/demo-legacy.css">
   <style>
-    html, body {
-      margin: 0;
-      padding: 0;
-      height: 100%;
-    }
-
-    body {
-      font-family: var(--font-main);
-      background: var(--space-black);
-      color: var(--text-primary);
-    }
-
-    .demo-wrapper {
-      min-height: 100vh;
-      position: relative;
-    }
-
-    #starfield {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: 0;
-    }
-
-    .demo-content {
-      position: relative;
-      z-index: 1;
-      max-width: 1000px;
-      margin: 0 auto;
-      padding: 1.5rem;
-    }
-
-    .demo-header {
-      text-align: center;
-      margin-bottom: 1rem;
-    }
-
-    .demo-title {
-      font-size: 1.75rem;
-      margin: 0 0 0.5rem 0;
-    }
-
-    .demo-subtitle {
-      font-size: 1rem;
-      color: var(--text-secondary);
-      margin: 0;
+    :root {
+      --demo-max-width: 1000px;
     }
 
     /* Two-view layout */
     .viz-layout {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 1rem;
-      margin-bottom: 1rem;
-    }
-
-    .viz-panel {
-      background: rgba(18, 18, 31, 0.9);
-      border: 1px solid var(--border-color);
-      border-radius: 12px;
-      padding: 1rem;
-    }
-
-    .panel-title {
-      font-size: 0.875rem;
-      color: var(--text-secondary);
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      margin-bottom: 0.75rem;
-      text-align: center;
+      margin-bottom: var(--space-md);
     }
 
     #top-view-svg, #side-view-svg {
@@ -134,35 +73,7 @@
 
     /* Controls grid */
     .controls-grid {
-      display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 1rem;
-      margin-bottom: 1rem;
-    }
-
-    .control-card {
-      background: rgba(18, 18, 31, 0.9);
-      border: 1px solid var(--border-color);
-      border-radius: 8px;
-      padding: 1rem;
-    }
-
-    .control-card.full-width {
-      grid-column: 1 / -1;
-    }
-
-    .control-title {
-      font-size: 0.875rem;
-      color: var(--text-secondary);
-      margin-bottom: 0.75rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .control-value {
-      font-family: var(--font-mono);
-      color: var(--accent-blue);
     }
 
     /* Simulation panel */
@@ -172,38 +83,6 @@
       margin-bottom: 1rem;
       flex-wrap: wrap;
       justify-content: center;
-    }
-
-    .sim-btn {
-      font-size: 0.875rem;
-      padding: 0.5rem 1rem;
-      background: var(--space-light);
-      border: 1px solid var(--border-color);
-      border-radius: 6px;
-      color: var(--text-secondary);
-      cursor: pointer;
-      transition: all 0.15s ease;
-    }
-
-    .sim-btn:hover {
-      background: var(--space-medium);
-      color: var(--text-primary);
-      border-color: var(--accent-blue);
-    }
-
-    .sim-btn.primary {
-      background: var(--accent-blue);
-      color: var(--space-black);
-      border-color: var(--accent-blue);
-    }
-
-    .sim-btn.primary:hover {
-      background: #7bc0eb;
-    }
-
-    .sim-btn:disabled {
-      opacity: 0.5;
-      cursor: not-allowed;
     }
 
     /* Stats display */
@@ -231,6 +110,14 @@
       font-family: var(--font-mono);
       font-size: 1.25rem;
       color: var(--accent-gold);
+    }
+
+    .slider-labels {
+      display: flex;
+      justify-content: space-between;
+      font-size: var(--font-size-xs);
+      color: var(--text-muted);
+      margin-top: var(--space-xs);
     }
 
     /* Insight box */
@@ -450,8 +337,8 @@
             Orbital Tilt
             <span class="control-value" id="tilt-display">5.1°</span>
           </div>
-          <input type="range" id="tilt-slider" class="astro-slider" min="0" max="100" value="51">
-          <div style="display: flex; justify-content: space-between; font-size: 0.7rem; color: var(--text-muted); margin-top: 0.25rem;">
+          <input type="range" id="tilt-slider" class="astro-slider" min="0" max="100" value="51" data-tooltip-source="#tilt-display">
+          <div class="slider-labels">
             <span>0° (eclipse every month!)</span>
             <span>10°</span>
           </div>
@@ -484,8 +371,8 @@
               Simulate Years
               <span class="control-value" id="sim-years-display">10</span>
             </div>
-            <input type="range" id="sim-years-slider" class="astro-slider" min="0" max="100" value="33">
-            <div style="display: flex; justify-content: space-between; font-size: 0.7rem; color: var(--text-muted); margin-top: 0.25rem;">
+            <input type="range" id="sim-years-slider" class="astro-slider" min="0" max="100" value="33" data-tooltip-source="#sim-years-display">
+            <div class="slider-labels">
               <span>1</span>
               <span>10</span>
               <span>100</span>
@@ -574,6 +461,7 @@
   </div>
 
   <script src="../_assets/astro-utils.js"></script>
+  <script src="../_assets/demo-polish.js"></script>
   <script src="../_assets/starfield.js"></script>
   <script src="../_assets/challenge-engine.js"></script>
   <script src="eclipse-geometry.js"></script>
