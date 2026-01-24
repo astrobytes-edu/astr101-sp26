@@ -90,6 +90,7 @@
       btnRunSim: document.getElementById('btn-run-sim'),
       btnStop: document.getElementById('btn-stop'),
       btnToggleLog: document.getElementById('btn-toggle-log'),
+      btnReset: document.getElementById('btn-reset'),
 
       // Simulation slider
       simYearsSlider: document.getElementById('sim-years-slider'),
@@ -421,6 +422,38 @@
     elements.btnToggleLog.addEventListener('click', () => {
       toggleLog();
     });
+
+    // Reset button
+    if (elements.btnReset) {
+      elements.btnReset.addEventListener('click', () => {
+        stopAnimation();
+
+        // Reset state to defaults
+        state.moonAngle = 0;
+        state.nodeAngle = 0;
+        state.orbitalTilt = 5.145;
+
+        // Reset UI
+        elements.tiltSlider.value = state.orbitalTilt * 10;
+        elements.tiltDisplay.textContent = state.orbitalTilt.toFixed(1) + '°';
+
+        // Reset stats
+        state.totalSolarEclipses = 0;
+        state.partialSolarEclipses = 0;
+        state.totalLunarEclipses = 0;
+        state.partialLunarEclipses = 0;
+        state.yearsSimulated = 0;
+        state.eclipseLog = [];
+
+        // Hide stats panel and log panel
+        elements.statsPanel.style.display = 'none';
+        elements.logPanel.style.display = 'none';
+        state.showLog = false;
+        elements.btnToggleLog.textContent = 'Show Log';
+
+        update();
+      });
+    }
   }
 
   // Logarithmic slider conversion (slider 0-100 → years 1-1000)
