@@ -2,9 +2,12 @@
   "polished": [
     "angular-size",
     "blackbody-radiation",
+    "eclipse-geometry",
     "em-spectrum",
     "keplers-laws",
+    "moon-phases",
     "parallax-distance",
+    "seasons",
     "telescope-resolution"
   ]
 }
