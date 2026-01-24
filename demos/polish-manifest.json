@@ -1,3 +1,7 @@
 {
-  "polished": []
+  "polished": [
+    "angular-size",
+    "blackbody-radiation",
+    "keplers-laws"
+  ]
 }
