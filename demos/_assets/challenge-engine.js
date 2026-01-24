@@ -48,6 +48,50 @@
    */
   class ChallengeEngine {
     /**
+     * Factory method to create a ChallengeEngine with config object
+     * @param {Object} config - Configuration object
+     * @param {Array} config.challenges - Array of challenge definitions
+     * @param {Function} [config.getState] - Function returning current demo state
+     * @param {Function} [config.setState] - Function to set demo state
+     * @param {HTMLElement} [config.container] - Container for challenge UI
+     * @returns {ChallengeEngine} New engine instance
+     */
+    static create(config) {
+      const { challenges, getState, setState, container } = config;
+
+      // Transform challenge format: prompt -> question, hint (string) -> hints (array)
+      const transformedChallenges = challenges.map(c => {
+        const transformed = { ...c };
+
+        // Map 'prompt' to internal 'question'
+        if (c.prompt !== undefined && c.question === undefined) {
+          transformed.question = c.prompt;
+        }
+
+        // Map 'hint' (string) to internal 'hints' (array)
+        if (typeof c.hint === 'string' && c.hints === undefined) {
+          transformed.hints = [c.hint];
+        }
+
+        // If challenge has a check function, mark it as custom type
+        if (typeof c.check === 'function' && c.type === undefined) {
+          transformed.type = 'custom';
+        }
+
+        return transformed;
+      });
+
+      const options = {
+        container,
+        getState,
+        setState,
+        showUI: true
+      };
+
+      return new ChallengeEngine(transformedChallenges, options);
+    }
+
+    /**
      * Create a ChallengeEngine
      * @param {Challenge[]} challenges - Array of challenge definitions
      * @param {ChallengeOptions} [options={}] - Configuration options
@@ -72,7 +116,7 @@
 
       // State
       this.currentIndex = -1;
-      this.isActive = false;
+      this._isActive = false;
       this.hintsUsed = 0;
       this.attempts = 0;
       this.stats = {
@@ -100,7 +144,7 @@
      * @returns {Challenge} The first/current challenge
      */
     start() {
-      this.isActive = true;
+      this._isActive = true;
 
       if (this.currentIndex < 0) {
         this.currentIndex = 0;
@@ -115,6 +159,12 @@
       this.hintsUsed = 0;
       this.attempts = 0;
 
+      // Apply initialState for the first/current challenge
+      const challenge = this.getCurrentChallenge();
+      if (challenge && challenge.initialState && this.options.setState) {
+        this.options.setState(challenge.initialState);
+      }
+
       // Show UI
       if (this.ui) {
         this.ui.style.display = 'block';
@@ -124,7 +174,7 @@
       // Fire progress callback
       this._fireProgress();
 
-      return this.getCurrentChallenge();
+      return challenge;
     }
 
     /**
@@ -133,7 +183,7 @@
      * @returns {Object} Result object with { correct, close, message }
      */
     check(userAnswer) {
-      if (!this.isActive || this.currentIndex < 0) {
+      if (!this._isActive || this.currentIndex < 0) {
         return { correct: false, close: false, message: 'No active challenge' };
       }
 
@@ -186,7 +236,7 @@
      * @returns {Challenge|null} The next challenge, or null if none
      */
     skip() {
-      if (!this.isActive || this.currentIndex < 0) {
+      if (!this._isActive || this.currentIndex < 0) {
         return null;
       }
 
@@ -205,7 +255,7 @@
      * @returns {string|null} The hint text, or null if no more hints
      */
     getHint() {
-      if (!this.isActive || this.currentIndex < 0) {
+      if (!this._isActive || this.currentIndex < 0) {
         return null;
       }
 
@@ -256,7 +306,7 @@
      */
     reset() {
       this.currentIndex = -1;
-      this.isActive = false;
+      this._isActive = false;
       this.hintsUsed = 0;
       this.attempts = 0;
       this.stats = {
@@ -278,7 +328,7 @@
      * Stop challenge mode (hide UI but preserve progress)
      */
     stop() {
-      this.isActive = false;
+      this._isActive = false;
       if (this.ui) {
         this.ui.style.display = 'none';
       }
@@ -289,7 +339,15 @@
      * @returns {boolean}
      */
     isRunning() {
-      return this.isActive;
+      return this._isActive;
+    }
+
+    /**
+     * Check if challenge mode is currently active (alias for isRunning)
+     * @returns {boolean}
+     */
+    isActive() {
+      return this._isActive;
     }
 
     // ========================================
@@ -304,6 +362,16 @@
       const { type, answer, tolerance } = challenge;
 
       switch (type) {
+        case 'custom':
+          // Use the challenge's check function with getState
+          if (typeof challenge.check === 'function') {
+            // If userAnswer is provided, use it; otherwise use getState
+            const state = userAnswer !== undefined ? userAnswer :
+              (this.options.getState ? this.options.getState() : {});
+            return challenge.check(state);
+          }
+          return { correct: false, close: false, message: 'No check function defined' };
+
         case 'angle':
           return this._checkAngle(userAnswer, answer, tolerance);
 
@@ -446,6 +514,12 @@
       this.hintsUsed = 0;
       this.attempts = 0;
 
+      // Apply initialState if challenge has one
+      const challenge = this.getCurrentChallenge();
+      if (challenge && challenge.initialState && this.options.setState) {
+        this.options.setState(challenge.initialState);
+      }
+
       if (this.ui) {
         this._updateUI();
         this._clearFeedback();
@@ -453,7 +527,7 @@
       }
 
       this._fireProgress();
-      return this.getCurrentChallenge();
+      return challenge;
     }
 
     /**
@@ -461,7 +535,7 @@
      * @private
      */
     _complete() {
-      this.isActive = false;
+      this._isActive = false;
 
       const finalStats = this.getProgress().stats;
 
@@ -534,7 +608,22 @@
       wrapper.querySelector('.prev-btn').addEventListener('click', () => this._goToPrevious());
       wrapper.querySelector('.next-btn').addEventListener('click', () => this._goToNext());
 
-      // Note: check-btn handler should be connected by the demo that knows the current state
+      // Hook up check-btn: for custom type challenges, use getState and the challenge's check function
+      wrapper.querySelector('.check-btn').addEventListener('click', () => {
+        const challenge = this.getCurrentChallenge();
+        if (challenge && challenge.type === 'custom' && typeof challenge.check === 'function') {
+          // Get current state and check using the challenge's check function
+          const state = this.options.getState ? this.options.getState() : {};
+          this.check(state);
+        } else {
+          // For non-custom types, the demo must call check() with the answer
+          // Fire a custom event that demos can listen for
+          const event = new CustomEvent('challengeCheckRequested', {
+            detail: { challenge }
+          });
+          this.options.container.dispatchEvent(event);
+        }
+      });
 
       this.options.container.insertBefore(wrapper, this.options.container.firstChild);
       this.ui = wrapper;
@@ -825,6 +914,13 @@
       if (this.currentIndex > 0) {
         this.currentIndex--;
         this.hintsUsed = 0;
+
+        // Apply initialState for the challenge
+        const challenge = this.getCurrentChallenge();
+        if (challenge && challenge.initialState && this.options.setState) {
+          this.options.setState(challenge.initialState);
+        }
+
         this._updateUI();
         this._clearFeedback();
         this._clearHint();
