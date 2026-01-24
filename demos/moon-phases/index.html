@@ -440,6 +440,32 @@
               <text y="45" text-anchor="middle" fill="#a0a0b0" font-size="11">Earth</text>
             </g>
 
+            <!-- Earth's Shadow Cone (toggled by checkbox) -->
+            <g id="earth-shadow-group" style="display: none;">
+              <!-- Shadow cone extending opposite to Sun (rightward) -->
+              <defs>
+                <linearGradient id="shadowGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" stop-color="rgba(30, 30, 50, 0.6)"/>
+                  <stop offset="100%" stop-color="rgba(30, 30, 50, 0)"/>
+                </linearGradient>
+              </defs>
+              <!-- Umbra cone (darker, narrower) -->
+              <path id="umbra-cone"
+                    d="M 225 200 L 380 185 L 380 215 Z"
+                    fill="rgba(20, 20, 40, 0.5)"
+                    stroke="none"/>
+              <!-- Penumbra cone (lighter, wider) -->
+              <path id="penumbra-cone"
+                    d="M 225 200 L 400 160 L 400 240 Z"
+                    fill="url(#shadowGradient)"
+                    stroke="rgba(100, 100, 140, 0.3)"
+                    stroke-width="1"
+                    stroke-dasharray="4 2"/>
+              <!-- Label -->
+              <text x="320" y="155" fill="#ec7063" font-size="10" opacity="0.8">Earth's Shadow</text>
+              <text x="300" y="168" fill="#ec7063" font-size="9" opacity="0.6">(only matters for eclipses!)</text>
+            </g>
+
             <!-- Moon (draggable) -->
             <g id="moon-group" class="moon-draggable"
                role="slider"
@@ -579,6 +605,16 @@
 
       <!-- Phase presets -->
       <div class="controls-panel">
+        <!-- Shadow Toggle -->
+        <div class="toggle-row" style="margin-bottom: 1rem; display: flex; align-items: center; justify-content: center; gap: 0.5rem;">
+          <label class="toggle-switch">
+            <input type="checkbox" id="show-shadow-toggle">
+            <span class="toggle-slider"></span>
+          </label>
+          <label for="show-shadow-toggle" style="font-size: 0.875rem; color: var(--text-secondary); cursor: pointer;">
+            Show Earth's Shadow
+          </label>
+        </div>
         <div class="controls-row">
           <button class="phase-btn" data-angle="180">New Moon</button>
           <button class="phase-btn" data-angle="270">First Quarter</button>
