@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Angular Size Demo | AstroEd</title>
+  <link rel="icon" type="image/svg+xml" href="../_assets/favicon.svg">
   <link rel="stylesheet" href="../_assets/astro-theme.css">
   <link rel="stylesheet" href="../_assets/demo-shell.css">
   <link rel="stylesheet" href="../_assets/demo-legacy.css">
@@ -88,7 +89,7 @@
       <!-- Readout Panel -->
       <div class="readout-panel">
         <div class="readout-item">
-          <div class="readout-label">Angular Size</div>
+          <div class="readout-label">Angular Size (degrees)</div>
           <div class="readout-value" id="angular-size-value">0.53</div>
           <div class="readout-unit" id="angular-size-unit">degrees</div>
         </div>
@@ -123,29 +124,36 @@
         </div>
 
         <div class="control-card full-width">
-          <div class="control-title">Presets</div>
+          <div class="preset-category">
+            <label for="preset-category">Presets</label>
+            <select id="preset-category">
+              <option value="everyday">Everyday Objects</option>
+              <option value="astronomical" selected>Astronomical Objects</option>
+            </select>
+          </div>
 
-          <div class="presets-section">
+          <div class="presets-section" id="astro-presets-section">
             <div class="presets-label">Astronomical Objects</div>
             <div class="presets-row" id="astro-presets"></div>
           </div>
 
-          <div class="presets-section">
-            <div class="presets-label">Everyday Objects (try these!)</div>
+          <div class="presets-section" id="everyday-presets-section" style="display: none;">
+            <div class="presets-label">Everyday Objects</div>
             <div class="presets-row" id="easter-presets"></div>
           </div>
 
           <!-- Time Evolution (Moon only) -->
           <div class="time-control" id="time-control" style="display: none;">
             <div class="control-title">
-              Time Evolution (Moon)
-              <span class="control-value" id="time-display">Today</span>
+              Time Evolution (for Moon)
+              <span class="control-value" id="time-display">Perigee</span>
             </div>
-            <input type="range" id="time-slider" class="astro-slider" min="-4000" max="1000" value="0" data-tooltip-source="#time-display">
+            <input type="range" id="time-slider" class="astro-slider" min="0" max="360" value="0" step="1" data-tooltip-source="#time-display">
             <div class="time-label">
-              <span>4 billion years ago</span>
-              <span>1 billion years from now</span>
+              <span>Perigee</span>
+              <span>Apogee</span>
             </div>
+            <div class="time-range" id="moon-angular-range"></div>
           </div>
         </div>
       </div>

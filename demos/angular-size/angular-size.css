@@ -19,6 +19,28 @@
   grid-template-columns: 1fr 1fr;
 }
 
+.preset-category {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-sm);
+}
+
+.preset-category label {
+  font-size: var(--font-size-sm);
+  color: var(--text-secondary);
+}
+
+.preset-category select {
+  padding: 6px 10px;
+  min-height: 44px;
+  background: var(--space-light);
+  border: 1px solid var(--border-color);
+  border-radius: 9999px;
+  color: var(--text-primary);
+}
+
 /* Time evolution (Moon only) */
 .time-control {
   margin-top: var(--space-md);
@@ -32,6 +54,12 @@
   font-size: var(--font-size-sm);
   color: var(--text-muted);
   margin-top: var(--space-xs);
+}
+
+.time-range {
+  margin-top: var(--space-sm);
+  font-size: var(--font-size-sm);
+  color: var(--text-secondary);
 }
 
 /* Reference guide */
@@ -58,4 +86,3 @@
     grid-template-columns: 1fr;
   }
 }
-

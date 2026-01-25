@@ -21,7 +21,7 @@
       description: 'Our star'
     },
     moon: {
-      name: 'Moon',
+      name: 'Moon (Today)',
       diameter: 3474,     // km
       distance: 384400,   // km
       category: 'astronomical',
@@ -62,12 +62,12 @@
       description: 'Nearest large galaxy'
     },
 
-    // Easter eggs - everyday objects
+    // Everyday objects
     basketball: {
       name: 'Basketball @ 10m',
       diameter: 0.000239, // 23.9 cm in km
       distance: 0.01,     // 10m in km
-      category: 'easter-egg',
+      category: 'everyday',
       color: 'object',
       description: 'Standard basketball'
     },
@@ -75,7 +75,7 @@
       name: 'Soccer ball @ 20m',
       diameter: 0.00022,  // 22 cm in km
       distance: 0.02,     // 20m in km
-      category: 'easter-egg',
+      category: 'everyday',
       color: 'object',
       description: 'Regulation soccer ball'
     },
@@ -83,7 +83,7 @@
       name: 'Quarter @ arm\'s length',
       diameter: 0.0000243, // 24.3 mm in km
       distance: 0.0007,    // 70cm arm's length
-      category: 'easter-egg',
+      category: 'everyday',
       color: 'object',
       description: 'US quarter coin'
     },
@@ -91,7 +91,7 @@
       name: 'Your thumb',
       diameter: 0.00002,   // ~2cm thumb width
       distance: 0.0007,    // ~70cm arm's length
-      category: 'easter-egg',
+      category: 'everyday',
       color: 'object',
       description: 'Thumb at arm\'s length ≈ 2°'
     },
@@ -99,7 +99,7 @@
       name: 'Jet @ 10km',
       diameter: 0.06,      // ~60m wingspan
       distance: 10,        // 10 km altitude
-      category: 'easter-egg',
+      category: 'everyday',
       color: 'object',
       description: 'Commercial jet overhead'
     },
@@ -107,7 +107,7 @@
       name: 'ISS overhead',
       diameter: 0.000109,  // 109m in km
       distance: 420,       // 420 km altitude
-      category: 'easter-egg',
+      category: 'everyday',
       color: 'object',
       description: 'International Space Station'
     }
@@ -121,7 +121,7 @@
     diameter: PRESETS.sun.diameter,
     distance: PRESETS.sun.distance,
     activePreset: 'sun',
-    timeOffset: 0  // Years from present (for Moon time evolution)
+    moonOrbitAngle: 0 // Degrees (for Moon orbit distance variation)
   };
 
   // Slider ranges (logarithmic)
@@ -130,9 +130,17 @@
   const SIZE_MIN = 0.00001;       // 1 cm in km
   const SIZE_MAX = 1e19;          // Large galaxy
 
-  // Moon recession rate: 3.8 cm/year
-  const MOON_RECESSION_CM_PER_YEAR = 3.8;
-  const MOON_BASE_DISTANCE = 384400; // km, current
+  // Lecture contract (module-01 lecture reading excerpt):
+  // Moon's angular size varies roughly from ~0.49° to ~0.56° over its orbit.
+  const MOON_ORBIT_MIN_ANGULAR_SIZE_DEG = 0.49;
+  const MOON_ORBIT_MAX_ANGULAR_SIZE_DEG = 0.56;
+  const MOON_ORBIT = (() => {
+    const degPerRad = 180 / Math.PI;
+    const d = PRESETS.moon.diameter;
+    const perigeeKm = d * degPerRad / MOON_ORBIT_MAX_ANGULAR_SIZE_DEG;
+    const apogeeKm = d * degPerRad / MOON_ORBIT_MIN_ANGULAR_SIZE_DEG;
+    return { perigeeKm, apogeeKm };
+  })();
 
   // ============================================
   // DOM Elements
@@ -165,10 +173,14 @@
 
     elements.astroPresets = document.getElementById('astro-presets');
     elements.easterPresets = document.getElementById('easter-presets');
+    elements.astroPresetsSection = document.getElementById('astro-presets-section');
+    elements.everydayPresetsSection = document.getElementById('everyday-presets-section');
+    elements.presetCategory = document.getElementById('preset-category');
 
     elements.timeControl = document.getElementById('time-control');
     elements.timeSlider = document.getElementById('time-slider');
     elements.timeDisplay = document.getElementById('time-display');
+    elements.moonAngularRange = document.getElementById('moon-angular-range');
   }
 
   // ============================================
@@ -182,10 +194,20 @@
     return radians * (180 / Math.PI);
   }
 
-  function getMoonDistanceAtTime(yearsFromNow) {
-    // Moon recession: 3.8 cm/year
-    const distanceChangeKm = (yearsFromNow * MOON_RECESSION_CM_PER_YEAR) / 100000;
-    return MOON_BASE_DISTANCE + distanceChangeKm;
+  function getMoonDistanceAtOrbitAngle(orbitAngleDeg) {
+    const phaseRad = orbitAngleDeg * Math.PI / 180;
+    const w = (Math.cos(phaseRad) + 1) / 2; // 1 at 0° (perigee), 0 at 180° (apogee)
+    return MOON_ORBIT.apogeeKm + w * (MOON_ORBIT.perigeeKm - MOON_ORBIT.apogeeKm);
+  }
+
+  function orbitAngleFromMoonDistance(distanceKm) {
+    const denom = (MOON_ORBIT.perigeeKm - MOON_ORBIT.apogeeKm);
+    if (denom === 0) return 0;
+    const w = (distanceKm - MOON_ORBIT.apogeeKm) / denom;
+    const clamped = Math.max(0, Math.min(1, w));
+    const cos = 2 * clamped - 1;
+    const angleRad = Math.acos(Math.max(-1, Math.min(1, cos))); // 0..π
+    return angleRad * 180 / Math.PI; // 0..180 (symmetry is fine for our display)
   }
 
   // ============================================
@@ -304,8 +326,7 @@
     elements.angleArc.setAttribute('d', arcPath);
 
     // Update angle text
-    const angleFormatted = formatAngle(angularDeg);
-    elements.angleText.textContent = `${angleFormatted.value}${angleFormatted.unit === 'degrees' ? '°' : angleFormatted.unit === 'arcminutes' ? "'" : '"'}`;
+    elements.angleText.textContent = `${angularDeg.toFixed(2)}°`;
     elements.angleText.setAttribute('x', eyeX + arcRadius + 10);
     elements.angleText.setAttribute('y', eyeY + 5);
 
@@ -337,9 +358,8 @@
     const angularDeg = calculateAngularSize(state.diameter, state.distance);
 
     // Angular size
-    const angleF = formatAngle(angularDeg);
-    elements.angularSizeValue.textContent = angleF.value;
-    elements.angularSizeUnit.textContent = angleF.unit;
+    elements.angularSizeValue.textContent = angularDeg.toFixed(2);
+    elements.angularSizeUnit.textContent = 'degrees';
 
     // Physical size
     const sizeF = formatDistance(state.diameter);
@@ -360,10 +380,9 @@
     if (objectCircle) {
       const preset = PRESETS[state.activePreset];
       const name = preset ? preset.name : 'Object';
-      const angleF = formatAngle(calculateAngularSize(state.diameter, state.distance));
       const distF = formatDistance(state.distance);
       objectCircle.setAttribute('aria-label',
-        `${name} at ${distF.value} ${distF.unit}, angular size ${angleF.value} ${angleF.unit}`);
+        `${name} at ${distF.value} ${distF.unit}, angular size ${angularDeg.toFixed(2)} degrees`);
     }
   }
 
@@ -419,6 +438,14 @@
         DISTANCE_MIN,
         DISTANCE_MAX
       );
+      if (state.activePreset === 'moon') {
+        state.moonOrbitAngle = orbitAngleFromMoonDistance(state.distance);
+        elements.timeSlider.value = state.moonOrbitAngle;
+        updateMoonTimeDisplay();
+        update();
+        return;
+      }
+
       state.activePreset = null;
       clearPresetSelection();
       update();
@@ -436,24 +463,26 @@
       update();
     });
 
-    // Time slider (for Moon)
+    // Time slider (Moon orbit distance variation)
     elements.timeSlider.addEventListener('input', () => {
-      state.timeOffset = parseFloat(elements.timeSlider.value) * 1e6; // Convert to years
-      state.distance = getMoonDistanceAtTime(state.timeOffset);
-
-      // Update time display
-      if (Math.abs(state.timeOffset) < 1000) {
-        elements.timeDisplay.textContent = 'Today';
-      } else {
-        const formatted = AstroUtils.formatTime(state.timeOffset);
-        elements.timeDisplay.textContent = `${formatted.value} ${formatted.unit}`;
-      }
+      state.moonOrbitAngle = parseFloat(elements.timeSlider.value);
+      state.distance = getMoonDistanceAtOrbitAngle(state.moonOrbitAngle);
+      updateMoonTimeDisplay();
 
       // Update distance slider to match
       elements.distanceSlider.value = valueToLogSlider(state.distance, DISTANCE_MIN, DISTANCE_MAX);
 
       update();
     });
+  }
+
+  function updateMoonTimeDisplay() {
+    if (!elements.timeDisplay) return;
+    const angle = state.moonOrbitAngle;
+    const delta = (a, b) => Math.abs((((a - b) % 360) + 540) % 360 - 180);
+    if (delta(angle, 0) <= 10) elements.timeDisplay.textContent = 'Perigee';
+    else if (delta(angle, 180) <= 10) elements.timeDisplay.textContent = 'Apogee';
+    else elements.timeDisplay.textContent = `${Math.round(angle)}°`;
   }
 
   function syncSlidersToState() {
@@ -471,14 +500,14 @@
 
     for (const [key, preset] of Object.entries(PRESETS)) {
       const btn = document.createElement('button');
-      btn.className = `preset-btn ${preset.category === 'easter-egg' ? 'easter-egg' : ''}`;
+      btn.className = `preset-btn ${preset.category === 'everyday' ? 'easter-egg' : ''}`;
       btn.textContent = preset.name;
       btn.dataset.preset = key;
       btn.title = preset.description;
 
       btn.addEventListener('click', () => selectPreset(key));
 
-      if (preset.category === 'easter-egg') {
+      if (preset.category === 'everyday') {
         easterContainer.appendChild(btn);
       } else {
         astroContainer.appendChild(btn);
@@ -496,13 +525,23 @@
     state.activePreset = key;
     state.diameter = preset.diameter;
     state.distance = preset.distance;
-    state.timeOffset = 0;
+    state.moonOrbitAngle = 0;
+
+    if (elements.presetCategory) {
+      elements.presetCategory.value = preset.category === 'everyday' ? 'everyday' : 'astronomical';
+      updatePresetCategoryVisibility();
+    }
 
     // Show/hide time control for Moon
     elements.timeControl.style.display = preset.timeEvolution ? 'block' : 'none';
     if (preset.timeEvolution) {
-      elements.timeSlider.value = 0;
-      elements.timeDisplay.textContent = 'Today';
+      state.moonOrbitAngle = orbitAngleFromMoonDistance(state.distance);
+      elements.timeSlider.value = state.moonOrbitAngle;
+      updateMoonTimeDisplay();
+      if (elements.moonAngularRange) {
+        elements.moonAngularRange.textContent =
+          `Range: ${MOON_ORBIT_MIN_ANGULAR_SIZE_DEG.toFixed(2)}°–${MOON_ORBIT_MAX_ANGULAR_SIZE_DEG.toFixed(2)}°`;
+      }
     }
 
     syncSlidersToState();
@@ -522,6 +561,19 @@
     elements.timeControl.style.display = 'none';
     updatePresetSelection();
     updateObjectAppearance();
+  }
+
+  function updatePresetCategoryVisibility() {
+    if (!elements.presetCategory || !elements.astroPresetsSection || !elements.everydayPresetsSection) return;
+    const mode = elements.presetCategory.value;
+    elements.astroPresetsSection.style.display = mode === 'astronomical' ? '' : 'none';
+    elements.everydayPresetsSection.style.display = mode === 'everyday' ? '' : 'none';
+  }
+
+  function setupPresetCategory() {
+    if (!elements.presetCategory) return;
+    elements.presetCategory.addEventListener('change', updatePresetCategoryVisibility);
+    updatePresetCategoryVisibility();
   }
 
   // ============================================
@@ -612,6 +664,7 @@
     initElements();
     setupSliders();
     setupPresets();
+    setupPresetCategory();
     setupKeyboard();
 
     // Initialize starfield
