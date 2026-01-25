@@ -25,20 +25,20 @@ Moon phases and eclipses are geometry problems, not mysteries. Once you see them
 :::
 
 ::: {.callout-important title="How to Use This Reading (Read → Revisit → Reuse)" collapse="true"}
-This page is both (1) the **assigned reading** and (2) your **reference manual** for lunar geometry. You should expect to come back to it multiple times—before lecture, after lecture, and while doing practice problems.
+This page is both (1) the **assigned reading** and (2) your **reference manual** for lunar geometry. You should expect to come back to it multiple times — before lecture, after lecture, and while doing practice problems.
 
 **Default expectation (best):** Read the whole page before class (including **Check Yourself**). Then return to it later when you work the **Practice Problems**.
 
-**If you're short on time before class (~15 min):** Do the **Musts for today** so you can participate now—then come back and finish the rest.
+**If you're short on time before class (~15 min):** Do the **Musts for today** so you can participate now — then come back and finish the rest.
 
 - **Musts for today:** The Big Idea • Phases Are NOT Shadows • The Geometry of Illumination • Why Not Monthly?
 - **Non-negotiable:** Stop and answer every **Check Yourself** question you encounter in these sections (don't just read past them).
 
-**Skim now, read carefully later:** Eclipse types, the Deep Dives. Skimming is a *preview*—you'll get much more from it after lecture.
+**Skim now, read carefully later:** Eclipse types, the Deep Dives. Skimming is a *preview* — you'll get much more from it after lecture.
 
-**Demo Explorations (do these!):** This reading integrates two interactive demos. The Moon Phases demo is especially powerful—spend time with it to build intuition.
+**Demo Explorations (do these!):** This reading integrates two interactive demos. The Moon Phases demo is especially powerful — spend time with it to build intuition.
 
-**Reassurance:** If phases feel confusing at first, that's normal. The key is connecting *position* (where the Moon is in its orbit) to *appearance* (what it looks like from Earth). The demos make this connection visible. Look for the **✏️ Sketch It** prompts throughout—if you can draw it, you understand it.
+**Reassurance:** If phases feel confusing at first, that's normal. The key is connecting *position* (where the Moon is in its orbit) to *appearance* (what it looks like from Earth). The demos make this connection visible. Look for the **✏️ Sketch It** prompts throughout — if you can draw it, you understand it.
 :::
 
 ---
@@ -47,19 +47,20 @@ This page is both (1) the **assigned reading** and (2) your **reference manual**
 
 Quick quiz: What causes the Moon's phases?
 
-If you answered "Earth's shadow," you're not alone—this is one of the most common misconceptions about the Moon. Surveys consistently show that many adults, including college students, believe phases are caused by Earth casting its shadow on the Moon.
+If you answered "Earth's shadow," you're not alone — this is one of the most common misconceptions about the Moon. Surveys consistently show that many adults, including college students, believe phases are caused by Earth casting its shadow on the Moon.
 
-It's a common and very reasonable first guess—but it doesn't match what we observe.
+It's a common and very reasonable first guess — but it doesn't match what we observe.
 
-Here's the geometry check: Earth's shadow always points **directly away from the Sun**. But crescent Moons appear **near the Sun in the sky**—meaning the Moon is nowhere near the anti-solar direction where Earth's shadow lives. So Earth's shadow can't be causing crescent (or quarter, or gibbous) phases. Earth's shadow only matters during a **lunar eclipse**, when the Moon is near the anti-solar direction *and* near the orbital plane.
+Here's the geometry check: Earth's shadow always points **directly away from the Sun**. But crescent Moons appear **near the Sun in the sky** — meaning the Moon is nowhere near the anti-solar direction where Earth's shadow lives. So Earth's shadow can't be causing crescent (or quarter, or gibbous) phases. Earth's shadow only matters during a **lunar eclipse**, when the Moon is near the anti-solar direction *and* near the orbital plane.
 
 [FIGURE PLACEHOLDER: L4-FIG-01 - Diagram showing crescent Moon near Sun in sky, with Earth's shadow pointing in opposite direction]
 
-*Caption: Earth's shadow points away from the Sun. Crescent Moons appear near the Sun. The geometry proves Earth's shadow plays no role in phases—only in the rare event of a lunar eclipse.*
+*Caption: Earth's shadow points away from the Sun. Crescent Moons appear near the Sun. The geometry proves Earth's shadow plays no role in phases — only in the rare event of a lunar eclipse.*
 
-Earth's shadow only touches the Moon during a **lunar eclipse**—which happens a few times per year globally (often around ~2), not every month. If phases were caused by Earth's shadow, we'd have an eclipse every single night that wasn't a full moon. That's obviously not what we observe.
+Earth's shadow only touches the Moon during a **lunar eclipse** — which happens a few times per year globally (often around ~2), not every month. If phases were caused by Earth's shadow, we'd have an eclipse every single night that wasn't a full moon. That's obviously not what we observe.
 
 So what *does* cause phases? Geometry. Pure, beautiful geometry.
+At all times, the Sun illuminates **half of the Moon**. Moon phases happen because we see different fractions of that lit half as the Moon orbits Earth.
 
 ::: {.callout-check-yourself title="Check Yourself 1 — What Causes Phases?"}
 Moon phases are caused by:
@@ -86,7 +87,11 @@ Let's establish the basic geometry:
 - **Earth** is orbited by the Moon
 - The **Moon** takes about **29.5 days** to complete one **cycle of phases** (new moon to new moon). This is called the **synodic month**.
 
-The Moon doesn't produce its own light. It shines by reflecting sunlight. At any moment, exactly half of the Moon—the half facing the Sun—is illuminated.
+The Moon doesn't produce its own light. It shines by reflecting sunlight. At any moment, exactly half of the Moon — the half facing the Sun — is illuminated.
+
+::: {.column-margin}
+**Synodic month:** The time from new moon to new moon (one full cycle of phases), about 29.5 days.
+:::
 
 [FIGURE PLACEHOLDER: L4-FIG-02 - Top-down view of Sun, Earth, Moon system showing parallel sunlight rays illuminating half of Moon]
 
@@ -100,9 +105,9 @@ This is the crucial insight. The amount of the Moon that's lit doesn't change. W
 
 Think of it this way: Imagine a tennis ball under a single lamp. The lamp illuminates one hemisphere of the ball. Now walk around the ball:
 
-- When you're on the same side as the lamp, you see mostly the dark side (new moon equivalent)
-- When you're opposite the lamp, you see the fully lit side (full moon equivalent)
-- At intermediate angles, you see a crescent, quarter, or gibbous view
+- When you're on the same side as the lamp, you see mostly the dark side (**new moon** equivalent)
+- When you're opposite the lamp, you see the fully lit side (**full moon** equivalent)
+- At intermediate angles, you see a **crescent**, **quarter**, or **gibbous** view
 
 [FIGURE PLACEHOLDER: L4-FIG-03 - Tennis ball under lamp from multiple viewing angles showing crescent → quarter → gibbous → full]
 
@@ -196,10 +201,16 @@ The shadow only matters during the rare alignment of a lunar eclipse.
 
 ::: {.callout-tip title="Explanation" collapse="true"}
 
-- **Between Earth and Sun (conjunction):** We see the Moon's unlit side → **New Moon**
-- **Opposite Sun from Earth (opposition):** We see the Moon's fully lit side → **Full Moon**
+- **Between Earth and Sun (**conjunction**):** We see the Moon's unlit side → **New Moon**
+- **Opposite Sun from Earth (**opposition**):** We see the Moon's fully lit side → **Full Moon**
 - **90° east of Sun:** Half lit, growing → **First Quarter**
 - **90° west of Sun:** Half lit, shrinking → **Third Quarter**
+
+::: {.column-margin}
+**Conjunction:** Two objects appear in the same direction on the sky; here, the Moon is (nearly) in the same direction as the Sun.
+
+**Opposition:** Two objects appear 180° apart on the sky; here, the Moon is opposite the Sun.
+:::
 
 **Claim:** The Moon's position in its orbit completely determines its phase.
 
@@ -256,6 +267,16 @@ The lunar cycle is traditionally divided into eight named phases:
 **Note on "illumination":** In the table below, the percentage refers to **how much of the Moon's Earth-facing disk looks lit**, not how much of the Moon the Sun is lighting (which is always 50%).
 :::
 
+::: {.column-margin}
+**Phase vocabulary (decode the name):**
+
+- **Waxing** = getting brighter (new → full)
+- **Waning** = getting dimmer (full → new)
+- **Crescent** = less than half of the visible disk looks lit
+- **Gibbous** = more than half (but not full) looks lit
+- **Quarter** = about half looks lit (the “quarter” refers to the Moon being about ¼ or ¾ of the way around its orbit)
+:::
+
 | Phase | Visible Disk Illuminated (%) | Position | Moon Rising | Moon Setting |
 |-------|------------------------------|----------|-------------|--------------|
 | **New Moon** | ~0% | Between Earth & Sun | ~Sunrise | ~Sunset |
@@ -291,7 +312,6 @@ A "waxing gibbous" moon is:
 ::: {.callout-tip title="Solution" collapse="true"}
 **B) More than half illuminated and getting brighter.** "Waxing" means increasing illumination (heading toward full moon). "Gibbous" means more than half lit (between quarter and full). So waxing gibbous is after first quarter, before full moon—more than 50% illuminated and growing.
 :::
-
 ---
 
 ### When Is the Moon Up?
@@ -417,7 +437,7 @@ Eclipses don't occur every month because:
 
 **Open the Eclipse Geometry Demo:** [astrobytes-edu.github.io/astr101-sp26/demos/eclipse-geometry/](https://astrobytes-edu.github.io/astr101-sp26/demos/eclipse-geometry/)
 
-This interactive demo lets you see *why* eclipses don't happen every month—and when they do.
+This interactive demo lets you see *why* eclipses don't happen every month — and when they do.
 
 **What you'll see in the demo:**
 - **NO ECLIPSE / SOLAR ECLIPSE / LUNAR ECLIPSE** status indicator
@@ -584,7 +604,7 @@ During an eclipse season:
 - If a new moon occurs while the Sun is near a node → **solar eclipse possible**
 - If a full moon occurs while the Sun is near a node → **lunar eclipse possible**
 
-Each eclipse season lasts about **34–35 days** (≈34.5 days on average)—long enough that at least one new moon or full moon typically occurs within it.
+Each eclipse season lasts about **34–35 days** (≈34.5 days on average) — long enough that at least one new moon or full moon typically occurs within it.
 
 [FIGURE PLACEHOLDER: L4-FIG-09 - Calendar view showing two eclipse seasons per year, roughly 6 months apart, with specific eclipse dates marked]
 
@@ -624,12 +644,22 @@ Not all solar eclipses are created equal. The type depends on the geometry:
 
 [FIGURE PLACEHOLDER: L4-FIG-10 - Four images showing appearance of each solar eclipse type: total (corona visible), annular (ring of fire), partial (crescent sun), hybrid (diagram of path)]
 
-*Caption: Solar eclipse types depend on Moon-Sun alignment and the Moon's distance from Earth. Total eclipses reveal the corona; annular eclipses show a "ring of fire."*
+*Caption: Solar eclipse types depend on Moon-Sun alignment and the Moon's distance from Earth. **Total eclipses** reveal the corona; **annular eclipses** show a "ring of fire."*
 
 **Why the variation?**
 
 - **Total vs. Annular:** Depends on the Moon's angular size relative to the Sun. When the Moon appears larger than the Sun (Moon closer to Earth), we get a total eclipse. When it appears smaller (Moon farther from Earth), we get an annular eclipse.
-- **Partial:** The observer is in the penumbra (partial shadow), not the umbra (full shadow).
+- **Partial:** The observer is in the **penumbra** (partial shadow), not the **umbra** (full shadow).
+
+::: {.column-margin}
+**Eclipse vocabulary (quick map):**
+
+- **Umbra** = full shadow (light source completely blocked)
+- **Penumbra** = partial shadow (light source partly blocked)
+- **Total solar eclipse**: you are in the Moon’s umbra (Sun fully covered)
+- **Partial solar eclipse**: you are in the Moon’s penumbra (Sun partly covered)
+- **Annular solar eclipse**: Moon is centered on Sun but appears smaller, so a bright ring remains
+:::
 
 ::: {.callout-check-yourself title="Check Yourself 11 — Annular vs. Total"}
 During an annular solar eclipse, the Moon:
@@ -641,7 +671,7 @@ During an annular solar eclipse, the Moon:
 :::
 
 ::: {.callout-tip title="Solution" collapse="true"}
-**B) Is farther from Earth than during a total eclipse.** When the Moon is at a more distant point in its elliptical orbit (near apogee), its angular size is smaller than the Sun's angular size. Even when perfectly aligned, the smaller-appearing Moon can't completely cover the Sun—leaving a ring (annulus) of sunlight visible. This is an annular eclipse.
+**B) Is farther from Earth than during a total eclipse.** When the Moon is at a more distant point in its elliptical orbit (near apogee), its angular size is smaller than the Sun's angular size. Even when perfectly aligned, the smaller-appearing Moon can't completely cover the Sun — leaving a ring (annulus) of sunlight visible. This is an annular eclipse.
 :::
 
 ---
@@ -667,7 +697,6 @@ Draw the Sun on the left (large circle). Draw Earth in the middle (small circle)
 
 Now draw the Moon passing through different parts of this shadow. Where must it be for a total lunar eclipse? A partial? A penumbral?
 :::
-
 ---
 
 **Why does the Moon turn red during a total lunar eclipse?**
@@ -695,7 +724,7 @@ The Moon turns reddish during a total lunar eclipse because:
 
 ### Why Total Solar Eclipses Are Special
 
-Lunar eclipses are visible from anywhere on Earth's night side—potentially billions of people can see each one.
+Lunar eclipses are visible from anywhere on Earth's night side — potentially billions of people can see each one.
 
 Total solar eclipses? The **path of totality** (where the Moon fully covers the Sun) is typically only about 100-250 km wide and traces a narrow path across Earth's surface.
 
@@ -709,7 +738,7 @@ Total solar eclipses? The **path of totality** (where the Moon fully covers the 
 - Duration of totality at any location: typically 2-7 minutes
 - Any given location experiences a total solar eclipse roughly **once every 375 years** on average
 
-This is why eclipse chasers travel around the world—you often have to go to the eclipse, because the eclipse probably won't come to you in your lifetime.
+This is why eclipse chasers travel around the world — you often have to go to the eclipse, because the eclipse probably won't come to you in your lifetime.
 
 ---
 
@@ -743,7 +772,7 @@ If the Moon were 20% farther from Earth than it is now, solar eclipses would be:
 :::
 
 ::: {.callout-tip title="Solution" collapse="true"}
-**C) Always annular (never total).** If the Moon were 20% farther away, its angular size would be about 20% smaller—roughly 0.4° instead of 0.5°. Since the Sun's angular size is about 0.5°, the Moon would never appear large enough to completely cover the Sun. Every solar eclipse would be annular, with a ring of sunlight visible.
+**C) Always annular (never total).** If the Moon were 20% farther away, its angular size would be about 20% smaller — roughly 0.4° instead of 0.5°. Since the Sun's angular size is about 0.5°, the Moon would never appear large enough to completely cover the Sun. Every solar eclipse would be annular, with a ring of sunlight visible.
 :::
 
 ---
@@ -765,10 +794,10 @@ The Moon is receding from Earth at about **3.8 cm per year**. We measure this di
 - After that, only annular and partial eclipses will be possible
 
 ::: {.callout-note title="Spoiler for Later (Gravity & Tides)" collapse="true"}
-The Moon rotates once per orbit, which is why we always see the same face—this is called **tidal locking**. The same tidal physics that locked the Moon's rotation is also pushing the Moon slowly outward over time. We'll explore how this works when we cover gravity and tides later in the course.
+The Moon rotates once per orbit, which is why we always see the same face — this is called **tidal locking**. The same tidal physics that locked the Moon's rotation is also pushing the Moon slowly outward over time. We'll explore how this works when we cover gravity and tides later in the course.
 :::
 
-We live in a **privileged epoch**—a cosmic window when total solar eclipses are possible but not too long. A billion years ago, the Moon would have appeared huge. A billion years from now, it will be too small for totality.
+We live in a **privileged epoch** — a cosmic window when total solar eclipses are possible but not too long. A billion years ago, the Moon would have appeared huge. A billion years from now, it will be too small for totality.
 
 ::: {.callout-check-yourself title="Check Yourself 14 — The Moon Is Receding"}
 Lunar laser ranging experiments show that the Moon is:
@@ -780,7 +809,7 @@ Lunar laser ranging experiments show that the Moon is:
 :::
 
 ::: {.callout-tip title="Solution" collapse="true"}
-**B) Moving away from Earth at 3.8 cm/year.** This recession is caused by tidal interactions—the same forces that create ocean tides slowly transfer angular momentum from Earth's rotation to the Moon's orbit. As the Moon gains orbital energy, it spirals outward. The measurement is precise thanks to retroreflectors placed on the Moon during Apollo missions.
+**B) Moving away from Earth at 3.8 cm/year.** This recession is caused by tidal interactions — the same forces that create ocean tides slowly transfer angular momentum from Earth's rotation to the Moon's orbit. As the Moon gains orbital energy, it spirals outward. The measurement is precise thanks to retroreflectors placed on the Moon during Apollo missions.
 :::
 
 ---

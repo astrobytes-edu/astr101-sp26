@@ -452,6 +452,13 @@ gibbous:
   first_use: "Lecture 4"
   module: 1
 
+crescent:
+  term: "Crescent (Moon)"
+  definition: "A Moon phase with less than half of the Earth-facing disk appearing illuminated."
+  context: "A waxing crescent occurs after new moon; a waning crescent occurs before new moon."
+  first_use: "Lecture 4"
+  module: 1
+
 waxing:
   term: "Waxing"
   definition: "Increasing in illumination; the Moon is waxing between new moon and full moon."
@@ -470,6 +477,62 @@ synodic_month:
   term: "Synodic month"
   definition: "The time for the Moon to complete one cycle of phases (new moon to new moon), approximately 29.5 days."
   context: "Longer than the sidereal month because Earth is also moving around the Sun."
+  first_use: "Lecture 4"
+  module: 1
+
+conjunction:
+  term: "Conjunction"
+  definition: "An alignment where two objects appear in nearly the same direction on the sky."
+  context: "For the Sun–Earth–Moon system, new moon corresponds to (near) conjunction of the Moon with the Sun as seen from Earth."
+  first_use: "Lecture 4"
+  module: 1
+
+opposition:
+  term: "Opposition"
+  definition: "An alignment where two objects appear 180° apart on the sky."
+  context: "For the Sun–Earth–Moon system, full moon corresponds to (near) opposition of the Moon relative to the Sun as seen from Earth."
+  first_use: "Lecture 4"
+  module: 1
+
+solar-eclipse-total:
+  term: "Solar eclipse (total)"
+  definition: "A solar eclipse in which the Moon completely covers the Sun for observers in the umbra."
+  context: "Totality is visible only along a narrow path on Earth."
+  first_use: "Lecture 4"
+  module: 1
+
+solar-eclipse-partial:
+  term: "Solar eclipse (partial)"
+  definition: "A solar eclipse in which the Moon covers only part of the Sun for observers in the penumbra."
+  context: "Much larger region of Earth sees a partial eclipse than totality."
+  first_use: "Lecture 4"
+  module: 1
+
+solar-eclipse-hybrid:
+  term: "Solar eclipse (hybrid)"
+  definition: "A rare solar eclipse that is total along part of its path and annular along another part."
+  context: "Caused by geometry near the threshold where the Moon’s apparent size is close to the Sun’s."
+  first_use: "Lecture 4"
+  module: 1
+
+lunar-eclipse-total:
+  term: "Lunar eclipse (total)"
+  definition: "A lunar eclipse in which the Moon fully enters Earth’s umbra."
+  context: "The Moon can appear red due to sunlight filtered through Earth’s atmosphere."
+  first_use: "Lecture 4"
+  module: 1
+
+lunar-eclipse-partial:
+  term: "Lunar eclipse (partial)"
+  definition: "A lunar eclipse in which only part of the Moon enters Earth’s umbra."
+  context: "The shadowed portion appears noticeably darkened."
+  first_use: "Lecture 4"
+  module: 1
+
+lunar-eclipse-penumbral:
+  term: "Lunar eclipse (penumbral)"
+  definition: "A lunar eclipse in which the Moon passes only through Earth’s penumbra."
+  context: "Often subtle and hard to notice without careful observation."
   first_use: "Lecture 4"
   module: 1
 
