@@ -40,7 +40,7 @@ The Sun is $\sim 400\times$ larger but also $\sim 400\times$ farther away, produ
 | Full Moon | $\sim 0.5°$ |
 | Jupiter (at opposition) | $\sim 50''$ |
 | Venus (at closest) | $\sim 1'$ |
-| Andromeda Galaxy | $\sim 3°$ ($6\times$ Moon's width!) |
+| Andromeda Galaxy (bright disk) | $\sim 3°$ ($6\times$ Moon's width!) |
 
 ### Units
 
@@ -129,7 +129,7 @@ Students should understand:
 angular-size/
 ├── index.html      # Standalone demo page
 ├── angular-size.js # Core visualization logic
-├── presets.json    # Configurable object library
+├── angular-size.css # Styles for this demo
 └── README.md       # This file
 ```
 
@@ -149,16 +149,7 @@ Use the Quarto shortcode:
 
 ### Extending Presets
 
-Edit `presets.json` to add objects:
-```json
-{
-  "name": "Proxima Centauri b",
-  "diameter_km": 14300,
-  "distance_km": 4.01e13,
-  "category": "exoplanet",
-  "description": "Nearest known exoplanet"
-}
-```
+Edit the `PRESETS` object in `angular-size.js` to add objects (values are in km for both diameter and distance).
 
 ## Future Features
 

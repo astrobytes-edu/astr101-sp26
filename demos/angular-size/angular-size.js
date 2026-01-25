@@ -55,11 +55,11 @@
     },
     andromeda: {
       name: 'Andromeda',
-      diameter: 2.2e18,   // km (~220,000 ly)
+      diameter: 1.26e18,  // km (~130,000 ly; bright disk)
       distance: 2.4e19,   // km (~2.5 million ly)
       category: 'astronomical',
       color: 'galaxy',
-      description: 'Nearest large galaxy'
+      description: 'Nearest large galaxy (bright disk)'
     },
 
     // Everyday objects
@@ -263,6 +263,30 @@
     return { value: (degrees * 3600).toFixed(1), unit: 'arcseconds' };
   }
 
+  function formatAngleDisplay(degrees) {
+    if (window.AstroUtils && typeof window.AstroUtils.formatAngle === 'function') {
+      return window.AstroUtils.formatAngle(degrees);
+    }
+
+    const formatted = formatAngle(degrees);
+    const units = {
+      degrees: '°',
+      arcminutes: "'",
+      arcseconds: '"'
+    };
+    return { value: formatted.value, unit: units[formatted.unit] || formatted.unit };
+  }
+
+  function clamp(value, min, max) {
+    return Math.max(min, Math.min(max, value));
+  }
+
+  function announceStatus(message) {
+    const region = document.getElementById('status-announce');
+    if (!region) return;
+    region.textContent = message;
+  }
+
   function formatShort(km) {
     const f = formatDistance(km);
     // Abbreviate units
@@ -317,12 +341,15 @@
     const halfAngleCapped = Math.min(halfAngle, Math.PI / 2 - 0.01);
 
     elements.angleLineTop.setAttribute('x2', objectX);
+    const rawTopY = eyeY - lineLength * Math.tan(halfAngleCapped);
+    const rawBottomY = eyeY + lineLength * Math.tan(halfAngleCapped);
+
     elements.angleLineTop.setAttribute('y1', eyeY);
-    elements.angleLineTop.setAttribute('y2', eyeY - lineLength * Math.tan(halfAngleCapped));
+    elements.angleLineTop.setAttribute('y2', clamp(rawTopY, 0, 300));
 
     elements.angleLineBottom.setAttribute('x2', objectX);
     elements.angleLineBottom.setAttribute('y1', eyeY);
-    elements.angleLineBottom.setAttribute('y2', eyeY + lineLength * Math.tan(halfAngleCapped));
+    elements.angleLineBottom.setAttribute('y2', clamp(rawBottomY, 0, 300));
 
     // Update angle arc
     const arcRadius = 40;
@@ -337,7 +364,8 @@
     elements.angleArc.setAttribute('d', arcPath);
 
     // Update angle text
-    elements.angleText.textContent = `${angularDeg.toFixed(2)}°`;
+    const angF = formatAngleDisplay(angularDeg);
+    elements.angleText.textContent = `${angF.value}${angF.unit}`;
     elements.angleText.setAttribute('x', eyeX + arcRadius + 10);
     elements.angleText.setAttribute('y', eyeY + 5);
 
@@ -369,8 +397,9 @@
     const angularDeg = calculateAngularSize(state.diameter, state.distance);
 
     // Angular size
-    elements.angularSizeValue.textContent = angularDeg.toFixed(2);
-    elements.angularSizeUnit.textContent = 'degrees';
+    const angF = formatAngleDisplay(angularDeg);
+    elements.angularSizeValue.textContent = angF.value;
+    elements.angularSizeUnit.textContent = angF.unit;
 
     if (elements.angleWarning) {
       if (state.diameter >= state.distance) {
@@ -404,7 +433,7 @@
       const name = preset ? preset.name : 'Object';
       const distF = formatDistance(state.distance);
       objectCircle.setAttribute('aria-label',
-        `${name} at ${distF.value} ${distF.unit}, angular size ${angularDeg.toFixed(2)} degrees`);
+        `${name} at ${distF.value} ${distF.unit}, angular size ${angF.value}${angF.unit}`);
     }
   }
 
@@ -570,6 +599,10 @@
     updatePresetSelection();
     updateObjectAppearance();
     update();
+
+    const angularDeg = calculateAngularSize(state.diameter, state.distance);
+    const angF = formatAngleDisplay(angularDeg);
+    announceStatus(`${preset.name}: angular size ${angF.value}${angF.unit}`);
   }
 
   function updatePresetSelection() {
@@ -605,7 +638,12 @@
   function setupKeyboard() {
     document.addEventListener('keydown', (event) => {
       // Only handle if not focused on a slider
-      if (event.target.tagName === 'INPUT') return;
+      if (event.ctrlKey || event.metaKey || event.altKey) return;
+      if (event.target instanceof HTMLElement) {
+        const tag = event.target.tagName;
+        if (tag === 'INPUT' || tag === 'SELECT' || tag === 'BUTTON' || tag === 'TEXTAREA' || tag === 'A') return;
+        if (event.target.isContentEditable) return;
+      }
 
       const logStep = event.shiftKey ? 0.02 : 0.1;  // Finer control with Shift
       let distanceMultiplier = 1;
