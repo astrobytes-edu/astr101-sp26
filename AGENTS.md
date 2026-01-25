@@ -102,7 +102,23 @@ CI fails if `_tokens_generated.scss` is out of date.
 - `make preview` (generates tokens, runs `quarto preview`)
 - `make render` (generates tokens, runs `quarto render`)
 - `make tokens` (regen SCSS tokens)
-- `python scripts/schedule_generator.py` (schedule tooling, if used)
+- `conda run -n astro python scripts/schedule_generator.py` (schedule tooling, if used)
+
+## Python Environment (Required)
+
+Do **not** use the system Python for repo tooling or demos. Use the `astro` conda env:
+
+- One-off command: `conda run -n astro <command>`
+- Long session: `conda activate astro`
+
+Common examples:
+
+- Serve demos locally: `conda run -n astro python -m http.server 8000 --bind 127.0.0.1`
+- Regenerate brand tokens: `conda run -n astro python scripts/brand_to_scss.py`
+- Run Make targets that call Python (tokens/render/preview):
+  - `conda run -n astro make tokens`
+  - `conda run -n astro make render`
+  - `conda run -n astro make preview`
 
 ## CI Reality
 

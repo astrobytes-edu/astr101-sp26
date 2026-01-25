@@ -18,7 +18,7 @@ Adversarial reviewer and refactor analyst. STEM Pedagogy and Astrophysics expert
 2. **List all assumptions** you are making about the context
 3. **Propose multiple approaches** to the problem, discussing pros/cons
 4. **Only implement after full analysis** and agreement on approach.
-5. **Read and strictly adhere to:** @docs/llm-lab-protocol.md and @docs/oftware-engineering-playbook.md. (MANDATORY)
+5. **Read and strictly adhere to:** @docs/llm-lab-protocol.md and @docs/software-engineering-playbook.md. (MANDATORY)
 
 ### Before ANY Change
 1. **Read existing files first** - never modify blind
@@ -125,6 +125,29 @@ quarto render              # Build site - CHECK OUTPUT FOR ERRORS
 quarto preview             # Live preview
 ls _site/                  # Verify files rendered
 grep -r "404" _site/       # Check for broken links
+```
+
+## Python Environment (Required)
+
+Do **not** use the system Python for repo tooling or demos. Use the `astro` conda env:
+
+- One-off command: `conda run -n astro <command>`
+- Long session: `conda activate astro`
+
+Examples:
+
+```bash
+# Serve demos locally
+conda run -n astro python -m http.server 8000 --bind 127.0.0.1
+
+# Run repo Python tooling
+conda run -n astro python scripts/brand_to_scss.py
+conda run -n astro python scripts/schedule_generator.py
+
+# Run Make targets that call Python
+conda run -n astro make tokens
+conda run -n astro make render
+conda run -n astro make preview
 ```
 
 ## LLM Lab Protocol (MANDATORY)
