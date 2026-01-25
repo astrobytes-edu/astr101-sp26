@@ -70,6 +70,8 @@
       heightLabel: document.getElementById('height-label'),
       ascendingNode: document.getElementById('ascending-node'),
       descendingNode: document.getElementById('descending-node'),
+      ascendingNodeLabel: document.getElementById('ascending-node-label'),
+      descendingNodeLabel: document.getElementById('descending-node-label'),
       nodeSide1: document.getElementById('node-side-1'),
       nodeSide2: document.getElementById('node-side-2'),
 
@@ -112,6 +114,10 @@
   // ============================================
   // Calculations
   // ============================================
+
+  function normalizeAngleDeg(angle) {
+    return ((angle % 360) + 360) % 360;
+  }
 
   /**
    * Calculate Moon's height above/below ecliptic
@@ -204,8 +210,11 @@
   // ============================================
 
   function updateVisualization() {
-    const angleRad = state.moonAngle * Math.PI / 180;
-    const nodeRad = state.nodeAngle * Math.PI / 180;
+    const moonAngle = normalizeAngleDeg(state.moonAngle);
+    const nodeAngle = normalizeAngleDeg(state.nodeAngle);
+
+    const angleRad = moonAngle * Math.PI / 180;
+    const nodeRad = nodeAngle * Math.PI / 180;
 
     // Top view: Moon position on tilted orbit
     // The orbit appears as an ellipse when tilted (but we keep it circular for simplicity)
@@ -226,12 +235,23 @@
     elements.descendingNode.setAttribute('cx', descX);
     elements.descendingNode.setAttribute('cy', descY);
 
+    if (elements.ascendingNodeLabel) {
+      elements.ascendingNodeLabel.setAttribute('x', ascX + 10);
+      elements.ascendingNodeLabel.setAttribute('y', ascY + 4);
+      elements.ascendingNodeLabel.setAttribute('text-anchor', 'start');
+    }
+    if (elements.descendingNodeLabel) {
+      elements.descendingNodeLabel.setAttribute('x', descX - 10);
+      elements.descendingNodeLabel.setAttribute('y', descY + 4);
+      elements.descendingNodeLabel.setAttribute('text-anchor', 'end');
+    }
+
     // Side view: Moon's vertical position
-    const height = getMoonEclipticHeight(state.moonAngle, state.orbitalTilt, state.nodeAngle);
+    const height = getMoonEclipticHeight(moonAngle, state.orbitalTilt, nodeAngle);
 
     // Map angle to horizontal position in side view
-    // New moon (180) on left near Sun, Full moon (0) on right
-    const sideX = 350 - (state.moonAngle / 360) * 250;
+    // Horizontal axis is "unwrapped" orbital angle (0° → 360°) for a clean sine-wave view of node crossings.
+    const sideX = 350 - (moonAngle / 360) * 250;
     const sideY = 100 - height * 8; // Scale height for visibility
 
     elements.moonSide.setAttribute('cx', sideX);
@@ -252,8 +272,8 @@
 
     // Update nodes on side view
     // Nodes are where the path crosses the ecliptic (y=100)
-    const nodeProgress1 = state.nodeAngle / 360;
-    const nodeProgress2 = ((state.nodeAngle + 180) % 360) / 360;
+    const nodeProgress1 = nodeAngle / 360;
+    const nodeProgress2 = normalizeAngleDeg(nodeAngle + 180) / 360;
     elements.nodeSide1.setAttribute('cx', 350 - nodeProgress1 * 250);
     elements.nodeSide2.setAttribute('cx', 350 - nodeProgress2 * 250);
   }
@@ -368,14 +388,14 @@
 
     document.addEventListener('mousemove', (e) => {
       if (!isDragging) return;
-      state.moonAngle = getAngle(e);
+      state.moonAngle = normalizeAngleDeg(getAngle(e));
       update();
     });
 
     document.addEventListener('touchmove', (e) => {
       if (!isDragging || !e.touches.length) return;
       const touch = e.touches[0];
-      state.moonAngle = getAngle(touch);
+      state.moonAngle = normalizeAngleDeg(getAngle(touch));
       update();
     }, { passive: false });
 
@@ -490,7 +510,7 @@
     if (diff < -180) diff += 360;
 
     AstroUtils.animateValue(startAngle, startAngle + diff, 500, (val) => {
-      state.moonAngle = val;
+      state.moonAngle = normalizeAngleDeg(val);
       update();
     });
   }
@@ -521,9 +541,9 @@
       const elapsed = currentTime - startTime;
       const progress = Math.min(elapsed / duration, 1);
 
-      state.moonAngle = startAngle + progress * 360;
+      state.moonAngle = normalizeAngleDeg(startAngle + progress * 360);
       // Nodes precess slowly (about 18.6 years for full cycle)
-      state.nodeAngle += 0.02;
+      state.nodeAngle = normalizeAngleDeg(state.nodeAngle + 0.02);
 
       update();
 
@@ -553,9 +573,9 @@
       const progress = Math.min(elapsed / duration, 1);
 
       // ~12.4 lunar months per year
-      state.moonAngle = startAngle + progress * 360 * 12.4;
+      state.moonAngle = normalizeAngleDeg(startAngle + progress * 360 * 12.4);
       // Nodes regress about 19.3° per year
-      state.nodeAngle = startNode - progress * 19.3;
+      state.nodeAngle = normalizeAngleDeg(startNode - progress * 19.3);
 
       update();
 
@@ -635,7 +655,7 @@
         const yearProgress = currentMonth / monthsPerYear;
 
         // Node regression: about 19.3° per year
-        const nodeAngle = startNode - yearProgress * 19.3;
+        const nodeAngle = normalizeAngleDeg(startNode - yearProgress * 19.3);
 
         // Check new moon (angle 180) for solar eclipses
         const newMoonHeight = Math.abs(getMoonEclipticHeight(180, state.orbitalTilt, nodeAngle));
