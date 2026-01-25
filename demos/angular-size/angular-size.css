@@ -14,6 +14,18 @@
   grid-template-columns: repeat(3, 1fr);
 }
 
+.angle-warning {
+  margin-top: var(--space-xs);
+  padding: 0.5rem 0.75rem;
+  background: rgba(18, 18, 31, 0.92);
+  border: 1px solid var(--border-color);
+  border-left: 3px solid var(--accent-gold);
+  border-radius: 8px;
+  font-size: var(--font-size-xs);
+  line-height: var(--line-height-normal);
+  color: var(--text-secondary);
+}
+
 /* Controls layout */
 .controls-grid {
   grid-template-columns: 1fr 1fr;

@@ -135,10 +135,16 @@
   const MOON_ORBIT_MIN_ANGULAR_SIZE_DEG = 0.49;
   const MOON_ORBIT_MAX_ANGULAR_SIZE_DEG = 0.56;
   const MOON_ORBIT = (() => {
-    const degPerRad = 180 / Math.PI;
     const d = PRESETS.moon.diameter;
-    const perigeeKm = d * degPerRad / MOON_ORBIT_MAX_ANGULAR_SIZE_DEG;
-    const apogeeKm = d * degPerRad / MOON_ORBIT_MIN_ANGULAR_SIZE_DEG;
+    const degToRad = (deg) => deg * Math.PI / 180;
+    const distanceForAngularDiameterDeg = (angularDeg) => {
+      const angleRad = degToRad(angularDeg);
+      if (angleRad <= 0) return Infinity;
+      return d / (2 * Math.tan(angleRad / 2));
+    };
+
+    const perigeeKm = distanceForAngularDiameterDeg(MOON_ORBIT_MAX_ANGULAR_SIZE_DEG);
+    const apogeeKm = distanceForAngularDiameterDeg(MOON_ORBIT_MIN_ANGULAR_SIZE_DEG);
     return { perigeeKm, apogeeKm };
   })();
 
@@ -181,6 +187,8 @@
     elements.timeSlider = document.getElementById('time-slider');
     elements.timeDisplay = document.getElementById('time-display');
     elements.moonAngularRange = document.getElementById('moon-angular-range');
+
+    elements.angleWarning = document.getElementById('angle-warning');
   }
 
   // ============================================
@@ -188,10 +196,11 @@
   // ============================================
 
   function calculateAngularSize(diameter, distance) {
-    // Angular size in radians (small angle approximation)
-    const radians = diameter / distance;
-    // Convert to degrees
-    return radians * (180 / Math.PI);
+    if (distance <= 0) return 180;
+    if (diameter <= 0) return 0;
+    // Exact angular diameter in radians, robust for all regimes.
+    const radians = 2 * Math.atan(diameter / (2 * distance));
+    return Math.min(180, radians * (180 / Math.PI));
   }
 
   function getMoonDistanceAtOrbitAngle(orbitAngleDeg) {
@@ -304,14 +313,15 @@
     const angleRad = angularDeg * (Math.PI / 180);
     const lineLength = objectX - eyeX;
     const halfAngle = angleRad / 2;
+    const halfAngleCapped = Math.min(halfAngle, Math.PI / 2 - 0.01);
 
     elements.angleLineTop.setAttribute('x2', objectX);
     elements.angleLineTop.setAttribute('y1', eyeY);
-    elements.angleLineTop.setAttribute('y2', eyeY - lineLength * Math.tan(halfAngle));
+    elements.angleLineTop.setAttribute('y2', eyeY - lineLength * Math.tan(halfAngleCapped));
 
     elements.angleLineBottom.setAttribute('x2', objectX);
     elements.angleLineBottom.setAttribute('y1', eyeY);
-    elements.angleLineBottom.setAttribute('y2', eyeY + lineLength * Math.tan(halfAngle));
+    elements.angleLineBottom.setAttribute('y2', eyeY + lineLength * Math.tan(halfAngleCapped));
 
     // Update angle arc
     const arcRadius = 40;
@@ -360,6 +370,17 @@
     // Angular size
     elements.angularSizeValue.textContent = angularDeg.toFixed(2);
     elements.angularSizeUnit.textContent = 'degrees';
+
+    if (elements.angleWarning) {
+      if (state.diameter >= state.distance) {
+        elements.angleWarning.textContent =
+          'You are "inside" the object (D ≥ d). Angular size saturates near 180°.';
+        elements.angleWarning.style.display = 'block';
+      } else {
+        elements.angleWarning.textContent = '';
+        elements.angleWarning.style.display = 'none';
+      }
+    }
 
     // Physical size
     const sizeF = formatDistance(state.diameter);
