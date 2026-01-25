@@ -316,6 +316,29 @@
 
   function setupDrag() {
     let isDragging = false;
+    const SNAP_DEGREES = 5;
+
+    function snapToCardinalPhase(angle) {
+      const normalized = ((angle % 360) + 360) % 360;
+      const targets = [0, 90, 180, 270];
+
+      let bestTarget = null;
+      let bestAbsDelta = Infinity;
+
+      for (const target of targets) {
+        const delta = ((normalized - target + 540) % 360) - 180;
+        const absDelta = Math.abs(delta);
+        if (absDelta < bestAbsDelta) {
+          bestAbsDelta = absDelta;
+          bestTarget = target;
+        }
+      }
+
+      if (bestTarget != null && bestAbsDelta <= SNAP_DEGREES) {
+        return bestTarget;
+      }
+      return angle;
+    }
 
     function getAngleFromEvent(event) {
       const rect = orbitalSvg.getBoundingClientRect();
@@ -358,7 +381,10 @@
     }
 
     function handleEnd() {
+      if (!isDragging) return;
       isDragging = false;
+      moonAngle = snapToCardinalPhase(moonAngle);
+      update();
     }
 
     // Mouse events
@@ -772,21 +798,21 @@
       }
     },
     {
-      id: 'waning-gibbous',
-      prompt: 'Adjust to show a Waning Gibbous',
-      hint: 'Waning Gibbous occurs after Full Moon but before Third Quarter. The Moon is more than half lit, with the left side bright. Look for angles between 22.5 and 67.5 degrees.',
+      id: 'third-quarter',
+      prompt: 'Create a Third Quarter Moon',
+      hint: 'Third Quarter occurs when the Moon has traveled 3/4 of its orbit from New Moon. In our diagram, that puts it at the top of the orbit (angle around 90 degrees).',
       check: (state) => {
         const angle = ((state.moonAngle % 360) + 360) % 360;
-        const isWaningGibbous = angle > 22.5 && angle < 67.5;
-        const isClose = (angle > 0 && angle < 90) && !isWaningGibbous;
+        const isThirdQuarter = angle > 67.5 && angle < 112.5;
+        const isClose = angle > 45 && angle < 135;
         return {
-          correct: isWaningGibbous,
-          close: isClose,
-          message: isWaningGibbous
-            ? 'Excellent! Waning Gibbous shows more than half lit, but shrinking (waning) toward Third Quarter.'
+          correct: isThirdQuarter,
+          close: isClose && !isThirdQuarter,
+          message: isThirdQuarter
+            ? 'Yes — Third Quarter! The Moon is 90° from the Sun-Earth line, so we see half of the lit hemisphere.'
             : isClose
-              ? 'You\'re close! Waning Gibbous is between Full Moon and Third Quarter.'
-              : '"Waning" means shrinking, "Gibbous" means more than half. Find the position after Full but before Third Quarter.'
+              ? 'Close! Third Quarter is the top of the orbit (about 90°).'
+              : 'Third Quarter happens when the Moon is about 90° from the Sun as seen from Earth (top of the diagram).'
         };
       }
     },
