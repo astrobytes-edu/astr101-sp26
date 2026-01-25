@@ -130,6 +130,7 @@
       // UI elements
       this.ui = null;
       this.styleSheet = null;
+      this._previousActiveElement = null;
 
       // Bind methods
       this.start = this.start.bind(this);
@@ -167,8 +168,19 @@
 
       // Show UI
       if (this.ui) {
+        this._previousActiveElement = document.activeElement instanceof HTMLElement
+          ? document.activeElement
+          : null;
+
         this.ui.style.display = 'block';
         this._updateUI();
+
+        const closeBtn = this.ui.querySelector('.challenge-close');
+        if (closeBtn) {
+          closeBtn.focus();
+        } else {
+          this.ui.focus();
+        }
       }
 
       // Fire progress callback
@@ -332,6 +344,11 @@
       if (this.ui) {
         this.ui.style.display = 'none';
       }
+
+      if (this._previousActiveElement && document.contains(this._previousActiveElement)) {
+        this._previousActiveElement.focus();
+      }
+      this._previousActiveElement = null;
     }
 
     /**
@@ -578,6 +595,10 @@
 
       const wrapper = document.createElement('div');
       wrapper.className = 'challenge-panel';
+      wrapper.setAttribute('role', 'dialog');
+      wrapper.setAttribute('aria-label', 'Challenge Mode');
+      wrapper.setAttribute('aria-modal', 'false');
+      wrapper.tabIndex = -1;
       wrapper.innerHTML = `
         <div class="challenge-header">
           <span class="challenge-badge">Challenge Mode</span>
@@ -607,6 +628,12 @@
       wrapper.querySelector('.skip-btn').addEventListener('click', () => this.skip());
       wrapper.querySelector('.prev-btn').addEventListener('click', () => this._goToPrevious());
       wrapper.querySelector('.next-btn').addEventListener('click', () => this._goToNext());
+      wrapper.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') {
+          event.preventDefault();
+          this.stop();
+        }
+      });
 
       // Hook up check-btn: for custom type challenges, use getState and the challenge's check function
       wrapper.querySelector('.check-btn').addEventListener('click', () => {
@@ -671,6 +698,11 @@
         }
         .challenge-close:hover {
           color: var(--text-primary, #f5f5f5);
+        }
+        .challenge-close:focus-visible,
+        .challenge-btn:focus-visible {
+          outline: 2px solid var(--accent-blue, #4ecdc4);
+          outline-offset: 2px;
         }
         .challenge-number {
           font-size: 0.875rem;
