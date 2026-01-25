@@ -30,11 +30,9 @@ The higher the Sun in the sky, the steeper the incident angle and the more conce
 
 $$\delta = 23.5° \times \sin\left(\frac{2\pi(d-80)}{365}\right)$$
 
-where $d$ is the day number (1–365) and the baseline is March 21 (day 80) at the vernal equinox.
+where $d$ is the day number in the year and the baseline is March 21 (day 80) at the vernal equinox.
 
-For other planets (including retrograde cases with tilt $> 90°$), we use an **effective obliquity** in the range $0°$–$90°$ for the seasonal amplitude:
-
-$$\varepsilon_\mathrm{eff} = \min(\varepsilon, 180° - \varepsilon)$$
+In this demo, axial tilt is limited to $0°$–$90°$.
 
 **Day length at latitude $\phi$ when Sun is at declination $\delta$:**
 
@@ -67,7 +65,7 @@ The left panel shows Earth's orbit around the Sun as viewed from above:
 - **Current position**: Labeled with date and season names for both hemispheres
 - **Distance display**: Shows Earth-Sun distance in AU (notice it barely changes)
 
-Drag Earth around its orbit or use the date slider to move through the year.
+Use the date slider to move through the year.
 
 ### Globe View (Right Panel)
 
@@ -84,7 +82,7 @@ The right panel shows Earth from space with current illumination:
 | Control | Type | Range | Default |
 |---------|------|-------|---------|
 | **Date/Position** | Slider | Jan 1 – Dec 31 | Mar 21 (equinox) |
-| **Axial Tilt** | Slider | 0° – 180° | 23.5° (Earth) |
+| **Axial Tilt** | Slider | 0° – 90° | 23.5° (Earth) |
 | **Latitude** | Slider | –90° – +90° | 40°N |
 
 **Why 40°N?** This latitude passes through Philadelphia, Denver, Madrid, and Beijing—cities students may recognize. At 40°N, seasons are distinct (not too polar, not too equatorial), making it an ideal teaching reference.
@@ -98,25 +96,6 @@ Quick-jump buttons to the cardinal seasons:
 - **June Solstice** (Jun 21): Longest day in Northern Hemisphere
 - **September Equinox** (Sep 22): Equal day and night again
 - **December Solstice** (Dec 21): Shortest day in Northern Hemisphere
-
-### Planet Presets
-
-Compare Earth's seasons to other worlds by changing the axial tilt:
-
-Planet preset values are defined in `planets.json` (one source of truth).
-
-| Planet | Axial Tilt | Notes |
-|--------|------------|-------|
-| **Earth** | 23.5° | Familiar seasons, moderate tilt |
-| **Mars** | 25.2° | Similar to Earth, longer year |
-| **Saturn** | 26.7° | Earth-like seasons |
-| **Jupiter** | 3.1° | Almost no tilt—minimal seasons |
-| **Uranus** | 97.8° | Extreme tilt—poles face Sun for part of orbit |
-| **Venus** | 177.4° | Retrograde rotation, nearly upside-down |
-
-Each preset updates the tilt slider and globe appearance to reflect the chosen world.
-
-**Retrograde note:** If axial tilt is greater than $90°$, the seasonal variation behaves like a smaller “effective tilt” of $180° - \varepsilon$ (e.g., Venus: $177.4° \rightarrow 2.6°$; Uranus: $97.8° \rightarrow 82.2°$).
 
 ### Animation
 
@@ -167,7 +146,7 @@ Students will understand:
 2. The same hemisphere facing toward the Sun receives more direct sunlight
 3. When Northern hemisphere has summer, Southern has winter
 4. Day length and sun angle both contribute to seasonal heating
-5. Different planets have different seasonal patterns based on their axial tilt
+5. Changing axial tilt changes seasonal patterns
 
 ### The #1 Misconception
 
@@ -197,16 +176,13 @@ Students will understand:
 1. **If Earth had no axial tilt**, what would seasons be like?
    - *Answer: No seasons. Temperature would depend only on latitude, and would be constant year-round.*
 
-2. **Why does Uranus have such extreme seasons?**
-   - *Answer: Its 98° tilt means poles face the Sun directly for half its 84-year orbit.*
+2. **What would happen if Earth’s tilt were much larger (closer to 90°)?**
+   - *Answer: Seasonal contrasts would be much more extreme, especially at high latitudes.*
 
-3. **Mars has similar tilt to Earth—how do its seasons differ?**
-   - *Answer: Longer (Mars year = 687 days) and more extreme (eccentricity = 9.3% vs. Earth's 1.7%).*
-
-4. **Why is the equator warm year-round despite the same tilt?**
+3. **Why is the equator warm year-round despite the same tilt?**
    - *Answer: The tilt angle (23.5°) means the Sun is never more than 23.5° away from directly overhead at the equator, so incident angles are always steep.*
 
-5. **When is the next solstice or equinox, and which hemisphere benefits?**
+4. **When is the next solstice or equinox, and which hemisphere benefits?**
    - *Answer: Encourages students to predict using the demo.*
 
 ### In-Class Activities
@@ -219,7 +195,7 @@ Students will understand:
 **Tilt variation experiment:**
 - Set tilt to 0° and observe (no seasons!)
 - Gradually increase tilt and watch seasons intensify
-- Discuss how extreme tilts (Jupiter, Uranus) would affect habitable zones
+- Discuss how very large tilts (near 90°) would affect seasonal patterns on Earth
 
 **Day length prediction:**
 - Set latitude to 60°N
@@ -239,7 +215,6 @@ Students will understand:
 demos/seasons/
 ├── index.html      # Standalone demo page
 ├── seasons.js      # Core visualization logic
-├── planets.json    # Planet preset data
 └── README.md       # This file
 ```
 

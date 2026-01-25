@@ -25,62 +25,7 @@
   // Days in each month (non-leap year)
   const DAYS_IN_MONTH = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
 
-  // Planet presets with colors and orbital data
-  let PLANET_DATA = {
-    earth: {
-      tilt: 23.5, color: 'var(--earth-blue)', name: 'Earth',
-      orbitalRadius: 1.0, orbitalPeriod: 1.0, perihelion: 0.983, aphelion: 1.017
-    },
-    mars: {
-      tilt: 25.2, color: 'var(--mars-red)', name: 'Mars',
-      orbitalRadius: 1.52, orbitalPeriod: 1.88, perihelion: 1.38, aphelion: 1.67
-    },
-    uranus: {
-      tilt: 97.8, color: 'var(--ice-blue)', name: 'Uranus',
-      orbitalRadius: 19.2, orbitalPeriod: 84.0, perihelion: 18.3, aphelion: 20.1
-    },
-    venus: {
-      tilt: 177.4, color: 'var(--stellar-amber)', name: 'Venus',
-      orbitalRadius: 0.72, orbitalPeriod: 0.615, perihelion: 0.718, aphelion: 0.728
-    },
-    jupiter: {
-      tilt: 3.1, color: 'var(--jupiter-tan)', name: 'Jupiter',
-      orbitalRadius: 5.2, orbitalPeriod: 11.86, perihelion: 4.95, aphelion: 5.46
-    },
-    saturn: {
-      tilt: 26.7, color: 'var(--sun-core)', name: 'Saturn',
-      orbitalRadius: 9.5, orbitalPeriod: 29.4, perihelion: 9.02, aphelion: 10.05
-    },
-    neptune: {
-      tilt: 28.3, color: 'var(--accent-blue)', name: 'Neptune',
-      orbitalRadius: 30.0, orbitalPeriod: 164.8, perihelion: 29.8, aphelion: 30.3
-    }
-  };
-
-  function loadPlanetsJson() {
-    return fetch('planets.json')
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error(`planets.json fetch failed: ${response.status}`);
-        }
-        return response.json();
-      })
-      .then((data) => {
-        if (!data || !Array.isArray(data.planets)) return;
-        const next = {};
-        for (const planet of data.planets) {
-          if (!planet || typeof planet !== 'object') continue;
-          if (typeof planet.key !== 'string' || planet.key.trim() === '') continue;
-          next[planet.key] = planet;
-        }
-        if (Object.keys(next).length > 0) {
-          PLANET_DATA = next;
-        }
-      })
-      .catch(() => {
-        // Offline/file:// runs may block fetch; keep the embedded fallback.
-      });
-  }
+  // Earth-only for now (keep the model clean and correct for ASTR 101).
 
   // ============================================
   // State
@@ -90,7 +35,6 @@
     dayOfYear: 80,           // Default: March equinox (day 80)
     axialTilt: 23.5,         // Degrees
     latitude: 40,            // Observer latitude (degrees)
-    currentPlanet: 'earth',  // Current planet preset
     animating: false,        // Animation in progress
     animationId: null,       // Animation frame ID
 
@@ -160,11 +104,6 @@
       sunAltitudeDisplay: document.getElementById('sun-altitude-display'),
       distanceDisplay: document.getElementById('distance-display'),
 
-      // Planet indicator
-      planetIndicator: document.getElementById('planet-indicator'),
-      planetName: document.getElementById('planet-name'),
-      planetTiltDisplay: document.getElementById('planet-tilt-display'),
-
       // Sliders
       dateSlider: document.getElementById('date-slider'),
       dateSliderDisplay: document.getElementById('date-slider-display'),
@@ -183,15 +122,6 @@
       presetJunSolstice: document.getElementById('preset-jun-solstice'),
       presetSepEquinox: document.getElementById('preset-sep-equinox'),
       presetDecSolstice: document.getElementById('preset-dec-solstice'),
-
-      // Planet presets
-      presetEarth: document.getElementById('preset-earth'),
-      presetMars: document.getElementById('preset-mars'),
-      presetUranus: document.getElementById('preset-uranus'),
-      presetVenus: document.getElementById('preset-venus'),
-      presetJupiter: document.getElementById('preset-jupiter'),
-      presetSaturn: document.getElementById('preset-saturn'),
-      presetNeptune: document.getElementById('preset-neptune'),
 
       // Overlay toggles
       toggleCelestialEquator: document.getElementById('toggle-celestial-equator'),
@@ -428,11 +358,7 @@
     elements.distanceText.setAttribute('y', midY);
     elements.distanceText.textContent = `${distanceAU.toFixed(3)} AU`;
 
-    // Update planet color
-    const planetData = PLANET_DATA[state.currentPlanet];
-    if (planetData) {
-      elements.earthOrbitalCircle.setAttribute('fill', planetData.color);
-    }
+    // Earth-only: keep marker style stable (no planet presets)
   }
 
   // ============================================
@@ -469,16 +395,6 @@
 
     // Update latitude marker position
     updateLatitudeMarker();
-
-    // Update globe color for planet
-    const planetData = PLANET_DATA[state.currentPlanet];
-    if (planetData) {
-      // Create a gradient based on planet color
-      const baseColor = planetData.color;
-      elements.globeBg.setAttribute('fill', `url(#globeGradient)`);
-      // We'd need to dynamically update the gradient, but for now use the planet color
-      // The gradient is defined in HTML, so we'll leave it as is for Earth
-    }
 
     // Update globe axis tilt visualization
     updateGlobeAxis();
@@ -708,7 +624,6 @@
     // Tilt slider
     elements.tiltSlider.addEventListener('input', () => {
       state.axialTilt = parseFloat(elements.tiltSlider.value);
-      updatePlanetPresetHighlight();
       update();
     });
 
@@ -734,31 +649,7 @@
       });
     });
 
-    // Planet presets
-    const planetPresets = [
-      { el: elements.presetEarth, planet: 'earth' },
-      { el: elements.presetMars, planet: 'mars' },
-      { el: elements.presetUranus, planet: 'uranus' },
-      { el: elements.presetVenus, planet: 'venus' },
-      { el: elements.presetJupiter, planet: 'jupiter' },
-      { el: elements.presetSaturn, planet: 'saturn' },
-      { el: elements.presetNeptune, planet: 'neptune' }
-    ];
-
-    planetPresets.forEach(preset => {
-      preset.el.addEventListener('click', () => {
-        const planetData = PLANET_DATA[preset.planet];
-        const tilt = planetData ? parseFloat(planetData.tilt) : parseFloat(preset.el.getAttribute('data-tilt'));
-        state.currentPlanet = preset.planet;
-
-        // Store actual tilt value (0-180° range now supported)
-        state.axialTilt = tilt;
-        elements.tiltSlider.value = tilt;
-
-        updatePlanetPresetHighlight(preset.el);
-        update();
-      });
-    });
+    // Planet presets removed (Earth-only)
 
     // Animation buttons
     elements.btnAnimateYear.addEventListener('click', () => {
@@ -773,7 +664,6 @@
       elements.btnResetDefaults.addEventListener('click', () => {
         stopAnimation();
 
-        state.currentPlanet = 'earth';
         state.dayOfYear = 80;
         state.axialTilt = 23.5;
         state.latitude = 40;
@@ -783,7 +673,6 @@
         elements.latitudeSlider.value = state.latitude;
 
         updateSeasonPresetHighlight(elements.presetMarEquinox);
-        updatePlanetPresetHighlight(elements.presetEarth);
         update();
       });
     }
@@ -837,98 +726,7 @@
     }
   }
 
-  function updatePlanetPresetHighlight(activeEl) {
-    const presets = [
-      elements.presetEarth,
-      elements.presetMars,
-      elements.presetUranus,
-      elements.presetVenus,
-      elements.presetJupiter,
-      elements.presetSaturn,
-      elements.presetNeptune
-    ];
-
-    presets.forEach(el => el.classList.remove('active'));
-
-    if (activeEl) {
-      activeEl.classList.add('active');
-    }
-
-    // Update planet indicator display
-    updatePlanetIndicator();
-  }
-
-  function updatePlanetIndicator() {
-    const planetData = PLANET_DATA[state.currentPlanet];
-    if (planetData && elements.planetName && elements.planetTiltDisplay) {
-      elements.planetName.textContent = planetData.name;
-      const eps = effectiveObliquityDegrees(planetData.tilt);
-      if (planetData.tilt > 90) {
-        elements.planetTiltDisplay.textContent = `(${planetData.tilt}° tilt, effective ${eps.toFixed(1)}°)`;
-      } else {
-        elements.planetTiltDisplay.textContent = `(${planetData.tilt}° tilt)`;
-      }
-
-      // Update indicator color to match planet
-      if (elements.planetIndicator) {
-        const rgb = resolveRgbTriplet(planetData.color) || '74, 144, 217';
-        elements.planetIndicator.style.background = `rgba(${rgb}, 0.15)`;
-        elements.planetIndicator.style.borderColor = `rgba(${rgb}, 0.4)`;
-      }
-      if (elements.planetName) {
-        elements.planetName.style.color = planetData.color;
-      }
-    }
-  }
-
-  const resolvedRgbCache = new Map();
-
-  function resolveRgbTriplet(color) {
-    if (!color || typeof color !== 'string') return null;
-    const key = color.trim();
-    if (key === '') return null;
-
-    const cached = resolvedRgbCache.get(key);
-    if (cached) return cached;
-
-    const fromHex = rgbTripletFromHex(key);
-    if (fromHex) {
-      resolvedRgbCache.set(key, fromHex);
-      return fromHex;
-    }
-
-    const varMatch = /^var\(\s*(--[\w-]+)\s*\)$/.exec(key);
-    if (varMatch) {
-      const cssValue = getComputedStyle(document.documentElement).getPropertyValue(varMatch[1]).trim();
-      if (cssValue) {
-        const resolved = resolveRgbTriplet(cssValue);
-        if (resolved) {
-          resolvedRgbCache.set(key, resolved);
-          return resolved;
-        }
-      }
-    }
-
-    const probe = document.createElement('span');
-    probe.style.color = key;
-    probe.style.display = 'none';
-    document.body.appendChild(probe);
-    const computed = getComputedStyle(probe).color;
-    probe.remove();
-
-    const rgbMatch = /^rgba?\((\d+),\s*(\d+),\s*(\d+)/.exec(computed);
-    if (!rgbMatch) return null;
-
-    const triplet = `${rgbMatch[1]}, ${rgbMatch[2]}, ${rgbMatch[3]}`;
-    resolvedRgbCache.set(key, triplet);
-    return triplet;
-  }
-
-  function rgbTripletFromHex(hex) {
-    const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
-    if (!result) return null;
-    return `${parseInt(result[1], 16)}, ${parseInt(result[2], 16)}, ${parseInt(result[3], 16)}`;
-  }
+  // Planet preset UI removed (Earth-only).
 
   // ============================================
   // Animation
@@ -1076,15 +874,9 @@
     elements.toggleTerminator.checked = state.overlays.terminator;
     elements.toggleHourGrid.checked = state.overlays.hourGrid;
 
-    loadPlanetsJson().then(() => {
-      updatePlanetIndicator();
-      update();
-    });
-
     // Initial update
     update();
     updateSeasonPresetHighlight();
-    updatePlanetIndicator();
   }
 
   // Start when DOM is ready

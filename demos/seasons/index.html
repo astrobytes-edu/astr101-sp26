@@ -13,28 +13,6 @@
       --demo-max-width: 1200px;
     }
 
-    .planet-indicator {
-      margin-top: 0.75rem;
-      padding: 0.5rem 1rem;
-      background: rgba(74, 144, 217, 0.15);
-      border: 1px solid rgba(74, 144, 217, 0.4);
-      border-radius: 20px;
-      display: inline-block;
-      transition: all 0.3s ease;
-    }
-
-    .planet-name {
-      font-weight: 600;
-      font-size: 1.1rem;
-      color: var(--accent-blue);
-    }
-
-    .planet-tilt {
-      font-size: 0.9rem;
-      color: var(--text-secondary);
-      margin-left: 0.5rem;
-    }
-
     /* Two-panel layout for orbital and globe views */
     .viz-layout {
       display: grid;
@@ -313,10 +291,6 @@
       <header class="demo-header">
         <h1 class="demo-title">Seasons: Why Tilt Matters</h1>
         <p class="demo-subtitle">Axial tilt causes seasons—not distance from the Sun</p>
-        <div class="planet-indicator" id="planet-indicator">
-          <span class="planet-name" id="planet-name">Earth</span>
-          <span class="planet-tilt" id="planet-tilt-display">(23.5° tilt)</span>
-        </div>
       </header>
 
       <!-- Readout panel -->
@@ -554,25 +528,10 @@
             Axial Tilt
             <span class="control-value" id="tilt-display">23.5°</span>
           </div>
-          <input type="range" id="tilt-slider" class="astro-slider" min="0" max="180" value="23.5" step="0.1" aria-label="Axial Tilt" data-tooltip-source="#tilt-display">
+          <input type="range" id="tilt-slider" class="astro-slider" min="0" max="90" value="23.5" step="0.1" aria-label="Axial Tilt" data-tooltip-source="#tilt-display">
           <div class="slider-labels">
             <span>0°</span>
             <span>90°</span>
-            <span>180° (retrograde)</span>
-          </div>
-
-          <!-- Planet presets -->
-          <div class="presets-section">
-            <div class="presets-label">Planet Presets</div>
-            <div class="presets-row">
-              <button class="preset-btn active" id="preset-earth" data-tilt="23.5">Earth</button>
-              <button class="preset-btn" id="preset-mars" data-tilt="25.2">Mars</button>
-              <button class="preset-btn" id="preset-uranus" data-tilt="97.8">Uranus</button>
-              <button class="preset-btn" id="preset-venus" data-tilt="177.4">Venus</button>
-              <button class="preset-btn" id="preset-jupiter" data-tilt="3.1">Jupiter</button>
-              <button class="preset-btn" id="preset-saturn" data-tilt="26.7">Saturn</button>
-              <button class="preset-btn" id="preset-neptune" data-tilt="28.3">Neptune</button>
-            </div>
           </div>
         </div>
 
