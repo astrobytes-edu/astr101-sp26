@@ -322,21 +322,31 @@
   // Orbital View Updates
   // ============================================
 
-  function updateOrbitalView() {
-    // Calculate Earth's position on orbit
-    // Day 0 (Jan 1) is near perihelion (right side of orbit)
-    // Day 80 (Mar 21) is at top
-    // Day 172 (Jun 21) is at left
-    // Day 266 (Sep 22) is at bottom
-    // Day 356 (Dec 21) is at right
+  function getOrbitAngleFromDay(dayOfYear) {
+    // Anchor perihelion (day ~3) on the +x axis for visual truthfulness.
+    const daysFromPerihelion = dayOfYear - 3;
+    return (daysFromPerihelion / 365) * 2 * Math.PI;
+  }
 
-    // Convert day to angle (0 at top, going clockwise when viewed from above)
-    // Actually, we want counter-clockwise for the orbital motion
-    // Day 80 at top means angle = -90 degrees at day 80
-    const dayAngle = ((state.dayOfYear - 80) / 365) * 2 * Math.PI;
-    // In SVG, Y increases downward, so we need to adjust
-    const earthX = ORBITAL_CENTER.x + ORBITAL_RADIUS_X * Math.sin(dayAngle);
-    const earthY = ORBITAL_CENTER.y - ORBITAL_RADIUS_Y * Math.cos(dayAngle);
+  function getExaggeratedOrbitRadiusPx(distanceAU) {
+    const base = 150;
+    const exaggeration = 8; // 1 AU ±1.7% becomes visually noticeable
+    return base * (1 + exaggeration * (distanceAU - 1));
+  }
+
+  function updateOrbitalView() {
+    const distanceAU = getEarthSunDistance(state.dayOfYear);
+    const earthAngle = getOrbitAngleFromDay(state.dayOfYear);
+    const orbitRadiusPx = getExaggeratedOrbitRadiusPx(distanceAU);
+
+    // Keep the orbit path as a stable "average orbit" reference ring.
+    if (elements.orbitPath) {
+      elements.orbitPath.setAttribute('rx', '150');
+      elements.orbitPath.setAttribute('ry', '150');
+    }
+
+    const earthX = ORBITAL_CENTER.x + orbitRadiusPx * Math.cos(earthAngle);
+    const earthY = ORBITAL_CENTER.y + orbitRadiusPx * Math.sin(earthAngle);
 
     // Update Earth position
     elements.earthOrbitalCircle.setAttribute('cx', earthX);
@@ -386,12 +396,11 @@
     elements.distanceLine.setAttribute('x2', earthX);
     elements.distanceLine.setAttribute('y2', earthY);
 
-    const distance = getEarthSunDistance(state.dayOfYear);
     const midX = (ORBITAL_CENTER.x + earthX) / 2;
     const midY = (ORBITAL_CENTER.y + earthY) / 2;
     elements.distanceText.setAttribute('x', midX + 10);
     elements.distanceText.setAttribute('y', midY);
-    elements.distanceText.textContent = `${distance.toFixed(3)} AU`;
+    elements.distanceText.textContent = `${distanceAU.toFixed(3)} AU`;
 
     // Update planet color
     const planetData = PLANET_DATA[state.currentPlanet];
