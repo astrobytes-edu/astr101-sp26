@@ -896,14 +896,16 @@
         }
         update();
       },
-      container: container
+      container: container,
+      onStop: () => {
+        btn.textContent = 'Challenge Mode';
+      }
     });
 
     // Toggle challenge mode on button click
     btn.addEventListener('click', () => {
       if (challengeEngine.isActive()) {
         challengeEngine.stop();
-        btn.textContent = 'Challenge Mode';
       } else {
         challengeEngine.start();
         btn.textContent = 'Exit Challenges';

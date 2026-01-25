@@ -30,6 +30,7 @@
    * @property {Function} [onIncorrect] - Callback when answer is incorrect: (challenge, userAnswer, result) => void
    * @property {Function} [onComplete] - Callback when all challenges complete: (stats) => void
    * @property {Function} [onProgress] - Callback on progress change: (current, total, challenge) => void
+   * @property {Function} [onStop] - Callback when UI closes: () => void
    * @property {HTMLElement} [container] - Container for challenge UI (optional)
    * @property {boolean} [showUI=true] - Whether to render built-in UI
    */
@@ -138,6 +139,19 @@
       this.skip = this.skip.bind(this);
       this.getHint = this.getHint.bind(this);
       this.reset = this.reset.bind(this);
+    }
+
+    _restoreFocus() {
+      if (this._previousActiveElement && document.contains(this._previousActiveElement)) {
+        this._previousActiveElement.focus();
+      }
+      this._previousActiveElement = null;
+    }
+
+    _fireStop() {
+      if (this.options.onStop) {
+        this.options.onStop();
+      }
     }
 
     /**
@@ -333,7 +347,12 @@
         this.ui.style.display = 'none';
         this._clearFeedback();
         this._clearHint();
+        this.ui.remove();
+        this.ui = null;
       }
+
+      this._restoreFocus();
+      this._fireStop();
     }
 
     /**
@@ -345,10 +364,8 @@
         this.ui.style.display = 'none';
       }
 
-      if (this._previousActiveElement && document.contains(this._previousActiveElement)) {
-        this._previousActiveElement.focus();
-      }
-      this._previousActiveElement = null;
+      this._restoreFocus();
+      this._fireStop();
     }
 
     /**
@@ -597,7 +614,7 @@
       wrapper.className = 'challenge-panel';
       wrapper.setAttribute('role', 'dialog');
       wrapper.setAttribute('aria-label', 'Challenge Mode');
-      wrapper.setAttribute('aria-modal', 'false');
+      wrapper.setAttribute('aria-modal', 'true');
       wrapper.tabIndex = -1;
       wrapper.innerHTML = `
         <div class="challenge-header">
@@ -632,6 +649,42 @@
         if (event.key === 'Escape') {
           event.preventDefault();
           this.stop();
+        }
+
+        if (event.key === 'Tab') {
+          const focusables = Array.from(
+            wrapper.querySelectorAll(
+              'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+            )
+          ).filter((el) => {
+            if (!(el instanceof HTMLElement)) return false;
+            if (el.hasAttribute('disabled')) return false;
+            if (el.getAttribute('aria-hidden') === 'true') return false;
+            const style = window.getComputedStyle(el);
+            return style.display !== 'none' && style.visibility !== 'hidden';
+          });
+
+          if (focusables.length === 0) {
+            event.preventDefault();
+            wrapper.focus();
+            return;
+          }
+
+          const first = focusables[0];
+          const last = focusables[focusables.length - 1];
+          const active = document.activeElement;
+
+          if (event.shiftKey) {
+            if (active === first || active === wrapper) {
+              event.preventDefault();
+              last.focus();
+            }
+          } else {
+            if (active === last) {
+              event.preventDefault();
+              first.focus();
+            }
+          }
         }
       });
 
@@ -850,6 +903,7 @@
       if (!this.ui) return;
 
       const feedback = this.ui.querySelector('.challenge-feedback');
+      if (!feedback) return;
       feedback.className = `challenge-feedback ${type}`;
       feedback.innerHTML = `<strong>${type === 'correct' ? 'Correct!' : type === 'close' ? 'Close!' : 'Not quite.'}</strong> ${message}`;
       feedback.style.display = 'block';
@@ -862,6 +916,7 @@
     _clearFeedback() {
       if (!this.ui) return;
       const feedback = this.ui.querySelector('.challenge-feedback');
+      if (!feedback) return;
       feedback.style.display = 'none';
     }
 

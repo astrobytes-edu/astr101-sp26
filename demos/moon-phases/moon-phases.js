@@ -873,14 +873,16 @@
           update();
         }
       },
-      container: container
+      container: container,
+      onStop: () => {
+        btn.classList.remove('active');
+      }
     });
 
     // Toggle challenge mode on button click
     btn.addEventListener('click', () => {
       if (challengeEngine.isActive()) {
         challengeEngine.stop();
-        btn.classList.remove('active');
       } else {
         challengeEngine.start();
         btn.classList.add('active');
