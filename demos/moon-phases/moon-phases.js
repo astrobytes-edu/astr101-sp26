@@ -50,6 +50,7 @@
 
   let orbitalSvg, phaseSvg;
   let moonGroup, moonDark, moonLit, moonTerminator;
+  let moonLitHalfClip;
   let litPortion;
   let phaseName, illumination, daysSinceNew;
   let phaseButtons;
@@ -63,6 +64,7 @@
     moonDark = document.getElementById('moon-dark');
     moonLit = document.getElementById('moon-lit');
     moonTerminator = document.getElementById('moon-terminator');
+    moonLitHalfClip = document.getElementById('moon-lit-half-clip');
 
     litPortion = document.getElementById('lit-portion');
 
@@ -137,32 +139,21 @@
     moonDark.setAttribute('cy', moonY);
     moonLit.setAttribute('cx', moonX);
     moonLit.setAttribute('cy', moonY);
-    moonTerminator.setAttribute('cx', moonX);
-    moonTerminator.setAttribute('cy', moonY);
+    if (moonTerminator) {
+      moonTerminator.setAttribute('x1', moonX);
+      moonTerminator.setAttribute('x2', moonX);
+      moonTerminator.setAttribute('y1', moonY - MOON_RADIUS);
+      moonTerminator.setAttribute('y2', moonY + MOON_RADIUS);
+    }
 
-    // The lit side of the Moon always faces the Sun (left side of diagram)
-    // We need to show which half is lit from the top-down view
-
-    // Calculate the terminator (boundary between light and dark)
-    // The Sun is to the left, so the left half of the Moon is lit
-    // But we're viewing from above, so we need to clip the lit portion
-
-    // For the orbital view, we'll show the Moon with its lit side facing left
-    // Use a clip or mask to show the lit half
-
-    // Simple approach: use the terminator ellipse to cover the dark side
-    // The terminator width depends on viewing angle (from above, it's always half)
-    moonTerminator.setAttribute('rx', MOON_RADIUS);
-
-    // Rotate the terminator to show which side is lit
-    // Sun is at left (angle 180 from right), so left half is always lit
-    moonLit.setAttribute('cx', moonX);
-    moonLit.setAttribute('cy', moonY);
-
-    // Create a clip path for the lit portion (left half of moon)
-    // For simplicity, we'll use a covering rectangle approach
-    const litClipX = moonX - MOON_RADIUS;
-    moonTerminator.setAttribute('cx', moonX);
+    // In the top-down orbital view, the Sun-facing hemisphere is always illuminated.
+    // We clip the lit circle to the left half (Sunlight comes from the left).
+    if (moonLitHalfClip) {
+      moonLitHalfClip.setAttribute('x', moonX - MOON_RADIUS);
+      moonLitHalfClip.setAttribute('y', moonY - MOON_RADIUS);
+      moonLitHalfClip.setAttribute('width', MOON_RADIUS);
+      moonLitHalfClip.setAttribute('height', MOON_RADIUS * 2);
+    }
   }
 
   /**
@@ -670,7 +661,7 @@
 
     // Create popup
     const popup = document.createElement('div');
-    popup.className = 'insight-popup';
+    popup.className = 'shadow-insight-popup insight-popup';
     popup.innerHTML = `
       <div class="insight-popup-content">
         <strong>Key Observation:</strong> Earth's shadow always points
@@ -679,33 +670,35 @@
         <button class="insight-close" aria-label="Close">Got it!</button>
       </div>
     `;
-    popup.style.cssText = `
-      position: fixed;
-      bottom: 2rem;
-      left: 50%;
-      transform: translateX(-50%);
-      background: rgba(46, 204, 113, 0.95);
-      color: #1a1a2e;
-      padding: 1rem 1.5rem;
-      border-radius: 8px;
-      max-width: 400px;
-      z-index: 1000;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.3);
-      animation: slideUp 0.3s ease-out;
-    `;
 
     document.body.appendChild(popup);
 
-    popup.querySelector('.insight-close').addEventListener('click', () => {
-      popup.remove();
-    });
+    const closeBtn = popup.querySelector('.insight-close');
+    let timeoutId = null;
+    const dismiss = () => {
+      if (timeoutId) window.clearTimeout(timeoutId);
+      document.removeEventListener('keydown', onKeyDown);
+      if (popup.parentNode) popup.remove();
+    };
+    const onKeyDown = (event) => {
+      if (event.key === 'Escape') {
+        event.preventDefault();
+        dismiss();
+      }
+    };
+
+    if (closeBtn) {
+      closeBtn.addEventListener('click', dismiss);
+      closeBtn.focus();
+    } else {
+      popup.tabIndex = -1;
+      popup.focus();
+    }
+
+    document.addEventListener('keydown', onKeyDown);
 
     // Auto-dismiss after 8 seconds
-    setTimeout(() => {
-      if (popup.parentNode) {
-        popup.remove();
-      }
-    }, 8000);
+    timeoutId = window.setTimeout(dismiss, 8000);
   }
 
   function setupShadowToggle() {
@@ -818,8 +811,8 @@
     },
     {
       id: 'shadow-challenge',
-      prompt: 'Shadow Challenge: Will Earth\'s shadow touch the Moon? (Toggle shadow on to check!)',
-      hint: 'First, turn on "Show Earth\'s Shadow" in the controls. Then position the Moon where the shadow actually reaches. Earth\'s shadow points away from the Sun.',
+      prompt: 'Shadow Challenge: Will Earth\'s shadow touch the Moon? (Use the Eclipse insight toggle to check!)',
+      hint: 'Open "Insights (optional)" and turn on "Show Earth\'s Shadow (Eclipse insight)". Then position the Moon where the shadow actually reaches. Earth\'s shadow points away from the Sun.',
       initialState: { showShadow: true },
       check: (state) => {
         // First check if shadow is visible
@@ -827,7 +820,7 @@
           return {
             correct: false,
             close: false,
-            message: 'Turn on "Show Earth\'s Shadow" first to see where the shadow actually is!'
+            message: 'Open "Insights (optional)" and turn on "Show Earth\'s Shadow (Eclipse insight)" first to see where the shadow actually is!'
           };
         }
 

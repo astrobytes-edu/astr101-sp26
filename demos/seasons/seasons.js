@@ -26,36 +26,61 @@
   const DAYS_IN_MONTH = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
 
   // Planet presets with colors and orbital data
-  const PLANET_DATA = {
+  let PLANET_DATA = {
     earth: {
-      tilt: 23.5, color: '#4a90d9', name: 'Earth',
+      tilt: 23.5, color: 'var(--earth-blue)', name: 'Earth',
       orbitalRadius: 1.0, orbitalPeriod: 1.0, perihelion: 0.983, aphelion: 1.017
     },
     mars: {
-      tilt: 25.2, color: '#c1440e', name: 'Mars',
+      tilt: 25.2, color: 'var(--mars-red)', name: 'Mars',
       orbitalRadius: 1.52, orbitalPeriod: 1.88, perihelion: 1.38, aphelion: 1.67
     },
     uranus: {
-      tilt: 97.8, color: '#b5e3e3', name: 'Uranus',
+      tilt: 97.8, color: 'var(--ice-blue)', name: 'Uranus',
       orbitalRadius: 19.2, orbitalPeriod: 84.0, perihelion: 18.3, aphelion: 20.1
     },
     venus: {
-      tilt: 177.4, color: '#e6c88a', name: 'Venus',
+      tilt: 177.4, color: 'var(--stellar-amber)', name: 'Venus',
       orbitalRadius: 0.72, orbitalPeriod: 0.615, perihelion: 0.718, aphelion: 0.728
     },
     jupiter: {
-      tilt: 3.1, color: '#d4a574', name: 'Jupiter',
+      tilt: 3.1, color: 'var(--jupiter-tan)', name: 'Jupiter',
       orbitalRadius: 5.2, orbitalPeriod: 11.86, perihelion: 4.95, aphelion: 5.46
     },
     saturn: {
-      tilt: 26.7, color: '#e8d5a0', name: 'Saturn',
+      tilt: 26.7, color: 'var(--sun-core)', name: 'Saturn',
       orbitalRadius: 9.5, orbitalPeriod: 29.4, perihelion: 9.02, aphelion: 10.05
     },
     neptune: {
-      tilt: 28.3, color: '#4169e1', name: 'Neptune',
+      tilt: 28.3, color: 'var(--accent-blue)', name: 'Neptune',
       orbitalRadius: 30.0, orbitalPeriod: 164.8, perihelion: 29.8, aphelion: 30.3
     }
   };
+
+  function loadPlanetsJson() {
+    return fetch('planets.json')
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error(`planets.json fetch failed: ${response.status}`);
+        }
+        return response.json();
+      })
+      .then((data) => {
+        if (!data || !Array.isArray(data.planets)) return;
+        const next = {};
+        for (const planet of data.planets) {
+          if (!planet || typeof planet !== 'object') continue;
+          if (typeof planet.key !== 'string' || planet.key.trim() === '') continue;
+          next[planet.key] = planet;
+        }
+        if (Object.keys(next).length > 0) {
+          PLANET_DATA = next;
+        }
+      })
+      .catch(() => {
+        // Offline/file:// runs may block fetch; keep the embedded fallback.
+      });
+  }
 
   // ============================================
   // State
@@ -151,6 +176,7 @@
       // Buttons
       btnAnimateYear: document.getElementById('btn-animate-year'),
       btnStop: document.getElementById('btn-stop'),
+      btnResetDefaults: document.getElementById('btn-reset-defaults'),
 
       // Season presets
       presetMarEquinox: document.getElementById('preset-mar-equinox'),
@@ -185,9 +211,16 @@
    * @param {number} dayOfYear - Day of year (0-365)
    * @returns {number} Declination in degrees (-23.5 to +23.5 for Earth)
    */
+  function effectiveObliquityDegrees(obliquityDeg) {
+    const t = Math.abs(obliquityDeg % 360);
+    const folded = t > 180 ? 360 - t : t; // 0..180
+    return folded > 90 ? 180 - folded : folded; // 0..90
+  }
+
   function getSunDeclination(dayOfYear) {
     const daysFromEquinox = dayOfYear - 80; // March 21 ~ day 80
-    return state.axialTilt * Math.sin(2 * Math.PI * daysFromEquinox / 365);
+    const eps = effectiveObliquityDegrees(state.axialTilt);
+    return eps * Math.sin(2 * Math.PI * daysFromEquinox / 365);
   }
 
   /**
@@ -315,21 +348,31 @@
   // Orbital View Updates
   // ============================================
 
-  function updateOrbitalView() {
-    // Calculate Earth's position on orbit
-    // Day 0 (Jan 1) is near perihelion (right side of orbit)
-    // Day 80 (Mar 21) is at top
-    // Day 172 (Jun 21) is at left
-    // Day 266 (Sep 22) is at bottom
-    // Day 356 (Dec 21) is at right
+  function getOrbitAngleFromDay(dayOfYear) {
+    // Anchor perihelion (day ~3) on the +x axis for visual truthfulness.
+    const daysFromPerihelion = dayOfYear - 3;
+    return (daysFromPerihelion / 365) * 2 * Math.PI;
+  }
 
-    // Convert day to angle (0 at top, going clockwise when viewed from above)
-    // Actually, we want counter-clockwise for the orbital motion
-    // Day 80 at top means angle = -90 degrees at day 80
-    const dayAngle = ((state.dayOfYear - 80) / 365) * 2 * Math.PI;
-    // In SVG, Y increases downward, so we need to adjust
-    const earthX = ORBITAL_CENTER.x + ORBITAL_RADIUS_X * Math.sin(dayAngle);
-    const earthY = ORBITAL_CENTER.y - ORBITAL_RADIUS_Y * Math.cos(dayAngle);
+  function getExaggeratedOrbitRadiusPx(distanceAU) {
+    const base = 150;
+    const exaggeration = 8; // 1 AU ±1.7% becomes visually noticeable
+    return base * (1 + exaggeration * (distanceAU - 1));
+  }
+
+  function updateOrbitalView() {
+    const distanceAU = getEarthSunDistance(state.dayOfYear);
+    const earthAngle = getOrbitAngleFromDay(state.dayOfYear);
+    const orbitRadiusPx = getExaggeratedOrbitRadiusPx(distanceAU);
+
+    // Keep the orbit path as a stable "average orbit" reference ring.
+    if (elements.orbitPath) {
+      elements.orbitPath.setAttribute('rx', '150');
+      elements.orbitPath.setAttribute('ry', '150');
+    }
+
+    const earthX = ORBITAL_CENTER.x + orbitRadiusPx * Math.cos(earthAngle);
+    const earthY = ORBITAL_CENTER.y + orbitRadiusPx * Math.sin(earthAngle);
 
     // Update Earth position
     elements.earthOrbitalCircle.setAttribute('cx', earthX);
@@ -379,12 +422,11 @@
     elements.distanceLine.setAttribute('x2', earthX);
     elements.distanceLine.setAttribute('y2', earthY);
 
-    const distance = getEarthSunDistance(state.dayOfYear);
     const midX = (ORBITAL_CENTER.x + earthX) / 2;
     const midY = (ORBITAL_CENTER.y + earthY) / 2;
     elements.distanceText.setAttribute('x', midX + 10);
     elements.distanceText.setAttribute('y', midY);
-    elements.distanceText.textContent = `${distance.toFixed(3)} AU`;
+    elements.distanceText.textContent = `${distanceAU.toFixed(3)} AU`;
 
     // Update planet color
     const planetData = PLANET_DATA[state.currentPlanet];
@@ -446,7 +488,7 @@
   }
 
   function updateLatitudeBands() {
-    const tilt = state.axialTilt;
+    const tilt = effectiveObliquityDegrees(state.axialTilt);
 
     // Latitude bands are positioned based on the current axial tilt
     // Arctic Circle: 90 - tilt degrees
@@ -538,12 +580,13 @@
     // The tilt direction depends on the current season
 
     const declination = getSunDeclination(state.dayOfYear);
-    const tiltRad = state.axialTilt * Math.PI / 180;
+    const eps = effectiveObliquityDegrees(state.axialTilt);
+    const tiltRad = eps * Math.PI / 180;
 
     // Calculate axis endpoints
     // The axis should tilt toward/away from the viewer (left/right in side view)
     // based on declination
-    const tiltDirection = declination / state.axialTilt; // -1 to +1
+    const tiltDirection = eps === 0 ? 0 : declination / eps; // -1 to +1
     const horizontalOffset = 20 * Math.sin(tiltRad) * tiltDirection;
 
     const topX = GLOBE_CENTER.x + horizontalOffset;
@@ -569,7 +612,7 @@
       // The ecliptic is tilted relative to the equator by the axial tilt
       if (state.overlays.ecliptic) {
         // Rotate the ecliptic ellipse to show the tilt
-        const tiltDeg = state.axialTilt;
+        const tiltDeg = effectiveObliquityDegrees(state.axialTilt);
         elements.eclipticOverlay.setAttribute('transform',
           `rotate(${tiltDeg} ${GLOBE_CENTER.x} ${GLOBE_CENTER.y})`);
       }
@@ -615,7 +658,12 @@
 
     // Slider displays
     elements.dateSliderDisplay.textContent = Math.round(state.dayOfYear);
-    elements.tiltDisplay.textContent = `${state.axialTilt.toFixed(1)}°`;
+    const eps = effectiveObliquityDegrees(state.axialTilt);
+    if (state.axialTilt > 90) {
+      elements.tiltDisplay.textContent = `${state.axialTilt.toFixed(1)}° (effective ${eps.toFixed(1)}°)`;
+    } else {
+      elements.tiltDisplay.textContent = `${state.axialTilt.toFixed(1)}°`;
+    }
 
     elements.latitudeDisplay.textContent = formatLatitude(state.latitude);
 
@@ -699,7 +747,8 @@
 
     planetPresets.forEach(preset => {
       preset.el.addEventListener('click', () => {
-        const tilt = parseFloat(preset.el.getAttribute('data-tilt'));
+        const planetData = PLANET_DATA[preset.planet];
+        const tilt = planetData ? parseFloat(planetData.tilt) : parseFloat(preset.el.getAttribute('data-tilt'));
         state.currentPlanet = preset.planet;
 
         // Store actual tilt value (0-180° range now supported)
@@ -719,6 +768,25 @@
     elements.btnStop.addEventListener('click', () => {
       stopAnimation();
     });
+
+    if (elements.btnResetDefaults) {
+      elements.btnResetDefaults.addEventListener('click', () => {
+        stopAnimation();
+
+        state.currentPlanet = 'earth';
+        state.dayOfYear = 80;
+        state.axialTilt = 23.5;
+        state.latitude = 40;
+
+        elements.dateSlider.value = state.dayOfYear;
+        elements.tiltSlider.value = state.axialTilt;
+        elements.latitudeSlider.value = state.latitude;
+
+        updateSeasonPresetHighlight(elements.presetMarEquinox);
+        updatePlanetPresetHighlight(elements.presetEarth);
+        update();
+      });
+    }
 
     // Overlay toggles
     elements.toggleCelestialEquator.addEventListener('change', () => {
@@ -794,12 +862,18 @@
     const planetData = PLANET_DATA[state.currentPlanet];
     if (planetData && elements.planetName && elements.planetTiltDisplay) {
       elements.planetName.textContent = planetData.name;
-      elements.planetTiltDisplay.textContent = `(${planetData.tilt}° tilt)`;
+      const eps = effectiveObliquityDegrees(planetData.tilt);
+      if (planetData.tilt > 90) {
+        elements.planetTiltDisplay.textContent = `(${planetData.tilt}° tilt, effective ${eps.toFixed(1)}°)`;
+      } else {
+        elements.planetTiltDisplay.textContent = `(${planetData.tilt}° tilt)`;
+      }
 
       // Update indicator color to match planet
       if (elements.planetIndicator) {
-        elements.planetIndicator.style.background = `rgba(${hexToRgb(planetData.color)}, 0.15)`;
-        elements.planetIndicator.style.borderColor = `rgba(${hexToRgb(planetData.color)}, 0.4)`;
+        const rgb = resolveRgbTriplet(planetData.color) || '74, 144, 217';
+        elements.planetIndicator.style.background = `rgba(${rgb}, 0.15)`;
+        elements.planetIndicator.style.borderColor = `rgba(${rgb}, 0.4)`;
       }
       if (elements.planetName) {
         elements.planetName.style.color = planetData.color;
@@ -807,12 +881,53 @@
     }
   }
 
-  // Helper to convert hex color to RGB string
-  function hexToRgb(hex) {
+  const resolvedRgbCache = new Map();
+
+  function resolveRgbTriplet(color) {
+    if (!color || typeof color !== 'string') return null;
+    const key = color.trim();
+    if (key === '') return null;
+
+    const cached = resolvedRgbCache.get(key);
+    if (cached) return cached;
+
+    const fromHex = rgbTripletFromHex(key);
+    if (fromHex) {
+      resolvedRgbCache.set(key, fromHex);
+      return fromHex;
+    }
+
+    const varMatch = /^var\(\s*(--[\w-]+)\s*\)$/.exec(key);
+    if (varMatch) {
+      const cssValue = getComputedStyle(document.documentElement).getPropertyValue(varMatch[1]).trim();
+      if (cssValue) {
+        const resolved = resolveRgbTriplet(cssValue);
+        if (resolved) {
+          resolvedRgbCache.set(key, resolved);
+          return resolved;
+        }
+      }
+    }
+
+    const probe = document.createElement('span');
+    probe.style.color = key;
+    probe.style.display = 'none';
+    document.body.appendChild(probe);
+    const computed = getComputedStyle(probe).color;
+    probe.remove();
+
+    const rgbMatch = /^rgba?\((\d+),\s*(\d+),\s*(\d+)/.exec(computed);
+    if (!rgbMatch) return null;
+
+    const triplet = `${rgbMatch[1]}, ${rgbMatch[2]}, ${rgbMatch[3]}`;
+    resolvedRgbCache.set(key, triplet);
+    return triplet;
+  }
+
+  function rgbTripletFromHex(hex) {
     const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
-    return result
-      ? `${parseInt(result[1], 16)}, ${parseInt(result[2], 16)}, ${parseInt(result[3], 16)}`
-      : '74, 144, 217';
+    if (!result) return null;
+    return `${parseInt(result[1], 16)}, ${parseInt(result[2], 16)}, ${parseInt(result[3], 16)}`;
   }
 
   // ============================================
@@ -960,6 +1075,11 @@
     elements.toggleLatitudeBands.checked = state.overlays.latitudeBands;
     elements.toggleTerminator.checked = state.overlays.terminator;
     elements.toggleHourGrid.checked = state.overlays.hourGrid;
+
+    loadPlanetsJson().then(() => {
+      updatePlanetIndicator();
+      update();
+    });
 
     // Initial update
     update();

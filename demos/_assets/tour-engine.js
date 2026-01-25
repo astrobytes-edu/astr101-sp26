@@ -83,7 +83,7 @@
         /* Tour Panel */
         .tour-panel {
           background: linear-gradient(135deg, rgba(30, 30, 50, 0.98), rgba(20, 20, 35, 0.98));
-          border: 2px solid var(--soft-magenta, #C792EA);
+          border: 2px solid var(--soft-magenta);
           border-radius: 12px;
           padding: 1.25rem;
           margin-bottom: 1rem;
@@ -137,8 +137,8 @@
         }
 
         .tour-badge {
-          background: var(--soft-magenta, #C792EA);
-          color: var(--space-black, #0a0a14);
+          background: var(--soft-magenta);
+          color: var(--space-black);
           padding: 0.25rem 0.75rem;
           border-radius: 9999px;
           font-size: 0.8rem;
@@ -148,7 +148,7 @@
         .tour-close {
           background: none;
           border: none;
-          color: var(--text-muted, #6272A4);
+          color: var(--text-muted);
           font-size: 1.5rem;
           cursor: pointer;
           padding: 0 0.5rem;
@@ -157,11 +157,11 @@
         }
 
         .tour-close:hover {
-          color: var(--text-primary, #F8F8F2);
+          color: var(--text-primary);
         }
 
         .tour-close:focus-visible {
-          outline: 2px solid var(--soft-magenta, #C792EA);
+          outline: 2px solid var(--soft-magenta);
           outline-offset: 2px;
         }
 
@@ -172,39 +172,39 @@
 
         .tour-step-number {
           font-size: 0.875rem;
-          color: var(--soft-magenta, #C792EA);
+          color: var(--soft-magenta);
           margin-bottom: 0.5rem;
         }
 
         .tour-title {
           font-size: 1.25rem;
           font-weight: 600;
-          color: var(--text-primary, #F8F8F2);
+          color: var(--text-primary);
           margin-bottom: 0.75rem;
           line-height: 1.3;
         }
 
         .tour-description {
           font-size: 1rem;
-          color: var(--text-secondary, #BFBFBF);
+          color: var(--text-secondary);
           line-height: 1.6;
         }
 
         .tour-description em {
-          color: var(--stellar-amber, #FFB86C);
+          color: var(--stellar-amber);
           font-style: normal;
           font-weight: 500;
         }
 
         .tour-description strong {
-          color: var(--text-primary, #F8F8F2);
+          color: var(--text-primary);
         }
 
         .tour-description code {
-          background: var(--space-light, #252538);
+          background: var(--space-light);
           padding: 0.1rem 0.3rem;
           border-radius: 3px;
-          font-family: var(--font-mono, monospace);
+          font-family: var(--font-mono);
           font-size: 0.9em;
         }
 
@@ -214,14 +214,14 @@
           align-items: center;
           gap: 0.5rem;
           padding-top: 1rem;
-          border-top: 1px solid var(--border-color, rgba(255,255,255,0.1));
+          border-top: 1px solid var(--border-color);
         }
 
         .tour-progress {
           flex: 1;
           text-align: center;
           font-size: 0.875rem;
-          color: var(--text-muted, #6272A4);
+          color: var(--text-muted);
         }
 
         .tour-progress-bar {
@@ -235,16 +235,16 @@
           width: 8px;
           height: 8px;
           border-radius: 50%;
-          background: var(--space-light, #252538);
+          background: var(--space-light);
           transition: all 0.2s ease;
         }
 
         .tour-progress-dot.completed {
-          background: var(--soft-magenta, #C792EA);
+          background: var(--soft-magenta);
         }
 
         .tour-progress-dot.current {
-          background: var(--soft-magenta, #C792EA);
+          background: var(--soft-magenta);
           box-shadow: 0 0 8px rgba(199, 146, 234, 0.6);
           transform: scale(1.2);
         }
@@ -253,9 +253,9 @@
         .tour-btn {
           padding: 0.5rem 1.25rem;
           border-radius: 6px;
-          border: 1px solid var(--border-color, rgba(255,255,255,0.1));
-          background: var(--space-light, #252538);
-          color: var(--text-secondary, #BFBFBF);
+          border: 1px solid var(--border-color);
+          background: var(--space-light);
+          color: var(--text-secondary);
           cursor: pointer;
           font-size: 0.9rem;
           font-family: inherit;
@@ -264,13 +264,13 @@
         }
 
         .tour-btn:hover:not(:disabled) {
-          background: var(--space-medium, #1a1a2e);
-          border-color: var(--soft-magenta, #C792EA);
-          color: var(--text-primary, #F8F8F2);
+          background: var(--space-medium);
+          border-color: var(--soft-magenta);
+          color: var(--text-primary);
         }
 
         .tour-btn:focus-visible {
-          outline: 2px solid var(--soft-magenta, #C792EA);
+          outline: 2px solid var(--soft-magenta);
           outline-offset: 2px;
         }
 
@@ -280,14 +280,14 @@
         }
 
         .tour-btn.primary {
-          background: var(--soft-magenta, #C792EA);
-          color: var(--space-black, #0a0a14);
-          border-color: var(--soft-magenta, #C792EA);
+          background: var(--soft-magenta);
+          color: var(--space-black);
+          border-color: var(--soft-magenta);
           font-weight: 500;
         }
 
         .tour-btn.primary:hover:not(:disabled) {
-          background: #d4a8f0;
+          filter: brightness(1.05);
           box-shadow: 0 0 15px rgba(199, 146, 234, 0.4);
         }
 
@@ -304,7 +304,7 @@
 
         .tour-highlight-ring {
           position: absolute;
-          border: 3px solid var(--soft-magenta, #C792EA);
+          border: 3px solid var(--soft-magenta);
           border-radius: 8px;
           box-shadow: 0 0 0 4000px rgba(10, 10, 20, 0.7),
                       0 0 20px rgba(199, 146, 234, 0.5),

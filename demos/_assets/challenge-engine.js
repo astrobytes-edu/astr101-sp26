@@ -130,6 +130,7 @@
       // UI elements
       this.ui = null;
       this.styleSheet = null;
+      this._previousActiveElement = null;
 
       // Bind methods
       this.start = this.start.bind(this);
@@ -167,8 +168,19 @@
 
       // Show UI
       if (this.ui) {
+        this._previousActiveElement = document.activeElement instanceof HTMLElement
+          ? document.activeElement
+          : null;
+
         this.ui.style.display = 'block';
         this._updateUI();
+
+        const closeBtn = this.ui.querySelector('.challenge-close');
+        if (closeBtn) {
+          closeBtn.focus();
+        } else {
+          this.ui.focus();
+        }
       }
 
       // Fire progress callback
@@ -332,6 +344,11 @@
       if (this.ui) {
         this.ui.style.display = 'none';
       }
+
+      if (this._previousActiveElement && document.contains(this._previousActiveElement)) {
+        this._previousActiveElement.focus();
+      }
+      this._previousActiveElement = null;
     }
 
     /**
@@ -578,6 +595,10 @@
 
       const wrapper = document.createElement('div');
       wrapper.className = 'challenge-panel';
+      wrapper.setAttribute('role', 'dialog');
+      wrapper.setAttribute('aria-label', 'Challenge Mode');
+      wrapper.setAttribute('aria-modal', 'false');
+      wrapper.tabIndex = -1;
       wrapper.innerHTML = `
         <div class="challenge-header">
           <span class="challenge-badge">Challenge Mode</span>
@@ -607,6 +628,12 @@
       wrapper.querySelector('.skip-btn').addEventListener('click', () => this.skip());
       wrapper.querySelector('.prev-btn').addEventListener('click', () => this._goToPrevious());
       wrapper.querySelector('.next-btn').addEventListener('click', () => this._goToNext());
+      wrapper.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') {
+          event.preventDefault();
+          this.stop();
+        }
+      });
 
       // Hook up check-btn: for custom type challenges, use getState and the challenge's check function
       wrapper.querySelector('.check-btn').addEventListener('click', () => {
@@ -638,7 +665,7 @@
       style.textContent = `
         .challenge-panel {
           background: rgba(18, 18, 31, 0.95);
-          border: 2px solid var(--cosmic-teal, #4ecdc4);
+          border: 2px solid var(--cosmic-teal);
           border-radius: 12px;
           padding: 1rem;
           margin-bottom: 1rem;
@@ -651,8 +678,8 @@
           margin-bottom: 1rem;
         }
         .challenge-badge {
-          background: var(--cosmic-teal, #4ecdc4);
-          color: var(--space-black, #0d0d1a);
+          background: var(--cosmic-teal);
+          color: var(--space-black);
           padding: 0.25rem 0.75rem;
           border-radius: 9999px;
           font-size: 0.75rem;
@@ -663,33 +690,38 @@
         .challenge-close {
           background: none;
           border: none;
-          color: var(--text-muted, #6b7280);
+          color: var(--text-muted);
           font-size: 1.5rem;
           cursor: pointer;
           padding: 0 0.5rem;
           line-height: 1;
         }
         .challenge-close:hover {
-          color: var(--text-primary, #f5f5f5);
+          color: var(--text-primary);
+        }
+        .challenge-close:focus-visible,
+        .challenge-btn:focus-visible {
+          outline: 2px solid var(--accent-blue);
+          outline-offset: 2px;
         }
         .challenge-number {
           font-size: 0.875rem;
-          color: var(--text-muted, #6b7280);
+          color: var(--text-muted);
           margin-bottom: 0.5rem;
         }
         .challenge-question {
           font-size: 1.1rem;
-          color: var(--text-primary, #f5f5f5);
+          color: var(--text-primary);
           margin-bottom: 1rem;
           line-height: 1.5;
         }
         .challenge-hint {
           background: rgba(255, 184, 108, 0.1);
-          border-left: 3px solid var(--stellar-amber, #ffb86c);
+          border-left: 3px solid var(--stellar-amber);
           padding: 0.75rem;
           margin-bottom: 1rem;
           font-size: 0.9rem;
-          color: var(--stellar-amber, #ffb86c);
+          color: var(--stellar-amber);
         }
         .challenge-feedback {
           padding: 0.75rem;
@@ -699,18 +731,18 @@
         }
         .challenge-feedback.correct {
           background: rgba(80, 250, 123, 0.1);
-          border-left: 3px solid var(--nebula-green, #50fa7b);
-          color: var(--nebula-green, #50fa7b);
+          border-left: 3px solid var(--nebula-green);
+          color: var(--nebula-green);
         }
         .challenge-feedback.incorrect {
           background: rgba(255, 121, 198, 0.1);
-          border-left: 3px solid var(--nova-pink, #ff79c6);
-          color: var(--nova-pink, #ff79c6);
+          border-left: 3px solid var(--nova-pink);
+          color: var(--nova-pink);
         }
         .challenge-feedback.close {
           background: rgba(255, 184, 108, 0.1);
-          border-left: 3px solid var(--stellar-amber, #ffb86c);
-          color: var(--stellar-amber, #ffb86c);
+          border-left: 3px solid var(--stellar-amber);
+          color: var(--stellar-amber);
         }
         .challenge-actions,
         .challenge-nav {
@@ -721,52 +753,52 @@
         .challenge-nav {
           margin-top: 1rem;
           padding-top: 1rem;
-          border-top: 1px solid var(--border-color, #2d2d44);
+          border-top: 1px solid var(--border-color);
         }
         .challenge-progress {
           flex: 1;
           text-align: center;
           font-size: 0.875rem;
-          color: var(--text-muted, #6b7280);
+          color: var(--text-muted);
         }
         .challenge-btn {
           padding: 0.5rem 1rem;
           border-radius: 6px;
-          border: 1px solid var(--border-color, #2d2d44);
-          background: var(--space-light, #1a1a2e);
-          color: var(--text-secondary, #a0a0a0);
+          border: 1px solid var(--border-color);
+          background: var(--space-light);
+          color: var(--text-secondary);
           cursor: pointer;
           font-size: 0.875rem;
           transition: all 0.15s ease;
         }
         .challenge-btn:hover:not(:disabled) {
-          background: var(--space-medium, #252538);
-          color: var(--text-primary, #f5f5f5);
-          border-color: var(--cosmic-teal, #4ecdc4);
+          background: var(--space-medium);
+          color: var(--text-primary);
+          border-color: var(--cosmic-teal);
         }
         .challenge-btn:disabled {
           opacity: 0.5;
           cursor: not-allowed;
         }
         .challenge-btn.primary {
-          background: var(--cosmic-teal, #4ecdc4);
-          color: var(--space-black, #0d0d1a);
-          border-color: var(--cosmic-teal, #4ecdc4);
+          background: var(--cosmic-teal);
+          color: var(--space-black);
+          border-color: var(--cosmic-teal);
           font-weight: 500;
         }
         .challenge-btn.primary:hover:not(:disabled) {
-          background: #7dd8d2;
+          filter: brightness(1.05);
         }
         .challenge-complete {
           text-align: center;
           padding: 1.5rem;
         }
         .challenge-complete h3 {
-          color: var(--nebula-green, #50fa7b);
+          color: var(--nebula-green);
           margin-bottom: 1rem;
         }
         .challenge-complete .stats {
-          color: var(--text-secondary, #a0a0a0);
+          color: var(--text-secondary);
           font-size: 0.9rem;
         }
       `;

@@ -9,6 +9,22 @@
   <link rel="stylesheet" href="../_assets/demo-shell.css">
   <link rel="stylesheet" href="../_assets/demo-legacy.css">
   <link rel="stylesheet" href="./angular-size.css">
+  <style>
+    .model-note {
+      margin-top: var(--space-md);
+      background: rgba(18, 18, 31, 0.9);
+      border: 1px solid var(--border-color);
+      border-left: 3px solid var(--accent-gold);
+      padding: 0.75rem 1rem;
+      border-radius: 0 8px 8px 0;
+      font-size: var(--font-size-sm);
+      color: var(--text-secondary);
+    }
+
+    .model-note strong {
+      color: var(--text-primary);
+    }
+  </style>
 </head>
 <body>
   <div class="demo-wrapper">
@@ -18,6 +34,7 @@
       <header class="demo-header">
         <h1 class="demo-title">Angular Size</h1>
         <p class="demo-subtitle">Why things look big or small depends on size <em>and</em> distance</p>
+        <button class="astro-btn secondary" id="btn-reset-defaults" type="button">Reset to Lecture Defaults</button>
       </header>
 
       <!-- Main Visualization -->
@@ -92,6 +109,7 @@
           <div class="readout-label">Angular Size (degrees)</div>
           <div class="readout-value" id="angular-size-value">0.53</div>
           <div class="readout-unit" id="angular-size-unit">degrees</div>
+          <div id="angle-warning" class="angle-warning" style="display:none"></div>
         </div>
         <div class="readout-item">
           <div class="readout-label">Physical Size</div>
@@ -112,7 +130,7 @@
             Distance
             <span class="control-value" id="distance-display">150 Mkm</span>
           </div>
-          <input type="range" id="distance-slider" class="astro-slider" min="0" max="1000" value="500" data-tooltip-source="#distance-display">
+          <input type="range" id="distance-slider" class="astro-slider" min="0" max="1000" value="500" aria-label="Distance" data-tooltip-source="#distance-display">
         </div>
 
         <div class="control-card">
@@ -120,7 +138,7 @@
             Physical Size
             <span class="control-value" id="size-display">1.39 Mkm</span>
           </div>
-          <input type="range" id="size-slider" class="astro-slider" min="0" max="1000" value="500" data-tooltip-source="#size-display">
+          <input type="range" id="size-slider" class="astro-slider" min="0" max="1000" value="500" aria-label="Physical Size" data-tooltip-source="#size-display">
         </div>
 
         <div class="control-card full-width">
@@ -148,7 +166,7 @@
               Time Evolution (for Moon)
               <span class="control-value" id="time-display">Perigee</span>
             </div>
-            <input type="range" id="time-slider" class="astro-slider" min="0" max="360" value="0" step="1" data-tooltip-source="#time-display">
+            <input type="range" id="time-slider" class="astro-slider" min="0" max="360" value="0" step="1" aria-label="Time Evolution" data-tooltip-source="#time-display">
             <div class="time-label">
               <span>Perigee</span>
               <span>Apogee</span>
@@ -156,6 +174,10 @@
             <div class="time-range" id="moon-angular-range"></div>
           </div>
         </div>
+      </div>
+
+      <div class="model-note">
+        <strong>Model note:</strong> Angular size uses the exact angular diameter formula; at very close distances, angles saturate.
       </div>
 
       <!-- Reference Guide -->

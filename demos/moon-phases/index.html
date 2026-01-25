@@ -47,6 +47,62 @@
       justify-content: center;
     }
 
+    /* Insights (optional) */
+    .insights-panel {
+      background: rgba(18, 18, 31, 0.9);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      margin-bottom: 1rem;
+    }
+
+    .insights-panel > summary {
+      cursor: pointer;
+      padding: 0.75rem 1rem;
+      color: var(--text-secondary);
+      font-weight: 600;
+      list-style: none;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.5rem;
+    }
+
+    .insights-panel > summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .insights-panel > summary::after {
+      content: '▸';
+      color: var(--text-muted);
+      transition: transform 0.15s ease;
+    }
+
+    .insights-panel[open] > summary::after {
+      transform: rotate(90deg);
+    }
+
+    .insights-panel > summary:focus-visible {
+      outline: 2px solid var(--accent-blue);
+      outline-offset: 2px;
+      border-radius: 6px;
+    }
+
+    .insights-panel[open] > summary {
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .insights-body {
+      padding: 0.75rem 1rem 1rem;
+      display: grid;
+      gap: 0.75rem;
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+    }
+
+    .insights-body strong {
+      color: var(--text-primary);
+    }
+
     /* Key insight */
     .insight-box {
       background: rgba(18, 18, 31, 0.9);
@@ -60,12 +116,34 @@
       color: var(--accent-green);
     }
 
+    .model-note {
+      margin-top: var(--space-md);
+      background: rgba(18, 18, 31, 0.9);
+      border: 1px solid var(--border-color);
+      border-left: 3px solid var(--accent-gold);
+      padding: 0.75rem 1rem;
+      border-radius: 0 8px 8px 0;
+      font-size: var(--font-size-sm);
+      color: var(--text-secondary);
+    }
+
+    .model-note strong {
+      color: var(--text-primary);
+    }
+
     /* Draggable hint */
     .drag-hint {
       text-align: center;
       color: var(--text-muted);
       font-size: 0.75rem;
       margin-top: 0.5rem;
+    }
+
+    .schematic-note {
+      text-align: center;
+      color: var(--text-muted);
+      font-size: var(--font-size-xs);
+      margin-top: var(--space-xs);
     }
 
     /* Moon in SVG */
@@ -179,7 +257,7 @@
       height: 28px;
       border-radius: 50%;
       position: relative;
-      background: #3a3a4a;
+      background: var(--moon-dark);
       overflow: hidden;
     }
 
@@ -189,7 +267,7 @@
       top: 0;
       width: 50%;
       height: 100%;
-      background: #e8e8f0;
+      background: var(--moon-light);
     }
 
     .phase-icon.new-moon::after { display: none; }
@@ -251,7 +329,7 @@
     }
 
     .anim-btn.primary:hover:not(:disabled) {
-      background: #7bc0eb;
+      background: var(--ice-blue);
     }
 
     .btn-icon {
@@ -288,6 +366,23 @@
       }
     }
 
+    .shadow-insight-popup {
+      position: fixed;
+      bottom: 2rem;
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(18, 18, 31, 0.95);
+      border: 1px solid var(--border-color);
+      border-left: 3px solid var(--accent-green);
+      color: var(--text-primary);
+      padding: 1rem 1.25rem;
+      border-radius: 12px;
+      max-width: 420px;
+      z-index: 1000;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+      animation: slideUp 0.3s ease-out;
+    }
+
     .insight-popup-content {
       display: flex;
       flex-direction: column;
@@ -295,13 +390,13 @@
     }
 
     .insight-popup-content strong {
-      color: #1a5f3a;
+      color: var(--accent-green);
     }
 
     .insight-close {
       align-self: flex-end;
-      background: #1a5f3a;
-      color: white;
+      background: var(--accent-green);
+      color: var(--space-black);
       border: none;
       padding: 0.5rem 1rem;
       border-radius: 4px;
@@ -310,7 +405,12 @@
     }
 
     .insight-close:hover {
-      background: #145a32;
+      filter: brightness(1.05);
+    }
+
+    .insight-close:focus-visible {
+      outline: 2px solid var(--accent-blue);
+      outline-offset: 2px;
     }
   </style>
 </head>
@@ -336,47 +436,52 @@
             <defs>
               <!-- Sun glow -->
               <radialGradient id="sunGlow" cx="50%" cy="50%" r="50%">
-                <stop offset="0%" stop-color="#fff5cc"/>
-                <stop offset="60%" stop-color="#ffcc00"/>
-                <stop offset="100%" stop-color="#ff8c00"/>
+                <stop offset="0%" stop-color="var(--sun-core)"/>
+                <stop offset="60%" stop-color="var(--sun-glow)"/>
+                <stop offset="100%" stop-color="var(--sun-corona)"/>
               </radialGradient>
 
               <!-- Earth gradient -->
               <radialGradient id="earthGradient" cx="30%" cy="30%">
-                <stop offset="0%" stop-color="#6bb5e0"/>
-                <stop offset="100%" stop-color="#2a5a8a"/>
+                <stop offset="0%" stop-color="var(--earth-blue)"/>
+                <stop offset="100%" stop-color="var(--text-muted)"/>
               </radialGradient>
 
               <!-- Moon lit side -->
               <radialGradient id="moonLit" cx="30%" cy="30%">
-                <stop offset="0%" stop-color="#f5f5fa"/>
-                <stop offset="100%" stop-color="#c8c8d8"/>
+                <stop offset="0%" stop-color="var(--moon-light)"/>
+                <stop offset="100%" stop-color="var(--text-secondary)"/>
               </radialGradient>
 
               <!-- Clip for moon phases -->
               <clipPath id="moonClip">
                 <circle cx="0" cy="0" r="15"/>
               </clipPath>
+
+              <!-- Clip for the Sun-facing (always-lit) half in orbital view -->
+              <clipPath id="moonLitHalfClip" clipPathUnits="userSpaceOnUse">
+                <rect id="moon-lit-half-clip" x="305" y="185" width="15" height="30"/>
+              </clipPath>
             </defs>
 
             <!-- Sunlight arrows -->
             <g id="sunlight-arrows" opacity="0.4">
-              <line x1="0" y1="100" x2="80" y2="100" stroke="#ffcc00" stroke-width="2" marker-end="url(#arrowhead)"/>
-              <line x1="0" y1="200" x2="80" y2="200" stroke="#ffcc00" stroke-width="2"/>
-              <line x1="0" y1="300" x2="80" y2="300" stroke="#ffcc00" stroke-width="2"/>
-              <text x="10" y="60" fill="#ffcc00" font-size="11">Sunlight</text>
+              <line x1="0" y1="100" x2="80" y2="100" stroke="var(--sun-glow)" stroke-width="2" marker-end="url(#arrowhead)"/>
+              <line x1="0" y1="200" x2="80" y2="200" stroke="var(--sun-glow)" stroke-width="2"/>
+              <line x1="0" y1="300" x2="80" y2="300" stroke="var(--sun-glow)" stroke-width="2"/>
+              <text x="10" y="60" fill="var(--sun-glow)" font-size="11">Sunlight</text>
             </g>
 
             <!-- Sun (off-screen left, show edge) -->
             <circle cx="-60" cy="200" r="80" fill="url(#sunGlow)" opacity="0.8"/>
 
             <!-- Moon's orbit -->
-            <circle cx="200" cy="200" r="120" fill="none" stroke="#404060" stroke-width="1" stroke-dasharray="4 4" opacity="0.6"/>
+            <circle cx="200" cy="200" r="120" fill="none" stroke="var(--text-muted)" stroke-width="1" stroke-dasharray="4 4" opacity="0.6"/>
 
             <!-- Earth -->
             <g id="earth-group" transform="translate(200, 200)">
               <circle r="25" fill="url(#earthGradient)" filter="url(#glow)"/>
-              <text y="45" text-anchor="middle" fill="#a0a0b0" font-size="11">Earth</text>
+              <text y="45" text-anchor="middle" fill="var(--text-secondary)" font-size="11">Earth</text>
             </g>
 
             <!-- Earth's Shadow Cone (toggled by checkbox) -->
@@ -401,8 +506,8 @@
                     stroke-width="1"
                     stroke-dasharray="4 2"/>
               <!-- Label -->
-              <text x="320" y="155" fill="#ec7063" font-size="10" opacity="0.8">Earth's Shadow</text>
-              <text x="300" y="168" fill="#ec7063" font-size="9" opacity="0.6">(only matters for eclipses!)</text>
+              <text x="320" y="155" fill="var(--accent-red)" font-size="10" opacity="0.8">Earth's Shadow</text>
+              <text x="300" y="168" fill="var(--accent-red)" font-size="9" opacity="0.6">(only matters for eclipses!)</text>
             </g>
 
             <!-- Moon (draggable) -->
@@ -413,19 +518,20 @@
                aria-valuemax="360"
                aria-valuenow="0"
                aria-valuetext="Full Moon, 100% illuminated"
-               tabindex="0">
+              tabindex="0">
               <!-- Dark side (always visible as background) -->
-              <circle id="moon-dark" cx="320" cy="200" r="15" fill="#3a3a4a"/>
+              <circle id="moon-dark" cx="320" cy="200" r="15" fill="var(--moon-dark)"/>
               <!-- Lit side (clipped to show phase in orbital view) -->
-              <circle id="moon-lit" cx="320" cy="200" r="15" fill="url(#moonLit)"/>
-              <!-- Terminator line (boundary between lit and dark) -->
-              <ellipse id="moon-terminator" cx="320" cy="200" rx="0" ry="15" fill="#3a3a4a"/>
+              <circle id="moon-lit" cx="320" cy="200" r="15" fill="url(#moonLit)" clip-path="url(#moonLitHalfClip)"/>
+              <!-- Terminator line (boundary between lit and dark, always faces the Sun) -->
+              <line id="moon-terminator" x1="320" y1="185" x2="320" y2="215"
+                    stroke="var(--text-muted)" stroke-width="1" opacity="0.85"/>
             </g>
 
             <!-- Observer's view direction indicator -->
             <g id="view-indicator" opacity="0.5">
-              <path d="M 200 175 L 200 140" stroke="#5dade2" stroke-width="1" stroke-dasharray="3 3"/>
-              <text x="200" y="130" text-anchor="middle" fill="#5dade2" font-size="9">Your view</text>
+              <path d="M 200 175 L 200 140" stroke="var(--ice-blue)" stroke-width="1" stroke-dasharray="3 3"/>
+              <text x="200" y="130" text-anchor="middle" fill="var(--ice-blue)" font-size="9">Your view</text>
             </g>
           </svg>
           <div class="drag-hint">Drag the Moon around Earth's orbit</div>
@@ -437,14 +543,14 @@
           <svg id="phase-svg" viewBox="0 0 200 200" preserveAspectRatio="xMidYMid meet">
             <defs>
               <radialGradient id="moonSurface" cx="30%" cy="30%">
-                <stop offset="0%" stop-color="#f0f0f5"/>
-                <stop offset="100%" stop-color="#b8b8c8"/>
+                <stop offset="0%" stop-color="var(--moon-light)"/>
+                <stop offset="100%" stop-color="var(--text-secondary)"/>
               </radialGradient>
 
               <!-- Earthshine (faint illumination of dark side) -->
               <radialGradient id="earthshine" cx="70%" cy="30%">
-                <stop offset="0%" stop-color="#2a3a4a"/>
-                <stop offset="100%" stop-color="#1a1a2a"/>
+                <stop offset="0%" stop-color="var(--space-light)"/>
+                <stop offset="100%" stop-color="var(--space-medium)"/>
               </radialGradient>
             </defs>
 
@@ -457,6 +563,7 @@
               <path id="lit-portion" d="" fill="url(#moonSurface)"/>
             </g>
           </svg>
+          <div class="schematic-note">Schematic (not to scale).</div>
         </div>
       </div>
 
@@ -536,7 +643,7 @@
           <span class="btn-icon">↺</span> Reset
         </button>
         <div class="speed-control">
-          <label>Speed:</label>
+          <label for="speed-select">Speed:</label>
           <select id="speed-select">
             <option value="1">1x</option>
             <option value="5" selected>5x</option>
@@ -550,16 +657,6 @@
 
       <!-- Phase presets -->
       <div class="controls-panel">
-        <!-- Shadow Toggle -->
-        <div class="toggle-row" style="margin-bottom: 1rem; display: flex; align-items: center; justify-content: center; gap: 0.5rem;">
-          <label class="toggle-switch">
-            <input type="checkbox" id="show-shadow-toggle">
-            <span class="toggle-switch__track">
-              <span class="toggle-switch__thumb"></span>
-            </span>
-            <span class="toggle-switch__label">Show Earth's Shadow</span>
-          </label>
-        </div>
         <div class="controls-row">
           <button class="phase-btn" data-angle="180">New Moon</button>
           <button class="phase-btn" data-angle="270">First Quarter</button>
@@ -568,11 +665,31 @@
         </div>
       </div>
 
+      <details class="insights-panel">
+        <summary>Insights (optional)</summary>
+        <div class="insights-body">
+          <div><strong>Eclipse insight:</strong> Earth's shadow is <em>not</em> what causes phases; it only matters during lunar eclipses.</div>
+          <div class="toggle-row" style="display: flex; align-items: center; justify-content: center; gap: 0.5rem;">
+            <label class="toggle-switch">
+              <input type="checkbox" id="show-shadow-toggle">
+              <span class="toggle-switch__track">
+                <span class="toggle-switch__thumb"></span>
+              </span>
+              <span class="toggle-switch__label">Show Earth's Shadow (Eclipse insight)</span>
+            </label>
+          </div>
+          <div>Want the full story? Try <a href="../eclipse-geometry/">Eclipse Geometry</a>.</div>
+        </div>
+      </details>
+
       <!-- Key insight -->
       <div class="insight-box">
         <strong>Key insight:</strong> The Sun always lights exactly half of the Moon.
         Phases show <em>how much of that lit half faces Earth</em> — it's geometry, not shadow.
-        Earth's shadow only matters during lunar eclipses (rare!).
+      </div>
+
+      <div class="model-note">
+        <strong>Model note:</strong> Geometry-only; not to scale; phases are about illumination, not shadow.
       </div>
 
       <!-- Cross-demo navigation -->
@@ -606,7 +723,7 @@
 
         .demo-nav-link:hover {
           background: var(--space-medium);
-          border-color: var(--cosmic-teal, #4ecdc4);
+          border-color: var(--cosmic-teal);
           color: var(--text-primary);
         }
 

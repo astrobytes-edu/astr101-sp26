@@ -1,9 +1,10 @@
 {
   "planets": [
     {
+      "key": "earth",
       "name": "Earth",
       "tilt": 23.5,
-      "color": "#4a90d9",
+      "color": "var(--earth-blue)",
       "features": "continents",
       "description": "Familiar seasons, 23.5° tilt",
       "orbitalRadius": 1.0,
@@ -12,9 +13,10 @@
       "aphelion": 1.017
     },
     {
+      "key": "mars",
       "name": "Mars",
       "tilt": 25.2,
-      "color": "#c1440e",
+      "color": "var(--mars-red)",
       "features": "mars",
       "description": "Similar tilt to Earth, 687-day year",
       "orbitalRadius": 1.52,
@@ -23,9 +25,10 @@
       "aphelion": 1.67
     },
     {
+      "key": "uranus",
       "name": "Uranus",
       "tilt": 97.8,
-      "color": "#b5e3e3",
+      "color": "var(--ice-blue)",
       "features": "banded",
       "description": "Extreme tilt—poles face Sun",
       "orbitalRadius": 19.2,
@@ -34,9 +37,10 @@
       "aphelion": 20.1
     },
     {
+      "key": "venus",
       "name": "Venus",
       "tilt": 177.4,
-      "color": "#e6c88a",
+      "color": "var(--stellar-amber)",
       "features": "clouds",
       "description": "Retrograde rotation, nearly upside-down",
       "orbitalRadius": 0.72,
@@ -45,9 +49,10 @@
       "aphelion": 0.728
     },
     {
+      "key": "jupiter",
       "name": "Jupiter",
       "tilt": 3.1,
-      "color": "#d4a574",
+      "color": "var(--jupiter-tan)",
       "features": "banded",
       "description": "Minimal tilt—almost no seasons",
       "orbitalRadius": 5.2,
@@ -56,9 +61,10 @@
       "aphelion": 5.46
     },
     {
+      "key": "saturn",
       "name": "Saturn",
       "tilt": 26.7,
-      "color": "#e8d5a0",
+      "color": "var(--sun-core)",
       "features": "banded",
       "description": "Earth-like tilt, 29-year orbit",
       "orbitalRadius": 9.5,
@@ -67,9 +73,10 @@
       "aphelion": 10.05
     },
     {
+      "key": "neptune",
       "name": "Neptune",
       "tilt": 28.3,
-      "color": "#4169e1",
+      "color": "var(--accent-blue)",
       "features": "banded",
       "description": "Earth-like tilt, 165-year orbit",
       "orbitalRadius": 30.0,

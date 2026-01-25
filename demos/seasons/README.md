@@ -26,11 +26,15 @@ The higher the Sun in the sky, the steeper the incident angle and the more conce
 
 ### Key Formulas
 
-**Sun's declination for a given day of year:**
+**Sun's declination for a given day of year (Earth example):**
 
 $$\delta = 23.5° \times \sin\left(\frac{2\pi(d-80)}{365}\right)$$
 
 where $d$ is the day number (1–365) and the baseline is March 21 (day 80) at the vernal equinox.
+
+For other planets (including retrograde cases with tilt $> 90°$), we use an **effective obliquity** in the range $0°$–$90°$ for the seasonal amplitude:
+
+$$\varepsilon_\mathrm{eff} = \min(\varepsilon, 180° - \varepsilon)$$
 
 **Day length at latitude $\phi$ when Sun is at declination $\delta$:**
 
@@ -80,7 +84,7 @@ The right panel shows Earth from space with current illumination:
 | Control | Type | Range | Default |
 |---------|------|-------|---------|
 | **Date/Position** | Slider | Jan 1 – Dec 31 | Mar 21 (equinox) |
-| **Axial Tilt** | Slider | 0° – 90° | 23.5° (Earth) |
+| **Axial Tilt** | Slider | 0° – 180° | 23.5° (Earth) |
 | **Latitude** | Slider | –90° – +90° | 40°N |
 
 **Why 40°N?** This latitude passes through Philadelphia, Denver, Madrid, and Beijing—cities students may recognize. At 40°N, seasons are distinct (not too polar, not too equatorial), making it an ideal teaching reference.
@@ -99,6 +103,8 @@ Quick-jump buttons to the cardinal seasons:
 
 Compare Earth's seasons to other worlds by changing the axial tilt:
 
+Planet preset values are defined in `planets.json` (one source of truth).
+
 | Planet | Axial Tilt | Notes |
 |--------|------------|-------|
 | **Earth** | 23.5° | Familiar seasons, moderate tilt |
@@ -109,6 +115,8 @@ Compare Earth's seasons to other worlds by changing the axial tilt:
 | **Venus** | 177.4° | Retrograde rotation, nearly upside-down |
 
 Each preset updates the tilt slider and globe appearance to reflect the chosen world.
+
+**Retrograde note:** If axial tilt is greater than $90°$, the seasonal variation behaves like a smaller “effective tilt” of $180° - \varepsilon$ (e.g., Venus: $177.4° \rightarrow 2.6°$; Uranus: $97.8° \rightarrow 82.2°$).
 
 ### Animation
 
