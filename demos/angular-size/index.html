@@ -9,6 +9,22 @@
   <link rel="stylesheet" href="../_assets/demo-shell.css">
   <link rel="stylesheet" href="../_assets/demo-legacy.css">
   <link rel="stylesheet" href="./angular-size.css">
+  <style>
+    .model-note {
+      margin-top: var(--space-md);
+      background: rgba(18, 18, 31, 0.9);
+      border: 1px solid var(--border-color);
+      border-left: 3px solid var(--accent-gold);
+      padding: 0.75rem 1rem;
+      border-radius: 0 8px 8px 0;
+      font-size: var(--font-size-sm);
+      color: var(--text-secondary);
+    }
+
+    .model-note strong {
+      color: var(--text-primary);
+    }
+  </style>
 </head>
 <body>
   <div class="demo-wrapper">
@@ -157,6 +173,10 @@
             <div class="time-range" id="moon-angular-range"></div>
           </div>
         </div>
+      </div>
+
+      <div class="model-note">
+        <strong>Model note:</strong> Angular size uses the exact angular diameter formula; at very close distances, angles saturate.
       </div>
 
       <!-- Reference Guide -->

@@ -60,6 +60,21 @@
       color: var(--accent-green);
     }
 
+    .model-note {
+      margin-top: var(--space-md);
+      background: rgba(18, 18, 31, 0.9);
+      border: 1px solid var(--border-color);
+      border-left: 3px solid var(--accent-gold);
+      padding: 0.75rem 1rem;
+      border-radius: 0 8px 8px 0;
+      font-size: var(--font-size-sm);
+      color: var(--text-secondary);
+    }
+
+    .model-note strong {
+      color: var(--text-primary);
+    }
+
     /* Draggable hint */
     .drag-hint {
       text-align: center;
@@ -603,6 +618,10 @@
         <strong>Key insight:</strong> The Sun always lights exactly half of the Moon.
         Phases show <em>how much of that lit half faces Earth</em> — it's geometry, not shadow.
         Earth's shadow only matters during lunar eclipses (rare!).
+      </div>
+
+      <div class="model-note">
+        <strong>Model note:</strong> Geometry-only; not to scale; phases are about illumination, not shadow.
       </div>
 
       <!-- Cross-demo navigation -->

@@ -134,6 +134,21 @@
       color: var(--accent-blue);
     }
 
+    .model-note {
+      margin-top: var(--space-md);
+      background: rgba(18, 18, 31, 0.9);
+      border: 1px solid var(--border-color);
+      border-left: 3px solid var(--accent-gold);
+      padding: 0.75rem 1rem;
+      border-radius: 0 8px 8px 0;
+      font-size: var(--font-size-sm);
+      color: var(--text-secondary);
+    }
+
+    .model-note strong {
+      color: var(--text-primary);
+    }
+
     /* Responsive */
     @media (max-width: 700px) {
       .viz-layout {
@@ -417,6 +432,10 @@
         <strong>Key insight:</strong> The Moon's orbit is tilted ~5° from Earth's orbital plane.
         This small tilt means the Moon usually passes <em>above</em> or <em>below</em> the Sun/Earth's shadow.
         Eclipses only happen when the Moon is near a <strong>node</strong> (where orbits cross) during new or full moon.
+      </div>
+
+      <div class="model-note">
+        <strong>Model note:</strong> Conceptual model; ignores some real orbital details; results are approximate.
       </div>
 
       <!-- Cross-demo navigation -->
