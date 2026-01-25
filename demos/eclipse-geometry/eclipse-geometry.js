@@ -37,7 +37,7 @@
   const state = {
     moonAngle: 0,           // Angle around orbit (0 = right/full moon position)
     orbitalTilt: 5.145,     // Degrees of orbital tilt
-    nodeAngle: 0,           // Angle of ascending node (rotates slowly)
+    nodeAngle: 30,          // Angle of ascending node (rotates slowly)
     animationId: null,
     isAnimating: false,
 
@@ -76,6 +76,7 @@
       // Status
       eclipseStatus: document.getElementById('eclipse-status'),
       statusDetail: document.getElementById('status-detail'),
+      statusNote: document.getElementById('status-note'),
 
       // Controls
       tiltSlider: document.getElementById('tilt-slider'),
@@ -276,34 +277,44 @@
 
   function updateStatus() {
     const eclipse = checkEclipse();
+    const phase = getPhase(state.moonAngle);
+    const height = getMoonEclipticHeight(state.moonAngle, state.orbitalTilt, state.nodeAngle);
+    const absHeight = Math.abs(height);
+    const direction = height >= 0 ? 'above' : 'below';
 
-    // Map type to CSS class (total vs partial styling)
+    // Persistent lecture-contract readout (exact phrasing)
+    elements.statusDetail.textContent = `Moon is ${absHeight.toFixed(1)}° ${direction} ecliptic plane`;
+
+    // Status indicator: match lecture wording exactly
+    let statusText = 'NO ECLIPSE';
     let cssClass = 'miss';
-    if (eclipse.type.includes('solar')) cssClass = 'solar';
-    if (eclipse.type.includes('lunar')) cssClass = 'lunar';
-    if (eclipse.type.includes('total')) cssClass += ' total';
-
-    elements.eclipseStatus.className = 'eclipse-status ' + cssClass;
-
-    switch (eclipse.type) {
-      case 'total-solar':
-        elements.eclipseStatus.textContent = '☀️ TOTAL SOLAR ECLIPSE!';
-        break;
-      case 'partial-solar':
-        elements.eclipseStatus.textContent = '🌤️ Partial Solar Eclipse';
-        break;
-      case 'total-lunar':
-        elements.eclipseStatus.textContent = '🌕 TOTAL LUNAR ECLIPSE!';
-        break;
-      case 'partial-lunar':
-        elements.eclipseStatus.textContent = '🌔 Partial Lunar Eclipse';
-        break;
-      default:
-        elements.eclipseStatus.textContent = 'NO ECLIPSE';
+    if (eclipse.type.includes('solar')) {
+      statusText = 'SOLAR ECLIPSE';
+      cssClass = 'solar';
+    } else if (eclipse.type.includes('lunar')) {
+      statusText = 'LUNAR ECLIPSE';
+      cssClass = 'lunar';
     }
 
-    elements.statusDetail.textContent = eclipse.detail;
-    elements.phaseDisplay.textContent = getPhase(state.moonAngle);
+    elements.eclipseStatus.textContent = statusText;
+    elements.eclipseStatus.className = 'eclipse-status ' + cssClass;
+
+    if (elements.statusNote) {
+      if (eclipse.type === 'none') {
+        elements.statusNote.textContent =
+          phase === 'New Moon' || phase === 'Full Moon'
+            ? 'Too far from node for an eclipse'
+            : 'Eclipses require New/Full Moon near a node';
+      } else if (eclipse.type.includes('total')) {
+        elements.statusNote.textContent = 'Total eclipse conditions';
+      } else if (eclipse.type.includes('partial')) {
+        elements.statusNote.textContent = 'Partial eclipse conditions';
+      } else {
+        elements.statusNote.textContent = '';
+      }
+    }
+
+    elements.phaseDisplay.textContent = phase;
   }
 
   function updateStats() {
@@ -430,7 +441,7 @@
 
         // Reset state to defaults
         state.moonAngle = 0;
-        state.nodeAngle = 0;
+        state.nodeAngle = 30;
         state.orbitalTilt = 5.145;
 
         // Reset UI
@@ -459,7 +470,7 @@
   // Logarithmic slider conversion (slider 0-100 → years 1-1000)
   function sliderToYears(sliderVal) {
     // 0 → 1, 50 → ~32, 100 → 1000
-    return Math.round(Math.pow(10, sliderVal / 100 * 3));
+    return Math.pow(10, sliderVal / 100 * 3);
   }
 
   function yearsToSlider(years) {
@@ -469,7 +480,7 @@
 
   function formatYears(years) {
     if (years >= 1000) return (years / 1000).toFixed(1) + 'k';
-    return years.toString();
+    return Math.round(years).toString();
   }
 
   function animateToAngle(targetAngle) {
@@ -614,6 +625,7 @@
     function simulateBatch() {
       if (!state.isAnimating || currentMonth >= totalMonths) {
         state.isAnimating = false;
+        state.yearsSimulated = yearsToSimulate;
         updateStats();
         updateLogTable();
         return;
