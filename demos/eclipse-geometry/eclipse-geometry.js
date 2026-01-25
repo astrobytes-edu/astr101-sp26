@@ -13,6 +13,8 @@
   const CENTER = { x: 200, y: 200 };
   const ORBIT_RADIUS = 100;
   const SYNODIC_MONTH = 29.53; // days
+  const MONTHS_PER_YEAR = 12.37; // synodic months per year (illustrative)
+  const NODE_REGRESSION_DEG_PER_YEAR = 19.3; // deg/year (illustrative; VERIFY)
 
   // Eclipse thresholds (degrees from ecliptic plane)
   // Based on actual eclipse limits from node (converted to height above ecliptic)
@@ -250,8 +252,9 @@
     const height = getMoonEclipticHeight(moonAngle, state.orbitalTilt, nodeAngle);
 
     // Map angle to horizontal position in side view
-    // Horizontal axis is "unwrapped" orbital angle (0° → 360°) for a clean sine-wave view of node crossings.
-    const sideX = 350 - (moonAngle / 360) * 250;
+    // Project along the Sun–Earth line so phase geometry is truthful:
+    // Full Moon (0°) is to the right of Earth, New Moon (180°) is to the left.
+    const sideX = 200 + ORBIT_RADIUS * Math.cos(angleRad);
     const sideY = 100 - height * 8; // Scale height for visibility
 
     elements.moonSide.setAttribute('cx', sideX);
@@ -271,19 +274,19 @@
     updateMoonPath();
 
     // Update nodes on side view
-    // Nodes are where the path crosses the ecliptic (y=100)
-    const nodeProgress1 = nodeAngle / 360;
-    const nodeProgress2 = normalizeAngleDeg(nodeAngle + 180) / 360;
-    elements.nodeSide1.setAttribute('cx', 350 - nodeProgress1 * 250);
-    elements.nodeSide2.setAttribute('cx', 350 - nodeProgress2 * 250);
+    // Nodes are where the orbit crosses the ecliptic (y=100)
+    elements.nodeSide1.setAttribute('cx', ascX);
+    elements.nodeSide2.setAttribute('cx', descX);
   }
 
   function updateMoonPath() {
-    // Draw sinusoidal path showing Moon's trajectory
+    // Draw the Moon's tilted path in side view.
     let pathD = '';
+    const nodeAngle = normalizeAngleDeg(state.nodeAngle);
     for (let i = 0; i <= 360; i += 5) {
-      const x = 350 - (i / 360) * 250;
-      const h = getMoonEclipticHeight(i, state.orbitalTilt, state.nodeAngle);
+      const angleRad = i * Math.PI / 180;
+      const x = 200 + ORBIT_RADIUS * Math.cos(angleRad);
+      const h = getMoonEclipticHeight(i, state.orbitalTilt, nodeAngle);
       const y = 100 - h * 8;
 
       if (i === 0) {
@@ -533,6 +536,7 @@
 
     const duration = 3000; // 3 seconds for one month
     const startAngle = state.moonAngle;
+    const startNode = state.nodeAngle;
     const startTime = performance.now();
 
     function frame(currentTime) {
@@ -542,8 +546,10 @@
       const progress = Math.min(elapsed / duration, 1);
 
       state.moonAngle = normalizeAngleDeg(startAngle + progress * 360);
-      // Nodes precess slowly (about 18.6 years for full cycle)
-      state.nodeAngle = normalizeAngleDeg(state.nodeAngle + 0.02);
+      // Node regression scaled to one synodic month.
+      state.nodeAngle = normalizeAngleDeg(
+        startNode - progress * (NODE_REGRESSION_DEG_PER_YEAR / MONTHS_PER_YEAR)
+      );
 
       update();
 
@@ -573,9 +579,9 @@
       const progress = Math.min(elapsed / duration, 1);
 
       // ~12.4 lunar months per year
-      state.moonAngle = normalizeAngleDeg(startAngle + progress * 360 * 12.4);
+      state.moonAngle = normalizeAngleDeg(startAngle + progress * 360 * MONTHS_PER_YEAR);
       // Nodes regress about 19.3° per year
-      state.nodeAngle = normalizeAngleDeg(startNode - progress * 19.3);
+      state.nodeAngle = normalizeAngleDeg(startNode - progress * NODE_REGRESSION_DEG_PER_YEAR);
 
       update();
 
@@ -635,8 +641,7 @@
     elements.statsPanel.style.display = 'grid';
 
     const startNode = state.nodeAngle;
-    const monthsPerYear = 12.37;
-    const totalMonths = yearsToSimulate * monthsPerYear;
+    const totalMonths = yearsToSimulate * MONTHS_PER_YEAR;
 
     // Adjust batch size based on simulation length
     let batchSize = yearsToSimulate <= 100 ? 5 : 50;
@@ -652,10 +657,10 @@
       }
 
       for (let i = 0; i < batchSize && currentMonth < totalMonths; i++, currentMonth++) {
-        const yearProgress = currentMonth / monthsPerYear;
+        const yearProgress = currentMonth / MONTHS_PER_YEAR;
 
         // Node regression: about 19.3° per year
-        const nodeAngle = normalizeAngleDeg(startNode - yearProgress * 19.3);
+        const nodeAngle = normalizeAngleDeg(startNode - yearProgress * NODE_REGRESSION_DEG_PER_YEAR);
 
         // Check new moon (angle 180) for solar eclipses
         const newMoonHeight = Math.abs(getMoonEclipticHeight(180, state.orbitalTilt, nodeAngle));
