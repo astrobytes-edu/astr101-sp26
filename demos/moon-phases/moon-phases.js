@@ -820,8 +820,8 @@
     },
     {
       id: 'shadow-challenge',
-      prompt: 'Shadow Challenge: Will Earth\'s shadow touch the Moon? (Toggle shadow on to check!)',
-      hint: 'First, turn on "Show Earth\'s Shadow" in the controls. Then position the Moon where the shadow actually reaches. Earth\'s shadow points away from the Sun.',
+      prompt: 'Shadow Challenge: Will Earth\'s shadow touch the Moon? (Use the Eclipse insight toggle to check!)',
+      hint: 'Open "Insights (optional)" and turn on "Show Earth\'s Shadow (Eclipse insight)". Then position the Moon where the shadow actually reaches. Earth\'s shadow points away from the Sun.',
       initialState: { showShadow: true },
       check: (state) => {
         // First check if shadow is visible
@@ -829,7 +829,7 @@
           return {
             correct: false,
             close: false,
-            message: 'Turn on "Show Earth\'s Shadow" first to see where the shadow actually is!'
+            message: 'Open "Insights (optional)" and turn on "Show Earth\'s Shadow (Eclipse insight)" first to see where the shadow actually is!'
           };
         }
 

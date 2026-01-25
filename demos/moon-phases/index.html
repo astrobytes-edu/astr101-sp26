@@ -47,6 +47,62 @@
       justify-content: center;
     }
 
+    /* Insights (optional) */
+    .insights-panel {
+      background: rgba(18, 18, 31, 0.9);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      margin-bottom: 1rem;
+    }
+
+    .insights-panel > summary {
+      cursor: pointer;
+      padding: 0.75rem 1rem;
+      color: var(--text-secondary);
+      font-weight: 600;
+      list-style: none;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.5rem;
+    }
+
+    .insights-panel > summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .insights-panel > summary::after {
+      content: '▸';
+      color: var(--text-muted);
+      transition: transform 0.15s ease;
+    }
+
+    .insights-panel[open] > summary::after {
+      transform: rotate(90deg);
+    }
+
+    .insights-panel > summary:focus-visible {
+      outline: 2px solid var(--accent-blue);
+      outline-offset: 2px;
+      border-radius: 6px;
+    }
+
+    .insights-panel[open] > summary {
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .insights-body {
+      padding: 0.75rem 1rem 1rem;
+      display: grid;
+      gap: 0.75rem;
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+    }
+
+    .insights-body strong {
+      color: var(--text-primary);
+    }
+
     /* Key insight */
     .insight-box {
       background: rgba(18, 18, 31, 0.9);
@@ -595,16 +651,6 @@
 
       <!-- Phase presets -->
       <div class="controls-panel">
-        <!-- Shadow Toggle -->
-        <div class="toggle-row" style="margin-bottom: 1rem; display: flex; align-items: center; justify-content: center; gap: 0.5rem;">
-          <label class="toggle-switch">
-            <input type="checkbox" id="show-shadow-toggle">
-            <span class="toggle-switch__track">
-              <span class="toggle-switch__thumb"></span>
-            </span>
-            <span class="toggle-switch__label">Show Earth's Shadow</span>
-          </label>
-        </div>
         <div class="controls-row">
           <button class="phase-btn" data-angle="180">New Moon</button>
           <button class="phase-btn" data-angle="270">First Quarter</button>
@@ -613,11 +659,27 @@
         </div>
       </div>
 
+      <details class="insights-panel">
+        <summary>Insights (optional)</summary>
+        <div class="insights-body">
+          <div><strong>Eclipse insight:</strong> Earth's shadow is <em>not</em> what causes phases; it only matters during lunar eclipses.</div>
+          <div class="toggle-row" style="display: flex; align-items: center; justify-content: center; gap: 0.5rem;">
+            <label class="toggle-switch">
+              <input type="checkbox" id="show-shadow-toggle">
+              <span class="toggle-switch__track">
+                <span class="toggle-switch__thumb"></span>
+              </span>
+              <span class="toggle-switch__label">Show Earth's Shadow (Eclipse insight)</span>
+            </label>
+          </div>
+          <div>Want the full story? Try <a href="../eclipse-geometry/">Eclipse Geometry</a>.</div>
+        </div>
+      </details>
+
       <!-- Key insight -->
       <div class="insight-box">
         <strong>Key insight:</strong> The Sun always lights exactly half of the Moon.
         Phases show <em>how much of that lit half faces Earth</em> — it's geometry, not shadow.
-        Earth's shadow only matters during lunar eclipses (rare!).
       </div>
 
       <div class="model-note">
