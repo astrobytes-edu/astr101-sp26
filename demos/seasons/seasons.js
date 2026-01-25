@@ -305,6 +305,12 @@
     return `${h}h ${m}m`;
   }
 
+  function formatLatitude(lat) {
+    const abs = Math.abs(lat);
+    const absStr = Number.isInteger(abs) ? String(abs) : abs.toFixed(1);
+    return lat >= 0 ? `${absStr}°N` : `${absStr}°S`;
+  }
+
   // ============================================
   // Orbital View Updates
   // ============================================
@@ -520,7 +526,7 @@
     elements.latMarkerDot.setAttribute('cy', y);
 
     // Update label
-    const latStr = lat >= 0 ? `${lat}°N` : `${-lat}°S`;
+    const latStr = formatLatitude(lat);
     elements.latMarkerLabel.setAttribute('x', x + 15);
     elements.latMarkerLabel.setAttribute('y', y + 4);
     elements.latMarkerLabel.textContent = latStr;
@@ -611,8 +617,7 @@
     elements.dateSliderDisplay.textContent = Math.round(state.dayOfYear);
     elements.tiltDisplay.textContent = `${state.axialTilt.toFixed(1)}°`;
 
-    const latStr = state.latitude >= 0 ? `${state.latitude}°N` : `${-state.latitude}°S`;
-    elements.latitudeDisplay.textContent = latStr;
+    elements.latitudeDisplay.textContent = formatLatitude(state.latitude);
 
     // Update ARIA for Earth position
     const earthOrbital = document.getElementById('earth-orbital');
