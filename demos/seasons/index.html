@@ -188,14 +188,6 @@
       opacity: 0.5;
     }
 
-    .earth-marker {
-      cursor: grab;
-    }
-
-    .earth-marker:active {
-      cursor: grabbing;
-    }
-
     .axis-line {
       stroke: #ff6b6b;
       stroke-width: 2;
@@ -501,7 +493,7 @@
             Date (Day of Year)
             <span class="control-value" id="date-slider-display">80</span>
           </div>
-          <input type="range" id="date-slider" class="astro-slider" min="0" max="365" value="80" aria-label="Date/Position" data-tooltip-source="#date-slider-display">
+          <input type="range" id="date-slider" class="astro-slider" min="1" max="365" value="80" aria-label="Date/Position" data-tooltip-source="#date-slider-display">
           <div class="slider-labels">
             <span>Jan 1</span>
             <span>Apr 1</span>

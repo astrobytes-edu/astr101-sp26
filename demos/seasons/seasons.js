@@ -10,6 +10,10 @@
   // Constants
   // ============================================
 
+  const YEAR_DAYS = 365;
+  const DAY_MIN = 1;
+  const DAY_MAX = 365;
+
   const ORBITAL_CENTER = { x: 200, y: 200 };
   const ORBITAL_RADIUS_X = 150;
   const ORBITAL_RADIUS_Y = 145; // Slightly elliptical
@@ -183,28 +187,34 @@
 
   /**
    * Earth-Sun distance for day of year
-   * @param {number} dayOfYear - Day of year (0-365)
+   * @param {number} dayOfYear - Day of year (1-365)
    * @returns {number} Distance in AU
    */
   function getEarthSunDistance(dayOfYear) {
     // Perihelion around Jan 3 (day 3), eccentricity ~ 0.017
     const daysFromPerihelion = dayOfYear - 3;
-    const angle = 2 * Math.PI * daysFromPerihelion / 365;
+    const angle = 2 * Math.PI * daysFromPerihelion / YEAR_DAYS;
     return 1 - 0.017 * Math.cos(angle);
+  }
+
+  function wrapDay(dayOfYear) {
+    const zeroBased = dayOfYear - 1;
+    const wrapped = ((zeroBased % YEAR_DAYS) + YEAR_DAYS) % YEAR_DAYS;
+    return wrapped + 1;
   }
 
   /**
    * Convert day of year to date string
-   * @param {number} dayOfYear - Day of year (0-365)
+   * @param {number} dayOfYear - Day of year (1-365)
    * @returns {string} Formatted date like "March 21"
    */
   function dayOfYearToDate(dayOfYear) {
     let day = Math.floor(dayOfYear);
-    if (day < 0) day = 0;
-    if (day > 365) day = 365;
+    if (day < DAY_MIN) day = DAY_MIN;
+    if (day > DAY_MAX) day = DAY_MAX;
 
     let monthIndex = 0;
-    let dayInMonth = day;
+    let dayInMonth = day - 1; // 0-based index within year
 
     for (let i = 0; i < 12; i++) {
       if (dayInMonth < DAYS_IN_MONTH[i]) {
@@ -219,10 +229,12 @@
 
   /**
    * Get season name for Northern hemisphere
-   * @param {number} dayOfYear - Day of year (0-365)
+   * @param {number} dayOfYear - Day of year (1-365)
    * @returns {string} Season name
    */
   function getSeasonNorth(dayOfYear) {
+    const eps = effectiveObliquityDegrees(state.axialTilt);
+    if (eps <= 0.05) return 'No seasons';
     if (dayOfYear >= 80 && dayOfYear < 172) return 'Spring';
     if (dayOfYear >= 172 && dayOfYear < 266) return 'Summer';
     if (dayOfYear >= 266 && dayOfYear < 356) return 'Fall';
@@ -231,11 +243,12 @@
 
   /**
    * Get season name for Southern hemisphere (opposite of North)
-   * @param {number} dayOfYear - Day of year (0-365)
+   * @param {number} dayOfYear - Day of year (1-365)
    * @returns {string} Season name
    */
   function getSeasonSouth(dayOfYear) {
     const north = getSeasonNorth(dayOfYear);
+    if (north === 'No seasons') return 'No seasons';
     const opposites = {
       'Spring': 'Fall',
       'Summer': 'Winter',
@@ -251,7 +264,15 @@
    * @returns {string} CSS class name
    */
   function getSeasonClass(season) {
-    return 'season-' + season.toLowerCase();
+    switch (season) {
+      case 'Spring':
+      case 'Summer':
+      case 'Fall':
+      case 'Winter':
+        return 'season-' + season.toLowerCase();
+      default:
+        return '';
+    }
   }
 
   /**
@@ -281,7 +302,7 @@
   function getOrbitAngleFromDay(dayOfYear) {
     // Anchor perihelion (day ~3) on the +x axis for visual truthfulness.
     const daysFromPerihelion = dayOfYear - 3;
-    return (daysFromPerihelion / 365) * 2 * Math.PI;
+    return (daysFromPerihelion / YEAR_DAYS) * 2 * Math.PI;
   }
 
   function getExaggeratedOrbitRadiusPx(distanceAU) {
@@ -359,6 +380,25 @@
     elements.distanceText.textContent = `${distanceAU.toFixed(3)} AU`;
 
     // Earth-only: keep marker style stable (no planet presets)
+
+    // Place month labels at their modeled orbital longitudes (avoid quadrant contradiction).
+    const labels = [
+      { el: document.getElementById('season-label-top'), day: 80 },   // March
+      { el: document.getElementById('season-label-right'), day: 172 }, // June
+      { el: document.getElementById('season-label-bottom'), day: 266 }, // September
+      { el: document.getElementById('season-label-left'), day: 356 }  // December
+    ];
+    const labelRadius = 170;
+    for (const item of labels) {
+      if (!item.el) continue;
+      const a = getOrbitAngleFromDay(item.day);
+      const x = ORBITAL_CENTER.x + labelRadius * Math.cos(a);
+      const y = ORBITAL_CENTER.y + labelRadius * Math.sin(a);
+      item.el.setAttribute('x', x.toFixed(1));
+      item.el.setAttribute('y', y.toFixed(1));
+      const c = Math.cos(a);
+      item.el.setAttribute('text-anchor', c > 0.35 ? 'start' : c < -0.35 ? 'end' : 'middle');
+    }
   }
 
   // ============================================
@@ -558,10 +598,16 @@
     const seasonSouth = getSeasonSouth(state.dayOfYear);
 
     elements.seasonNorthDisplay.textContent = seasonNorth;
-    elements.seasonNorthDisplay.className = 'readout-value ' + getSeasonClass(seasonNorth);
+    {
+      const cls = getSeasonClass(seasonNorth);
+      elements.seasonNorthDisplay.className = cls ? `readout-value ${cls}` : 'readout-value';
+    }
 
     elements.seasonSouthDisplay.textContent = seasonSouth;
-    elements.seasonSouthDisplay.className = 'readout-value ' + getSeasonClass(seasonSouth);
+    {
+      const cls = getSeasonClass(seasonSouth);
+      elements.seasonSouthDisplay.className = cls ? `readout-value ${cls}` : 'readout-value';
+    }
 
     // Day length
     elements.dayLengthDisplay.textContent = formatDayLength(dayLength);
@@ -573,13 +619,8 @@
     elements.distanceDisplay.textContent = `${distance.toFixed(3)} AU`;
 
     // Slider displays
-    elements.dateSliderDisplay.textContent = Math.round(state.dayOfYear);
-    const eps = effectiveObliquityDegrees(state.axialTilt);
-    if (state.axialTilt > 90) {
-      elements.tiltDisplay.textContent = `${state.axialTilt.toFixed(1)}° (effective ${eps.toFixed(1)}°)`;
-    } else {
-      elements.tiltDisplay.textContent = `${state.axialTilt.toFixed(1)}°`;
-    }
+    elements.dateSliderDisplay.textContent = Math.min(DAY_MAX, Math.max(DAY_MIN, Math.round(state.dayOfYear)));
+    elements.tiltDisplay.textContent = `${state.axialTilt.toFixed(1)}°`;
 
     elements.latitudeDisplay.textContent = formatLatitude(state.latitude);
 
@@ -667,10 +708,22 @@
         state.dayOfYear = 80;
         state.axialTilt = 23.5;
         state.latitude = 40;
+        state.overlays = {
+          celestialEquator: false,
+          ecliptic: false,
+          latitudeBands: true,
+          terminator: true,
+          hourGrid: false
+        };
 
         elements.dateSlider.value = state.dayOfYear;
         elements.tiltSlider.value = state.axialTilt;
         elements.latitudeSlider.value = state.latitude;
+        elements.toggleCelestialEquator.checked = state.overlays.celestialEquator;
+        elements.toggleEcliptic.checked = state.overlays.ecliptic;
+        elements.toggleLatitudeBands.checked = state.overlays.latitudeBands;
+        elements.toggleTerminator.checked = state.overlays.terminator;
+        elements.toggleHourGrid.checked = state.overlays.hourGrid;
 
         updateSeasonPresetHighlight(elements.presetMarEquinox);
         update();
@@ -743,15 +796,16 @@
   }
 
   function animateToDay(targetDay) {
-    const startDay = state.dayOfYear;
-    let diff = targetDay - startDay;
+    const startIndex = state.dayOfYear - 1;
+    const targetIndex = targetDay - 1;
+    let diff = targetIndex - startIndex;
 
     // Take shortest path around the year
-    if (diff > 182.5) diff -= 365;
-    if (diff < -182.5) diff += 365;
+    if (diff > YEAR_DAYS / 2) diff -= YEAR_DAYS;
+    if (diff < -YEAR_DAYS / 2) diff += YEAR_DAYS;
 
-    AstroUtils.animateValue(startDay, startDay + diff, 500, (val) => {
-      state.dayOfYear = ((val % 365) + 365) % 365;
+    AstroUtils.animateValue(startIndex, startIndex + diff, 500, (valIndex) => {
+      state.dayOfYear = wrapDay(valIndex + 1);
       elements.dateSlider.value = state.dayOfYear;
       update();
     });
@@ -773,7 +827,7 @@
       const elapsed = currentTime - startTime;
       const progress = (elapsed / duration) % 1; // Loop continuously
 
-      state.dayOfYear = (startDay + progress * 365) % 365;
+      state.dayOfYear = wrapDay(startDay + progress * YEAR_DAYS);
       elements.dateSlider.value = state.dayOfYear;
       updateSeasonPresetHighlight();
       update();
@@ -790,8 +844,12 @@
 
   function setupKeyboard() {
     document.addEventListener('keydown', (event) => {
-      // Only handle if not focused on an input
-      if (event.target.tagName === 'INPUT') return;
+      if (event.ctrlKey || event.metaKey || event.altKey) return;
+      if (event.target instanceof HTMLElement) {
+        const tag = event.target.tagName;
+        if (tag === 'INPUT' || tag === 'SELECT' || tag === 'BUTTON' || tag === 'TEXTAREA' || tag === 'A') return;
+        if (event.target.isContentEditable) return;
+      }
 
       let dayDelta = 0;
       let jumpDay = null;
@@ -814,7 +872,7 @@
         case 'S':
           // Jump to nearest solstice
           const distToJun = Math.abs(state.dayOfYear - 172);
-          const distToDec = Math.min(Math.abs(state.dayOfYear - 356), Math.abs(state.dayOfYear + 9));
+          const distToDec = Math.min(Math.abs(state.dayOfYear - 356), Math.abs(state.dayOfYear - (356 - YEAR_DAYS)));
           jumpDay = distToJun < distToDec ? 172 : 356;
           break;
         case ' ':
@@ -835,7 +893,7 @@
       if (jumpDay !== null) {
         animateToDay(jumpDay);
       } else if (dayDelta !== 0) {
-        state.dayOfYear = ((state.dayOfYear + dayDelta) % 365 + 365) % 365;
+        state.dayOfYear = wrapDay(state.dayOfYear + dayDelta);
         elements.dateSlider.value = state.dayOfYear;
         updateSeasonPresetHighlight();
         update();
