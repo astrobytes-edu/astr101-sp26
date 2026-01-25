@@ -50,6 +50,7 @@
 
   let orbitalSvg, phaseSvg;
   let moonGroup, moonDark, moonLit, moonTerminator;
+  let moonLitHalfClip;
   let litPortion;
   let phaseName, illumination, daysSinceNew;
   let phaseButtons;
@@ -63,6 +64,7 @@
     moonDark = document.getElementById('moon-dark');
     moonLit = document.getElementById('moon-lit');
     moonTerminator = document.getElementById('moon-terminator');
+    moonLitHalfClip = document.getElementById('moon-lit-half-clip');
 
     litPortion = document.getElementById('lit-portion');
 
@@ -137,32 +139,21 @@
     moonDark.setAttribute('cy', moonY);
     moonLit.setAttribute('cx', moonX);
     moonLit.setAttribute('cy', moonY);
-    moonTerminator.setAttribute('cx', moonX);
-    moonTerminator.setAttribute('cy', moonY);
+    if (moonTerminator) {
+      moonTerminator.setAttribute('x1', moonX);
+      moonTerminator.setAttribute('x2', moonX);
+      moonTerminator.setAttribute('y1', moonY - MOON_RADIUS);
+      moonTerminator.setAttribute('y2', moonY + MOON_RADIUS);
+    }
 
-    // The lit side of the Moon always faces the Sun (left side of diagram)
-    // We need to show which half is lit from the top-down view
-
-    // Calculate the terminator (boundary between light and dark)
-    // The Sun is to the left, so the left half of the Moon is lit
-    // But we're viewing from above, so we need to clip the lit portion
-
-    // For the orbital view, we'll show the Moon with its lit side facing left
-    // Use a clip or mask to show the lit half
-
-    // Simple approach: use the terminator ellipse to cover the dark side
-    // The terminator width depends on viewing angle (from above, it's always half)
-    moonTerminator.setAttribute('rx', MOON_RADIUS);
-
-    // Rotate the terminator to show which side is lit
-    // Sun is at left (angle 180 from right), so left half is always lit
-    moonLit.setAttribute('cx', moonX);
-    moonLit.setAttribute('cy', moonY);
-
-    // Create a clip path for the lit portion (left half of moon)
-    // For simplicity, we'll use a covering rectangle approach
-    const litClipX = moonX - MOON_RADIUS;
-    moonTerminator.setAttribute('cx', moonX);
+    // In the top-down orbital view, the Sun-facing hemisphere is always illuminated.
+    // We clip the lit circle to the left half (Sunlight comes from the left).
+    if (moonLitHalfClip) {
+      moonLitHalfClip.setAttribute('x', moonX - MOON_RADIUS);
+      moonLitHalfClip.setAttribute('y', moonY - MOON_RADIUS);
+      moonLitHalfClip.setAttribute('width', MOON_RADIUS);
+      moonLitHalfClip.setAttribute('height', MOON_RADIUS * 2);
+    }
   }
 
   /**

@@ -457,6 +457,11 @@
               <clipPath id="moonClip">
                 <circle cx="0" cy="0" r="15"/>
               </clipPath>
+
+              <!-- Clip for the Sun-facing (always-lit) half in orbital view -->
+              <clipPath id="moonLitHalfClip" clipPathUnits="userSpaceOnUse">
+                <rect id="moon-lit-half-clip" x="305" y="185" width="15" height="30"/>
+              </clipPath>
             </defs>
 
             <!-- Sunlight arrows -->
@@ -517,9 +522,10 @@
               <!-- Dark side (always visible as background) -->
               <circle id="moon-dark" cx="320" cy="200" r="15" fill="var(--moon-dark)"/>
               <!-- Lit side (clipped to show phase in orbital view) -->
-              <circle id="moon-lit" cx="320" cy="200" r="15" fill="url(#moonLit)"/>
-              <!-- Terminator line (boundary between lit and dark) -->
-              <ellipse id="moon-terminator" cx="320" cy="200" rx="0" ry="15" fill="var(--moon-dark)"/>
+              <circle id="moon-lit" cx="320" cy="200" r="15" fill="url(#moonLit)" clip-path="url(#moonLitHalfClip)"/>
+              <!-- Terminator line (boundary between lit and dark, always faces the Sun) -->
+              <line id="moon-terminator" x1="320" y1="185" x2="320" y2="215"
+                    stroke="var(--text-muted)" stroke-width="1" opacity="0.85"/>
             </g>
 
             <!-- Observer's view direction indicator -->
