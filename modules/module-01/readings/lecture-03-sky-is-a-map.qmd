@@ -21,45 +21,45 @@ prerequisites: Basic geometry; comfort with angles, ratios, and units
 ::: {.callout-important #the-big-idea}
 ## The Big Idea
 
-The sky is a direction-finder, not a depth-gauge. Every position on the sky is an *angle*, not a distance—and understanding this geometric framework unlocks seasons, eclipses, and the entire toolbox of positional astronomy.
+The sky is a direction-finder, not a depth-gauge. Every position on the sky is an *angle*, not a distance — and understanding this geometric framework unlocks seasons, eclipses, and the entire toolbox of positional astronomy.
 :::
 
 ::: {.callout-important title="How to Use This Reading (Read → Revisit → Reuse)" collapse="true"}
-This page is both (1) the **assigned reading** and (2) your **reference manual** for celestial geometry. You should expect to come back to it multiple times—before lecture, after lecture, and while doing practice problems.
+This page is both (1) the **assigned reading** and (2) your **reference manual** for celestial geometry. You should expect to come back to it multiple times — before lecture, after lecture, while doing practice problems and assignments, and studying for exams.
 
 **Default expectation (best):** Read the whole page before class (including **Check Yourself**). Then return to it later when you work the **Practice Problems**.
 
-**If you're short on time before class (~15 min):** Do the **Musts for today** so you can participate now—then come back and finish the rest.
+**If you're short on time before class (~15 min):** Do the **Musts for today** so you can participate now — then come back and finish the rest.
 
 - **Musts for today:** The Big Idea • The Celestial Sphere • Seasons: Tilt, Not Distance • Angular Size Basics
 - **Non-negotiable:** Stop and answer every **Check Yourself** question you encounter in these sections (don't just read past them).
 
-**Skim now, read carefully later:** The Deep Dives and Demo Explorations. Skimming is a *preview*—you'll get much more from it after lecture.
+**Skim now, read carefully later:** The Deep Dives and Demo Explorations. Skimming is a *preview* — you'll get much more from it after lecture.
 
-**Demo Explorations (do these!):** This reading integrates two interactive demos. Work through them at your own pace—they're designed to build intuition that words alone can't provide.
+**Demo Explorations (do these!):** This reading integrates two interactive demos. Work through them at your own pace — they're designed to build intuition that words alone can't provide.
 
-**Reassurance:** This is geometry, not memorization. If you can *draw* it, you can understand it. Your goal is building mental models, not cramming vocabulary. Look for the **✏️ Sketch It** prompts throughout—they'll help you lock in the geometry.
+**Reassurance:** This is geometry, not memorization. If you can *draw* it, you can understand it. Your goal is building mental models, not cramming vocabulary. Look for the **✏️ Sketch It** prompts throughout — they'll help you lock in the geometry.
 :::
 
 ---
 
 ## The Problem: Astronomy Without Depth Perception
 
-Look up at the night sky. You see points of light scattered across a dark dome. Some are brighter, some dimmer. Some cluster together in familiar patterns we call constellations.
+Look up at the night sky. You see points of light scattered across a dark dome. Some are brighter, some dimmer. Some cluster together in familiar patterns we call **constellations**.
 
 Here's the fundamental problem: **you have no depth perception**.
 
-Your eyes can't tell you whether a star is close and dim or far and brilliant. The Big Dipper's seven stars *look* like they belong together—like friends sitting around a cosmic campfire. But they're not. They're scattered at wildly different distances, from 79 to 124 light-years away. They just happen to lie along similar *directions* as seen from Earth.
+Your eyes can't tell you whether a star is close and dim or far and luminous. The Big Dipper's seven stars *look* like they belong together — like friends sitting around a cosmic campfire. But they're not. They're scattered at wildly different distances, from 79 to 124 light-years away. They just happen to lie along similar *directions* as seen from Earth.
 
 [FIGURE PLACEHOLDER: Big Dipper stars at different distances - 3D view showing stars scattered in depth vs. 2D view from Earth showing apparent pattern]
 
 *Caption: The Big Dipper appears as a pattern because we see only directions, not distances. The stars range from 79 to 124 light-years away—they're not neighbors in space.*
 
 ::: {.callout-note title="Nerd Note" collapse="true"}
-Several Big Dipper stars actually share a common motion through space (a "moving group"), suggesting they formed together. But the dipper *pattern* is still a projection—from a different vantage point in the galaxy, those same stars would form a completely different shape.
+Several Big Dipper stars actually share a common motion through space (a "moving group"), suggesting they formed together. But the dipper *pattern* is still a projection — from a different vantage point in the galaxy, those same stars would form a completely different shape.
 :::
 
-This isn't a limitation—it's a **starting point**. The sky gives us *directions* by default. Measuring *distances* requires extra work (remember the cosmic distance ladder from Lecture 1). Today, we embrace what the sky naturally provides: a coordinate system for pointing at things.
+This isn't a limitation — it's a **starting point**. The sky gives us *directions* by default. Measuring *distances* requires extra work (remember the cosmic distance ladder from Lecture 1). Today, we embrace what the sky naturally provides: a coordinate system for pointing at things.
 
 ::: {.callout-check-yourself title="Check Yourself 1 — Constellations and Depth"}
 Stars in a constellation are physically close together in space.
@@ -69,9 +69,12 @@ Stars in a constellation are physically close together in space.
 :::
 
 ::: {.callout-tip title="Solution" collapse="true"}
-**B) False.** Stars in a constellation appear close together on the sky because they lie along similar *directions* as seen from Earth—not because they're physically near each other. The stars of Orion, for example, range from about 250 to over 2,000 light-years away. Constellations are patterns of projection, not physical associations.
+**B) False.** Stars in a constellation appear close together on the sky because they lie along similar *directions* as seen from Earth *not* because they're physically near each other. The stars of Orion, for example, range from about 250 to over 2,000 light-years away. Constellations are patterns of projection, not physical associations.
 :::
 
+::: {.column-margin}
+**Constellation:** A named pattern of stars on the sky. A constellation is defined by **directions** (angles), not by stars being physically close together in space.
+:::
 ---
 
 ## The Celestial Sphere: A Map of Directions
@@ -80,7 +83,7 @@ Stars in a constellation are physically close together in space.
 
 Imagine you're standing at the center of a vast, transparent globe. Every star, planet, and galaxy can be located by pointing in some direction from where you stand. Those directions can be mapped onto the inside surface of the sphere.
 
-This imaginary sphere is the **celestial sphere**—and it's one of astronomy's oldest and most useful conceptual tools.
+This imaginary sphere is the **celestial sphere** — and it's one of astronomy's oldest and most useful conceptual tools.
 
 ::: {.column-margin}
 **Celestial sphere:** An imaginary sphere of arbitrary radius centered on the observer, onto which all celestial objects are projected. It's a coordinate system for *directions*, not a claim about where things actually are.
@@ -90,13 +93,9 @@ This imaginary sphere is the **celestial sphere**—and it's one of astronomy's 
 
 *Caption: The celestial sphere is a mental model for mapping directions. Objects at vastly different distances all get projected onto the same imaginary surface.*
 
-**Key insight:** The celestial sphere doesn't represent where things *are*—it represents where to *look*. It's a direction-finder, not a distance-finder.
+**Key insight:** The celestial sphere doesn't represent where things *are* — it represents where to *look*. It's a direction-finder, not a distance-finder.
 
-::: {.callout-note title="✏️ Sketch It: The Celestial Sphere" collapse="true"}
-Draw yourself at the center of a sphere. Draw three arrows labeled **up (zenith)**, **north**, and **toward the horizon**. Circle the "horizon" as the boundary between sky and ground directions.
 
-This turns the celestial sphere from an abstract idea into a manipulable mental object.
-:::
 
 ::: {.callout-check-yourself title="Check Yourself 2 — What the Celestial Sphere Is For"}
 The celestial sphere tells us:
@@ -132,6 +131,17 @@ The celestial sphere has special points and circles that help us navigate. Here 
 | **Horizon** | The circle where sky meets ground for an observer | Depends on your location |
 | **Ecliptic** | The Sun's apparent yearly path across the sky | Earth's orbital plane projected onto the sky |
 
+**Essential Coordinates (for this course):**
+
+| Coordinate | What It Means | Earth Analog |
+|------------|---------------|--------------|
+| **Declination (Dec)** | Celestial latitude: angle north/south of the celestial equator (−90° to +90°) | **Latitude** |
+| **Right ascension (RA)** | Celestial longitude: position along the celestial equator measured from a fixed zero point; often given in hours (0–24h) | **Longitude** |
+
+::: {.column-margin}
+**RA in hours:** 24 hours = 360°, so 1 hour = 15°. Astronomers often use hours for RA because the sky appears to rotate once per day.
+:::
+
 ::: {.column-margin}
 **Great circle:** Any circle on a sphere whose center coincides with the center of the sphere. The celestial equator, ecliptic, and horizon are all great circles. They divide the celestial sphere into equal halves.
 :::
@@ -139,6 +149,21 @@ The celestial sphere has special points and circles that help us navigate. Here 
 [FIGURE PLACEHOLDER: Celestial sphere with labeled reference points (poles, zenith) and circles (celestial equator, horizon, ecliptic)]
 
 *Caption: The celestial sphere's reference points and circles. The celestial equator is fixed (Earth's equator projected outward), while the horizon and zenith depend on where you're standing.*
+
+**Key geometry clarification:** **Zenith** is a direction (straight up from where you stand). **North** is a compass direction along your local horizon. They are not the same axis — you can point north while looking straight ahead, but zenith is straight up.
+
+::: {.callout-note title="✏️ Sketch It: Earth + Celestial Sphere" collapse="true"}
+Draw **Earth** as a circle. Put a stick-figure **observer** on Earth’s surface.
+
+1. Draw Earth’s **rotation axis** through the globe and label **North Pole** and **South Pole**.
+2. Around Earth, draw a larger circle representing the **celestial sphere**.
+3. Extend the rotation axis until it hits the celestial sphere in two points. Label them **north celestial pole** and **south celestial pole**.
+4. At the observer, draw an arrow straight out from Earth’s surface and label it **zenith** (your local “up”).
+5. Through the observer, draw a line tangent to Earth (your local “flat ground” direction) and sketch the **horizon circle** on the celestial sphere.
+6. Finally, mark **north** on the horizon: it is a direction *along* the horizon (toward Earth’s geographic north), not the same as zenith.
+
+If you can draw this, you can keep “up,” “north,” and “celestial poles” straight in your head.
+:::
 
 ::: {.callout-note title="Optional: Additional Navigation Terms (for stargazing enthusiasts)" collapse="true"}
 
@@ -149,8 +174,6 @@ If you want to do serious sky navigation or use star charts, these additional te
 | **Nadir** | The point directly below the observer (opposite the zenith) |
 | **Meridian** | The great circle passing through zenith, nadir, and celestial poles—your local north-south line |
 | **Hour angle** | How far west an object is from the meridian |
-| **Right ascension** | The celestial equivalent of longitude |
-| **Declination** | The celestial equivalent of latitude |
 
 These won't appear on exams, but they're the full toolkit for positional astronomy.
 
@@ -162,15 +185,15 @@ These won't appear on exams, but they're the full toolkit for positional astrono
 
 For understanding seasons and eclipses, two circles are essential:
 
-**The Celestial Equator** is Earth's equator projected onto the sky. If you stood on Earth's equator, your **zenith** would lie on the **celestial equator**. This circle is defined by Earth's *rotation*—it's perpendicular to Earth's spin axis.
+**The Celestial Equator** is Earth's equator projected onto the sky. If you stood on Earth's equator, your **zenith** would lie on the **celestial equator**. This circle is defined by Earth's *rotation* — it's perpendicular to Earth's spin axis.
 
-**The Ecliptic** is the Sun's apparent yearly path across the sky. As Earth orbits the Sun, the Sun appears to drift eastward against the background stars, completing one full circuit per year. This path is the ecliptic—and it's defined by Earth's *orbit*.
+**The Ecliptic** is the Sun's apparent yearly path across the sky. As Earth orbits the Sun, the Sun appears to drift eastward against the background stars, completing one full circuit per year. This path is the ecliptic — and it's defined by Earth's *orbit*.
 
 [FIGURE PLACEHOLDER: Celestial sphere showing both celestial equator and ecliptic as great circles, tilted 23.5° relative to each other, with their intersection points marked]
 
 *Caption: The celestial equator (Earth's equator projected) and the ecliptic (Sun's apparent path) are tilted 23.5° relative to each other. This tilt is the key to seasons.*
 
-**The crucial point:** These two circles are *not* aligned. They're tilted relative to each other by about **23.5°**—and this tilt is the entire reason we have seasons.
+**The crucial point:** These two circles are *not* aligned. They're tilted relative to each other by about **23.5°** — and this tilt is the entire reason we have seasons.
 
 ::: {.column-margin}
 **Ecliptic:** The apparent path of the Sun across the celestial sphere over the course of a year, corresponding to the plane of Earth's orbit around the Sun.
@@ -196,7 +219,7 @@ The ecliptic is:
 :::
 
 ::: {.callout-tip title="Solution" collapse="true"}
-**B) The Sun's apparent path across the sky over the course of a year.** As Earth orbits the Sun, the Sun appears to move against the background stars, tracing out a great circle called the ecliptic. This corresponds to the plane of Earth's orbit. The ecliptic is tilted 23.5° relative to the celestial equator—that's why seasons exist.
+**B) The Sun's apparent path across the sky over the course of a year.** As Earth orbits the Sun, the Sun appears to move against the background stars, tracing out a great circle called the ecliptic. This corresponds to the plane of Earth's orbit. The ecliptic is tilted 23.5° relative to the celestial equator — that's why seasons exist.
 :::
 
 ::: {.callout-check-yourself title="Check Yourself 4 — Why the Ecliptic Is Tilted"}
@@ -222,7 +245,7 @@ A common source of confusion: the Sun moves across the sky in two different ways
 | Motion | Cause | Time Scale | What You See |
 |--------|-------|------------|--------------|
 | **Daily arc** | Earth's rotation | 24 hours | Sun rises in east, arcs across sky, sets in west* |
-| **Yearly drift** | Earth's orbit | 365 days | Sun slowly slides eastward along the ecliptic, visiting different constellations |
+| **Yearly drift** | Earth's orbit | 365.25 days | Sun slowly slides eastward along the ecliptic, visiting different constellations |
 
 *(Near the poles, there are parts of the year when the Sun doesn't rise or doesn't set.)*
 
@@ -231,28 +254,45 @@ The daily arc is why the Sun is up during the day. The yearly drift is why the S
 
 This distinction matters: when we talk about the Sun's position "changing with the seasons," we mean its position along the ecliptic (the yearly drift), not its daily east-to-west motion.
 
+::: {.callout-note title="The More You Know: Why We Have Leap Year" collapse="true"}
+The time it takes Earth to orbit the Sun (the year that keeps the seasons lined up) is not an exact whole number of days. If our calendar always had exactly 365 days, the dates of the solstices and equinoxes would slowly drift through the calendar.
+
+**The fix:** We add **leap days** to keep the calendar aligned with Earth’s orbit and the seasons.
+
+**The rule (Gregorian calendar):**
+- Most years divisible by 4 are leap years (we add February 29).
+- Century years (divisible by 100) are *not* leap years…
+- …unless they are also divisible by 400 (then they *are* leap years).
+
+This keeps the calendar much better synchronized with Earth’s seasonal cycle over long times.
+:::
+
 ---
 
 ## Seasons: Tilt, Not Distance
 
 ### The Misconception That Won't Die
 
-Quick—what causes the seasons?
+Quick — what causes the seasons?
 
 If you said "Earth is closer to the Sun in summer," you're in good company. This is one of the most persistent misconceptions in astronomy education. Surveys consistently show that many adults, including college students, hold this belief.
 
-It's a common and very reasonable first guess—but it doesn't match what we observe.
+It's a common and very reasonable first guess — but it doesn't match what we observe.
 
-Here's the proof: **When it's summer in the Northern Hemisphere, it's winter in the Southern Hemisphere.** If distance caused seasons, both hemispheres would experience summer at the same time—when Earth is closest to the Sun.
+Here's the proof: **When it's summer in the Northern Hemisphere, it's winter in the Southern Hemisphere.** If distance caused seasons, both hemispheres would experience summer at the same time — when Earth is closest to the Sun.
 
 [FIGURE PLACEHOLDER: Earth's orbit (slightly elliptical) with positions marked showing Northern summer occurs near aphelion (farthest point), not perihelion]
 
 *Caption: Earth is actually slightly FARTHER from the Sun during Northern Hemisphere summer (aphelion in July) than during Northern winter (perihelion in January). Distance doesn't cause seasons.*
 
-**The numbers:** Earth's distance from the Sun varies by only about 3% over the year—from 147 million km at perihelion (closest, in January) to 152 million km at aphelion (farthest, in July). This 3% variation affects how much total energy Earth receives by about 7%—far too small to explain the dramatic temperature swings of seasons, and in the *wrong direction* for the Northern Hemisphere anyway.
+**The numbers:** Earth's distance from the Sun varies by only about 3% over the year — from 147 million km at **perihelion** (closest, in January) to 152 million km at **aphelion** (farthest, in July). This 3% variation affects how much total energy Earth receives by about 7%—far too small to explain the dramatic temperature swings of seasons, and in the *wrong direction* for the Northern Hemisphere anyway.
+
+<!---
+Define, add to glossary, and add margin notes for perihelion and aphelion.
+--->
 
 ::: {.callout-note title="Optional nuance: Does distance matter at all?" collapse="true"}
-Because perihelion happens during Southern Hemisphere summer, the SH receives slightly higher solar flux then. In an Earth-without-oceans thought experiment, that would make SH summers a bit more intense. On real Earth, the distribution of oceans and land dominates regional climate patterns, so this effect is subtle. The 7% difference is real—it just isn't what *causes* seasons.
+Because perihelion happens during Southern Hemisphere summer, the SH receives slightly higher solar flux then. In an Earth-without-oceans thought experiment, that would make SH summers a bit more intense. On real Earth, the distribution of oceans and land dominates regional climate patterns, so this effect is subtle. The 7% difference is real — it just isn't what *causes* seasons.
 :::
 
 ::: {.callout-check-yourself title="Check Yourself 5 — Seasons and Distance"}
@@ -278,7 +318,7 @@ Seasons result from **two geometric effects**, both caused by Earth's 23.5° axi
 
 When the Sun is higher in the sky, its rays hit the ground more directly. When the Sun is lower, the same amount of light spreads over a larger area.
 
-Think of it this way: shine a flashlight straight down on a table—you get a bright circle. Now tilt the flashlight at an angle—the same light spreads into an oval, covering more area but with less intensity per square meter.
+Think of it this way: shine a flashlight straight down on a table — you get a bright circle. Now tilt the flashlight at an angle — the same light spreads into an oval, covering more area but with less intensity per square meter.
 
 [FIGURE PLACEHOLDER: Comparison of direct vs. oblique sunlight hitting a surface - same beam spread over different areas]
 
@@ -293,7 +333,7 @@ At the summer solstice in San Diego (~32°N latitude):
 - It reaches a maximum altitude of about **81°** above the southern horizon
 
 At the winter solstice:
-- The Sun is up for only about **10 hours**  
+- The Sun is up for only about **10 hours**
 - It reaches a maximum altitude of only about **35°**
 
 That's 4 extra hours of daylight AND much more direct sunlight. The combination is powerful.
@@ -372,9 +412,9 @@ Write your prediction here before continuing: _______________
 
 ::: {.callout-tip title="What You Should Have Found" collapse="true"}
 
-Earth is actually **farthest** from the Sun (aphelion) in early July—during Northern Hemisphere summer! Earth is **closest** (perihelion) in early January—during Northern winter. This directly contradicts the "distance causes seasons" hypothesis.
+Earth is actually **farthest** from the Sun (aphelion) in early July — during Northern Hemisphere summer! Earth is **closest** (perihelion) in early January — during Northern winter. This directly contradicts the "distance causes seasons" hypothesis.
 
-The distance varies by only about 3%, which creates about a 7% difference in total solar energy received—nowhere near enough to explain the large temperature differences between seasons.
+The distance varies by only about 3%, which creates about a 7% difference in total solar energy received — nowhere near enough to explain the large temperature differences between seasons.
 
 **Claim:** Distance cannot be the primary cause of seasons.
 
@@ -411,7 +451,7 @@ In December (Northern winter):
 
 **Claim:** Seasons are caused by the combined effect of changing day length and Sun angle.
 
-**Evidence:** The demo's Day Length and Sun Altitude readouts both change dramatically between solstices, while distance barely changes. These geometric effects—not distance—explain seasonal temperature variation.
+**Evidence:** The demo's Day Length and Sun Altitude readouts both change dramatically between solstices, while distance barely changes. These geometric effects — not distance — explain seasonal temperature variation.
 
 :::
 
@@ -506,9 +546,20 @@ On the equinoxes, the Sun is located:
 
 Here's a question that seems simple but isn't: How big is the Moon?
 
-Your instinct might be to answer in kilometers (the Moon's diameter is about 3,474 km). But that's not what you *see*. What you see is how much of your field of view the Moon occupies—its **angular size**.
+Your instinct might be to answer in kilometers (the Moon's diameter is about 3,474 km). But that's not what you *see*. What you see is how much of your field of view the Moon occupies — its **angular size**.
 
-The Moon's angular size is about **0.5°** (half a degree). That's about **¼ of your thumb's width** held at arm's length, or roughly **½ of your pinky finger's width**.
+The Moon's angular size is about **0.5°** (half a degree). Hand-based “sky ruler” estimates vary by person, so treat them as rough: the Moon is about **half the width of your pinky finger** at arm’s length (approximately).
+
+::: {.callout-note title="Optional: Measuring the Sky With Your Hand" collapse="true"}
+These are approximate (your mileage will vary depending on hand size and arm length):
+
+- Pinky width at arm’s length: ~1–1.5°
+- Thumb width at arm’s length: ~2°
+- Fist width at arm’s length: ~10°
+- Thumb-to-pinky span (outstretched hand): ~20–25°
+
+Use these as *order-of-magnitude* checks, not precision tools.
+:::
 
 ::: {.column-margin}
 **Angular size:** The angle an object subtends (spans) as seen from the observer. Measured in degrees, arcminutes (1° = 60'), or arcseconds (1' = 60").
@@ -522,11 +573,30 @@ The Moon's angular size is about **0.5°** (half a degree). That's about **¼ of
 | 1 arcsecond (") | 1' = 60" (so 1° = 3600") | Telescope resolution territory |
 
 **Useful conversion:** 0.5° = 30' = 1800"
+
+**Worked example:** Convert 0.5° into arcminutes and arcseconds.
+
+- $0.5^\circ \times \frac{60\ \text{arcmin}}{1^\circ} = 30\ \text{arcmin}$
+- $30\ \text{arcmin} \times \frac{60\ \text{arcsec}}{1\ \text{arcmin}} = 1800\ \text{arcsec}$
+
+**Radians (why they show up in formulas):** A radian is defined so that
+
+$$\theta\ (\text{radians}) = \frac{\text{arc length}}{\text{radius}}$$
+
+That’s why radians are sometimes described as “unitless” — it’s a length ratio. In degrees, a full circle is $360^\circ$; in radians, a full circle is $2\pi$:
+
+$$360^\circ = 2\pi\ \text{rad} \quad \text{and} \quad 1\ \text{rad} \approx 57.3^\circ$$
+
+[FIGURE PLACEHOLDER: Unit circle showing degrees vs. radians (360° = 2π rad) and the arc-length definition of a radian]
+
+*Caption: A unit circle helps you see why $2\pi$ radians makes a full turn and why “radians = arc length ÷ radius” is the natural language of geometry.*
+
+**Why we’ll use arcseconds later (spoiler):** When we measure tiny angles for very distant stars (parallax), degrees are too coarse. Arcseconds are a convenient unit at that scale.
 :::
 
 **The key insight:** Angular size depends on **both** physical size **and** distance.
 
-A large object far away can have the same angular size as a small object nearby. This is why the Sun and Moon appear nearly the same size in our sky—despite the Sun being about 400× larger. The Sun is also about 400× farther away, and the two effects almost perfectly cancel.
+A large object far away can have the same angular size as a small object nearby. This is why the Sun and Moon appear nearly the same size in our sky — despite the Sun being about 400× larger. The Sun is also about 400× farther away, and the two effects almost perfectly cancel.
 
 [FIGURE PLACEHOLDER: Diagram showing two objects of different sizes at different distances subtending the same angle]
 
@@ -579,7 +649,7 @@ This demo lets you explore how angular size depends on both physical size and di
 
 **Claim:** Angular size is proportional to physical size and inversely proportional to distance.
 
-**Evidence:** The demo's Angular Size readout halves when you double distance, and doubles when you double physical size. This confirms the **small-angle formula**: Angular size ∝ (Physical size / Distance).
+**Evidence:** The demo's Angular Size readout halves when you double distance, and doubles when you double physical size. This confirms the **small-angle formula**: Angular size $\propto$ (Physical size / Distance).
 
 :::
 
@@ -600,7 +670,7 @@ Both the Sun and Moon have angular sizes of approximately **0.5°** (half a degr
 
 **Claim:** The Sun and Moon have nearly identical angular sizes despite vastly different physical sizes.
 
-**Evidence:** The demo's Angular Size readout shows ~0.5° for both objects. This coincidence is why we can have **total solar eclipses**—the Moon can *just barely* cover the Sun completely.
+**Evidence:** The demo's Angular Size readout shows ~0.5° for both objects. This coincidence is why we can have **total solar eclipses** — the Moon can *just barely* cover the Sun completely.
 
 :::
 
@@ -635,30 +705,32 @@ The Moon appears about the same angular size as the Sun because:
 :::
 
 ::: {.callout-tip title="Solution" collapse="true"}
-**C) The Moon is ~400× smaller but also ~400× closer.** The Sun's diameter is about 1.4 million km; the Moon's is about 3,500 km—a ratio of 400:1. The Sun is about 150 million km away; the Moon is about 380,000 km away—also a ratio of roughly 400:1. These factors cancel, giving nearly equal angular sizes.
+**C) The Moon is ~400× smaller but also ~400× closer.** The Sun's diameter is about 1.4 million km; the Moon's is about 3,500 km—a ratio of 400:1. The Sun is about 150 million km away; the Moon is about 380,000 km away — also a ratio of roughly 400:1. These factors cancel, giving nearly equal angular sizes.
 :::
 
-::: {.callout-note title="Deep Dive: The Small-Angle Formula" collapse="true"}
+::: {.callout-note title="Deep Dive: The Small-Angle Formula" collapse="false"}
 For objects whose angular size is small (less than a few degrees), there's a simple relationship:
 
-$$\theta = \frac{d}{D}$$
+**Why radians first?** The small-angle relationship comes from basic circle geometry (arc length = radius × angle) and trigonometry, and those relationships are simplest and most “natural” when the angle is measured in **radians**. We often *report* angles in degrees/arcminutes/arcseconds because they’re easier to interpret, so we convert at the end.
+
+$$\theta = \frac{D}{d}$$
 
 where:
 - $\theta$ is the angular size in **radians**
-- d is the object's physical diameter
-- D is the distance to the object
+- $D$ is the object's physical diameter
+- $d$ is the distance to the object
 
 To convert to degrees, multiply by 57.3 (since 1 radian ≈ 57.3°):
 
-$$\theta_{\text{degrees}} = 57.3° \times \frac{d}{D}$$
+$$\theta_{\text{degrees}} = 57.3^\circ \times \frac{D}{d}$$
 
 **Example:** What's the angular size of the Moon?
-- Moon's diameter: d = 3,474 km
-- Moon's distance: D = 384,000 km
+- Moon's diameter: $D = 3474$ km
+- Moon's distance: $d = 384000$ km
 
-$$\theta = 57.3° \times \frac{3474}{384000} = 57.3° \times 0.00905 = 0.52°$$
+$$\theta = 57.3^\circ \times \frac{3474~\text{km}}{384000~\text{km}} = 57.3^\circ \times 0.00905 = 0.52^\circ$$
 
-That's about half a degree—roughly ¼ of your thumb width at arm's length.
+That's about half a degree — roughly ¼ of your thumb width at arm's length.
 :::
 
 ::: {.callout-note title="✏️ Sketch It: Angular Size" collapse="true"}
@@ -673,13 +745,13 @@ Now draw the same object at twice the distance. What happens to the angle?
 
 It's worth pausing to appreciate how remarkable the Sun-Moon angular size match is.
 
-The Sun is a star—a ball of plasma 1.4 million kilometers across, located 150 million kilometers away.
+The Sun is a star — a ball of plasma 1.4 million kilometers across, located 150 million kilometers away. 
 
 The Moon is a small rocky body 3,474 kilometers across, located a mere 384,000 kilometers away.
 
-There's no **fundamental requirement** that these two appear the same size—it's a coincidence of our particular moment in cosmic history.
+There's no **fundamental requirement** that these two appear the same size — it's a *coincidence* of our particular moment in cosmic history.
 
-**And it wasn't always this way.** The Moon is slowly drifting away from Earth (about 3.8 cm per year—we can measure this with lasers!). Billions of years ago, the Moon appeared much larger. In a few hundred million years (on the order of ~600 million), the Moon will appear too small to ever fully cover the Sun.
+**And it wasn't always this way.** The Moon is slowly drifting away from Earth (about 3.8 cm per year — we can measure this with lasers!). Billions of years ago, the Moon appeared much larger. In a few hundred million years (on the order of ~600 million), the Moon will appear too small to ever fully cover the Sun.
 
 [FIGURE PLACEHOLDER: Timeline showing Moon's recession and how it affects solar eclipse type]
 
@@ -708,24 +780,30 @@ Let's step back and see how today's concepts fit together:
 
 **Seasons** result from the 23.5° tilt between Earth's rotation axis and its orbital plane. This tilt causes the Sun's path across the sky to change throughout the year, varying both the directness of sunlight and the length of each day. Seasons are ultimately about **solar energy per square meter per day**.
 
-**Angular size** reminds us that what we see depends on geometry—both the object's true size and its distance. The Sun and Moon having nearly equal angular sizes is a coincidence that enables total solar eclipses.
+**Angular size** reminds us that what we see depends on geometry — both the object's true size and its distance. The Sun and Moon having nearly equal angular sizes is a coincidence that enables total solar eclipses.
 
-**The through-line:** All of today's concepts are about **geometry**—the geometry of directions (celestial sphere), illumination (seasons), and apparent size (angular size). This geometric thinking will serve you throughout astronomy.
+**The through-line:** All of today's concepts are about **geometry** — the geometry of directions (celestial sphere), illumination (seasons), and apparent size (angular size). This geometric thinking will serve you throughout astronomy.
 
 **Next time:** We'll apply angular size to understand Moon phases and eclipses. The geometry you've learned today is the foundation for explaining why the Moon appears to change shape each month, and why eclipses don't happen every month.
+
+This same geometry returns later in the semester:
+
+- **Exoplanet transits:** A planet crosses in front of a star, blocking a tiny fraction of its light. The *depth* of the dip depends on the **area ratio** (planet disk vs. star disk).
+- **Eclipsing binary stars:** Two stars orbit each other and periodically eclipse, producing a repeating brightness pattern.
+- **Stellar/planet sizes from light curves:** With good geometry and timing, eclipses/transits let us infer physical sizes and orbits from how the brightness changes.
 
 ::: {.callout-note title="Looking Ahead"}
 Here's a preview of what's coming in Lecture 4:
 
 **Moon phases** are NOT caused by Earth's shadow. They're a consequence of seeing different portions of the Moon's lit half as the Moon orbits Earth. The geometry is similar to how a ball appears to "change shape" as you walk around it under a single light source.
 
-**Eclipses** require a special alignment—the Moon must be near the points where its orbit crosses the ecliptic. This happens only about twice a year, which is why eclipses are relatively rare events.
+**Eclipses** require a special alignment — the Moon must be near the points where its orbit crosses the ecliptic. This happens only about twice a year, which is why eclipses are relatively rare events.
 
-**Why not monthly?** The Moon's orbit is tilted about 5° relative to the ecliptic. Usually, the Moon passes above or below the Sun (at new moon) or above or below Earth's shadow (at full moon). Only when the Moon is near a "node"—where its orbit crosses the ecliptic—can eclipses occur.
+**Why not monthly?** The Moon's orbit is tilted about 5° relative to the ecliptic. Usually, the Moon passes above or below the Sun (at new moon) or above or below Earth's shadow (at full moon). Only when the Moon is near a "node" — where its orbit crosses the ecliptic—can eclipses occur.
 
 [FIGURE PLACEHOLDER: Preview diagram showing Moon's tilted orbit relative to ecliptic, with nodes marked]
 
-*Caption: Coming Wednesday: The Moon's orbit is tilted ~5° from the ecliptic plane. Eclipses can only occur when the Moon is near a node—where its orbit crosses the ecliptic.*
+*Caption: Coming Wednesday: The Moon's orbit is tilted ~5° from the ecliptic plane. Eclipses can only occur when the Moon is near a node — where its orbit crosses the ecliptic.*
 :::
 
 ---
@@ -753,7 +831,7 @@ Here's a preview of what's coming in Lecture 4:
 
 **7.** **Demo Integration.** Describe one misconception that the Seasons demo helped you correct, and explain how the demo's specific features (readouts, overlays, etc.) provided the evidence.
 
-### Challenge Problems (Optional—For Those Who Want More Math)
+### Challenge Problems
 
 **8.** **Angular Size Practice.** Mars has a diameter of 6,792 km. When Mars is at its closest approach to Earth (about 55 million km), what is its angular size in arcseconds? *(Use the small-angle formula: θ = 57.3° × d/D, then convert to arcseconds using 1° = 3600".)*
 
@@ -761,24 +839,24 @@ Here's a preview of what's coming in Lecture 4:
 
 **10.** **Day Length.** At a latitude of 45°N, the day length on the summer solstice is about 15.5 hours. How many more hours of sunlight does this provide compared to a 12-hour equinox day? Over a 90-day summer, approximately how many extra hours of sunlight does this location receive compared to the equator (assuming 12-hour days at the equator year-round)?
 
-**11.** **Sun Altitude.** At noon on the summer solstice, the Sun is 23.5° north of the celestial equator (its declination is +23.5°). For an observer at 32°N latitude (San Diego), what is the Sun's altitude above the southern horizon?
+**11.** **Sun Altitude (Noon Altitude Formula).** At local noon, the Sun reaches its **maximum altitude** for the day. Use:
 
-::: {.callout-note title="Optional Tool: Noon Altitude Formula" collapse="true"}
+$$h_{\text{noon}} = 90^\circ - \left|\phi - \delta\right|$$
 
-For any observer at latitude φ, when an object has declination δ:
+where $\phi$ is your latitude and $\delta$ is the Sun’s declination (both in degrees). **Absolute value** just means “take the positive angular separation” between $\phi$ and $\delta$.
 
-**Noon altitude = 90° − |φ − δ|**
+For San Diego, $\phi = 32^\circ$ N. Complete the table and show your work for each row:
 
-This gives the Sun's **maximum altitude at local noon** (upper transit). It's a very useful geometric shortcut for our problems.
+| Date | $\delta$ (Sun declination) | $h_{\text{noon}}$ (degrees above S horizon) |
+|------|-----------------------------|---------------------------------------------|
+| Summer solstice | $+23.5^\circ$ | |
+| Winter solstice | $-23.5^\circ$ | |
 
-For San Diego (φ = 32°N) on summer solstice (δ = +23.5°):
-Noon altitude = 90° − |32° − 23.5°| = 90° − 8.5° = 81.5°
-
-:::
+Then, in 1–2 sentences: which noon altitude is higher, and what geometric reason explains the difference?
 
 ### Bridge Problems (Connects to Future Topics)
 
-**12.** **Observable → Model → Inference.** An astronomer measures that a star's position in the sky shifts by 0.5 arcseconds over 6 months. Following the Observable → Model → Inference pattern from Lecture 1:
+**12.** **Observable → Model → Inference.** An astronomer measures that a star's position in the sky shifts by 0.5 arcseconds over 6 months. Following the _Observable → Model → Inference_ pattern from Lecture 1:
 
 - (a) What is being measured? (Which of the four observables?)
 - (b) What physical model connects this measurement to distance?

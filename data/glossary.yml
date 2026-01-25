@@ -29,6 +29,13 @@ observable:
   first_use: "Lecture 1"
   module: 1
 
+constellation:
+  term: "Constellation"
+  definition: "A named pattern of stars on the sky."
+  context: "Constellations are defined by directions (angles) on the celestial sphere; the stars in a constellation are not necessarily close together in space."
+  first_use: "Lecture 3"
+  module: 1
+
 model:
   term: "Model"
   definition: "A mathematical relationship encoding physical assumptions that connects what we measure to what we want to know."
@@ -302,4 +309,173 @@ angular_size:
   definition: "The angle an object subtends as seen by an observer, measured in degrees, arcminutes, or arcseconds."
   context: "Angular size depends on physical size and distance; for small angles, θ (radians) ≈ d/D."
   first_use: "Lecture 3"
+  module: 1
+
+# Moon Geometry (Lecture 4)
+eclipse:
+  term: "Eclipse"
+  definition: "An astronomical event where one celestial body passes into the shadow of another."
+  context: "Solar eclipses occur when the Moon's shadow falls on Earth; lunar eclipses occur when the Moon passes through Earth's shadow."
+  first_use: "Lecture 4"
+  module: 1
+
+solar_eclipse:
+  term: "Solar eclipse"
+  definition: "An eclipse that occurs when the Moon's shadow falls on Earth."
+  context: "Possible only at new moon when the Moon is near a node; visible only from a limited area (the shadow path)."
+  first_use: "Lecture 4"
+  module: 1
+
+lunar_eclipse:
+  term: "Lunar eclipse"
+  definition: "An eclipse that occurs when the Moon passes through Earth's shadow."
+  context: "Possible only at full moon when the Moon is near a node; visible from the entire night side of Earth."
+  first_use: "Lecture 4"
+  module: 1
+
+annular_eclipse:
+  term: "Annular eclipse"
+  definition: "A solar eclipse in which the Moon appears smaller than the Sun, leaving a ring ('annulus') of sunlight visible."
+  context: "Occurs when the Moon is near apogee in its elliptical orbit."
+  first_use: "Lecture 4"
+  module: 1
+
+totality:
+  term: "Totality"
+  definition: "The phase of a total eclipse when the Sun (solar eclipse) or Moon (lunar eclipse) is completely blocked or immersed in shadow."
+  context: "During total solar eclipses, the corona becomes visible."
+  first_use: "Lecture 4"
+  module: 1
+
+umbra:
+  term: "Umbra"
+  definition: "The darkest, central portion of a shadow where the light source is completely blocked."
+  context: "The Moon entering Earth's umbra creates a total or partial lunar eclipse."
+  first_use: "Lecture 4"
+  module: 1
+
+penumbra:
+  term: "Penumbra"
+  definition: "The lighter, outer portion of a shadow where only part of the light source is blocked."
+  context: "The Moon passing through Earth's penumbra creates a subtle penumbral lunar eclipse."
+  first_use: "Lecture 4"
+  module: 1
+
+blood_moon:
+  term: "Blood moon"
+  definition: "Colloquial term for the reddish appearance of the Moon during a total lunar eclipse."
+  context: "Caused by Earth's atmosphere filtering and refracting sunlight into the shadow zone."
+  first_use: "Lecture 4"
+  module: 1
+
+node:
+  term: "Node"
+  definition: "One of two points where the Moon's orbital plane intersects the ecliptic plane."
+  context: "Eclipses can only occur when the Moon is near a node during new moon (solar) or full moon (lunar) phase."
+  first_use: "Lecture 4"
+  module: 1
+
+ascending_node:
+  term: "Ascending node"
+  definition: "The point where the Moon crosses the ecliptic plane moving from south to north."
+  context: "One of two points where the Moon's tilted orbit intersects the ecliptic."
+  first_use: "Lecture 4"
+  module: 1
+
+descending_node:
+  term: "Descending node"
+  definition: "The point where the Moon crosses the ecliptic plane moving from north to south."
+  context: "One of two points where the Moon's tilted orbit intersects the ecliptic."
+  first_use: "Lecture 4"
+  module: 1
+
+eclipse_season:
+  term: "Eclipse season"
+  definition: "A period of about 34–35 days during which eclipses are possible, occurring when the Sun is near one of the Moon's orbital nodes."
+  context: "Two eclipse seasons occur each year, about 173 days apart."
+  first_use: "Lecture 4"
+  module: 1
+
+saros_cycle:
+  term: "Saros cycle"
+  definition: "A period of approximately 18 years, 11 days, and 8 hours after which similar eclipses repeat."
+  context: "Results from the alignment of the synodic, draconic, and anomalistic months; each successive eclipse in a Saros series is shifted about 120° in longitude due to the extra ~8 hours."
+  first_use: "Lecture 4"
+  module: 1
+
+apogee:
+  term: "Apogee"
+  definition: "The point in the Moon's orbit when it is farthest from Earth (~406,700 km)."
+  context: "At apogee, the Moon appears smallest; if a solar eclipse occurs, it cannot be total (it will be annular or partial)."
+  first_use: "Lecture 4"
+  module: 1
+
+perigee:
+  term: "Perigee"
+  definition: "The point in the Moon's orbit when it is closest to Earth (~356,500 km)."
+  context: "At perigee, the Moon appears largest; total solar eclipses are possible (if alignment is central)."
+  first_use: "Lecture 4"
+  module: 1
+
+new_moon:
+  term: "New moon"
+  definition: "The lunar phase when the Moon is between Earth and the Sun, with the illuminated side facing away from Earth."
+  context: "The Moon is lost in the Sun's glare during this phase."
+  first_use: "Lecture 4"
+  module: 1
+
+first_quarter:
+  term: "First quarter"
+  definition: "The lunar phase when the Moon is 90° east of the Sun."
+  context: "Right half illuminated (as seen from the Northern Hemisphere); rises around noon and sets around midnight."
+  first_use: "Lecture 4"
+  module: 1
+
+full_moon:
+  term: "Full moon"
+  definition: "The lunar phase when the Moon is opposite the Sun, with essentially 100% of the Earth-facing side illuminated."
+  context: "Rises at sunset and sets at sunrise."
+  first_use: "Lecture 4"
+  module: 1
+
+third_quarter:
+  term: "Third quarter"
+  definition: "The lunar phase when the Moon is 90° west of the Sun."
+  context: "Left half illuminated (as seen from the Northern Hemisphere); rises around midnight and sets around noon."
+  first_use: "Lecture 4"
+  module: 1
+
+gibbous:
+  term: "Gibbous"
+  definition: "A lunar phase between quarter and full, with more than half but less than all of the Moon's face illuminated."
+  context: "From Latin 'gibbosus' meaning 'humpbacked'."
+  first_use: "Lecture 4"
+  module: 1
+
+waxing:
+  term: "Waxing"
+  definition: "Increasing in illumination; the Moon is waxing between new moon and full moon."
+  context: "From Old English 'weaxan' meaning 'to grow'."
+  first_use: "Lecture 4"
+  module: 1
+
+waning:
+  term: "Waning"
+  definition: "Decreasing in illumination; the Moon is waning between full moon and new moon."
+  context: "From Old English 'wanian' meaning 'to lessen'."
+  first_use: "Lecture 4"
+  module: 1
+
+synodic_month:
+  term: "Synodic month"
+  definition: "The time for the Moon to complete one cycle of phases (new moon to new moon), approximately 29.5 days."
+  context: "Longer than the sidereal month because Earth is also moving around the Sun."
+  first_use: "Lecture 4"
+  module: 1
+
+lunar_phase:
+  term: "Phase (lunar)"
+  definition: "The apparent shape of the Moon's illuminated portion as seen from Earth, determined by the Moon's position in its orbit relative to the Sun."
+  context: "The eight traditional phases cycle over about 29.5 days."
+  first_use: "Lecture 4"
   module: 1
