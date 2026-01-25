@@ -68,6 +68,13 @@
       margin-top: 0.5rem;
     }
 
+    .schematic-note {
+      text-align: center;
+      color: var(--text-muted);
+      font-size: var(--font-size-xs);
+      margin-top: var(--space-xs);
+    }
+
     /* Moon in SVG */
     .moon-draggable {
       cursor: grab;
@@ -288,6 +295,23 @@
       }
     }
 
+    .shadow-insight-popup {
+      position: fixed;
+      bottom: 2rem;
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(18, 18, 31, 0.95);
+      border: 1px solid var(--border-color);
+      border-left: 3px solid var(--accent-green);
+      color: var(--text-primary);
+      padding: 1rem 1.25rem;
+      border-radius: 12px;
+      max-width: 420px;
+      z-index: 1000;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+      animation: slideUp 0.3s ease-out;
+    }
+
     .insight-popup-content {
       display: flex;
       flex-direction: column;
@@ -295,13 +319,13 @@
     }
 
     .insight-popup-content strong {
-      color: #1a5f3a;
+      color: var(--accent-green);
     }
 
     .insight-close {
       align-self: flex-end;
-      background: #1a5f3a;
-      color: white;
+      background: var(--accent-green);
+      color: var(--space-black);
       border: none;
       padding: 0.5rem 1rem;
       border-radius: 4px;
@@ -310,7 +334,12 @@
     }
 
     .insight-close:hover {
-      background: #145a32;
+      filter: brightness(1.05);
+    }
+
+    .insight-close:focus-visible {
+      outline: 2px solid var(--accent-blue);
+      outline-offset: 2px;
     }
   </style>
 </head>
@@ -457,6 +486,7 @@
               <path id="lit-portion" d="" fill="url(#moonSurface)"/>
             </g>
           </svg>
+          <div class="schematic-note">Schematic (not to scale).</div>
         </div>
       </div>
 
@@ -536,7 +566,7 @@
           <span class="btn-icon">↺</span> Reset
         </button>
         <div class="speed-control">
-          <label>Speed:</label>
+          <label for="speed-select">Speed:</label>
           <select id="speed-select">
             <option value="1">1x</option>
             <option value="5" selected>5x</option>

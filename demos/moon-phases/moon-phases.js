@@ -670,7 +670,7 @@
 
     // Create popup
     const popup = document.createElement('div');
-    popup.className = 'insight-popup';
+    popup.className = 'shadow-insight-popup insight-popup';
     popup.innerHTML = `
       <div class="insight-popup-content">
         <strong>Key Observation:</strong> Earth's shadow always points
@@ -679,33 +679,35 @@
         <button class="insight-close" aria-label="Close">Got it!</button>
       </div>
     `;
-    popup.style.cssText = `
-      position: fixed;
-      bottom: 2rem;
-      left: 50%;
-      transform: translateX(-50%);
-      background: rgba(46, 204, 113, 0.95);
-      color: #1a1a2e;
-      padding: 1rem 1.5rem;
-      border-radius: 8px;
-      max-width: 400px;
-      z-index: 1000;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.3);
-      animation: slideUp 0.3s ease-out;
-    `;
 
     document.body.appendChild(popup);
 
-    popup.querySelector('.insight-close').addEventListener('click', () => {
-      popup.remove();
-    });
+    const closeBtn = popup.querySelector('.insight-close');
+    let timeoutId = null;
+    const dismiss = () => {
+      if (timeoutId) window.clearTimeout(timeoutId);
+      document.removeEventListener('keydown', onKeyDown);
+      if (popup.parentNode) popup.remove();
+    };
+    const onKeyDown = (event) => {
+      if (event.key === 'Escape') {
+        event.preventDefault();
+        dismiss();
+      }
+    };
+
+    if (closeBtn) {
+      closeBtn.addEventListener('click', dismiss);
+      closeBtn.focus();
+    } else {
+      popup.tabIndex = -1;
+      popup.focus();
+    }
+
+    document.addEventListener('keydown', onKeyDown);
 
     // Auto-dismiss after 8 seconds
-    setTimeout(() => {
-      if (popup.parentNode) {
-        popup.remove();
-      }
-    }, 8000);
+    timeoutId = window.setTimeout(dismiss, 8000);
   }
 
   function setupShadowToggle() {
