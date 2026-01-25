@@ -242,6 +242,7 @@
     const name = getPhaseName(moonAngle);
     const days = getDaysSinceNew(moonAngle);
     const moonGroupEl = document.getElementById('moon-group');
+    const normalized = ((moonAngle % 360) + 360) % 360;
 
     phaseName.textContent = name;
     illumination.textContent = Math.round(illum * 100) + '%';
@@ -249,7 +250,7 @@
 
     // Update ARIA attributes for accessibility
     if (moonGroupEl) {
-      moonGroupEl.setAttribute('aria-valuenow', Math.round(moonAngle));
+      moonGroupEl.setAttribute('aria-valuenow', Math.round(normalized) % 360);
       moonGroupEl.setAttribute('aria-valuetext',
         `${name}, ${Math.round(illum * 100)}% illuminated, Day ${days.toFixed(0)} of lunar cycle`);
     }
@@ -266,11 +267,11 @@
    * Update the timeline strip
    */
   function updateTimeline() {
-    const normalized = ((moonAngle % 360) + 360) % 360;
     const days = getDaysSinceNew(moonAngle);
+    const normalizedAngle = ((moonAngle % 360) + 360) % 360;
 
     // Update direction indicator
-    const isWaxing = normalized > 180 || normalized === 0;
+    const isWaxing = days < (SYNODIC_MONTH / 2);
     if (timelineDirection) {
       timelineDirection.textContent = isWaxing ? 'WAXING →' : '← WANING';
       timelineDirection.classList.toggle('waning', !isWaxing);
@@ -285,7 +286,7 @@
     if (timelinePhases) {
       timelinePhases.forEach(phase => {
         const phaseAngle = parseFloat(phase.dataset.angle);
-        const diff = Math.abs(((normalized - phaseAngle + 180) % 360) - 180);
+        const diff = Math.abs(((normalizedAngle - phaseAngle + 180) % 360) - 180);
         phase.classList.toggle('active', diff < 22.5);
       });
     }
@@ -344,6 +345,7 @@
     }
 
     function handleStart(event) {
+      stopAnimation();
       isDragging = true;
       event.preventDefault();
     }
@@ -400,6 +402,7 @@
     phaseButtons.forEach(btn => {
       btn.addEventListener('click', () => {
         const targetAngle = parseFloat(btn.dataset.angle);
+        announcePhase(targetAngle);
 
         // Animate to the target angle
         const startAngle = moonAngle;
@@ -428,6 +431,7 @@
       timelinePhases.forEach(phase => {
         phase.addEventListener('click', () => {
           const targetAngle = parseFloat(phase.dataset.angle);
+          announcePhase(targetAngle);
 
           // Animate to target
           const startAngle = moonAngle;
@@ -520,12 +524,7 @@
         update();
 
         // Announce change for screen readers
-        const announce = document.getElementById('status-announce');
-        if (announce) {
-          const name = getPhaseName(moonAngle);
-          const illum = getIllumination(moonAngle);
-          announce.textContent = `${name}, ${Math.round(illum * 100)}% illuminated`;
-        }
+        announcePhase(moonAngle);
       }
     });
 
@@ -655,9 +654,20 @@
    */
   let shadowInsightShown = false;
 
-  function showShadowInsight() {
+  function announcePhase(angle) {
+    const announce = document.getElementById('status-announce');
+    if (!announce) return;
+    const name = getPhaseName(angle);
+    const illum = getIllumination(angle);
+    announce.textContent = `${name}, ${Math.round(illum * 100)}% illuminated`;
+  }
+
+  function showShadowInsight(returnFocusEl) {
     if (shadowInsightShown) return;
     shadowInsightShown = true;
+    const previousFocus = returnFocusEl instanceof HTMLElement
+      ? returnFocusEl
+      : (document.activeElement instanceof HTMLElement ? document.activeElement : null);
 
     // Create popup
     const popup = document.createElement('div');
@@ -667,7 +677,7 @@
         <strong>Key Observation:</strong> Earth's shadow always points
         <em>away</em> from the Sun. The Moon is almost never in the shadow —
         that's why phases are NOT caused by Earth's shadow!
-        <button class="insight-close" aria-label="Close">Got it!</button>
+        <button class="insight-close" aria-label="Got it">Got it!</button>
       </div>
     `;
 
@@ -679,6 +689,9 @@
       if (timeoutId) window.clearTimeout(timeoutId);
       document.removeEventListener('keydown', onKeyDown);
       if (popup.parentNode) popup.remove();
+      if (previousFocus && document.contains(previousFocus)) {
+        previousFocus.focus();
+      }
     };
     const onKeyDown = (event) => {
       if (event.key === 'Escape') {
@@ -710,7 +723,7 @@
         shadowGroup.style.display = shadowToggle.checked ? 'block' : 'none';
 
         if (shadowToggle.checked) {
-          showShadowInsight();
+          showShadowInsight(shadowToggle);
         }
 
         // Announce for screen readers
