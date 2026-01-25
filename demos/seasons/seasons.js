@@ -185,9 +185,16 @@
    * @param {number} dayOfYear - Day of year (0-365)
    * @returns {number} Declination in degrees (-23.5 to +23.5 for Earth)
    */
+  function effectiveObliquityDegrees(obliquityDeg) {
+    const t = Math.abs(obliquityDeg % 360);
+    const folded = t > 180 ? 360 - t : t; // 0..180
+    return folded > 90 ? 180 - folded : folded; // 0..90
+  }
+
   function getSunDeclination(dayOfYear) {
     const daysFromEquinox = dayOfYear - 80; // March 21 ~ day 80
-    return state.axialTilt * Math.sin(2 * Math.PI * daysFromEquinox / 365);
+    const eps = effectiveObliquityDegrees(state.axialTilt);
+    return eps * Math.sin(2 * Math.PI * daysFromEquinox / 365);
   }
 
   /**
@@ -446,7 +453,7 @@
   }
 
   function updateLatitudeBands() {
-    const tilt = state.axialTilt;
+    const tilt = effectiveObliquityDegrees(state.axialTilt);
 
     // Latitude bands are positioned based on the current axial tilt
     // Arctic Circle: 90 - tilt degrees
@@ -538,12 +545,13 @@
     // The tilt direction depends on the current season
 
     const declination = getSunDeclination(state.dayOfYear);
-    const tiltRad = state.axialTilt * Math.PI / 180;
+    const eps = effectiveObliquityDegrees(state.axialTilt);
+    const tiltRad = eps * Math.PI / 180;
 
     // Calculate axis endpoints
     // The axis should tilt toward/away from the viewer (left/right in side view)
     // based on declination
-    const tiltDirection = declination / state.axialTilt; // -1 to +1
+    const tiltDirection = eps === 0 ? 0 : declination / eps; // -1 to +1
     const horizontalOffset = 20 * Math.sin(tiltRad) * tiltDirection;
 
     const topX = GLOBE_CENTER.x + horizontalOffset;
@@ -569,7 +577,7 @@
       // The ecliptic is tilted relative to the equator by the axial tilt
       if (state.overlays.ecliptic) {
         // Rotate the ecliptic ellipse to show the tilt
-        const tiltDeg = state.axialTilt;
+        const tiltDeg = effectiveObliquityDegrees(state.axialTilt);
         elements.eclipticOverlay.setAttribute('transform',
           `rotate(${tiltDeg} ${GLOBE_CENTER.x} ${GLOBE_CENTER.y})`);
       }
@@ -615,7 +623,12 @@
 
     // Slider displays
     elements.dateSliderDisplay.textContent = Math.round(state.dayOfYear);
-    elements.tiltDisplay.textContent = `${state.axialTilt.toFixed(1)}°`;
+    const eps = effectiveObliquityDegrees(state.axialTilt);
+    if (state.axialTilt > 90) {
+      elements.tiltDisplay.textContent = `${state.axialTilt.toFixed(1)}° (effective ${eps.toFixed(1)}°)`;
+    } else {
+      elements.tiltDisplay.textContent = `${state.axialTilt.toFixed(1)}°`;
+    }
 
     elements.latitudeDisplay.textContent = formatLatitude(state.latitude);
 
@@ -794,7 +807,12 @@
     const planetData = PLANET_DATA[state.currentPlanet];
     if (planetData && elements.planetName && elements.planetTiltDisplay) {
       elements.planetName.textContent = planetData.name;
-      elements.planetTiltDisplay.textContent = `(${planetData.tilt}° tilt)`;
+      const eps = effectiveObliquityDegrees(planetData.tilt);
+      if (planetData.tilt > 90) {
+        elements.planetTiltDisplay.textContent = `(${planetData.tilt}° tilt, effective ${eps.toFixed(1)}°)`;
+      } else {
+        elements.planetTiltDisplay.textContent = `(${planetData.tilt}° tilt)`;
+      }
 
       // Update indicator color to match planet
       if (elements.planetIndicator) {
