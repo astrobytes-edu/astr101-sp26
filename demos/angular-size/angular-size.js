@@ -421,16 +421,16 @@
         elements.objectCircle.setAttribute('fill', 'url(#moonGradient)');
         break;
       case 'mars':
-        elements.objectCircle.setAttribute('fill', '#d9534f');
+        elements.objectCircle.setAttribute('fill', 'var(--mars-red)');
         break;
       case 'planet':
-        elements.objectCircle.setAttribute('fill', '#d4a574');
+        elements.objectCircle.setAttribute('fill', 'var(--jupiter-tan)');
         break;
       case 'galaxy':
-        elements.objectCircle.setAttribute('fill', '#8899bb');
+        elements.objectCircle.setAttribute('fill', 'var(--ice-blue)');
         break;
       default:
-        elements.objectCircle.setAttribute('fill', '#a0a0b0');
+        elements.objectCircle.setAttribute('fill', 'var(--text-secondary)');
     }
   }
 
