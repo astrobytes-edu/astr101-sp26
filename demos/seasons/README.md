@@ -103,6 +103,8 @@ Quick-jump buttons to the cardinal seasons:
 
 Compare Earth's seasons to other worlds by changing the axial tilt:
 
+Planet preset values are defined in `planets.json` (one source of truth).
+
 | Planet | Axial Tilt | Notes |
 |--------|------------|-------|
 | **Earth** | 23.5° | Familiar seasons, moderate tilt |
