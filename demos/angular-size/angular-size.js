@@ -189,6 +189,7 @@
     elements.moonAngularRange = document.getElementById('moon-angular-range');
 
     elements.angleWarning = document.getElementById('angle-warning');
+    elements.btnResetDefaults = document.getElementById('btn-reset-defaults');
   }
 
   // ============================================
@@ -687,6 +688,12 @@
     setupPresets();
     setupPresetCategory();
     setupKeyboard();
+
+    if (elements.btnResetDefaults) {
+      elements.btnResetDefaults.addEventListener('click', () => {
+        selectPreset('sun');
+      });
+    }
 
     // Initialize starfield
     const starfieldCanvas = document.getElementById('starfield');

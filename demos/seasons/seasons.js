@@ -176,6 +176,7 @@
       // Buttons
       btnAnimateYear: document.getElementById('btn-animate-year'),
       btnStop: document.getElementById('btn-stop'),
+      btnResetDefaults: document.getElementById('btn-reset-defaults'),
 
       // Season presets
       presetMarEquinox: document.getElementById('preset-mar-equinox'),
@@ -767,6 +768,25 @@
     elements.btnStop.addEventListener('click', () => {
       stopAnimation();
     });
+
+    if (elements.btnResetDefaults) {
+      elements.btnResetDefaults.addEventListener('click', () => {
+        stopAnimation();
+
+        state.currentPlanet = 'earth';
+        state.dayOfYear = 80;
+        state.axialTilt = 23.5;
+        state.latitude = 40;
+
+        elements.dateSlider.value = state.dayOfYear;
+        elements.tiltSlider.value = state.axialTilt;
+        elements.latitudeSlider.value = state.latitude;
+
+        updateSeasonPresetHighlight(elements.presetMarEquinox);
+        updatePlanetPresetHighlight(elements.presetEarth);
+        update();
+      });
+    }
 
     // Overlay toggles
     elements.toggleCelestialEquator.addEventListener('change', () => {
