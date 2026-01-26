@@ -1,0 +1,23 @@
+### 1) Show your work (always)
+
+For any problem with numbers, your solution must include:
+
+- setup (what you’re solving for)
+- knowns/unknowns (what you’re given)
+- equations or reasoning path (why you’re doing what you’re doing)
+- units at every step (units are not decoration — they’re error-checking)
+- a final answer that is clearly labeled (box/circle it)
+
+If you only write a final number, you should **expect major point loss** even if it’s correct.
+
+### 2) Explain your reasoning (conceptual problems)
+
+For conceptual questions, write in complete sentences. Aim for:
+
+- Claim: your answer
+- Evidence/Reasoning: why (use the lecture ideas)
+- Optional sketch: a quick diagram is often worth 10 sentences
+
+### 3) Use diagrams like a scientist
+
+For geometry/sky problems: draw a labeled sketch (Sun–Earth–observer, horizon/zenith, tilt, angles). You don’t need to be an artist — just be clear.
