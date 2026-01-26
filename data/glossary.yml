@@ -307,7 +307,7 @@ equinox:
 angular_size:
   term: "Angular size"
   definition: "The angle an object subtends as seen by an observer, measured in degrees, arcminutes, or arcseconds."
-  context: "Angular size depends on physical size and distance; for small angles, θ (radians) ≈ d/D."
+  context: "Angular size depends on physical size and distance; for small angles, θ (radians) ≈ D/d where D is diameter and d is distance."
   first_use: "Lecture 3"
   module: 1
 

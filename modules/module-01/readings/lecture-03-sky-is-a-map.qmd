@@ -51,9 +51,7 @@ Here's the fundamental problem: **you have no depth perception**.
 
 Your eyes can't tell you whether a star is close and dim or far and luminous. The Big Dipper's seven stars *look* like they belong together — like friends sitting around a cosmic campfire. But they're not. They're scattered at wildly different distances, from 79 to 124 light-years away. They just happen to lie along similar *directions* as seen from Earth.
 
-[FIGURE PLACEHOLDER: Big Dipper stars at different distances - 3D view showing stars scattered in depth vs. 2D view from Earth showing apparent pattern]
-
-*Caption: The Big Dipper appears as a pattern because we see only directions, not distances. The stars range from 79 to 124 light-years away—they're not neighbors in space.*
+{{< fig constellations-are-projections >}}
 
 ::: {.callout-note title="Nerd Note" collapse="true"}
 Several Big Dipper stars actually share a common motion through space (a "moving group"), suggesting they formed together. But the dipper *pattern* is still a projection — from a different vantage point in the galaxy, those same stars would form a completely different shape.
@@ -89,9 +87,7 @@ This imaginary sphere is the **celestial sphere** — and it's one of astronomy'
 **Celestial sphere:** An imaginary sphere of arbitrary radius centered on the observer, onto which all celestial objects are projected. It's a coordinate system for *directions*, not a claim about where things actually are.
 :::
 
-[FIGURE PLACEHOLDER: Observer at center of celestial sphere with various objects projected onto it - stars, Sun, Moon at their apparent positions]
-
-*Caption: The celestial sphere is a mental model for mapping directions. Objects at vastly different distances all get projected onto the same imaginary surface.*
+{{< fig celestial-sphere-directions >}}
 
 **Key insight:** The celestial sphere doesn't represent where things *are* — it represents where to *look*. It's a direction-finder, not a distance-finder.
 
@@ -146,9 +142,7 @@ The celestial sphere has special points and circles that help us navigate. Here 
 **Great circle:** Any circle on a sphere whose center coincides with the center of the sphere. The celestial equator, ecliptic, and horizon are all great circles. They divide the celestial sphere into equal halves.
 :::
 
-[FIGURE PLACEHOLDER: Celestial sphere with labeled reference points (poles, zenith) and circles (celestial equator, horizon, ecliptic)]
-
-*Caption: The celestial sphere's reference points and circles. The celestial equator is fixed (Earth's equator projected outward), while the horizon and zenith depend on where you're standing.*
+{{< fig celestial-sphere-reference-points >}}
 
 **Key geometry clarification:** **Zenith** is a direction (straight up from where you stand). **North** is a compass direction along your local horizon. They are not the same axis — you can point north while looking straight ahead, but zenith is straight up.
 
@@ -189,9 +183,7 @@ For understanding seasons and eclipses, two circles are essential:
 
 **The Ecliptic** is the Sun's apparent yearly path across the sky. As Earth orbits the Sun, the Sun appears to drift eastward against the background stars, completing one full circuit per year. This path is the ecliptic — and it's defined by Earth's *orbit*.
 
-[FIGURE PLACEHOLDER: Celestial sphere showing both celestial equator and ecliptic as great circles, tilted 23.5° relative to each other, with their intersection points marked]
-
-*Caption: The celestial equator (Earth's equator projected) and the ecliptic (Sun's apparent path) are tilted 23.5° relative to each other. This tilt is the key to seasons.*
+{{< fig celestial-sphere-ecliptic >}}
 
 **The crucial point:** These two circles are *not* aligned. They're tilted relative to each other by about **23.5°** — and this tilt is the entire reason we have seasons.
 
@@ -281,9 +273,7 @@ It's a common and very reasonable first guess — but it doesn't match what we o
 
 Here's the proof: **When it's summer in the Northern Hemisphere, it's winter in the Southern Hemisphere.** If distance caused seasons, both hemispheres would experience summer at the same time — when Earth is closest to the Sun.
 
-[FIGURE PLACEHOLDER: Earth's orbit (slightly elliptical) with positions marked showing Northern summer occurs near aphelion (farthest point), not perihelion]
-
-*Caption: Earth is actually slightly FARTHER from the Sun during Northern Hemisphere summer (aphelion in July) than during Northern winter (perihelion in January). Distance doesn't cause seasons.*
+{{< fig seasons-misconception-distance >}}
 
 **The numbers:** Earth's distance from the Sun varies by only about 3% over the year — from 147 million km at **perihelion** (closest, in January) to 152 million km at **aphelion** (farthest, in July). This 3% variation affects how much total energy Earth receives by about 7%—far too small to explain the dramatic temperature swings of seasons, and in the *wrong direction* for the Northern Hemisphere anyway.
 
@@ -320,9 +310,7 @@ When the Sun is higher in the sky, its rays hit the ground more directly. When t
 
 Think of it this way: shine a flashlight straight down on a table — you get a bright circle. Now tilt the flashlight at an angle — the same light spreads into an oval, covering more area but with less intensity per square meter.
 
-[FIGURE PLACEHOLDER: Comparison of direct vs. oblique sunlight hitting a surface - same beam spread over different areas]
-
-*Caption: Sunlight hitting at a steep angle (left) concentrates energy on a small area. The same sunlight at a shallow angle (right) spreads over a larger area, reducing intensity.*
+{{< fig seasons-effect1-sunlight-angle >}}
 
 **Effect 2: Day Length**
 
@@ -338,9 +326,7 @@ At the winter solstice:
 
 That's 4 extra hours of daylight AND much more direct sunlight. The combination is powerful.
 
-[FIGURE PLACEHOLDER: Sun path diagrams for San Diego showing summer solstice (high arc, long day) vs. winter solstice (low arc, short day)]
-
-*Caption: The Sun's path across the sky changes dramatically with season. In summer, it rises north of east, arcs high across the sky, and sets north of west. In winter, it rises south of east, stays low, and sets south of west.*
+{{< fig seasons-effect2-sun-path >}}
 
 ::: {.callout-important title="The Bottom Line"}
 Seasons are fundamentally about **how much solar energy per square meter** your location receives over a day. Tilt changes that through **sun angle** (how concentrated the rays are) and **day length** (how many hours of heating).
@@ -521,9 +507,7 @@ The seasons are marked by four special configurations:
 **Equinox:** From Latin *aequus* (equal) + *nox* (night). Day and night are approximately equal in length worldwide.
 :::
 
-[FIGURE PLACEHOLDER: Earth's orbit with four positions marked (solstices and equinoxes), showing axial tilt direction at each position]
-
-*Caption: Earth's axial tilt stays pointed in the same direction in space as Earth orbits. This creates the changing relationship between the Sun's position and each hemisphere.*
+{{< fig earth-orbit-seasons >}}
 
 ::: {.callout-check-yourself title="Check Yourself 8 — Equinox Geometry"}
 On the equinoxes, the Sun is located:
@@ -587,9 +571,7 @@ That’s why radians are sometimes described as “unitless” — it’s a leng
 
 $$360^\circ = 2\pi\ \text{rad} \quad \text{and} \quad 1\ \text{rad} \approx 57.3^\circ$$
 
-[FIGURE PLACEHOLDER: Unit circle showing degrees vs. radians (360° = 2π rad) and the arc-length definition of a radian]
-
-*Caption: A unit circle helps you see why $2\pi$ radians makes a full turn and why “radians = arc length ÷ radius” is the natural language of geometry.*
+{{< fig unit-circle-radians >}}
 
 **Why we’ll use arcseconds later (spoiler):** When we measure tiny angles for very distant stars (parallax), degrees are too coarse. Arcseconds are a convenient unit at that scale.
 :::
@@ -598,9 +580,7 @@ $$360^\circ = 2\pi\ \text{rad} \quad \text{and} \quad 1\ \text{rad} \approx 57.3
 
 A large object far away can have the same angular size as a small object nearby. This is why the Sun and Moon appear nearly the same size in our sky — despite the Sun being about 400× larger. The Sun is also about 400× farther away, and the two effects almost perfectly cancel.
 
-[FIGURE PLACEHOLDER: Diagram showing two objects of different sizes at different distances subtending the same angle]
-
-*Caption: Angular size depends on both physical size and distance. A tennis ball at arm's length and a car across a parking lot can have the same angular size.*
+{{< fig angular-size-tradeoff >}}
 
 ::: {.callout-check-yourself title="Check Yourself 9 — Same Angular Size"}
 Two planets have the same angular size as seen from Earth. This means:
@@ -751,11 +731,7 @@ The Moon is a small rocky body 3,474 kilometers across, located a mere 384,000 k
 
 There's no **fundamental requirement** that these two appear the same size — it's a *coincidence* of our particular moment in cosmic history.
 
-**And it wasn't always this way.** The Moon is slowly drifting away from Earth (about 3.8 cm per year — we can measure this with lasers!). Billions of years ago, the Moon appeared much larger. In a few hundred million years (on the order of ~600 million), the Moon will appear too small to ever fully cover the Sun.
-
-[FIGURE PLACEHOLDER: Timeline showing Moon's recession and how it affects solar eclipse type]
-
-*Caption: We live in a privileged cosmic moment. In the distant past, **annular** solar eclipses weren't possible because the Moon appeared larger than the Sun. In the far future (hundreds of millions of years), **total** solar eclipses won't be possible because the Moon will appear smaller than the Sun. Partial eclipses will always remain possible.*
+**And it wasn't always this way.** The Moon is slowly drifting away from Earth (about 3.8 cm per year — we can measure this with lasers!). Billions of years ago, the Moon appeared much larger. In a few hundred million years (on the order of ~600 million), the Moon will appear too small to ever fully cover the Sun. We live in a privileged cosmic moment: in the distant past, annular solar eclipses weren't possible because the Moon appeared larger than the Sun; in the far future, total solar eclipses won't be possible because the Moon will appear smaller than the Sun.
 
 ::: {.callout-check-yourself title="Check Yourself 11 — Future Eclipses"}
 In several hundred million years, total solar eclipses will:
@@ -800,10 +776,6 @@ Here's a preview of what's coming in Lecture 4:
 **Eclipses** require a special alignment — the Moon must be near the points where its orbit crosses the ecliptic. This happens only about twice a year, which is why eclipses are relatively rare events.
 
 **Why not monthly?** The Moon's orbit is tilted about 5° relative to the ecliptic. Usually, the Moon passes above or below the Sun (at new moon) or above or below Earth's shadow (at full moon). Only when the Moon is near a "node" — where its orbit crosses the ecliptic—can eclipses occur.
-
-[FIGURE PLACEHOLDER: Preview diagram showing Moon's tilted orbit relative to ecliptic, with nodes marked]
-
-*Caption: Coming Wednesday: The Moon's orbit is tilted ~5° from the ecliptic plane. Eclipses can only occur when the Moon is near a node — where its orbit crosses the ecliptic.*
 :::
 
 ---
@@ -833,9 +805,9 @@ Here's a preview of what's coming in Lecture 4:
 
 ### Challenge Problems
 
-**8.** **Angular Size Practice.** Mars has a diameter of 6,792 km. When Mars is at its closest approach to Earth (about 55 million km), what is its angular size in arcseconds? *(Use the small-angle formula: θ = 57.3° × d/D, then convert to arcseconds using 1° = 3600".)*
+**8.** **Angular Size Practice.** Mars has a diameter of $D=6,792$ km. When Mars is at its closest approach to Earth (about $d=55$ million km), what is its angular size in arcseconds? *(Use the small-angle formula: $\theta = 57.3^{\circ} \times D/d$, then convert to arcseconds using 1° = 3600".)*
 
-**9.** **Angular Size Scaling.** A satellite appears to have an angular size of 2 arcminutes when at 400 km altitude. What would its angular size be if it moved to 800 km altitude?
+**9.** **Angular Size Scaling.** A satellite appears to have an angular size of 2 arcminutes when at 400 km altitude. What would its angular size be if it moved to 800 km altitude? *Hint:* Use the ratio method.
 
 **10.** **Day Length.** At a latitude of 45°N, the day length on the summer solstice is about 15.5 hours. How many more hours of sunlight does this provide compared to a 12-hour equinox day? Over a 90-day summer, approximately how many extra hours of sunlight does this location receive compared to the equator (assuming 12-hour days at the equator year-round)?
 

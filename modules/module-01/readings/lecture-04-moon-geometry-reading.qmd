@@ -53,9 +53,7 @@ It's a common and very reasonable first guess — but it doesn't match what we o
 
 Here's the geometry check: Earth's shadow always points **directly away from the Sun**. But crescent Moons appear **near the Sun in the sky** — meaning the Moon is nowhere near the anti-solar direction where Earth's shadow lives. So Earth's shadow can't be causing crescent (or quarter, or gibbous) phases. Earth's shadow only matters during a **lunar eclipse**, when the Moon is near the anti-solar direction *and* near the orbital plane.
 
-[FIGURE PLACEHOLDER: L4-FIG-01 - Diagram showing crescent Moon near Sun in sky, with Earth's shadow pointing in opposite direction]
-
-*Caption: Earth's shadow points away from the Sun. Crescent Moons appear near the Sun. The geometry proves Earth's shadow plays no role in phases — only in the rare event of a lunar eclipse.*
+{{< fig moon-phases-not-shadows >}}
 
 Earth's shadow only touches the Moon during a **lunar eclipse** — which happens a few times per year globally (often around ~2), not every month. If phases were caused by Earth's shadow, we'd have an eclipse every single night that wasn't a full moon. That's obviously not what we observe.
 
@@ -93,9 +91,7 @@ The Moon doesn't produce its own light. It shines by reflecting sunlight. At any
 **Synodic month:** The time from new moon to new moon (one full cycle of phases), about 29.5 days.
 :::
 
-[FIGURE PLACEHOLDER: L4-FIG-02 - Top-down view of Sun, Earth, Moon system showing parallel sunlight rays illuminating half of Moon]
-
-*Caption: The Sun illuminates half of the Moon at all times. The question is: how much of that lit half can we see from Earth?*
+{{< fig moon-half-always-lit >}}
 
 ### The Key Insight: Half Is Always Lit
 
@@ -109,9 +105,7 @@ Think of it this way: Imagine a tennis ball under a single lamp. The lamp illumi
 - When you're opposite the lamp, you see the fully lit side (**full moon** equivalent)
 - At intermediate angles, you see a **crescent**, **quarter**, or **gibbous** view
 
-[FIGURE PLACEHOLDER: L4-FIG-03 - Tennis ball under lamp from multiple viewing angles showing crescent → quarter → gibbous → full]
-
-*Caption: The ball metaphor: A tennis ball under a lamp shows different "phases" depending on your viewing angle. The lit half stays constant; only your view of it changes.*
+<!-- Tennis ball analogy is included in the moon-half-always-lit figure above -->
 
 ::: {.callout-check-yourself title="Check Yourself 2 — How Much of the Moon Is Lit?"}
 During a full moon, the portion of the Moon that is illuminated by the Sun is:
@@ -290,9 +284,9 @@ The lunar cycle is traditionally divided into eight named phases:
 
 *(\*As seen from the Northern Hemisphere; reversed in the Southern Hemisphere.)*
 
-[FIGURE PLACEHOLDER: L4-FIG-04 - Eight phases arranged in a circle around Earth, with Sun direction marked, showing illumination pattern for each]
+{{< fig moon-phase-cycle >}}
 
-*Caption: The eight traditional phases of the Moon. "Waxing" means growing (toward full); "waning" means shrinking (toward new). "Gibbous" means more than half lit.*
+{{< fig moon-phases-synodic-month >}}
 
 > **Waxing:** Growing in illumination (new → full). From Old English *weaxan*, "to grow."
 >
@@ -328,9 +322,7 @@ The Moon's position relative to the Sun determines not just its appearance, but 
 
 **Third Quarter:** About a week after full → rises around midnight, highest at sunrise, sets around noon
 
-[FIGURE PLACEHOLDER: L4-FIG-05 - Four-panel diagram showing Moon position at each quarter phase with corresponding rise/set times]
-
-*Caption: The Moon's phase tells you when it's visible. Full moons are up all night; new moons are invisible; quarter moons are up for roughly half the night.*
+{{< fig moon-as-a-clock >}}
 
 **Practical application:** If you see the Moon high in the sky at 3 AM, what phase must it be? It has to be past full (waning gibbous or third quarter), because only those phases are high in the sky in the pre-dawn hours.
 
@@ -373,9 +365,9 @@ An **eclipse** occurs when one celestial body passes through the shadow of anoth
 - **Solar eclipse:** Moon's shadow falls on Earth (Moon between Sun and Earth)
 - **Lunar eclipse:** Moon passes through Earth's shadow (Earth between Sun and Moon)
 
-[FIGURE PLACEHOLDER: L4-FIG-06 - Two diagrams: (1) Solar eclipse with Moon's shadow cone reaching Earth, (2) Lunar eclipse with Moon passing through Earth's shadow cone]
+{{< fig eclipses-when-shadows-matter >}}
 
-*Caption: Eclipses are shadow phenomena. Solar eclipses occur when the Moon casts its shadow on Earth; lunar eclipses occur when the Moon enters Earth's shadow.*
+{{< fig eclipse-varieties >}}
 
 For an eclipse to happen, you need a **very specific alignment**: Sun, Earth, and Moon must be nearly collinear (in a straight line).
 
@@ -404,9 +396,9 @@ The Moon's orbit around Earth is tilted about **5.1°** relative to the ecliptic
 
 Because of this tilt, at most new moons, the Moon passes **above or below** the Sun as seen from Earth—no solar eclipse. At most full moons, the Moon passes **above or below** Earth's shadow—no lunar eclipse.
 
-[FIGURE PLACEHOLDER: L4-FIG-07 - 3D diagram showing Moon's tilted orbital plane relative to ecliptic plane, with Moon passing above/below Sun-Earth line most months]
+{{< fig eclipses-5deg-difference >}}
 
-*Caption: The Moon's orbit is tilted 5.1° from the ecliptic. At most new moons, the Moon passes above or below the Sun (no eclipse). Only when the Moon is near a node can eclipses occur.*
+{{< fig eclipses-nodes-why-not-monthly >}}
 
 ::: {.callout-note title="✏️ Sketch It: Eclipse Geometry" collapse="true"}
 Draw a horizontal line across your page—this is the **ecliptic plane** (Earth's orbital plane around the Sun).
@@ -580,9 +572,7 @@ The **nodes** are the two points where the Moon's orbit crosses the ecliptic pla
 **Node:** A point where the Moon's orbital plane intersects the ecliptic plane. The ascending node is where the Moon crosses northward; the descending node is where it crosses southward.
 :::
 
-[FIGURE PLACEHOLDER: L4-FIG-08 - 3D view of Moon's tilted orbit around Earth, with the ecliptic plane shown as a flat disk, nodes clearly marked at the two intersection points]
-
-*Caption: The nodes are the "gateways" to eclipses. Only when the Moon is near a node AND at new/full moon phase can an eclipse occur.*
+{{< fig eclipses-nodes-gateways >}}
 
 The nodes aren't fixed—they slowly drift (regress) around the ecliptic with a period of about **18.6 years** (the **lunar nodal cycle**). This means the eclipse seasons slowly shift through the calendar year.
 
@@ -604,11 +594,7 @@ During an eclipse season:
 - If a new moon occurs while the Sun is near a node → **solar eclipse possible**
 - If a full moon occurs while the Sun is near a node → **lunar eclipse possible**
 
-Each eclipse season lasts about **34–35 days** (≈34.5 days on average) — long enough that at least one new moon or full moon typically occurs within it.
-
-[FIGURE PLACEHOLDER: L4-FIG-09 - Calendar view showing two eclipse seasons per year, roughly 6 months apart, with specific eclipse dates marked]
-
-*Caption: Eclipse seasons occur about twice per year, roughly 6 months apart. Each season can produce up to three eclipses (solar, lunar, solar) if the timing is right.*
+Each eclipse season lasts about **34–35 days** (≈34.5 days on average) — long enough that at least one new moon or full moon typically occurs within it. Eclipse seasons occur about twice per year, roughly 6 months apart, and each season can produce up to three eclipses (solar, lunar, solar) if the timing is right.
 
 ::: {.callout-check-yourself title="Check Yourself 10 — Eclipse Seasons Timing"}
 If a solar eclipse occurs on March 15, when might the next lunar eclipse occur?
@@ -642,9 +628,7 @@ Not all solar eclipses are created equal. The type depends on the geometry:
 | **Partial** | Moon only partially covers the Sun | Sun looks "bitten" |
 | **Hybrid** | Transitions between total and annular along the path | Rare; both total and annular visible depending on location |
 
-[FIGURE PLACEHOLDER: L4-FIG-10 - Four images showing appearance of each solar eclipse type: total (corona visible), annular (ring of fire), partial (crescent sun), hybrid (diagram of path)]
-
-*Caption: Solar eclipse types depend on Moon-Sun alignment and the Moon's distance from Earth. **Total eclipses** reveal the corona; **annular eclipses** show a "ring of fire."*
+{{< fig solar-eclipse-types-photo >}}
 
 **Why the variation?**
 
@@ -686,9 +670,7 @@ Lunar eclipses also come in varieties:
 | **Partial** | Moon only partially enters umbra | Part of Moon darkened |
 | **Penumbral** | Moon only passes through penumbra | Subtle shading (often hard to notice) |
 
-[FIGURE PLACEHOLDER: L4-FIG-11 - Diagram of Earth's shadow showing umbra (full shadow) and penumbra (partial shadow), with Moon positions for each eclipse type]
-
-*Caption: Earth casts a shadow with two parts: the dark umbra and the lighter penumbra. The type of lunar eclipse depends on which shadow region the Moon enters.*
+{{< fig lunar-eclipse-blood-moon >}}
 
 ::: {.callout-note title="✏️ Sketch It: Shadow Geometry" collapse="true"}
 Draw the Sun on the left (large circle). Draw Earth in the middle (small circle). Now draw Earth's shadow extending to the right:
@@ -703,9 +685,7 @@ Now draw the Moon passing through different parts of this shadow. Where must it 
 
 Earth's atmosphere bends (refracts) and filters sunlight. Blue light scatters away (the same reason our sky is blue), but red light bends around Earth's edge and reaches the Moon. The Moon is literally being illuminated by all the sunrises and sunsets happening on Earth simultaneously!
 
-[FIGURE PLACEHOLDER: L4-FIG-12 - Diagram showing sunlight bending through Earth's atmosphere, red light reaching the Moon in Earth's umbra]
-
-*Caption: The "blood moon" effect: Earth's atmosphere bends red sunlight into the shadow zone. The Moon is lit by the collective glow of all Earth's sunrises and sunsets.*
+<!-- Blood moon explanation is covered by the lunar-eclipse-blood-moon figure above -->
 
 ::: {.callout-check-yourself title="Check Yourself 12 — Why the Moon Turns Red"}
 The Moon turns reddish during a total lunar eclipse because:
@@ -726,11 +706,7 @@ The Moon turns reddish during a total lunar eclipse because:
 
 Lunar eclipses are visible from anywhere on Earth's night side — potentially billions of people can see each one.
 
-Total solar eclipses? The **path of totality** (where the Moon fully covers the Sun) is typically only about 100-250 km wide and traces a narrow path across Earth's surface.
-
-[FIGURE PLACEHOLDER: L4-FIG-13 - Map showing a solar eclipse path of totality as a narrow band across Earth, compared to the wide area that sees partial eclipse]
-
-*Caption: Total solar eclipse visibility is limited to a narrow path (typically 100-250 km wide). Outside this path, observers see only a partial eclipse. The total experience requires being in exactly the right place.*
+Total solar eclipses? The **path of totality** (where the Moon fully covers the Sun) is typically only about 100-250 km wide and traces a narrow path across Earth's surface. Outside this path, observers see only a partial eclipse.
 
 **The numbers:**
 - Total eclipse path width: ~100-250 km
@@ -756,11 +732,7 @@ Remember from Lecture 3: the Sun and Moon have nearly the same angular size (~0.
 
 When the Moon's angular size **exceeds** the Sun's, total eclipses are possible.
 
-When the Moon's angular size is **smaller** than the Sun's, only annular eclipses can occur.
-
-[FIGURE PLACEHOLDER: L4-FIG-14 - Comparison diagram showing Moon at perigee (appears larger than Sun → total eclipse) vs. Moon at apogee (appears smaller than Sun → annular eclipse)]
-
-*Caption: Total vs. annular depends on angular size. At perigee, the Moon appears slightly larger than the Sun (total eclipse possible). At apogee, it appears smaller (only annular possible).*
+When the Moon's angular size is **smaller** than the Sun's, only annular eclipses can occur. At perigee, the Moon appears slightly larger than the Sun (total eclipse possible); at apogee, it appears smaller (only annular possible).
 
 ::: {.callout-check-yourself title="Check Yourself 13 — Total vs. Annular (What If?)"}
 If the Moon were 20% farther from Earth than it is now, solar eclipses would be:
@@ -781,11 +753,7 @@ If the Moon were 20% farther from Earth than it is now, solar eclipses would be:
 
 Here's an extraordinary fact: total solar eclipses are a temporary gift from the cosmos.
 
-The Moon is receding from Earth at about **3.8 cm per year**. We measure this directly by bouncing laser beams off retroreflectors left on the Moon by Apollo astronauts (and Soviet Lunokhod rovers).
-
-[FIGURE PLACEHOLDER: L4-FIG-15 - Photo of lunar retroreflector array with diagram showing laser ranging experiment from Earth]
-
-*Caption: Lunar laser ranging: We measure the Moon's distance to centimeter precision by timing laser pulses reflected from retroreflectors on the Moon. The data show the Moon is slowly drifting away.*
+The Moon is receding from Earth at about **3.8 cm per year**. We measure this directly by bouncing laser beams off retroreflectors left on the Moon by Apollo astronauts (and Soviet Lunokhod rovers). Lunar laser ranging measures the Moon's distance to centimeter precision, confirming the Moon is slowly drifting away.
 
 **What this means:**
 - In the distant past, the Moon was much closer and appeared much larger in the sky

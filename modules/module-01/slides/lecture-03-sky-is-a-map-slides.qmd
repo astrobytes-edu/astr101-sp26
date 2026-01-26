@@ -1,0 +1,967 @@
+---
+title: "The Sky Is a Map"
+subtitle: "Celestial Geometry, Seasons,<br> and Angular Size"
+author: "Dr. Anna Rosen"
+date: "2026-01-26"
+description: "Celestial sphere geometry, seasons (tilt not distance), and angular size—how to navigate a sky made of angles."
+draft: false
+
+format:
+  revealjs:
+    theme: [default, ../../../assets/theme/slides/theme.scss]
+    footer: "ASTR 101 • Lecture 3 • Dr. Anna Rosen"
+    slide-number: true
+    transition: fade
+    transition-speed: fast
+    center: false
+    chalkboard: true
+    title-slide-attributes:
+      data-background-image: "/assets/images/common/noirlab-nightsky-mosaic.jpg"
+      data-background-opacity: "0.4"
+    pointer:
+      key: "q"
+      color: "#5dbfbf"
+      pointerSize: 18
+      alwaysVisible: true
+    spotlight:
+      size: 80
+      toggleSpotlightOnMouseDown: true
+      presentingCursor: "crosshair"
+      fadeInAndOut: 100
+    quiz:
+      shuffleOptions: true
+      defaultCorrect: "Correct!"
+      defaultIncorrect: "Not quite—let's discuss."
+
+revealjs-plugins:
+  - pointer
+  - spotlight
+  - attribution
+  - quiz
+
+filters:
+  - roughnotation
+
+execute:
+  echo: false
+  warning: false
+  message: false
+---
+
+## Join iClicker {background-color="black"}
+
+::: {.text-center}
+{{< img iclicker-qr-astr101 width="36%" class="img-center" >}}
+
+::: {.text-xl .font-semibold .mt-2}
+[join.iclicker.com/ASES](https://join.iclicker.com/ASES)
+:::
+
+::: {.text-sm .text-muted .mt-2}
+If you can't scan: open the link and enter the course code **ASES**.
+:::
+:::
+
+::: {.notes}
+30–60 sec. Get everyone connected before starting.
+:::
+
+---
+
+## {background-color="black"}
+
+:::: {.columns}
+::: {.column width="55%"}
+{{< img constellations-are-projections width="100%" >}}
+:::
+
+::: {.column width="45%"}
+::: {.text-lg .font-semibold}
+The Big Dipper looks like a family.
+:::
+
+::: {.fragment .mt-2}
+But these stars aren't neighbors in space.
+
+They range from **79 to 124 light-years** away.
+:::
+:::
+::::
+
+::: {.fragment .mt-2 .text-muted}
+The pattern exists only because they lie along similar **directions** from Earth.
+:::
+
+::: {.notes}
+0–2 min. Let the image speak first.
+
+"When you look at the Big Dipper, your brain sees a pattern—a group. But space is 3D, and you're seeing a 2D projection. These stars just happen to be in the same general direction."
+:::
+
+---
+
+## Today's Learning Objectives {background-image="/assets/images/common/noirlab-nightsky-mosaic.jpg" background-opacity="0.2"}
+
+::: {.bg-muted .p-2}
+
+By the end of today, you'll be able to:
+
+::: {.incremental .text-sm}
+- Explain why the sky is a map of **directions**, not distances
+- Use the **celestial sphere** to locate objects: horizon, zenith, poles, equator, ecliptic
+- Explain seasons as **axial tilt** (sun angle + day length), not changing distance
+- Interpret **solstices and equinoxes** geometrically
+- Use **angular size** reasoning to compare sizes and distances
+:::
+
+:::
+
+::: {.notes}
+2–3 min. Frame the day: "Today is about geometry. If you can draw it, you can understand it."
+:::
+
+---
+
+## {.center}
+
+::: {.r-fit-text}
+The Celestial Sphere
+:::
+
+*A Map of Directions*
+
+::: {.notes}
+3 min. Section transition. Brief pause.
+:::
+
+---
+
+## The Problem: No Depth Perception {background-image="/assets/images/common/noirlab-nightsky-mosaic.jpg" background-opacity="0.3"}
+
+::: {.text-center .text-base .text-muted}
+Look up at the night sky. You see points of light scattered across a dark dome.
+:::
+
+::: {.fragment .text-center .mt-4}
+**Here's the fundamental problem:**
+
+Your eyes can't tell you whether a star is<br> **close and dim** or **far and luminous**.
+:::
+
+::: {.fragment .text-center .mt-2 .text-muted}
+The sky gives us *directions* by default.<br> Measuring *distances* requires extra work.
+:::
+
+::: {.notes}
+3–4 min. "This isn't a limitation—it's a starting point. We embrace what the sky naturally gives us: a coordinate system for pointing at things."
+:::
+
+---
+
+## The Celestial Sphere
+
+:::: {.columns}
+::: {.column width="50%"}
+{{< img celestial-sphere-directions width="100%" >}}
+:::
+
+::: {.column width="50%"}
+Imagine standing at the center of a vast, transparent globe.
+
+::: {.fragment}
+Every star, planet, and galaxy can be located by **pointing** in some direction.
+:::
+
+:::
+::::
+
+::: {.fragment .mt-2 .bg-muted .p-2}
+**Key insight:** The celestial sphere doesn't represent where things *are* — it represents where to *look*.
+:::
+
+::: {.notes}
+4–5 min. "It's a direction-finder, not a distance-finder. Objects at wildly different distances get mapped to the same sphere."
+:::
+
+---
+
+## Reference Points on the Sky
+
+:::: {.columns}
+::: {.column width="55%"}
+{{< img celestial-sphere-reference-points width="100%" >}}
+:::
+
+::: {.column width="45%" .text-sm}
+| Point | What It Is |
+|-------|------------|
+| **Zenith** | Straight up from where you stand |
+| **Celestial poles** | Earth's rotation axis extended to the sky |
+
+::: {.fragment .mt-2 .text-xs .text-muted}
+**Zenith** is your local "up."
+
+**North** is a compass direction along the horizon — not the same as zenith!
+:::
+:::
+::::
+
+::: {.notes}
+5–6 min. Common confusion: students mix up "zenith" and "north." Emphasize: zenith is straight up, north is along the horizon.
+:::
+
+---
+
+## Reference Circles on the Sky
+
+:::{.text-sm}
+| Circle | Definition | What It Corresponds To |
+|--------|------------|----------------------|
+| **Celestial equator** | Earth's equator projected onto the sky | Divides N/S celestial hemispheres |
+| **Horizon** | Where sky meets ground | Your local view (depends on location) |
+| **Ecliptic** | Sun's yearly path across the sky | Earth's orbital plane projected onto sky |
+:::
+
+::: {.fragment .mt-2 .bg-muted .p-2 .text-sm}
+All three are **great circles** — they divide the celestial sphere into equal halves.
+:::
+
+::: {.notes}
+6–7 min. "These aren't arbitrary—they're defined by Earth's rotation (equator) and orbit (ecliptic)."
+:::
+
+---
+
+## Celestial Coordinates
+
+:::: {.columns}
+::: {.column width="55%" .text-xs}
+
+| Coordinate | Meaning | Earth Analog |
+|------------|---------------|----------|
+| **Declination (Dec)** | Angle N/S of celestial equator (−90° to +90°) | Latitude |
+| **Right Ascension (RA)** | Position along equator (0–24h) | Longitude |
+
+::: {.fragment .mt-2 .text-base}
+**Why hours for RA?**
+
+24 hours = 360°, so 1 hour = 15°.
+
+The sky appears to rotate once per day — hours match the clock.
+:::
+
+:::
+
+::: {.column width="45%"}
+::: {.bg-muted .p-2}
+**Observable:** Position on the sky (RA, Dec)
+
+**Model:** Celestial sphere geometry
+
+**Inference:** Where to point the telescope tonight
+:::
+:::
+::::
+
+::: {.notes}
+7–8 min. Don't dwell on RA details—just establish the analogy to lat/long.
+:::
+
+---
+
+## Two Circles That Matter
+
+:::: {.columns}
+::: {.column width="45%"}
+{{< img celestial-sphere-ecliptic width="100%" >}}
+:::
+
+::: {.column width="55%" .text-sm}
+**Celestial Equator:** Defined by Earth's *rotation* — perpendicular to the spin axis.<br>
+
+**Ecliptic:** Defined by Earth's *orbit* — the Sun's apparent yearly path.
+
+:::
+::::
+
+::: {.fragment .mt-2 .bg-muted .p-2 .text-sm}
+**The crucial point:** These circles are tilted **23.5°** relative to each other.
+
+This tilt is why we have **seasons**.
+:::
+
+::: {.notes}
+8–9 min. "Two different motions—rotation and orbit—define two different reference planes. They don't align, and that misalignment changes everything."
+:::
+
+---
+
+## Two Motions, Two Time Scales
+
+| Motion | Cause | Time Scale | What You See |
+|--------|-------|------------|--------------|
+| **Daily arc** | Earth's rotation | 24 hours | Sun rises east, sets west |
+| **Yearly drift** | Earth's orbit | 365 days | Sun slides eastward along ecliptic |
+
+::: {.fragment .mt-2 .text-muted .text-sm}
+The daily arc is why the Sun is up during the day.
+
+The yearly drift is why the Sun's noon altitude changes with the seasons.
+:::
+
+::: {.notes}
+9–10 min. "When we talk about the Sun's position 'changing with seasons,' we mean along the ecliptic—the yearly drift, not the daily motion."
+:::
+
+---
+
+## Quick Check: The Ecliptic {background-color="#1a1a2e"}
+
+::: {.quiz}
+The ecliptic is:
+
+- [ ] The path the Moon takes across the sky each night
+- [ ] The Sun's apparent path across the sky over the course of a year
+- [ ] The same as the celestial equator
+- [ ] The edge of Earth's shadow
+:::
+
+::: {.notes}
+10–11 min. Give 30 seconds.
+
+Correct: B. The ecliptic traces Earth's orbital plane—the Sun appears to move along it over a year.
+:::
+
+---
+
+## {.center}
+
+::: {.r-fit-text}
+Seasons: Tilt, Not Distance
+:::
+
+*The Misconception That Won't Die*
+
+::: {.notes}
+11 min. Section transition. "Now we apply the geometry."
+:::
+
+---
+
+## The Common Misconception {background-color="black"}
+
+:::: {.columns}
+::: {.column width="55%"}
+{{< img seasons-misconception-distance width="100%" >}}
+:::
+
+::: {.column width="45%"}
+::: {.text-lg}
+"Earth is closer to the Sun in summer."
+:::
+
+::: {.fragment .mt-2}
+This is **wrong** — but it's a reasonable first guess.
+:::
+
+::: {.fragment .mt-2 .text-muted}
+Surveys show many college students and adults believe this.
+:::
+:::
+::::
+
+::: {.notes}
+11–12 min. Don't shame—acknowledge it's intuitive. "It makes sense! Closer = warmer, right? But nature doesn't cooperate."
+:::
+
+---
+
+## The Proof: Opposite Hemispheres
+
+:::: {.columns}
+::: {.column width="50%"}
+::: {.bg-muted .p-2}
+**If distance caused seasons:**
+
+Both hemispheres would have summer at the same time — when Earth is closest to the Sun.
+:::
+:::
+
+::: {.column width="50%"}
+::: {.fragment .bg-muted .p-2}
+**What we observe:**
+
+When it's summer in the Northern Hemisphere, it's **winter** in the Southern Hemisphere.
+
+The hemispheres have **opposite** seasons.
+:::
+:::
+::::
+
+::: {.fragment .mt-2 .text-center}
+**Conclusion:** Distance cannot be the cause.
+:::
+
+::: {.notes}
+12–13 min. "This is the killer observation. One fact rules out the entire hypothesis."
+:::
+
+---
+
+## The Numbers Don't Work Either
+
+::: {.incremental}
+- Earth's distance from the Sun varies by only **~3%** over the year
+- **Perihelion** (closest): 147 million km — in **January**
+- **Aphelion** (farthest): 152 million km — in **July**
+- This 3% distance change affects solar flux by only **~7%**
+:::
+
+::: {.fragment .mt-2 .bg-muted .p-2}
+**The irony:** Earth is *farthest* from the Sun during Northern Hemisphere summer!
+:::
+
+::: {.notes}
+13–14 min. "The effect is too small AND in the wrong direction for the Northern Hemisphere."
+:::
+
+---
+
+## The Real Mechanism: Effect 1
+
+:::: {.columns}
+::: {.column width="55%"}
+{{< img seasons-effect1-sunlight-angle width="100%" >}}
+:::
+
+::: {.column width="45%" .text-sm}
+**Sunlight Angle**
+
+When the Sun is higher in the sky, its rays hit the ground more **directly**.
+
+::: {.fragment .mt-2}
+**Flashlight analogy:**
+
+- Straight down → bright circle
+- Tilted → same light spreads over larger area
+- Less energy per square meter
+:::
+:::
+::::
+
+::: {.notes}
+14–15 min. "Effect 1: sun angle. Higher sun = more concentrated energy."
+:::
+
+---
+
+## The Real Mechanism: Effect 2
+
+:::: {.columns}
+::: {.column width="55%"}
+{{< img seasons-effect2-sun-path width="100%" >}}
+:::
+
+::: {.column width="45%" .text-sm}
+**Day Length**
+
+When your hemisphere tilts toward the Sun, the Sun takes a **longer path** across your sky.<br>
+
+::: {.fragment .mt-2 .text-sm}
+<br>**San Diego (~32°N):**
+
+| Season | Day Length | Noon Altitude |
+|--------|-----------|---------------|
+| Summer solstice | ~14 hours | ~81° |
+| Winter solstice | ~10 hours | ~35° |
+:::
+:::
+::::
+
+::: {.notes}
+15–16 min. "Effect 2: day length. More hours of heating. The combination is powerful—4 extra hours of more direct sunlight."
+:::
+
+---
+
+## The Bottom Line
+
+:::: {.columns}
+::: {.column width="55%"}
+{{< img seasons-geometry-illumination width="100%" >}}
+:::
+
+::: {.column width="45%" .text-sm}
+::: {.bg-muted .p-2}
+**Observable:** Sun's noon altitude and day length change through the year
+
+**Model:** Earth's 23.5° axial tilt
+
+**Inference:** Seasons are about *solar energy per square meter per day*
+:::
+
+:::
+::::
+
+::: {.fragment .mt-0 .text-sm .text-center}
+**Tilt changes this through:**
+
+1. **Sun angle** (how concentrated)
+2. **Day length** (how many hours)
+:::
+
+::: {.notes}
+16–17 min. "This is the complete answer. Tilt creates two geometric effects that combine to make seasons."
+:::
+
+---
+
+## Quick Check: Summer Sun Path {background-color="#1a1a2e"}
+
+::: {.quiz}
+During summer in your hemisphere, the Sun:
+
+- [ ] Is closer to Earth and appears larger
+- [ ] Rises and sets at the same points as in winter, just brighter
+- [ ] Takes a higher, longer path across the sky
+- [ ] Moves faster across the sky
+:::
+
+::: {.notes}
+17–18 min. Give 30 seconds.
+
+Correct: C. Higher path (more direct energy) + longer path (more hours of heating).
+:::
+
+---
+
+## Solstices and Equinoxes
+
+:::: {.columns}
+::: {.column width="55%"}
+{{< img earth-orbit-seasons width="95%" >}}
+
+::: {.text-sm .text-muted .mt-2}
+**Equinox** = day ≈ night everywhere
+
+**Solstice** = Sun "stands still" at extreme
+:::
+:::
+
+::: {.column width="45%" .text-xs}
+| Event | Date | What Happens |
+|-------|------|--------------|
+| **March Equinox** | ~Mar 20 | Sun crosses equator going north |
+| **June Solstice** | ~Jun 21 | Sun farthest north; longest NH day |
+| **Sept Equinox** | ~Sep 22 | Sun crosses equator going south |
+| **Dec Solstice** | ~Dec 21 | Sun farthest south; shortest NH day |
+
+:::
+::::
+
+::: {.notes}
+18–19 min. "Four special geometry days. The ecliptic and equator intersect at equinoxes; the Sun reaches its extremes at solstices."
+:::
+
+---
+
+## Demo: Seasons Explorer
+
+::: {.bg-muted .p-2 .text-center}
+**Open:** [astrobytes-edu.github.io/astr101-sp26/demos/seasons/](https://astrobytes-edu.github.io/astr101-sp26/demos/seasons/)
+:::
+
+::: {.incremental .mt-2}
+**Demo Mission 1: Test the Distance Hypothesis**
+
+- Click through the 4 season presets
+- Record the **Earth-Sun Distance** for each
+- Is Earth closer during NH summer or winter?
+:::
+
+::: {.fragment .mt-2 .text-muted .text-sm}
+(You should find Earth is *farthest* from the Sun in July—the opposite of what distance hypothesis predicts!)
+:::
+
+::: {.notes}
+19–21 min. Have students follow along on their devices if possible. This is active learning.
+:::
+
+---
+
+## Demo Mission 2: The Real Mechanism
+
+::: {.bg-muted .p-2}
+**With display overlays on:**
+
+- Go to **June Solstice** vs **December Solstice**
+- Record **Day Length** and **Sun Altitude** for both
+:::
+
+| Season | Day Length | Sun Altitude |
+|--------|-----------|--------------|
+| June Solstice | _____ | _____ |
+| December Solstice | _____ | _____ |
+
+::: {.fragment .mt-2}
+**Key question:** What changes between June and December that explains the temperature difference?
+:::
+
+::: {.notes}
+21–23 min. "Day length and sun altitude both change dramatically. Distance barely changes. Case closed."
+:::
+
+---
+
+## {.center}
+
+::: {.r-fit-text}
+Angular Size
+:::
+
+*How Big Things **Look***
+
+::: {.notes}
+23 min. Section transition.
+:::
+
+---
+
+## The Fundamental Insight
+
+:::: {.columns}
+::: {.column width="55%"}
+{{< img angular-size-tradeoff width="100%" >}}
+:::
+
+::: {.column width="45%"}
+How big is the Moon?
+
+::: {.fragment}
+In kilometers: **3,474 km** diameter.
+
+But that's not what you *see*.
+:::
+
+::: {.fragment .mt-2}
+What you see is how much of your field of view it occupies—its **angular size**.
+
+The Moon's angular size: **~0.5°**
+:::
+:::
+::::
+
+::: {.notes}
+23–24 min. "Angular size is the angle an object subtends. It depends on both physical size AND distance."
+:::
+
+---
+
+## Angular Units
+
+:::: {.columns}
+::: {.column width="55%"}
+
+| Unit | Relation | Example |
+|------|----------|---------|
+| 1 degree (°) | Base unit | Thumb width at arm's length ≈ 2° |
+| 1 arcminute (') | 1° = 60' | Human eye resolution ≈ 1' |
+| 1 arcsecond (") | 1' = 60" | Telescope territory |
+
+::: {.fragment .mt-2 .text-sm}
+**Useful conversion:**
+
+0.5° = 30' = 1800"
+:::
+
+:::
+
+::: {.column width="45%"}
+{{< img unit-circle-radians width="100%" >}}
+
+::: {.text-sm .text-muted}
+A radian is defined by θ = arc/radius.
+
+1 radian ≈ 57.3°
+:::
+:::
+::::
+
+::: {.notes}
+24–25 min. "Degrees for big stuff, arcminutes and arcseconds for small stuff. Astronomers use arcseconds for tiny angles."
+:::
+
+---
+
+## The Small-Angle Formula
+
+::: {.bg-muted .p-2}
+For small angles (less than a few degrees):
+
+$$\theta = \frac{D}{d} \quad \text{(radians)}$$
+
+To convert to degrees:
+
+$$\theta_{\text{degrees}} = 57.3° \times \frac{D}{d}$$
+
+where $D$ = physical diameter, $d$ = distance
+:::
+
+::: {.fragment .mt-2}
+**Key insight:** Angular size depends on **both** physical size **and** distance.
+
+A large object far away can look the same as a small object nearby.
+:::
+
+::: {.notes}
+25–26 min. "This formula is the heart of angular size reasoning. Size divided by distance."
+:::
+
+---
+
+## Worked Example: The Moon
+
+::: {.incremental}
+- Moon's diameter: $D = 3474$ km
+- Moon's distance: $d = 384{,}000$ km
+- Angular size: $\theta = 57.3° \times \frac{3474}{384{,}000} = 57.3° \times 0.00905$
+- **Result: θ ≈ 0.52°** (about half a degree)
+:::
+
+::: {.fragment .mt-2 .text-muted}
+That's roughly half the width of your pinky finger at arm's length.
+:::
+
+::: {.notes}
+26–27 min. Walk through the calculation. "The formula works—and it matches what we see."
+:::
+
+---
+
+## The Sun-Moon Coincidence {background-color="black"}
+
+:::: {.columns}
+::: {.column width="50%"}
+**The Sun:**
+
+- Diameter: ~1,400,000 km
+- Distance: ~150,000,000 km
+- Angular size: **~0.53°**
+:::
+
+::: {.column width="50%"}
+**The Moon:**
+
+- Diameter: ~3,474 km
+- Distance: ~384,000 km
+- Angular size: **~0.52°**
+:::
+::::
+
+::: {.fragment .mt-2 .text-center .text-lg}
+The Sun is **400× larger** but also **400× farther**.
+
+The factors cancel—they appear **almost exactly the same size**!
+:::
+
+::: {.notes}
+27–28 min. "This is a cosmic coincidence. No law of physics requires this—it's just where we happen to be in history."
+:::
+
+---
+
+## Why This Matters {background-image="/assets/images/module-01/lec04/total-solar-eclipse.webp" background-opacity="0.6"}
+
+::: {.text-center .text-xl .font-semibold}
+Because of this coincidence, the Moon can *just barely* cover the Sun completely.
+:::
+
+::: {.fragment .text-center .mt-4}
+**Total solar eclipses** are possible.
+
+We see the Sun's corona—its outer atmosphere—only during these moments.
+:::
+
+::: {.notes}
+28–29 min. "If the Moon were smaller or farther, we'd never see totality. This coincidence is why eclipses are so spectacular."
+:::
+
+---
+
+## Quick Check: Same Angular Size {background-color="#1a1a2e"}
+
+::: {.quiz}
+Two planets have the same angular size as seen from Earth. This means:
+
+- [ ] They have the same physical diameter
+- [ ] They are at the same distance
+- [x] The ratio of their diameters equals the ratio of their distances
+- [ ] They have the same luminosity
+:::
+
+::: {.notes}
+29–30 min. Give 30 seconds.
+
+Correct: C. Same angular size means the size-to-distance ratio is the same.
+:::
+
+---
+
+## Demo: Angular Size Explorer
+
+::: {.bg-muted .p-2 .text-center}
+**Open:** [astrobytes-edu.github.io/astr101-sp26/demos/angular-size/](https://astrobytes-edu.github.io/astr101-sp26/demos/angular-size/)
+:::
+
+::: {.incremental .mt-2}
+**Explore:**
+
+- Double the distance → what happens to angular size?
+- Double the physical size → what happens to angular size?
+- Compare Sun vs Moon (Today) presets
+:::
+
+::: {.fragment .mt-2 .text-muted .text-sm}
+You should find: distance ×2 → angular size ÷2 (inverse relationship)
+:::
+
+::: {.notes}
+30–32 min. Quick hands-on demo. "Verify the formula with your own eyes."
+:::
+
+---
+
+## A Cosmic Privilege
+
+::: {.incremental}
+- The Moon is drifting away from Earth at **3.8 cm per year**
+- We measure this with **laser retroreflectors** left by Apollo astronauts
+- Billions of years ago, the Moon appeared **much larger**
+- In ~600 million years, the Moon will appear **too small** to fully cover the Sun
+:::
+
+::: {.fragment .mt-2 .bg-muted .p-2}
+We live in a **privileged cosmic moment**: the only era when total solar eclipses are possible.
+:::
+
+::: {.notes}
+32–33 min. "In the past, annular eclipses weren't possible because the Moon was too big. In the future, total eclipses won't be possible because the Moon will be too small. We're lucky."
+:::
+
+---
+
+## {.center}
+
+::: {.r-fit-text}
+Connecting the Concepts
+:::
+
+::: {.notes}
+33 min. Section transition to wrap-up.
+:::
+
+---
+
+## The Through-Line: Geometry
+
+::: {.incremental}
+- **Celestial sphere:** The geometry of *directions* in the sky
+- **Seasons:** The geometry of *illumination* from Earth's tilt
+- **Angular size:** The geometry of *apparent size* from distance
+:::
+
+::: {.fragment .mt-2 .bg-muted .p-2}
+**Observable:** Positions, angles, apparent sizes
+
+**Model:** 3D geometry of Earth, Sun, Moon, stars
+
+**Inference:** Real physical properties and motions
+:::
+
+::: {.notes}
+33–34 min. "All of today's concepts are geometry. If you can draw it, you can understand it."
+:::
+
+---
+
+## Looking Ahead: Lecture 4
+
+::: {.bg-muted .p-2}
+**Next time:** Moon Phases and Eclipses
+
+We'll apply angular size to understand:
+
+::: {.incremental}
+- Why the Moon appears to change shape each month
+- Why eclipses don't happen every month
+- The difference between total, annular, and partial eclipses
+:::
+:::
+
+::: {.fragment .mt-2 .text-muted}
+**Preview:** Moon phases are NOT caused by Earth's shadow. (The geometry will prove it.)
+:::
+
+::: {.notes}
+34–35 min. "Everything you learned today—celestial sphere, angular size—comes back in Lecture 4."
+:::
+
+---
+
+## Takeaways {background-image="/assets/images/common/noirlab-nightsky-mosaic.jpg" background-opacity="0.2"}
+
+::: {.bg-muted .p-2}
+**What to recognize:**
+
+::: {.incremental}
+1. The sky is a map of **directions**, not distances—that's the celestial sphere
+2. Seasons are caused by **axial tilt** (sun angle + day length), not distance
+3. **Angular size** depends on both physical size AND distance
+4. The Sun-Moon angular size match is a **coincidence** that enables total eclipses
+:::
+:::
+
+::: {.fragment .mt-2 .text-center .text-muted}
+*Recognition, not retention—you should be able to identify these ideas when they return.*
+:::
+
+::: {.notes}
+35–37 min. "You don't need to memorize formulas. You need to recognize these patterns when you see them."
+:::
+
+---
+
+## Reading & Practice
+
+::: {.bg-muted .p-2}
+**Before next class:**
+
+- Complete the **Lecture 3 Reading** (includes demo explorations)
+- Work through the **Check Yourself** questions
+- Try at least 3 **Practice Problems**
+:::
+
+::: {.fragment .mt-2}
+**Stuck?**
+
+- Office hours: [times]
+- Discussion board: [link]
+:::
+
+::: {.notes}
+37–38 min. Point them to resources.
+:::
+
+---
+
+## Questions? {background-image="/assets/images/common/noirlab-nightsky-mosaic.jpg" background-opacity="0.3"}
+
+::: {.text-center .text-lg}
+What's still unclear?
+
+What would help it click?
+:::
+
+::: {.notes}
+38–40 min. Open floor for questions. If none, dismiss with: "See you next time for moon phases and eclipses!"
+:::

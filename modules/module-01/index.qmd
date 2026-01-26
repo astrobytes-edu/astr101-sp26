@@ -30,17 +30,17 @@ By the end of this module, you will be able to:
 - Describe how light and the electromagnetic spectrum reveal information about distant objects
 - Explain how telescopes collect and analyze light
 
-## Lectures
-
-::: {.lecture-grid}
-::: {#module-lectures}
-:::
-:::
-
 ## Lecture Readings
 
 ::: {.lecture-grid}
 ::: {#module-readings}
+:::
+:::
+
+## Lecture Slides
+
+::: {.lecture-grid}
+::: {#module-lectures}
 :::
 :::
 
