@@ -1,0 +1,23 @@
+---
+title: "Homework"
+draft: false
+listing:
+  contents: "astr101-hw-*.qmd"
+  type: table
+  fields: [order, title, description, solutions_due, memo_due]
+  sort: "order asc"
+  sort-ui: false
+  filter-ui: false
+  field-types:
+    order: number
+  field-display-names:
+    order: "#"
+    title: "Assignment"
+    description: "Focus"
+    solutions_due: "Solutions due"
+    memo_due: "Grade memo due"
+---
+
+{{< include ../_includes/hw-submission-instructions.qmd >}}
+
+Homework is one of the main ways you build the skills you need for exams: clear reasoning, careful units, and honest self-assessment.

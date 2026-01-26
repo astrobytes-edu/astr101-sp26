@@ -50,7 +50,8 @@ project:
     - index.qmd
     - course-info/*.qmd
     - handouts/*.qmd
-    - homework/*.qmd
+    - homework/index.qmd
+    - homework/astr101-hw-*.qmd
     - modules/index.qmd
     - modules/module-*/index.qmd
     - modules/module-*/slides/*.qmd
@@ -140,6 +141,10 @@ website:
       - section: "Handouts"
         contents:
           - handouts/index.qmd
+
+      - section: "Homework"
+        contents:
+          - homework/index.qmd
 
       - section: "Demos"
         contents:
