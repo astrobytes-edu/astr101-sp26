@@ -198,7 +198,7 @@ Every star, planet, and galaxy can be located by **pointing** in some direction.
 | **Zenith** | Straight up from where you stand |
 | **Celestial poles** | Earth's rotation axis extended to the sky |
 
-::: {.fragment .mt-2 .text-xs .text-muted}
+::: {.fragment .mt-2 .text-sm .text-muted}
 **Zenith** is your local "up."
 
 **North** is a compass direction along the horizon — not the same as zenith!
@@ -637,14 +637,14 @@ Angular Size
 ::: {.column width="45%"}
 How big is the Moon?
 
-::: {.fragment}
+::: {.fragment .text-sm}
 In kilometers: **3,474 km** diameter.
 
 But that's not what you *see*.
 :::
 
-::: {.fragment .mt-2}
-What you see is how much of your field of view it occupies—its **angular size**.
+::: {.fragment .mt-2 .text-sm}
+What you see is how much of your field of view it occupies — its **angular size**.
 
 The Moon's angular size: **~0.5°**
 :::
@@ -660,10 +660,10 @@ The Moon's angular size: **~0.5°**
 ## Angular Units
 
 :::: {.columns}
-::: {.column width="55%"}
+::: {.column width="60%" .text-sm}
 
 | Unit | Relation | Example |
-|------|----------|---------|
+|--------|----------|---------|
 | 1 degree (°) | Base unit | Thumb width at arm's length ≈ 2° |
 | 1 arcminute (') | 1° = 60' | Human eye resolution ≈ 1' |
 | 1 arcsecond (") | 1' = 60" | Telescope territory |
@@ -676,11 +676,11 @@ The Moon's angular size: **~0.5°**
 
 :::
 
-::: {.column width="45%"}
+::: {.column width="40%"}
 {{< img unit-circle-radians width="100%" >}}
 
 ::: {.text-sm .text-muted}
-A radian is defined by θ = arc/radius.
+A radian is defined by $θ =$ arc/radius.
 
 1 radian ≈ 57.3°
 :::
@@ -695,23 +695,28 @@ A radian is defined by θ = arc/radius.
 
 ## The Small-Angle Formula
 
-::: {.bg-muted .p-2}
+:::: {.columns}
+
+::: {.column width="60%" .bg-muted .p-2 .text-sm}
 For small angles (less than a few degrees):
 
-$$\theta = \frac{D}{d} \quad \text{(radians)}$$
+$$\boxed{\theta = \frac{D}{d} \quad \text{(radians)}}$$
 
 To convert to degrees:
 
-$$\theta_{\text{degrees}} = 57.3° \times \frac{D}{d}$$
+$$\boxed{\theta_{\text{degrees}} = 57.3° \times \frac{D}{d}}$$
 
 where $D$ = physical diameter, $d$ = distance
 :::
 
-::: {.fragment .mt-2}
+::: {.column width="36%" .text-sm}
+::: {.fragment}
 **Key insight:** Angular size depends on **both** physical size **and** distance.
 
 A large object far away can look the same as a small object nearby.
 :::
+:::
+::::
 
 ::: {.notes}
 25–26 min. "This formula is the heart of angular size reasoning. Size divided by distance."
@@ -724,7 +729,7 @@ A large object far away can look the same as a small object nearby.
 ::: {.incremental}
 - Moon's diameter: $D = 3474$ km
 - Moon's distance: $d = 384{,}000$ km
-- Angular size: $\theta = 57.3° \times \frac{3474}{384{,}000} = 57.3° \times 0.00905$
+- Angular size: $\theta = 57.3° \times \frac{3474 \text{ km}}{384{,}000 \text{ km}} = 57.3° \times 0.00905$
 - **Result: θ ≈ 0.52°** (about half a degree)
 :::
 
@@ -761,7 +766,7 @@ That's roughly half the width of your pinky finger at arm's length.
 ::: {.fragment .mt-2 .text-center .text-lg}
 The Sun is **400× larger** but also **400× farther**.
 
-The factors cancel—they appear **almost exactly the same size**!
+The factors cancel — they appear **almost exactly the same size**!
 :::
 
 ::: {.notes}
@@ -795,7 +800,7 @@ Two planets have the same angular size as seen from Earth. This means:
 
 - [ ] They have the same physical diameter
 - [ ] They are at the same distance
-- [x] The ratio of their diameters equals the ratio of their distances
+- [ ] The ratio of their diameters equals the ratio of their distances
 - [ ] They have the same luminosity
 :::
 
@@ -809,11 +814,11 @@ Correct: C. Same angular size means the size-to-distance ratio is the same.
 
 ## Demo: Angular Size Explorer
 
-::: {.bg-muted .p-2 .text-center}
+::: {.bg-muted .p-2 .text-center .text-sm}
 **Open:** [astrobytes-edu.github.io/astr101-sp26/demos/angular-size/](https://astrobytes-edu.github.io/astr101-sp26/demos/angular-size/)
 :::
 
-::: {.incremental .mt-2}
+::: {.incremental .mt-2 .text-sm}
 **Explore:**
 
 - Double the distance → what happens to angular size?
@@ -846,7 +851,7 @@ We live in a **privileged cosmic moment**: the only era when total solar eclipse
 :::
 
 ::: {.notes}
-32–33 min. "In the past, annular eclipses weren't possible because the Moon was too big. In the future, total eclipses won't be possible because the Moon will be too small. We're lucky."
+32–33 min. "In the past, annular eclipses weren't possible because the Moon was too big. In the future, total eclipses won't be possible because the Moon will be too small. *We're lucky.*"
 :::
 
 ---
@@ -911,7 +916,7 @@ We'll apply angular size to understand:
 
 ## Takeaways {background-image="/assets/images/common/noirlab-nightsky-mosaic.jpg" background-opacity="0.2"}
 
-::: {.bg-muted .p-2}
+::: {.bg-muted .p-2 .text-sm}
 **What to recognize:**
 
 ::: {.incremental}
@@ -923,7 +928,7 @@ We'll apply angular size to understand:
 :::
 
 ::: {.fragment .mt-2 .text-center .text-muted}
-*Recognition, not retention—you should be able to identify these ideas when they return.*
+*Recognition, not retention — you should be able to identify these ideas when they return.*
 :::
 
 ::: {.notes}
@@ -938,31 +943,19 @@ We'll apply angular size to understand:
 **Before next class:**
 
 - Complete the **Lecture 3 Reading** (includes demo explorations)
-- Work through the **Check Yourself** questions
+- Work through the **Check Yourself** questions (*some will be assigned for homework*)
 - Try at least 3 **Practice Problems**
+- Read or skim the **Lecture 4 Reading** 
 :::
 
 ::: {.fragment .mt-2}
-**Stuck?**
+**Questions?**
 
-- Office hours: [times]
-- Discussion board: [link]
 :::
 
 ::: {.notes}
 37–38 min. Point them to resources.
-:::
 
----
-
-## Questions? {background-image="/assets/images/common/noirlab-nightsky-mosaic.jpg" background-opacity="0.3"}
-
-::: {.text-center .text-lg}
-What's still unclear?
-
-What would help it click?
-:::
-
-::: {.notes}
 38–40 min. Open floor for questions. If none, dismiss with: "See you next time for moon phases and eclipses!"
 :::
+
