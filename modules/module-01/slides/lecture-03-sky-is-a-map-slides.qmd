@@ -819,6 +819,7 @@ Correct: C. Same angular size means the size-to-distance ratio is the same.
 - Double the distance → what happens to angular size?
 - Double the physical size → what happens to angular size?
 - Compare Sun vs Moon (Today) presets
+- Watch the unit label (° / ′ / ″) when angles are tiny
 :::
 
 ::: {.fragment .mt-2 .text-muted .text-sm}

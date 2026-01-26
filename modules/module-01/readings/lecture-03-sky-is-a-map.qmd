@@ -604,10 +604,11 @@ Two planets have the same angular size as seen from Earth. This means:
 This demo lets you explore how angular size depends on both physical size and distance.
 
 **What you'll see in the demo:**
-- **Angular Size (degrees)** readout
+- **Angular Size** readout (auto units: ° / ′ / ″)
 - **Physical Size** and **Distance** sliders/values
 - **Presets:** Everyday Objects and Astronomical Objects
 - **Time Evolution (for Moon):** See how the Moon's angular size changes as its distance varies
+  - *(Note: the angular-size readout may automatically switch units as the angle gets smaller.)*
 
 ---
 
