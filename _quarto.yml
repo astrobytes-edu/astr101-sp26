@@ -50,6 +50,7 @@ project:
     - index.qmd
     - course-info/*.qmd
     - handouts/*.qmd
+    - homework/*.qmd
     - modules/index.qmd
     - modules/module-*/index.qmd
     - modules/module-*/slides/*.qmd

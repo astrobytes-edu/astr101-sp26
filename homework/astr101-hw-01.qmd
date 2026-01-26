@@ -1,0 +1,125 @@
+---
+title: "ASTR 101 — Homework #1 (Lectures 1–3)"
+author: "Dr. Anna Rosen"
+draft: false
+pdf: true
+format:
+  html: default
+  pdf: default
+---
+
+***Topics:** scientific thinking in astronomy • cosmic scales • units & scientific notation • “the sky is a map” • seasons misconceptions*
+
+**Estimated time:** ~3-4 hours
+
+**Due:** Feb 2, 2026 @ 11:59 pm (1 week after this assignment is posted).
+
+## Why this homework exists (read this)
+
+_This is not busy work._ Astronomy is a “reasoning from evidence” science, and the exams will ask you to explain and apply ideas — not just recall definitions.
+
+This assignment is designed to:
+
+- make the big ideas from Lectures 1–3 stick,
+- give you repeated practice with the math tools you’ll use all semester,
+- and help you build the habit of showing your reasoning (how you’ll earn points on exams).
+
+---
+
+### What to do
+
+Complete the assigned Practice Problems from the end of the following lecture readings:
+
+- **Lecture 1:** Spoiler Alerts — [Practice Problems]({{< meta params.website-url >}}/modules/module-01/readings/lecture-01-spoiler-alerts-reading.html#practice-problems)
+
+- **Lecture 2:** Foundations / Tools of the Trade — [Practice Problems]({{< meta params.website-url >}}/modules/module-01/readings/lecture-02-foundations-reading.html#practice-problems)
+
+- **Lecture 3:** The Sky Is a Map — [Practice Problems]({{< meta params.website-url >}}/modules/module-01/readings/lecture-03-sky-is-a-map.html#practice-problems)
+
+Use the lecture pages for the full problem statements (located at the end of each lecture).
+
+---
+
+## Problems to complete
+
+### Lecture 1
+
+> 1, 2, 4, 6, 8
+
+### Lecture 2
+
+> 1, 2, 3, 4, 6, 7, 12, 14
+
+### Lecture 3
+
+> 2, 3, 7, 8, 11, 12
+
+---
+
+## How to earn full credit
+
+### 1) Show your work (always)
+
+For any problem with numbers, your solution must include:
+
+- setup (what you’re solving for)
+
+- knowns/unknowns (what you’re given)
+
+- equations or reasoning path (why you’re doing what you’re doing)
+
+- units at every step (units are not decoration — they’re error-checking)
+
+- a final answer that is clearly labeled (box/circle it)
+
+If you only write a final number, you should **expect major point loss** even if it’s correct.
+
+### 2) Explain your reasoning (conceptual problems)
+
+For conceptual questions, write in complete sentences. Aim for:
+
+- Claim: your answer
+
+- Evidence/Reasoning: why (use the lecture ideas)
+
+- Optional sketch: a quick diagram is often worth 10 sentences
+
+### 3) Use diagrams like a scientist
+
+For geometry/sky problems: draw a labeled sketch (Sun–Earth–observer, horizon/zenith, tilt, angles). You don’t need to be an artist—just be clear.
+
+## What to submit
+
+Upload **one PDF** to Canvas.
+
+Acceptable formats:
+
+- neatly handwritten work scanned to PDF (recommended, come see the instructor if you need help with this for the first assignment).
+
+- typed solutions (PDF)
+
+**Quality standard:** I should be able to read it without guessing what you meant.
+
+## Collaboration and resources
+
+- You may discuss ideas with classmates, but your write-up must be your own.
+
+- If you worked with someone, add a short line at the top: “Collaborators: …”
+
+- You may use your notes, the readings, and a calculator.
+
+## Pro tips (to save time and pain)
+
+- Start with the conceptual questions first, then do the calculations.
+
+- When stuck, ask: **“What is observable here? What is inferred?”**
+
+- Use **units** as your lie detector.
+
+- Do a quick sanity check: is the answer the right order of magnitude?
+
+---
+
+## Help
+
+If you get stuck, bring at least **one specific attempt** (a diagram, your setup, where you got lost) to office hours. Struggle is normal; *productive struggle* is the point.
