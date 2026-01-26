@@ -204,6 +204,44 @@
     return Math.min(180, radians * (180 / Math.PI));
   }
 
+  // ============================================
+  // Display helpers (units + readable labels)
+  // ============================================
+
+  function formatAngleForUi(degrees) {
+    const abs = Math.abs(degrees);
+
+    // Prefer readable prime symbols over ASCII ' and ".
+    const PRIME = '′';
+    const DOUBLE_PRIME = '″';
+
+    if (abs >= 1) {
+      return {
+        value: degrees.toFixed(2),
+        symbol: '°',
+        label: 'degrees',
+        readoutUnit: '° (degrees)',
+        ariaUnit: 'degrees'
+      };
+    }
+    if (abs >= 1 / 60) {
+      return {
+        value: (degrees * 60).toFixed(1),
+        symbol: PRIME,
+        label: 'arcmin',
+        readoutUnit: `${PRIME} (arcmin)`,
+        ariaUnit: 'arcminutes'
+      };
+    }
+    return {
+      value: (degrees * 3600).toFixed(1),
+      symbol: DOUBLE_PRIME,
+      label: 'arcsec',
+      readoutUnit: `${DOUBLE_PRIME} (arcsec)`,
+      ariaUnit: 'arcseconds'
+    };
+  }
+
   function getMoonDistanceAtOrbitAngle(orbitAngleDeg) {
     const phaseRad = orbitAngleDeg * Math.PI / 180;
     const w = (Math.cos(phaseRad) + 1) / 2; // 1 at 0° (perigee), 0 at 180° (apogee)
@@ -264,17 +302,10 @@
   }
 
   function formatAngleDisplay(degrees) {
-    if (window.AstroUtils && typeof window.AstroUtils.formatAngle === 'function') {
-      return window.AstroUtils.formatAngle(degrees);
-    }
-
-    const formatted = formatAngle(degrees);
-    const units = {
-      degrees: '°',
-      arcminutes: "'",
-      arcseconds: '"'
-    };
-    return { value: formatted.value, unit: units[formatted.unit] || formatted.unit };
+    // Keep a legacy-compatible wrapper (value + unit string) for code paths that
+    // still expect this shape.
+    const ui = formatAngleForUi(degrees);
+    return { value: ui.value, unit: ui.symbol };
   }
 
   function clamp(value, min, max) {
@@ -323,26 +354,27 @@
     const distFraction = (logDist - logMin) / (logMax - logMin);
     const objectX = minObjectX + distFraction * (maxObjectX - minObjectX);
 
-    // Map size to visual radius (logarithmic)
-    const logSize = Math.log10(state.diameter);
-    const logSizeMin = Math.log10(SIZE_MIN);
-    const logSizeMax = Math.log10(SIZE_MAX);
-    const sizeFraction = (logSize - logSizeMin) / (logSizeMax - logSizeMin);
-    const visualRadius = 5 + sizeFraction * 60; // 5px to 65px
+    // Visual angle is intentionally magnified for readability, while the numeric
+    // readout remains exact.
+    const VISUAL_ANGLE_MAGNIFICATION = 8;
 
-    // Update object position and size
+    // Update object position
     elements.objectCircle.setAttribute('cx', objectX);
-    elements.objectCircle.setAttribute('r', visualRadius);
 
     // Update angle lines
     const angleRad = angularDeg * (Math.PI / 180);
     const lineLength = objectX - eyeX;
     const halfAngle = angleRad / 2;
     const halfAngleCapped = Math.min(halfAngle, Math.PI / 2 - 0.01);
+    const displayHalfAngle = Math.atan(Math.tan(halfAngleCapped) * VISUAL_ANGLE_MAGNIFICATION);
+    const displayHalfAngleCapped = Math.min(displayHalfAngle, Math.PI / 2 - 0.01);
 
     elements.angleLineTop.setAttribute('x2', objectX);
-    const rawTopY = eyeY - lineLength * Math.tan(halfAngleCapped);
-    const rawBottomY = eyeY + lineLength * Math.tan(halfAngleCapped);
+    const rawOffset = lineLength * Math.tan(displayHalfAngleCapped);
+    const maxOffset = Math.min(130, eyeY - 8, 300 - eyeY - 8);
+    const offset = Math.max(0, Math.min(maxOffset, rawOffset));
+    const rawTopY = eyeY - offset;
+    const rawBottomY = eyeY + offset;
 
     elements.angleLineTop.setAttribute('y1', eyeY);
     elements.angleLineTop.setAttribute('y2', clamp(rawTopY, 0, 300));
@@ -353,7 +385,7 @@
 
     // Update angle arc
     const arcRadius = 40;
-    const arcAngle = Math.min(halfAngle, Math.PI / 4); // Cap arc size
+    const arcAngle = Math.min(Math.atan(offset / Math.max(1, lineLength)), Math.PI / 4); // Cap arc size
     const arcTopY = eyeY - arcRadius * Math.sin(arcAngle);
     const arcTopX = eyeX + arcRadius * Math.cos(arcAngle);
     const arcBottomY = eyeY + arcRadius * Math.sin(arcAngle);
@@ -364,8 +396,8 @@
     elements.angleArc.setAttribute('d', arcPath);
 
     // Update angle text
-    const angF = formatAngleDisplay(angularDeg);
-    elements.angleText.textContent = `${angF.value}${angF.unit}`;
+    const angUi = formatAngleForUi(angularDeg);
+    elements.angleText.textContent = `${angUi.value}${angUi.symbol}`;
     elements.angleText.setAttribute('x', eyeX + arcRadius + 10);
     elements.angleText.setAttribute('y', eyeY + 5);
 
@@ -374,6 +406,9 @@
     elements.distanceLabel.textContent = `${distFormatted.value} ${distFormatted.unit}`;
 
     // Update size indicator
+    // Use the same offset so the object and rays stay aligned visually.
+    const visualRadius = Math.max(1, offset);
+    elements.objectCircle.setAttribute('r', visualRadius);
     elements.sizeLine.setAttribute('x1', objectX);
     elements.sizeLine.setAttribute('x2', objectX);
     elements.sizeLine.setAttribute('y1', eyeY - visualRadius);
@@ -397,9 +432,9 @@
     const angularDeg = calculateAngularSize(state.diameter, state.distance);
 
     // Angular size
-    const angF = formatAngleDisplay(angularDeg);
-    elements.angularSizeValue.textContent = angF.value;
-    elements.angularSizeUnit.textContent = angF.unit;
+    const angUi = formatAngleForUi(angularDeg);
+    elements.angularSizeValue.textContent = angUi.value;
+    elements.angularSizeUnit.textContent = angUi.readoutUnit;
 
     if (elements.angleWarning) {
       if (state.diameter >= state.distance) {
@@ -433,7 +468,7 @@
       const name = preset ? preset.name : 'Object';
       const distF = formatDistance(state.distance);
       objectCircle.setAttribute('aria-label',
-        `${name} at ${distF.value} ${distF.unit}, angular size ${angF.value}${angF.unit}`);
+        `${name} at ${distF.value} ${distF.unit}, angular size ${angUi.value} ${angUi.ariaUnit}`);
     }
   }
 
@@ -515,7 +550,7 @@
     });
 
     // Time slider (Moon orbit distance variation)
-    elements.timeSlider.addEventListener('input', () => {
+    if (elements.timeSlider) elements.timeSlider.addEventListener('input', () => {
       state.moonOrbitAngle = parseFloat(elements.timeSlider.value);
       state.distance = getMoonDistanceAtOrbitAngle(state.moonOrbitAngle);
       updateMoonTimeDisplay();
@@ -584,10 +619,10 @@
     }
 
     // Show/hide time control for Moon
-    elements.timeControl.style.display = preset.timeEvolution ? 'block' : 'none';
+    if (elements.timeControl) elements.timeControl.style.display = preset.timeEvolution ? 'block' : 'none';
     if (preset.timeEvolution) {
       state.moonOrbitAngle = orbitAngleFromMoonDistance(state.distance);
-      elements.timeSlider.value = state.moonOrbitAngle;
+      if (elements.timeSlider) elements.timeSlider.value = state.moonOrbitAngle;
       updateMoonTimeDisplay();
       if (elements.moonAngularRange) {
         elements.moonAngularRange.textContent =
@@ -601,8 +636,8 @@
     update();
 
     const angularDeg = calculateAngularSize(state.diameter, state.distance);
-    const angF = formatAngleDisplay(angularDeg);
-    announceStatus(`${preset.name}: angular size ${angF.value}${angF.unit}`);
+    const angUi = formatAngleForUi(angularDeg);
+    announceStatus(`${preset.name}: angular size ${angUi.value} ${angUi.ariaUnit}`);
   }
 
   function updatePresetSelection() {
@@ -613,7 +648,7 @@
 
   function clearPresetSelection() {
     state.activePreset = null;
-    elements.timeControl.style.display = 'none';
+    if (elements.timeControl) elements.timeControl.style.display = 'none';
     updatePresetSelection();
     updateObjectAppearance();
   }
