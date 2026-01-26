@@ -107,6 +107,8 @@ website:
                 text: "Lecture 1: Spoiler Alerts"
               - href: modules/module-01/slides/lecture-02-foundations-slides.qmd
                 text: "Lecture 2: Tools of the Trade"
+              - href: modules/module-01/slides/lecture-03-sky-is-a-map-slides.qmd
+                text: "Lecture 3: Sky Is a Map"
           - section: "Readings"
             contents:
               - href: modules/module-01/readings/lecture-01-spoiler-alerts-reading.qmd
