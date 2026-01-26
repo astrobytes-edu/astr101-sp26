@@ -328,7 +328,7 @@ From your desk to the edge of the observable universe takes about **27 steps**.
 
 ---
 
-## {background-image="/assets/images/module-01/logarithmic-cosmic-scales-gemini.png" background-size="contain" background-color="#0a0a14"}
+## {background-image="/assets/images/module-01/logarithmic-cosmic-scales-gemini.webp" background-size="contain" background-color="#0a0a14"}
 
 ::: {.notes}
 1 min. Full-screen image—let it breathe. From atoms to the observable universe, each tick is ×10. This is why we need scientific notation: ordinary numbers can't hold 40+ orders of magnitude.

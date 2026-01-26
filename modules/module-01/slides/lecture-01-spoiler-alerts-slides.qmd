@@ -258,7 +258,7 @@ This is a constraint, not a limitation — it's what makes astronomy a science o
 
 ---
 
-## {.full-bleed background-image="/assets/images/module-01/decoding-the-cosmos-infographic.png" background-opacity="1" background-size="contain" background-position="center" background-color="black"}
+## {.full-bleed background-image="/assets/images/module-01/decoding-the-cosmos-infographic.webp" background-opacity="1" background-size="contain" background-position="center" background-color="black"}
 
 ::: {.notes}
 8–9 min. **Don't read the infographic aloud.** It's a map, not a quiz.
@@ -1052,7 +1052,7 @@ Give students a moment to write their own question.
 
 ---
 
-## Next Time: Math Boot Camp {background-image="/assets/images/module-01/math-toolbox-nblm.png" background-opacity="0.2"}
+## Next Time: Math Boot Camp {background-image="/assets/images/module-01/math-toolbox-nblm.webp" background-opacity="0.2"}
 
 **Thursday: The Math We Need**
 
