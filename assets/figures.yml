@@ -497,6 +497,94 @@ figures:
     module: 1
 
   # ==============================================================
+  # Lecture 04: Moon Geometry (Phases + Eclipses)
+  # ==============================================================
+
+  moon-phases-not-shadows:
+    path: /assets/images/module-01/lec04/moon-phases-misconception-nblm.webp
+    caption: "**What to notice:** Moon phases are not caused by Earth’s shadow; phases are about which half of the Moon is lit and what part you can see."
+    alt: "Graphic contrasting the incorrect idea that Earth’s shadow causes phases with the correct illumination-and-viewing-geometry explanation."
+    credit: "Course illustration (A. Rosen/NotebookLM)"
+    module: 1
+
+  moon-half-always-lit:
+    path: /assets/images/module-01/lec04/moon-illumination-nblm.webp
+    caption: "**What to notice:** At any moment, half of the Moon is illuminated by the Sun; the phase is the fraction of that lit half you can see from Earth."
+    alt: "Diagram showing the Moon with one hemisphere illuminated by the Sun regardless of phase, emphasizing constant illumination geometry."
+    credit: "Course illustration (A. Rosen/NotebookLM)"
+    module: 1
+
+  moon-phase-cycle:
+    path: /assets/images/module-01/lec04/moon-phase-cycle-nblm.webp
+    caption: "The moon phase cycle around Earth"
+    alt: "Diagram showing the Moon orbiting Earth with labeled phases around the orbit."
+    credit: "Course illustration (A. Rosen/NotebookLM)"
+    module: 1
+
+  moon-phases-synodic-month:
+    path: /assets/images/module-01/lec04/moon-phases-synodic-month-nblm.webp
+    caption: "Synodic month: why the phase cycle is not the same as the Moon’s orbital period"
+    alt: "Diagram showing the Moon’s orbit around Earth combined with Earth’s orbit around the Sun, explaining why returning to the same phase takes longer than one orbit."
+    credit: "Course illustration (A. Rosen/NotebookLM)"
+    module: 1
+
+  moon-as-a-clock:
+    path: /assets/images/module-01/lec04/moon-as-a-clock-nblm.webp
+    caption: "Using the Moon’s phase as a rough clock"
+    alt: "Diagram linking approximate Moon phase to time since new moon, emphasizing that phases progress predictably over the month."
+    credit: "Course illustration (A. Rosen/NotebookLM)"
+    module: 1
+
+  eclipses-when-shadows-matter:
+    path: /assets/images/module-01/lec04/eclipses-when-shadows-matter-nblm.webp
+    caption: "**What to notice:** Eclipses are about shadows (umbra/penumbra) and alignment; phases are not."
+    alt: "Diagram showing Sun–Earth–Moon alignment cases that produce lunar and solar eclipses via shadows."
+    credit: "Course illustration (A. Rosen/NotebookLM)"
+    module: 1
+
+  eclipse-varieties:
+    path: /assets/images/module-01/lec04/eclipse-varieties-nblm.webp
+    caption: "Varieties of eclipses from alignment geometry"
+    alt: "Diagram summarizing different eclipse types (solar and lunar) and the role of umbra and penumbra."
+    credit: "Course illustration (A. Rosen/NotebookLM)"
+    module: 1
+
+  eclipses-5deg-difference:
+    path: /assets/images/module-01/lec04/eclipses-5deg-difference-nblm.webp
+    caption: "Why eclipses don’t happen every month: the Moon’s orbit is tilted"
+    alt: "Diagram showing the Moon’s orbital plane tilted relative to the ecliptic plane by a small angle, preventing perfect alignment most months."
+    credit: "Course illustration (A. Rosen/NotebookLM)"
+    module: 1
+
+  eclipses-nodes-why-not-monthly:
+    path: /assets/images/module-01/lec04/eclipses-nodes-nblm.webp
+    caption: "Orbital nodes: the alignment gateways for eclipses"
+    alt: "Diagram illustrating the Moon’s ascending and descending nodes where its orbit crosses the ecliptic, and showing that eclipses require the Sun to be near a node at new/full moon."
+    credit: "Course illustration (A. Rosen/NotebookLM)"
+    module: 1
+
+  eclipses-nodes-gateways:
+    path: /assets/images/module-01/lec04/eclipses-nodes-illustration-nblm.webp
+    caption: "Nodes as eclipse “gateways” along the Moon’s orbit"
+    alt: "Diagram highlighting the Moon’s nodes and showing how eclipse seasons occur when the Sun lies near a node direction."
+    credit: "Course illustration (A. Rosen/NotebookLM)"
+    module: 1
+
+  solar-eclipse-types-photo:
+    path: /assets/images/module-01/lec04/partial-annular-total-solar-eclipses.jpg
+    caption: "Solar eclipse types: partial, annular, and total"
+    alt: "Three-panel photo/graphic showing partial, annular (ring), and total solar eclipses for visual comparison."
+    credit: "Source: [VERIFY]"
+    module: 1
+
+  lunar-eclipse-blood-moon:
+    path: /assets/images/module-01/lec04/lunar-eclipse-nblm.webp
+    caption: "Total lunar eclipse (“blood moon”) from Earth’s atmospheric filtering"
+    alt: "Illustration of a lunar eclipse showing Earth casting a shadow on the Moon, with an emphasis on the Moon appearing reddish during totality."
+    credit: "Course illustration (A. Rosen/NotebookLM)"
+    module: 1
+
+  # ==============================================================
   # Module 2: Inferring Star Properties
   # ==============================================================
 
