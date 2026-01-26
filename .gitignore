@@ -39,3 +39,5 @@ _test-*
 
 /.luarc.json
 *.mp4
+*.png
+*.PNG
