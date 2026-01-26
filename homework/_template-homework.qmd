@@ -1,0 +1,44 @@
+---
+title: "ASTR 101 — Homework #X"
+author: "Dr. Anna Rosen"
+draft: true
+order: 0
+description: "[One-line description]"
+solutions_due: "Monday 11:59 pm PT (Canvas)"
+memo_due: "Wednesday 11:59 pm PT (Canvas)"
+format:
+  html: default
+  pdf: default
+---
+
+{{< include ../_includes/hw-submission-instructions.qmd >}}
+
+{{< include ../_includes/ai-policy.qmd >}}
+
+***Topics:** [topic A] • [topic B] • [topic C]*
+
+**Estimated time:** [~N hours]
+
+## What to do
+
+Complete the assigned Practice Problems from the end of the relevant lecture readings.
+
+- **Lecture X:** [Practice Problems]([LINK])
+
+## Problems to complete
+
+### Lecture X
+
+> [problem numbers]
+
+## How to earn full credit
+
+{{< include ../_includes/homework/how-to-earn-full-credit.qmd >}}
+
+## Collaboration and resources
+
+{{< include ../_includes/homework/collaboration-and-resources.qmd >}}
+
+## Help
+
+{{< include ../_includes/homework/help.qmd >}}

@@ -2,17 +2,23 @@
 title: "ASTR 101 — Homework #1 (Lectures 1–3)"
 author: "Dr. Anna Rosen"
 draft: false
+order: 1
+description: "Practice problems from Lectures 1–3"
+solutions_due: "Monday 11:59 pm PT (Canvas)"
+memo_due: "Wednesday 11:59 pm PT (Canvas)"
 pdf: true
 format:
   html: default
   pdf: default
 ---
 
+{{< include ../_includes/hw-submission-instructions.qmd >}}
+
+{{< include ../_includes/ai-policy.qmd >}}
+
 ***Topics:** scientific thinking in astronomy • cosmic scales • units & scientific notation • “the sky is a map” • seasons misconceptions*
 
 **Estimated time:** ~3-4 hours
-
-**Due:** Feb 2, 2026 @ 11:59 pm (1 week after this assignment is posted).
 
 ## Why this homework exists (read this)
 
@@ -58,55 +64,11 @@ Use the lecture pages for the full problem statements (located at the end of eac
 
 ## How to earn full credit
 
-### 1) Show your work (always)
-
-For any problem with numbers, your solution must include:
-
-- setup (what you’re solving for)
-
-- knowns/unknowns (what you’re given)
-
-- equations or reasoning path (why you’re doing what you’re doing)
-
-- units at every step (units are not decoration — they’re error-checking)
-
-- a final answer that is clearly labeled (box/circle it)
-
-If you only write a final number, you should **expect major point loss** even if it’s correct.
-
-### 2) Explain your reasoning (conceptual problems)
-
-For conceptual questions, write in complete sentences. Aim for:
-
-- Claim: your answer
-
-- Evidence/Reasoning: why (use the lecture ideas)
-
-- Optional sketch: a quick diagram is often worth 10 sentences
-
-### 3) Use diagrams like a scientist
-
-For geometry/sky problems: draw a labeled sketch (Sun–Earth–observer, horizon/zenith, tilt, angles). You don’t need to be an artist—just be clear.
-
-## What to submit
-
-Upload **one PDF** to Canvas.
-
-Acceptable formats:
-
-- neatly handwritten work scanned to PDF (recommended, come see the instructor if you need help with this for the first assignment).
-
-- typed solutions (PDF)
-
-**Quality standard:** I should be able to read it without guessing what you meant.
+{{< include ../_includes/homework/how-to-earn-full-credit.qmd >}}
 
 ## Collaboration and resources
 
-- You may discuss ideas with classmates, but your write-up must be your own.
-
-- If you worked with someone, add a short line at the top: “Collaborators: …”
-
-- You may use your notes, the readings, and a calculator.
+{{< include ../_includes/homework/collaboration-and-resources.qmd >}}
 
 ## Pro tips (to save time and pain)
 
@@ -122,4 +84,4 @@ Acceptable formats:
 
 ## Help
 
-If you get stuck, bring at least **one specific attempt** (a diagram, your setup, where you got lost) to office hours. Struggle is normal; *productive struggle* is the point.
+{{< include ../_includes/homework/help.qmd >}}
