@@ -416,6 +416,87 @@ figures:
     module: 1
 
   # ==============================================================
+  # Lecture 03: Sky Is a Map
+  # ==============================================================
+
+  constellations-are-projections:
+    path: /assets/images/module-01/lec03/constellations-are-projections-gemini.webp
+    caption: "**What to notice:** Constellations are patterns on the sky, not physical groupings; stars can be at very different distances."
+    alt: "Illustration showing constellation lines drawn on stars, emphasizing that the pattern is a projection on the sky rather than a physical cluster."
+    credit: "Course illustration (Gemini)"
+    module: 1
+
+  celestial-sphere-directions:
+    path: /assets/images/module-01/lec03/celestial-sphere-gemini.webp
+    caption: "Celestial sphere directions and local sky coordinates"
+    alt: "Diagram of the celestial sphere showing cardinal directions and the observer’s horizon-based coordinate system."
+    credit: "Course illustration (Gemini)"
+    module: 1
+
+  celestial-sphere-reference-points:
+    path: /assets/images/module-01/lec03/celestial-sphere-great-circles-chatgpt.webp
+    caption: "Reference points and great circles on the celestial sphere"
+    alt: "Diagram illustrating great circles and reference points on the celestial sphere used for defining coordinates."
+    credit: "Course illustration (ChatGPT)"
+    module: 1
+
+  celestial-sphere-ecliptic:
+    path: /assets/images/module-01/lec03/celestial-sphere-ecliptic-chatgpt.webp
+    caption: "The ecliptic on the celestial sphere"
+    alt: "Diagram of the celestial sphere showing the ecliptic path relative to the celestial equator."
+    credit: "Course illustration (ChatGPT)"
+    module: 1
+
+  seasons-misconception-distance:
+    path: /assets/images/module-01/lec03/seasons-misconception-distance-gemini.webp
+    caption: "**What to notice:** Seasons are not caused by Earth–Sun distance; tilt changes the Sun’s angle and day length."
+    alt: "Diagram contrasting the incorrect distance-based seasons idea with the tilt-based explanation involving sunlight angle and day length."
+    credit: "Course illustration (Gemini)"
+    module: 1
+
+  seasons-effect1-sunlight-angle:
+    path: /assets/images/module-01/lec03/seasons-effect1-angle-of-sunlight-nblm.webp
+    caption: "Effect 1: Sunlight angle changes energy per area"
+    alt: "Diagram showing sunlight hitting at a steep angle versus a shallow angle, spreading the same energy over a larger area at shallow incidence."
+    credit: "Course illustration (A. Rosen/NotebookLM)"
+    module: 1
+
+  seasons-effect2-sun-path:
+    path: /assets/images/module-01/lec03/seasons-effect2-duration-nblm.webp
+    caption: "Effect 2: Day length and Sun path change seasonally"
+    alt: "Diagram showing longer versus shorter daylight duration and differing Sun paths across the sky in different seasons."
+    credit: "Course illustration (A. Rosen/NotebookLM)"
+    module: 1
+
+  seasons-geometry-illumination:
+    path: /assets/images/module-01/lec03/seasons-geometry-of-illumination-nblm.webp
+    caption: "Geometry of illumination for seasons"
+    alt: "Earth–Sun geometry diagram showing axial tilt and how it changes which hemisphere is tilted toward the Sun."
+    credit: "Course illustration (A. Rosen/NotebookLM)"
+    module: 1
+
+  earth-orbit-seasons:
+    path: /assets/images/module-01/lec03/earth-tilt-seasons-chatgpt.webp
+    caption: "Earth’s orbit and axial tilt: the seasons story"
+    alt: "Diagram of Earth’s orbit showing axial tilt maintained in space and indicating seasonal orientation."
+    credit: "Course illustration (ChatGPT)"
+    module: 1
+
+  angular-size-tradeoff:
+    path: /assets/images/module-01/lec03/angular-size-nblm.webp
+    caption: "Angular size: the distance–size ambiguity"
+    alt: "Diagram illustrating that the same angular size can result from a small nearby object or a large distant object."
+    credit: "Course illustration (A. Rosen/NotebookLM)"
+    module: 1
+
+  unit-circle-radians:
+    path: /assets/images/module-01/lec03/unit-circle-deg-vs-rad-nblm.webp
+    caption: "Degrees versus radians on the unit circle"
+    alt: "Unit circle diagram comparing degree measures to radian measures and emphasizing arc length definition of radians."
+    credit: "Course illustration (A. Rosen/NotebookLM)"
+    module: 1
+
+  # ==============================================================
   # Module 2: Inferring Star Properties
   # ==============================================================
 
