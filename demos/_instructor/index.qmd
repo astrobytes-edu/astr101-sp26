@@ -1,23 +1,31 @@
 ---
-title: "Demo Instructor Guide"
-subtitle: "How to use interactive demos in ASTR 101"
+title: "Cosmic Playground — Instructor Guide"
+subtitle: "Instructor-facing guides for the interactive demo suite"
 page-layout: article
 toc: true
+search: false
 ---
 
-::: {.callout-note}
-## Instructor-Only Page
-This page is not linked from the main navigation. Share the direct URL with TAs and co-instructors only.
+::: {.callout-roadmap title="Instructor-only (unlinked)"}
+This section is not linked from the student navigation. It is still a public URL if someone has the link.
+
+Open directly: `/demos/_instructor/`
 :::
 
 ## Quick Links
 
-| Demo | Student URL | Embed Code |
-|------|-------------|------------|
-| Angular Size | `/demos/angular-size/` | `{{</* demo angular-size */>}}` |
-| Moon Phases | `/demos/moon-phases/` | `{{</* demo moon-phases height="450px" */>}}` |
-| Eclipse Geometry | `/demos/eclipse-geometry/` | `{{</* demo eclipse-geometry height="600px" */>}}` |
-| Seasons | `/demos/seasons/` | `{{</* demo seasons height="600px" */>}}` |
+| Demo | Student URL | Instructor guide | Embed code |
+|------|-------------|-----------------|------------|
+| Seasons | `/demos/seasons/` | `/demos/_instructor/seasons/` | `{{</* demo seasons height="600px" */>}}` |
+| Moon phases | `/demos/moon-phases/` | `/demos/_instructor/moon-phases/` | `{{</* demo moon-phases height="450px" */>}}` |
+| Angular size | `/demos/angular-size/` | `/demos/_instructor/angular-size/` | `{{</* demo angular-size */>}}` |
+| Eclipse geometry | `/demos/eclipse-geometry/` | `/demos/_instructor/eclipse-geometry/` | `{{</* demo eclipse-geometry height="600px" */>}}` |
+
+## Recommended “Astro Lab” flow (Friday)
+
+If you’re running a rotation lab across all four demos, start here:
+
+- Capstone rotation + synthesis: `/demos/_instructor/cosmic-playground/capstone.html`
 
 ---
 

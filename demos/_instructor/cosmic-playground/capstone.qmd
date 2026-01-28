@@ -1,0 +1,115 @@
+---
+title: "Cosmic Playground Capstone: Rotation + Synthesis"
+subtitle: "A Friday Astro Lab that connects Seasons → Phases → Angular Size → Eclipses"
+page-layout: article
+toc: true
+search: false
+---
+
+::: {.callout-roadmap title="Instructor goals for this lab"}
+Make the four demos feel like one coherent “geometry toolkit,” not four disconnected topics. Every station produces evidence that is required for the final synthesis.
+:::
+
+## Logistics (suggested)
+
+**Total time:** 50–75 minutes (flexible)  
+**Groups:** 3–4 students  
+**Devices:** 1 per group (phone/tablet/laptop)  
+**Deliverable:** one concept map or one CER paragraph + station evidence table
+
+## Rotation schedule (default 70 minutes)
+
+- 4 stations × 10 minutes = 40 min  
+  - 7 min station work + 3 min transition/check-in
+- 20 min synthesis + write-up
+- 10 min debrief
+
+If you only have 50 minutes, run 4×8 min stations and a shorter synthesis (12 min).
+
+## Station “Model Card” template (students fill in at every station)
+
+Copy/paste or print this template for each station:
+
+| Field | Your station notes |
+|---|---|
+| Controls (what we change) |  |
+| Observables (what we read) |  |
+| Governing relationship (equation or rule, in words) |  |
+| One sanity check (limit case or units) |  |
+| One connection sentence to the next station |  |
+
+## Station 1: Seasons
+
+**URL:** `/demos/seasons/`  
+**Focus:** tilt $\varepsilon$ → declination $\delta$ → day length + noon altitude
+
+**Task:** At latitude 40°N, record day length and noon altitude at June solstice and December solstice. Then set tilt to 0° and record what changes.
+
+**Required connection sentence:** “This is a geometry story because changing an angle changes an observable (day length/noon altitude).”
+
+## Station 2: Moon phases
+
+**URL:** `/demos/moon-phases/`  
+**Focus:** phase angle $\alpha$ → illumination fraction $f$
+
+**Task:** Record illumination (%) at New, First Quarter, Full, Third Quarter. Then answer: “Why does ‘quarter’ not mean 25% illuminated?”
+
+**Required connection sentence:** “Phases are geometry, not shadow — but eclipses *do* involve shadows.”
+
+## Station 3: Angular size
+
+**URL:** `/demos/angular-size/`  
+**Focus:** $d/D$ → angular diameter $\theta$
+
+**Task:** Compare Sun and Moon angular sizes. Then vary Moon distance in orbit mode and record the min/max angular size.
+
+**Required connection sentence:** “Eclipses depend on alignment, but what we *see* (total vs not) depends on angular size.”
+
+## Station 4: Eclipse geometry
+
+**URL:** `/demos/eclipse-geometry/`  
+**Focus:** syzygy (New/Full) + near-node ($|\beta|$ small) → eclipse type
+
+**Task:** Produce:
+1) One example of New Moon with no eclipse (far from node)  
+2) One example of New Moon with a solar eclipse (near a node)  
+3) One example of Full Moon with a penumbral or umbral lunar eclipse
+
+**Required connection sentence:** “Eclipses are a constrained intersection of phase geometry and near-plane geometry.”
+
+## Synthesis (the “put it all together” moment)
+
+Choose one of these synthesis deliverables:
+
+### Option A: Concept map (recommended)
+
+**Constraint:** Your map must include at least one arrow labeled with an equation/rule from each station.
+
+Required nodes (minimum):
+
+- Tilt $\varepsilon$  
+- Declination $\delta$  
+- Phase angle $\alpha$  
+- Illumination fraction $f$  
+- Angular diameter $\theta$  
+- Ecliptic latitude $|\beta|$ / node proximity  
+- Eclipse type (none/partial/central; penumbral/umbral/total)
+
+### Option B: CER paragraph
+
+**Claim (given):** “Total solar eclipses are possible now because of a coincidence in angular size, but eclipses are rare because geometry adds multiple constraints.”
+
+**Evidence requirement:** At least one measured value or screenshot from **each** demo.
+
+**Reasoning requirement:** The reasoning must include:
+- a tilt statement (Seasons),
+- a phase statement (Moon phases),
+- a ratio statement (Angular size),
+- and a “two conditions” statement (Eclipses).
+
+## Debrief prompts (whole class)
+
+1) “What was the common structure across all four stations?” (controls → observables → rule)  
+2) “Where did our intuition fail until the model constrained it?”  
+3) “Which single equation/rule felt most powerful, and why?”
+

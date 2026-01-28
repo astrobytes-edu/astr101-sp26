@@ -1,0 +1,22 @@
+---
+title: "Eclipse Geometry — Future Enhancements (Backlog)"
+subtitle: "Planning table: physics, UX, accessibility, pedagogy"
+page-layout: article
+toc: true
+search: false
+---
+
+::: {.callout-roadmap title="How to use this backlog"}
+This is a planning guide. Physics items should improve realism without turning the demo into an ephemeris.
+:::
+
+| Priority | Impact | Effort | Category | Notes | Code entrypoint |
+|---|---|---|---|---|---|
+| P0 | High | Medium | Physics | Add variable Earth–Moon distance (perigee/apogee) and classify **total vs annular** solar eclipses (not just “central”). | `demos/_assets/eclipse-geometry-model.js` + `demos/eclipse-geometry/eclipse-geometry.js` |
+| P0 | High | Low | UX | Make the “Speed” control persist and display the current speed near the simulation buttons. | `demos/eclipse-geometry/eclipse-geometry.js` + `demos/eclipse-geometry/index.html` |
+| P1 | High | Medium | Pedagogy | Add built-in station mode: printable table template + “synthesis prompt” button for Friday labs. | `demos/eclipse-geometry/eclipse-geometry.js` |
+| P1 | Medium | Medium | Physics | Include Earth orbital eccentricity (Sun distance) as a second-order effect on eclipse cone sizes. | `demos/_assets/eclipse-geometry-model.js` |
+| P1 | Medium | Medium | UX | Add a “show shadow cones” overlay (umbra/penumbra) with scale disclaimer. | `demos/eclipse-geometry/index.html` + `demos/eclipse-geometry/eclipse-geometry.js` |
+| P2 | Medium | Low | Accessibility | Add explicit keyboard shortcuts help panel (New/Full, toggle log, speed). | `demos/eclipse-geometry/index.html` |
+| P2 | Low | Low | Docs | Update `demos/eclipse-geometry/README.md` to match the current penumbral + shadow-model thresholds. | `demos/eclipse-geometry/README.md` |
+

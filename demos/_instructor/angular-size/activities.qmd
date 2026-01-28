@@ -1,0 +1,75 @@
+---
+title: "Angular Size — In-Class Activities"
+subtitle: "MW quick + MW short + Friday Astro Lab + station version"
+page-layout: article
+toc: true
+search: false
+---
+
+::: {.callout-roadmap title="Links"}
+Student demo: `/demos/angular-size/`  
+Main guide: `index.qmd`  
+Model deep dive: `model.qmd`
+:::
+
+## MW Quick Exploration (3–5 min, pairs)
+
+::: {.callout-tps title="TPS: The Sun–Moon coincidence"}
+**Think (30 s):** “Which looks larger in the sky: the Sun or the Moon?”  
+
+**Pair (60 s):** Decide whether you expect their angular sizes to differ by a lot, a little, or be about the same.
+
+**Share (1–2 min):** Use the demo:
+1) Select **Sun** preset → read the angular size.  
+2) Select **Moon (Today)** preset → read the angular size.  
+3) Ask: “What does this imply about total solar eclipses?”
+
+**Debrief script:** “It’s a coincidence: the Sun is ~400× larger but also ~400× farther, so the ratios nearly cancel.”
+:::
+
+## MW Short Investigation (8–12 min, pairs/triads)
+
+::: {.callout-problem title="Investigation: Scaling without a calculator"}
+**Task:** Pick one object (e.g., the Moon preset). Then do three controlled changes and predict first:
+
+1) Double the distance $D$ (keep diameter fixed).  
+2) Halve the distance.  
+3) Double the diameter $d$ (keep distance fixed).
+
+For each, record the angular size and write one proportional-reasoning sentence like: “When $D$ doubles, $\theta$ roughly halves.”
+
+**Expected pattern:** $\theta \propto d/D$ for small angles.
+:::
+
+## Friday Astro Lab (20–30+ min, groups of 3–4)
+
+::: {.callout-problem title="Astro Lab: When are total solar eclipses possible?"}
+**Deliverable:** A short written claim with evidence + a “future Moon” graph.
+
+**Part 1 (evidence table):** Record angular sizes for:
+- Sun
+- Moon (today)
+- Moon at perigee-like and apogee-like settings (orbit mode)
+
+**Part 2 (recession):** Switch to Moon “recession time” mode. Choose two future times (e.g., +500 Myr and +1000 Myr). Record Moon angular size at each.
+
+**Prompt:** “At what point does the Moon become too small to ever fully cover the Sun?”  
+
+**Reasoning cue:** totality requires $\theta_{\text{Moon}} \gtrsim \theta_{\text{Sun}}$ (plus alignment from the eclipse demo).
+
+**ASTR 201 extension (optional):** Compare the exact formula $\theta = 2\arctan(d/2D)$ to the small-angle approximation $\theta\approx d/D$ and estimate the fractional error for the Moon.
+:::
+
+## Station version (for the Cosmic Playground capstone rotation)
+
+::: {.callout-problem title="Station card: Angular Size (6–8 minutes)"}
+**Demo setup:** Compare **Sun** and **Moon (Today)**; then toggle Moon orbit mode.
+
+**Your station artifact (fill in):**
+1) **Control(s):** diameter $d$, distance $D$  
+2) **Observable(s):** angular diameter $\theta$ (°/′/″)  
+3) **Governing relationship:** write $\theta = 2\arctan(d/2D)$ in words  
+4) **Sanity check:** what happens to $\theta$ if $D$ doubles?  
+5) **Connection sentence:** “This matters for eclipses because…”
+:::
+

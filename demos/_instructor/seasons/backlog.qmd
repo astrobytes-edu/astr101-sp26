@@ -1,0 +1,23 @@
+---
+title: "Seasons — Future Enhancements (Backlog)"
+subtitle: "Planning table: physics, UX, accessibility, pedagogy"
+page-layout: article
+toc: true
+search: false
+---
+
+::: {.callout-roadmap title="How to use this backlog"}
+This is a planning guide. Keep it honest: “Impact” is about learning value, not cleverness.
+:::
+
+| Priority | Impact | Effort | Category | Notes | Code entrypoint |
+|---|---|---|---|---|---|
+| P0 | High | Low | UX | Add explicit “Not to scale” label for the orbit exaggeration and distance axis. | `demos/seasons/index.html` |
+| P0 | High | Medium | Physics | Use one consistent year length everywhere (switch calendar wrap logic from 365 to 365.2422 or explicitly label “calendar day-of-year” vs “solar longitude”). | `demos/seasons/seasons.js` + `demos/_assets/seasons-model.js` |
+| P1 | High | Medium | Pedagogy | Add an “insolation proxy” readout (relative daily energy) built from day length × cos(zenith angle). | `demos/seasons/seasons.js` |
+| P1 | Medium | Medium | Physics | Replace distance toy model with a simple Kepler-solver (mean anomaly → eccentric anomaly → true anomaly) for $r(t)$. | `demos/seasons/seasons.js` |
+| P1 | Medium | Low | UX | Add a “Compare hemispheres” toggle that pins both 40°N and 40°S readouts simultaneously. | `demos/seasons/seasons.js` |
+| P2 | Medium | Medium | UX | Add a station-mode overlay: numbered steps + built-in data table export (CSV copy). | `demos/seasons/seasons.js` |
+| P2 | Medium | Low | Accessibility | Add a reduced-motion mode that defaults animations to step mode. | `demos/seasons/seasons.js` |
+| P2 | Low | Low | Pedagogy | Add 2–3 additional clicker items directly in the instructor guide after classroom pilots. | `demos/_instructor/seasons/assessment.qmd` |
+
