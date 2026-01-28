@@ -160,21 +160,46 @@
             <div class="presets-row" id="easter-presets"></div>
           </div>
 
-          <!-- Time Evolution (Moon only) -->
-          <div class="time-control" id="time-control" style="display: none;">
-            <div class="control-title">
-              Time Evolution (for Moon)
-              <span class="control-value" id="time-display">Perigee</span>
-            </div>
-            <input type="range" id="time-slider" class="astro-slider" min="0" max="360" value="0" step="1" aria-label="Time Evolution" data-tooltip-source="#time-display">
-            <div class="time-label">
-              <span>Perigee</span>
-              <span>Apogee</span>
-            </div>
-            <div class="time-range" id="moon-angular-range"></div>
-          </div>
-        </div>
-      </div>
+	          <!-- Time Evolution (Moon only) -->
+	          <div class="time-control" id="time-control" style="display: none;">
+	            <div class="control-title">
+	              Moon Time Mode
+	              <span class="control-value" id="time-display">Perigee</span>
+	            </div>
+
+	            <div class="time-mode-row" role="group" aria-label="Moon time mode">
+	              <label class="time-mode-option">
+	                <input type="radio" name="moon-time-mode" id="moon-time-mode-orbit" value="orbit" checked>
+	                Orbit (perigee ↔ apogee)
+	              </label>
+	              <label class="time-mode-option">
+	                <input type="radio" name="moon-time-mode" id="moon-time-mode-recession" value="recession">
+	                Recession (Myr from today)
+	              </label>
+	            </div>
+
+	            <div id="moon-time-orbit-controls">
+	              <input type="range" id="time-slider" class="astro-slider" min="0" max="360" value="0" step="1" aria-label="Moon orbit position (degrees)" data-tooltip-source="#time-display">
+	              <div class="time-label">
+	                <span>Perigee</span>
+	                <span>Apogee</span>
+	              </div>
+	              <div class="time-range" id="moon-angular-range"></div>
+	            </div>
+
+	            <div id="moon-time-recession-controls" style="display: none;">
+	              <input type="range" id="recession-slider" class="astro-slider" min="-1000" max="1000" value="0" step="10" aria-label="Moon recession time (million years from today)" data-tooltip-source="#time-display">
+	              <div class="time-label">
+	                <span>Past</span>
+	                <span>Future</span>
+	              </div>
+	              <div class="time-range" id="moon-recession-note">
+	                Toy model: linear extrapolation using today’s mean recession rate (varies over time).
+	              </div>
+	            </div>
+	          </div>
+	        </div>
+	      </div>
 
       <div class="model-note">
         <strong>Model note:</strong> Angular size uses the exact angular diameter formula; at very close distances, angles saturate. For visibility, the diagram's rays/object are visually magnified (the numeric readout is the authoritative value). Units may auto-switch (° / ′ / ″).
@@ -194,6 +219,7 @@
   <script src="../_assets/astro-utils.js"></script>
   <script src="../_assets/demo-polish.js"></script>
   <script src="../_assets/starfield.js"></script>
+  <script src="../_assets/angular-size-model.js"></script>
   <script src="angular-size.js"></script>
 </body>
 </html>

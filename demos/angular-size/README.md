@@ -78,15 +78,14 @@ Hidden presets demonstrate angular size with everyday objects:
 - Jet airplane at cruising altitude
 - International Space Station overhead
 
-### Time Evolution
+### Moon Time Modes (Moon preset only)
 
-The **Moon Recession slider** shows how the Moon's angular size changes over geological time:
+When the **Moon** preset is selected, the demo offers two time-related controls:
 
-- **$-4$ billion years**: Moon was much closer ($\sim 15 R_\oplus$), appearing $\sim 8\times$ larger
-- **Today**: Moon at $\sim 60 R_\oplus$, angular size $\sim 0.5°$
-- **$+1$ billion years**: Moon will be farther, appearing smaller
+1. **Orbit (perigee ↔ apogee):** shows the Moon’s *monthly* distance variation and how that changes angular size.
+2. **Recession (Myr from today):** a clearly-labeled **toy model** that linearly extrapolates the Moon’s distance using today’s mean recession rate (the real rate varies over time).
 
-This demonstrates why total solar eclipses will eventually become impossible — the Moon will be too small to fully cover the Sun.
+This supports the teaching point that as the Moon slowly recedes, its angular size decreases, making “Moon bigger than Sun” alignment less likely in the far future.
 
 ## Pedagogical Notes
 

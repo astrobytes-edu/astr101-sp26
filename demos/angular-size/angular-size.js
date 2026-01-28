@@ -6,112 +6,17 @@
 (function() {
   'use strict';
 
+  const Model = typeof window !== 'undefined' ? window.AngularSizeModel : null;
+  if (!Model) {
+    console.error('Angular Size: missing window.AngularSizeModel (did you load demos/_assets/angular-size-model.js?)');
+    return;
+  }
+
   // ============================================
   // Preset Data
   // ============================================
 
-  const PRESETS = {
-    // Astronomical objects
-    sun: {
-      name: 'Sun',
-      diameter: 1.392e6,  // km
-      distance: 1.496e8,  // km (1 AU)
-      category: 'astronomical',
-      color: 'sun',
-      description: 'Our star'
-    },
-    moon: {
-      name: 'Moon (Today)',
-      diameter: 3474,     // km
-      distance: 384400,   // km
-      category: 'astronomical',
-      color: 'moon',
-      description: 'Earth\'s satellite',
-      timeEvolution: true  // Enable time slider
-    },
-    jupiter: {
-      name: 'Jupiter',
-      diameter: 139820,   // km
-      distance: 6.287e8,  // km (opposition)
-      category: 'astronomical',
-      color: 'planet',
-      description: 'At opposition'
-    },
-    venus: {
-      name: 'Venus',
-      diameter: 12104,    // km
-      distance: 4.14e7,   // km (closest approach)
-      category: 'astronomical',
-      color: 'planet',
-      description: 'At closest approach'
-    },
-    mars: {
-      name: 'Mars',
-      diameter: 6779,     // km
-      distance: 5.46e7,   // km (opposition)
-      category: 'astronomical',
-      color: 'mars',
-      description: 'At opposition'
-    },
-    andromeda: {
-      name: 'Andromeda',
-      diameter: 1.26e18,  // km (~130,000 ly; bright disk)
-      distance: 2.4e19,   // km (~2.5 million ly)
-      category: 'astronomical',
-      color: 'galaxy',
-      description: 'Nearest large galaxy (bright disk)'
-    },
-
-    // Everyday objects
-    basketball: {
-      name: 'Basketball @ 10m',
-      diameter: 0.000239, // 23.9 cm in km
-      distance: 0.01,     // 10m in km
-      category: 'everyday',
-      color: 'object',
-      description: 'Standard basketball'
-    },
-    soccerball: {
-      name: 'Soccer ball @ 20m',
-      diameter: 0.00022,  // 22 cm in km
-      distance: 0.02,     // 20m in km
-      category: 'everyday',
-      color: 'object',
-      description: 'Regulation soccer ball'
-    },
-    quarter: {
-      name: 'Quarter @ arm\'s length',
-      diameter: 0.0000243, // 24.3 mm in km
-      distance: 0.0007,    // 70cm arm's length
-      category: 'everyday',
-      color: 'object',
-      description: 'US quarter coin'
-    },
-    thumb: {
-      name: 'Your thumb',
-      diameter: 0.00002,   // ~2cm thumb width
-      distance: 0.0007,    // ~70cm arm's length
-      category: 'everyday',
-      color: 'object',
-      description: 'Thumb at arm\'s length ≈ 2°'
-    },
-    airplane: {
-      name: 'Jet @ 10km',
-      diameter: 0.06,      // ~60m wingspan
-      distance: 10,        // 10 km altitude
-      category: 'everyday',
-      color: 'object',
-      description: 'Commercial jet overhead'
-    },
-    iss: {
-      name: 'ISS overhead',
-      diameter: 0.000109,  // 109m in km
-      distance: 420,       // 420 km altitude
-      category: 'everyday',
-      color: 'object',
-      description: 'International Space Station'
-    }
-  };
+  const PRESETS = Model.presets;
 
   // ============================================
   // State
@@ -121,8 +26,13 @@
     diameter: PRESETS.sun.diameter,
     distance: PRESETS.sun.distance,
     activePreset: 'sun',
-    moonOrbitAngle: 0 // Degrees (for Moon orbit distance variation)
+    moonOrbitAngle: 0, // Degrees (for Moon orbit distance variation)
+    moonTimeMode: 'orbit', // 'orbit' | 'recession'
+    moonRecessionTimeMyr: 0 // Myr from today (toy linear model)
   };
+
+  const MOON_DISTANCE_TODAY_KM = PRESETS.moon.distance;
+  const MOON_RECESSION_CM_PER_YEAR = 3.8; // mean present-day value; varies with time
 
   // Slider ranges (logarithmic)
   const DISTANCE_MIN = 0.0001;    // 0.1 m in km
@@ -186,6 +96,11 @@
     elements.timeControl = document.getElementById('time-control');
     elements.timeSlider = document.getElementById('time-slider');
     elements.timeDisplay = document.getElementById('time-display');
+    elements.recessionSlider = document.getElementById('recession-slider');
+    elements.moonTimeModeOrbit = document.getElementById('moon-time-mode-orbit');
+    elements.moonTimeModeRecession = document.getElementById('moon-time-mode-recession');
+    elements.moonTimeOrbitControls = document.getElementById('moon-time-orbit-controls');
+    elements.moonTimeRecessionControls = document.getElementById('moon-time-recession-controls');
     elements.moonAngularRange = document.getElementById('moon-angular-range');
 
     elements.angleWarning = document.getElementById('angle-warning');
@@ -197,11 +112,7 @@
   // ============================================
 
   function calculateAngularSize(diameter, distance) {
-    if (distance <= 0) return 180;
-    if (diameter <= 0) return 0;
-    // Exact angular diameter in radians, robust for all regimes.
-    const radians = 2 * Math.atan(diameter / (2 * distance));
-    return Math.min(180, radians * (180 / Math.PI));
+    return Model.angularDiameterDeg({ diameterKm: diameter, distanceKm: distance });
   }
 
   // ============================================
@@ -246,6 +157,35 @@
     const phaseRad = orbitAngleDeg * Math.PI / 180;
     const w = (Math.cos(phaseRad) + 1) / 2; // 1 at 0° (perigee), 0 at 180° (apogee)
     return MOON_ORBIT.apogeeKm + w * (MOON_ORBIT.perigeeKm - MOON_ORBIT.apogeeKm);
+  }
+
+  function moonTimeMyrFromDistance(distanceKm) {
+    const kmPerMyr = MOON_RECESSION_CM_PER_YEAR * 10;
+    if (kmPerMyr === 0) return 0;
+    return (distanceKm - MOON_DISTANCE_TODAY_KM) / kmPerMyr;
+  }
+
+  function setMoonTimeMode(mode) {
+    state.moonTimeMode = mode === 'recession' ? 'recession' : 'orbit';
+
+    if (elements.moonTimeOrbitControls) {
+      elements.moonTimeOrbitControls.style.display = state.moonTimeMode === 'orbit' ? '' : 'none';
+    }
+    if (elements.moonTimeRecessionControls) {
+      elements.moonTimeRecessionControls.style.display = state.moonTimeMode === 'recession' ? '' : 'none';
+    }
+
+    // Keep sliders consistent with current distance.
+    if (state.activePreset === 'moon') {
+      if (state.moonTimeMode === 'orbit') {
+        state.moonOrbitAngle = orbitAngleFromMoonDistance(state.distance);
+        if (elements.timeSlider) elements.timeSlider.value = state.moonOrbitAngle;
+      } else {
+        state.moonRecessionTimeMyr = moonTimeMyrFromDistance(state.distance);
+        if (elements.recessionSlider) elements.recessionSlider.value = Math.round(state.moonRecessionTimeMyr / 10) * 10;
+      }
+      updateMoonTimeDisplay();
+    }
   }
 
   function orbitAngleFromMoonDistance(distanceKm) {
@@ -525,8 +465,13 @@
         DISTANCE_MAX
       );
       if (state.activePreset === 'moon') {
-        state.moonOrbitAngle = orbitAngleFromMoonDistance(state.distance);
-        elements.timeSlider.value = state.moonOrbitAngle;
+        if (state.moonTimeMode === 'orbit') {
+          state.moonOrbitAngle = orbitAngleFromMoonDistance(state.distance);
+          if (elements.timeSlider) elements.timeSlider.value = state.moonOrbitAngle;
+        } else {
+          state.moonRecessionTimeMyr = moonTimeMyrFromDistance(state.distance);
+          if (elements.recessionSlider) elements.recessionSlider.value = Math.round(state.moonRecessionTimeMyr / 10) * 10;
+        }
         updateMoonTimeDisplay();
         update();
         return;
@@ -551,6 +496,8 @@
 
     // Time slider (Moon orbit distance variation)
     if (elements.timeSlider) elements.timeSlider.addEventListener('input', () => {
+      if (state.activePreset !== 'moon') return;
+      if (state.moonTimeMode !== 'orbit') return;
       state.moonOrbitAngle = parseFloat(elements.timeSlider.value);
       state.distance = getMoonDistanceAtOrbitAngle(state.moonOrbitAngle);
       updateMoonTimeDisplay();
@@ -560,10 +507,41 @@
 
       update();
     });
+
+    // Recession slider (Moon only; toy linear model)
+    if (elements.recessionSlider) elements.recessionSlider.addEventListener('input', () => {
+      if (state.activePreset !== 'moon') return;
+      if (state.moonTimeMode !== 'recession') return;
+      state.moonRecessionTimeMyr = parseFloat(elements.recessionSlider.value);
+      state.distance = Model.moonDistanceKmFromRecession({
+        distanceTodayKm: MOON_DISTANCE_TODAY_KM,
+        recessionCmPerYr: MOON_RECESSION_CM_PER_YEAR,
+        timeMyr: state.moonRecessionTimeMyr,
+      });
+
+      // Update distance slider to match
+      elements.distanceSlider.value = valueToLogSlider(state.distance, DISTANCE_MIN, DISTANCE_MAX);
+
+      updateMoonTimeDisplay();
+      update();
+    });
   }
 
   function updateMoonTimeDisplay() {
     if (!elements.timeDisplay) return;
+
+    if (state.moonTimeMode === 'recession') {
+      const t = Math.round(state.moonRecessionTimeMyr);
+      if (Math.abs(t) < 1) {
+        elements.timeDisplay.textContent = 'Today';
+      } else if (t < 0) {
+        elements.timeDisplay.textContent = `${Math.abs(t)} Myr ago`;
+      } else {
+        elements.timeDisplay.textContent = `+${t} Myr`;
+      }
+      return;
+    }
+
     const angle = state.moonOrbitAngle;
     const delta = (a, b) => Math.abs((((a - b) % 360) + 540) % 360 - 180);
     if (delta(angle, 0) <= 10) elements.timeDisplay.textContent = 'Perigee';
@@ -612,6 +590,7 @@
     state.diameter = preset.diameter;
     state.distance = preset.distance;
     state.moonOrbitAngle = 0;
+    state.moonRecessionTimeMyr = 0;
 
     if (elements.presetCategory) {
       elements.presetCategory.value = preset.category === 'everyday' ? 'everyday' : 'astronomical';
@@ -621,9 +600,11 @@
     // Show/hide time control for Moon
     if (elements.timeControl) elements.timeControl.style.display = preset.timeEvolution ? 'block' : 'none';
     if (preset.timeEvolution) {
-      state.moonOrbitAngle = orbitAngleFromMoonDistance(state.distance);
-      if (elements.timeSlider) elements.timeSlider.value = state.moonOrbitAngle;
-      updateMoonTimeDisplay();
+      // Default to orbit mode on selection (students usually think in perigee/apogee first).
+      if (elements.moonTimeModeOrbit) elements.moonTimeModeOrbit.checked = true;
+      if (elements.moonTimeModeRecession) elements.moonTimeModeRecession.checked = false;
+      setMoonTimeMode('orbit');
+
       if (elements.moonAngularRange) {
         elements.moonAngularRange.textContent =
           `Range: ${MOON_ORBIT_MIN_ANGULAR_SIZE_DEG.toFixed(2)}°–${MOON_ORBIT_MAX_ANGULAR_SIZE_DEG.toFixed(2)}°`;
@@ -664,6 +645,32 @@
     if (!elements.presetCategory) return;
     elements.presetCategory.addEventListener('change', updatePresetCategoryVisibility);
     updatePresetCategoryVisibility();
+  }
+
+  function setupMoonTimeMode() {
+    if (elements.moonTimeModeOrbit) {
+      elements.moonTimeModeOrbit.addEventListener('change', () => {
+        if (elements.moonTimeModeOrbit.checked) {
+          setMoonTimeMode('orbit');
+          update();
+        }
+      });
+    }
+
+    if (elements.moonTimeModeRecession) {
+      elements.moonTimeModeRecession.addEventListener('change', () => {
+        if (elements.moonTimeModeRecession.checked) {
+          // When switching to recession mode, treat the current distance as the selected time.
+          state.moonRecessionTimeMyr = moonTimeMyrFromDistance(state.distance);
+          if (elements.recessionSlider) {
+            elements.recessionSlider.value = Math.round(state.moonRecessionTimeMyr / 10) * 10;
+            state.moonRecessionTimeMyr = parseFloat(elements.recessionSlider.value);
+          }
+          setMoonTimeMode('recession');
+          update();
+        }
+      });
+    }
   }
 
   // ============================================
@@ -760,6 +767,7 @@
     setupSliders();
     setupPresets();
     setupPresetCategory();
+    setupMoonTimeMode();
     setupKeyboard();
 
     if (elements.btnResetDefaults) {
