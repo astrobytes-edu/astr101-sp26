@@ -51,3 +51,28 @@ test('deltaLambdaFromBetaDeg inverts betaFromDeltaLambdaDeg (approx)', () => {
     assert.ok(Math.abs(beta2 - beta) < 0.03);
   }
 });
+
+test('eclipseThresholdsDeg: lunar thresholds are ordered (total < umbral < penumbral)', () => {
+  assert.ok(typeof M.eclipseThresholdsDeg === 'function', 'expected eclipseThresholdsDeg export');
+  const thr = M.eclipseThresholdsDeg({ earthMoonDistanceKm: 384400 });
+  assert.ok(thr.lunarTotalDeg > 0);
+  assert.ok(thr.lunarUmbralDeg > thr.lunarTotalDeg);
+  assert.ok(thr.lunarPenumbralDeg > thr.lunarUmbralDeg);
+  assert.ok(thr.lunarPenumbralDeg < 10);
+});
+
+test('lunarEclipseTypeFromBetaDeg classifies penumbral vs umbral vs total', () => {
+  assert.ok(typeof M.lunarEclipseTypeFromBetaDeg === 'function', 'expected lunarEclipseTypeFromBetaDeg export');
+  const thr = M.eclipseThresholdsDeg({ earthMoonDistanceKm: 384400 });
+
+  assert.equal(M.lunarEclipseTypeFromBetaDeg({ betaDeg: 0, earthMoonDistanceKm: 384400 }).type, 'total-lunar');
+
+  const betaPartial = (thr.lunarTotalDeg + thr.lunarUmbralDeg) / 2;
+  assert.equal(M.lunarEclipseTypeFromBetaDeg({ betaDeg: betaPartial, earthMoonDistanceKm: 384400 }).type, 'partial-lunar');
+
+  const betaPenumbral = (thr.lunarUmbralDeg + thr.lunarPenumbralDeg) / 2;
+  assert.equal(M.lunarEclipseTypeFromBetaDeg({ betaDeg: betaPenumbral, earthMoonDistanceKm: 384400 }).type, 'penumbral-lunar');
+
+  const betaNone = thr.lunarPenumbralDeg + 1;
+  assert.equal(M.lunarEclipseTypeFromBetaDeg({ betaDeg: betaNone, earthMoonDistanceKm: 384400 }).type, 'none');
+});
