@@ -87,6 +87,8 @@ Let's establish the basic geometry:
 
 The Moon doesn't produce its own light. It shines by reflecting sunlight. At any moment, exactly half of the Moon — the half facing the Sun — is illuminated.
 
+{{< fig earth-moon-system >}}
+
 ::: {.column-margin}
 **Synodic month:** The time from new moon to new moon (one full cycle of phases), about 29.5 days.
 :::

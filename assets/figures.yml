@@ -515,10 +515,17 @@ figures:
     module: 1
 
   moon-phase-cycle:
-    path: /assets/images/module-01/lec04/moon-phase-cycle-nblm.webp
+    path: /assets/images/module-01/moon_phases_cococubed.svg
     caption: "The moon phase cycle around Earth"
     alt: "Diagram showing the Moon orbiting Earth with labeled phases around the orbit."
-    credit: "(A. Rosen/NotebookLM)"
+    credit: "Cococubed"
+    module: 1
+
+  earth-moon-system:
+    path: /assets/images/earth_moon_system02_cococubed.svg
+    caption: "The Earth-Moon system: orbital geometry that creates phases and eclipses"
+    alt: "Diagram showing Earth and the Moon's orbit, illustrating the geometry of the Earth-Moon system with orbital paths marked."
+    credit: "Cococubed"
     module: 1
 
   moon-phases-synodic-month:

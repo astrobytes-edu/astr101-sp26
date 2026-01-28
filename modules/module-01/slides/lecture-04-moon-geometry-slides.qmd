@@ -255,6 +255,16 @@ Moon phases are this exact demo — just with the Sun as the lamp and Earth as y
 
 ---
 
+## The Earth-Moon System {background-color="black"}
+
+{{< img earth-moon-system width="88%" class="img-center" >}}
+
+::: {.notes}
+7–8 min. Transition from the mental model to the real geometry. Point out: Earth at center, Moon's orbit around it. The Sun is far off to one side (not shown to scale).
+:::
+
+---
+
 ## The Phase Cycle (Geometry Map) {background-color="black"}
 
 {{< img moon-phase-cycle width="92%" class="img-center" >}}
