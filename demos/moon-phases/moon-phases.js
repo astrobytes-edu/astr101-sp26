@@ -12,6 +12,11 @@
     return;
   }
 
+  const PREFERS_REDUCED_MOTION =
+    typeof window !== 'undefined' && typeof window.matchMedia === 'function'
+      ? window.matchMedia('(prefers-reduced-motion: reduce)').matches
+      : false;
+
   // ============================================
   // Constants
   // ============================================
@@ -48,7 +53,7 @@
   // Animation state
   let isAnimating = false;
   let animationId = null;
-  let animationSpeed = 5;  // Default to 5x speed
+  let animationSpeed = PREFERS_REDUCED_MOTION ? 1 : 5;
 
   // ============================================
   // DOM Elements
@@ -619,9 +624,13 @@
     document.getElementById('btn-step-forward').addEventListener('click', stepForward);
     document.getElementById('btn-step-back').addEventListener('click', stepBackward);
 
-    document.getElementById('speed-select').addEventListener('change', (e) => {
-      animationSpeed = parseFloat(e.target.value);
-    });
+    const speedSelect = document.getElementById('speed-select');
+    if (speedSelect) {
+      speedSelect.value = String(animationSpeed);
+      speedSelect.addEventListener('change', (e) => {
+        animationSpeed = parseFloat(e.target.value);
+      });
+    }
 
     // Reset button
     document.getElementById('btn-reset').addEventListener('click', () => {
