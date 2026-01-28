@@ -32,21 +32,11 @@
   const SYZYGY_TOLERANCE_DEG = 5; // pedagogical; hours-level realism not required
   const STATUS_PLANE_EPS_DEG = 0.05; // treat as "in plane" for copy/readouts
 
-  // Eclipse thresholds (degrees from ecliptic plane)
-  // Based on actual eclipse limits from node (converted to height above ecliptic)
-  //
-  // TOTAL eclipses require very close alignment:
-  // - Total solar: Moon within ~10.5° of node → height = 5.145° × sin(10.5°) ≈ 0.94°
-  // - Total lunar: Moon within ~4.6° of node → height = 5.145° × sin(4.6°) ≈ 0.41°
-  //
-  // PARTIAL eclipses have larger windows:
-  // - Partial solar: Moon within ~18.5° of node → height = 5.145° × sin(18.5°) ≈ 1.63°
-  // - Partial lunar: Moon within ~12.2° of node → height = 5.145° × sin(12.2°) ≈ 1.09°
-
-  const TOTAL_SOLAR_THRESHOLD = 0.94;    // Total/annular solar eclipse
-  const PARTIAL_SOLAR_THRESHOLD = 1.63;  // Any solar eclipse (including partial)
-  const TOTAL_LUNAR_THRESHOLD = 0.41;    // Total lunar eclipse (umbral)
-  const PARTIAL_LUNAR_THRESHOLD = 1.09;  // Any lunar eclipse (including penumbral)
+  // Eclipse classification uses a physically-motivated shadow model (similar triangles)
+  // with mean Earth–Moon distance. This yields realistic “eclipse season” windows without
+  // hard-coding node-angle thresholds.
+  const EARTH_MOON_DISTANCE_KM = 384400; // mean distance (km)
+  const ECLIPSE_THRESHOLDS = Model.eclipseThresholdsDeg({ earthMoonDistanceKm: EARTH_MOON_DISTANCE_KM });
 
   // ============================================
   // State
@@ -67,6 +57,7 @@
     partialSolarEclipses: 0,
     totalLunarEclipses: 0,
     partialLunarEclipses: 0,
+    penumbralLunarEclipses: 0,
     yearsSimulated: 0,
 
     // Eclipse log for table display
@@ -217,10 +208,10 @@
 
   function updateEclipseWindowArcs() {
     // Convert the latitude thresholds into "within Δλ of a node" windows for the current tilt.
-    const dSolarAny = Model.deltaLambdaFromBetaDeg({ tiltDeg: state.orbitalTilt, betaDeg: PARTIAL_SOLAR_THRESHOLD });
-    const dSolarCentral = Model.deltaLambdaFromBetaDeg({ tiltDeg: state.orbitalTilt, betaDeg: TOTAL_SOLAR_THRESHOLD });
-    const dLunarAny = Model.deltaLambdaFromBetaDeg({ tiltDeg: state.orbitalTilt, betaDeg: PARTIAL_LUNAR_THRESHOLD });
-    const dLunarCentral = Model.deltaLambdaFromBetaDeg({ tiltDeg: state.orbitalTilt, betaDeg: TOTAL_LUNAR_THRESHOLD });
+    const dSolarAny = Model.deltaLambdaFromBetaDeg({ tiltDeg: state.orbitalTilt, betaDeg: ECLIPSE_THRESHOLDS.solarPartialDeg });
+    const dSolarCentral = Model.deltaLambdaFromBetaDeg({ tiltDeg: state.orbitalTilt, betaDeg: ECLIPSE_THRESHOLDS.solarCentralDeg });
+    const dLunarAny = Model.deltaLambdaFromBetaDeg({ tiltDeg: state.orbitalTilt, betaDeg: ECLIPSE_THRESHOLDS.lunarPenumbralDeg });
+    const dLunarCentral = Model.deltaLambdaFromBetaDeg({ tiltDeg: state.orbitalTilt, betaDeg: ECLIPSE_THRESHOLDS.lunarTotalDeg });
 
     const nodeAsc = getDisplayNodeAngleDeg();
     const nodeDesc = normalizeAngleDeg(nodeAsc + 180);
@@ -281,33 +272,34 @@
 
     // Check for solar eclipse (New Moon)
     if (nearNew) {
-      if (absHeight < TOTAL_SOLAR_THRESHOLD) {
+      if (absHeight < ECLIPSE_THRESHOLDS.solarCentralDeg) {
         return {
-          type: 'total-solar',
-          detail: `TOTAL solar eclipse! Moon is only ${absHeight.toFixed(2)}° from ecliptic`
+          type: 'central-solar',
+          detail: `CENTRAL solar eclipse (total/annular possible) — |β| = ${absHeight.toFixed(2)}°`
         };
       }
-      if (absHeight < PARTIAL_SOLAR_THRESHOLD) {
+      if (absHeight < ECLIPSE_THRESHOLDS.solarPartialDeg) {
         return {
           type: 'partial-solar',
-          detail: `Partial solar eclipse — Moon is ${absHeight.toFixed(1)}° from ecliptic`
+          detail: `Partial solar eclipse — |β| = ${absHeight.toFixed(2)}°`
         };
       }
     }
 
     // Check for lunar eclipse (Full Moon)
     if (nearFull) {
-      if (absHeight < TOTAL_LUNAR_THRESHOLD) {
-        return {
-          type: 'total-lunar',
-          detail: `TOTAL lunar eclipse! Moon is only ${absHeight.toFixed(2)}° from ecliptic`
-        };
+      const lunar = Model.lunarEclipseTypeFromBetaDeg({
+        betaDeg: absHeight,
+        earthMoonDistanceKm: EARTH_MOON_DISTANCE_KM,
+      });
+      if (lunar.type === 'total-lunar') {
+        return { type: 'total-lunar', detail: `TOTAL lunar eclipse — |β| = ${absHeight.toFixed(2)}°` };
       }
-      if (absHeight < PARTIAL_LUNAR_THRESHOLD) {
-        return {
-          type: 'partial-lunar',
-          detail: `Partial lunar eclipse — Moon is ${absHeight.toFixed(1)}° from ecliptic`
-        };
+      if (lunar.type === 'partial-lunar') {
+        return { type: 'partial-lunar', detail: `Umbral lunar eclipse (partial) — |β| = ${absHeight.toFixed(2)}°` };
+      }
+      if (lunar.type === 'penumbral-lunar') {
+        return { type: 'penumbral-lunar', detail: `Penumbral lunar eclipse — |β| = ${absHeight.toFixed(2)}°` };
       }
     }
 
@@ -327,14 +319,16 @@
 
   function formatEclipseTypeLabel(type) {
     switch (type) {
-      case 'total-solar':
-        return 'Total solar';
+      case 'central-solar':
+        return 'Central solar';
       case 'partial-solar':
         return 'Solar (not total)';
       case 'total-lunar':
         return 'Total lunar';
       case 'partial-lunar':
-        return 'Lunar (not total)';
+        return 'Umbral lunar';
+      case 'penumbral-lunar':
+        return 'Penumbral lunar';
       default:
         return type;
     }
@@ -477,6 +471,10 @@
           nearSyzygy
             ? 'Too far from node for an eclipse'
             : 'Eclipses require New/Full Moon near a node';
+      } else if (eclipse.type === 'central-solar') {
+        elements.statusNote.textContent = 'Central eclipse conditions';
+      } else if (eclipse.type === 'penumbral-lunar') {
+        elements.statusNote.textContent = 'Penumbral eclipse conditions';
       } else if (eclipse.type.includes('total')) {
         elements.statusNote.textContent = 'Total eclipse conditions';
       } else if (eclipse.type.includes('partial')) {
@@ -500,10 +498,10 @@
 	    const totalSolar = state.totalSolarEclipses;
 	    const allSolar = state.totalSolarEclipses + state.partialSolarEclipses;
 	    const totalLunar = state.totalLunarEclipses;
-	    const allLunar = state.totalLunarEclipses + state.partialLunarEclipses;
+	    const allLunar = state.totalLunarEclipses + state.partialLunarEclipses + state.penumbralLunarEclipses;
 
 	    elements.statSolar.innerHTML = `${totalSolar} <small style="opacity:0.6">(${allSolar} incl. partial)</small>`;
-	    elements.statLunar.innerHTML = `${totalLunar} <small style="opacity:0.6">(${allLunar} incl. partial)</small>`;
+	    elements.statLunar.innerHTML = `${totalLunar} <small style="opacity:0.6">(${allLunar} incl. umbral + penumbral)</small>`;
 	    elements.statYears.textContent = state.yearsSimulated.toFixed(1);
 	  }
 
@@ -651,6 +649,7 @@
         state.partialSolarEclipses = 0;
         state.totalLunarEclipses = 0;
         state.partialLunarEclipses = 0;
+        state.penumbralLunarEclipses = 0;
         state.yearsSimulated = 0;
         state.eclipseLog = [];
         updateLogTable();
@@ -813,6 +812,7 @@
     state.partialSolarEclipses = 0;
     state.totalLunarEclipses = 0;
     state.partialLunarEclipses = 0;
+    state.penumbralLunarEclipses = 0;
     state.yearsSimulated = 0;
     state.eclipseLog = [];
 
@@ -853,10 +853,10 @@
           const betaAbs = Math.abs(Model.eclipticLatitudeDeg({ tiltDeg: state.orbitalTilt, moonLonDeg, nodeLonDeg }));
           const year = tNewDays / DAYS_PER_TROPICAL_YEAR;
 
-          if (betaAbs < TOTAL_SOLAR_THRESHOLD) {
+          if (betaAbs < ECLIPSE_THRESHOLDS.solarCentralDeg) {
             state.totalSolarEclipses++;
-            state.eclipseLog.push({ year, type: 'total-solar', height: betaAbs });
-          } else if (betaAbs < PARTIAL_SOLAR_THRESHOLD) {
+            state.eclipseLog.push({ year, type: 'central-solar', height: betaAbs });
+          } else if (betaAbs < ECLIPSE_THRESHOLDS.solarPartialDeg) {
             state.partialSolarEclipses++;
             state.eclipseLog.push({ year, type: 'partial-solar', height: betaAbs });
           }
@@ -871,12 +871,20 @@
           const betaAbs = Math.abs(Model.eclipticLatitudeDeg({ tiltDeg: state.orbitalTilt, moonLonDeg, nodeLonDeg }));
           const year = tFullDays / DAYS_PER_TROPICAL_YEAR;
 
-          if (betaAbs < TOTAL_LUNAR_THRESHOLD) {
+          const lunar = Model.lunarEclipseTypeFromBetaDeg({
+            betaDeg: betaAbs,
+            earthMoonDistanceKm: EARTH_MOON_DISTANCE_KM,
+          });
+
+          if (lunar.type === 'total-lunar') {
             state.totalLunarEclipses++;
             state.eclipseLog.push({ year, type: 'total-lunar', height: betaAbs });
-          } else if (betaAbs < PARTIAL_LUNAR_THRESHOLD) {
+          } else if (lunar.type === 'partial-lunar') {
             state.partialLunarEclipses++;
             state.eclipseLog.push({ year, type: 'partial-lunar', height: betaAbs });
+          } else if (lunar.type === 'penumbral-lunar') {
+            state.penumbralLunarEclipses++;
+            state.eclipseLog.push({ year, type: 'penumbral-lunar', height: betaAbs });
           }
         }
 
@@ -924,11 +932,11 @@
         });
         const height = Math.abs(rawHeight);
         const isNewMoon = isNearAngle(demoState.moonAngle, 180, SYZYGY_TOLERANCE_DEG);
-        const nearNode = height < PARTIAL_SOLAR_THRESHOLD;
+        const nearNode = height < ECLIPSE_THRESHOLDS.solarPartialDeg;
         const phase = getPhaseLabel(normalizeAngleDeg(demoState.moonAngle - 180));
 
         if (isNewMoon && nearNode) {
-          const eclipseType = height < TOTAL_SOLAR_THRESHOLD ? 'total' : 'partial';
+          const eclipseType = height < ECLIPSE_THRESHOLDS.solarCentralDeg ? 'central' : 'partial';
           return {
             correct: true,
             message: `Solar eclipse achieved! The Moon is at new moon AND only ${height.toFixed(2)}° from the ecliptic — that's a ${eclipseType} solar eclipse!`
@@ -966,11 +974,17 @@
         });
         const height = Math.abs(rawHeight);
         const isFullMoon = isNearAngle(demoState.moonAngle, 0, SYZYGY_TOLERANCE_DEG);
-        const nearNode = height < PARTIAL_LUNAR_THRESHOLD;
+        const lunar = Model.lunarEclipseTypeFromBetaDeg({ betaDeg: height, earthMoonDistanceKm: EARTH_MOON_DISTANCE_KM });
+        const nearNode = lunar.type !== 'none';
         const phase = getPhaseLabel(normalizeAngleDeg(demoState.moonAngle - 180));
 
         if (isFullMoon && nearNode) {
-          const eclipseType = height < TOTAL_LUNAR_THRESHOLD ? 'total' : 'partial';
+          const eclipseType =
+            lunar.type === 'total-lunar'
+              ? 'total'
+              : lunar.type === 'partial-lunar'
+                ? 'umbral (partial)'
+                : 'penumbral';
           return {
             correct: true,
             message: `Lunar eclipse achieved! The Moon is at full moon AND passing through Earth's shadow — that's a ${eclipseType} lunar eclipse!`
@@ -1008,7 +1022,8 @@
         });
         const height = Math.abs(rawHeight);
         const isFullMoon = isNearAngle(demoState.moonAngle, 0, SYZYGY_TOLERANCE_DEG);
-        const noEclipse = height > PARTIAL_LUNAR_THRESHOLD;
+        const noEclipse =
+          Model.lunarEclipseTypeFromBetaDeg({ betaDeg: height, earthMoonDistanceKm: EARTH_MOON_DISTANCE_KM }).type === 'none';
         const phase = getPhaseLabel(normalizeAngleDeg(demoState.moonAngle - 180));
 
         if (isFullMoon && noEclipse) {
