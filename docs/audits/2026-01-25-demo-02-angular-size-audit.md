@@ -1,8 +1,8 @@
 # Demo 2 Audit — Angular Size (`demos/angular-size/`)
 
-**Date:** 2026-01-25  
-**Auditor:** Codex (GPT-5.2)  
-**Scope:** Demo 2 only (`demos/angular-size/`). No other demos reviewed in this audit.  
+**Date:** 2026-01-25
+**Auditor:** Codex (GPT-5.2)
+**Scope:** Demo 2 only (`demos/angular-size/`). No other demos reviewed in this audit.
 
 ---
 
@@ -66,14 +66,14 @@ Assumptions used for this audit:
 
 **Claim:** Apparent angular size depends on both physical diameter `d` and distance `D`. The demo models angular diameter as:
 
-- **Exact angular diameter:** `θ = 2 atan(d/(2D))` (converted to degrees), with saturation near 180° for very close distances.  
+- **Exact angular diameter:** `θ = 2 atan(d/(2D))` (converted to degrees), with saturation near 180° for very close distances.
   Evidence: `demos/angular-size/angular-size.js#calculateAngularSize` + `demos/angular-size/index.html` model note.
 
 **Units/scale used in code:**
 - Preset values are stored in **kilometers** (both `diameter` and `distance`). Evidence: `demos/angular-size/angular-size.js` preset comments.
 - Sliders are **log-scaled** from:
   - Distance: `DISTANCE_MIN = 1e-4 km` (10 cm) to `DISTANCE_MAX = 1e20 km` (~10 million ly)
-  - Size: `SIZE_MIN = 1e-5 km` (1 cm) to `SIZE_MAX = 1e19 km` (large galaxy)  
+  - Size: `SIZE_MIN = 1e-5 km` (1 cm) to `SIZE_MAX = 1e19 km` (large galaxy)
   Evidence: `demos/angular-size/angular-size.js` constants + `logSliderToValue`.
 
 **Visualization:**
@@ -121,28 +121,28 @@ Assumptions used for this audit:
 
 ### Fix plan (prioritized, sequential; no implementation)
 
-1) **Fix keyboard shortcut gating (A-02)**  
-   - Minimal change: ignore key handlers when focus is on interactive controls (at least `SELECT` and `BUTTON`, not just `INPUT`).  
-   - Verify: focus `#preset-category`, press ArrowUp/ArrowDown and `1`—ensure the select behaves normally and no preset/size/distance changes occur.
+1) **Fix keyboard shortcut gating (A-02)**
+   - Minimal change: ignore key handlers when focus is on interactive controls (at least `SELECT` and `BUTTON`, not just `INPUT`).
+   - Verify: focus `#preset-category`, press ArrowUp/ArrowDown and `1` — ensure the select behaves normally and no preset/size/distance changes occur.
 
-2) **Fix angular-size unit/precision handling (A-01)**  
-   - Minimal change: use `formatAngle()` (already in file) for readout + `#angle-text` + object `aria-label`.  
+2) **Fix angular-size unit/precision handling (A-01)**
+   - Minimal change: use `formatAngle()` (already in file) for readout + `#angle-text` + object `aria-label`.
    - Verify: Jupiter shows a stable, interpretable value (e.g., arcseconds/arcminutes) and tiny-angle presets no longer collapse to `0.00°`.
 
-3) **Clamp or switch visualization in saturated regimes (A-03)**  
-   - Minimal change: when warning triggers (“inside object”), cap ray endpoints to SVG bounds or replace with a simpler saturated graphic.  
+3) **Clamp or switch visualization in saturated regimes (A-03)**
+   - Minimal change: when warning triggers (“inside object”), cap ray endpoints to SVG bounds or replace with a simpler saturated graphic.
    - Verify: extreme close/large case stays within the SVG without huge coordinate values.
 
-4) **Resolve Andromeda example mismatch (A-04) (VERIFY)**  
-   - Decide which “Andromeda angular size” definition the course wants, then align README/preset accordingly.  
+4) **Resolve Andromeda example mismatch (A-04) (VERIFY)**
+   - Decide which “Andromeda angular size” definition the course wants, then align README/preset accordingly.
    - Verify: README and preset display agree, or the UI labels the definition clearly.
 
-5) **Update README drift (A-06)**  
-   - Remove `presets.json` from README tree or actually introduce it intentionally (requires explicit approval if it changes workflow).  
+5) **Update README drift (A-06)**
+   - Remove `presets.json` from README tree or actually introduce it intentionally (requires explicit approval if it changes workflow).
    - Verify: README “Files” section matches `find demos/angular-size -maxdepth 2 -type f`.
 
-6) **Optional: `aria-live` announcements (A-07)**  
-   - Either add minimal announcements for preset selection/slider changes or remove the unused region.  
+6) **Optional: `aria-live` announcements (A-07)**
+   - Either add minimal announcements for preset selection/slider changes or remove the unused region.
    - Verify: screen reader output is non-spammy and reflects meaningful state changes.
 
 ---

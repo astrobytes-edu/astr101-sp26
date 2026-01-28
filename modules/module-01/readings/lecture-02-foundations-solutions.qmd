@@ -254,7 +254,7 @@ $$750 \text{ s} \times \frac{1 \text{ min}}{60 \text{ s}} = 12.5 \text{ min}$$
 Light from the supernova takes 700 years to reach us:
 $$1300 + 700 = 2000 \text{ CE}$$
 
-**Answer:** We would have seen it around **2000 CE** (which means if it happened in 1300, we've already missed it—unless it hasn't happened yet!).
+**Answer:** We would have seen it around **2000 CE** (which means if it happened in 1300, we've already missed it — unless it hasn't happened yet!).
 
 **Note:** This is a trick question. If we haven't seen a supernova from Betelgeuse yet, the explosion hasn't happened within the last 700 years. We can only know about events after their light reaches us.
 
@@ -285,7 +285,7 @@ $$[LT^{-1}] \neq [LT]$$
 - The correct equation is $v = d/t$ (velocity = distance ÷ time)
 - Dimensional check of correct equation: $[L]/[T] = [LT^{-1}]$ ✓
 
-**Lesson:** Dimensional analysis catches this error immediately—no calculation needed.
+**Lesson:** Dimensional analysis catches this error immediately — no calculation needed.
 
 ---
 
@@ -298,12 +298,12 @@ $$[LT^{-1}] \neq [LT]$$
 **The difference:**
 $$M_\odot - M_\oplus = 2 \times 10^{30} - 6 \times 10^{24} \approx 2 \times 10^{30} \text{ kg}$$
 
-This tells us almost nothing useful—the Sun is heavier by "about the Sun's mass." The difference is essentially the larger number, giving no intuitive sense of scale.
+This tells us almost nothing useful — the Sun is heavier by "about the Sun's mass." The difference is essentially the larger number, giving no intuitive sense of scale.
 
 **The ratio:**
 $$\frac{M_\odot}{M_\oplus} = \frac{2 \times 10^{30}}{6 \times 10^{24}} = \frac{2}{6} \times 10^{6} \approx 333{,}000$$
 
-This tells us the Sun is about **330,000 times more massive** than Earth—an immediately meaningful comparison.
+This tells us the Sun is about **330,000 times more massive** than Earth — an immediately meaningful comparison.
 
 **Why ratios are more useful:**
 1. **Human-sized numbers:** Ratios compress cosmic scales into digestible numbers
@@ -311,7 +311,7 @@ This tells us the Sun is about **330,000 times more massive** than Earth—an im
 3. **Constants cancel:** In physics equations, ratios often eliminate unknown constants
 4. **Scale-independent:** Ratios work regardless of unit choice
 
-**The takeaway:** When comparing cosmic quantities, always divide—never subtract.
+**The takeaway:** When comparing cosmic quantities, always divide — never subtract.
 
 ---
 
@@ -327,7 +327,7 @@ The mnemonic (555)-711-2555 tells us:
 - $10^9$ m = Sun's radius (the "1" in "711")
 - Nearby stars are at ~$10^{16}$ m (the first "5" in "2555")
 
-**The problem:** $10^9$ m is about 1.5 million km—roughly twice the Sun's radius. That's far too small for an interstellar distance!
+**The problem:** $10^9$ m is about 1.5 million km — roughly twice the Sun's radius. That's far too small for an interstellar distance!
 
 **What the answer should be:**
 - The nearest star (Proxima Centauri) is about 4 light-years ≈ $4 \times 10^{16}$ m

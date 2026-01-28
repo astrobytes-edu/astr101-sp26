@@ -157,10 +157,10 @@ In addition to screenshots, the following MUST be manually verified each release
 **Goal:** Slides never steal your current page context.
 
 Verify:
-1. In the sidebar, click any lecture under `/slides/`  
-   ✅ MUST open in a new tab  
+1. In the sidebar, click any lecture under `/slides/`
+   ✅ MUST open in a new tab
    ✅ current tab remains on the module page
-2. On a module landing page, click a lecture card “View Slides →” link  
+2. On a module landing page, click a lecture card “View Slides →” link
    ✅ MUST open in a new tab
 3. Confirm new tabs use `rel="noopener"` (security best practice)
 

@@ -10,7 +10,7 @@ owner: "Dr. Anna Rosen"
 
 This document defines the **functional capabilities** and **non-goals** of the ASTR 101 Quarto site.
 
-**If implementation deviates from this contract, it is a bug.**  
+**If implementation deviates from this contract, it is a bug.**
 Changes require an ADR.
 
 ---
@@ -35,7 +35,7 @@ Applies to:
 - Lectures MUST appear under their module both in navigation and on module landing pages.
 - Modules MUST have dedicated landing pages.
 
-This contract is aligned with the approved spec:  
+This contract is aligned with the approved spec:
 “ASTR 101 Modules UI/UX Design Specification v1.0”.
 
 ### 1.2 Navigation Behavior (MUST)
@@ -179,7 +179,7 @@ These commands MUST succeed on the instructor machine:
 
 CI MUST build:
 
-1) Website HTML  
+1) Website HTML
 2) Representative PDFs:
    - syllabus OR one assignment OR one handout (choose at least 2)
 3) One RevealJS deck render

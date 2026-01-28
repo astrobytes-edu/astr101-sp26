@@ -40,20 +40,20 @@ You do *not* need to be loud to be engaged. You do need to be *evidence-based* a
 ### Socratic Seminar norms (how we talk like scientists)
 In seminar, our goal is **shared inquiry**, not performance.
 
-**1) Anchor claims in evidence.**  
+**1) Anchor claims in evidence.**
 If you make a claim, point to something specific: a line in the text, a feature in the figure, an axis label, a trend, a number.
 
-**2) Name assumptions out loud.**  
+**2) Name assumptions out loud.**
 Astronomy is inference under constraints. Assumptions are part of the job, not something to hide.
 
-**3) Disagree with ideas, not people.**  
+**3) Disagree with ideas, not people.**
 Use: “I interpret it differently because…” not “That’s wrong.”
 
-**4) Share the airtime.**  
+**4) Share the airtime.**
 If you’ve spoken a lot, practice listening. If you’ve been quiet, try one contribution:
 a question, a clarification, or one evidence-based claim.
 
-**5) Let uncertainty be normal (but not vague).**  
+**5) Let uncertainty be normal (but not vague).**
 Uncertainty is fine. Vague claims are not. Try: “I’m ~70% confident because…”
 
 ### Practical seminar roles (so everyone can contribute)
@@ -72,7 +72,7 @@ Outer circle contributions that count as full engagement:
 - Speaking without evidence (repeatedly) after redirection
 
 ### Academic integrity and AI tools
-Your thinking matters here. **Generative AI tools (e.g., ChatGPT, Copilot, Gemini, Claude) are prohibited for course-related assessments.**  
+Your thinking matters here. **Generative AI tools (e.g., ChatGPT, Copilot, Gemini, Claude) are prohibited for course-related assessments.**
 That includes any for-credit written seminar prep/reflections, if assigned. If you’re unsure whether something counts, ask before submitting.
 
 \newpage
@@ -80,7 +80,7 @@ That includes any for-credit written seminar prep/reflections, if assigned. If y
 ## Discourse Kit
 
 ### Evidence & Reasoning Sentence Starters
-Use these in Socratic Seminar, think–pair–share, and group inquiry activities. The goal is not fancy wording—it’s clear scientific thinking.
+Use these in Socratic Seminar, think–pair–share, and group inquiry activities. The goal is not fancy wording — it’s clear scientific thinking.
 
 #### Claim (what you think is true)
 - “A conservative interpretation is that…”
@@ -125,48 +125,48 @@ Use these in Socratic Seminar, think–pair–share, and group inquiry activitie
 \newpage
 
 ### Common Astronomy Inference Pitfalls
-Astronomy is inference under constraints. These pitfalls are *normal*—the goal is to notice them early and build guardrails.
+Astronomy is inference under constraints. These pitfalls are *normal* — the goal is to notice them early and build guardrails.
 
 Use this sheet during problem-solving and seminar.
 
 #### 1) Mixing up what’s measured vs what’s inferred
-**Guardrail:** Write “Observable:” and “Inference:” separately.  
+**Guardrail:** Write “Observable:” and “Inference:” separately.
 Example: flux is measured; distance is inferred using a model.
 
 #### 2) Confusing brightness with luminosity
 - **Brightness (flux)** depends on distance.
-- **Luminosity** is intrinsic power output.  
+- **Luminosity** is intrinsic power output.
 **Guardrail:** Ask: “Is this property distance-dependent?”
 
 #### 3) Treating a model assumption as a fact
-Examples: circular orbits, equilibrium, “standard candle,” negligible dust.  
+Examples: circular orbits, equilibrium, “standard candle,” negligible dust.
 **Guardrail:** Say: “This conclusion holds *if* ____.”
 
 #### 4) Over-claiming (data show X → therefore theory Y is true)
-Data usually constrain a *family* of models.  
+Data usually constrain a *family* of models.
 **Guardrail:** Ask: “What else could explain this pattern?”
 
 #### 5) Ignoring selection effects (“what got into the dataset?”)
-What you observe is shaped by detection limits and survey design.  
+What you observe is shaped by detection limits and survey design.
 **Guardrail:** Ask: “What might be missing, and why?”
 
 #### 6) Forgetting units or axis scaling (especially log axes)
-A straight line on a log plot means something different than on a linear plot.  
+A straight line on a log plot means something different than on a linear plot.
 **Guardrail:** Always write the units and identify linear vs log.
 
 #### 7) Confusing correlation with causation
-Two quantities can vary together due to a third variable or measurement bias.  
+Two quantities can vary together due to a third variable or measurement bias.
 **Guardrail:** Ask: “What mechanism connects them? What would break the trend?”
 
 #### 8) Treating uncertainty as a footnote
-Uncertainty is part of the claim.  
+Uncertainty is part of the claim.
 **Guardrail:** Try: “I’m ~__% confident because…” and name your biggest uncertainty.
 
 #### 9) Single-figure tunnel vision
-A great plot can still be misleading without context (calibration, sample, method).  
+A great plot can still be misleading without context (calibration, sample, method).
 **Guardrail:** Ask: “What information is missing that could change interpretation?”
 
-**The most scientific question you can ask:**  
+**The most scientific question you can ask:**
 **“What observation would discriminate between these explanations?”**
 
 \newpage
@@ -177,115 +177,115 @@ A great plot can still be misleading without context (calibration, sample, metho
 
 **Name:** ____________________________  **Date:** ____________________
 
-Astronomy is a science of *inference*. A figure is not “the truth”—it’s a compact argument made out of data, axes, and assumptions.
+Astronomy is a science of *inference*. A figure is not “the truth” — it’s a compact argument made out of data, axes, and assumptions.
 
 #### Step 0: Identify the figure’s job (one sentence)
-**This figure is trying to show:**  
+**This figure is trying to show:**
 ______________________________________________________________________________
 
 #### Step 1: Read the axes like a scientist
-- **What are the axes?** (write the full variable names, not just symbols)  
-  **x-axis:** ________________________________   **units:** ________________  
+- **What are the axes?** (write the full variable names, not just symbols)
+  **x-axis:** ________________________________   **units:** ________________
   **y-axis:** ________________________________   **units:** ________________
 
-- **What is *measured* vs *inferred*?**  
-  **Measured (observables):** __________________________________________________  
+- **What is *measured* vs *inferred*?**
+  **Measured (observables):** __________________________________________________
   **Inferred (model-dependent):** ______________________________________________
 
-- **What is the scale?** (linear/log; important!)  
+- **What is the scale?** (linear/log; important!)
   ☐ linear  ☐ log  ☐ mixed/other: ______________________
 
 #### Step 2: Describe the pattern (before you interpret it)
 Use literal description first.
 
-- **Trend:** ___________________________________________________________________  
-- **Scatter / uncertainty:** ___________________________________________________  
-- **Outliers:** ________________________________________________________________  
+- **Trend:** ___________________________________________________________________
+- **Scatter / uncertainty:** ___________________________________________________
+- **Outliers:** ________________________________________________________________
 - **Range / limits:** __________________________________________________________
 
 If error bars exist: what do they represent? ☐ measurement error ☐ intrinsic scatter ☐ not sure
 
 #### Step 3: What claim does the figure support (conservatively)?
-**Conservative claim (supported by what’s shown):**  
-______________________________________________________________________________  
-**Evidence in the figure (point to a specific feature/value/region):**  
+**Conservative claim (supported by what’s shown):**
+______________________________________________________________________________
+**Evidence in the figure (point to a specific feature/value/region):**
 ______________________________________________________________________________
 
 #### Step 4: Name at least one assumption
 Interpretation requires assumptions. Name one.
 
-**Assumption:** _______________________________________________________________  
-**If this assumption fails, the interpretation might change because:**  
+**Assumption:** _______________________________________________________________
+**If this assumption fails, the interpretation might change because:**
 ______________________________________________________________________________
 
 #### Step 5: Ask the “discriminating test” question
 What new measurement would best reduce ambiguity?
 
-**Next measurement:** _________________________________________________________  
+**Next measurement:** _________________________________________________________
 **If we saw ________, it would strengthen the claim. If we saw ________, it would weaken it.**
 
 #### Quick checklist (for seminar)
-☐ I can say what each axis means and its units.  
-☐ I separated *description* from *interpretation*.  
-☐ I named at least one assumption.  
+☐ I can say what each axis means and its units.
+☐ I separated *description* from *interpretation*.
+☐ I named at least one assumption.
 ☐ I can propose a next measurement.
 
 \newpage
 
 ### Socratic Seminar Prep — Half-Sheet
 
-**Name:** ____________________________  **Date:** ____________________  
+**Name:** ____________________________  **Date:** ____________________
 **Seminar topic / “text” (figure, excerpt, dataset):** _______________________________________
 
 #### 1) My Claim (one sentence)
 Write a *specific* claim that you think the “text” supports.
 
-**Claim:**  
-______________________________________________________________________________  
+**Claim:**
+______________________________________________________________________________
 ______________________________________________________________________________
 
 #### 2) Evidence (two concrete pieces)
 Point to *specific* evidence: a quoted phrase, a trend, an axis label + value, a feature in a spectrum, etc.
 
-**Evidence #1 (what I’m pointing to):**  
-______________________________________________________________________________  
-**Why it supports my claim (one sentence):**  
+**Evidence #1 (what I’m pointing to):**
+______________________________________________________________________________
+**Why it supports my claim (one sentence):**
 ______________________________________________________________________________
 
-**Evidence #2 (what I’m pointing to):**  
-______________________________________________________________________________  
-**Why it supports my claim (one sentence):**  
+**Evidence #2 (what I’m pointing to):**
+______________________________________________________________________________
+**Why it supports my claim (one sentence):**
 ______________________________________________________________________________
 
 #### 3) Assumption (what must be true for my claim to hold)
 Name at least one assumption your inference relies on. (Examples: equilibrium, calibration, geometry, negligible dust, “standard candle” validity, selection effects.)
 
-**Assumption:**  
-______________________________________________________________________________  
-**If this assumption fails, my claim would change like this:**  
+**Assumption:**
+______________________________________________________________________________
+**If this assumption fails, my claim would change like this:**
 ______________________________________________________________________________
 
 #### 4) Uncertainty (optional but strongly encouraged)
 Try a confidence estimate *with a reason*.
 
-**I am about** _______% **confident because**  
+**I am about** _______% **confident because**
 ______________________________________________________________________________
 
 #### 5) Next Measurement (the discriminating test)
 If you had one new observation/measurement you could make, what would best test your claim or distinguish between competing explanations?
 
-**Next measurement:**  
-______________________________________________________________________________  
-**What outcome would strengthen my claim?**  
-______________________________________________________________________________  
-**What outcome would weaken my claim?**  
+**Next measurement:**
+______________________________________________________________________________
+**What outcome would strengthen my claim?**
+______________________________________________________________________________
+**What outcome would weaken my claim?**
 ______________________________________________________________________________
 
 #### 6) One Question I want to ask the group
 Ask something that pushes thinking forward (not a yes/no question).
 
-**Question:**  
-______________________________________________________________________________  
+**Question:**
+______________________________________________________________________________
 ______________________________________________________________________________
 
 ---

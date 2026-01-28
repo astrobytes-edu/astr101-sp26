@@ -1,6 +1,6 @@
 # Scientific Correctness Verification Checklist — ASTR 101 Interactive Demos
 
-**Scope:** `demos/seasons/`, `demos/angular-size/`, `demos/moon-phases/`, `demos/eclipse-geometry/`  
+**Scope:** `demos/seasons/`, `demos/angular-size/`, `demos/moon-phases/`, `demos/eclipse-geometry/`
 **Purpose:** A post-fix checklist to validate that each demo’s *scientific model* matches its stated assumptions, coordinate/sign conventions, units, and limiting-case behavior.
 
 > If any item is uncertain or depends on an external reference, mark it `VERIFY` and record what source you used (course slides/textbook) before changing numbers or claims.

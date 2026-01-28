@@ -502,7 +502,7 @@ The whole point is making semester transitions trivial:
 
 5. **Done.** All 30+ lecture dates are correct.
 
-The lecture order, topics, and readings stay exactly the same—only the dates shift to match the new semester's calendar.
+The lecture order, topics, and readings stay exactly the same — only the dates shift to match the new semester's calendar.
 
 ---
 

@@ -6,7 +6,7 @@
 
 ## 0) The vibe contract (why these choices work)
 
-Slides aren’t a textbook—they’re a **live interface** for attention.
+Slides aren’t a textbook — they’re a **live interface** for attention.
 
 Your north stars:
 

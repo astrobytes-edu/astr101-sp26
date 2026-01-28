@@ -1,16 +1,16 @@
 # Seasons Demo
 
-Interactive visualization demonstrating that **axial tilt causes seasons, NOT distance from the Sun**—the classic misconception that even educated adults get wrong.
+Interactive visualization demonstrating that **axial tilt causes seasons, NOT distance from the Sun** — the classic misconception that even educated adults get wrong.
 
 ## Science Background
 
 ### Why Tilt Causes Seasons (Not Distance)
 
-Earth's seasons arise from the tilt of its rotational axis, not from changes in distance from the Sun. In fact, Earth is **closest to the Sun in January** (Northern winter)—the opposite of what the distance misconception predicts.
+Earth's seasons arise from the tilt of its rotational axis, not from changes in distance from the Sun. In fact, Earth is **closest to the Sun in January** (Northern winter) — the opposite of what the distance misconception predicts.
 
 **Key insight: The same hemisphere that faces toward the Sun receives more direct sunlight.**
 
-When the Northern Hemisphere is tilted toward the Sun (summer), sunlight arrives at a steep angle and concentrates energy per unit area. When tilted away (winter), sunlight arrives at a shallow angle and spreads over a larger area. Meanwhile, the Southern Hemisphere experiences the opposite season simultaneously—both at essentially the same distance from the Sun.
+When the Northern Hemisphere is tilted toward the Sun (summer), sunlight arrives at a steep angle and concentrates energy per unit area. When tilted away (winter), sunlight arrives at a shallow angle and spreads over a larger area. Meanwhile, the Southern Hemisphere experiences the opposite season simultaneously — both at essentially the same distance from the Sun.
 
 ### The Geometry of Sunlight at Different Latitudes
 
@@ -85,7 +85,7 @@ The right panel shows Earth from space with current illumination:
 | **Axial Tilt** | Slider | 0° – 90° | 23.5° (Earth) |
 | **Latitude** | Slider | –90° – +90° | 40°N |
 
-**Why 40°N?** This latitude passes through Philadelphia, Denver, Madrid, and Beijing—cities students may recognize. At 40°N, seasons are distinct (not too polar, not too equatorial), making it an ideal teaching reference.
+**Why 40°N?** This latitude passes through Philadelphia, Denver, Madrid, and Beijing — cities students may recognize. At 40°N, seasons are distinct (not too polar, not too equatorial), making it an ideal teaching reference.
 
 Adjust each to explore how seasons change.
 
@@ -165,11 +165,11 @@ Students will understand:
 
 | Misconception | Reality |
 |---------------|---------|
-| "Seasons happen because of Earth's elliptical orbit" | Eccentricity is only 1.7%—too small to explain seasons |
+| "Seasons happen because of Earth's elliptical orbit" | Eccentricity is only 1.7% — too small to explain seasons |
 | "Summer is the same season everywhere on Earth" | Opposite in Northern vs. Southern hemispheres |
 | "Equator is coldest because it's farthest from the Sun" | Equator is warmest year-round due to direct sunlight |
 | "Polar regions are always dark" | Poles have midnight sun (24h daylight) in summer |
-| "Day length doesn't vary near the equator" | True—day/night are always ~12h at the equator |
+| "Day length doesn't vary near the equator" | True — day/night are always ~12h at the equator |
 
 ### Discussion Questions
 

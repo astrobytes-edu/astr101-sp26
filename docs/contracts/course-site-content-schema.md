@@ -107,5 +107,5 @@ They MUST be visually distinct but not interactive.
 
 ---
 
-If you want, I can also draft the **exact `_quarto.yml` skeleton** + **assets/scripts.js** + **SCSS contract stubs** that implement these rules *without ambiguity*—but the docs above should already keep Claude tightly on the rails.
+If you want, I can also draft the **exact `_quarto.yml` skeleton** + **assets/scripts.js** + **SCSS contract stubs** that implement these rules *without ambiguity* — but the docs above should already keep Claude tightly on the rails.
 ```

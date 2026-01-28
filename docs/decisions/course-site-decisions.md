@@ -11,8 +11,8 @@ owner: "Dr. Anna Rosen"
 This file records **binding decisions** for the course site.
 
 **Any change to a LOCKED decision requires:**
-1) a new ADR entry appended here (or separate ADR file), and  
-2) updated acceptance screenshots, and  
+1) a new ADR entry appended here (or separate ADR file), and
+2) updated acceptance screenshots, and
 3) successful CI build across outputs.
 
 ---

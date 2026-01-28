@@ -14,7 +14,7 @@ format:
     number-sections: false
 ---
 
-**Name:** ____________________________  **Date:** ____________________  
+**Name:** ____________________________  **Date:** ____________________
 **Seminar topic / “text” (figure, excerpt, dataset):** _______________________________________
 
 ---
@@ -23,8 +23,8 @@ format:
 
 Write a *specific* claim that you think the “text” supports.
 
-**Claim:**  
-______________________________________________________________________________  
+**Claim:**
+______________________________________________________________________________
 ______________________________________________________________________________
 
 ---
@@ -33,14 +33,14 @@ ______________________________________________________________________________
 
 Point to *specific* evidence: a quoted phrase, a trend, an axis label + value, a feature in a spectrum, etc.
 
-**Evidence #1 (what I’m pointing to):**  
-______________________________________________________________________________  
-**Why it supports my claim (one sentence):**  
+**Evidence #1 (what I’m pointing to):**
+______________________________________________________________________________
+**Why it supports my claim (one sentence):**
 ______________________________________________________________________________
 
-**Evidence #2 (what I’m pointing to):**  
-______________________________________________________________________________  
-**Why it supports my claim (one sentence):**  
+**Evidence #2 (what I’m pointing to):**
+______________________________________________________________________________
+**Why it supports my claim (one sentence):**
 ______________________________________________________________________________
 
 ---
@@ -49,9 +49,9 @@ ______________________________________________________________________________
 
 Name at least one assumption your inference relies on. (Examples: equilibrium, calibration, geometry, negligible dust, “standard candle” validity, selection effects.)
 
-**Assumption:**  
-______________________________________________________________________________  
-**If this assumption fails, my claim would change like this:**  
+**Assumption:**
+______________________________________________________________________________
+**If this assumption fails, my claim would change like this:**
 ______________________________________________________________________________
 
 ---
@@ -60,7 +60,7 @@ ______________________________________________________________________________
 
 Try a confidence estimate *with a reason*.
 
-**I am about** _______% **confident because**  
+**I am about** _______% **confident because**
 ______________________________________________________________________________
 
 ---
@@ -69,11 +69,11 @@ ______________________________________________________________________________
 
 If you had one new observation/measurement you could make, what would best test your claim or distinguish between competing explanations?
 
-**Next measurement:**  
-______________________________________________________________________________  
-**What outcome would strengthen my claim?**  
-______________________________________________________________________________  
-**What outcome would weaken my claim?**  
+**Next measurement:**
+______________________________________________________________________________
+**What outcome would strengthen my claim?**
+______________________________________________________________________________
+**What outcome would weaken my claim?**
 ______________________________________________________________________________
 
 ---
@@ -82,8 +82,8 @@ ______________________________________________________________________________
 
 Ask something that pushes thinking forward (not a yes/no question).
 
-**Question:**  
-______________________________________________________________________________  
+**Question:**
+______________________________________________________________________________
 ______________________________________________________________________________
 
 ---

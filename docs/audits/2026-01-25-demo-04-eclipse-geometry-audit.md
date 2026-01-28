@@ -1,8 +1,8 @@
 # Demo 4 Audit — Eclipse Geometry (`demos/eclipse-geometry/`)
 
-**Date:** 2026-01-25  
-**Auditor:** Codex (GPT-5.2)  
-**Scope:** Demo 4 only (`demos/eclipse-geometry/`). No other demos reviewed in this audit.  
+**Date:** 2026-01-25
+**Auditor:** Codex (GPT-5.2)
+**Scope:** Demo 4 only (`demos/eclipse-geometry/`). No other demos reviewed in this audit.
 
 ---
 
@@ -120,40 +120,40 @@ Assumptions used for this audit:
 
 ### Fix plan (prioritized, sequential; no implementation)
 
-1) **Fix side-view phase geometry mapping (E-01)**  
-   - Minimal change: define side-view x-position so New Moon is left of Earth and Full Moon is right (consistent with top view + Sun position).  
+1) **Fix side-view phase geometry mapping (E-01)**
+   - Minimal change: define side-view x-position so New Moon is left of Earth and Full Moon is right (consistent with top view + Sun position).
    - Verify: click New/Full; confirm `#moon-side` is left/right of Earth as expected and the status phase matches.
 
-2) **Fix shared ChallengeEngine console error (E-04)**  
-   - Minimal change in `demos/_assets/challenge-engine.js`: null-guard `.challenge-feedback` in `_clearFeedback()`.  
+2) **Fix shared ChallengeEngine console error (E-04)**
+   - Minimal change in `demos/_assets/challenge-engine.js`: null-guard `.challenge-feedback` in `_clearFeedback()`.
    - Verify: Challenge Mode → Finish → Close yields no console errors.
 
-3) **Add Challenge modal focus trap (E-05)**  
-   - Minimal change: trap Tab within dialog; restore focus to `#btn-challenges` on close.  
+3) **Add Challenge modal focus trap (E-05)**
+   - Minimal change: trap Tab within dialog; restore focus to `#btn-challenges` on close.
    - Verify: with dialog open, Tab never focuses underlying page controls.
 
-4) **Normalize angles for side-view mapping (E-02)**  
-   - Minimal change: use a normalized angle before mapping to x; keep moon within viewBox during animateMonth/animateYear.  
+4) **Normalize angles for side-view mapping (E-02)**
+   - Minimal change: use a normalized angle before mapping to x; keep moon within viewBox during animateMonth/animateYear.
    - Verify: during animations, `#moon-side` stays within visible bounds (no negative `cx`).
 
-5) **Decide and implement/remove eclipse-zone overlay (E-03)**  
-   - Minimal change: either remove the dead SVG element or render a simple “near-node window” overlay matching the current thresholds.  
+5) **Decide and implement/remove eclipse-zone overlay (E-03)**
+   - Minimal change: either remove the dead SVG element or render a simple “near-node window” overlay matching the current thresholds.
    - Verify: eclipse window is discoverable and correctly tied to the current model.
 
-6) **Add keyboard-accessible Moon angle control (E-06)**  
-   - Minimal change: add a slider or make the Moon handle a true `role=\"slider\"` with arrow key support.  
+6) **Add keyboard-accessible Moon angle control (E-06)**
+   - Minimal change: add a slider or make the Moon handle a true `role=\"slider\"` with arrow key support.
    - Verify: keyboard-only user can set New/Full and move near nodes without a mouse.
 
-7) **Unify node regression across animations (E-07)**  
-   - Minimal change: compute node regression from elapsed time with the same sign convention in both month/year animations.  
+7) **Unify node regression across animations (E-07)**
+   - Minimal change: compute node regression from elapsed time with the same sign convention in both month/year animations.
    - Verify: month and year animations move nodes in the same direction and approximately consistent rates (scaled by simulated time).
 
-8) **Optional: reset stat text for coherence (E-08)**  
-   - Minimal change: set stat fields to 0 (or call `updateStats()`) on reset.  
+8) **Optional: reset stat text for coherence (E-08)**
+   - Minimal change: set stat fields to 0 (or call `updateStats()`) on reset.
    - Verify: after reset, hidden stats state is internally consistent when shown again.
 
-9) **Sync Challenge toggle button label with engine close (E-09)**  
-   - Minimal change: restore “Challenge Mode” label when the engine closes via its own UI.  
+9) **Sync Challenge toggle button label with engine close (E-09)**
+   - Minimal change: restore “Challenge Mode” label when the engine closes via its own UI.
    - Verify: after × / Close, the button label matches actual inactive state.
 
 ---

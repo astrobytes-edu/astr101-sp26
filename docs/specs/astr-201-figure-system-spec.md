@@ -1,6 +1,6 @@
 # ASTR201 Figure System Spec
 
-*A design/spec contract for how figures are stored, referenced, rendered, attributed, and audited across ASTR 101 materials.*  
+*A design/spec contract for how figures are stored, referenced, rendered, attributed, and audited across ASTR 101 materials.*
 Version: v1.0 • Status: Proposed → Active upon adoption
 
 ---
@@ -168,7 +168,7 @@ If `anchor` is present, the `<figure>` must include an `id` so links and crossre
 ## 8) Shortcodes
 
 ### 8.1 `fig` (render a figure by id)
-Input: `figure id` (key in `figures.yml`)  
+Input: `figure id` (key in `figures.yml`)
 Output: figure element (asset/include) + caption + attribution
 
 **Usage**
@@ -177,7 +177,7 @@ Output: figure element (asset/include) + caption + attribution
 ```
 
 ### 8.2 `figref` (reference link)
-Input: `figure id`  
+Input: `figure id`
 Output: a stable link to the figure anchor
 
 **Usage**
@@ -186,7 +186,7 @@ See {{< figref kepler_orbits_overview >}}.
 ```
 
 ### 8.3 `figshow` (one-call: title + figure)
-Input: `figure id`  
+Input: `figure id`
 Output: title (optional) + `fig`
 
 **Usage**

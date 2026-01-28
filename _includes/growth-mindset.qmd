@@ -1,7 +1,7 @@
 ::: {.callout-tip}
 ## Growth Mindset
 
-A **growth mindset** is the belief that intelligence, abilities, and talents can be developed through effort and persistence—not fixed traits you're born with.
+A **growth mindset** is the belief that intelligence, abilities, and talents can be developed through effort and persistence — not fixed traits you're born with.
 
 In {{< meta params.course-code >}}, you'll encounter challenging concepts that may initially seem overwhelming. **This is normal and expected: it means you're learning.**
 

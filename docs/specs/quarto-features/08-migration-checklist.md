@@ -6,7 +6,7 @@
 
 ## Overview
 
-This checklist walks you through adding all the Quarto features documented in this spec series to an existing course website. Follow it in order—later steps depend on earlier ones.
+This checklist walks you through adding all the Quarto features documented in this spec series to an existing course website. Follow it in order — later steps depend on earlier ones.
 
 **Time estimate:** 2-4 hours for a typical course site
 

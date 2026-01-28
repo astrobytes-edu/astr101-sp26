@@ -160,7 +160,7 @@ These interactive demos let you explore fundamental astronomy concepts hands-on.
 <div class="demo-info">
 <h3 class="demo-title">Seasons</h3>
 <p class="demo-description">
-Why does axial tilt—not distance from the Sun—cause seasons? Explore with different planets and watch a year unfold.
+Why does axial tilt — not distance from the Sun — cause seasons? Explore with different planets and watch a year unfold.
 </p>
 <a href="seasons/" class="demo-link">Open Demo →</a>
 <div class="demo-concepts">

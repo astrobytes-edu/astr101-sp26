@@ -33,7 +33,7 @@ For each quantity, state whether it is *directly measured* or *inferred*:
 
 The statement conflates *measurement* with *inference*. We don't "see" hydrogen directly.
 
-**What we actually measure:** The Sun's spectrum—brightness as a function of wavelength. When we spread sunlight through a spectrograph, we observe dark absorption lines at specific wavelengths.
+**What we actually measure:** The Sun's spectrum — brightness as a function of wavelength. When we spread sunlight through a spectrograph, we observe dark absorption lines at specific wavelengths.
 
 **How we infer composition:** Those absorption lines appear at wavelengths that match hydrogen's atomic fingerprint (e.g., the Balmer series at 656 nm, 486 nm, etc.). The physics of atomic energy levels tells us that only hydrogen atoms can absorb at those exact wavelengths.
 
@@ -47,7 +47,7 @@ The statement conflates *measurement* with *inference*. We don't "see" hydrogen 
 
 **Solution:**
 
-**The problem:** Brightness alone cannot tell us distance. A faint nearby candle and a brilliant distant lighthouse can appear equally bright. To determine distance from brightness, we need to know the object's *intrinsic luminosity*—how much light it actually emits.
+**The problem:** Brightness alone cannot tell us distance. A faint nearby candle and a brilliant distant lighthouse can appear equally bright. To determine distance from brightness, we need to know the object's *intrinsic luminosity* — how much light it actually emits.
 
 **What standard candles provide:** Objects whose luminosity we can determine independently. For example:
 - Cepheid variables: pulsation period tells us luminosity
@@ -67,7 +67,7 @@ The statement conflates *measurement* with *inference*. We don't "see" hydrogen 
 
 The explosion occurred **2.5 million years ago**.
 
-**Reasoning:** A light-year is the distance light travels in one year. If Andromeda is 2.5 million light-years away, its light takes 2.5 million years to reach us. When we observe the supernova "tonight," we're seeing light that left Andromeda 2.5 million years ago—before *Homo sapiens* existed.
+**Reasoning:** A light-year is the distance light travels in one year. If Andromeda is 2.5 million light-years away, its light takes 2.5 million years to reach us. When we observe the supernova "tonight," we're seeing light that left Andromeda 2.5 million years ago — before *Homo sapiens* existed.
 
 **Key insight:** Looking far away = looking back in time. The supernova we see "now" is ancient history for anyone in Andromeda.
 
@@ -83,7 +83,7 @@ The explosion occurred **2.5 million years ago**.
 
 **What can be inferred:** The redshift of the absorption lines indicates the star is **moving away from us** (Doppler effect). The amount of shift tells us the velocity. If the shift changes periodically, we might infer an orbiting companion (planet or another star).
 
-**Key insight:** Wavelength measurements reveal motion toward/away from us through the Doppler shift—something position measurements cannot easily detect.
+**Key insight:** Wavelength measurements reveal motion toward/away from us through the Doppler shift — something position measurements cannot easily detect.
 
 ---
 
@@ -192,7 +192,7 @@ $$\frac{B_\text{final}}{B_\text{initial}} = \left(\frac{d_\text{initial}}{d_\tex
 
 **Answer:** The light left the galaxy **50 million years ago**.
 
-**Context:** When we observe this galaxy today, we're seeing it as it was during the Eocene epoch on Earth—before humans, before apes, when early whales were just returning to the oceans. The galaxy we see "now" may look very different today.
+**Context:** When we observe this galaxy today, we're seeing it as it was during the Eocene epoch on Earth — before humans, before apes, when early whales were just returning to the oceans. The galaxy we see "now" may look very different today.
 
 ---
 
@@ -204,7 +204,7 @@ $$\frac{B_\text{final}}{B_\text{initial}} = \left(\frac{d_\text{initial}}{d_\tex
 
 **Sample Solution:**
 
-"Every beautiful space image you've seen is actually scientific data. Astronomers can only measure four things directly—how bright something is, where it appears, what colors of light it emits, and how those change over time. Everything else we claim to know about stars, galaxies, and the universe (their temperatures, distances, ages, compositions) is figured out by combining those measurements with the laws of physics."
+"Every beautiful space image you've seen is actually scientific data. Astronomers can only measure four things directly — how bright something is, where it appears, what colors of light it emits, and how those change over time. Everything else we claim to know about stars, galaxies, and the universe (their temperatures, distances, ages, compositions) is figured out by combining those measurements with the laws of physics."
 
 **Key elements a good answer should include:**
 - Images = data, not just pretty pictures
@@ -228,7 +228,7 @@ $$\frac{B_\text{final}}{B_\text{initial}} = \left(\frac{d_\text{initial}}{d_\tex
 - Stars: thermal radiation from hot surfaces → visible light
 - Cold gas: atomic transition in neutral hydrogen → radio waves
 
-**The key insight:** Same object, different wavelength = different physical component revealed. This is why astronomers need telescopes spanning the entire electromagnetic spectrum—each wavelength probes different physics.
+**The key insight:** Same object, different wavelength = different physical component revealed. This is why astronomers need telescopes spanning the entire electromagnetic spectrum — each wavelength probes different physics.
 
 ---
 
@@ -240,20 +240,20 @@ $$\frac{B_\text{final}}{B_\text{initial}} = \left(\frac{d_\text{initial}}{d_\tex
 
 **One compelling piece of evidence: Galaxy rotation curves**
 
-**What we measure:** The velocities of stars and gas at different distances from a galaxy's center, using the Doppler effect. When we spread the light into a spectrum, absorption lines appear shifted—redshifted if moving away, blueshifted if approaching.
+**What we measure:** The velocities of stars and gas at different distances from a galaxy's center, using the Doppler effect. When we spread the light into a spectrum, absorption lines appear shifted — redshifted if moving away, blueshifted if approaching.
 
 **What we find:** Stars in the outer regions of galaxies orbit at roughly the same speed as stars closer to the center. They don't slow down with distance.
 
-**What physics predicts without dark matter:** If most mass is concentrated in the visible center (where we see stars), orbital speed should decrease with distance—just like planets in our solar system (Mercury orbits faster than Neptune).
+**What physics predicts without dark matter:** If most mass is concentrated in the visible center (where we see stars), orbital speed should decrease with distance — just like planets in our solar system (Mercury orbits faster than Neptune).
 
-**The inference:** For outer stars to orbit so fast, there must be much more mass than we can see—mass extending far beyond the visible galaxy. We call this invisible mass "dark matter."
+**The inference:** For outer stars to orbit so fast, there must be much more mass than we can see — mass extending far beyond the visible galaxy. We call this invisible mass "dark matter."
 
 **The inference chain:**
 - Doppler shifts → stellar velocities (measurement)
 - Newton's gravity → mass required to explain velocities (model)
 - Mass required >> visible mass → dark matter exists (inference)
 
-**Key point:** We detect dark matter through its *gravitational effects* on things we can see—not by seeing dark matter itself.
+**Key point:** We detect dark matter through its *gravitational effects* on things we can see — not by seeing dark matter itself.
 
 ---
 
@@ -273,7 +273,7 @@ Newton's laws of gravity and orbital mechanics. If a star has an unseen companio
 
 **(c) What we infer:**
 
-The star has an **unseen companion**—most likely a planet or a dim stellar companion. From the period and amplitude of the wobble, we can infer:
+The star has an **unseen companion** — most likely a planet or a dim stellar companion. From the period and amplitude of the wobble, we can infer:
 - The orbital period of the companion
 - A lower limit on the companion's mass
 - The shape (eccentricity) of the orbit

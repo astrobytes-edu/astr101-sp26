@@ -38,7 +38,7 @@ title: "Lecture 2: Tools of the Trade"
 subtitle: "Math + Cosmic Scales Survival Kit"
 author: "Dr. Anna Rosen"
 date: "2026-01-23"
-description: "ASTR 101 math essentials: scientific notation, SI prefixes, units & conversions, ratio method, and rate problems—framed through cosmic scales."
+description: "ASTR 101 math essentials: scientific notation, SI prefixes, units & conversions, ratio method, and rate problems — framed through cosmic scales."
 draft: true
 format:
   revealjs:
@@ -65,7 +65,7 @@ format:
     quiz:
       shuffleOptions: true
       defaultCorrect: "✓ Correct!"
-      defaultIncorrect: "✗ Not quite—let's fix it."
+      defaultIncorrect: "✗ Not quite — let's fix it."
 
 revealjs-plugins:
   - pointer
@@ -215,7 +215,7 @@ The nearest star? Another grapefruit **in Hawaii**.
 
 ::: {.notes}
 0–1 min. Pause after the first line. Let them picture it. Then reveal the fragments.
-This establishes *why* we need powers of ten—ordinary language can't hold these scales.
+This establishes *why* we need powers of ten — ordinary language can't hold these scales.
 :::
 ```
 
@@ -428,7 +428,7 @@ Using $V \propto R^3$, what is $V_\odot / V_\oplus$?
 
 ::: {.notes}
 1-2 min. $109^3 \approx 1.3 \times 10^6$.
-Key insight: volume grows as the *cube* of radius—much faster than area or length.
+Key insight: volume grows as the *cube* of radius — much faster than area or length.
 :::
 ```
 
@@ -559,7 +559,7 @@ After line 143 (after the table callout), add:
 ```markdown
 ::: {.callout-warning appearance="minimal"}
 ### Common trap
-A **light-year** is a *distance*, not a time—even though "year" is in the name.
+A **light-year** is a *distance*, not a time — even though "year" is in the name.
 It's how far light travels in one year: about 9.5 trillion km.
 :::
 ```

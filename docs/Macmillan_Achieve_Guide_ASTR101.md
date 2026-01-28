@@ -44,7 +44,7 @@
 - Questions adapt based on correct/incorrect responses
 - Harder questions appear as students answer correctly
 - They can see hints (reduces point value) or skip and move on
-- E-book is integrated into every question—no penalty for accessing it
+- E-book is integrated into every question — no penalty for accessing it
 - After completion, students see a **Personalized Study Plan** showing areas for improvement
 
 > **Pro tip**: Research shows students who complete 80%+ of LearningCurve activities score ~10% higher on exams.
@@ -144,7 +144,7 @@ Since you're using Canvas for announcements and gradebook:
 
 ### Grade Sync Options
 - Grades can sync automatically to Canvas gradebook
-- New option: **Post-Due Date Reporting** (grades only sync after due date)—select this in settings if you want to prevent students from seeing grades before deadline
+- New option: **Post-Due Date Reporting** (grades only sync after due date) — select this in settings if you want to prevent students from seeing grades before deadline
 
 ---
 
@@ -156,7 +156,7 @@ Since you're using Canvas for announcements and gradebook:
 |---------|-------------|
 | **Side Panel** | Manage assignment details, student notes, and due date extensions directly within the gradebook |
 | **Completion Timestamps** | See exactly when students finish activities (including "Target Score Reached" for LearningCurve) |
-| **Activity Launch Log Export** | Download logs showing when students initiated each activity—useful for academic integrity questions |
+| **Activity Launch Log Export** | Download logs showing when students initiated each activity — useful for academic integrity questions |
 
 ### Instructor Resources
 Available in Achieve for your textbook (look for **Instructor Resources** tab):

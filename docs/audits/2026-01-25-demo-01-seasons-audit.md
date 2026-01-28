@@ -1,8 +1,8 @@
 # Demo 1 Audit — Seasons (`demos/seasons/`)
 
-**Date:** 2026-01-25  
-**Auditor:** Codex (GPT-5.2)  
-**Scope:** Demo 1 only (`demos/seasons/`). No other demos reviewed in this audit.  
+**Date:** 2026-01-25
+**Auditor:** Codex (GPT-5.2)
+**Scope:** Demo 1 only (`demos/seasons/`). No other demos reviewed in this audit.
 
 ---
 
@@ -124,34 +124,34 @@ If any of the “unknown/underspecified” assumptions are wrong, the fix plan s
 
 ### Fix plan (prioritized, sequential; no implementation)
 
-1) **Fix day indexing + slider range (S-01)**  
-   - Minimal change: choose 1-based (1–365) *or* keep 0–364; make it consistent everywhere (slider, presets, declination anchor, date formatting).  
+1) **Fix day indexing + slider range (S-01)**
+   - Minimal change: choose 1-based (1–365) *or* keep 0–364; make it consistent everywhere (slider, presets, declination anchor, date formatting).
    - Verify: set to min and max; confirm displayed dates are Jan 1 and Dec 31; confirm “March Equinox” preset shows March 21 (or explicitly documented alternative).
 
-2) **Fix Spacebar keyboard semantics (S-05)**  
-   - Minimal change: don’t intercept Space unless focus is on non-interactive background.  
+2) **Fix Spacebar keyboard semantics (S-05)**
+   - Minimal change: don’t intercept Space unless focus is on non-interactive background.
    - Verify: focus each button and press Space; confirm it activates that button and does not start animation. Confirm Space still toggles animation when focus is not on a control (if keeping that shortcut).
 
-3) **Neutralize seasons when effective tilt ~0° (S-02)**  
-   - Minimal change: when `effectiveObliquityDegrees(axialTilt)` is below a small threshold, set season readouts to “No seasons” (and adjust styling).  
+3) **Neutralize seasons when effective tilt ~0° (S-02)**
+   - Minimal change: when `effectiveObliquityDegrees(axialTilt)` is below a small threshold, set season readouts to “No seasons” (and adjust styling).
    - Verify: tilt 0° and 180° at multiple days → season readouts remain “No seasons”; day length + altitude still update smoothly.
 
-4) **Resolve orbital-view coherence (S-03)**  
-   - Minimal change option A (schematic): remove perihelion/aphelion markers and align orbit labels to the model’s “season quadrants”.  
-   - Minimal change option B (truthful): keep perihelion/aphelion anchor and move equinox/solstice markers/labels to their true longitudes for the chosen calendar anchor.  
+4) **Resolve orbital-view coherence (S-03)**
+   - Minimal change option A (schematic): remove perihelion/aphelion markers and align orbit labels to the model’s “season quadrants”.
+   - Minimal change option B (truthful): keep perihelion/aphelion anchor and move equinox/solstice markers/labels to their true longitudes for the chosen calendar anchor.
    - Verify: at each preset day, Earth marker visually aligns with the corresponding label; distance marker remains consistent with position.
 
-5) **Clarify/repair “Planet Presets” scope (S-04)**  
-   - Minimal change option A: rename UI copy to “Tilt presets” and keep Earth-only calendar/distance.  
-   - Minimal change option B: make distance + orbit scale planet-aware and replace “Date” with “Orbital position” (fraction of orbit / solar longitude).  
+5) **Clarify/repair “Planet Presets” scope (S-04)**
+   - Minimal change option A: rename UI copy to “Tilt presets” and keep Earth-only calendar/distance.
+   - Minimal change option B: make distance + orbit scale planet-aware and replace “Date” with “Orbital position” (fraction of orbit / solar longitude).
    - Verify: switching presets cannot produce “Earth-Sun Distance” while planet label reads “Mars” (either label changes or feature is removed).
 
-6) **Decide reset scope (S-06)**  
-   - Minimal: either rename to “Reset sliders” (if overlays persist by design) or reset overlays too.  
+6) **Decide reset scope (S-06)**
+   - Minimal: either rename to “Reset sliders” (if overlays persist by design) or reset overlays too.
    - Verify: after reset, UI state matches the chosen label’s promise.
 
-7) **Align affordances with behavior (S-07)**  
-   - Minimal: remove drag claims + cursor styling, *or* add drag support.  
+7) **Align affordances with behavior (S-07)**
+   - Minimal: remove drag claims + cursor styling, *or* add drag support.
    - Verify: user can discover how to change date without reading external docs; no misleading cursor.
 
 ---

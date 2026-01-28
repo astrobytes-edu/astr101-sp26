@@ -100,7 +100,7 @@ Quarto profiles let you **override any configuration** based on which profile yo
 └───────────────────────────────┘     └───────────────────────────────┘
 ```
 
-**The key insight:** Profile files only contain **overrides**. They don't repeat the base configuration—they just change specific settings.
+**The key insight:** Profile files only contain **overrides**. They don't repeat the base configuration — they just change specific settings.
 
 ---
 

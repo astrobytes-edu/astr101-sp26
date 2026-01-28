@@ -24,7 +24,7 @@ Before reading further, predict: what color will a 10,000 K star appear?
 ## Content Callouts
 
 ::: {.callout-key-insight}
-**Physics tells you what relationships are allowed.** The inverse-square law isn't arbitrary—it's geometry.
+**Physics tells you what relationships are allowed.** The inverse-square law isn't arbitrary — it's geometry.
 :::
 
 ::: {.callout-worked-example}
@@ -60,7 +60,7 @@ Henrietta Leavitt discovered the period-luminosity relation for Cepheids in 1912
 :::
 
 ::: {.callout-why-this-matters}
-Distance measurements aren't just bookkeeping—they give us the age of the universe. Without Cepheids and supernovae, we wouldn't know we live in a 13.8-billion-year-old cosmos.
+Distance measurements aren't just bookkeeping — they give us the age of the universe. Without Cepheids and supernovae, we wouldn't know we live in a 13.8-billion-year-old cosmos.
 :::
 
 ## Metacognitive Callouts

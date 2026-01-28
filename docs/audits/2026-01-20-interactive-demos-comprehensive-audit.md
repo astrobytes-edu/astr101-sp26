@@ -217,7 +217,7 @@ Where φ is phase angle (0° = Full, 180° = New)
 - Real-time phase name and illumination updates
 
 **Misconception-Busting Elements:**
-- Instruction text explicitly states: "Phases show *how much of that lit half faces Earth*—it's geometry, not shadow"
+- Instruction text explicitly states: "Phases show *how much of that lit half faces Earth* — it's geometry, not shadow"
 - Orbital view shows Earth's shadow pointing *away* from the Sun
 - Earthshine visualization on dark limb reinforces that dark side isn't shadowed
 

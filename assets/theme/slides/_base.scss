@@ -33,7 +33,7 @@
 .reveal .quarto-title-block .subtitle {
   font-size: 1.3em;
   font-weight: 500;
-  color: #4ECDC4; // cosmic-teal
+  color: $link-hover-color; // darker teal (brand token)
   margin-top: 0.3em;
   text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
 }

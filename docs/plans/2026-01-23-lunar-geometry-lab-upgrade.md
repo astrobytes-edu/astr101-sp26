@@ -158,8 +158,7 @@ function showShadowInsight() {
   popup.innerHTML = `
     <div class="insight-popup-content">
       <strong>Key Observation:</strong> Earth's shadow always points
-      <em>away</em> from the Sun. The Moon is almost never in the shadow —
-      that's why phases are NOT caused by Earth's shadow!
+      <em>away</em> from the Sun. The Moon is almost never in the shadow — that's why phases are NOT caused by Earth's shadow!
       <button class="insight-close" aria-label="Close">Got it!</button>
     </div>
   `;

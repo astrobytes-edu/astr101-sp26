@@ -21,7 +21,7 @@ prerequisites: Lecture 3 sky geometry; basic comfort with angles and spatial rea
 ::: {.callout-important #the-big-idea}
 ## The Big Idea
 
-Moon phases and eclipses are geometry problems, not mysteries. Once you see them as different viewing angles of illuminated spheres, you can predict what the Moon will look like—and when rare alignments will produce eclipses.
+Moon phases and eclipses are geometry problems, not mysteries. Once you see them as different viewing angles of illuminated spheres, you can predict what the Moon will look like — and when rare alignments will produce eclipses.
 :::
 
 ::: {.callout-important title="How to Use This Reading (Read → Revisit → Reuse)" collapse="true"}
@@ -70,7 +70,7 @@ Moon phases are caused by:
 :::
 
 ::: {.callout-tip title="Solution" collapse="true"}
-**C) The geometry of viewing the Moon's lit half from different angles.** The Sun always illuminates half of the Moon (the half facing the Sun). As the Moon orbits Earth, we see different portions of this lit half—that's what creates the phases. Earth's shadow is irrelevant except during the rare occasions of a lunar eclipse.
+**C) The geometry of viewing the Moon's lit half from different angles.** The Sun always illuminates half of the Moon (the half facing the Sun). As the Moon orbits Earth, we see different portions of this lit half — that's what creates the phases. Earth's shadow is irrelevant except during the rare occasions of a lunar eclipse.
 :::
 
 ---
@@ -89,6 +89,33 @@ The Moon doesn't produce its own light. It shines by reflecting sunlight. At any
 
 ::: {.column-margin}
 **Synodic month:** The time from new moon to new moon (one full cycle of phases), about 29.5 days.
+:::
+
+::: {.callout-note appearance="minimal"}
+### Main takeaway (do **not** memorize the details)
+
+Phases are about the Moon’s alignment with the **Sun-direction**, not its position relative to the background stars. Because Earth moves around the Sun while the Moon orbits Earth, the phase cycle (new → new) takes a little **longer** than one Moon orbit.
+:::
+
+::: {.callout-tip title="If you want the numbers (optional)" collapse="true"}
+There are two useful “months”:
+
+- **Sidereal month**: the Moon’s orbital period relative to the distant stars, about **27.3 days**
+- **Synodic month**: the phase cycle (new moon → new moon), about **29.5 days**
+
+Here’s the geometric reason the synodic month is longer:
+
+Earth moves around the Sun by about **1° per day**, so during ~27.3 days Earth moves about **27°** along its orbit. That changes the Sun-direction. To get back to **new moon** (Moon lined up with the Sun again), the Moon has to go a little **farther** than 360° around Earth.
+
+The Moon moves about \(360^\circ/27.3\text{ d}\approx 13.2^\circ\)/day, so catching up ~27° takes about \(27^\circ/(13.2^\circ/\text{day})\approx 2.1\) days.
+
+So \(27.3\text{ d} + 2.1\text{ d} \approx 29.4\text{ d}\), which is why the synodic month is about **29.5 days**.
+
+Compact form (same idea): if \(P_{\text{syn}}\) is the synodic month, \(P_{\text{sid}}\) is the sidereal month, and \(P_{\text{year}}\) is 1 year, then
+\[
+\frac{1}{P_{\text{syn}}}=\frac{1}{P_{\text{sid}}}-\frac{1}{P_{\text{year}}}.
+\]
+You do not need to memorize this equation — use it only if you like it as a clean “motion accounting” statement.
 :::
 
 {{< fig moon-half-always-lit >}}
@@ -117,7 +144,7 @@ During a full moon, the portion of the Moon that is illuminated by the Sun is:
 :::
 
 ::: {.callout-tip title="Solution" collapse="true"}
-**B) 50% (half the Moon).** The Sun ALWAYS illuminates exactly half of any sphere. During a full moon, we see essentially all of that lit half because the Moon is opposite the Sun from our perspective. The amount of the Moon that's lit by the Sun (50%) never changes—only how much of that lit half we can see from Earth changes.
+**B) 50% (half the Moon).** The Sun ALWAYS illuminates exactly half of any sphere. During a full moon, we see essentially all of that lit half because the Moon is opposite the Sun from our perspective. The amount of the Moon that's lit by the Sun (50%) never changes — only how much of that lit half we can see from Earth changes.
 :::
 
 ::: {.callout-note title="✏️ Sketch It: Phases Geometry" collapse="true"}
@@ -165,7 +192,7 @@ Write your prediction here before continuing: _______________
 
 ::: {.callout-tip title="What You Should Have Found" collapse="true"}
 
-Earth's shadow is nowhere near the Moon during first quarter (or crescent, or gibbous phases). The shadow points directly away from the Sun—and during first quarter, the Moon is 90° away from that shadow line. 
+Earth's shadow is nowhere near the Moon during first quarter (or crescent, or gibbous phases). The shadow points directly away from the Sun — and during first quarter, the Moon is 90° away from that shadow line.
 
 **Claim:** Phases have nothing to do with Earth's shadow.
 
@@ -208,7 +235,7 @@ The shadow only matters during the rare alignment of a lunar eclipse.
 
 **Claim:** The Moon's position in its orbit completely determines its phase.
 
-**Evidence:** As you drag the Moon in the demo, the Phase readout changes predictably with position. The angular separation from the Sun (as seen from Earth) directly controls what phase we see—no other factors needed.
+**Evidence:** As you drag the Moon in the demo, the Phase readout changes predictably with position. The angular separation from the Sun (as seen from Earth) directly controls what phase we see — no other factors needed.
 :::
 
 ---
@@ -225,7 +252,7 @@ The shadow only matters during the rare alignment of a lunar eclipse.
 
 For each challenge, position the Moon correctly, then check your answer.
 
-**Why this matters:** If you can *create* a phase by positioning the Moon, you understand the geometry. You're not memorizing—you're reasoning.
+**Why this matters:** If you can *create* a phase by positioning the Moon, you understand the geometry. You're not memorizing — you're reasoning.
 
 ::: {.callout-note title="Hints If You're Stuck" collapse="true"}
 
@@ -248,7 +275,7 @@ To go from new moon to full moon, the Moon must:
 :::
 
 ::: {.callout-tip title="Solution" collapse="true"}
-**B) Move about 180° around its orbit.** At new moon, the Moon is on the sunward side of Earth. At full moon, it's on the anti-sunward side—exactly opposite. That's a 180° journey around the orbit. Since the full lunar cycle takes about 29.5 days, this journey from new to full takes about 14.75 days (approximately two weeks).
+**B) Move about 180° around its orbit.** At new moon, the Moon is on the sunward side of Earth. At full moon, it's on the anti-sunward side — exactly opposite. That's a 180° journey around the orbit. Since the full lunar cycle takes about 29.5 days, this journey from new to full takes about 14.75 days (approximately two weeks).
 :::
 
 ---
@@ -304,7 +331,7 @@ A "waxing gibbous" moon is:
 :::
 
 ::: {.callout-tip title="Solution" collapse="true"}
-**B) More than half illuminated and getting brighter.** "Waxing" means increasing illumination (heading toward full moon). "Gibbous" means more than half lit (between quarter and full). So waxing gibbous is after first quarter, before full moon—more than 50% illuminated and growing.
+**B) More than half illuminated and getting brighter.** "Waxing" means increasing illumination (heading toward full moon). "Gibbous" means more than half lit (between quarter and full). So waxing gibbous is after first quarter, before full moon — more than 50% illuminated and growing.
 :::
 ---
 
@@ -336,7 +363,7 @@ You see a crescent Moon low in the western sky just after sunset. Is this moon w
 :::
 
 ::: {.callout-tip title="Solution" collapse="true"}
-**A) Waxing (getting brighter over coming days).** A crescent Moon visible in the evening (after sunset, in the west) is a waxing crescent—moving from new toward first quarter. A waning crescent would be visible in the pre-dawn eastern sky, not the evening western sky. Position and time together tell you the phase trajectory.
+**A) Waxing (getting brighter over coming days).** A crescent Moon visible in the evening (after sunset, in the west) is a waxing crescent — moving from new toward first quarter. A waning crescent would be visible in the pre-dawn eastern sky, not the evening western sky. Position and time together tell you the phase trajectory.
 :::
 
 ::: {.callout-check-yourself title="Check Yourself 6 — Moon Highest at Midnight"}
@@ -349,7 +376,7 @@ It's midnight, and the Moon is **highest in the sky**. What phase is it?
 :::
 
 ::: {.callout-tip title="Solution" collapse="true"}
-**C) Full Moon.** The full moon is opposite the Sun. At midnight, the Sun is on the opposite side of Earth (below your feet, roughly). The Moon being highest in the sky at midnight means it's in the anti-sunward direction—which is the full moon position. (First quarter is highest in the early evening; third quarter is highest in the early morning.)
+**C) Full Moon.** The full moon is opposite the Sun. At midnight, the Sun is on the opposite side of Earth (below your feet, roughly). The Moon being highest in the sky at midnight means it's in the anti-sunward direction — which is the full moon position. (First quarter is highest in the early evening; third quarter is highest in the early morning.)
 :::
 
 ---
@@ -381,7 +408,7 @@ During a solar eclipse, the Moon is at what phase?
 :::
 
 ::: {.callout-tip title="Solution" collapse="true"}
-**B) New Moon.** For the Moon's shadow to reach Earth, the Moon must be between Earth and the Sun—which is the new moon position. Solar eclipses can only occur at new moon. (Lunar eclipses can only occur at full moon, when the Moon is opposite the Sun and can pass through Earth's shadow.)
+**B) New Moon.** For the Moon's shadow to reach Earth, the Moon must be between Earth and the Sun — which is the new moon position. Solar eclipses can only occur at new moon. (Lunar eclipses can only occur at full moon, when the Moon is opposite the Sun and can pass through Earth's shadow.)
 :::
 
 ---
@@ -394,14 +421,14 @@ The answer is the **tilt of the Moon's orbit**.
 
 The Moon's orbit around Earth is tilted about **5.1°** relative to the ecliptic (the plane of Earth's orbit around the Sun). This might sound small, but it's enough to change everything.
 
-Because of this tilt, at most new moons, the Moon passes **above or below** the Sun as seen from Earth—no solar eclipse. At most full moons, the Moon passes **above or below** Earth's shadow—no lunar eclipse.
+Because of this tilt, at most new moons, the Moon passes **above or below** the Sun as seen from Earth — no solar eclipse. At most full moons, the Moon passes **above or below** Earth's shadow — no lunar eclipse.
 
 {{< fig eclipses-5deg-difference >}}
 
 {{< fig eclipses-nodes-why-not-monthly >}}
 
 ::: {.callout-note title="✏️ Sketch It: Eclipse Geometry" collapse="true"}
-Draw a horizontal line across your page—this is the **ecliptic plane** (Earth's orbital plane around the Sun).
+Draw a horizontal line across your page — this is the **ecliptic plane** (Earth's orbital plane around the Sun).
 
 Now draw the Moon's orbit as a tilted ellipse, crossing the ecliptic at two points. Label these crossing points as **nodes**.
 
@@ -420,7 +447,7 @@ Eclipses don't occur every month because:
 :::
 
 ::: {.callout-tip title="Solution" collapse="true"}
-**B) The Moon's orbit is tilted relative to Earth's orbital plane.** The ~5° tilt means the Moon usually passes above or below the direct line between Sun and Earth (at new moon) or above/below Earth's shadow (at full moon). Only when the alignment is nearly perfect—which requires the Moon to be near a node—can eclipses occur.
+**B) The Moon's orbit is tilted relative to Earth's orbital plane.** The ~5° tilt means the Moon usually passes above or below the direct line between Sun and Earth (at new moon) or above/below Earth's shadow (at full moon). Only when the alignment is nearly perfect — which requires the Moon to be near a node — can eclipses occur.
 :::
 
 ---
@@ -489,7 +516,7 @@ With 0° tilt, you get an eclipse every time:
 With realistic tilt (5.1°):
 - At most orbital positions, the Moon is above or below the ecliptic plane by 1–5°
 - Eclipse status shows **NO ECLIPSE** even at new/full moon phases
-- Eclipses only become possible when the Moon is near a **node**—where its orbit crosses the ecliptic plane
+- Eclipses only become possible when the Moon is near a **node** — where its orbit crosses the ecliptic plane
 
 **Claim:** Most new/full moons don't produce eclipses because the Moon is above or below the ecliptic plane.
 
@@ -574,7 +601,7 @@ The **nodes** are the two points where the Moon's orbit crosses the ecliptic pla
 
 {{< fig eclipses-nodes-gateways >}}
 
-The nodes aren't fixed—they slowly drift (regress) around the ecliptic with a period of about **18.6 years** (the **lunar nodal cycle**). This means the eclipse seasons slowly shift through the calendar year.
+The nodes aren't fixed — they slowly drift (regress) around the ecliptic with a period of about **18.6 years** (the **lunar nodal cycle**). This means the eclipse seasons slowly shift through the calendar year.
 
 ::: {.callout-note title="Optional: The Saros Cycle" collapse="true"}
 
@@ -606,7 +633,7 @@ If a solar eclipse occurs on March 15, when might the next lunar eclipse occur?
 :::
 
 ::: {.callout-tip title="Solution" collapse="true"}
-**C) The next full moon AND the full moon 6 months later are both possibilities.** If a solar eclipse occurred (Sun was near a node at new moon), then the same eclipse season could produce a lunar eclipse about 2 weeks later at the following full moon—the Sun will still be near the node. Additionally, about 6 months later, the Sun will be near the other node, creating another eclipse season with lunar eclipse potential.
+**C) The next full moon AND the full moon 6 months later are both possibilities.** If a solar eclipse occurred (Sun was near a node at new moon), then the same eclipse season could produce a lunar eclipse about 2 weeks later at the following full moon — the Sun will still be near the node. Additionally, about 6 months later, the Sun will be near the other node, creating another eclipse season with lunar eclipse potential.
 :::
 
 ---
@@ -616,7 +643,7 @@ If a solar eclipse occurs on March 15, when might the next lunar eclipse occur?
 ### Solar Eclipse Types
 
 ::: {.callout-warning title="Solar Eclipse Safety"}
-Never look at the Sun during partial or annular phases without proper solar filters or eclipse glasses (ISO 12312-2 certified). Regular sunglasses are NOT safe. Never look at the Sun through binoculars or a telescope without a proper front-mounted solar filter, even if you're wearing eclipse glasses. During the brief totality phase of a total eclipse (and ONLY during totality), it is safe to view with the naked eye—but you must use protection before and after.
+Never look at the Sun during partial or annular phases without proper solar filters or eclipse glasses (ISO 12312-2 certified). Regular sunglasses are NOT safe. Never look at the Sun through binoculars or a telescope without a proper front-mounted solar filter, even if you're wearing eclipse glasses. During the brief totality phase of a total eclipse (and ONLY during totality), it is safe to view with the naked eye — but you must use protection before and after.
 :::
 
 Not all solar eclipses are created equal. The type depends on the geometry:
@@ -697,7 +724,7 @@ The Moon turns reddish during a total lunar eclipse because:
 :::
 
 ::: {.callout-tip title="Solution" collapse="true"}
-**B) Earth's atmosphere filters out blue light, allowing red to reach the Moon.** As sunlight passes through Earth's atmosphere, blue wavelengths scatter (Rayleigh scattering—same reason our sky is blue). Red wavelengths pass through more easily and get bent around Earth's edge into the shadow zone. This red light illuminates the Moon, creating the "blood moon" appearance.
+**B) Earth's atmosphere filters out blue light, allowing red to reach the Moon.** As sunlight passes through Earth's atmosphere, blue wavelengths scatter (Rayleigh scattering — same reason our sky is blue). Red wavelengths pass through more easily and get bent around Earth's edge into the shadow zone. This red light illuminates the Moon, creating the "blood moon" appearance.
 :::
 
 ---
@@ -790,7 +817,7 @@ Let's synthesize everything from today:
 
 **Eclipses** happen when shadows actually align. Solar eclipses require the Moon to be directly between Sun and Earth (new moon); lunar eclipses require Earth to be directly between Sun and Moon (full moon).
 
-**Why not monthly?** The Moon's orbit is tilted 5.1° from the ecliptic. This tilt causes most new moons to pass above or below the Sun, and most full moons to miss Earth's shadow. Only near the nodes—where the Moon's orbit crosses the ecliptic—can eclipses occur.
+**Why not monthly?** The Moon's orbit is tilted 5.1° from the ecliptic. This tilt causes most new moons to pass above or below the Sun, and most full moons to miss Earth's shadow. Only near the nodes — where the Moon's orbit crosses the ecliptic — can eclipses occur.
 
 **Total vs. annular** depends on angular size. The Moon's elliptical orbit means its angular size varies. When the Moon appears larger than the Sun, totality is possible. When it appears smaller, we get an annular eclipse.
 

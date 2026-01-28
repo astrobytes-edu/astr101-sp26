@@ -537,7 +537,7 @@ shared language. This module builds that language: how to handle astronomical
 scales, how gravity shapes orbits, and how light carries information across
 cosmic distances.
 
-Everything in this course—every calculation, every inference—rests on the
+Everything in this course — every calculation, every inference — rests on the
 tools you'll master here. The equations may seem abstract now, but by Week 4,
 you'll use them to measure the distances to stars.
 

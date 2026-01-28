@@ -111,7 +111,7 @@ Every problem is classified along four dimensions:
 | Tag | Meaning | Audit Use |
 |-----|---------|-----------|
 | **O→M→I** | Problem requires tracing from Observable → Model → Inference | Ensures course thesis is reinforced |
-| **—** | Problem doesn't require inference chain | Tool drill or mechanics practice |
+| ** — ** | Problem doesn't require inference chain | Tool drill or mechanics practice |
 
 **Requirement:** At least 2 problems per reading/homework MUST have the O→M→I tag.
 

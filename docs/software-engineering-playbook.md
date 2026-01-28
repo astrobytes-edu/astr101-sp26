@@ -127,7 +127,7 @@ For each side effect (write file, update DB, publish, download):
 - What happens on **retry**?
 - What’s the **compensation** if a later step fails?
 
-If you can’t answer these, you don’t have a side effect yet—you have a future incident report.
+If you can’t answer these, you don’t have a side effect yet — you have a future incident report.
 
 ### Step 4 — Make replay modes explicit
 

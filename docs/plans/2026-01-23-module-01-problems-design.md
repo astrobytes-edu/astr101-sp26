@@ -49,7 +49,7 @@ This document defines the problem structure, labels, and content for Module 1 re
 | 1 | **Observable vs. Inferred.** For each quantity, state whether directly measured or inferred: brightness, temperature, position, distance, wavelength | Conceptual / Recognition / O→M→I / ⭐ |
 | 2 | **The Inference Pipeline.** "We know the Sun is made of hydrogen because we can see it." What's wrong? | Conceptual / Connection / O→M→I / ⭐⭐ |
 | 3 | **Standard Candles.** Why do astronomers need standard candles? What problem do they solve? | Conceptual / Application / O→M→I / ⭐⭐ |
-| 4 | **Lookback Time.** Andromeda is 2.5 Mly away. Supernova observed tonight—when did it occur? | Conceptual / Application / — / ⭐ |
+| 4 | **Lookback Time.** Andromeda is 2.5 Mly away. Supernova observed tonight — when did it occur? | Conceptual / Application / — / ⭐ |
 | 5 | **Four Observables ID.** *(NEW)* Given a scenario, identify which observable is being measured | Conceptual / Recognition / O→M→I / ⭐ |
 
 ### Calculations
@@ -59,8 +59,8 @@ This document defines the problem structure, labels, and content for Module 1 re
 | 6 | **Relative Brightness.** Star A 9× brighter than Star B. How many times farther is B? | Calculation / Application / O→M→I / ⭐⭐ |
 | 7 | **Light Travel Time.** c = 3×10⁸ m/s, Sun 1.5×10¹¹ m away. Time in seconds, then minutes. | Calculation / Application / — / ⭐ |
 | 8 | **Building a Light-Year.** Calculate distance light travels in 1 year. | Calculation / Application / — / ⭐⭐ |
-| 9 | **Inverse-Square Reasoning.** *(NEW)* Star moves 4× farther—what happens to brightness? | Calculation / Application / — / ⭐ |
-| 10 | **Lookback Time Calculation.** *(NEW)* Galaxy at 50 Mly—when did light leave? | Calculation / Application / — / ⭐⭐ |
+| 9 | **Inverse-Square Reasoning.** *(NEW)* Star moves 4× farther — what happens to brightness? | Calculation / Application / — / ⭐ |
+| 10 | **Lookback Time Calculation.** *(NEW)* Galaxy at 50 Mly — when did light leave? | Calculation / Application / — / ⭐⭐ |
 
 ### Synthesis
 
@@ -113,9 +113,9 @@ This document defines the problem structure, labels, and content for Module 1 re
 
 | # | Problem | Label |
 |---|---------|-------|
-| 7 | **Telescope comparison:** 30m vs 2.4m—how much more light? | Calculation / Application / — / ⭐⭐ |
-| 8 | **Planet volumes:** Jupiter R = 11× Earth—how many Earths fit? | Calculation / Application / — / ⭐⭐ |
-| 9 | **Inverse-square:** Star X 16× fainter—how many times farther? | Calculation / Application / O→M→I / ⭐⭐ |
+| 7 | **Telescope comparison:** 30m vs 2.4m — how much more light? | Calculation / Application / — / ⭐⭐ |
+| 8 | **Planet volumes:** Jupiter R = 11× Earth — how many Earths fit? | Calculation / Application / — / ⭐⭐ |
+| 9 | **Inverse-square:** Star X 16× fainter — how many times farther? | Calculation / Application / O→M→I / ⭐⭐ |
 
 ### Rate Problems
 
@@ -123,7 +123,7 @@ This document defines the problem structure, labels, and content for Module 1 re
 |---|---------|-------|
 | 10 | **Light travel:** Sun to Neptune (30 AU) in hours | Calculation / Application / — / ⭐⭐ |
 | 11 | **Earth orbital speed:** Distance in 1 day at 30 km/s | Calculation / Application / — / ⭐⭐ |
-| 12 | **Signal delay:** Mars at 1.5 AU—radio signal time | Calculation / Application / — / ⭐⭐ |
+| 12 | **Signal delay:** Mars at 1.5 AU — radio signal time | Calculation / Application / — / ⭐⭐ |
 
 ### Synthesis & Conceptual
 

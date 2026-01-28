@@ -1,6 +1,6 @@
 # Quarto RevealJS Extensions Guide
 
-A curated set of extensions for ASTR 101 lectures. This stack emphasizes **clarity**, **attention direction**, and **active learning**—not gimmicks.
+A curated set of extensions for ASTR 101 lectures. This stack emphasizes **clarity**, **attention direction**, and **active learning** — not gimmicks.
 
 ## Installed Extensions
 
@@ -34,7 +34,7 @@ filters:
 ---
 ```
 
-**Note:** RoughNotation is a *filter*, not a plugin—it goes in `filters:`, not `revealjs-plugins:`.
+**Note:** RoughNotation is a *filter*, not a plugin — it goes in `filters:`, not `revealjs-plugins:`.
 
 ---
 
@@ -102,7 +102,7 @@ Use spotlight for *sustained* attention (walking through details) and pointer fo
 
 ## 3. Attribution
 
-Adds attribution text along the slide edge—perfect for crediting astronomy images without cluttering the slide.
+Adds attribution text along the slide edge — perfect for crediting astronomy images without cluttering the slide.
 
 **Note:** In this repo we prefer **registry-based on-slide credits** for media (`assets/media.yml` + `{{< media ... >}}`) and slide images (`assets/figures.yml` + `{{< img ... >}}`). The attribution plugin is optional and not required for credits to appear.
 
@@ -313,7 +313,7 @@ format:
 
 ## Built-in Features (No Extension Needed)
 
-These are native Quarto/reveal.js features—just enable in YAML:
+These are native Quarto/reveal.js features — just enable in YAML:
 
 ### Chalkboard
 
@@ -378,7 +378,7 @@ format:
     quiz:
       shuffleOptions: true
       defaultCorrect: "✓ Correct!"
-      defaultIncorrect: "✗ Not quite—let's discuss."
+      defaultIncorrect: "✗ Not quite — let's discuss."
 revealjs-plugins:
   - pointer
   - spotlight
@@ -426,7 +426,7 @@ filters:
 
 ### Chalkboard not working?
 
-Check if `embed-resources: true` is set—they're incompatible.
+Check if `embed-resources: true` is set — they're incompatible.
 
 ### Quiz not responding to keys?
 

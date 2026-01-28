@@ -1,8 +1,8 @@
 # Demo 3 Audit — Moon Phases (`demos/moon-phases/`)
 
-**Date:** 2026-01-25  
-**Auditor:** Codex (GPT-5.2)  
-**Scope:** Demo 3 only (`demos/moon-phases/`). No other demos reviewed in this audit.  
+**Date:** 2026-01-25
+**Auditor:** Codex (GPT-5.2)
+**Scope:** Demo 3 only (`demos/moon-phases/`). No other demos reviewed in this audit.
 
 ---
 
@@ -72,7 +72,7 @@ Assumptions used for this audit:
   - `0°` = **Full Moon** (Moon opposite Sun, on the right)
   - `180°` = **New Moon** (Moon between Earth and Sun, on the left)
   - `270°` = **First Quarter** (bottom of orbit)
-  - `90°` = **Third Quarter** (top of orbit)  
+  - `90°` = **Third Quarter** (top of orbit)
   Evidence: `demos/moon-phases/moon-phases.js` comments + timeline `data-angle` values.
 
 **Physics/geometry:**
@@ -126,36 +126,36 @@ Assumptions used for this audit:
 
 ### Fix plan (prioritized, sequential; no implementation)
 
-1) **Fix Challenge Mode console error (M-03)**  
-   - Minimal change: null-guard `.challenge-feedback` in `ChallengeEngine._clearFeedback()` (or preserve it in completion layout).  
+1) **Fix Challenge Mode console error (M-03)**
+   - Minimal change: null-guard `.challenge-feedback` in `ChallengeEngine._clearFeedback()` (or preserve it in completion layout).
    - Verify: run Challenge Mode → Finish → Close; confirm Playwright console has no errors.
 
-2) **Add modal focus trap + close semantics for Challenge Mode (M-06)**  
-   - Minimal change: trap Tab within the dialog and support Escape to close (optional but high-value).  
+2) **Add modal focus trap + close semantics for Challenge Mode (M-06)**
+   - Minimal change: trap Tab within the dialog and support Escape to close (optional but high-value).
    - Verify: with dialog open, Tab cycles within dialog only; focus restored to `#btn-challenges` on close.
 
-3) **Fix timeline direction boundary behavior (M-01)**  
-   - Minimal change: compute waxing/waning from days-since-new rather than raw angle comparisons.  
+3) **Fix timeline direction boundary behavior (M-01)**
+   - Minimal change: compute waxing/waning from days-since-new rather than raw angle comparisons.
    - Verify: at New Moon, direction indicates waxing; at Full Moon, direction indicates waning (or “Full (turning point)” if you choose neutral wording).
 
-4) **Fix timeline button accessible names (M-02)**  
-   - Minimal change: add `aria-label="Waxing Gibbous"` etc on `.timeline-phase` buttons.  
+4) **Fix timeline button accessible names (M-02)**
+   - Minimal change: add `aria-label="Waxing Gibbous"` etc on `.timeline-phase` buttons.
    - Verify: at desktop and mobile widths, screen-reader names are unique and stable.
 
-5) **Fix Challenge exit button state sync (M-04)**  
-   - Minimal change: have ChallengeEngine stop/close event notify the host so `#btn-challenges` class reflects actual state.  
+5) **Fix Challenge exit button state sync (M-04)**
+   - Minimal change: have ChallengeEngine stop/close event notify the host so `#btn-challenges` class reflects actual state.
    - Verify: after × exit, dialog hidden/removed and `#btn-challenges` is not `.active`.
 
-6) **Improve drag+animation interaction (M-07)**  
-   - Minimal change: stop animation on drag start.  
+6) **Improve drag+animation interaction (M-07)**
+   - Minimal change: stop animation on drag start.
    - Verify: while playing, drag pauses and leaves Moon where user releases it.
 
-7) **Focus restoration for insight popup (M-05)**  
-   - Minimal change: restore focus to the shadow toggle on dismiss.  
+7) **Focus restoration for insight popup (M-05)**
+   - Minimal change: restore focus to the shadow toggle on dismiss.
    - Verify: Escape/close returns focus to the toggle and does not strand focus on `BODY`.
 
-8) **Optional: announcement completeness (M-09)**  
-   - Minimal change: announce phase changes for mouse-driven timeline/preset clicks.  
+8) **Optional: announcement completeness (M-09)**
+   - Minimal change: announce phase changes for mouse-driven timeline/preset clicks.
    - Verify: `#status-announce` updates for both mouse and keyboard interactions without spamming during animation.
 
 ---

@@ -39,7 +39,7 @@ This contract defines the callout types available in ASTR 101 and when to use ea
 | **The More You Know** | `.callout-the-more-you-know` | Interesting optional info | Yes |
 
 **Usage rules:**
-- Key Insights are rare (max 2-3 per reading)—they mark the "one thing to remember"
+- Key Insights are rare (max 2-3 per reading) — they mark the "one thing to remember"
 - Worked Examples show full solution with units and sanity checks
 - Deep Dives and More You Know are always collapsible (`collapse="true"`)
 - Deep Dives = physics/math detail; More You Know = history/context/fun facts

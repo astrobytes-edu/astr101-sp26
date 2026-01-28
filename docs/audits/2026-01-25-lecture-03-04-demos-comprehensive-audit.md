@@ -1,9 +1,9 @@
 # Lecture 03–04 Demos — Comprehensive Audit (Technical + Scientific + Pedagogical)
 
-**Date:** 2026-01-25  
-**Auditor:** Codex (GPT-5.2)  
-**Scope:** `demos/seasons/`, `demos/angular-size/`, `demos/moon-phases/`, `demos/eclipse-geometry/` (+ shared assets in `demos/_assets/`)  
-**Related artifact (traceability gate):** `docs/audits/2026-01-25-lecture-03-04-demos-hardening.md`  
+**Date:** 2026-01-25
+**Auditor:** Codex (GPT-5.2)
+**Scope:** `demos/seasons/`, `demos/angular-size/`, `demos/moon-phases/`, `demos/eclipse-geometry/` (+ shared assets in `demos/_assets/`)
+**Related artifact (traceability gate):** `docs/audits/2026-01-25-lecture-03-04-demos-hardening.md`
 
 ---
 

@@ -3,7 +3,7 @@ title: "The Sky Is a Map"
 subtitle: "Lecture 3 Reading Companion"
 author: "Dr. Anna Rosen"
 date: "2026-01-26"
-description: "Celestial sphere geometry, seasons (tilt not distance), and angular size—how to navigate a sky made of angles."
+description: "Celestial sphere geometry, seasons (tilt not distance), and angular size — how to navigate a sky made of angles."
 draft: false
 categories: [foundations, celestial-coordinates]
 course: ASTR 101
@@ -166,7 +166,7 @@ If you want to do serious sky navigation or use star charts, these additional te
 | Term | Definition |
 |------|------------|
 | **Nadir** | The point directly below the observer (opposite the zenith) |
-| **Meridian** | The great circle passing through zenith, nadir, and celestial poles—your local north-south line |
+| **Meridian** | The great circle passing through zenith, nadir, and celestial poles — your local north-south line |
 | **Hour angle** | How far west an object is from the meridian |
 
 These won't appear on exams, but they're the full toolkit for positional astronomy.
@@ -275,7 +275,7 @@ Here's the proof: **When it's summer in the Northern Hemisphere, it's winter in 
 
 {{< fig seasons-misconception-distance >}}
 
-**The numbers:** Earth's distance from the Sun varies by only about 3% over the year — from 147 million km at **perihelion** (closest, in January) to 152 million km at **aphelion** (farthest, in July). This 3% variation affects how much total energy Earth receives by about 7%—far too small to explain the dramatic temperature swings of seasons, and in the *wrong direction* for the Northern Hemisphere anyway.
+**The numbers:** Earth's distance from the Sun varies by only about 3% over the year — from 147 million km at **perihelion** (closest, in January) to 152 million km at **aphelion** (farthest, in July). This 3% variation affects how much total energy Earth receives by about 7% — far too small to explain the dramatic temperature swings of seasons, and in the *wrong direction* for the Northern Hemisphere anyway.
 
 <!---
 Define, add to glossary, and add margin notes for perihelion and aphelion.
@@ -365,7 +365,7 @@ During summer in your hemisphere, the Sun:
 
 **Open the Seasons Demo:** [astrobytes-edu.github.io/astr101-sp26/demos/seasons/](https://astrobytes-edu.github.io/astr101-sp26/demos/seasons/)
 
-This interactive demo lets you see *why* tilt—not distance—causes seasons. You'll observe how day length, Sun altitude, and Earth-Sun distance change throughout the year.
+This interactive demo lets you see *why* tilt — not distance — causes seasons. You'll observe how day length, Sun altitude, and Earth-Sun distance change throughout the year.
 
 **What you'll see in the demo:**
 - **Season Presets:** Jump to solstices and equinoxes
@@ -499,7 +499,7 @@ The seasons are marked by four special configurations:
 | **September Equinox** | Sept. 22 | Sun crosses celestial equator going south; day ≈ night everywhere* |
 | **December Solstice** | Dec. 21 | Sun reaches farthest south; shortest day in N. Hemisphere |
 
-*\*"Day ≈ night" is approximate. Atmospheric refraction bends sunlight, making the Sun visible slightly before it geometrically rises and after it geometrically sets. This adds a few minutes of daylight. The Sun's finite angular size also contributes—sunrise is defined as when the Sun's edge (not center) crosses the horizon.*
+*\*"Day ≈ night" is approximate. Atmospheric refraction bends sunlight, making the Sun visible slightly before it geometrically rises and after it geometrically sets. This adds a few minutes of daylight. The Sun's finite angular size also contributes — sunrise is defined as when the Sun's edge (not center) crosses the horizon.*
 
 ::: {.column-margin}
 **Solstice:** From Latin *sol* (sun) + *sistere* (to stand still). The Sun reaches its most extreme northern or southern position and appears to "pause" before reversing direction.
@@ -686,7 +686,7 @@ The Moon appears about the same angular size as the Sun because:
 :::
 
 ::: {.callout-tip title="Solution" collapse="true"}
-**C) The Moon is ~400× smaller but also ~400× closer.** The Sun's diameter is about 1.4 million km; the Moon's is about 3,500 km—a ratio of 400:1. The Sun is about 150 million km away; the Moon is about 380,000 km away — also a ratio of roughly 400:1. These factors cancel, giving nearly equal angular sizes.
+**C) The Moon is ~400× smaller but also ~400× closer.** The Sun's diameter is about 1.4 million km; the Moon's is about 3,500 km — a ratio of 400:1. The Sun is about 150 million km away; the Moon is about 380,000 km away — also a ratio of roughly 400:1. These factors cancel, giving nearly equal angular sizes.
 :::
 
 ::: {.callout-note title="Deep Dive: The Small-Angle Formula" collapse="false"}
@@ -726,7 +726,7 @@ Now draw the same object at twice the distance. What happens to the angle?
 
 It's worth pausing to appreciate how remarkable the Sun-Moon angular size match is.
 
-The Sun is a star — a ball of plasma 1.4 million kilometers across, located 150 million kilometers away. 
+The Sun is a star — a ball of plasma 1.4 million kilometers across, located 150 million kilometers away.
 
 The Moon is a small rocky body 3,474 kilometers across, located a mere 384,000 kilometers away.
 
@@ -776,7 +776,7 @@ Here's a preview of what's coming in Lecture 4:
 
 **Eclipses** require a special alignment — the Moon must be near the points where its orbit crosses the ecliptic. This happens only about twice a year, which is why eclipses are relatively rare events.
 
-**Why not monthly?** The Moon's orbit is tilted about 5° relative to the ecliptic. Usually, the Moon passes above or below the Sun (at new moon) or above or below Earth's shadow (at full moon). Only when the Moon is near a "node" — where its orbit crosses the ecliptic—can eclipses occur.
+**Why not monthly?** The Moon's orbit is tilted about 5° relative to the ecliptic. Usually, the Moon passes above or below the Sun (at new moon) or above or below Earth's shadow (at full moon). Only when the Moon is near a "node" — where its orbit crosses the ecliptic — can eclipses occur.
 :::
 
 ---

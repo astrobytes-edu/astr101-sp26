@@ -8,7 +8,7 @@
 
 ## Overview
 
-Interactive visualization demonstrating that **axial tilt causes seasons, NOT distance from the Sun**—the classic misconception that even educated adults get wrong.
+Interactive visualization demonstrating that **axial tilt causes seasons, NOT distance from the Sun** — the classic misconception that even educated adults get wrong.
 
 **Approach:** Full mechanism with embedded misconception-busters. Students see how tilt creates seasons while explicitly seeing why distance cannot explain the phenomenon.
 
@@ -67,9 +67,9 @@ Interactive visualization demonstrating that **axial tilt causes seasons, NOT di
 |--------|------------|-------|
 | Earth | 23.5° | Default, familiar seasons |
 | Mars | 25.2° | Similar to Earth |
-| Uranus | 97.8° | Extreme—poles face Sun |
+| Uranus | 97.8° | Extreme — poles face Sun |
 | Venus | 177.4° | Retrograde, nearly upside-down |
-| Jupiter | 3.1° | Almost no tilt—no seasons |
+| Jupiter | 3.1° | Almost no tilt — no seasons |
 | Saturn | 26.7° | Earth-like seasons |
 
 Planet presets change the tilt slider value AND update the globe appearance (colors, surface features) to match the selected planet.
@@ -237,7 +237,7 @@ function getEarthSunDistance(dayOfYear) {
       "tilt": 97.8,
       "color": "#b5e3e3",
       "features": "banded",
-      "description": "Extreme tilt—poles face Sun"
+      "description": "Extreme tilt — poles face Sun"
     }
   ]
 }
@@ -269,7 +269,7 @@ Students will understand:
 
 1. If Earth had no axial tilt, what would seasons be like?
 2. Why does Uranus have such extreme seasons?
-3. Mars has similar tilt to Earth—how do its seasons differ?
+3. Mars has similar tilt to Earth — how do its seasons differ?
 4. Why is the equator warm year-round despite the same tilt?
 
 ---

@@ -1,13 +1,13 @@
 # ASTR201 Equation System Spec
 
-*A design/spec contract for how equations, meanings, and references are authored and rendered across ASTR 101 materials.*  
+*A design/spec contract for how equations, meanings, and references are authored and rendered across ASTR 101 materials.*
 Version: v1.0 • Status: Proposed → Active upon adoption
 
 ---
 
 ## 1) Purpose
 
-ASTR 101 materials repeatedly use the same physics relations (Kepler scaling, Schwarzschild radius, flux–luminosity–distance, Stefan–Boltzmann, etc.). Students do not struggle primarily with algebra—they struggle with **what an equation is claiming** and **what assumptions make it true**.
+ASTR 101 materials repeatedly use the same physics relations (Kepler scaling, Schwarzschild radius, flux–luminosity–distance, Stefan–Boltzmann, etc.). Students do not struggle primarily with algebra — they struggle with **what an equation is claiming** and **what assumptions make it true**.
 
 This spec standardizes a two-layer system:
 
@@ -112,7 +112,7 @@ This yields:
 ## 5) Shortcodes
 
 ### 5.1 `eqcard` (meaning only)
-Input: `eqcard id`  
+Input: `eqcard id`
 Output: Predicts/Depends/Says (+ assumptions if provided)
 
 **Usage**
@@ -121,7 +121,7 @@ Output: Predicts/Depends/Says (+ assumptions if provided)
 ```
 
 ### 5.2 `eqrefcard` (meaning + reference)
-Input: `equation id` from `equations.yml`  
+Input: `equation id` from `equations.yml`
 Output: meaning card + “See: the equation” link to the registry’s anchor.
 
 **Usage**

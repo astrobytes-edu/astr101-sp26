@@ -17,7 +17,7 @@ format:
 
 ## Evidence & Reasoning Sentence Starters
 
-Use these in Socratic Seminar, think-pair-share, and group inquiry activities. The goal is not fancy wording—it's clear scientific thinking.
+Use these in Socratic Seminar, think-pair-share, and group inquiry activities. The goal is not fancy wording — it's clear scientific thinking.
 
 <div class="card-grid">
 
@@ -115,7 +115,7 @@ Use these in Socratic Seminar, think-pair-share, and group inquiry activities. T
 
 ## Common Astronomy Inference Pitfalls
 
-Astronomy is inference under constraints. These pitfalls are *normal*—the goal is to notice them early and build guardrails.
+Astronomy is inference under constraints. These pitfalls are *normal* — the goal is to notice them early and build guardrails.
 
 Use this sheet during problem-solving and seminar.
 

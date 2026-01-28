@@ -1,6 +1,6 @@
 # Eclipse Geometry Demo
 
-Interactive visualization explaining why eclipses don't happen every month—and simulating their frequency over centuries.
+Interactive visualization explaining why eclipses don't happen every month — and simulating their frequency over centuries.
 
 ## Science Background
 
@@ -26,7 +26,7 @@ Eclipses can only occur when the Moon is within $\sim 18°$ of a node (for solar
 
 ### Node Regression
 
-The nodes are not fixed—they slowly drift westward (regress) around the ecliptic, completing one full cycle in $P_{\text{node}} = 18.6$ years. This is why eclipse seasons shift earlier by about $19$ days each year.
+The nodes are not fixed — they slowly drift westward (regress) around the ecliptic, completing one full cycle in $P_{\text{node}} = 18.6$ years. This is why eclipse seasons shift earlier by about $19$ days each year.
 
 The regression rate is approximately $19.3°$ per year:
 
@@ -144,7 +144,7 @@ Either condition alone is insufficient. This is why eclipses are relatively rare
 
 | Misconception | Reality |
 |---------------|---------|
-| "The Moon's orbit is very tilted" | Only 5°—almost in the ecliptic plane |
+| "The Moon's orbit is very tilted" | Only 5° — almost in the ecliptic plane |
 | "Eclipses are random" | They follow precise patterns (Saros cycles) |
 | "Solar eclipses are rarer than lunar" | More solar eclipses occur, but each is visible from less of Earth |
 | "The Moon's orbit is fixed" | Nodes regress, completing a cycle every 18.6 years |
@@ -159,9 +159,9 @@ Either condition alone is insufficient. This is why eclipses are relatively rare
 ### In-Class Activities
 
 **Simulation experiments:**
-- Run 100-year simulation with real tilt (5.1°)—note eclipse counts
-- Reduce tilt to 0° and re-run—observe dramatic increase
-- Increase tilt to 10°—eclipses become very rare
+- Run 100-year simulation with real tilt (5.1°) — note eclipse counts
+- Reduce tilt to 0° and re-run — observe dramatic increase
+- Increase tilt to 10° — eclipses become very rare
 
 **Pattern discovery:**
 - Run 10-year simulation with log visible

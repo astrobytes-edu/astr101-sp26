@@ -22,20 +22,20 @@ prerequisites: Basic algebra, familiarity with exponents
 ::: {.callout-important #the-big-idea}
 ## The Big Idea
 
-Math isn't decoration—it's how we turn points of light into physical understanding.
+Math isn't decoration — it's how we turn points of light into physical understanding.
 :::
 
 ::: {.callout-important title="How to Use This Reading (Read → Revisit → Reuse)" collapse="true"}
-This page is both (1) the **assigned reading** and (2) your **reference manual** for math tools. You should expect to come back to it multiple times—before lecture, after lecture, and while doing practice problems.
+This page is both (1) the **assigned reading** and (2) your **reference manual** for math tools. You should expect to come back to it multiple times — before lecture, after lecture, and while doing practice problems.
 
 **Default expectation (best):** Read the whole page before class (including **Check Yourself**). Then return to it later when you work the **Practice Problems**.
 
-**If you're short on time before class (~15 min):** Do the **Musts for today** so you can participate now—then come back and finish the rest.
+**If you're short on time before class (~15 min):** Do the **Musts for today** so you can participate now — then come back and finish the rest.
 
 - **Musts for today:** The Big Idea • Scientific Notation basics • Unit Conversions (factor-label method) • The Ratio Method
 - **Non-negotiable:** Stop and answer every **Check Yourself** question you encounter in these sections (don't just read past them).
 
-**Skim now, read carefully later:** Rate Problems, Reference Tables. Skimming is a *preview*—you'll get much more from it after lecture.
+**Skim now, read carefully later:** Rate Problems, Reference Tables. Skimming is a *preview* — you'll get much more from it after lecture.
 
 **Reference mode (always):** Use the [Reference Tables](#reference-tables) while you work: physical constants, astronomical constants, distance conversions.
 
@@ -48,7 +48,7 @@ This page is both (1) the **assigned reading** and (2) your **reference manual**
 
 If the Sun were a cantaloupe sitting in San Francisco, Earth would be a pinhead 15 meters away. The nearest star? Another cantaloupe **in Hawaii**.
 
-That's the scale problem astronomy faces. The numbers are so large (or so small) that ordinary notation fails. Writing out the mass of the Sun—2,000,000,000,000,000,000,000,000,000,000 kg—is tedious, error-prone, and hides the essential information.
+That's the scale problem astronomy faces. The numbers are so large (or so small) that ordinary notation fails. Writing out the mass of the Sun — 2,000,000,000,000,000,000,000,000,000,000 kg — is tedious, error-prone, and hides the essential information.
 
 This lecture introduces four tools that professional astronomers use every day:
 
@@ -136,7 +136,7 @@ The algebra of exponents makes cosmic calculations manageable:
 **Full example:**
 $(3 \times 10^5)(4 \times 10^3) = (3 \times 4) \times 10^{5+3} = 12 \times 10^8$
 
-But wait—12 isn't between 1 and 10. **Normalize** by rewriting: $12 = 1.2 \times 10^1$
+But wait — 12 isn't between 1 and 10. **Normalize** by rewriting: $12 = 1.2 \times 10^1$
 
 Final answer: $1.2 \times 10^9$
 
@@ -148,14 +148,14 @@ SI prefixes attach to units to indicate powers of ten:
 |--------|--------|--------|---------|
 | tera | T | $10^{12}$ | THz (far-infrared frequencies) |
 | giga | G | $10^{9}$ | GHz (radio astronomy) |
-| mega | M | $10^{6}$ | Mpc (megaparsec—galaxy distances) |
+| mega | M | $10^{6}$ | Mpc (megaparsec — galaxy distances) |
 | kilo | k | $10^{3}$ | km (planetary scales) |
 | | | $10^{0}$ | meter, gram, second (human scale) |
 | milli | m | $10^{-3}$ | mm (submillimeter astronomy) |
 | micro | μ | $10^{-6}$ | μm (infrared wavelengths) |
 | nano | n | $10^{-9}$ | nm (visible light: 400–700 nm) |
 
-**Example:** Visible light spans 400–700 nm. The prefix "nano" ($10^{-9}$) tells you immediately these are very short wavelengths—about 1000× smaller than a human hair.
+**Example:** Visible light spans 400–700 nm. The prefix "nano" ($10^{-9}$) tells you immediately these are very short wavelengths — about 1000× smaller than a human hair.
 
 ::: {.callout-check-yourself title="Check Yourself — Scientific Notation"}
 What is $(3 \times 10^5)(4 \times 10^3)$ in proper scientific notation?
@@ -194,10 +194,10 @@ A **physical quantity** is a number attached to a unit. The unit carries meaning
 :::
 :::
 
-**The unit is not optional.** Without it, the number is meaningless—like a sentence without a verb.
+**The unit is not optional.** Without it, the number is meaningless — like a sentence without a verb.
 
 ::: {.column-margin}
-**Physical constant:** A number that nature gives us—it doesn't change. Examples: speed of light $c$, gravitational constant $G$.
+**Physical constant:** A number that nature gives us — it doesn't change. Examples: speed of light $c$, gravitational constant $G$.
 :::
 
 ### Conversion Factors = "Multiply by 1"
@@ -206,7 +206,7 @@ Since $1 \text{ m} = 100 \text{ cm}$, we can write:
 
 $$\frac{100 \text{ cm}}{1 \text{ m}} = 1 \quad \text{or} \quad \frac{1 \text{ m}}{100 \text{ cm}} = 1$$
 
-Multiplying by 1 doesn't change the physical quantity—it only changes the label.
+Multiplying by 1 doesn't change the physical quantity — it only changes the label.
 
 ### The Factor-Label Method
 
@@ -224,7 +224,7 @@ Watch the units cancel: mile cancels mile, km cancels km, hr cancels hr. What re
 
 $$= \frac{60 \times 1.6 \times 1000}{3600} \frac{\text{m}}{\text{s}} = 26.7 \text{ m/s}$$
 
-**Sanity check:** 60 mph is highway speed. 27 m/s is about 30 meters per second—roughly 100 feet per second. That feels right for highway driving.
+**Sanity check:** 60 mph is highway speed. 27 m/s is about 30 meters per second — roughly 100 feet per second. That feels right for highway driving.
 
 ### Watch the Exponents!
 
@@ -249,7 +249,7 @@ Astronomers use specialized distance units because cosmic scales span many order
 | parsec (pc) | Distance at which 1 AU subtends 1 arcsecond | $3.09 \times 10^{16}$ m ≈ 3.26 ly |
 
 ::: {.callout-warning}
-A **light-year** is a unit of **distance**, not time—even though "year" is in the name. It's how far light travels in one year.
+A **light-year** is a unit of **distance**, not time — even though "year" is in the name. It's how far light travels in one year.
 :::
 
 ::: {.callout-check-yourself title="Check Yourself — Unit Conversion"}
@@ -291,7 +291,7 @@ When comparing two astronomical quantities, which approach gives you more useful
 - (a) Subtract them to find the difference
 - (b) Divide them to find the ratio
 - (c) Add them together
-- (d) It doesn't matter—both give the same information
+- (d) It doesn't matter — both give the same information
 :::
 
 ::: {.callout-tip title="Solution" collapse="true"}
@@ -429,7 +429,7 @@ $$d = (3 \times 3.15) \times 10^{8+7} \text{ m} = 9.45 \times 10^{15} \text{ m}$
 
 ### Dimensional Analysis as "Smoke Detector"
 
-Every equation in physics must be dimensionally consistent. If the dimensions on both sides don't match, **the physics is guaranteed to be wrong**—no calculation needed.
+Every equation in physics must be dimensionally consistent. If the dimensions on both sides don't match, **the physics is guaranteed to be wrong** — no calculation needed.
 
 **The three fundamental dimensions:**
 
@@ -447,7 +447,7 @@ $$v = \frac{d}{t^2}$$
 
 Check the dimensions: $\frac{[L]}{[T]^2} = [L T^{-2}]$
 
-That's acceleration, not velocity! The equation is dimensionally wrong—don't bother calculating.
+That's acceleration, not velocity! The equation is dimensionally wrong — don't bother calculating.
 
 **The smoke detector principle:** Before plugging in numbers, check that dimensions match your target. Wrong dimensions = guaranteed wrong physics.
 
@@ -461,7 +461,7 @@ Earth moves around the Sun at about 29.8 km/s. How far does Earth travel in one 
 
 $$d = v \times t = (2.98 \times 10^4 \text{ m/s})(60 \text{ s}) = 1.79 \times 10^6 \text{ m}$$
 
-**Answer:** About **1,800 km** in one minute. Earth covers almost 2000 km every minute—cosmic speeds are fast!
+**Answer:** About **1,800 km** in one minute. Earth covers almost 2000 km every minute — cosmic speeds are fast!
 :::
 
 ---
@@ -490,7 +490,7 @@ You don't need to memorize formulas. You need to **recognize patterns**:
 When you see a big number or a scaling question, you'll know which tool to reach for.
 
 ::: {.callout-note title="Looking Ahead"}
-**Next time:** We'll apply these tools to our first real inference problem—measuring the distance to stars we can never visit.
+**Next time:** We'll apply these tools to our first real inference problem — measuring the distance to stars we can never visit.
 
 **Coming soon:** The cosmic distance ladder, parallax, and standard candles. The math toolkit you just learned makes it all possible.
 :::

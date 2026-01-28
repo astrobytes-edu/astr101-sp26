@@ -46,7 +46,7 @@ Miss one file, and students get conflicting information. Some show up Friday, so
 
 ## How It Works Mechanically
 
-Quarto's `_quarto.yml` file is the central configuration for your entire site. Every time Quarto renders a page, it reads this file first. You can add a `params:` block with arbitrary key-value pairs—think of it as a dictionary of variables.
+Quarto's `_quarto.yml` file is the central configuration for your entire site. Every time Quarto renders a page, it reads this file first. You can add a `params:` block with arbitrary key-value pairs — think of it as a dictionary of variables.
 
 These variables become accessible in any `.qmd` file using Quarto's `meta` shortcode: `{{< meta params.KEY >}}`.
 

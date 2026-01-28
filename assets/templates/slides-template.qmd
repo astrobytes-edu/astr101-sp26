@@ -45,7 +45,7 @@ format:
     quiz:
       shuffleOptions: true
       defaultCorrect: "✓ Correct!"
-      defaultIncorrect: "✗ Not quite—let's discuss."
+      defaultIncorrect: "✗ Not quite — let's discuss."
 
 revealjs-plugins:
   - pointer

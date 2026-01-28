@@ -1,12 +1,12 @@
 # Parallax & Distance Demo
 
-Interactive visualization demonstrating stellar parallax—the geometric method for measuring distances to nearby stars.
+Interactive visualization demonstrating stellar parallax — the geometric method for measuring distances to nearby stars.
 
 ## Science Background
 
 ### What is Parallax?
 
-**Parallax** is the apparent shift in position of a nearby object against a distant background when viewed from different locations. Hold your thumb at arm's length, close one eye, then the other—your thumb appears to jump against the background. The same principle works for stars.
+**Parallax** is the apparent shift in position of a nearby object against a distant background when viewed from different locations. Hold your thumb at arm's length, close one eye, then the other — your thumb appears to jump against the background. The same principle works for stars.
 
 ### Stellar Parallax
 

@@ -1,5 +1,6 @@
 /.quarto/
 _site/
+_render_tmp/
 .venv/
 .DS_Store
 **/.DS_Store

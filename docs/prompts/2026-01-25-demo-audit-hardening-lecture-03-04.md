@@ -94,7 +94,7 @@ Use these excerpts as the authoritative contract. Do **not** paraphrase in the t
 
 **Open the Seasons Demo:** [astrobytes-edu.github.io/astr101-sp26/demos/seasons/](https://astrobytes-edu.github.io/astr101-sp26/demos/seasons/)
 
-This interactive demo lets you see *why* tilt—not distance—causes seasons. You'll observe how day length, Sun altitude, and Earth-Sun distance change throughout the year.
+This interactive demo lets you see *why* tilt — not distance — causes seasons. You'll observe how day length, Sun altitude, and Earth-Sun distance change throughout the year.
 
 **What you'll see in the demo:**
 - **Season Presets:** Jump to solstices and equinoxes

@@ -1,8 +1,8 @@
 # ASTR 101 Teaching Tools (RevealJS) — Spec + UX Contract
 
-**Status:** Draft  
-**Owner:** Anna (instructor)  
-**Last updated:** 2026-01-19  
+**Status:** Draft
+**Owner:** Anna (instructor)
+**Last updated:** 2026-01-19
 
 ## 0) Task Classification (per `docs/llm-lab-protocol.md`)
 
@@ -208,7 +208,7 @@ Build a single RevealJS plugin (Quarto extension) that:
 - owns the state machine and priority rules
 - uses Reveal config (`Reveal.getConfig().teachingTools`) for defaults
 
-**Pros:** one source of truth; deterministic; fewer conflicts.  
+**Pros:** one source of truth; deterministic; fewer conflicts.
 **Cons:** more initial work; must replicate some chalkboard functionality.
 
 ### Approach 2: “Coordinator” wrapper around existing plugins
@@ -219,7 +219,7 @@ Build a small plugin that:
 - toggles existing pointer/spotlight/chalkboard plugins
 - enforces priority via API calls and DOM checks
 
-**Pros:** less code; reuse known plugins.  
+**Pros:** less code; reuse known plugins.
 **Cons:** brittle (plugin API differences, DOM timing), more regressions risk.
 
 ### Decision

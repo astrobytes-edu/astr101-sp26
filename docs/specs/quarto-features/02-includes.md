@@ -169,7 +169,7 @@ You may use AI tools (ChatGPT, Claude, GitHub Copilot, etc.) as **learning aids*
 
 2. **Cite AI assistance.** When AI helps you, add a brief note: "Used ChatGPT to help debug the unit conversion" or "Claude helped me understand the Stefan-Boltzmann law."
 
-3. **Don't copy solutions directly.** Use AI to understand concepts, check your reasoning, or debug—not to avoid thinking. The goal is learning, not task completion.
+3. **Don't copy solutions directly.** Use AI to understand concepts, check your reasoning, or debug — not to avoid thinking. The goal is learning, not task completion.
 
 4. **AI makes mistakes.** Large language models confidently produce wrong answers. Always verify AI output against your textbook, lecture notes, or physical intuition.
 
@@ -246,7 +246,7 @@ title: "ASTR 101 Syllabus"
 
 ### 1. No YAML frontmatter in includes
 
-Includes are content fragments, not standalone documents. They don't have titles or metadata—that belongs in the parent document.
+Includes are content fragments, not standalone documents. They don't have titles or metadata — that belongs in the parent document.
 
 ```markdown
 <!-- WRONG - includes don't have frontmatter -->

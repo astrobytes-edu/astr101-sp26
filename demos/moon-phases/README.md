@@ -104,7 +104,7 @@ Students should understand:
 This is **wrong**. Earth's shadow causes lunar eclipses, which happen ~2× per year. Phases happen every month due to our changing view of the lit hemisphere.
 
 **How to address this:**
-1. Show the orbital view—Earth's shadow points away from the Sun
+1. Show the orbital view — Earth's shadow points away from the Sun
 2. Note that during First Quarter, Earth's shadow points 90° away from the Moon
 3. Ask: "If Earth's shadow caused phases, where would the shadow be during First Quarter?"
 
@@ -113,7 +113,7 @@ This is **wrong**. Earth's shadow causes lunar eclipses, which happen ~2× per y
 | Misconception | Reality |
 |---------------|---------|
 | "We only see one side because it doesn't rotate" | The Moon rotates exactly once per orbit (synchronous rotation) |
-| "The dark part is in shadow" | It's just facing away from the Sun—same as Earth's night side |
+| "The dark part is in shadow" | It's just facing away from the Sun — same as Earth's night side |
 | "Full Moon is overhead at midnight" | Full Moon is highest at midnight, but "overhead" depends on latitude |
 | "Phases take different amounts of time" | Each phase transition takes ~3.7 days |
 
@@ -137,7 +137,7 @@ This is **wrong**. Earth's shadow causes lunar eclipses, which happen ~2× per y
 
 **Earthshine observation:**
 - Best seen during crescent phases
-- The "dark" part is faintly visible—lit by Earth reflecting sunlight
+- The "dark" part is faintly visible — lit by Earth reflecting sunlight
 
 ## Technical Details
 
@@ -189,7 +189,7 @@ ORBITAL_RADIUS = 120     // Pixels (visual only)
 **Rise/set time visualization:**
 - [ ] Horizon line showing when Moon rises and sets
 - [ ] Clock display correlating phase with rise/set times
-- [ ] "What time is it?" mode—given Moon position, determine local time
+- [ ] "What time is it?" mode — given Moon position, determine local time
 
 **Earthshine enhancement:**
 - [ ] More realistic earthshine intensity (varies with Earth's cloud cover)

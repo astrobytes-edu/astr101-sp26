@@ -184,7 +184,7 @@ Write a 3–4 sentence explanation that would convince a smart friend that:
 ### Common misconceptions to surface
 
 * “Closer = summer.”
-* “Eccentricity doesn’t matter at all.” (It can—especially for high-e worlds, or when perihelion aligns with a hemisphere’s summer.)
+* “Eccentricity doesn’t matter at all.” (It can — especially for high-e worlds, or when perihelion aligns with a hemisphere’s summer.)
 * “Temperature follows energy linearly.” (The (1/4) power dependence is a great conceptual lever.)
 
 ### Quick extensions (pick one)

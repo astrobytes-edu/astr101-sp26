@@ -16,7 +16,7 @@ listing:
 
 ## Why this module matters
 
-Stars are not static points of light—they are dynamic nuclear furnaces held in delicate balance by gravity and pressure. This module takes you inside stars to understand how they generate energy, how we measure their properties, and how they evolve over billions of years.
+Stars are not static points of light — they are dynamic nuclear furnaces held in delicate balance by gravity and pressure. This module takes you inside stars to understand how they generate energy, how we measure their properties, and how they evolve over billions of years.
 
 ## Learning objectives
 

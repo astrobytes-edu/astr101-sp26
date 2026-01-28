@@ -6,7 +6,7 @@ Interactive visualization demonstrating the diffraction limit of telescopes and 
 
 ### The Diffraction Limit
 
-Light waves bend (diffract) when passing through an aperture. Even a perfect telescope cannot produce infinitely sharp images—there is a fundamental **diffraction limit** determined by the wave nature of light.
+Light waves bend (diffract) when passing through an aperture. Even a perfect telescope cannot produce infinitely sharp images — there is a fundamental **diffraction limit** determined by the wave nature of light.
 
 A point source (like a star) produces an **Airy disk** pattern:
 - Bright central spot containing ~84% of the light
@@ -56,7 +56,7 @@ The first dark ring occurs at $x = 3.83$, which gives the Rayleigh criterion.
 Resolution degrades at longer wavelengths:
 - Optical (550 nm): Best ground-based resolution ~0.5" (seeing-limited)
 - Infrared (10 μm): 18× worse than optical for same aperture
-- Radio (21 cm): ~400,000× worse—need huge dishes or interferometers
+- Radio (21 cm): ~400,000× worse — need huge dishes or interferometers
 
 This is why radio telescopes are enormous and often combined into arrays (interferometry).
 

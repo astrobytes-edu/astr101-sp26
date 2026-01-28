@@ -465,7 +465,7 @@ Before reading further, predict: what color will a 10,000 K star appear?
 ## Content Callouts
 
 ::: {.callout-key-insight}
-**Physics tells you what relationships are allowed.** The inverse-square law isn't arbitrary—it's geometry.
+**Physics tells you what relationships are allowed.** The inverse-square law isn't arbitrary — it's geometry.
 :::
 
 ::: {.callout-worked-example}
@@ -501,7 +501,7 @@ Henrietta Leavitt discovered the period-luminosity relation for Cepheids in 1912
 :::
 
 ::: {.callout-why-this-matters}
-Distance measurements aren't just bookkeeping—they give us the age of the universe. Without Cepheids and supernovae, we wouldn't know we live in a 13.8-billion-year-old cosmos.
+Distance measurements aren't just bookkeeping — they give us the age of the universe. Without Cepheids and supernovae, we wouldn't know we live in a 13.8-billion-year-old cosmos.
 :::
 
 ## Metacognitive Callouts
@@ -597,7 +597,7 @@ This contract defines the callout types available in ASTR 101 and when to use ea
 | **The More You Know** | `.callout-the-more-you-know` | Interesting optional info | Yes |
 
 **Usage rules:**
-- Key Insights are rare (max 2-3 per reading)—they mark the "one thing to remember"
+- Key Insights are rare (max 2-3 per reading) — they mark the "one thing to remember"
 - Worked Examples show full solution with units and sanity checks
 - Deep Dives and More You Know are always collapsible (`collapse="true"`)
 - Deep Dives = physics/math detail; More You Know = history/context/fun facts

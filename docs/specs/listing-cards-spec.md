@@ -19,7 +19,7 @@ A lecture title shows up in:
 
 When you update one, you forget the others. Students see "Lecture 5: Stellar Spectra" in the sidebar but "Lecture 5: How Stars Reveal Their Secrets" on the module page. Small inconsistencies erode trust and create confusion.
 
-**The single-source pattern solves this.** You write metadata once—in the document's frontmatter—and every other display location pulls from that source automatically.
+**The single-source pattern solves this.** You write metadata once — in the document's frontmatter — and every other display location pulls from that source automatically.
 
 ---
 

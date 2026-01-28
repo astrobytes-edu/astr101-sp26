@@ -166,9 +166,9 @@ No work shown.
 * Focus on understanding your mistakes, not just tallying points.
 * Use specific examples from your work to justify your scores.
 * Reflect on how you can improve your problem-solving process for next time.
-* Keep it concise—clarity is more important than length.
+* Keep it concise — clarity is more important than length.
 * If you struggled with a problem, think about what resources or strategies could help you in the future.
-* Use this as an opportunity to practice metacognition—thinking about your own thinking and learning.
+* Use this as an opportunity to practice metacognition — thinking about your own thinking and learning.
 
 ## Detailed Per-Problem Self-Grading Rubric (1–5)
 

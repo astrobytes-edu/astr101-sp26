@@ -29,7 +29,7 @@ This explains why the Sun and Moon appear nearly the same size in our sky despit
 | Sun | 1,392,000 km | 150,000,000 km | $\sim 0.53°$ |
 | Moon | 3,474 km | 384,400 km | $\sim 0.52°$ |
 
-The Sun is $\sim 400\times$ larger but also $\sim 400\times$ farther away, producing nearly identical angular sizes—the cosmic coincidence that makes total solar eclipses possible.
+The Sun is $\sim 400\times$ larger but also $\sim 400\times$ farther away, producing nearly identical angular sizes — the cosmic coincidence that makes total solar eclipses possible.
 
 ### Common Angular Size References
 
@@ -86,7 +86,7 @@ The **Moon Recession slider** shows how the Moon's angular size changes over geo
 - **Today**: Moon at $\sim 60 R_\oplus$, angular size $\sim 0.5°$
 - **$+1$ billion years**: Moon will be farther, appearing smaller
 
-This demonstrates why total solar eclipses will eventually become impossible—the Moon will be too small to fully cover the Sun.
+This demonstrates why total solar eclipses will eventually become impossible — the Moon will be too small to fully cover the Sun.
 
 ## Pedagogical Notes
 
@@ -117,7 +117,7 @@ Students should understand:
 ### In-Class Activities
 
 **Quick demonstrations:**
-- Have students extend their thumb at arm's length—it covers about $2°$ of sky
+- Have students extend their thumb at arm's length — it covers about $2°$ of sky
 - Ask: "How many full moons would fit across your thumb?" (Answer: $\sim 4$)
 - Compare angular sizes: fist at arm's length ($\sim 10°$) vs. the Big Dipper ($\sim 25°$)
 

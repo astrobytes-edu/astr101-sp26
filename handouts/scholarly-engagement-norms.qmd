@@ -14,12 +14,12 @@ format:
     number-sections: false
 ---
 
-**Artifact Header (for course materials)**  
-**Course:** ASTR 101  
-**Module:** [TBD] (used throughout the semester)  
-**Learning Objectives:** Practice scientific reasoning and evidence-based discussion (supports course learning outcomes).  
-**Concept Throughline:** Observables → models → inference, with uncertainty as normal.  
-**Math level:** Astro 201 (equations are allowed, but we always interpret symbols physically).  
+**Artifact Header (for course materials)**
+**Course:** ASTR 101
+**Module:** [TBD] (used throughout the semester)
+**Learning Objectives:** Practice scientific reasoning and evidence-based discussion (supports course learning outcomes).
+**Concept Throughline:** Observables → models → inference, with uncertainty as normal.
+**Math level:** Astro 201 (equations are allowed, but we always interpret symbols physically).
 **Mode:** Draft
 
 ---
@@ -54,20 +54,20 @@ You do *not* need to be loud to be engaged. You do need to be *evidence-based* a
 
 In seminar, our goal is **shared inquiry**, not performance.
 
-**1) Anchor claims in evidence.**  
+**1) Anchor claims in evidence.**
 If you make a claim, point to something specific: a line in the text, a feature in the figure, an axis label, a trend, a number.
 
-**2) Name assumptions out loud.**  
+**2) Name assumptions out loud.**
 Astronomy is inference under constraints. Assumptions are part of the job, not something to hide.
 
-**3) Disagree with ideas, not people.**  
+**3) Disagree with ideas, not people.**
 Use: “I interpret it differently because…” not “That’s wrong.”
 
-**4) Share the airtime.**  
+**4) Share the airtime.**
 If you’ve spoken a lot, practice listening. If you’ve been quiet, try one contribution:
 a question, a clarification, or one evidence-based claim.
 
-**5) Let uncertainty be normal (but not vague).**  
+**5) Let uncertainty be normal (but not vague).**
 Uncertainty is fine. Vague claims are not. Try: “I’m ~70% confident because…”
 
 ---
@@ -96,7 +96,7 @@ Outer circle contributions that count as full engagement:
 
 ## Academic integrity and AI tools
 
-Your thinking matters here. **Generative AI tools (e.g., ChatGPT, Copilot, Gemini, Claude) are prohibited for course-related assessments.**  
+Your thinking matters here. **Generative AI tools (e.g., ChatGPT, Copilot, Gemini, Claude) are prohibited for course-related assessments.**
 That includes any for-credit written seminar prep/reflections, if assigned. If you’re unsure whether something counts, ask before submitting.
 
 ---

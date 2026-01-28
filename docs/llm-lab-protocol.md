@@ -69,7 +69,7 @@ Dimensional:
 ```text
 Code unit system:
 - [mass]  = M☉ (solar masses)
-- [length] = pc (parsecs)  
+- [length] = pc (parsecs)
 - [time]   = Myr (megayears)
 
 Derived units:
@@ -81,7 +81,7 @@ Constants in code units:
 
 - G = 4.4985 pc³/(M☉ × Myr²)
 - c = 306.6 pc/Myr
-  
+
 ```
 
 Numerical:
@@ -104,7 +104,7 @@ Statistical:
 Soft goals (may trade off):
 
 - Readability
-- Extensibility  
+- Extensibility
 - Performance
 - Elegance
 
@@ -357,7 +357,7 @@ In NovaGraph or multi-model workflows, explicitly chain roles:
 - Reuse as a **pre-commit AI checklist**
 - Include in **Claude Project instructions**
 
-This protocol scales from a single function to a multiphysics simulation codebase—and, crucially, it keeps the models from lying to you *politely*.
+This protocol scales from a single function to a multiphysics simulation codebase — and, crucially, it keeps the models from lying to you *politely*.
 
 ---
 

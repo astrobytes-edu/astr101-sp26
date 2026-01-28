@@ -24,7 +24,7 @@ More content...
 
 ### Live Preview
 
-Run live preview while editing—iterate at "thought speed":
+Run live preview while editing — iterate at "thought speed":
 
 ```bash
 quarto preview slides/lecture-01.qmd
@@ -325,7 +325,7 @@ Our home galaxy...
 > **Rules of thumb:**
 > - Backgrounds should *increase* contrast, not reduce it
 > - For dark images with light theme, set explicit `background-color` for text
-> - Interactive iframes can hijack slide navigation—use carefully
+> - Interactive iframes can hijack slide navigation — use carefully
 
 ### Content Overflow
 
@@ -625,7 +625,7 @@ format:
 
 The deck looks great when these are true:
 
-- [ ] **One idea per slide** (reveal.js gives you infinite slides—use them)
+- [ ] **One idea per slide** (reveal.js gives you infinite slides — use them)
 - [ ] **≤ 35 words per slide** (your mouth narrates; the slide provides visual evidence)
 - [ ] Every major concept has at least one of:
   - [ ] A prediction question (before you reveal)

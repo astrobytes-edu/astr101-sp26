@@ -56,3 +56,37 @@
 .reveal .eq-gloss li {
   margin: 0.12rem 0;
 }
+
+// ---------------------------------------------------------------------------
+// Callouts on black-background slides need higher contrast
+// ---------------------------------------------------------------------------
+.reveal .slides section[data-background-color="black"] .callout,
+.reveal .slides section.has-dark-background .callout {
+  background-color: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba($link-hover-color, 0.35);
+  border-left: 6px solid $link-hover-color;
+  box-shadow: none;
+  color: rgba(255, 255, 255, 0.96);
+}
+
+.reveal .slides section[data-background-color="black"] .callout .callout-title,
+.reveal .slides section.has-dark-background .callout .callout-title {
+  color: $link-hover-color;
+}
+
+.reveal .slides section[data-background-color="black"] .callout .callout-body,
+.reveal .slides section.has-dark-background .callout .callout-body {
+  color: rgba(255, 255, 255, 0.96) !important;
+}
+
+.reveal .slides section[data-background-color="black"] .callout .callout-content,
+.reveal .slides section.has-dark-background .callout .callout-content {
+  color: rgba(255, 255, 255, 0.96) !important;
+}
+
+.reveal .slides section[data-background-color="black"] .callout .callout-content p,
+.reveal .slides section.has-dark-background .callout .callout-content p,
+.reveal .slides section[data-background-color="black"] .callout .callout-content li,
+.reveal .slides section.has-dark-background .callout .callout-content li {
+  color: rgba(255, 255, 255, 0.96) !important;
+}

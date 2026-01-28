@@ -180,4 +180,4 @@ One sheet per group with:
 * It includes a built-in “gotcha” (**two-scale trap**) that produces a good class discussion
 * It’s physical and collaborative, so week-1 nerves get socially metabolized into tape and laughter
 
-If you want to crank the fun dial higher later, you can turn the “Cosmic Cards” into a quick **competition** (“closest to correct layout wins”) or add a “budget” mechanic (“each extra meter costs $10 million—optimize your scale”).
+If you want to crank the fun dial higher later, you can turn the “Cosmic Cards” into a quick **competition** (“closest to correct layout wins”) or add a “budget” mechanic (“each extra meter costs $10 million — optimize your scale”).

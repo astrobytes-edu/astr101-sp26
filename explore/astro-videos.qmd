@@ -4,7 +4,7 @@ description: "Curated collection of astronomical videos organized by topic"
 draft: true
 ---
 
-A curated collection of videos that bring the cosmos to life. These are optional viewing—but if you want to see the universe in motion, start here.
+A curated collection of videos that bring the cosmos to life. These are optional viewing — but if you want to see the universe in motion, start here.
 
 ---
 
@@ -19,7 +19,7 @@ Made from over 1,100 images captured by NSF-DOE Vera C. Rubin Observatory, this 
 Those 10 million galaxies are roughly **0.05%** of the approximately 20 billion galaxies Rubin Observatory will capture during its 10-year Legacy Survey of Space and Time.
 
 ::: {.callout-note title="Why This Matters"}
-Every point of light in this video is a galaxy—not a star, a *galaxy*. Each contains hundreds of billions of stars. And we're going to learn how to read the light from all of them.
+Every point of light in this video is a galaxy — not a star, a *galaxy*. Each contains hundreds of billions of stars. And we're going to learn how to read the light from all of them.
 :::
 
 **Credit:** NSF–DOE Vera C. Rubin Observatory
@@ -59,7 +59,7 @@ This video showcases **46 subtly pulsating RR Lyrae variable stars** in an early
 Over the next 10 years, Rubin will detect up to about **100,000 of these stars** extending out to more than a million light-years away, allowing scientists to map the outer reaches of our Galaxy and explore the structure of the Galactic halo that surrounds the Milky Way and extends nearly halfway to our closest neighbor, the Andromeda galaxy.
 
 ::: {.callout-note title="Why Variable Stars Matter"}
-RR Lyrae stars are **standard candles**—their pulsation period tells us their intrinsic luminosity. Compare that to how bright they *appear*, and we can calculate their distance. This is the cosmic distance ladder in action.
+RR Lyrae stars are **standard candles** — their pulsation period tells us their intrinsic luminosity. Compare that to how bright they *appear*, and we can calculate their distance. This is the cosmic distance ladder in action.
 :::
 
 **Credit:** NSF–DOE Vera C. Rubin Observatory
@@ -72,10 +72,10 @@ RR Lyrae stars are **standard candles**—their pulsation period tells us their 
 
 {{< video https://youtu.be/1JPDN8qoRjs >}}
 
-A Hubble Space Telescope color image of the core of the globular star cluster Omega Centauri is used to construct a Hertzsprung-Russell diagram. Watch as hundreds of thousands of stars are sorted by two observables—brightness and color—and a striking pattern emerges.
+A Hubble Space Telescope color image of the core of the globular star cluster Omega Centauri is used to construct a Hertzsprung-Russell diagram. Watch as hundreds of thousands of stars are sorted by two observables — brightness and color — and a striking pattern emerges.
 
 ::: {.callout-note title="Pattern Recognition in Action"}
-The HR diagram is one of astronomy's most powerful tools, and it's built entirely from things we can *measure*: how bright a star appears and what color it is. No magic—just careful observation and pattern recognition.
+The HR diagram is one of astronomy's most powerful tools, and it's built entirely from things we can *measure*: how bright a star appears and what color it is. No magic — just careful observation and pattern recognition.
 
 This is how astronomers work: sort the data, find the structure, discover the physics.
 :::
