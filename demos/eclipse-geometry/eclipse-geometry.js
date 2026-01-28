@@ -114,6 +114,7 @@
       // Simulation slider
       simYearsSlider: document.getElementById('sim-years-slider'),
       simYearsDisplay: document.getElementById('sim-years-display'),
+      simSpeedSelect: document.getElementById('sim-speed-select'),
 
       // Stats
       statsPanel: document.getElementById('stats-panel'),
@@ -621,11 +622,9 @@
 
     if (elements.btnClearLog) {
       elements.btnClearLog.addEventListener('click', () => {
+        stopAnimation();
         state.eclipseLog = [];
         updateLogTable();
-        if (!state.showLog) {
-          elements.logPanel.style.display = 'none';
-        }
       });
     }
 
@@ -681,6 +680,21 @@
     return Math.round(years).toString();
   }
 
+  function getSpeedConfig() {
+    const mode = elements.simSpeedSelect ? elements.simSpeedSelect.value : 'normal';
+    switch (mode) {
+      case 'slow':
+        return { monthMs: 5000, yearMs: 15000, simMonthsPerTick: 1, simTickMs: 60 };
+      case 'fast':
+        return { monthMs: 1500, yearMs: 5000, simMonthsPerTick: 4, simTickMs: 16 };
+      case 'instant':
+        return { monthMs: 600, yearMs: 2000, simMonthsPerTick: 50, simTickMs: 0 };
+      case 'normal':
+      default:
+        return { monthMs: 3000, yearMs: 10000, simMonthsPerTick: 1, simTickMs: 30 };
+    }
+  }
+
   function animateToDisplayAngle(targetDisplayAngleDeg) {
     const startAngle = getDisplayMoonAngleDeg();
     let diff = targetDisplayAngleDeg - startAngle;
@@ -701,6 +715,7 @@
     state.isAnimating = false;
     if (state.animationId) {
       cancelAnimationFrame(state.animationId);
+      clearTimeout(state.animationId);
       state.animationId = null;
     }
   }
@@ -709,7 +724,7 @@
     stopAnimation();
     state.isAnimating = true;
 
-    const duration = 3000; // 3 seconds for one month
+    const duration = getSpeedConfig().monthMs;
     const startSun = state.sunLonDeg;
     const startMoon = state.moonLonDeg;
     const startNode = state.nodeLonDeg;
@@ -742,7 +757,7 @@
     stopAnimation();
     state.isAnimating = true;
 
-    const duration = 10000; // 10 seconds for one year
+    const duration = getSpeedConfig().yearMs;
     const startSun = state.sunLonDeg;
     const startMoon = state.moonLonDeg;
     const startNode = state.nodeLonDeg;
@@ -826,12 +841,11 @@
 
     const totalMonths = Math.ceil((yearsToSimulate * DAYS_PER_TROPICAL_YEAR) / SYNODIC_MONTH_DAYS);
 
-    // Adjust batch size based on simulation length
-    let batchSize = yearsToSimulate <= 100 ? 5 : 50;
     let currentMonth = 0;
 
     function simulateBatch() {
-      if (!state.isAnimating || currentMonth >= totalMonths) {
+      if (!state.isAnimating) return;
+      if (currentMonth >= totalMonths) {
         state.isAnimating = false;
         state.yearsSimulated = yearsToSimulate;
         updateStats();
@@ -839,7 +853,8 @@
         return;
       }
 
-      for (let i = 0; i < batchSize && currentMonth < totalMonths; i++, currentMonth++) {
+      const { simMonthsPerTick, simTickMs } = getSpeedConfig();
+      for (let i = 0; i < simMonthsPerTick && currentMonth < totalMonths; i++, currentMonth++) {
         // Time since simulation start.
         const tNewDays = currentMonth * SYNODIC_MONTH_DAYS;
         const tFullDays = tNewDays + 0.5 * SYNODIC_MONTH_DAYS;
@@ -899,15 +914,12 @@
       updateStats();
       update();
 
-      // Update log periodically for shorter simulations
-      if (yearsToSimulate <= 100 && currentMonth % 50 === 0) {
-        updateLogTable();
-      }
+      if (state.showLog) updateLogTable();
 
-      state.animationId = requestAnimationFrame(simulateBatch);
+      state.animationId = setTimeout(simulateBatch, simTickMs);
     }
 
-    state.animationId = requestAnimationFrame(simulateBatch);
+    state.animationId = setTimeout(simulateBatch, getSpeedConfig().simTickMs);
   }
 
   // ============================================
