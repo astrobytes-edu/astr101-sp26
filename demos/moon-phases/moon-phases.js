@@ -6,6 +6,12 @@
 (function() {
   'use strict';
 
+  const Model = typeof window !== 'undefined' ? window.MoonPhasesModel : null;
+  if (!Model) {
+    console.error('Moon Phases: missing window.MoonPhasesModel (did you load demos/_assets/moon-phases-model.js?)');
+    return;
+  }
+
   // ============================================
   // Constants
   // ============================================
@@ -88,9 +94,7 @@
    * @param {number} angle - Angle in degrees (0 = full, 180 = new)
    */
   function getIllumination(angle) {
-    // At angle 0 (full moon), illumination = 1
-    // At angle 180 (new moon), illumination = 0
-    return (1 + Math.cos(angle * Math.PI / 180)) / 2;
+    return Model.illuminationFractionFromMoonAngleDeg(angle);
   }
 
   /**
