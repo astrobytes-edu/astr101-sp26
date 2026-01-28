@@ -6,6 +6,12 @@
 (function() {
   'use strict';
 
+  const Model = typeof window !== 'undefined' ? window.SeasonsModel : null;
+  if (!Model) {
+    console.error('Seasons: missing window.SeasonsModel (did you load demos/_assets/seasons-model.js?)');
+    return;
+  }
+
   // ============================================
   // Constants
   // ============================================
@@ -146,15 +152,11 @@
    * @returns {number} Declination in degrees (-23.5 to +23.5 for Earth)
    */
   function effectiveObliquityDegrees(obliquityDeg) {
-    const t = Math.abs(obliquityDeg % 360);
-    const folded = t > 180 ? 360 - t : t; // 0..180
-    return folded > 90 ? 180 - folded : folded; // 0..90
+    return Model.effectiveObliquityDegrees(obliquityDeg);
   }
 
   function getSunDeclination(dayOfYear) {
-    const daysFromEquinox = dayOfYear - 80; // March 21 ~ day 80
-    const eps = effectiveObliquityDegrees(state.axialTilt);
-    return eps * Math.sin(2 * Math.PI * daysFromEquinox / 365);
+    return Model.sunDeclinationDeg({ dayOfYear, axialTiltDeg: state.axialTilt });
   }
 
   /**
@@ -164,15 +166,7 @@
    * @returns {number} Hours of daylight
    */
   function getDayLength(latitude, sunDeclination) {
-    const phi = latitude * Math.PI / 180;
-    const delta = sunDeclination * Math.PI / 180;
-    const cosH = -Math.tan(phi) * Math.tan(delta);
-
-    if (cosH < -1) return 24;  // Midnight sun
-    if (cosH > 1) return 0;    // Polar night
-
-    const H = Math.acos(cosH) * 180 / Math.PI;
-    return 2 * H / 15;  // Hours of daylight
+    return Model.dayLengthHours({ latitudeDeg: latitude, sunDeclinationDeg: sunDeclination });
   }
 
   /**
@@ -182,7 +176,7 @@
    * @returns {number} Maximum sun altitude in degrees
    */
   function getSunAltitude(latitude, sunDeclination) {
-    return 90 - Math.abs(latitude - sunDeclination);
+    return Model.sunNoonAltitudeDeg({ latitudeDeg: latitude, sunDeclinationDeg: sunDeclination });
   }
 
   /**
