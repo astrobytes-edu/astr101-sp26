@@ -76,3 +76,21 @@ test('lunarEclipseTypeFromBetaDeg classifies penumbral vs umbral vs total', () =
   const betaNone = thr.lunarPenumbralDeg + 1;
   assert.equal(M.lunarEclipseTypeFromBetaDeg({ betaDeg: betaNone, earthMoonDistanceKm: 384400 }).type, 'none');
 });
+
+test('solarEclipseTypeFromBetaDeg: beta≈0 distinguishes total vs annular by umbra sign', () => {
+  assert.ok(typeof M.solarEclipseTypeFromBetaDeg === 'function', 'expected solarEclipseTypeFromBetaDeg export');
+
+  // Umbra radius at distance x is:
+  //   r_umbra(x) = R_moon - x*(R_sun - R_moon)/AU.
+  // The umbra tip (r_umbra=0) is at x = R_moon * AU / (R_sun - R_moon).
+  const moonRadiusKm = 1737.4;
+  const sunRadiusKm = 696000;
+  const auKm = 149597870.7;
+  const dCrit = (moonRadiusKm * auKm) / (sunRadiusKm - moonRadiusKm);
+
+  const totalish = M.solarEclipseTypeFromBetaDeg({ betaDeg: 0, earthMoonDistanceKm: 0.9 * dCrit });
+  const annularish = M.solarEclipseTypeFromBetaDeg({ betaDeg: 0, earthMoonDistanceKm: 1.1 * dCrit });
+
+  assert.equal(totalish.type, 'total-solar');
+  assert.equal(annularish.type, 'annular-solar');
+});

@@ -33,10 +33,13 @@
   const STATUS_PLANE_EPS_DEG = 0.05; // treat as "in plane" for copy/readouts
 
   // Eclipse classification uses a physically-motivated shadow model (similar triangles)
-  // with mean Earth–Moon distance. This yields realistic “eclipse season” windows without
+  // with user-selectable Earth–Moon distance. This yields realistic “eclipse season” windows without
   // hard-coding node-angle thresholds.
-  const EARTH_MOON_DISTANCE_KM = 384400; // mean distance (km)
-  const ECLIPSE_THRESHOLDS = Model.eclipseThresholdsDeg({ earthMoonDistanceKm: EARTH_MOON_DISTANCE_KM });
+  const MOON_DISTANCE_PRESETS_KM = {
+    perigee: 363300,
+    mean: 384400,
+    apogee: 405500,
+  };
 
   // ============================================
   // State
@@ -49,11 +52,13 @@
     moonLonDeg: 180,        // start at Full Moon (opposite Sun)
     orbitalTilt: 5.145,     // Degrees of orbital tilt
     nodeLonDeg: 210,        // chosen so the displayed ascending node starts at ~30°
+    earthMoonDistanceKm: MOON_DISTANCE_PRESETS_KM.mean,
     animationId: null,
     isAnimating: false,
 
     // Simulation stats (track total and partial separately)
     totalSolarEclipses: 0,
+    annularSolarEclipses: 0,
     partialSolarEclipses: 0,
     totalLunarEclipses: 0,
     partialLunarEclipses: 0,
@@ -91,6 +96,7 @@
       eclipseStatus: document.getElementById('eclipse-status'),
       statusDetail: document.getElementById('status-detail'),
       nodeDistanceDetail: document.getElementById('node-distance-detail'),
+      distanceDetail: document.getElementById('distance-detail'),
       statusNote: document.getElementById('status-note'),
 
       // Controls
@@ -99,6 +105,8 @@
       phaseDisplay: document.getElementById('phase-display'),
       moonAngleSlider: document.getElementById('moon-angle-slider'),
       moonAngleDisplay: document.getElementById('moon-angle-display'),
+      moonDistanceSelect: document.getElementById('moon-distance-select'),
+      moonDistanceDisplay: document.getElementById('moon-distance-display'),
 
       // Buttons
       btnNewMoon: document.getElementById('btn-new-moon'),
@@ -166,6 +174,10 @@
     });
   }
 
+  function getEclipseThresholds(earthMoonDistanceKm = state.earthMoonDistanceKm) {
+    return Model.eclipseThresholdsDeg({ earthMoonDistanceKm });
+  }
+
   function polarToXY(center, r, deg) {
     const a = (deg * Math.PI) / 180;
     return { x: center.x + r * Math.cos(a), y: center.y - r * Math.sin(a) };
@@ -209,10 +221,11 @@
 
   function updateEclipseWindowArcs() {
     // Convert the latitude thresholds into "within Δλ of a node" windows for the current tilt.
-    const dSolarAny = Model.deltaLambdaFromBetaDeg({ tiltDeg: state.orbitalTilt, betaDeg: ECLIPSE_THRESHOLDS.solarPartialDeg });
-    const dSolarCentral = Model.deltaLambdaFromBetaDeg({ tiltDeg: state.orbitalTilt, betaDeg: ECLIPSE_THRESHOLDS.solarCentralDeg });
-    const dLunarAny = Model.deltaLambdaFromBetaDeg({ tiltDeg: state.orbitalTilt, betaDeg: ECLIPSE_THRESHOLDS.lunarPenumbralDeg });
-    const dLunarCentral = Model.deltaLambdaFromBetaDeg({ tiltDeg: state.orbitalTilt, betaDeg: ECLIPSE_THRESHOLDS.lunarTotalDeg });
+    const thresholds = getEclipseThresholds();
+    const dSolarAny = Model.deltaLambdaFromBetaDeg({ tiltDeg: state.orbitalTilt, betaDeg: thresholds.solarPartialDeg });
+    const dSolarCentral = Model.deltaLambdaFromBetaDeg({ tiltDeg: state.orbitalTilt, betaDeg: thresholds.solarCentralDeg });
+    const dLunarAny = Model.deltaLambdaFromBetaDeg({ tiltDeg: state.orbitalTilt, betaDeg: thresholds.lunarPenumbralDeg });
+    const dLunarCentral = Model.deltaLambdaFromBetaDeg({ tiltDeg: state.orbitalTilt, betaDeg: thresholds.lunarTotalDeg });
 
     const nodeAsc = getDisplayNodeAngleDeg();
     const nodeDesc = normalizeAngleDeg(nodeAsc + 180);
@@ -273,17 +286,18 @@
 
     // Check for solar eclipse (New Moon)
     if (nearNew) {
-      if (absHeight < ECLIPSE_THRESHOLDS.solarCentralDeg) {
-        return {
-          type: 'central-solar',
-          detail: `CENTRAL solar eclipse (total/annular possible) — |β| = ${absHeight.toFixed(2)}°`
-        };
+      const solar = Model.solarEclipseTypeFromBetaDeg({
+        betaDeg: absHeight,
+        earthMoonDistanceKm: state.earthMoonDistanceKm,
+      });
+      if (solar.type === 'total-solar') {
+        return { type: 'total-solar', detail: `TOTAL solar eclipse — |β| = ${absHeight.toFixed(2)}°` };
       }
-      if (absHeight < ECLIPSE_THRESHOLDS.solarPartialDeg) {
-        return {
-          type: 'partial-solar',
-          detail: `Partial solar eclipse — |β| = ${absHeight.toFixed(2)}°`
-        };
+      if (solar.type === 'annular-solar') {
+        return { type: 'annular-solar', detail: `ANNULAR solar eclipse — |β| = ${absHeight.toFixed(2)}°` };
+      }
+      if (solar.type === 'partial-solar') {
+        return { type: 'partial-solar', detail: `Partial solar eclipse — |β| = ${absHeight.toFixed(2)}°` };
       }
     }
 
@@ -291,7 +305,7 @@
     if (nearFull) {
       const lunar = Model.lunarEclipseTypeFromBetaDeg({
         betaDeg: absHeight,
-        earthMoonDistanceKm: EARTH_MOON_DISTANCE_KM,
+        earthMoonDistanceKm: state.earthMoonDistanceKm,
       });
       if (lunar.type === 'total-lunar') {
         return { type: 'total-lunar', detail: `TOTAL lunar eclipse — |β| = ${absHeight.toFixed(2)}°` };
@@ -320,10 +334,12 @@
 
   function formatEclipseTypeLabel(type) {
     switch (type) {
-      case 'central-solar':
-        return 'Central solar';
+      case 'total-solar':
+        return 'Total solar';
+      case 'annular-solar':
+        return 'Annular solar';
       case 'partial-solar':
-        return 'Solar (not total)';
+        return 'Partial solar';
       case 'total-lunar':
         return 'Total lunar';
       case 'partial-lunar':
@@ -449,15 +465,43 @@
       elements.nodeDistanceDetail.textContent = `Nearest node: ${nodeDistance.toFixed(1)}°`;
     }
 
-    // Status indicator: match lecture wording exactly
+    if (elements.distanceDetail) {
+      elements.distanceDetail.textContent = `Earth–Moon distance: ${Math.round(state.earthMoonDistanceKm).toLocaleString()} km`;
+    }
+    if (elements.moonDistanceDisplay) {
+      elements.moonDistanceDisplay.textContent = `${Math.round(state.earthMoonDistanceKm).toLocaleString()} km`;
+    }
+
+    // Status indicator
     let statusText = 'NO ECLIPSE';
     let cssClass = 'miss';
-    if (eclipse.type.includes('solar')) {
-      statusText = 'SOLAR ECLIPSE';
-      cssClass = 'solar';
-    } else if (eclipse.type.includes('lunar')) {
-      statusText = 'LUNAR ECLIPSE';
-      cssClass = 'lunar';
+    switch (eclipse.type) {
+      case 'total-solar':
+        statusText = 'TOTAL SOLAR ECLIPSE';
+        cssClass = 'solar';
+        break;
+      case 'annular-solar':
+        statusText = 'ANNULAR SOLAR ECLIPSE';
+        cssClass = 'solar';
+        break;
+      case 'partial-solar':
+        statusText = 'PARTIAL SOLAR ECLIPSE';
+        cssClass = 'solar';
+        break;
+      case 'total-lunar':
+        statusText = 'TOTAL LUNAR ECLIPSE';
+        cssClass = 'lunar';
+        break;
+      case 'partial-lunar':
+        statusText = 'UMBRAL LUNAR ECLIPSE';
+        cssClass = 'lunar';
+        break;
+      case 'penumbral-lunar':
+        statusText = 'PENUMBRAL LUNAR ECLIPSE';
+        cssClass = 'lunar';
+        break;
+      default:
+        break;
     }
 
     elements.eclipseStatus.textContent = statusText;
@@ -472,8 +516,8 @@
           nearSyzygy
             ? 'Too far from node for an eclipse'
             : 'Eclipses require New/Full Moon near a node';
-      } else if (eclipse.type === 'central-solar') {
-        elements.statusNote.textContent = 'Central eclipse conditions';
+      } else if (eclipse.type === 'annular-solar') {
+        elements.statusNote.textContent = 'Annular eclipse conditions';
       } else if (eclipse.type === 'penumbral-lunar') {
         elements.statusNote.textContent = 'Penumbral eclipse conditions';
       } else if (eclipse.type.includes('total')) {
@@ -494,17 +538,17 @@
     }
   }
 
-	  function updateStats() {
-	    // Show total eclipses prominently, partial in parentheses
-	    const totalSolar = state.totalSolarEclipses;
-	    const allSolar = state.totalSolarEclipses + state.partialSolarEclipses;
-	    const totalLunar = state.totalLunarEclipses;
-	    const allLunar = state.totalLunarEclipses + state.partialLunarEclipses + state.penumbralLunarEclipses;
+		  function updateStats() {
+		    // Show total eclipses prominently, partial in parentheses
+		    const totalSolar = state.totalSolarEclipses;
+		    const allSolar = state.totalSolarEclipses + state.annularSolarEclipses + state.partialSolarEclipses;
+		    const totalLunar = state.totalLunarEclipses;
+		    const allLunar = state.totalLunarEclipses + state.partialLunarEclipses + state.penumbralLunarEclipses;
 
-	    elements.statSolar.innerHTML = `${totalSolar} <small style="opacity:0.6">(${allSolar} incl. partial)</small>`;
-	    elements.statLunar.innerHTML = `${totalLunar} <small style="opacity:0.6">(${allLunar} incl. umbral + penumbral)</small>`;
-	    elements.statYears.textContent = state.yearsSimulated.toFixed(1);
-	  }
+		    elements.statSolar.innerHTML = `${totalSolar} <small style="opacity:0.6">(${allSolar} incl. annular + partial)</small>`;
+		    elements.statLunar.innerHTML = `${totalLunar} <small style="opacity:0.6">(${allLunar} incl. umbral + penumbral)</small>`;
+		    elements.statYears.textContent = state.yearsSimulated.toFixed(1);
+		  }
 
   function update() {
     updateVisualization();
@@ -564,13 +608,23 @@
   // Controls
   // ============================================
 
-  function setupControls() {
-    // Tilt slider
-    elements.tiltSlider.addEventListener('input', () => {
-      state.orbitalTilt = parseFloat(elements.tiltSlider.value) / 10;
-      elements.tiltDisplay.textContent = state.orbitalTilt.toFixed(1) + '°';
-      update();
-    });
+	  function setupControls() {
+	    // Tilt slider
+	    elements.tiltSlider.addEventListener('input', () => {
+	      state.orbitalTilt = parseFloat(elements.tiltSlider.value) / 10;
+	      elements.tiltDisplay.textContent = state.orbitalTilt.toFixed(1) + '°';
+	      update();
+	    });
+
+	    if (elements.moonDistanceSelect) {
+	      elements.moonDistanceSelect.addEventListener('change', () => {
+	        stopAnimation();
+	        const key = elements.moonDistanceSelect.value;
+	        const next = MOON_DISTANCE_PRESETS_KM[key] ?? MOON_DISTANCE_PRESETS_KM.mean;
+	        state.earthMoonDistanceKm = next;
+	        update();
+	      });
+	    }
 
     // Phase buttons
     elements.btnNewMoon.addEventListener('click', () => {
@@ -634,21 +688,24 @@
         stopAnimation();
 
         // Reset state to defaults
-        state.sunLonDeg = 0;
-        state.moonLonDeg = 180;
-        state.nodeLonDeg = 210;
-        state.orbitalTilt = 5.145;
+	        state.sunLonDeg = 0;
+	        state.moonLonDeg = 180;
+	        state.nodeLonDeg = 210;
+	        state.orbitalTilt = 5.145;
+	        state.earthMoonDistanceKm = MOON_DISTANCE_PRESETS_KM.mean;
 
-        // Reset UI
-        elements.tiltSlider.value = state.orbitalTilt * 10;
-        elements.tiltDisplay.textContent = state.orbitalTilt.toFixed(1) + '°';
+	        // Reset UI
+	        elements.tiltSlider.value = state.orbitalTilt * 10;
+	        elements.tiltDisplay.textContent = state.orbitalTilt.toFixed(1) + '°';
+	        if (elements.moonDistanceSelect) elements.moonDistanceSelect.value = 'mean';
 
-        // Reset stats
-        state.totalSolarEclipses = 0;
-        state.partialSolarEclipses = 0;
-        state.totalLunarEclipses = 0;
-        state.partialLunarEclipses = 0;
-        state.penumbralLunarEclipses = 0;
+	        // Reset stats
+	        state.totalSolarEclipses = 0;
+	        state.annularSolarEclipses = 0;
+	        state.partialSolarEclipses = 0;
+	        state.totalLunarEclipses = 0;
+	        state.partialLunarEclipses = 0;
+	        state.penumbralLunarEclipses = 0;
         state.yearsSimulated = 0;
         state.eclipseLog = [];
         updateLogTable();
@@ -818,26 +875,28 @@
     elements.logTable.innerHTML = html;
   }
 
-  function simulateYears(yearsToSimulate) {
-    stopAnimation();
-    state.isAnimating = true;
+	  function simulateYears(yearsToSimulate) {
+	    stopAnimation();
+	    state.isAnimating = true;
 
-    // Reset stats
-    state.totalSolarEclipses = 0;
-    state.partialSolarEclipses = 0;
-    state.totalLunarEclipses = 0;
-    state.partialLunarEclipses = 0;
-    state.penumbralLunarEclipses = 0;
-    state.yearsSimulated = 0;
-    state.eclipseLog = [];
+	    // Reset stats
+	    state.totalSolarEclipses = 0;
+	    state.annularSolarEclipses = 0;
+	    state.partialSolarEclipses = 0;
+	    state.totalLunarEclipses = 0;
+	    state.partialLunarEclipses = 0;
+	    state.penumbralLunarEclipses = 0;
+	    state.yearsSimulated = 0;
+	    state.eclipseLog = [];
 
     elements.statsPanel.style.display = 'grid';
     // Immediately clear the visible log table, so "Reset" / reruns don't leave stale rows.
     updateLogTable();
 
-    const startSun = state.sunLonDeg;
-    const startMoon = state.moonLonDeg;
-    const startNode = state.nodeLonDeg;
+	    const startSun = state.sunLonDeg;
+	    const startMoon = state.moonLonDeg;
+	    const startNode = state.nodeLonDeg;
+	    const earthMoonDistanceKm = state.earthMoonDistanceKm;
 
     const totalMonths = Math.ceil((yearsToSimulate * DAYS_PER_TROPICAL_YEAR) / SYNODIC_MONTH_DAYS);
 
@@ -860,22 +919,30 @@
         const tFullDays = tNewDays + 0.5 * SYNODIC_MONTH_DAYS;
 
         // New Moon event (phase angle ~0): solar eclipses possible.
-        {
-          const sunLonDeg = normalizeAngleDeg(startSun + SUN_RATE_DEG_PER_DAY * tNewDays);
-          const nodeLonDeg = normalizeAngleDeg(startNode + NODE_RATE_DEG_PER_DAY * tNewDays);
-          const moonLonDeg = sunLonDeg; // conjunction
+	        {
+	          const sunLonDeg = normalizeAngleDeg(startSun + SUN_RATE_DEG_PER_DAY * tNewDays);
+	          const nodeLonDeg = normalizeAngleDeg(startNode + NODE_RATE_DEG_PER_DAY * tNewDays);
+	          const moonLonDeg = sunLonDeg; // conjunction
 
-          const betaAbs = Math.abs(Model.eclipticLatitudeDeg({ tiltDeg: state.orbitalTilt, moonLonDeg, nodeLonDeg }));
-          const year = tNewDays / DAYS_PER_TROPICAL_YEAR;
+	          const betaAbs = Math.abs(Model.eclipticLatitudeDeg({ tiltDeg: state.orbitalTilt, moonLonDeg, nodeLonDeg }));
+	          const year = tNewDays / DAYS_PER_TROPICAL_YEAR;
 
-          if (betaAbs < ECLIPSE_THRESHOLDS.solarCentralDeg) {
-            state.totalSolarEclipses++;
-            state.eclipseLog.push({ year, type: 'central-solar', height: betaAbs });
-          } else if (betaAbs < ECLIPSE_THRESHOLDS.solarPartialDeg) {
-            state.partialSolarEclipses++;
-            state.eclipseLog.push({ year, type: 'partial-solar', height: betaAbs });
-          }
-        }
+	          const solar = Model.solarEclipseTypeFromBetaDeg({
+	            betaDeg: betaAbs,
+	            earthMoonDistanceKm,
+	          });
+
+	          if (solar.type === 'total-solar') {
+	            state.totalSolarEclipses++;
+	            state.eclipseLog.push({ year, type: 'total-solar', height: betaAbs });
+	          } else if (solar.type === 'annular-solar') {
+	            state.annularSolarEclipses++;
+	            state.eclipseLog.push({ year, type: 'annular-solar', height: betaAbs });
+	          } else if (solar.type === 'partial-solar') {
+	            state.partialSolarEclipses++;
+	            state.eclipseLog.push({ year, type: 'partial-solar', height: betaAbs });
+	          }
+	        }
 
         // Full Moon event (phase angle ~180): lunar eclipses possible.
         {
@@ -886,10 +953,10 @@
           const betaAbs = Math.abs(Model.eclipticLatitudeDeg({ tiltDeg: state.orbitalTilt, moonLonDeg, nodeLonDeg }));
           const year = tFullDays / DAYS_PER_TROPICAL_YEAR;
 
-          const lunar = Model.lunarEclipseTypeFromBetaDeg({
-            betaDeg: betaAbs,
-            earthMoonDistanceKm: EARTH_MOON_DISTANCE_KM,
-          });
+	          const lunar = Model.lunarEclipseTypeFromBetaDeg({
+	            betaDeg: betaAbs,
+	            earthMoonDistanceKm,
+	          });
 
           if (lunar.type === 'total-lunar') {
             state.totalLunarEclipses++;
@@ -944,11 +1011,21 @@
         });
         const height = Math.abs(rawHeight);
         const isNewMoon = isNearAngle(demoState.moonAngle, 180, SYZYGY_TOLERANCE_DEG);
-        const nearNode = height < ECLIPSE_THRESHOLDS.solarPartialDeg;
+        const thresholds = getEclipseThresholds(state.earthMoonDistanceKm);
+        const nearNode = height < thresholds.solarPartialDeg;
+        const solar = Model.solarEclipseTypeFromBetaDeg({
+          betaDeg: height,
+          earthMoonDistanceKm: state.earthMoonDistanceKm,
+        });
         const phase = getPhaseLabel(normalizeAngleDeg(demoState.moonAngle - 180));
 
         if (isNewMoon && nearNode) {
-          const eclipseType = height < ECLIPSE_THRESHOLDS.solarCentralDeg ? 'central' : 'partial';
+          const eclipseType =
+            solar.type === 'total-solar'
+              ? 'total'
+              : solar.type === 'annular-solar'
+                ? 'annular'
+                : 'partial';
           return {
             correct: true,
             message: `Solar eclipse achieved! The Moon is at new moon AND only ${height.toFixed(2)}° from the ecliptic — that's a ${eclipseType} solar eclipse!`
@@ -986,7 +1063,7 @@
         });
         const height = Math.abs(rawHeight);
         const isFullMoon = isNearAngle(demoState.moonAngle, 0, SYZYGY_TOLERANCE_DEG);
-        const lunar = Model.lunarEclipseTypeFromBetaDeg({ betaDeg: height, earthMoonDistanceKm: EARTH_MOON_DISTANCE_KM });
+        const lunar = Model.lunarEclipseTypeFromBetaDeg({ betaDeg: height, earthMoonDistanceKm: state.earthMoonDistanceKm });
         const nearNode = lunar.type !== 'none';
         const phase = getPhaseLabel(normalizeAngleDeg(demoState.moonAngle - 180));
 
@@ -1035,7 +1112,7 @@
         const height = Math.abs(rawHeight);
         const isFullMoon = isNearAngle(demoState.moonAngle, 0, SYZYGY_TOLERANCE_DEG);
         const noEclipse =
-          Model.lunarEclipseTypeFromBetaDeg({ betaDeg: height, earthMoonDistanceKm: EARTH_MOON_DISTANCE_KM }).type === 'none';
+          Model.lunarEclipseTypeFromBetaDeg({ betaDeg: height, earthMoonDistanceKm: state.earthMoonDistanceKm }).type === 'none';
         const phase = getPhaseLabel(normalizeAngleDeg(demoState.moonAngle - 180));
 
         if (isFullMoon && noEclipse) {
@@ -1093,19 +1170,23 @@
       check: (demoState) => {
         const hasRunSim = demoState.yearsSimulated >= 9;
         const totalSolar = demoState.totalSolarEclipses;
+        const annularSolar = demoState.annularSolarEclipses || 0;
         const partialSolar = demoState.partialSolarEclipses;
         const totalLunar = demoState.totalLunarEclipses;
         const partialLunar = demoState.partialLunarEclipses;
-        const allEclipses = totalSolar + partialSolar + totalLunar + partialLunar;
+        const penumbralLunar = demoState.penumbralLunarEclipses || 0;
+        const allEclipses = totalSolar + annularSolar + partialSolar + totalLunar + partialLunar + penumbralLunar;
 
         if (hasRunSim && allEclipses > 0) {
           const totalCount = totalSolar + totalLunar;
-          const partialCount = partialSolar + partialLunar;
+          const nonTotalCount = annularSolar + partialSolar + partialLunar + penumbralLunar;
+          const allSolar = totalSolar + annularSolar + partialSolar;
+          const allLunar = totalLunar + partialLunar + penumbralLunar;
           const eclipsesPerYear = (allEclipses / demoState.yearsSimulated).toFixed(1);
 
           return {
             correct: true,
-            message: `In ${demoState.yearsSimulated.toFixed(0)} years: ${totalSolar + partialSolar} solar eclipses (${totalSolar} total), ${totalLunar + partialLunar} lunar eclipses (${totalLunar} total). That's about ${eclipsesPerYear} eclipses per year — rare compared to 12+ new/full moons per year! Partial eclipses (${partialCount}) are more common than total eclipses (${totalCount}) because they require less precise alignment.`
+            message: `In ${demoState.yearsSimulated.toFixed(0)} years: ${allSolar} solar eclipses (${totalSolar} total, ${annularSolar} annular), ${allLunar} lunar eclipses (${totalLunar} total). That's about ${eclipsesPerYear} eclipses per year — rare compared to 12+ new/full moons per year! Non-total eclipses (${nonTotalCount}) are more common than total eclipses (${totalCount}) because they require less precise alignment.`
           };
         } else if (demoState.yearsSimulated > 0) {
           return {
@@ -1143,11 +1224,14 @@
         moonAngle: getDisplayMoonAngleDeg(),
         nodeAngle: getDisplayNodeAngleDeg(),
         orbitalTilt: state.orbitalTilt,
+        earthMoonDistanceKm: state.earthMoonDistanceKm,
         yearsSimulated: state.yearsSimulated,
         totalSolarEclipses: state.totalSolarEclipses,
+        annularSolarEclipses: state.annularSolarEclipses,
         partialSolarEclipses: state.partialSolarEclipses,
         totalLunarEclipses: state.totalLunarEclipses,
-        partialLunarEclipses: state.partialLunarEclipses
+        partialLunarEclipses: state.partialLunarEclipses,
+        penumbralLunarEclipses: state.penumbralLunarEclipses
       }),
       setState: (newState) => {
         if (newState.moonAngle !== undefined) {
@@ -1160,6 +1244,9 @@
           state.orbitalTilt = newState.orbitalTilt;
           elements.tiltSlider.value = newState.orbitalTilt * 10;
           elements.tiltDisplay.textContent = newState.orbitalTilt.toFixed(1) + '°';
+        }
+        if (newState.earthMoonDistanceKm !== undefined && Number.isFinite(newState.earthMoonDistanceKm)) {
+          state.earthMoonDistanceKm = newState.earthMoonDistanceKm;
         }
         update();
       },
@@ -1199,14 +1286,18 @@
       starfield.start();
     }
 
-    // Set initial tilt slider value
-    elements.tiltSlider.value = state.orbitalTilt * 10;
-    elements.tiltDisplay.textContent = state.orbitalTilt.toFixed(1) + '°';
+	    // Set initial tilt slider value
+	    elements.tiltSlider.value = state.orbitalTilt * 10;
+	    elements.tiltDisplay.textContent = state.orbitalTilt.toFixed(1) + '°';
 
-    // Set initial simulation years slider (default 10 years)
-    const defaultYears = 10;
-    elements.simYearsSlider.value = yearsToSlider(defaultYears);
-    elements.simYearsDisplay.textContent = formatYears(defaultYears);
+	    if (elements.moonDistanceSelect) {
+	      elements.moonDistanceSelect.value = 'mean';
+	    }
+
+	    // Set initial simulation years slider (default 10 years)
+	    const defaultYears = 10;
+	    elements.simYearsSlider.value = yearsToSlider(defaultYears);
+	    elements.simYearsDisplay.textContent = formatYears(defaultYears);
 
     // Set initial Moon angle slider value (display angle)
     if (elements.moonAngleSlider && elements.moonAngleDisplay) {

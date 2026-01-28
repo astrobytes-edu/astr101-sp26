@@ -188,6 +188,37 @@
     return { type: 'none' };
   }
 
+  function solarEclipseTypeFromBetaDeg({
+    betaDeg,
+    earthMoonDistanceKm,
+    earthRadiusKm = 6371,
+    moonRadiusKm = 1737.4,
+    sunRadiusKm = 696000,
+    auKm = 149597870.7,
+  }) {
+    const D_EM = earthMoonDistanceKm;
+    const absBetaRad = Math.abs(degToRad(betaDeg));
+    const impactKm = D_EM * Math.sin(absBetaRad);
+
+    const { umbraRadiusKm, penumbraRadiusKm } = shadowRadiiKmAtDistance({
+      bodyRadiusKm: moonRadiusKm,
+      sunRadiusKm,
+      distanceToSunKm: auKm,
+      distanceFromBodyKm: D_EM,
+    });
+
+    const partialLimitKm = earthRadiusKm + penumbraRadiusKm;
+    const centralLimitKm = earthRadiusKm + Math.abs(umbraRadiusKm);
+
+    if (impactKm <= centralLimitKm) {
+      return { type: umbraRadiusKm > 0 ? 'total-solar' : 'annular-solar' };
+    }
+    if (impactKm <= partialLimitKm) {
+      return { type: 'partial-solar' };
+    }
+    return { type: 'none' };
+  }
+
   return {
     normalizeAngleDeg,
     angularSeparationDeg,
@@ -199,5 +230,6 @@
     shadowRadiiKmAtDistance,
     eclipseThresholdsDeg,
     lunarEclipseTypeFromBetaDeg,
+    solarEclipseTypeFromBetaDeg,
   };
 });

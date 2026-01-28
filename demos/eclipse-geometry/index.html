@@ -266,12 +266,13 @@
       <div id="challenge-container"></div>
 
       <!-- Status display -->
-	      <div class="status-panel">
-	        <div class="eclipse-status miss" id="eclipse-status">NO ECLIPSE</div>
-	        <div class="status-detail" id="status-detail">Moon is 3.2° above ecliptic plane</div>
-	        <div class="status-detail" id="node-distance-detail"></div>
-	        <div class="status-detail" id="status-note"></div>
-	      </div>
+		      <div class="status-panel">
+		        <div class="eclipse-status miss" id="eclipse-status">NO ECLIPSE</div>
+		        <div class="status-detail" id="status-detail">Moon is 3.2° above ecliptic plane</div>
+		        <div class="status-detail" id="node-distance-detail"></div>
+		        <div class="status-detail" id="distance-detail"></div>
+		        <div class="status-detail" id="status-note"></div>
+		      </div>
 
       <!-- Two-view visualization -->
       <div class="viz-layout">
@@ -395,12 +396,31 @@
             <span>0° (eclipse every month!)</span>
             <span>10°</span>
           </div>
-        </div>
+	        </div>
 
-	        <!-- Phase info -->
+	        <!-- Moon distance (affects total vs annular and eclipse-season windows) -->
 	        <div class="control-card">
-          <div class="control-title">
-            Current Phase
+	          <div class="control-title">
+	            Earth–Moon Distance
+	            <span class="control-value" id="moon-distance-display">384,400 km</span>
+	          </div>
+	          <div class="speed-control" style="margin-top: 0.75rem; margin-left: 0;">
+	            <label for="moon-distance-select">Preset:</label>
+	            <select id="moon-distance-select" aria-label="Earth–Moon distance preset">
+	              <option value="perigee">Perigee (~363,300 km)</option>
+	              <option value="mean" selected>Mean (~384,400 km)</option>
+	              <option value="apogee">Apogee (~405,500 km)</option>
+	            </select>
+	          </div>
+	          <div class="status-detail" style="margin-top: 0.5rem;">
+	            Total vs annular depends on whether the Moon looks larger or smaller than the Sun.
+	          </div>
+	        </div>
+
+		        <!-- Phase info -->
+		        <div class="control-card">
+	          <div class="control-title">
+	            Current Phase
             <span class="control-value" id="phase-display">Full Moon</span>
 	        </div>
 
@@ -464,11 +484,11 @@
 	            <button class="sim-btn" id="btn-challenges">Challenge Mode</button>
 	          </div>
 
-          <div class="stats-grid" id="stats-panel" style="display: none;">
-            <div class="stat-item">
-              <div class="stat-label">Central Solar<br><small style="opacity:0.6">(+partial)</small></div>
-              <div class="stat-value" id="stat-solar">0</div>
-            </div>
+	          <div class="stats-grid" id="stats-panel" style="display: none;">
+	            <div class="stat-item">
+	              <div class="stat-label">Total Solar<br><small style="opacity:0.6">(+annular + partial)</small></div>
+	              <div class="stat-value" id="stat-solar">0</div>
+	            </div>
             <div class="stat-item">
               <div class="stat-label">Total Lunar<br><small style="opacity:0.6">(+umbral + penumbral)</small></div>
               <div class="stat-value" id="stat-lunar">0</div>
