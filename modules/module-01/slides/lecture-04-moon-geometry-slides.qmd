@@ -1,0 +1,805 @@
+---
+title: "Moon Geometry"
+subtitle: "Phases, Eclipses, and<br> Why Shadows Rarely Matter"
+author: "Dr. Anna Rosen"
+date: "2026-01-28"
+description: "Moon phases and eclipses as geometry: illumination, viewing angle, orbital tilt, nodes, and why eclipses don’t happen monthly."
+draft: false
+
+format:
+  revealjs:
+    theme: [default, ../../../assets/theme/slides/theme.scss]
+    footer: "ASTR 101 • Lecture 4 • Dr. Anna Rosen"
+    slide-number: true
+    transition: fade
+    transition-speed: fast
+    background-transition: fade
+    center: false
+    chalkboard: true
+    title-slide-attributes:
+      data-background-image: "/assets/images/common/noirlab-nightsky-mosaic.jpg"
+      data-background-opacity: "0.35"
+    pointer:
+      key: "q"
+      color: "#5dbfbf"
+      pointerSize: 18
+      alwaysVisible: true
+    spotlight:
+      size: 80
+      toggleSpotlightOnMouseDown: true
+      presentingCursor: "crosshair"
+      fadeInAndOut: 100
+    quiz:
+      shuffleOptions: true
+      defaultCorrect: "Correct!"
+      defaultIncorrect: "Not quite — let’s fix the geometry."
+
+revealjs-plugins:
+  - pointer
+  - spotlight
+  - attribution
+  - quiz
+
+filters:
+  - roughnotation
+
+execute:
+  echo: false
+  warning: false
+  message: false
+---
+
+## Join iClicker {background-color="black"}
+
+::: {.text-center}
+{{< img iclicker-qr-astr101 width="36%" class="img-center" >}}
+
+::: {.text-xl .font-semibold .mt-2}
+[join.iclicker.com/ASES](https://join.iclicker.com/ASES)
+:::
+
+::: {.text-sm .text-muted .mt-2}
+If you can't scan: open the link and enter the course code **ASES**.
+:::
+:::
+
+::: {.notes}
+30–60 sec. Get everyone connected before starting.
+:::
+
+---
+
+## {background-color="black"}
+
+::: {.text-center .text-xl .font-semibold .mb-2}
+Two questions that secretly have the same answer:
+:::
+
+::: {.fragment .text-center .text-lg .text-muted}
+Why does the Moon change shape?
+:::
+
+::: {.fragment .text-center .text-lg .text-muted}
+Why don’t we get eclipses every month?
+:::
+
+::: {.fragment .text-center .mt-4}
+Geometry. (Not vibes.)
+:::
+
+::: {.notes}
+0–1 min. Hook. Emphasize: "Today is a geometry day. If you can draw it, you can predict it."
+:::
+
+---
+
+## Today's Learning Objectives {background-image="/assets/images/common/noirlab-nightsky-mosaic.jpg" background-opacity="0.2"}
+
+::: {.bg-muted .p-2 .text-sm}
+By the end of today, you'll be able to:
+
+::: {.incremental}
+- Explain Moon phases as changing viewing geometry of the Moon’s sunlit half (not Earth’s shadow)
+- Predict the Moon’s phase from Sun–Earth–Moon geometry and describe when each phase is visible
+- Distinguish phases from eclipses and explain why eclipses do not happen every month
+- Define nodes and explain eclipse seasons as repeated alignment windows
+- Connect angular size to eclipse type (total vs. annular) using geometric reasoning
+:::
+:::
+
+::: {.notes}
+1–2 min. Point out: phases (common), eclipses (rare) — same ingredients, different alignments.
+:::
+
+---
+
+## Quick Break (2–3 min): NotebookLM {background-image="/assets/images/common/noirlab-nightsky-mosaic.jpg" background-opacity="0.2"}
+
+::: {.bg-muted .p-2 .text-sm}
+Open NotebookLM: [notebooklm.google.com](https://notebooklm.google.com/)
+
+:::: {.columns .mt-2}
+::: {.column width="52%"}
+::: {.bg-muted .p-2 .text-xs}
+**Make your notebook (now):**
+
+1. Create a new notebook: **Lecture 4 — Moon Geometry**
+2. Add sources by pasting the **lecture reading web pages** (URLs)
+3. Ask it to generate retrieval questions + “find-it-fast” summaries
+
+Example source URL to add:
+`{{< meta params.website-url >}}/modules/module-01/readings/lecture-04-moon-geometry-reading.html`
+:::
+:::
+
+::: {.column width="48%"}
+::: {.bg-muted .p-2 .text-xs}
+**Why NotebookLM:**
+
+::: {.incremental}
+- It’s **grounded in your sources** (it answers from what you add)
+- It can **cite where it got the answer** (use the citations to verify)
+- It’s great for **retrieval practice** (quiz yourself fast)
+- It can produce **multimodal study outputs** (feature-dependent): audio overview (“podcast”), study guide, concept map, slide-style summary
+:::
+:::
+
+:::
+::::
+:::
+
+::: {.mt-2 .text-xs .text-muted}
+**Caveats:** Study tool only. Don’t use it to generate graded solutions. If it doesn’t cite the reading, treat it as untrusted and go back to the source.
+:::
+
+::: {.notes}
+Do this as a real break + micro-demo (2–3 min max).
+
+Framing:
+- NotebookLM is for studying and review; it should not write graded solutions.
+- If students have the course NotebookLM, open it from the posted invite/link (Canvas/website).
+
+Two demo prompts:
+- "Make 8 retrieval questions on Moon phases + eclipses. Include 2 misconception checks."
+- "Where in the reading do we explain why eclipses aren’t monthly? Summarize in 3 bullets."
+
+More templates live in `handouts/ai-tutor-study-tips.qmd`.
+:::
+
+---
+
+## Quick Quiz: What Causes Phases? {background-color="#1a1a2e"}
+
+::: {.quiz}
+Moon phases are caused by:
+
+- [ ] Earth’s shadow falling on the Moon
+- [ ] The Moon passing through different parts of Earth’s atmosphere
+- [ ] The geometry of viewing the Moon’s lit half from different angles
+- [ ] Clouds on the Moon blocking sunlight
+:::
+
+::: {.notes}
+2–3 min. Correct: C. The Sun always lights half the Moon; we see different fractions of that lit half.
+:::
+
+---
+
+## Phases Are NOT Shadows {background-color="black"}
+
+:::: {.columns}
+::: {.column width="60%"}
+{{< img moon-phases-not-shadows width="100%" >}}
+:::
+
+::: {.column width="40%"}
+::: {.text-lg .font-semibold}
+Phases are not Earth’s shadow.
+:::
+
+::: {.fragment .mt-3 .text-muted .text-sm}
+If phases were Earth’s shadow, we’d have an “almost-eclipse” basically every night.
+:::
+:::
+::::
+
+::: {.notes}
+3–5 min. Make it observational: crescent moons appear near the Sun in the sky; Earth’s shadow points away from the Sun.
+:::
+
+---
+
+## The Key Insight {background-color="black"}
+
+:::: {.columns}
+::: {.column width="60%"}
+{{< img moon-half-always-lit width="100%" >}}
+:::
+
+::: {.column width="40%"}
+::: {.text-lg .font-semibold}
+The Sun illuminates **half of the Moon** at all times.
+:::
+
+::: {.fragment .mt-3 .text-muted}
+The phase is: **how much of that lit half you can see from Earth.**
+:::
+:::
+::::
+
+::: {.notes}
+5–7 min. Say: "The Moon isn’t changing. Your viewing angle is changing."
+:::
+
+---
+
+## A Mental Model: Lamp + Ball {background-color="black"}
+
+::: {.text-lg}
+Imagine a tennis ball under one lamp:
+:::
+
+::: {.incremental}
+- The lamp lights one hemisphere (**always 50%**).
+- Walk around the ball.
+- The **lit fraction you can see** changes smoothly.
+:::
+
+::: {.fragment .mt-3 .text-muted}
+Moon phases are this exact demo — just with the Sun as the lamp and Earth as your viewpoint.
+:::
+
+::: {.notes}
+7–8 min. Keep it simple. No diagrams yet; set up intuition.
+:::
+
+---
+
+## The Phase Cycle (Geometry Map) {background-color="black"}
+
+{{< img moon-phase-cycle width="92%" class="img-center" >}}
+
+::: {.notes}
+8–10 min. Walk around the orbit: new → waxing crescent → first quarter → waxing gibbous → full → waning gibbous → third quarter → waning crescent.
+:::
+
+---
+
+## Why ~29.5 Days? {background-color="black"}
+
+:::: {.columns}
+::: {.column width="55%"}
+{{< img moon-phases-synodic-month width="100%" >}}
+:::
+
+::: {.column width="45%"}
+::: {.bg-muted .p-2 .text-xs .leading-tight}
+**Sidereal month** ≈ 27.3 days (relative to the stars)  
+**Synodic month** ≈ 29.5 days (new → new)
+
+Earth moves around the Sun, so the **Sun-direction shifts** during one Moon orbit.  
+The Moon must **catch up** to re-align → about **2 extra days**.
+
+**Main takeaway:** phases track the **Sun-direction**, not the background stars.
+:::
+:::
+::::
+
+::: {.notes}
+10–11 min. The “lol why 29.5?” slide. Emphasize: phases are locked to the Sun-direction, not the stars.
+
+If you want the quantitative version (say it, don’t show it):
+- Moon’s orbital speed ≈ 360°/27.3 d ≈ 13.2°/day, so catching up ~27° takes ~2.1 days.
+- Optional compact relation: 1/P_syn = 1/P_sid − 1/P_year.
+:::
+
+---
+
+## Quick Check: Where Is “First Quarter”? {background-color="#1a1a2e"}
+
+::: {.quiz}
+At **first quarter**, the Moon is:
+
+- [ ] Between Earth and the Sun
+- [ ] 90° away from the Sun (as seen from Earth)
+- [ ] Opposite the Sun in the sky
+- [ ] In Earth’s shadow
+:::
+
+::: {.notes}
+10–11 min. Correct: B. First/third quarter corresponds to a 90° Sun–Earth–Moon angle.
+:::
+
+---
+
+## “Waxing” vs “Waning” (Translation) {background-color="black"}
+
+::: {.text-center .text-xl}
+Waxing = getting brighter each night
+:::
+
+::: {.fragment .text-center .text-xl .mt-2}
+Waning = getting dimmer each night
+:::
+
+::: {.fragment .text-center .text-muted .mt-3}
+Growing/waning is about **time direction**, not left vs right on the Moon.
+:::
+
+::: {.notes}
+11–12 min. Students often memorize “right side lit means waxing” which fails in the southern hemisphere and confuses orientation. Emphasize time + where it is in the sky.
+:::
+
+---
+
+## Moon as a Clock {background-color="black"}
+
+:::: {.columns}
+::: {.column width="60%"}
+{{< img moon-as-a-clock width="100%" >}}
+:::
+
+::: {.column width="40%"}
+::: {.fragment .text-muted .text-sm}
+If you know the **time** and you can estimate the **phase**, you can usually predict where to look.
+:::
+:::
+::::
+
+::: {.notes}
+12–14 min. Highlight the big anchor times: new near Sun; first quarter highest near sunset; full highest near midnight; third quarter highest near sunrise.
+:::
+
+---
+
+## Check Yourself: Evening Crescent {background-color="#1a1a2e"}
+
+::: {.quiz}
+You see a **crescent Moon** low in the **western sky just after sunset**. Is it waxing or waning?
+
+- [ ] Waxing
+- [ ] Waning
+- [ ] Could be either
+- [ ] Crescent moons are never visible at sunset
+:::
+
+::: {.notes}
+14–15 min. Correct: waxing. Waning crescent shows up pre-dawn in the east.
+:::
+
+---
+
+## Check Yourself: Highest at Midnight {background-color="#1a1a2e"}
+
+::: {.quiz}
+It’s midnight, and the Moon is **highest in the sky**. What phase is it?
+
+- [ ] New Moon
+- [ ] First Quarter
+- [ ] Full Moon
+- [ ] Third Quarter
+:::
+
+::: {.notes}
+15–16 min. Correct: full moon.
+:::
+
+---
+
+## Mini-Activity: Sketch the Geometry
+
+::: {style="background-color: rgba(93,191,191,0.16); border-left: 6px solid #5dbfbf; border-radius: 14px; padding: 0.9rem 1.0rem; color: rgba(255,255,255,0.96);"}
+::: {.text-lg .font-semibold}
+✏️ 60-second sketch
+:::
+
+::: {.text-sm .leading-tight}
+Draw sunlight coming from the left, Earth in the middle, and the Moon in four positions: new, first quarter, full, third quarter.
+
+Then: for each Moon, shade the half **away from the Sun** and ask: what fraction of the lit half can Earth see?
+
+When you're done: **compare with a neighbor**. If your sketches disagree, decide which one has the lit half always facing the Sun.
+:::
+:::
+
+::: {.notes}
+16–18 min.
+
+Enforcement:
+- 60 sec sketch (timer).
+- 30 sec pair-check: "Show your sketch to your neighbor."
+- Cold-call 2 pairs to describe (no drawing on board needed): "Where is the Sun? Which half is lit? What do we see from Earth?"
+:::
+
+---
+
+## Live Demo (3 min): Moon Phases {background-image="/assets/images/common/noirlab-nightsky-mosaic.jpg" background-opacity="0.2"}
+
+::: {.text-lg}
+Open the Moon Phases demo:
+:::
+
+::: {.text-xl .font-semibold}
+[astrobytes-edu.github.io/astr101-sp26/demos/moon-phases/](https://astrobytes-edu.github.io/astr101-sp26/demos/moon-phases/)
+:::
+
+::: {.fragment .mt-3 .text-sm}
+Do three quick checkpoints:
+:::
+
+::: {.incremental .text-sm}
+1. **First quarter:** where is Earth’s shadow?
+2. **Full moon:** where is the Moon in the sky relative to the Sun?
+3. **Waning crescent:** what time of day would you expect to see it?
+:::
+
+::: {.notes}
+18–21 min. Make this mandatory (tight 3 minutes).
+
+Script:
+- First quarter: turn on "Show Earth's Shadow" and ask for a quick prediction, then reveal the shadow is nowhere near the Moon.
+- Full: drag to full and connect to "highest at midnight."
+- Waning crescent: drag there and ask "sunrise vs sunset?"
+:::
+
+---
+
+## {.center}
+
+::: {.r-fit-text}
+Eclipses: when shadows actually matter
+:::
+
+::: {.notes}
+Transition. "Now we earn the word 'shadow'."
+:::
+
+---
+
+## What Is an Eclipse? {background-color="black"}
+
+:::: {.columns}
+::: {.column width="60%"}
+{{< img eclipses-when-shadows-matter width="100%" >}}
+:::
+
+::: {.column width="40%"}
+::: {.incremental .text-sm}
+- **Solar eclipse:** Moon’s shadow falls on Earth (Moon between Sun and Earth)
+- **Lunar eclipse:** Moon passes through Earth’s shadow (Earth between Sun and Moon)
+:::
+:::
+::::
+
+::: {.notes}
+20–22 min. Keep it geometrical: alignment + shadow cones (umbra/penumbra).
+:::
+
+---
+
+## Quick Check: Solar Eclipse Phase {background-color="#1a1a2e"}
+
+::: {.quiz}
+During a **solar eclipse**, the Moon must be at:
+
+- [ ] Full Moon
+- [ ] New Moon
+- [ ] First Quarter
+- [ ] Third Quarter
+:::
+
+::: {.notes}
+22–23 min. Correct: new moon. Lunar eclipse corresponds to full moon.
+:::
+
+---
+
+## Why Not Every Month? {background-color="black"}
+
+::: {.text-lg}
+If eclipses happen at **new** and **full** moon…
+:::
+
+::: {.fragment .text-lg}
+…why don’t we get two eclipses every month?
+:::
+
+::: {.fragment .mt-3}
+Because the Moon’s orbit is tilted by about **5°** relative to the ecliptic.
+:::
+
+::: {.notes}
+23–24 min. Name the ecliptic: Earth’s orbital plane (Lecture 3).
+:::
+
+---
+
+## Orbital Tilt Breaks the Alignment {background-color="black"}
+
+:::: {.columns}
+::: {.column width="60%"}
+{{< img eclipses-5deg-difference width="100%" >}}
+:::
+
+::: {.column width="40%"}
+::: {.fragment .text-muted .text-sm}
+Most months, the Moon passes a few degrees **above or below** the Sun (new moon) or Earth’s shadow (full moon).
+:::
+:::
+::::
+
+::: {.notes}
+24–26 min. Emphasize: “5 degrees is enough to miss a shadow cone.”
+:::
+
+---
+
+## Nodes = Eclipse Gateways {background-color="black"}
+
+:::: {.columns}
+::: {.column width="60%"}
+{{< img eclipses-nodes-why-not-monthly width="100%" >}}
+:::
+
+::: {.column width="40%"}
+::: {.fragment .text-muted .text-sm}
+Eclipses are only possible when the Moon is near a **node** (where its orbit crosses the ecliptic).
+:::
+:::
+::::
+
+::: {.notes}
+26–28 min. Define node: intersection points of planes. Keep it visual.
+:::
+
+---
+
+## Live Demo (2 min): Eclipse Geometry {background-image="/assets/images/common/noirlab-nightsky-mosaic.jpg" background-opacity="0.2"}
+
+::: {.text-lg}
+Open the Eclipse Geometry demo:
+:::
+
+::: {.text-xl .font-semibold}
+[astrobytes-edu.github.io/astr101-sp26/demos/eclipse-geometry/](https://astrobytes-edu.github.io/astr101-sp26/demos/eclipse-geometry/)
+:::
+
+::: {.fragment .mt-3 .text-sm}
+Two fast tests:
+:::
+
+::: {.incremental .text-sm}
+1. Set tilt to **0°** → new moon and full moon should always produce eclipses.
+2. Restore tilt to **5.1°** → eclipses only happen when the Moon is near a **node**.
+:::
+
+::: {.notes}
+28–30 min. This is the cleanest "why not monthly" proof students will remember.
+:::
+
+---
+
+## Check Yourself: Why Eclipses Aren’t Monthly {background-color="#1a1a2e"}
+
+::: {.quiz}
+Eclipses don’t occur every month because:
+
+- [ ] The Moon is too small to cast a significant shadow
+- [ ] The Moon’s orbit is tilted relative to Earth’s orbital plane
+- [ ] Earth’s atmosphere bends the Moon’s shadow away
+- [ ] The Sun is too bright during most new moons
+:::
+
+::: {.notes}
+28–29 min. Correct: B.
+:::
+
+---
+
+## Sketch It: Eclipse Geometry
+
+::: {.callout-note appearance="minimal"}
+### ✏️ 90-second sketch
+
+Draw the ecliptic as a straight line. Draw the Moon’s orbit as a tilted loop crossing the ecliptic at two nodes.
+
+Mark new moon and full moon positions both **near a node** and **far from a node**.
+
+Circle the cases where an eclipse is possible.
+
+When you're done: **hold up your paper** (or show your neighbor) so we can check the logic quickly.
+:::
+
+::: {.notes}
+30–32 min. Enforcement: 90 sec timer, then quick scan of the room / pair-check. Ask one student to narrate their sketch: "What has to be true at new moon for a solar eclipse?"
+:::
+
+---
+
+## Eclipse Seasons (Same Geometry, Repeats) {background-color="black"}
+
+:::: {.columns}
+::: {.column width="60%"}
+{{< img eclipses-nodes-gateways width="100%" >}}
+:::
+
+::: {.column width="40%"}
+::: {.fragment .text-muted .text-sm}
+When the Sun is lined up near a node direction, eclipses become possible for a short window: an **eclipse season**.
+:::
+:::
+::::
+
+::: {.notes}
+31–33 min. Conceptual only; don’t drown in timing. "Alignment windows repeat."
+:::
+
+---
+
+## Eclipse Seasons: Numbers to Anchor It {background-color="black" .smaller}
+
+::: {.bg-muted .p-2}
+Helpful reference numbers (global):
+
+- An **eclipse season** lasts about **34–35 days** (≈34.5 days).
+- Eclipse seasons happen about **twice per year** (roughly **6 months** apart).
+- Globally, there are about **2–5 solar eclipses per year** (average ≈ **2.4**).
+- A single season can produce up to **three eclipses** (solar, lunar, solar) if the timing lines up.
+:::
+
+::: {.notes}
+33–34 min. Emphasize "global numbers" vs "what you personally see." This sets up why eclipse chasing is a thing.
+:::
+
+---
+
+## Eclipse Varieties {background-color="black"}
+
+{{< img eclipse-varieties width="92%" class="img-center" >}}
+
+::: {.notes}
+33–35 min. Quick tour: partial vs total; umbra vs penumbra; solar vs lunar.
+:::
+
+---
+
+## Why Does the Moon Turn Red? {background-color="black"}
+
+:::: {.columns}
+::: {.column width="60%"}
+{{< img lunar-eclipse-blood-moon width="100%" >}}
+:::
+
+::: {.column width="40%"}
+::: {.fragment .text-muted}
+During a total lunar eclipse, the Moon is lit by sunlight filtered through Earth’s atmosphere.
+:::
+:::
+::::
+
+::: {.notes}
+35–37 min. Tie to Rayleigh scattering: blue scattered out, red survives and bends into the shadow.
+:::
+
+---
+
+## Angular Size Decides: Total vs Annular {background-color="black"}
+
+::: {.text-lg}
+Recall (Lecture 3): Sun and Moon are both about **0.5°** across in our sky.
+:::
+
+::: {.fragment .mt-3}
+But the Moon’s distance changes — so its angular size changes.
+:::
+
+::: {.fragment .mt-2 .text-muted}
+If the Moon looks **bigger** than the Sun → **total** eclipse possible.
+
+If the Moon looks **smaller** than the Sun → **annular** eclipse (ring).
+:::
+
+::: {.notes}
+37–39 min. Keep it conceptual: angular size ∝ physical size / distance.
+:::
+
+---
+
+## Check Yourself: What If the Moon Were Farther? {background-color="#1a1a2e"}
+
+::: {.quiz}
+If the Moon were **20% farther** from Earth than it is now, solar eclipses would be:
+
+- [ ] More frequent
+- [ ] Always total
+- [ ] Always annular (never total)
+- [ ] Exactly the same
+:::
+
+::: {.notes}
+39–40 min. Correct: always annular. Farther → smaller angular size.
+:::
+
+---
+
+## One Wild Fact (Optional) {background-color="black"}
+
+::: {.text-center .text-xl}
+Total solar eclipses are temporary.
+:::
+
+::: {.fragment .mt-3 .text-lg}
+The Moon is slowly receding from Earth (about **3.8 cm/year**).
+:::
+
+::: {.fragment .mt-2 .text-muted}
+Far in the future, the Moon will look too small to fully cover the Sun.
+:::
+
+::: {.notes}
+Optional 60 sec. Keep it as “cool preview” tied to tides/rotation later.
+:::
+
+---
+
+## The Big Picture (One Slide Summary) {background-image="/assets/images/common/noirlab-nightsky-mosaic.jpg" background-opacity="0.2"}
+
+::: {.bg-muted .p-2}
+**Phases:** not shadows → changing **viewing angle** of the Moon’s sunlit half.
+
+**Eclipses:** shadows → rare **alignment** + near a **node**.
+
+**Total vs annular:** **angular size** (Moon distance) decides whether the Sun can be fully covered.
+:::
+
+::: {.notes}
+Wrap. Ask: "If you remember one thing: draw the geometry."
+:::
+
+---
+
+## Exit Ticket {background-color="#1a1a2e"}
+
+:::: {.columns}
+::: {.column width="50%"}
+::: {.quiz .text-sm}
+1. During a **full moon**, the fraction of the Moon that is illuminated by the Sun is:
+
+- [ ] 0%
+- [ ] 50%
+- [ ] 100%
+- [ ] It depends on the season
+:::
+:::
+
+::: {.column width="50%"}
+::: {.quiz .text-sm}
+2. A **lunar eclipse** can only happen at:
+
+- [ ] New moon
+- [ ] First quarter
+- [ ] Full moon
+- [ ] Any phase
+:::
+:::
+::::
+
+::: {.notes}
+Collect answers quickly. 1) pre-dawn east, 2) full moon.
+:::
+
+---
+
+## Exit Ticket (Open Response)
+
+::: {.callout-note appearance="minimal"}
+### ✏️ 60 seconds: draw + explain
+
+Draw the geometry for a **lunar eclipse**.
+
+In one sentence: **Why must it be full moon?**
+:::
+
+::: {.notes}
+Collect a few responses out loud, or have students swap papers with a neighbor for a 10-second check.
+:::

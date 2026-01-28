@@ -3,7 +3,7 @@ title: "The Sky Is a Map"
 subtitle: "Celestial Geometry, Seasons,<br> and Angular Size"
 author: "Dr. Anna Rosen"
 date: "2026-01-26"
-description: "Celestial sphere geometry, seasons (tilt not distance), and angular size—how to navigate a sky made of angles."
+description: "Celestial sphere geometry, seasons (tilt not distance), and angular size — how to navigate a sky made of angles."
 draft: false
 
 format:
@@ -31,7 +31,7 @@ format:
     quiz:
       shuffleOptions: true
       defaultCorrect: "Correct!"
-      defaultIncorrect: "Not quite—let's discuss."
+      defaultIncorrect: "Not quite — let's discuss."
 
 revealjs-plugins:
   - pointer
@@ -95,7 +95,7 @@ The pattern exists only because they lie along similar **directions** from Earth
 ::: {.notes}
 0–2 min. Let the image speak first.
 
-"When you look at the Big Dipper, your brain sees a pattern—a group. But space is 3D, and you're seeing a 2D projection. These stars just happen to be in the same general direction."
+"When you look at the Big Dipper, your brain sees a pattern — a group. But space is 3D, and you're seeing a 2D projection. These stars just happen to be in the same general direction."
 :::
 
 ---
@@ -153,7 +153,7 @@ The sky gives us *directions* by default.<br> Measuring *distances* requires ext
 :::
 
 ::: {.notes}
-3–4 min. "This isn't a limitation—it's a starting point. We embrace what the sky naturally gives us: a coordinate system for pointing at things."
+3–4 min. "This isn't a limitation — it's a starting point. We embrace what the sky naturally gives us: a coordinate system for pointing at things."
 :::
 
 ---
@@ -227,7 +227,7 @@ All three are **great circles** — they divide the celestial sphere into equal 
 :::
 
 ::: {.notes}
-6–7 min. "These aren't arbitrary—they're defined by Earth's rotation (equator) and orbit (ecliptic)."
+6–7 min. "These aren't arbitrary — they're defined by Earth's rotation (equator) and orbit (ecliptic)."
 :::
 
 ---
@@ -264,7 +264,7 @@ The sky appears to rotate once per day — hours match the clock.
 ::::
 
 ::: {.notes}
-7–8 min. Don't dwell on RA details—just establish the analogy to lat/long.
+7–8 min. Don't dwell on RA details — just establish the analogy to lat/long.
 :::
 
 ---
@@ -291,7 +291,7 @@ This tilt is why we have **seasons**.
 :::
 
 ::: {.notes}
-8–9 min. "Two different motions—rotation and orbit—define two different reference planes. They don't align, and that misalignment changes everything."
+8–9 min. "Two different motions — rotation and orbit — define two different reference planes. They don't align, and that misalignment changes everything."
 :::
 
 ---
@@ -310,7 +310,7 @@ The yearly drift is why the Sun's noon altitude changes with the seasons.
 :::
 
 ::: {.notes}
-9–10 min. "When we talk about the Sun's position 'changing with seasons,' we mean along the ecliptic—the yearly drift, not the daily motion."
+9–10 min. "When we talk about the Sun's position 'changing with seasons,' we mean along the ecliptic — the yearly drift, not the daily motion."
 :::
 
 ---
@@ -329,7 +329,7 @@ The ecliptic is:
 ::: {.notes}
 10–11 min. Give 30 seconds.
 
-Correct: B. The ecliptic traces Earth's orbital plane—the Sun appears to move along it over a year.
+Correct: B. The ecliptic traces Earth's orbital plane — the Sun appears to move along it over a year.
 :::
 
 ---
@@ -371,7 +371,7 @@ Surveys show many college students and adults believe this.
 ::::
 
 ::: {.notes}
-11–12 min. Don't shame—acknowledge it's intuitive. "It makes sense! Closer = warmer, right? But nature doesn't cooperate."
+11–12 min. Don't shame — acknowledge it's intuitive. "It makes sense! Closer = warmer, right? But nature doesn't cooperate."
 :::
 
 ---
@@ -479,7 +479,7 @@ When your hemisphere tilts toward the Sun, the Sun takes a **longer path** acros
 ::::
 
 ::: {.notes}
-15–16 min. "Effect 2: day length. More hours of heating. The combination is powerful—4 extra hours of more direct sunlight."
+15–16 min. "Effect 2: day length. More hours of heating. The combination is powerful — 4 extra hours of more direct sunlight."
 :::
 
 ---
@@ -580,7 +580,7 @@ Correct: C. Higher path (more direct energy) + longer path (more hours of heatin
 :::
 
 ::: {.fragment .mt-2 .text-muted .text-sm}
-(You should find Earth is *farthest* from the Sun in July—the opposite of what distance hypothesis predicts!)
+(You should find Earth is *farthest* from the Sun in July — the opposite of what distance hypothesis predicts!)
 :::
 
 ::: {.notes}
@@ -738,7 +738,7 @@ That's roughly half the width of your pinky finger at arm's length.
 :::
 
 ::: {.notes}
-26–27 min. Walk through the calculation. "The formula works—and it matches what we see."
+26–27 min. Walk through the calculation. "The formula works — and it matches what we see."
 :::
 
 ---
@@ -770,7 +770,7 @@ The factors cancel — they appear **almost exactly the same size**!
 :::
 
 ::: {.notes}
-27–28 min. "This is a cosmic coincidence. No law of physics requires this—it's just where we happen to be in history."
+27–28 min. "This is a cosmic coincidence. No law of physics requires this — it's just where we happen to be in history."
 :::
 
 ---
@@ -784,7 +784,7 @@ Because of this coincidence, the Moon can *just barely* cover the Sun completely
 ::: {.fragment .text-center .mt-4}
 **Total solar eclipses** are possible.
 
-We see the Sun's corona—its outer atmosphere—only during these moments.
+We see the Sun's corona — its outer atmosphere — only during these moments.
 :::
 
 ::: {.notes}
@@ -909,7 +909,7 @@ We'll apply angular size to understand:
 :::
 
 ::: {.notes}
-34–35 min. "Everything you learned today—celestial sphere, angular size—comes back in Lecture 4."
+34–35 min. "Everything you learned today — celestial sphere, angular size — comes back in Lecture 4."
 :::
 
 ---
@@ -920,7 +920,7 @@ We'll apply angular size to understand:
 **What to recognize:**
 
 ::: {.incremental}
-1. The sky is a map of **directions**, not distances—that's the celestial sphere
+1. The sky is a map of **directions**, not distances — that's the celestial sphere
 2. Seasons are caused by **axial tilt** (sun angle + day length), not distance
 3. **Angular size** depends on both physical size AND distance
 4. The Sun-Moon angular size match is a **coincidence** that enables total eclipses
@@ -945,7 +945,7 @@ We'll apply angular size to understand:
 - Complete the **Lecture 3 Reading** (includes demo explorations)
 - Work through the **Check Yourself** questions (*some will be assigned for homework*)
 - Try at least 3 **Practice Problems**
-- Read or skim the **Lecture 4 Reading** 
+- Read or skim the **Lecture 4 Reading**
 :::
 
 ::: {.fragment .mt-2}

@@ -3,7 +3,7 @@ title: "Lecture 2: Tools of the Trade"
 subtitle: "Math + Cosmic Scales Survival Kit"
 author: "Dr. Anna Rosen"
 date: "2026-01-23"
-description: "ASTR 101 math essentials: scientific notation, SI prefixes, units & conversions, ratio method, and rate problems—framed through cosmic scales."
+description: "ASTR 101 math essentials: scientific notation, SI prefixes, units & conversions, ratio method, and rate problems — framed through cosmic scales."
 title-slide-attributes:
   data-background-image: "/assets/images/common/cosmic-cliffs-jwst.png"
   data-background-size: "cover"
@@ -33,7 +33,7 @@ format:
     quiz:
       shuffleOptions: true
       defaultCorrect: "✓ Correct!"
-      defaultIncorrect: "✗ Not quite—let's fix it."
+      defaultIncorrect: "✗ Not quite — let's fix it."
 
 revealjs-plugins:
   - pointer
@@ -74,13 +74,13 @@ Set the tone: "This is not a math test. It's a navigation toolkit for the univer
 ::: {.callout-warning appearance="minimal"}
 ### Don't panic about the equations!
 
-Today I'll show you **examples** using formulas we haven't covered yet. You're **not expected to understand them fully**—we'll learn each one properly when its topic comes up.
+Today I'll show you **examples** using formulas we haven't covered yet. You're **not expected to understand them fully** — we'll learn each one properly when its topic comes up.
 
 For now, focus on the *method*, not the formula.
 :::
 
 ::: {.fragment}
-Think of it like watching a cooking demo before you have all the ingredients. You're learning the *technique*—the details come later.
+Think of it like watching a cooking demo before you have all the ingredients. You're learning the *technique* — the details come later.
 :::
 
 ::: {.notes}
@@ -104,7 +104,7 @@ The nearest star? Another cantaloupe **in Hawaii**.
 
 ::: {.notes}
 0–1 min. Pause after the first line. Let them picture it. Then reveal the fragments.
-This establishes *why* we need powers of ten—ordinary language can't hold these scales.
+This establishes *why* we need powers of ten — ordinary language can't hold these scales.
 :::
 
 ---
@@ -115,7 +115,7 @@ This establishes *why* we need powers of ten—ordinary language can't hold thes
 
 ### Math as a telescope 🔭
 
-In ASTR 101, numbers aren’t decoration—they’re how we turn **points of light** into **physical reality**.
+In ASTR 101, numbers aren’t decoration — they’re how we turn **points of light** into **physical reality**.
 :::
 
 ::: {.incremental}
@@ -177,7 +177,7 @@ We see them **as they were**.
 
 ::: {.callout-warning appearance="minimal"}
 ### Common trap
-A **light-year** is a *distance*, not a time—even though "year" is in the name.
+A **light-year** is a *distance*, not a time — even though "year" is in the name.
 It's how far light travels in one year: about 9.5 trillion km.
 :::
 
@@ -207,7 +207,7 @@ $$c = 300{,}000\,\text{km/s} = 3 \times 10^8\,\text{m/s}$$
 {{< img lsst-cosmic-treasure-chest >}}
 
 ::: {.fragment .text-sm}
-Every galaxy in this image is a **time capsule**. The light we see left millions to billions of years ago—we're seeing them as they *were*, not as they *are*.
+Every galaxy in this image is a **time capsule**. The light we see left millions to billions of years ago — we're seeing them as they *were*, not as they *are*.
 :::
 :::
 :::
@@ -222,7 +222,7 @@ This sets up the key insight: distance = looking back in time.
 
 ## What a Light-Year Really Means
 
-A **light-year** is a *distance*, not a time—even though "year" is in the name.
+A **light-year** is a *distance*, not a time — even though "year" is in the name.
 
 ::: {.columns}
 ::: {.column width="55%"}
@@ -331,7 +331,7 @@ From your desk to the edge of the observable universe takes about **27 steps**.
 ## {background-image="/assets/images/module-01/logarithmic-cosmic-scales-gemini.webp" background-size="contain" background-color="#0a0a14"}
 
 ::: {.notes}
-1 min. Full-screen image—let it breathe. From atoms to the observable universe, each tick is ×10. This is why we need scientific notation: ordinary numbers can't hold 40+ orders of magnitude.
+1 min. Full-screen image — let it breathe. From atoms to the observable universe, each tick is ×10. This is why we need scientific notation: ordinary numbers can't hold 40+ orders of magnitude.
 :::
 
 ---
@@ -547,7 +547,7 @@ Emphasize: a number without a unit is like a sentence without a verb.
 
 ## What's a Physical Constant?
 
-A **physical constant** is a number that nature gives us—it doesn't change.
+A **physical constant** is a number that nature gives us — it doesn't change.
 
 ::: {.incremental}
 - **Speed of light:** $c = 3 \times 10^8$ m/s — the universe's speed limit
@@ -564,7 +564,7 @@ They're **conversion factors** between different physical quantities. The speed 
 :::
 
 ::: {.notes}
-1.5 min. Don't dwell on the numbers—emphasize the *concept*.
+1.5 min. Don't dwell on the numbers — emphasize the *concept*.
 Constants are nature's rules, not human choices. We discover them, we don't invent them.
 :::
 
@@ -703,7 +703,7 @@ $$= 100^3\,\text{cm}^3 = 10^6\,\text{cm}^3$$ ✓
 :::
 
 ::: {.fragment}
-**Pro tip:** Parentheses are your best friend—wrap the number *and* unit together: $(100\,\text{cm})^3$, not $100\,\text{cm}^3$.
+**Pro tip:** Parentheses are your best friend — wrap the number *and* unit together: $(100\,\text{cm})^3$, not $100\,\text{cm}^3$.
 :::
 
 ::: {.notes}
@@ -733,7 +733,7 @@ Complex quantities are just base dimensions multiplied and divided. If you know 
 
 ::: {.notes}
 1 min. Walk through how velocity becomes acceleration becomes force.
-This is dimensional analysis in miniature—combinations of base units.
+This is dimensional analysis in miniature — combinations of base units.
 :::
 
 ---
@@ -758,7 +758,7 @@ If a unit looks unfamiliar, rewrite it in base units!
 :::
 
 ::: {.notes}
-30 sec. Don't memorize this table—use it as a reference.
+30 sec. Don't memorize this table — use it as a reference.
 The point: all units reduce to combinations of length, mass, and time.
 :::
 
@@ -808,7 +808,7 @@ The constant $k$ cancels!
 :::
 
 ::: {.fragment}
-**What this says:** Ratios let you compare systems using only the *relationship* between quantities—no need to look up constants.
+**What this says:** Ratios let you compare systems using only the *relationship* between quantities — no need to look up constants.
 :::
 
 ---
@@ -837,12 +837,12 @@ $$\frac{A_\text{Keck}}{A_\text{Hubble}} = \left(\frac{D_\text{Keck}}{D_\text{Hub
 :::
 
 ::: {.fragment}
-**Answer:** Keck collects about **17× more light** than Hubble—no need to calculate actual areas!
+**Answer:** Keck collects about **17× more light** than Hubble — no need to calculate actual areas!
 :::
 
 ::: {.notes}
 2 min. Walk through step by step. Emphasize: we never needed to know $\pi$ or calculate actual square meters.
-The ratio $D_2/D_1$ does all the work. Students often want to compute $\pi r^2$ for both—show them this shortcut.
+The ratio $D_2/D_1$ does all the work. Students often want to compute $\pi r^2$ for both — show them this shortcut.
 :::
 
 ---
@@ -862,7 +862,7 @@ Using $V \propto R^3$, what is $V_\odot / V_\oplus$?
 
 ::: {.notes}
 1-2 min. $109^3 \approx 1.3 \times 10^6$.
-Key insight: volume grows as the *cube* of radius—much faster than area or length.
+Key insight: volume grows as the *cube* of radius — much faster than area or length.
 
 Answer: About 1.3 million
 :::
@@ -943,14 +943,14 @@ $$\frac{I_\text{Mars}}{I_\text{Earth}} = \left(\frac{d_\text{Earth}}{d_\text{Mar
 :::
 
 ::: {.fragment}
-**Answer:** Mars receives only **44% as much sunlight** as Earth—less than half!
+**Answer:** Mars receives only **44% as much sunlight** as Earth — less than half!
 
-This is why solar panels on Mars rovers need to be so large. (Mars is cold mostly because its thin atmosphere can't trap heat—but less sunlight doesn't help!)
+This is why solar panels on Mars rovers need to be so large. (Mars is cold mostly because its thin atmosphere can't trap heat — but less sunlight doesn't help!)
 :::
 
 ::: {.notes}
 2 min. Walk through carefully. Note the d terms flip because brightness is *inversely* proportional to d².
-Students often get confused about which distance goes on top—remind them: farther away = less light.
+Students often get confused about which distance goes on top — remind them: farther away = less light.
 Note: Mars is cold (−60°C average) mainly due to its thin atmosphere (~1% of Earth's), not just distance. But less sunlight does mean solar panels must be larger.
 :::
 
@@ -1045,7 +1045,7 @@ $$\text{distance} = \text{speed} \times \text{time}$$
 - Speed of light: $c = 3 \times 10^8\,\text{m/s}$
 - Time: $1\,\text{year}$
 
-But wait—the units don't match! We need time in **seconds**.
+But wait — the units don't match! We need time in **seconds**.
 :::
 
 ::: {.column width="50%"}
@@ -1255,7 +1255,7 @@ $$12 \times 10^8 = 1.2 \times 10^9$$
 [← Back](#stop-solve-1)
 
 ::: {.notes}
-1 min. Walk through each step deliberately. The normalization step catches students—remind them that $12 = 1.2 \times 10^1$, so we add 1 to the exponent.
+1 min. Walk through each step deliberately. The normalization step catches students — remind them that $12 = 1.2 \times 10^1$, so we add 1 to the exponent.
 :::
 
 ---

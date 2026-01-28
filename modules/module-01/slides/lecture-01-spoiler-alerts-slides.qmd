@@ -56,7 +56,7 @@ If you can’t scan: open the link and enter the course code **ASES**.
 
 ::: {.notes}
 Take 30–60 seconds at the very start to get everyone connected.
-Then move on immediately—don’t troubleshoot at the podium; have students flag you after class if needed.
+Then move on immediately — don’t troubleshoot at the podium; have students flag you after class if needed.
 :::
 
 ---
@@ -105,7 +105,7 @@ Advance to the video without explanation.
 
 Made from over a thousand images captured by NSF-DOE Vera C. Rubin Observatory.
 
-Begins with two galaxies, zooms out to reveal millions of galaxies—just a tiny fraction of what Rubin will capture over its survey.
+Begins with two galaxies, zooms out to reveal millions of galaxies — just a tiny fraction of what Rubin will capture over its survey.
 
 **Let the video do the work. Don't narrate over it.**
 :::
@@ -755,8 +755,8 @@ This is why JWST was built to see infrared — to peer into star-forming regions
 
 Point to: filaments (where galaxies cluster), voids (empty spaces).
 
-"We measure spectra and get redshifts—wavelengths stretched by cosmic expansion. Redshift gives us distance, so we can map galaxies in 3D."
-"The pattern isn’t random—gravity and expansion sculpt this web."
+"We measure spectra and get redshifts — wavelengths stretched by cosmic expansion. Redshift gives us distance, so we can map galaxies in 3D."
+"The pattern isn’t random — gravity and expansion sculpt this web."
 :::
 
 ---
@@ -773,7 +773,7 @@ Point to: filaments (where galaxies cluster), voids (empty spaces).
 
 **We infer:** the expansion is accelerating → “dark energy”
 
-**The physics:** gravity + cosmic expansion link energy content to expansion. 
+**The physics:** gravity + cosmic expansion link energy content to expansion.
 
 *Acceleration implies a component that acts like “repulsive gravity”*
 
@@ -803,7 +803,7 @@ Emphasize: “We can describe the universe with numbers — but we still don’t
 {{< img universe-history-nasa width="85%" class="img-center" >}}
 
 ::: {.notes}
-Say: "This is the punchline: the universe has a history—and by the end of this course, you’ll be able to explain the story on this timeline, and how we know it."
+Say: "This is the punchline: the universe has a history — and by the end of this course, you’ll be able to explain the story on this timeline, and how we know it."
 :::
 
 ---
