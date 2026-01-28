@@ -153,6 +153,14 @@ website:
       - section: "Demos"
         contents:
           - demos/index.qmd
+          - href: demos/seasons/
+            text: "Seasons"
+          - href: demos/angular-size/
+            text: "Angular Size"
+          - href: demos/moon-phases/
+            text: "Phases of the Moon"
+          - href: demos/eclipse-geometry/
+            text: "Eclipses"
 
       - section: "Explore"
         contents:
