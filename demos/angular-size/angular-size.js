@@ -539,14 +539,25 @@
       } else {
         elements.timeDisplay.textContent = `+${t} Myr`;
       }
-      return;
+    } else {
+      const angle = state.moonOrbitAngle;
+      const delta = (a, b) => Math.abs((((a - b) % 360) + 540) % 360 - 180);
+      if (delta(angle, 0) <= 10) elements.timeDisplay.textContent = 'Perigee';
+      else if (delta(angle, 180) <= 10) elements.timeDisplay.textContent = 'Apogee';
+      else elements.timeDisplay.textContent = `${Math.round(angle)}°`;
     }
 
-    const angle = state.moonOrbitAngle;
-    const delta = (a, b) => Math.abs((((a - b) % 360) + 540) % 360 - 180);
-    if (delta(angle, 0) <= 10) elements.timeDisplay.textContent = 'Perigee';
-    else if (delta(angle, 180) <= 10) elements.timeDisplay.textContent = 'Apogee';
-    else elements.timeDisplay.textContent = `${Math.round(angle)}°`;
+    // Connect to eclipse geometry: whether total vs annular is possible depends on whether the Moon's
+    // apparent diameter is larger or smaller than the Sun's.
+    if (elements.moonAngularRange && state.activePreset === 'moon') {
+      const moonDeg = calculateAngularSize(state.diameter, state.distance);
+      const sunDeg = calculateAngularSize(PRESETS.sun.diameter, PRESETS.sun.distance);
+      const relation = moonDeg > sunDeg ? 'Moon larger → total possible' : 'Moon smaller → annular possible';
+
+      elements.moonAngularRange.textContent =
+        `Range: ${MOON_ORBIT_MIN_ANGULAR_SIZE_DEG.toFixed(2)}°–${MOON_ORBIT_MAX_ANGULAR_SIZE_DEG.toFixed(2)}° · ` +
+        `Now: Moon ${moonDeg.toFixed(2)}° vs Sun ${sunDeg.toFixed(2)}° · ${relation}`;
+    }
   }
 
   function syncSlidersToState() {
@@ -604,11 +615,6 @@
       if (elements.moonTimeModeOrbit) elements.moonTimeModeOrbit.checked = true;
       if (elements.moonTimeModeRecession) elements.moonTimeModeRecession.checked = false;
       setMoonTimeMode('orbit');
-
-      if (elements.moonAngularRange) {
-        elements.moonAngularRange.textContent =
-          `Range: ${MOON_ORBIT_MIN_ANGULAR_SIZE_DEG.toFixed(2)}°–${MOON_ORBIT_MAX_ANGULAR_SIZE_DEG.toFixed(2)}°`;
-      }
     }
 
     syncSlidersToState();

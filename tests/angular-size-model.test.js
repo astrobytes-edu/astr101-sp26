@@ -12,6 +12,19 @@ test('angularDiameterDeg: Sun at 1 AU is ~0.53°', () => {
   assert.ok(deg > 0.50 && deg < 0.60, `expected ~0.53°, got ${deg}`);
 });
 
+test('distanceForAngularDiameterDeg inverts angularDiameterDeg (approx)', () => {
+  assert.ok(
+    typeof AngularSizeModel.distanceForAngularDiameterDeg === 'function',
+    'expected distanceForAngularDiameterDeg export'
+  );
+
+  const diameterKm = 3474;
+  const angularDiameterDeg = 0.53;
+  const distanceKm = AngularSizeModel.distanceForAngularDiameterDeg({ diameterKm, angularDiameterDeg });
+  const back = AngularSizeModel.angularDiameterDeg({ diameterKm, distanceKm });
+  assert.ok(Math.abs(back - angularDiameterDeg) < 1e-6, `expected ${angularDiameterDeg}, got ${back}`);
+});
+
 test('moonDistanceKmFromRecession: uses linear recession in km', () => {
   const todayKm = 384400;
   const recessionCmPerYr = 3.8;

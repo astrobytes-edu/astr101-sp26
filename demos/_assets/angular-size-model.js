@@ -20,6 +20,14 @@
     return Math.min(180, radians * (180 / Math.PI));
   }
 
+  function distanceForAngularDiameterDeg({ diameterKm, angularDiameterDeg }) {
+    if (!Number.isFinite(diameterKm) || diameterKm <= 0) return NaN;
+    if (!Number.isFinite(angularDiameterDeg) || angularDiameterDeg <= 0) return Infinity;
+    if (angularDiameterDeg >= 180) return 0;
+    const theta = (angularDiameterDeg * Math.PI) / 180;
+    return diameterKm / (2 * Math.tan(theta / 2));
+  }
+
   function moonDistanceKmFromRecession({ distanceTodayKm, recessionCmPerYr, timeMyr }) {
     if (!Number.isFinite(distanceTodayKm)) return NaN;
     if (!Number.isFinite(recessionCmPerYr)) return NaN;
@@ -138,6 +146,7 @@
 
   return {
     angularDiameterDeg,
+    distanceForAngularDiameterDeg,
     moonDistanceKmFromRecession,
     presets,
   };
