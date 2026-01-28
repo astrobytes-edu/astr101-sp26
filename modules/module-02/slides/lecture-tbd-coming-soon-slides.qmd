@@ -1,0 +1,10 @@
+---
+title: "Module 2 Slides (Coming Soon)"
+description: "Slides will be posted as we approach Module 2."
+draft: false
+---
+
+## Coming soon
+
+Slides for Module 2 will be posted closer to the start of the module.
+

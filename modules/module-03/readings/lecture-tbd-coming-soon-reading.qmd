@@ -1,0 +1,10 @@
+---
+title: "Module 3 Readings (Coming Soon)"
+description: "Readings will be posted as we approach Module 3."
+draft: false
+---
+
+## Coming soon
+
+Readings for Module 3 will be posted closer to the start of the module.
+

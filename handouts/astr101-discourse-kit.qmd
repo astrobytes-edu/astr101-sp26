@@ -19,8 +19,7 @@ format:
 
 Use these in Socratic Seminar, think-pair-share, and group inquiry activities. The goal is not fancy wording — it's clear scientific thinking.
 
-<div class="card-grid">
-
+::: {.card-grid .content-hidden when-format="pdf"}
 <details class="collapsible-card">
 <summary>Claim (what you think is true)</summary>
 <div class="collapsible-card-content">
@@ -109,9 +108,53 @@ Use these in Socratic Seminar, think-pair-share, and group inquiry activities. T
 </div>
 </details>
 
-</div>
+:::
 
+::: {.content-visible when-format="pdf"}
+### Claim (what you think is true)
+- "A conservative interpretation is that..."
+- "The figure suggests that..."
+- "My current best claim is..."
+
+### Evidence (what you're pointing to)
+- "I'm basing that on ___ (axis/line/value/quote)..."
+- "In the region where ___, the trend shows..."
+- "The key detail is ___, which indicates..."
+
+### Reasoning (why the evidence supports the claim)
+- "That supports the claim because..."
+- "If ___ increases, then ___ should change because..."
+- "The physical story is: ___ → ___ → ___."
+
+### Assumptions (what must be true)
+- "This depends on the assumption that..."
+- "We're implicitly assuming ___ (calibration / geometry / equilibrium / negligible dust)..."
+- "If that assumption fails, the conclusion could change by..."
+
+### Alternative explanations (how to avoid tunnel vision)
+- "Another explanation consistent with the data is..."
+- "A competing model would predict..."
+- "These interpretations differ mainly in the assumption that..."
+
+### Uncertainty (allowed; vagueness is not)
+- "I'm about __% confident because..."
+- "The biggest uncertainty is..."
+- "I'm unsure whether ___ or ___, because the data don't constrain..."
+
+### Discriminating tests (what would we measure next?)
+- "A measurement that would distinguish these is..."
+- "If we observe ___, it would support model A; if we observe ___, it would support model B."
+- "The next-best observation would be ___ because it reduces the degeneracy between..."
+
+### Building on others (collaboration moves)
+- "I want to build on what ___ said by adding..."
+- "I agree with ___ under the condition that..."
+- "I interpret that differently because the evidence suggests..."
+:::
+
+::: {.content-visible when-format="pdf"}
 \newpage
+:::
 
 ## Common Astronomy Inference Pitfalls
 
@@ -119,84 +162,42 @@ Astronomy is inference under constraints. These pitfalls are *normal* — the go
 
 Use this sheet during problem-solving and seminar.
 
-<div class="card-grid">
+### 1. Mixing up what's measured vs what's inferred
+- **Guardrail:** Write "Observable:" and "Inference:" separately.
+- Example: flux is measured; distance is inferred using a model.
 
-<details class="collapsible-card">
-<summary>1. Mixing up what's measured vs what's inferred</summary>
-<div class="collapsible-card-content">
-<p><strong>Guardrail:</strong> Write "Observable:" and "Inference:" separately.</p>
-<p>Example: flux is measured; distance is inferred using a model.</p>
-</div>
-</details>
+### 2. Confusing brightness with luminosity
+- **Brightness (flux)** depends on distance.
+- **Luminosity** is intrinsic power output.
+- **Guardrail:** Ask: "Is this property distance-dependent?"
 
-<details class="collapsible-card">
-<summary>2. Confusing brightness with luminosity</summary>
-<div class="collapsible-card-content">
-<ul>
-<li><strong>Brightness (flux)</strong> depends on distance.</li>
-<li><strong>Luminosity</strong> is intrinsic power output.</li>
-</ul>
-<p><strong>Guardrail:</strong> Ask: "Is this property distance-dependent?"</p>
-</div>
-</details>
+### 3. Treating a model assumption as a fact
+- Examples: circular orbits, equilibrium, "standard candle," negligible dust.
+- **Guardrail:** Say: "This conclusion holds *if* ____."
 
-<details class="collapsible-card">
-<summary>3. Treating a model assumption as a fact</summary>
-<div class="collapsible-card-content">
-<p>Examples: circular orbits, equilibrium, "standard candle," negligible dust.</p>
-<p><strong>Guardrail:</strong> Say: "This conclusion holds <em>if</em> ____."</p>
-</div>
-</details>
+### 4. Over-claiming (data show X → therefore theory Y is true)
+- Data usually constrain a *family* of models.
+- **Guardrail:** Ask: "What else could explain this pattern?"
 
-<details class="collapsible-card">
-<summary>4. Over-claiming (data show X → therefore theory Y is true)</summary>
-<div class="collapsible-card-content">
-<p>Data usually constrain a <em>family</em> of models.</p>
-<p><strong>Guardrail:</strong> Ask: "What else could explain this pattern?"</p>
-</div>
-</details>
+### 5. Ignoring selection effects ("what got into the dataset?")
+- What you observe is shaped by detection limits and survey design.
+- **Guardrail:** Ask: "What might be missing, and why?"
 
-<details class="collapsible-card">
-<summary>5. Ignoring selection effects ("what got into the dataset?")</summary>
-<div class="collapsible-card-content">
-<p>What you observe is shaped by detection limits and survey design.</p>
-<p><strong>Guardrail:</strong> Ask: "What might be missing, and why?"</p>
-</div>
-</details>
+### 6. Forgetting units or axis scaling (especially log axes)
+- A straight line on a log plot means something different than on a linear plot.
+- **Guardrail:** Always write the units and identify linear vs log.
 
-<details class="collapsible-card">
-<summary>6. Forgetting units or axis scaling (especially log axes)</summary>
-<div class="collapsible-card-content">
-<p>A straight line on a log plot means something different than on a linear plot.</p>
-<p><strong>Guardrail:</strong> Always write the units and identify linear vs log.</p>
-</div>
-</details>
+### 7. Confusing correlation with causation
+- Two quantities can vary together due to a third variable or measurement bias.
+- **Guardrail:** Ask: "What mechanism connects them? What would break the trend?"
 
-<details class="collapsible-card">
-<summary>7. Confusing correlation with causation</summary>
-<div class="collapsible-card-content">
-<p>Two quantities can vary together due to a third variable or measurement bias.</p>
-<p><strong>Guardrail:</strong> Ask: "What mechanism connects them? What would break the trend?"</p>
-</div>
-</details>
+### 8. Treating uncertainty as a footnote
+- Uncertainty is part of the claim.
+- **Guardrail:** Try: "I'm ~__% confident because..." and name your biggest uncertainty.
 
-<details class="collapsible-card">
-<summary>8. Treating uncertainty as a footnote</summary>
-<div class="collapsible-card-content">
-<p>Uncertainty is part of the claim.</p>
-<p><strong>Guardrail:</strong> Try: "I'm ~__% confident because..." and name your biggest uncertainty.</p>
-</div>
-</details>
-
-<details class="collapsible-card">
-<summary>9. Single-figure tunnel vision</summary>
-<div class="collapsible-card-content">
-<p>A great plot can still be misleading without context (calibration, sample, method).</p>
-<p><strong>Guardrail:</strong> Ask: "What information is missing that could change interpretation?"</p>
-</div>
-</details>
-
-</div>
+### 9. Single-figure tunnel vision
+- A great plot can still be misleading without context (calibration, sample, method).
+- **Guardrail:** Ask: "What information is missing that could change interpretation?"
 
 ::: {.callout-tip}
 ## The most scientific question you can ask
