@@ -31,3 +31,34 @@ test('dayLengthHours: polar day/night behavior', () => {
   assert.equal(midSummer, 24);
   assert.equal(midWinter, 0);
 });
+
+test('earthSunDistanceAu: perihelion/aphelion bracket 1 AU (toy model)', () => {
+  assert.ok(typeof SeasonsModel.earthSunDistanceAu === 'function', 'expected earthSunDistanceAu export');
+
+  const yearDays = 365.2422;
+  const perihelionDay = 3;
+  const rPeri = SeasonsModel.earthSunDistanceAu({ dayOfYear: perihelionDay, yearDays, perihelionDay });
+  const rAp = SeasonsModel.earthSunDistanceAu({ dayOfYear: perihelionDay + yearDays / 2, yearDays, perihelionDay });
+
+  assert.ok(rPeri < 1, `expected perihelion < 1 AU, got ${rPeri}`);
+  assert.ok(rAp > 1, `expected aphelion > 1 AU, got ${rAp}`);
+  assert.ok(rPeri > 0.97 && rPeri < 1.0, `expected perihelion near 1 AU, got ${rPeri}`);
+  assert.ok(rAp > 1.0 && rAp < 1.03, `expected aphelion near 1 AU, got ${rAp}`);
+});
+
+test('orbitAngleRadFromDay: wraps every year', () => {
+  assert.ok(typeof SeasonsModel.orbitAngleRadFromDay === 'function', 'expected orbitAngleRadFromDay export');
+
+  const yearDays = 365.2422;
+  const perihelionDay = 3;
+  const a1 = SeasonsModel.orbitAngleRadFromDay({ dayOfYear: perihelionDay, yearDays, perihelionDay });
+  const a2 = SeasonsModel.orbitAngleRadFromDay({ dayOfYear: perihelionDay + yearDays, yearDays, perihelionDay });
+
+  const tau = 2 * Math.PI;
+  const wrap = (rad) => ((rad % tau) + tau) % tau;
+  const diff = wrap(a2 - a1);
+
+  assert.ok(Number.isFinite(a1));
+  assert.ok(Number.isFinite(a2));
+  assert.ok(Math.abs(diff) < 1e-9, `expected wrap-around (Δ≈0), got ${diff}`);
+});

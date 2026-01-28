@@ -60,10 +60,39 @@
     return 90 - Math.abs(latitudeDeg - sunDeclinationDeg);
   }
 
+  // Earth–Sun distance (AU) in a simple eccentric-orbit toy model:
+  // r ≈ 1 - e cos(2π * (t - t_peri) / year)
+  //
+  // This is not a Kepler solver; it's a pedagogical approximation that preserves
+  // the key fact that Earth's distance variation is small (~±1.7%).
+  function earthSunDistanceAu({
+    dayOfYear,
+    yearDays = 365.2422,
+    eccentricity = 0.017,
+    perihelionDay = 3,
+  }) {
+    const daysFromPerihelion = dayOfYear - perihelionDay;
+    const angle = (2 * Math.PI * daysFromPerihelion) / yearDays;
+    return 1 - eccentricity * Math.cos(angle);
+  }
+
+  // Orbital angle (radians) for a given day-of-year in the same toy model.
+  // Anchors perihelion at angle 0.
+  function orbitAngleRadFromDay({
+    dayOfYear,
+    yearDays = 365.2422,
+    perihelionDay = 3,
+  }) {
+    const daysFromPerihelion = dayOfYear - perihelionDay;
+    return (2 * Math.PI * daysFromPerihelion) / yearDays;
+  }
+
   return {
     effectiveObliquityDegrees,
     sunDeclinationDeg,
     dayLengthHours,
     sunNoonAltitudeDeg,
+    earthSunDistanceAu,
+    orbitAngleRadFromDay,
   };
 });

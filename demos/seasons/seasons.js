@@ -16,7 +16,11 @@
   // Constants
   // ============================================
 
+  // UI uses a 365-day calendar day-of-year slider, but the simplified “physics”
+  // model uses a tropical year length for smooth periodic functions.
   const YEAR_DAYS = 365;
+  const TROPICAL_YEAR_DAYS = 365.2422;
+  const PERIHELION_DAY = 3;
   const DAY_MIN = 1;
   const DAY_MAX = 365;
 
@@ -185,10 +189,11 @@
    * @returns {number} Distance in AU
    */
   function getEarthSunDistance(dayOfYear) {
-    // Perihelion around Jan 3 (day 3), eccentricity ~ 0.017
-    const daysFromPerihelion = dayOfYear - 3;
-    const angle = 2 * Math.PI * daysFromPerihelion / YEAR_DAYS;
-    return 1 - 0.017 * Math.cos(angle);
+    return Model.earthSunDistanceAu({
+      dayOfYear,
+      yearDays: TROPICAL_YEAR_DAYS,
+      perihelionDay: PERIHELION_DAY,
+    });
   }
 
   function wrapDay(dayOfYear) {
@@ -295,8 +300,11 @@
 
   function getOrbitAngleFromDay(dayOfYear) {
     // Anchor perihelion (day ~3) on the +x axis for visual truthfulness.
-    const daysFromPerihelion = dayOfYear - 3;
-    return (daysFromPerihelion / YEAR_DAYS) * 2 * Math.PI;
+    return Model.orbitAngleRadFromDay({
+      dayOfYear,
+      yearDays: TROPICAL_YEAR_DAYS,
+      perihelionDay: PERIHELION_DAY,
+    });
   }
 
   function getExaggeratedOrbitRadiusPx(distanceAU) {
