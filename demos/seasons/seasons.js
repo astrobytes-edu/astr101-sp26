@@ -24,6 +24,11 @@
   const DAY_MIN = 1;
   const DAY_MAX = 365;
 
+  const PREFERS_REDUCED_MOTION =
+    typeof window !== 'undefined' && typeof window.matchMedia === 'function'
+      ? window.matchMedia('(prefers-reduced-motion: reduce)').matches
+      : false;
+
   const ORBITAL_CENTER = { x: 200, y: 200 };
   const ORBITAL_RADIUS_X = 150;
   const ORBITAL_RADIUS_Y = 145; // Slightly elliptical
@@ -791,6 +796,7 @@
     state.animating = false;
     if (state.animationId) {
       cancelAnimationFrame(state.animationId);
+      clearTimeout(state.animationId);
       state.animationId = null;
     }
     elements.btnStop.disabled = true;
@@ -818,6 +824,31 @@
     state.animating = true;
     elements.btnStop.disabled = false;
     elements.btnAnimateYear.disabled = true;
+
+    if (PREFERS_REDUCED_MOTION) {
+      const startDay = state.dayOfYear;
+      const steps = 24;
+      const stepDays = YEAR_DAYS / steps;
+      const stepMs = 250;
+      let i = 0;
+
+      function tick() {
+        if (!state.animating) return;
+        state.dayOfYear = wrapDay(startDay + i * stepDays);
+        elements.dateSlider.value = state.dayOfYear;
+        updateSeasonPresetHighlight();
+        update();
+        i += 1;
+        if (i > steps) {
+          stopAnimation();
+          return;
+        }
+        state.animationId = setTimeout(tick, stepMs);
+      }
+
+      tick();
+      return;
+    }
 
     const duration = 10000; // 10 seconds for full year
     const startDay = state.dayOfYear;
