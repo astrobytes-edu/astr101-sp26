@@ -248,8 +248,8 @@
     .hour-grid {
       fill: none;
       stroke: var(--text-muted);
-      stroke-width: 0.5;
-      opacity: 0.3;
+      stroke-width: 0.8;
+      opacity: 0.45;
     }
 
     .polaris-label {
@@ -442,6 +442,9 @@
               <!-- Ecliptic overlay (off by default) -->
               <ellipse id="ecliptic-overlay" class="ecliptic-line" cx="200" cy="200" rx="150" ry="100" style="display: none;"/>
 
+              <!-- Day/Night terminator -->
+              <ellipse id="terminator" class="terminator" cx="250" cy="200" rx="50" ry="150" fill="rgba(0,0,0,0.6)"/>
+
               <!-- Hour angle grid (off by default) -->
               <g id="hour-grid" style="display: none;">
                 <line class="hour-grid" x1="200" y1="50" x2="200" y2="350"/>
@@ -451,9 +454,6 @@
                 <line class="hour-grid" x1="200" y1="50" x2="200" y2="350" transform="rotate(120 200 200)"/>
                 <line class="hour-grid" x1="200" y1="50" x2="200" y2="350" transform="rotate(150 200 200)"/>
               </g>
-
-              <!-- Day/Night terminator -->
-              <ellipse id="terminator" class="terminator" cx="250" cy="200" rx="50" ry="150" fill="rgba(0,0,0,0.6)"/>
             </g>
 
             <!-- Globe edge -->
