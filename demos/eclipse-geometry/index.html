@@ -66,11 +66,36 @@
       color: var(--accent-green);
     }
 
-    .status-detail {
-      margin-top: 0.5rem;
-      font-size: 0.875rem;
-      color: var(--text-secondary);
-    }
+	    .status-detail {
+	      margin-top: 0.5rem;
+	      font-size: 0.875rem;
+	      color: var(--text-secondary);
+	    }
+
+	    /* Eclipse windows (node arcs) */
+	    .window-arc {
+	      fill: none;
+	      stroke-width: 4;
+	      opacity: 0.18;
+	      pointer-events: none;
+	    }
+
+	    .window-arc.solar {
+	      stroke: var(--accent-gold);
+	    }
+
+	    .window-arc.lunar {
+	      stroke: var(--accent-green);
+	    }
+
+	    .window-arc.central {
+	      stroke-width: 6;
+	      opacity: 0.25;
+	    }
+
+	    .window-arc.any {
+	      stroke-dasharray: 6 6;
+	    }
 
     /* Controls grid */
     .controls-grid {
@@ -241,11 +266,12 @@
       <div id="challenge-container"></div>
 
       <!-- Status display -->
-      <div class="status-panel">
-        <div class="eclipse-status miss" id="eclipse-status">NO ECLIPSE</div>
-        <div class="status-detail" id="status-detail">Moon is 3.2° above ecliptic plane</div>
-        <div class="status-detail" id="status-note"></div>
-      </div>
+	      <div class="status-panel">
+	        <div class="eclipse-status miss" id="eclipse-status">NO ECLIPSE</div>
+	        <div class="status-detail" id="status-detail">Moon is 3.2° above ecliptic plane</div>
+	        <div class="status-detail" id="node-distance-detail"></div>
+	        <div class="status-detail" id="status-note"></div>
+	      </div>
 
       <!-- Two-view visualization -->
       <div class="viz-layout">
@@ -278,9 +304,19 @@
             <line x1="100" y1="200" x2="300" y2="200" stroke="var(--ice-blue)" stroke-width="2" opacity="0.4" stroke-dasharray="8 4"/>
             <text x="305" y="204" fill="var(--ice-blue)" font-size="10" opacity="0.6">Ecliptic</text>
 
-            <!-- Moon's tilted orbit -->
-            <ellipse id="moon-orbit" cx="200" cy="200" rx="100" ry="100"
-                     fill="none" stroke="var(--text-muted)" stroke-width="1" stroke-dasharray="4 4" opacity="0.6"/>
+	            <!-- Moon's tilted orbit -->
+	            <ellipse id="moon-orbit" cx="200" cy="200" rx="100" ry="100"
+	                     fill="none" stroke="var(--text-muted)" stroke-width="1" stroke-dasharray="4 4" opacity="0.6"/>
+
+	            <!-- Eclipse season windows (drawn as arcs around nodes) -->
+	            <path id="arc-solar-any-asc" class="window-arc solar any" d=""/>
+	            <path id="arc-solar-any-desc" class="window-arc solar any" d=""/>
+	            <path id="arc-solar-central-asc" class="window-arc solar central" d=""/>
+	            <path id="arc-solar-central-desc" class="window-arc solar central" d=""/>
+	            <path id="arc-lunar-any-asc" class="window-arc lunar any" d=""/>
+	            <path id="arc-lunar-any-desc" class="window-arc lunar any" d=""/>
+	            <path id="arc-lunar-central-asc" class="window-arc lunar central" d=""/>
+	            <path id="arc-lunar-central-desc" class="window-arc lunar central" d=""/>
 
             <!-- Node markers (where orbit crosses ecliptic) -->
             <circle id="ascending-node" class="node-marker" cx="300" cy="200" r="6"/>
@@ -347,9 +383,9 @@
       </div>
 
       <!-- Controls -->
-      <div class="controls-grid">
-        <!-- Tilt control -->
-        <div class="control-card">
+	      <div class="controls-grid">
+	        <!-- Tilt control -->
+	        <div class="control-card">
           <div class="control-title">
             Orbital Tilt
             <span class="control-value" id="tilt-display">5.1°</span>
@@ -361,12 +397,26 @@
           </div>
         </div>
 
-        <!-- Phase info -->
-        <div class="control-card">
+	        <!-- Phase info -->
+	        <div class="control-card">
           <div class="control-title">
             Current Phase
             <span class="control-value" id="phase-display">Full Moon</span>
-          </div>
+	        </div>
+
+	        <!-- Moon position (keyboard-accessible) -->
+	        <div class="control-card">
+	          <div class="control-title">
+	            Moon Position
+	            <span class="control-value" id="moon-angle-display">0°</span>
+	          </div>
+	          <input type="range" id="moon-angle-slider" class="astro-slider" min="0" max="360" step="1" value="0" aria-label="Moon position (degrees around orbit)" data-tooltip-source="#moon-angle-display">
+	          <div class="slider-labels">
+	            <span>0° (Full)</span>
+	            <span>180° (New)</span>
+	            <span>360°</span>
+	          </div>
+	        </div>
           <div style="display: flex; gap: 0.5rem; margin-top: 0.5rem;">
             <button class="sim-btn" id="btn-new-moon">New Moon</button>
             <button class="sim-btn" id="btn-full-moon">Full Moon</button>
@@ -397,11 +447,12 @@
             </div>
           </div>
 
-          <div class="sim-controls" style="margin-top: 0.75rem;">
-            <button class="sim-btn primary" id="btn-run-sim">Run Simulation</button>
-            <button class="sim-btn" id="btn-toggle-log">Show Log</button>
-            <button class="sim-btn" id="btn-challenges">Challenge Mode</button>
-          </div>
+	          <div class="sim-controls" style="margin-top: 0.75rem;">
+	            <button class="sim-btn primary" id="btn-run-sim">Run Simulation</button>
+	            <button class="sim-btn" id="btn-toggle-log">Show Log</button>
+	            <button class="sim-btn" id="btn-clear-log" title="Clear the log table">Clear Log</button>
+	            <button class="sim-btn" id="btn-challenges">Challenge Mode</button>
+	          </div>
 
           <div class="stats-grid" id="stats-panel" style="display: none;">
             <div class="stat-item">
@@ -481,10 +532,11 @@
     </div>
   </div>
 
-  <script src="../_assets/astro-utils.js"></script>
-  <script src="../_assets/demo-polish.js"></script>
-  <script src="../_assets/starfield.js"></script>
-  <script src="../_assets/challenge-engine.js"></script>
-  <script src="eclipse-geometry.js"></script>
-</body>
-</html>
+	  <script src="../_assets/astro-utils.js"></script>
+	  <script src="../_assets/demo-polish.js"></script>
+	  <script src="../_assets/starfield.js"></script>
+	  <script src="../_assets/challenge-engine.js"></script>
+	  <script src="../_assets/eclipse-geometry-model.js"></script>
+	  <script src="eclipse-geometry.js"></script>
+	</body>
+	</html>

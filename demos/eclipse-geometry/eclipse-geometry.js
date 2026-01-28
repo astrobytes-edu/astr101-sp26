@@ -6,15 +6,31 @@
 (function() {
   'use strict';
 
+  const Model = typeof window !== 'undefined' ? window.EclipseGeometryModel : null;
+  if (!Model) {
+    console.error('Eclipse Geometry: missing window.EclipseGeometryModel (did you load demos/_assets/eclipse-geometry-model.js?)');
+    return;
+  }
+
   // ============================================
   // Constants
   // ============================================
 
   const CENTER = { x: 200, y: 200 };
   const ORBIT_RADIUS = 100;
-  const SYNODIC_MONTH = 29.53; // days
-  const MONTHS_PER_YEAR = 12.37; // synodic months per year (illustrative)
-  const NODE_REGRESSION_DEG_PER_YEAR = 19.3; // deg/year (illustrative; VERIFY)
+  const DAYS_PER_TROPICAL_YEAR = 365.2422; // days
+  const SIDEREAL_MONTH_DAYS = 27.321661; // days
+  const SYNODIC_MONTH_DAYS = 29.530588; // days (New to New)
+  const NODE_REGRESSION_YEARS = 18.6; // years (nodal precession period; VERIFY)
+
+  const SUN_RATE_DEG_PER_DAY = 360 / DAYS_PER_TROPICAL_YEAR;
+  const MOON_RATE_DEG_PER_DAY = 360 / SIDEREAL_MONTH_DAYS;
+  const NODE_RATE_DEG_PER_DAY = -360 / (NODE_REGRESSION_YEARS * DAYS_PER_TROPICAL_YEAR);
+
+  // Eclipse checks should require being close to true syzygy (New/Full), not merely inside
+  // a coarse "phase label" bucket.
+  const SYZYGY_TOLERANCE_DEG = 5; // pedagogical; hours-level realism not required
+  const STATUS_PLANE_EPS_DEG = 0.05; // treat as "in plane" for copy/readouts
 
   // Eclipse thresholds (degrees from ecliptic plane)
   // Based on actual eclipse limits from node (converted to height above ecliptic)
@@ -37,9 +53,12 @@
   // ============================================
 
   const state = {
-    moonAngle: 0,           // Angle around orbit (0 = right/full moon position)
+    // Inertial longitudes (degrees). The SVG visualization is Sun-fixed by displaying
+    // angles relative to the Sun direction (i.e., subtracting sunLonDeg internally).
+    sunLonDeg: 0,
+    moonLonDeg: 180,        // start at Full Moon (opposite Sun)
     orbitalTilt: 5.145,     // Degrees of orbital tilt
-    nodeAngle: 30,          // Angle of ascending node (rotates slowly)
+    nodeLonDeg: 210,        // chosen so the displayed ascending node starts at ~30°
     animationId: null,
     isAnimating: false,
 
@@ -80,12 +99,15 @@
       // Status
       eclipseStatus: document.getElementById('eclipse-status'),
       statusDetail: document.getElementById('status-detail'),
+      nodeDistanceDetail: document.getElementById('node-distance-detail'),
       statusNote: document.getElementById('status-note'),
 
       // Controls
       tiltSlider: document.getElementById('tilt-slider'),
       tiltDisplay: document.getElementById('tilt-display'),
       phaseDisplay: document.getElementById('phase-display'),
+      moonAngleSlider: document.getElementById('moon-angle-slider'),
+      moonAngleDisplay: document.getElementById('moon-angle-display'),
 
       // Buttons
       btnNewMoon: document.getElementById('btn-new-moon'),
@@ -95,6 +117,7 @@
       btnRunSim: document.getElementById('btn-run-sim'),
       btnStop: document.getElementById('btn-stop'),
       btnToggleLog: document.getElementById('btn-toggle-log'),
+      btnClearLog: document.getElementById('btn-clear-log'),
       btnReset: document.getElementById('btn-reset'),
 
       // Simulation slider
@@ -109,7 +132,17 @@
 
       // Eclipse log
       logPanel: document.getElementById('eclipse-log-panel'),
-      logTable: document.getElementById('eclipse-log-table')
+      logTable: document.getElementById('eclipse-log-table'),
+
+      // Eclipse window arcs (node distance windows)
+      arcSolarAnyAsc: document.getElementById('arc-solar-any-asc'),
+      arcSolarAnyDesc: document.getElementById('arc-solar-any-desc'),
+      arcSolarCentralAsc: document.getElementById('arc-solar-central-asc'),
+      arcSolarCentralDesc: document.getElementById('arc-solar-central-desc'),
+      arcLunarAnyAsc: document.getElementById('arc-lunar-any-asc'),
+      arcLunarAnyDesc: document.getElementById('arc-lunar-any-desc'),
+      arcLunarCentralAsc: document.getElementById('arc-lunar-central-asc'),
+      arcLunarCentralDesc: document.getElementById('arc-lunar-central-desc')
     };
   }
 
@@ -117,39 +150,121 @@
   // Calculations
   // ============================================
 
-  function normalizeAngleDeg(angle) {
-    return ((angle % 360) + 360) % 360;
+  function normalizeAngleDeg(angleDeg) {
+    return Model.normalizeAngleDeg(angleDeg);
   }
 
-  /**
-   * Calculate Moon's height above/below ecliptic
-   * @param {number} moonAngle - Moon's position in orbit (degrees)
-   * @param {number} tilt - Orbital tilt (degrees)
-   * @param {number} nodeAngle - Position of ascending node (degrees)
-   * @returns {number} Height in degrees above ecliptic
-   */
-  function getMoonEclipticHeight(moonAngle, tilt, nodeAngle) {
-    // Moon's height follows a sine wave as it orbits
-    // Maximum height is at 90° from the nodes
-    const angleFromNode = (moonAngle - nodeAngle) * Math.PI / 180;
-    return tilt * Math.sin(angleFromNode);
+  function angularSeparationDeg(aDeg, bDeg) {
+    return Model.angularSeparationDeg(aDeg, bDeg);
   }
 
-  /**
-   * Get phase name from moon angle
-   * 0 = Full Moon (opposite Sun), 180 = New Moon (toward Sun)
-   */
-  function getPhase(moonAngle) {
-    const normalized = ((moonAngle % 360) + 360) % 360;
+  function isNearAngle(angleDeg, targetDeg, toleranceDeg) {
+    return angularSeparationDeg(angleDeg, targetDeg) <= toleranceDeg;
+  }
 
-    if (normalized < 22.5 || normalized >= 337.5) return 'Full Moon';
-    if (normalized < 67.5) return 'Waning Gibbous';
-    if (normalized < 112.5) return 'Third Quarter';
-    if (normalized < 157.5) return 'Waning Crescent';
-    if (normalized < 202.5) return 'New Moon';
-    if (normalized < 247.5) return 'Waxing Crescent';
-    if (normalized < 292.5) return 'First Quarter';
-    return 'Waxing Gibbous';
+  function getPhaseAngleDeg() {
+    return Model.phaseAngleDeg({ moonLonDeg: state.moonLonDeg, sunLonDeg: state.sunLonDeg });
+  }
+
+  function getMoonEclipticLatitudeDeg(moonLonDeg = state.moonLonDeg, nodeLonDeg = state.nodeLonDeg) {
+    return Model.eclipticLatitudeDeg({
+      tiltDeg: state.orbitalTilt,
+      moonLonDeg,
+      nodeLonDeg,
+    });
+  }
+
+  function polarToXY(center, r, deg) {
+    const a = (deg * Math.PI) / 180;
+    return { x: center.x + r * Math.cos(a), y: center.y - r * Math.sin(a) };
+  }
+
+  function arcPath(center, r, startDeg, endDeg) {
+    const start = polarToXY(center, r, startDeg);
+    const end = polarToXY(center, r, endDeg);
+    const sweep = normalizeAngleDeg(endDeg - startDeg);
+    const largeArc = sweep > 180 ? 1 : 0;
+    return `M ${start.x.toFixed(2)} ${start.y.toFixed(2)} A ${r} ${r} 0 ${largeArc} 0 ${end.x.toFixed(2)} ${end.y.toFixed(2)}`;
+  }
+
+  function fullCirclePath(center, r, startDeg) {
+    const midDeg = normalizeAngleDeg(startDeg + 180);
+    const start = polarToXY(center, r, startDeg);
+    const mid = polarToXY(center, r, midDeg);
+    const end = start;
+    const a1 = `M ${start.x.toFixed(2)} ${start.y.toFixed(2)} A ${r} ${r} 0 0 0 ${mid.x.toFixed(2)} ${mid.y.toFixed(2)}`;
+    const a2 = `A ${r} ${r} 0 0 0 ${end.x.toFixed(2)} ${end.y.toFixed(2)}`;
+    return `${a1} ${a2}`;
+  }
+
+  function setWindowArc(pathEl, centerDeg, halfWidthDeg) {
+    if (!pathEl) return;
+    if (!Number.isFinite(halfWidthDeg) || halfWidthDeg <= 0) {
+      pathEl.setAttribute('d', '');
+      return;
+    }
+
+    // If the window covers essentially the full orbit, draw a full circle.
+    if (halfWidthDeg >= 179.999) {
+      pathEl.setAttribute('d', fullCirclePath(CENTER, ORBIT_RADIUS, centerDeg));
+      return;
+    }
+
+    const startDeg = normalizeAngleDeg(centerDeg - halfWidthDeg);
+    const endDeg = normalizeAngleDeg(centerDeg + halfWidthDeg);
+    pathEl.setAttribute('d', arcPath(CENTER, ORBIT_RADIUS, startDeg, endDeg));
+  }
+
+  function updateEclipseWindowArcs() {
+    // Convert the latitude thresholds into "within Δλ of a node" windows for the current tilt.
+    const dSolarAny = Model.deltaLambdaFromBetaDeg({ tiltDeg: state.orbitalTilt, betaDeg: PARTIAL_SOLAR_THRESHOLD });
+    const dSolarCentral = Model.deltaLambdaFromBetaDeg({ tiltDeg: state.orbitalTilt, betaDeg: TOTAL_SOLAR_THRESHOLD });
+    const dLunarAny = Model.deltaLambdaFromBetaDeg({ tiltDeg: state.orbitalTilt, betaDeg: PARTIAL_LUNAR_THRESHOLD });
+    const dLunarCentral = Model.deltaLambdaFromBetaDeg({ tiltDeg: state.orbitalTilt, betaDeg: TOTAL_LUNAR_THRESHOLD });
+
+    const nodeAsc = getDisplayNodeAngleDeg();
+    const nodeDesc = normalizeAngleDeg(nodeAsc + 180);
+
+    setWindowArc(elements.arcSolarAnyAsc, nodeAsc, dSolarAny);
+    setWindowArc(elements.arcSolarAnyDesc, nodeDesc, dSolarAny);
+    setWindowArc(elements.arcSolarCentralAsc, nodeAsc, dSolarCentral);
+    setWindowArc(elements.arcSolarCentralDesc, nodeDesc, dSolarCentral);
+    setWindowArc(elements.arcLunarAnyAsc, nodeAsc, dLunarAny);
+    setWindowArc(elements.arcLunarAnyDesc, nodeDesc, dLunarAny);
+    setWindowArc(elements.arcLunarCentralAsc, nodeAsc, dLunarCentral);
+    setWindowArc(elements.arcLunarCentralDesc, nodeDesc, dLunarCentral);
+  }
+
+  // Phase labels based on phase angle Δ = λ_moon - λ_sun:
+  //   0° = New, 180° = Full.
+  function getPhaseLabel(phaseAngleDeg) {
+    const normalized = normalizeAngleDeg(phaseAngleDeg);
+
+    if (normalized < 22.5 || normalized >= 337.5) return 'New Moon';
+    if (normalized < 67.5) return 'Waxing Crescent';
+    if (normalized < 112.5) return 'First Quarter';
+    if (normalized < 157.5) return 'Waxing Gibbous';
+    if (normalized < 202.5) return 'Full Moon';
+    if (normalized < 247.5) return 'Waning Gibbous';
+    if (normalized < 292.5) return 'Third Quarter';
+    return 'Waning Crescent';
+  }
+
+  function getDisplayMoonAngleDeg() {
+    // Display convention: 180° is toward the Sun (left), 0° is opposite the Sun (right).
+    return normalizeAngleDeg(180 + (state.moonLonDeg - state.sunLonDeg));
+  }
+
+  function getDisplayNodeAngleDeg() {
+    return normalizeAngleDeg(180 + (state.nodeLonDeg - state.sunLonDeg));
+  }
+
+  function setMoonFromDisplayAngleDeg(displayAngleDeg) {
+    state.moonLonDeg = state.sunLonDeg + (normalizeAngleDeg(displayAngleDeg) - 180);
+  }
+
+  function setNodeFromDisplayAngleDeg(displayAngleDeg) {
+    state.nodeLonDeg = state.sunLonDeg + (normalizeAngleDeg(displayAngleDeg) - 180);
   }
 
   /**
@@ -157,12 +272,15 @@
    * @returns {object} { type: 'none'|'solar'|'lunar', detail: string }
    */
   function checkEclipse() {
-    const height = getMoonEclipticHeight(state.moonAngle, state.orbitalTilt, state.nodeAngle);
+    const height = getMoonEclipticLatitudeDeg();
     const absHeight = Math.abs(height);
-    const phase = getPhase(state.moonAngle);
+    const phaseAngle = getPhaseAngleDeg();
+    const phaseLabel = getPhaseLabel(phaseAngle);
+    const nearNew = isNearAngle(phaseAngle, 0, SYZYGY_TOLERANCE_DEG);
+    const nearFull = isNearAngle(phaseAngle, 180, SYZYGY_TOLERANCE_DEG);
 
     // Check for solar eclipse (New Moon)
-    if (phase === 'New Moon') {
+    if (nearNew) {
       if (absHeight < TOTAL_SOLAR_THRESHOLD) {
         return {
           type: 'total-solar',
@@ -178,7 +296,7 @@
     }
 
     // Check for lunar eclipse (Full Moon)
-    if (phase === 'Full Moon') {
+    if (nearFull) {
       if (absHeight < TOTAL_LUNAR_THRESHOLD) {
         return {
           type: 'total-lunar',
@@ -194,7 +312,7 @@
     }
 
     const direction = height > 0 ? 'above' : 'below';
-    if (phase === 'New Moon' || phase === 'Full Moon') {
+    if (phaseLabel === 'New Moon' || phaseLabel === 'Full Moon') {
       return {
         type: 'none',
         detail: `Moon is ${absHeight.toFixed(1)}° ${direction} the ecliptic — no eclipse`
@@ -203,8 +321,23 @@
 
     return {
       type: 'none',
-      detail: `${phase} — eclipses only occur at new/full moon`
+      detail: `${phaseLabel} — eclipses only occur at new/full moon`
     };
+  }
+
+  function formatEclipseTypeLabel(type) {
+    switch (type) {
+      case 'total-solar':
+        return 'Total solar';
+      case 'partial-solar':
+        return 'Solar (not total)';
+      case 'total-lunar':
+        return 'Total lunar';
+      case 'partial-lunar':
+        return 'Lunar (not total)';
+      default:
+        return type;
+    }
   }
 
   // ============================================
@@ -212,8 +345,8 @@
   // ============================================
 
   function updateVisualization() {
-    const moonAngle = normalizeAngleDeg(state.moonAngle);
-    const nodeAngle = normalizeAngleDeg(state.nodeAngle);
+    const moonAngle = getDisplayMoonAngleDeg();
+    const nodeAngle = getDisplayNodeAngleDeg();
 
     const angleRad = moonAngle * Math.PI / 180;
     const nodeRad = nodeAngle * Math.PI / 180;
@@ -249,7 +382,7 @@
     }
 
     // Side view: Moon's vertical position
-    const height = getMoonEclipticHeight(moonAngle, state.orbitalTilt, nodeAngle);
+    const height = getMoonEclipticLatitudeDeg();
 
     // Map angle to horizontal position in side view
     // Project along the Sun–Earth line so phase geometry is truthful:
@@ -273,6 +406,9 @@
     // Update sinusoidal path for side view
     updateMoonPath();
 
+    // Update eclipse windows (arcs around nodes)
+    updateEclipseWindowArcs();
+
     // Update nodes on side view
     // Nodes are where the orbit crosses the ecliptic (y=100)
     elements.nodeSide1.setAttribute('cx', ascX);
@@ -282,11 +418,12 @@
   function updateMoonPath() {
     // Draw the Moon's tilted path in side view.
     let pathD = '';
-    const nodeAngle = normalizeAngleDeg(state.nodeAngle);
     for (let i = 0; i <= 360; i += 5) {
       const angleRad = i * Math.PI / 180;
       const x = 200 + ORBIT_RADIUS * Math.cos(angleRad);
-      const h = getMoonEclipticHeight(i, state.orbitalTilt, nodeAngle);
+      // Convert display-angle i back to inertial moon longitude, keeping the display Sun-fixed.
+      const moonLonDeg = state.sunLonDeg + (i - 180);
+      const h = getMoonEclipticLatitudeDeg(moonLonDeg, state.nodeLonDeg);
       const y = 100 - h * 8;
 
       if (i === 0) {
@@ -300,13 +437,22 @@
 
   function updateStatus() {
     const eclipse = checkEclipse();
-    const phase = getPhase(state.moonAngle);
-    const height = getMoonEclipticHeight(state.moonAngle, state.orbitalTilt, state.nodeAngle);
+    const phaseAngle = getPhaseAngleDeg();
+    const phase = getPhaseLabel(phaseAngle);
+    const height = getMoonEclipticLatitudeDeg();
     const absHeight = Math.abs(height);
     const direction = height >= 0 ? 'above' : 'below';
+    const nodeDistance = Model.nearestNodeDistanceDeg({ moonLonDeg: state.moonLonDeg, nodeLonDeg: state.nodeLonDeg });
 
     // Persistent lecture-contract readout (exact phrasing)
-    elements.statusDetail.textContent = `Moon is ${absHeight.toFixed(1)}° ${direction} ecliptic plane`;
+    elements.statusDetail.textContent =
+      absHeight < STATUS_PLANE_EPS_DEG
+        ? `Moon is in the ecliptic plane (${absHeight.toFixed(1)}°)`
+        : `Moon is ${absHeight.toFixed(1)}° ${direction} ecliptic plane`;
+
+    if (elements.nodeDistanceDetail) {
+      elements.nodeDistanceDetail.textContent = `Nearest node: ${nodeDistance.toFixed(1)}°`;
+    }
 
     // Status indicator: match lecture wording exactly
     let statusText = 'NO ECLIPSE';
@@ -324,8 +470,11 @@
 
     if (elements.statusNote) {
       if (eclipse.type === 'none') {
+        const nearSyzygy =
+          isNearAngle(phaseAngle, 0, SYZYGY_TOLERANCE_DEG) ||
+          isNearAngle(phaseAngle, 180, SYZYGY_TOLERANCE_DEG);
         elements.statusNote.textContent =
-          phase === 'New Moon' || phase === 'Full Moon'
+          nearSyzygy
             ? 'Too far from node for an eclipse'
             : 'Eclipses require New/Full Moon near a node';
       } else if (eclipse.type.includes('total')) {
@@ -338,19 +487,25 @@
     }
 
     elements.phaseDisplay.textContent = phase;
+
+    if (elements.moonAngleSlider && elements.moonAngleDisplay) {
+      const displayAngle = getDisplayMoonAngleDeg();
+      elements.moonAngleSlider.value = Math.round(displayAngle).toString();
+      elements.moonAngleDisplay.textContent = `${Math.round(displayAngle)}°`;
+    }
   }
 
-  function updateStats() {
-    // Show total eclipses prominently, partial in parentheses
-    const totalSolar = state.totalSolarEclipses;
-    const allSolar = state.totalSolarEclipses + state.partialSolarEclipses;
-    const totalLunar = state.totalLunarEclipses;
-    const allLunar = state.totalLunarEclipses + state.partialLunarEclipses;
+	  function updateStats() {
+	    // Show total eclipses prominently, partial in parentheses
+	    const totalSolar = state.totalSolarEclipses;
+	    const allSolar = state.totalSolarEclipses + state.partialSolarEclipses;
+	    const totalLunar = state.totalLunarEclipses;
+	    const allLunar = state.totalLunarEclipses + state.partialLunarEclipses;
 
-    elements.statSolar.innerHTML = `${totalSolar} <small style="opacity:0.6">(${allSolar} total)</small>`;
-    elements.statLunar.innerHTML = `${totalLunar} <small style="opacity:0.6">(${allLunar} total)</small>`;
-    elements.statYears.textContent = state.yearsSimulated.toFixed(1);
-  }
+	    elements.statSolar.innerHTML = `${totalSolar} <small style="opacity:0.6">(${allSolar} incl. partial)</small>`;
+	    elements.statLunar.innerHTML = `${totalLunar} <small style="opacity:0.6">(${allLunar} incl. partial)</small>`;
+	    elements.statYears.textContent = state.yearsSimulated.toFixed(1);
+	  }
 
   function update() {
     updateVisualization();
@@ -391,14 +546,14 @@
 
     document.addEventListener('mousemove', (e) => {
       if (!isDragging) return;
-      state.moonAngle = normalizeAngleDeg(getAngle(e));
+      setMoonFromDisplayAngleDeg(normalizeAngleDeg(getAngle(e)));
       update();
     });
 
     document.addEventListener('touchmove', (e) => {
       if (!isDragging || !e.touches.length) return;
       const touch = e.touches[0];
-      state.moonAngle = normalizeAngleDeg(getAngle(touch));
+      setMoonFromDisplayAngleDeg(normalizeAngleDeg(getAngle(touch)));
       update();
     }, { passive: false });
 
@@ -421,13 +576,22 @@
     // Phase buttons
     elements.btnNewMoon.addEventListener('click', () => {
       stopAnimation();
-      animateToAngle(180);
+      animateToDisplayAngle(180);
     });
 
     elements.btnFullMoon.addEventListener('click', () => {
       stopAnimation();
-      animateToAngle(0);
+      animateToDisplayAngle(0);
     });
+
+    // Moon position slider (keyboard accessible)
+    if (elements.moonAngleSlider) {
+      elements.moonAngleSlider.addEventListener('input', () => {
+        stopAnimation();
+        setMoonFromDisplayAngleDeg(parseFloat(elements.moonAngleSlider.value));
+        update();
+      });
+    }
 
     // Animation buttons
     elements.btnAnimateMonth.addEventListener('click', () => {
@@ -457,14 +621,25 @@
       toggleLog();
     });
 
+    if (elements.btnClearLog) {
+      elements.btnClearLog.addEventListener('click', () => {
+        state.eclipseLog = [];
+        updateLogTable();
+        if (!state.showLog) {
+          elements.logPanel.style.display = 'none';
+        }
+      });
+    }
+
     // Reset button
     if (elements.btnReset) {
       elements.btnReset.addEventListener('click', () => {
         stopAnimation();
 
         // Reset state to defaults
-        state.moonAngle = 0;
-        state.nodeAngle = 30;
+        state.sunLonDeg = 0;
+        state.moonLonDeg = 180;
+        state.nodeLonDeg = 210;
         state.orbitalTilt = 5.145;
 
         // Reset UI
@@ -478,6 +653,7 @@
         state.partialLunarEclipses = 0;
         state.yearsSimulated = 0;
         state.eclipseLog = [];
+        updateLogTable();
 
         // Hide stats panel and log panel
         elements.statsPanel.style.display = 'none';
@@ -506,14 +682,14 @@
     return Math.round(years).toString();
   }
 
-  function animateToAngle(targetAngle) {
-    const startAngle = state.moonAngle;
-    let diff = targetAngle - startAngle;
+  function animateToDisplayAngle(targetDisplayAngleDeg) {
+    const startAngle = getDisplayMoonAngleDeg();
+    let diff = targetDisplayAngleDeg - startAngle;
     if (diff > 180) diff -= 360;
     if (diff < -180) diff += 360;
 
     AstroUtils.animateValue(startAngle, startAngle + diff, 500, (val) => {
-      state.moonAngle = normalizeAngleDeg(val);
+      setMoonFromDisplayAngleDeg(normalizeAngleDeg(val));
       update();
     });
   }
@@ -535,8 +711,9 @@
     state.isAnimating = true;
 
     const duration = 3000; // 3 seconds for one month
-    const startAngle = state.moonAngle;
-    const startNode = state.nodeAngle;
+    const startSun = state.sunLonDeg;
+    const startMoon = state.moonLonDeg;
+    const startNode = state.nodeLonDeg;
     const startTime = performance.now();
 
     function frame(currentTime) {
@@ -544,12 +721,11 @@
 
       const elapsed = currentTime - startTime;
       const progress = Math.min(elapsed / duration, 1);
+      const timeDays = progress * SYNODIC_MONTH_DAYS;
 
-      state.moonAngle = normalizeAngleDeg(startAngle + progress * 360);
-      // Node regression scaled to one synodic month.
-      state.nodeAngle = normalizeAngleDeg(
-        startNode - progress * (NODE_REGRESSION_DEG_PER_YEAR / MONTHS_PER_YEAR)
-      );
+      state.sunLonDeg = normalizeAngleDeg(startSun + SUN_RATE_DEG_PER_DAY * timeDays);
+      state.moonLonDeg = normalizeAngleDeg(startMoon + MOON_RATE_DEG_PER_DAY * timeDays);
+      state.nodeLonDeg = normalizeAngleDeg(startNode + NODE_RATE_DEG_PER_DAY * timeDays);
 
       update();
 
@@ -568,8 +744,9 @@
     state.isAnimating = true;
 
     const duration = 10000; // 10 seconds for one year
-    const startAngle = state.moonAngle;
-    const startNode = state.nodeAngle;
+    const startSun = state.sunLonDeg;
+    const startMoon = state.moonLonDeg;
+    const startNode = state.nodeLonDeg;
     const startTime = performance.now();
 
     function frame(currentTime) {
@@ -577,11 +754,11 @@
 
       const elapsed = currentTime - startTime;
       const progress = Math.min(elapsed / duration, 1);
+      const timeDays = progress * DAYS_PER_TROPICAL_YEAR;
 
-      // ~12.4 lunar months per year
-      state.moonAngle = normalizeAngleDeg(startAngle + progress * 360 * MONTHS_PER_YEAR);
-      // Nodes regress about 19.3° per year
-      state.nodeAngle = normalizeAngleDeg(startNode - progress * NODE_REGRESSION_DEG_PER_YEAR);
+      state.sunLonDeg = normalizeAngleDeg(startSun + SUN_RATE_DEG_PER_DAY * timeDays);
+      state.moonLonDeg = normalizeAngleDeg(startMoon + MOON_RATE_DEG_PER_DAY * timeDays);
+      state.nodeLonDeg = normalizeAngleDeg(startNode + NODE_RATE_DEG_PER_DAY * timeDays);
 
       update();
 
@@ -599,6 +776,7 @@
     state.showLog = !state.showLog;
     elements.logPanel.style.display = state.showLog ? 'block' : 'none';
     elements.btnToggleLog.textContent = state.showLog ? 'Hide Log' : 'Show Log';
+    if (state.showLog) updateLogTable();
   }
 
   function updateLogTable() {
@@ -611,7 +789,7 @@
     const recentLog = state.eclipseLog.slice(-100).reverse();
     for (const entry of recentLog) {
       const typeClass = entry.type.includes('solar') ? 'solar' : 'lunar';
-      const typeLabel = entry.type.replace('-', ' ').replace(/\b\w/g, c => c.toUpperCase());
+      const typeLabel = formatEclipseTypeLabel(entry.type);
       html += `<tr class="${typeClass}">
         <td>${entry.year.toFixed(2)}</td>
         <td>${typeLabel}</td>
@@ -639,9 +817,14 @@
     state.eclipseLog = [];
 
     elements.statsPanel.style.display = 'grid';
+    // Immediately clear the visible log table, so "Reset" / reruns don't leave stale rows.
+    updateLogTable();
 
-    const startNode = state.nodeAngle;
-    const totalMonths = yearsToSimulate * MONTHS_PER_YEAR;
+    const startSun = state.sunLonDeg;
+    const startMoon = state.moonLonDeg;
+    const startNode = state.nodeLonDeg;
+
+    const totalMonths = Math.ceil((yearsToSimulate * DAYS_PER_TROPICAL_YEAR) / SYNODIC_MONTH_DAYS);
 
     // Adjust batch size based on simulation length
     let batchSize = yearsToSimulate <= 100 ? 5 : 50;
@@ -657,34 +840,52 @@
       }
 
       for (let i = 0; i < batchSize && currentMonth < totalMonths; i++, currentMonth++) {
-        const yearProgress = currentMonth / MONTHS_PER_YEAR;
+        // Time since simulation start.
+        const tNewDays = currentMonth * SYNODIC_MONTH_DAYS;
+        const tFullDays = tNewDays + 0.5 * SYNODIC_MONTH_DAYS;
 
-        // Node regression: about 19.3° per year
-        const nodeAngle = normalizeAngleDeg(startNode - yearProgress * NODE_REGRESSION_DEG_PER_YEAR);
+        // New Moon event (phase angle ~0): solar eclipses possible.
+        {
+          const sunLonDeg = normalizeAngleDeg(startSun + SUN_RATE_DEG_PER_DAY * tNewDays);
+          const nodeLonDeg = normalizeAngleDeg(startNode + NODE_RATE_DEG_PER_DAY * tNewDays);
+          const moonLonDeg = sunLonDeg; // conjunction
 
-        // Check new moon (angle 180) for solar eclipses
-        const newMoonHeight = Math.abs(getMoonEclipticHeight(180, state.orbitalTilt, nodeAngle));
-        if (newMoonHeight < TOTAL_SOLAR_THRESHOLD) {
-          state.totalSolarEclipses++;
-          state.eclipseLog.push({ year: yearProgress, type: 'total-solar', height: newMoonHeight });
-        } else if (newMoonHeight < PARTIAL_SOLAR_THRESHOLD) {
-          state.partialSolarEclipses++;
-          state.eclipseLog.push({ year: yearProgress, type: 'partial-solar', height: newMoonHeight });
+          const betaAbs = Math.abs(Model.eclipticLatitudeDeg({ tiltDeg: state.orbitalTilt, moonLonDeg, nodeLonDeg }));
+          const year = tNewDays / DAYS_PER_TROPICAL_YEAR;
+
+          if (betaAbs < TOTAL_SOLAR_THRESHOLD) {
+            state.totalSolarEclipses++;
+            state.eclipseLog.push({ year, type: 'total-solar', height: betaAbs });
+          } else if (betaAbs < PARTIAL_SOLAR_THRESHOLD) {
+            state.partialSolarEclipses++;
+            state.eclipseLog.push({ year, type: 'partial-solar', height: betaAbs });
+          }
         }
 
-        // Check full moon (angle 0) for lunar eclipses
-        const fullMoonHeight = Math.abs(getMoonEclipticHeight(0, state.orbitalTilt, nodeAngle));
-        if (fullMoonHeight < TOTAL_LUNAR_THRESHOLD) {
-          state.totalLunarEclipses++;
-          state.eclipseLog.push({ year: yearProgress, type: 'total-lunar', height: fullMoonHeight });
-        } else if (fullMoonHeight < PARTIAL_LUNAR_THRESHOLD) {
-          state.partialLunarEclipses++;
-          state.eclipseLog.push({ year: yearProgress, type: 'partial-lunar', height: fullMoonHeight });
+        // Full Moon event (phase angle ~180): lunar eclipses possible.
+        {
+          const sunLonDeg = normalizeAngleDeg(startSun + SUN_RATE_DEG_PER_DAY * tFullDays);
+          const nodeLonDeg = normalizeAngleDeg(startNode + NODE_RATE_DEG_PER_DAY * tFullDays);
+          const moonLonDeg = normalizeAngleDeg(sunLonDeg + 180); // opposition
+
+          const betaAbs = Math.abs(Model.eclipticLatitudeDeg({ tiltDeg: state.orbitalTilt, moonLonDeg, nodeLonDeg }));
+          const year = tFullDays / DAYS_PER_TROPICAL_YEAR;
+
+          if (betaAbs < TOTAL_LUNAR_THRESHOLD) {
+            state.totalLunarEclipses++;
+            state.eclipseLog.push({ year, type: 'total-lunar', height: betaAbs });
+          } else if (betaAbs < PARTIAL_LUNAR_THRESHOLD) {
+            state.partialLunarEclipses++;
+            state.eclipseLog.push({ year, type: 'partial-lunar', height: betaAbs });
+          }
         }
 
-        state.yearsSimulated = yearProgress;
-        state.nodeAngle = nodeAngle;
-        state.moonAngle = (currentMonth * 360) % 360;
+        // Advance visible state (for the live animation during simulation).
+        const tDays = tNewDays;
+        state.sunLonDeg = normalizeAngleDeg(startSun + SUN_RATE_DEG_PER_DAY * tDays);
+        state.moonLonDeg = normalizeAngleDeg(startMoon + MOON_RATE_DEG_PER_DAY * tDays);
+        state.nodeLonDeg = normalizeAngleDeg(startNode + NODE_RATE_DEG_PER_DAY * tDays);
+        state.yearsSimulated = tDays / DAYS_PER_TROPICAL_YEAR;
       }
 
       updateStats();
@@ -716,10 +917,15 @@
       hint: 'Solar eclipses happen at NEW MOON when the Moon passes between Earth and Sun. The Moon must also be near a node (where its tilted orbit crosses the ecliptic plane).',
       initialState: { moonAngle: 90, nodeAngle: 0 },
       check: (demoState) => {
-        const phase = getPhase(demoState.moonAngle);
-        const height = Math.abs(getMoonEclipticHeight(demoState.moonAngle, demoState.orbitalTilt, demoState.nodeAngle));
-        const isNewMoon = phase === 'New Moon';
+        const rawHeight = Model.eclipticLatitudeDeg({
+          tiltDeg: demoState.orbitalTilt,
+          moonLonDeg: demoState.moonAngle,
+          nodeLonDeg: demoState.nodeAngle,
+        });
+        const height = Math.abs(rawHeight);
+        const isNewMoon = isNearAngle(demoState.moonAngle, 180, SYZYGY_TOLERANCE_DEG);
         const nearNode = height < PARTIAL_SOLAR_THRESHOLD;
+        const phase = getPhaseLabel(normalizeAngleDeg(demoState.moonAngle - 180));
 
         if (isNewMoon && nearNode) {
           const eclipseType = height < TOTAL_SOLAR_THRESHOLD ? 'total' : 'partial';
@@ -753,10 +959,15 @@
       hint: 'Lunar eclipses happen at FULL MOON when the Moon passes through Earth\'s shadow. The Moon must be near a node so it doesn\'t pass above or below the shadow.',
       initialState: { moonAngle: 270, nodeAngle: 0 },
       check: (demoState) => {
-        const phase = getPhase(demoState.moonAngle);
-        const height = Math.abs(getMoonEclipticHeight(demoState.moonAngle, demoState.orbitalTilt, demoState.nodeAngle));
-        const isFullMoon = phase === 'Full Moon';
+        const rawHeight = Model.eclipticLatitudeDeg({
+          tiltDeg: demoState.orbitalTilt,
+          moonLonDeg: demoState.moonAngle,
+          nodeLonDeg: demoState.nodeAngle,
+        });
+        const height = Math.abs(rawHeight);
+        const isFullMoon = isNearAngle(demoState.moonAngle, 0, SYZYGY_TOLERANCE_DEG);
         const nearNode = height < PARTIAL_LUNAR_THRESHOLD;
+        const phase = getPhaseLabel(normalizeAngleDeg(demoState.moonAngle - 180));
 
         if (isFullMoon && nearNode) {
           const eclipseType = height < TOTAL_LUNAR_THRESHOLD ? 'total' : 'partial';
@@ -790,11 +1001,15 @@
       hint: 'Most full moons don\'t cause eclipses because the Moon\'s orbit is tilted ~5°. Try positioning the Moon at full moon but FAR from the nodes — it will pass above or below Earth\'s shadow.',
       initialState: { moonAngle: 0, nodeAngle: 90 },
       check: (demoState) => {
-        const phase = getPhase(demoState.moonAngle);
-        const rawHeight = getMoonEclipticHeight(demoState.moonAngle, demoState.orbitalTilt, demoState.nodeAngle);
+        const rawHeight = Model.eclipticLatitudeDeg({
+          tiltDeg: demoState.orbitalTilt,
+          moonLonDeg: demoState.moonAngle,
+          nodeLonDeg: demoState.nodeAngle,
+        });
         const height = Math.abs(rawHeight);
-        const isFullMoon = phase === 'Full Moon';
+        const isFullMoon = isNearAngle(demoState.moonAngle, 0, SYZYGY_TOLERANCE_DEG);
         const noEclipse = height > PARTIAL_LUNAR_THRESHOLD;
+        const phase = getPhaseLabel(normalizeAngleDeg(demoState.moonAngle - 180));
 
         if (isFullMoon && noEclipse) {
           return {
@@ -822,7 +1037,7 @@
       initialState: { moonAngle: 180, orbitalTilt: 5.145, nodeAngle: 0 },
       check: (demoState) => {
         const tiltIsZero = demoState.orbitalTilt < 0.5;
-        const phase = getPhase(demoState.moonAngle);
+        const phase = getPhaseLabel(normalizeAngleDeg(demoState.moonAngle - 180));
 
         if (tiltIsZero) {
           return {
@@ -898,8 +1113,8 @@
     challengeEngine = ChallengeEngine.create({
       challenges: ECLIPSE_CHALLENGES,
       getState: () => ({
-        moonAngle: state.moonAngle,
-        nodeAngle: state.nodeAngle,
+        moonAngle: getDisplayMoonAngleDeg(),
+        nodeAngle: getDisplayNodeAngleDeg(),
         orbitalTilt: state.orbitalTilt,
         yearsSimulated: state.yearsSimulated,
         totalSolarEclipses: state.totalSolarEclipses,
@@ -909,10 +1124,10 @@
       }),
       setState: (newState) => {
         if (newState.moonAngle !== undefined) {
-          state.moonAngle = newState.moonAngle;
+          setMoonFromDisplayAngleDeg(newState.moonAngle);
         }
         if (newState.nodeAngle !== undefined) {
-          state.nodeAngle = newState.nodeAngle;
+          setNodeFromDisplayAngleDeg(newState.nodeAngle);
         }
         if (newState.orbitalTilt !== undefined) {
           state.orbitalTilt = newState.orbitalTilt;
@@ -965,6 +1180,13 @@
     const defaultYears = 10;
     elements.simYearsSlider.value = yearsToSlider(defaultYears);
     elements.simYearsDisplay.textContent = formatYears(defaultYears);
+
+    // Set initial Moon angle slider value (display angle)
+    if (elements.moonAngleSlider && elements.moonAngleDisplay) {
+      const displayAngle = getDisplayMoonAngleDeg();
+      elements.moonAngleSlider.value = Math.round(displayAngle).toString();
+      elements.moonAngleDisplay.textContent = `${Math.round(displayAngle)}°`;
+    }
 
     // Set up challenge mode
     setupChallengeMode();
