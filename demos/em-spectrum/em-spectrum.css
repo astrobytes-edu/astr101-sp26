@@ -1,0 +1,561 @@
+/* EM Spectrum Explorer - Demo-specific styles */
+
+:root {
+  --demo-max-width: 1200px;
+}
+
+/* Mode Toggle Tabs */
+.mode-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 0;
+  margin-bottom: 1.5rem;
+  background: rgba(18, 18, 31, 0.9);
+  border-radius: 8px;
+  padding: 0.25rem;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.mode-tab {
+  padding: 0.5rem 1.25rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  border: none;
+  background: transparent;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border-radius: 6px;
+}
+
+.mode-tab:hover:not(.active) {
+  color: var(--text-primary);
+  background: var(--space-light);
+}
+
+.mode-tab.active {
+  background: var(--accent-blue);
+  color: var(--space-black);
+}
+
+.mode-tab:focus {
+  outline: 2px solid var(--accent-gold);
+  outline-offset: 2px;
+}
+
+/* Main Spectrum Panel */
+.spectrum-panel {
+  background: rgba(18, 18, 31, 0.95);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+/* EM Spectrum Bar */
+.em-spectrum-container {
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.em-spectrum-bar {
+  height: 60px;
+  border-radius: 8px;
+  position: relative;
+  cursor: pointer;
+  background: linear-gradient(to right,
+    #800000 0%,       /* Radio - dark red */
+    #cc3300 8%,       /* Microwave - orange-red */
+    #ff3300 15%,      /* Far IR - red */
+    #ff0000 22%,      /* IR - red */
+    #ff0000 28%,      /* Near IR */
+    #ff0000 32%,      /* Visible red edge */
+    #ff4500 34%,
+    #ffa500 37%,
+    #ffff00 40%,
+    #00ff00 44%,
+    #00ffff 48%,
+    #0000ff 52%,
+    #4b0082 55%,      /* Visible violet edge */
+    #8b00ff 58%,      /* UV */
+    #9932cc 65%,      /* X-ray - purple */
+    #4b0082 80%,      /* Hard X-ray */
+    #1a0033 100%      /* Gamma - deep purple/black */
+  );
+  box-shadow: 0 0 20px rgba(100, 100, 255, 0.3);
+}
+
+.em-spectrum-bar::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 8px;
+  background: linear-gradient(to bottom,
+    rgba(255, 255, 255, 0.1) 0%,
+    transparent 50%,
+    rgba(0, 0, 0, 0.2) 100%
+  );
+  pointer-events: none;
+}
+
+/* Band Labels */
+.band-labels {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+  font-size: 0.7rem;
+  color: var(--text-muted);
+}
+
+.band-label {
+  text-align: center;
+  cursor: pointer;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.band-label:hover {
+  color: var(--text-primary);
+  background: var(--space-light);
+}
+
+.band-label.active {
+  color: var(--accent-gold);
+  background: var(--space-medium);
+}
+
+/* Wavelength Scale */
+.wavelength-scale {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.25rem 0;
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  color: var(--text-muted);
+}
+
+.wavelength-tick {
+  text-align: center;
+  position: relative;
+}
+
+.wavelength-tick::before {
+  content: '';
+  position: absolute;
+  top: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1px;
+  height: 6px;
+  background: var(--text-muted);
+}
+
+/* Size Comparison */
+.size-comparison {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 0.5rem 0;
+  font-size: 0.6rem;
+  color: var(--text-muted);
+  opacity: 0.8;
+}
+
+.size-item {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.size-icon {
+  font-size: 1rem;
+}
+
+/* Selection Marker */
+.selection-marker {
+  position: absolute;
+  top: -10px;
+  width: 4px;
+  height: calc(100% + 20px);
+  background: var(--accent-gold);
+  transform: translateX(-50%);
+  pointer-events: none;
+  display: none;
+  z-index: 10;
+  box-shadow: 0 0 10px var(--accent-gold);
+}
+
+.selection-marker::after {
+  content: attr(data-label);
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.7rem;
+  color: var(--accent-gold);
+  white-space: nowrap;
+  background: var(--space-black);
+  padding: 0.15rem 0.4rem;
+  border-radius: 4px;
+}
+
+/* Band Highlight Overlay */
+.band-highlight {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  border: 2px solid var(--accent-gold);
+  border-radius: 4px;
+  pointer-events: none;
+  display: none;
+}
+
+/* Mode Content Panels */
+.mode-content {
+  display: none;
+}
+
+.mode-content.active {
+  display: block;
+}
+
+/* Explore Mode */
+.band-info-panel {
+  background: var(--space-medium);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 1rem;
+  min-height: 120px;
+}
+
+.band-info-title {
+  font-size: 1.1rem;
+  color: var(--accent-gold);
+  margin: 0 0 0.5rem 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.band-info-wavelength {
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  color: var(--accent-blue);
+  margin-bottom: 0.5rem;
+}
+
+.band-info-description {
+  color: var(--text-secondary);
+  line-height: 1.5;
+  margin: 0;
+}
+
+.band-info-examples {
+  margin-top: 0.75rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--border-color);
+  font-size: 0.875rem;
+}
+
+.band-info-examples strong {
+  color: var(--text-primary);
+}
+
+/* Convert Mode */
+.converter-panel {
+  background: var(--space-medium);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 1.5rem;
+}
+
+.converter-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.converter-input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.converter-label {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.converter-input-row {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.converter-input {
+  flex: 1;
+  padding: 0.5rem;
+  font-family: var(--font-mono);
+  font-size: 1rem;
+  background: var(--space-deep);
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  color: var(--text-primary);
+  text-align: right;
+}
+
+.converter-input:focus {
+  outline: none;
+  border-color: var(--accent-blue);
+  box-shadow: 0 0 8px rgba(93, 173, 226, 0.3);
+}
+
+.converter-unit-select {
+  padding: 0.5rem;
+  background: var(--space-light);
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  color: var(--text-primary);
+  cursor: pointer;
+  min-width: 70px;
+}
+
+.converter-unit-select:focus {
+  outline: 2px solid var(--accent-blue);
+}
+
+.converter-result {
+  font-family: var(--font-mono);
+  font-size: 1.25rem;
+  color: var(--accent-gold);
+  padding: 0.5rem;
+  background: var(--space-deep);
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  text-align: right;
+}
+
+.converter-formula {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-color);
+  text-align: center;
+}
+
+.formula-display {
+  font-family: var(--font-mono);
+  color: var(--accent-blue);
+  margin: 0.5rem 0;
+}
+
+/* Telescopes Mode */
+.telescopes-panel {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 0.75rem;
+}
+
+.telescope-card {
+  background: var(--space-medium);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 0.75rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: center;
+}
+
+.telescope-card:hover {
+  border-color: var(--accent-blue);
+  background: var(--space-light);
+}
+
+.telescope-card.active {
+  border-color: var(--accent-gold);
+  background: rgba(244, 208, 63, 0.1);
+}
+
+.telescope-card:focus {
+  outline: 2px solid var(--accent-gold);
+  outline-offset: 2px;
+}
+
+.telescope-icon {
+  font-size: 1.5rem;
+  margin-bottom: 0.25rem;
+}
+
+.telescope-name {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  margin-bottom: 0.25rem;
+}
+
+.telescope-band {
+  font-size: 0.65rem;
+  color: var(--text-muted);
+}
+
+.telescope-info-panel {
+  margin-top: 1rem;
+  background: var(--space-medium);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 1rem;
+  display: none;
+}
+
+.telescope-info-panel.visible {
+  display: block;
+}
+
+/* Objects Mode */
+.objects-panel {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 0.75rem;
+}
+
+.object-card {
+  background: var(--space-medium);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 0.75rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: center;
+}
+
+.object-card:hover {
+  border-color: var(--accent-blue);
+  background: var(--space-light);
+}
+
+.object-card.active {
+  border-color: var(--accent-gold);
+  background: rgba(244, 208, 63, 0.1);
+}
+
+.object-card:focus {
+  outline: 2px solid var(--accent-gold);
+  outline-offset: 2px;
+}
+
+.object-icon {
+  font-size: 1.5rem;
+  margin-bottom: 0.25rem;
+}
+
+.object-name {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.object-info-panel {
+  margin-top: 1rem;
+  background: var(--space-medium);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 1rem;
+  display: none;
+}
+
+.object-info-panel.visible {
+  display: block;
+}
+
+/* Readout Panel */
+.readout-panel {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+/* Insight Box */
+.insight-box {
+  background: rgba(18, 18, 31, 0.9);
+  border-left: 3px solid var(--accent-gold);
+  padding: 1rem;
+  border-radius: 0 8px 8px 0;
+  margin-top: 1rem;
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+.insight-box h4 {
+  margin: 0 0 0.5rem 0;
+  color: var(--accent-gold);
+  font-size: 0.875rem;
+}
+
+.insight-box p {
+  margin: 0;
+  color: var(--text-secondary);
+}
+
+.insight-box .formula {
+  font-family: var(--font-mono);
+  color: var(--accent-blue);
+  margin: 0.5rem 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .mode-tabs {
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  .mode-tab {
+    flex: 1 1 auto;
+    text-align: center;
+  }
+
+  .converter-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .readout-panel {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .telescopes-panel,
+  .objects-panel {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Screen reader only */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Focus indicators */
+.mode-tab:focus-visible,
+.telescope-card:focus-visible,
+.object-card:focus-visible,
+.band-label:focus-visible {
+  outline: 2px solid var(--accent-gold);
+  outline-offset: 2px;
+}
