@@ -713,6 +713,28 @@
   // Keyboard Navigation
   // ============================================
 
+  /**
+   * Keyboard shortcuts (active when not focused on input/select):
+   *
+   * Aperture control:
+   *   ArrowLeft        - Decrease aperture by 10%
+   *   Shift+ArrowLeft  - Decrease aperture by 1% (fine)
+   *   ArrowRight       - Increase aperture by 10%
+   *   Shift+ArrowRight - Increase aperture by 1% (fine)
+   *
+   * Binary separation:
+   *   ArrowUp          - Increase binary separation by 10%
+   *   ArrowDown        - Decrease binary separation by 10%
+   *
+   * Toggle controls:
+   *   M                - Toggle math mode (101/201)
+   *   A                - Toggle atmosphere simulation
+   *   O                - Toggle adaptive optics (if atmosphere enabled)
+   *   C                - Toggle compare mode
+   *
+   * Presets:
+   *   1-8              - Select telescope preset
+   */
   function setupKeyboard() {
     document.addEventListener('keydown', (event) => {
       if (event.target.tagName === 'INPUT' || event.target.tagName === 'SELECT') return;
