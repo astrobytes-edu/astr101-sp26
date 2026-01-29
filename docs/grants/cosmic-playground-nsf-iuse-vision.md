@@ -111,6 +111,7 @@ Demos serve two distinct modes:
 This is why it's a "Playground" — designed equipment (presets, structured UI), but students can still play freely.
 
 **Homework integration:** Assignments are designed around the demos:
+
 - Use the simulation to verify your calculations
 - Explore parameter space to build intuition before solving problems
 - "Set up the demo to match this system, then predict what happens when..."
@@ -155,7 +156,7 @@ This is STEM pedagogical software built on **correctness + software engineering 
 3. **Building simulations was expensive/slow** before modern AI-assisted development
 4. **The layered complexity insight** requires teaching across multiple course levels — most faculty teach one course repeatedly
 
-The PI sits at an unusual intersection: computational astrophysicist with software engineering expertise, teaching intro through upper-division courses, applying AI tools to accelerate development while maintaining physics rigor.
+The PI sits at an unusual intersection: computational astrophysicist with software engineering expertise, teaching intro → upper-division → graduate computational courses, applying AI tools to accelerate development while maintaining physics rigor.
 
 **The inverted model:** Most IUSE proposals feature STEM education researchers partnering with content experts. This proposal inverts that — a content expert with methodological rigor seeking STEM Ed partnership to measure whether that rigor improves learning outcomes. The simulations exist; the research question is whether research-grade standards for teaching tools actually matter.
 
@@ -369,7 +370,9 @@ The design draws on established findings in science education:
 - Numerical simulation (stellar feedback, radiation hydrodynamics)
 - Scientific visualization
 - Software engineering best practices
-- AI-augmented scientific computing (teaches computational science courses)
+- AI-augmented scientific computing
+
+**Teaching span:** Intro astronomy (ASTR 101/109) → upper-division astrophysics (ASTR 201+) → graduate computational science and computational astrophysics courses. This full-spectrum teaching experience directly informs the layered complexity architecture.
 
 **Pedagogical approach:**
 - Evidence-based design grounded in learning science research
