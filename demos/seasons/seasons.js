@@ -19,7 +19,7 @@
   // UI uses a 365-day calendar day-of-year slider, but the simplified “physics”
   // model uses a tropical year length for smooth periodic functions.
   const YEAR_DAYS = 365;
-  const TROPICAL_YEAR_DAYS = 365.2422;
+  const TROPICAL_YEAR_DAYS = AstroConstants.TIME.MEAN_TROPICAL_YEAR_DAYS;
   const PERIHELION_DAY = 3;
   const DAY_MIN = 1;
   const DAY_MAX = 365;
