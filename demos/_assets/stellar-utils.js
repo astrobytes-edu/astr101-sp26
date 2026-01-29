@@ -39,8 +39,17 @@ const StellarUtils = (function() {
     return 'L+';
   }
 
-  // Temperature to RGB color (blackbody approximation)
+  // Temperature to RGB color - delegates to BlackbodyModel when available
   function temperatureToColor(T) {
+    // Use BlackbodyModel if available (preferred - avoids code duplication)
+    if (typeof BlackbodyModel !== 'undefined' && BlackbodyModel.temperatureToColor) {
+      return BlackbodyModel.temperatureToColor(T);
+    }
+
+    // Fallback implementation for standalone use (when BlackbodyModel not loaded)
+    if (!Number.isFinite(T) || T <= 0) {
+      return { r: 0, g: 0, b: 0 };
+    }
     let r, g, b;
 
     if (T < 1000) {
@@ -54,7 +63,7 @@ const StellarUtils = (function() {
     } else if (T < 6500) {
       r = 255;
       g = Math.min(255, 180 + (T - 4000) / 35);
-      b = Math.min(255, (T - 4000) / 10);
+      b = Math.min(255, (T - 4000) / 8);  // Faster blue increase for white-ish Sun
     } else if (T < 10000) {
       r = Math.max(200, 255 - (T - 6500) / 30);
       g = Math.max(200, 255 - (T - 6500) / 50);
