@@ -38,3 +38,19 @@ test('planckFunction: handles extreme temperature gracefully (no overflow)', () 
   const B_hot = BlackbodyModel.planckFunction(1e-7, 1e6); // 1 nm
   assert.ok(Number.isFinite(B_hot), `expected finite value for hot star, got ${B_hot}`);
 });
+
+test('stefanBoltzmannFlux: Sun flux matches L☉/(4πR☉²)', () => {
+  const flux = BlackbodyModel.stefanBoltzmannFlux(5772);
+  // σT⁴ should equal L/(4πR²) for Sun
+  // L☉ = 3.828e33 erg/s, R☉ = 6.957e10 cm
+  // F = L/(4πR²) = 3.828e33 / (4π × (6.957e10)²) ≈ 6.29e10 erg/s/cm²
+  const expected = 3.828e33 / (4 * Math.PI * Math.pow(6.957e10, 2));
+  const relError = Math.abs(flux - expected) / expected;
+  assert.ok(relError < 0.01, `expected ~${expected.toExponential(2)}, got ${flux.toExponential(2)}, error ${(relError*100).toFixed(1)}%`);
+});
+
+test('luminosityRatio: Sun at 5772 K has L/L☉ = 1', () => {
+  const ratio = BlackbodyModel.luminosityRatio(5772);
+  // (T/T☉)⁴ = 1 when T = T☉
+  assert.ok(Math.abs(ratio - 1) < 0.001, `expected ~1, got ${ratio}`);
+});

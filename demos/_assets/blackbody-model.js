@@ -98,10 +98,37 @@
     return factor1 / (Math.exp(exponent) - 1);
   }
 
+  // ============================================
+  // Stefan-Boltzmann Law
+  // ============================================
+
+  /**
+   * Stefan-Boltzmann flux: F = σT⁴
+   * @param {number} T - Temperature (K)
+   * @returns {number} Flux (erg/s/cm²)
+   */
+  function stefanBoltzmannFlux(T) {
+    if (!Number.isFinite(T) || T <= 0) return 0;
+    return CONSTANTS.sigma * Math.pow(T, 4);
+  }
+
+  /**
+   * Luminosity relative to Sun (assuming same radius)
+   * L/L☉ = (T/T☉)⁴
+   * @param {number} T - Temperature (K)
+   * @returns {number} Luminosity ratio
+   */
+  function luminosityRatio(T) {
+    if (!Number.isFinite(T) || T <= 0) return 0;
+    return Math.pow(T / CONSTANTS.T_sun, 4);
+  }
+
   return {
     CONSTANTS,
     wienPeakCm,
     wienPeakNm,
     planckFunction,
+    stefanBoltzmannFlux,
+    luminosityRatio,
   };
 });
