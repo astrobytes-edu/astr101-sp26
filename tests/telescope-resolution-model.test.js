@@ -94,3 +94,37 @@ test('resolutionStatus: close binary is unresolved', () => {
   const result = TelescopeResolutionModel.resolutionStatus(0.1, 0.5);
   assert.strictEqual(result, 'unresolved');
 });
+
+// besselJ1 tests
+test('besselJ1: J1(0) = 0', () => {
+  const result = TelescopeResolutionModel.besselJ1(0);
+  assert.ok(Math.abs(result) < 1e-10, `expected 0, got ${result}`);
+});
+
+test('besselJ1: J1(3.83) ≈ 0 (first zero)', () => {
+  const result = TelescopeResolutionModel.besselJ1(3.8317);
+  assert.ok(Math.abs(result) < 0.01, `expected ~0, got ${result}`);
+});
+
+test('besselJ1: J1(1.84) ≈ 0.58 (maximum)', () => {
+  const result = TelescopeResolutionModel.besselJ1(1.8412);
+  assert.ok(Math.abs(result - 0.5819) < 0.01, `expected ~0.58, got ${result}`);
+});
+
+// airyIntensity tests
+test('airyIntensity: I(0) = 1 (central maximum)', () => {
+  const result = TelescopeResolutionModel.airyIntensity(0);
+  assert.ok(Math.abs(result - 1.0) < 1e-10, `expected 1, got ${result}`);
+});
+
+test('airyIntensity: I(3.83) ≈ 0 (first null)', () => {
+  const result = TelescopeResolutionModel.airyIntensity(3.8317);
+  assert.ok(result < 0.001, `expected ~0, got ${result}`);
+});
+
+test('airyIntensity: always returns value between 0 and 1', () => {
+  for (const x of [0, 0.5, 1, 2, 3, 5, 10, 20]) {
+    const result = TelescopeResolutionModel.airyIntensity(x);
+    assert.ok(result >= 0 && result <= 1, `I(${x}) = ${result} not in [0,1]`);
+  }
+});
