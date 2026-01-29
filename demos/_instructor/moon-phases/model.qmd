@@ -8,8 +8,8 @@ search: false
 
 ::: {.callout-roadmap title="Links"}
 Student demo: `/demos/moon-phases/`  
-UI/visualization code: `demos/moon-phases/moon-phases.js`  
-Model snippet (tests): `demos/_assets/moon-phases-model.js`
+Model code: `demos/_assets/moon-phases-model.js` (loaded by the demo)  
+UI/visualization code: `demos/moon-phases/moon-phases.js`
 :::
 
 ## What the demo is modeling (big picture)
@@ -24,6 +24,14 @@ The demo reports:
 - Phase name (New, Crescent, Quarter, Gibbous, Full)
 - Illumination fraction (0–100%)
 - Days since New Moon (using a synodic month)
+
+## Shared model code (single source of truth)
+
+The illumination fraction is computed by a small shared model function:
+
+- `MoonPhasesModel.illuminationFractionFromMoonAngleDeg(angleDeg)`
+
+The student-facing demo loads `demos/_assets/moon-phases-model.js` so the equation used in class discussion and the equation used by the code cannot silently drift apart.
 
 ## Angle convention in this demo
 
@@ -80,3 +88,6 @@ What this is really saying: the demo treats the synodic month as evenly spaced i
 - The phase “shape” rendering is schematic (designed to look right qualitatively, not to be a photometric model).
 :::
 
+## Reduced motion behavior (accessibility)
+
+If a browser reports `prefers-reduced-motion: reduce`, the demo defaults the animation speed to **1×**. Students can still step through phases and manually increase speed; the goal is to avoid surprising rapid motion by default.

@@ -66,13 +66,23 @@ What this equation is really saying: the Moon is in the ecliptic plane at the no
 
 ## Eclipse “how close is close enough?” (shadow geometry)
 
-The demo uses a physically-motivated shadow model (similar triangles) at the mean Earth–Moon distance:
+The demo uses a physically-motivated shadow model (similar triangles). A key second knob is that **Earth–Moon distance** $D_{EM}$ is selectable (held fixed during a run/simulation):
 
-- Earth–Moon distance: $D_{EM}=384{,}400\ \text{km}$ (constant in the current demo)
+- Earth–Moon distance: $D_{EM}$ (km; perigee/mean/apogee presets)
 - Earth radius: $R_E = 6371\ \text{km}$
 - Moon radius: $R_M = 1737.4\ \text{km}$
 - Sun radius: $R_\odot = 696{,}000\ \text{km}$
 - 1 AU: $D_{ES}=149{,}597{,}870.7\ \text{km}$
+
+::: {.callout-deep-dive title="Earth–Moon distance presets in the student demo" collapse="true"}
+The student demo provides three presets (km):
+
+- Perigee-like: $363{,}300$
+- Mean: $384{,}400$
+- Apogee-like: $405{,}500$
+
+These are course-appropriate representative values (the real distance varies continuously).
+:::
 
 ### Umbra and penumbra radii (similar triangles)
 
@@ -100,28 +110,38 @@ A lunar eclipse happens when the Moon passes through Earth’s shadow at Full Mo
 - **Umbral (partial) lunar:** $r_{\text{umbra}}(D_{EM}) - R_M < b \le r_{\text{umbra}}(D_{EM}) + R_M$
 - **Penumbral lunar:** $r_{\text{umbra}}(D_{EM}) + R_M < b \le r_{\text{pen}}(D_{EM}) + R_M$
 
-::: {.callout-deep-dive title="Thresholds used at mean distance (computed by the model)" collapse="true"}
-From `EclipseGeometryModel.eclipseThresholdsDeg({ earthMoonDistanceKm: 384400 })`:
+::: {.callout-deep-dive title="Thresholds at student distance presets (computed by the model)" collapse="true"}
+The model computes the maximum allowed geocentric latitude $|\beta|$ for each class via `EclipseGeometryModel.eclipseThresholdsDeg({ earthMoonDistanceKm })`.
 
-- Lunar total: $|\beta| \lesssim 0.427^\circ$
-- Lunar umbral (partial/total): $|\beta| \lesssim 0.944^\circ$
-- Lunar penumbral: $|\beta| \lesssim 1.478^\circ$
+At the three student presets (degrees):
+
+| Preset | $D_{EM}$ (km) | Total lunar | Umbral lunar | Penumbral lunar |
+|---|---:|---:|---:|---:|
+| Perigee-like | 363,300 | 0.467° | 1.015° | 1.548° |
+| Mean | 384,400 | 0.427° | 0.944° | 1.478° |
+| Apogee-like | 405,500 | 0.391° | 0.882° | 1.415° |
 :::
 
-## Solar eclipse classification (partial vs central)
+## Solar eclipse classification (partial vs total vs annular)
 
 A solar eclipse happens at New Moon when the Moon’s shadow reaches Earth. The demo uses:
 
 - **Partial solar:** Earth intersects the Moon’s penumbra somewhere
-- **Central solar:** Earth intersects the Moon’s umbra/antumbra cone (total or annular is possible depending on distance)
+- **Total solar:** Earth intersects the Moon’s **umbra** (Moon appears larger than the Sun)
+- **Annular solar:** Earth intersects the Moon’s **antumbra** (Moon appears smaller than the Sun)
 
-In this simplified model, “central” is a single category (it does not distinguish total vs annular yet).
+Geometrically, the model checks whether the miss distance $b$ is smaller than the shadow radius at Earth (including Earth’s radius). Then it distinguishes total vs annular by whether the Moon’s umbra cone still has positive radius at $x=D_{EM}$ (umbra reaches Earth) or has already “ended” (antumbra).
 
-::: {.callout-deep-dive title="Thresholds used at mean distance (computed by the model)" collapse="true"}
-From `EclipseGeometryModel.eclipseThresholdsDeg({ earthMoonDistanceKm: 384400 })`:
+::: {.callout-deep-dive title="Thresholds at student distance presets (computed by the model)" collapse="true"}
+The model computes the maximum allowed geocentric latitude $|\beta|$ for “central” vs “partial” solar eclipses via `EclipseGeometryModel.eclipseThresholdsDeg({ earthMoonDistanceKm })`.
 
-- Solar central: $|\beta| \lesssim 0.957^\circ$
-- Solar partial: $|\beta| \lesssim 1.476^\circ$
+At the three student presets (degrees):
+
+| Preset | $D_{EM}$ (km) | “Central” window | “Any partial” window |
+|---|---:|---:|---:|
+| Perigee-like | 363,300 | 1.013° | 1.546° |
+| Mean | 384,400 | 0.957° | 1.476° |
+| Apogee-like | 405,500 | 0.921° | 1.413° |
 :::
 
 ## Time evolution (what moves in the simulation)
@@ -137,10 +157,9 @@ The long-run “Simulate Years” feature counts eclipse events at each New Moon
 ## What’s simplified / not modeled
 
 ::: {.callout-deep-dive title="Model limitations (intentional)" collapse="true"}
-- Mean Earth–Moon distance is fixed (so total vs annular solar is not distinguished).
+- Earth–Moon distance is selectable, but it is held fixed during a simulation run (we are not solving the Moon’s eccentric orbit).
 - The Moon’s orbital eccentricity and variable speed are ignored.
 - Earth’s orbital eccentricity is ignored (Sun distance is fixed at 1 AU).
 - We classify using geocentric latitude (parallax effects are only approximated via Earth radius in the solar case).
 - The syzygy tolerance in interactive mode is pedagogical, not ephemeris-grade.
 :::
-

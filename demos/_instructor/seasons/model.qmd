@@ -27,11 +27,17 @@ From `demos/_assets/seasons-model.js` (declination/day length/noon altitude):
 - March equinox anchor day: `dayOfMarchEquinox = 80` (day-of-year)
 - Tropical year length used in the declination model: `tropicalYearDays = 365.2422` (days)
 
-From `demos/seasons/seasons.js` (calendar and distance display):
+From `demos/_assets/seasons-model.js` (distance + orbit-angle toy model):
+
+- Eccentricity: `eccentricity = 0.017` (dimensionless)
+- Perihelion anchor day: `perihelionDay = 3` (≈ Jan 3)
+- Year length used in the periodic distance/angle functions: `yearDays = 365.2422` (days)
+
+From `demos/seasons/seasons.js` (calendar + visualization):
 
 - Calendar year length used for date wrapping: `YEAR_DAYS = 365` (days; non-leap-year calendar)
-- Eccentricity used for distance display: `e ≈ 0.017` (dimensionless)
-- Perihelion day anchor: `day ≈ 3` (≈ Jan 3)
+- Physics year length used for distance/orbit display: `TROPICAL_YEAR_DAYS = 365.2422` (days)
+- Perihelion anchor (passed into the model): `PERIHELION_DAY = 3`
 
 The orbit is visually exaggerated for visibility (it is not drawn to scale).
 :::
@@ -104,7 +110,7 @@ What this is really saying: seasons change both **how long** the Sun shines and 
 
 The demo includes a simple distance variation model with eccentricity $e\approx0.017$ and perihelion around day $\approx 3$:
 
-$$r \approx 1 - e\cos\!\left(2\pi\,\frac{(\text{dayOfYear}-3)}{365}\right)$$
+$$r \approx 1 - e\cos\!\left(2\pi\,\frac{(\text{dayOfYear}-\text{perihelionDay})}{\text{tropicalYearDays}}\right)$$
 
 This is *not* intended to be a precise orbital solution; it is there to support the key teaching move: Earth is closest to the Sun in early January, so distance cannot be the main cause of Northern Hemisphere summer.
 
@@ -114,4 +120,3 @@ This is *not* intended to be a precise orbital solution; it is there to support 
 - We do not compute insolation explicitly; we use day length and noon altitude as interpretable proxies.
 - The globe “terminator” is schematic: it is designed for conceptual clarity, not photorealistic shading.
 :::
-

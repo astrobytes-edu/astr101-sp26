@@ -44,6 +44,20 @@ What this equation is really saying: angular size depends on a *ratio* $d/D$. If
 Inside the arctangent, $\frac{d}{2D}$ is a ratio of km/km, so it’s unitless (as required for trig functions).
 :::
 
+## Inverting the equation (distance from a desired angular size)
+
+Sometimes the teaching question is the inverse one: “If an object has diameter $d$, how far away would it need to be to appear $\theta$ wide?”
+
+Solving the exact equation for $D$ gives:
+
+$$D = \frac{d}{2\tan(\theta/2)}$$
+
+This inversion is implemented in the shared model as:
+
+- `AngularSizeModel.distanceForAngularDiameterDeg({ diameterKm, angularDiameterDeg })`
+
+The demo uses this idea when it sets “perigee-like” and “apogee-like” endpoints for the Moon’s orbit-variation mode from a chosen angular-size range.
+
 ## Small-angle approximation (useful for reasoning)
 
 For small angles (most astronomy cases), $\tan x \approx x$ (when $x$ is in radians), so:
@@ -70,7 +84,7 @@ The demo includes an orbit-mode control that varies the Moon’s distance betwee
 
 - angular diameter $\approx 0.49^\circ$ (small) to $\approx 0.56^\circ$ (large)
 
-Those endpoints imply distances (computed by inverting the exact formula):
+Those endpoints imply distances (computed by inverting the exact formula above):
 
 ::: {.callout-deep-dive title="Numbers implied by the demo’s orbit range" collapse="true"}
 Using $d_{\text{Moon}} = 3474\ \text{km}$:
@@ -106,6 +120,15 @@ $$1\ \text{cm/yr} = 10\ \text{km/Myr} \;\;\Rightarrow\;\; 3.8\ \text{cm/yr} \app
 The real Earth–Moon recession rate varies with time (tidal dissipation depends on ocean basins, etc.). The demo uses a linear model because the teaching goal is scaling: “farther away → smaller angular size.”
 :::
 
+## Connection to eclipses (total vs annular)
+
+The *geometric* reason total and annular solar eclipses both exist is an angular-size comparison.
+
+- If the Moon’s angular diameter is **larger** than the Sun’s ($\theta_{\text{Moon}} > \theta_\odot$), then a well-aligned “central” eclipse can be **total** somewhere on Earth (the Moon’s umbra can reach Earth).
+- If the Moon’s angular diameter is **smaller** than the Sun’s ($\theta_{\text{Moon}} < \theta_\odot$), then a well-aligned “central” eclipse is **annular** (the umbra ends before Earth; the antumbra reaches Earth).
+
+This is the conceptual bridge to the **Eclipse Geometry** demo: Moon distance changes $\theta_{\text{Moon}}$, which changes whether “central” eclipses are total or annular.
+
 ## Sanity-check anchors (built into presets)
 
 Two especially useful reference points for classroom verification:
@@ -119,4 +142,3 @@ The “ISS overhead” preset uses:
 - distance $D \approx 420\ \text{km}$
 
 which puts it around the arcminute scale.
-
