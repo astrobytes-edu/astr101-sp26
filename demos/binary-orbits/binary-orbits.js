@@ -302,11 +302,13 @@
     const x1 = r1 * Math.cos(state.theta);
     const y1 = r1 * Math.sin(state.theta);
 
-    // Body 2's position (angle = θ + π, opposite side of barycenter)
-    const theta2 = state.theta + Math.PI;
-    const r2 = orbitalRadius(a2, state.e, theta2);
-    const x2 = r2 * Math.cos(theta2);
-    const y2 = r2 * Math.sin(theta2);
+    // Body 2's position (opposite side of barycenter, same orbital phase)
+    // Both bodies share the same true anomaly - when body 1 is at perihelion,
+    // body 2 is also at ITS perihelion (on the opposite side of barycenter).
+    // So use same theta for radius, but position angle is theta + π.
+    const r2 = orbitalRadius(a2, state.e, state.theta);
+    const x2 = r2 * Math.cos(state.theta + Math.PI);
+    const y2 = r2 * Math.sin(state.theta + Math.PI);
 
     // Relative separation (should equal orbitalRadius(a, e, theta))
     const separation = Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2));
@@ -342,8 +344,10 @@
     // Velocity direction: tangent to elliptical orbit
     // For eccentric orbits, velocity is NOT perpendicular to radius!
     // Use calculus: tangent angle = atan2(dy/dθ, dx/dθ)
+    // Both bodies use same theta (same orbital phase), but body 2's tangent
+    // is rotated 180° since it's on the opposite side moving in same direction.
     const vAngle1 = orbitTangentAngle(a1, state.e, state.theta);
-    const vAngle2 = orbitTangentAngle(a2, state.e, state.theta + Math.PI);
+    const vAngle2 = orbitTangentAngle(a2, state.e, state.theta) + Math.PI;
 
     return {
       v1: {
@@ -893,7 +897,10 @@
     // Velocity vectors (scale for visibility)
     if (state.overlays.velocity) {
       elements.velocityVectors.style.display = 'block';
-      const vScale = 3;  // pixels per km/s
+      // Adaptive scale: faster velocities get smaller scale to fit on screen
+      // Target ~50-80 pixels for vectors
+      const maxV = Math.max(velocities.v1.speed, velocities.v2.speed);
+      const vScale = Math.min(15, Math.max(3, 60 / maxV));  // pixels per km/s
 
       const v1End = {
         x: pos1.x + velocities.v1.vx * vScale,
