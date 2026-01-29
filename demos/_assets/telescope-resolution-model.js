@@ -50,8 +50,53 @@
     return CONSTANTS.DIFF_COEFF * lambda_cm / D_cm;
   }
 
+  /**
+   * Calculate effective resolution including atmospheric seeing
+   *
+   * For space telescopes (seeing = 0): resolution = diffraction limit
+   * For ground without AO: resolution = max(diffraction_limit, seeing)
+   * For ground with AO: resolution combines both quadratically with Strehl improvement
+   *
+   * @param {number} theta_diff - Diffraction limit in arcsec
+   * @param {number} seeing - Atmospheric seeing in arcsec (0 for space)
+   * @param {boolean} aoEnabled - Whether adaptive optics is enabled
+   * @returns {number} Effective resolution in arcseconds
+   */
+  function effectiveResolution(theta_diff, seeing, aoEnabled) {
+    if (seeing === 0) {
+      // Space telescope - diffraction limited
+      return theta_diff;
+    }
+
+    if (!aoEnabled) {
+      // Ground without AO - seeing limited unless telescope is small
+      return Math.max(theta_diff, seeing);
+    }
+
+    // Ground with AO - partial correction
+    // AO reduces the seeing contribution by (1 - Strehl)
+    const correctedSeeing = seeing * (1 - CONSTANTS.AO_STREHL);
+    // Combine in quadrature
+    return Math.sqrt(theta_diff * theta_diff + correctedSeeing * correctedSeeing);
+  }
+
+  /**
+   * Determine if a binary pair is resolved according to Rayleigh criterion
+   * @param {number} separation - Binary separation in arcsec
+   * @param {number} resolution - Effective resolution in arcsec
+   * @returns {string} 'resolved', 'marginal', or 'unresolved'
+   */
+  function resolutionStatus(separation, resolution) {
+    const ratio = separation / resolution;
+    if (ratio > 1.5) return 'resolved';
+    if (ratio > 0.8) return 'marginal';
+    return 'unresolved';
+  }
+
   return {
     CONSTANTS,
     diffractionLimitArcsec,
+    effectiveResolution,
+    resolutionStatus,
   };
 });

@@ -56,3 +56,41 @@ test('diffractionLimitArcsec: returns NaN for invalid D', () => {
   assert.ok(Number.isNaN(TelescopeResolutionModel.diffractionLimitArcsec(lambda_cm, NaN)), 'D=NaN should return NaN');
   assert.ok(Number.isNaN(TelescopeResolutionModel.diffractionLimitArcsec(lambda_cm, Infinity)), 'D=Infinity should return NaN');
 });
+
+// effectiveResolution tests
+test('effectiveResolution: space telescope (seeing=0) returns diffraction limit', () => {
+  const theta_diff = 0.05;
+  const result = TelescopeResolutionModel.effectiveResolution(theta_diff, 0, false);
+  assert.strictEqual(result, theta_diff);
+});
+
+test('effectiveResolution: ground without AO is seeing-limited', () => {
+  const theta_diff = 0.05;
+  const seeing = 1.0;
+  const result = TelescopeResolutionModel.effectiveResolution(theta_diff, seeing, false);
+  assert.strictEqual(result, seeing);
+});
+
+test('effectiveResolution: ground with AO improves on seeing', () => {
+  const theta_diff = 0.05;
+  const seeing = 1.0;
+  const withoutAO = TelescopeResolutionModel.effectiveResolution(theta_diff, seeing, false);
+  const withAO = TelescopeResolutionModel.effectiveResolution(theta_diff, seeing, true);
+  assert.ok(withAO < withoutAO, `AO should improve: ${withAO} < ${withoutAO}`);
+});
+
+// resolutionStatus tests
+test('resolutionStatus: well-separated binary is resolved', () => {
+  const result = TelescopeResolutionModel.resolutionStatus(1.0, 0.5);
+  assert.strictEqual(result, 'resolved');
+});
+
+test('resolutionStatus: equal separation/resolution is marginal', () => {
+  const result = TelescopeResolutionModel.resolutionStatus(0.5, 0.5);
+  assert.strictEqual(result, 'marginal');
+});
+
+test('resolutionStatus: close binary is unresolved', () => {
+  const result = TelescopeResolutionModel.resolutionStatus(0.1, 0.5);
+  assert.strictEqual(result, 'unresolved');
+});
