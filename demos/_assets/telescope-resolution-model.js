@@ -35,7 +35,23 @@
     AO_STREHL: 0.6
   };
 
+  /**
+   * Calculate diffraction limit in arcseconds
+   * theta = 1.22 * lambda / D (radians)
+   * theta(arcsec) = DIFF_COEFF * lambda(cm) / D(cm)
+   *
+   * @param {number} lambda_cm - Wavelength in cm
+   * @param {number} D_cm - Aperture diameter in cm
+   * @returns {number} Angular resolution in arcseconds, or NaN for invalid inputs
+   */
+  function diffractionLimitArcsec(lambda_cm, D_cm) {
+    if (!Number.isFinite(lambda_cm) || lambda_cm <= 0) return NaN;
+    if (!Number.isFinite(D_cm) || D_cm <= 0) return NaN;
+    return CONSTANTS.DIFF_COEFF * lambda_cm / D_cm;
+  }
+
   return {
     CONSTANTS,
+    diffractionLimitArcsec,
   };
 });

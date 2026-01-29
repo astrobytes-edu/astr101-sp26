@@ -16,3 +16,43 @@ test('CONSTANTS.DIFF_COEFF is 1.22 * RAD_TO_ARCSEC (within 0.01%)', () => {
   const error = Math.abs(actual - expected) / expected;
   assert.ok(error < 0.0001, `expected ~${expected}, got ${actual}`);
 });
+
+// diffractionLimitArcsec tests
+test('diffractionLimitArcsec: HST (D=2.4m, lambda=550nm) gives ~0.058 arcsec', () => {
+  const D_cm = 2.4 * 100;          // 2.4 m in cm
+  const lambda_cm = 5.5e-5;         // 550 nm in cm
+  const result = TelescopeResolutionModel.diffractionLimitArcsec(lambda_cm, D_cm);
+  // NASA quotes HST resolution as ~0.05" at 500nm
+  assert.ok(result > 0.05 && result < 0.07, `expected ~0.058, got ${result}`);
+});
+
+test('diffractionLimitArcsec: human eye (D=7mm, lambda=550nm) gives ~20 arcsec', () => {
+  const D_cm = 0.7;                 // 7 mm in cm
+  const lambda_cm = 5.5e-5;         // 550 nm in cm
+  const result = TelescopeResolutionModel.diffractionLimitArcsec(lambda_cm, D_cm);
+  // Human eye diffraction limit ~20" (practical limit is worse due to aberrations)
+  assert.ok(result > 15 && result < 25, `expected ~20, got ${result}`);
+});
+
+test('diffractionLimitArcsec: Keck (D=10m, lambda=550nm) gives ~0.014 arcsec', () => {
+  const D_cm = 10 * 100;            // 10 m in cm
+  const lambda_cm = 5.5e-5;         // 550 nm in cm
+  const result = TelescopeResolutionModel.diffractionLimitArcsec(lambda_cm, D_cm);
+  assert.ok(result > 0.01 && result < 0.02, `expected ~0.014, got ${result}`);
+});
+
+test('diffractionLimitArcsec: returns NaN for invalid lambda', () => {
+  const D_cm = 240;
+  assert.ok(Number.isNaN(TelescopeResolutionModel.diffractionLimitArcsec(0, D_cm)), 'lambda=0 should return NaN');
+  assert.ok(Number.isNaN(TelescopeResolutionModel.diffractionLimitArcsec(-1, D_cm)), 'lambda<0 should return NaN');
+  assert.ok(Number.isNaN(TelescopeResolutionModel.diffractionLimitArcsec(NaN, D_cm)), 'lambda=NaN should return NaN');
+  assert.ok(Number.isNaN(TelescopeResolutionModel.diffractionLimitArcsec(Infinity, D_cm)), 'lambda=Infinity should return NaN');
+});
+
+test('diffractionLimitArcsec: returns NaN for invalid D', () => {
+  const lambda_cm = 5.5e-5;
+  assert.ok(Number.isNaN(TelescopeResolutionModel.diffractionLimitArcsec(lambda_cm, 0)), 'D=0 should return NaN');
+  assert.ok(Number.isNaN(TelescopeResolutionModel.diffractionLimitArcsec(lambda_cm, -1)), 'D<0 should return NaN');
+  assert.ok(Number.isNaN(TelescopeResolutionModel.diffractionLimitArcsec(lambda_cm, NaN)), 'D=NaN should return NaN');
+  assert.ok(Number.isNaN(TelescopeResolutionModel.diffractionLimitArcsec(lambda_cm, Infinity)), 'D=Infinity should return NaN');
+});
