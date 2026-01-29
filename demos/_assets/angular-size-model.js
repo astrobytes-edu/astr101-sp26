@@ -6,25 +6,28 @@
 
 (function (root, factory) {
   if (typeof module === 'object' && typeof module.exports === 'object') {
-    module.exports = factory(require('./physics/astro-constants.js'));
+    module.exports = factory(
+      require('./physics/astro-constants.js'),
+      require('./physics/units.js')
+    );
   } else {
-    root.AngularSizeModel = factory(root.AstroConstants);
+    root.AngularSizeModel = factory(root.AstroConstants, root.AstroUnits);
   }
-})(typeof globalThis !== 'undefined' ? globalThis : this, function (AstroConstants) {
+})(typeof globalThis !== 'undefined' ? globalThis : this, function (AstroConstants, AstroUnits) {
   'use strict';
 
   function angularDiameterDeg({ diameterKm, distanceKm }) {
     if (!Number.isFinite(diameterKm) || diameterKm <= 0) return 0;
     if (!Number.isFinite(distanceKm) || distanceKm <= 0) return 180;
     const radians = 2 * Math.atan(diameterKm / (2 * distanceKm));
-    return Math.min(180, radians * (180 / Math.PI));
+    return Math.min(180, AstroUnits ? AstroUnits.radToDeg(radians) : radians * (180 / Math.PI));
   }
 
   function distanceForAngularDiameterDeg({ diameterKm, angularDiameterDeg }) {
     if (!Number.isFinite(diameterKm) || diameterKm <= 0) return NaN;
     if (!Number.isFinite(angularDiameterDeg) || angularDiameterDeg <= 0) return Infinity;
     if (angularDiameterDeg >= 180) return 0;
-    const theta = (angularDiameterDeg * Math.PI) / 180;
+    const theta = AstroUnits ? AstroUnits.degToRad(angularDiameterDeg) : (angularDiameterDeg * Math.PI) / 180;
     return diameterKm / (2 * Math.tan(theta / 2));
   }
 
