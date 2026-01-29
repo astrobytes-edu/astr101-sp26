@@ -97,6 +97,24 @@ Based on cognitive load theory:
 - **Progressive disclosure** (advanced features hidden until needed)
 - **Visual hierarchy** (primary physics > readouts > controls)
 
+#### Principle 4: Dual-Use Design (Classroom + Self-Study)
+
+Demos serve two distinct modes:
+
+| Context | How students use it |
+|---------|---------------------|
+| **In class** | Instructor-guided POE, prediction checkpoints, structured activities |
+| **Self-study** | Free exploration — "what if I change this?" while studying for exams |
+
+This is why it's a "Playground" — designed equipment (presets, structured UI), but students can still play freely.
+
+**Homework integration:** Assignments are designed around the demos:
+- Use the simulation to verify your calculations
+- Explore parameter space to build intuition before solving problems
+- "Set up the demo to match this system, then predict what happens when..."
+
+This extends learning beyond classroom contact hours. Students who struggle with the math can build visual intuition first; students who grasp concepts quickly can explore edge cases.
+
 ### What Makes This Different
 
 | Feature | PhET / NAAP | Cosmic Playground |
