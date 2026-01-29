@@ -12,11 +12,16 @@
 (function() {
   'use strict';
 
+  var Model = window.EMSpectrumModel;
+  if (!Model) {
+    throw new Error('EM Spectrum Explorer: missing EMSpectrumModel (load demos/_assets/em-spectrum-model.js first)');
+  }
+
   // ============================================
   // Physical Constants (CGS)
   // ============================================
 
-  const CONSTANTS = {
+  let CONSTANTS = {
     c: 2.998e10,           // Speed of light (cm/s)
     h: 6.626e-27,          // Planck constant (erg*s)
 
@@ -49,7 +54,7 @@
   // EM Spectrum Bands (wavelength ranges in cm)
   // ============================================
 
-  const BANDS = {
+  let BANDS = {
     radio: {
       name: 'Radio',
       lambda_min: 1e-1,     // 1 mm
@@ -378,6 +383,27 @@
       return { value: E_erg.toPrecision(3), unit: 'erg' };
     }
   }
+
+  // Prefer shared model implementations (single source of truth + Node-testable).
+  CONSTANTS = Model.CONSTANTS;
+  BANDS = Model.BANDS;
+  wavelengthToFrequency = Model.wavelengthToFrequency;
+  frequencyToWavelength = Model.frequencyToWavelength;
+  wavelengthToEnergy = Model.wavelengthToEnergy;
+  energyToWavelength = Model.energyToWavelength;
+  frequencyToEnergy = Model.frequencyToEnergy;
+  wavelengthToCm = Model.wavelengthToCm;
+  cmToWavelength = Model.cmToWavelength;
+  frequencyToHz = Model.frequencyToHz;
+  hzToFrequency = Model.hzToFrequency;
+  energyToErg = Model.energyToErg;
+  ergToEnergy = Model.ergToEnergy;
+  getBandForWavelength = Model.getBandForWavelength;
+  wavelengthToPosition = Model.wavelengthToPosition;
+  positionToWavelength = Model.positionToWavelength;
+  formatWavelength = Model.formatWavelength;
+  formatFrequency = Model.formatFrequency;
+  formatEnergy = Model.formatEnergy;
 
   // ============================================
   // State
@@ -1030,24 +1056,8 @@
     state.wavelength_cm = 5e-5;
     update();
 
-    console.log('EM Spectrum Explorer initialized');
-
     // Expose physics functions for verification
-    window.EMSpectrumPhysics = {
-      wavelengthToFrequency: wavelengthToFrequency,
-      frequencyToWavelength: frequencyToWavelength,
-      wavelengthToEnergy: wavelengthToEnergy,
-      energyToWavelength: energyToWavelength,
-      frequencyToEnergy: frequencyToEnergy,
-      wavelengthToCm: wavelengthToCm,
-      cmToWavelength: cmToWavelength,
-      frequencyToHz: frequencyToHz,
-      hzToFrequency: hzToFrequency,
-      energyToErg: energyToErg,
-      ergToEnergy: ergToEnergy,
-      CONSTANTS: CONSTANTS,
-      BANDS: BANDS
-    };
+    window.EMSpectrumPhysics = Model;
   }
 
   if (document.readyState === 'loading') {

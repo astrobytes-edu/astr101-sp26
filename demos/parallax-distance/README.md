@@ -56,41 +56,29 @@ Gaia can measure parallaxes accurate to 10 microarcseconds, reaching stars acros
 
 ### Distance Slider
 
-- Drag to change the star's distance (1–100 pc)
-- Watch the parallax angle update
-- Observe the parallax ellipse shrink with distance
+- Drag to change the target distance (**log scale** from 1 pc to 10,000 pc)
+- Watch the parallax angle update (displayed in arcsec / mas / µas as appropriate)
+- Notice how the apparent shift shrinks rapidly with distance
 
-### Animation Controls
+### Two Views
 
-- **Play/Pause**: Animate Earth's orbit around the Sun
-- **Speed**: Adjust animation rate
-- **Reset**: Return to starting position
+- **Observer’s View (Star Field):** the target star shifts against a fixed background
+- **Top-Down View (Solar System):** Earth’s orbit and an exaggerated parallax-angle visualization
 
-### View Modes
+### Time Controls
 
-**Top-down view (default):**
-- See Earth's orbit and the star position
-- Parallax angle shown as sight lines
+- **Orbit Year:** animate one full orbit of Earth
+- **Pause:** pause the animation
+- **Jan / July:** jump to opposite sides of the orbit (the 2 AU baseline)
+- **Reset:** return to January
 
-**Side view:**
-- See the parallax shift against background stars
-- Observe the semi-annual oscillation
+### Measurement Precision
 
-### Preset Stars
+- Toggle between **Hipparcos** (~1 mas) and **Gaia** (~0.02 mas) to see what’s measurable
 
-Click to load real nearby stars:
-- **Proxima Centauri**: 1.30 pc, $p = 0.769"$ (nearest star)
-- **Barnard's Star**: 1.83 pc, $p = 0.546"$ (largest proper motion)
-- **Sirius**: 2.64 pc, $p = 0.379"$ (brightest star)
-- **Vega**: 7.68 pc, $p = 0.130"$ (former pole star)
-- **Polaris**: 132 pc, $p = 0.0076"$ (current pole star)
+### Presets
 
-### Background Stars
-
-Toggle distant background stars to see:
-- How nearby stars shift against them
-- Why more distant stars show less parallax
-- The reference frame for parallax measurements
+- Use the **Nearby Stars** and **Distant Objects** preset buttons (with Gaia measurability indicators)
 
 ## Pedagogical Notes
 
@@ -137,15 +125,21 @@ Students should understand:
 ```
 parallax-distance/
 ├── index.html      # Standalone demo page
-├── parallax.js     # Core visualization logic
-├── stars.json      # Nearby star catalog
+├── parallax-distance.css # Demo-specific layout styling
+├── parallax.js     # UI/controller + canvas rendering
+├── star-data.js    # Star catalog + display helpers
 └── README.md       # This file
+
+_assets/
+└── ../_assets/parallax-distance-model.js  # Pure geometry helpers (Node-testable)
 ```
 
 ### Dependencies
 
 - `../_assets/astro-theme.css` — Shared dark space theme
 - `../_assets/astro-utils.js` — Utilities (formatting, animation, constants)
+- `../_assets/parallax-distance-model.js` — Shared, pure parallax model helpers
+- `../_assets/demo-polish.js` — Shared demo UI polish
 - `../_assets/starfield.js` — Animated background
 
 ### Key Formula Implementation

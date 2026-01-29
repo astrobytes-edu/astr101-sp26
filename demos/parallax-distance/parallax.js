@@ -121,57 +121,20 @@
   }
 
   // ============================================
-  // Physics Functions
+  // Model (pure physics helpers)
   // ============================================
 
-  /**
-   * Calculate parallax angle from distance
-   * p (arcsec) = 1 / d (pc)
-   */
-  function parallaxFromDistance(d_pc) {
-    if (d_pc <= 0) return null;
-    return 1 / d_pc;
+  const ParallaxModel = window.ParallaxDistanceModel;
+  if (!ParallaxModel) {
+    throw new Error(
+      'Stellar Parallax Sandbox: missing ParallaxDistanceModel (load demos/_assets/parallax-distance-model.js first)'
+    );
   }
 
-  /**
-   * Calculate distance from parallax
-   * d (pc) = 1 / p (arcsec)
-   */
-  function distanceFromParallax(p_arcsec) {
-    if (p_arcsec <= 0) return null;
-    return 1 / p_arcsec;
-  }
-
-  /**
-   * Calculate Earth's position on orbit
-   * Returns { x, y } in AU, with Sun at origin
-   * January (yearFraction=0): Earth at +1 AU on x-axis
-   * July (yearFraction=0.5): Earth at -1 AU on x-axis
-   */
-  function earthPosition(yearFraction) {
-    // Angle in radians (0 = positive x-axis = January)
-    const angle = yearFraction * 2 * Math.PI;
-    return {
-      x: Math.cos(angle),  // AU
-      y: Math.sin(angle)   // AU
-    };
-  }
-
-  /**
-   * Calculate apparent parallax shift of nearby star
-   * Returns shift in arcseconds (positive = shift right, negative = shift left)
-   *
-   * The star appears to shift OPPOSITE to Earth's motion
-   * When Earth is at +x (Jan), star appears shifted to -x (left)
-   * When Earth is at -x (July), star appears shifted to +x (right)
-   */
-  function apparentShift(yearFraction, parallax_arcsec) {
-    if (!parallax_arcsec) return 0;
-    const earthPos = earthPosition(yearFraction);
-    // Shift is opposite to Earth position, scaled by parallax
-    // Maximum shift is exactly the parallax angle when at Jan or July
-    return -earthPos.x * parallax_arcsec;
-  }
+  const parallaxFromDistance = ParallaxModel.parallaxFromDistance;
+  const distanceFromParallax = ParallaxModel.distanceFromParallax;
+  const earthPosition = ParallaxModel.earthPosition;
+  const apparentShift = ParallaxModel.apparentShift;
 
   // ============================================
   // Rendering - Observer View (Left Panel)
@@ -988,37 +951,6 @@
 
     update();
     updateInsightBox();
-
-    // Physics validation (check console)
-    validatePhysics();
-
-    console.log('Stellar Parallax Sandbox initialized');
-  }
-
-  /**
-   * Validate physics calculations
-   */
-  function validatePhysics() {
-    console.log('=== Parallax Physics Validation ===');
-
-    // Test: d = 1/p relationship
-    const testCases = [
-      { name: 'Proxima Centauri', d_pc: 1.30, expected_p: 0.769 },
-      { name: 'Vega', d_pc: 7.7, expected_p: 0.130 },
-      { name: 'Galactic Center', d_pc: 8000, expected_p: 0.000125 }
-    ];
-
-    testCases.forEach(test => {
-      const calculated_p = parallaxFromDistance(test.d_pc);
-      const error = Math.abs(calculated_p - test.expected_p) / test.expected_p * 100;
-      console.log(`${test.name}: d=${test.d_pc} pc`);
-      console.log(`  Calculated p = ${calculated_p.toPrecision(4)}"`);
-      console.log(`  Expected p = ${test.expected_p}"`);
-      console.log(`  d x p = ${(test.d_pc * calculated_p).toPrecision(4)} (should be ~1)`);
-      console.log(`  Error: ${error.toFixed(2)}%`);
-    });
-
-    console.log('===================================');
   }
 
   // Start initialization when DOM is ready

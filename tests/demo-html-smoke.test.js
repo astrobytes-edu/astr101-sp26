@@ -64,3 +64,13 @@ test("Kepler's Laws includes an equal-time markers group", () => {
   const html = readText('demos', 'keplers-laws', 'index.html');
   assert.match(html, /id="equal-time-markers"/);
 });
+
+test('EM Spectrum loads the shared EMSpectrumModel', () => {
+  const html = readText('demos', 'em-spectrum', 'index.html');
+  assert.match(html, /_assets\/em-spectrum-model\.js/);
+});
+
+test('Parallax Distance loads the shared ParallaxDistanceModel', () => {
+  const html = readText('demos', 'parallax-distance', 'index.html');
+  assert.match(html, /_assets\/parallax-distance-model\.js/);
+});

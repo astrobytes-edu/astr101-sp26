@@ -137,14 +137,21 @@ Students should understand:
 ```
 em-spectrum/
 ├── index.html      # Standalone demo page
-├── em-spectrum.js  # Core visualization logic
+├── em-spectrum.js  # UI/controller logic (delegates to shared model)
+├── telescope-data.js # Telescope catalog data
+├── object-data.js  # Astronomical object catalog data
 └── README.md       # This file
+
+_assets/
+└── ../_assets/em-spectrum-model.js  # Pure physics + formatting helpers (Node-testable)
 ```
 
 ### Dependencies
 
 - `../_assets/astro-theme.css` — Shared dark space theme
 - `../_assets/astro-utils.js` — Utilities (formatting, animation, constants)
+- `../_assets/em-spectrum-model.js` — Shared, pure EM-spectrum model helpers
+- `../_assets/demo-polish.js` — Shared demo UI polish
 - `../_assets/starfield.js` — Animated background
 
 ### Physical Constants (CODATA 2018)

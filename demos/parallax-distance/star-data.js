@@ -293,7 +293,9 @@ const STAR_DATA = {
   }
 };
 
-// Export for use in parallax.js
-if (typeof window !== 'undefined') {
+// Export for use in parallax.js (browser) and Node tests (require()).
+if (typeof module === 'object' && typeof module.exports === 'object') {
+  module.exports = STAR_DATA;
+} else if (typeof window !== 'undefined') {
   window.STAR_DATA = STAR_DATA;
 }
