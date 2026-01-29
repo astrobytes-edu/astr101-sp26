@@ -44,7 +44,34 @@
     L_sun: 3.828e33        // erg/s (IAU 2015 nominal)
   };
 
+  // ============================================
+  // Wien's Displacement Law
+  // ============================================
+
+  /**
+   * Wien's peak wavelength in cm
+   * λ_peak = b / T
+   * @param {number} T - Temperature (K)
+   * @returns {number} Peak wavelength (cm)
+   */
+  function wienPeakCm(T) {
+    if (!Number.isFinite(T) || T <= 0) return NaN;
+    return CONSTANTS.wien_b / T;
+  }
+
+  /**
+   * Wien's peak wavelength in nm (for display)
+   * @param {number} T - Temperature (K)
+   * @returns {number} Peak wavelength (nm)
+   */
+  function wienPeakNm(T) {
+    const cm = wienPeakCm(T);
+    return Number.isNaN(cm) ? NaN : cm * CONSTANTS.cm_to_nm;
+  }
+
   return {
     CONSTANTS,
+    wienPeakCm,
+    wienPeakNm,
   };
 });
