@@ -111,6 +111,44 @@ Based on cognitive load theory:
 
 ---
 
+## Methodological Innovation: Research-Grade Standards for Teaching Tools
+
+### The Core Insight
+
+Educational software has historically been built *ad-hoc* — one-off tools by individual instructors, or flashy products without verified physics. Cosmic Playground asks: **What happens when you apply professional software engineering practices to educational simulation development?**
+
+> "The same standards we apply to research simulations — tested, documented, reproducible — should apply to the simulations we use to teach."
+
+This is STEM pedagogical software built on **correctness + software engineering best practices**, where four domains converge:
+
+| Domain | Contribution |
+|--------|--------------|
+| **Computational science** | Physics correctness, numerical validation against analytic solutions |
+| **Software engineering** | Unit tests, documented invariants, modular architecture, version control |
+| **STEM pedagogy** | POE cycle, misconception confrontation, cognitive load management |
+| **AI-augmented development** | Accelerated iteration with extensive testing and validation |
+
+### Why This Hasn't Been Done
+
+1. **STEM Ed researchers** don't have computational skills to build simulations from scratch
+2. **Computational scientists** typically don't prioritize pedagogy (or teach service courses)
+3. **Building simulations was expensive/slow** before modern AI-assisted development
+4. **The layered complexity insight** requires teaching across multiple course levels — most faculty teach one course repeatedly
+
+The PI sits at an unusual intersection: computational astrophysicist with software engineering expertise, teaching intro through upper-division courses, applying AI tools to accelerate development while maintaining physics rigor.
+
+### The Research Question
+
+The STEM Ed collaborator provides the research framework to *measure* whether this rigor actually improves learning outcomes:
+
+- Does physics correctness at the conceptual level improve transfer to quantitative reasoning?
+- Does the layered complexity architecture help students build on prior tool familiarity?
+- Does the prediction-checkpoint structure improve misconception correction compared to free exploration?
+
+The grant funds this research component — the methodology exists, but we need assessment instruments and multi-site testing to validate it.
+
+---
+
 ## Deliverables
 
 ### Core Simulation Toolkit (Layered Complexity Architecture)
@@ -341,14 +379,14 @@ The design draws on established findings in science education:
 
 **These assets demonstrate the PI can execute** — not that the research is complete.
 
-**Development methodology:** The PI uses AI pair-programming (Claude Code, Codex) to accelerate demo development. This is not a shortcut — it's a computational astrophysicist applying modern software engineering practices to education research. The approach enables:
+**Development methodology:** The PI uses AI pair-programming (Claude Code, Codex) to accelerate development while maintaining extensive testing and validation. This is not a shortcut — it's a computational astrophysicist applying modern software engineering practices to education research. The approach enables:
 
-- Rapid prototyping with physics correctness maintained
-- Documented, testable code from the start
-- Architecture that other instructors can customize using the same AI tools
-- Execution velocity that makes 30+ demos in 3 years realistic, not aspirational
+- Accelerated iteration with physics correctness maintained through automated testing
+- Documented, testable code from the start — unit tests validate against analytic solutions
+- Modular architecture that other instructors can customize using the same AI tools
+- Sustainable development velocity that makes 30+ demos in 3 years achievable
 
-This is transparent and intentional: AI augmentation is part of the sustainability model.
+This is transparent and intentional: AI augmentation is a force multiplier for domain expertise, not a replacement for it. The rigor comes from the methodology (tests, invariants, validation), and AI accelerates the implementation.
 
 ### What the Grant Funds
 
@@ -412,10 +450,14 @@ NSF IUSE Level 2 ("Development and Implementation") is the right fit for this pr
 | **Angular Size** | Sun/Moon same actual size | Distance-size tradeoff, recession mode |
 | **Kepler's Laws** | Uniform orbital speed | Equal areas, vis-viva, Newton mode |
 | **Binary Orbits** | Star doesn't move | Barycenter, mass ratio, 51 Peg b preset |
+| **Parallax Distance** | Stars don't move | Annual motion, trigonometric parallax |
+| **Blackbody Radiation** | Color unrelated to temperature | Wien's law, Stefan-Boltzmann, stellar spectra |
+| **EM Spectrum** | All light is the same | Wavelength-energy relation, atmospheric windows |
+| **Telescope Resolution** | Bigger is always better | Diffraction limit, Rayleigh criterion |
 
 ### Instructor Resources Complete
 
-All six demos have full instructor resource suites:
+All 10 demos have full instructor resource suites:
 - Think-Pair-Share activities with explicit prediction checkpoints
 - Named misconceptions with confrontation strategies
 - Clicker questions with distractors tied to misconceptions
