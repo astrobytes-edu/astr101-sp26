@@ -75,13 +75,65 @@
     return { nuMin: -nuMax, nuMax };
   }
 
-  function sampleConicOrbitAu({ ecc, pAu, omegaRad, numPoints }) {
+  /**
+   * Plotting helper: for open orbits, optionally clip the domain so that r(ν) ≤ rMaxAu.
+   *
+   * This keeps escape/hyperbolic orbits visible in a finite view window and avoids
+   * sampling arbitrarily close to asymptotes where r → ∞.
+   */
+  function conicTrueAnomalyDomainRadForPlot({ ecc, pAu, rMaxAu }) {
+    const base = conicTrueAnomalyDomainRad({ ecc });
+    if (!Number.isFinite(base.nuMin) || !Number.isFinite(base.nuMax)) return base;
+    if (!(Number.isFinite(ecc) && ecc >= 1)) return base;
+    if (!(Number.isFinite(pAu) && pAu > 0)) return base;
+    if (!(Number.isFinite(rMaxAu) && rMaxAu > 0)) return base;
+
+    const c = (pAu / rMaxAu - 1) / ecc;
+    const cClamped = Math.max(-1, Math.min(1, c));
+    const nuMaxClip = Math.acos(cClamped);
+    if (!Number.isFinite(nuMaxClip)) return base;
+
+    const clipped = Math.min(base.nuMax, nuMaxClip);
+    return { nuMin: -clipped, nuMax: clipped };
+  }
+
+  function wrap2Pi(rad) {
+    const twoPi = 2 * Math.PI;
+    return ((rad % twoPi) + twoPi) % twoPi;
+  }
+
+  /**
+   * Animation helper: advance ν for a simple parameter-sweep animation.
+   *
+   * - For elliptical orbits, wraps ν into [0, 2π).
+   * - For open orbits, clamps at the plotting domain edge and returns stopped=true.
+   */
+  function advanceTrueAnomalyRad({ nuRad, ecc, nuMin, nuMax, dir, dtSec, nuSpeedRadPerSec }) {
+    const d = Number.isFinite(dir) ? dir : 1;
+    if (!Number.isFinite(nuRad)) return { nuRad: NaN, dir: d, stopped: true };
+
+    const dt = Number.isFinite(dtSec) ? dtSec : 0;
+    const speed = Number.isFinite(nuSpeedRadPerSec) ? nuSpeedRadPerSec : 0;
+    const next = nuRad + d * speed * dt;
+
+    if (!Number.isFinite(ecc) || ecc < 0) return { nuRad: next, dir: d, stopped: true };
+    if (ecc < 1) {
+      return { nuRad: wrap2Pi(next), dir: d, stopped: false };
+    }
+
+    if (!Number.isFinite(nuMin) || !Number.isFinite(nuMax)) return { nuRad: next, dir: d, stopped: true };
+    if (next > nuMax) return { nuRad: nuMax, dir: d, stopped: true };
+    if (next < nuMin) return { nuRad: nuMin, dir: d, stopped: true };
+    return { nuRad: next, dir: d, stopped: false };
+  }
+
+  function sampleConicOrbitAu({ ecc, pAu, omegaRad, numPoints, rMaxAu }) {
     if (!Number.isFinite(ecc) || ecc < 0) return [];
     if (!Number.isFinite(pAu) || pAu <= 0) return [];
     if (!Number.isFinite(omegaRad)) return [];
     if (!Number.isFinite(numPoints) || numPoints < 3) return [];
 
-    const { nuMin, nuMax } = conicTrueAnomalyDomainRad({ ecc });
+    const { nuMin, nuMax } = conicTrueAnomalyDomainRadForPlot({ ecc, pAu, rMaxAu });
     if (!Number.isFinite(nuMin) || !Number.isFinite(nuMax)) return [];
 
     const cosO = Math.cos(omegaRad);
@@ -108,7 +160,8 @@
     velocityFromSpeedAndDirectionAuYr,
     initialStateAuYr,
     conicTrueAnomalyDomainRad,
+    conicTrueAnomalyDomainRadForPlot,
+    advanceTrueAnomalyRad,
     sampleConicOrbitAu,
   };
 });
-

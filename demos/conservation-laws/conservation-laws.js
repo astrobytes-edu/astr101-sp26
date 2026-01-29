@@ -213,22 +213,23 @@
       anim.lastTimeMs = nowMs;
 
       const nuSpeedRadPerSec = 1.0;
-      anim.nuRad += anim.dir * nuSpeedRadPerSec * dt;
-
-      if (anim.ecc < 1) {
-        anim.nuRad = wrap2Pi(anim.nuRad);
-      } else {
-        if (anim.nuRad > anim.nuMax) {
-          anim.nuRad = anim.nuMax;
-          anim.dir = -1;
-        }
-        if (anim.nuRad < anim.nuMin) {
-          anim.nuRad = anim.nuMin;
-          anim.dir = 1;
-        }
-      }
+      const step = Model.advanceTrueAnomalyRad({
+        nuRad: anim.nuRad,
+        ecc: anim.ecc,
+        nuMin: anim.nuMin,
+        nuMax: anim.nuMax,
+        dir: anim.dir,
+        dtSec: dt,
+        nuSpeedRadPerSec,
+      });
+      anim.nuRad = step.nuRad;
+      anim.dir = step.dir;
 
       renderParticleAndVelocity();
+      if (step.stopped) {
+        stopAnimation();
+        return;
+      }
       state.animationId = requestAnimationFrame(tick);
     }
 
@@ -303,6 +304,10 @@
     const els = TwoBody.orbitElementsFromStateAuYr({ rVecAu, vVecAuYr, muAu3Yr2 });
     const orbitType = formatOrbitType(els.orbitType);
 
+    // For open orbits (escape/hyperbolic), clip the plotted curve to a finite window.
+    // Otherwise, sampling near asymptotes makes max radius enormous and the orbit collapses visually.
+    const rMaxPlotAu = Number.isFinite(els.ecc) && els.ecc >= 1 ? 10 * state.r0Au : undefined;
+
     // Plot conic from (e, p, omega); for near-circular, omega is arbitrary but harmless.
     const points =
       els.orbitType === 'invalid' || !(els.pAu > 0)
@@ -312,6 +317,7 @@
             pAu: els.pAu,
             omegaRad: els.omegaRad,
             numPoints: PATH_SAMPLES,
+            rMaxAu: rMaxPlotAu,
           });
 
     const maxR = Math.max(maxRadiusAu(points), state.r0Au);
@@ -320,7 +326,7 @@
     elements.orbitPath.setAttribute('d', buildPathD(points, scalePxPerAu));
 
     // Animation parameters (reuse the conic definition used for plotting).
-    const domain = Model.conicTrueAnomalyDomainRad({ ecc: els.ecc });
+    const domain = Model.conicTrueAnomalyDomainRadForPlot({ ecc: els.ecc, pAu: els.pAu, rMaxAu: rMaxPlotAu });
     anim.orbitType = els.orbitType;
     anim.ecc = Number.isFinite(els.ecc) ? els.ecc : NaN;
     anim.pAu = Number.isFinite(els.pAu) ? els.pAu : NaN;
