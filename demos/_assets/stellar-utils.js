@@ -1,7 +1,16 @@
 // demos/_assets/stellar-utils.js
 // Shared stellar property utilities for ASTR 101 demos
 
-const StellarUtils = (function() {
+(function (root, factory) {
+  if (typeof module === 'object' && typeof module.exports === 'object') {
+    module.exports = factory(
+      require('./physics/astro-constants.js'),
+      require('./blackbody-model.js')
+    );
+  } else {
+    root.StellarUtils = factory(root.AstroConstants, root.BlackbodyModel);
+  }
+})(typeof globalThis !== 'undefined' ? globalThis : this, function (AstroConstants, BlackbodyModel) {
   'use strict';
 
   // === Mass → Physical Properties (Main Sequence) ===
@@ -108,7 +117,7 @@ const StellarUtils = (function() {
     },
     distance: {
       'AU':   { factor: 1,         label: 'AU' },
-      'km':   { factor: 1.496e8,   label: 'km' },
+      'km':   { factor: AstroConstants ? AstroConstants.LENGTH.KM_PER_AU : 1.496e8, label: 'km' },
       'R☉':   { factor: 215.03,    label: 'R☉' }
     }
   };
@@ -142,6 +151,4 @@ const StellarUtils = (function() {
     formatVelocity,
     UNITS
   };
-})();
-
-if (typeof module !== 'undefined') module.exports = StellarUtils;
+});
