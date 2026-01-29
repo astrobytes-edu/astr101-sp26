@@ -2,6 +2,17 @@
  *
  * Goal: pure functions usable both in the browser (via window.EclipseGeometryModel)
  * and in Node tests (via require()).
+ *
+ * MODEL SCOPE:
+ * - Orbital inclination: Mean value 5.145° (does not model libration).
+ * - Node regression: Mean 18.61-year cycle included in simulations.
+ * - Nutation: NOT modeled. Short-period (~18.6 yr principal term) nutation
+ *   causes ±9 arcsec wobble in obliquity — negligible for eclipse geometry
+ *   teaching but important for precise eclipse predictions.
+ * - Shadow geometry: Exact similar-triangle formulas for umbra/penumbra.
+ * - Eclipse thresholds: Physically motivated from shadow radii, not empirical.
+ *
+ * These choices prioritize geometric intuition over ephemeris precision.
  */
 
 (function (root, factory) {
