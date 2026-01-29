@@ -202,34 +202,7 @@
   // Formatting
   // ============================================
 
-  function formatDistance(km) {
-    const AU = 1.496e8;
-    const LY = 9.461e12;
-
-    if (km >= LY * 0.1) {
-      const ly = km / LY;
-      if (ly >= 1e6) {
-        return { value: (ly / 1e6).toPrecision(3), unit: 'million ly' };
-      }
-      return { value: ly.toPrecision(3), unit: 'light-years' };
-    }
-    if (km >= AU * 0.1) {
-      return { value: (km / AU).toPrecision(3), unit: 'AU' };
-    }
-    if (km >= 1e6) {
-      return { value: (km / 1e6).toPrecision(3), unit: 'million km' };
-    }
-    if (km >= 1000) {
-      return { value: (km / 1000).toPrecision(3), unit: 'thousand km' };
-    }
-    if (km >= 1) {
-      return { value: km.toPrecision(3), unit: 'km' };
-    }
-    if (km >= 0.001) {
-      return { value: (km * 1000).toPrecision(3), unit: 'm' };
-    }
-    return { value: (km * 100000).toPrecision(3), unit: 'cm' };
-  }
+  // formatDistance is provided by AstroUtils (loaded before this script)
 
   function formatAngle(degrees) {
     if (degrees >= 1) {
@@ -259,17 +232,14 @@
   }
 
   function formatShort(km) {
-    const f = formatDistance(km);
-    // Abbreviate units
+    const f = AstroUtils.formatDistance(km);
+    // Abbreviate units - AstroUtils returns 'ly', 'pc', 'AU', 'km', 'm'
     const abbrev = {
-      'million km': 'Mkm',
-      'thousand km': 'kkm',
-      'million ly': 'Mly',
-      'light-years': 'ly',
+      'pc': 'pc',
+      'ly': 'ly',
       'AU': 'AU',
       'km': 'km',
-      'm': 'm',
-      'cm': 'cm'
+      'm': 'm'
     };
     return `${f.value} ${abbrev[f.unit] || f.unit}`;
   }
@@ -342,7 +312,7 @@
     elements.angleText.setAttribute('y', eyeY + 5);
 
     // Update distance indicator
-    const distFormatted = formatDistance(state.distance);
+    const distFormatted = AstroUtils.formatDistance(state.distance);
     elements.distanceLabel.textContent = `${distFormatted.value} ${distFormatted.unit}`;
 
     // Update size indicator
@@ -354,7 +324,7 @@
     elements.sizeLine.setAttribute('y1', eyeY - visualRadius);
     elements.sizeLine.setAttribute('y2', eyeY + visualRadius);
 
-    const sizeFormatted = formatDistance(state.diameter);
+    const sizeFormatted = AstroUtils.formatDistance(state.diameter);
     elements.sizeLabel.setAttribute('x', objectX + 10);
     elements.sizeLabel.textContent = `${sizeFormatted.value} ${sizeFormatted.unit}`;
 
@@ -388,12 +358,12 @@
     }
 
     // Physical size
-    const sizeF = formatDistance(state.diameter);
+    const sizeF = AstroUtils.formatDistance(state.diameter);
     elements.sizeValue.textContent = sizeF.value;
     elements.sizeUnit.textContent = sizeF.unit;
 
     // Distance
-    const distF = formatDistance(state.distance);
+    const distF = AstroUtils.formatDistance(state.distance);
     elements.distanceValue.textContent = distF.value;
     elements.distanceUnit.textContent = distF.unit;
 
@@ -406,7 +376,7 @@
     if (objectCircle) {
       const preset = PRESETS[state.activePreset];
       const name = preset ? preset.name : 'Object';
-      const distF = formatDistance(state.distance);
+      const distF = AstroUtils.formatDistance(state.distance);
       objectCircle.setAttribute('aria-label',
         `${name} at ${distF.value} ${distF.unit}, angular size ${angUi.value} ${angUi.ariaUnit}`);
     }
