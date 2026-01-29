@@ -82,3 +82,8 @@ test('Binary Orbits includes view zoom + marker size controls', () => {
   assert.match(html, /id="marker-size-slider"/);
   assert.match(html, /id="marker-size-display"/);
 });
+
+test('Telescope Resolution loads the shared TelescopeResolutionModel', () => {
+  const html = readText('demos', 'telescope-resolution', 'index.html');
+  assert.match(html, /_assets\/telescope-resolution-model\.js/);
+});
