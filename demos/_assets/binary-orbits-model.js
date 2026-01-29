@@ -19,12 +19,16 @@
 
 (function (root, factory) {
   if (typeof module === 'object' && typeof module.exports === 'object') {
-    module.exports = factory();
+    module.exports = factory(require('./physics/astro-constants.js'));
   } else {
-    root.BinaryOrbitsModel = factory();
+    root.BinaryOrbitsModel = factory(root.AstroConstants);
   }
-})(typeof globalThis !== 'undefined' ? globalThis : this, function () {
+})(typeof globalThis !== 'undefined' ? globalThis : this, function (AstroConstants) {
   'use strict';
+
+  if (!AstroConstants) {
+    throw new Error('BinaryOrbitsModel: missing AstroConstants (load demos/_assets/physics/astro-constants.js first)');
+  }
 
   // ============================================
   // Physical Constants
@@ -32,11 +36,11 @@
 
   // G in solar units: G = 4π² AU³/yr²/M☉ (Kepler's normalization)
   // This makes P² = a³/M_tot with P in years, a in AU, M in M☉
-  const G_SOLAR = 4 * Math.PI * Math.PI;
+  const G_SOLAR = AstroConstants.GRAV.G_AU3_YR2_PER_SOLAR_MASS;
 
   // Unit conversions
-  const AU_KM = 1.496e8;           // km per AU
-  const YEAR_SECONDS = 3.156e7;    // seconds per year
+  const AU_KM = AstroConstants.LENGTH.KM_PER_AU;        // km per AU
+  const YEAR_SECONDS = AstroConstants.TIME.YEAR_S;      // seconds per (Julian) year
 
   // ============================================
   // Input Validation

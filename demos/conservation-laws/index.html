@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Conservation Laws (Orbits) | Cosmic Playground</title>
+  <link rel="stylesheet" href="../_assets/astro-theme.css">
+  <link rel="stylesheet" href="../_assets/demo-shell.css">
+  <link rel="stylesheet" href="../_assets/demo-legacy.css">
+  <link rel="stylesheet" href="./conservation-laws.css">
+</head>
+<body>
+  <div class="demo-wrapper">
+    <canvas id="starfield"></canvas>
+
+    <div class="demo-content">
+      <header class="demo-header">
+        <h1 class="demo-title">Conservation Laws: Orbit Shapes</h1>
+        <p class="demo-subtitle">Energy + angular momentum determine whether an orbit is bound, escaping, or hyperbolic</p>
+      </header>
+
+      <details class="model-note">
+        <summary>Model note (teaching model)</summary>
+        <p>
+          This demo uses an analytic two-body model (Newtonian gravity). We place the particle at an initial radius
+          and choose its velocity as a multiple of the circular speed. The orbit type is classified using the
+          conserved specific energy ε and angular momentum h.
+        </p>
+      </details>
+
+      <div class="viz-panel">
+        <svg id="orbit-svg" viewBox="0 0 600 600" preserveAspectRatio="xMidYMid meet">
+          <defs>
+            <marker id="arrow-vel" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+              <polygon points="0 0, 10 3.5, 0 7" fill="#2ecc71"></polygon>
+            </marker>
+          </defs>
+
+          <!-- Central mass -->
+          <circle id="central-mass" cx="300" cy="300" r="10" fill="#ffcc00"></circle>
+
+          <!-- Orbit path -->
+          <path id="orbit-path" d="" fill="none" stroke="#5dade2" stroke-width="2" opacity="0.9"></path>
+
+          <!-- Initial position -->
+          <circle id="particle" cx="400" cy="300" r="8" fill="#7ec8e3"></circle>
+
+          <!-- Velocity vector at initial point -->
+          <line id="velocity-line" x1="400" y1="300" x2="460" y2="300"
+                stroke="#2ecc71" stroke-width="2" marker-end="url(#arrow-vel)"></line>
+        </svg>
+      </div>
+
+      <div class="readout-panel">
+        <div class="readout-item">
+          <div class="readout-label">Orbit type</div>
+          <div class="readout-value" id="orbit-type">circular</div>
+          <div class="readout-unit">&nbsp;</div>
+        </div>
+        <div class="readout-item">
+          <div class="readout-label">Eccentricity (e)</div>
+          <div class="readout-value" id="ecc-value">0.00</div>
+          <div class="readout-unit">&nbsp;</div>
+        </div>
+        <div class="readout-item">
+          <div class="readout-label">Specific energy (ε)</div>
+          <div class="readout-value" id="eps-value">0</div>
+          <div class="readout-unit">AU²/yr²</div>
+        </div>
+        <div class="readout-item">
+          <div class="readout-label">Angular momentum (h)</div>
+          <div class="readout-value" id="h-value">0</div>
+          <div class="readout-unit">AU²/yr</div>
+        </div>
+        <div class="readout-item">
+          <div class="readout-label">Periapsis (rₚ)</div>
+          <div class="readout-value" id="rp-value">0</div>
+          <div class="readout-unit">AU</div>
+        </div>
+        <div class="readout-item">
+          <div class="readout-label">Semi-major axis (a)</div>
+          <div class="readout-value" id="a-value">0</div>
+          <div class="readout-unit">AU</div>
+        </div>
+      </div>
+
+      <div class="controls-grid">
+        <div class="control-card">
+          <div class="control-title">Central mass</div>
+          <div class="slider-group">
+            <label for="mass-slider">
+              Mass
+              <span class="value-display" id="mass-display">1.00 M☉</span>
+            </label>
+            <input type="range" id="mass-slider" class="astro-slider" min="-1" max="1" step="0.01" value="0">
+            <div class="scale-hint">Log scale: 0.1 – 10 M☉</div>
+          </div>
+        </div>
+
+        <div class="control-card">
+          <div class="control-title">Initial conditions</div>
+
+          <div class="slider-group">
+            <label for="r0-slider">
+              Initial radius (r₀)
+              <span class="value-display" id="r0-display">1.00 AU</span>
+            </label>
+            <input type="range" id="r0-slider" class="astro-slider" min="-1" max="1" step="0.01" value="0">
+            <div class="scale-hint">Log scale: 0.1 – 10 AU</div>
+          </div>
+
+          <div class="slider-group">
+            <label for="speed-slider">
+              Speed factor (v / v<sub>circ</sub>)
+              <span class="value-display" id="speed-display">1.00×</span>
+            </label>
+            <input type="range" id="speed-slider" class="astro-slider" min="0" max="2.5" step="0.01" value="1">
+            <div class="scale-hint">Escape at √2 ≈ 1.414</div>
+          </div>
+
+          <div class="slider-group">
+            <label for="direction-slider">
+              Direction (from tangential)
+              <span class="value-display" id="direction-display">0°</span>
+            </label>
+            <input type="range" id="direction-slider" class="astro-slider" min="-85" max="85" step="1" value="0">
+            <div class="scale-hint">0° tangential; ±85° near-radial</div>
+          </div>
+
+          <div class="presets-row">
+            <button class="preset-btn" data-preset="circular">Circular</button>
+            <button class="preset-btn" data-preset="elliptical">Elliptical</button>
+            <button class="preset-btn" data-preset="escape">Escape</button>
+            <button class="preset-btn" data-preset="hyperbolic">Hyperbolic</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="sr-only" aria-live="polite" id="status-announce"></div>
+    </div>
+  </div>
+
+  <script src="../_assets/astro-utils.js"></script>
+  <script src="../_assets/demo-polish.js"></script>
+  <script src="../_assets/starfield.js"></script>
+  <script src="../_assets/physics/astro-constants.js"></script>
+  <script src="../_assets/physics/units.js"></script>
+  <script src="../_assets/physics/two-body-analytic.js"></script>
+  <script src="../_assets/conservation-laws-model.js"></script>
+  <script src="./conservation-laws.js"></script>
+</body>
+</html>
+

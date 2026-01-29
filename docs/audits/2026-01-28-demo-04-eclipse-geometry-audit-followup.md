@@ -71,7 +71,7 @@ Implementation: `demos/eclipse-geometry/eclipse-geometry.js` and `demos/eclipse-
 - Constant: `demos/eclipse-geometry/eclipse-geometry.js:17`
 - Used in simulation: `demos/eclipse-geometry/eclipse-geometry.js:662`
 
-In the demo’s *Sun-fixed* frame (Sun direction drawn fixed to the left in `demos/eclipse-geometry/index.html:270`), using only nodal regression means the “node vs Sun” alignment changes on an ~18.6-year time-scale, not a “twice per year” season time-scale.
+In the demo’s *Sun-fixed* frame (Sun direction drawn fixed to the left in `demos/eclipse-geometry/index.html:270`), using only nodal regression means the “node vs Sun” alignment changes on an ~18.61‑Julian‑year time-scale, not a “twice per year” season time-scale.
 
 **Concern:** This is likely the root cause of “the eclipse demo is incorrect,” because it conflicts directly with the intended qualitative takeaway (“seasons”) and with the discussion question “Why does the eclipse season occur twice per year?” `demos/eclipse-geometry/README.md:155`
 

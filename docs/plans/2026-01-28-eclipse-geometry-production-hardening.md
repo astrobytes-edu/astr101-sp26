@@ -96,7 +96,7 @@ Implement:
 - Use `dtDays` stepping with:
   - `sunLonDeg += 360/365.2422 * dt`
   - `moonLonDeg += 360/27.321661 * dt`
-  - `nodeLonDeg += (-360/(18.6*365.2422)) * dt` (sign VERIFY)
+  - `nodeLonDeg += (-360/(18.61*365.25)) * dt` (sign VERIFY; 18.61 Julian years)
 - In the long-term simulation, detect syzygies by tracking phase angle crossings and sampling near minima (simple interpolation is fine).
 
 **Step 4: Keep the visualization Sun-fixed (projection)**
@@ -160,4 +160,3 @@ Implement:
 - Reset clears stats/log visibly
 - Challenge Mode still works
 - Mobile width: no overflow
-

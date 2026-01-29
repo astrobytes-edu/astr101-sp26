@@ -339,6 +339,43 @@
         </div>
       </div>
 
+      <!-- Conservation Laws -->
+      <details class="model-note">
+        <summary>Conservation laws (energy & angular momentum)</summary>
+        <p>
+          These are <em>specific</em> (per unit mass) quantities. In 101 mode we show them in
+          AU²/yr² and AU²/yr (“code units”). In 201 mode we show the same quantities in CGS
+          (cm²/s² and cm²/s).
+        </p>
+        <div class="readout-panel" style="margin-top: 0.75rem;">
+          <div class="readout-item">
+            <div class="readout-label">Kinetic (v²/2)</div>
+            <div class="readout-value" id="kinetic-value">0</div>
+            <div class="readout-unit" id="kinetic-unit">AU²/yr²</div>
+          </div>
+          <div class="readout-item">
+            <div class="readout-label">Potential (−μ/r)</div>
+            <div class="readout-value" id="potential-value">0</div>
+            <div class="readout-unit" id="potential-unit">AU²/yr²</div>
+          </div>
+          <div class="readout-item">
+            <div class="readout-label">Total ε</div>
+            <div class="readout-value" id="energy-value">0</div>
+            <div class="readout-unit" id="energy-unit">AU²/yr²</div>
+          </div>
+          <div class="readout-item">
+            <div class="readout-label">Angular momentum (h)</div>
+            <div class="readout-value" id="angmom-value">0</div>
+            <div class="readout-unit" id="angmom-unit">AU²/yr</div>
+          </div>
+          <div class="readout-item">
+            <div class="readout-label">Areal velocity (dA/dt)</div>
+            <div class="readout-value" id="areal-value">0</div>
+            <div class="readout-unit" id="areal-unit">AU²/yr</div>
+          </div>
+        </div>
+      </details>
+
       <!-- Timeline -->
       <div class="timeline-panel">
         <div class="timeline-header">
@@ -488,6 +525,9 @@
   <script src="../_assets/demo-polish.js"></script>
   <script src="../_assets/starfield.js"></script>
   <script src="../_assets/katex/katex.min.js"></script>
+  <script src="../_assets/physics/astro-constants.js"></script>
+  <script src="../_assets/physics/units.js"></script>
+  <script src="../_assets/physics/two-body-analytic.js"></script>
   <script src="../_assets/keplers-laws-model.js"></script>
   <script src="keplers-laws.js"></script>
 </body>

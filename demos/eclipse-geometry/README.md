@@ -26,13 +26,13 @@ Eclipses can only occur when the Moon is within $\sim 18°$ of a node (for solar
 
 ### Node Regression
 
-The nodes are not fixed — they slowly drift westward (regress) around the ecliptic, completing one full cycle in $P_{\text{node}} = 18.6$ years. This is why eclipse seasons shift earlier by about $19$ days each year.
+The nodes are not fixed — they slowly drift westward (regress) around the ecliptic, completing one full cycle in $P_{\text{node}} \approx 18.61$ **Julian years**. This is why eclipse seasons shift earlier by about $19$ days each year.
 
-The regression rate is approximately $19.3°$ per year:
+The regression rate is approximately $19.34°$ per Julian year:
 
-$$\dot{\Omega} = -\frac{360°}{18.6 \text{ yr}} \approx -19.3°/\text{yr}$$
+$$\dot{\Omega} = -\frac{360°}{18.61 \text{ yr}} \approx -19.34°/\text{yr}$$
 
-**How this shows up in the demo:** the visuals hold the Sun direction fixed on the page (a Sun‑fixed view). In that coordinate system, the node line sweeps around roughly once per year (because Earth orbits the Sun), *plus* the slow 18.6‑year regression. That combination produces two eclipse “seasons” per year, and those seasons drift earlier by ~19 days/year.
+**How this shows up in the demo:** the visuals hold the Sun direction fixed on the page (a Sun‑fixed view). In that coordinate system, the node line sweeps around roughly once per year (because Earth orbits the Sun), *plus* the slow 18.61‑year regression. That combination produces two eclipse “seasons” per year, and those seasons drift earlier by ~19 days/year.
 
 ### Eclipse Frequency
 
@@ -167,14 +167,14 @@ Either condition alone is insufficient. This is why eclipses are relatively rare
 | "The Moon's orbit is very tilted" | Only 5° — almost in the ecliptic plane |
 | "Eclipses are random" | They follow precise patterns (Saros cycles) |
 | "Solar eclipses are rarer than lunar" | More solar eclipses occur, but each is visible from less of Earth |
-| "The Moon's orbit is fixed" | Nodes regress, completing a cycle every 18.6 years |
+| "The Moon's orbit is fixed" | Nodes regress, completing a cycle every ~18.61 Julian years |
 
 ### Discussion Questions
 
 1. If you could adjust the Moon's orbital tilt, what value would make eclipses monthly?
 2. Why does the eclipse "season" occur twice per year?
 3. Why are total solar eclipses rarer than partial solar eclipses?
-4. The nodes complete one full regression in 18.6 years. How does this relate to the Saros cycle (18 years, 11 days)?
+4. The nodes complete one full regression in ~18.61 Julian years. How does this relate to the Saros cycle (18 years, 11 days)?
 
 ### In-Class Activities
 
@@ -231,7 +231,7 @@ Use the Quarto shortcode:
 | Tropical year | $P_{\oplus}$ | $365.2422$ days | Mean solar year |
 | Sidereal month | $P_{\text{sid}}$ | $27.321661$ days | Moon’s orbital period vs. stars |
 | Synodic month | $P_{\text{syn}}$ | $29.530588$ days | New Moon to New Moon |
-| Node regression period | $P_{\text{node}}$ | $18.6$ yr | Nodes drift westward (regress) |
+| Node regression period | $P_{\text{node}}$ | $18.61$ Julian yr | Nodes drift westward (regress) |
 
 **Eclipse thresholds** (maximum $\beta$ for eclipse):
 
@@ -248,14 +248,14 @@ ORBITAL_TILT = 5.145            // degrees (adjustable via slider)
 DAYS_PER_TROPICAL_YEAR = 365.2422
 SIDEREAL_MONTH_DAYS = 27.321661
 SYNODIC_MONTH_DAYS = 29.530588
-NODE_REGRESSION_YEARS = 18.6
+MEAN_NODE_REGRESSION_JULIAN_YEARS = 18.61
 ```
 
 ### Simulation Algorithm
 
 The simulation uses an inertial-frame model with explicit longitudes for the Sun, Moon, and node:
 
-1. Advance Sun longitude $\lambda_\odot(t)$ and node longitude $\Omega(t)$ with constant rates (tropical year + 18.6-year nodal regression).
+1. Advance Sun longitude $\lambda_\odot(t)$ and node longitude $\Omega(t)$ with constant rates (tropical year + 18.61‑Julian‑year nodal regression).
 2. Step through synodic months; at each **New Moon** set $\lambda_{\text{moon}}=\lambda_\odot$ and at each **Full Moon** set $\lambda_{\text{moon}}=\lambda_\odot+180°$.
 3. Compute ecliptic latitude using the exact formula $\beta=\arcsin(\sin i\,\sin(\lambda_{\text{moon}}-\Omega))$ and compare to the eclipse thresholds.
 4. Accumulate counts and append to the log (year as a decimal fraction of a tropical year).

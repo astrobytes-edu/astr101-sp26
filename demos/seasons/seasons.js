@@ -563,6 +563,64 @@
     elements.globeAxisLine.setAttribute('y2', bottomY);
   }
 
+  // --------------------------------------------
+  // Hour angle grid (meridians)
+  // --------------------------------------------
+
+  const HOUR_GRID_LONGITUDES_DEG = [-75, -45, -15, 0, 15, 45, 75];
+  const HOUR_GRID_SAMPLES = 181;
+
+  function buildMeridianPathD({ longitudeDeg, samples }) {
+    const lonRad = (longitudeDeg * Math.PI) / 180;
+
+    // Central meridian: draw as a straight line through the poles.
+    if (Math.abs(longitudeDeg) < 1e-12) {
+      const x = GLOBE_CENTER.x;
+      const yTop = GLOBE_CENTER.y - GLOBE_RADIUS;
+      const yBottom = GLOBE_CENTER.y + GLOBE_RADIUS;
+      return `M ${x.toFixed(1)} ${yTop.toFixed(1)} L ${x.toFixed(1)} ${yBottom.toFixed(1)}`;
+    }
+
+    const steps = Number.isFinite(samples) && samples >= 3 ? Math.floor(samples) : HOUR_GRID_SAMPLES;
+
+    let d = '';
+    for (let i = 0; i < steps; i++) {
+      const t = i / (steps - 1);
+      const phi = -Math.PI / 2 + t * Math.PI; // latitude parameter
+
+      // Orthographic projection with viewpoint centered on the equator.
+      // (x, y) are in a math coordinate system with +y north/up.
+      const x = GLOBE_RADIUS * Math.cos(phi) * Math.sin(lonRad);
+      const y = GLOBE_RADIUS * Math.sin(phi);
+
+      const svgX = GLOBE_CENTER.x + x;
+      const svgY = GLOBE_CENTER.y - y;
+
+      d += `${i === 0 ? 'M' : ' L'} ${svgX.toFixed(1)} ${svgY.toFixed(1)}`;
+    }
+
+    return d;
+  }
+
+  function ensureHourGridGenerated() {
+    if (!elements.hourGrid) return;
+    if (elements.hourGrid.dataset.generated === 'true') return;
+
+    // Clear any legacy markup (previous versions hardcoded spoke-like lines).
+    while (elements.hourGrid.firstChild) {
+      elements.hourGrid.removeChild(elements.hourGrid.firstChild);
+    }
+
+    for (const lonDeg of HOUR_GRID_LONGITUDES_DEG) {
+      const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+      path.setAttribute('class', 'hour-grid');
+      path.setAttribute('d', buildMeridianPathD({ longitudeDeg: lonDeg, samples: HOUR_GRID_SAMPLES }));
+      elements.hourGrid.appendChild(path);
+    }
+
+    elements.hourGrid.dataset.generated = 'true';
+  }
+
   function updateOverlays() {
     // Celestial equator
     if (elements.celestialEquator) {
@@ -583,7 +641,12 @@
 
     // Hour grid
     if (elements.hourGrid) {
-      elements.hourGrid.style.display = state.overlays.hourGrid ? '' : 'none';
+      if (state.overlays.hourGrid) {
+        ensureHourGridGenerated();
+        elements.hourGrid.style.display = '';
+      } else {
+        elements.hourGrid.style.display = 'none';
+      }
     }
   }
 

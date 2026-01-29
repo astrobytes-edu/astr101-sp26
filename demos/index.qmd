@@ -329,6 +329,38 @@ Drag planets around elliptical orbits. See how speed changes with distance and w
 :::
 
 :::{.demo-card}
+<div class="demo-preview">🌀</div>
+<div class="demo-info">
+<h3 class="demo-title">Binary Orbits</h3>
+<p class="demo-description">
+Both bodies orbit the barycenter. Explore stellar wobble and how mass ratio sets orbit size and speed.
+</p>
+<a href="binary-orbits/" class="demo-link">Open Demo →</a>
+<div class="demo-concepts">
+<span class="concept-tag">barycenter</span>
+<span class="concept-tag">two-body</span>
+<span class="concept-tag">exoplanets</span>
+</div>
+</div>
+:::
+
+:::{.demo-card}
+<div class="demo-preview">⚖️</div>
+<div class="demo-info">
+<h3 class="demo-title">Conservation Laws (Orbits)</h3>
+<p class="demo-description">
+Energy + angular momentum determine whether an orbit is bound (ellipse), escaping (parabola), or a flyby (hyperbola).
+</p>
+<a href="conservation-laws/" class="demo-link">Open Demo →</a>
+<div class="demo-concepts">
+<span class="concept-tag">energy</span>
+<span class="concept-tag">angular momentum</span>
+<span class="concept-tag">escape velocity</span>
+</div>
+</div>
+:::
+
+:::{.demo-card}
 <div class="demo-preview">📏</div>
 <div class="demo-info">
 <h3 class="demo-title">Stellar Parallax</h3>

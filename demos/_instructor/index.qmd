@@ -26,6 +26,8 @@ Open directly: `/demos/_instructor/`
 | Demo | Student URL | Instructor guide | Embed code |
 |------|-------------|-----------------|------------|
 | Kepler’s laws | `/demos/keplers-laws/` | `/demos/_instructor/keplers-laws/` | `{{</* demo keplers-laws height="700px" */>}}` |
+| Binary orbits | `/demos/binary-orbits/` | `/demos/_instructor/binary-orbits/` | `{{</* demo binary-orbits height="700px" */>}}` |
+| Conservation laws (orbits) | `/demos/conservation-laws/` | `/demos/_instructor/conservation-laws/` | `{{</* demo conservation-laws height="650px" */>}}` |
 
 ## Recommended “Astro Lab” flow (Friday)
 

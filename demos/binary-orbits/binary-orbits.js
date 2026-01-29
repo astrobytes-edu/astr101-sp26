@@ -22,6 +22,16 @@
     return;
   }
 
+  const AstroConstants = typeof window !== 'undefined' ? window.AstroConstants : null;
+  const AstroUnits = typeof window !== 'undefined' ? window.AstroUnits : null;
+  const TwoBody = typeof window !== 'undefined' ? window.TwoBodyAnalytic : null;
+  if (!AstroConstants || !AstroUnits || !TwoBody) {
+    console.error(
+      'Binary Orbits: missing shared physics modules (did you load demos/_assets/physics/astro-constants.js, units.js, and two-body-analytic.js?)'
+    );
+    return;
+  }
+
   // ============================================
   // Constants
   // ============================================
@@ -571,6 +581,18 @@
       type1Value: document.getElementById('type1-value'),
       type2Value: document.getElementById('type2-value'),
 
+      // Conservation (details panel)
+      kineticValue: document.getElementById('kinetic-value'),
+      kineticUnit: document.getElementById('kinetic-unit'),
+      potentialValue: document.getElementById('potential-value'),
+      potentialUnit: document.getElementById('potential-unit'),
+      energyValue: document.getElementById('energy-value'),
+      energyUnit: document.getElementById('energy-unit'),
+      angmomValue: document.getElementById('angmom-value'),
+      angmomUnit: document.getElementById('angmom-unit'),
+      arealValue: document.getElementById('areal-value'),
+      arealUnit: document.getElementById('areal-unit'),
+
       // Animation controls
       btnPlay: document.getElementById('btn-play'),
       btnPause: document.getElementById('btn-pause'),
@@ -897,8 +919,8 @@
     } else {
       // Fallback conversion
       if (velUnit === 'AU/yr') {
-        v1 *= 4.74047;
-        v2 *= 4.74047;
+        v1 = AstroUnits.kmPerSToAuPerYr(v1);
+        v2 = AstroUnits.kmPerSToAuPerYr(v2);
       } else if (velUnit === 'm/s') {
         v1 *= 1000;
         v2 *= 1000;
@@ -922,9 +944,8 @@
 
     // Barycenter distance from M1
     // a1 is in AU; convert to km (1 AU = 1.496e8 km)
-    const AU_KM = 1.496e8;
     const SOLAR_RADIUS_KM = 6.96e5;
-    const barycenterDistKm = a1 * AU_KM;
+    const barycenterDistKm = a1 * AstroConstants.LENGTH.KM_PER_AU;
 
     // Get stellar radius if available
     let stellarRadiusKm = SOLAR_RADIUS_KM; // Default to solar radius
@@ -974,6 +995,56 @@
       } else {
         // Planet
         elements.type2Value.textContent = 'Planet';
+      }
+    }
+
+    // Conservation-law readouts (relative-orbit specific quantities)
+    if (elements.energyValue && elements.angmomValue) {
+      const muAu3Yr2 = TwoBody.muAu3Yr2FromMassSolar(state.M1 + state.M2);
+      const rAu = positions.separation;
+      const vRelAuYr = TwoBody.visVivaSpeedAuPerYr({ rAu, aAu: state.a, muAu3Yr2 });
+
+      if (velUnit === 'cm/s') {
+        const rCm = AstroUnits.auToCm(rAu);
+        const aCm = AstroUnits.auToCm(state.a);
+        const muCgs = TwoBody.muCgsFromMuAu3Yr2(muAu3Yr2);
+        const vCms = AstroUnits.auPerYrToCmPerS(vRelAuYr);
+
+        const k = 0.5 * vCms * vCms; // cm^2/s^2
+        const u = -muCgs / rCm;      // cm^2/s^2
+        const eps = k + u;           // cm^2/s^2
+        const h = Math.sqrt(muCgs * aCm * (1 - state.e * state.e)); // cm^2/s
+        const areal = 0.5 * h;       // cm^2/s
+
+        elements.kineticValue.textContent = formatValue(k);
+        elements.potentialValue.textContent = formatValue(u);
+        elements.energyValue.textContent = formatValue(eps);
+        elements.angmomValue.textContent = formatValue(h);
+        elements.arealValue.textContent = formatValue(areal);
+
+        elements.kineticUnit.textContent = 'cm²/s²';
+        elements.potentialUnit.textContent = 'cm²/s²';
+        elements.energyUnit.textContent = 'cm²/s²';
+        elements.angmomUnit.textContent = 'cm²/s';
+        elements.arealUnit.textContent = 'cm²/s';
+      } else {
+        const k = 0.5 * vRelAuYr * vRelAuYr; // AU^2/yr^2
+        const u = -muAu3Yr2 / rAu;           // AU^2/yr^2
+        const eps = k + u;                   // AU^2/yr^2
+        const h = Math.sqrt(muAu3Yr2 * state.a * (1 - state.e * state.e)); // AU^2/yr
+        const areal = 0.5 * h;               // AU^2/yr
+
+        elements.kineticValue.textContent = formatValue(k);
+        elements.potentialValue.textContent = formatValue(u);
+        elements.energyValue.textContent = formatValue(eps);
+        elements.angmomValue.textContent = formatValue(h);
+        elements.arealValue.textContent = formatValue(areal);
+
+        elements.kineticUnit.textContent = 'AU²/yr²';
+        elements.potentialUnit.textContent = 'AU²/yr²';
+        elements.energyUnit.textContent = 'AU²/yr²';
+        elements.angmomUnit.textContent = 'AU²/yr';
+        elements.arealUnit.textContent = 'AU²/yr';
       }
     }
   }

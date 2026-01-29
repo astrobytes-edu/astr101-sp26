@@ -1,7 +1,9 @@
 {
   "polished": [
     "angular-size",
+    "binary-orbits",
     "blackbody-radiation",
+    "conservation-laws",
     "eclipse-geometry",
     "em-spectrum",
     "keplers-laws",

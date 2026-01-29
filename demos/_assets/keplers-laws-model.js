@@ -108,8 +108,8 @@
     return {
       vValue: vKms,
       vUnit: 'km/s',
-      aValue: aMs2,
-      aUnit: 'm/s²',
+      aValue: aMs2 * 1000,
+      aUnit: 'mm/s²',
     };
   }
 

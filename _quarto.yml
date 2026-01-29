@@ -86,6 +86,21 @@ project:
     - demos/_instructor/eclipse-geometry/activities.qmd
     - demos/_instructor/eclipse-geometry/assessment.qmd
     - demos/_instructor/eclipse-geometry/backlog.qmd
+    - demos/_instructor/keplers-laws/index.qmd
+    - demos/_instructor/keplers-laws/model.qmd
+    - demos/_instructor/keplers-laws/activities.qmd
+    - demos/_instructor/keplers-laws/assessment.qmd
+    - demos/_instructor/keplers-laws/backlog.qmd
+    - demos/_instructor/binary-orbits/index.qmd
+    - demos/_instructor/binary-orbits/model.qmd
+    - demos/_instructor/binary-orbits/activities.qmd
+    - demos/_instructor/binary-orbits/assessment.qmd
+    - demos/_instructor/binary-orbits/backlog.qmd
+    - demos/_instructor/conservation-laws/index.qmd
+    - demos/_instructor/conservation-laws/model.qmd
+    - demos/_instructor/conservation-laws/activities.qmd
+    - demos/_instructor/conservation-laws/assessment.qmd
+    - demos/_instructor/conservation-laws/backlog.qmd
   resources:
     - "demos/**/*.html"
     - "demos/**/*.js"

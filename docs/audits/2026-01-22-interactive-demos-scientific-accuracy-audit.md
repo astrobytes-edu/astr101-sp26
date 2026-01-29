@@ -141,7 +141,7 @@ This correctly models the Moon's sinusoidal path above/below the ecliptic with:
 ```javascript
 state.nodeAngle = startNode - progress * 19.3;  // degrees/year
 ```
-Literature value: 19.35°/year → 18.6-year cycle ✅
+Literature value: 19.35°/year → ~18.61‑Julian‑year nodal cycle ✅
 
 **Simulation Validation:**
 Running 1000-year simulation with 5.145° tilt should produce:
@@ -150,7 +150,7 @@ Running 1000-year simulation with 5.145° tilt should produce:
 
 **Learning Outcomes:**
 - ✅ Explains why eclipses don't happen every month (5° tilt)
-- ✅ Shows node regression and 18.6-year Saros cycle
+- ✅ Shows node regression and ~18.61‑Julian‑year nodal cycle
 - ✅ Statistical simulation demonstrates eclipse frequency
 
 ---
@@ -643,7 +643,7 @@ if (exponent > 700) return 0;  // Prevents exp() overflow
 |------|-------------------|----------------|--------|
 | Kepler's Laws | Angular momentum | Equal areas in equal times | ✅ Conserved |
 | Kepler's Laws | Energy | Vis-viva equation | ✅ Correct |
-| Eclipse | Node precession | 18.6-year cycle | ✅ Modeled |
+| Eclipse | Node precession | ~18.61‑Julian‑year nodal cycle | ✅ Modeled |
 | Seasons | Earth tilt constancy | Fixed at 23.5° | ✅ Preserved |
 
 ---

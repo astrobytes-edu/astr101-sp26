@@ -19,13 +19,14 @@
   const CENTER = { x: 200, y: 200 };
   const ORBIT_RADIUS = 100;
   const DAYS_PER_TROPICAL_YEAR = 365.2422; // days
+  const DAYS_PER_JULIAN_YEAR = 365.25; // days (exact definition)
   const SIDEREAL_MONTH_DAYS = 27.321661; // days
   const SYNODIC_MONTH_DAYS = 29.530588; // days (New to New)
-  const NODE_REGRESSION_YEARS = 18.6; // years (nodal precession period; VERIFY)
+  const MEAN_NODE_REGRESSION_JULIAN_YEARS = 18.61; // Julian years (mean nodal regression period)
 
   const SUN_RATE_DEG_PER_DAY = 360 / DAYS_PER_TROPICAL_YEAR;
   const MOON_RATE_DEG_PER_DAY = 360 / SIDEREAL_MONTH_DAYS;
-  const NODE_RATE_DEG_PER_DAY = -360 / (NODE_REGRESSION_YEARS * DAYS_PER_TROPICAL_YEAR);
+  const NODE_RATE_DEG_PER_DAY = -360 / (MEAN_NODE_REGRESSION_JULIAN_YEARS * DAYS_PER_JULIAN_YEAR);
 
   // Eclipse checks should require being close to true syzygy (New/Full), not merely inside
   // a coarse "phase label" bucket.

@@ -54,8 +54,8 @@ test('formatNewtonReadouts matches 101 vs 201 units', () => {
   const r101 = Model.formatNewtonReadouts({ vKms: 1, aMs2: 2, units: '101' });
   assert.equal(r101.vValue, 1);
   assert.equal(r101.vUnit, 'km/s');
-  assert.equal(r101.aValue, 2);
-  assert.equal(r101.aUnit, 'm/s²');
+  assert.equal(r101.aValue, 2000);
+  assert.equal(r101.aUnit, 'mm/s²');
 
   const r201 = Model.formatNewtonReadouts({ vKms: 1, aMs2: 2, units: '201' });
   assert.equal(r201.vValue, 1e5);

@@ -150,7 +150,7 @@ The demo evolves inertial longitudes with constant rates:
 
 - Sun: $360^\circ$ per tropical year (365.2422 days)
 - Moon: $360^\circ$ per sidereal month (27.321661 days)
-- Node: regression period ~18.6 years (westward drift)
+- Node: regression period ~18.61 Julian years (westward drift)
 
 The long-run “Simulate Years” feature counts eclipse events at each New Moon and Full Moon time step (synodic month spacing).
 

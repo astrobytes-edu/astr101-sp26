@@ -170,22 +170,22 @@ Create `demos/_assets/physics/astro-constants.js`:
 
     // Source (in-repo): demos/eclipse-geometry/eclipse-geometry.js (comment notes VERIFY)
     // Interpret “years” here as Julian years for an exact seconds definition.
-    NODE_REGRESSION_JULIAN_YEARS: 18.6,
+    MEAN_NODE_REGRESSION_JULIAN_YEARS: 18.61,
   };
 
   // Derived seconds
   TIME.MEAN_TROPICAL_YEAR_S = TIME.MEAN_TROPICAL_YEAR_DAYS * TIME.DAY_S;
   TIME.MEAN_SIDEREAL_MONTH_S = TIME.MEAN_SIDEREAL_MONTH_DAYS * TIME.DAY_S;
   TIME.MEAN_SYNODIC_MONTH_S = TIME.MEAN_SYNODIC_MONTH_DAYS * TIME.DAY_S;
-  TIME.NODE_REGRESSION_S = TIME.NODE_REGRESSION_JULIAN_YEARS * TIME.JULIAN_YEAR_S;
-  TIME.NODE_REGRESSION_DAYS = TIME.NODE_REGRESSION_S / TIME.DAY_S;
+  TIME.MEAN_NODE_REGRESSION_S = TIME.MEAN_NODE_REGRESSION_JULIAN_YEARS * TIME.JULIAN_YEAR_S;
+  TIME.MEAN_NODE_REGRESSION_DAYS = TIME.MEAN_NODE_REGRESSION_S / TIME.DAY_S;
 
   // Eclipse-relevant: draconic month (node-to-node) derived from sidereal month + nodal regression.
   // If Moon advances +360/P_sid per day and the node regresses −360/P_node per day,
   // the relative rate is (1/P_sid + 1/P_node) cycles/day.
   // So: P_drac = 1 / (1/P_sid + 1/P_node)
   TIME.MEAN_DRACONIC_MONTH_DAYS =
-    1 / (1 / TIME.MEAN_SIDEREAL_MONTH_DAYS + 1 / TIME.NODE_REGRESSION_DAYS);
+    1 / (1 / TIME.MEAN_SIDEREAL_MONTH_DAYS + 1 / TIME.MEAN_NODE_REGRESSION_DAYS);
   TIME.MEAN_DRACONIC_MONTH_S = TIME.MEAN_DRACONIC_MONTH_DAYS * TIME.DAY_S;
 
   // ============================================
@@ -827,4 +827,3 @@ Two execution options:
 2. **Parallel session:** open a new session (preferably in a worktree) and run `superpowers:executing-plans` there.
 
 Which approach do you want?
-

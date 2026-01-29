@@ -1,0 +1,63 @@
+---
+title: "Conservation Laws: Activities"
+subtitle: "MW quick + MW short + Friday lab + station version"
+page-layout: article
+toc: true
+search: false
+---
+
+## MW Quick (3–5 min): Bound vs unbound (prediction first)
+
+**Setup (projector):** Default settings ($M=1\,M_\odot$, $r_0=1\,\mathrm{AU}$).
+
+1. Set **speed factor** to **1.00** (circular) and ask: *“Bound or unbound?”*
+2. Set **speed factor** to **1.30** and ask: *“Still bound?”*
+3. Set **speed factor** to **1.414** (escape) and ask: *“What’s special about this value?”*
+
+**Key takeaway:** the sign of $\varepsilon$ changes at escape.
+
+## MW Short (8–12 min): Why √2?
+
+**Goal:** students discover $v_{\rm esc}=\sqrt{2}\,v_{\rm circ}$ using the demo’s readouts.
+
+1. Keep $M$ and $r_0$ fixed. Record $v_{\rm circ}$ by setting speed factor = 1.
+2. Increase the speed factor until the orbit switches to “parabolic (escape).”
+3. Compute the ratio $v_{\rm esc}/v_{\rm circ}$ from the speed factor and compare to $\sqrt{2}$.
+
+**Discussion prompt:** *“Why does energy care about speed squared?”* Tie back to $\varepsilon=v^2/2-\mu/r$.
+
+## Friday Lab (20–30+ min): Map orbit type in (speed, direction) space
+
+### Part A: Build a classification map
+
+Students collect a small dataset by varying:
+
+- speed factor $v/v_{\rm circ}$
+- direction angle (0° tangential; near ±85° radial)
+
+**Deliverable:** a table with columns:
+
+- speed factor
+- direction angle
+- orbit type (circular / elliptical / parabolic / hyperbolic)
+- $e$
+- $\varepsilon$
+- $h$
+
+### Part B: Claim–Evidence–Reasoning
+
+**Claim:** “Orbit type depends primarily on energy, while closest approach depends strongly on angular momentum.”
+
+**Evidence:** use at least two paired comparisons where speed factor is similar but direction differs, producing noticeably different $h$ and periapsis distance.
+
+**Reasoning:** connect to:
+
+- $\varepsilon = v^2/2 - \mu/r$ (bound vs unbound)
+- $h = |\mathbf{r}\times\mathbf{v}|$ (controls periapsis via $p=h^2/\mu$)
+
+## Station version (6–8 min): Quick rotation prompt
+
+At each station, students must answer one question on a worksheet:
+
+> “Set $r_0=1\,\mathrm{AU}$, $M=1\,M_\odot$. Find the smallest speed factor that produces a hyperbolic orbit at direction 0°. Then repeat at direction 60°. Explain the difference using $h$.”
+

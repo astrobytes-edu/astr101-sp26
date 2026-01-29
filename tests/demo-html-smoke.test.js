@@ -42,3 +42,8 @@ test("Kepler's Laws includes keyboard shortcuts help", () => {
   const html = readText('demos', 'keplers-laws', 'index.html');
   assert.match(html, /keyboard shortcuts/i);
 });
+
+test('Seasons hour-angle grid is not hardcoded as spoke-like lines', () => {
+  const html = readText('demos', 'seasons', 'index.html');
+  assert.doesNotMatch(html, /<line\\b[^>]*\\bclass\\s*=\\s*\"hour-grid\"/i);
+});

@@ -12,16 +12,19 @@
     return;
   }
 
+  const AstroConstants = typeof window !== 'undefined' ? window.AstroConstants : null;
+  const AstroUnits = typeof window !== 'undefined' ? window.AstroUnits : null;
+  const TwoBody = typeof window !== 'undefined' ? window.TwoBodyAnalytic : null;
+  if (!AstroConstants || !AstroUnits || !TwoBody) {
+    console.error(
+      'Kepler’s Laws: missing shared physics modules (did you load demos/_assets/physics/astro-constants.js, units.js, and two-body-analytic.js?)'
+    );
+    return;
+  }
+
   // ============================================
   // Constants
   // ============================================
-
-  // Physical constants
-  const G = 6.674e-11;                    // N⋅m²/kg² (SI)
-  const M_SUN = 1.989e30;                 // kg
-  const AU_KM = 1.496e8;                  // km per AU
-  const AU_M = 1.496e11;                  // m per AU
-  const YEAR_S = 3.156e7;                 // seconds per year
 
   // SVG layout
   const SVG_CENTER = { x: 300, y: 200 };
@@ -114,6 +117,18 @@
       accelUnit: document.getElementById('accel-unit'),
       periodValue: document.getElementById('period-value'),
 
+      // Conservation (details panel)
+      kineticValue: document.getElementById('kinetic-value'),
+      kineticUnit: document.getElementById('kinetic-unit'),
+      potentialValue: document.getElementById('potential-value'),
+      potentialUnit: document.getElementById('potential-unit'),
+      energyValue: document.getElementById('energy-value'),
+      energyUnit: document.getElementById('energy-unit'),
+      angmomValue: document.getElementById('angmom-value'),
+      angmomUnit: document.getElementById('angmom-unit'),
+      arealValue: document.getElementById('areal-value'),
+      arealUnit: document.getElementById('areal-unit'),
+
       // Timeline
       timelineTrack: document.getElementById('timeline-track'),
       timelineProgress: document.getElementById('timeline-progress'),
@@ -180,12 +195,8 @@
    * @returns {number} Velocity (km/s)
    */
   function orbitalVelocity(a, r, M) {
-    // GM in km³/s² for M☉ at 1 AU
-    const GM_km3_s2 = 1.327e11 * M;  // GM_sun = 1.327e11 km³/s²
-    const a_km = a * AU_KM;
-    const r_km = r * AU_KM;
-    const v_kms = Math.sqrt(GM_km3_s2 * (2 / r_km - 1 / a_km));
-    return v_kms;
+    const vAuYr = TwoBody.visVivaSpeedAuPerYrFromAuSolar({ rAu: r, aAu: a, massSolar: M });
+    return AstroUnits.auPerYrToKmPerS(vAuYr);
   }
 
   /**
@@ -208,10 +219,9 @@
    * @returns {number} Acceleration (m/s²)
    */
   function gravitationalAccel(r, M) {
-    // GM in m³/s² for calculations
-    const GM_m3_s2 = 1.327e20 * M;  // GM_sun in m³/s²
-    const r_m = r * AU_M;
-    return GM_m3_s2 / (r_m * r_m);
+    const muAu3Yr2 = TwoBody.muAu3Yr2FromMassSolar(M);
+    const aAuYr2 = muAu3Yr2 / (r * r);
+    return AstroUnits.auPerYr2ToMPerS2(aAuYr2);
   }
 
   /**
@@ -484,8 +494,11 @@
 
   function updateReadouts() {
     const r = orbitalRadius(state.a, state.e, state.theta);
-    const v = orbitalVelocity(state.a, r, state.M);
-    const acc = gravitationalAccel(r, state.M);
+    const muAu3Yr2 = TwoBody.muAu3Yr2FromMassSolar(state.M);
+    const vRelAuYr = TwoBody.visVivaSpeedAuPerYr({ rAu: r, aAu: state.a, muAu3Yr2 });
+    const v = AstroUnits.auPerYrToKmPerS(vRelAuYr);
+    const accAuYr2 = muAu3Yr2 / (r * r);
+    const acc = AstroUnits.auPerYr2ToMPerS2(accAuYr2);
     const P = orbitalPeriod(state.a, state.M);
 
     elements.distanceValue.textContent = r.toPrecision(3);
@@ -497,10 +510,59 @@
     elements.accelValue.textContent = fmt.aValue.toPrecision(3);
     elements.accelUnit.textContent = fmt.aUnit;
 
+    // Conservation-law readouts (specific quantities)
+    if (elements.energyValue && elements.angmomValue) {
+      if (state.units === '201') {
+        const rCm = AstroUnits.auToCm(r);
+        const aCm = AstroUnits.auToCm(state.a);
+        const muCgs = TwoBody.muCgsFromMuAu3Yr2(muAu3Yr2);
+        const vCms = AstroUnits.auPerYrToCmPerS(vRelAuYr);
+
+        const k = 0.5 * vCms * vCms;     // cm^2/s^2
+        const u = -muCgs / rCm;          // cm^2/s^2
+        const eps = k + u;               // cm^2/s^2
+        const h = Math.sqrt(muCgs * aCm * (1 - state.e * state.e)); // cm^2/s
+        const areal = 0.5 * h;           // cm^2/s
+
+        elements.kineticValue.textContent = k.toPrecision(4);
+        elements.potentialValue.textContent = u.toPrecision(4);
+        elements.energyValue.textContent = eps.toPrecision(4);
+        elements.angmomValue.textContent = h.toPrecision(4);
+        elements.arealValue.textContent = areal.toPrecision(4);
+
+        elements.kineticUnit.textContent = 'cm²/s²';
+        elements.potentialUnit.textContent = 'cm²/s²';
+        elements.energyUnit.textContent = 'cm²/s²';
+        elements.angmomUnit.textContent = 'cm²/s';
+        elements.arealUnit.textContent = 'cm²/s';
+      } else {
+        const k = 0.5 * vRelAuYr * vRelAuYr;  // AU^2/yr^2
+        const u = -muAu3Yr2 / r;              // AU^2/yr^2
+        const eps = k + u;                    // AU^2/yr^2
+        const h = Math.sqrt(muAu3Yr2 * state.a * (1 - state.e * state.e)); // AU^2/yr
+        const areal = 0.5 * h;                // AU^2/yr
+
+        elements.kineticValue.textContent = k.toPrecision(4);
+        elements.potentialValue.textContent = u.toPrecision(4);
+        elements.energyValue.textContent = eps.toPrecision(4);
+        elements.angmomValue.textContent = h.toPrecision(4);
+        elements.arealValue.textContent = areal.toPrecision(4);
+
+        elements.kineticUnit.textContent = 'AU²/yr²';
+        elements.potentialUnit.textContent = 'AU²/yr²';
+        elements.energyUnit.textContent = 'AU²/yr²';
+        elements.angmomUnit.textContent = 'AU²/yr';
+        elements.arealUnit.textContent = 'AU²/yr';
+      }
+    }
+
     // Update Newton mode values in insight box with KaTeX
     if (state.mode === 'newton' && window.katex) {
       const vLatexUnit = fmt.vUnit === 'cm/s' ? '\\text{ cm/s}' : '\\text{ km/s}';
-      const aLatexUnit = fmt.aUnit === 'cm/s²' ? '\\text{ cm/s}^2' : '\\text{ m/s}^2';
+      const aLatexUnit =
+        fmt.aUnit === 'cm/s²' ? '\\text{ cm/s}^2' :
+        fmt.aUnit === 'mm/s²' ? '\\text{ mm/s}^2' :
+        '\\text{ m/s}^2';
 
       const vLatex = `v = \\sqrt{GM\\left(\\frac{2}{r} - \\frac{1}{a}\\right)} = ${fmt.vValue.toPrecision(3)}${vLatexUnit}`;
       const aLatex = `a = \\frac{GM}{r^2} = ${fmt.aValue.toPrecision(3)}${aLatexUnit}`;

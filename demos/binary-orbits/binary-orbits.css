@@ -543,6 +543,28 @@
 /* ============================================
    Insight Box
    ============================================ */
+.model-note {
+  background: rgba(18, 18, 31, 0.9);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-md);
+  padding: 0.5rem 0.75rem;
+  margin: 0.75rem 0 1rem 0;
+  color: var(--text-secondary);
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-normal);
+}
+
+.model-note summary {
+  cursor: pointer;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.model-note p {
+  margin: 0.5rem 0 0 0;
+  color: var(--text-muted);
+}
+
 .insight-box {
   background: rgba(18, 18, 31, 0.9);
   border-left: 3px solid var(--stellar-amber);
