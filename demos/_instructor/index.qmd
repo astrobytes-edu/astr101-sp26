@@ -21,6 +21,12 @@ Open directly: `/demos/_instructor/`
 | Angular size | `/demos/angular-size/` | `/demos/_instructor/angular-size/` | `{{</* demo angular-size */>}}` |
 | Eclipse geometry | `/demos/eclipse-geometry/` | `/demos/_instructor/eclipse-geometry/` | `{{</* demo eclipse-geometry height="600px" */>}}` |
 
+## ASTR 201 add-on demos
+
+| Demo | Student URL | Instructor guide | Embed code |
+|------|-------------|-----------------|------------|
+| Kepler’s laws | `/demos/keplers-laws/` | `/demos/_instructor/keplers-laws/` | `{{</* demo keplers-laws height="700px" */>}}` |
+
 ## Recommended “Astro Lab” flow (Friday)
 
 If you’re running a rotation lab across all four demos, start here:

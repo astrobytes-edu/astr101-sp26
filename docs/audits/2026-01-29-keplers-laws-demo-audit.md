@@ -2,7 +2,7 @@
 
 **Date:** 2026-01-29  
 **Audience:** ASTR 201 (also usable for ASTR 101 with “Kepler Mode”)  
-**Overall:** **Needs Work** (1 physics/visualization blocker in Newton mode)
+**Overall:** **Pass** (production-ready for teaching; see remaining polish)
 
 ## Throughline (what this demo is trying to teach)
 
@@ -12,60 +12,59 @@ This demo has a strong conceptual arc: first, students explore the *patterns* (K
 
 | Dimension | Score | Notes |
 | --- | --- | --- |
-| Scientific correctness | ⚠️ | Core scalars ($r$, $P$, $v$, $a$) look correct; **Newton velocity vector direction appears inconsistent with the plotted orbit**. |
-| Math grammar | ⚠️ | KaTeX is integrated and readable; dynamic Newton equations are not unit-aware for 201 mode. |
+| Scientific correctness | ✅ | Orbit geometry and Newton vectors now share a single coordinate convention (velocity is tangent; force points to the star). |
+| Math grammar | ✅ | KaTeX is integrated; Newton-mode equations now respect the 101/201 unit toggle. |
 | UX / cognitive load | ✅ | Mode toggle + overlays + presets are well-structured; sliders have adaptive precision. |
 | Accessibility | ✅ | Keyboard support + ARIA slider + live region are present. |
-| Performance | ⚠️ | KaTeX re-renders on every `update()` in Newton mode; may be janky during animation. |
-| Verification | ✅ | Repo gates passed (`node --test`, demo polish/static checks, `conda run -n astro make render`). |
+| Performance | ✅ | KaTeX updates are throttled during animation (reduced jank risk). |
+| Verification | ✅ | `node --test`, `conda run -n astro python scripts/check_demo_polish.py`, `conda run -n astro python scripts/demo_static_checks.py`, `conda run -n astro make render`. |
 
-## Critical Issues (must fix before teaching ASTR 201)
+## Resolved (implemented on 2026-01-29)
 
-1. **Newton-mode velocity vector direction is inconsistent with the orbit geometry** (`demos/keplers-laws/keplers-laws.js:294` and `demos/keplers-laws/keplers-laws.js:431`).
+1. **Newton-mode velocity vector direction is now consistent with the orbit geometry**.
 
-   The orbit is drawn using `orbitalToSvg()` with an x-reflection (`x_orb = -r*cos(theta)`), which flips the handedness of the parameterization. The velocity direction, however, is computed as if the mapping were not reflected (`return theta + π/2 + γ`). This will generally point the velocity arrow the wrong way except at special points where $\gamma=0$ (perihelion/aphelion). In Newton mode, that’s a conceptual blocker: students will correctly expect $\vec v$ to be tangent to the path (with a small radial component for $e>0$).
+   We introduced a shared, testable orbital model module and compute the velocity direction from the curve’s tangent in the **same** coordinate convention used to draw the orbit.
 
-   - **Where:** `velocityAngle()` returns `theta + Math.PI / 2 + gamma` (`demos/keplers-laws/keplers-laws.js:298`), and `updateVectors()` uses it directly (`demos/keplers-laws/keplers-laws.js:441–452`).
-   - **Fix (mechanical):** compute the velocity direction in the *same* coordinate convention used by `orbitalToSvg()` (account for the x-reflection), and verify with the circular-orbit limiting case ($e=0$) that the velocity arrow is tangent everywhere.
+   - Model: `demos/_assets/keplers-laws-model.js` (`KeplersLawsModel.orbitTangentAngleRad`)
+   - Demo wiring: `demos/keplers-laws/keplers-laws.js#L409` (now uses `Model.orbitTangentAngleRad(...)`)
+   - Tests: `tests/keplers-laws-model.test.js` (circular limit + numerical-derivative check)
 
-## Major Issues (should fix soon for ASTR 201)
+2. **Newton-mode KaTeX values are now unit-consistent with the 101/201 toggle**.
 
-1. **Newton-mode dynamic KaTeX equations ignore the 101/201 unit toggle** (`demos/keplers-laws/keplers-laws.js:530–542`).
+   The readout panel and the Newton-mode KaTeX block use the same unit conversion function:
 
-   In 201 mode the readouts switch to CGS (cm/s, cm/s²), but the KaTeX strings hard-code `km/s` and `m/s^2` and use the unconverted values. This creates a “two answers on screen” inconsistency during lecture and undermines unit discipline.
+   - Model helper: `KeplersLawsModel.formatNewtonReadouts(...)` in `demos/_assets/keplers-laws-model.js`
+   - Tests: `tests/keplers-laws-model.test.js` (101 vs 201 conversion)
+   - Demo usage: `demos/keplers-laws/keplers-laws.js#L485` (readouts + KaTeX derive from `fmt`)
 
-   - **Fix (mechanical):** branch the KaTeX render strings on `state.units` and render values/units that match the readouts (or explicitly label the KaTeX block as SI-only and keep readouts SI-only too).
+3. **KaTeX re-rendering is now throttled during animation**.
 
-2. **Potential performance/jank risk: KaTeX re-renders every frame in Newton mode** (`demos/keplers-laws/keplers-laws.js:530–542` via `update()` calls).
+   We avoid expensive re-renders on every animation frame by throttling KaTeX updates while playing (and caching when paused):
 
-   Rendering math on every animation frame is costly. If this stutters on student laptops, Newton mode will feel “broken” even when the physics is correct.
+   - `demos/keplers-laws/keplers-laws.js#L482` (`NEWTON_KATEX_MIN_INTERVAL_MS` + cache)
 
-   - **Fix (mechanical):** throttle KaTeX renders (e.g., only when numeric values change beyond a tolerance, or at ~10 Hz), or render as plain text during animation and upgrade to KaTeX on pause/drag end.
+4. **The speed control is now labeled with its intended meaning**.
 
-3. **The “Speed” control is not anchored to an explicit time unit** (`demos/keplers-laws/index.html:321–331`, `demos/keplers-laws/keplers-laws.js:794–803`).
-
-   The code advances `state.t` (years) by `dt` (seconds) times a dimensionless multiplier, which implicitly means “~1 year per real second at 1×.” That’s fine pedagogically, but it should be stated (otherwise students think “1× means real time”).
-
-   - **Fix (mechanical):** label the control as something like “Speed (years/sec)” or add a one-line model note that states the baseline mapping.
+   - UI: `demos/keplers-laws/index.html` now labels the control `Speed (years/sec)`.
+   - Smoke test: `tests/demo-html-smoke.test.js` asserts the label exists.
 
 ## Minor / Polish (nice-to-have)
 
-1. **Quadrant handling in `trueToMeanAnomaly()` is fragile for angles outside $[-\pi, \pi]$** (`demos/keplers-laws/keplers-laws.js:259–266`).
+1. **Add an explicit “model note” box in the student demo UI** (optional but recommended).
 
-   The `tan(θ/2)` formula with `atan()` is standard, but using `atan2`-based forms is more robust for continuity and avoids subtle wrap discontinuities during interaction.
+   The demo is an intentionally simplified, planar, 2-body model (planet mass negligible; no perturbations; teaching-scale time). Stating this explicitly helps prevent “is this a real ephemeris?” confusion in ASTR 201.
 
-2. **README math could be tightened for ASTR 201** (`demos/keplers-laws/README.md`).
+2. **Tighten README unit-system language** (`demos/keplers-laws/README.md`).
 
-   The period line reads as the dimensional form ($P = 2π\sqrt{a^3/GM}$), while the code uses the solar-unit simplification ($P^2 = a^3/M$ with $a$ in AU and $P$ in years). Both are valid in context, but mixing them without an explicit “unit system” sentence invites confusion.
+   The demo mixes “solar units” (AU, years, $M_\odot$) with SI/CGS readouts. It’s correct, but worth a single sentence so students don’t treat it as inconsistent math.
 
 ## Recommendation: production readiness verdict
 
-- **ASTR 101 use (Kepler mode, no vectors):** *likely OK* once you add a short “model note” about scaling and assumptions.  
-- **ASTR 201 use (Newton mode with vectors):** **not yet production ready** until the velocity vector direction issue is fixed and the Newton equations are made unit-consistent (or unit-simplified).
+- **ASTR 101 use (Kepler mode, minimal overlays):** ✅ appropriate and stable.  
+- **ASTR 201 use (Newton mode + vectors + units toggle):** ✅ appropriate and stable.
 
 ## Suggested next steps (fastest path to “teach on Friday”)
 
-1) Fix the Newton velocity vector direction and sanity-check it in the $e=0$ limit (tangent everywhere).  
-2) Make the KaTeX Newton readout unit-consistent with 101/201 mode and throttle math rendering during animation.  
-3) Add a one-line “model note” (2-body, planar, planet mass negligible; scaling to fit) and clarify the speed unit mapping.
+1) Add a short model note (planar 2-body; teaching-scale time) directly in the student demo UI.  
+2) Use the instructor docs to run a 10–15 minute Kepler→Newton throughline on the projector, then a 20–30 minute Friday lab with “equal areas” as the group deliverable.  
 
