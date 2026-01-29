@@ -24,6 +24,10 @@
 })(typeof globalThis !== 'undefined' ? globalThis : this, function () {
   'use strict';
 
+  // Perihelion occurs around Jan 3 ±2 days depending on year.
+  // This constant documents the uncertainty for UI/tooltip use.
+  const PERIHELION_DAY_UNCERTAINTY = 2;
+
   function degToRad(deg) {
     return (deg * Math.PI) / 180;
   }
@@ -99,6 +103,7 @@
   }
 
   return {
+    PERIHELION_DAY_UNCERTAINTY,
     effectiveObliquityDegrees,
     sunDeclinationDeg,
     dayLengthHours,

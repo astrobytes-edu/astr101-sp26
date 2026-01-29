@@ -62,3 +62,8 @@ test('orbitAngleRadFromDay: wraps every year', () => {
   assert.ok(Number.isFinite(a2));
   assert.ok(Math.abs(diff) < 1e-9, `expected wrap-around (Δ≈0), got ${diff}`);
 });
+
+test('PERIHELION_DAY_UNCERTAINTY is exported and equals 2', () => {
+  assert.ok(typeof SeasonsModel.PERIHELION_DAY_UNCERTAINTY === 'number', 'expected PERIHELION_DAY_UNCERTAINTY export');
+  assert.equal(SeasonsModel.PERIHELION_DAY_UNCERTAINTY, 2);
+});
