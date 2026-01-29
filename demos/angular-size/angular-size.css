@@ -124,3 +124,22 @@
     grid-template-columns: 1fr;
   }
 }
+
+/* ============================================
+ * Styles extracted from inline <style> block
+ * ============================================ */
+
+.model-note {
+  margin-top: var(--space-md);
+  background: rgba(18, 18, 31, 0.9);
+  border: 1px solid var(--border-color);
+  border-left: 3px solid var(--accent-gold);
+  padding: 0.75rem 1rem;
+  border-radius: 0 8px 8px 0;
+  font-size: var(--font-size-sm);
+  color: var(--text-secondary);
+}
+
+.model-note strong {
+  color: var(--text-primary);
+}
