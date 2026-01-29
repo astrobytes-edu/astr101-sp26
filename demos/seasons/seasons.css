@@ -1,0 +1,264 @@
+:root {
+  --demo-max-width: 1200px;
+}
+
+/* Two-panel layout for orbital and globe views */
+.viz-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: var(--space-md);
+}
+
+#orbital-view, #globe-view {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Controls grid */
+.controls-grid {
+  grid-template-columns: 1fr 1fr;
+}
+
+.slider-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: var(--font-size-xs);
+  color: var(--text-muted);
+  margin-top: var(--space-xs);
+}
+
+/* Preset buttons */
+.presets-section {
+  margin-top: 0.75rem;
+}
+
+.presets-label {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  margin-bottom: 0.5rem;
+}
+
+.presets-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.preset-btn.season {
+  border-color: var(--accent-blue);
+}
+
+.preset-btn.season:hover {
+  border-color: var(--accent-blue);
+  background: rgba(93, 173, 226, 0.2);
+}
+
+.preset-btn.season.active {
+  background: var(--accent-blue);
+  color: var(--space-black);
+}
+
+/* Readout panel */
+.readout-panel {
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+}
+
+.readout-value.season-summer {
+  color: var(--accent-gold);
+}
+
+.readout-value.season-winter {
+  color: var(--accent-blue);
+}
+
+.readout-value.season-spring,
+.readout-value.season-fall {
+  color: var(--accent-green);
+}
+
+/* Overlay toggles */
+.overlays-section {
+  margin-top: 0.75rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--border-color);
+}
+
+.overlays-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 0.5rem;
+}
+
+.overlay-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  cursor: pointer;
+}
+
+.overlay-toggle input[type="checkbox"] {
+  accent-color: var(--cosmic-teal);
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+.overlay-toggle:hover {
+  color: var(--text-primary);
+}
+
+/* Insight box */
+.insight-box {
+  background: rgba(18, 18, 31, 0.9);
+  border-left: 3px solid var(--accent-blue);
+  padding: 1rem;
+  border-radius: 0 8px 8px 0;
+  font-size: 0.9rem;
+}
+
+.insight-box strong {
+  color: var(--accent-blue);
+}
+
+.insight-box .misconception {
+  color: var(--accent-red);
+  font-style: italic;
+}
+
+.model-note {
+  margin-top: var(--space-md);
+  background: rgba(18, 18, 31, 0.9);
+  border: 1px solid var(--border-color);
+  border-left: 3px solid var(--accent-gold);
+  padding: 0.75rem 1rem;
+  border-radius: 0 8px 8px 0;
+  font-size: var(--font-size-sm);
+  color: var(--text-secondary);
+}
+
+.model-note strong {
+  color: var(--text-primary);
+}
+
+/* Responsive */
+@media (max-width: 800px) {
+  .viz-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .controls-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .readout-panel {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .readout-panel {
+    grid-template-columns: 1fr;
+  }
+
+  .overlays-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* SVG styles */
+.orbit-path {
+  fill: none;
+  stroke: var(--text-muted);
+  stroke-width: 1.5;
+  stroke-dasharray: 6 4;
+  opacity: 0.5;
+}
+
+.axis-line {
+  stroke: #ff6b6b;
+  stroke-width: 2;
+}
+
+.axis-arrow {
+  fill: #ff6b6b;
+}
+
+.sunlight-ray {
+  stroke: var(--sun-glow);
+  stroke-width: 1.5;
+  opacity: 0.6;
+}
+
+.terminator {
+  fill: rgba(0, 0, 0, 0.5);
+}
+
+.latitude-line {
+  fill: none;
+  stroke: var(--accent-blue);
+  stroke-width: 1;
+  stroke-dasharray: 3 3;
+  opacity: 0.5;
+}
+
+.latitude-line.equator {
+  stroke: var(--accent-green);
+  stroke-width: 1.5;
+  opacity: 0.7;
+}
+
+.latitude-line.tropic {
+  stroke: var(--accent-gold);
+}
+
+.latitude-line.arctic {
+  stroke: var(--accent-blue);
+}
+
+.celestial-equator {
+  fill: none;
+  stroke: var(--accent-green);
+  stroke-width: 1.5;
+  stroke-dasharray: 8 4;
+  opacity: 0.6;
+}
+
+.ecliptic-line {
+  fill: none;
+  stroke: var(--accent-gold);
+  stroke-width: 1.5;
+  stroke-dasharray: 4 4;
+  opacity: 0.6;
+}
+
+.hour-grid {
+  fill: none;
+  stroke: var(--text-muted);
+  stroke-width: 0.8;
+  opacity: 0.45;
+}
+
+.polaris-label {
+  font-size: 10px;
+  fill: #ff6b6b;
+}
+
+.distance-label {
+  font-size: 10px;
+  fill: var(--text-muted);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
