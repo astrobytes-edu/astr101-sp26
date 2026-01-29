@@ -348,7 +348,7 @@
     // The apparent tilt toward/away from Sun depends on Earth's orbital position
 
     const axisLength = 30;
-    const tiltRad = state.axialTilt * Math.PI / 180;
+    const tiltRad = AstroUnits.degToRad(state.axialTilt);
 
     // The axis always points in the same direction in space
     // In our view, that's roughly upward with a slight tilt
@@ -476,19 +476,19 @@
       // A latitude line appears as an ellipse with:
       // rx = GLOBE_RADIUS * cos(lat)
       // The "ry" in our 2D projection represents how much we see "into" the globe
-      return Math.abs(GLOBE_RADIUS * Math.cos(lat * Math.PI / 180) * 0.15);
+      return Math.abs(GLOBE_RADIUS * Math.cos(AstroUnits.degToRad(lat)) * 0.15);
     }
 
     // Arctic Circle at 90 - tilt degrees
     const arcticLat = 90 - tilt;
     elements.arcticCircle.setAttribute('cy', latToY(arcticLat));
     elements.arcticCircle.setAttribute('ry', getEllipseRy(arcticLat));
-    elements.arcticCircle.setAttribute('rx', GLOBE_RADIUS * Math.cos(arcticLat * Math.PI / 180));
+    elements.arcticCircle.setAttribute('rx', GLOBE_RADIUS * Math.cos(AstroUnits.degToRad(arcticLat)));
 
     // Tropic of Cancer at +tilt degrees
     elements.tropicCancer.setAttribute('cy', latToY(tilt));
     elements.tropicCancer.setAttribute('ry', getEllipseRy(tilt));
-    elements.tropicCancer.setAttribute('rx', GLOBE_RADIUS * Math.cos(tilt * Math.PI / 180));
+    elements.tropicCancer.setAttribute('rx', GLOBE_RADIUS * Math.cos(AstroUnits.degToRad(tilt)));
 
     // Equator at 0 degrees
     elements.equatorLine.setAttribute('cy', GLOBE_CENTER.y);
@@ -498,13 +498,13 @@
     // Tropic of Capricorn at -tilt degrees
     elements.tropicCapricorn.setAttribute('cy', latToY(-tilt));
     elements.tropicCapricorn.setAttribute('ry', getEllipseRy(-tilt));
-    elements.tropicCapricorn.setAttribute('rx', GLOBE_RADIUS * Math.cos(tilt * Math.PI / 180));
+    elements.tropicCapricorn.setAttribute('rx', GLOBE_RADIUS * Math.cos(AstroUnits.degToRad(tilt)));
 
     // Antarctic Circle at -(90 - tilt) degrees
     const antarcticLat = -(90 - tilt);
     elements.antarcticCircle.setAttribute('cy', latToY(antarcticLat));
     elements.antarcticCircle.setAttribute('ry', getEllipseRy(antarcticLat));
-    elements.antarcticCircle.setAttribute('rx', GLOBE_RADIUS * Math.cos(antarcticLat * Math.PI / 180));
+    elements.antarcticCircle.setAttribute('rx', GLOBE_RADIUS * Math.cos(AstroUnits.degToRad(antarcticLat)));
 
     // Update labels
     elements.labelArctic.setAttribute('y', latToY(arcticLat) + 4);
@@ -524,7 +524,7 @@
     const y = GLOBE_CENTER.y - (lat / 90) * GLOBE_RADIUS;
 
     // X position - show on the left (sunlit) side of the globe
-    const rx = GLOBE_RADIUS * Math.cos(lat * Math.PI / 180);
+    const rx = GLOBE_RADIUS * Math.cos(AstroUnits.degToRad(lat));
     const x = GLOBE_CENTER.x - rx * 0.7; // Slightly left of center on sunlit side
 
     elements.latMarkerDot.setAttribute('cx', x);
@@ -544,7 +544,7 @@
 
     const declination = getSunDeclination(state.dayOfYear);
     const eps = effectiveObliquityDegrees(state.axialTilt);
-    const tiltRad = eps * Math.PI / 180;
+    const tiltRad = AstroUnits.degToRad(eps);
 
     // Calculate axis endpoints
     // The axis should tilt toward/away from the viewer (left/right in side view)
