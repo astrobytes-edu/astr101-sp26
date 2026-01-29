@@ -180,6 +180,36 @@
   }
 
   /**
+   * Calculate the tangent angle to an elliptical orbit at given true anomaly
+   * This is the direction of velocity, NOT simply θ + π/2 for eccentric orbits!
+   *
+   * Uses calculus: tangent = (dx/dθ, dy/dθ) where position is in polar coords
+   * For r = a(1-e²)/(1+e·cosθ), the derivative dr/dθ gives the radial velocity component
+   *
+   * @param {number} a - Semi-major axis of this body's orbit around barycenter (AU)
+   * @param {number} e - Eccentricity
+   * @param {number} theta - True anomaly (radians)
+   * @returns {number} Tangent angle (radians) in our coordinate system
+   */
+  function orbitTangentAngle(a, e, theta) {
+    // Semi-latus rectum
+    const p = a * (1 - e * e);
+    const denom = 1 + e * Math.cos(theta);
+    const r = p / denom;
+
+    // dr/dθ for r = p/(1 + e cos θ)
+    const drdTheta = (p * e * Math.sin(theta)) / (denom * denom);
+
+    // Our coordinate convention: x = -r cos θ, y = r sin θ (periapsis to the left)
+    // dx/dθ = -(dr/dθ)cos θ + r sin θ
+    // dy/dθ = (dr/dθ)sin θ + r cos θ
+    const dx = -drdTheta * Math.cos(theta) + r * Math.sin(theta);
+    const dy = drdTheta * Math.sin(theta) + r * Math.cos(theta);
+
+    return Math.atan2(dy, dx);
+  }
+
+  /**
    * Convert mean anomaly to true anomaly by solving Kepler's equation
    * M = E - e × sin(E)  (Kepler's equation)
    * θ = 2 × atan2(√(1+e) × sin(E/2), √(1-e) × cos(E/2))
@@ -309,10 +339,11 @@
     const v1_speed = v_rel * state.M2 / M_tot;  // Body 1's speed
     const v2_speed = v_rel * state.M1 / M_tot;  // Body 2's speed
 
-    // Velocity direction: perpendicular to radius, in direction of motion
-    // For prograde orbit: v is 90° ahead of r
-    const vAngle1 = state.theta + Math.PI / 2;
-    const vAngle2 = state.theta + Math.PI + Math.PI / 2;
+    // Velocity direction: tangent to elliptical orbit
+    // For eccentric orbits, velocity is NOT perpendicular to radius!
+    // Use calculus: tangent angle = atan2(dy/dθ, dx/dθ)
+    const vAngle1 = orbitTangentAngle(a1, state.e, state.theta);
+    const vAngle2 = orbitTangentAngle(a2, state.e, state.theta + Math.PI);
 
     return {
       v1: {
