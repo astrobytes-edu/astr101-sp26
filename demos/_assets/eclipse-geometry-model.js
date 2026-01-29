@@ -17,11 +17,11 @@
 
 (function (root, factory) {
   if (typeof module === 'object' && typeof module.exports === 'object') {
-    module.exports = factory();
+    module.exports = factory(require('./physics/astro-constants.js'));
   } else {
-    root.EclipseGeometryModel = factory();
+    root.EclipseGeometryModel = factory(root.AstroConstants);
   }
-})(typeof globalThis !== 'undefined' ? globalThis : this, function () {
+})(typeof globalThis !== 'undefined' ? globalThis : this, function (AstroConstants) {
   'use strict';
 
   // ============================================
@@ -30,7 +30,9 @@
 
   // Saros cycle: 223 synodic months = 6585.3211 days (18 years, 11 days, 8 hours)
   // After one Saros, Sun, Moon, and nodes return to nearly the same relative positions.
-  const SYNODIC_MONTH_DAYS = 29.530588;
+  const SYNODIC_MONTH_DAYS = AstroConstants
+    ? AstroConstants.TIME.MEAN_SYNODIC_MONTH_DAYS
+    : 29.530588;
   const SAROS_SYNODIC_MONTHS = 223;
   const SAROS_CYCLE_DAYS = SYNODIC_MONTH_DAYS * SAROS_SYNODIC_MONTHS; // ≈ 6585.32
 

@@ -11,6 +11,11 @@ params:
 # Instructor website title (clearly marked)
 website:
   title: "ASTR 101 [INSTRUCTOR VERSION]"
+  navbar:
+    logo: assets/astr101-logo.png
+    right:
+      - text: "Instructor Demos"
+        href: demos/_instructor/index.qmd
 
 # Instructor-specific rendering
 format:
