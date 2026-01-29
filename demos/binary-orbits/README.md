@@ -59,8 +59,10 @@ LaTeX source for key formulas:
 ## Files
 
 - `index.html` - Demo page with all UI elements
-- `binary-orbits.js` - Physics engine, rendering, and interaction logic
+- `binary-orbits.js` - State, rendering, and interaction logic
 - `binary-orbits.css` - Demo-specific styles
+- `../_assets/binary-orbits-model.js` - Shared physics model (testable, UMD)
+- `../../tests/binary-orbits-physics.test.js` - Unit tests for physics
 - `README.md` - This documentation
 
 ## Controls
@@ -105,6 +107,51 @@ LaTeX source for key formulas:
 | Sirius AB | 2.06 | 1.02 | 19.8 AU | 0.59 |
 | Equal Mass | 1.0 | 1.0 | 1.0 AU | 0.0 |
 | Massive O+O | 50 | 40 | 0.5 AU | 0.3 |
+
+## Pedagogical Notes
+
+### Learning Objectives
+
+- Understand that **both bodies orbit the common center of mass** (barycenter), not one around the other
+- Connect stellar wobble to **exoplanet detection** via the radial velocity method
+- See that **Kepler's laws emerge from Newton's gravitational physics** in two-body systems
+- Recognize the **inverse mass-orbit relationship**: heavier body has smaller orbit (a₁/a₂ = M₂/M₁)
+- Distinguish between **star+planet systems** (extreme mass ratio) and **binary stars** (comparable masses)
+
+### Common Misconceptions
+
+| Misconception | Reality | Demo Feature |
+|---------------|---------|--------------|
+| "The star stays still, only the planet moves" | Star wobbles; larger planets cause larger wobble | Visible M₁ orbit path around barycenter |
+| "Barycenter is always inside the star" | For massive companions, barycenter can be outside the star | Alpha Cen preset shows external barycenter |
+| "Binary stars are rare" | ~50% of stars are in multiple systems | Multiple binary star presets |
+| "Heavier objects orbit faster" | Both bodies share the same period; heavier body has smaller orbit | Equal Mass preset demonstrates this |
+| "Planets orbit the center of the star" | Planets orbit the system barycenter (Sun wobbles too) | Sun+Jupiter preset shows solar wobble |
+
+### Discussion Questions
+
+1. **Exoplanet detection**: Why does Jupiter cause more stellar wobble than Earth? How would you detect a planet around a distant star using only the star's spectrum?
+2. **Barycenter position**: What happens to the barycenter position as M₂ → 0? Where is the Sun-Jupiter barycenter relative to the Sun's surface?
+3. **Orbital synchronization**: Why do both bodies reach perihelion simultaneously? Why must they have the same orbital period?
+4. **Mass determination**: If you can measure both stellar orbits in a binary system, how can you determine the individual masses?
+5. **Equal mass case**: In the Equal Mass preset, why are both orbits identical? What would happen if you slightly increased one mass?
+
+## Future Features
+
+| Extension | Description | Priority |
+|-----------|-------------|----------|
+| Doppler RV curve | Radial velocity vs time plot showing stellar wobble signal | High |
+| Light curve | Brightness dip during eclipses/transits for edge-on systems | High |
+| 3D inclination | Add orbital plane tilt to show projection effects | Medium |
+| Tidal forces | Differential gravity visualization near close companions | Medium |
+| Roche lobes | Mass transfer regions in close binary systems | Low |
+| GR precession | Post-Newtonian apsidal advance for close orbits | Low |
+
+## References
+
+- Freedman, *Universe*, 11th Ed., Ch. 17 (Binary Stars and Stellar Masses)
+- [NASA Exoplanet Archive](https://exoplanetarchive.ipac.caltech.edu)
+- [Radial Velocity Method](https://exoplanets.nasa.gov/alien-worlds/ways-to-find-a-planet/#/2) (NASA Exoplanets)
 
 ## Usage
 
