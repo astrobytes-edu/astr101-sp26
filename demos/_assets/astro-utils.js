@@ -134,7 +134,9 @@ function formatTime(years) {
 function angularSize(diameter, distance) {
   // Angular size in radians = diameter / distance (small angle approx)
   // Convert to degrees
-  return (diameter / distance) * (180 / Math.PI);
+  var Units = (typeof AstroUnits !== 'undefined') ? AstroUnits : null;
+  var radians = diameter / distance;
+  return Units ? Units.radToDeg(radians) : radians * (180 / Math.PI);
 }
 
 /**
@@ -144,7 +146,8 @@ function angularSize(diameter, distance) {
  * @returns {number} Required distance
  */
 function distanceForAngularSize(diameter, angularDeg) {
-  const angularRad = angularDeg * (Math.PI / 180);
+  var Units = (typeof AstroUnits !== 'undefined') ? AstroUnits : null;
+  var angularRad = Units ? Units.degToRad(angularDeg) : angularDeg * (Math.PI / 180);
   return diameter / angularRad;
 }
 
