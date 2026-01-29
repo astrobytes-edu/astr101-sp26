@@ -33,6 +33,17 @@ Orbital period: P = 2π√(a³/GM)
 Gravitational acceleration: a = GM/r²
 ```
 
+## Model and units (what this demo is / isn’t)
+
+This is a teaching model (not an ephemeris). The orbit is planar (2D) and uses an idealized two-body setup (no
+perturbations).
+
+- **Kepler-mode scaling:** the demo uses the “astronomical unit system” (a in AU, P in years, M★ in solar masses).
+  For a 1 M☉ star, Kepler’s 3rd law is **P² = a³**; more generally **P² = a³ / M★**.
+- **Newton-mode readouts:** the demo computes physical values and then formats them for display:
+  - 101: `km/s` and `m/s²`
+  - 201: `cm/s` and `cm/s²` (CGS)
+
 ## Math Rendering
 
 All formulas use KaTeX for proper mathematical typesetting. The demo uses:
