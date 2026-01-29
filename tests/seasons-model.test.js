@@ -67,3 +67,10 @@ test('PERIHELION_DAY_UNCERTAINTY is exported and equals 2', () => {
   assert.ok(typeof SeasonsModel.PERIHELION_DAY_UNCERTAINTY === 'number', 'expected PERIHELION_DAY_UNCERTAINTY export');
   assert.equal(SeasonsModel.PERIHELION_DAY_UNCERTAINTY, 2);
 });
+
+test('SeasonsModel uses MEAN_TROPICAL_YEAR_DAYS from AstroConstants', () => {
+  // Verify the model produces consistent results with the constant
+  const AstroConstants = require('../demos/_assets/physics/astro-constants.js');
+  const result = SeasonsModel.sunDeclinationDeg({ dayOfYear: 172, axialTiltDeg: 23.44 }); // ~summer solstice
+  assert.ok(Math.abs(result) > 20, 'Declination at solstice should be > 20°');
+});

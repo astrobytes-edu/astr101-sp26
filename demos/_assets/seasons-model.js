@@ -17,12 +17,17 @@
 
 (function (root, factory) {
   if (typeof module === 'object' && typeof module.exports === 'object') {
-    module.exports = factory();
+    module.exports = factory(require('./physics/astro-constants.js'));
   } else {
-    root.SeasonsModel = factory();
+    root.SeasonsModel = factory(root.AstroConstants);
   }
-})(typeof globalThis !== 'undefined' ? globalThis : this, function () {
+})(typeof globalThis !== 'undefined' ? globalThis : this, function (AstroConstants) {
   'use strict';
+
+  // Use centralized constant with fallback for standalone use
+  var TROPICAL_YEAR_DAYS = AstroConstants
+    ? AstroConstants.TIME.MEAN_TROPICAL_YEAR_DAYS
+    : 365.2422;
 
   // Perihelion occurs around Jan 3 ±2 days depending on year.
   // This constant documents the uncertainty for UI/tooltip use.
@@ -50,7 +55,7 @@
   function sunDeclinationDeg({
     dayOfYear,
     axialTiltDeg,
-    tropicalYearDays = 365.2422,
+    tropicalYearDays = TROPICAL_YEAR_DAYS,
     dayOfMarchEquinox = 80,
   }) {
     const eps = effectiveObliquityDegrees(axialTiltDeg);
@@ -82,7 +87,7 @@
   // the key fact that Earth's distance variation is small (~±1.7%).
   function earthSunDistanceAu({
     dayOfYear,
-    yearDays = 365.2422,
+    yearDays = TROPICAL_YEAR_DAYS,
     eccentricity = 0.017,
     perihelionDay = 3,
   }) {
@@ -95,7 +100,7 @@
   // Anchors perihelion at angle 0.
   function orbitAngleRadFromDay({
     dayOfYear,
-    yearDays = 365.2422,
+    yearDays = TROPICAL_YEAR_DAYS,
     perihelionDay = 3,
   }) {
     const daysFromPerihelion = dayOfYear - perihelionDay;
