@@ -366,8 +366,8 @@
     const moonAngle = getDisplayMoonAngleDeg();
     const nodeAngle = getDisplayNodeAngleDeg();
 
-    const angleRad = moonAngle * Math.PI / 180;
-    const nodeRad = nodeAngle * Math.PI / 180;
+    const angleRad = AstroUnits.degToRad(moonAngle);
+    const nodeRad = AstroUnits.degToRad(nodeAngle);
 
     // Top view: Moon position on tilted orbit
     // The orbit appears as an ellipse when tilted (but we keep it circular for simplicity)
@@ -437,7 +437,7 @@
     // Draw the Moon's tilted path in side view.
     let pathD = '';
     for (let i = 0; i <= 360; i += 5) {
-      const angleRad = i * Math.PI / 180;
+      const angleRad = AstroUnits.degToRad(i);
       const x = 200 + ORBIT_RADIUS * Math.cos(angleRad);
       // Convert display-angle i back to inertial moon longitude, keeping the display Sun-fixed.
       const moonLonDeg = state.sunLonDeg + (i - 180);
@@ -579,7 +579,7 @@
       const dx = svgX - CENTER.x;
       const dy = CENTER.y - svgY;
 
-      return Math.atan2(dy, dx) * 180 / Math.PI;
+      return AstroUnits.radToDeg(Math.atan2(dy, dx));
     }
 
     moonTop.addEventListener('mousedown', (e) => {
