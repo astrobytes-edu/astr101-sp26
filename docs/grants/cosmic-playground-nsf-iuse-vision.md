@@ -1,9 +1,11 @@
 # Cosmic Playground: NSF IUSE Vision Document
 
-*A modern, open-source interactive astronomy and physics simulation ecosystem for reasoning-based instruction — from intro courses through advanced astrophysics.*
+*A modern, open-source interactive astronomy and physics simulation ecosystem for reasoning-based instruction — from introductory through upper-division undergraduate courses.*
 
 **PI:** Dr. Anna Rosen (Computational Astrophysicist)
-**Target Program:** NSF IUSE: EDU (Engaged Student Learning, Level 2 or 3)
+**Target Program:** NSF IUSE: EDU (Engaged Student Learning, Level 2)
+**Target Audience:** Undergraduate students (lower-division and upper-division)
+**Target Courses:** ASTR 101 (intro lecture), ASTR 109 (intro lab), ASTR 201+ (upper-division), PHYS 195/196/197 (physics for scientists)
 **Status:** Draft vision document for grant development
 
 ---
@@ -20,7 +22,7 @@ Unlike general-purpose physics simulators from the 2000s era, Cosmic Playground:
 
 3. **Uses rigorously correct physics** — Separated, unit-tested physics models validated against analytic solutions and real astronomical systems (not black-box simulations)
 
-4. **Scales from intro to advanced** — Tier 1 (ASTR 101) through Tier 3 (upper-division/grad) with consistent architecture: hydrostatic equilibrium, radiative transfer, GR, fluid dynamics
+4. **Layered complexity architecture** — Each demo serves multiple course levels through progressive disclosure; the same simulation works in ASTR 101 (conceptual) and upper-division courses (quantitative) with toggled depth
 
 5. **Modern, accessible design** — Web-native (no Flash/Java), responsive, WCAG-compliant, embeddable in any LMS
 
@@ -111,46 +113,88 @@ Based on cognitive load theory:
 
 ## Deliverables
 
-### Core Simulation Toolkit (Multi-Level)
+### Core Simulation Toolkit (Layered Complexity Architecture)
 
-Cosmic Playground spans introductory through advanced courses, with rigorously correct physics under the hood.
+**Innovation:** Rather than separate demos for different course levels, Cosmic Playground uses a **layered complexity model**. Each simulation serves multiple audiences through progressive disclosure — the same demo works in ASTR 101 (conceptual, visual) and upper-division courses (quantitative, mathematical) with toggled depth.
 
-#### Tier 1: Intro Astronomy (ASTR 101)
+#### How Layered Complexity Works
 
-**Currently Implemented:**
+| Layer | Audience | Features Visible | Example (Binary Orbits) |
+|-------|----------|------------------|-------------------------|
+| **Conceptual** | ASTR 101/109 | Animation, presets, key observables | See the wobble, understand barycenter |
+| **Quantitative** | ASTR 201, PHYS 195-197 | Equations, derivations, parameter exploration | Calculate mass ratios from orbit sizes |
+| **Advanced** | Upper-division | Full physics, edge cases, research connections | Analyze RV curves, inclination effects |
 
-- Seasons — Axial tilt and solar angle
-- Moon Phases — Viewing geometry of illumination
-- Eclipse Geometry — Alignment requirements (node + phase)
-- Angular Size — Distance-size relationship
-- Kepler's Laws — Orbital mechanics (Kepler and Newton modes)
-- Binary Orbits — Two-body barycenter physics
+**Benefits:**
 
-**Planned:**
+- Students see the *same* simulation across courses, building familiarity
+- Instructors control complexity via UI toggles, not separate tools
+- No "watered-down" version — the physics is always correct, just progressively revealed
+- Lab courses (ASTR 109) use conceptual + hands-on data collection modes
 
-- Stellar Parallax — Distance measurement via annual motion
-- Doppler/Redshift — Spectral line shifts and radial velocity
-- H-R Diagram — Stellar classification and evolution
-- Hubble's Law — Expanding universe
-- Light Curves — Transit and eclipse detection
+#### Current Demo Suite (Layered)
 
-#### Tier 2: Intro Astrophysics (ASTR 201 / Physics Majors)
+| Demo | Conceptual Layer | Quantitative Layer | Advanced Layer |
+|------|------------------|-------------------|----------------|
+| **Seasons** | Axial tilt animation | Solar angle calculations | Milankovitch cycles |
+| **Moon Phases** | Viewing geometry | Terminator position math | Libration, phase curves |
+| **Eclipse Geometry** | Node + phase requirement | Saros cycle prediction | Eclipse magnitude |
+| **Angular Size** | Distance-size visual | Small-angle formula | Parsec derivation |
+| **Kepler's Laws** | Equal areas animation | Vis-viva equation | Newton mode, perturbations |
+| **Binary Orbits** | Barycenter wobble | Mass ratio from orbits | RV curves, inclination, light curves |
+| **Parallax Distance** | Annual motion visual | Trigonometric parallax | Gaia data, distance ladder |
+| **Blackbody Radiation** | Color-temperature visual | Wien's law, Stefan-Boltzmann | Planck function, stellar spectra |
+| **EM Spectrum** | Wavelength visualization | Energy-wavelength relation | Atmospheric windows, detector types |
+| **Telescope Resolution** | Diffraction visual | Rayleigh criterion | Aperture synthesis, adaptive optics |
 
-- Spectroscopy — Blackbody radiation, Wien's law, absorption lines
-- Hydrostatic Equilibrium — Pressure-gravity balance in stars
-- Gas Laws / Equation of State — Ideal gas, degeneracy pressure
-- Radiative Transfer — Optical depth, emission, absorption
-- Tidal Forces — Differential gravity, Roche limit, tidal locking
-- Gravitational Lensing — Light bending, Einstein rings
+#### Planned Demos (Layered)
 
-#### Tier 3: Advanced Astrophysics (Upper Division / Grad Intro)
+**Classical Misconceptions (High Priority):**
 
-- Stellar Structure — Lane-Emden equation, polytropes
-- Nuclear Reaction Networks — CNO cycle, pp-chain energetics
-- Accretion Disks — Viscous transport, temperature profiles
-- General Relativity Basics — Schwarzschild metric, orbital precession
-- Radiative Processes — Bremsstrahlung, synchrotron, Compton
-- Fluid Instabilities — Rayleigh-Taylor, Kelvin-Helmholtz
+- Retrograde Motion — Apparent reversal → heliocentric geometry → reference frames
+- Tides — Two-bulge visual → differential gravity → Roche limit, tidal locking
+- Inverse Square Law — Visual falloff → 1/r² math → flux, luminosity, apparent magnitude
+
+**Observational Astronomy:**
+
+- Doppler/Redshift — Color shift → wavelength math → spectral fitting
+- H-R Diagram — Classification → luminosity-temperature → stellar evolution tracks
+- Light Curves — Transit shape → depth analysis → limb darkening
+- Magnitude System — Apparent brightness → logarithmic scale → distance modulus
+- Spectral Classification — OBAFGKM visual → temperature sequence → spectral types
+- Color Index — B-V color → temperature proxy → reddening, extinction
+
+**Stellar Physics:**
+
+- Spectroscopy — Absorption lines → Planck function → curve of growth
+- Hydrostatic Equilibrium — Pressure balance concept → Lane-Emden → polytropes
+- Nuclear Reactions — Energy source → pp-chain → CNO cycle energetics
+- Stellar Structure — Onion model → equations of stellar structure → MESA comparison
+- Stellar Evolution — Main sequence lifetime → post-MS phases → endpoint fates
+- Kelvin-Helmholtz Contraction — Gravitational heating → contraction timescale → pre-main-sequence
+- Radiative Losses — Energy escape → cooling curves → thermal equilibrium
+
+**Gravitational Physics:**
+
+- Tidal Forces — Differential gravity → Roche limit → tidal locking timescales
+- Gravitational Lensing — Light bending → Einstein ring → mass estimation
+- Orbital Mechanics — Kepler → Newton → post-Newtonian corrections
+- Escape Velocity — Throw-and-fall → energy equation → Schwarzschild radius
+
+**Cosmology:**
+
+- Hubble's Law — Raisin bread visual → v = H₀d → dark energy, deceleration parameter
+- Scale of the Universe — Powers-of-ten zoom → logarithmic scaling → cosmic distance ladder
+- Universe Expansion — Expanding space → comoving coordinates → topology, curvature
+
+**Physics Foundations (PHYS 195-197):**
+
+- Thermodynamics — Ideal gas → equation of state → stellar interiors
+- Waves & Optics — Interference → diffraction → spectroscopy
+- E&M Waves / Spectra — Wave propagation → polarization, interference → spectral analysis
+- Gravity & Orbits — Newton's law → orbital energy → escape velocity
+- Energy Conservation — KE + PE visual → virial theorem → bound vs unbound systems
+- Angular Momentum Conservation — Ice skater spin-up → collapsing cloud → accretion disk formation
 
 #### Design Principle: Correct Theory Under the Hood
 
@@ -161,6 +205,8 @@ Every demo uses **physically correct models**, not pedagogical simplifications t
 - Radiative transfer: proper optical depth treatment, not "light gets absorbed"
 
 The physics is **testable** (unit tests against analytic solutions) and **documented** (invariants, assumptions, limitations explicit).
+
+**Why this matters:** Students develop correct intuitions at the conceptual level. When they encounter the math in upper-division courses, the simulation *still works* — they're just seeing deeper layers of the same system.
 
 ### Instructor Resource Suite (Per Demo)
 
@@ -212,9 +258,9 @@ The design draws on established findings in science education:
 
 ### Pilot Data (Grant Scope)
 
-- Year 1: Implement in PI's ASTR 101/201 courses, collect prediction checkpoint data
-- Year 2: Partner institutions (2-3 sites) test and provide feedback
-- Year 3: Publish findings in Astronomy Education Journal, present at AAS
+- Year 1: Implement in PI's ASTR 101 (lecture), ASTR 109 (lab), and upper-division courses; collect prediction checkpoint data
+- Year 2: Partner institutions (2-3 sites) test across their intro and upper-division astronomy courses
+- Year 3: Public release, AAS workshop, journal publication (Astronomy Education Journal, Physics Teacher)
 
 ---
 
@@ -243,7 +289,7 @@ The design draws on established findings in science education:
 ### Sustainability
 
 - **Zero hosting costs** — Static files run in any browser
-- **AI-adaptable architecture** — Documented design enables AI-assisted customization by adopting instructors
+- **AI-augmented development** — Demos built using AI pair-programming; documented architecture enables rapid iteration and instructor customization
 - **Community maintenance** — Open contributions via GitHub
 
 ### Broader Impacts
@@ -251,6 +297,7 @@ The design draws on established findings in science education:
 - **Accessibility-first** — WCAG compliant, usable by students with disabilities
 - **Community college focus** — Where most intro astro is taught, often with fewest resources
 - **HSI/MSI partnerships** — Outreach to institutions serving underrepresented students
+- **Science museum outreach** — Partnership with Fleet Science Center (San Diego) to adapt demos for exhibit use and informal learning environments
 
 ---
 
@@ -262,6 +309,7 @@ The design draws on established findings in science education:
 - Numerical simulation (stellar feedback, radiation hydrodynamics)
 - Scientific visualization
 - Software engineering best practices
+- AI-augmented scientific computing (teaches computational science courses)
 
 **Pedagogical approach:**
 - Evidence-based design grounded in learning science research
@@ -270,9 +318,73 @@ The design draws on established findings in science education:
 
 ### Potential Collaborators
 
-- **STEM Education Researcher** — For assessment instrument development and validation
+- **STEM Education Researcher (SDSU)** — San Diego State has strong science education faculty; co-PI for assessment framework design and research question formulation
 - **Partner Instructors** — At community colleges and HSI/MSI institutions for pilot testing
+- **Fleet Science Center (San Diego)** — Science museum partnership for public outreach; demos adapted for exhibit use and informal learning
 - **Accessibility Consultant** — For WCAG compliance verification
+
+---
+
+## What We Have vs. What the Grant Funds
+
+**This is a Development & Implementation proposal.** The grant funds the *creation and testing* of innovations, not validation of completed work.
+
+### Already Developed (Proof of Concept)
+
+| Asset | Purpose |
+|-------|---------|
+| 10 working demos | Technical feasibility demonstrated |
+| Instructor resource suite | Adoption model proven |
+| Pedagogy contract | Design principles articulated |
+| Layered complexity architecture | Innovation defined |
+| Unit-tested physics models | Quality standard established |
+
+**These assets demonstrate the PI can execute** — not that the research is complete.
+
+**Development methodology:** The PI uses AI pair-programming (Claude Code, Codex) to accelerate demo development. This is not a shortcut — it's a computational astrophysicist applying modern software engineering practices to education research. The approach enables:
+
+- Rapid prototyping with physics correctness maintained
+- Documented, testable code from the start
+- Architecture that other instructors can customize using the same AI tools
+- Execution velocity that makes 30+ demos in 3 years realistic, not aspirational
+
+This is transparent and intentional: AI augmentation is part of the sustainability model.
+
+### What the Grant Funds
+
+| Activity | Year | Deliverable |
+|----------|------|-------------|
+| Expand demo suite | 1-2 | 20+ new layered demos (misconceptions, observational, stellar, gravitational, cosmology, physics) |
+| Develop assessment framework | 1 | With SDSU STEM Ed co-PI; research instruments for measuring reasoning transfer |
+| Pilot across courses | 1-3 | ASTR 101/109, PHYS 195-197, upper-division at PI's institution |
+| Partner institution testing | 2-3 | Community colleges, HSIs, Fleet Science Center |
+| Research on effectiveness | 1-3 | Does layered complexity improve transfer across course levels? |
+| Dissemination | 3 | AAS workshop, journal publications, open-source release |
+
+**The grant enables the research component** — assessment design, multi-site testing, and effectiveness studies — that cannot be done without funding and collaborators.
+
+---
+
+## Why Level 2? (Engaged Student Learning)
+
+NSF IUSE Level 2 ("Development and Implementation") is the right fit for this project:
+
+| Level 2 Criterion | How Cosmic Playground Meets It |
+|-------------------|-------------------------------|
+| **Develop and test innovations** | Novel layered complexity architecture; prediction-checkpoint pedagogy |
+| **Multiple contexts** | ASTR 101/109, ASTR 201+, PHYS 195/196/197 — astronomy and physics courses |
+| **Evidence-based design** | Grounded in misconception research, POE, cognitive load theory |
+| **Broader impact** | Open-source, accessible, community college focus, HSI/MSI partnerships |
+| **Sustainability plan** | Zero hosting costs, AI-adaptable, community maintenance |
+
+**Scope is undergraduate-focused:**
+
+- Lower-division: ASTR 101 (intro lecture) + ASTR 109 (intro lab)
+- Upper-division: ASTR 201+, physics majors taking astrophysics courses
+- Physics sequence: PHYS 195/196/197 (physics for scientists) — demos for blackbody radiation, thermodynamics, gravity, waves
+- Not targeting graduate students — the layered architecture serves the full undergraduate pathway
+
+**Innovation claim:** The layered complexity model is genuinely novel. Rather than creating separate "intro" and "advanced" versions of simulations (which fragments the ecosystem), Cosmic Playground demonstrates that one simulation can serve multiple audiences through progressive disclosure — and students benefit from encountering the *same* tool across their entire undergraduate career.
 
 ---
 
@@ -316,8 +428,8 @@ All six demos have full instructor resource suites:
 
 1. **Finalize demo pedagogy contract** — Document design principles formally ✓
 2. **Identify STEM Ed collaborator** — For assessment instrument development
-3. **Draft NSF IUSE proposal** — Using this vision document as foundation
-4. **Begin Year 1 pilot** — Spring 2026 in ASTR 101/201
+3. **Draft NSF IUSE Level 2 proposal** — Using this vision document as foundation
+4. **Begin Year 1 pilot** — Spring 2026 in ASTR 101, ASTR 109, and upper-division courses
 
 ---
 

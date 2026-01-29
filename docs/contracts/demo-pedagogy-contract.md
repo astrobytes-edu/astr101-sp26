@@ -2,7 +2,7 @@
 
 *Design principles for maximizing learning impact from interactive astronomy demonstrations.*
 
-Version: v1.0 | Status: Active | Owner: Dr. Anna Rosen
+Version: v1.1 | Status: Active | Owner: Dr. Anna Rosen
 
 ---
 
@@ -80,6 +80,34 @@ A demo without structured activities is a toy. Impact requires:
 | **Discussion prompts** | "What do you expect to happen when...?" |
 
 **Anti-pattern:** Free exploration without guided prediction. Students observe without engaging.
+
+### 2.5 Layered Complexity Architecture
+
+Each demo serves multiple course levels through progressive disclosure — not separate "intro" and "advanced" versions.
+
+| Layer | Audience | What's Visible | Design Goal |
+|-------|----------|----------------|-------------|
+| **Conceptual** | ASTR 101/109 | Animation, presets, key observables | Build correct intuitions visually |
+| **Quantitative** | ASTR 201, PHYS 195-197 | Equations, derivations, parameter exploration | Connect intuitions to mathematics |
+| **Advanced** | Upper-division | Full physics, edge cases, research connections | Extend to authentic science |
+
+**Requirements:**
+
+| Requirement | Rationale |
+|-------------|-----------|
+| **Same simulation, toggled depth** | Students encounter familiar tools across courses |
+| **Physics always correct** | No "watered-down" versions that break at edges |
+| **Layer toggles in UI** | Instructors control complexity, not separate URLs |
+| **Learning objectives per layer** | Clear goals for each audience |
+
+**Implementation pattern:**
+
+- Default to conceptual layer (works for ASTR 101 out of the box)
+- "Show equations" toggle reveals quantitative layer
+- "Advanced mode" exposes edge cases, research data, full parameter ranges
+- URL parameters allow instructors to link directly to specific layer
+
+**Anti-pattern:** Creating separate "101 version" and "201 version" of the same demo. This fragments the ecosystem and prevents students from building familiarity across courses.
 
 ---
 
@@ -241,6 +269,14 @@ Before deploying a demo, verify:
 - [ ] Enables prediction-before-observation
 - [ ] Connects to Observable → Model → Inference
 - [ ] Has clear learning objectives by course level
+
+### Layered Complexity
+
+- [ ] Conceptual layer works standalone for ASTR 101/109
+- [ ] Quantitative layer adds equations without breaking intuitions
+- [ ] Layer toggles are clearly labeled in UI
+- [ ] URL parameters support direct linking to specific layers
+- [ ] No separate "intro" and "advanced" versions exist
 
 ### Integration
 - [ ] Instructor index.qmd exists
