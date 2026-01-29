@@ -6,6 +6,13 @@ toc: true
 search: false
 ---
 
+::: {.callout-note title="Navigation"}
+- Instructor hub: [/demos/_instructor/](/demos/_instructor/)
+- Back to this demo guide: [Guide](index.qmd)
+- Student demo: [/demos/keplers-laws/](/demos/keplers-laws/)
+- This demo: [Model](model.qmd) · [Activities](activities.qmd) · [Assessment](assessment.qmd) · [Backlog](backlog.qmd)
+:::
+
 ::: {.callout-roadmap title="How to use this backlog"}
 This is a planning guide. Prefer changes that increase correctness and reduce cognitive friction before adding new features.
 :::
@@ -20,4 +27,3 @@ This is a planning guide. Prefer changes that increase correctness and reduce co
 | P1 | Medium | Low | Docs | Add an explicit “model note” box in the student demo UI (planar 2-body; teaching scale). | `demos/keplers-laws/index.html` |
 | P2 | Medium | Medium | Pedagogy | Add a built-in “prediction checkpoint” mode (pause prompts + guiding questions) aligned to common misconceptions (speed vs distance, period scaling). | `demos/keplers-laws/keplers-laws.js` |
 | P2 | Low | Low | Accessibility | Add an on-screen “keyboard shortcuts” help panel (students forget this exists). | `demos/keplers-laws/index.html` |
-

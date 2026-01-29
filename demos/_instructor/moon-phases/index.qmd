@@ -6,6 +6,12 @@ toc: true
 search: false
 ---
 
+::: {.callout-note title="Navigation"}
+- Instructor hub: [/demos/_instructor/](/demos/_instructor/)
+- Student demo: [/demos/moon-phases/](/demos/moon-phases/)
+- This demo: [Model](model.qmd) · [Activities](activities.qmd) · [Assessment](assessment.qmd) · [Backlog](backlog.qmd)
+:::
+
 ::: {.callout-roadmap title="This guide is instructor-facing"}
 Student demo: `/demos/moon-phases/`  
 Main code: `demos/moon-phases/moon-phases.js`  
@@ -48,4 +54,3 @@ Students should be able to:
 - **Eclipse geometry:** eclipses require New/Full Moon *and* near-node geometry (phases alone are not eclipses).
 - **Angular size:** the Sun and Moon have similar angular sizes, which is why total solar eclipses are possible.
 - **Seasons:** tilt changes the Sun’s path in the sky; phases change because the Moon’s position changes relative to the Sun.
-

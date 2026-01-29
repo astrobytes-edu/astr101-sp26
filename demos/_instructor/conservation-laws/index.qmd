@@ -6,6 +6,12 @@ toc: true
 search: false
 ---
 
+::: {.callout-note title="Navigation"}
+- Instructor hub: [/demos/_instructor/](/demos/_instructor/)
+- Student demo: [/demos/conservation-laws/](/demos/conservation-laws/)
+- This demo: [Model](model.qmd) · [Activities](activities.qmd) · [Assessment](assessment.qmd) · [Backlog](backlog.qmd)
+:::
+
 ::: {.callout-roadmap title="This guide is instructor-facing"}
 Student demo: `/demos/conservation-laws/`  
 Main code: `demos/conservation-laws/conservation-laws.js`  
@@ -71,4 +77,3 @@ Students should also be able to:
 - **Kepler’s Laws:** This demo explains *why* Keplerian orbits take conic shapes in the first place.
 - **Binary Orbits:** The relative orbit is set by the same conservation laws (now with $M_1+M_2$).
 - **(Future) Numerical Integrators:** Conservation drift becomes a visual test of algorithm quality.
-

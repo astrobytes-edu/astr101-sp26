@@ -6,6 +6,12 @@ toc: true
 search: false
 ---
 
+::: {.callout-note title="Navigation"}
+- Instructor hub: [/demos/_instructor/](/demos/_instructor/)
+- Student demo: [/demos/angular-size/](/demos/angular-size/)
+- This demo: [Model](model.qmd) · [Activities](activities.qmd) · [Assessment](assessment.qmd) · [Backlog](backlog.qmd)
+:::
+
 ::: {.callout-roadmap title="This guide is instructor-facing"}
 Student demo: `/demos/angular-size/`  
 Main code: `demos/angular-size/angular-size.js`  
@@ -50,4 +56,3 @@ Students should be able to:
 - **Eclipse geometry:** total solar eclipses require alignment *and* comparable angular sizes of Sun and Moon.
 - **Moon phases:** phases change over the synodic month; angular size does not define phase, but it matters for eclipse appearance.
 - **Seasons:** a cautionary parallel — “what we see” can mislead unless we connect it to a model.
-

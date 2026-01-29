@@ -6,6 +6,12 @@ toc: true
 search: false
 ---
 
+::: {.callout-note title="Navigation"}
+- Instructor hub: [/demos/_instructor/](/demos/_instructor/)
+- Student demo: [/demos/binary-orbits/](/demos/binary-orbits/)
+- This demo: [Model](model.qmd) · [Activities](activities.qmd) · [Assessment](assessment.qmd) · [Backlog](backlog.qmd)
+:::
+
 ::: {.callout-roadmap title="This guide is instructor-facing"}
 Student demo: `/demos/binary-orbits/`
 Main code: `demos/binary-orbits/binary-orbits.js`

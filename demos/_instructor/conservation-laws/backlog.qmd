@@ -6,6 +6,13 @@ toc: true
 search: false
 ---
 
+::: {.callout-note title="Navigation"}
+- Instructor hub: [/demos/_instructor/](/demos/_instructor/)
+- Back to this demo guide: [Guide](index.qmd)
+- Student demo: [/demos/conservation-laws/](/demos/conservation-laws/)
+- This demo: [Model](model.qmd) · [Activities](activities.qmd) · [Assessment](assessment.qmd) · [Backlog](backlog.qmd)
+:::
+
 ::: {.callout-roadmap title="How to use this backlog"}
 This is a planning guide. Prefer changes that increase correctness and reduce cognitive friction before adding new features.
 :::
@@ -35,4 +42,3 @@ This is a planning guide. Prefer changes that increase correctness and reduce co
 - **P1:** High-impact pedagogy or usability (should add soon)
 - **P2:** Nice-to-have enhancements (add when time permits)
 - **P3:** Future extensions (research-level or specialized topics)
-

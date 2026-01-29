@@ -6,6 +6,13 @@ toc: true
 search: false
 ---
 
+::: {.callout-note title="Navigation"}
+- Instructor hub: [/demos/_instructor/](/demos/_instructor/)
+- Back to this demo guide: [Guide](index.qmd)
+- Student demo: [/demos/conservation-laws/](/demos/conservation-laws/)
+- This demo: [Model](model.qmd) · [Activities](activities.qmd) · [Assessment](assessment.qmd) · [Backlog](backlog.qmd)
+:::
+
 ## Clicker questions (ASTR 101)
 
 ### Q1: Escape threshold (conceptual)
@@ -65,4 +72,3 @@ One sentence each:
 
 1. Energy tells you whether the orbit is bound or unbound.
 2. Angular momentum tells you how close the orbit can approach (and the areal sweep rate).
-

@@ -6,6 +6,13 @@ toc: true
 search: false
 ---
 
+::: {.callout-note title="Navigation"}
+- Instructor hub: [/demos/_instructor/](/demos/_instructor/)
+- Back to this demo guide: [Guide](index.qmd)
+- Student demo: [/demos/conservation-laws/](/demos/conservation-laws/)
+- This demo: [Model](model.qmd) · [Activities](activities.qmd) · [Assessment](assessment.qmd) · [Backlog](backlog.qmd)
+:::
+
 ## What the demo computes (in one sentence)
 
 Given an initial position $\mathbf{r}_0$ and velocity $\mathbf{v}_0$ around a central mass, the demo computes the conserved quantities $\varepsilon$ and $h$ and uses them to infer the orbit type (bound vs escape vs flyby).
@@ -113,4 +120,3 @@ So $\mu = GM$ is in AU³/yr², and:
 - No perturbations (no other planets/stars).
 - No relativity.
 - The orbit path is drawn from conic geometry; the demo does **not** attempt ephemeris-grade timing along hyperbolic trajectories.
-

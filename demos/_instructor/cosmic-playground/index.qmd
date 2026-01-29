@@ -6,6 +6,12 @@ toc: true
 search: false
 ---
 
+::: {.callout-note title="Navigation"}
+- Instructor hub: [/demos/_instructor/](/demos/_instructor/)
+- Core demos: [Seasons](/demos/_instructor/seasons/) · [Moon phases](/demos/_instructor/moon-phases/) · [Angular size](/demos/_instructor/angular-size/) · [Eclipse geometry](/demos/_instructor/eclipse-geometry/)
+- Capstone: [Rotation + synthesis](capstone.qmd)
+:::
+
 ::: {.callout-roadmap title="What this page is"}
 This is the instructor-facing “throughline” for the four core Cosmic Playground demos.
 :::
@@ -32,4 +38,3 @@ Astronomy is built on *geometry + light*: we infer reality by connecting **what 
 ## Capstone
 
 - Rotation + synthesis lab: `capstone.qmd`
-

@@ -6,6 +6,13 @@ toc: true
 search: false
 ---
 
+::: {.callout-note title="Navigation"}
+- Instructor hub: [/demos/_instructor/](/demos/_instructor/)
+- Back to this demo guide: [Guide](index.qmd)
+- Student demo: [/demos/conservation-laws/](/demos/conservation-laws/)
+- This demo: [Model](model.qmd) · [Activities](activities.qmd) · [Assessment](assessment.qmd) · [Backlog](backlog.qmd)
+:::
+
 ## MW Quick (3–5 min): Bound vs unbound (prediction first)
 
 **Setup (projector):** Default settings ($M=1\,M_\odot$, $r_0=1\,\mathrm{AU}$).
@@ -60,4 +67,3 @@ Students collect a small dataset by varying:
 At each station, students must answer one question on a worksheet:
 
 > “Set $r_0=1\,\mathrm{AU}$, $M=1\,M_\odot$. Find the smallest speed factor that produces a hyperbolic orbit at direction 0°. Then repeat at direction 60°. Explain the difference using $h$.”
-

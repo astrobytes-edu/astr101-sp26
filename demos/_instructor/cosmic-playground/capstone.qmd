@@ -6,6 +6,12 @@ toc: true
 search: false
 ---
 
+::: {.callout-note title="Navigation"}
+- Instructor hub: [/demos/_instructor/](/demos/_instructor/)
+- Back to suite guide: [Cosmic Playground](index.qmd)
+- Core demos: [Seasons](/demos/_instructor/seasons/) · [Moon phases](/demos/_instructor/moon-phases/) · [Angular size](/demos/_instructor/angular-size/) · [Eclipse geometry](/demos/_instructor/eclipse-geometry/)
+:::
+
 ::: {.callout-roadmap title="Instructor goals for this lab"}
 Make the four demos feel like one coherent “geometry toolkit,” not four disconnected topics. Every station produces evidence that is required for the final synthesis.
 :::
@@ -112,4 +118,3 @@ Required nodes (minimum):
 1) “What was the common structure across all four stations?” (controls → observables → rule)  
 2) “Where did our intuition fail until the model constrained it?”  
 3) “Which single equation/rule felt most powerful, and why?”
-

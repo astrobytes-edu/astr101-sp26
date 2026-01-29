@@ -6,6 +6,13 @@ toc: true
 search: false
 ---
 
+::: {.callout-note title="Navigation"}
+- Instructor hub: [/demos/_instructor/](/demos/_instructor/)
+- Back to this demo guide: [Guide](index.qmd)
+- Student demo: [/demos/keplers-laws/](/demos/keplers-laws/)
+- This demo: [Model](model.qmd) · [Activities](activities.qmd) · [Assessment](assessment.qmd) · [Backlog](backlog.qmd)
+:::
+
 ::: {.callout-roadmap title="How to use this bank"}
 Each item includes a **demo setup** so you can reproduce the scenario live, plus distractors tied to common misconceptions.
 :::
@@ -76,4 +83,3 @@ D. In a fixed direction regardless of position
 
 **Expected:** A line from the star to the planet sweeps out equal areas in equal times.
 :::
-

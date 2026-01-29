@@ -6,6 +6,12 @@ toc: true
 search: false
 ---
 
+::: {.callout-note title="Navigation"}
+- Instructor hub: [/demos/_instructor/](/demos/_instructor/)
+- Student demo: [/demos/seasons/](/demos/seasons/)
+- This demo: [Model](model.qmd) · [Activities](activities.qmd) · [Assessment](assessment.qmd) · [Backlog](backlog.qmd)
+:::
+
 ::: {.callout-roadmap title="This guide is instructor-facing"}
 Student demo: `/demos/seasons/`  
 Main code: `demos/seasons/seasons.js`  
@@ -59,4 +65,3 @@ This demo sets up the shared “geometry language” used in the rest of Cosmic 
 - **Moon phases:** angles and illumination are geometry, not shadow.
 - **Angular size:** what you *see* depends on size and distance; this matters for eclipse totality.
 - **Eclipse geometry:** eclipses require both phase geometry and near-node geometry.
-

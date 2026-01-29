@@ -6,6 +6,13 @@ toc: true
 search: false
 ---
 
+::: {.callout-note title="Navigation"}
+- Instructor hub: [/demos/_instructor/](/demos/_instructor/)
+- Back to this demo guide: [Guide](index.qmd)
+- Student demo: [/demos/keplers-laws/](/demos/keplers-laws/)
+- This demo: [Model](model.qmd) · [Activities](activities.qmd) · [Assessment](assessment.qmd) · [Backlog](backlog.qmd)
+:::
+
 ::: {.callout-roadmap title="Links"}
 Student demo: `/demos/keplers-laws/`  
 Model code (tests + shared): `demos/_assets/keplers-laws-model.js`  
@@ -161,4 +168,3 @@ This is unit tested in:
 - “Time” is a teaching scale, not an ephemeris; the speed control is labeled as years/sec.
 - Vectors are scaled for visibility (not drawn to physical scale).
 :::
-

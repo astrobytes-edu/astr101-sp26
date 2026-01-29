@@ -6,6 +6,13 @@ toc: true
 search: false
 ---
 
+::: {.callout-note title="Navigation"}
+- Instructor hub: [/demos/_instructor/](/demos/_instructor/)
+- Back to this demo guide: [Guide](index.qmd)
+- Student demo: [/demos/keplers-laws/](/demos/keplers-laws/)
+- This demo: [Model](model.qmd) · [Activities](activities.qmd) · [Assessment](assessment.qmd) · [Backlog](backlog.qmd)
+:::
+
 ::: {.callout-roadmap title="Links"}
 Student demo: `/demos/keplers-laws/`  
 Main guide: `index.qmd`  
@@ -73,4 +80,3 @@ Record at the same two points:
 4) **Scaling:** if $a$ doubles (same $M$), what happens to $P$?  
 5) **Connection sentence:** “This connects to another course idea because…”
 :::
-
