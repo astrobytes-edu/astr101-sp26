@@ -2,6 +2,17 @@
  *
  * Goal: pure functions usable both in the browser (via window.SeasonsModel)
  * and in Node tests (via require()).
+ *
+ * MODEL LIMITATIONS:
+ * - Solar declination uses simplified uniform ecliptic longitude approximation
+ *   (δ = arcsin(sin(ε) × sin(L)) with L linear in time). Accuracy: ~1° vs ephemeris.
+ * - Earth-Sun distance uses first-order eccentric orbit (r ≈ 1 - e cos(θ)),
+ *   not a Kepler solver. Distance accurate to ~0.1%.
+ * - Perihelion fixed at day 3 (Jan 3); actual varies ±2 days year-to-year.
+ * - Ignores precession, nutation, and equation of time.
+ *
+ * These simplifications are intentional for teaching: the model correctly
+ * demonstrates that axial tilt causes seasons, not Earth-Sun distance.
  */
 
 (function (root, factory) {
