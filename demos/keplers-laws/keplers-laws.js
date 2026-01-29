@@ -141,6 +141,8 @@
       // Insight box
       insightBox: document.getElementById('insight-box'),
       newtonValues: document.getElementById('newton-values'),
+      newtonVelocityFormula: document.getElementById('newton-velocity-formula'),
+      newtonAccelFormula: document.getElementById('newton-accel-formula'),
 
       // Accessibility
       statusAnnounce: document.getElementById('status-announce')
@@ -302,22 +304,24 @@
 
   /**
    * Convert orbital coordinates to SVG coordinates
-   * Origin at star, x points right, y points up in orbital plane
+   * Origin at star (focus), theta=0 points toward perihelion (left/-x)
+   * @param {number} r - Orbital radius (AU)
+   * @param {number} theta - True anomaly (radians), 0 = perihelion
+   * @returns {{x: number, y: number}} SVG coordinates
    */
   function orbitalToSvg(r, theta) {
-    // Calculate focus offset for star position
-    const c = focusOffset(state.a, state.e);
     // Scale factor: shrink large orbits, expand small ones
     const scale = SVG_SCALE / Math.max(state.a, 1);
 
-    // Orbital position relative to ellipse center
-    const x_orb = r * Math.cos(theta);
+    // Orbital position from focus (star)
+    // theta=0 is perihelion, which points in -x direction (left of star)
+    // theta=pi is aphelion, which points in +x direction (right of star)
+    const x_orb = -r * Math.cos(theta);
     const y_orb = r * Math.sin(theta);
 
-    // SVG coordinates (star at focus, which is offset from center)
     return {
-      x: SVG_CENTER.x + (x_orb) * scale,
-      y: SVG_CENTER.y - (y_orb) * scale  // Flip y for SVG
+      x: SVG_CENTER.x + x_orb * scale,
+      y: SVG_CENTER.y - y_orb * scale  // Flip y for SVG (y increases downward)
     };
   }
 
@@ -523,11 +527,18 @@
       elements.accelUnit.textContent = 'cm/s²';
     }
 
-    // Update Newton mode values in insight box
-    if (state.mode === 'newton') {
-      elements.newtonValues.innerHTML =
-        `v = √(GM(2/r - 1/a)) = ${v.toPrecision(3)} km/s<br>` +
-        `a = GM/r² = ${acc.toPrecision(3)} m/s²`;
+    // Update Newton mode values in insight box with KaTeX
+    if (state.mode === 'newton' && window.katex) {
+      katex.render(
+        `v = \\sqrt{GM\\left(\\frac{2}{r} - \\frac{1}{a}\\right)} = ${v.toPrecision(3)}\\text{ km/s}`,
+        elements.newtonVelocityFormula,
+        { displayMode: false, throwOnError: false }
+      );
+      katex.render(
+        `a = \\frac{GM}{r^2} = ${acc.toPrecision(3)}\\text{ m/s}^2`,
+        elements.newtonAccelFormula,
+        { displayMode: false, throwOnError: false }
+      );
     }
   }
 
@@ -546,8 +557,21 @@
   /**
    * Update slider displays
    */
+  /**
+   * Update slider value displays with adaptive precision
+   */
   function updateSliderDisplays() {
-    elements.aDisplay.textContent = `${state.a.toFixed(2)} AU`;
+    // Semi-major axis: more precision for small values
+    let aText;
+    if (state.a < 1) {
+      aText = `${state.a.toFixed(3)} AU`;
+    } else if (state.a < 10) {
+      aText = `${state.a.toFixed(2)} AU`;
+    } else {
+      aText = `${state.a.toFixed(1)} AU`;
+    }
+    elements.aDisplay.textContent = aText;
+
     elements.eDisplay.textContent = state.e.toFixed(3);
     elements.massDisplay.textContent = `${state.M.toFixed(1)} M☉`;
   }
@@ -1062,6 +1086,12 @@
 
   function init() {
     initElements();
+
+    // Initialize KaTeX for static formulas
+    if (window.AstroUtils && window.AstroUtils.renderAllMath) {
+      AstroUtils.renderAllMath();
+    }
+
     setupSliders();
     setupPresets();
     setupOverlays();

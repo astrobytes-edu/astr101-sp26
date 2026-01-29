@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Kepler's Laws Sandbox | AstroEd</title>
   <link rel="stylesheet" href="../_assets/astro-theme.css">
+  <link rel="stylesheet" href="../_assets/katex/katex.min.css">
   <style>
     /* Timeline */
     .timeline-panel {
@@ -416,7 +417,7 @@
           <p>Empirical patterns discovered from Tycho Brahe's observations:</p>
           <p><strong>Law 1:</strong> Planets orbit in <em>ellipses</em> with the Sun at one focus.</p>
           <p><strong>Law 2:</strong> A line from Sun to planet sweeps <em>equal areas in equal times</em>.</p>
-          <p class="formula">Law 3: P² = a³ (years, AU)</p>
+          <p class="formula">Law 3: <span data-math="P^2 = a^3"></span> (years, AU)</p>
           <p style="color: var(--text-muted); margin-top: 0.75rem;">
             These are <em>descriptions</em> of what we observe. But <em>why</em>?
             Toggle to Newton Mode to find out →
@@ -425,13 +426,13 @@
         <div class="newton-content" style="display: none;">
           <h4>Newton's Insight (1687)</h4>
           <p>One law explains all three of Kepler's patterns:</p>
-          <p class="formula">F = GMm/r²</p>
+          <p class="formula"><span data-math="F = \frac{GMm}{r^2}" data-math-display></span></p>
           <p>Gravity weakens with distance squared. This single force law <em>mathematically implies</em> all of Kepler's empirical laws!</p>
           <p style="margin-top: 0.75rem;"><strong>Current values:</strong></p>
-          <p class="formula" id="newton-values">
-            v = √(GM(2/r - 1/a)) = 29.8 km/s<br>
-            a = GM/r² = 5.93 mm/s²
-          </p>
+          <div class="formula" id="newton-values">
+            <div id="newton-velocity-formula"></div>
+            <div id="newton-accel-formula"></div>
+          </div>
         </div>
       </div>
 
@@ -443,6 +444,7 @@
   <script src="../_assets/astro-utils.js"></script>
   <script src="../_assets/demo-polish.js"></script>
   <script src="../_assets/starfield.js"></script>
+  <script src="../_assets/katex/katex.min.js"></script>
   <script src="keplers-laws.js"></script>
 </body>
 </html>

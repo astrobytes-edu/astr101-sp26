@@ -8,6 +8,19 @@
   display: block;
 }
 
+/* Smooth transitions for orbit changes */
+#orbit-path {
+  transition: all 0.3s ease-out;
+}
+
+#planet {
+  transition: r 0.2s ease-out;
+}
+
+.control-card {
+  transition: opacity 0.2s ease;
+}
+
 /* Layout */
 .readout-panel {
   grid-template-columns: repeat(4, 1fr);
@@ -159,9 +172,25 @@
   font-size: var(--font-size-sm);
 }
 
+/* Formula styling for KaTeX */
 .insight-box .formula {
-  font-family: var(--font-mono);
-  color: var(--cosmic-teal);
   margin: var(--space-sm) 0;
+  padding: var(--space-sm) 0;
+}
+
+.insight-box .formula .katex {
+  font-size: 1.1em;
+  color: var(--cosmic-teal);
+}
+
+#newton-values {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+#newton-velocity-formula,
+#newton-accel-formula {
+  color: var(--cosmic-teal);
 }
 

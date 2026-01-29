@@ -33,6 +33,21 @@ Orbital period: P = 2π√(a³/GM)
 Gravitational acceleration: a = GM/r²
 ```
 
+## Math Rendering
+
+All formulas use KaTeX for proper mathematical typesetting. The demo uses:
+
+- `data-math` attributes for static formulas
+- Direct `katex.render()` for dynamic values
+- `AstroUtils.renderAllMath()` for initialization
+
+LaTeX source for key formulas:
+
+- Kepler's 3rd Law: `P^2 = a^3`
+- Newton's Law: `F = \frac{GMm}{r^2}`
+- Vis-viva: `v = \sqrt{GM\left(\frac{2}{r} - \frac{1}{a}\right)}`
+- Acceleration: `a = \frac{GM}{r^2}`
+
 ## Files
 
 - `index.html` - Demo page with all UI elements
