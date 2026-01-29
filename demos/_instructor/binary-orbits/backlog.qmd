@@ -19,6 +19,7 @@ This is a planning guide. Prefer changes that increase correctness and reduce co
 | P0 | High | Low | Bug | **DONE (2026-01-28):** Fix missing model script tag in index.html. | `demos/binary-orbits/index.html` |
 | P1 | High | Medium | Docs | **DONE (2026-01-28):** Expand README with pedagogical notes and future features. | `demos/binary-orbits/README.md` |
 | P1 | High | High | Docs | **DONE (2026-01-28):** Create instructor resources (index, model, activities, assessment, backlog). | `demos/_instructor/binary-orbits/` |
+| P1 | Medium | Low | UX | **DONE (2026-01-28):** Add preset for **51 Pegasi b** + barycenter distance readout with inside/outside star indicator. | `demos/binary-orbits/` |
 
 ## Active Backlog
 
@@ -26,7 +27,6 @@ This is a planning guide. Prefer changes that increase correctness and reduce co
 |---|---|---|---|---|---|
 | P1 | High | Medium | Physics | Add **Doppler RV curve** overlay showing radial velocity vs time for each body. Critical for exoplanet detection pedagogy. | `demos/binary-orbits/binary-orbits.js` |
 | P1 | High | Medium | Physics | Add **light curve** overlay for edge-on systems (transit/eclipse dips). | `demos/binary-orbits/binary-orbits.js` |
-| P1 | Medium | Low | UX | Add preset for **51 Pegasi b** (the first confirmed exoplanet around a Sun-like star). | `demos/binary-orbits/binary-orbits.js` |
 | P2 | Medium | Medium | Physics | Add **3D inclination** control to show projection effects (why RV gives minimum mass). | `demos/binary-orbits/binary-orbits.js` |
 | P2 | Medium | Medium | Pedagogy | Add **prediction checkpoint** mode with guided questions before revealing answers. | `demos/binary-orbits/binary-orbits.js` |
 | P2 | Low | Low | Accessibility | Add on-screen **keyboard shortcuts** help panel. | `demos/binary-orbits/index.html` |

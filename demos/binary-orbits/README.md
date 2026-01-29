@@ -97,6 +97,7 @@ LaTeX source for key formulas:
 | Sun + Earth | 1.0 | 3e-6 | 1.0 AU | 0.017 |
 | Sun + Jupiter | 1.0 | 9.5e-4 | 5.2 AU | 0.049 |
 | Hot Jupiter | 1.0 | 1e-3 | 0.05 AU | 0.02 |
+| 51 Peg b | 1.11 | 4.5e-4 | 0.052 AU | 0.013 |
 | Proxima b | 0.12 | 4e-6 | 0.049 AU | 0.11 |
 
 ### Binary Star

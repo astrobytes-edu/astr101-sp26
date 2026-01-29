@@ -1,25 +1,44 @@
 /**
- * Binary Orbits Demo - Two-Body Physics Core
+ * Binary Orbits Demo - Two-Body Physics Visualization
  * Interactive demonstration of proper center-of-mass orbital mechanics
  *
  * Both bodies orbit the barycenter with correct physics - even planets
  * cause measurable stellar wobble.
+ *
+ * Physics is delegated to BinaryOrbitsModel (binary-orbits-model.js)
+ * for testability and reuse.
  */
 
 (function() {
   'use strict';
 
   // ============================================
-  // Physical Constants
+  // Model Import
   // ============================================
 
-  // G in solar units: G = 4π² AU³/yr²/M☉ (Kepler's normalization)
-  // This makes P² = a³/M_tot with P in years, a in AU, M in M☉
-  const G_SOLAR = 4 * Math.PI * Math.PI;
+  const Model = typeof window !== 'undefined' ? window.BinaryOrbitsModel : null;
+  if (!Model) {
+    console.error('Binary Orbits: missing window.BinaryOrbitsModel (did you load demos/_assets/binary-orbits-model.js?)');
+    return;
+  }
 
-  // Unit conversions
-  const AU_KM = 1.496e8;           // km per AU
-  const YEAR_SECONDS = 3.156e7;    // seconds per year
+  // ============================================
+  // Constants
+  // ============================================
+
+  // Import from model for backward compatibility
+  const G_SOLAR = Model.G_SOLAR;
+  const AU_KM = Model.AU_KM;
+  const YEAR_SECONDS = Model.YEAR_SECONDS;
+
+  // Body visualization constants
+  const BODY_SIZE = {
+    MIN: 5,           // Minimum body radius (px)
+    MAX: 30,          // Maximum body radius (px)
+    BASE: 12,         // Base radius for 1 M☉
+    LOG_SCALE: 6,     // Scaling factor for log(mass)
+    MIN_MASS: 0.01    // Minimum mass for size calculation
+  };
 
   // ============================================
   // State
@@ -62,222 +81,46 @@
   };
 
   // ============================================
-  // Two-Body Physics Functions
+  // Physics Functions (delegated to Model)
   // ============================================
 
-  /**
-   * Calculate barycenter fraction (center of mass position)
-   * x_cm = M2 / (M1 + M2) × separation from M1
-   *
-   * @param {number} M1 - Mass of body 1 (M☉)
-   * @param {number} M2 - Mass of body 2 (M☉)
-   * @returns {number} Fraction of separation from M1 to barycenter
-   */
+  // Thin wrappers around Model functions for backward compatibility
+  // and to maintain the demo's existing API.
+
   function barycenterFraction(M1, M2) {
-    const M_tot = M1 + M2;
-    if (M_tot === 0) return 0.5;
-    return M2 / M_tot;
+    return Model.barycenterFraction({ M1, M2 });
   }
 
-  /**
-   * Calculate individual semi-major axes for each body's orbit around barycenter
-   *
-   * The key insight: a1 + a2 = a_rel (relative separation)
-   * And: a1/a2 = M2/M1 (inverse mass ratio)
-   *
-   * @param {number} a_rel - Relative separation semi-major axis (AU)
-   * @param {number} M1 - Mass of body 1 (M☉)
-   * @param {number} M2 - Mass of body 2 (M☉)
-   * @returns {{a1: number, a2: number}} Individual orbit semi-major axes (AU)
-   */
   function individualSemiMajor(a_rel, M1, M2) {
-    const M_tot = M1 + M2;
-    if (M_tot === 0) {
-      return { a1: a_rel / 2, a2: a_rel / 2 };
-    }
-    return {
-      a1: a_rel * M2 / M_tot,  // Body 1's orbit size (larger mass = smaller orbit)
-      a2: a_rel * M1 / M_tot   // Body 2's orbit size
-    };
+    return Model.individualSemiMajorAu({ aRel: a_rel, M1, M2 });
   }
 
-  /**
-   * Calculate orbital period using Kepler's 3rd Law
-   * P² = a³ / (M1 + M2)  [with P in years, a in AU, M in M☉]
-   *
-   * @param {number} a_rel - Relative separation semi-major axis (AU)
-   * @param {number} M1 - Mass of body 1 (M☉)
-   * @param {number} M2 - Mass of body 2 (M☉)
-   * @returns {number} Orbital period (years)
-   */
   function orbitalPeriod(a_rel, M1, M2) {
-    const M_tot = M1 + M2;
-    if (M_tot === 0) return Infinity;
-    return Math.sqrt(Math.pow(a_rel, 3) / M_tot);
+    return Model.orbitalPeriodYr({ aRel: a_rel, M1, M2 });
   }
 
-  /**
-   * Calculate orbital radius from true anomaly using polar equation
-   * r = a(1 - e²) / (1 + e × cos(θ))
-   *
-   * @param {number} a - Semi-major axis (AU)
-   * @param {number} e - Eccentricity (0 ≤ e < 1)
-   * @param {number} theta - True anomaly (radians)
-   * @returns {number} Orbital radius (AU)
-   */
   function orbitalRadius(a, e, theta) {
-    if (e >= 1) e = 0.999;  // Safety clamp for bound orbits
-    const numerator = a * (1 - e * e);
-    const denominator = 1 + e * Math.cos(theta);
-    return numerator / denominator;
+    return Model.orbitalRadiusAu({ aAu: a, e, thetaRad: theta });
   }
 
-  /**
-   * Calculate orbital velocity using vis-viva equation
-   * v = √(G × M_tot × (2/r - 1/a))
-   *
-   * Returns velocity in AU/yr, then converts to km/s
-   *
-   * @param {number} r - Current orbital radius (AU)
-   * @param {number} a - Semi-major axis (AU)
-   * @param {number} M1 - Mass of body 1 (M☉)
-   * @param {number} M2 - Mass of body 2 (M☉)
-   * @returns {number} Orbital velocity (km/s)
-   */
   function orbitalVelocity(r, a, M1, M2) {
-    const M_tot = M1 + M2;
-    if (M_tot === 0 || r === 0 || a === 0) return 0;
-
-    // v² = G × M_tot × (2/r - 1/a)  [AU³/yr²/M☉ × M☉ × 1/AU = AU²/yr²]
-    const v_squared = G_SOLAR * M_tot * (2 / r - 1 / a);
-    if (v_squared < 0) return 0;  // Safety for numerical edge cases
-
-    const v_AU_yr = Math.sqrt(v_squared);  // AU/yr
-
-    // Convert to km/s: 1 AU/yr = AU_KM / YEAR_SECONDS km/s
-    const v_kms = v_AU_yr * AU_KM / YEAR_SECONDS;
-    return v_kms;
+    return Model.orbitalVelocityKms({ rAu: r, aAu: a, M1, M2 });
   }
 
-  /**
-   * Calculate gravitational acceleration toward other body
-   * a = G × M_other / r²
-   *
-   * @param {number} r - Distance from other body (AU)
-   * @param {number} M_other - Mass of the other body (M☉)
-   * @returns {number} Gravitational acceleration (m/s²)
-   */
   function gravAcceleration(r, M_other) {
-    if (r === 0) return Infinity;
-
-    // a = G × M / r²  [AU³/yr²/M☉ × M☉ / AU² = AU/yr²]
-    const a_AU_yr2 = G_SOLAR * M_other / (r * r);
-
-    // Convert to m/s²: 1 AU/yr² = (AU_KM × 1000) / (YEAR_SECONDS²) m/s²
-    const AU_M = AU_KM * 1000;
-    const a_ms2 = a_AU_yr2 * AU_M / (YEAR_SECONDS * YEAR_SECONDS);
-    return a_ms2;
+    return Model.gravAccelerationMs2({ rAu: r, M: M_other });
   }
 
-  /**
-   * Calculate the tangent angle to an elliptical orbit at given true anomaly
-   * This is the direction of velocity, NOT simply θ + π/2 for eccentric orbits!
-   *
-   * Uses calculus: tangent = (dx/dθ, dy/dθ) where position is in polar coords
-   * For r = a(1-e²)/(1+e·cosθ), the derivative dr/dθ gives the radial velocity component
-   *
-   * @param {number} a - Semi-major axis of this body's orbit around barycenter (AU)
-   * @param {number} e - Eccentricity
-   * @param {number} theta - True anomaly (radians)
-   * @returns {number} Tangent angle (radians) in our coordinate system
-   */
   function orbitTangentAngle(a, e, theta) {
-    // Semi-latus rectum
-    const p = a * (1 - e * e);
-    const denom = 1 + e * Math.cos(theta);
-    const r = p / denom;
-
-    // dr/dθ for r = p/(1 + e cos θ)
-    const drdTheta = (p * e * Math.sin(theta)) / (denom * denom);
-
-    // Our coordinate convention: x = -r cos θ, y = r sin θ (periapsis to the left)
-    // dx/dθ = -(dr/dθ)cos θ + r sin θ
-    // dy/dθ = (dr/dθ)sin θ + r cos θ
-    const dx = -drdTheta * Math.cos(theta) + r * Math.sin(theta);
-    const dy = drdTheta * Math.sin(theta) + r * Math.cos(theta);
-
-    return Math.atan2(dy, dx);
+    return Model.orbitTangentAngleRad({ aAu: a, e, thetaRad: theta });
   }
 
-  /**
-   * Convert mean anomaly to true anomaly by solving Kepler's equation
-   * M = E - e × sin(E)  (Kepler's equation)
-   * θ = 2 × atan2(√(1+e) × sin(E/2), √(1-e) × cos(E/2))
-   *
-   * Uses Newton-Raphson iteration for eccentric anomaly E
-   *
-   * @param {number} M_anom - Mean anomaly (radians)
-   * @param {number} e - Eccentricity
-   * @returns {number} True anomaly (radians)
-   */
   function meanAnomalyToTrue(M_anom, e) {
-    // Normalize mean anomaly to [0, 2π)
-    M_anom = ((M_anom % (2 * Math.PI)) + 2 * Math.PI) % (2 * Math.PI);
-
-    // For circular orbit, true anomaly = mean anomaly
-    if (e < 1e-10) return M_anom;
-
-    // Newton-Raphson iteration to solve Kepler's equation
-    // M = E - e × sin(E)
-    // f(E) = E - e × sin(E) - M = 0
-    // f'(E) = 1 - e × cos(E)
-
-    let E = M_anom;  // Initial guess
-    const maxIter = 30;
-    const tolerance = 1e-10;
-
-    for (let i = 0; i < maxIter; i++) {
-      const f = E - e * Math.sin(E) - M_anom;
-      const fPrime = 1 - e * Math.cos(E);
-
-      if (Math.abs(fPrime) < 1e-15) break;  // Avoid division by zero
-
-      const dE = f / fPrime;
-      E -= dE;
-
-      if (Math.abs(dE) < tolerance) break;
-    }
-
-    // Convert eccentric anomaly E to true anomaly θ
-    // tan(θ/2) = √((1+e)/(1-e)) × tan(E/2)
-    const sinHalfTheta = Math.sqrt(1 + e) * Math.sin(E / 2);
-    const cosHalfTheta = Math.sqrt(1 - e) * Math.cos(E / 2);
-    const theta = 2 * Math.atan2(sinHalfTheta, cosHalfTheta);
-
-    return theta;
+    return Model.meanToTrueAnomalyRad({ meanAnomalyRad: M_anom, e });
   }
 
-  /**
-   * Convert true anomaly to mean anomaly (for time calculations)
-   *
-   * @param {number} theta - True anomaly (radians)
-   * @param {number} e - Eccentricity
-   * @returns {number} Mean anomaly (radians)
-   */
   function trueToMeanAnomaly(theta, e) {
-    // For circular orbit
-    if (e < 1e-10) return theta;
-
-    // True anomaly → Eccentric anomaly
-    // tan(E/2) = √((1-e)/(1+e)) × tan(θ/2)
-    const sinHalfE = Math.sqrt(1 - e) * Math.sin(theta / 2);
-    const cosHalfE = Math.sqrt(1 + e) * Math.cos(theta / 2);
-    const E = 2 * Math.atan2(sinHalfE, cosHalfE);
-
-    // Eccentric anomaly → Mean anomaly (Kepler's equation)
-    const M = E - e * Math.sin(E);
-
-    return M;
+    return Model.trueToMeanAnomalyRad({ thetaRad: theta, e });
   }
 
   // ============================================
@@ -591,12 +434,34 @@
   // Module Export
   // ============================================
 
+  /**
+   * Get a frozen copy of current state (prevents external mutation)
+   * @returns {Object} Frozen state snapshot
+   */
+  function getState() {
+    return Object.freeze({
+      M1: state.M1,
+      M2: state.M2,
+      a: state.a,
+      e: state.e,
+      theta: state.theta,
+      t: state.t,
+      mode: state.mode,
+      systemType: state.systemType,
+      units: Object.freeze({ ...state.units }),
+      overlays: Object.freeze({ ...state.overlays }),
+      playing: state.playing,
+      speed: state.speed
+    });
+  }
+
   // Expose as global for browser use
   window.BinaryOrbits = {
-    // State (read-only access recommended)
-    state: state,
+    // State access (getState() recommended for external use)
+    state: state,  // Kept for backward compatibility
+    getState: getState,
 
-    // Core physics functions
+    // Core physics (delegated to Model)
     barycenterFraction: barycenterFraction,
     individualSemiMajor: individualSemiMajor,
     orbitalPeriod: orbitalPeriod,
@@ -624,10 +489,11 @@
     PRESETS: PRESETS,
 
     // Constants
-    G_SOLAR: G_SOLAR
-  };
+    G_SOLAR: G_SOLAR,
 
-  console.log('Binary Orbits physics core loaded');
+    // Model reference (for direct access to physics)
+    Model: Model
+  };
 
   // ============================================
   // DOM Element References
@@ -698,6 +564,9 @@
       rValue: document.getElementById('r-value'),
       a1Value: document.getElementById('a1-value'),
       a2Value: document.getElementById('a2-value'),
+      barycenterDistance: document.getElementById('barycenter-distance'),
+      barycenterUnit: document.getElementById('barycenter-unit'),
+      barycenterLocation: document.getElementById('barycenter-location'),
       t1Value: document.getElementById('t1-value'),
       type1Value: document.getElementById('type1-value'),
       type2Value: document.getElementById('type2-value'),
@@ -834,8 +703,10 @@
     elements.separationText.textContent = `r = ${positions.separation.toPrecision(3)} AU`;
 
     // Update body sizes based on mass (log scale for visibility)
-    const r1 = Math.max(5, Math.min(30, 12 + 6 * Math.log10(Math.max(0.01, state.M1))));
-    const r2 = Math.max(5, Math.min(30, 12 + 6 * Math.log10(Math.max(0.01, state.M2))));
+    const r1 = Math.max(BODY_SIZE.MIN, Math.min(BODY_SIZE.MAX,
+      BODY_SIZE.BASE + BODY_SIZE.LOG_SCALE * Math.log10(Math.max(BODY_SIZE.MIN_MASS, state.M1))));
+    const r2 = Math.max(BODY_SIZE.MIN, Math.min(BODY_SIZE.MAX,
+      BODY_SIZE.BASE + BODY_SIZE.LOG_SCALE * Math.log10(Math.max(BODY_SIZE.MIN_MASS, state.M2))));
     elements.body1.setAttribute('r', r1);
     elements.body2.setAttribute('r', r2);
 
@@ -1049,6 +920,45 @@
     elements.a1Value.textContent = formatValue(a1);
     elements.a2Value.textContent = formatValue(a2);
 
+    // Barycenter distance from M1
+    // a1 is in AU; convert to km (1 AU = 1.496e8 km)
+    const AU_KM = 1.496e8;
+    const SOLAR_RADIUS_KM = 6.96e5;
+    const barycenterDistKm = a1 * AU_KM;
+
+    // Get stellar radius if available
+    let stellarRadiusKm = SOLAR_RADIUS_KM; // Default to solar radius
+    if (typeof StellarUtils !== 'undefined') {
+      const R1_solar = StellarUtils.massToRadius(state.M1);
+      stellarRadiusKm = R1_solar * SOLAR_RADIUS_KM;
+    }
+
+    // Format distance display
+    if (barycenterDistKm < 1e6) {
+      // Show in km for small values
+      elements.barycenterDistance.textContent = Math.round(barycenterDistKm).toLocaleString();
+      elements.barycenterUnit.textContent = 'km from M₁';
+    } else {
+      // Show in AU for larger values
+      elements.barycenterDistance.textContent = formatValue(a1);
+      elements.barycenterUnit.textContent = 'AU from M₁';
+    }
+
+    // Inside/outside star indicator
+    const isInsideStar = barycenterDistKm < stellarRadiusKm;
+    if (isInsideStar) {
+      elements.barycenterLocation.textContent = '(inside star)';
+      elements.barycenterLocation.className = 'readout-note inside-star';
+    } else {
+      const distanceRatio = barycenterDistKm / stellarRadiusKm;
+      if (distanceRatio < 10) {
+        elements.barycenterLocation.textContent = `(${distanceRatio.toFixed(1)}× R★ from center)`;
+      } else {
+        elements.barycenterLocation.textContent = '(outside star)';
+      }
+      elements.barycenterLocation.className = 'readout-note outside-star';
+    }
+
     // Stellar properties (temperature and spectral type)
     if (typeof StellarUtils !== 'undefined') {
       const T1 = StellarUtils.massToTemperature(state.M1);
@@ -1206,6 +1116,24 @@
         const a = parseFloat(btn.dataset.a);
         const e = parseFloat(btn.dataset.e);
 
+        // Validate parsed values
+        if (!Number.isFinite(M1) || M1 <= 0) {
+          console.warn('Invalid M1 in preset:', btn.dataset.m1);
+          return;
+        }
+        if (!Number.isFinite(M2) || M2 <= 0) {
+          console.warn('Invalid M2 in preset:', btn.dataset.m2);
+          return;
+        }
+        if (!Number.isFinite(a) || a <= 0) {
+          console.warn('Invalid a in preset:', btn.dataset.a);
+          return;
+        }
+        if (!Number.isFinite(e) || e < 0 || e >= 1) {
+          console.warn('Invalid e in preset:', btn.dataset.e);
+          return;
+        }
+
         // Update state
         state.M1 = M1;
         state.M2 = M2;
@@ -1357,9 +1285,27 @@
     updateBodies();
     updateVectors();
     updateReadouts();
+    updateAriaPosition();
 
     // Continue animation
     state.animationId = requestAnimationFrame(animate);
+  }
+
+  // ============================================
+  // ARIA Updates for Accessibility
+  // ============================================
+
+  /**
+   * Update ARIA aria-valuenow attributes for body position sliders.
+   * Body 1 position is theta in degrees (0-360).
+   * Body 2 position is theta + 180 degrees (opposite side).
+   */
+  function updateAriaPosition() {
+    const thetaDeg = ((state.theta * 180 / Math.PI) % 360 + 360) % 360;
+    const theta2Deg = (thetaDeg + 180) % 360;
+
+    elements.body1Group.setAttribute('aria-valuenow', Math.round(thetaDeg));
+    elements.body2Group.setAttribute('aria-valuenow', Math.round(theta2Deg));
   }
 
   // ============================================
@@ -1421,6 +1367,7 @@
       updateBodies();
       updateVectors();
       updateReadouts();
+      updateAriaPosition();
     }
 
     document.addEventListener('mousemove', onMove);
@@ -1496,6 +1443,7 @@
     updateBodies();
     updateVectors();
     updateReadouts();
+    updateAriaPosition();
   }
 
   // ============================================
@@ -1557,8 +1505,6 @@
 
     // Initial render
     updateAll();
-
-    console.log('Binary Orbits visualization initialized');
   }
 
   // Run initialization when DOM is ready

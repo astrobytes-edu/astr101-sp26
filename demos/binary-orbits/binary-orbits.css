@@ -333,6 +333,26 @@
   border-left: 3px solid #e74c3c;
 }
 
+.readout-item.barycenter-info {
+  border-left: 3px solid #888;
+  position: relative;
+}
+
+.readout-note {
+  font-size: 0.6rem;
+  color: var(--text-muted);
+  margin-top: 0.15rem;
+  font-style: italic;
+}
+
+.readout-note.inside-star {
+  color: #f39c12;
+}
+
+.readout-note.outside-star {
+  color: #27ae60;
+}
+
 /* ============================================
    Animation Controls
    ============================================ */
