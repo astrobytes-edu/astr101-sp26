@@ -1,26 +1,30 @@
 # Cosmic Playground: NSF IUSE Vision Document
 
-*A modern, open-source interactive astronomy simulation toolkit for reasoning-based instruction.*
+*A modern, open-source interactive astronomy and physics simulation ecosystem for reasoning-based instruction — from intro courses through advanced astrophysics.*
 
 **PI:** Dr. Anna Rosen (Computational Astrophysicist)
-**Target Program:** NSF IUSE: EDU (Engaged Student Learning, Level 1 or 2)
+**Target Program:** NSF IUSE: EDU (Engaged Student Learning, Level 2 or 3)
 **Status:** Draft vision document for grant development
 
 ---
 
 ## Executive Summary
 
-**Cosmic Playground** is an open-source suite of interactive astronomy simulations designed for introductory astronomy courses. Unlike general-purpose physics simulators from the 2000s era, Cosmic Playground:
+**Cosmic Playground** is an open-source ecosystem of interactive astronomy and physics simulations spanning introductory through advanced courses. Designed by a computational astrophysicist, every simulation uses **physically correct theory under the hood** — not pedagogical simplifications that break at the edges.
+
+Unlike general-purpose physics simulators from the 2000s era, Cosmic Playground:
 
 1. **Embeds epistemological pedagogy** — Every demo follows the Observable → Model → Inference pattern, teaching students *how astronomers know* not just *what we know*
 
 2. **Provides complete instructor scaffolding** — Each simulation includes Think-Pair-Share activities, clicker questions, misconception registries, and lab protocols
 
-3. **Uses verifiable physics** — Separated, unit-tested physics models validated against real astronomical systems (not black-box simulations)
+3. **Uses rigorously correct physics** — Separated, unit-tested physics models validated against analytic solutions and real astronomical systems (not black-box simulations)
 
-4. **Modern, accessible design** — Web-native (no Flash/Java), responsive, WCAG-compliant, embeddable in any LMS
+4. **Scales from intro to advanced** — Tier 1 (ASTR 101) through Tier 3 (upper-division/grad) with consistent architecture: hydrostatic equilibrium, radiative transfer, GR, fluid dynamics
 
-The project fills a gap: existing astronomy simulations were built for "explore and discover" pedagogy. Cosmic Playground is designed for the prediction-observation-explanation cycle that research shows produces deeper conceptual change.
+5. **Modern, accessible design** — Web-native (no Flash/Java), responsive, WCAG-compliant, embeddable in any LMS
+
+The project fills a gap: existing astronomy simulations were built for "explore and discover" pedagogy with simplified (often incorrect) physics. Cosmic Playground is designed for the prediction-observation-explanation cycle with theory that actually works.
 
 ---
 
@@ -29,6 +33,7 @@ The project fills a gap: existing astronomy simulations were built for "explore 
 ### Intro Astronomy Is Often Taught Badly
 
 Most introductory astronomy courses emphasize memorization over understanding:
+
 - Students recall that "seasons are caused by tilt" without understanding *why* tilt matters
 - Assessment tests factual recall, not reasoning ability
 - The epistemological dimension ("how do we know?") is rarely addressed
@@ -53,6 +58,7 @@ None have: prediction checkpoints, instructor activity protocols, unit-tested ph
 **Astronomy synthesizes observation, theory, and computation.** Students must understand that we *infer* physical reality by testing theoretical models against observational constraints — and increasingly, against computational simulations.
 
 Every Cosmic Playground demo embodies this triad:
+
 - **Observable:** What can students see or measure in the simulation?
 - **Model:** What physical mechanism explains the observation?
 - **Inference:** What can we conclude about things we can't directly see?
@@ -77,12 +83,14 @@ The design requires **prediction before observation** — students commit to the
 #### Principle 2: Observable → Model → Inference Epistemology
 
 Students don't just see "what happens" — they understand *how we know*:
+
 - The binary orbits demo shows stellar wobble → connects to radial velocity detection → explains how we find exoplanets we can't see directly
 - The eclipse geometry demo shows alignment requirements → connects to eclipse prediction → explains how ancient astronomers validated their models
 
 #### Principle 3: Cognitive Load Management
 
 Based on cognitive load theory:
+
 - **Curated presets** from real astronomical systems (51 Pegasi b, Alpha Centauri, not arbitrary parameters)
 - **Progressive disclosure** (advanced features hidden until needed)
 - **Visual hierarchy** (primary physics > readouts > controls)
@@ -103,23 +111,56 @@ Based on cognitive load theory:
 
 ## Deliverables
 
-### Core Simulation Toolkit (10+ Demos)
+### Core Simulation Toolkit (Multi-Level)
+
+Cosmic Playground spans introductory through advanced courses, with rigorously correct physics under the hood.
+
+#### Tier 1: Intro Astronomy (ASTR 101)
 
 **Currently Implemented:**
-1. Seasons — Axial tilt and solar angle
-2. Moon Phases — Viewing geometry of illumination
-3. Eclipse Geometry — Alignment requirements (node + phase)
-4. Angular Size — Distance-size relationship
-5. Kepler's Laws — Orbital mechanics (Kepler and Newton modes)
-6. Binary Orbits — Two-body barycenter physics
 
-**Planned Additions:**
-7. Stellar Parallax — Distance measurement via annual motion
-8. Doppler/Redshift — Spectral line shifts and radial velocity
-9. H-R Diagram — Stellar classification and evolution
-10. Hubble's Law — Expanding universe
-11. Light Curves — Transit and eclipse detection
-12. Spectroscopy — Blackbody radiation and absorption lines
+- Seasons — Axial tilt and solar angle
+- Moon Phases — Viewing geometry of illumination
+- Eclipse Geometry — Alignment requirements (node + phase)
+- Angular Size — Distance-size relationship
+- Kepler's Laws — Orbital mechanics (Kepler and Newton modes)
+- Binary Orbits — Two-body barycenter physics
+
+**Planned:**
+
+- Stellar Parallax — Distance measurement via annual motion
+- Doppler/Redshift — Spectral line shifts and radial velocity
+- H-R Diagram — Stellar classification and evolution
+- Hubble's Law — Expanding universe
+- Light Curves — Transit and eclipse detection
+
+#### Tier 2: Intro Astrophysics (ASTR 201 / Physics Majors)
+
+- Spectroscopy — Blackbody radiation, Wien's law, absorption lines
+- Hydrostatic Equilibrium — Pressure-gravity balance in stars
+- Gas Laws / Equation of State — Ideal gas, degeneracy pressure
+- Radiative Transfer — Optical depth, emission, absorption
+- Tidal Forces — Differential gravity, Roche limit, tidal locking
+- Gravitational Lensing — Light bending, Einstein rings
+
+#### Tier 3: Advanced Astrophysics (Upper Division / Grad Intro)
+
+- Stellar Structure — Lane-Emden equation, polytropes
+- Nuclear Reaction Networks — CNO cycle, pp-chain energetics
+- Accretion Disks — Viscous transport, temperature profiles
+- General Relativity Basics — Schwarzschild metric, orbital precession
+- Radiative Processes — Bremsstrahlung, synchrotron, Compton
+- Fluid Instabilities — Rayleigh-Taylor, Kelvin-Helmholtz
+
+#### Design Principle: Correct Theory Under the Hood
+
+Every demo uses **physically correct models**, not pedagogical simplifications that break at the edges:
+
+- Hydrostatic equilibrium: actual pressure-gravity balance, not "hand-wavy explanations"
+- GR effects: real Schwarzschild precession, not "gravity is like a bowling ball on a trampoline"
+- Radiative transfer: proper optical depth treatment, not "light gets absorbed"
+
+The physics is **testable** (unit tests against analytic solutions) and **documented** (invariants, assumptions, limitations explicit).
 
 ### Instructor Resource Suite (Per Demo)
 
