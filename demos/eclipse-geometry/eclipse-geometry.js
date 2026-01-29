@@ -18,11 +18,11 @@
 
   const CENTER = { x: 200, y: 200 };
   const ORBIT_RADIUS = 100;
-  const DAYS_PER_TROPICAL_YEAR = 365.2422; // days
-  const DAYS_PER_JULIAN_YEAR = 365.25; // days (exact definition)
-  const SIDEREAL_MONTH_DAYS = 27.321661; // days
-  const SYNODIC_MONTH_DAYS = 29.530588; // days (New to New)
-  const MEAN_NODE_REGRESSION_JULIAN_YEARS = 18.61; // Julian years (mean nodal regression period)
+  const DAYS_PER_TROPICAL_YEAR = AstroConstants.TIME.MEAN_TROPICAL_YEAR_DAYS;
+  const DAYS_PER_JULIAN_YEAR = AstroConstants.TIME.JULIAN_YEAR_S / AstroConstants.TIME.DAY_S;
+  const SIDEREAL_MONTH_DAYS = AstroConstants.TIME.MEAN_SIDEREAL_MONTH_DAYS;
+  const SYNODIC_MONTH_DAYS = AstroConstants.TIME.MEAN_SYNODIC_MONTH_DAYS;
+  const MEAN_NODE_REGRESSION_JULIAN_YEARS = AstroConstants.TIME.MEAN_NODE_REGRESSION_JULIAN_YEARS;
 
   const SUN_RATE_DEG_PER_DAY = 360 / DAYS_PER_TROPICAL_YEAR;
   const MOON_RATE_DEG_PER_DAY = 360 / SIDEREAL_MONTH_DAYS;
