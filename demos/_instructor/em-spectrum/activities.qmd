@@ -1,0 +1,30 @@
+---
+title: "EM Spectrum — Activity Protocols"
+subtitle: "MW quick + MW short + Friday lab + station rotation"
+page-layout: article
+toc: true
+search: false
+---
+
+::: {.callout-note title="Navigation"}
+- Instructor hub: [/demos/_instructor/](/demos/_instructor/)
+- Back to this demo guide: [Guide](index.qmd)
+- Student demo: [/demos/em-spectrum/](/demos/em-spectrum/)
+- This demo: [Model](model.qmd) · [Activities](activities.qmd) · [Assessment](assessment.qmd) · [Backlog](backlog.qmd)
+:::
+
+## MW Quick (3–5 min)
+
+[TBD]
+
+## MW Short (8–12 min)
+
+[TBD]
+
+## Friday Lab (20–30+ min)
+
+[TBD]
+
+## Station version (6–8 min)
+
+[TBD]

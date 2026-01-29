@@ -1,0 +1,36 @@
+---
+title: "Parallax Distance — Model & Math (Instructor Deep Dive)"
+subtitle: "What the demo computes, with units, assumptions, and sanity checks"
+page-layout: article
+toc: true
+search: false
+---
+
+::: {.callout-note title="Navigation"}
+- Instructor hub: [/demos/_instructor/](/demos/_instructor/)
+- Back to this demo guide: [Guide](index.qmd)
+- Student demo: [/demos/parallax-distance/](/demos/parallax-distance/)
+- This demo: [Model](model.qmd) · [Activities](activities.qmd) · [Assessment](assessment.qmd) · [Backlog](backlog.qmd)
+:::
+
+::: {.callout-roadmap title="Links"}
+Student demo: `/demos/parallax-distance/`  
+Model code: `demos/_assets/parallax-distance-model.js`  
+UI/visualization code: `demos/parallax-distance/parallax.js`
+:::
+
+## What the demo is modeling (big picture)
+
+[TBD]
+
+## Units + conventions used in the code
+
+[TBD]
+
+## Key relationships to foreground (with meaning + units)
+
+[TBD]
+
+## Assumptions, limitations, and sanity checks
+
+[TBD]

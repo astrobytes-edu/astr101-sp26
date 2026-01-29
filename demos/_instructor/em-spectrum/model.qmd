@@ -1,0 +1,36 @@
+---
+title: "EM Spectrum — Model & Math (Instructor Deep Dive)"
+subtitle: "What the demo computes, with units, assumptions, and sanity checks"
+page-layout: article
+toc: true
+search: false
+---
+
+::: {.callout-note title="Navigation"}
+- Instructor hub: [/demos/_instructor/](/demos/_instructor/)
+- Back to this demo guide: [Guide](index.qmd)
+- Student demo: [/demos/em-spectrum/](/demos/em-spectrum/)
+- This demo: [Model](model.qmd) · [Activities](activities.qmd) · [Assessment](assessment.qmd) · [Backlog](backlog.qmd)
+:::
+
+::: {.callout-roadmap title="Links"}
+Student demo: `/demos/em-spectrum/`  
+Model code: `demos/_assets/em-spectrum-model.js`  
+UI/visualization code: `demos/em-spectrum/em-spectrum.js`
+:::
+
+## What the demo is modeling (big picture)
+
+[TBD]
+
+## Units + conventions used in the code
+
+[TBD]
+
+## Key relationships to foreground (with meaning + units)
+
+[TBD]
+
+## Assumptions, limitations, and sanity checks
+
+[TBD]

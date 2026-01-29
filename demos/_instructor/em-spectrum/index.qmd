@@ -1,0 +1,51 @@
+---
+title: "EM Spectrum"
+subtitle: "Instructor guide (teach-first) + links to model, activities, assessments"
+page-layout: article
+toc: true
+search: false
+---
+
+::: {.callout-note title="Navigation"}
+- Instructor hub: [/demos/_instructor/](/demos/_instructor/)
+- Student demo: [/demos/em-spectrum/](/demos/em-spectrum/)
+- This demo: [Model](model.qmd) · [Activities](activities.qmd) · [Assessment](assessment.qmd) · [Backlog](backlog.qmd)
+:::
+
+::: {.callout-roadmap title="This guide is instructor-facing"}
+Student demo: `/demos/em-spectrum/`  
+Main code: `demos/em-spectrum/em-spectrum.js`  
+Model code: `demos/_assets/em-spectrum-model.js`  
+Data: `demos/em-spectrum/object-data.js`, `demos/em-spectrum/telescope-data.js`
+:::
+
+::: {.callout-roadmap title="Where to go next"}
+- Model + math + assumptions: `model.qmd`
+- In-class activities (MW + Friday lab + station version): `activities.qmd`
+- Assessment bank (clickers + short answer + exit ticket): `assessment.qmd`
+- Future enhancements (planning backlog): `backlog.qmd`
+:::
+
+## Why this demo exists
+
+[TBD]
+
+## Learning goals (ASTR 101)
+
+[TBD]
+
+## Learning goals (ASTR 201 stretch)
+
+[TBD]
+
+## 10–15 minute live-teach script (projector)
+
+[TBD]
+
+## Misconceptions + prediction prompts
+
+[TBD]
+
+## Suggested connections to other demos
+
+[TBD]

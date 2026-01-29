@@ -66,6 +66,26 @@ project:
     - demos/_instructor/index.qmd
     - demos/_instructor/cosmic-playground/index.qmd
     - demos/_instructor/cosmic-playground/capstone.qmd
+    - demos/_instructor/em-spectrum/index.qmd
+    - demos/_instructor/em-spectrum/model.qmd
+    - demos/_instructor/em-spectrum/activities.qmd
+    - demos/_instructor/em-spectrum/assessment.qmd
+    - demos/_instructor/em-spectrum/backlog.qmd
+    - demos/_instructor/blackbody-radiation/index.qmd
+    - demos/_instructor/blackbody-radiation/model.qmd
+    - demos/_instructor/blackbody-radiation/activities.qmd
+    - demos/_instructor/blackbody-radiation/assessment.qmd
+    - demos/_instructor/blackbody-radiation/backlog.qmd
+    - demos/_instructor/telescope-resolution/index.qmd
+    - demos/_instructor/telescope-resolution/model.qmd
+    - demos/_instructor/telescope-resolution/activities.qmd
+    - demos/_instructor/telescope-resolution/assessment.qmd
+    - demos/_instructor/telescope-resolution/backlog.qmd
+    - demos/_instructor/parallax-distance/index.qmd
+    - demos/_instructor/parallax-distance/model.qmd
+    - demos/_instructor/parallax-distance/activities.qmd
+    - demos/_instructor/parallax-distance/assessment.qmd
+    - demos/_instructor/parallax-distance/backlog.qmd
     - demos/_instructor/seasons/index.qmd
     - demos/_instructor/seasons/model.qmd
     - demos/_instructor/seasons/activities.qmd

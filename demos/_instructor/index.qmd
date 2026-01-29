@@ -227,6 +227,82 @@ Embed: `{{</* demo eclipse-geometry height="600px" */>}}`
 :::
 
 ::: {.hub-section}
+## 🔭 Light & measurement demos
+
+::: {.hub-gallery}
+
+::: {.hub-card}
+### 🌈 EM spectrum
+
+Wavelength vs frequency vs photon energy; “what you can see” depends on the detector.
+
+::: {.hub-links}
+[Student demo](/demos/em-spectrum/){.hub-link .primary}
+[Guide](em-spectrum/){.hub-link}
+[Model](em-spectrum/model.qmd){.hub-link}
+[Activities](em-spectrum/activities.qmd){.hub-link}
+[Assessment](em-spectrum/assessment.qmd){.hub-link}
+[Backlog](em-spectrum/backlog.qmd){.hub-link}
+:::
+
+Embed: `{{</* demo em-spectrum height="650px" */>}}`
+:::
+
+::: {.hub-card}
+### 🔥 Blackbody radiation
+
+Temperature changes the peak wavelength + total emitted power (star color ≠ “heat” intuition).
+
+::: {.hub-links}
+[Student demo](/demos/blackbody-radiation/){.hub-link .primary}
+[Guide](blackbody-radiation/){.hub-link}
+[Model](blackbody-radiation/model.qmd){.hub-link}
+[Activities](blackbody-radiation/activities.qmd){.hub-link}
+[Assessment](blackbody-radiation/assessment.qmd){.hub-link}
+[Backlog](blackbody-radiation/backlog.qmd){.hub-link}
+:::
+
+Embed: `{{</* demo blackbody-radiation height="650px" */>}}`
+:::
+
+::: {.hub-card}
+### 🔭 Telescope resolution
+
+Why “bigger telescope” matters: diffraction + wavelength + aperture set a best-case angular resolution.
+
+::: {.hub-links}
+[Student demo](/demos/telescope-resolution/){.hub-link .primary}
+[Guide](telescope-resolution/){.hub-link}
+[Model](telescope-resolution/model.qmd){.hub-link}
+[Activities](telescope-resolution/activities.qmd){.hub-link}
+[Assessment](telescope-resolution/assessment.qmd){.hub-link}
+[Backlog](telescope-resolution/backlog.qmd){.hub-link}
+:::
+
+Embed: `{{</* demo telescope-resolution height="650px" */>}}`
+:::
+
+::: {.hub-card}
+### 📏 Parallax distance
+
+Geometry as a measurement tool: nearer stars shift more; turning a tiny angle into a distance.
+
+::: {.hub-links}
+[Student demo](/demos/parallax-distance/){.hub-link .primary}
+[Guide](parallax-distance/){.hub-link}
+[Model](parallax-distance/model.qmd){.hub-link}
+[Activities](parallax-distance/activities.qmd){.hub-link}
+[Assessment](parallax-distance/assessment.qmd){.hub-link}
+[Backlog](parallax-distance/backlog.qmd){.hub-link}
+:::
+
+Embed: `{{</* demo parallax-distance height="650px" */>}}`
+:::
+
+:::
+:::
+
+::: {.hub-section}
 ## 🛰️ ASTR 201 / mechanics add-ons
 
 ::: {.hub-gallery}
