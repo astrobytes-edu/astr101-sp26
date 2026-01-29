@@ -139,7 +139,7 @@
     // Angle 0 = right side (full moon position, opposite Sun)
     // We add 180 to convert because our angle 0 is "full moon" which is
     // when Moon is on the opposite side from the Sun (which comes from left)
-    const orbitalAngle = moonAngle * Math.PI / 180;
+    const orbitalAngle = AstroUnits.degToRad(moonAngle);
     const moonX = ORBITAL_CENTER.x + ORBITAL_RADIUS * Math.cos(orbitalAngle);
     const moonY = ORBITAL_CENTER.y - ORBITAL_RADIUS * Math.sin(orbitalAngle);
 
@@ -197,7 +197,7 @@
     // Gibbous: squeeze is positive (bulging toward dark side)
     // Crescent: squeeze is negative (curving away from dark side)
 
-    const phaseAngle = normalizedAngle * Math.PI / 180;
+    const phaseAngle = AstroUnits.degToRad(normalizedAngle);
     const squeeze = r * Math.cos(phaseAngle);
 
     // Build the path
@@ -349,7 +349,7 @@
       const dx = svgX - ORBITAL_CENTER.x;
       const dy = ORBITAL_CENTER.y - svgY; // Flip Y for standard math coordinates
 
-      let angle = Math.atan2(dy, dx) * 180 / Math.PI;
+      let angle = AstroUnits.radToDeg(Math.atan2(dy, dx));
       return angle;
     }
 
@@ -378,7 +378,7 @@
       const dx = svgX - ORBITAL_CENTER.x;
       const dy = ORBITAL_CENTER.y - svgY;
 
-      moonAngle = Math.atan2(dy, dx) * 180 / Math.PI;
+      moonAngle = AstroUnits.radToDeg(Math.atan2(dy, dx));
       update();
     }
 
