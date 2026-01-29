@@ -995,6 +995,23 @@
   // Keyboard Navigation
   // ============================================
 
+  /**
+   * Keyboard shortcuts (active when not focused on input/select):
+   *
+   * Planet controls (when planet is focused):
+   *   ArrowLeft        - Step backward 5% of orbit
+   *   Shift+ArrowLeft  - Step backward 1% of orbit (fine)
+   *   ArrowRight       - Step forward 5% of orbit
+   *   Shift+ArrowRight - Step forward 1% of orbit (fine)
+   *   Home             - Jump to perihelion (closest approach)
+   *   End              - Jump to aphelion (farthest point)
+   *   Space            - Toggle play/pause animation
+   *
+   * Global shortcuts:
+   *   K                - Switch to Kepler mode (equal areas)
+   *   N                - Switch to Newton mode (forces)
+   *   1-6              - Select preset orbit (1=Mercury, 2=Earth, etc.)
+   */
   function setupKeyboard() {
     // Planet group keyboard controls
     elements.planetGroup.addEventListener('keydown', (event) => {
