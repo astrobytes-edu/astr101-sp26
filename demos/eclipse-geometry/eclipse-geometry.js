@@ -41,6 +41,11 @@
     apogee: 405500,
   };
 
+  const STORAGE_KEYS = {
+    simSpeed: 'eclipse-geometry.simSpeed',
+    simYearsSlider: 'eclipse-geometry.simYearsSlider',
+  };
+
   // ============================================
   // State
   // ============================================
@@ -123,6 +128,7 @@
       simYearsSlider: document.getElementById('sim-years-slider'),
       simYearsDisplay: document.getElementById('sim-years-display'),
       simSpeedSelect: document.getElementById('sim-speed-select'),
+      simSpeedDisplay: document.getElementById('sim-speed-display'),
 
       // Stats
       statsPanel: document.getElementById('stats-panel'),
@@ -655,11 +661,19 @@
       animateYear();
     });
 
-    // Simulation years slider (logarithmic: 0-100 maps to 1-1000 years)
-    elements.simYearsSlider.addEventListener('input', () => {
-      const years = sliderToYears(parseFloat(elements.simYearsSlider.value));
-      elements.simYearsDisplay.textContent = formatYears(years);
-    });
+	    // Simulation years slider (logarithmic: 0-100 maps to 1-1000 years)
+	    elements.simYearsSlider.addEventListener('input', () => {
+	      const years = sliderToYears(parseFloat(elements.simYearsSlider.value));
+	      elements.simYearsDisplay.textContent = formatYears(years);
+	      safeLocalStorageSet(STORAGE_KEYS.simYearsSlider, elements.simYearsSlider.value);
+	    });
+
+	    if (elements.simSpeedSelect) {
+	      elements.simSpeedSelect.addEventListener('change', () => {
+	        updateSimSpeedDisplay();
+	        safeLocalStorageSet(STORAGE_KEYS.simSpeed, elements.simSpeedSelect.value);
+	      });
+	    }
 
     elements.btnRunSim.addEventListener('click', () => {
       const years = sliderToYears(parseFloat(elements.simYearsSlider.value));
@@ -735,6 +749,50 @@
   function formatYears(years) {
     if (years >= 1000) return (years / 1000).toFixed(1) + 'k';
     return Math.round(years).toString();
+  }
+
+  function safeLocalStorageGet(key) {
+    try {
+      return window.localStorage.getItem(key);
+    } catch {
+      return null;
+    }
+  }
+
+  function safeLocalStorageSet(key, value) {
+    try {
+      window.localStorage.setItem(key, value);
+    } catch {
+      // ignore (private browsing / disabled storage)
+    }
+  }
+
+  function updateSimSpeedDisplay() {
+    if (!elements.simSpeedSelect || !elements.simSpeedDisplay) return;
+    const selected = elements.simSpeedSelect.selectedOptions?.[0];
+    elements.simSpeedDisplay.textContent = selected ? selected.textContent : elements.simSpeedSelect.value;
+  }
+
+  function loadPersistedSimSettings() {
+    if (elements.simSpeedSelect) {
+      const storedSpeed = safeLocalStorageGet(STORAGE_KEYS.simSpeed);
+      const allowed = new Set(Array.from(elements.simSpeedSelect.options).map((opt) => opt.value));
+      if (storedSpeed && allowed.has(storedSpeed)) {
+        elements.simSpeedSelect.value = storedSpeed;
+      }
+    }
+
+    if (elements.simYearsSlider && elements.simYearsDisplay) {
+      const storedSlider = safeLocalStorageGet(STORAGE_KEYS.simYearsSlider);
+      const n = storedSlider === null ? NaN : parseFloat(storedSlider);
+      if (Number.isFinite(n)) {
+        elements.simYearsSlider.value = String(n);
+        const years = sliderToYears(n);
+        elements.simYearsDisplay.textContent = formatYears(years);
+      }
+    }
+
+    updateSimSpeedDisplay();
   }
 
   function getSpeedConfig() {
@@ -1298,10 +1356,11 @@
 	    const defaultYears = 10;
 	    elements.simYearsSlider.value = yearsToSlider(defaultYears);
 	    elements.simYearsDisplay.textContent = formatYears(defaultYears);
+	    loadPersistedSimSettings();
 
-    // Set initial Moon angle slider value (display angle)
-    if (elements.moonAngleSlider && elements.moonAngleDisplay) {
-      const displayAngle = getDisplayMoonAngleDeg();
+	    // Set initial Moon angle slider value (display angle)
+	    if (elements.moonAngleSlider && elements.moonAngleDisplay) {
+	      const displayAngle = getDisplayMoonAngleDeg();
       elements.moonAngleSlider.value = Math.round(displayAngle).toString();
       elements.moonAngleDisplay.textContent = `${Math.round(displayAngle)}°`;
     }
