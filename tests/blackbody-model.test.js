@@ -54,3 +54,20 @@ test('luminosityRatio: Sun at 5772 K has L/L☉ = 1', () => {
   // (T/T☉)⁴ = 1 when T = T☉
   assert.ok(Math.abs(ratio - 1) < 0.001, `expected ~1, got ${ratio}`);
 });
+
+test('temperatureToColor: hot stars are blue (high T → r < b)', () => {
+  const color = BlackbodyModel.temperatureToColor(30000);
+  assert.ok(color.b > color.r, `expected blue > red for 30000 K, got r=${color.r}, b=${color.b}`);
+});
+
+test('temperatureToColor: cool stars are red (low T → r > b)', () => {
+  const color = BlackbodyModel.temperatureToColor(3000);
+  assert.ok(color.r > color.b, `expected red > blue for 3000 K, got r=${color.r}, b=${color.b}`);
+});
+
+test('temperatureToColor: Sun is white-ish (all channels similar)', () => {
+  const color = BlackbodyModel.temperatureToColor(5772);
+  // Sun should be roughly white (all channels > 200)
+  assert.ok(color.r > 200 && color.g > 200 && color.b > 200,
+    `expected white-ish for Sun, got r=${color.r}, g=${color.g}, b=${color.b}`);
+});

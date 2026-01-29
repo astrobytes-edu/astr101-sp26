@@ -123,6 +123,92 @@
     return Math.pow(T / CONSTANTS.T_sun, 4);
   }
 
+  // ============================================
+  // Temperature to Color (Perceptual Approximation)
+  // ============================================
+
+  /**
+   * Convert temperature to approximate blackbody RGB color.
+   * This is a perceptual approximation, not CIE colorimetry.
+   *
+   * @param {number} T - Temperature (K)
+   * @returns {object} {r, g, b} values 0-255
+   */
+  function temperatureToColor(T) {
+    if (!Number.isFinite(T) || T <= 0) {
+      return { r: 0, g: 0, b: 0 };
+    }
+
+    let r, g, b;
+
+    if (T < 1000) {
+      // Very cold - dark red to invisible
+      r = Math.min(255, T / 4);
+      g = 0;
+      b = 0;
+    } else if (T < 4000) {
+      // Red to orange
+      r = 255;
+      g = Math.min(255, (T - 1000) / 12);
+      b = 0;
+    } else if (T < 6500) {
+      // Orange to white
+      r = 255;
+      g = Math.min(255, 180 + (T - 4000) / 35);
+      b = Math.min(255, (T - 4000) / 8);  // Faster blue increase for white-ish Sun
+    } else if (T < 10000) {
+      // White to blue-white
+      r = Math.max(200, 255 - (T - 6500) / 30);
+      g = Math.max(200, 255 - (T - 6500) / 50);
+      b = 255;
+    } else {
+      // Blue-white to blue
+      r = Math.max(150, 200 - (T - 10000) / 200);
+      g = Math.max(180, 200 - (T - 10000) / 300);
+      b = 255;
+    }
+
+    return {
+      r: Math.round(Math.max(0, Math.min(255, r))),
+      g: Math.round(Math.max(0, Math.min(255, g))),
+      b: Math.round(Math.max(0, Math.min(255, b)))
+    };
+  }
+
+  /**
+   * Get descriptive color name from temperature
+   * @param {number} T - Temperature (K)
+   * @returns {string} Color name
+   */
+  function colorName(T) {
+    if (!Number.isFinite(T) || T <= 0) return 'Unknown';
+    if (T < 2000) return 'Infrared (invisible)';
+    if (T < 3500) return 'Deep Red';
+    if (T < 4500) return 'Orange-Red';
+    if (T < 5500) return 'Yellow-Orange';
+    if (T < 6500) return 'Yellow-White';
+    if (T < 8000) return 'White';
+    if (T < 12000) return 'Blue-White';
+    return 'Blue';
+  }
+
+  /**
+   * Get spectral class from temperature
+   * @param {number} T - Temperature (K)
+   * @returns {string} Spectral class (O, B, A, F, G, K, M, L+)
+   */
+  function spectralClass(T) {
+    if (!Number.isFinite(T) || T <= 0) return 'Unknown';
+    if (T >= 30000) return 'O';
+    if (T >= 10000) return 'B';
+    if (T >= 7500) return 'A';
+    if (T >= 6000) return 'F';
+    if (T >= 5200) return 'G';
+    if (T >= 3700) return 'K';
+    if (T >= 2400) return 'M';
+    return 'L+';
+  }
+
   return {
     CONSTANTS,
     wienPeakCm,
@@ -130,5 +216,8 @@
     planckFunction,
     stefanBoltzmannFlux,
     luminosityRatio,
+    temperatureToColor,
+    colorName,
+    spectralClass,
   };
 });
