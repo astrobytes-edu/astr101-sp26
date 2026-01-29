@@ -1114,7 +1114,7 @@
       `${position}, distance ${r.toFixed(2)} AU, velocity ${v.toFixed(1)} km/s, ${phasePct}% through orbit`;
 
     // Update ARIA attributes
-    elements.planetGroup.setAttribute('aria-valuenow', Math.round(state.theta * 180 / Math.PI));
+    elements.planetGroup.setAttribute('aria-valuenow', Math.round(AstroUnits.radToDeg(state.theta)));
     elements.planetGroup.setAttribute('aria-valuetext',
       `${position}, ${r.toFixed(2)} AU from star`);
   }

@@ -1433,7 +1433,7 @@
    * Body 2 position is theta + 180 degrees (opposite side).
    */
   function updateAriaPosition() {
-    const thetaDeg = ((state.theta * 180 / Math.PI) % 360 + 360) % 360;
+    const thetaDeg = ((AstroUnits.radToDeg(state.theta)) % 360 + 360) % 360;
     const theta2Deg = (thetaDeg + 180) % 360;
 
     elements.body1Group.setAttribute('aria-valuenow', Math.round(thetaDeg));
