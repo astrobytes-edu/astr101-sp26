@@ -52,6 +52,8 @@ LaTeX source for key formulas:
 
 - `index.html` - Demo page with all UI elements
 - `keplers-laws.js` - Physics, rendering, and interaction logic
+- `../_assets/keplers-laws-model.js` - Shared, testable model utilities (loaded by the demo)
+- `../../tests/keplers-laws-model.test.js` - Unit tests for the shared model
 - `README.md` - This documentation
 
 ## Controls

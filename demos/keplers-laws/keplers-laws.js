@@ -6,6 +6,12 @@
 (function() {
   'use strict';
 
+  const Model = typeof window !== 'undefined' ? window.KeplersLawsModel : null;
+  if (!Model) {
+    console.error('Kepler’s Laws: missing window.KeplersLawsModel (did you load demos/_assets/keplers-laws-model.js?)');
+    return;
+  }
+
   // ============================================
   // Constants
   // ============================================
@@ -162,8 +168,7 @@
    * @returns {number} Orbital radius (AU)
    */
   function orbitalRadius(a, e, theta) {
-    if (e === 0) return a;
-    return a * (1 - e * e) / (1 + e * Math.cos(theta));
+    return Model.orbitalRadiusAu({ aAu: a, e, thetaRad: theta });
   }
 
   /**
@@ -257,12 +262,7 @@
    * @returns {number} Mean anomaly (radians)
    */
   function trueToMeanAnomaly(theta, e) {
-    // Eccentric anomaly: tan(E/2) = √((1-e)/(1+e)) × tan(θ/2)
-    const tanHalfTheta = Math.tan(theta / 2);
-    const factor = Math.sqrt((1 - e) / (1 + e));
-    const E = 2 * Math.atan(factor * tanHalfTheta);
-    // Mean anomaly: M = E - e⋅sin(E)
-    return E - e * Math.sin(E);
+    return Model.trueToMeanAnomalyRad({ thetaRad: theta, e });
   }
 
   /**
@@ -273,29 +273,7 @@
    * @returns {number} True anomaly (radians)
    */
   function meanToTrueAnomaly(M, e) {
-    // Solve Kepler's equation: M = E - e⋅sin(E)
-    let E = M;  // Initial guess
-    for (let i = 0; i < 10; i++) {
-      const dE = (M - E + e * Math.sin(E)) / (1 - e * Math.cos(E));
-      E += dE;
-      if (Math.abs(dE) < 1e-10) break;
-    }
-    // True anomaly: tan(θ/2) = √((1+e)/(1-e)) × tan(E/2)
-    const factor = Math.sqrt((1 + e) / (1 - e));
-    return 2 * Math.atan(factor * Math.tan(E / 2));
-  }
-
-  /**
-   * Calculate velocity direction angle (perpendicular to radius + flight path angle)
-   * @param {number} theta - True anomaly (radians)
-   * @param {number} e - Eccentricity
-   * @returns {number} Velocity direction angle (radians)
-   */
-  function velocityAngle(theta, e) {
-    // Flight path angle: γ = atan(e⋅sin(θ) / (1 + e⋅cos(θ)))
-    const gamma = Math.atan2(e * Math.sin(theta), 1 + e * Math.cos(theta));
-    // Velocity is perpendicular to radius + flight path angle
-    return theta + Math.PI / 2 + gamma;
+    return Model.meanToTrueAnomalyRad({ meanAnomalyRad: M, e });
   }
 
   // ============================================
@@ -438,7 +416,7 @@
     const r = orbitalRadius(state.a, state.e, state.theta);
     const pos = orbitalToSvg(r, state.theta);
     const v = orbitalVelocity(state.a, r, state.M);
-    const vAngle = velocityAngle(state.theta, state.e);
+    const vAngle = Model.orbitTangentAngleRad({ aAu: state.a, e: state.e, thetaRad: state.theta });
 
     // Scale vectors for visibility
     const vScale = 2;  // pixels per km/s
@@ -501,6 +479,9 @@
   /**
    * Update readout displays
    */
+  const NEWTON_KATEX_MIN_INTERVAL_MS = 120; // ~8 Hz while animating
+  const lastNewtonKatex = { v: null, a: null, tMs: 0 };
+
   function updateReadouts() {
     const r = orbitalRadius(state.a, state.e, state.theta);
     const v = orbitalVelocity(state.a, r, state.M);
@@ -510,35 +491,30 @@
     elements.distanceValue.textContent = r.toPrecision(3);
     elements.periodValue.textContent = P.toPrecision(3);
 
-    // Velocity and acceleration depend on unit mode
-    if (state.units === '101') {
-      elements.velocityValue.textContent = v.toPrecision(3);
-      elements.velocityUnit.textContent = 'km/s';
-
-      // Scientific notation for acceleration (m/s²)
-      elements.accelValue.textContent = acc.toPrecision(3);
-      elements.accelUnit.textContent = 'm/s²';
-    } else {
-      // 201 mode: CGS
-      elements.velocityValue.textContent = (v * 1e5).toPrecision(3);
-      elements.velocityUnit.textContent = 'cm/s';
-
-      elements.accelValue.textContent = (acc * 100).toPrecision(3);
-      elements.accelUnit.textContent = 'cm/s²';
-    }
+    const fmt = Model.formatNewtonReadouts({ vKms: v, aMs2: acc, units: state.units });
+    elements.velocityValue.textContent = fmt.vValue.toPrecision(3);
+    elements.velocityUnit.textContent = fmt.vUnit;
+    elements.accelValue.textContent = fmt.aValue.toPrecision(3);
+    elements.accelUnit.textContent = fmt.aUnit;
 
     // Update Newton mode values in insight box with KaTeX
     if (state.mode === 'newton' && window.katex) {
-      katex.render(
-        `v = \\sqrt{GM\\left(\\frac{2}{r} - \\frac{1}{a}\\right)} = ${v.toPrecision(3)}\\text{ km/s}`,
-        elements.newtonVelocityFormula,
-        { displayMode: false, throwOnError: false }
-      );
-      katex.render(
-        `a = \\frac{GM}{r^2} = ${acc.toPrecision(3)}\\text{ m/s}^2`,
-        elements.newtonAccelFormula,
-        { displayMode: false, throwOnError: false }
-      );
+      const vLatexUnit = fmt.vUnit === 'cm/s' ? '\\text{ cm/s}' : '\\text{ km/s}';
+      const aLatexUnit = fmt.aUnit === 'cm/s²' ? '\\text{ cm/s}^2' : '\\text{ m/s}^2';
+
+      const vLatex = `v = \\sqrt{GM\\left(\\frac{2}{r} - \\frac{1}{a}\\right)} = ${fmt.vValue.toPrecision(3)}${vLatexUnit}`;
+      const aLatex = `a = \\frac{GM}{r^2} = ${fmt.aValue.toPrecision(3)}${aLatexUnit}`;
+
+      const nowMs = typeof performance !== 'undefined' ? performance.now() : Date.now();
+      if (state.playing && nowMs - lastNewtonKatex.tMs < NEWTON_KATEX_MIN_INTERVAL_MS) return;
+      if (!state.playing && lastNewtonKatex.v === vLatex && lastNewtonKatex.a === aLatex) return;
+
+      katex.render(vLatex, elements.newtonVelocityFormula, { displayMode: false, throwOnError: false });
+      katex.render(aLatex, elements.newtonAccelFormula, { displayMode: false, throwOnError: false });
+
+      lastNewtonKatex.v = vLatex;
+      lastNewtonKatex.a = aLatex;
+      lastNewtonKatex.tMs = nowMs;
     }
   }
 

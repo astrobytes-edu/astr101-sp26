@@ -23,3 +23,12 @@ test('Moon Phases loads the shared MoonPhasesModel', () => {
   assert.match(html, /_assets\/moon-phases-model\.js/);
 });
 
+test('Kepler’s Laws loads the shared KeplersLawsModel', () => {
+  const html = readText('demos', 'keplers-laws', 'index.html');
+  assert.match(html, /_assets\/keplers-laws-model\.js/);
+});
+
+test('Kepler’s Laws labels animation speed units', () => {
+  const html = readText('demos', 'keplers-laws', 'index.html');
+  assert.match(html, /years\/sec/i);
+});
