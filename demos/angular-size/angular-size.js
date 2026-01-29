@@ -46,9 +46,8 @@
   const MOON_ORBIT_MAX_ANGULAR_SIZE_DEG = 0.56;
   const MOON_ORBIT = (() => {
     const d = PRESETS.moon.diameter;
-    const degToRad = (deg) => deg * Math.PI / 180;
     const distanceForAngularDiameterDeg = (angularDeg) => {
-      const angleRad = degToRad(angularDeg);
+      const angleRad = AstroUnits.degToRad(angularDeg);
       if (angleRad <= 0) return Infinity;
       return d / (2 * Math.tan(angleRad / 2));
     };
@@ -154,7 +153,7 @@
   }
 
   function getMoonDistanceAtOrbitAngle(orbitAngleDeg) {
-    const phaseRad = orbitAngleDeg * Math.PI / 180;
+    const phaseRad = AstroUnits.degToRad(orbitAngleDeg);
     const w = (Math.cos(phaseRad) + 1) / 2; // 1 at 0° (perigee), 0 at 180° (apogee)
     return MOON_ORBIT.apogeeKm + w * (MOON_ORBIT.perigeeKm - MOON_ORBIT.apogeeKm);
   }
@@ -195,7 +194,7 @@
     const clamped = Math.max(0, Math.min(1, w));
     const cos = 2 * clamped - 1;
     const angleRad = Math.acos(Math.max(-1, Math.min(1, cos))); // 0..π
-    return angleRad * 180 / Math.PI; // 0..180 (symmetry is fine for our display)
+    return AstroUnits.radToDeg(angleRad); // 0..180 (symmetry is fine for our display)
   }
 
   // ============================================
@@ -262,7 +261,7 @@
     elements.objectCircle.setAttribute('cx', objectX);
 
     // Update angle lines
-    const angleRad = angularDeg * (Math.PI / 180);
+    const angleRad = AstroUnits.degToRad(angularDeg);
     const lineLength = objectX - eyeX;
     const halfAngle = angleRad / 2;
     const halfAngleCapped = Math.min(halfAngle, Math.PI / 2 - 0.01);
