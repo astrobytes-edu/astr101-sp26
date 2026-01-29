@@ -74,3 +74,11 @@ test('Parallax Distance loads the shared ParallaxDistanceModel', () => {
   const html = readText('demos', 'parallax-distance', 'index.html');
   assert.match(html, /_assets\/parallax-distance-model\.js/);
 });
+
+test('Binary Orbits includes view zoom + marker size controls', () => {
+  const html = readText('demos', 'binary-orbits', 'index.html');
+  assert.match(html, /id="zoom-slider"/);
+  assert.match(html, /id="zoom-display"/);
+  assert.match(html, /id="marker-size-slider"/);
+  assert.match(html, /id="marker-size-display"/);
+});

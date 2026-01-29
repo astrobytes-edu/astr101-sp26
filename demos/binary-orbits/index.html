@@ -160,6 +160,25 @@
         </div>
       </div>
 
+      <!-- View Controls -->
+      <div class="view-controls">
+        <div class="slider-group">
+          <label>
+            View zoom
+            <span class="value-display" id="zoom-display">1×</span>
+          </label>
+          <input type="range" id="zoom-slider" class="astro-slider" min="0" max="2.3" step="0.01" value="0">
+          <div class="scale-hint">Log scale: 1× - 200× (caps to fit view)</div>
+        </div>
+        <div class="slider-group">
+          <label>
+            Marker size
+            <span class="value-display" id="marker-size-display">1.0×</span>
+          </label>
+          <input type="range" id="marker-size-slider" class="astro-slider" min="0.7" max="2.5" step="0.05" value="1">
+        </div>
+      </div>
+
       <!-- Unit Selectors -->
       <div class="unit-selectors">
         <div class="unit-select">

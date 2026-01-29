@@ -84,6 +84,12 @@
       force: false
     },
 
+    // View controls
+    view: {
+      zoom: 10,         // dimensionless multiplier applied to view scale (capped to fit)
+      markerScale: 1    // dimensionless multiplier applied to body marker radii
+    },
+
     // Animation state
     playing: false,
     speed: 1.0,
@@ -560,6 +566,12 @@
       aDisplay: document.getElementById('a-display'),
       eDisplay: document.getElementById('e-display'),
 
+      // View controls
+      zoomSlider: document.getElementById('zoom-slider'),
+      zoomDisplay: document.getElementById('zoom-display'),
+      markerSizeSlider: document.getElementById('marker-size-slider'),
+      markerSizeDisplay: document.getElementById('marker-size-display'),
+
       // Unit selectors
       velocityUnit: document.getElementById('velocity-unit'),
       periodUnit: document.getElementById('period-unit'),
@@ -626,6 +638,10 @@
   const SVG_VIEWBOX_SIZE = 600;
   const BASE_SCALE = 200;  // pixels per AU at a=1
 
+  function logSliderToZoom(sliderValue) {
+    return Math.pow(10, parseFloat(sliderValue));
+  }
+
   /**
    * Calculate scale factor to fit orbits in viewBox
    * Ensures the larger orbit fits comfortably with padding
@@ -634,7 +650,9 @@
     const { a1, a2 } = individualSemiMajor(state.a, state.M1, state.M2);
     const maxOrbitSize = Math.max(a1, a2) * (1 + state.e);  // Aphelion distance
     const availableRadius = (SVG_VIEWBOX_SIZE / 2) * 0.85;  // 85% of half viewBox
-    return Math.min(BASE_SCALE, availableRadius / maxOrbitSize);
+    const fitScale = availableRadius / maxOrbitSize;
+    const zoomScale = BASE_SCALE * state.view.zoom;
+    return Math.min(zoomScale, fitScale);
   }
 
   /**
@@ -697,19 +715,38 @@
     const positions = computePositions();
     const scale = getScale();
 
+    // Update body sizes based on mass (log scale for visibility)
+    const baseR1 = Math.max(
+      BODY_SIZE.MIN,
+      Math.min(
+        BODY_SIZE.MAX,
+        BODY_SIZE.BASE + BODY_SIZE.LOG_SCALE * Math.log10(Math.max(BODY_SIZE.MIN_MASS, state.M1))
+      )
+    );
+    const baseR2 = Math.max(
+      BODY_SIZE.MIN,
+      Math.min(
+        BODY_SIZE.MAX,
+        BODY_SIZE.BASE + BODY_SIZE.LOG_SCALE * Math.log10(Math.max(BODY_SIZE.MIN_MASS, state.M2))
+      )
+    );
+
+    const r1 = Math.max(3, Math.min(60, baseR1 * state.view.markerScale));
+    const r2 = Math.max(3, Math.min(60, baseR2 * state.view.markerScale));
+
     // Body 1 position
     const pos1 = auToSvg(positions.body1.x, positions.body1.y);
     elements.body1.setAttribute('cx', pos1.x);
     elements.body1.setAttribute('cy', pos1.y);
     elements.body1Label.setAttribute('x', pos1.x);
-    elements.body1Label.setAttribute('y', pos1.y + 35);
+    elements.body1Label.setAttribute('y', pos1.y + r1 + 15);
 
     // Body 2 position
     const pos2 = auToSvg(positions.body2.x, positions.body2.y);
     elements.body2.setAttribute('cx', pos2.x);
     elements.body2.setAttribute('cy', pos2.y);
     elements.body2Label.setAttribute('x', pos2.x);
-    elements.body2Label.setAttribute('y', pos2.y + 35);
+    elements.body2Label.setAttribute('y', pos2.y + r2 + 15);
 
     // Update separation line
     elements.separationLine.setAttribute('x1', pos1.x);
@@ -724,11 +761,6 @@
     elements.separationText.setAttribute('y', midY);
     elements.separationText.textContent = `r = ${positions.separation.toPrecision(3)} AU`;
 
-    // Update body sizes based on mass (log scale for visibility)
-    const r1 = Math.max(BODY_SIZE.MIN, Math.min(BODY_SIZE.MAX,
-      BODY_SIZE.BASE + BODY_SIZE.LOG_SCALE * Math.log10(Math.max(BODY_SIZE.MIN_MASS, state.M1))));
-    const r2 = Math.max(BODY_SIZE.MIN, Math.min(BODY_SIZE.MAX,
-      BODY_SIZE.BASE + BODY_SIZE.LOG_SCALE * Math.log10(Math.max(BODY_SIZE.MIN_MASS, state.M2))));
     elements.body1.setAttribute('r', r1);
     elements.body2.setAttribute('r', r2);
 
@@ -1068,6 +1100,15 @@
       elements.aDisplay.textContent = `${state.a.toPrecision(2)} AU`;
     }
     elements.eDisplay.textContent = state.e.toFixed(2);
+
+    if (elements.zoomDisplay) {
+      const zoom = state.view.zoom;
+      elements.zoomDisplay.textContent = zoom >= 10 ? `${Math.round(zoom)}×` : `${zoom.toFixed(1)}×`;
+    }
+
+    if (elements.markerSizeDisplay) {
+      elements.markerSizeDisplay.textContent = `${state.view.markerScale.toFixed(1)}×`;
+    }
   }
 
   // ============================================
@@ -1135,6 +1176,22 @@
       clearPresetHighlight();
       updateAll();
     });
+  }
+
+  function setupViewControls() {
+    if (elements.zoomSlider) {
+      elements.zoomSlider.addEventListener('input', () => {
+        state.view.zoom = logSliderToZoom(elements.zoomSlider.value);
+        updateAll();
+      });
+    }
+
+    if (elements.markerSizeSlider) {
+      elements.markerSizeSlider.addEventListener('input', () => {
+        state.view.markerScale = parseFloat(elements.markerSizeSlider.value);
+        updateAll();
+      });
+    }
   }
 
   /**
@@ -1548,6 +1605,7 @@
 
     // Setup all event handlers
     setupSliders();
+    setupViewControls();
     setupSystemTypeSelector();
     setupUnitSelectors();
     setupPresets();
@@ -1570,6 +1628,13 @@
     elements.m2Slider.value = massToLogSlider(state.M2);
     elements.aSlider.value = separationToLogSlider(state.a);
     elements.eSlider.value = state.e;
+
+    if (elements.zoomSlider) {
+      elements.zoomSlider.value = Math.log10(state.view.zoom);
+    }
+    if (elements.markerSizeSlider) {
+      elements.markerSizeSlider.value = state.view.markerScale;
+    }
 
     // Initial overlay states
     elements.toggleBarycenter.checked = state.overlays.barycenter;

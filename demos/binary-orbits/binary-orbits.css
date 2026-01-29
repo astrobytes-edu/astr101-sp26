@@ -124,12 +124,12 @@
 /* Body labels */
 #body-1-label {
   fill: #5dade2;
-  font-size: 10px;
+  font-size: 12px;
 }
 
 #body-2-label {
   fill: #e74c3c;
-  font-size: 10px;
+  font-size: 12px;
 }
 
 /* ============================================
@@ -142,7 +142,7 @@
 
 #barycenter-label {
   fill: var(--text-muted);
-  font-size: 10px;
+  font-size: 12px;
 }
 
 #barycenter-group {
@@ -161,7 +161,12 @@
 
 #separation-text {
   fill: var(--text-muted);
-  font-size: 10px;
+  font-size: 13px;
+  font-weight: 600;
+  paint-order: stroke;
+  stroke: rgba(0, 0, 0, 0.85);
+  stroke-width: 3px;
+  stroke-linejoin: round;
 }
 
 /* ============================================
@@ -228,7 +233,7 @@
 }
 
 .slider-group .scale-hint {
-  font-size: 0.65rem;
+  font-size: var(--font-size-xs);
   color: var(--text-muted);
   text-align: right;
   margin-top: 0.25rem;
@@ -238,6 +243,16 @@
    Orbital Controls
    ============================================ */
 .orbital-controls {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-md);
+  margin-bottom: var(--space-md);
+}
+
+/* ============================================
+   View Controls
+   ============================================ */
+.view-controls {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: var(--space-md);
@@ -264,7 +279,7 @@
 }
 
 .unit-select label {
-  font-size: var(--font-size-xs);
+  font-size: var(--font-size-sm);
   color: var(--text-muted);
 }
 
@@ -274,7 +289,7 @@
   background: var(--space-dark, var(--space-deep));
   border: 1px solid var(--border-color);
   color: var(--text-primary);
-  font-size: var(--font-size-xs);
+  font-size: var(--font-size-sm);
   cursor: pointer;
 }
 
@@ -306,13 +321,14 @@
 }
 
 .readout-label {
-  font-size: 0.7rem;
-  color: var(--text-muted);
-  margin-bottom: 0.25rem;
+  font-size: var(--font-size-sm);
+  color: var(--text-secondary);
+  margin-bottom: var(--space-xs);
+  line-height: var(--line-height-tight);
 }
 
 .readout-value {
-  font-size: 1.25rem;
+  font-size: var(--font-size-xl);
   font-weight: 600;
   font-family: var(--font-mono);
   color: var(--cosmic-teal);
@@ -320,7 +336,7 @@
 }
 
 .readout-unit {
-  font-size: 0.65rem;
+  font-size: var(--font-size-sm);
   color: var(--text-muted);
 }
 
@@ -339,7 +355,7 @@
 }
 
 .readout-note {
-  font-size: 0.6rem;
+  font-size: var(--font-size-xs);
   color: var(--text-muted);
   margin-top: 0.15rem;
   font-style: italic;
@@ -631,7 +647,8 @@
    ============================================ */
 @media (max-width: 700px) {
   .mass-controls,
-  .orbital-controls {
+  .orbital-controls,
+  .view-controls {
     grid-template-columns: 1fr;
   }
 
@@ -690,7 +707,7 @@
   }
 
   .readout-value {
-    font-size: 1rem;
+    font-size: var(--font-size-lg);
   }
 
   .preset-btn {
