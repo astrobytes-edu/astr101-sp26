@@ -156,7 +156,7 @@ This is STEM pedagogical software built on **correctness + software engineering 
 3. **Building simulations was expensive/slow** before modern AI-assisted development
 4. **The layered complexity insight** requires teaching across multiple course levels — most faculty teach one course repeatedly
 
-The PI sits at an unusual intersection: computational astrophysicist with software engineering expertise, teaching intro → upper-division → graduate computational courses, applying AI tools to accelerate development while maintaining physics rigor.
+The PI sits at an unusual intersection: computational astrophysicist with software engineering expertise, teaching intro (non-majors and majors) through graduate computational courses, applying AI tools to accelerate development while maintaining physics rigor.
 
 **The inverted model:** Most IUSE proposals feature STEM education researchers partnering with content experts. This proposal inverts that — a content expert with methodological rigor seeking STEM Ed partnership to measure whether that rigor improves learning outcomes. The simulations exist; the research question is whether research-grade standards for teaching tools actually matter.
 
@@ -372,7 +372,7 @@ The design draws on established findings in science education:
 - Software engineering best practices
 - AI-augmented scientific computing
 
-**Teaching span:** Intro astronomy (ASTR 101/109) → upper-division astrophysics (ASTR 201+) → graduate computational science and computational astrophysics courses. This full-spectrum teaching experience directly informs the layered complexity architecture.
+**Teaching span:** Intro astronomy for non-majors (ASTR 101) → intro for majors (ASTR 201) → graduate computational science and computational astrophysics courses. This range — from general education to research methods — directly informs the layered complexity architecture.
 
 **Pedagogical approach:**
 - Evidence-based design grounded in learning science research
