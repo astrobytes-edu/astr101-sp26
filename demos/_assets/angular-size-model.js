@@ -6,11 +6,11 @@
 
 (function (root, factory) {
   if (typeof module === 'object' && typeof module.exports === 'object') {
-    module.exports = factory();
+    module.exports = factory(require('./physics/astro-constants.js'));
   } else {
-    root.AngularSizeModel = factory();
+    root.AngularSizeModel = factory(root.AstroConstants);
   }
-})(typeof globalThis !== 'undefined' ? globalThis : this, function () {
+})(typeof globalThis !== 'undefined' ? globalThis : this, function (AstroConstants) {
   'use strict';
 
   function angularDiameterDeg({ diameterKm, distanceKm }) {
@@ -46,7 +46,7 @@
     sun: {
       name: 'Sun',
       diameter: 1.392e6,  // km
-      distance: 1.496e8,  // km (1 AU)
+      distance: AstroConstants ? AstroConstants.LENGTH.KM_PER_AU : 149597870.7,  // km (1 AU)
       category: 'astronomical',
       color: 'sun',
       description: 'Our star'
