@@ -101,6 +101,15 @@
     );
   }
 
+  // Angle conversions
+  function degToRad(deg) {
+    return (deg * Math.PI) / 180;
+  }
+
+  function radToDeg(rad) {
+    return (rad * 180) / Math.PI;
+  }
+
   return {
     daysToSeconds,
     secondsToDays,
@@ -120,5 +129,7 @@
     cmPerS2ToAuPerYr2,
     au3PerYr2ToCm3PerS2,
     cm3PerS2ToAu3PerYr2,
+    degToRad,
+    radToDeg,
   };
 });

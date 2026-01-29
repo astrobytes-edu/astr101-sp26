@@ -44,3 +44,22 @@ test('Units converts AU^3/yr^2 to cm^3/s^2 (for mu)', () => {
   assert.ok(Math.abs(one - expected) / expected < 1e-15);
   assert.ok(Math.abs(Units.cm3PerS2ToAu3PerYr2(expected) - 1) < 1e-15);
 });
+
+// Angle conversion tests
+const AstroUnits = Units;  // Alias for consistency with plan
+
+test('degToRad converts 180° to π radians', () => {
+  const result = AstroUnits.degToRad(180);
+  assert.ok(Math.abs(result - Math.PI) < 1e-12, `expected π, got ${result}`);
+});
+
+test('radToDeg converts π radians to 180°', () => {
+  const result = AstroUnits.radToDeg(Math.PI);
+  assert.ok(Math.abs(result - 180) < 1e-12, `expected 180, got ${result}`);
+});
+
+test('degToRad and radToDeg are inverses', () => {
+  const original = 45;
+  const result = AstroUnits.radToDeg(AstroUnits.degToRad(original));
+  assert.ok(Math.abs(result - original) < 1e-12, `expected ${original}, got ${result}`);
+});
