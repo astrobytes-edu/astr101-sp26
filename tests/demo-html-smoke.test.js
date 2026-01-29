@@ -37,3 +37,8 @@ test("Kepler's Laws includes a model note", () => {
   const html = readText('demos', 'keplers-laws', 'index.html');
   assert.match(html, /model note/i);
 });
+
+test("Kepler's Laws includes keyboard shortcuts help", () => {
+  const html = readText('demos', 'keplers-laws', 'index.html');
+  assert.match(html, /keyboard shortcuts/i);
+});
