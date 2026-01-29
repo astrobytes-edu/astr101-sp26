@@ -47,3 +47,20 @@ test('Seasons hour-angle grid is not hardcoded as spoke-like lines', () => {
   const html = readText('demos', 'seasons', 'index.html');
   assert.doesNotMatch(html, /<line\\b[^>]*\\bclass\\s*=\\s*\"hour-grid\"/i);
 });
+
+test('Binary Orbits readouts include a collapsed advanced section for first-time users', () => {
+  const html = readText('demos', 'binary-orbits', 'index.html');
+  assert.match(html, /<details\b[^>]*>\s*<summary>\s*(Advanced|More)\s+readouts/i);
+});
+
+test('Conservation Laws includes animation controls', () => {
+  const html = readText('demos', 'conservation-laws', 'index.html');
+  assert.match(html, /id="btn-play"/);
+  assert.match(html, /id="btn-pause"/);
+  assert.match(html, /id="btn-reset"/);
+});
+
+test("Kepler's Laws includes an equal-time markers group", () => {
+  const html = readText('demos', 'keplers-laws', 'index.html');
+  assert.match(html, /id="equal-time-markers"/);
+});

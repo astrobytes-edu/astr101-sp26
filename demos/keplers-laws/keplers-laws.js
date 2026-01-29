@@ -92,6 +92,7 @@
       // Overlays
       equalAreasGroup: document.getElementById('equal-areas-group'),
       equalAreasWedge: document.getElementById('equal-areas-wedge'),
+      equalTimeMarkers: document.getElementById('equal-time-markers'),
       velocityVector: document.getElementById('velocity-vector'),
       velocityLine: document.getElementById('velocity-line'),
       forceVector: document.getElementById('force-vector'),
@@ -484,6 +485,34 @@
 
     pathD += ' Z';
     elements.equalAreasWedge.setAttribute('d', pathD);
+
+    // Equal-time markers (uniform in mean anomaly).
+    if (elements.equalTimeMarkers) {
+      const N = 12;
+      const group = elements.equalTimeMarkers;
+      group.setAttribute('pointer-events', 'none');
+
+      if (group.childElementCount !== N) {
+        group.innerHTML = '';
+        for (let i = 0; i < N; i++) {
+          const c = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+          c.setAttribute('r', '2');
+          c.setAttribute('fill', 'var(--accent-blue)');
+          c.setAttribute('opacity', '0.75');
+          group.appendChild(c);
+        }
+      }
+
+      for (let i = 0; i < N; i++) {
+        const M = (2 * Math.PI * i) / N;
+        const theta = meanToTrueAnomaly(M, state.e);
+        const r = orbitalRadius(state.a, state.e, theta);
+        const pos = orbitalToSvg(r, theta);
+        const c = group.children[i];
+        c.setAttribute('cx', pos.x);
+        c.setAttribute('cy', pos.y);
+      }
+    }
   }
 
   /**
@@ -510,7 +539,11 @@
     elements.accelValue.textContent = fmt.aValue.toPrecision(3);
     elements.accelUnit.textContent = fmt.aUnit;
 
-    // Conservation-law readouts (specific quantities)
+    // Conservation-law readouts (specific quantities).
+    // "Specific" means per unit mass, so:
+    // - specific energy ε has units [length^2/time^2]
+    // - specific angular momentum h has units [length^2/time]
+    // We show AU^2/yr^2 ("teaching units") for intuition, or cm^2/s^2 (CGS) for astrophysics conventions.
     if (elements.energyValue && elements.angmomValue) {
       if (state.units === '201') {
         const rCm = AstroUnits.auToCm(r);

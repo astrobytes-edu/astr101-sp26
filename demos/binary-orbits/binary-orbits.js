@@ -998,7 +998,11 @@
       }
     }
 
-    // Conservation-law readouts (relative-orbit specific quantities)
+    // Conservation-law readouts (relative-orbit specific quantities).
+    // "Specific" means per unit mass (here: per unit reduced mass), so:
+    // - specific energy ε has units [length^2/time^2]
+    // - specific angular momentum h has units [length^2/time]
+    // The UI toggles between AU^2/yr^2 ("teaching units") and cm^2/s^2 (CGS).
     if (elements.energyValue && elements.angmomValue) {
       const muAu3Yr2 = TwoBody.muAu3Yr2FromMassSolar(state.M1 + state.M2);
       const rAu = positions.separation;

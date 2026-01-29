@@ -29,6 +29,26 @@
     r0Au: 1,
     speedFactor: 1,
     directionDeg: 0,
+
+    playing: false,
+    animationId: null,
+  };
+
+  const anim = {
+    nuRad: 0,
+    startNuRad: 0,
+    nuMin: 0,
+    nuMax: 0,
+    dir: 1,
+
+    ecc: NaN,
+    pAu: NaN,
+    omegaRad: NaN,
+    orbitType: 'invalid',
+
+    scalePxPerAu: 1,
+    vLenPx: 60,
+    lastTimeMs: 0,
   };
 
   let elements = {};
@@ -38,6 +58,10 @@
       orbitPath: document.getElementById('orbit-path'),
       particle: document.getElementById('particle'),
       velocityLine: document.getElementById('velocity-line'),
+
+      btnPlay: document.getElementById('btn-play'),
+      btnPause: document.getElementById('btn-pause'),
+      btnReset: document.getElementById('btn-reset'),
 
       massSlider: document.getElementById('mass-slider'),
       massDisplay: document.getElementById('mass-display'),
@@ -89,6 +113,126 @@
       x: CENTER.x + xAu * scalePxPerAu,
       y: CENTER.y - yAu * scalePxPerAu,
     };
+  }
+
+  function wrap2Pi(rad) {
+    const twoPi = 2 * Math.PI;
+    return ((rad % twoPi) + twoPi) % twoPi;
+  }
+
+  function conicPositionAndTangentAu({ ecc, pAu, omegaRad, nuRad }) {
+    if (!Number.isFinite(ecc) || ecc < 0) return null;
+    if (!Number.isFinite(pAu) || !(pAu > 0)) return null;
+    if (!Number.isFinite(omegaRad)) return null;
+    if (!Number.isFinite(nuRad)) return null;
+
+    const cosNu = Math.cos(nuRad);
+    const sinNu = Math.sin(nuRad);
+    const denom = 1 + ecc * cosNu;
+    if (!(denom > 0)) return null;
+
+    const r = pAu / denom;
+    const drdNu = (pAu * ecc * sinNu) / (denom * denom);
+
+    const xOrb = r * cosNu;
+    const yOrb = r * sinNu;
+    const dxOrb = drdNu * cosNu - r * sinNu;
+    const dyOrb = drdNu * sinNu + r * cosNu;
+
+    const cosO = Math.cos(omegaRad);
+    const sinO = Math.sin(omegaRad);
+
+    const xAu = xOrb * cosO - yOrb * sinO;
+    const yAu = xOrb * sinO + yOrb * cosO;
+    const dxAu = dxOrb * cosO - dyOrb * sinO;
+    const dyAu = dxOrb * sinO + dyOrb * cosO;
+
+    return { xAu, yAu, dxAu, dyAu };
+  }
+
+  function renderParticleAndVelocity() {
+    if (!elements.particle || !elements.velocityLine) return;
+
+    const pos = conicPositionAndTangentAu({
+      ecc: anim.ecc,
+      pAu: anim.pAu,
+      omegaRad: anim.omegaRad,
+      nuRad: anim.nuRad,
+    });
+    if (!pos) return;
+
+    const pSvg = toSvg({ xAu: pos.xAu, yAu: pos.yAu }, anim.scalePxPerAu);
+    elements.particle.setAttribute('cx', pSvg.x.toFixed(2));
+    elements.particle.setAttribute('cy', pSvg.y.toFixed(2));
+
+    // Tangent direction in SVG coordinates (note y flip).
+    const dxSvg = pos.dxAu * anim.scalePxPerAu;
+    const dySvg = -pos.dyAu * anim.scalePxPerAu;
+    const mag = Math.sqrt(dxSvg * dxSvg + dySvg * dySvg);
+    const ux = mag > 0 ? (dxSvg / mag) * anim.dir : 0;
+    const uy = mag > 0 ? (dySvg / mag) * anim.dir : 0;
+
+    elements.velocityLine.setAttribute('x1', pSvg.x.toFixed(2));
+    elements.velocityLine.setAttribute('y1', pSvg.y.toFixed(2));
+    elements.velocityLine.setAttribute('x2', (pSvg.x + ux * anim.vLenPx).toFixed(2));
+    elements.velocityLine.setAttribute('y2', (pSvg.y + uy * anim.vLenPx).toFixed(2));
+  }
+
+  function stopAnimation() {
+    state.playing = false;
+    if (state.animationId) {
+      cancelAnimationFrame(state.animationId);
+      state.animationId = null;
+    }
+    if (elements.btnPlay) elements.btnPlay.disabled = false;
+    if (elements.btnPause) elements.btnPause.disabled = true;
+  }
+
+  function resetAnimation() {
+    stopAnimation();
+    anim.dir = 1;
+    anim.nuRad = anim.startNuRad;
+    renderParticleAndVelocity();
+  }
+
+  function startAnimation() {
+    if (state.playing) return;
+    if (!Number.isFinite(anim.ecc) || !Number.isFinite(anim.pAu) || !Number.isFinite(anim.omegaRad)) return;
+    if (!Number.isFinite(anim.nuMin) || !Number.isFinite(anim.nuMax)) return;
+    if (anim.orbitType === 'invalid') return;
+
+    state.playing = true;
+    if (elements.btnPlay) elements.btnPlay.disabled = true;
+    if (elements.btnPause) elements.btnPause.disabled = false;
+
+    anim.lastTimeMs = typeof performance !== 'undefined' ? performance.now() : Date.now();
+
+    function tick(nowMs) {
+      if (!state.playing) return;
+      const dt = (nowMs - anim.lastTimeMs) / 1000;
+      anim.lastTimeMs = nowMs;
+
+      const nuSpeedRadPerSec = 1.0;
+      anim.nuRad += anim.dir * nuSpeedRadPerSec * dt;
+
+      if (anim.ecc < 1) {
+        anim.nuRad = wrap2Pi(anim.nuRad);
+      } else {
+        if (anim.nuRad > anim.nuMax) {
+          anim.nuRad = anim.nuMax;
+          anim.dir = -1;
+        }
+        if (anim.nuRad < anim.nuMin) {
+          anim.nuRad = anim.nuMin;
+          anim.dir = 1;
+        }
+      }
+
+      renderParticleAndVelocity();
+      state.animationId = requestAnimationFrame(tick);
+    }
+
+    state.animationId = requestAnimationFrame(tick);
   }
 
   function buildPathD(points, scalePxPerAu) {
@@ -144,6 +288,8 @@
   }
 
   function update() {
+    stopAnimation();
+
     const muAu3Yr2 = TwoBody.muAu3Yr2FromMassSolar(state.massSolar);
     const vCirc = TwoBody.circularSpeedAuPerYr({ muAu3Yr2, rAu: state.r0Au });
     const speedAuYr = state.speedFactor * vCirc;
@@ -173,24 +319,37 @@
 
     elements.orbitPath.setAttribute('d', buildPathD(points, scalePxPerAu));
 
-    // Place particle at initial position (r0 on +x axis).
-    const p0 = toSvg({ xAu: state.r0Au, yAu: 0 }, scalePxPerAu);
-    elements.particle.setAttribute('cx', p0.x.toFixed(2));
-    elements.particle.setAttribute('cy', p0.y.toFixed(2));
+    // Animation parameters (reuse the conic definition used for plotting).
+    const domain = Model.conicTrueAnomalyDomainRad({ ecc: els.ecc });
+    anim.orbitType = els.orbitType;
+    anim.ecc = Number.isFinite(els.ecc) ? els.ecc : NaN;
+    anim.pAu = Number.isFinite(els.pAu) ? els.pAu : NaN;
+    anim.omegaRad = Number.isFinite(els.omegaRad) ? els.omegaRad : NaN;
+    anim.scalePxPerAu = scalePxPerAu;
+    anim.vLenPx = Math.max(0, Math.min(110, 50 * state.speedFactor));
+    anim.nuMin = domain.nuMin;
+    anim.nuMax = domain.nuMax;
 
-    // Velocity arrow at initial point (direction only; length is teaching scale).
-    const vMag = Math.sqrt(vVecAuYr.vxAuYr * vVecAuYr.vxAuYr + vVecAuYr.vyAuYr * vVecAuYr.vyAuYr);
-    const vLen = Math.max(0, Math.min(110, 50 * state.speedFactor));
-    let dx = 0;
-    let dy = 0;
-    if (vMag > 0) {
-      dx = (vVecAuYr.vxAuYr / vMag) * vLen;
-      dy = -(vVecAuYr.vyAuYr / vMag) * vLen;
+    // Initial position is r0 on +x axis; map to conic true anomaly (ν) in the orbit frame.
+    if (rVecAu && Number.isFinite(anim.omegaRad)) {
+      const cosO = Math.cos(anim.omegaRad);
+      const sinO = Math.sin(anim.omegaRad);
+      const xOrb0 = rVecAu.xAu * cosO + rVecAu.yAu * sinO;
+      const yOrb0 = -rVecAu.xAu * sinO + rVecAu.yAu * cosO;
+      let nu0 = Math.atan2(yOrb0, xOrb0);
+      if (Number.isFinite(anim.ecc) && anim.ecc < 1) nu0 = wrap2Pi(nu0);
+      anim.startNuRad = nu0;
+      anim.nuRad = nu0;
+      anim.dir = 1;
     }
-    elements.velocityLine.setAttribute('x1', p0.x.toFixed(2));
-    elements.velocityLine.setAttribute('y1', p0.y.toFixed(2));
-    elements.velocityLine.setAttribute('x2', (p0.x + dx).toFixed(2));
-    elements.velocityLine.setAttribute('y2', (p0.y + dy).toFixed(2));
+
+    // Render particle + velocity direction at the initial state.
+    renderParticleAndVelocity();
+
+    // Disable animation if the orbit is not drawable.
+    if (elements.btnPlay) {
+      elements.btnPlay.disabled = orbitType === 'invalid' || !Number.isFinite(anim.nuMin) || !Number.isFinite(anim.nuMax);
+    }
 
     // Readouts
     elements.orbitType.textContent = orbitType;
@@ -258,6 +417,11 @@
   function init() {
     initElements();
     setupControls();
+    if (elements.btnPlay && elements.btnPause && elements.btnReset) {
+      elements.btnPlay.addEventListener('click', startAnimation);
+      elements.btnPause.addEventListener('click', stopAnimation);
+      elements.btnReset.addEventListener('click', resetAnimation);
+    }
     updateSliderDisplays();
     update();
 
@@ -274,4 +438,3 @@
     init();
   }
 })();
-

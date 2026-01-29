@@ -29,6 +29,29 @@ test('anomaly conversions invert (moderate e)', () => {
   }
 });
 
+test('Kepler solver converges for high e (regression)', () => {
+  const e = 0.999;
+  for (const deg of [0, 20, 60, 120, 179, 240, 300]) {
+    const theta = (deg * Math.PI) / 180;
+    const M = TwoBody.trueToMeanAnomalyRad({ thetaRad: theta, e });
+    const theta2 = TwoBody.meanToTrueAnomalyRad({ meanAnomalyRad: M, e });
+    assert.ok(Math.abs(wrapPi(theta2 - theta)) < 1e-8);
+  }
+});
+
+test('TwoBodyAnalytic exports trueToEccentricAnomalyRad', () => {
+  assert.equal(typeof TwoBody.trueToEccentricAnomalyRad, 'function');
+});
+
+test('trueToEccentricAnomalyRad is consistent with trueToMeanAnomalyRad', () => {
+  const e = 0.6;
+  const thetaRad = 1.0;
+  const E = TwoBody.trueToEccentricAnomalyRad({ thetaRad, e });
+  const M1 = TwoBody.trueToMeanAnomalyRad({ thetaRad, e });
+  const M2 = E - e * Math.sin(E);
+  assert.ok(Math.abs(M1 - M2) < 1e-12);
+});
+
 test('teaching-unit wrapper: P_yr = sqrt(a^3/M) (Kepler normalization)', () => {
   assert.ok(Math.abs(TwoBody.orbitalPeriodYrFromAuSolar({ aAu: 1, massSolar: 1 }) - 1) < 1e-12);
   assert.ok(Math.abs(TwoBody.orbitalPeriodYrFromAuSolar({ aAu: 8, massSolar: 1 }) - Math.pow(8, 1.5)) < 1e-12);

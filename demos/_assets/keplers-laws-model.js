@@ -13,6 +13,15 @@
 })(typeof globalThis !== 'undefined' ? globalThis : this, function () {
   'use strict';
 
+  const TwoBody =
+    typeof window !== 'undefined'
+      ? window.TwoBodyAnalytic
+      : require('./physics/two-body-analytic.js');
+
+  if (!TwoBody) {
+    throw new Error('KeplersLawsModel: missing TwoBodyAnalytic (load demos/_assets/physics/two-body-analytic.js first)');
+  }
+
   function normalizeAngleRad(rad) {
     const twoPi = 2 * Math.PI;
     return ((rad % twoPi) + twoPi) % twoPi;
@@ -52,44 +61,8 @@
     return Math.atan2(dy, dx);
   }
 
-  function trueToEccentricAnomalyRad({ thetaRad, e }) {
-    if (!Number.isFinite(e) || e < 0 || e >= 1) return NaN;
-
-    // Robust conversion using atan2 forms (avoids tan-half-angle quadrant issues).
-    const cosT = Math.cos(thetaRad);
-    const sinT = Math.sin(thetaRad);
-    const denom = 1 + e * cosT;
-    const cosE = (e + cosT) / denom;
-    const sinE = (Math.sqrt(1 - e * e) * sinT) / denom;
-    return Math.atan2(sinE, cosE);
-  }
-
-  function trueToMeanAnomalyRad({ thetaRad, e }) {
-    const E = trueToEccentricAnomalyRad({ thetaRad, e });
-    return E - e * Math.sin(E);
-  }
-
-  function meanToTrueAnomalyRad({ meanAnomalyRad, e }) {
-    if (!Number.isFinite(e) || e < 0 || e >= 1) return NaN;
-    // Keep the caller's mean anomaly unwrapped so demos can build "time windows"
-    // (e.g., the equal-areas wedge) without discontinuities at 0/2π.
-    const M = meanAnomalyRad;
-
-    // Solve Kepler’s equation: M = E - e sin E
-    let E = M;
-    for (let i = 0; i < 20; i++) {
-      const f = E - e * Math.sin(E) - M;
-      const fp = 1 - e * Math.cos(E);
-      const dE = -f / fp;
-      E += dE;
-      if (Math.abs(dE) < 1e-12) break;
-    }
-
-    const denom = 1 - e * Math.cos(E);
-    const cosT = (Math.cos(E) - e) / denom;
-    const sinT = (Math.sqrt(1 - e * e) * Math.sin(E)) / denom;
-    return Math.atan2(sinT, cosT);
-  }
+  const trueToMeanAnomalyRad = TwoBody.trueToMeanAnomalyRad;
+  const meanToTrueAnomalyRad = TwoBody.meanToTrueAnomalyRad;
 
   function formatNewtonReadouts({ vKms, aMs2, units }) {
     if (!Number.isFinite(vKms) || !Number.isFinite(aMs2)) {

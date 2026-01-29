@@ -30,6 +30,15 @@
     throw new Error('BinaryOrbitsModel: missing AstroConstants (load demos/_assets/physics/astro-constants.js first)');
   }
 
+  const TwoBody =
+    typeof window !== 'undefined'
+      ? window.TwoBodyAnalytic
+      : require('./physics/two-body-analytic.js');
+
+  if (!TwoBody) {
+    throw new Error('BinaryOrbitsModel: missing TwoBodyAnalytic (load demos/_assets/physics/two-body-analytic.js first)');
+  }
+
   // ============================================
   // Physical Constants
   // ============================================
@@ -260,6 +269,11 @@
     return Math.atan2(dy, dx);
   }
 
+  function wrap2Pi(rad) {
+    const twoPi = 2 * Math.PI;
+    return ((rad % twoPi) + twoPi) % twoPi;
+  }
+
   /**
    * Convert mean anomaly to true anomaly by solving Kepler's equation
    * M = E - e × sin(E)  (Kepler's equation)
@@ -278,41 +292,13 @@
       if (e < 0) e = 0;
     }
 
-    // Normalize mean anomaly to [0, 2π)
+    // Binary Orbits uses a [0, 2π) convention for mean anomaly inputs.
     const twoPi = 2 * Math.PI;
-    let M_anom = ((meanAnomalyRad % twoPi) + twoPi) % twoPi;
+    const M_norm = ((meanAnomalyRad % twoPi) + twoPi) % twoPi;
 
-    // For circular orbit, true anomaly = mean anomaly
-    if (e < 1e-10) return M_anom;
-
-    // Newton-Raphson iteration to solve Kepler's equation
-    // M = E - e × sin(E)
-    // f(E) = E - e × sin(E) - M = 0
-    // f'(E) = 1 - e × cos(E)
-
-    let E = M_anom;  // Initial guess
-    const maxIter = 30;
-    const tolerance = 1e-12;
-
-    for (let i = 0; i < maxIter; i++) {
-      const f = E - e * Math.sin(E) - M_anom;
-      const fPrime = 1 - e * Math.cos(E);
-
-      if (Math.abs(fPrime) < 1e-15) break;  // Avoid division by zero
-
-      const dE = f / fPrime;
-      E -= dE;
-
-      if (Math.abs(dE) < tolerance) break;
-    }
-
-    // Convert eccentric anomaly E to true anomaly θ
-    // tan(θ/2) = √((1+e)/(1-e)) × tan(E/2)
-    const sinHalfTheta = Math.sqrt(1 + e) * Math.sin(E / 2);
-    const cosHalfTheta = Math.sqrt(1 - e) * Math.cos(E / 2);
-    const theta = 2 * Math.atan2(sinHalfTheta, cosHalfTheta);
-
-    return theta;
+    // Delegate the Kepler solve to the shared TwoBodyAnalytic implementation, then wrap to [0, 2π).
+    const theta = TwoBody.meanToTrueAnomalyRad({ meanAnomalyRad: M_norm, e });
+    return wrap2Pi(theta);
   }
 
   /**
@@ -331,17 +317,7 @@
 
     // For circular orbit
     if (e < 1e-10) return thetaRad;
-
-    // True anomaly → Eccentric anomaly
-    // tan(E/2) = √((1-e)/(1+e)) × tan(θ/2)
-    const sinHalfE = Math.sqrt(1 - e) * Math.sin(thetaRad / 2);
-    const cosHalfE = Math.sqrt(1 + e) * Math.cos(thetaRad / 2);
-    const E = 2 * Math.atan2(sinHalfE, cosHalfE);
-
-    // Eccentric anomaly → Mean anomaly (Kepler's equation)
-    const M = E - e * Math.sin(E);
-
-    return M;
+    return TwoBody.trueToMeanAnomalyRad({ thetaRad, e });
   }
 
   // ============================================

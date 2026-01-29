@@ -61,6 +61,8 @@
 
     // Solve Kepler’s equation: M = E - e sin E using Newton iterations.
     let E = M;
+    // Iteration cap is a safety guard (not a target): tests cover convergence to |dE|<1e-12
+    // for e up to 0.999 (see tests/two-body-analytic.test.js).
     for (let i = 0; i < 25; i++) {
       const f = E - e * Math.sin(E) - M;
       const fp = 1 - e * Math.cos(E);
@@ -215,6 +217,7 @@
 
   return {
     orbitalRadius,
+    trueToEccentricAnomalyRad,
     trueToMeanAnomalyRad,
     meanToTrueAnomalyRad,
 
