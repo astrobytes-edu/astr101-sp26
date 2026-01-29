@@ -109,6 +109,29 @@
       margin: 0.5rem 0;
     }
 
+    /* Model note (student-facing) */
+    .model-note {
+      background: rgba(18, 18, 31, 0.9);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      padding: 0.5rem 0.75rem;
+      margin: 0.75rem 0 1rem 0;
+      color: var(--text-secondary);
+      font-size: 0.8rem;
+      line-height: 1.4;
+    }
+
+    .model-note summary {
+      cursor: pointer;
+      font-weight: 600;
+      color: var(--text-secondary);
+    }
+
+    .model-note p {
+      margin: 0.5rem 0 0 0;
+      color: var(--text-muted);
+    }
+
     /* Newton-mode specific */
     .newton-only {
       display: none;
@@ -169,6 +192,15 @@
         <button class="mode-btn active" id="btn-kepler-mode">KEPLER MODE</button>
         <button class="mode-btn" id="btn-newton-mode">NEWTON MODE</button>
       </div>
+
+      <!-- Model Note -->
+      <details class="model-note">
+        <summary>Model note (teaching model)</summary>
+        <p>
+          This simulation is a simplified, planar (2D) two-body model. It ignores perturbations and treats the planet as
+          negligible-mass in Newton mode. The animation speed is a teaching scale (years per second), not real time.
+        </p>
+      </details>
 
       <!-- Main Visualization -->
       <div class="viz-panel">

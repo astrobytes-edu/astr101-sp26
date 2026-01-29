@@ -32,3 +32,8 @@ test('Kepler’s Laws labels animation speed units', () => {
   const html = readText('demos', 'keplers-laws', 'index.html');
   assert.match(html, /years\/sec/i);
 });
+
+test("Kepler's Laws includes a model note", () => {
+  const html = readText('demos', 'keplers-laws', 'index.html');
+  assert.match(html, /model note/i);
+});
