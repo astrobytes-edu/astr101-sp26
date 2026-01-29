@@ -202,17 +202,7 @@
   // Formatting
   // ============================================
 
-  // formatDistance is provided by AstroUtils (loaded before this script)
-
-  function formatAngle(degrees) {
-    if (degrees >= 1) {
-      return { value: degrees.toFixed(2), unit: 'degrees' };
-    }
-    if (degrees >= 1/60) {
-      return { value: (degrees * 60).toFixed(1), unit: 'arcminutes' };
-    }
-    return { value: (degrees * 3600).toFixed(1), unit: 'arcseconds' };
-  }
+  // formatDistance and formatAngle are provided by AstroUtils (loaded before this script)
 
   function formatAngleDisplay(degrees) {
     // Keep a legacy-compatible wrapper (value + unit string) for code paths that
