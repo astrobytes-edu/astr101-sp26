@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Binary Orbits Sandbox | AstroEd</title>
+  <link rel="stylesheet" href="../_assets/astro-theme.css">
+  <link rel="stylesheet" href="../_assets/katex/katex.min.css">
+  <style>
+    /* System type selector */
+    .system-selector {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .system-selector label {
+      font-weight: 500;
+      color: var(--text-secondary);
+    }
+
+    .system-selector select {
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      background: var(--space-medium);
+      border: 1px solid var(--border-color);
+      color: var(--text-primary);
+      font-size: 0.875rem;
+    }
+
+    /* Mass controls with log scale indicator */
+    .mass-controls {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .slider-group {
+      background: rgba(18, 18, 31, 0.7);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      padding: 0.75rem 1rem;
+    }
+
+    .slider-group label {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.875rem;
+      margin-bottom: 0.5rem;
+      color: var(--text-secondary);
+    }
+
+    .slider-group .value-display {
+      color: var(--cosmic-teal);
+      font-family: var(--font-mono);
+    }
+
+    .slider-group input[type="range"] {
+      width: 100%;
+    }
+
+    .slider-group .scale-hint {
+      font-size: 0.65rem;
+      color: var(--text-muted);
+      text-align: right;
+      margin-top: 0.25rem;
+    }
+
+    /* Orbital parameters */
+    .orbital-controls {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    /* Unit selectors */
+    .unit-selectors {
+      display: flex;
+      gap: 2rem;
+      margin-bottom: 1rem;
+      padding: 0.75rem 1rem;
+      background: rgba(18, 18, 31, 0.7);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+    }
+
+    .unit-select {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .unit-select label {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+    }
+
+    .unit-select select {
+      padding: 0.25rem 0.5rem;
+      border-radius: 4px;
+      background: var(--space-dark);
+      border: 1px solid var(--border-color);
+      color: var(--text-primary);
+      font-size: 0.75rem;
+    }
+
+    /* Readout panel */
+    .readout-panel {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.75rem;
+      margin-bottom: 1rem;
+    }
+
+    .readout-item {
+      background: rgba(18, 18, 31, 0.9);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      padding: 0.75rem;
+      text-align: center;
+    }
+
+    .readout-label {
+      font-size: 0.7rem;
+      color: var(--text-muted);
+      margin-bottom: 0.25rem;
+    }
+
+    .readout-value {
+      font-size: 1.25rem;
+      font-weight: 600;
+      font-family: var(--font-mono);
+      color: var(--cosmic-teal);
+    }
+
+    .readout-unit {
+      font-size: 0.65rem;
+      color: var(--text-muted);
+    }
+
+    .readout-item.body-1 {
+      border-left: 3px solid #5dade2;
+    }
+
+    .readout-item.body-2 {
+      border-left: 3px solid #e74c3c;
+    }
+
+    /* Insight box */
+    .insight-box {
+      background: rgba(18, 18, 31, 0.9);
+      border-left: 3px solid var(--accent-gold);
+      padding: 1rem;
+      border-radius: 0 8px 8px 0;
+      font-size: 0.875rem;
+      line-height: 1.5;
+      margin-bottom: 1rem;
+    }
+
+    .insight-box h4 {
+      margin: 0 0 0.5rem 0;
+      color: var(--accent-gold);
+      font-size: 0.875rem;
+    }
+
+    .insight-box .formula {
+      font-family: var(--font-mono);
+      color: var(--cosmic-teal);
+      margin: 0.5rem 0;
+    }
+
+    /* Animation controls */
+    .animation-controls {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 1rem;
+      padding: 0.75rem 1rem;
+      background: rgba(18, 18, 31, 0.7);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+    }
+
+    .anim-btn {
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      background: var(--space-medium);
+      border: 1px solid var(--border-color);
+      color: var(--text-primary);
+      cursor: pointer;
+      font-size: 0.875rem;
+      transition: all 0.2s;
+    }
+
+    .anim-btn:hover {
+      background: var(--space-light);
+    }
+
+    .anim-btn.primary {
+      background: var(--accent-blue);
+      border-color: var(--accent-blue);
+    }
+
+    .anim-btn:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+
+    .speed-control {
+      margin-left: auto;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .speed-control label {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+    }
+
+    .speed-control select {
+      padding: 0.25rem 0.5rem;
+      border-radius: 4px;
+      background: var(--space-dark);
+      border: 1px solid var(--border-color);
+      color: var(--text-primary);
+      font-size: 0.75rem;
+    }
+
+    /* Presets */
+    .presets-panel {
+      background: rgba(18, 18, 31, 0.7);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      padding: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .presets-section {
+      margin-bottom: 0.75rem;
+    }
+
+    .presets-label {
+      font-size: 0.7rem;
+      color: var(--text-muted);
+      margin-bottom: 0.5rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .presets-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .preset-btn {
+      padding: 0.375rem 0.75rem;
+      border-radius: 4px;
+      background: var(--space-medium);
+      border: 1px solid var(--border-color);
+      color: var(--text-secondary);
+      cursor: pointer;
+      font-size: 0.75rem;
+      transition: all 0.2s;
+    }
+
+    .preset-btn:hover {
+      background: var(--space-light);
+      color: var(--text-primary);
+    }
+
+    .preset-btn.active {
+      background: var(--accent-blue);
+      border-color: var(--accent-blue);
+      color: white;
+    }
+
+    /* Overlay toggles */
+    .overlays-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 0.75rem;
+      padding-top: 0.75rem;
+      border-top: 1px solid var(--border-color);
+    }
+
+    .overlay-toggle {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.75rem;
+      color: var(--text-secondary);
+      cursor: pointer;
+    }
+
+    .overlay-toggle input {
+      accent-color: var(--cosmic-teal);
+    }
+
+    /* SVG styles */
+    .viz-panel {
+      background: rgba(0, 0, 0, 0.3);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      margin-bottom: 1rem;
+      overflow: hidden;
+    }
+
+    #orbit-svg {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .orbit-path {
+      fill: none;
+      stroke-width: 1.5;
+      stroke-dasharray: 4 4;
+      opacity: 0.6;
+    }
+
+    .body {
+      cursor: grab;
+    }
+
+    .body:active {
+      cursor: grabbing;
+    }
+
+    .vector-group line {
+      stroke-width: 2;
+    }
+
+    /* Responsive */
+    @media (max-width: 700px) {
+      .mass-controls,
+      .orbital-controls {
+        grid-template-columns: 1fr;
+      }
+
+      .readout-panel {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .unit-selectors {
+        flex-direction: column;
+        gap: 0.75rem;
+      }
+    }
+
+    /* Screen reader only */
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+  </style>
+  <link rel="stylesheet" href="../_assets/demo-shell.css">
+  <link rel="stylesheet" href="../_assets/demo-legacy.css">
+</head>
+<body>
+  <div class="demo-wrapper">
+    <canvas id="starfield"></canvas>
+
+    <div class="demo-content">
+      <header class="demo-header">
+        <h1 class="demo-title">Binary Orbits Sandbox</h1>
+        <p class="demo-subtitle">Explore two-body orbital mechanics: both bodies orbit the barycenter</p>
+      </header>
+
+      <!-- System Type Selector -->
+      <div class="system-selector">
+        <label for="system-type">System:</label>
+        <select id="system-type">
+          <option value="star-planet">Star + Planet</option>
+          <option value="binary-star">Binary Star</option>
+        </select>
+      </div>
+
+      <!-- Main Visualization -->
+      <div class="viz-panel">
+        <svg id="orbit-svg" viewBox="0 0 600 600" preserveAspectRatio="xMidYMid meet">
+          <defs>
+            <!-- Body 1 gradient (will be set dynamically) -->
+            <radialGradient id="body1Gradient">
+              <stop offset="0%" stop-color="#fff5cc"/>
+              <stop offset="70%" stop-color="#ffcc00"/>
+              <stop offset="100%" stop-color="#ff8c00"/>
+            </radialGradient>
+
+            <!-- Body 2 gradient (will be set dynamically) -->
+            <radialGradient id="body2Gradient" cx="30%" cy="30%">
+              <stop offset="0%" stop-color="#7ec8e3"/>
+              <stop offset="100%" stop-color="#4a90d9"/>
+            </radialGradient>
+
+            <!-- Glow filter -->
+            <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+              <feGaussianBlur stdDeviation="3" result="blur"/>
+              <feMerge>
+                <feMergeNode in="blur"/>
+                <feMergeNode in="SourceGraphic"/>
+              </feMerge>
+            </filter>
+
+            <!-- Arrow markers for vectors -->
+            <marker id="arrow-velocity" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+              <polygon points="0 0, 10 3.5, 0 7" fill="#2ecc71"/>
+            </marker>
+            <marker id="arrow-accel" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+              <polygon points="0 0, 10 3.5, 0 7" fill="#f39c12"/>
+            </marker>
+            <marker id="arrow-force" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+              <polygon points="0 0, 10 3.5, 0 7" fill="#e74c3c"/>
+            </marker>
+          </defs>
+
+          <!-- Barycenter marker -->
+          <g id="barycenter-group">
+            <circle id="barycenter" cx="300" cy="300" r="4" fill="#888"/>
+            <text id="barycenter-label" x="300" y="320" text-anchor="middle"
+                  fill="var(--text-muted)" font-size="10">Barycenter</text>
+          </g>
+
+          <!-- Orbit paths -->
+          <ellipse id="orbit-1" class="orbit-path" cx="300" cy="300" rx="100" ry="100" stroke="#5dade2"/>
+          <ellipse id="orbit-2" class="orbit-path" cx="300" cy="300" rx="100" ry="100" stroke="#e74c3c"/>
+
+          <!-- Distance line between bodies -->
+          <line id="separation-line" x1="200" y1="300" x2="400" y2="300"
+                stroke="var(--text-muted)" stroke-width="1" stroke-dasharray="3 3" opacity="0.5"/>
+
+          <!-- Vector overlays -->
+          <g id="velocity-vectors" class="vector-group" style="display: none;">
+            <line id="v1-line" x1="0" y1="0" x2="0" y2="0" stroke="#2ecc71" marker-end="url(#arrow-velocity)"/>
+            <line id="v2-line" x1="0" y1="0" x2="0" y2="0" stroke="#2ecc71" marker-end="url(#arrow-velocity)"/>
+          </g>
+          <g id="accel-vectors" class="vector-group" style="display: none;">
+            <line id="a1-line" x1="0" y1="0" x2="0" y2="0" stroke="#f39c12" marker-end="url(#arrow-accel)"/>
+            <line id="a2-line" x1="0" y1="0" x2="0" y2="0" stroke="#f39c12" marker-end="url(#arrow-accel)"/>
+          </g>
+          <g id="force-vectors" class="vector-group" style="display: none;">
+            <line id="f1-line" x1="0" y1="0" x2="0" y2="0" stroke="#e74c3c" marker-end="url(#arrow-force)"/>
+            <line id="f2-line" x1="0" y1="0" x2="0" y2="0" stroke="#e74c3c" marker-end="url(#arrow-force)"/>
+          </g>
+
+          <!-- Bodies (colored by temperature for stars) -->
+          <g id="body-1-group" class="body-draggable"
+             role="slider" aria-label="Body 1 position on orbit"
+             aria-valuemin="0" aria-valuemax="360" aria-valuenow="0"
+             tabindex="0">
+            <circle id="body-1" class="body" cx="200" cy="300" r="20" fill="url(#body1Gradient)" filter="url(#glow)"/>
+            <text id="body-1-label" x="200" y="340" text-anchor="middle"
+                  fill="#5dade2" font-size="10">M₁</text>
+          </g>
+
+          <g id="body-2-group" class="body-draggable"
+             role="slider" aria-label="Body 2 position on orbit"
+             aria-valuemin="0" aria-valuemax="360" aria-valuenow="180"
+             tabindex="0">
+            <circle id="body-2" class="body" cx="400" cy="300" r="12" fill="url(#body2Gradient)"/>
+            <text id="body-2-label" x="400" y="340" text-anchor="middle"
+                  fill="#e74c3c" font-size="10">M₂</text>
+          </g>
+
+          <!-- Separation distance label -->
+          <text id="separation-text" x="300" y="290" text-anchor="middle"
+                fill="var(--text-muted)" font-size="10">a = 1.00 AU</text>
+        </svg>
+      </div>
+
+      <!-- Mass Controls -->
+      <div class="mass-controls">
+        <div class="slider-group">
+          <label>
+            M₁ (Primary)
+            <span class="value-display" id="m1-display">1.0 M&#9737;</span>
+          </label>
+          <input type="range" id="m1-slider" class="astro-slider" min="-1" max="2" step="0.01" value="0">
+          <div class="scale-hint">Log scale: 0.1 - 100 M&#9737;</div>
+        </div>
+        <div class="slider-group">
+          <label>
+            M₂ (Secondary)
+            <span class="value-display" id="m2-display">1.0 M&#9737;</span>
+          </label>
+          <input type="range" id="m2-slider" class="astro-slider" min="-1" max="2" step="0.01" value="0">
+          <div class="scale-hint">Log scale: 0.1 - 100 M&#9737;</div>
+        </div>
+      </div>
+
+      <!-- Orbital Parameters -->
+      <div class="orbital-controls">
+        <div class="slider-group">
+          <label>
+            Separation (a)
+            <span class="value-display" id="a-display">1.0 AU</span>
+          </label>
+          <input type="range" id="a-slider" class="astro-slider" min="-2" max="2" step="0.01" value="0">
+          <div class="scale-hint">Log scale: 0.01 - 100 AU</div>
+        </div>
+        <div class="slider-group">
+          <label>
+            Eccentricity (e)
+            <span class="value-display" id="e-display">0.00</span>
+          </label>
+          <input type="range" id="e-slider" class="astro-slider" min="0" max="0.95" step="0.01" value="0">
+        </div>
+      </div>
+
+      <!-- Unit Selectors -->
+      <div class="unit-selectors">
+        <div class="unit-select">
+          <label for="velocity-unit">Velocity:</label>
+          <select id="velocity-unit">
+            <option value="AU/yr">AU/yr</option>
+            <option value="km/s">km/s</option>
+            <option value="m/s">m/s</option>
+            <option value="cm/s">cm/s (CGS)</option>
+          </select>
+        </div>
+        <div class="unit-select">
+          <label for="period-unit">Period:</label>
+          <select id="period-unit">
+            <option value="yr">years</option>
+            <option value="days">days</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Readout Panel -->
+      <div class="readout-panel">
+        <div class="readout-item">
+          <div class="readout-label">Period (P)</div>
+          <div class="readout-value" id="period-value">1.00</div>
+          <div class="readout-unit" id="period-unit-display">yr</div>
+        </div>
+        <div class="readout-item body-1">
+          <div class="readout-label">v₁ (Primary)</div>
+          <div class="readout-value" id="v1-value">0.00</div>
+          <div class="readout-unit" id="v1-unit">AU/yr</div>
+        </div>
+        <div class="readout-item body-2">
+          <div class="readout-label">v₂ (Secondary)</div>
+          <div class="readout-value" id="v2-value">0.00</div>
+          <div class="readout-unit" id="v2-unit">AU/yr</div>
+        </div>
+        <div class="readout-item">
+          <div class="readout-label">Separation (r)</div>
+          <div class="readout-value" id="r-value">1.00</div>
+          <div class="readout-unit">AU</div>
+        </div>
+        <div class="readout-item body-1">
+          <div class="readout-label">a₁ (Orbit size)</div>
+          <div class="readout-value" id="a1-value">0.50</div>
+          <div class="readout-unit">AU</div>
+        </div>
+        <div class="readout-item body-2">
+          <div class="readout-label">a₂ (Orbit size)</div>
+          <div class="readout-value" id="a2-value">0.50</div>
+          <div class="readout-unit">AU</div>
+        </div>
+        <div class="readout-item body-1">
+          <div class="readout-label">T₁ (Temp)</div>
+          <div class="readout-value" id="t1-value">5778</div>
+          <div class="readout-unit">K</div>
+        </div>
+        <div class="readout-item body-1">
+          <div class="readout-label">Type₁</div>
+          <div class="readout-value" id="type1-value">G</div>
+          <div class="readout-unit">spectral</div>
+        </div>
+        <div class="readout-item body-2">
+          <div class="readout-label">Type₂</div>
+          <div class="readout-value" id="type2-value">G</div>
+          <div class="readout-unit">spectral</div>
+        </div>
+      </div>
+
+      <!-- Animation Controls -->
+      <div class="animation-controls">
+        <button class="anim-btn primary" id="btn-play">&#9654; Play</button>
+        <button class="anim-btn" id="btn-pause" disabled>&#10074;&#10074; Pause</button>
+        <button class="anim-btn" id="btn-reset">&#10227; Reset</button>
+        <div class="speed-control">
+          <label for="speed-select">Speed:</label>
+          <select id="speed-select">
+            <option value="0.1">0.1x</option>
+            <option value="0.5">0.5x</option>
+            <option value="1" selected>1x</option>
+            <option value="2">2x</option>
+            <option value="5">5x</option>
+            <option value="10">10x</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Presets Panel -->
+      <div class="presets-panel">
+        <div class="presets-section" id="star-planet-presets">
+          <div class="presets-label">Star + Planet</div>
+          <div class="presets-row">
+            <button class="preset-btn active" data-m1="1.0" data-m2="3e-6" data-a="1.0" data-e="0.017">Sun + Earth</button>
+            <button class="preset-btn" data-m1="1.0" data-m2="9.5e-4" data-a="5.2" data-e="0.049">Sun + Jupiter</button>
+            <button class="preset-btn" data-m1="1.0" data-m2="1e-3" data-a="0.05" data-e="0.02">Hot Jupiter</button>
+            <button class="preset-btn" data-m1="0.12" data-m2="4e-6" data-a="0.049" data-e="0.11">Proxima b</button>
+          </div>
+        </div>
+
+        <div class="presets-section" id="binary-star-presets">
+          <div class="presets-label">Binary Stars</div>
+          <div class="presets-row">
+            <button class="preset-btn" data-m1="1.1" data-m2="0.91" data-a="23.4" data-e="0.52">Alpha Cen AB</button>
+            <button class="preset-btn" data-m1="2.06" data-m2="1.02" data-a="19.8" data-e="0.59">Sirius AB</button>
+            <button class="preset-btn" data-m1="1.0" data-m2="1.0" data-a="1.0" data-e="0.0">Equal Mass</button>
+            <button class="preset-btn" data-m1="50" data-m2="40" data-a="0.5" data-e="0.3">Massive O+O</button>
+          </div>
+        </div>
+
+        <div class="overlays-row">
+          <label class="overlay-toggle">
+            <input type="checkbox" id="toggle-barycenter" checked> Barycenter
+          </label>
+          <label class="overlay-toggle">
+            <input type="checkbox" id="toggle-orbits" checked> Orbit Paths
+          </label>
+          <label class="overlay-toggle">
+            <input type="checkbox" id="toggle-velocity"> Velocity (v)
+          </label>
+          <label class="overlay-toggle">
+            <input type="checkbox" id="toggle-acceleration"> Acceleration (a)
+          </label>
+          <label class="overlay-toggle">
+            <input type="checkbox" id="toggle-force"> Force (F)
+          </label>
+        </div>
+      </div>
+
+      <!-- Insight Box -->
+      <div class="insight-box" id="insight-box">
+        <h4>Two-Body Physics</h4>
+        <p>Both bodies orbit their common <em>center of mass</em> (barycenter). Neither body is truly "fixed" - even the Sun wobbles due to Jupiter!</p>
+        <div class="formula">
+          <span data-math="a_1 / a_2 = M_2 / M_1"></span>
+        </div>
+        <p>Orbit sizes are inversely proportional to masses. The heavier body has the smaller orbit.</p>
+        <div class="formula">
+          <span data-math="P^2 = \frac{a^3}{M_1 + M_2}"></span> (years, AU, M&#9737;)
+        </div>
+        <p id="insight-text" style="color: var(--text-muted); margin-top: 0.75rem;">
+          Drag the bodies or use sliders to explore. Watch how changing masses shifts the barycenter!
+        </p>
+      </div>
+
+      <!-- Screen reader announcements -->
+      <div id="status-announce" aria-live="polite" aria-atomic="true" class="sr-only"></div>
+    </div>
+  </div>
+
+  <script src="../_assets/astro-utils.js"></script>
+  <script src="../_assets/stellar-utils.js"></script>
+  <script src="../_assets/demo-polish.js"></script>
+  <script src="../_assets/starfield.js"></script>
+  <script src="../_assets/katex/katex.min.js"></script>
+  <script src="binary-orbits.js"></script>
+</body>
+</html>
