@@ -12,6 +12,8 @@
 
 ## Executive Summary
 
+**The hook:** A computational astrophysicist built 10 validated simulations with unit-tested physics using AI-augmented development — and wants funding to study whether physically correct simulations improve learning transfer across course levels.
+
 **Cosmic Playground** is an open-source ecosystem of interactive astronomy and physics simulations spanning introductory through advanced courses. Designed by a computational astrophysicist, every simulation uses **physically correct theory under the hood** — not pedagogical simplifications that break at the edges.
 
 Unlike general-purpose physics simulators from the 2000s era, Cosmic Playground:
@@ -154,6 +156,8 @@ This is STEM pedagogical software built on **correctness + software engineering 
 4. **The layered complexity insight** requires teaching across multiple course levels — most faculty teach one course repeatedly
 
 The PI sits at an unusual intersection: computational astrophysicist with software engineering expertise, teaching intro through upper-division courses, applying AI tools to accelerate development while maintaining physics rigor.
+
+**The inverted model:** Most IUSE proposals feature STEM education researchers partnering with content experts. This proposal inverts that — a content expert with methodological rigor seeking STEM Ed partnership to measure whether that rigor improves learning outcomes. The simulations exist; the research question is whether research-grade standards for teaching tools actually matter.
 
 ### The Research Question
 
@@ -440,7 +444,9 @@ NSF IUSE Level 2 ("Development and Implementation") is the right fit for this pr
 - Physics sequence: PHYS 195/196/197 (physics for scientists) — demos for blackbody radiation, thermodynamics, gravity, waves
 - Not targeting graduate students — the layered architecture serves the full undergraduate pathway
 
-**Innovation claim:** The layered complexity model is genuinely novel. Rather than creating separate "intro" and "advanced" versions of simulations (which fragments the ecosystem), Cosmic Playground demonstrates that one simulation can serve multiple audiences through progressive disclosure — and students benefit from encountering the *same* tool across their entire undergraduate career.
+**Innovation claim:** The layered complexity model is genuinely novel. Existing simulation ecosystems (PhET, NAAP) create separate "intro" and "advanced" versions of the same concept — fragmenting the ecosystem and preventing students from building familiarity across courses. Cosmic Playground demonstrates that one simulation can serve multiple audiences through progressive disclosure. The physics is always correct; only the visible complexity changes.
+
+**Why this matters:** A student who uses the Binary Orbits demo in ASTR 101 to understand the barycenter can return to the *same* tool in ASTR 201 to calculate mass ratios from orbital parameters. The interface is familiar; only the depth increases. No other simulation ecosystem does this.
 
 ---
 
