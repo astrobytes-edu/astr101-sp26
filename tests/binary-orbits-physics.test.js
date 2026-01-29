@@ -11,80 +11,35 @@
  * - Equal mass binary: a1 = a2 = 0.5 AU
  */
 
-// Extract physics functions from the module
-// We need to parse the IIFE and extract the core functions
+// Import the shared physics model
+const Model = require('../demos/_assets/binary-orbits-model.js');
 
-const fs = require('fs');
-const path = require('path');
-
-// Physical constants (must match binary-orbits.js)
-const G_SOLAR = 4 * Math.PI * Math.PI;  // AU^3 / yr^2 / M_sun
-const AU_KM = 1.496e8;                   // km per AU
-const YEAR_SECONDS = 3.156e7;            // seconds per year
+// Export constants from model for reference
+const { G_SOLAR, AU_KM, YEAR_SECONDS } = Model;
 
 // ============================================
-// Core Physics Functions (extracted)
+// Thin Wrappers (positional → object params)
 // ============================================
 
-/**
- * Calculate individual semi-major axes for each body's orbit around barycenter
- */
 function individualSemiMajor(a_rel, M1, M2) {
-  const M_tot = M1 + M2;
-  if (M_tot === 0) {
-    return { a1: a_rel / 2, a2: a_rel / 2 };
-  }
-  return {
-    a1: a_rel * M2 / M_tot,
-    a2: a_rel * M1 / M_tot
-  };
+  const result = Model.individualSemiMajorAu({ aRel: a_rel, M1, M2 });
+  return { a1: result.a1, a2: result.a2 };
 }
 
-/**
- * Calculate orbital period using Kepler's 3rd Law
- * P^2 = a^3 / (M1 + M2) with P in years, a in AU, M in M_sun
- */
 function orbitalPeriod(a_rel, M1, M2) {
-  const M_tot = M1 + M2;
-  if (M_tot === 0) return Infinity;
-  return Math.sqrt(Math.pow(a_rel, 3) / M_tot);
+  return Model.orbitalPeriodYr({ aRel: a_rel, M1, M2 });
 }
 
-/**
- * Calculate orbital radius from true anomaly
- * r = a(1 - e^2) / (1 + e * cos(theta))
- */
 function orbitalRadius(a, e, theta) {
-  if (e >= 1) e = 0.999;
-  const numerator = a * (1 - e * e);
-  const denominator = 1 + e * Math.cos(theta);
-  return numerator / denominator;
+  return Model.orbitalRadiusAu({ aAu: a, e, thetaRad: theta });
 }
 
-/**
- * Calculate orbital velocity using vis-viva equation
- * v = sqrt(G * M_tot * (2/r - 1/a))
- * Returns velocity in km/s
- */
 function orbitalVelocity(r, a, M1, M2) {
-  const M_tot = M1 + M2;
-  if (M_tot === 0 || r === 0 || a === 0) return 0;
-
-  const v_squared = G_SOLAR * M_tot * (2 / r - 1 / a);
-  if (v_squared < 0) return 0;
-
-  const v_AU_yr = Math.sqrt(v_squared);
-  const v_kms = v_AU_yr * AU_KM / YEAR_SECONDS;
-  return v_kms;
+  return Model.orbitalVelocityKms({ rAu: r, aAu: a, M1, M2 });
 }
 
-/**
- * Calculate barycenter fraction
- */
 function barycenterFraction(M1, M2) {
-  const M_tot = M1 + M2;
-  if (M_tot === 0) return 0.5;
-  return M2 / M_tot;
+  return Model.barycenterFraction({ M1, M2 });
 }
 
 // ============================================
