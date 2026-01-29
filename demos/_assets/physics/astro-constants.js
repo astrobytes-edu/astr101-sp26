@@ -68,8 +68,14 @@
     M_PER_KM: 1000,
     CM_PER_KM: 100000,
 
-    // IAU-defined AU value already used elsewhere in this repo (km).
+    // IAU-defined AU value (km)
     KM_PER_AU: 149597870.7,
+
+    // Derived distance scales (km)
+    // Light-year: c * Julian year
+    KM_PER_LY: 9.4607304725808e12,
+    // Parsec: 1 AU / tan(1 arcsec)
+    KM_PER_PC: 3.0856775814914e13,
   };
 
   LENGTH.M_PER_AU = LENGTH.KM_PER_AU * LENGTH.M_PER_KM;

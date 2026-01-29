@@ -25,3 +25,9 @@ test('AstroConstants derives a positive draconic month from sidereal month + nod
   assert.ok(AstroConstants.TIME.MEAN_DRACONIC_MONTH_DAYS < AstroConstants.TIME.MEAN_SIDEREAL_MONTH_DAYS);
 });
 
+test('AstroConstants exposes distance presets (AU, LY, PC in km)', () => {
+  assert.equal(AstroConstants.LENGTH.KM_PER_AU, 149597870.7);
+  assert.ok(Math.abs(AstroConstants.LENGTH.KM_PER_LY - 9.461e12) / 9.461e12 < 0.001);
+  assert.ok(Math.abs(AstroConstants.LENGTH.KM_PER_PC - 3.086e13) / 3.086e13 < 0.001);
+});
+
