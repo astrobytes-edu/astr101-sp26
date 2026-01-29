@@ -12,150 +12,24 @@
   'use strict';
 
   // ============================================
-  // Physical Constants (CGS)
+  // Physics from shared BlackbodyModel
   // ============================================
 
-  const CONSTANTS = {
-    c: 2.998e10,           // Speed of light (cm/s)
-    h: 6.626e-27,          // Planck constant (erg*s)
-    k: 1.381e-16,          // Boltzmann constant (erg/K)
-    sigma: 5.670e-5,       // Stefan-Boltzmann (erg/cm^2/s/K^4)
-    wien_b: 0.2898,        // Wien displacement constant (cm*K)
+  // Use shared model for physics constants and functions
+  const CONSTANTS = window.BlackbodyModel.CONSTANTS;
 
-    // Unit conversions
-    cm_to_nm: 1e7,         // cm to nm
-    nm_to_cm: 1e-7,        // nm to cm
-
-    // Solar values for reference
-    T_sun: 5778,           // K
-    R_sun: 6.96e10,        // cm
-    L_sun: 3.828e33        // erg/s
-  };
-
-  // ============================================
-  // Physics Functions
-  // ============================================
+  // Physics functions from shared model
+  const wienPeak = window.BlackbodyModel.wienPeakCm;
+  const wienPeakNm = window.BlackbodyModel.wienPeakNm;
+  const planckFunction = window.BlackbodyModel.planckFunction;
+  const stefanBoltzmannFlux = window.BlackbodyModel.stefanBoltzmannFlux;
+  const luminosityRatio = window.BlackbodyModel.luminosityRatio;
+  const temperatureToColor = window.BlackbodyModel.temperatureToColor;
+  const colorName = window.BlackbodyModel.colorName;
 
   /**
-   * Wien's Displacement Law: lambda_peak = b / T
-   * @param {number} T - Temperature (K)
-   * @returns {number} Peak wavelength (cm)
-   */
-  function wienPeak(T) {
-    return CONSTANTS.wien_b / T;
-  }
-
-  /**
-   * Wien's Law in nm for display
-   * @param {number} T - Temperature (K)
-   * @returns {number} Peak wavelength (nm)
-   */
-  function wienPeakNm(T) {
-    return wienPeak(T) * CONSTANTS.cm_to_nm;
-  }
-
-  /**
-   * Planck function B_lambda(T)
-   * @param {number} lambda - Wavelength (cm)
-   * @param {number} T - Temperature (K)
-   * @returns {number} Spectral radiance (erg/s/cm^2/sr/cm)
-   */
-  function planckFunction(lambda, T) {
-    const c = CONSTANTS.c;
-    const h = CONSTANTS.h;
-    const k = CONSTANTS.k;
-
-    const factor1 = (2 * h * c * c) / Math.pow(lambda, 5);
-    const exponent = (h * c) / (lambda * k * T);
-
-    // Prevent overflow for very small wavelengths
-    if (exponent > 700) return 0;
-
-    return factor1 / (Math.exp(exponent) - 1);
-  }
-
-  /**
-   * Stefan-Boltzmann flux: F = sigma*T^4
-   * @param {number} T - Temperature (K)
-   * @returns {number} Flux (erg/s/cm^2)
-   */
-  function stefanBoltzmannFlux(T) {
-    return CONSTANTS.sigma * Math.pow(T, 4);
-  }
-
-  /**
-   * Luminosity relative to Sun (assuming same radius)
-   * L/L_sun = (T/T_sun)^4
-   * @param {number} T - Temperature (K)
-   * @returns {number} Luminosity ratio
-   */
-  function luminosityRatio(T) {
-    return Math.pow(T / CONSTANTS.T_sun, 4);
-  }
-
-  /**
-   * Convert temperature to approximate star color (RGB)
-   * Uses blackbody color approximation
-   * @param {number} T - Temperature (K)
-   * @returns {object} {r, g, b} values 0-255
-   */
-  function temperatureToColor(T) {
-    // Approximation for blackbody colors
-    // Based on CIE color matching functions
-    let r, g, b;
-
-    if (T < 1000) {
-      // Very cold - dark red to invisible
-      r = Math.min(255, T / 4);
-      g = 0;
-      b = 0;
-    } else if (T < 4000) {
-      // Red to orange
-      r = 255;
-      g = Math.min(255, (T - 1000) / 12);
-      b = 0;
-    } else if (T < 6500) {
-      // Orange to white
-      r = 255;
-      g = Math.min(255, 180 + (T - 4000) / 35);
-      b = Math.min(255, (T - 4000) / 10);
-    } else if (T < 10000) {
-      // White to blue-white
-      r = Math.max(200, 255 - (T - 6500) / 30);
-      g = Math.max(200, 255 - (T - 6500) / 50);
-      b = 255;
-    } else {
-      // Blue-white to blue
-      r = Math.max(150, 200 - (T - 10000) / 200);
-      g = Math.max(180, 200 - (T - 10000) / 300);
-      b = 255;
-    }
-
-    return {
-      r: Math.round(Math.max(0, Math.min(255, r))),
-      g: Math.round(Math.max(0, Math.min(255, g))),
-      b: Math.round(Math.max(0, Math.min(255, b)))
-    };
-  }
-
-  /**
-   * Get color name from temperature
-   * @param {number} T - Temperature (K)
-   * @returns {string} Color name
-   */
-  function colorName(T) {
-    if (T < 2000) return 'Infrared (invisible)';
-    if (T < 3500) return 'Deep Red';
-    if (T < 4500) return 'Orange-Red';
-    if (T < 5500) return 'Yellow-Orange';
-    if (T < 6500) return 'Yellow-White';
-    if (T < 8000) return 'White';
-    if (T < 12000) return 'Blue-White';
-    return 'Blue';
-  }
-
-  /**
-   * Get spectral class from temperature
+   * Get spectral class from temperature (extended version for demo UI)
+   * Provides more detailed descriptions than the model's simple O/B/A/F/G/K/M/L+ labels
    * @param {number} T - Temperature (K)
    * @returns {string} Spectral class description
    */
@@ -1070,14 +944,19 @@
     update();
     console.log('Blackbody Radiation Sandbox initialized');
 
-    // Expose physics functions for verification
+    // Expose physics functions for verification (delegates to BlackbodyModel)
     window.BlackbodyPhysics = {
       wienPeak: wienPeak,
       wienPeakNm: wienPeakNm,
       planckFunction: planckFunction,
       stefanBoltzmannFlux: stefanBoltzmannFlux,
       luminosityRatio: luminosityRatio,
-      CONSTANTS: CONSTANTS
+      temperatureToColor: temperatureToColor,
+      colorName: colorName,
+      spectralClass: spectralClass,
+      CONSTANTS: CONSTANTS,
+      // Reference to the full model
+      model: window.BlackbodyModel
     };
   }
 
