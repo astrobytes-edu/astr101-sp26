@@ -147,6 +147,32 @@ The throughline across the four core geometry demos + recommended sequencing.
 Embed: `{{</* demo seasons height="600px" */>}}` (repeat per demo)
 :::
 
+::: {.hub-card}
+### 🔭 Light & Telescopes (suite guide)
+
+How wavelength choice, thermal spectra, and instrument resolution fit into one observing story.
+
+::: {.hub-links}
+[Suite guide](light-and-telescopes/){.hub-link .primary}
+[Capstone rotation](light-and-telescopes/capstone.qmd){.hub-link}
+:::
+
+Includes: EM spectrum · Blackbody radiation · Telescope resolution
+:::
+
+::: {.hub-card}
+### 📏 Distance & Measurement (suite guide)
+
+Parallax as the first rung + unit translation + why precision limits what’s directly measurable.
+
+::: {.hub-links}
+[Suite guide](distance-and-measurement/){.hub-link .primary}
+[Capstone rotation](distance-and-measurement/capstone.qmd){.hub-link}
+:::
+
+Includes: Parallax distance (+ optional Cosmic Distance Builder activity)
+:::
+
 :::
 :::
 

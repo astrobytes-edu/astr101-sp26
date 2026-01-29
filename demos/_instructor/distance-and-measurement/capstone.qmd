@@ -1,0 +1,87 @@
+---
+title: "Distance & Measurement Capstone: Rotation + Synthesis"
+subtitle: "A Friday Astro Lab using parallax + unit translation + measurability limits"
+page-layout: article
+toc: true
+search: false
+---
+
+::: {.callout-note title="Navigation"}
+- Instructor hub: [/demos/_instructor/](/demos/_instructor/)
+- Back to suite guide: [Distance & Measurement](index.qmd)
+- Demo: [Parallax distance](/demos/_instructor/parallax-distance/)
+:::
+
+::: {.callout-roadmap title="Instructor goals for this lab"}
+Help students treat “distance” as a measured/inferred quantity with uncertainty and limits, not a label. Every station produces evidence that feeds a final distance claim.
+:::
+
+## Logistics (suggested)
+
+**Total time:** 50–65 minutes  
+**Groups:** 3–4 students  
+**Devices:** 1 per group  
+**Deliverable:** one evidence table + one CER paragraph
+
+## Station “Model Card” template
+
+| Field | Your station notes |
+|---|---|
+| Controls (what we change) |  |
+| Observables (what we read) |  |
+| Governing relationship (equation or rule, in words) |  |
+| One sanity check (limit case or units) |  |
+| One connection sentence to the next station |  |
+
+## Station 1: Parallax scaling
+
+**URL:** `/demos/parallax-distance/`  
+**Focus:** distance ↔ parallax angle (inverse relationship)
+
+**Task:** For each of these distances, record the parallax readout (in arcsec or mas):
+- 1 pc
+- 10 pc
+- 100 pc
+- 1000 pc
+
+Then answer: “How does parallax change when distance increases by 10×?”
+
+## Station 2: Measurement limits (Hipparcos vs Gaia)
+
+**URL:** `/demos/parallax-distance/`  
+**Focus:** what is measurable depends on precision
+
+**Task:** Use the precision toggle and find:
+- one distance that is measurable by **Hipparcos** but difficult/unmeasurable for more distant values,
+- one distance that is measurable by **Gaia** but not by Hipparcos.
+
+Record the parallax values and the demo’s measurability indicator state.
+
+## Station 3: Unit translation (parsec ↔ light-year)
+
+**Focus:** parsecs are defined by the measurement; light-years are a different description.
+
+**Task:** Using the relationship given in the demo README (1 pc ≈ 3.26 light-years), convert:
+- 10 pc into light-years
+- 100 pc into light-years
+
+Then answer: “Why might astronomers prefer parsecs when discussing parallax?”
+
+## Synthesis (CER)
+
+**Claim (given):** “Parallax is a powerful direct distance measurement, but it has a reach limit set by angular precision.”
+
+**Evidence requirement:** your evidence table must include:
+- at least 4 distance/parallax pairs (Station 1),
+- at least 2 measurability examples (Station 2),
+- at least 2 unit conversions (Station 3).
+
+**Reasoning requirement:** your reasoning must explicitly connect:
+- smaller angles to harder measurements,
+- and why a measurement-defined unit (parsec) is convenient for this method.
+
+## Debrief prompts (whole class)
+
+1. “What made a distance ‘direct’ in this lab?”  
+2. “What was the strongest limitation you encountered?”  
+3. “If parallax doesn’t reach far enough, what kind of information might the next rung need?”

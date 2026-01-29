@@ -66,6 +66,10 @@ project:
     - demos/_instructor/index.qmd
     - demos/_instructor/cosmic-playground/index.qmd
     - demos/_instructor/cosmic-playground/capstone.qmd
+    - demos/_instructor/light-and-telescopes/index.qmd
+    - demos/_instructor/light-and-telescopes/capstone.qmd
+    - demos/_instructor/distance-and-measurement/index.qmd
+    - demos/_instructor/distance-and-measurement/capstone.qmd
     - demos/_instructor/em-spectrum/index.qmd
     - demos/_instructor/em-spectrum/model.qmd
     - demos/_instructor/em-spectrum/activities.qmd

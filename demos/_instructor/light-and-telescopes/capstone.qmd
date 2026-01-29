@@ -1,0 +1,99 @@
+---
+title: "Light & Telescopes Capstone: Rotation + Synthesis"
+subtitle: "A Friday Astro Lab connecting spectrum vocabulary → temperature inference → resolution limits"
+page-layout: article
+toc: true
+search: false
+---
+
+::: {.callout-note title="Navigation"}
+- Instructor hub: [/demos/_instructor/](/demos/_instructor/)
+- Back to suite guide: [Light & Telescopes](index.qmd)
+- Demos: [EM spectrum](/demos/_instructor/em-spectrum/) · [Blackbody radiation](/demos/_instructor/blackbody-radiation/) · [Telescope resolution](/demos/_instructor/telescope-resolution/)
+:::
+
+::: {.callout-roadmap title="Instructor goals for this lab"}
+Make “multi-wavelength astronomy” feel like a disciplined choice, not a fun fact: students must justify what they observe, what it means, and what their instrument can actually resolve.
+:::
+
+## Logistics (suggested)
+
+**Total time:** 50–70 minutes  
+**Groups:** 3–4 students  
+**Devices:** 1 per group  
+**Deliverable:** one CER paragraph + evidence table
+
+## Rotation schedule (default 60 minutes)
+
+- 3 stations × 12 minutes = 36 min  
+  - 9 min station work + 3 min transition/check-in
+- 18 min synthesis + write-up
+- 6 min debrief
+
+## Station “Model Card” template (students fill in at every station)
+
+| Field | Your station notes |
+|---|---|
+| Controls (what we change) |  |
+| Observables (what we read) |  |
+| Governing relationship (equation or rule, in words) |  |
+| One sanity check (limit case or units) |  |
+| One connection sentence to the next station |  |
+
+## Station 1: EM spectrum (vocabulary + band choice)
+
+**URL:** `/demos/em-spectrum/`  
+**Focus:** wavelength $\lambda$ ↔ frequency $\nu$ ↔ photon energy $E$
+
+**Task:** Choose one low-energy band and one high-energy band. For each, record:
+- one representative wavelength (with units),
+- one representative photon energy (with units),
+- one example object and one example telescope from the Objects/Telescopes tabs.
+
+**Required connection sentence:** “Choosing a band changes what the photons *can mean* about the source.”
+
+## Station 2: Blackbody radiation (temperature inference)
+
+**URL:** `/demos/blackbody-radiation/`  
+**Focus:** hotter → shorter $\lambda_{\text{peak}}$ and much higher emitted power
+
+**Task:** Compare two temperatures (choose presets such as Sun vs B star or Sun vs Red Giant). Record:
+- $T$ for each,
+- $\lambda_{\text{peak}}$ for each,
+- one sentence describing what “peak shifts” tells you about color and detectability.
+
+**Required connection sentence:** “If you know the band where something emits strongly, you can choose an observation that is sensitive to it.”
+
+## Station 3: Telescope resolution (measurement constraint)
+
+**URL:** `/demos/telescope-resolution/`  
+**Focus:** resolution scales as $\theta \propto \lambda/D$
+
+**Task:** Pick one telescope preset and compare resolution at two wavelengths (e.g., Visible vs Near-IR). Record:
+- wavelength choices,
+- resolution readouts (arcsec),
+- whether the binary is resolved at a chosen separation.
+
+**Required connection sentence:** “Even if the physics says ‘observe in IR,’ resolution may get worse unless $D$ is large.”
+
+## Synthesis (the “put it all together” moment)
+
+### CER prompt (recommended)
+
+**Claim (given):** “Choosing a wavelength band is a measurement decision that controls what you can infer, but your instrument’s resolution constrains what you can actually test.”
+
+**Evidence requirement:** at least one recorded value or screenshot from each station:
+- EM spectrum: a wavelength + photon energy + a telescope/object example
+- Blackbody: $T$ and $\lambda_{\text{peak}}$
+- Telescope resolution: a resolution number (arcsec) and resolved/marginal/unresolved status
+
+**Reasoning requirement:** your reasoning must include:
+- a wavelength/energy statement ($\lambda$, $\nu$, or $E$),
+- a temperature–spectrum statement (hotter ↔ peak shift),
+- and a resolution statement ($\lambda/D$ scaling).
+
+## Debrief prompts (whole class)
+
+1. “Where did our intuition fail until the model constrained it?”  
+2. “What was the strongest tradeoff you noticed (band choice vs resolution)?”  
+3. “What would you need beyond these demos to make a real observing proposal?”
