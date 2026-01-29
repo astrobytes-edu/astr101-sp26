@@ -94,3 +94,36 @@ test('solarEclipseTypeFromBetaDeg: beta≈0 distinguishes total vs annular by um
   assert.equal(totalish.type, 'total-solar');
   assert.equal(annularish.type, 'annular-solar');
 });
+
+test('SAROS_CYCLE_DAYS is exported and approximately 6585.3 days', () => {
+  assert.ok(typeof M.SAROS_CYCLE_DAYS === 'number', 'expected SAROS_CYCLE_DAYS export');
+  // Saros = 223 synodic months ≈ 6585.32 days (18 years, 11 days, 8 hours)
+  assert.ok(Math.abs(M.SAROS_CYCLE_DAYS - 6585.32) < 0.1, `expected ~6585.32, got ${M.SAROS_CYCLE_DAYS}`);
+});
+
+test('isSarosRelated: eclipses ~6585 days apart are Saros-related', () => {
+  assert.ok(typeof M.isSarosRelated === 'function', 'expected isSarosRelated export');
+
+  // Two eclipses exactly one Saros apart
+  const related = M.isSarosRelated({ daysSeparation: 6585.32 });
+  assert.equal(related, true);
+
+  // Eclipses half a Saros apart are NOT related
+  const notRelated = M.isSarosRelated({ daysSeparation: 3292 });
+  assert.equal(notRelated, false);
+
+  // Tolerance: within ±1 day should still match
+  const almostSaros = M.isSarosRelated({ daysSeparation: 6584.5 });
+  assert.equal(almostSaros, true);
+});
+
+test('isExeligmosRelated: eclipses ~19756 days apart are Exeligmos-related', () => {
+  assert.ok(typeof M.isExeligmosRelated === 'function', 'expected isExeligmosRelated export');
+
+  // Exeligmos = 3 Saros cycles ≈ 19755.96 days (54 years, 33 days)
+  const related = M.isExeligmosRelated({ daysSeparation: 19756 });
+  assert.equal(related, true);
+
+  const notRelated = M.isExeligmosRelated({ daysSeparation: 10000 });
+  assert.equal(notRelated, false);
+});

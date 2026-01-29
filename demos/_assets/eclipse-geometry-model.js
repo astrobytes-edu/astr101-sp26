@@ -24,6 +24,23 @@
 })(typeof globalThis !== 'undefined' ? globalThis : this, function () {
   'use strict';
 
+  // ============================================
+  // Eclipse Cycle Constants
+  // ============================================
+
+  // Saros cycle: 223 synodic months = 6585.3211 days (18 years, 11 days, 8 hours)
+  // After one Saros, Sun, Moon, and nodes return to nearly the same relative positions.
+  const SYNODIC_MONTH_DAYS = 29.530588;
+  const SAROS_SYNODIC_MONTHS = 223;
+  const SAROS_CYCLE_DAYS = SYNODIC_MONTH_DAYS * SAROS_SYNODIC_MONTHS; // ≈ 6585.32
+
+  // Exeligmos: 3 Saros cycles = 669 synodic months ≈ 19755.96 days (54 years, 33 days)
+  // After one Exeligmos, eclipses return to same longitude (8-hour shift cancels out).
+  const EXELIGMOS_CYCLE_DAYS = SAROS_CYCLE_DAYS * 3;
+
+  // Tolerance for cycle matching (±1 day accounts for approximations)
+  const CYCLE_TOLERANCE_DAYS = 1;
+
   function degToRad(deg) {
     return (deg * Math.PI) / 180;
   }
@@ -230,7 +247,38 @@
     return { type: 'none' };
   }
 
+  // ============================================
+  // Saros Cycle Detection
+  // ============================================
+
+  /**
+   * Check if two eclipses are Saros-related (separated by ~6585 days).
+   * @param {object} params
+   * @param {number} params.daysSeparation - Days between two eclipses
+   * @returns {boolean} True if within tolerance of one Saros cycle
+   */
+  function isSarosRelated({ daysSeparation }) {
+    if (!Number.isFinite(daysSeparation)) return false;
+    const absDays = Math.abs(daysSeparation);
+    return Math.abs(absDays - SAROS_CYCLE_DAYS) <= CYCLE_TOLERANCE_DAYS;
+  }
+
+  /**
+   * Check if two eclipses are Exeligmos-related (separated by ~19756 days).
+   * Exeligmos = 3 Saros cycles; eclipses return to same longitude.
+   * @param {object} params
+   * @param {number} params.daysSeparation - Days between two eclipses
+   * @returns {boolean} True if within tolerance of one Exeligmos cycle
+   */
+  function isExeligmosRelated({ daysSeparation }) {
+    if (!Number.isFinite(daysSeparation)) return false;
+    const absDays = Math.abs(daysSeparation);
+    return Math.abs(absDays - EXELIGMOS_CYCLE_DAYS) <= CYCLE_TOLERANCE_DAYS;
+  }
+
   return {
+    SAROS_CYCLE_DAYS,
+    EXELIGMOS_CYCLE_DAYS,
     normalizeAngleDeg,
     angularSeparationDeg,
     phaseAngleDeg,
@@ -242,5 +290,7 @@
     eclipseThresholdsDeg,
     lunarEclipseTypeFromBetaDeg,
     solarEclipseTypeFromBetaDeg,
+    isSarosRelated,
+    isExeligmosRelated,
   };
 });
