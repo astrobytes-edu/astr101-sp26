@@ -94,8 +94,15 @@
   }
 
   /**
-   * Bessel function J1(x) approximation
-   * Used for Airy disk pattern
+   * Compute Bessel function J1(x) using polynomial approximation.
+   *
+   * Source: Numerical Recipes in C, 2nd Edition (1992), Section 6.5
+   * Press, Teukolsky, Vetterling, Flannery
+   * Cambridge University Press
+   *
+   * Coefficients from equations 6.5.8 and 6.5.9 for |x| < 8 and |x| >= 8
+   * respectively. Accuracy: |error| < 4e-8 for all x.
+   *
    * @param {number} x - Input value
    * @returns {number} J1(x)
    */
