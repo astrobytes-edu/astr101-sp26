@@ -12,28 +12,278 @@ This section is not linked from the student navigation. It is still a public URL
 Open directly: `/demos/_instructor/`
 :::
 
-## Quick Links
+<style>
+.hub-section {
+  margin: 2rem 0 2.5rem 0;
+}
 
-| Demo | Student URL | Instructor guide | Embed code |
-|------|-------------|-----------------|------------|
-| Seasons | `/demos/seasons/` | `/demos/_instructor/seasons/` | `{{</* demo seasons height="600px" */>}}` |
-| Moon phases | `/demos/moon-phases/` | `/demos/_instructor/moon-phases/` | `{{</* demo moon-phases height="450px" */>}}` |
-| Angular size | `/demos/angular-size/` | `/demos/_instructor/angular-size/` | `{{</* demo angular-size */>}}` |
-| Eclipse geometry | `/demos/eclipse-geometry/` | `/demos/_instructor/eclipse-geometry/` | `{{</* demo eclipse-geometry height="600px" */>}}` |
+.hub-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--bs-border-color);
+}
 
-## ASTR 201 add-on demos
+.hub-header-icon {
+  font-size: 1.25rem;
+}
 
-| Demo | Student URL | Instructor guide | Embed code |
-|------|-------------|-----------------|------------|
-| Kepler’s laws | `/demos/keplers-laws/` | `/demos/_instructor/keplers-laws/` | `{{</* demo keplers-laws height="700px" */>}}` |
-| Binary orbits | `/demos/binary-orbits/` | `/demos/_instructor/binary-orbits/` | `{{</* demo binary-orbits height="700px" */>}}` |
-| Conservation laws (orbits) | `/demos/conservation-laws/` | `/demos/_instructor/conservation-laws/` | `{{</* demo conservation-laws height="650px" */>}}` |
+.hub-header-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0;
+}
 
-## Recommended “Astro Lab” flow (Friday)
+.hub-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+}
 
-If you’re running a rotation lab across all four demos, start here:
+.hub-card {
+  border: 1px solid var(--bs-border-color);
+  border-radius: 12px;
+  overflow: hidden;
+  background: var(--bs-body-bg);
+}
 
-- Capstone rotation + synthesis: `/demos/_instructor/cosmic-playground/capstone.html`
+.hub-card-top {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 1.25rem;
+  background: rgba(0, 0, 0, 0.03);
+}
+
+.hub-card-icon {
+  font-size: 1.75rem;
+  line-height: 1;
+}
+
+.hub-card-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.hub-card-body {
+  padding: 1rem 1.25rem 1.25rem 1.25rem;
+}
+
+.hub-card-desc {
+  margin: 0 0 0.75rem 0;
+  color: var(--bs-secondary-color);
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+.hub-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 0.5rem 0 0.75rem 0;
+}
+
+.hub-link {
+  display: inline-block;
+  padding: 0.35rem 0.65rem;
+  border-radius: 9999px;
+  border: 1px solid var(--bs-border-color);
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.hub-link:hover {
+  text-decoration: none;
+  border-color: var(--bs-primary);
+}
+
+.hub-link.primary {
+  background: var(--bs-primary);
+  color: var(--bs-body-bg);
+  border-color: var(--bs-primary);
+}
+
+.hub-link.primary:hover {
+  filter: brightness(1.05);
+}
+
+.hub-embed {
+  margin: 0;
+  font-size: 0.85rem;
+  color: var(--bs-secondary-color);
+}
+
+.hub-embed code {
+  white-space: nowrap;
+}
+</style>
+
+## Instructor demo hub
+
+Use this hub as your “home base” (bookmark it) and jump to:
+
+- the **student-facing demo** (what you project / what students use),
+- the **instructor guide** (teach-first script + links),
+- or the **model / activities / assessment / backlog** pages.
+
+::: {.hub-section}
+## 🧭 Suite resources
+
+::: {.hub-gallery}
+
+::: {.hub-card}
+### 🧩 Cosmic Playground (suite guide)
+
+The throughline across the four core geometry demos + recommended sequencing.
+
+::: {.hub-links}
+[Suite guide](cosmic-playground/){.hub-link .primary}
+[Capstone rotation](cosmic-playground/capstone.qmd){.hub-link}
+:::
+
+Embed: `{{</* demo seasons height="600px" */>}}` (repeat per demo)
+:::
+
+:::
+:::
+
+::: {.hub-section}
+## 🌍 ASTR 101 core demos
+
+::: {.hub-gallery}
+
+::: {.hub-card}
+### 🌍 Seasons
+
+Tilt vs distance; day length + noon altitude; misconception-busting.
+
+::: {.hub-links}
+[Student demo](/demos/seasons/){.hub-link .primary}
+[Guide](seasons/){.hub-link}
+[Model](seasons/model.qmd){.hub-link}
+[Activities](seasons/activities.qmd){.hub-link}
+[Assessment](seasons/assessment.qmd){.hub-link}
+[Backlog](seasons/backlog.qmd){.hub-link}
+:::
+
+Embed: `{{</* demo seasons height="600px" */>}}`
+:::
+
+::: {.hub-card}
+### 🌙 Moon phases
+
+Phases are geometry, not shadows; prediction-first exploration.
+
+::: {.hub-links}
+[Student demo](/demos/moon-phases/){.hub-link .primary}
+[Guide](moon-phases/){.hub-link}
+[Model](moon-phases/model.qmd){.hub-link}
+[Activities](moon-phases/activities.qmd){.hub-link}
+[Assessment](moon-phases/assessment.qmd){.hub-link}
+[Backlog](moon-phases/backlog.qmd){.hub-link}
+:::
+
+Embed: `{{</* demo moon-phases height="450px" */>}}`
+:::
+
+::: {.hub-card}
+### 📐 Angular size
+
+Size vs distance; degrees/arcminutes/arcseconds; eclipse intuition.
+
+::: {.hub-links}
+[Student demo](/demos/angular-size/){.hub-link .primary}
+[Guide](angular-size/){.hub-link}
+[Model](angular-size/model.qmd){.hub-link}
+[Activities](angular-size/activities.qmd){.hub-link}
+[Assessment](angular-size/assessment.qmd){.hub-link}
+[Backlog](angular-size/backlog.qmd){.hub-link}
+:::
+
+Embed: `{{</* demo angular-size */>}}`
+:::
+
+::: {.hub-card}
+### 🌑 Eclipse geometry
+
+Tilt + nodes + phase alignment; why eclipses are rare.
+
+::: {.hub-links}
+[Student demo](/demos/eclipse-geometry/){.hub-link .primary}
+[Guide](eclipse-geometry/){.hub-link}
+[Model](eclipse-geometry/model.qmd){.hub-link}
+[Activities](eclipse-geometry/activities.qmd){.hub-link}
+[Assessment](eclipse-geometry/assessment.qmd){.hub-link}
+[Backlog](eclipse-geometry/backlog.qmd){.hub-link}
+:::
+
+Embed: `{{</* demo eclipse-geometry height="600px" */>}}`
+:::
+
+:::
+:::
+
+::: {.hub-section}
+## 🛰️ ASTR 201 / mechanics add-ons
+
+::: {.hub-gallery}
+
+::: {.hub-card}
+### 📏 Kepler’s laws
+
+Area law + anomalies + orbital geometry; equal-time markers.
+
+::: {.hub-links}
+[Student demo](/demos/keplers-laws/){.hub-link .primary}
+[Guide](keplers-laws/){.hub-link}
+[Model](keplers-laws/model.qmd){.hub-link}
+[Activities](keplers-laws/activities.qmd){.hub-link}
+[Assessment](keplers-laws/assessment.qmd){.hub-link}
+[Backlog](keplers-laws/backlog.qmd){.hub-link}
+:::
+
+Embed: `{{</* demo keplers-laws height="700px" */>}}`
+:::
+
+::: {.hub-card}
+### 🪐 Binary orbits
+
+Barycenter intuition + exoplanet wobble; mass ratio scaling.
+
+::: {.hub-links}
+[Student demo](/demos/binary-orbits/){.hub-link .primary}
+[Guide](binary-orbits/){.hub-link}
+[Model](binary-orbits/model.qmd){.hub-link}
+[Activities](binary-orbits/activities.qmd){.hub-link}
+[Assessment](binary-orbits/assessment.qmd){.hub-link}
+[Backlog](binary-orbits/backlog.qmd){.hub-link}
+:::
+
+Embed: `{{</* demo binary-orbits height="700px" */>}}`
+:::
+
+::: {.hub-card}
+### 🧲 Conservation laws (orbits)
+
+Energy + angular momentum set orbit type (bound/escape/hyperbolic).
+
+::: {.hub-links}
+[Student demo](/demos/conservation-laws/){.hub-link .primary}
+[Guide](conservation-laws/){.hub-link}
+[Model](conservation-laws/model.qmd){.hub-link}
+[Activities](conservation-laws/activities.qmd){.hub-link}
+[Assessment](conservation-laws/assessment.qmd){.hub-link}
+[Backlog](conservation-laws/backlog.qmd){.hub-link}
+:::
+
+Embed: `{{</* demo conservation-laws height="650px" */>}}`
+:::
+
+:::
+:::
 
 ---
 
