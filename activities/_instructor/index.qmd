@@ -3,6 +3,7 @@ title: "Activities Instructor Guide"
 subtitle: "Facilitation notes and answer keys for ASTR 101 activities"
 page-layout: article
 toc: true
+search: false
 ---
 
 ::: {.callout-note}
