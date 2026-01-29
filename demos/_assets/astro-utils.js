@@ -61,11 +61,14 @@ function formatWithUnits(value, type) {
 
 /**
  * Format distance with appropriate units (km input)
+ * Uses AstroConstants for single source of truth.
  */
 function formatDistance(km) {
-  const AU = 1.496e8; // km
-  const LY = 9.461e12; // km
-  const PC = 3.086e13; // km
+  // Use AstroConstants if available, otherwise fallback to hardcoded values
+  var constants = (typeof AstroConstants !== 'undefined') ? AstroConstants.LENGTH : null;
+  var AU = constants ? constants.KM_PER_AU : 149597870.7;
+  var LY = constants ? constants.KM_PER_LY : 9.4607304725808e12;
+  var PC = constants ? constants.KM_PER_PC : 3.0856775814914e13;
 
   if (km >= PC) {
     return { value: (km / PC).toPrecision(3), unit: 'pc' };
@@ -952,57 +955,65 @@ function renderAllMath() {
 // Export for use in demos
 // ============================================
 
+// Build the exports object
+var AstroUtilsExports = {
+  // Formatting
+  formatScientific: formatScientific,
+  formatWithUnits: formatWithUnits,
+  formatDistance: formatDistance,
+  formatAngle: formatAngle,
+  formatTime: formatTime,
+
+  // Calculations
+  angularSize: angularSize,
+  distanceForAngularSize: distanceForAngularSize,
+
+  // Animation
+  createAnimationLoop: createAnimationLoop,
+  easeInOutCubic: easeInOutCubic,
+  easeOutCubic: easeOutCubic,
+  easeInCubic: easeInCubic,
+  easeOutElastic: easeOutElastic,
+  easeOutBack: easeOutBack,
+  keplerianEasing: keplerianEasing,
+  lerp: lerp,
+  animateValue: animateValue,
+
+  // Micro-interactions
+  animateValueChange: animateValueChange,
+  createAnimatedValue: createAnimatedValue,
+  addRippleEffect: addRippleEffect,
+  showSuccessIndicator: showSuccessIndicator,
+
+  // Sliders
+  updateSliderProgress: updateSliderProgress,
+  addSliderTooltip: addSliderTooltip,
+  createLogSlider: createLogSlider,
+  createLinearSlider: createLinearSlider,
+
+  // DOM
+  createSVGElement: createSVGElement,
+  $: $,
+  $$: $$,
+
+  // Drag
+  makeOrbitalDraggable: makeOrbitalDraggable,
+
+  // Math rendering (KaTeX)
+  renderMath: renderMath,
+  renderAllMath: renderAllMath,
+
+  // Constants
+  ASTRO: ASTRO,
+  ANGULAR_SIZE_PRESETS: ANGULAR_SIZE_PRESETS
+};
+
 // Make available globally for standalone HTML files
 if (typeof window !== 'undefined') {
-  window.AstroUtils = {
-    // Formatting
-    formatScientific,
-    formatWithUnits,
-    formatDistance,
-    formatAngle,
-    formatTime,
+  window.AstroUtils = AstroUtilsExports;
+}
 
-    // Calculations
-    angularSize,
-    distanceForAngularSize,
-
-    // Animation
-    createAnimationLoop,
-    easeInOutCubic,
-    easeOutCubic,
-    easeInCubic,
-    easeOutElastic,
-    easeOutBack,
-    keplerianEasing,
-    lerp,
-    animateValue,
-
-    // Micro-interactions
-    animateValueChange,
-    createAnimatedValue,
-    addRippleEffect,
-    showSuccessIndicator,
-
-    // Sliders
-    updateSliderProgress,
-    addSliderTooltip,
-    createLogSlider,
-    createLinearSlider,
-
-    // DOM
-    createSVGElement,
-    $,
-    $$,
-
-    // Drag
-    makeOrbitalDraggable,
-
-    // Math rendering (KaTeX)
-    renderMath,
-    renderAllMath,
-
-    // Constants
-    ASTRO,
-    ANGULAR_SIZE_PRESETS
-  };
+// Support Node.js (for testing)
+if (typeof module === 'object' && typeof module.exports === 'object') {
+  module.exports = AstroUtilsExports;
 }
