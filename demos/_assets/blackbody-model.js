@@ -69,9 +69,39 @@
     return Number.isNaN(cm) ? NaN : cm * CONSTANTS.cm_to_nm;
   }
 
+  // ============================================
+  // Planck Function
+  // ============================================
+
+  /**
+   * Planck function B_λ(T) - spectral radiance
+   * B_λ = (2hc²/λ⁵) × 1/(exp(hc/λkT) - 1)
+   *
+   * @param {number} lambda - Wavelength (cm)
+   * @param {number} T - Temperature (K)
+   * @returns {number} Spectral radiance (erg/s/cm²/sr/cm)
+   */
+  function planckFunction(lambda, T) {
+    if (!Number.isFinite(lambda) || lambda <= 0) return 0;
+    if (!Number.isFinite(T) || T <= 0) return 0;
+
+    const c = CONSTANTS.c;
+    const h = CONSTANTS.h;
+    const k = CONSTANTS.k;
+
+    const factor1 = (2 * h * c * c) / Math.pow(lambda, 5);
+    const exponent = (h * c) / (lambda * k * T);
+
+    // Prevent overflow for very small wavelengths or low temperatures
+    if (exponent > 700) return 0;
+
+    return factor1 / (Math.exp(exponent) - 1);
+  }
+
   return {
     CONSTANTS,
     wienPeakCm,
     wienPeakNm,
+    planckFunction,
   };
 });
