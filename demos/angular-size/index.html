@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="../_assets/astro-theme.css">
   <link rel="stylesheet" href="../_assets/demo-shell.css">
   <link rel="stylesheet" href="../_assets/demo-legacy.css">
+  <link rel="stylesheet" href="../_assets/demo-modes.css">
   <link rel="stylesheet" href="./angular-size.css">
 </head>
 <body>
@@ -18,7 +19,11 @@
       <header class="demo-header">
         <h1 class="demo-title">Angular Size</h1>
         <p class="demo-subtitle">Why things look big or small depends on size <em>and</em> distance</p>
-        <button class="astro-btn secondary" id="btn-reset-defaults" type="button">Reset to Lecture Defaults</button>
+        <div class="btn-group demo-tools">
+          <button class="astro-btn secondary" id="btn-reset-defaults" type="button">Reset to Lecture Defaults</button>
+          <button class="astro-btn" id="btn-station-mode" type="button">Station Mode</button>
+          <button class="astro-btn secondary" id="btn-help" type="button">Help / Keys</button>
+        </div>
       </header>
 
       <!-- Main Visualization -->
@@ -204,6 +209,7 @@
   <script src="../_assets/physics/units.js"></script>
   <script src="../_assets/astro-utils.js"></script>
   <script src="../_assets/demo-polish.js"></script>
+  <script src="../_assets/demo-modes.js"></script>
   <script src="../_assets/starfield.js"></script>
   <script src="../_assets/angular-size-model.js"></script>
   <script src="angular-size.js"></script>

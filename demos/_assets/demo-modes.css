@@ -1,0 +1,203 @@
+:root {
+  --demo-modal-z: 1000;
+}
+
+.demo-tools {
+  justify-content: center;
+  margin-top: var(--space-md);
+}
+
+.demo-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: var(--demo-modal-z);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-lg);
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.demo-modal-backdrop.open {
+  display: flex;
+}
+
+.demo-modal {
+  width: min(920px, 100%);
+  max-height: min(88vh, 900px);
+  display: flex;
+  flex-direction: column;
+  background: rgba(18, 18, 31, 0.98);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-lg);
+  box-shadow: 0 16px 60px rgba(0, 0, 0, 0.6);
+  overflow: hidden;
+}
+
+.demo-modal-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-md);
+  padding: var(--space-md) var(--space-lg);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.demo-modal-title {
+  font-size: var(--font-size-lg);
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: var(--line-height-tight);
+  margin: 0;
+}
+
+.demo-modal-subtitle {
+  margin-top: var(--space-xs);
+  font-size: var(--font-size-sm);
+  color: var(--text-muted);
+  line-height: var(--line-height-normal);
+}
+
+.demo-modal-close {
+  background: transparent;
+  border: 1px solid var(--border-color);
+  color: var(--text-secondary);
+  border-radius: 9999px;
+  width: 44px;
+  height: 44px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  line-height: 1;
+  display: grid;
+  place-items: center;
+}
+
+.demo-modal-close:hover {
+  color: var(--text-primary);
+  border-color: var(--cosmic-teal);
+  box-shadow: var(--glow-teal);
+}
+
+.demo-modal-close:focus-visible {
+  outline: 2px solid var(--cosmic-teal);
+  outline-offset: 2px;
+}
+
+.demo-modal-body {
+  padding: var(--space-lg);
+  overflow: auto;
+}
+
+.demo-modal-section {
+  margin-bottom: var(--space-lg);
+}
+
+.demo-modal-section:last-child {
+  margin-bottom: 0;
+}
+
+.demo-modal-section h3 {
+  margin: 0 0 var(--space-sm) 0;
+  font-size: var(--font-size-sm);
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.demo-kbd,
+kbd.demo-kbd {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.85em;
+  padding: 0.15rem 0.4rem;
+  border-radius: 6px;
+  background: var(--space-deep);
+  border: 1px solid var(--border-color);
+  color: var(--text-primary);
+  white-space: nowrap;
+}
+
+.demo-shortcuts {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--font-size-sm);
+}
+
+.demo-shortcuts th,
+.demo-shortcuts td {
+  border: 1px solid var(--border-color);
+  padding: 0.5rem 0.6rem;
+  vertical-align: top;
+}
+
+.demo-shortcuts th {
+  background: rgba(78, 205, 196, 0.08);
+  color: var(--text-secondary);
+  font-weight: 700;
+}
+
+.demo-station-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+  align-items: center;
+  margin-bottom: var(--space-sm);
+}
+
+.demo-station-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--font-size-sm);
+}
+
+.demo-station-table th,
+.demo-station-table td {
+  border: 1px solid var(--border-color);
+  padding: 0.5rem 0.6rem;
+  vertical-align: top;
+}
+
+.demo-station-table th {
+  background: rgba(199, 146, 234, 0.10);
+  color: var(--text-secondary);
+  font-weight: 700;
+}
+
+.demo-modal-status {
+  margin-top: var(--space-md);
+  font-size: var(--font-size-sm);
+  color: var(--text-muted);
+}
+
+@media (max-width: 540px) {
+  .demo-modal-body {
+    padding: var(--space-md);
+  }
+}
+
+@media print {
+  body.demo-printing .demo-wrapper {
+    display: none !important;
+  }
+
+  body.demo-printing .demo-modal-backdrop {
+    position: static !important;
+    inset: auto !important;
+    display: block !important;
+    background: transparent !important;
+    padding: 0 !important;
+  }
+
+  body.demo-printing .demo-modal {
+    max-height: none !important;
+    width: 100% !important;
+    border: none !important;
+    box-shadow: none !important;
+  }
+
+  body.demo-printing .demo-modal-close,
+  body.demo-printing .demo-station-actions {
+    display: none !important;
+  }
+}
+

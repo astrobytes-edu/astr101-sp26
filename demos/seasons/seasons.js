@@ -147,7 +147,11 @@
       toggleEcliptic: document.getElementById('toggle-ecliptic'),
       toggleLatitudeBands: document.getElementById('toggle-latitude-bands'),
       toggleTerminator: document.getElementById('toggle-terminator'),
-      toggleHourGrid: document.getElementById('toggle-hour-grid')
+      toggleHourGrid: document.getElementById('toggle-hour-grid'),
+
+      // Demo modes (shared UI)
+      btnStationMode: document.getElementById('btn-station-mode'),
+      btnHelp: document.getElementById('btn-help'),
     };
   }
 
@@ -297,6 +301,34 @@
     const abs = Math.abs(lat);
     const absStr = Number.isInteger(abs) ? String(abs) : abs.toFixed(1);
     return lat >= 0 ? `${absStr}°N` : `${absStr}°S`;
+  }
+
+  function buildStationRow({ dayOfYear, latitudeDeg, axialTiltDeg }) {
+    const dayInt = Math.round(wrapDay(dayOfYear));
+    const latitude = Number.isFinite(latitudeDeg) ? latitudeDeg : state.latitude;
+    const tilt = Number.isFinite(axialTiltDeg) ? axialTiltDeg : state.axialTilt;
+
+    const declination = Model.sunDeclinationDeg({ dayOfYear: dayInt, axialTiltDeg: tilt });
+    const dayLengthHours = Model.dayLengthHours({ latitudeDeg: latitude, sunDeclinationDeg: declination });
+    const noonAlt = Model.sunNoonAltitudeDeg({ latitudeDeg: latitude, sunDeclinationDeg: declination });
+    const rAu = Model.earthSunDistanceAu({
+      dayOfYear: dayInt,
+      yearDays: TROPICAL_YEAR_DAYS,
+      perihelionDay: PERIHELION_DAY,
+    });
+
+    return {
+      day: String(dayInt),
+      date: dayOfYearToDate(dayInt),
+      latitude: formatLatitude(latitude),
+      tilt: `${tilt.toFixed(1)}°`,
+      declination: `${declination.toFixed(1)}°`,
+      dayLength: formatDayLength(dayLengthHours),
+      noonAltitude: `${noonAlt.toFixed(1)}°`,
+      seasonN: getSeasonNorth(dayInt),
+      seasonS: getSeasonSouth(dayInt),
+      distanceAu: rAu.toFixed(3),
+    };
   }
 
   // ============================================
@@ -1005,6 +1037,94 @@
     initElements();
     setupControls();
     setupKeyboard();
+
+    // Shared demo modes (Help/Keys + Station Mode)
+    if (window.DemoModes && (elements.btnHelp || elements.btnStationMode)) {
+      const modes = window.DemoModes.create({
+        help: {
+          title: 'Help / Keys',
+          subtitle: 'Keyboard shortcuts + how to use this demo',
+          sections: [
+            {
+              heading: 'Global',
+              type: 'shortcuts',
+              items: [
+                { key: '?', action: 'Open/close this help' },
+                { key: 'g', action: 'Open/close Station Mode' },
+              ],
+            },
+            {
+              heading: 'Seasons shortcuts',
+              type: 'shortcuts',
+              items: [
+                { key: '← / →', action: 'Move 1 day backward/forward' },
+                { key: 'Shift + ← / →', action: 'Jump 30 days backward/forward' },
+                { key: 'e', action: 'Jump to nearest equinox' },
+                { key: 's', action: 'Jump to nearest solstice' },
+                { key: 'Space', action: 'Play/pause year animation' },
+              ],
+            },
+            {
+              heading: 'Mouse / touch',
+              type: 'bullets',
+              items: [
+                'Use sliders to change date, tilt, and latitude.',
+                'Use the Equinox/Solstice buttons for quick anchor dates.',
+              ],
+            },
+          ],
+        },
+        station: {
+          title: 'Station Mode: Seasons',
+          subtitle: 'Collect evidence that tilt (not distance) causes seasons',
+          steps: [
+            'Add the four anchor dates (equinoxes + solstices).',
+            'Change latitude (and/or tilt), then add snapshot rows.',
+            'Use your table to explain how day length and noon altitude change across the year.',
+          ],
+          columns: [
+            { key: 'date', label: 'Date' },
+            { key: 'day', label: 'Day' },
+            { key: 'latitude', label: 'Latitude' },
+            { key: 'tilt', label: 'Tilt' },
+            { key: 'declination', label: 'Sun decl. δ' },
+            { key: 'dayLength', label: 'Day length' },
+            { key: 'noonAltitude', label: 'Noon alt.' },
+            { key: 'seasonN', label: 'Season (N)' },
+            { key: 'seasonS', label: 'Season (S)' },
+            { key: 'distanceAu', label: 'Distance (AU)' },
+          ],
+          snapshotLabel: 'Add row (current settings)',
+          getSnapshotRow: () =>
+            buildStationRow({
+              dayOfYear: state.dayOfYear,
+              latitudeDeg: state.latitude,
+              axialTiltDeg: state.axialTilt,
+            }),
+          rowSets: [
+            {
+              label: 'Add anchor dates',
+              getRows: () => [
+                buildStationRow({ dayOfYear: 80, latitudeDeg: state.latitude, axialTiltDeg: state.axialTilt }),
+                buildStationRow({ dayOfYear: 172, latitudeDeg: state.latitude, axialTiltDeg: state.axialTilt }),
+                buildStationRow({ dayOfYear: 266, latitudeDeg: state.latitude, axialTiltDeg: state.axialTilt }),
+                buildStationRow({ dayOfYear: 356, latitudeDeg: state.latitude, axialTiltDeg: state.axialTilt }),
+              ],
+            },
+          ],
+          synthesisPrompt: `
+            <p><strong>Claim:</strong> Seasons are caused by Earth’s axial tilt, not Earth–Sun distance.</p>
+            <p><strong>Use your table:</strong> Compare day length + noon altitude across the anchor dates. Then check whether the distance column lines up with Northern Hemisphere summer.</p>
+          `,
+        },
+        keys: { help: '?', station: 'g' },
+      });
+
+      modes.bindButtons({
+        helpButton: elements.btnHelp,
+        stationButton: elements.btnStationMode,
+      });
+    }
 
     // Initialize starfield if available
     const starfieldCanvas = document.getElementById('starfield');

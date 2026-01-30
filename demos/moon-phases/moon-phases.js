@@ -66,6 +66,7 @@
   let phaseName, illumination, daysSinceNew;
   let phaseButtons;
   let timelineDirection, timelineDay, timelinePhases;
+  let btnStationMode, btnHelp;
 
   function initElements() {
     orbitalSvg = document.getElementById('orbital-svg');
@@ -88,6 +89,9 @@
     timelineDirection = document.getElementById('timeline-direction');
     timelineDay = document.getElementById('timeline-day');
     timelinePhases = document.querySelectorAll('.timeline-phase');
+
+    btnStationMode = document.getElementById('btn-station-mode');
+    btnHelp = document.getElementById('btn-help');
   }
 
   // ============================================
@@ -125,6 +129,29 @@
     // New moon is at 180, so offset by 180
     const daysFraction = ((normalized - 180 + 360) % 360) / 360;
     return daysFraction * SYNODIC_MONTH;
+  }
+
+  function buildStationRow({ angleDeg, label }) {
+    const normalized = ((angleDeg % 360) + 360) % 360;
+    const illum = getIllumination(angleDeg);
+    const name = getPhaseName(angleDeg);
+    const days = getDaysSinceNew(angleDeg);
+
+    const trend =
+      normalized === 180
+        ? 'New'
+        : normalized > 180
+          ? 'Waxing'
+          : 'Waning';
+
+    return {
+      case: label ?? 'Snapshot',
+      phase: name,
+      angle: `${Math.round(normalized)}°`,
+      illumination: `${Math.round(illum * 100)}%`,
+      daysSinceNew: `${days.toFixed(1)} d`,
+      trend,
+    };
   }
 
   // ============================================
@@ -929,6 +956,82 @@
     setupAnimationControls();
     setupShadowToggle();
     setupChallengeMode();
+
+    // Shared demo modes (Help/Keys + Station Mode)
+    if (window.DemoModes && (btnHelp || btnStationMode)) {
+      const modes = window.DemoModes.create({
+        help: {
+          title: 'Help / Keys',
+          subtitle: 'Keyboard shortcuts + how to use this demo',
+          sections: [
+            {
+              heading: 'Global',
+              type: 'shortcuts',
+              items: [
+                { key: '?', action: 'Open/close this help' },
+                { key: 'g', action: 'Open/close Station Mode' },
+              ],
+            },
+            {
+              heading: 'Moon (when focused)',
+              type: 'shortcuts',
+              items: [
+                { key: '← / → (or ↑ / ↓)', action: 'Move Moon 5° around orbit' },
+                { key: 'Shift + arrows', action: 'Move Moon 1° (fine control)' },
+                { key: 'Home', action: 'Jump to Full Moon' },
+                { key: 'End', action: 'Jump to New Moon' },
+                { key: '1–8', action: 'Jump to the 8 named phases' },
+              ],
+            },
+            {
+              heading: 'Tip',
+              type: 'bullets',
+              items: [
+                'Click the Moon in the “View from Above” panel (or Tab to it) to enable keyboard control.',
+                'Sunlight comes from the left in the top view.',
+              ],
+            },
+          ],
+        },
+        station: {
+          title: 'Station Mode: Moon Phases',
+          subtitle: 'Collect evidence that phases are viewing geometry (not shadow)',
+          steps: [
+            'Add the 4 key phases (New, First Quarter, Full, Third Quarter).',
+            'Drag to any other phase and add snapshot rows.',
+            'Use the table to connect “angle around the orbit” → illumination fraction.',
+          ],
+          columns: [
+            { key: 'case', label: 'Case' },
+            { key: 'phase', label: 'Phase' },
+            { key: 'angle', label: 'Angle (0=Full, 180=New)' },
+            { key: 'illumination', label: 'Illumination' },
+            { key: 'daysSinceNew', label: 'Days since new' },
+            { key: 'trend', label: 'Waxing/waning' },
+          ],
+          snapshotLabel: 'Add row (current Moon position)',
+          getSnapshotRow: () => buildStationRow({ angleDeg: moonAngle, label: 'Snapshot' }),
+          rowSets: [
+            {
+              label: 'Add key phases',
+              getRows: () => [
+                buildStationRow({ angleDeg: 180, label: 'New Moon' }),
+                buildStationRow({ angleDeg: 270, label: 'First Quarter' }),
+                buildStationRow({ angleDeg: 0, label: 'Full Moon' }),
+                buildStationRow({ angleDeg: 90, label: 'Third Quarter' }),
+              ],
+            },
+          ],
+          synthesisPrompt: `
+            <p><strong>Explain:</strong> The Sun always lights half the Moon. The phase is the fraction of that lit half that we can see from Earth.</p>
+            <p><strong>Use your table:</strong> Check that quarter phases are about 50% illuminated, and that the illumination changes smoothly as the Moon moves.</p>
+          `,
+        },
+        keys: { help: '?', station: 'g' },
+      });
+
+      modes.bindButtons({ helpButton: btnHelp, stationButton: btnStationMode });
+    }
 
     // Initialize starfield
     const starfieldCanvas = document.getElementById('starfield');

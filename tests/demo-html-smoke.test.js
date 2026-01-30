@@ -8,9 +8,21 @@ function readText(...segments) {
   return fs.readFileSync(filePath, 'utf8');
 }
 
+function assertHasDemoModes(html) {
+  assert.match(html, /_assets\/demo-modes\.css/);
+  assert.match(html, /_assets\/demo-modes\.js/);
+  assert.match(html, /id="btn-station-mode"/);
+  assert.match(html, /id="btn-help"/);
+}
+
 test('Seasons has an explicit not-to-scale disclaimer', () => {
   const html = readText('demos', 'seasons', 'index.html');
   assert.match(html, /not to scale/i);
+});
+
+test('Seasons includes Station Mode + Help buttons', () => {
+  const html = readText('demos', 'seasons', 'index.html');
+  assertHasDemoModes(html);
 });
 
 test('Angular Size notes internal units are km', () => {
@@ -18,9 +30,24 @@ test('Angular Size notes internal units are km', () => {
   assert.match(html, /internal units\s*=\s*km/i);
 });
 
+test('Angular Size includes Station Mode + Help buttons', () => {
+  const html = readText('demos', 'angular-size', 'index.html');
+  assertHasDemoModes(html);
+});
+
 test('Moon Phases loads the shared MoonPhasesModel', () => {
   const html = readText('demos', 'moon-phases', 'index.html');
   assert.match(html, /_assets\/moon-phases-model\.js/);
+});
+
+test('Moon Phases includes Station Mode + Help buttons', () => {
+  const html = readText('demos', 'moon-phases', 'index.html');
+  assertHasDemoModes(html);
+});
+
+test('Eclipse Geometry includes Station Mode + Help buttons', () => {
+  const html = readText('demos', 'eclipse-geometry', 'index.html');
+  assertHasDemoModes(html);
 });
 
 test('Kepler’s Laws loads the shared KeplersLawsModel', () => {

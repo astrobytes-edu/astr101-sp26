@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="../_assets/astro-theme.css">
   <link rel="stylesheet" href="../_assets/demo-shell.css">
   <link rel="stylesheet" href="../_assets/demo-legacy.css">
+  <link rel="stylesheet" href="../_assets/demo-modes.css">
   <link rel="stylesheet" href="seasons.css">
 </head>
 <body>
@@ -18,6 +19,10 @@
       <header class="demo-header">
         <h1 class="demo-title">Seasons: Why Tilt Matters</h1>
         <p class="demo-subtitle">Axial tilt causes seasons—not distance from the Sun</p>
+        <div class="btn-group demo-tools">
+          <button class="astro-btn" id="btn-station-mode" type="button">Station Mode</button>
+          <button class="astro-btn secondary" id="btn-help" type="button">Help / Keys</button>
+        </div>
       </header>
 
       <!-- Readout panel -->
@@ -341,6 +346,7 @@
   <script src="../_assets/physics/units.js"></script>
   <script src="../_assets/astro-utils.js"></script>
   <script src="../_assets/demo-polish.js"></script>
+  <script src="../_assets/demo-modes.js"></script>
   <script src="../_assets/starfield.js"></script>
   <script src="../_assets/seasons-model.js"></script>
   <script src="seasons.js"></script>

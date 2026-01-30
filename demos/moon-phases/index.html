@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="../_assets/astro-theme.css">
   <link rel="stylesheet" href="../_assets/demo-shell.css">
   <link rel="stylesheet" href="../_assets/demo-legacy.css">
+  <link rel="stylesheet" href="../_assets/demo-modes.css">
   <link rel="stylesheet" href="moon-phases.css">
 </head>
 <body>
@@ -18,6 +19,10 @@
       <header class="demo-header">
         <h1 class="demo-title">Moon Phases</h1>
         <p class="demo-subtitle">The phase shows how much of the lit half we see from Earth</p>
+        <div class="btn-group demo-tools">
+          <button class="astro-btn" id="btn-station-mode" type="button">Station Mode</button>
+          <button class="astro-btn secondary" id="btn-help" type="button">Help / Keys</button>
+        </div>
       </header>
 
       <!-- Challenge mode container (populated by JS) -->
@@ -65,7 +70,8 @@
               <line x1="0" y1="100" x2="80" y2="100" stroke="var(--sun-glow)" stroke-width="2" marker-end="url(#arrowhead)"/>
               <line x1="0" y1="200" x2="80" y2="200" stroke="var(--sun-glow)" stroke-width="2"/>
               <line x1="0" y1="300" x2="80" y2="300" stroke="var(--sun-glow)" stroke-width="2"/>
-              <text x="10" y="60" fill="var(--sun-glow)" font-size="11">Sunlight</text>
+              <text x="10" y="60" fill="var(--sun-glow)" font-size="11">Sunlight →</text>
+              <text x="10" y="72" fill="var(--sun-glow)" font-size="9" opacity="0.85">from the Sun</text>
             </g>
 
             <!-- Sun (off-screen left, show edge) -->
@@ -305,6 +311,7 @@
       <script src="../_assets/physics/units.js"></script>
       <script src="../_assets/astro-utils.js"></script>
       <script src="../_assets/demo-polish.js"></script>
+      <script src="../_assets/demo-modes.js"></script>
       <script src="../_assets/starfield.js"></script>
       <script src="../_assets/challenge-engine.js"></script>
       <script src="../_assets/moon-phases-model.js"></script>

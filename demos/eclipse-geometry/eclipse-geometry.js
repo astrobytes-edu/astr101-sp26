@@ -149,7 +149,11 @@
       arcLunarAnyAsc: document.getElementById('arc-lunar-any-asc'),
       arcLunarAnyDesc: document.getElementById('arc-lunar-any-desc'),
       arcLunarCentralAsc: document.getElementById('arc-lunar-central-asc'),
-      arcLunarCentralDesc: document.getElementById('arc-lunar-central-desc')
+      arcLunarCentralDesc: document.getElementById('arc-lunar-central-desc'),
+
+      // Demo modes (shared UI)
+      btnStationMode: document.getElementById('btn-station-mode'),
+      btnHelp: document.getElementById('btn-help')
     };
   }
 
@@ -356,6 +360,37 @@
       default:
         return type;
     }
+  }
+
+  function buildStationRow({ label }) {
+    const eclipse = checkEclipse();
+    const phaseAngle = getPhaseAngleDeg();
+    const phase = getPhaseLabel(phaseAngle);
+    const beta = getMoonEclipticLatitudeDeg();
+    const absBeta = Math.abs(beta);
+    const nodeDistance = Model.nearestNodeDistanceDeg({ moonLonDeg: state.moonLonDeg, nodeLonDeg: state.nodeLonDeg });
+
+    const thresholds = getEclipseThresholds();
+    const nearNew = isNearAngle(phaseAngle, 0, SYZYGY_TOLERANCE_DEG);
+    const nearFull = isNearAngle(phaseAngle, 180, SYZYGY_TOLERANCE_DEG);
+    const betaThreshold =
+      nearNew
+        ? thresholds.solarPartialDeg
+        : nearFull
+          ? thresholds.lunarPenumbralDeg
+          : Math.min(thresholds.solarPartialDeg, thresholds.lunarPenumbralDeg);
+    const nodeLabel = absBeta < betaThreshold ? 'near node' : 'far from node';
+
+    return {
+      case: label ?? `${phase} (${nodeLabel})`,
+      phase,
+      phaseAngle: `${phaseAngle.toFixed(1)}°`,
+      betaAbs: `${absBeta.toFixed(1)}°`,
+      nodeDistance: `${nodeDistance.toFixed(1)}°`,
+      tilt: `${state.orbitalTilt.toFixed(2)}°`,
+      distance: `${Math.round(state.earthMoonDistanceKm).toLocaleString()} km`,
+      eclipse: eclipse.type === 'none' ? 'No eclipse' : formatEclipseTypeLabel(eclipse.type),
+    };
   }
 
   // ============================================
@@ -1334,6 +1369,82 @@
     initElements();
     setupDrag();
     setupControls();
+
+    // Shared demo modes (Help/Keys + Station Mode)
+    if (window.DemoModes && (elements.btnHelp || elements.btnStationMode)) {
+      const modes = window.DemoModes.create({
+        help: {
+          title: 'Help / Keys',
+          subtitle: 'How to use this demo (and what the readouts mean)',
+          sections: [
+            {
+              heading: 'Global',
+              type: 'shortcuts',
+              items: [
+                { key: '?', action: 'Open/close this help' },
+                { key: 'g', action: 'Open/close Station Mode' },
+              ],
+            },
+            {
+              heading: 'Controls',
+              type: 'bullets',
+              items: [
+                'Drag the Moon in the top view, or use the “Moon Position” slider.',
+                'Use “New Moon” / “Full Moon”, then move near/far from a node to test eclipse conditions.',
+                'Adjust orbital tilt to see why eclipses do not happen every month.',
+                'Change Earth–Moon distance (perigee/mean/apogee) to compare total vs annular solar eclipses.',
+              ],
+            },
+            {
+              heading: 'Accessibility',
+              type: 'bullets',
+              items: [
+                'All sliders and buttons are keyboard-accessible (Tab to focus, then use arrow keys / Enter).',
+              ],
+            },
+          ],
+        },
+        station: {
+          title: 'Station Mode: Eclipse Geometry',
+          subtitle: 'Record the two required conditions for eclipses',
+          steps: [
+            'Set to New Moon, then drag near a node; add a snapshot row.',
+            'Drag far from a node; add another snapshot row.',
+            'Repeat at Full Moon. Then try changing the tilt and distance presets.',
+          ],
+          columns: [
+            { key: 'case', label: 'Case' },
+            { key: 'phase', label: 'Phase' },
+            { key: 'phaseAngle', label: 'Δ (deg)' },
+            { key: 'betaAbs', label: '|β| (deg)' },
+            { key: 'nodeDistance', label: 'Nearest node (deg)' },
+            { key: 'tilt', label: 'Tilt i' },
+            { key: 'distance', label: 'Earth–Moon distance' },
+            { key: 'eclipse', label: 'Outcome' },
+          ],
+          snapshotLabel: 'Add row (current settings)',
+          getSnapshotRow: () => buildStationRow({}),
+          rowSets: [
+            {
+              label: 'Add 4-case template (blank)',
+              getRows: () => [
+                { case: 'New (far from node)' },
+                { case: 'New (near node)' },
+                { case: 'Full (far from node)' },
+                { case: 'Full (near node)' },
+              ],
+            },
+          ],
+          synthesisPrompt: `
+            <p><strong>Claim:</strong> An eclipse requires (1) New/Full Moon and (2) being near a node (small |β|).</p>
+            <p><strong>Use your table:</strong> Point to one “New but no eclipse” case and one “New + near node” case and explain what changed.</p>
+          `,
+        },
+        keys: { help: '?', station: 'g' },
+      });
+
+      modes.bindButtons({ helpButton: elements.btnHelp, stationButton: elements.btnStationMode });
+    }
 
     // Initialize starfield
     const starfieldCanvas = document.getElementById('starfield');

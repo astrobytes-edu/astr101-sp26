@@ -104,6 +104,8 @@
 
     elements.angleWarning = document.getElementById('angle-warning');
     elements.btnResetDefaults = document.getElementById('btn-reset-defaults');
+    elements.btnStationMode = document.getElementById('btn-station-mode');
+    elements.btnHelp = document.getElementById('btn-help');
   }
 
   // ============================================
@@ -231,6 +233,24 @@
       'm': 'm'
     };
     return `${f.value} ${abbrev[f.unit] || f.unit}`;
+  }
+
+  function buildStationRow({ label, diameterKm, distanceKm, presetKey, moonMode, moonSetting }) {
+    const angularDeg = calculateAngularSize(diameterKm, distanceKm);
+    const angUi = formatAngleForUi(angularDeg);
+    const sizeF = AstroUtils.formatDistance(diameterKm);
+    const distF = AstroUtils.formatDistance(distanceKm);
+    const presetName = presetKey && PRESETS[presetKey] ? PRESETS[presetKey].name : (presetKey ?? 'Custom');
+
+    return {
+      case: label ?? presetName,
+      diameter: `${sizeF.value} ${sizeF.unit}`,
+      distance: `${distF.value} ${distF.unit}`,
+      thetaDisplay: `${angUi.value}${angUi.symbol}`,
+      thetaDeg: `${angularDeg.toPrecision(4)}°`,
+      moonMode: moonMode ?? '',
+      moonSetting: moonSetting ?? '',
+    };
   }
 
   // ============================================
@@ -734,6 +754,163 @@
     setupPresetCategory();
     setupMoonTimeMode();
     setupKeyboard();
+
+    // Shared demo modes (Help/Keys + Station Mode)
+    if (window.DemoModes && (elements.btnHelp || elements.btnStationMode)) {
+      const modes = window.DemoModes.create({
+        help: {
+          title: 'Help / Keys',
+          subtitle: 'Keyboard shortcuts + how to use this demo',
+          sections: [
+            {
+              heading: 'Global',
+              type: 'shortcuts',
+              items: [
+                { key: '?', action: 'Open/close this help' },
+                { key: 'g', action: 'Open/close Station Mode' },
+              ],
+            },
+            {
+              heading: 'Keyboard shortcuts',
+              type: 'shortcuts',
+              items: [
+                { key: '← / →', action: 'Distance ×/÷ (log scale)' },
+                { key: '↑ / ↓', action: 'Size ×/÷ (log scale)' },
+                { key: 'Shift + arrows', action: 'Finer step size' },
+                { key: '1–6', action: 'Jump to astronomy presets (Sun, Moon, Jupiter, Venus, Mars, Andromeda)' },
+              ],
+            },
+            {
+              heading: 'Tip',
+              type: 'bullets',
+              items: [
+                'For eclipses: total vs annular depends on whether the Moon’s angular size is larger or smaller than the Sun’s.',
+              ],
+            },
+          ],
+        },
+        station: {
+          title: 'Station Mode: Angular Size',
+          subtitle: 'Record size, distance, and angular size (in multiple units)',
+          steps: [
+            'Add rows for Sun and Moon (today). Compare their angular sizes.',
+            'Switch to Moon orbit mode and add perigee/apogee rows.',
+            'Optional: try recession time (+500 Myr, +1000 Myr) and see when total eclipses become impossible.',
+          ],
+          columns: [
+            { key: 'case', label: 'Case' },
+            { key: 'diameter', label: 'Diameter' },
+            { key: 'distance', label: 'Distance' },
+            { key: 'thetaDisplay', label: 'θ (display)' },
+            { key: 'thetaDeg', label: 'θ (degrees)' },
+            { key: 'moonMode', label: 'Moon mode' },
+            { key: 'moonSetting', label: 'Moon setting' },
+          ],
+          snapshotLabel: 'Add row (current settings)',
+          getSnapshotRow: () => {
+            const presetKey = state.activePreset;
+            const presetName = presetKey && PRESETS[presetKey] ? PRESETS[presetKey].name : 'Custom';
+
+            let moonMode = '';
+            let moonSetting = '';
+            if (presetKey === 'moon') {
+              moonMode = state.moonTimeMode === 'recession' ? 'Recession time' : 'Orbit angle';
+              moonSetting = state.moonTimeMode === 'recession'
+                ? (elements.timeDisplay ? elements.timeDisplay.textContent : `${Math.round(state.moonRecessionTimeMyr)} Myr`)
+                : (elements.timeDisplay ? elements.timeDisplay.textContent : `${Math.round(state.moonOrbitAngle)}°`);
+            }
+
+            return buildStationRow({
+              label: presetName,
+              diameterKm: state.diameter,
+              distanceKm: state.distance,
+              presetKey: presetKey ?? 'Custom',
+              moonMode,
+              moonSetting,
+            });
+          },
+          rowSets: [
+            {
+              label: 'Add Sun + Moon (today)',
+              getRows: () => [
+                buildStationRow({
+                  label: 'Sun (1 AU)',
+                  presetKey: 'sun',
+                  diameterKm: PRESETS.sun.diameter,
+                  distanceKm: PRESETS.sun.distance,
+                }),
+                buildStationRow({
+                  label: 'Moon (today)',
+                  presetKey: 'moon',
+                  diameterKm: PRESETS.moon.diameter,
+                  distanceKm: PRESETS.moon.distance,
+                  moonMode: 'Orbit',
+                  moonSetting: 'Today',
+                }),
+              ],
+            },
+            {
+              label: 'Add Moon perigee/apogee',
+              getRows: () => [
+                buildStationRow({
+                  label: 'Moon (perigee)',
+                  presetKey: 'moon',
+                  diameterKm: PRESETS.moon.diameter,
+                  distanceKm: MOON_ORBIT.perigeeKm,
+                  moonMode: 'Orbit',
+                  moonSetting: 'Perigee',
+                }),
+                buildStationRow({
+                  label: 'Moon (apogee)',
+                  presetKey: 'moon',
+                  diameterKm: PRESETS.moon.diameter,
+                  distanceKm: MOON_ORBIT.apogeeKm,
+                  moonMode: 'Orbit',
+                  moonSetting: 'Apogee',
+                }),
+              ],
+            },
+            {
+              label: 'Add Moon future (+500/+1000 Myr)',
+              getRows: () => {
+                const distanceAtMyr = (t) =>
+                  Model.moonDistanceKmFromRecession({
+                    distanceTodayKm: MOON_DISTANCE_TODAY_KM,
+                    recessionCmPerYr: MOON_RECESSION_CM_PER_YEAR,
+                    timeMyr: t,
+                  });
+
+                return [
+                  buildStationRow({
+                    label: 'Moon (+500 Myr)',
+                    presetKey: 'moon',
+                    diameterKm: PRESETS.moon.diameter,
+                    distanceKm: distanceAtMyr(500),
+                    moonMode: 'Recession time',
+                    moonSetting: '+500 Myr',
+                  }),
+                  buildStationRow({
+                    label: 'Moon (+1000 Myr)',
+                    presetKey: 'moon',
+                    diameterKm: PRESETS.moon.diameter,
+                    distanceKm: distanceAtMyr(1000),
+                    moonMode: 'Recession time',
+                    moonSetting: '+1000 Myr',
+                  }),
+                ];
+              },
+            },
+          ],
+          synthesisPrompt: `
+            <p><strong>Explain:</strong> Angular size depends on <em>both</em> size and distance.</p>
+            <p><strong>Use your table:</strong> Compare the Sun and Moon today, then explain why perigee vs apogee changes whether a solar eclipse can be total or annular.</p>
+          `,
+        },
+        keys: { help: '?', station: 'g' },
+      });
+
+      modes.bindButtons({ helpButton: elements.btnHelp, stationButton: elements.btnStationMode });
+    }
 
     if (elements.btnResetDefaults) {
       elements.btnResetDefaults.addEventListener('click', () => {
