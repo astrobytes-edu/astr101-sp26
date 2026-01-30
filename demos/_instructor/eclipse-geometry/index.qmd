@@ -25,6 +25,11 @@ Model code (tests + shared): `demos/_assets/eclipse-geometry-model.js`
 - Future enhancements (planning backlog): `backlog.qmd`
 :::
 
+::: {.callout-tip title="New: Station Mode + Help"}
+- In the student demo, click **Station Mode** to build a data table you can **print** or **copy as CSV**.
+- Click **Help / Keys** (or press `?`) for shortcuts; press `g` to open Station Mode.
+:::
+
 ## Why this demo exists
 
 ::: {.callout-why-this-matters}

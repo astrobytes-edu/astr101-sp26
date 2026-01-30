@@ -52,6 +52,7 @@ Ask groups to report “how many eclipses per season” and “roughly how far a
 
 ::: {.callout-problem title="Astro Lab: How does orbital tilt control eclipse frequency?"}
 **Deliverable:** A short report (table + claim + reasoning).
+**Tip:** Use **Station Mode** to record cases and export/print your table.
 
 **Setup:** Assign each group a tilt value (e.g., 0°, 2°, 5°, 8°).
 
@@ -71,6 +72,7 @@ Ask groups to report “how many eclipses per season” and “roughly how far a
 
 ::: {.callout-problem title="Station card: Eclipse Geometry (6–8 minutes)"}
 **Demo setup:** Use **New Moon** and **Full Moon** buttons; drag near/far from nodes.
+**Tip:** Click **Station Mode** to add snapshot rows and print/copy your table.
 
 **Your station artifact (fill in):**
 1) **Control(s):** phase angle $\Delta$, node proximity (nearest-node distance or $|\beta|$), tilt $i$  

@@ -24,6 +24,6 @@ This is a planning guide. Keep it honest: “Impact” is about learning value, 
 | P1 | High | Medium | Pedagogy | Add an “insolation proxy” readout (relative daily energy) built from day length × cos(zenith angle). | `demos/seasons/seasons.js` |
 | P1 | Medium | Medium | Physics | Replace distance toy model with a simple Kepler-solver (mean anomaly → eccentric anomaly → true anomaly) for $r(t)$. | `demos/seasons/seasons.js` |
 | P1 | Medium | Low | UX | Add a “Compare hemispheres” toggle that pins both 40°N and 40°S readouts simultaneously. | `demos/seasons/seasons.js` |
-| P2 | Medium | Medium | UX | Add a station-mode overlay: numbered steps + built-in data table export (CSV copy). | `demos/seasons/seasons.js` |
+| P2 | Medium | Medium | UX | **DONE (2026-01-30):** Added a shared Station Mode overlay (steps + table + CSV copy + print) and a Help/Keys panel. | `demos/seasons/index.html` + `demos/seasons/seasons.js` + `demos/_assets/demo-modes.js` |
 | P2 | Medium | Low | Accessibility | **DONE (2026-01-29):** Added a reduced-motion mode that defaults animations to step mode. | `demos/seasons/seasons.js` |
 | P2 | Low | Low | Pedagogy | Add 2–3 additional clicker items directly in the instructor guide after classroom pilots. | `demos/_instructor/seasons/assessment.qmd` |

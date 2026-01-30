@@ -59,7 +59,7 @@ Have one group describe the “shape” of illumination vs time (slow near New/F
 **Claim (given):** “Moon phases are not caused by Earth’s shadow.”
 
 **Evidence (from the demo):**
-1) A table showing illumination at the four key phases.  
+1) A table showing illumination at the four key phases (use **Station Mode** to export/print).  
 2) A diagram (sketch) of the Sun–Earth–Moon geometry at New, First Quarter, Full, Third Quarter.  
 3) One “shadow check”: show that Earth’s shadow points away from the Sun and is only relevant for eclipses, not most phases.
 
@@ -72,6 +72,7 @@ Have one group describe the “shape” of illumination vs time (slow near New/F
 
 ::: {.callout-problem title="Station card: Moon Phases (6–8 minutes)"}
 **Demo setup:** start at New → First Quarter → Full → Third Quarter.
+**Tip:** Click **Station Mode** to add key-phase rows and print/copy your table.
 
 **Your station artifact (fill in):**
 1) **Control(s):** Moon angle $\alpha$  

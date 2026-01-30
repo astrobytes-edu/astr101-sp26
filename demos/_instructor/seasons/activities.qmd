@@ -66,7 +66,7 @@ Each group reports one sentence: “At latitude $\phi$, summer vs winter changes
 **Claim (given):** “Axial tilt is the primary cause of seasons on Earth.”
 
 **Evidence (from the demo):**
-1) A data table for one latitude showing day length and noon altitude at the four anchor dates.
+1) A data table for one latitude showing day length and noon altitude at the four anchor dates (use **Station Mode** to export/print).
 2) A “tilt = 0°” control test showing the seasonal cycle collapses.
 3) A short note showing perihelion is in early January and therefore distance cannot explain Northern Hemisphere summer.
 
@@ -79,6 +79,7 @@ Each group reports one sentence: “At latitude $\phi$, summer vs winter changes
 
 ::: {.callout-problem title="Station card: Seasons (6–8 minutes)"}
 **Demo setup:** defaults → then click **June Solstice** and **December Solstice**.
+**Tip:** Click **Station Mode** to add anchor-date rows and print/copy your table.
 
 **Your station artifact (fill in):**
 1) **Control(s):** tilt $\varepsilon$, day of year, latitude $\phi$  

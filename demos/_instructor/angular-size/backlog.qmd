@@ -25,4 +25,5 @@ This is a planning guide. Prefer changes that improve reasoning and reduce unit-
 | P1 | Medium | Medium | Physics | Replace the linear recession model with a clearly-labeled “toy” vs “geology-informed” option (still keep units explicit). | `demos/_assets/angular-size-model.js` |
 | P1 | Medium | Medium | UX | Add a “compare two presets side-by-side” view for ratio reasoning. | `demos/angular-size/index.html` + `demos/angular-size/angular-size.js` |
 | P2 | Medium | Low | Accessibility | Ensure all controls have aria labels + keyboard focus order (audit). | `demos/angular-size/index.html` |
+| P2 | Medium | Low | UX | **DONE (2026-01-30):** Added shared Station Mode (table + CSV copy + print) and a Help/Keys panel. | `demos/angular-size/index.html` + `demos/angular-size/angular-size.js` + `demos/_assets/demo-modes.js` |
 | P2 | Low | Low | Pedagogy | Expand assessment items after classroom pilot; add distractors about degrees vs arcminutes. | `demos/_instructor/angular-size/assessment.qmd` |

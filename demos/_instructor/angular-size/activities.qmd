@@ -53,6 +53,8 @@ For each, record the angular size and write one proportional-reasoning sentence 
 ::: {.callout-problem title="Astro Lab: When are total solar eclipses possible?"}
 **Deliverable:** A short written claim with evidence + a “future Moon” graph.
 
+**Tip:** Use **Station Mode** to build a data table you can print or copy as CSV.
+
 **Part 1 (evidence table):** Record angular sizes for:
 - Sun
 - Moon (today)
@@ -71,6 +73,7 @@ For each, record the angular size and write one proportional-reasoning sentence 
 
 ::: {.callout-problem title="Station card: Angular Size (6–8 minutes)"}
 **Demo setup:** Compare **Sun** and **Moon (Today)**; then toggle Moon orbit mode.
+**Tip:** Click **Station Mode** to add rows and print/copy your table.
 
 **Your station artifact (fill in):**
 1) **Control(s):** diameter $d$, distance $D$  
