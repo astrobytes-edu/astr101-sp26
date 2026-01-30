@@ -1,0 +1,72 @@
+---
+title: "ASTR 101 — Homework Rubric (1–5 Scale)"
+draft: false
+subtitle: "Use this to grade each problem in your Grade Memo"
+author: "Dr. Anna Rosen"
+format:
+  pdf:
+    toc: false
+    number-sections: false
+    geometry: margin=0.75in
+    fontsize: 11pt
+  html:
+    toc: false
+---
+
+## Per-Problem Scoring
+
+Use this scale to grade **each** homework problem in your Wednesday Grade Memo.
+
+| Score | What It Means | Examples |
+|:-----:|:--------------|:---------|
+| **5** | **Correct + scientifically clear** | Correct result, clear reasoning, units consistent, assumptions stated, work readable and organized |
+| **4** | **Essentially correct, minor issues** | Right method and answer, but small algebra slip, missing brief explanation, or unclear step |
+| **3** | **Partially correct, meaningful gaps** | Some correct reasoning but significant mistakes — wrong setup, incomplete solution, inconsistent units |
+| **2** | **Attempted, mostly incorrect** | Real attempt shown, but approach is wrong — incorrect model, major conceptual error, steps don't connect |
+| **1** | **Minimal progress** | Too little work to evaluate, or too incomplete/unclear to score |
+| **0** | **No attempt** | Nothing submitted for this problem |
+
+---
+
+## The Golden Rule
+
+> **Score based on visible reasoning.** If your reasoning isn't shown, it can't earn a high score — even if your final answer is correct.
+
+---
+
+## What "Show Your Work" Means
+
+For full credit, your solutions should include:
+
+1. **Setup** — What are you solving for?
+2. **Knowns/Unknowns** — What values do you have? What's missing?
+3. **Equations or reasoning** — Why are you doing what you're doing?
+4. **Units at every step** — Units are error-checking, not decoration
+5. **Labeled final answer** — Box or circle it
+
+---
+
+## Common Error Types
+
+When something goes wrong, identify **which type** of error it was:
+
+| Error Type | What It Means |
+|:-----------|:--------------|
+| **Units** | Wrong units, missing units, or didn't convert properly |
+| **Algebra** | Math mistake (arithmetic, solving equations, etc.) |
+| **Concept** | Misunderstood the physics or astronomy idea |
+| **Sign** | Positive/negative error |
+| **Assumptions** | Used wrong model or made invalid assumption |
+| **Interpretation** | Got a number but didn't explain what it means |
+
+---
+
+## Be Honest
+
+Self-grading isn't about giving yourself a high score. It's about **accurate self-assessment**:
+
+- If you guessed and got lucky → that's a 2 or 3, not a 5
+- If you showed clear reasoning but made a small slip → that's a 4
+- If you have no idea whether your answer is right → say so
+
+Honest reflection is worth more than a padded score.

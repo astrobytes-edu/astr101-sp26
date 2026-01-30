@@ -1,0 +1,135 @@
+---
+title: "ASTR 101 — Homework Demo Walkthrough"
+draft: false
+subtitle: "What Good Work Looks Like"
+author: "Dr. Anna Rosen"
+format:
+  pdf:
+    toc: false
+    number-sections: false
+    geometry: margin=0.85in
+    fontsize: 10.5pt
+  html:
+    toc: false
+---
+
+This walkthrough shows you what a complete homework submission and grade memo look like. Use it as a model for your own work.
+
+---
+
+## Sample Problem
+
+> **Problem:** The Sun is about 150 million km from Earth. Light travels at 300,000 km/s. How long does it take sunlight to reach Earth? Express your answer in minutes.
+
+---
+
+## Stage 1: Solution (Monday Submission)
+
+### What a 5/5 Solution Looks Like
+
+**Given:**
+
+- Distance from Sun to Earth: $d = 150 \times 10^6$ km
+- Speed of light: $c = 3 \times 10^5$ km/s
+
+**Find:** Time for light to travel from Sun to Earth, in minutes
+
+**Solution:**
+
+Using $\text{time} = \frac{\text{distance}}{\text{speed}}$:
+
+$$t = \frac{d}{c} = \frac{150 \times 10^6 \text{ km}}{3 \times 10^5 \text{ km/s}} = 500 \text{ s}$$
+
+Converting to minutes:
+
+$$t = 500 \text{ s} \times \frac{1 \text{ min}}{60 \text{ s}} = 8.3 \text{ min}$$
+
+**Answer:** Light takes about **8.3 minutes** to travel from the Sun to Earth.
+
+**Sanity check:** This is close to the "8 minutes" you often hear quoted — makes sense!
+
+---
+
+### What a 2/5 Solution Looks Like
+
+> $150000000 / 300000 = 500$
+>
+> Answer: 500
+
+**Why this is a 2:**
+
+- No units shown
+- No setup explaining what's being calculated
+- Didn't convert to minutes (problem asked for minutes)
+- No sanity check or interpretation
+
+---
+
+## Stage 2: Grade Memo (Wednesday Submission)
+
+### If You Got It Right
+
+| Problem | Score | Why this score? |
+|:-------:|:-----:|:----------------|
+| 1 | 5 | Showed all steps, units consistent, converted to minutes, answer matches expected ~8 min |
+
+**What was confusing?**
+Nothing major — I had to double-check the unit conversion from seconds to minutes.
+
+**What would help?**
+I'll keep practicing scientific notation; I almost made an error with the powers of 10.
+
+**Collaboration:** No
+
+**AI Tools:** No
+
+---
+
+### If You Made an Error
+
+Let's say you forgot to convert to minutes and wrote "500 seconds" as your final answer.
+
+| Problem | Score | Why this score? |
+|:-------:|:-----:|:----------------|
+| 1 | 4 | Method correct, units tracked, but didn't convert to minutes as asked |
+
+**What was confusing?**
+I didn't read carefully — missed that it asked for minutes, not seconds.
+
+**What would help?**
+Before finishing, I'll re-read what the problem actually asks for. Circle the units in the question.
+
+**Collaboration:** No
+
+**AI Tools:** No
+
+---
+
+### If You Struggled
+
+Let's say you weren't sure how to set it up and guessed.
+
+| Problem | Score | Why this score? |
+|:-------:|:-----:|:----------------|
+| 1 | 2 | Attempted but divided wrong quantities; didn't track units |
+
+**What was confusing?**
+I wasn't sure whether to multiply or divide. I guessed divide but I don't really understand why.
+
+**What would help?**
+Review the "distance = speed × time" relationship in the reading. Maybe try office hours to work through another example.
+
+**Collaboration:** Talked to roommate briefly but still confused
+
+**AI Tools:** No
+
+---
+
+## Key Takeaways
+
+1. **Show your work** — setup, reasoning, units, labeled answer
+2. **Be honest in self-grading** — guessing correctly isn't a 5
+3. **Reflection matters** — identifying what confused you is valuable
+4. **Disclosure is required** — even if it's just "none"
+
+The goal isn't perfection. It's **visible reasoning + honest self-assessment**.

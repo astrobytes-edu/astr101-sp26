@@ -1,0 +1,120 @@
+---
+title: "ASTR 101 — Astronomy Media List (Spring 2026)"
+draft: true
+subtitle: "Assigned Media for Reflections"
+author: "Dr. Anna Rosen"
+format:
+  pdf:
+    toc: false
+    number-sections: false
+    geometry: margin=0.85in
+    fontsize: 11pt
+  html:
+    toc: false
+---
+
+## Assigned Media Reflections
+
+These are the assigned media for your 5 reflection assignments. Due dates are on Canvas.
+
+---
+
+### Reflection 1: The Scale of the Universe
+
+**Module 1 — Observing the Sky**
+
+**Watch:** *"The Most Astounding Fact"* — Neil deGrasse Tyson (3 min)
+<https://www.youtube.com/watch?v=9D05ej8u-gU>
+
+**Or:** *"Cosmic Eye"* — a zoom from face to universe (3 min)
+<https://www.youtube.com/watch?v=8Are9dDbW24>
+
+**Connection:** Cosmic scales, our place in the universe, the "spoiler alerts" from Lecture 1
+
+---
+
+### Reflection 2: Seasons and Misconceptions
+
+**Module 1 — Earth, Moon, Sky**
+
+**Watch:** *"A Private Universe"* — Harvard graduation interviews (20 min, excerpt)
+<https://www.learner.org/series/a-private-universe/>
+
+**Why this one:** Famous documentary showing that even Harvard graduates get seasons wrong. Watch how smart people confidently give incorrect explanations — then reflect on why this misconception is so persistent.
+
+**Connection:** Seasons, common misconceptions, the tilt explanation from Lecture 3
+
+---
+
+### Reflection 3: Light and Telescopes
+
+**Module 2 — Light & Spectra**
+
+**Watch:** *"Cosmic Queries: The James Webb Space Telescope"* — StarTalk podcast episode (45 min)
+<https://www.startalkradio.net/show/cosmic-queries-the-james-webb-space-telescope/>
+
+**Or:** Any recent JWST results video from NASA or PBS Space Time (your choice, link it)
+
+**Connection:** Infrared astronomy, why JWST sees farther/older than Hubble, how telescopes work
+
+---
+
+### Reflection 4: Stellar Evolution
+
+**Module 2 — Stars**
+
+**Watch:** *"The Life and Death of Stars"* — PBS Space Time (15 min)
+<https://www.youtube.com/watch?v=PM9CQDlQI0A>
+
+**Or:** *"Cosmos: A Spacetime Odyssey"* — Episode 8: "Sisters of the Sun" (43 min, Netflix/streaming)
+
+**Connection:** Stellar lifecycles, HR diagram, why massive stars die young
+
+---
+
+### Reflection 5: Black Holes or Exoplanets (Your Choice)
+
+**Module 3 — Galaxies & Cosmology**
+
+**Option A — Black Holes:**
+*"The Edge of All We Know"* (Netflix documentary, 99 min)
+— or any Veritasium/PBS video on the 2019 black hole image
+
+**Option B — Exoplanets:**
+*"The Search for Another Earth"* — NOVA (53 min)
+— or any recent video on TRAPPIST-1 or habitable zone planets
+
+**Connection:** Extreme objects, detection methods, what we can/can't observe
+
+---
+
+## Propose Your Own
+
+Found an astronomy video, documentary, or podcast you want to use instead? You can propose a substitution:
+
+1. **Message me on Canvas** with:
+   - Link to the media
+   - Which reflection it would replace
+   - Why you want to use it (1–2 sentences)
+
+2. **Approval criteria:**
+   - Must be astronomy-related (not general science or sci-fi)
+   - Must connect to course content from that module
+   - Reasonable length (5–60 minutes; documentaries up to 2 hours OK)
+
+3. **Not allowed:**
+   - TikToks under 3 minutes
+   - Videos that are pure entertainment with no educational content
+   - Anything you've already watched for another class
+
+---
+
+## Tips for Media Reflections
+
+- **Watch actively** — take a few notes as you go
+- **Don't summarize** — I know what's in the video; tell me what *you* think
+- **Be specific** — name concepts, quote moments, describe scenes
+- **Connect to class** — use vocabulary from lectures and readings
+- **Ask real questions** — the kind you'd actually want answered
+
+See the *Media Reflection Guide* and *Examples* handouts for more detail.

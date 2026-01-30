@@ -1,0 +1,91 @@
+---
+title: "ASTR 101 — Grade Memo Template"
+draft: false
+subtitle: "Due Wednesday 11:59 PM (2 days after HW submission)"
+author: "Dr. Anna Rosen"
+format:
+  pdf:
+    toc: false
+    number-sections: false
+    geometry: margin=0.9in
+    fontsize: 11pt
+  html:
+    toc: false
+---
+
+**Name:** ____________________________  **RedID:** _______________
+
+**Homework #:** _____  **Date:** _______________
+
+---
+
+## Part 1 — Self-Grading (Required)
+
+Use the 1–5 rubric (on reverse or posted on Canvas) to score each problem. Write **one sentence** explaining your score.
+
+| Problem | Score (1–5) | Why this score? (1 sentence) |
+|:-------:|:-----------:|------------------------------|
+| 1 | | |
+| 2 | | |
+| 3 | | |
+| 4 | | |
+| 5 | | |
+| 6 | | |
+| 7 | | |
+| 8 | | |
+
+*Add or remove rows as needed for your assignment.*
+
+---
+
+## Part 2 — Reflection (Required, 2–3 sentences)
+
+**What was the most confusing part of this assignment?**
+
+\vspace{1.5cm}
+
+**What would help you understand it better?** (e.g., office hours, re-reading a section, practice problems, asking a classmate)
+
+\vspace{1.5cm}
+
+---
+
+## Part 3 — Disclosure (Required)
+
+### Collaboration
+
+**Did you work with anyone?**  ☐ No  ☐ Yes → Names: _______________________
+
+**What did you do together?** (e.g., discussed strategy, checked answers, studied together)
+
+\vspace{0.8cm}
+
+### AI Tools
+
+**Did you use any AI tools?**  ☐ No  ☐ Yes
+
+If **Yes**, check what you used it for:
+
+- ☐ Clarifying concepts from notes/readings
+- ☐ Unit checks or reasonableness checks
+- ☐ Generating practice questions (not HW problems)
+- ☐ Other: _______________________
+
+**I confirm that:**
+
+- ☐ I did **not** generate homework solutions with AI
+- ☐ I did **not** paste AI-generated text/math into my submitted solutions
+
+---
+
+::: {.callout-note}
+## Why This Memo Matters
+
+This isn't busywork. Research shows that **reflecting on your mistakes** is one of the most powerful ways to learn. Honest self-assessment helps you:
+
+- Identify what you actually understand vs. what you're guessing at
+- Build habits that prevent the same mistakes on exams
+- Earn credit for engagement even when problems are hard
+
+Your grade depends on **visible reasoning + honest reflection**, not just getting answers right.
+:::

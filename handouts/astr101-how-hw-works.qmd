@@ -1,0 +1,108 @@
+---
+title: "ASTR 101 — How Homework Works"
+draft: false
+subtitle: "Two-Stage Submission Guide"
+author: "Dr. Anna Rosen"
+format:
+  pdf:
+    toc: false
+    number-sections: false
+    geometry: margin=0.85in
+    fontsize: 11pt
+  html:
+    toc: false
+---
+
+## The Two-Stage System
+
+Homework in this course uses a **two-stage workflow** that builds your ability to evaluate your own understanding — a skill that pays off on exams.
+
+```
+┌─────────────────────────────────────────────────────────────────┐
+│  STAGE 1: SOLUTIONS                                             │
+│  Due: Monday 11:59 PM                                           │
+│  → Submit your work as ONE readable PDF on Canvas               │
+│  → Show all reasoning, units, labeled answers                   │
+└─────────────────────────────────────────────────────────────────┘
+                              ↓
+              Tuesday morning: Solutions posted on Canvas
+                              ↓
+┌─────────────────────────────────────────────────────────────────┐
+│  STAGE 2: GRADE MEMO                                            │
+│  Due: Wednesday 11:59 PM                                        │
+│  → Compare your work to the solutions                           │
+│  → Score each problem (1–5) using the rubric                    │
+│  → Reflect: What was confusing? What would help?                │
+│  → Disclose any collaboration or AI use                         │
+└─────────────────────────────────────────────────────────────────┘
+```
+
+---
+
+## Why Two Stages?
+
+| Traditional HW | Two-Stage HW |
+|:---------------|:-------------|
+| Turn in, forget about it | Engage with solutions, learn from mistakes |
+| Find out weeks later what you got wrong | Same-week feedback loop |
+| No practice evaluating your own work | Builds metacognition (self-awareness of learning) |
+| Incentivizes copying for "right answers" | Rewards honest effort and reflection |
+
+**Research shows:** Students who reflect on their mistakes learn more than those who just see a grade.
+
+---
+
+## What Gets Graded?
+
+Your homework score (0–5) combines both stages:
+
+| Score | What It Looks Like |
+|:-----:|:-------------------|
+| **5** | Thorough solutions with clear reasoning; insightful, honest self-assessment; complete disclosures |
+| **4** | Solid work with minor gaps; genuine reflection |
+| **3** | Acceptable but uneven; shallow or generic reflection |
+| **2** | Incomplete solutions or missing memo components |
+| **1** | Minimal engagement |
+| **0** | Not submitted, missing disclosures, or integrity violation |
+
+**Key insight:** You can earn a 4 or 5 even if you didn't get every problem right — *if* your reflection shows genuine engagement with what went wrong.
+
+---
+
+## Common Questions
+
+**Q: What if I don't finish all the problems by Monday?**
+Submit what you have. Partial work + honest reflection beats nothing.
+
+**Q: What if I got everything right?**
+Great! Your memo should still reflect: Was anything tricky? Did you have to look anything up? What would you tell a classmate who's stuck?
+
+**Q: Can I work with classmates?**
+Yes — discuss strategies, check each other's reasoning. But your submitted solutions must be your own work, and you must disclose who you worked with.
+
+**Q: What about AI tools?**
+Course-provided tools (NotebookLM) are allowed for studying. Do not use AI to generate solutions you submit. Disclose any AI use honestly.
+
+**Q: What if I miss a deadline?**
+Stage 1 (Monday): No late submissions — solutions are posted Tuesday.
+Stage 2 (Wednesday): No late submissions.
+**Safety net:** Your lowest homework score is dropped.
+
+---
+
+## Quick Checklist
+
+**Monday (Solutions):**
+
+- [ ] Completed all assigned problems
+- [ ] Showed work: setup, reasoning, units, labeled answers
+- [ ] Submitted as **one PDF** (not photos, not multiple files)
+- [ ] Uploaded to Canvas before 11:59 PM
+
+**Wednesday (Grade Memo):**
+
+- [ ] Downloaded posted solutions from Canvas
+- [ ] Scored each problem 1–5 with one-sentence justification
+- [ ] Wrote 2–3 sentences on what was confusing / what would help
+- [ ] Completed collaboration and AI disclosure
+- [ ] Submitted memo to Canvas before 11:59 PM

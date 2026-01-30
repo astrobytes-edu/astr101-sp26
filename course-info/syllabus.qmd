@@ -83,9 +83,9 @@ By the end of this course, students will be able to:
 
 | Component | Weight |
 |---|-:|
-| LearningCurve Reading (Achieve) | 10% |
-| Weekly Homework (Achieve) | 15% |
-| Scholarly Engagement (iClicker + in-class activities) | 10% |
+| Astronomy Media Reflections | 5% |
+| Weekly Homework + Grade Memos | 15% |
+| Scholarly Engagement (iClicker + in-class activities) | 15% |
 | Module Exam 1 | 15% |
 | Module Exam 2 | 15% |
 | Final Exam (cumulative) | 35% |
@@ -125,12 +125,25 @@ Per SDSU policy, students are expected to spend at least 6 hours per week (a min
 
 **In this section:**
 
+- [Astronomy Media Reflections](#sec-media)
+- [Weekly Homework + Grade Memos](#sec-homework)
 - [Scholarly Engagement](#sec-engagement)
-- [Weekly Homework](#sec-homework)
-- [LearningCurve Reading](#sec-learningcurve)
 - [Exams](#sec-exams)
 
-#### Scholarly Engagement (10%) {#sec-engagement}
+#### Astronomy Media Reflections (5%) {#sec-media}
+
+Throughout the semester, you'll watch or listen to astronomy media — documentaries, YouTube videos, podcasts — and write brief reflections connecting what you learned to course concepts.
+
+**Details:**
+
+- **~5 assignments** spread across the semester
+- **Short responses** (2–3 paragraphs or Canvas discussion post)
+- **Graded on completion and effort** — honest engagement, not "right answers"
+- Specific media will be assigned; you may also propose your own with instructor approval
+
+**Why this matters:** Astronomy is everywhere — in the news, in popular science, in culture. This component helps you practice recognizing course concepts "in the wild" and evaluating how science is communicated to the public.
+
+#### Scholarly Engagement (15%) {#sec-engagement}
 
 Scholarly engagement measures how you make your reasoning visible through class participation and observable learning behaviors. Engagement is assessed through **iClicker responses** and **weekly observable behaviors**.
 
@@ -149,29 +162,37 @@ Attendance is not formally taken, but you cannot earn engagement credit if you a
 
 **Classroom norms:** Phones and off-task devices are not permitted during class. Be punctual. Treat classmates and the instructor with respect, and actively contribute to our learning community.
 
-#### Weekly Homework (15%) {#sec-homework}
+#### Weekly Homework + Grade Memos (15%) {#sec-homework}
 
-Homework is completed on **Macmillan Achieve** and is auto-graded. Assignments reinforce lecture material and prepare you for exams.
+Homework develops quantitative proficiency and reasoning skills. Problems emphasize **units, assumptions, and physical interpretation** — not just final numerical answers. The primary purpose is exam readiness through consistent, meaningful practice.
 
-**Details:**
+**Two-Stage Submission Workflow:**
 
-- **~10 assignments** throughout the semester
-- **Due Tuesdays at 11:59 PM** via Achieve
-- **5 attempts allowed** per question
-- **Lowest 2 scores dropped** — this policy handles emergencies, so no extensions are granted
-- Mix of multiple choice, numerical, and visual questions
+1. **Stage 1 — Solutions** *(Due Monday 11:59 PM PT)*
+   - Submit **one readable PDF** via Canvas (not photo compilations)
+   - Show your work clearly: calculations, reasoning, labeled answers
+   - No late submissions; solutions posted Tuesday morning
+   - **Lowest homework score dropped** (handles emergencies)
 
-**Bottom line:** Consistent practice builds exam readiness. The drop policy means you don't need to stress about one bad week.
+2. **Stage 2 — Grade Memo** *(Due Wednesday 11:59 PM PT)*
+   - Complete the Grade Memo using the rubric and posted solutions
+   - Document what succeeded and why
+   - Identify what failed and pinpoint where errors occurred
+   - Reflect on learning gains and adjustments for future work
+   - Include: per-problem self-ratings (1–5) with explanations and AI/collaboration disclosure
 
-#### LearningCurve Reading (10%) {#sec-learningcurve}
+**Instructor Grading Scale (0–5):**
 
-**LearningCurve** is an adaptive reading tool in Achieve. It adjusts to your level and helps you engage with the textbook before lecture.
+| Score | Criteria |
+|:------|:---------|
+| **5** | Thorough, clear solutions with shown steps/units; insightful self-assessment; pinpointed corrections and concrete habit adjustments; complete disclosures |
+| **4** | Solid work with minor gaps; genuine reflection evident |
+| **3** | Acceptable but uneven; missing reasoning in places; shallow reflection |
+| **2** | Limited/weak: incomplete solutions or missing memo components |
+| **1** | Minimal engagement |
+| **0** | Not submitted, missing disclosures, or integrity breach |
 
-**Details:**
-
-- **Completion-based grading** — keep working until you reach the target
-- **Unlimited attempts** — no penalty for wrong answers
-- **All chapters available** throughout the semester
+**Why 2-stage grading?** Visible reasoning + honest reflection + improvement over time are the pathways to exam readiness. Correctness is one factor among several.
 
 #### Exams (65% total) {#sec-exams}
 

@@ -1,0 +1,98 @@
+---
+title: "ASTR 101 — Media Reflection Examples"
+draft: true
+subtitle: "What Good (and Not-So-Good) Reflections Look Like"
+author: "Dr. Anna Rosen"
+format:
+  pdf:
+    toc: false
+    number-sections: false
+    geometry: margin=0.85in
+    fontsize: 10.5pt
+  html:
+    toc: false
+---
+
+These examples show the difference between reflections that earn full credit and ones that miss the mark. Use them to calibrate your own writing.
+
+**Assigned Media:** *"The Farthest: Voyager in Space"* (PBS documentary)
+
+---
+
+## Example A: Full Credit ✓
+
+**What surprised you?**
+
+I had no idea the Voyager spacecraft are still communicating with Earth after 45+ years. The documentary mentioned the signal is so weak that NASA needs giant dish antennas to detect it — and even then, the data rate is slower than a 1980s modem. I always assumed we'd lost contact with them decades ago. It made me realize how much effort goes into maintaining these long-term missions.
+
+**Connection to class:**
+
+The "Golden Record" segment reminded me of our discussion about how we'd communicate with aliens. In class, we talked about what wavelengths would be best for interstellar signals. The documentary mentioned they included instructions on how to *play* the record using basic physics diagrams — hydrogen wavelengths as a "universal constant" reference. That's exactly the kind of physics-based communication we discussed.
+
+**Question I'm left with:**
+
+The documentary said Voyager 1 entered "interstellar space" in 2012, but I'm confused about what that actually means. Is it outside the solar system? Outside the Sun's gravity? It sounds like there's a specific boundary, but I don't understand what defines it physically.
+
+---
+
+## Example B: Partial Credit (Shallow) ⚠️
+
+**What surprised you?**
+
+It was cool to see how far Voyager has traveled. I didn't know it was still out there.
+
+**Connection to class:**
+
+This relates to what we learned about space exploration.
+
+**Question I'm left with:**
+
+I want to learn more about Voyager.
+
+**Why this misses the mark:**
+
+- "It was cool" tells me nothing about *what* was cool or *why*
+- The class connection is vague — which lecture? Which concept?
+- The question is too broad to be meaningful
+- Total word count: ~50 words (way under the ~250–400 target)
+
+---
+
+## Example C: Full Credit ✓ (Different Style)
+
+**What surprised you?**
+
+I was struck by how *political* the mission was. The documentary showed how close Voyager came to being canceled due to budget cuts, and how the team had to fight for every dollar. I'd always thought of space exploration as purely scientific, but this made me realize it's also about convincing non-scientists that it's worth funding. The Carl Sagan segments especially showed how important science communication is — he basically saved the Golden Record by making it emotionally compelling to politicians.
+
+**Connection to class:**
+
+When they showed the famous "Pale Blue Dot" photo — Earth as a tiny speck in a sunbeam — it connected to our scale discussion in Lecture 1. We talked about how the universe makes Earth seem insignificant, but Sagan's commentary reframed it: that tiny dot is "everyone you love, everyone you know, everyone you ever heard of." That's the kind of perspective shift the course description promised.
+
+**Question I'm left with:**
+
+Voyager used "gravity assists" from Jupiter and Saturn to speed up. How does stealing energy from a planet not slow the planet down? I assume the effect on Jupiter is negligible because it's so massive, but I'd like to understand the physics better.
+
+---
+
+## Common Pitfalls to Avoid
+
+| Pitfall | Example | Fix |
+|:--------|:--------|:----|
+| **Too vague** | "It was interesting" | *What* was interesting and *why*? |
+| **Summary instead of reflection** | "The video talked about black holes, then pulsars, then..." | I already know what's in the video — tell me what *you* think |
+| **Generic class connection** | "This relates to astronomy" | Name a specific lecture, concept, or formula |
+| **Closed question** | "How big is Voyager?" | Ask something that would take more than a Google search to answer |
+| **Too short** | 3 sentences total | Aim for ~250–400 words (~1 page) |
+
+---
+
+## Remember
+
+This is **informal writing**. You don't need perfect grammar or a thesis statement. I'm looking for:
+
+- Genuine engagement with the content
+- Specific observations (not vague praise)
+- Real connections to course material
+- Curiosity that goes beyond the surface
+
+Write like you're telling a friend about something cool you watched — but a friend who's also in this class.

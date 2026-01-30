@@ -1,0 +1,85 @@
+---
+title: "ASTR 101 — Astronomy Media Reflections"
+draft: true
+subtitle: "Guidelines and Prompt Template"
+author: "Dr. Anna Rosen"
+format:
+  pdf:
+    toc: false
+    number-sections: false
+    geometry: margin=0.85in
+    fontsize: 11pt
+  html:
+    toc: false
+---
+
+## What Are Media Reflections?
+
+Throughout the semester, you'll watch or listen to astronomy media — documentaries, YouTube videos, podcasts — and write brief, informal reflections connecting what you experienced to course concepts.
+
+**This is not a summary assignment.** I don't want you to tell me what the video said. I want to know what *you* thought about it.
+
+---
+
+## The Assignment
+
+**Format:** ~1 page (roughly 250–400 words), informal writing
+
+**Submit via:** Canvas (assignment or discussion post, as specified)
+
+**Grading:** Completion + effort (not "right answers")
+
+---
+
+## Reflection Prompts
+
+For each assigned media, respond to these three prompts:
+
+### 1. What surprised you?
+
+What's one thing that caught your attention, challenged something you believed, or made you see the topic differently?
+
+*Be specific. "It was cool" doesn't count. What exactly was cool and why?*
+
+### 2. Connect to class
+
+Identify **one idea** from the video/podcast that connects to something we've covered (or will cover) in class. How does the media explain it differently than the textbook or lectures?
+
+*You might notice they simplified something, left something out, or explained it in a way that clicked for you.*
+
+### 3. What question are you left with?
+
+What does this leave you curious about? What would you want to learn more about?
+
+*Good questions are specific. Not "I want to know more about space" but "I wonder how they actually measure the temperature of a star that's millions of light-years away."*
+
+---
+
+## What Good Reflections Look Like
+
+| Element | Weak | Strong |
+|:--------|:-----|:-------|
+| **Surprise** | "I didn't know black holes existed" | "I assumed black holes just suck everything in, but apparently stuff can orbit them safely at a distance — that changed how I picture them" |
+| **Connection** | "This relates to Chapter 3" | "The video explained stellar parallax using a finger-at-arm's-length demo, which made the small-angle formula from Lecture 4 click for me" |
+| **Question** | "I want to know more about stars" | "If massive stars die faster, why are there still massive stars? Shouldn't they all be gone by now?" |
+
+---
+
+## Logistics
+
+- **~5 reflections** throughout the semester (dates on Canvas)
+- **Due dates** vary — check the schedule
+- **Late policy:** Same as homework (completion required, but reflections are low-stakes)
+- **Propose your own:** Found an amazing astronomy video? You can propose it for credit — message me with the link and why you want to use it
+
+---
+
+## Why This Matters
+
+Astronomy is everywhere — Netflix documentaries, TikTok explainers, news headlines about black holes and exoplanets. Part of scientific literacy is being able to:
+
+- Recognize when media gets the science right (or wrong)
+- Connect popular explanations to the underlying physics
+- Notice what gets left out for the sake of storytelling
+
+These reflections give you practice doing that — and they're way more fun than problem sets.
