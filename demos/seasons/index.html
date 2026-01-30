@@ -53,6 +53,9 @@
         <!-- Orbital View (top-down) -->
         <div class="viz-panel">
           <div class="panel-title">Orbital View</div>
+          <div class="panel-note">
+            Dashed circle = 1 AU reference. Earth’s distance varies slightly (elliptical orbit), and we exaggerate that change so it’s visible.
+          </div>
           <svg id="orbital-view" viewBox="0 0 400 400" preserveAspectRatio="xMidYMid meet">
             <defs>
               <radialGradient id="sunGlowGradient">
@@ -73,7 +76,7 @@
               </filter>
             </defs>
 
-            <!-- Earth's orbital path (slightly elliptical) -->
+            <!-- Reference ring (1 AU; not drawn to scale) -->
             <ellipse id="orbit-path" class="orbit-path" cx="200" cy="200" rx="150" ry="145"/>
 
             <!-- Sun at center -->
