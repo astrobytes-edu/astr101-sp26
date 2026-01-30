@@ -41,12 +41,13 @@ By the end of this module, you will be able to:
 :::
 :::
 
-## Required Textbook Reading
+## Optional Reference (OpenStax Astronomy 2e)
 
-- Chapter 16: The Sun
-- Chapter 17: Measuring Stars (parallax, luminosity, H-R diagram)
-- Chapter 18: Star Formation and the Interstellar Medium
-- Chapters 19–21: Stellar Evolution, Stellar Death, and Black Holes
+Lecture readings are provided on this website. For additional depth, see the free [OpenStax Astronomy 2e](https://openstax.org/details/books/astronomy-2e):
+
+- Chapter 15: The Sun
+- Chapters 17–18: Analyzing Starlight; The Stars
+- Chapters 20–23: Star Formation through Black Holes
 
 ::: {.callout-frontier}
 - **What triggers core-collapse supernovae?** We know massive stars explode, but the exact mechanism is still debated.

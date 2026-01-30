@@ -43,7 +43,7 @@ No prior physics or astronomy background is required, just curiosity and a willi
 
 1. Read the [Syllabus](course-info/syllabus.qmd) to understand course policies and expectations.
 2. Check the [Schedule](course-info/schedule.qmd) each week for lectures, readings, and due dates.
-3. Complete homework and readings on [Achieve](https://achieve.macmillanlearning.com).
+3. Submit homework on [Canvas](https://sdsu.instructure.com) — readings are on this website.
 :::
 
 ## Quick Navigation
@@ -118,7 +118,7 @@ Zoom out to the largest scales: our Milky Way, billions of other galaxies, and t
 
 ## How to Succeed
 
-1. **Stay current.** Complete LearningCurve readings before lecture and homework by the deadline.
+1. **Stay current.** Complete readings before lecture and homework by the deadline.
 2. **Engage in class.** Bring your iClicker, participate in Friday activities, and ask questions.
 3. **Use your resources.** Office hours, the discussion board, and the Astronomy Help Room are there for you.
 

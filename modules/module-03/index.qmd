@@ -41,11 +41,13 @@ By the end of this module, you will be able to:
 :::
 :::
 
-## Required Textbook Reading
+## Optional Reference (OpenStax Astronomy 2e)
 
-- Chapters 22–23: Milky Way and Galaxies
-- Chapters 24–25: Active Galaxies and Cosmology
-- Chapter 26: The Big Bang and Early Universe
+Lecture readings are provided on this website. For additional depth, see the free [OpenStax Astronomy 2e](https://openstax.org/details/books/astronomy-2e):
+
+- Chapters 25–26: The Milky Way Galaxy; Galaxies
+- Chapters 27–28: Active Galaxies; The Evolution of Galaxies
+- Chapter 29: The Big Bang
 
 ::: {.callout-frontier}
 - **What is dark matter?** It makes up ~27% of the universe, but we've never detected a dark matter particle directly.

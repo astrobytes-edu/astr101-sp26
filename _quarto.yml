@@ -14,7 +14,7 @@ params:
   instructor: "Dr. Anna Rosen"
   email: "alrosen@sdsu.edu"
   office: "Physics 239"
-  office-hours: "Fridays 11:00 am–12:00 pm (and by appointment)"
+  office-hours: "Fridays 11:00 am–1:00 pm (and by appointment)"
 
   # Class logistics
   class-time: "MWF 10:00–10:50 AM"
@@ -25,9 +25,8 @@ params:
   canvas-url: "https://sdsu.instructure.com"
 
   # Textbook
-  textbook: "Freedman, Geller & Kaufmann, *Universe*, 11th Edition (2019)"
-  textbook-supplement: "Fleisch & Kregenow, *A Student's Guide to the Mathematics of Astronomy*, 1st Edition"
-  textbook-platform: "https://achieve.macmillanlearning.com"
+  textbook: "Lecture readings and slides provided on the course website"
+  textbook-reference: "OpenStax *Astronomy 2e* (free online) — optional reference"
 
   # Assets (for includes)
   logo: "assets/astr101-logo.png"

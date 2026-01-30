@@ -22,7 +22,7 @@ execute:
 | **Instructor** | Dr. Anna Rosen |
 | **Email** | <alrosen@sdsu.edu> |
 | **Office** | Physics 239 |
-| **Office Hours** | Mondays 11:00 am–12:00 pm (and by appointment) |
+| **Office Hours** | Fridays 11:00 am–1:00 pm (and by appointment) |
 | **Class meetings** | Mon/Wed/Fri 10:00–10:50 am |
 | **Location** | LH 345 |
 | **Course website** | <https://astrobytes-edu.github.io/astr101-sp26> |
@@ -48,9 +48,7 @@ Discover the universe: planets, stars, galaxies, and our place in the cosmos. Th
 
 - **Lecture readings and slides:** Provided on the [course website](https://astrobytes-edu.github.io/astr101-sp26) under each module — no textbook purchase required.
 
-- **Recommended supplement:** Fleisch & Kregenow, *A Student's Guide to the Mathematics of Astronomy*, 1st Edition
-
-- **Optional reference:** Freedman, Geller & Kaufmann, *Universe*, 11th Edition (2019) — for students who prefer a traditional textbook.
+- **Optional reference:** OpenStax *Astronomy 2e* — free online at [openstax.org/details/books/astronomy-2e](https://openstax.org/details/books/astronomy-2e)
 
 - **iClicker:** Required for in-class engagement. Register at <https://student.iclicker.com/>
 
