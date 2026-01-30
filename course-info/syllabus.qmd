@@ -26,13 +26,13 @@ execute:
 | **Class meetings** | Mon/Wed/Fri 10:00–10:50 am |
 | **Location** | LH 345 |
 | **Course website** | <https://astrobytes-edu.github.io/astr101-sp26> |
-| **Platforms** | [Canvas](https://sdsu.instructure.com) *(announcements, gradebook)*<br>[Achieve](https://www.macmillanlearning.com/college/us/digital/achieve) *(homework, readings)*<br>[iClicker](https://student.iclicker.com/) *(in-class engagement)* |
+| **Platforms** | [Canvas](https://sdsu.instructure.com) *(announcements, homework, gradebook)*<br>[iClicker](https://student.iclicker.com/) *(in-class engagement)* |
 
 ::: {.callout-hero}
 ## Start Here
 
-- **Homework:** Complete on [Macmillan Achieve](https://achieve.macmillanlearning.com), due **Tuesdays 11:59 PM**
-- **Reading:** LearningCurve on Achieve (completion-based)
+- **Homework:** Submit on Canvas (two-stage: solutions Monday, grade memo Wednesday)
+- **Reading:** Lecture readings provided on course website
 - **In class:** Bring iClicker; most Fridays include an in-class group activity
 - **Exams:** Closed-note, calculator allowed, formula sheet provided
 - **Questions?** Check Canvas and course website announcements, then [office hours](#sec-getting-help)
@@ -46,15 +46,13 @@ Discover the universe: planets, stars, galaxies, and our place in the cosmos. Th
 
 ### Required Materials
 
-- **Required textbook:** Freedman, Geller & Kaufmann, *Universe*, 11th Edition (2019) — via [Macmillan Achieve](https://achieve.macmillanlearning.com)
+- **Lecture readings:** Provided on the [course website](https://astrobytes-edu.github.io/astr101-sp26) under each module — no textbook purchase required.
 
 - **Recommended supplement:** Fleisch & Kregenow, *A Student's Guide to the Mathematics of Astronomy*, 1st Edition
 
-- **Achieve platform access:** Required for homework and *LearningCurve* reading assignments. Access provided through **Day1Ready** — materials are included through the add/drop date (February 2, 2026). After that, your account is charged unless you opt out by 11:59 PM on Feb 2. See [shopaztecs.com/Day1Ready](https://shopaztecs.com/Day1Ready).
+- **Optional reference:** Freedman, Geller & Kaufmann, *Universe*, 11th Edition (2019) — for students who prefer a traditional textbook.
 
-- **iClicker:** Required for in-class engagement, included with your Achieve account. Register at <https://student.iclicker.com/>
-
-- **Lecture slides:** Posted on the [course website](https://astrobytes-edu.github.io/astr101-sp26) under each module.
+- **iClicker:** Required for in-class engagement. Register at <https://student.iclicker.com/>
 
 - **Calculator:** Non-smartphone calculator for exams.
 
@@ -213,9 +211,7 @@ All submitted work must reflect **your own understanding**. Collaboration is enc
 ::: {.callout-tip}
 ## Approved AI Tools
 
-**Achieve AI Tutor** — Enabled for homework support. This Socratic-style tutor asks guiding questions to help you think through problems; it won't give you answers. Use it when you're stuck and need a nudge. Your submitted work must still reflect your own reasoning.
-
-**ASTR 101 NotebookLM** — The instructor may also provide a private notebook grounded in course materials only (invitation via email). Use for reviewing concepts, not generating solutions.
+**ASTR 101 NotebookLM** — A private notebook grounded in course materials only (invitation via email). Use for reviewing concepts, clarifying lecture content, and studying — not for generating solutions to submit.
 :::
 
 ### External AI Tools (Not Allowed for Graded Work) {#sec-external-ai}
