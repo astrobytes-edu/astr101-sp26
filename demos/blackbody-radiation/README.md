@@ -11,11 +11,13 @@ A **blackbody** is an idealized object that absorbs all incident radiation and r
 $$B_\lambda(T) = \frac{2hc^2}{\lambda^5} \cdot \frac{1}{e^{hc/\lambda k_B T} - 1}$$
 
 where:
-- $h = 6.626 \times 10^{-34}$ J·s (Planck's constant)
+- $h = 6.626 \times 10^{-27}$ erg·s (Planck's constant; $= 6.626 \times 10^{-34}$ J·s)
 - $c = 2.998 \times 10^{10}$ cm/s (speed of light)
 - $k_B = 1.381 \times 10^{-16}$ erg/K (Boltzmann constant)
 - $\lambda$ = wavelength
 - $T$ = temperature in Kelvin
+
+**Units note:** The demo’s model computes the Planck function in **CGS** units (cm, s, erg) and converts wavelengths to nm/μm for display.
 
 ### Wien's Displacement Law
 
@@ -23,7 +25,7 @@ The wavelength at which a blackbody emits most intensely shifts with temperature
 
 $$\lambda_{\text{peak}} = \frac{b}{T}$$
 
-where $b = 2.898 \times 10^{-3}$ m·K (Wien's displacement constant).
+where $b = 0.2898$ cm·K ($= 2.898 \times 10^{-3}$ m·K) is Wien's displacement constant.
 
 **Examples:**
 | Object | Temperature | Peak Wavelength | Color |

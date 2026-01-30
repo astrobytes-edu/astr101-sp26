@@ -29,7 +29,7 @@ Light behaves as both waves and particles (photons). Each photon carries energy:
 
 $$E = h\nu = \frac{hc}{\lambda}$$
 
-where $h = 6.626 \times 10^{-34}$ J·s (Planck's constant).
+where $h = 6.626 \times 10^{-27}$ erg·s ($= 6.626 \times 10^{-34}$ J·s) is Planck's constant.
 
 **Consequence:** Shorter wavelength = higher energy photons.
 
