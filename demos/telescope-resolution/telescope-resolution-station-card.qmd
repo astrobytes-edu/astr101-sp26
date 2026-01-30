@@ -1,0 +1,19 @@
+---
+title: "Station Card: Telescope Resolution"
+subtitle: "Aperture and wavelength set diffraction limits"
+format:
+  pdf:
+    toc: false
+    number-sections: false
+    geometry: margin=0.9in
+    fontsize: 11pt
+---
+
+{{< include demos/_assets/station-cards/_student-header.qmd >}}
+
+**Demo:** `/demos/telescope-resolution/`
+
+---
+
+{{< include demos/_assets/station-cards/telescope-resolution.qmd >}}
+

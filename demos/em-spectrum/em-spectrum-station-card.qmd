@@ -1,0 +1,19 @@
+---
+title: "Station Card: EM Spectrum"
+subtitle: "Wavelength and energy span many orders of magnitude"
+format:
+  pdf:
+    toc: false
+    number-sections: false
+    geometry: margin=0.9in
+    fontsize: 11pt
+---
+
+{{< include demos/_assets/station-cards/_student-header.qmd >}}
+
+**Demo:** `/demos/em-spectrum/`
+
+---
+
+{{< include demos/_assets/station-cards/em-spectrum.qmd >}}
+

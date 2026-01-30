@@ -1,0 +1,19 @@
+---
+title: "Station Card: Moon Phases"
+subtitle: "The phase is the lit-half overlap we can see"
+format:
+  pdf:
+    toc: false
+    number-sections: false
+    geometry: margin=0.9in
+    fontsize: 11pt
+---
+
+{{< include demos/_assets/station-cards/_student-header.qmd >}}
+
+**Demo:** `/demos/moon-phases/`
+
+---
+
+{{< include demos/_assets/station-cards/moon-phases.qmd >}}
+

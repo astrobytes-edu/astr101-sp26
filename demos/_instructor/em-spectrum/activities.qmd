@@ -79,14 +79,4 @@ Each group gives a 60-second pitch: band choice + one key piece of evidence + on
 
 ## Station version (6–8 min)
 
-**Artifact:** a completed “spectrum card” (one band + one object + one telescope).
-
-1. Assign each station a band (Radio / IR / Visible / UV / X-ray / Gamma).
-2. Students fill in:
-   - a representative wavelength (with units),
-   - the corresponding photon energy (with units),
-   - one object example (Objects tab),
-   - one telescope example (Telescopes tab),
-   - one sentence: “This band is good for observing ____ because ____.”
-
-**Quick check:** swap cards between stations; students verify the ordering of energies across bands (lowest → highest).
+{{< include demos/_assets/station-cards/em-spectrum.qmd >}}

@@ -66,10 +66,4 @@ Use the **log vs linear** display toggle and discuss: “Which view makes the lo
 
 ## Station version (6–8 min)
 
-**Artifact:** a “temperature–spectrum card.”
-
-At the station, students pick one preset (**Sun**, **Red Giant**, **B**, **White Dwarf**) and fill in:
-- $T$ (K)
-- $\lambda_{\text{peak}}$ (nm or µm)
-- Which band dominates (IR / visible / UV)
-- One sentence: “This star looks ____ because its blackbody peak is at ____.”
+{{< include demos/_assets/station-cards/blackbody-radiation.qmd >}}

@@ -69,14 +69,4 @@ Record at the same two points:
 
 ## Station version (for a rotation lab)
 
-::: {.callout-problem title="Station card: Kepler’s Laws (6–8 minutes)"}
-**Controls:** $a$, $e$, (Newton mode) $M$  
-**Overlays:** foci, apsides, equal areas, vectors
-
-**Your station artifact (fill in):**
-1) **Observation:** where is the planet fastest?  
-2) **Kepler law:** explain the observation using “equal areas in equal times.”  
-3) **Newton picture:** which vector points to the star? which is tangent?  
-4) **Scaling:** if $a$ doubles (same $M$), what happens to $P$?  
-5) **Connection sentence:** “This connects to another course idea because…”
-:::
+{{< include demos/_assets/station-cards/keplers-laws.qmd >}}

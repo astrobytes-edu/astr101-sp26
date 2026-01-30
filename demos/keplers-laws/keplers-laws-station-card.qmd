@@ -1,0 +1,19 @@
+---
+title: "Station Card: Kepler’s Laws"
+subtitle: "Orbits: shape, speed, and period"
+format:
+  pdf:
+    toc: false
+    number-sections: false
+    geometry: margin=0.9in
+    fontsize: 11pt
+---
+
+{{< include demos/_assets/station-cards/_student-header.qmd >}}
+
+**Demo:** `/demos/keplers-laws/`
+
+---
+
+{{< include demos/_assets/station-cards/keplers-laws.qmd >}}
+

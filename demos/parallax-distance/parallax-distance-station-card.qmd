@@ -1,0 +1,19 @@
+---
+title: "Station Card: Parallax Distance"
+subtitle: "Closer stars have larger parallax"
+format:
+  pdf:
+    toc: false
+    number-sections: false
+    geometry: margin=0.9in
+    fontsize: 11pt
+---
+
+{{< include demos/_assets/station-cards/_student-header.qmd >}}
+
+**Demo:** `/demos/parallax-distance/`
+
+---
+
+{{< include demos/_assets/station-cards/parallax-distance.qmd >}}
+

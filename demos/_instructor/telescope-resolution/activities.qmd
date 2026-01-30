@@ -65,14 +65,4 @@ Fill in the table using presets and wavelength buttons. Record the diffraction l
 
 ## Station version (6–8 min)
 
-**Artifact:** a “can this telescope resolve it?” card.
-
-At the station, students must choose:
-- one telescope preset,
-- one wavelength (UV/Visible/Near-IR/Mid-IR/Radio),
-- one binary separation that is “marginal.”
-
-They record:
-- resolution (arcsec),
-- the resolved/marginal/unresolved status,
-- one sentence explaining *why* (link to $\lambda$ and $D$, optionally atmosphere).
+{{< include demos/_assets/station-cards/telescope-resolution.qmd >}}

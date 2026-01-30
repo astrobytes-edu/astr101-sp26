@@ -1,0 +1,19 @@
+---
+title: "Station Card: Seasons"
+subtitle: "Seasons are caused by axial tilt (not distance)"
+format:
+  pdf:
+    toc: false
+    number-sections: false
+    geometry: margin=0.9in
+    fontsize: 11pt
+---
+
+{{< include demos/_assets/station-cards/_student-header.qmd >}}
+
+**Demo:** `/demos/seasons/`
+
+---
+
+{{< include demos/_assets/station-cards/seasons.qmd >}}
+

@@ -1,0 +1,19 @@
+---
+title: "Station Card: Angular Size"
+subtitle: "How big something looks depends on size and distance"
+format:
+  pdf:
+    toc: false
+    number-sections: false
+    geometry: margin=0.9in
+    fontsize: 11pt
+---
+
+{{< include demos/_assets/station-cards/_student-header.qmd >}}
+
+**Demo:** `/demos/angular-size/`
+
+---
+
+{{< include demos/_assets/station-cards/angular-size.qmd >}}
+

@@ -1,0 +1,19 @@
+---
+title: "Station Card: Binary Orbits"
+subtitle: "Both bodies orbit the barycenter"
+format:
+  pdf:
+    toc: false
+    number-sections: false
+    geometry: margin=0.9in
+    fontsize: 11pt
+---
+
+{{< include demos/_assets/station-cards/_student-header.qmd >}}
+
+**Demo:** `/demos/binary-orbits/`
+
+---
+
+{{< include demos/_assets/station-cards/binary-orbits.qmd >}}
+

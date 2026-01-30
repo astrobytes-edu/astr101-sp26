@@ -66,9 +66,4 @@ Use the discussion prompt: *“What if we could observe from Jupiter’s orbit?�
 
 ## Station version (6–8 min)
 
-**Artifact:** a “parallax card” with one numeric example + one sentence interpretation.
-
-At the station, students must produce:
-- A chosen distance (pc) and the corresponding parallax (in arcsec or mas),
-- One sentence: “Because $p$ is inverse in $d$, this star is [near/far] compared to ____.”
-- One note about measurement: “Hipparcos/Gaia can/can’t measure this because ____.”
+{{< include demos/_assets/station-cards/parallax-distance.qmd >}}

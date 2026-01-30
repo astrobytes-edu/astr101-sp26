@@ -1,0 +1,22 @@
+::: {.callout-problem title="Station card: Blackbody Radiation (6–8 minutes)"}
+Pick one preset (**Sun**, **Red Giant**, **B**, or **White Dwarf**) and record:
+- Temperature $T$ (K)
+- Peak wavelength $\lambda_{\text{peak}}$ (nm or µm)
+- Which band dominates (IR / visible / UV)
+
+Then write one sentence:
+> “This star looks ____ because its blackbody peak is at ____.”
+:::
+
+::: {.callout-tip title="Word bank + sanity checks"}
+**Word bank:**
+- **Blackbody spectrum:** the ideal “thermal glow” curve; temperature sets its shape.
+- **Temperature $T$ (K):** hotter objects emit more and peak at shorter wavelengths.
+- **Peak wavelength $\lambda_{\text{peak}}$:** where the curve is highest (the “peak marker”).
+
+**Sanity checks:**
+- Hotter → $\lambda_{\text{peak}}$ shifts to *shorter* wavelength (toward blue/UV).
+- Cooler → $\lambda_{\text{peak}}$ shifts to *longer* wavelength (toward red/IR).
+- In astronomy, “redder” blackbodies are **cooler**, not hotter.
+:::
+

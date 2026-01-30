@@ -98,22 +98,7 @@ Model deep dive: `model.qmd`
 
 ## Station version (for a rotation lab)
 
-::: {.callout-problem title="Station card: Binary Orbits (6-8 minutes)"}
-**Controls:** $M_1$, $M_2$, separation $a$, eccentricity $e$
-**Overlays:** barycenter, velocity vectors
-
-**Your station artifact (fill in):**
-
-1) **Observation:** In the Sun + Jupiter system, which body's orbit is larger? By roughly what factor?
-
-2) **Rule:** Write a formula relating orbit sizes to masses.
-
-3) **Prediction:** If you doubled Jupiter's mass, what would happen to the Sun's wobble?
-
-4) **Exoplanet connection:** How would an astronomer detect a Jupiter-sized planet around a distant star using only the star's light?
-
-5) **Connection sentence:** "This connects to another course idea because..."
-:::
+{{< include demos/_assets/station-cards/binary-orbits.qmd >}}
 
 ## Quick Demonstrations (projector, no student work)
 

@@ -62,8 +62,6 @@ Students collect a small dataset by varying:
 - $\varepsilon = v^2/2 - \mu/r$ (bound vs unbound)
 - $h = |\mathbf{r}\times\mathbf{v}|$ (controls periapsis via $p=h^2/\mu$)
 
-## Station version (6–8 min): Quick rotation prompt
+## Station version (6–8 min)
 
-At each station, students must answer one question on a worksheet:
-
-> “Set $r_0=1\,\mathrm{AU}$, $M=1\,M_\odot$. Find the smallest speed factor that produces a hyperbolic orbit at direction 0°. Then repeat at direction 60°. Explain the difference using $h$.”
+{{< include demos/_assets/station-cards/conservation-laws.qmd >}}

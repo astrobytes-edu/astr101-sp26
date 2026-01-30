@@ -1,0 +1,19 @@
+---
+title: "Station Card: Conservation Laws (Orbits)"
+subtitle: "Energy + angular momentum shape orbits"
+format:
+  pdf:
+    toc: false
+    number-sections: false
+    geometry: margin=0.9in
+    fontsize: 11pt
+---
+
+{{< include demos/_assets/station-cards/_student-header.qmd >}}
+
+**Demo:** `/demos/conservation-laws/`
+
+---
+
+{{< include demos/_assets/station-cards/conservation-laws.qmd >}}
+

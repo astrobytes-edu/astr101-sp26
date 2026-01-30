@@ -1,0 +1,19 @@
+---
+title: "Station Card: Blackbody Radiation"
+subtitle: "Temperature sets a star’s spectrum and color"
+format:
+  pdf:
+    toc: false
+    number-sections: false
+    geometry: margin=0.9in
+    fontsize: 11pt
+---
+
+{{< include demos/_assets/station-cards/_student-header.qmd >}}
+
+**Demo:** `/demos/blackbody-radiation/`
+
+---
+
+{{< include demos/_assets/station-cards/blackbody-radiation.qmd >}}
+

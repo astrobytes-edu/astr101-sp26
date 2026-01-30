@@ -1,0 +1,19 @@
+---
+title: "Station Card: Eclipse Geometry"
+subtitle: "Why eclipses don’t happen every month"
+format:
+  pdf:
+    toc: false
+    number-sections: false
+    geometry: margin=0.9in
+    fontsize: 11pt
+---
+
+{{< include demos/_assets/station-cards/_student-header.qmd >}}
+
+**Demo:** `/demos/eclipse-geometry/`
+
+---
+
+{{< include demos/_assets/station-cards/eclipse-geometry.qmd >}}
+
