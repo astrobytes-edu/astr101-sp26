@@ -64,4 +64,4 @@ Students collect a small dataset by varying:
 
 ## Station version (6–8 min)
 
-{{< include demos/_assets/station-cards/conservation-laws.qmd >}}
+{{< include ../../_assets/station-cards/conservation-laws.qmd >}}

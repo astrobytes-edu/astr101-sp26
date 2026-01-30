@@ -77,4 +77,4 @@ Each group reports one sentence: “At latitude $\phi$, summer vs winter changes
 
 ## Station version (for the Cosmic Playground capstone rotation)
 
-{{< include demos/_assets/station-cards/seasons.qmd >}}
+{{< include ../../_assets/station-cards/seasons.qmd >}}

@@ -70,4 +70,4 @@ Ask groups to report “how many eclipses per season” and “roughly how far a
 
 ## Station version (for the Cosmic Playground capstone rotation)
 
-{{< include demos/_assets/station-cards/eclipse-geometry.qmd >}}
+{{< include ../../_assets/station-cards/eclipse-geometry.qmd >}}

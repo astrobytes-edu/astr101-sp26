@@ -98,7 +98,7 @@ Model deep dive: `model.qmd`
 
 ## Station version (for a rotation lab)
 
-{{< include demos/_assets/station-cards/binary-orbits.qmd >}}
+{{< include ../../_assets/station-cards/binary-orbits.qmd >}}
 
 ## Quick Demonstrations (projector, no student work)
 

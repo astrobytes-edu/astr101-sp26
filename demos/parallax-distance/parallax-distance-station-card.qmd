@@ -9,11 +9,10 @@ format:
     fontsize: 11pt
 ---
 
-{{< include demos/_assets/station-cards/_student-header.qmd >}}
+{{< include ../_assets/station-cards/_student-header.qmd >}}
 
 **Demo:** `/demos/parallax-distance/`
 
 ---
 
-{{< include demos/_assets/station-cards/parallax-distance.qmd >}}
-
+{{< include ../_assets/station-cards/parallax-distance.qmd >}}

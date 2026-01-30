@@ -79,4 +79,4 @@ Each group gives a 60-second pitch: band choice + one key piece of evidence + on
 
 ## Station version (6–8 min)
 
-{{< include demos/_assets/station-cards/em-spectrum.qmd >}}
+{{< include ../../_assets/station-cards/em-spectrum.qmd >}}

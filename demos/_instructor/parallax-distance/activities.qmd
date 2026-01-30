@@ -66,4 +66,4 @@ Use the discussion prompt: *“What if we could observe from Jupiter’s orbit?�
 
 ## Station version (6–8 min)
 
-{{< include demos/_assets/station-cards/parallax-distance.qmd >}}
+{{< include ../../_assets/station-cards/parallax-distance.qmd >}}

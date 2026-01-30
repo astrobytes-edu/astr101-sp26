@@ -69,4 +69,4 @@ Record at the same two points:
 
 ## Station version (for a rotation lab)
 
-{{< include demos/_assets/station-cards/keplers-laws.qmd >}}
+{{< include ../../_assets/station-cards/keplers-laws.qmd >}}

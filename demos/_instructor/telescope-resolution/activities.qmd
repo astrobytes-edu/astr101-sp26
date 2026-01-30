@@ -65,4 +65,4 @@ Fill in the table using presets and wavelength buttons. Record the diffraction l
 
 ## Station version (6–8 min)
 
-{{< include demos/_assets/station-cards/telescope-resolution.qmd >}}
+{{< include ../../_assets/station-cards/telescope-resolution.qmd >}}

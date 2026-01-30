@@ -71,4 +71,4 @@ For each, record the angular size and write one proportional-reasoning sentence 
 
 ## Station version (for the Cosmic Playground capstone rotation)
 
-{{< include demos/_assets/station-cards/angular-size.qmd >}}
+{{< include ../../_assets/station-cards/angular-size.qmd >}}

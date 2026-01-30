@@ -62,6 +62,7 @@ project:
     - exams/*.qmd
     - explore/*.qmd
     - demos/index.qmd
+    - demos/*/*-station-card.qmd
     - demos/_instructor/index.qmd
     - demos/_instructor/cosmic-playground/index.qmd
     - demos/_instructor/cosmic-playground/capstone.qmd

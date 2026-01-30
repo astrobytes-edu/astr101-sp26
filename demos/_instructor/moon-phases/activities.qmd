@@ -70,4 +70,4 @@ Have one group describe the “shape” of illumination vs time (slow near New/F
 
 ## Station version (for the Cosmic Playground capstone rotation)
 
-{{< include demos/_assets/station-cards/moon-phases.qmd >}}
+{{< include ../../_assets/station-cards/moon-phases.qmd >}}

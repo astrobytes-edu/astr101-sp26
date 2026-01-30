@@ -37,6 +37,9 @@ _test-*
 
 **/*.quarto_ipynb
 
+# Station-card PDFs are built artifacts (the website outputs them in _site/)
+demos/**/*-station-card.pdf
+
 
 /.luarc.json
 *.mp4

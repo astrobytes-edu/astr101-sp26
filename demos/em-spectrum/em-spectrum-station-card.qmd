@@ -9,11 +9,10 @@ format:
     fontsize: 11pt
 ---
 
-{{< include demos/_assets/station-cards/_student-header.qmd >}}
+{{< include ../_assets/station-cards/_student-header.qmd >}}
 
 **Demo:** `/demos/em-spectrum/`
 
 ---
 
-{{< include demos/_assets/station-cards/em-spectrum.qmd >}}
-
+{{< include ../_assets/station-cards/em-spectrum.qmd >}}
