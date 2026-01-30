@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Conservation Laws (Orbits) | Cosmic Playground</title>
   <link rel="stylesheet" href="../_assets/astro-theme.css">
+  <link rel="stylesheet" href="../_assets/katex/katex.min.css">
   <link rel="stylesheet" href="../_assets/demo-shell.css">
   <link rel="stylesheet" href="../_assets/demo-legacy.css">
   <link rel="stylesheet" href="./conservation-laws.css">
@@ -65,42 +66,42 @@
           <div class="readout-unit">&nbsp;</div>
         </div>
         <div class="readout-item">
-          <div class="readout-label">Eccentricity (e)</div>
+          <div class="readout-label">Eccentricity (<span data-math="e"></span>)</div>
           <div class="readout-value" id="ecc-value">0.00</div>
           <div class="readout-unit">&nbsp;</div>
         </div>
         <div class="readout-item">
-          <div class="readout-label">Specific energy (ε = K + U)</div>
+          <div class="readout-label">Specific energy (<span data-math="\\varepsilon = K + U"></span>)</div>
           <div class="readout-value" id="eps-value">0</div>
           <div class="readout-unit">AU²/yr²</div>
         </div>
         <div class="readout-item">
-          <div class="readout-label">Angular momentum (h)</div>
+          <div class="readout-label">Angular momentum (<span data-math="h"></span>)</div>
           <div class="readout-value" id="h-value">0</div>
           <div class="readout-unit">AU²/yr</div>
         </div>
         <div class="readout-item">
-          <div class="readout-label">Speed (v, instantaneous)</div>
+          <div class="readout-label">Speed (<span data-math="v"></span>, instantaneous)</div>
           <div class="readout-value" id="v-value">0</div>
           <div class="readout-unit">km/s</div>
         </div>
         <div class="readout-item">
-          <div class="readout-label">Kinetic (K = v²/2)</div>
+          <div class="readout-label">Kinetic (<span data-math="K = v^2/2"></span>)</div>
           <div class="readout-value" id="k-value">0</div>
           <div class="readout-unit">AU²/yr²</div>
         </div>
         <div class="readout-item">
-          <div class="readout-label">Potential (U = −μ/r)</div>
+          <div class="readout-label">Potential (<span data-math="U = -\\mu/r"></span>)</div>
           <div class="readout-value" id="u-value">0</div>
           <div class="readout-unit">AU²/yr²</div>
         </div>
         <div class="readout-item">
-          <div class="readout-label">Periapsis (rₚ)</div>
+          <div class="readout-label">Periapsis (<span data-math="r_p"></span>)</div>
           <div class="readout-value" id="rp-value">0</div>
           <div class="readout-unit">AU</div>
         </div>
         <div class="readout-item">
-          <div class="readout-label">Semi-major axis (a)</div>
+          <div class="readout-label">Semi-major axis (<span data-math="a"></span>)</div>
           <div class="readout-value" id="a-value">0</div>
           <div class="readout-unit">AU</div>
         </div>
@@ -131,7 +132,7 @@
 
           <div class="slider-group">
             <label for="r0-slider">
-              Initial radius (r₀)
+              Initial radius (<span data-math="r_0"></span>)
               <span class="value-display" id="r0-display">1.00 AU</span>
             </label>
             <input type="range" id="r0-slider" class="astro-slider" min="-1" max="1" step="0.01" value="0">
@@ -140,7 +141,7 @@
 
           <div class="slider-group">
             <label for="speed-slider">
-              Speed factor (v / v<sub>circ</sub>)
+              Speed factor (<span data-math="v / v_{\\mathrm{circ}}"></span>)
               <span class="value-display" id="speed-display">1.00×</span>
             </label>
             <input type="range" id="speed-slider" class="astro-slider" min="0" max="2.5" step="0.01" value="1">
@@ -170,6 +171,7 @@
   </div>
 
   <script src="../_assets/astro-utils.js"></script>
+  <script src="../_assets/katex/katex.min.js"></script>
   <script src="../_assets/demo-polish.js"></script>
   <script src="../_assets/starfield.js"></script>
   <script src="../_assets/physics/astro-constants.js"></script>

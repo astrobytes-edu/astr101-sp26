@@ -2,6 +2,10 @@
   --demo-max-width: 1000px;
 }
 
+html {
+  font-size: 18px;
+}
+
 #orbit-svg {
   width: 100%;
   height: auto;

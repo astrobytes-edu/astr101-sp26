@@ -499,6 +499,9 @@
 
   function init() {
     initElements();
+    if (window.AstroUtils && typeof window.AstroUtils.renderAllMath === 'function') {
+      window.AstroUtils.renderAllMath();
+    }
     setupControls();
     if (elements.btnPlay && elements.btnPause && elements.btnReset) {
       elements.btnPlay.addEventListener('click', startAnimation);
