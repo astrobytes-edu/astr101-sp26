@@ -105,6 +105,62 @@ Addresses the classic misconception that many adults still hold — demonstratin
 
 ---
 
+### 5. Kepler's Laws
+
+**Concept:** Kepler’s empirical rules (especially the “equal areas” idea and the $P^2\propto a^3$ scaling) and how they connect to Newtonian gravity.
+
+📁 [`keplers-laws/`](keplers-laws/)
+
+---
+
+### 6. Conservation Laws (Orbit Shapes)
+
+**Concept:** Conic sections as a consequence of conserved **specific energy** and **specific angular momentum**; connects circular vs. escape speed.
+
+📁 [`conservation-laws/`](conservation-laws/)
+
+---
+
+### 7. Binary Orbits
+
+**Concept:** Two-body motion around the **barycenter**; connects directly to binary stars and exoplanet “stellar wobble.”
+
+📁 [`binary-orbits/`](binary-orbits/)
+
+---
+
+### 8. Blackbody Radiation
+
+**Concept:** Temperature sets a thermal spectrum’s shape, peak, and total power (Wien + Stefan–Boltzmann).
+
+📁 [`blackbody-radiation/`](blackbody-radiation/)
+
+---
+
+### 9. Electromagnetic Spectrum
+
+**Concept:** Connect wavelength, frequency, and photon energy; map bands to what astronomers can observe.
+
+📁 [`em-spectrum/`](em-spectrum/)
+
+---
+
+### 10. Telescope Resolution
+
+**Concept:** Diffraction limit (plus seeing / AO context) and what it means for “resolved vs. unresolved.”
+
+📁 [`telescope-resolution/`](telescope-resolution/)
+
+---
+
+### 11. Parallax Distance
+
+**Concept:** Distance from angle; parsecs, baselines, and precision limits.
+
+📁 [`parallax-distance/`](parallax-distance/)
+
+---
+
 ## Embedding in Quarto
 
 Use the `{{< demo >}}` shortcode to embed demos in Quarto documents:
@@ -114,6 +170,7 @@ Use the `{{< demo >}}` shortcode to embed demos in Quarto documents:
 {{< demo moon-phases height="450px" >}}
 {{< demo eclipse-geometry height="600px" >}}
 {{< demo seasons height="600px" >}}
+{{< demo keplers-laws >}}
 ```
 
 Or link directly to standalone pages:
@@ -122,6 +179,13 @@ Or link directly to standalone pages:
 - `demos/moon-phases/index.html`
 - `demos/eclipse-geometry/index.html`
 - `demos/seasons/index.html`
+- `demos/keplers-laws/index.html`
+- `demos/conservation-laws/index.html`
+- `demos/binary-orbits/index.html`
+- `demos/blackbody-radiation/index.html`
+- `demos/em-spectrum/index.html`
+- `demos/telescope-resolution/index.html`
+- `demos/parallax-distance/index.html`
 
 ---
 
@@ -131,49 +195,56 @@ All demos share common styling and utilities:
 
 | File | Purpose |
 |------|---------|
-| `_assets/astro-theme.css` | Dark space theme, control styling |
-| `_assets/astro-utils.js` | Animation loops, formatting helpers |
+| `_assets/astro-theme.css` | Theme tokens + controls + accessibility defaults |
+| `_assets/demo-shell.css` | Standard layout shell shared across demos |
+| `_assets/demo-legacy.css` | Legacy class bridge (keeps older selectors working) |
+| `_assets/demo-polish.js` | Micro-interactions (ripples, slider progress, opt-in tooltips) |
+| `_assets/astro-utils.js` | Formatting, animation helpers, KaTeX helpers, shared UI utilities |
 | `_assets/starfield.js` | Animated starfield background |
+| `_assets/physics/astro-constants.js` | Single source of truth for constants + time scales |
+| `_assets/physics/units.js` | Unit conversions (built on `AstroConstants`) |
+| `_assets/physics/two-body-analytic.js` | Shared orbital mechanics core (used by multiple demos) |
 
 ---
 
-## Build Priority (ASTR 101 Spring 2026)
+## Course Alignment (ASTR 101 Spring 2026)
 
 Demos prioritized by course schedule alignment. First class: Jan 21, 2026.
 
-**Legend:** ✅ Verified | 🔶 Implemented (needs verification) | ☐ Not started
+**Legend:** ✅ Verified | ☐ Not started
 
-### Implemented (Verification Pending)
+### Implemented (Verified)
 
 | Status | Demo | Course Week | Topic |
 |--------|------|-------------|-------|
-| 🔶 | **Angular Size** | Week 1–2 | Scale of the universe |
-| 🔶 | **Moon Phases** | Week 2 | Lunar cycle, geometry vs shadows |
-| 🔶 | **Eclipse Geometry** | Week 2 | Why eclipses don't happen monthly |
-| 🔶 | **Seasons** | Week 2 | Axial tilt, NOT distance |
+| ✅ | **Angular Size** | Week 1–2 | Scale of the universe |
+| ✅ | **Moon Phases** | Week 2 | Lunar cycle, geometry vs shadows |
+| ✅ | **Eclipse Geometry** | Week 2 | Why eclipses don't happen monthly |
+| ✅ | **Seasons** | Week 2 | Axial tilt, NOT distance |
 
 ### Immediate (Week 3)
 
 | Status | Demo | Course Week | Topic |
 |--------|------|-------------|-------|
-| ☐ | **Kepler's Laws Sandbox** | Week 3 (Feb 2–6) | Gravity & orbits, Kepler's laws |
+| ✅ | **Kepler's Laws** | Week 3 (Feb 2–6) | Gravity & orbits, Kepler's laws |
+| ✅ | **Conservation Laws** | Week 3 (Feb 2–6) | Energy & angular momentum (orbit shapes) |
 
 ### High Priority (Weeks 4–5)
 
 | Status | Demo | Course Week | Topic |
 |--------|------|-------------|-------|
-| ☐ | **Blackbody Radiation** | Week 4 (Feb 9–13) | Light & radiation, EM spectrum |
-| ☐ | **Electromagnetic Spectrum** | Week 4 (Feb 9–13) | Light & radiation |
-| ☐ | **Telescope Resolution** | Week 5 (Feb 17–20) | Telescopes |
+| ✅ | **Blackbody Radiation** | Week 4 (Feb 9–13) | Light & radiation, EM spectrum |
+| ✅ | **Electromagnetic Spectrum** | Week 4 (Feb 9–13) | Light & radiation |
+| ✅ | **Telescope Resolution** | Week 5 (Feb 17–20) | Telescopes |
 
 ### Medium Priority (Weeks 8–10)
 
 | Status | Demo | Course Week | Topic |
 |--------|------|-------------|-------|
-| ☐ | **Parallax & Distance** | Week 8 (Mar 9–13) | Measuring stars |
+| ✅ | **Parallax Distance** | Week 8 (Mar 9–13) | Measuring stars |
 | ☐ | **Inverse Square Law** | Week 8 (Mar 9–13) | Luminosity |
 | ☐ | **HR Diagram Explorer** | Week 8 (Mar 9–13) | H-R diagram |
-| ☐ | **Binary Star Orbits** | Week 9 (Mar 16–20) | Binary stars, stellar masses |
+| ✅ | **Binary Orbits** | Week 9 (Mar 16–20) | Binary stars, stellar masses |
 
 ### Later (Weeks 14–16)
 
@@ -186,17 +257,15 @@ Demos prioritized by course schedule alignment. First class: Jan 21, 2026.
 
 ---
 
-## Demo Roadmap
+## Future Demo Roadmap
 
-Full catalog of planned demos, organized by topic area:
+Full catalog of planned demos **not yet implemented**, organized by topic area:
 
 ### Foundational Concepts
 
 | Demo | Concept | Key Formula | Course Level |
 |------|---------|-------------|--------------|
-| **Parallax & Distance** | Stellar parallax as distance measurement | $d = 1/p$ (parsecs) | 101 |
 | **Inverse Square Law** | Brightness falls off with distance squared | $F = L / 4\pi d^2$ | 101 |
-| **Blackbody Radiation** | Temperature determines color and total power | Wien: $\lambda_{\max} = b/T$; Stefan-Boltzmann: $L \propto R^2 T^4$ | 101/201 |
 | **Tides** | Differential gravity from Moon and Sun | $F_{\text{tidal}} \propto M/d^3$ | 101 |
 | **Light Travel Time** | Looking far = looking back in time | $t = d/c$ | 101 |
 | **Cosmic Distance Ladder** | Chain of methods: parallax → Cepheids → Type Ia → Hubble | Multi-step | 201 |
@@ -208,7 +277,6 @@ Full catalog of planned demos, organized by topic area:
 | **HR Diagram Explorer** | Plot stars, identify regions, watch evolution tracks | 101/201 |
 | **Stellar Spectrum Lab** | Temperature → color → spectral type → composition | 101/201 |
 | **Stellar Evolution Sandbox** | Watch stars evolve using pre-computed MESA/PARSEC tracks | 201 |
-| **Binary Star Orbits** | Mass determination from orbital motion | 201 |
 | **Stellar Nucleosynthesis** | Fusion chains: pp, CNO, triple-alpha | 201 |
 
 ### Galaxies & Cosmology
@@ -225,7 +293,6 @@ Full catalog of planned demos, organized by topic area:
 
 | Demo | Concept | Course Level |
 |------|---------|--------------|
-| **Kepler's Laws Sandbox** | Orbital mechanics, equal areas, $P^2 \propto a^3$ | 101 |
 | **Transit Light Curve Lab** | Exoplanet detection via transits | 101/201 |
 | **Habitable Zone Calculator** | HZ boundaries, stellar luminosity effects | 101 |
 | **Radial Velocity Method** | Wobble detection, $m \sin i$ degeneracy | 201 |
@@ -235,9 +302,7 @@ Full catalog of planned demos, organized by topic area:
 
 | Demo | Concept | Course Level |
 |------|---------|--------------|
-| **Telescope Resolution** | Diffraction limit $\theta = 1.22\lambda/D$ | 101/201 |
 | **Doppler Shift Spectrometer** | Radial velocity from spectral line shifts | 201 |
-| **Electromagnetic Spectrum** | Different wavelengths reveal different phenomena | 101 |
 | **CCD & Photon Counting** | How detectors convert light to data | 201 |
 
 ---

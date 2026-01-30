@@ -6,6 +6,17 @@ Format based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ---
 
+## [Unreleased]
+
+### Fixed
+
+- Documentation: corrected Planck constant units in `blackbody-radiation` and `em-spectrum` READMEs.
+
+### Changed
+
+- `demos/polish-manifest.json` tracks 11 polished demos (including `binary-orbits` and `conservation-laws`).
+- Documentation: refreshed `demos/README.md` to list the full current suite and updated the course-alignment tables.
+
 ## [2.0.1] - 2026-01-24
 
 ### Demo Suite Finish + Guardrails
@@ -25,7 +36,7 @@ Format based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 #### Changed
 
-- All 9 demos now use the shared shell + polish assets (see `demos/polish-manifest.json`):
+- All 9 demos in the initial suite now use the shared shell + polish assets:
   - `angular-size`, `blackbody-radiation`, `eclipse-geometry`, `em-spectrum`, `keplers-laws`, `moon-phases`, `parallax-distance`, `seasons`, `telescope-resolution`
 - Slider tooltips are opt-in (to avoid showing raw slider values when sliders map to physical values). Add `data-tooltip-source="#some-display-id"` on the slider to display the corresponding formatted readout text.
 
