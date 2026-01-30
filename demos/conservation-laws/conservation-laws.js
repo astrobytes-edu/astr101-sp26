@@ -51,9 +51,9 @@
     orbitType: 'invalid',
     hAbsAu2Yr: NaN,
     muAu3Yr2: NaN,
+    vCirc0AuYr: NaN,
 
     scalePxPerAu: 1,
-    vLenPx: 60,
     lastTimeMs: 0,
   };
 
@@ -83,6 +83,8 @@
       epsValue: document.getElementById('eps-value'),
       hValue: document.getElementById('h-value'),
       vValue: document.getElementById('v-value'),
+      kValue: document.getElementById('k-value'),
+      uValue: document.getElementById('u-value'),
       rpValue: document.getElementById('rp-value'),
       aValue: document.getElementById('a-value'),
 
@@ -196,28 +198,47 @@
     elements.particle.setAttribute('cx', pSvg.x.toFixed(2));
     elements.particle.setAttribute('cy', pSvg.y.toFixed(2));
 
+    const rAu = orbitalRadiusAu({ xAu: pos.xAu, yAu: pos.yAu, ecc: anim.ecc, pAu: anim.pAu, nuRad: anim.nuRad });
+    const vAuYr = instantaneousSpeedAuPerYr({
+      muAu3Yr2: anim.muAu3Yr2,
+      hAbsAu2Yr: anim.hAbsAu2Yr,
+      ecc: anim.ecc,
+      nuRad: anim.nuRad,
+    });
+    const kAu2Yr2 = Number.isFinite(vAuYr) ? 0.5 * vAuYr * vAuYr : NaN;
+    const uAu2Yr2 =
+      Number.isFinite(anim.muAu3Yr2) && Number.isFinite(rAu) && rAu > 0 ? -anim.muAu3Yr2 / rAu : NaN;
+
     if (elements.vValue) {
-      const vAuYr = instantaneousSpeedAuPerYr({
-        muAu3Yr2: anim.muAu3Yr2,
-        hAbsAu2Yr: anim.hAbsAu2Yr,
-        ecc: anim.ecc,
-        nuRad: anim.nuRad,
-      });
       const vKmS = Number.isFinite(vAuYr) ? TwoBody.speedKmPerSFromAuPerYr(vAuYr) : NaN;
       elements.vValue.textContent = Number.isFinite(vKmS) ? vKmS.toPrecision(4) : '—';
+    }
+    if (elements.kValue) {
+      elements.kValue.textContent = Number.isFinite(kAu2Yr2) ? kAu2Yr2.toPrecision(4) : '—';
+    }
+    if (elements.uValue) {
+      elements.uValue.textContent = Number.isFinite(uAu2Yr2) ? uAu2Yr2.toPrecision(4) : '—';
+    }
+    if (elements.epsValue) {
+      const eps = Number.isFinite(kAu2Yr2) && Number.isFinite(uAu2Yr2) ? kAu2Yr2 + uAu2Yr2 : NaN;
+      elements.epsValue.textContent = Number.isFinite(eps) ? eps.toPrecision(4) : '—';
     }
 
     // Tangent direction in SVG coordinates (note y flip).
     const dxSvg = pos.dxAu * anim.scalePxPerAu;
     const dySvg = -pos.dyAu * anim.scalePxPerAu;
     const mag = Math.sqrt(dxSvg * dxSvg + dySvg * dySvg);
+    // Scale velocity arrow length with instantaneous speed so the "speed up near periapsis" effect is visible.
+    const vRatio = Number.isFinite(vAuYr) && Number.isFinite(anim.vCirc0AuYr) && anim.vCirc0AuYr > 0 ? vAuYr / anim.vCirc0AuYr : 1;
+    const vLenPx = Math.max(20, Math.min(120, 60 * vRatio));
+
     const ux = mag > 0 ? (dxSvg / mag) * anim.dir : 0;
     const uy = mag > 0 ? (dySvg / mag) * anim.dir : 0;
 
     elements.velocityLine.setAttribute('x1', pSvg.x.toFixed(2));
     elements.velocityLine.setAttribute('y1', pSvg.y.toFixed(2));
-    elements.velocityLine.setAttribute('x2', (pSvg.x + ux * anim.vLenPx).toFixed(2));
-    elements.velocityLine.setAttribute('y2', (pSvg.y + uy * anim.vLenPx).toFixed(2));
+    elements.velocityLine.setAttribute('x2', (pSvg.x + ux * vLenPx).toFixed(2));
+    elements.velocityLine.setAttribute('y2', (pSvg.y + uy * vLenPx).toFixed(2));
   }
 
   function stopAnimation() {
@@ -387,8 +408,8 @@
     anim.omegaRad = Number.isFinite(els.omegaRad) ? els.omegaRad : NaN;
     anim.hAbsAu2Yr = Number.isFinite(els.hAbsAu2Yr) ? els.hAbsAu2Yr : NaN;
     anim.muAu3Yr2 = muAu3Yr2;
+    anim.vCirc0AuYr = vCirc;
     anim.scalePxPerAu = scalePxPerAu;
-    anim.vLenPx = Math.max(0, Math.min(110, 50 * state.speedFactor));
     anim.nuMin = domain.nuMin;
     anim.nuMax = domain.nuMax;
 
