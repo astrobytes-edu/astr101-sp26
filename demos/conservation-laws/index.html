@@ -28,6 +28,8 @@
           This demo uses an analytic two-body model (Newtonian gravity). We place the particle at an initial radius
           and choose its velocity as a multiple of the circular speed. The orbit type is classified using the
           conserved specific energy ε (per unit mass, in AU²/yr²) and angular momentum h (per unit mass, in AU²/yr).
+          During the animation we advance the particle using the equal-area rule (Kepler’s 2nd law), so it moves
+          faster near periapsis (closest approach) and slower farther away.
           For escape/hyperbolic orbits, the plotted path is clipped to a finite radius window for visibility; the
           animation stops at the edge of that window.
         </p>
@@ -76,6 +78,11 @@
           <div class="readout-label">Angular momentum (h)</div>
           <div class="readout-value" id="h-value">0</div>
           <div class="readout-unit">AU²/yr</div>
+        </div>
+        <div class="readout-item">
+          <div class="readout-label">Speed (v, instantaneous)</div>
+          <div class="readout-value" id="v-value">0</div>
+          <div class="readout-unit">km/s</div>
         </div>
         <div class="readout-item">
           <div class="readout-label">Periapsis (rₚ)</div>

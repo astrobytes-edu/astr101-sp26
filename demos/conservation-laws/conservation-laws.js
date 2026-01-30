@@ -24,6 +24,10 @@
   const VIEW_RADIUS_PX = 250;
   const PATH_SAMPLES = 720;
 
+  // Teaching time scale: simulation time in years per real second.
+  // Calibrated so that a circular orbit at 1 AU around 1 M☉ completes in ~6.3 s.
+  const SIM_YEARS_PER_SEC = 1 / (2 * Math.PI);
+
   const state = {
     massSolar: 1,
     r0Au: 1,
@@ -45,6 +49,8 @@
     pAu: NaN,
     omegaRad: NaN,
     orbitType: 'invalid',
+    hAbsAu2Yr: NaN,
+    muAu3Yr2: NaN,
 
     scalePxPerAu: 1,
     vLenPx: 60,
@@ -76,6 +82,7 @@
       eccValue: document.getElementById('ecc-value'),
       epsValue: document.getElementById('eps-value'),
       hValue: document.getElementById('h-value'),
+      vValue: document.getElementById('v-value'),
       rpValue: document.getElementById('rp-value'),
       aValue: document.getElementById('a-value'),
 
@@ -150,6 +157,30 @@
     return { xAu, yAu, dxAu, dyAu };
   }
 
+  function orbitalRadiusAu({ xAu, yAu, ecc, pAu, nuRad }) {
+    if (Number.isFinite(xAu) && Number.isFinite(yAu)) {
+      const r = Math.hypot(xAu, yAu);
+      if (Number.isFinite(r) && r > 0) return r;
+    }
+    if (!Number.isFinite(ecc) || ecc < 0) return NaN;
+    if (!Number.isFinite(pAu) || !(pAu > 0)) return NaN;
+    if (!Number.isFinite(nuRad)) return NaN;
+    const denom = 1 + ecc * Math.cos(nuRad);
+    return denom > 0 ? pAu / denom : NaN;
+  }
+
+  function instantaneousSpeedAuPerYr({ muAu3Yr2, hAbsAu2Yr, ecc, nuRad }) {
+    if (!Number.isFinite(muAu3Yr2) || !(muAu3Yr2 > 0)) return NaN;
+    if (!Number.isFinite(hAbsAu2Yr) || !(hAbsAu2Yr > 0)) return NaN;
+    if (!Number.isFinite(ecc) || ecc < 0) return NaN;
+    if (!Number.isFinite(nuRad)) return NaN;
+
+    // v = (μ / h) * sqrt(1 + 2e cosν + e^2)
+    const q = 1 + 2 * ecc * Math.cos(nuRad) + ecc * ecc;
+    if (!(q >= 0)) return NaN;
+    return (muAu3Yr2 / hAbsAu2Yr) * Math.sqrt(Math.max(0, q));
+  }
+
   function renderParticleAndVelocity() {
     if (!elements.particle || !elements.velocityLine) return;
 
@@ -164,6 +195,17 @@
     const pSvg = toSvg({ xAu: pos.xAu, yAu: pos.yAu }, anim.scalePxPerAu);
     elements.particle.setAttribute('cx', pSvg.x.toFixed(2));
     elements.particle.setAttribute('cy', pSvg.y.toFixed(2));
+
+    if (elements.vValue) {
+      const vAuYr = instantaneousSpeedAuPerYr({
+        muAu3Yr2: anim.muAu3Yr2,
+        hAbsAu2Yr: anim.hAbsAu2Yr,
+        ecc: anim.ecc,
+        nuRad: anim.nuRad,
+      });
+      const vKmS = Number.isFinite(vAuYr) ? TwoBody.speedKmPerSFromAuPerYr(vAuYr) : NaN;
+      elements.vValue.textContent = Number.isFinite(vKmS) ? vKmS.toPrecision(4) : '—';
+    }
 
     // Tangent direction in SVG coordinates (note y flip).
     const dxSvg = pos.dxAu * anim.scalePxPerAu;
@@ -212,21 +254,33 @@
       const dt = (nowMs - anim.lastTimeMs) / 1000;
       anim.lastTimeMs = nowMs;
 
-      const nuSpeedRadPerSec = 1.0;
-      const step = Model.advanceTrueAnomalyRad({
-        nuRad: anim.nuRad,
-        ecc: anim.ecc,
-        nuMin: anim.nuMin,
-        nuMax: anim.nuMax,
-        dir: anim.dir,
-        dtSec: dt,
-        nuSpeedRadPerSec,
-      });
-      anim.nuRad = step.nuRad;
-      anim.dir = step.dir;
+      // Advance using Kepler’s 2nd law (constant areal velocity):
+      // h = r^2 dν/dt  ⇒  dν/dt = h/r^2.
+      // We use a teaching time scale (SIM_YEARS_PER_SEC) so motion is visible.
+      let dtRemain = Math.min(dt, 0.1);
+      let stopped = false;
+      while (dtRemain > 1e-9 && !stopped) {
+        const dtStep = Math.min(dtRemain, 0.02);
+        const rAu = orbitalRadiusAu({ ecc: anim.ecc, pAu: anim.pAu, nuRad: anim.nuRad });
+        const nuSpeedRadPerYr =
+          Number.isFinite(anim.hAbsAu2Yr) && Number.isFinite(rAu) && rAu > 0 ? anim.hAbsAu2Yr / (rAu * rAu) : 0;
+        const step = Model.advanceTrueAnomalyRad({
+          nuRad: anim.nuRad,
+          ecc: anim.ecc,
+          nuMin: anim.nuMin,
+          nuMax: anim.nuMax,
+          dir: anim.dir,
+          dtSec: dtStep,
+          nuSpeedRadPerSec: nuSpeedRadPerYr * SIM_YEARS_PER_SEC,
+        });
+        anim.nuRad = step.nuRad;
+        anim.dir = step.dir;
+        stopped = step.stopped;
+        dtRemain -= dtStep;
+      }
 
       renderParticleAndVelocity();
-      if (step.stopped) {
+      if (stopped) {
         stopAnimation();
         return;
       }
@@ -331,6 +385,8 @@
     anim.ecc = Number.isFinite(els.ecc) ? els.ecc : NaN;
     anim.pAu = Number.isFinite(els.pAu) ? els.pAu : NaN;
     anim.omegaRad = Number.isFinite(els.omegaRad) ? els.omegaRad : NaN;
+    anim.hAbsAu2Yr = Number.isFinite(els.hAbsAu2Yr) ? els.hAbsAu2Yr : NaN;
+    anim.muAu3Yr2 = muAu3Yr2;
     anim.scalePxPerAu = scalePxPerAu;
     anim.vLenPx = Math.max(0, Math.min(110, 50 * state.speedFactor));
     anim.nuMin = domain.nuMin;
