@@ -42,11 +42,11 @@ execute:
 
 Discover the universe: planets, stars, galaxies, and our place in the cosmos. This course builds a **foundational understanding of modern astronomy** — from how stars shine and die, to the Big Bang and the large-scale structure of the universe. Along the way, we'll explore black holes, dark matter, dark energy, nebulae, and other exotic objects.
 
-*Statisfies the Physical Science [5A] General Education requirement.*
+*Satisfies the Physical Science [5A] General Education requirement.*
 
 ### Required Materials
 
-- **Lecture readings:** Provided on the [course website](https://astrobytes-edu.github.io/astr101-sp26) under each module — no textbook purchase required.
+- **Lecture readings and slides:** Provided on the [course website](https://astrobytes-edu.github.io/astr101-sp26) under each module — no textbook purchase required.
 
 - **Recommended supplement:** Fleisch & Kregenow, *A Student's Guide to the Mathematics of Astronomy*, 1st Edition
 
@@ -90,8 +90,8 @@ By the end of this course, students will be able to:
 
 ### Important Dates {#sec-important-dates}
 
-- **Module 1 Exam:** Monday, March 2 (Chapters 1-8)
-- **Module 2 Exam:** Monday, April 20 (Chapters 16-21)
+- **Module 1 Exam:** Monday, March 2 (Observing the Sky, Light & Spectra)
+- **Module 2 Exam:** Monday, April 20 (Stars, Stellar Evolution, Exoplanets)
 - **Final Exam:** Friday, May 8, 10:30 AM – 12:30 PM (Comprehensive)
 
 See the [Course Schedule](./schedule.qmd) for the full weekly calendar.
@@ -124,8 +124,8 @@ Per SDSU policy, students are expected to spend at least 6 hours per week (a min
 **In this section:**
 
 - [Astronomy Media Reflections](#sec-media)
-- [Weekly Homework + Grade Memos](#sec-homework)
 - [Scholarly Engagement](#sec-engagement)
+- [Weekly Homework + Grade Memos](#sec-homework)
 - [Exams](#sec-exams)
 
 #### Astronomy Media Reflections (5%) {#sec-media}
