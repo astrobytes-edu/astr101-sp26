@@ -36,13 +36,13 @@
         </p>
       </details>
 
-      <div class="viz-panel">
-        <svg id="orbit-svg" viewBox="0 0 600 600" preserveAspectRatio="xMidYMid meet">
-          <defs>
-            <marker id="arrow-vel" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-              <polygon points="0 0, 10 3.5, 0 7" fill="#2ecc71"></polygon>
-            </marker>
-          </defs>
+	      <div class="viz-panel">
+	        <svg id="orbit-svg" viewBox="0 0 600 600" preserveAspectRatio="xMidYMid meet">
+	          <defs>
+	            <marker id="arrow-vel" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+	              <polygon points="0 0, 10 3.5, 0 7" fill="#2ecc71"></polygon>
+	            </marker>
+	          </defs>
 
           <!-- Central mass -->
           <circle id="central-mass" cx="300" cy="300" r="10" fill="#ffcc00"></circle>
@@ -54,10 +54,17 @@
           <circle id="particle" cx="400" cy="300" r="8" fill="#7ec8e3"></circle>
 
           <!-- Velocity vector at initial point -->
-          <line id="velocity-line" x1="400" y1="300" x2="460" y2="300"
-                stroke="#2ecc71" stroke-width="2" marker-end="url(#arrow-vel)"></line>
-        </svg>
-      </div>
+	          <line id="velocity-line" x1="400" y1="300" x2="460" y2="300"
+	                stroke="#2ecc71" stroke-width="2" marker-end="url(#arrow-vel)"></line>
+	        </svg>
+
+	        <!-- Animation Controls (kept attached to the visualization) -->
+	        <div class="animation-controls viz-controls">
+	          <button class="anim-btn primary" id="btn-play">▶ Play</button>
+	          <button class="anim-btn" id="btn-pause" disabled>⏸ Pause</button>
+	          <button class="anim-btn" id="btn-reset">⟲ Reset</button>
+	        </div>
+	      </div>
 
       <div class="readout-panel">
         <div class="readout-item">
@@ -107,16 +114,9 @@
         </div>
       </div>
 
-      <!-- Animation Controls -->
-      <div class="animation-controls" style="margin-top: 0.75rem;">
-        <button class="anim-btn primary" id="btn-play">▶ Play</button>
-        <button class="anim-btn" id="btn-pause" disabled>⏸ Pause</button>
-        <button class="anim-btn" id="btn-reset">⟲ Reset</button>
-      </div>
-
-      <div class="controls-grid">
-        <div class="control-card">
-          <div class="control-title">Central mass</div>
+	      <div class="controls-grid">
+	        <div class="control-card">
+	          <div class="control-title">Central mass</div>
           <div class="slider-group">
             <label for="mass-slider">
               Mass

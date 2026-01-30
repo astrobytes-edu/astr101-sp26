@@ -3,7 +3,29 @@
 }
 
 html {
-  font-size: 18px;
+  font-size: clamp(16px, 1.8vw, 20px);
+}
+
+.viz-panel {
+  position: relative;
+}
+
+.viz-panel .animation-controls.viz-controls {
+  position: absolute;
+  left: 50%;
+  bottom: 0.75rem;
+  transform: translateX(-50%);
+  display: flex;
+  gap: var(--space-sm);
+  padding: 0.5rem 0.75rem;
+  border-radius: var(--border-radius-md);
+  background: rgba(10, 10, 18, 0.75);
+  border: 1px solid var(--border-color);
+  backdrop-filter: blur(6px);
+}
+
+.viz-panel .animation-controls.viz-controls .anim-btn {
+  font-size: 1rem;
 }
 
 #orbit-svg {

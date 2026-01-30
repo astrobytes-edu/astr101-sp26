@@ -25,8 +25,8 @@
   const PATH_SAMPLES = 720;
 
   // Teaching time scale: simulation time in years per real second.
-  // Calibrated so that a circular orbit at 1 AU around 1 M☉ completes in ~6.3 s.
-  const SIM_YEARS_PER_SEC = 1 / (2 * Math.PI);
+  // Calibrated so that a circular orbit at 1 AU around 1 M☉ completes in ~3 s.
+  const SIM_YEARS_PER_SEC = 1 / 3;
 
   const state = {
     massSolar: 1,
