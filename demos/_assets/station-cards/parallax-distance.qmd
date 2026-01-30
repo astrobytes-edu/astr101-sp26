@@ -11,11 +11,12 @@ At the station, produce:
 **Word bank:**
 - **Parallax:** an apparent shift caused by a change in viewpoint (here: Jan vs July).
 - **Parallax angle $p$:** the measured angle; larger $p$ means the star is closer.
-- **Parsec (pc):** defined so that $d(\mathrm{pc}) = 1/p(\")$.
+- **Parsec (pc):** defined so that:
+
+  $$d\,(\mathrm{pc})=\frac{1}{p\,(\mathrm{arcsec})}$$
 
 **Sanity checks:**
-- If $d=1$ pc, then $p=1\"$.
+- If $d=1\,\mathrm{pc}$, then $p=1\,\mathrm{arcsec}$.
 - If distance increases by 10×, parallax should decrease by 10×.
 - Distant stars have tiny parallax angles (mas or µas).
 :::
-

@@ -17,9 +17,12 @@
 - **Orbit size about the barycenter:** the more massive body has the smaller orbit.
 - **Radial velocity method:** detect a planet by measuring the star’s back-and-forth Doppler shift.
 
+**Key relationship (mass vs orbit size):**
+
+$$\frac{a_1}{a_2}=\frac{M_2}{M_1}$$
+
 **Sanity checks:**
 - If $M_1=M_2$, both orbits should be the same size (mirror symmetry).
 - Making the planet more massive increases the star’s wobble (harder pull → larger response).
 - The star’s wobble is usually much smaller than the planet’s orbit.
 :::
-

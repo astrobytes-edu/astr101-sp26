@@ -14,9 +14,12 @@ Then write one sentence:
 - **Temperature $T$ (K):** hotter objects emit more and peak at shorter wavelengths.
 - **Peak wavelength $\lambda_{\text{peak}}$:** where the curve is highest (the “peak marker”).
 
+**Key relationship (Wien scaling):**
+
+$$\lambda_{\text{peak}} \propto \frac{1}{T}$$
+
 **Sanity checks:**
 - Hotter → $\lambda_{\text{peak}}$ shifts to *shorter* wavelength (toward blue/UV).
 - Cooler → $\lambda_{\text{peak}}$ shifts to *longer* wavelength (toward red/IR).
 - In astronomy, “redder” blackbodies are **cooler**, not hotter.
 :::
-

@@ -18,9 +18,12 @@
 - **Kepler 2:** equal areas in equal times (a timing law → speed changes).
 - **Kepler 3:** bigger orbits have longer periods (for the same central mass).
 
+**Key relationship (period scaling):**
+
+$$P \propto a^{3/2}$$
+
 **Sanity checks:**
 - If $e=0$, speed should be constant around the orbit.
 - For an ellipse, the planet should move fastest at perihelion.
 - Increasing $a$ should increase the period $P$.
 :::
-
