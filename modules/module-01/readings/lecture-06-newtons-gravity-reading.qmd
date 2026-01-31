@@ -818,6 +818,16 @@ $$M \approx \frac{4\pi^2 a^3}{G P^2}$$
 
 **Translation:** Measure orbital period and distance → Calculate the central mass
 
+::: {.callout-note title="Observable → Model → Inference: Weighing the Sun"}
+**Observable:** Earth's orbital period is 1 year, and its orbital distance (semi-major axis) is 1 AU. (Timing + Position observations)
+
+**Model:** Newton's version of Kepler III: $M = 4\pi^2 a^3 / (GP^2)$
+
+**Inference:** The Sun's mass is approximately $2 \times 10^{30}$ kg — about 330,000 times Earth's mass.
+
+We never touched the Sun. We just watched how Earth moves around it.
+:::
+
 This is how astronomers "weigh" the universe:
 
 - The Sun (from planetary orbits)
