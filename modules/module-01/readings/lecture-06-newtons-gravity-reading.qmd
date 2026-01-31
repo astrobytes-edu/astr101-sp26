@@ -85,6 +85,19 @@ Newton's insight was radical: **the Moon IS falling**. Right now. Continuously. 
 **Alt text:** Newton's cannon fires projectiles at increasing speeds; at orbital velocity, the projectile falls continuously around Earth.
 :::
 
+::: {.callout-note title="✏️ Sketch It: Newton's Cannon" collapse="true"}
+Draw a circular Earth. On top of it, draw a tall mountain with a cannon pointing horizontally (parallel to the ground).
+
+Now draw four trajectories for cannonballs fired at increasing speeds:
+
+1. **Low speed:** Curves down, hits ground nearby
+2. **Medium speed:** Curves down, hits ground farther away
+3. **Orbital speed:** Curves down, but Earth curves away at the same rate — continuous fall around Earth!
+4. **Escape speed:** Curves but never comes back — escapes to infinity
+
+Label which trajectory represents an orbit. The key insight: **orbiting is falling, but moving sideways fast enough to keep missing.**
+:::
+
 And here's the key: the same mathematical law — the same equation — describes both the falling apple and the orbiting Moon. The force that makes your coffee mug hit the floor when you drop it is the *same* force that keeps planets circling the Sun.
 
 Newton called this **universal gravitation**. And with it, he answered every question Kepler couldn't:
