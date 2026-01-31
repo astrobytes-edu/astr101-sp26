@@ -147,8 +147,9 @@ You might assume:
 - **An object must be heated to glow**
 
 But everything above absolute zero emits electromagnetic radiation.
-At room temperature, you emit infrared light constantly — about 100
-watts of thermal radiation, right now!
+At room temperature, you emit infrared light constantly — on the order
+of ~100 W of thermal radiation (very roughly; it depends on your body,
+clothing, and surroundings).
 :::
 ```
 
@@ -336,13 +337,13 @@ have higher peaks at shorter wavelengths.
 
 ### Why Stars Are (Nearly) Blackbodies
 
-> Stars are excellent approximations of blackbodies because:
+> Stars are excellent approximations of blackbodies (for their **smooth continuum spectrum**) because:
 >
-> 1. They're opaque — light can't pass through
-> 2. They absorb almost all radiation that reaches them
-> 3. They're in thermal equilibrium — energy absorbed equals energy emitted
+> 1. They're **opaque** — photons interact many times before escaping.
+> 2. Those repeated interactions tend to **thermalize** the radiation, producing a spectrum close to a blackbody.
+> 3. The light we see comes from the **photosphere**, which can be described by an effective temperature.
 >
-> This means we can apply blackbody physics to determine stellar temperatures directly from their spectra!
+> Real stellar spectra are not perfect blackbodies — **spectral lines** sit on top of the blackbody-like continuum. We'll use those lines in Lecture 9 to get composition and motion.
 
 **Demo connection:**
 
@@ -413,6 +414,17 @@ or in convenient form for visible light:
 $$\lambda_{peak} \text{ (nm)} = \frac{2,900,000}{T \text{ (K)}}$$
 
 **Hotter objects peak at shorter wavelengths.**
+:::
+```
+
+**Unit check (so you don’t get nonsense):**
+
+```
+::: {.callout-tip title="Unit Check for Wien's Law" collapse="true"}
+Use **one** version at a time and match the units:
+
+- If you use the **m·K** form, $\lambda_{peak}$ must be in **meters** and $T$ in **Kelvin**.
+- If you use the **nm** form, $\lambda_{peak}$ must be in **nanometers** and $T$ in **Kelvin**.
 :::
 ```
 
@@ -570,6 +582,16 @@ ALT TEXT: Stars of different colors representing different temperatures:
 red (cool) to blue-white (hot).
 ```
 
+**Figure placeholder (optional, for size intuition):**
+
+```
+{{< fig betelgeuse-size-eso >}}
+
+FIGURE: Betelgeuse Compared to the Solar System (ALMA)
+DESCRIPTION: ALMA millimeter-continuum image of Betelgeuse with an overlay comparing its size to the Solar System. Emphasize: Betelgeuse would engulf Mercury, Venus, Earth, Mars, and even Jupiter; only Saturn would remain beyond its surface.
+ALT TEXT: ALMA millimeter-continuum image of Betelgeuse with a Solar System size overlay indicating the star would extend beyond Jupiter’s orbit.
+```
+
 ### Real-World Application
 
 > When JWST observes a distant planet-forming disk, it measures the infrared spectrum. By finding the peak, astronomers can determine the temperature of the dust — revealing whether it's warm enough for certain chemical reactions or cool enough for ice to form.
@@ -704,7 +726,7 @@ A star can be luminous because:
 > - If Star A and Star B have the same $T$ but Star A is 100× more luminous...
 > - Then Star A must have 10× the radius (since $L \propto R^2$)
 >
-> This is how we distinguish **giants** from **dwarfs** — not by mass, but by radius!
+> This is how we distinguish **giants** from **dwarfs** observationally: same temperature, different luminosity → different radius.
 
 **Figure placeholder:**
 
@@ -909,7 +931,21 @@ composition, and velocity — all from analyzing its light.
 
 8. **Earth as a blackbody:** Earth has an effective temperature of about 255 K (due to energy balance with sunlight). At what wavelength does Earth's thermal emission peak? In what part of the EM spectrum is this?
 
-9. **Size from L and T:** The star Betelgeuse has a surface temperature of about 3500 K and a luminosity of about 100,000 $L_\odot$. The Sun has $T = 5800$ K and $L = 1 L_\odot$. Estimate the ratio $R_{Betelgeuse}/R_{Sun}$.
+9. **Size from L and T (OoM):** The star Betelgeuse has a surface temperature of about 3500 K and a luminosity of about $10^5\,L_\odot$ (order of magnitude). The Sun has $T = 5800$ K and $L = 1 L_\odot$. Estimate the ratio $R_{Betelgeuse}/R_{Sun}$.
+
+::: {.callout-tip title="Solution sketch (OoM)" collapse="true"}
+Use the scaling from Stefan–Boltzmann:
+\[
+\frac{L}{L_\odot}=\left(\frac{R}{R_\odot}\right)^2\left(\frac{T}{T_\odot}\right)^4
+\quad\Rightarrow\quad
+\frac{R}{R_\odot}=\left(\frac{L}{L_\odot}\right)^{1/2}\left(\frac{T}{T_\odot}\right)^{-2}.
+\]
+With $L/L_\odot \sim 10^5$ we have $\sqrt{L/L_\odot}\sim 3\times 10^2$. With $T/T_\odot \sim 3500/5800 \approx 0.6$, we get
+\[
+\frac{R}{R_\odot}\sim \frac{3\times 10^2}{(0.6)^2}\approx 9\times 10^2 \sim 10^3.
+\]
+(Order of magnitude: hundreds to a few thousand.)
+:::
 
 10. **Why blackbodies matter:** Explain in your own words why blackbody physics is useful for astronomy, and what additional information (beyond temperature) requires spectral lines.
 
@@ -940,6 +976,7 @@ composition, and velocity — all from analyzing its light.
 | `blackbody-spectrum-temps` | Blackbody curves at different temperatures | ☐ |
 | `sun-spectrum-green` | Solar spectrum showing peak at green, broad emission | ☐ |
 | `star-colors-temperature` | Stars of different colors/temperatures | ☐ |
+| `betelgeuse-size-eso` | Betelgeuse size vs Solar System (ALMA overlay) | ☐ |
 | `giant-vs-dwarf` | Same temperature, different size/luminosity | ☐ |
 
 ---

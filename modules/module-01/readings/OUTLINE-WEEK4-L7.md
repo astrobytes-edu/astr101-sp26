@@ -354,6 +354,17 @@ to short-wavelength gamma rays, with visible light as a narrow band.
 > **R**ed, **O**range, **Y**ellow, **G**reen, **B**lue, **V**iolet — "Roy G. Biv"
 > Red has the longest visible wavelength; violet has the shortest.
 
+**Atmospheric windows (why we need space telescopes):**
+
+```
+::: {.callout-note title="Atmospheric Windows" collapse="true"}
+Earth's atmosphere is transparent mainly in two broad windows: **visible light** and parts of **radio**.
+It absorbs most **ultraviolet, X-rays, and gamma rays**, and it absorbs a lot of **infrared** (though some IR gets through from high, dry sites).
+
+This is why some astronomy must be done from space: the atmosphere blocks the very wavelengths that would carry that information to the ground.
+:::
+```
+
 ### Demo Connection
 
 ```
@@ -563,6 +574,20 @@ $$\text{Scattering} \propto \frac{1}{\lambda^4}$$
 >
 > Blue light scatters about **6 times more** than red light! This is why the sky is blue — blue photons get scattered all over the sky, while red photons mostly travel straight through.
 
+**But why not violet? (common misconception):**
+
+```
+::: {.callout-tip title="The Sky Isn't Violet (Even Though Violet Scatters More)" collapse="true"}
+Violet light *does* scatter strongly. But the sky doesn't look violet because:
+
+1. The Sun emits less violet than green and blue.
+2. Some of the shortest-wavelength light is absorbed in the atmosphere.
+3. Human eyes are less sensitive to violet than to blue/green.
+
+The result is a sky that looks blue to us, not violet.
+:::
+```
+
 **Figure placeholder:**
 
 ```
@@ -636,6 +661,10 @@ Sunsets appear red because:
 through much more atmosphere. After all that scattering, the blue is
 gone — redirected in other directions. What remains is the less-scattered
 red and orange, giving sunsets their characteristic colors.
+
+Note: dust and aerosols can **enhance** reds and oranges, but the baseline
+reason sunsets redden is the long path through the atmosphere plus
+wavelength-dependent scattering.
 :::
 ```
 
@@ -702,10 +731,10 @@ around the planet; blue scatters away, and only red reaches the Moon.
 
 ```
 ::: {.callout-tip title="The More You Know: Exoplanet Atmospheres" collapse="true"}
-In 2024, JWST detected water vapor, carbon dioxide, and even hints of
-sulfur compounds in exoplanet atmospheres — using the same principle as
-lunar eclipse reddening. Light from the host star filters through the
-exoplanet's atmosphere, and we measure what wavelengths are absorbed.
+Astronomers can detect gases in some exoplanet atmospheres by the same
+basic trick you just used for lunar eclipses: **light filters through a
+planet’s atmosphere**, and different wavelengths are absorbed or scattered
+by different molecules.
 
 This is how we might someday detect signs of life on distant worlds:
 by looking for atmospheric signatures (like oxygen + methane together)
@@ -749,7 +778,7 @@ Moon — like projecting every sunset on Earth onto the lunar surface.
 
 ```
 ::: {.callout-important title="Inverse-Square Law for Light Intensity"}
-The **intensity** (brightness per unit area) of light from a source
+The **intensity** (received power per unit area — astronomers often call this **flux** or **apparent brightness**) of light from a source
 decreases with distance squared:
 
 $$I \propto \frac{1}{r^2}$$
@@ -784,7 +813,7 @@ the distance, the same light covers 4× the area, so intensity is 1/4.
 
 > The inverse-square law is why distant stars appear dim even if they're intrinsically very luminous. A star with the same luminosity as the Sun but 10 times farther away appears **100 times fainter**.
 >
-> This also means that if we know a star's true luminosity and measure its apparent brightness, we can calculate its distance. We'll return to this idea when we discuss "standard candles" and the cosmic distance ladder.
+> This also means that if we know a star's true luminosity and measure its flux (apparent brightness), we can calculate its distance. We'll return to this idea when we discuss "standard candles" and the cosmic distance ladder.
 
 ### Check Yourself 8:
 

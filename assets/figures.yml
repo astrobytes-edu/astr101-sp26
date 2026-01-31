@@ -248,7 +248,7 @@ figures:
     path: /assets/images/module-01/pillars-hubble-jwst.png
     caption: "**What to notice:** Left (Hubble optical)—dark, opaque columns block visible light. Right (JWST infrared)—thousands of embedded newborn stars revealed. Infrared penetrates the dust that blocks optical light."
     alt: "Side-by-side comparison of the Pillars of Creation in the Eagle Nebula: Left panel shows Hubble optical image with dark opaque dust pillars against glowing gas. Right panel shows JWST near-infrared image revealing thousands of previously hidden stars embedded within and behind the pillars."
-    credit: "NASA, ESA, CSA, STScI"
+    credit: "Illustration: NASA, ESA, CSA"
     module: 1
 
   # Spoiler 8: Crab Nebula multiwavelength
@@ -413,6 +413,27 @@ figures:
     path: /assets/images/module-01/kepler-orbits.png
     caption: "Kepler's laws of planetary motion"
     alt: "Elliptical orbit diagram showing equal areas in equal times"
+    module: 1
+
+  kepler-1st-law-ellipse:
+    path: /assets/images/module-01/lec05/kepler-1st-law-ellipse-focus.svg
+    caption: "What to notice: planetary orbits are ellipses, and the Sun sits at one focus (not at the center)."
+    alt: "Diagram of an elliptical orbit with the Sun drawn at one focus and the other focus marked. The closest point (perihelion) and farthest point (aphelion) are labeled, and the semimajor axis a is shown."
+    credit: "(A. Rosen/Codex)"
+    module: 1
+
+  kepler-2nd-law-equal-areas:
+    path: /assets/images/module-01/lec05/kepler-2nd-law-equal-areas.svg
+    caption: "What to notice: equal areas are swept out in equal times; the planet moves faster near perihelion and slower near aphelion."
+    alt: "Diagram of an elliptical orbit with the Sun at one focus and two shaded regions of equal area swept out by the Sun-to-planet line during equal time intervals. The perihelion region spans a longer arc than the aphelion region."
+    credit: "(A. Rosen/Codex)"
+    module: 1
+
+  kepler-1st-law-eccentricity-variants:
+    path: /assets/images/module-01/lec05/kepler-1st-law-eccentricity-variants.svg
+    caption: "What to notice: eccentricity e controls how stretched an orbit is—and how far the focus (where the Sun sits) is from the center."
+    alt: "Three-panel diagram comparing orbits with e=0, e=0.3, and e=0.6, each with the center marked and the Sun shown at a focus (with foci coinciding for the circle)."
+    credit: "(A. Rosen/Codex)"
     module: 1
 
   # ==============================================================
@@ -589,6 +610,157 @@ figures:
     caption: "Total lunar eclipse (“blood moon”) from Earth’s atmospheric filtering"
     alt: "Illustration of a lunar eclipse showing Earth casting a shadow on the Moon, with an emphasis on the Moon appearing reddish during totality."
     credit: "(A. Rosen/NotebookLM)"
+    module: 1
+
+  # ==============================================================
+  # Week 04 / Lecture 08: Temperature from Light (Blackbodies)
+  # ==============================================================
+
+  betelgeuse-size-eso:
+    path: /assets/images/module-01/week-04/betelgeuse-size-eso.jpg
+    caption: "What to notice: this ALMA millimeter-continuum image shows Betelgeuse—around 1400 times the Sun’s size in the millimeter continuum—with an overlay comparing it to the Solar System; it would engulf the inner planets and even Jupiter, while Saturn would remain beyond its surface."
+    alt: "ALMA millimeter-continuum image of the red supergiant star Betelgeuse with an overlaid scale comparison to the Solar System, indicating Betelgeuse would engulf Mercury, Venus, Earth, Mars, and Jupiter, while Saturn would remain beyond the star’s surface."
+    credit: "ESO/ALMA"
+    module: 1
+
+  multiwavelength-crab:
+    path: /assets/images/module-01/crab-multiwavelength-chandra.jpg
+    caption: "**What to notice:** The same object can look completely different at different wavelengths; each band highlights different physics."
+    alt: "Composite/multi-panel view of the Crab Nebula at multiple wavelengths, where different structures are emphasized in different bands."
+    credit: "NASA/CXC/SAO"
+    module: 1
+
+  lunar-eclipse-red:
+    path: /assets/images/module-01/lec04/lunar-eclipse-nblm.webp
+    caption: "What to notice: during a total lunar eclipse, sunlight filtered through Earth’s atmosphere illuminates the Moon, often giving it a reddish color."
+    alt: "Illustration of a lunar eclipse showing Earth casting a shadow on the Moon, with emphasis on the Moon appearing reddish during totality."
+    credit: "(A. Rosen/NotebookLM)"
+    module: 1
+
+  light-inverse-square:
+    path: /assets/images/module-01/inverse-square-law-gemini.png
+    caption: "What to notice: as distance increases, the same light spreads over a larger area, so intensity drops as 1/r²."
+    alt: "Diagram illustrating the inverse-square law for light: the same total light spreads over larger spherical surfaces at greater distances, reducing intensity."
+    credit: "(A. Rosen/Gemini)"
+    module: 1
+
+  electromagnetic-wave:
+    path: /assets/images/module-01/week-04/em-wave-only-jwst.png
+    caption: "What to notice: light is an electromagnetic wave—electric and magnetic fields oscillate at right angles while the wave travels forward."
+    alt: "Diagram of an electromagnetic wave showing oscillating electric and magnetic fields perpendicular to each other and to the direction of propagation, with x, y, and z axes labeled."
+    credit: "Illustration: NASA, ESA, CSA"
+    module: 1
+
+  mechanical-vs-em-wave:
+    path: /assets/images/module-01/week-04/mechanical-vs-em-wave-jwst.png
+    caption: "What to notice: both mechanical waves and electromagnetic waves have wavelength, but EM waves do not require a material medium."
+    alt: "Side-by-side diagram comparing a mechanical wave with a labeled wavelength to an electromagnetic wave with labeled electric and magnetic fields."
+    credit: "Illustration: NASA, ESA, CSA"
+    module: 1
+
+  em-spectrum-full:
+    path: /assets/images/module-01/week-04/em-spectrum-astro-objects-jwst.png
+    caption: "What to notice: the electromagnetic spectrum is much bigger than visible light; different wavelength bands reveal different kinds of astronomical objects and physics."
+    alt: "Infographic of the electromagnetic spectrum from gamma rays to radio, with visible light highlighted and short descriptions of example astronomical sources in each band."
+    credit: "Illustration: NASA, ESA, CSA"
+    module: 1
+
+  em-spectrum-jwst:
+    path: /assets/images/module-01/week-04/em-spectrum-jwst.png
+    caption: "What to notice: visible light is a tiny slice of the electromagnetic spectrum, between ultraviolet and infrared."
+    alt: "Graphic of the electromagnetic spectrum labeled gamma ray through radio, with a narrow visible-light band marked between 380 and 780 nanometers."
+    credit: "Illustration: NASA, ESA, CSA"
+    module: 1
+
+  wavelength-energy:
+    path: /assets/images/module-01/week-04/wavelength-energy-jwst.png
+    caption: "What to notice: shorter wavelength means higher photon energy; moving from red to violet increases energy."
+    alt: "Visible-light spectrum bar labeled roughly 400 to 700 nanometers with arrows indicating higher energy at shorter wavelengths (ultraviolet side) and lower energy at longer wavelengths (infrared side)."
+    credit: "Illustration: NASA, ESA, CSA"
+    module: 1
+
+  prism-spectrum-jwst:
+    path: /assets/images/module-01/week-04/prism-spectrum-jwst.png
+    caption: "What to notice: white light contains many wavelengths; a prism separates them into a spectrum from ultraviolet through visible into infrared."
+    alt: "Diagram of sunlight entering a prism and emerging as a spread-out rainbow spectrum, with ultraviolet below and infrared above the visible band indicated."
+    credit: "Illustration: NASA, ESA, CSA"
+    module: 1
+
+  light-matter-interactions:
+    path: /assets/images/module-01/week-04/light-matter-interactions-jwst.png
+    caption: "What to notice: light can be absorbed, emitted, transmitted, reflected, or refracted—those interactions are how spectra are made."
+    alt: "Row of five panels labeled absorption, emission, transmission, reflection, and refraction, each showing a light ray interacting with a material."
+    credit: "Illustration: NASA, ESA, CSA"
+    module: 1
+
+  types-of-spectra-jwst:
+    path: /assets/images/module-01/week-04/types-of-spectra-jwst.png
+    caption: "What to notice: three common spectra—continuous, emission-line, and absorption-line—come from different physical setups."
+    alt: "Illustration showing a continuous light source producing a continuous spectrum, a cloud of gas producing an emission spectrum, and light passing through gas producing an absorption spectrum."
+    credit: "Illustration: NASA, ESA, CSA"
+    module: 1
+
+  absorption-emission-spectra-jwst:
+    path: /assets/images/module-01/week-04/absorption-emission-spectra-jwst.png
+    caption: "What to notice: absorption and emission lines occur at the same wavelengths for a given element—same atomic fingerprints, seen in opposite ways."
+    alt: "Chart comparing absorption and emission spectra for several elements (including sodium, nitrogen, hydrogen, and oxygen) across the visible wavelength range."
+    credit: "Illustration: NASA, ESA, CSA"
+    module: 1
+
+  altair-spectrum-jwst:
+    path: /assets/images/module-01/week-04/altair-spectrum-jwst.png
+    caption: "What to notice: a spectrum can be shown as both an image (colored strip) and a graph; the dips and features are where atoms absorb light."
+    alt: "Graphic showing a spectrum as a colored strip and as a plotted curve of brightness versus wavelength, with absorption features highlighted and labeled."
+    credit: "Illustration: NASA, ESA, CSA"
+    module: 1
+
+  doppler-shift-star-jwst:
+    path: /assets/images/module-01/week-04/doppler-shift-star-jwst.png
+    caption: "What to notice: Doppler shift moves spectral lines—toward blue for motion toward us and toward red for motion away—so spectra can measure motion."
+    alt: "Diagram illustrating Doppler shift of starlight, with spectral features shifted toward shorter wavelengths (blueshift) or longer wavelengths (redshift) depending on motion."
+    credit: "Illustration: NASA, ESA, CSA"
+    module: 1
+
+  reflectance-spectra-earth-jwst:
+    path: /assets/images/module-01/week-04/reflectance-spectra-earth-jwst.png
+    caption: "What to notice: reflectance spectra can reveal surface and atmospheric materials by showing which wavelengths are absorbed or reflected."
+    alt: "Plot comparing reflectance as a function of wavelength for different materials or surfaces associated with Earth, showing distinct spectral shapes."
+    credit: "Illustration: NASA, ESA, CSA"
+    module: 1
+
+  absorption-of-light-hydrogen-jwst:
+    path: /assets/images/module-01/week-04/absorption-of-light-hydrogen-jwst.png
+    caption: "What to notice: when cooler hydrogen gas sits in front of a hotter source, it absorbs specific wavelengths—creating dark absorption lines."
+    alt: "Diagram showing a light source shining through a region of hydrogen gas, producing a spectrum with dark absorption lines at specific wavelengths."
+    credit: "Illustration: NASA, ESA, CSA"
+    module: 1
+
+  emission-of-light-hydrogen-jwst:
+    path: /assets/images/module-01/week-04/emission-of-light-hydrogen-jwst.png
+    caption: "What to notice: a hot, low-density hydrogen gas emits light at specific wavelengths—creating bright emission lines."
+    alt: "Diagram showing a cloud of hydrogen gas emitting light, producing a spectrum with bright emission lines at specific wavelengths."
+    credit: "Illustration: NASA, ESA, CSA"
+    module: 1
+
+  sun-spectrum-green:
+    path: /assets/images/module-01/week-04/lightbulb-vs-sun-spectrum-jwst.png
+    caption: "What to notice: the Sun’s spectrum is broad (a smooth-ish continuum), not a narrow spike at one color—so the mix of wavelengths looks white/yellow-white."
+    alt: "Comparison graphic showing the Sun and a fluorescent light bulb with their spectra plotted versus wavelength; the Sun’s spectrum is broad while the bulb shows distinct peaks."
+    credit: "Illustration: NASA, ESA, CSA"
+    module: 1
+
+  blackbody-spectrum-temps:
+    path: /assets/images/module-01/week-04/blackbody-spectra-jwst.jpg
+    caption: "What to notice: hotter objects peak at shorter wavelengths and emit more total light; cooler objects peak at longer wavelengths."
+    alt: "Graph of blackbody curves for stars of different temperatures, showing the peak shifting to shorter wavelengths for hotter stars and to longer wavelengths for cooler stars."
+    credit: "Illustration: NASA, ESA, CSA"
+    module: 1
+
+  star-colors-temperature:
+    path: /assets/images/module-01/week-04/blackbody-spectra-jwst.jpg
+    caption: "What to notice: star color tracks temperature because blackbody curves shift—cool stars peak toward red/infrared, hot stars peak toward blue/UV."
+    alt: "Blackbody spectra for cool, medium, and hot stars with the visible band highlighted, illustrating how peak wavelength shifts with temperature."
+    credit: "Illustration: NASA, ESA, CSA"
     module: 1
 
   # ==============================================================

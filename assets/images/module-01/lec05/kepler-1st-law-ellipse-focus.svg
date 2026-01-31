@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540" role="img" aria-labelledby="title desc">
+  <title id="title">Kepler’s First Law: Orbits are ellipses with the Sun at one focus</title>
+  <desc id="desc">A labeled ellipse representing a planet’s orbit. The Sun is drawn at one focus, the empty focus is marked, perihelion and aphelion are labeled, and the semimajor axis a is indicated from the center to aphelion.</desc>
+
+  <defs>
+    <style>
+      :root{
+        --bg:#0b0b0f;
+        --fg:#eef0ff;
+        --muted:#c9cbe5;
+        --grid:#1a1c28;
+
+        /* Jewel Aurora palette */
+        --teal:#028391;
+        --magenta:#BE5A83;
+        --lavender:#7077A1;
+
+        --sun:#f6d55c;
+        --orbitW:6;
+        --axisW:2.5;
+      }
+      text{ font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; fill: var(--fg); }
+      .small{ font-size: 18px; letter-spacing: 0.2px; }
+      .label{ font-size: 20px; font-weight: 600; }
+      .title{ font-size: 28px; font-weight: 750; }
+      .subtitle{ font-size: 18px; fill: var(--muted); }
+      .muted{ fill: var(--muted); }
+      .dash{ stroke-dasharray: 10 10; }
+    </style>
+
+    <filter id="softGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="2.2" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <marker id="arrowTeal" markerWidth="14" markerHeight="14" refX="10" refY="7" orient="auto">
+      <path d="M 0 0 L 14 7 L 0 14 z" fill="var(--teal)"/>
+    </marker>
+    <marker id="arrowMagenta" markerWidth="14" markerHeight="14" refX="10" refY="7" orient="auto">
+      <path d="M 0 0 L 14 7 L 0 14 z" fill="var(--magenta)"/>
+    </marker>
+    <marker id="arrowMagentaStart" markerWidth="14" markerHeight="14" refX="4" refY="7" orient="auto">
+      <path d="M 14 0 L 0 7 L 14 14 z" fill="var(--magenta)"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect x="0" y="0" width="960" height="540" fill="var(--bg)"/>
+
+  <!-- Subtle grid for visual stability -->
+  <g opacity="0.25">
+    <path d="M0 90 H960 M0 180 H960 M0 270 H960 M0 360 H960 M0 450 H960" stroke="var(--grid)" stroke-width="1"/>
+    <path d="M120 0 V540 M240 0 V540 M360 0 V540 M480 0 V540 M600 0 V540 M720 0 V540 M840 0 V540" stroke="var(--grid)" stroke-width="1"/>
+  </g>
+
+  <!-- Title -->
+  <text x="48" y="56" class="title">Kepler’s First Law</text>
+  <text x="48" y="82" class="subtitle">Orbits are ellipses, with the Sun at one focus (not the center).</text>
+
+  <!-- Diagram geometry (center at 480,270; a=320; b=180; e=0.4; foci at x=352 and x=608) -->
+  <!-- Orbit -->
+  <ellipse cx="480" cy="300" rx="320" ry="180" fill="none" stroke="var(--teal)" stroke-width="var(--orbitW)" filter="url(#softGlow)"/>
+
+  <!-- Major axis (dashed) -->
+  <line x1="160" y1="300" x2="800" y2="300" stroke="var(--lavender)" stroke-width="var(--axisW)" class="dash" opacity="0.95"/>
+
+  <!-- Center marker -->
+  <g opacity="0.85">
+    <line x1="472" y1="300" x2="488" y2="300" stroke="var(--muted)" stroke-width="2"/>
+    <line x1="480" y1="292" x2="480" y2="308" stroke="var(--muted)" stroke-width="2"/>
+  </g>
+  <text x="494" y="290" class="small muted">center</text>
+
+  <!-- Foci -->
+  <circle cx="352" cy="300" r="18" fill="var(--sun)" filter="url(#softGlow)"/>
+  <circle cx="352" cy="300" r="24" fill="none" stroke="var(--sun)" stroke-width="2" opacity="0.55"/>
+
+  <circle cx="608" cy="300" r="10" fill="var(--lavender)" opacity="0.95"/>
+  <circle cx="608" cy="300" r="18" fill="none" stroke="var(--lavender)" stroke-width="2" opacity="0.55"/>
+
+  <!-- Focus annotations -->
+  <path d="M 205 210 C 255 210, 300 230, 332 268" fill="none" stroke="var(--muted)" stroke-width="2.5" marker-end="url(#arrowTeal)"/>
+  <text x="92" y="206" class="label">Sun at one focus</text>
+
+  <path d="M 804 212 C 744 210, 692 230, 628 280" fill="none" stroke="var(--muted)" stroke-width="2.5" marker-end="url(#arrowTeal)"/>
+  <text x="642" y="206" class="label">Empty focus</text>
+
+  <!-- Perihelion & aphelion markers -->
+  <circle cx="160" cy="300" r="7" fill="var(--fg)" opacity="0.9"/>
+  <circle cx="800" cy="300" r="7" fill="var(--fg)" opacity="0.9"/>
+
+  <line x1="160" y1="300" x2="114" y2="300" stroke="var(--fg)" stroke-width="2" opacity="0.75"/>
+  <line x1="800" y1="300" x2="846" y2="300" stroke="var(--fg)" stroke-width="2" opacity="0.75"/>
+
+  <text x="52" y="306" class="label">perihelion</text>
+  <text x="848" y="306" class="label" text-anchor="end">aphelion</text>
+
+  <!-- Semimajor axis a (from center to aphelion) -->
+  <line x1="480" y1="334" x2="800" y2="334"
+        stroke="var(--magenta)" stroke-width="4"
+        marker-start="url(#arrowMagentaStart)" marker-end="url(#arrowMagenta)"/>
+  <text x="640" y="360" class="label" fill="var(--magenta)" text-anchor="middle">a (semimajor axis)</text>
+
+  <!-- Direction of motion (decorative but helpful) -->
+  <path d="M 320 438 A 320 180 0 0 0 280 378" fill="none" stroke="var(--teal)" stroke-width="4" marker-end="url(#arrowTeal)" opacity="0.95"/>
+  <text x="208" y="458" class="small muted">direction of orbit</text>
+
+  <!-- Key takeaway -->
+  <g transform="translate(48,470)">
+    <rect x="0" y="0" width="864" height="54" rx="12" fill="#121425" stroke="var(--lavender)" stroke-width="1.5" opacity="0.95"/>
+    <text x="18" y="33" class="label">
+      Key idea: the Sun is <tspan fill="var(--sun)" font-weight="800">off-center</tspan>—at a focus—so “closest” and “farthest” points (perihelion/aphelion) are different distances.
+    </text>
+  </g>
+</svg>
+

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540" role="img" aria-labelledby="title desc" data-theme="dark">
+  <title id="title">SVG Template (ASTR 101)</title>
+  <desc id="desc">Template for course SVG figures with accessible metadata and consistent palettes for dark/light backgrounds.</desc>
+
+  <defs>
+    <style>
+      :root{
+        /* Neutrals */
+        --bg:#0b0b0f;
+        --fg:#eef0ff;
+        --muted:#c9cbe5;
+        --grid:#1a1c28;
+
+        /* Palette: Jewel Aurora (deep but visible) */
+        --aurora-teal:#028391;
+        --aurora-pink:#BE5A83;
+        --aurora-violet:#7077A1;
+
+        /* Palette: Deep Jewel (maximum twilight) */
+        --deep-teal:#257180;
+        --deep-pink:#A35C7A;
+        --deep-violet:#655D8A;
+
+        /* Default mapping (dark theme) */
+        --teal:var(--aurora-teal);
+        --pink:var(--aurora-pink);
+        --violet:var(--aurora-violet);
+
+        --stroke-primary:6;
+        --stroke-secondary:2.5;
+      }
+
+      /* Optional: switch to Deep Jewel palette by setting data-theme="light" */
+      svg[data-theme="light"]{
+        --bg:#ffffff;
+        --fg:#111218;
+        --muted:#3a3d52;
+        --grid:#e7e8f0;
+
+        --teal:var(--deep-teal);
+        --pink:var(--deep-pink);
+        --violet:var(--deep-violet);
+      }
+
+      text{
+        font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+        fill: var(--fg);
+      }
+      .title{ font-size: 28px; font-weight: 750; }
+      .subtitle{ font-size: 18px; fill: var(--muted); }
+      .label{ font-size: 20px; font-weight: 650; }
+      .small{ font-size: 18px; letter-spacing: 0.2px; fill: var(--muted); }
+      .dash{ stroke-dasharray: 10 10; }
+    </style>
+
+    <marker id="arrow-teal" markerWidth="14" markerHeight="14" refX="10" refY="7" orient="auto">
+      <path d="M 0 0 L 14 7 L 0 14 z" fill="var(--teal)"/>
+    </marker>
+    <marker id="arrow-pink" markerWidth="14" markerHeight="14" refX="10" refY="7" orient="auto">
+      <path d="M 0 0 L 14 7 L 0 14 z" fill="var(--pink)"/>
+    </marker>
+  </defs>
+
+  <!-- Background (set --bg: transparent to remove) -->
+  <rect x="0" y="0" width="960" height="540" fill="var(--bg)"/>
+
+  <!-- Optional grid -->
+  <g opacity="0.25">
+    <path d="M0 90 H960 M0 180 H960 M0 270 H960 M0 360 H960 M0 450 H960" stroke="var(--grid)" stroke-width="1"/>
+    <path d="M120 0 V540 M240 0 V540 M360 0 V540 M480 0 V540 M600 0 V540 M720 0 V540 M840 0 V540" stroke="var(--grid)" stroke-width="1"/>
+  </g>
+
+  <!-- Header -->
+  <text x="48" y="56" class="title">Figure Title</text>
+  <text x="48" y="82" class="subtitle">Subtitle / “what to notice” prompt (keep short here; prefer caption in registry).</text>
+
+  <!-- Diagram area -->
+  <g transform="translate(0,0)">
+    <!-- Your figure goes here -->
+    <circle cx="480" cy="300" r="6" fill="var(--pink)"/>
+    <text x="500" y="305" class="label">Example mark</text>
+  </g>
+</svg>
+
