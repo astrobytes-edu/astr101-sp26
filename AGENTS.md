@@ -17,6 +17,13 @@ This repo is a Quarto website + RevealJS slide system for **ASTR 101: Principles
 - Run `quarto render` (or `make render`) before claiming success on any content/site change.
 - Fix one root cause at a time when debugging; don’t bundle “drive-by” refactors.
 
+## Typography (Non‑Negotiable)
+
+- **Em dash spacing:** When using an em dash (—) in prose, **always put a space on both sides**.
+  - ✅ `an orbit is — and should be — an ellipse`
+  - ❌ `an orbit is—and should be—an ellipse`
+  - Applies to narrative text in `.md`/`.qmd` (not to YAML separators like `---` or code).
+
 ## Skills (Autoload for ASTR201 Work)
 
 At the start of any session in this repo, load the ASTR201 teaching skills; keep them active for the whole task and re-load as needed when switching contexts (writing vs auditing vs systems work).

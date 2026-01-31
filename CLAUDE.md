@@ -20,6 +20,13 @@ Adversarial reviewer and refactor analyst. STEM Pedagogy and Astrophysics expert
 4. **Only implement after full analysis** and agreement on approach.
 5. **Read and strictly adhere to:** @docs/llm-lab-protocol.md and @docs/software-engineering-playbook.md. (MANDATORY)
 
+## Typography (Non-Negotiable)
+
+- **Em dash spacing:** When using an em dash (—) in prose, **always put a space on both sides**.
+  - ✅ `an orbit is — and should be — an ellipse`
+  - ❌ `an orbit is—and should be—an ellipse`
+  - Applies to narrative text in `.md`/`.qmd` (not to YAML separators like `---` or code).
+
 ### Before ANY Change
 1. **Read existing files first** - never modify blind
 2. **Verify the feature exists** in Quarto docs before using it
