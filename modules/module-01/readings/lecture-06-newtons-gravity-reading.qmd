@@ -1,0 +1,1109 @@
+---
+title: "Newton's Revolution — From Patterns to Physics"
+subtitle: "Lecture 6 Reading Companion"
+author: "Dr. Anna Rosen"
+date: "2026-02-04"
+description: "Newton unified heaven and Earth: the same gravity that drops apples also guides planets. His laws transform Kepler's patterns into physics — and give astronomers the power to weigh the universe."
+draft: false
+categories: [foundations, newton, gravity]
+course: ASTR 101
+module: "1 - Foundations"
+learning-objectives:
+  - State Newton's three laws of motion and apply F = ma to simple situations
+  - Explain why objects in circular motion are accelerating even at constant speed
+  - State Newton's Law of Universal Gravitation and explain its inverse-square nature
+  - Distinguish mass (inertia) from gravitational force and apparent weight (scale reading)
+  - Explain why astronauts float (free fall, not zero gravity)
+  - Describe how Newton's gravity explains each of Kepler's three laws
+  - Use orbital motion to infer the mass of a central object
+  - Distinguish physical laws (mechanisms) from empirical laws (patterns)
+math-level: symbolic_with_interpretation
+prerequisites: Lecture 5 (Kepler's Laws); comfort with basic algebra
+---
+
+::: {.callout-important #the-big-idea}
+## The Big Idea
+
+Newton showed that the same force pulling an apple to the ground also keeps the Moon in orbit. His law of gravity explains *why* Kepler's patterns exist — and gives astronomers the power to "weigh" objects billions of kilometers away by watching how things move around them.
+:::
+
+::: {.callout-important title="How to Use This Reading" collapse="true"}
+This reading gives you the **physics behind Kepler's patterns**. You'll want Lecture 5 handy for reference.
+
+**Musts for today (~25 min):**
+
+- The Big Idea
+- All three of Newton's Laws of Motion
+- Newton's Law of Universal Gravitation
+- Mass vs. Weight (the bridge to everyday experience)
+- "Why Astronauts Float" (misconception fix)
+- Newton Explains Kepler (at least the summary table)
+
+**Non-negotiable:** Stop at every **Check Yourself** question — don't just read past them!
+
+**Deep Dives (important but save for later):**
+
+- Orbital velocity derivation
+- Detailed explanations of each Kepler law
+
+**Connection to Lecture 5:** This reading directly answers the "why" questions from Kepler's laws. The transition from empirical → physical is the key conceptual shift.
+:::
+
+::: {.callout-tip title="Newton in 60 Seconds (3 Key Takeaways)" collapse="true"}
+If you only remember three things:
+
+1. **Newton's Three Laws:** (1) Objects stay in motion unless a *net* force acts, (2) $\vec{F}_{net} = m\vec{a}$, (3) forces come in equal-opposite pairs.
+
+2. **Universal Gravitation:** $F = GMm/r^2$ — same equation works for apples, moons, and planets. "Inverse-square" means double distance → 1/4 the force.
+
+3. **The Payoff:** By measuring orbits, we can calculate mass — that's how we "weigh" the Sun, black holes, and galaxies.
+
+Now for the details...
+:::
+
+---
+
+## The Apple and the Moon
+
+At the end of Lecture 5, we left Kepler with three beautiful laws and no explanation. He could predict where Mars would be next century, but he couldn't tell you *why* it followed an ellipse. The patterns were precise, but the mechanism was missing.
+
+Sixty years later, a young English scientist sat in his mother's garden during a plague year, watching apples fall from a tree. What Isaac Newton asked next would transform our understanding of the universe:
+
+*Does the force that pulls this apple to the ground also reach up to the Moon?*
+
+Whether or not the apple story happened exactly this way, it captures Newton's core insight: **the Moon is constantly falling**.
+
+It sounds paradoxical. In Newton's time, "earthly" physics and "celestial" physics were considered completely separate. Objects on Earth fell straight down. The Moon circled overhead forever, never falling. These seemed like fundamentally different behaviors.
+
+Newton's insight was radical: **the Moon IS falling**. Right now. Continuously. It's falling toward Earth at every moment — but it's also moving sideways so fast that it keeps missing. That combination of falling and moving sideways is what we call an orbit.
+
+::: {.callout-note title="FIGURE PLACEHOLDER: Newton's Cannon" collapse="false"}
+**Figure ID:** `newtons-cannon`
+
+**Description:** Classic Newton's cannon thought experiment. A cannon on top of a very tall mountain with multiple trajectories showing: (1) Low speed → projectile curves and hits Earth, (2) Medium speed → projectile curves more, still hits Earth, (3) Orbital speed → projectile "falls around" Earth continuously, (4) Escape speed → projectile escapes to infinity. Caption: "The Moon is simply a cannonball moving fast enough to keep missing Earth as it falls."
+
+**Alt text:** Newton's cannon fires projectiles at increasing speeds; at orbital velocity, the projectile falls continuously around Earth.
+:::
+
+And here's the key: the same mathematical law — the same equation — describes both the falling apple and the orbiting Moon. The force that makes your coffee mug hit the floor when you drop it is the *same* force that keeps planets circling the Sun.
+
+Newton called this **universal gravitation**. And with it, he answered every question Kepler couldn't:
+
+- Why ellipses? *Because inverse-square gravity produces exactly that shape.*
+- Why do planets speed up near the Sun? *Because gravity is a central force, so angular momentum is conserved.*
+- Why $P^2 \propto a^3$? *Because inverse-square gravity predicts that exact period–distance relationship.*
+
+In one stroke, Newton transformed Kepler's patterns into physics. Today, we'll follow that transformation.
+
+::: {.callout-note title="🔍 Spot the Assumption" collapse="false"}
+Before Newton, people assumed:
+
+- **Earthly physics and celestial physics are different** — what happens on Earth doesn't apply to the heavens
+- **The Moon doesn't fall** — it circles eternally, untouched by Earth's pull
+
+Newton challenged both assumptions with a single equation.
+:::
+
+::: {.callout-note title="Where We Left Off (Lecture 5)"}
+Kepler discovered three empirical laws of planetary motion:
+
+1. Orbits are **ellipses** with the Sun at one focus
+2. Planets sweep **equal areas in equal times** (faster when closer)
+3. $P^2 \propto a^3$ (use ratio form; the Sun-only shorthand only works in special units)
+
+These laws describe *what* planets do. But Kepler couldn't explain *why*.
+
+**Key distinction from Lecture 5:**
+
+- **Empirical law:** A pattern from data — describes *what* happens
+- **Physical law:** An explanation from principles — explains *why* it happens
+
+Newton's gravity is a *physical* law. It will explain *why* Kepler's patterns exist.
+:::
+
+---
+
+# Part 1: The Rules of Motion
+
+## Why Motion Matters
+
+Before explaining *gravity*, Newton needed to explain *motion* itself. What does it mean for something to move? What makes motion change? Newton's three laws of motion form the foundation of classical physics. These laws plus gravity give us everything we need to explain Kepler.
+
+::: {.callout-note title="🔍 Spot the Assumption"}
+Before Newton, the prevailing view (from Aristotle) was that motion requires continuous effort — push a cart, and it moves; stop pushing, and it stops. This assumed that **rest is the natural state** and motion is something that must be maintained.
+
+Newton will challenge this directly.
+:::
+
+---
+
+## Newton's First Law — Inertia
+
+**Predict:** What happens to a hockey puck sliding on frictionless ice after you stop pushing it? Aristotle would say it slows down and stops. What do you think?
+
+::: {.callout-important title="Newton's First Law: The Law of Inertia"}
+**An object at rest stays at rest. An object in motion stays in motion (at constant speed in a straight line) — unless acted upon by a nonzero net external force.**
+:::
+
+### What This Means
+
+Things don't change their motion on their own. If something speeds up, slows down, or changes direction — a **net force** caused it. Motion at constant velocity requires no net force; *changing* motion requires net force.
+
+The puck keeps sliding forever on perfect ice — no force needed to maintain motion.
+
+::: {.column-margin}
+**Inertia:** The tendency of an object to resist changes in its motion.
+
+**Net force:** The vector sum of all forces acting on an object; forces can cancel.
+:::
+
+### Why This Was Revolutionary
+
+Before Newton, people followed Aristotle's view: motion requires continuous effort. A cart stops when you stop pushing because "that's what objects do." Newton said no — the cart stops because of *friction*, an external force. In the absence of net forces, objects coast forever.
+
+**Assumption Overturned:** Rest is NOT the natural state. Constant velocity (including rest) is the natural state. Net forces cause *changes* in motion, not motion itself.
+
+### Astronomical Connection
+
+Imagine firing a cannon horizontally from a very tall mountain. At low speed, the cannonball curves downward and hits Earth. Fire it faster, and it travels farther before landing. Fire it fast enough, and something remarkable happens: it falls *around* Earth, continuously missing the ground. That's an orbit.
+
+The Moon is doing exactly this. It's falling toward Earth every second — but moving sideways fast enough to keep missing. Without gravity, it would fly off in a straight line (First Law). With gravity, it curves into an orbit.
+
+::: {.callout-check-yourself title="Check Yourself 1 — Newton's First Law"}
+A spacecraft in deep space, far from any planets or stars, fires its engines briefly and then shuts them off. After the engines stop (ignoring tiny gravitational effects from distant objects), the spacecraft will:
+
+- A) Gradually slow down and eventually stop
+- B) Continue at constant velocity indefinitely
+- C) Start drifting toward the nearest star
+- D) Need to keep firing to maintain speed
+:::
+
+::: {.callout-tip title="Solution" collapse="true"}
+**B) Continue at constant velocity indefinitely.** This is exactly what Newton's First Law predicts. With no net forces acting (engines off, negligible distant gravity), the spacecraft maintains constant velocity forever. There's no friction in space to slow it down. This is not intuition we develop on Earth, where friction is everywhere — but in space, it's reality.
+:::
+
+---
+
+## Newton's Second Law — Force and Acceleration
+
+**Predict:** If you push a shopping cart and a loaded truck with the same force, which accelerates more? Most people get this right intuitively — but Newton gave us the precise relationship.
+
+::: {.callout-important title="Newton's Second Law: F = ma"}
+**The acceleration of an object equals the net force on it divided by its mass.**
+
+$$\vec{F}_{net} = m\vec{a} \quad \text{or equivalently} \quad \vec{a} = \frac{\vec{F}_{net}}{m}$$
+
+The arrows indicate that force and acceleration are **vectors** — they have both magnitude and direction. Acceleration points in the same direction as the net force.
+:::
+
+### What Each Term Means
+
+| Symbol | Quantity | What it measures | SI Units |
+|--------|----------|------------------|----------|
+| $F_{net}$ | Net force | The total push/pull on an object (vector sum) | Newtons (N) = kg·m/s² |
+| $m$ | Mass | Amount of matter; resistance to acceleration | kilograms (kg) |
+| $a$ | Acceleration | Rate of change of velocity (vector) | m/s² |
+
+::: {.column-margin}
+**Force:** A push or pull that causes acceleration; a vector quantity.
+
+**Mass:** The amount of matter in an object; measures how much it resists acceleration (inertia).
+
+**Acceleration:** The rate at which velocity changes — can be speeding up, slowing down, or changing direction.
+:::
+
+### Physical Interpretation
+
+**Net force tells matter how to accelerate. Mass tells matter how much to resist.**
+
+- More net force → more acceleration
+- More mass → less acceleration (for the same force)
+
+Push a shopping cart and it accelerates easily. Push a car with the same force and it barely budges. The car has more mass — more resistance to acceleration.
+
+**Key clarification:** $\vec{F} = m\vec{a}$ really means: the *net* force determines acceleration. If multiple forces act, you must add them as vectors first. If forces balance (net force = zero), acceleration = zero.
+
+::: {.callout-check-yourself title="Check Yourself 2 — F = ma"}
+The same force is applied to a bowling ball and a tennis ball. Which experiences greater acceleration?
+
+- A) The bowling ball (more mass)
+- B) The tennis ball (less mass)
+- C) Both experience the same acceleration
+- D) Neither accelerates
+:::
+
+::: {.callout-tip title="Solution" collapse="true"}
+**B) The tennis ball.** Since $a = F/m$, smaller mass means greater acceleration for the same force. The tennis ball has much less mass than the bowling ball, so it accelerates much more. This is why it's easier to throw a tennis ball than a bowling ball!
+:::
+
+::: {.callout-check-yourself title="Check Yourself 3 — Balanced Forces"}
+Two people push on opposite sides of a box with equal force. What is the box's acceleration?
+
+- A) It accelerates in both directions
+- B) It accelerates toward the stronger person
+- C) Zero — the forces cancel
+- D) It depends on the box's mass
+:::
+
+::: {.callout-tip title="Solution" collapse="true"}
+**C) Zero — the forces cancel.** When forces are equal and opposite, the *net* force is zero. By $F_{net} = ma$, zero net force means zero acceleration. The box stays at rest (or continues at constant velocity if it was already moving). This is why "net force" matters, not just "force."
+:::
+
+### Critical Insight: Acceleration Includes Direction Changes
+
+::: {.callout-warning title="Key Insight"}
+**Constant speed does NOT mean constant velocity.** Direction changes → velocity changes → acceleration.
+:::
+
+Students often think acceleration only means "speeding up." But velocity is a **vector** — it has both speed (how fast) and direction (which way). Acceleration happens whenever *either* changes:
+
+- Speeding up → acceleration ✓
+- Slowing down → acceleration ✓
+- **Changing direction at constant speed → acceleration ✓**
+
+This surprises people. A car driving around a curve at constant speedometer reading is accelerating — because its direction is changing. And by $F = ma$, that acceleration requires a net force.
+
+**Astronomical payoff:** A planet moving in a circle at constant speed is **accelerating** because its direction constantly changes. That acceleration requires a force — and gravity provides it. This is the key to understanding orbits!
+
+::: {.callout-note title="FIGURE PLACEHOLDER: Acceleration Includes Direction Changes" collapse="false"}
+**Figure ID:** `acceleration-direction-change`
+
+**Description:** Show a ball moving in a circle at constant speed. Velocity vectors at several points (always tangent to circle). Show that velocity vector changes direction. Show acceleration vector pointing toward center. Caption: "Even at constant speed, the changing direction means changing velocity — which means acceleration."
+
+**Alt text:** A ball moves in a circle with velocity arrows tangent to the path; the change in velocity direction shows there is acceleration toward the center.
+:::
+
+::: {.callout-check-yourself title="Check Yourself 4 — Circular Motion"}
+A car drives around a circular track at a constant speedometer reading of 60 mph. Is the car accelerating?
+
+- A) No — the speed is constant
+- B) Yes — the direction is constantly changing
+- C) Only if the driver presses the gas pedal
+- D) Only if there's friction
+:::
+
+::: {.callout-tip title="Solution" collapse="true"}
+**B) Yes — the direction is constantly changing.** Even though the speed (magnitude of velocity) is constant, the velocity vector keeps rotating. Changing direction = changing velocity = acceleration. The car's tires push sideways on the road, and the road pushes back — that sideways force causes the acceleration. If there were no friction, the car would slide straight off the track.
+:::
+
+---
+
+## Centripetal Acceleration and Force
+
+::: {.callout-note title="🤔 Predict First"}
+If an object moves in a circle and you **double its speed**, does the required inward force **double** or **quadruple**?
+
+Think about it before reading on...
+:::
+
+For an object moving in a circle of radius $r$ at speed $v$:
+
+$$a_c = \frac{v^2}{r}$$
+
+This acceleration points **toward the center** of the circle.
+
+**Answer to prediction:** The force **quadruples** — because $v$ is squared!
+
+::: {.column-margin}
+**Centripetal acceleration:** The center-directed acceleration required for circular motion; "centripetal" means "center-seeking."
+:::
+
+### What This Formula Means
+
+The formula tells us how "hard" it is to maintain circular motion:
+
+- **Faster speed** → direction changes more rapidly → **larger acceleration** (and it scales as $v^2$!)
+- **Larger radius** → gentler curve → **smaller acceleration**
+- **Tighter turn at high speed** → very large acceleration
+
+This is why race cars have to slow down for tight turns — the required acceleration would be enormous otherwise.
+
+### The Force Required
+
+By $F = ma$, the force needed to maintain circular motion is:
+
+$$F_c = ma_c = \frac{mv^2}{r}$$
+
+**Key insight:** **Centripetal force is not a new type of force.** It's whatever force happens to be pulling the object toward the center:
+
+- For planets: **gravity**
+- For a ball on a string: tension
+- For a car turning: friction between tires and road
+
+The formula tells us how *strong* the center-directed force must be. Something has to provide that force — otherwise no circular motion.
+
+::: {.callout-note title="FIGURE PLACEHOLDER: Centripetal Force Examples" collapse="false"}
+**Figure ID:** `centripetal-force-examples`
+
+**Description:** Three examples side by side: (1) Planet orbiting Sun — gravity provides centripetal force, (2) Ball on string swung in circle — tension provides centripetal force, (3) Car turning on road — friction provides centripetal force. Each shows force arrow pointing toward center.
+
+**Alt text:** Three examples showing different forces (gravity, tension, friction) all providing the centripetal force for circular motion.
+:::
+
+::: {.callout-tip title="What About Centrifugal Force?" collapse="true"}
+You may have heard of "centrifugal force" — the outward push you feel when a car turns. In an **inertial frame** (standing on the ground watching), there is no outward force. The real force points **inward** (centripetal), curving the car's path.
+
+The "outward push" you feel is your body trying to go straight (inertia) while the car turns underneath you. In a **rotating frame** (sitting in the car), you can mathematically describe this as a "pseudo-force," but it's not a real force in the Newtonian sense.
+
+For this course, stick with the inertial-frame view: the real force points inward.
+:::
+
+::: {.callout-check-yourself title="Check Yourself 5 — Centripetal Force"}
+A planet orbits the Sun in a nearly circular orbit. What force provides the centripetal acceleration needed to keep it in orbit?
+
+- A) The planet's inertia
+- B) The planet's momentum
+- C) Gravity from the Sun
+- D) The planet's rotational spin
+:::
+
+::: {.callout-tip title="Solution" collapse="true"}
+**C) Gravity from the Sun.** The Sun's gravitational pull on the planet points toward the Sun (toward the center of the orbit). This provides exactly the centripetal force needed to curve the planet's path into an orbit. Without gravity, the planet would fly off in a straight line (Newton's First Law).
+:::
+
+---
+
+## Newton's Third Law — Action and Reaction
+
+**Predict:** When you push on a wall, does the wall push back? If so, why don't you fly backward?
+
+::: {.callout-important title="Newton's Third Law: Action-Reaction"}
+**For every force, there is an equal and opposite reaction force.**
+
+If object A exerts a force on object B, then B exerts a force on A with equal magnitude but opposite direction.
+:::
+
+### Examples
+
+- You push on the ground → the ground pushes back on you (that's how walking works)
+- Earth pulls on the Moon → the Moon pulls on Earth
+- Sun pulls on Jupiter → Jupiter pulls on the Sun
+
+### Why You Don't Fly When You Push a Wall
+
+The wall pushes back with equal force, but you don't fly backward because your feet are connected to the floor. The floor provides friction that absorbs the wall's push. The forces on *you* include both the wall pushing your hands and the floor pushing your feet — these roughly cancel, so you don't accelerate much.
+
+If you pushed a wall while floating in space (and the wall was floating freely), you'd both accelerate away from each other!
+
+### Astronomical Importance
+
+When we say "the Sun's gravity pulls on Earth," we must also acknowledge that Earth pulls on the Sun with *exactly the same force*. The forces are equal.
+
+But the *accelerations* are not equal! By $F = ma$, the same force produces less acceleration on the more massive object. The Sun is 330,000 times more massive than Earth, so it accelerates 330,000 times less. The Sun wobbles, but barely.
+
+This tiny wobble is actually how we detect exoplanets: we measure the parent star's subtle back-and-forth motion caused by an orbiting planet tugging on it.
+
+::: {.callout-check-yourself title="Check Yourself 6 — Third Law"}
+Earth exerts a gravitational force on the Moon. According to Newton's Third Law, the Moon exerts a gravitational force on Earth that is:
+
+- A) Much weaker, because the Moon is smaller
+- B) Much stronger, because Earth is closer to the Moon
+- C) Exactly equal in magnitude but opposite in direction
+- D) Zero, because the Moon is in space
+:::
+
+::: {.callout-tip title="Solution" collapse="true"}
+**C) Exactly equal in magnitude but opposite in direction.** Newton's Third Law is absolute: every force has an equal and opposite reaction. Earth pulls on the Moon with exactly the same force that the Moon pulls on Earth. (The *accelerations* differ because the masses differ, but the *forces* are equal.) This is why Earth has tides — the Moon's pull is real and measurable!
+:::
+
+---
+
+# Part 2: Universal Gravitation
+
+## The Law
+
+::: {.callout-note title="🤔 Predict First"}
+Gravity gets weaker as you move farther from Earth. If you **double** your distance from Earth's center, does gravity drop to **1/2**, **1/4**, or **1/8**?
+
+Think about it before reading on...
+:::
+
+::: {.callout-important title="Newton's Law of Universal Gravitation"}
+**Every mass attracts every other mass with a force given by:**
+
+$$F_g = \frac{Gm_1m_2}{r^2}$$
+
+where:
+
+- $G = 6.67 \times 10^{-11}$ N·m²/kg² (gravitational constant)
+- $m_1$ and $m_2$ are the two masses (kg)
+- $r$ is the distance between their centers (m)
+:::
+
+**Answer to prediction:** Gravity drops to **1/4** — because of the $r^2$ in the denominator!
+
+### What Each Part Means
+
+| Part | Meaning |
+|------|---------|
+| $G$ | Universal constant; same everywhere in the universe |
+| $m_1 m_2$ | Force depends on *both* masses (Third Law compatible!) |
+| $r^2$ | Force weakens with distance squared (inverse-square law) |
+
+::: {.column-margin}
+**Universal gravitation:** The principle that every mass attracts every other mass, with a force proportional to both masses and inversely proportional to distance squared.
+:::
+
+### The Power of "Universal"
+
+Newton claimed this law applies **everywhere**: to apples and cannonballs on Earth, to the Moon orbiting Earth, to planets orbiting the Sun, to stars orbiting galaxy centers. The same equation. The same constant $G$. The same physics.
+
+This was audacious. Before Newton, celestial and terrestrial physics were separate domains. Newton said: there is only **one** physics.
+
+::: {.callout-note title="🔍 Spot the Assumption (Overturned)"}
+Pre-Newton assumption: **Different rules govern Earth and the heavens.**
+
+Newton's claim: **One equation governs everything that has mass.**
+:::
+
+::: {.callout-note title="FIGURE PLACEHOLDER: Gravity Equation Visualized" collapse="false"}
+**Figure ID:** `gravity-equation-visual`
+
+**Description:** Show two masses $m_1$ and $m_2$ separated by distance $r$. Force arrows pointing toward each other (both feel the same force). Label all quantities. Perhaps show what happens when you double $r$ (force becomes 1/4).
+
+**Alt text:** Two masses attract each other with equal and opposite forces; the force depends on both masses and decreases with distance squared.
+:::
+
+### Verification: Does Gravity Really Reach the Moon?
+
+Newton calculated that if gravity follows an inverse-square law, the Moon (60 Earth radii away) should experience gravity about $1/60^2 = 1/3600$ as strong as at Earth's surface. He checked: is that enough to curve the Moon's path into its observed orbit?
+
+Yes — the numbers matched perfectly. Same equation, same physics, from apple to Moon.
+
+::: {.callout-tip title="The More You Know: Gravity From People" collapse="true"}
+Every mass attracts every other mass — so why don't you get pulled toward the person next to you?
+
+You *do* — but the force is incredibly tiny. Two 70 kg people standing 1 meter apart attract each other with a force of about $3 \times 10^{-7}$ N. That's comparable to the weight of a grain of sand.
+
+The gravitational constant $G$ is extremely small, so gravity only becomes noticeable when at least one mass is huge (like a planet). Everyday forces (friction, normal force, tension) easily overwhelm the tiny gravitational attraction between ordinary objects.
+:::
+
+---
+
+## The Inverse-Square Law
+
+### What It Means
+
+The "$r^2$ in the denominator" is profound:
+
+| Distance change | Force change |
+|-----------------|--------------|
+| Double the distance | Force drops to 1/4 |
+| Triple the distance | Force drops to 1/9 |
+| 10× the distance | Force drops to 1/100 |
+
+### What Does "Inverse-Square" Actually Mean?
+
+The term can be confusing. Here's the breakdown:
+
+- **"Inverse"** means "dividing by" — force gets smaller as distance gets larger
+- **"Square"** means distance is raised to the second power
+- So $1/r^2$ means: square the distance, then take the reciprocal
+
+If $r$ doubles (×2), then $r^2$ quadruples (×4), so $1/r^2$ becomes 1/4.
+
+### Physical Intuition: The Sphere Area Connection
+
+**Analogy: Light spreading from a flashlight**
+
+Imagine light spreading from a point source. At twice the distance, the same amount of light spreads over a sphere with 4× the surface area. Why? Because the surface area of a sphere is $4\pi r^2$ — it grows like $r^2$.
+
+Any given spot receives 1/4 the intensity at twice the distance.
+
+Gravity "spreads" the same way. The gravitational influence of a mass spreads over the surface of imaginary spheres. Larger sphere = same total influence spread over more area = weaker effect at any given point.
+
+**The mechanism in one line:** Surface area of a sphere grows like $4\pi r^2$, so spreading over that area makes the "per-area effect" drop like $1/r^2$.
+
+::: {.callout-note title="FIGURE PLACEHOLDER: The Inverse-Square Law" collapse="false"}
+**Figure ID:** `inverse-square-diagram`
+
+**Description:** Show concentric spheres around a mass (or light source). At $r$: one unit of "intensity" per unit area. At $2r$: sphere has 4× the surface area, so 1/4 intensity per unit area. At $3r$: sphere has 9× the surface area, so 1/9 intensity per unit area.
+
+**Alt text:** As distance from a source doubles, the same influence spreads over 4× the area, resulting in 1/4 the intensity at any point.
+:::
+
+::: {.callout-check-yourself title="Check Yourself 7 — Inverse-Square Calculation"}
+The Moon is about 60 Earth radii from Earth's center. Compared to gravitational acceleration at Earth's surface, the Moon experiences gravitational acceleration that is:
+
+- A) 60 times weaker
+- B) 360 times weaker
+- C) 3,600 times weaker
+- D) The same strength
+:::
+
+::: {.callout-tip title="Solution" collapse="true"}
+**C) 3,600 times weaker.** By the inverse-square law: at 60× the distance, gravitational acceleration is $1/60^2 = 1/3600$ as strong. The Moon experiences only about 0.03% of the gravitational acceleration you feel standing on Earth's surface — but that's still enough to keep it in orbit!
+
+This was actually Newton's key test — he computed this and checked whether 1/3600 of surface gravity was enough to curve the Moon's path. It was.
+:::
+
+---
+
+## Mass vs. Weight — The Bridge to Everyday Experience
+
+### The Distinction
+
+| Quantity | What it measures | Depends on location? | SI Units |
+|----------|------------------|---------------------|----------|
+| **Mass** ($m$) | Resistance to acceleration (inertia) | No — same everywhere | kg |
+| **Gravitational force** ($F_g$) | The force from gravity on you | Yes — depends on local gravity | N (newtons) |
+| **Apparent weight** ($W_{app}$) | What you *feel* as "weight" (normal force from floor/scale) | Yes — depends on gravity *and* motion | N (newtons) |
+
+**Vocabulary note:** Some textbooks use "weight" to mean the gravitational force $mg$. In this course, we'll be explicit: $F_g$ is the gravitational force, and your **apparent weight** is what a scale reads (the normal force).
+
+### Gravitational Acceleration
+
+Near any massive body, we can define **gravitational acceleration**:
+
+$$g(r) = \frac{GM}{r^2}$$
+
+This is the acceleration any object experiences due to gravity at distance $r$ from a mass $M$. At Earth's surface:
+
+$$g_{Earth} \approx 9.8 \text{ m/s}^2$$
+
+### Gravitational Force vs. Apparent Weight
+
+The gravitational force on you is:
+
+$$F_g = mg$$
+
+But what you *feel* as "weight" is your **apparent weight**, which is the **normal force** $N$ from the floor (or scale):
+
+$$W_{app} = N$$
+
+When you're standing still (no vertical acceleration), these match: $N = mg$.
+
+**Key insight:** Mass stays the same everywhere. Gravity changes with location. And what you *feel* as "weight" is the floor's push on you (the normal force).
+
+On the Moon (where $g_{Moon} \approx 1.6$ m/s²), your scale reading would be about 1/6 as much, but your mass would be unchanged.
+
+::: {.callout-check-yourself title="Check Yourself 8 — Mass vs. Weight"}
+An astronaut has a mass of 70 kg on Earth. On the Moon (where gravity is about 1/6 as strong), their:
+
+- A) Mass decreases to about 12 kg
+- B) Gravitational force (and scale reading) decreases to about 1/6, but mass stays 70 kg
+- C) Both mass and gravitational force stay the same
+- D) Mass increases because there's less gravity pulling them down
+:::
+
+::: {.callout-tip title="Solution" collapse="true"}
+**B) Gravitational force decreases, but mass stays 70 kg.** Mass is an intrinsic property — how much matter you contain. It doesn't change with location. Gravity produces a smaller downward force in a weaker gravitational field: $F_g = mg$. If you're standing on the Moon, your scale reading (normal force) is smaller too — you feel lighter — but your mass is unchanged.
+:::
+
+---
+
+## Why Astronauts Float
+
+::: {.callout-warning title="Don't Mislearn This"}
+**Common wrong answer:** "Astronauts on the ISS float because there's no gravity in space."
+
+This is one of the most widespread misconceptions in physics. Let's fix it right now.
+:::
+
+### The Truth
+
+At the altitude of the International Space Station (~400 km), Earth's gravity is still about **90% as strong** as at the surface. There's plenty of gravity up there!
+
+So why do astronauts float? Because they're in **free fall**. The ISS and everyone inside it is falling toward Earth — but moving sideways so fast that they keep missing. Everything in the station (astronauts, equipment, water droplets) is falling together at the same rate.
+
+::: {.column-margin}
+**Free fall:** Motion under gravity alone, with no other forces. Produces the sensation of weightlessness.
+
+**Microgravity:** The condition of apparent weightlessness in free fall; called "micro" because small residual effects mean it's not perfectly zero-g.
+:::
+
+### What Does "Weightlessness" Actually Mean?
+
+When you stand on Earth, you feel weight because the floor pushes up on you (Newton's Third Law). You push down on the floor, and it pushes back up.
+
+In orbit, both you *and* the floor are falling together. There's nothing to push back on you. No normal force = no sensation of weight.
+
+You haven't escaped gravity. You've just eliminated the floor's push by falling alongside it.
+
+**Analogy:** If you're in an elevator and the cable snaps, during the fall you'd feel weightless too — not because gravity disappeared, but because you and the elevator are falling together. (Please don't test this.)
+
+::: {.callout-note title="FIGURE PLACEHOLDER: Free Fall Creates Weightlessness" collapse="false"}
+**Figure ID:** `free-fall-astronaut`
+
+**Description:** Two panels: (1) Person standing on Earth: gravity pulls down, floor pushes up. These forces balance, person feels weight. (2) Astronaut in ISS: gravity pulls down, but floor is also falling. No normal force, so no sensation of weight.
+
+**Alt text:** On Earth, the floor's push creates the sensation of weight. In orbit, everything falls together, so there's no floor push — weightlessness.
+:::
+
+::: {.callout-check-yourself title="Check Yourself 9 — Weightlessness"}
+An astronaut floats inside the ISS, 400 km above Earth's surface. At this location, Earth's gravitational pull on the astronaut is:
+
+- A) Zero — that's why they float
+- B) About 90% of what it would be on Earth's surface
+- C) Exactly the same as on Earth's surface
+- D) Much stronger than on Earth's surface
+:::
+
+::: {.callout-tip title="Solution" collapse="true"}
+**B) About 90% of what it would be on Earth's surface.** At 400 km altitude, you're at about 6,770 km from Earth's center (vs. 6,370 km at the surface). By the inverse-square law: $(6370/6770)^2 \approx 0.89$ or 89%. Plenty of gravity!
+
+The astronaut floats because they're in **free fall** (microgravity), not because gravity is absent. The ISS and everything in it are all falling together toward Earth — they just keep missing because of their sideways motion.
+:::
+
+---
+
+# Part 3: Newton Explains Kepler
+
+## The Big Picture
+
+Here's where it all comes together. Newton didn't just describe gravity — he showed that Kepler's three laws are **consequences** of his physics. They're not separate facts about the universe; they all flow from Newton's laws of motion and gravitation.
+
+| Kepler's Law | Newton's Explanation | Requires inverse-square? |
+|--------------|---------------------|-------------------------|
+| Orbits are ellipses | Inverse-square central force → conic sections | **Yes** |
+| Equal areas in equal times | Central force → angular momentum conserved | No — any central force |
+| $P^2 \propto a^3$ | Inverse-square gives this exponent | **Yes** |
+
+This is the transition from **empirical** (patterns) to **physical** (mechanisms). Kepler said "here's what happens." Newton said "here's why it must happen."
+
+**Key nuance:** Kepler II (equal areas) follows from gravity being a **central force** — pointing straight at the Sun. This would hold even if gravity fell off as $1/r$ or $1/r^3$. But Kepler I (ellipses) and Kepler III (the specific $P^2 \propto a^3$ relationship) require the inverse-square law specifically.
+
+---
+
+## Explaining Kepler's First Law (Ellipses)
+
+### The Question
+
+Why are orbits ellipses? Why not circles, or spirals, or figure-eights? Kepler discovered the pattern but couldn't explain it.
+
+### Newton's Answer
+
+Newton showed mathematically that any object moving under an **inverse-square central force** will trace a **conic section**: circle, ellipse, parabola, or hyperbola.
+
+- If the object doesn't have enough energy to escape: **ellipse** (or circle as special case)
+- If the object has just enough energy to escape: **parabola**
+- If the object has extra energy and escapes: **hyperbola**
+
+Most planets have bound orbits (they don't escape), so they follow ellipses. The specific eccentricity depends on how the planet formed.
+
+**Key insight:** The ellipse shape isn't assumed — it's a **consequence** of inverse-square gravity. Newton derived it mathematically. If gravity followed a different power law (say, $1/r$ or $1/r^3$), orbits would NOT be ellipses — they'd be different shapes entirely, or wouldn't even close on themselves.
+
+**Kepler discovered the pattern. Newton explained why it had to be that way.**
+
+::: {.callout-note title="FIGURE PLACEHOLDER: Conic Sections from Gravity" collapse="false"}
+**Figure ID:** `conic-sections-orbits`
+
+**Description:** Show a central mass (Sun) with different trajectories: Circle (bound, e=0), Ellipse (bound, 0<e<1), Parabola (just escapes, e=1), Hyperbola (escapes with speed to spare, e>1). Label each with its energy condition.
+
+**Alt text:** Objects under inverse-square gravity follow conic sections: bound objects trace ellipses or circles; escaping objects trace parabolas or hyperbolas.
+:::
+
+::: {.callout-check-yourself title="Check Yourself 10 — First Law Explained"}
+Newton explained that planetary orbits are ellipses because:
+
+- A) Planets were created in elliptical paths
+- B) Inverse-square gravity mathematically produces conic sections
+- C) Ellipses are the simplest possible curves
+- D) The Sun's rotation shapes the orbits
+:::
+
+::: {.callout-tip title="Solution" collapse="true"}
+**B) Inverse-square gravity mathematically produces conic sections.** Newton showed that the specific mathematical form of gravity ($1/r^2$) is what produces ellipses for bound orbits. The ellipse is not an assumption — it's a derivable consequence. If gravity were $1/r$ or $1/r^3$, the orbits would be different shapes entirely.
+:::
+
+---
+
+## Explaining Kepler's Second Law (Equal Areas)
+
+### The Question
+
+Why do planets sweep equal areas in equal times? Why speed up near the Sun?
+
+### Newton's Answer: Angular Momentum Conservation
+
+Gravity is a **central force** — it always points directly toward the Sun. Central forces have a special property: they cannot change **angular momentum**. If angular momentum is constant and the planet gets closer to the Sun, it must speed up.
+
+**Important distinction:** This explanation works for **any** central force, not just inverse-square. Even if gravity fell off as $1/r$ or $1/r^3$, Kepler II would still hold — as long as the force points straight at the center.
+
+### What Does "Angular Momentum" Mean?
+
+Angular momentum combines two things: **how far** you are from the rotation center and **how fast** you're moving sideways (tangentially).
+
+$$L = mvr_\perp$$
+
+If $L$ must stay constant and $r$ (distance from Sun) decreases, then $v$ (speed) must increase. Closer → faster. Farther → slower.
+
+**The ice skater analogy (callback from Lecture 5):** When an ice skater pulls their arms in, they spin faster. When they extend their arms, they spin slower. The rotational motion is conserved — it just gets concentrated in a smaller space or spread over a larger one.
+
+Planets do the same thing. At perihelion (close to Sun), the planet is "pulled in" and must move faster. At aphelion (far from Sun), it's "spread out" and moves slower.
+
+**Connection to Kepler II:** Newton showed that "equal areas in equal times" is mathematically identical to "angular momentum is conserved." They're the same statement in different words.
+
+Kepler discovered the pattern. Newton explained the physics: gravity is central (points at the Sun), so angular momentum can't change, so equal areas must be swept.
+
+::: {.callout-check-yourself title="Check Yourself 11 — Second Law Explained"}
+Newton explained Kepler's Second Law (equal areas) as a consequence of:
+
+- A) The inverse-square nature of gravity
+- B) Conservation of angular momentum because gravity is a central force
+- C) The fact that planets have elliptical orbits
+- D) Energy conservation
+:::
+
+::: {.callout-tip title="Solution" collapse="true"}
+**B) Conservation of angular momentum because gravity is a central force.** A central force always points toward a fixed center (the Sun), so it cannot exert any "twist" (torque) that would change the planet's angular momentum. Constant angular momentum = equal areas in equal times.
+
+Note: The inverse-square nature (A) is what produces ellipses (Kepler I), not equal areas. Kepler II would hold for *any* central force.
+:::
+
+---
+
+## Explaining Kepler's Third Law ($P^2 \propto a^3$)
+
+### The Question
+
+Why is the relationship between orbital period and distance exactly $P^2 \propto a^3$? Why not $P \propto a$, or $P^2 \propto a^2$?
+
+::: {.callout-note title="🤔 Predict First"}
+At the same orbital distance from a star, which gives a **shorter** orbital period: a more massive star or a less massive star?
+
+Think about it before reading on...
+:::
+
+### Newton's Answer: It Has to Be Inverse-Square
+
+If a central force follows a power law ($F \propto 1/r^n$), then there's a corresponding relationship between period and orbital size:
+
+$$P^2 \propto a^{n+1}$$
+
+So the exponent in Kepler's pattern directly tells you the exponent in the force law:
+
+- If $n = 2$ (inverse-square): $P^2 \propto a^3$ ✓
+- If $n = 1$: $P^2 \propto a^2$
+- If $n = 3$: $P^2 \propto a^4$
+
+Only $n = 2$ matches Kepler's observed pattern. The observations point to the inverse-square law.
+
+**Answer to prediction:** A **more massive star** gives a **shorter** period — stronger gravity means faster orbits.
+
+### Newton's Improved Version
+
+Newton also derived the exact form:
+
+$$P^2 = \frac{4\pi^2}{G(M + m)} a^3$$
+
+**What's new compared to Kepler:**
+
+- The constant includes $G$ and the **total mass** $(M + m)$
+- The relationship applies to **any** gravitational system, not just our Solar System
+- We can solve for mass!
+
+### The Mass-Measuring Power Tool
+
+Rearranging Newton's version:
+
+$$M + m = \frac{4\pi^2 a^3}{G P^2}$$
+
+When $M \gg m$ (central body much more massive than orbiter):
+
+$$M \approx \frac{4\pi^2 a^3}{G P^2}$$
+
+**Translation:** Measure orbital period and distance → Calculate the central mass
+
+This is how astronomers "weigh" the universe:
+
+- The Sun (from planetary orbits)
+- Other stars (from binary star orbits)
+- Black holes (from stars orbiting galactic centers)
+- Dark matter (from unexpectedly fast galaxy rotation)
+
+We never touch these objects. We just watch how things move around them — and Newton's equations tell us the mass.
+
+::: {.callout-check-yourself title="Check Yourself 12 — Weighing the Sun"}
+How do astronomers determine the mass of the Sun?
+
+- A) By measuring how bright it is
+- B) By measuring Earth's orbital period and distance
+- C) By sending a spacecraft to collect a sample
+- D) By measuring the Sun's size
+:::
+
+::: {.callout-tip title="Solution" collapse="true"}
+**B) By measuring Earth's orbital period and distance.** Using Newton's version of Kepler's Third Law, knowing Earth's orbital radius (1 AU) and period (1 year), we can calculate the Sun's mass. The formula is $M = 4\pi^2 a^3/(GP^2)$. This works for any central body: measure the orbit of something around it → calculate mass.
+
+We'll use this technique throughout the course to "weigh" stars, galaxies, and even black holes.
+:::
+
+::: {.callout-check-yourself title="Check Yourself 13 — Different Stars"}
+Two planets orbit different stars at the same distance (same $a$). Planet A orbits a 2 $M_\odot$ star. Planet B orbits a 0.5 $M_\odot$ star. Which planet has the shorter orbital period?
+
+- A) Planet A (around the more massive star)
+- B) Planet B (around the less massive star)
+- C) Both have the same period
+- D) Cannot determine without knowing planet masses
+:::
+
+::: {.callout-tip title="Solution" collapse="true"}
+**A) Planet A (around the more massive star).** From Newton's Kepler III, $P^2 \propto 1/M$ at fixed distance. More massive star = stronger gravity = faster orbital speed = shorter period. Planet A's period is shorter by factor $\sqrt{0.5/2} = \sqrt{0.25} = 0.5$ — half as long.
+
+This shows why Newton's version is more powerful than Kepler's: it tells us how the *constant* depends on mass.
+:::
+
+---
+
+## 🔭 Demo Exploration: Motion Reveals Mass
+
+**Open the Binary Orbits Demo:** [astrobytes-edu.github.io/astr101-sp26/demos/binary-orbits/](https://astrobytes-edu.github.io/astr101-sp26/demos/binary-orbits/)
+
+This demo shows the full physics of two-body orbits. Both the star AND the planet orbit their common center of mass (barycenter). This is how astronomers "weigh" distant objects.
+
+**What you'll see:**
+
+- **Both bodies move** — the star wobbles too (this is how we detect exoplanets!)
+- **Mass sliders** for both objects
+- **Period readout** that changes with total mass
+- **Presets** for real systems (Sun-Jupiter, exoplanets, binary stars)
+
+---
+
+**Demo Mission 1: The Star Wobbles**
+
+*Predict before you explore:* When Jupiter orbits the Sun, does the Sun stay perfectly still?
+
+::: {.callout-note title="My Prediction" collapse="true"}
+Write your prediction here: _______________
+:::
+
+**Do this:**
+
+1. Select the **Sun + Jupiter** preset
+2. Click **Play** and watch both bodies move
+3. Toggle on **Show Barycenter**
+4. Observe: Is the Sun stationary?
+
+::: {.callout-tip title="What You Should Have Found" collapse="true"}
+The Sun is NOT stationary — it wobbles in a tiny orbit around the barycenter (center of mass). Jupiter's mass is small compared to the Sun's, so the Sun's wobble is small but real.
+
+**Claim:** Newton's Third Law requires both bodies to move. If Jupiter pulls on the Sun, the Sun pulls back — and both accelerate.
+
+**Evidence:** The demo shows the Sun's small orbit. In fact, the Sun-Jupiter barycenter is actually just outside the Sun's surface! This wobble is how we detect exoplanets around distant stars (radial velocity method).
+:::
+
+---
+
+**Demo Mission 2: Measuring Mass from Orbits**
+
+*Predict before you explore:* If you double the total mass of the system while keeping the separation fixed, what happens to the orbital period?
+
+::: {.callout-note title="My Prediction" collapse="true"}
+From $P^2 = a^3/M_{total}$: If $M$ doubles, $P^2$ becomes half as large, so $P$ becomes...?
+:::
+
+**Do this:**
+
+1. Select **Equal Mass** binary preset (1 $M_\odot$ + 1 $M_\odot$)
+2. Note the orbital period
+3. Increase M₁ to 2 $M_\odot$ (now 2 + 1 = 3 $M_\odot$ total)
+4. Compare the new period to the original
+
+| Configuration | Total Mass | Period | $P^2$ |
+|---------------|------------|--------|-------|
+| 1 + 1 $M_\odot$ | 2 $M_\odot$ | | |
+| 2 + 1 $M_\odot$ | 3 $M_\odot$ | | |
+
+::: {.callout-tip title="What You Should Have Found" collapse="true"}
+Increasing total mass → shorter period. More mass = stronger gravity = faster orbits.
+
+**Claim:** $P^2 \propto 1/M_{total}$ at fixed separation. This is Newton's version of Kepler III.
+
+**Evidence:** The period readout shows faster orbits with more mass. The ratio should match: $P_2/P_1 = \sqrt{M_1/M_2} = \sqrt{2/3} \approx 0.82$.
+
+**The Payoff:** Flip this around — if we MEASURE the period and separation, we can CALCULATE the total mass. That's how we weigh stars, black holes, and galaxies!
+:::
+
+---
+
+**Demo Mission 3: Exoplanet Detection (Why the Wobble Matters)**
+
+**Do this:**
+
+1. Select the **51 Peg b** preset (first exoplanet discovered, 1995)
+2. Observe the star's wobble
+3. Now select **Sun + Earth**
+4. Compare the star wobble size
+
+::: {.callout-tip title="What You Should Have Found" collapse="true"}
+51 Peg b (a "hot Jupiter") causes a MUCH larger stellar wobble than Earth does. Why? It's more massive AND closer to its star.
+
+**Claim:** We detect exoplanets by measuring their host star's wobble. Bigger planets cause bigger wobbles.
+
+**Evidence:** The demo shows 51 Peg b causing obvious stellar motion, while Earth's effect on the Sun is nearly invisible. This is why hot Jupiters were discovered first — they cause the largest, easiest-to-detect wobbles.
+:::
+
+---
+
+::: {.callout-note title="Also Try: Kepler Demo Newton Mode"}
+The [Kepler's Laws Demo](https://astrobytes-edu.github.io/astr101-sp26/demos/keplers-laws/) has a **Newton Mode** that shows velocity and acceleration vectors. Try it to see how centripetal acceleration always points toward the Sun.
+:::
+
+---
+
+::: {.callout-note title="🔬 Deep Dive: Orbital Velocity" collapse="true"}
+### Deriving the Orbital Velocity
+
+For a stable circular orbit, gravity provides the centripetal force:
+
+$$\frac{GMm}{r^2} = \frac{mv^2}{r}$$
+
+Notice: the orbiting mass $m$ appears on both sides and **cancels**:
+
+$$\frac{GM}{r^2} = \frac{v^2}{r}$$
+
+Multiply both sides by $r$:
+
+$$\frac{GM}{r} = v^2$$
+
+Take the square root:
+
+$$v_{orb} = \sqrt{\frac{GM}{r}}$$
+
+### Physical Interpretation
+
+- Larger central mass $M$ → stronger gravity → must orbit **faster**
+- Larger orbital radius $r$ → weaker gravity → can orbit **slower**
+- The orbiting object's mass **doesn't matter**!
+
+This last point is remarkable. A satellite and a space station at the same altitude orbit at the same speed, even if one is 1000× more massive.
+
+### Example: Earth's Orbital Speed
+
+- $M_{Sun} = 2 \times 10^{30}$ kg
+- $r = 1.5 \times 10^{11}$ m (1 AU)
+- $G = 6.67 \times 10^{-11}$ N·m²/kg²
+
+$$v = \sqrt{\frac{(6.67 \times 10^{-11})(2 \times 10^{30})}{1.5 \times 10^{11}}} \approx 30{,}000 \text{ m/s} = 30 \text{ km/s}$$
+
+Earth travels at 30 km/s (about 67,000 mph) just to stay in orbit!
+:::
+
+---
+
+# Part 4: Synthesis
+
+## From Empirical to Physical
+
+| Kepler (Empirical) | Newton (Physical) |
+|-------------------|-------------------|
+| Describes *what* planets do | Explains *why* they do it |
+| Patterns extracted from data | Mechanisms derived from principles |
+| Limited to observed systems | Universal — applies everywhere |
+| Can predict within Solar System | Can predict anywhere gravity acts |
+
+## One Law Rules All
+
+With a single equation — $F = GMm/r^2$ — Newton explained:
+
+- Why apples fall
+- Why the Moon orbits Earth
+- Why planets orbit the Sun
+- Why Kepler's three laws hold
+- How to weigh objects we'll never touch
+
+This unification was one of the greatest achievements in the history of science. Where there had been separate physics for Earth and sky, Newton showed there was only **one physics**.
+
+::: {.callout-note title="From Patterns to Physics"}
+| Lecture 5 (Kepler) | Lecture 6 (Newton) |
+|-------------------|-------------------|
+| **Empirical laws** | **Physical law** |
+| What | Why |
+| Describe | Explain |
+| Pattern-fitting | First principles |
+| Works where tested | Works everywhere |
+
+This transition — from observed patterns to underlying mechanisms — is how science advances. Every "why" answer opens new "how can we use this" possibilities.
+:::
+
+## Connection to the Course
+
+The gravitational tools we've developed are the foundation for nearly everything else in this course:
+
+**Module 1 (remaining):** We'll use spectra to measure velocities (Doppler effect) — which feeds into orbital mass determinations.
+
+**Module 2 (Stars):** Binary star orbits → stellar masses. Escape velocity → understanding black holes. Hydrostatic equilibrium → stellar structure.
+
+**Module 3 (Galaxies):** Galaxy rotation curves → dark matter. Cosmic expansion → the fate of the universe.
+
+Every time we measure a mass in astronomy, we're using Newton's insight: **motion reveals mass**.
+
+---
+
+::: {.callout-important title="Key Takeaways from Lecture 6"}
+1. **Newton's Laws of Motion:**
+   - 1st: Objects maintain velocity unless a *net* force acts
+   - 2nd: $\vec{F}_{net} = m\vec{a}$ (net force causes acceleration)
+   - 3rd: Every force has an equal and opposite reaction
+
+2. **Objects in circular motion are accelerating** (direction changes), requiring centripetal force: $F_c = mv^2/r$
+
+3. **Newton's Law of Gravitation:** $F = GMm/r^2$ — every mass attracts every other mass, with force decreasing as distance²
+
+4. **Mass vs. Weight:** Mass (inertia) stays constant everywhere. Gravity depends on location ($F_g = mg$), and your *apparent weight* is the normal force (scale reading).
+
+5. **Astronauts float because they're in free fall** (microgravity), not because gravity is absent (~90% of surface gravity at ISS altitude!)
+
+6. **Newton explains all of Kepler's laws:**
+   - Ellipses → from inverse-square central force
+   - Equal areas → from angular momentum conservation (any central force)
+   - $P^2 \propto a^3$ → requires inverse-square; constant reveals mass
+
+7. **Orbits reveal mass:** Measure period and distance → calculate central mass using $M = 4\pi^2 a^3/(GP^2)$
+:::
+
+---
+
+## Practice Problems
+
+### Core (do these first)
+
+**1. Newton's First Law:** A probe is coasting through interstellar space at 50 km/s. Its fuel tanks are empty. Describe its motion for the next million years, assuming negligible gravitational effects from distant objects.
+
+**2. Newton's Second Law:** A 1000 kg car accelerates at 3 m/s². What net force is acting on it?
+
+**3. Inverse-Square:** At what distance from Earth's center would gravitational acceleration be 1/4 as strong as at the surface? (Earth's radius = 6,370 km)
+
+**4. Mass vs. Weight:** Your mass is 70 kg. What is the gravitational force on you on Earth (in newtons)? On the Moon where $g \approx 1.6$ m/s²? Does your mass change?
+
+**5. Weightlessness:** Explain why astronauts on the ISS appear weightless, even though gravity there is about 90% as strong as on Earth's surface.
+
+**6. Orbital Mass:** A moon orbits a planet at 500,000 km with a period of 10 days. Calculate the planet's mass. (Assume circular orbit and moon mass ≪ planet mass.)
+
+### Challenge (synthesis)
+
+**7. Kepler III Derivation:** Starting from $F = mv^2/r$ (centripetal) and $F = GMm/r^2$ (gravity), show that $v = \sqrt{GM/r}$. Then use $P = 2\pi r/v$ to derive Kepler's Third Law for circular orbits.
+
+**8. Conceptual:** If gravity followed a $1/r^3$ law instead of $1/r^2$, would orbits still be ellipses? Would the $P^2 \propto a^3$ relationship still hold? Explain.
+
+**9. Application:** Mars's moon Phobos orbits at 9,376 km from Mars's center with a period of 7.7 hours. Calculate Mars's mass. (Compare to Earth's mass = $6 \times 10^{24}$ kg)
+
+**10. Kepler's Form vs. Newton's:** Why does the shorthand $P^2 = a^3$ work only for objects orbiting the Sun when $P$ is in years and $a$ is in AU? What changes for other central masses?
+
+---
+
+## Glossary
+
+| Term | Definition |
+|------|------------|
+| **Inertia** | The tendency of an object to resist changes in motion |
+| **Net force** | The vector sum of all forces on an object |
+| **Force** | A push or pull that causes acceleration; a vector quantity |
+| **Mass** | The amount of matter in an object; resistance to acceleration (intrinsic property) |
+| **Gravitational force** | The force from gravity on an object; near a planet $F_g = mg$ (depends on location) |
+| **Apparent weight** | The normal force you feel from a floor/scale; can be near zero in free fall |
+| **Acceleration** | Rate of change of velocity (includes direction changes) |
+| **Centripetal acceleration** | Center-directed acceleration required for circular motion: $a_c = v^2/r$ |
+| **Centripetal force** | The force providing centripetal acceleration; not a new force type |
+| **Universal gravitation** | Newton's law: $F = GMm/r^2$ |
+| **Inverse-square law** | A relationship where a quantity decreases with distance squared |
+| **Free fall** | Motion under gravity alone; produces weightlessness |
+| **Microgravity** | The condition of apparent weightlessness in free fall |
+| **Angular momentum** | Measure of rotational motion; conserved under central forces |
+| **Central force** | A force that always points toward a fixed center |
+| **Physical law** | An explanation from fundamental principles; tells us *why* |
+| **Empirical law** | A pattern from data; tells us *what* without explaining why |
+
+{{< glossary module=1 >}}
