@@ -45,3 +45,11 @@ demos/**/*-station-card.pdf
 *.mp4
 *.png
 *.PNG
+
+# Course images: we DO track PNGs under assets/images (many existing figures are PNG).
+!assets/images/**/*.png
+!assets/images/**/*.PNG
+
+# But keep local preview renders out of git.
+assets/images/**/_previews/*.png
+assets/images/**/_previews/*.PNG
