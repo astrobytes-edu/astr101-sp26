@@ -342,6 +342,36 @@ In a planetary orbit, the Sun is located:
 **B) At one focus of the ellipse.** This is Kepler's First Law. The other focus is empty. Because the Sun is offset from center, the planet's distance from the Sun changes as it orbits.
 :::
 
+### 🔭 Try It: First Law in the Demo
+
+See the First Law in action! Open the interactive simulation and explore how the Sun's position relates to the ellipse.
+
+**Open the Kepler's Laws Demo:** [astrobytes-edu.github.io/astr101-sp26/demos/keplers-laws/](https://astrobytes-edu.github.io/astr101-sp26/demos/keplers-laws/)
+
+**Demo Mission: The Sun Is Not at the Center**
+
+*Predict before you explore:* If you make an orbit highly elliptical (high eccentricity), where will the Sun be relative to the orbit's center?
+
+::: {.callout-note title="My Prediction" collapse="true"}
+Write your prediction here before continuing: _______________
+:::
+
+**Do this:**
+
+1. Set **Eccentricity** to about 0.6 (fairly elliptical)
+2. Toggle on **Show Foci** and **Show Apsides**
+3. Observe where the Sun sits relative to the ellipse's geometric center
+
+**Key question:** Is the Sun at the center of the ellipse?
+
+::: {.callout-tip title="What You Should Have Found" collapse="true"}
+The Sun sits at one **focus**, not at the center. The higher the eccentricity, the more offset the Sun is from center. The other focus is empty — nothing sits there.
+
+**Claim:** Kepler's First Law says orbits are ellipses with the Sun at one focus, not at the center.
+
+**Evidence:** With eccentricity ~0.6, the Sun is clearly offset from the ellipse's geometric center. The distance from perihelion (closest point) to the Sun is much shorter than from aphelion (farthest point) to the Sun.
+:::
+
 ---
 
 ## Kepler's Second Law — Orbital Speed
@@ -417,6 +447,40 @@ According to Kepler's Second Law, if a planet takes 30 days to travel from point
 
 ::: {.callout-tip title="Solution" collapse="true"}
 **C) Exactly 30 days.** Equal areas in equal times means the time depends only on the area, not on position. The planet adjusts its speed to compensate for changing distance.
+:::
+
+### 🔭 Try It: Second Law in the Demo
+
+Now explore the Second Law in the simulation. Watch how orbital speed changes with distance from the Sun.
+
+**Open the Kepler's Laws Demo:** [astrobytes-edu.github.io/astr101-sp26/demos/keplers-laws/](https://astrobytes-edu.github.io/astr101-sp26/demos/keplers-laws/)
+
+**Demo Mission: Faster When Closer**
+
+*Predict before you explore:* As you drag the planet from aphelion to perihelion, what will happen to its speed?
+
+::: {.callout-note title="My Prediction" collapse="true"}
+Write your prediction here before continuing: _______________
+:::
+
+**Do this:**
+
+1. Keep eccentricity at ~0.5 so speed differences are visible
+2. Toggle on **Show Equal Areas**
+3. Click **Play** and watch the animation
+4. Observe the wedge-shaped areas being swept out
+
+**Key observations:**
+
+- How does the planet's speed change as it moves around the orbit?
+- Are the area wedges all the same size?
+
+::: {.callout-tip title="What You Should Have Found" collapse="true"}
+The planet moves **faster** near perihelion and **slower** near aphelion. The equal-area wedges show this clearly: near perihelion the wedges are short and wide (fast motion, short radius), while near aphelion they're long and narrow (slow motion, long radius).
+
+**Claim:** Kepler's Second Law — equal areas in equal times — means planets speed up when closer to the Sun.
+
+**Evidence:** The animation shows visibly faster motion at perihelion. The "Show Equal Areas" overlay confirms that despite the speed change, each time interval sweeps the same area.
 :::
 
 ---
@@ -565,80 +629,15 @@ This is why the "Kepler constant" isn't really constant — it depends on what y
 
 ---
 
-## 🔭 Demo Exploration: Kepler's Laws Sandbox
+## 🔭 Demo Exploration: Kepler's Third Law
+
+You've already explored the First and Second Laws in the demo above. Now let's test the Third Law and preview Newton.
 
 **Open the Kepler's Laws Demo:** [astrobytes-edu.github.io/astr101-sp26/demos/keplers-laws/](https://astrobytes-edu.github.io/astr101-sp26/demos/keplers-laws/)
 
-This interactive simulation lets you **see** all three of Kepler's laws in action. You can drag a planet around its orbit, adjust orbital parameters, and watch how the laws play out in real time.
-
-**What you'll see in the demo:**
-
-- **Kepler Mode:** Focuses on the empirical patterns (what we observe)
-- **Newton Mode:** Reveals the physics underneath (velocity and acceleration vectors)
-- **Draggable planet** that you can move along its orbit
-- **Parameter sliders** for semi-major axis, eccentricity, and (in Newton mode) star mass
-- **Solar System presets:** Mercury through Pluto, plus extreme orbits like Halley's Comet
-- **Toggleable overlays:** Foci, apsides, equal-area wedges, velocity vectors
-
 ---
 
-**Demo Mission 1: The Sun Is Not at the Center**
-
-*Predict before you explore:* If you make an orbit highly elliptical (high eccentricity), where will the Sun be relative to the orbit's center?
-
-::: {.callout-note title="My Prediction" collapse="true"}
-Write your prediction here before continuing: _______________
-:::
-
-**Do this:**
-
-1. Set **Eccentricity** to about 0.6 (fairly elliptical)
-2. Toggle on **Show Foci** and **Show Apsides**
-3. Observe where the Sun sits relative to the ellipse's geometric center
-
-**Key question:** Is the Sun at the center of the ellipse?
-
-::: {.callout-tip title="What You Should Have Found" collapse="true"}
-The Sun sits at one **focus**, not at the center. The higher the eccentricity, the more offset the Sun is from center. The other focus is empty — nothing sits there.
-
-**Claim:** Kepler's First Law says orbits are ellipses with the Sun at one focus, not at the center.
-
-**Evidence:** With eccentricity ~0.6, the Sun is clearly offset from the ellipse's geometric center. The distance from perihelion (closest point) to the Sun is much shorter than from aphelion (farthest point) to the Sun.
-:::
-
----
-
-**Demo Mission 2: Faster When Closer**
-
-*Predict before you explore:* As you drag the planet from aphelion to perihelion, what will happen to its speed?
-
-::: {.callout-note title="My Prediction" collapse="true"}
-Write your prediction here before continuing: _______________
-:::
-
-**Do this:**
-
-1. Keep eccentricity at ~0.5 so speed differences are visible
-2. Toggle on **Show Equal Areas**
-3. Click **Play** and watch the animation
-4. Observe the wedge-shaped areas being swept out
-
-**Key observations:**
-
-- How does the planet's speed change as it moves around the orbit?
-- Are the area wedges all the same size?
-
-::: {.callout-tip title="What You Should Have Found" collapse="true"}
-The planet moves **faster** near perihelion and **slower** near aphelion. The equal-area wedges show this clearly: near perihelion the wedges are short and wide (fast motion, short radius), while near aphelion they're long and narrow (slow motion, long radius).
-
-**Claim:** Kepler's Second Law — equal areas in equal times — means planets speed up when closer to the Sun.
-
-**Evidence:** The animation shows visibly faster motion at perihelion. The "Show Equal Areas" overlay confirms that despite the speed change, each time interval sweeps the same area.
-:::
-
----
-
-**Demo Mission 3: Testing $P^2 \propto a^3$**
+**Demo Mission: Testing $P^2 \propto a^3$**
 
 *Predict before you explore:* Earth (at 1 AU) takes 1 year to orbit. If you select a preset with a = 4 AU, what period should you see?
 
@@ -671,7 +670,7 @@ Saturn: $a \approx 9.5$ AU, so $a^3 \approx 857$. The demo should show $P \appro
 
 ---
 
-**Demo Mission 4: What Changes With Star Mass? (Preview of Newton)**
+**Demo Mission: What Changes With Star Mass? (Preview of Newton)**
 
 *Predict before you explore:* If you switch to **Newton Mode** and double the star's mass, what will happen to the orbital period at the same distance?
 
