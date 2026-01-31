@@ -186,6 +186,10 @@ website:
                 text: "Lecture 3: The Sky Is a Map"
               - href: modules/module-01/readings/lecture-04-moon-geometry-reading.qmd
                 text: "Lecture 4: Moon Geometry"
+              - href: modules/module-01/readings/lecture-05-keplers-laws-reading.qmd
+                text: "Lecture 5: From Ancient Skies to Kepler's Laws"
+              - href: modules/module-01/readings/lecture-06-newtons-gravity-reading.qmd
+                text: "Lecture 6: Newton's Revolution — From Patterns to Physics"
 
       - section: "Module 2: Stars & Stellar Evolution"
         href: modules/module-02/index.qmd
