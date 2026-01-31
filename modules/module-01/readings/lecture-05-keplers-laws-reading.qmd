@@ -229,6 +229,14 @@ For years, Kepler tried to fit Mars's orbit to a circle. He tried offset circles
 
 Finally, Kepler tried something radical: an **ellipse**. And suddenly, everything fit. The data that had resisted circles for twenty years surrendered immediately to this humble oval. Kepler later wrote that he felt like he had "awoken from a sleep."
 
+::: {.callout-tip title="In Kepler's Own Words" collapse="true"}
+> "I was almost driven to madness in considering and calculating this matter. I could not find out why the planet would rather go on an elliptical orbit... With reasoning derived from physical principles, agreeing with experience, there is no figure left for the orbit of the planet but a perfect ellipse."
+>
+> — Johannes Kepler, *Astronomia Nova* (1609)
+
+Kepler's breakthrough wasn't a flash of insight — it was twenty years of grueling calculation. He tried circles, offset circles, ovals, and dozens of variations before the ellipse finally fit.
+:::
+
 This was Occam's Razor vindicated. For centuries, astronomers had added complexity — epicycle upon epicycle — to preserve the "perfection" of circles. Kepler let go of that assumption. One ellipse replaced dozens of circles. The math became cleaner, the predictions more accurate.
 
 ---
