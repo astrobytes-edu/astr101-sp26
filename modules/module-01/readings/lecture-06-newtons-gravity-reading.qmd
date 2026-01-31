@@ -1124,9 +1124,9 @@ Every time we measure a mass in astronomy, we're using Newton's insight: **motio
 | **Inverse-square law** | A relationship where a quantity decreases with distance squared |
 | **Free fall** | Motion under gravity alone; produces weightlessness |
 | **Microgravity** | The condition of apparent weightlessness in free fall |
-| **Angular momentum** | Measure of rotational motion; conserved under central forces |
+| **Angular momentum** | Measure of rotational motion; conserved under central forces. (See also [Lecture 5](lecture-05-keplers-laws-reading.qmd#glossary)) |
 | **Central force** | A force that always points toward a fixed center |
 | **Physical law** | An explanation from fundamental principles; tells us *why* |
-| **Empirical law** | A pattern from data; tells us *what* without explaining why |
+| **Empirical law** | A pattern from data; tells us *what* without explaining why. (Introduced in [Lecture 5](lecture-05-keplers-laws-reading.qmd#glossary)) |
 
 {{< glossary module=1 >}}
