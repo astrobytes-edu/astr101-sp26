@@ -190,6 +190,10 @@ website:
                 text: "Lecture 5: From Ancient Skies to Kepler's Laws"
               - href: modules/module-01/readings/lecture-06-newtons-gravity-reading.qmd
                 text: "Lecture 6: Newton's Revolution — From Patterns to Physics"
+              - href: modules/module-01/readings/lecture-07-light-information-reading.qmd
+                text: "Lecture 7: The Cosmic Messenger — Light Carries Information"
+              - href: modules/module-01/readings/lecture-08-blackbody-radiation-reading.qmd
+                text: "Lecture 8: Reading the Glow — Temperature Written in Light"
 
       - section: "Module 2: Stars & Stellar Evolution"
         href: modules/module-02/index.qmd
