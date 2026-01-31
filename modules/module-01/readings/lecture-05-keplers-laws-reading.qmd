@@ -70,6 +70,14 @@ Planets never actually reverse their orbital direction. **Retrograde motion** is
 
 This puzzle — explaining retrograde motion — drove astronomical thinking for two millennia. The answers people proposed reveal how science works: assumptions get built into models, and sometimes the right answer requires abandoning assumptions everyone took for granted.
 
+::: {.callout-note title="Observable → Model → Inference: Retrograde Motion"}
+**Observable:** Mars appears to reverse direction against the background stars for several weeks each year. (Position observation)
+
+**Model:** Earth and Mars both orbit the Sun; Earth orbits faster. When Earth "passes" Mars, Mars appears to drift backward — like passing a car on the highway.
+
+**Inference:** Retrograde is an **apparent** motion caused by geometry, not a real reversal. This supports the heliocentric model.
+:::
+
 ::: {.callout-note title="FIGURE PLACEHOLDER: Retrograde Motion of Mars" collapse="false"}
 **Figure ID:** `retrograde-motion-mars`
 
@@ -545,6 +553,139 @@ where $M$ is the central mass and $m$ is the orbiting mass (usually negligible).
 This is why the "Kepler constant" isn't really constant — it depends on what you're orbiting. The Sun-only shorthand hides this by baking in $M = M_\odot$.
 
 **In Lecture 6**, we'll see how this transforms Kepler's pattern into a mass-measuring tool.
+:::
+
+---
+
+## 🔭 Demo Exploration: Kepler's Laws Sandbox
+
+**Open the Kepler's Laws Demo:** [astrobytes-edu.github.io/astr101-sp26/demos/keplers-laws/](https://astrobytes-edu.github.io/astr101-sp26/demos/keplers-laws/)
+
+This interactive simulation lets you **see** all three of Kepler's laws in action. You can drag a planet around its orbit, adjust orbital parameters, and watch how the laws play out in real time.
+
+**What you'll see in the demo:**
+
+- **Kepler Mode:** Focuses on the empirical patterns (what we observe)
+- **Newton Mode:** Reveals the physics underneath (velocity and acceleration vectors)
+- **Draggable planet** that you can move along its orbit
+- **Parameter sliders** for semi-major axis, eccentricity, and (in Newton mode) star mass
+- **Solar System presets:** Mercury through Pluto, plus extreme orbits like Halley's Comet
+- **Toggleable overlays:** Foci, apsides, equal-area wedges, velocity vectors
+
+---
+
+**Demo Mission 1: The Sun Is Not at the Center**
+
+*Predict before you explore:* If you make an orbit highly elliptical (high eccentricity), where will the Sun be relative to the orbit's center?
+
+::: {.callout-note title="My Prediction" collapse="true"}
+Write your prediction here before continuing: _______________
+:::
+
+**Do this:**
+
+1. Set **Eccentricity** to about 0.6 (fairly elliptical)
+2. Toggle on **Show Foci** and **Show Apsides**
+3. Observe where the Sun sits relative to the ellipse's geometric center
+
+**Key question:** Is the Sun at the center of the ellipse?
+
+::: {.callout-tip title="What You Should Have Found" collapse="true"}
+The Sun sits at one **focus**, not at the center. The higher the eccentricity, the more offset the Sun is from center. The other focus is empty — nothing sits there.
+
+**Claim:** Kepler's First Law says orbits are ellipses with the Sun at one focus, not at the center.
+
+**Evidence:** With eccentricity ~0.6, the Sun is clearly offset from the ellipse's geometric center. The distance from perihelion (closest point) to the Sun is much shorter than from aphelion (farthest point) to the Sun.
+:::
+
+---
+
+**Demo Mission 2: Faster When Closer**
+
+*Predict before you explore:* As you drag the planet from aphelion to perihelion, what will happen to its speed?
+
+::: {.callout-note title="My Prediction" collapse="true"}
+Write your prediction here before continuing: _______________
+:::
+
+**Do this:**
+
+1. Keep eccentricity at ~0.5 so speed differences are visible
+2. Toggle on **Show Equal Areas**
+3. Click **Play** and watch the animation
+4. Observe the wedge-shaped areas being swept out
+
+**Key observations:**
+
+- How does the planet's speed change as it moves around the orbit?
+- Are the area wedges all the same size?
+
+::: {.callout-tip title="What You Should Have Found" collapse="true"}
+The planet moves **faster** near perihelion and **slower** near aphelion. The equal-area wedges show this clearly: near perihelion the wedges are short and wide (fast motion, short radius), while near aphelion they're long and narrow (slow motion, long radius).
+
+**Claim:** Kepler's Second Law — equal areas in equal times — means planets speed up when closer to the Sun.
+
+**Evidence:** The animation shows visibly faster motion at perihelion. The "Show Equal Areas" overlay confirms that despite the speed change, each time interval sweeps the same area.
+:::
+
+---
+
+**Demo Mission 3: Testing $P^2 \propto a^3$**
+
+*Predict before you explore:* Earth (at 1 AU) takes 1 year to orbit. If you select a preset with a = 4 AU, what period should you see?
+
+::: {.callout-note title="My Prediction" collapse="true"}
+Calculate first: Using $(P/1\,\text{yr})^2 = (a/1\,\text{AU})^3$, if $a = 4$ AU, then $P = $ _____ years.
+:::
+
+**Do this:**
+
+1. Select the **Jupiter** preset (~5.2 AU)
+2. Read the **Period** readout
+3. Check: Does $P^2$ approximately equal $a^3$?
+4. Try **Saturn** (~9.5 AU) and repeat the check
+
+| Preset | Semi-major Axis (AU) | $a^3$ | Period (years) | $P^2$ | Match? |
+|--------|---------------------|-------|----------------|-------|--------|
+| Earth | 1.0 | 1.0 | 1.0 | 1.0 | ✓ |
+| Jupiter | ~5.2 | | | | |
+| Saturn | ~9.5 | | | | |
+
+::: {.callout-tip title="What You Should Have Found" collapse="true"}
+Jupiter: $a \approx 5.2$ AU, so $a^3 \approx 141$. The demo should show $P \approx 11.9$ years, and $P^2 \approx 141$. Match!
+
+Saturn: $a \approx 9.5$ AU, so $a^3 \approx 857$. The demo should show $P \approx 29.5$ years, and $P^2 \approx 870$. Match!
+
+**Claim:** Kepler's Third Law ($P^2 \propto a^3$) works precisely across the entire Solar System.
+
+**Evidence:** The demo's period readouts for multiple planets match the prediction from the Third Law. This pattern holds from Mercury to Neptune and beyond.
+:::
+
+---
+
+**Demo Mission 4: What Changes With Star Mass? (Preview of Newton)**
+
+*Predict before you explore:* If you switch to **Newton Mode** and double the star's mass, what will happen to the orbital period at the same distance?
+
+::: {.callout-note title="My Prediction" collapse="true"}
+Write your prediction here before continuing: _______________
+:::
+
+**Do this:**
+
+1. Switch to **Newton Mode**
+2. Note the current period at $a = 1$ AU with $M = 1\,M_\odot$
+3. Increase the star mass to $2\,M_\odot$
+4. Observe what happens to the period
+
+::: {.callout-tip title="What You Should Have Found" collapse="true"}
+Doubling the star mass makes the planet orbit **faster** (shorter period) at the same distance. With $M = 2\,M_\odot$, the period at 1 AU is about 0.71 years instead of 1 year.
+
+**Claim:** The "constant" in Kepler's Third Law depends on the central mass. More massive star → faster orbits at the same distance.
+
+**Evidence:** The demo shows that $P^2 = a^3$ only works for a 1 solar mass star. Change the mass, and the relationship changes. This is the preview of Newton: the full law is $P^2 \propto a^3/M$.
+
+This is why we'll be able to "weigh" stars and planets in Lecture 6!
 :::
 
 ---
