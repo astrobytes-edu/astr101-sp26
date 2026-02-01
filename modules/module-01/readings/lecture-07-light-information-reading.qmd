@@ -68,7 +68,7 @@ Now for the details...
 
 Think about this for a moment: the closest star to the Sun — Proxima Centauri — is about 4 light-years away. That means light traveling at 300,000 km/s takes **four years** to reach us. In human terms, that's roughly 40 trillion kilometers. You will never go there. No one alive today will visit another star.
 
-And yet... we can tell you that Proxima Centauri is a red dwarf with a surface temperature of about 3,000 K. It has at least two planets. It occasionally releases violent flares. We know its mass, its age, its chemical composition.
+And yet... we can tell you that Proxima Centauri is a red dwarf with a surface temperature of about 3,000 K. It has **multiple confirmed planets**. It occasionally releases violent flares. We know its mass, its age, its chemical composition.
 
 How do we know all this about something we've never touched?
 
@@ -195,10 +195,10 @@ What we call "visible light" — the colors of the rainbow — is just a tiny sl
 
 ### The Full Spectrum
 
-| Region | Wavelength Range | Typical Sources | Astronomical Uses |
-|--------|-----------------|-----------------|-------------------|
-| **Radio** | > 1 mm | Radio transmitters, cold gas | Mapping hydrogen, pulsars, CMB |
-| **Microwave** | 1 mm – 1 cm | Ovens, cosmic background | CMB, cold dust, molecules |
+| Region | Wavelength Range (approx.) | Typical Sources | Astronomical Uses |
+|--------|---------------------------|-----------------|-------------------|
+| **Radio** | > 10 cm | Radio transmitters, cold gas | Mapping hydrogen, pulsars |
+| **Microwave** | 1 mm – 10 cm | Ovens, cosmic background | CMB, cold dust, molecules |
 | **Infrared** | 700 nm – 1 mm | Warm objects, heat | Dust-obscured regions, cool stars |
 | **Visible** | 400 – 700 nm | Hot objects (stars, bulbs) | Direct imaging, stellar classification |
 | **Ultraviolet** | 10 – 400 nm | Very hot stars, active galaxies | Hot gas, stellar nurseries |
@@ -240,6 +240,14 @@ Which correctly orders these types of light from longest wavelength to shortest?
 **B) Radio → Infrared → Visible → UV → X-rays → Gamma rays.** Radio has the longest wavelengths (meters to kilometers), gamma rays the shortest (smaller than atoms). This order goes from low-energy, low-frequency light to high-energy, high-frequency light.
 :::
 
+::: {.callout-tip title="Bonus: Why 'High-Energy' Light?" collapse="true"}
+You'll hear X-rays and gamma rays called "high-energy" light, while radio waves are "low-energy." Why?
+
+Photon energy increases with frequency: $E = hf$ (where $h$ is Planck's constant). Since shorter wavelength means higher frequency, **shorter-wavelength photons carry more energy per photon**.
+
+A single gamma-ray photon can carry millions of times more energy than a radio photon — which is why gamma rays are dangerous and radio waves are harmless.
+:::
+
 ::: {.callout-check-yourself title="Check Yourself 3 — Multiwavelength Astronomy"}
 Why do astronomers observe the same object at different wavelengths?
 
@@ -278,11 +286,11 @@ Because light has finite speed, when we look at distant objects, we see them **a
 | Andromeda Galaxy | 2.5 million light-years | 2.5 million years |
 | Distant galaxies | Billions of light-years | Billions of years |
 
-Looking out in space is looking back in time. The farther we see, the younger the universe appears. When we observe a galaxy 10 billion light-years away, we see it as it was 10 billion years ago — when the universe was only about 4 billion years old.
+Looking out in space is looking back in time. The farther we see, the younger the universe appears. When we observe a galaxy whose light has been traveling for **~10 billion years** (a "lookback time" of ~10 billion years), we see it as it was when the universe was only about 4 billion years old.
 
-This has profound implications for cosmology. When astronomers observe the most distant galaxies, they're studying the early universe directly. The Hubble and James Webb Space Telescopes have detected galaxies so distant that their light has been traveling for over 13 billion years — we see them as they were when the universe was less than a billion years old. These infant galaxies look completely different from modern galaxies, giving us a window into cosmic history.
+This has profound implications for cosmology. When astronomers observe the most distant galaxies, they're studying the early universe directly. The Hubble and James Webb Space Telescopes have detected galaxies so distant that their light has been traveling for over 13 billion years — we see them as they were when the universe was less than a billion years old. These infant galaxies look completely different from modern galaxies, giving us a window into cosmic history. (In an expanding universe, "distance" can be defined in several ways; for now, light-travel time is the cleanest intuition, and we'll refine this later in the course.)
 
-Even within our own solar system, light-travel time matters. When NASA sends commands to a Mars rover, the signal takes 4-24 minutes to arrive (depending on where Mars is in its orbit). The rover can't be controlled in real-time — it must be programmed to make decisions autonomously. Communication with the Voyager spacecraft, now over 15 billion kilometers away, involves a round-trip delay of over 40 hours!
+Even within our own solar system, light-travel time matters. Signals between Earth and Mars take **about 3 to 22 minutes one-way**, depending on where the planets are in their orbits — so rovers can't be "joysticked" in real time; they must make decisions autonomously. For spacecraft much farther out, the delay becomes dramatic: signals take **~22.5 hours one-way** to reach Voyager 1 (now ~24 billion km away), and **~45 hours round trip** for a reply!
 
 ::: {.callout-note title="What's a Light-Year?"}
 A **light-year** is the distance light travels in one year:
@@ -464,7 +472,7 @@ This isn't just pretty — it's useful! The same principle applies to **exoplane
 ::: {.callout-tip title="The More You Know: Exoplanet Atmospheres" collapse="true"}
 Astronomers can detect gases in some exoplanet atmospheres by the same basic physics you just used for lunar eclipses: **light filters through a planet's atmosphere**, and different wavelengths are absorbed or scattered by different molecules.
 
-This is how we might someday detect signs of life on distant worlds: by looking for atmospheric signatures (like oxygen + methane together) that would be hard to explain without biology.
+This is how we might someday detect signs of life on distant worlds: by looking for atmospheric signatures (like oxygen and methane together) that **could be suggestive** — but only with the right planetary context, and only after ruling out **non-biological "false positive"** explanations.
 :::
 
 ::: {.callout-check-yourself title="Check Yourself 7 — Blood Moon"}
@@ -490,7 +498,7 @@ After a major volcanic eruption (which puts extra particles in the atmosphere), 
 :::
 
 ::: {.callout-tip title="Solution" collapse="true"}
-**B) Extra particles scatter away even more blue light.** Volcanic aerosols enhance the Rayleigh scattering effect and also absorb some light. The result is that less total light reaches the Moon, and what does reach it is even more reddened. The 1991 eruption of Mount Pinatubo led to notably dark lunar eclipses for about two years afterward.
+**B) Extra particles scatter away even more blue light.** Volcanic aerosols and dust **scatter and absorb more light overall**, so less total sunlight reaches the Moon through Earth's atmosphere. That can make eclipses **darker**, and often shifts the transmitted light toward **deeper reds**. The 1991 eruption of Mount Pinatubo led to notably dark lunar eclipses for about two years afterward.
 :::
 
 ---
@@ -512,7 +520,9 @@ Double your distance from a light source → receive 1/4 the intensity.
 :::
 
 ::: {.column-margin}
-**Intensity (flux):** The power of light received per unit area. Measured in W/m². Astronomers sometimes call this "apparent brightness" or "flux."
+**Luminosity:** The total power emitted by a source. Measured in watts (W). An intrinsic property — doesn't depend on distance.
+
+**Intensity (flux):** The power of light received per unit area. Measured in W/m². This *does* depend on distance — farther = fainter.
 :::
 
 ### Why?
@@ -595,11 +605,11 @@ Write your prediction here before continuing: _______________
 3. Compare this range to the full spectrum (radio to gamma rays)
 
 ::: {.callout-tip title="What You Should Have Found" collapse="true"}
-Visible light is a **tiny sliver** of the full spectrum — far less than 1% of the total wavelength range. The electromagnetic spectrum spans from radio waves (meters long) to gamma rays (smaller than atoms) — a range of over 15 orders of magnitude. Our eyes see only a narrow window in the middle.
+Visible light is a **tiny sliver** of the full spectrum. It spans only a factor of ~2 in wavelength (400–700 nm), while the electromagnetic spectrum spans **~15 orders of magnitude** — from about $10^{-12}$ m (gamma rays) up to $10^{3}$ m (radio waves). Our eyes see only a narrow window in the middle.
 
 **Claim:** Visible light is an extremely small part of the electromagnetic spectrum.
 
-**Evidence:** The demo shows wavelengths ranging from $10^{-12}$ m (gamma rays) to $10^{3}$ m (radio). Visible light (400-700 nm = $4-7 \times 10^{-7}$ m) is a tiny band in the middle.
+**Evidence:** The demo shows wavelengths ranging from $10^{-12}$ m (gamma rays) to $10^{3}$ m (radio). Visible light (400–700 nm = $4$–$7 \times 10^{-7}$ m) is a tiny band in the middle of this enormous range.
 :::
 
 ---
