@@ -1,12 +1,12 @@
 # Week 6, Lecture 11: Our Cosmic Backyard — Solar System Architecture & Formation
 
-**Status:** DRAFT OUTLINE — v1
+**Status:** DRAFT OUTLINE — v3
 **Target length:** ~20-25 rendered pages
 **Filename when complete:** `lecture-11-solar-system-reading.qmd`
 
 **Note:** Monday lecture (Feb 23). First of a 3-lecture capstone week reinforcing Module 1 concepts before the exam.
 
-**Instructor note to students:** "This week is designed to reinforce everything you've learned — we're applying all our tools to the solar system, exoplanets, and the biggest question: Are we alone?"
+**Instructor note to students:** "This week is designed to reinforce everything you've learned — we're applying all our tools to the solar system, exoplanets, and the biggest question: Are we alone? We're not learning brand-new physics; we're stress-testing the toolkit on the one system you think you already know."
 
 ---
 
@@ -32,7 +32,11 @@
 ### Pedagogy
 
 - [ ] Framed as capstone/reinforcement, not brand new content
+- [ ] **Retrieval warm-up** activates prior knowledge before reading
+- [ ] **Contrasting cases** reinforce patterns (Mercury vs Venus, etc.)
+- [ ] **Causal chain** for formation (rehearsable ladder)
 - [ ] Check Yourself questions test prior concepts in new context
+- [ ] **Transfer questions** force tool choice, not just recall
 - [ ] Practice problems connect to Module 1 tools
 - [ ] Tone matches L1-L10 (conversational but rigorous)
 
@@ -103,11 +107,32 @@ prerequisites: Lectures 5-10 (this lecture applies all prior tools)
 >
 > Now let's use these tools on something close to home: **our own solar system**.
 >
-> How do we know Mercury's surface reaches 430°C? Wien's Law — we measure its infrared emission. How do we know Jupiter is 318 times Earth's mass? Newton's gravity — we watch its moons orbit. How do we know Mars has CO₂ in its atmosphere? Spectroscopy — we see absorption lines.
+> How do we know Mercury is rocky? Its high density (5.4 g/cm³) tells us it's made of rock and iron — density comes from mass (Newton) divided by volume (measured from angular size + distance). How do we know Mercury's daytime surface reaches 430°C while nighttime plunges to -180°C? Wien's Law — we measure its infrared emission at different times. That 600°C swing also tells us Mercury has essentially no atmosphere to trap or distribute heat.
+>
+> How do we know Jupiter is 318 times Earth's mass? Newton's gravity — we watch its moons orbit and apply $M = 4\pi^2 a^3 / (GP^2)$. How do we know Mars has CO₂ in its atmosphere? Spectroscopy — we see absorption lines at CO₂'s fingerprint wavelengths.
 >
 > Every fact you've learned about planets comes from the physics in this course. The solar system isn't just a list of objects to memorize — it's a **laboratory** where we apply our tools.
 >
 > Today we'll tour the solar system's architecture: rocky planets, gas giants, ice giants, and the swarms of small bodies beyond. Then we'll explain *why* it looks this way — how a collapsing cloud of gas and dust became the orderly system we see today. Along the way, we'll reinforce every major concept from Module 1.
+
+---
+
+## Retrieval Warm-Up
+
+```
+::: {.callout-tip title="Before You Read: Activate Your Toolkit" collapse="false"}
+Take 2 minutes to answer these from memory (no peeking!):
+
+1. **Kepler's Third Law** relates which two quantities?
+2. **Doppler effect** measures which component of velocity — radial or transverse?
+3. **Wien's Law** lets you infer what property from a spectrum?
+
+If you struggled, review the relevant lecture before continuing. This
+reading assumes you have these tools ready to apply.
+
+*Answers: (1) Period and semi-major axis ($P^2 \propto a^3$); (2) Radial (line-of-sight); (3) Temperature from peak wavelength.*
+:::
+```
 
 ---
 
@@ -189,11 +214,11 @@ gas giants, ice giants, Kuiper Belt, and Oort Cloud.
 | Zone | Distance | Objects | Key Properties |
 |------|----------|---------|----------------|
 | **Rocky planets** | 0.4–1.5 AU | Mercury, Venus, Earth, Mars | Small, dense, solid surfaces |
-| **Asteroid belt** | 2–4 AU | Millions of rocky/metallic bodies | Failed planet (Jupiter's gravity) |
+| **Asteroid belt** | 2–4 AU | Millions of rocky/metallic bodies | Planetesimals that never accreted into a planet (gravitational stirring/resonances—especially from Jupiter—kept collisions destructive rather than constructive) |
 | **Gas giants** | 5–10 AU | Jupiter, Saturn | Massive, H/He dominated, no solid surface |
-| **Ice giants** | 20–30 AU | Uranus, Neptune | Smaller, more ices (water, ammonia, methane) |
-| **Kuiper Belt** | 30–50 AU | Pluto, Eris, comets | Icy bodies, leftover from formation |
-| **Oort Cloud** | ~2,000–100,000 AU | Long-period comets | Spherical halo, barely bound to Sun |
+| **Ice giants** | 19–30 AU | Uranus, Neptune | Smaller, more ices (water, ammonia, methane) |
+| **Kuiper Belt** | 30–50 AU | Pluto and many icy bodies (dwarf planets and smaller); source of many short-period comets | Icy bodies, leftover from formation; scattered disk objects (e.g., Eris) on more eccentric/inclined orbits beyond |
+| **Oort Cloud** | ~2,000–5,000 AU (inner) to ~10,000–100,000 AU (outer) | Long-period comets | Spherical halo, barely bound to Sun; perturbed by passing stars and galactic tides |
 
 ### The Key Pattern
 
@@ -204,8 +229,8 @@ gas giants, ice giants, Kuiper Belt, and Oort Cloud.
 - **Astronomical Unit (AU):** The average Earth-Sun distance, ~150 million km. A convenient unit for solar system distances.
 - **Gas giant:** A large planet composed primarily of hydrogen and helium (Jupiter, Saturn).
 - **Ice giant:** A large planet with substantial amounts of water, ammonia, and methane ices (Uranus, Neptune).
-- **Kuiper Belt:** A disk of icy bodies beyond Neptune, including Pluto.
-- **Oort Cloud:** A distant spherical shell of icy bodies, source of long-period comets.
+- **Kuiper Belt:** A disk of icy bodies beyond Neptune, including Pluto and other dwarf planets.
+- **Oort Cloud:** A distant spherical shell of icy bodies, source of long-period comets; loosely bound and shaped by galactic gravitational influences.
 
 ---
 
@@ -224,6 +249,28 @@ gas giants, ice giants, Kuiper Belt, and Oort Cloud.
 | Surface | Solid | None (gas/liquid) |
 | Moons | Few (0–2) | Many (dozens) |
 | Rings | None | Yes |
+
+### Contrasting Cases: Learning Through Comparison
+
+```
+::: {.callout-note title="Contrasting Cases: Why Compare?" collapse="false"}
+Students learn patterns faster through paired comparisons. As you read,
+think about these contrasts:
+
+**Mercury vs. Venus:** Both inner planets, but Mercury has no atmosphere
+(extreme temperature swings: 430°C day, -180°C night) while Venus has a
+thick atmosphere (constant 460°C everywhere). Same region, different fates.
+
+**Venus vs. Earth:** Nearly the same size and distance from Sun, but
+Venus is 450°C hotter than Earth. Why? (Answer in L12: greenhouse effect.)
+
+**Jupiter vs. Saturn:** Both gas giants with similar composition, but
+Saturn's density (0.69 g/cm³) is lower than water's. Why? (Hint: Saturn
+is less massive, so less compressed.)
+
+These comparisons reveal what physics is doing.
+:::
+```
 
 ### Check Yourself 1:
 
@@ -266,14 +313,15 @@ find a big enough ocean, Saturn would float!
 ::: {.callout-important title="Measuring Planets with Module 1 Tools"}
 | What We Measure | The Tool | The Physics |
 |-----------------|----------|-------------|
-| **Distance** | Radar timing + Kepler III | Light travel time; $P^2 \propto a^3$ |
+| **Distance from Earth** | Radar ranging | Round-trip light travel time |
+| **Distance from Sun (a)** | Kepler III (once P known) | $P^2 \propto a^3$ |
 | **Orbital period** | Observation over time | Track position against stars |
 | **Mass (with moons)** | Moon orbits + Newton | $M = \frac{4\pi^2 a^3}{GP^2}$ |
 | **Mass (no moons)** | Spacecraft tracking | Gravity bends spacecraft path |
 | **Temperature** | IR spectrum + Wien | Peak wavelength → temperature |
 | **Composition** | Spectral lines | Absorption/emission fingerprints |
-| **Rotation rate** | Doppler broadening | Approaching side blueshifted, receding redshifted |
-| **Wind speeds** | Doppler of cloud features | Track motion over time |
+| **Rotation rate** | Repeated imaging/radar + Doppler broadening | Track repeating patterns; Doppler broadening measures "toward/away" limb effect (works best for fast rotators) |
+| **Wind speeds** | Doppler shifts of atmospheric lines + cloud tracking | Doppler gives line-of-sight wind speed; cloud tracking gives pattern motion over time |
 :::
 ```
 
@@ -316,6 +364,27 @@ the same period require stronger gravity → more mass.
 :::
 ```
 
+### Check Yourself 3 — Tool Choice (Transfer Question):
+
+```
+::: {.callout-check-yourself title="Check Yourself 3 — Which Tool?"}
+Which tool would you use to measure Jupiter's mass if it had NO moons?
+
+- A) Wien's Law
+- B) Spectroscopy
+- C) Track a spacecraft's path as it flies by
+- D) Doppler effect on Jupiter's light
+:::
+
+::: {.callout-tip title="Solution" collapse="true"}
+**C) Track a spacecraft's path as it flies by.** Without moons, we can't
+use Newton's form of Kepler III. But a spacecraft passing Jupiter gets
+deflected by gravity — by measuring how much the path bends, we can
+calculate Jupiter's mass. This is how we measure masses of moonless
+asteroids and comets.
+:::
+```
+
 ---
 
 ## Section 2.2: Temperature from Wien's Law
@@ -330,17 +399,98 @@ the same period require stronger gravity → more mass.
 >
 > We can measure a planet's peak emission wavelength and calculate its temperature.
 
+### What Is "Equilibrium Temperature"?
+
+> **Equilibrium temperature** is what a planet's temperature *would be* if:
+> - It absorbed sunlight and re-radiated as a blackbody
+> - It had no atmosphere (no greenhouse effect)
+> - Temperature was averaged over the whole surface
+>
+> It's a baseline prediction from Stefan-Boltzmann. Differences between equilibrium and actual temperature reveal atmospheric effects (greenhouse) or internal heat sources.
+
+```
+::: {.callout-warning title="Don't Mislearn This: Equilibrium ≠ Observed"}
+**Equilibrium temperature** is a *prediction* — what physics says "should"
+happen with just sunlight in, thermal radiation out.
+
+**Observed temperature** is what we *measure*.
+
+When they differ, something interesting is happening:
+- **Venus:** Observed >> Equilibrium → massive greenhouse effect
+- **Jupiter:** Observed > Equilibrium → internal heat source (leftover from formation)
+- **Mercury:** Observed matches equilibrium (on average) → no atmosphere
+
+Always compare the two to diagnose what's going on!
+:::
+```
+
 ### Planetary Temperatures
 
 | Planet | Distance (AU) | T_equilibrium (K) | T_observed (K) | Notes |
 |--------|---------------|-------------------|----------------|-------|
-| Mercury | 0.39 | ~440 | 100-700 | No atmosphere, extreme variation |
+| Mercury | 0.39 | ~440 | ~90–700 | No atmosphere (just exosphere) → extreme day/night swing |
 | Venus | 0.72 | ~230 | **735** | Runaway greenhouse! |
-| Earth | 1.0 | ~255 | 288 | Moderate greenhouse |
-| Mars | 1.52 | ~210 | 218 | Thin atmosphere |
-| Jupiter | 5.2 | ~110 | 165 | Internal heat source |
+| Earth | 1.0 | ~255 | 288 | Moderate greenhouse (+33 K) |
+| Mars | 1.52 | ~210 | 218 | Thin atmosphere (+8 K) |
+| Jupiter | 5.2 | ~110 | ~165 | Internal heat source adds ~55 K |
 
-> Venus stands out: its actual temperature is **500 K hotter** than expected! This is the greenhouse effect — and we'll explore it in L12.
+> **Mercury's extremes** illustrate what happens without an atmosphere: daytime reaches 430°C (700 K), but nighttime plunges to -180°C (~90 K). That 600°C swing would be impossible with an atmosphere to redistribute heat.
+
+```
+::: {.callout-note title="Mercury's Exosphere: Not Quite 'No Atmosphere'" collapse="true"}
+Technically, Mercury has an **exosphere** — an extremely thin envelope of
+atoms (sodium, potassium, oxygen, hydrogen) that are constantly escaping
+to space and being replenished by solar wind bombardment, micrometeorite
+impacts, and outgassing from the surface.
+
+The exosphere is so thin (surface pressure ~10⁻¹⁵ bar, compared to Earth's
+1 bar) that atoms rarely collide with each other. It provides essentially
+**no insulation, no heat redistribution, no greenhouse effect** — which is
+why Mercury's temperature swings are so extreme.
+
+For our purposes: Mercury effectively has "no atmosphere" in the
+thermodynamic sense that matters for climate.
+:::
+```
+
+> **Venus** stands out: its actual temperature is **500 K hotter** than equilibrium! This is the greenhouse effect — and we'll explore it in L12.
+
+```
+::: {.callout-tip title="Venus Preview: A Cautionary Tale" collapse="true"}
+Venus is nearly Earth's twin in size and mass. Scientists believe it may
+have had **Earth-like conditions early in its history** — possibly even
+liquid water oceans. So what went wrong?
+
+In L12, we'll trace Venus's transformation from potentially habitable
+world to 735 K hellscape. The culprit: a **runaway greenhouse effect**
+triggered by Venus being slightly too close to the Sun. It's a story
+with implications for understanding climate here on Earth.
+:::
+```
+>
+> **Jupiter** is warmer than equilibrium because it has an internal heat source — leftover heat from its formation, still slowly radiating away.
+
+### Check Yourself 4 — Tool Choice (Transfer Question):
+
+```
+::: {.callout-check-yourself title="Check Yourself 4 — Hot for Different Reasons"}
+Mercury and Venus are both "hot" planets. Which tool would help you
+distinguish "hot because close to Sun" from "hot because greenhouse effect"?
+
+- A) Compare observed temperature to equilibrium temperature
+- B) Measure the planet's mass
+- C) Count the planet's moons
+- D) Measure the planet's orbital period
+:::
+
+::: {.callout-tip title="Solution" collapse="true"}
+**A) Compare observed temperature to equilibrium temperature.** Mercury's
+temperature roughly matches what you'd expect from its distance (equilibrium).
+Venus is 500 K hotter than equilibrium — that huge gap reveals the
+greenhouse effect is doing something extreme. This is exactly how we
+diagnosed Venus's climate.
+:::
+```
 
 ---
 
@@ -359,10 +509,10 @@ the same period require stronger gravity → more mass.
 >
 > The same spectroscopy that identifies elements in stars identifies molecules in planetary atmospheres!
 
-### Check Yourself 3:
+### Check Yourself 5:
 
 ```
-::: {.callout-check-yourself title="Check Yourself 3 — Applying L8 and L9"}
+::: {.callout-check-yourself title="Check Yourself 5 — Applying L8 and L9"}
 Mars appears red to our eyes. Neptune appears blue. Using concepts from
 L7-L9, which planet likely has methane (CH₄) in its atmosphere?
 
@@ -389,15 +539,30 @@ absorption.
 
 **Target length:** ~3 pages
 
-### From Cloud to Disk
+### From Cloud to Disk: A Causal Chain
 
-> The solar system formed ~4.6 billion years ago from a collapsing cloud of gas and dust called the **solar nebula**. The basic story:
->
-> 1. **Collapse:** A molecular cloud region begins to collapse under its own gravity
-> 2. **Spin-up:** Conservation of angular momentum causes the cloud to spin faster as it shrinks (L5-L6 callback!)
-> 3. **Flattening:** Rotation flattens the cloud into a disk (material can fall inward but not through the spinning disk)
-> 4. **Central star forms:** Most mass falls to the center → proto-Sun
-> 5. **Planets form in the disk:** Solid particles collide and stick, building up planetesimals, then planets
+> The solar system formed ~4.6 billion years ago from a collapsing cloud of gas and dust called the **solar nebula**. Here's the cause → effect chain you can rehearse:
+
+```
+::: {.callout-important title="Formation: The Causal Ladder"}
+**1. Gravity → Collapse**
+A region of a molecular cloud becomes dense enough to collapse under its own gravity.
+
+**2. Collapse → Spin-up** (Angular momentum conservation)
+As the cloud shrinks, it spins faster (L5-L6: $L = mvr = \text{constant}$).
+
+**3. Spin-up + Collisions → Disk**
+Rotation + collisions damp vertical motions, so material settles into a thin disk while continuing to orbit and accrete inward.
+
+**4. Temperature gradient → Condensation sequence**
+Inner disk is hot (only rock/metal condenses); outer disk is cold (ices also condense).
+
+**5. Core growth outside snow line → Gas capture**
+More solid material → bigger cores → gravitational capture of H/He → gas giants.
+
+*Memorize this ladder. You can reconstruct the whole story from these five steps.*
+:::
+```
 
 **Figure placeholder:**
 
@@ -407,11 +572,9 @@ absorption.
 FIGURE: Solar System Formation — The Nebular Hypothesis
 DESCRIPTION: Four-panel sequence showing:
 1. Molecular cloud with slight rotation
-2. Collapsing cloud spinning faster
+2. Collapsing cloud spinning faster (label: angular momentum conservation)
 3. Flattened disk with proto-Sun at center
-4. Planets forming in disk at different distances
-- Label angular momentum conservation in panel 2
-- Show frost line in panel 4
+4. Planets forming in disk at different distances (label: frost line at ~3 AU)
 ALT TEXT: Four stages of solar system formation from collapsing cloud
 to flattened disk to planets.
 ```
@@ -448,6 +611,19 @@ This is why:
 > - **Inside the frost line (~3 AU):** Too hot for ices; only rock and metal could condense
 > - **Outside the frost line:** Ices could form, providing much more solid material
 
+```
+::: {.callout-warning title="Model-Dependent: The Frost Line Moved"}
+The ~3 AU value is a useful order-of-magnitude for the early solar nebula,
+but the snow line isn't a fixed wall. It moves over time as the disk
+evolves and the young Sun's luminosity changes. Early on, when the Sun
+was dimmer, the frost line may have been closer; as the disk heated up
+during active accretion, it moved outward.
+
+For ASTR 101: ~3 AU captures the essential physics. Just don't think of
+it as a permanent, sharp boundary.
+:::
+```
+
 ### The Consequence
 
 > Rocky planets formed close to the Sun because only rock/metal was available as solid building blocks. Beyond the frost line, ices added to the solids, allowing larger cores to form. These massive cores could gravitationally capture hydrogen and helium from the nebula → gas giants!
@@ -457,10 +633,10 @@ This is why:
 | Inside frost line | Rock, metal only | Small rocky planets |
 | Outside frost line | Rock + metal + ices | Large cores → capture H/He → gas giants |
 
-### Check Yourself 4:
+### Check Yourself 6:
 
 ```
-::: {.callout-check-yourself title="Check Yourself 4 — Formation"}
+::: {.callout-check-yourself title="Check Yourself 6 — Formation"}
 Why didn't Earth become a gas giant like Jupiter?
 
 - A) Earth formed before Jupiter
@@ -490,9 +666,21 @@ gravitationally capture the abundant hydrogen and helium gas.
 > 1. **All planets orbit in the same direction** (inherited from the disk's rotation)
 > 2. **All planets orbit in nearly the same plane** (the disk was flat)
 > 3. **Rocky planets inside, giants outside** (frost line)
-> 4. **Asteroid belt:** Jupiter's gravity prevented a planet from forming
+> 4. **Asteroid belt:** Jupiter's gravity and resonances inhibited planet formation
 > 5. **Meteorites:** Pristine samples from early solar system, dated to 4.6 Gyr
 > 6. **Protoplanetary disks observed around other young stars!**
+
+```
+::: {.callout-warning title="Don't Mislearn This: Exceptions Exist"}
+Most planets orbit in the same plane and direction — but **many moons
+are exceptions**. Some moons are captured asteroids orbiting at odd angles
+(like Triton, which orbits Neptune *backwards*). Some moons formed from
+giant impacts (like Earth's Moon).
+
+The **planet** pattern supports the disk story. Moon orbits are messier
+because moons have additional formation pathways beyond the original disk.
+:::
+```
 
 **Figure placeholder:**
 
@@ -518,7 +706,7 @@ with ring structures, likely carved by forming planets.
 **Solar System Architecture:**
 1. Rocky planets (Mercury–Mars) inside ~1.5 AU
 2. Gas giants (Jupiter, Saturn) at 5–10 AU
-3. Ice giants (Uranus, Neptune) at 20–30 AU
+3. Ice giants (Uranus, Neptune) at 19–30 AU
 4. Small bodies: asteroid belt, Kuiper Belt, Oort Cloud
 
 **Applying Our Toolkit:**
@@ -527,10 +715,10 @@ with ring structures, likely carved by forming planets.
 7. Compositions from spectral lines (L9)
 8. Everything connects back to Module 1!
 
-**Formation:**
-9. Nebular hypothesis: collapse → spin-up → disk → planets
+**Formation (The Causal Chain):**
+9. Collapse → spin-up → disk → temperature gradient → condensation
 10. Angular momentum conservation explains disk formation and orbital patterns
-11. Frost line explains rocky vs. gas giant distribution
+11. Frost line (~3 AU, model-dependent) explains rocky vs. gas giant distribution
 :::
 ```
 
@@ -554,6 +742,8 @@ with ring structures, likely carved by forming planets.
 
 6. **Integration Problem:** You discover an exoplanet system where rocky planets extend out to 5 AU. What might this tell you about the host star compared to our Sun?
 
+7. **Tool Choice:** You want to determine whether a newly discovered exoplanet is rocky or gaseous. What two measurements would you need, and which tools from Module 1 would provide them?
+
 ---
 
 ## Glossary
@@ -564,12 +754,14 @@ with ring structures, likely carved by forming planets.
 | **Terrestrial planet** | Small, rocky planet with solid surface (Mercury, Venus, Earth, Mars) |
 | **Gas giant** | Massive planet dominated by hydrogen and helium (Jupiter, Saturn) |
 | **Ice giant** | Large planet with substantial water, ammonia, methane (Uranus, Neptune) |
-| **Kuiper Belt** | Region of icy bodies beyond Neptune, 30-50 AU |
-| **Oort Cloud** | Spherical shell of icy bodies at ~2,000-100,000 AU |
+| **Kuiper Belt** | Region of icy bodies beyond Neptune, 30-50 AU; includes Pluto; source of short-period comets |
+| **Oort Cloud** | Spherical shell of icy bodies from ~2,000-5,000 AU (inner) to ~10,000-100,000 AU (outer); source of long-period comets; perturbed by passing stars |
+| **Exosphere** | Extremely thin atmospheric layer where atoms rarely collide; Mercury has only an exosphere, providing no thermal insulation |
 | **Solar nebula** | The cloud of gas and dust from which the solar system formed |
 | **Nebular hypothesis** | Model where solar system forms from a collapsing, rotating disk |
-| **Frost line** | Distance where temperature allows water ice to form; ~3 AU in our solar system |
+| **Frost line (snow line)** | Distance where temperature allows water ice to form; ~3 AU in early solar nebula (model-dependent) |
 | **Protoplanetary disk** | Disk of gas and dust around a young star where planets form |
+| **Equilibrium temperature** | Predicted temperature from Stefan-Boltzmann, assuming no atmosphere |
 
 ---
 
@@ -578,7 +770,7 @@ with ring structures, likely carved by forming planets.
 | Figure ID | Description | Status |
 |-----------|-------------|--------|
 | `solar-system-architecture` | Zones of the solar system with distances | ☐ |
-| `nebular-hypothesis` | Four-stage formation sequence | ☐ |
+| `nebular-hypothesis` | Four-stage formation sequence with causal labels | ☐ |
 | `protoplanetary-disk` | ALMA image of disk around young star | ☐ |
 
 ---
@@ -591,4 +783,4 @@ with ring structures, likely carved by forming planets.
 
 ---
 
-*End of L11 Outline (v1)*
+*End of L11 Outline (v3)*

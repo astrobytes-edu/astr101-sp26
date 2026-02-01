@@ -1,6 +1,6 @@
 # Week 6, Lecture 12: Planetary Climates & Finding Other Worlds
 
-**Status:** DRAFT OUTLINE — v1
+**Status:** DRAFT OUTLINE — v3
 **Target length:** ~25-30 rendered pages
 **Filename when complete:** `lecture-12-climates-exoplanets-reading.qmd`
 
@@ -12,6 +12,9 @@
 
 ### Content — Planetary Climates
 
+- [ ] **Equilibrium temperature deep dive:** Full derivation with energy balance
+- [ ] **πR² disk approximation:** Moon/Sun eclipse analogy for why planets intercept light as disks
+- [ ] **Bond albedo defined:** Table with Venus (0.76), Earth (0.30), Mars (0.25), Moon (0.11)
 - [ ] **Venus/Earth/Mars comparison table** with T_equilibrium vs T_actual
 - [ ] **Greenhouse effect explained** using L8 concepts (blackbody, radiative equilibrium)
 - [ ] **Runaway greenhouse (Venus):** CO₂ feedback loop, why Venus is a hellscape
@@ -110,9 +113,31 @@ prerequisites: Lecture 8 (blackbody, Stefan-Boltzmann), Lecture 10 (Doppler), Le
 >
 > **Mars:** Surface temperature 218 K (-55°C). Atmospheric pressure less than 1% of Earth's. Frozen polar caps. Ancient river channels, but no liquid water today. A cold desert.
 >
-> What explains these vastly different outcomes? The answer involves physics we've already learned: **blackbody radiation, thermal equilibrium, and atmospheric absorption.** Today we'll see how the greenhouse effect creates these different climates — and why adding CO₂ to Earth's atmosphere is pushing our planet in Venus's direction.
+> What explains these vastly different outcomes? The answer involves physics we've already learned: **blackbody radiation, thermal equilibrium, and atmospheric absorption.** Today we'll see how the greenhouse effect creates these different climates — and why adding CO₂ to Earth's atmosphere shifts the same energy balance (though in a vastly different regime than Venus).
 >
 > Then we'll turn to the search for other worlds. We've found thousands of exoplanets, some in "habitable zones" where liquid water could exist. How do we find them? And what determines if they're actually habitable?
+
+---
+
+## Retrieval Warm-Up (60 seconds)
+
+```
+::: {.callout-tip title="Quick Check — Activate Prior Knowledge"}
+Before we dive in, see if you can answer these from memory:
+
+1. **L8:** What law relates an object's temperature to the total power it radiates per unit area?
+2. **L8:** If an object's temperature doubles, by what factor does its radiated power increase?
+3. **L10:** When a star moves toward us, are its spectral lines blueshifted or redshifted?
+4. **L4:** Why don't we see a solar eclipse every month?
+:::
+
+::: {.callout-tip title="Answers" collapse="true"}
+1. Stefan-Boltzmann Law
+2. 16× (since P ∝ T⁴)
+3. Blueshifted
+4. Moon's orbit is tilted ~5° relative to the ecliptic — alignment is rare
+:::
+```
 
 ---
 
@@ -158,14 +183,149 @@ Drake Equation to estimate how many civilizations might exist.
 >
 > This gives an **equilibrium temperature** — what the planet's temperature *should* be if it's just balancing incoming sunlight against outgoing thermal radiation.
 
-### The Calculation (Conceptual)
+### Deep Dive: Deriving Equilibrium Temperature
 
-> The equilibrium temperature depends on:
-> - **Distance from Sun:** Farther → less sunlight → cooler
-> - **Albedo:** More reflective → absorbs less → cooler
+**Target length for this subsection:** ~3 pages
+
+#### Step 1: Energy Balance
+
+> At equilibrium, energy in equals energy out:
 >
-> For a quick estimate (assuming moderate albedo):
-> $$T_{eq} \approx 280\text{ K} \times \left(\frac{1\text{ AU}}{d}\right)^{1/2}$$
+> $$\text{Power absorbed from Sun} = \text{Power radiated to space}$$
+>
+> We already know the right side from L8: a blackbody radiates power according to **Stefan-Boltzmann**:
+> $$P_{out} = \sigma T^4 \times (\text{surface area})$$
+>
+> But how much solar power does a planet actually intercept?
+
+#### Step 2: Why πR², Not 4πR²? — The Disk Approximation
+
+> Here's a key insight: A planet doesn't absorb sunlight over its entire spherical surface. Sunlight comes from one direction (the Sun), so the planet only intercepts light across its **cross-sectional area** — the area of the "shadow" it would cast.
+
+```
+::: {.callout-note title="Think About a Total Solar Eclipse"}
+During a total solar eclipse, the Moon blocks the Sun. But the Moon's shadow on Earth isn't sphere-shaped — it's a **disk**. That's because sunlight travels in parallel rays from the distant Sun, and the Moon intercepts them with its cross-sectional area.
+
+**Cross-section of a sphere = πR²** (the area of a circle with the same radius)
+
+The planet intercepts sunlight like a disk (πR²) but radiates from its entire spherical surface (4πR²). This factor of 4 difference is crucial for the calculation!
+:::
+```
+
+**Figure placeholder:**
+
+```
+{{< fig disk-approximation >}}
+
+FIGURE: Why Planets Intercept Light as Disks
+DESCRIPTION: Side view showing:
+1. Parallel rays of sunlight coming from the left
+2. A planet (sphere) intercepting them
+3. The circular cross-section (πR²) shown as a shaded disk
+4. Comparison: Moon during eclipse casting a circular shadow
+5. Caption: "A planet intercepts sunlight with area πR², but radiates from area 4πR²"
+ALT TEXT: Diagram showing parallel sunlight rays hitting a planet, with the intercepted cross-sectional area highlighted as πR².
+```
+
+#### Step 3: What Is Albedo?
+
+> Not all sunlight that hits a planet gets absorbed — some reflects back into space. **Albedo** (A) is the fraction of incoming light that reflects away.
+>
+> - Albedo = 0 → perfectly absorbing (all light absorbed)
+> - Albedo = 1 → perfectly reflecting (all light bounces off)
+> - Real planets: somewhere in between
+
+> These are **Bond albedos** — the fraction of total incoming energy reflected, averaged over all wavelengths and angles. (Geometric albedo, which you may see elsewhere, measures reflectivity at a single viewing angle.)
+
+| Body | Bond Albedo | Why? |
+|------|-------------|------|
+| **Venus** | ~0.76 | Thick, bright sulfuric-acid clouds reflect most light |
+| **Earth** | ~0.30 | Mix of clouds, oceans (dark), ice (bright) |
+| **Mars** | ~0.25 | Dusty, rocky surface with thin atmosphere |
+| **Moon** | ~0.11 | Dark basalt surface, no atmosphere |
+
+> If a planet reflects fraction A, it **absorbs fraction (1 - A)**.
+>
+> - Venus absorbs only 25% of incoming sunlight
+> - Earth absorbs 70%
+> - Mars absorbs 75%
+
+```
+::: {.callout-note title="Albedo's Counterintuitive Effect"}
+Venus has the **highest** albedo of these planets — it reflects most of its sunlight! This *should* make it cooler than Earth. The fact that Venus is instead the hottest planet in the solar system (even hotter than Mercury) tells you how powerful its greenhouse effect is.
+:::
+```
+
+#### Step 4: Putting It All Together
+
+> Now we can set up the full energy balance:
+>
+> **Power absorbed:**
+> $$P_{in} = (\text{Solar flux at planet}) \times (\text{cross-section}) \times (1 - A)$$
+>
+> The solar flux at distance $d$ from the Sun is:
+> $$F = \frac{L_\odot}{4\pi d^2}$$
+>
+> So:
+> $$P_{in} = \frac{L_\odot}{4\pi d^2} \times \pi R^2 \times (1 - A)$$
+>
+> **Power radiated:**
+> $$P_{out} = \sigma T_{eq}^4 \times 4\pi R^2$$
+>
+> **Setting them equal:**
+> $$\frac{L_\odot}{4\pi d^2} \times \pi R^2 \times (1 - A) = \sigma T_{eq}^4 \times 4\pi R^2$$
+>
+> Notice that $\pi R^2$ appears on both sides — the planet's size cancels out! This is why equilibrium temperature doesn't depend on planet size (as long as it's spherical).
+>
+> Solving for $T_{eq}$:
+> $$T_{eq} = \left[ \frac{(1-A) L_\odot}{16\pi \sigma d^2} \right]^{1/4}$$
+
+```
+::: {.callout-important title="What Equilibrium Temperature Depends On"}
+Looking at the formula:
+
+$$T_{eq} = \left[ \frac{(1-A) L_\odot}{16\pi \sigma d^2} \right]^{1/4}$$
+
+The equilibrium temperature depends on:
+1. **Distance (d):** Farther → lower T_eq (goes as $d^{-1/2}$)
+2. **Albedo (A):** Higher albedo → lower T_eq (absorbs less)
+3. **Stellar luminosity (L):** Brighter star → higher T_eq
+
+It does NOT depend on:
+- Planet radius (canceled out!)
+- Planet mass
+- Whether the planet has an atmosphere (that comes later!)
+:::
+```
+
+```
+::: {.callout-warning title="Don't Mislearn This"}
+**Equilibrium temperature is a model, not a measurement.**
+
+$T_{eq}$ is what a bare, airless sphere *would* have if it only balanced absorbed sunlight against blackbody emission. Real surface temperatures differ because:
+
+- Atmospheres trap heat (greenhouse effect)
+- Planets rotate, redistributing heat
+- Internal heat sources (e.g., Jupiter radiates more than it absorbs)
+
+When you see a planet's "temperature" in the news, ask: *equilibrium, effective, or surface?* They're different numbers.
+:::
+```
+
+#### Simplified Formula for Quick Estimates
+
+> For a **perfectly absorbing planet** (A = 0) orbiting the Sun:
+>
+> $$T_{eq} \approx 279\text{ K} \times \left(\frac{1\text{ AU}}{d}\right)^{1/2}$$
+>
+> To correct for albedo, multiply by $(1-A)^{1/4}$:
+>
+> $$T_{eq} \approx 279\text{ K} \times (1-A)^{1/4} \times \left(\frac{1\text{ AU}}{d}\right)^{1/2}$$
+>
+> **Sanity check for Earth** (d = 1 AU, A ≈ 0.30):
+> $$T_{eq} \approx 279 \times (0.70)^{1/4} \approx 279 \times 0.91 \approx 255\text{ K}$$
+>
+> That matches the table below — and it's about 33 K colder than Earth's actual surface temperature. The difference? The greenhouse effect.
 
 ### The Predictions vs. Reality
 
@@ -210,7 +370,7 @@ than this prediction — that's where the greenhouse effect comes in.
 > 2. **The surface emits infrared radiation** (thermal, from Wien's Law)
 > 3. **Greenhouse gases absorb infrared** — they're opaque at these wavelengths
 > 4. **The atmosphere re-radiates** — some back down to the surface
-> 5. **The surface must get hotter** to radiate enough energy to escape to space
+> 5. **The effective emission level moves higher in the atmosphere** — where it's colder. To radiate the same total power to space, the *surface* must warm up to compensate. (Think of it this way: the atmosphere acts like a blanket, so the skin under the blanket has to be warmer to maintain the same heat flow outward.)
 
 **Figure placeholder:**
 
@@ -251,8 +411,7 @@ From Wien's Law: $\lambda_{peak} = 2.9 \times 10^6 / T$ nm
 - **Sun (5800 K):** Peak at ~500 nm (visible) → passes through atmosphere
 - **Earth (288 K):** Peak at ~10,000 nm (infrared) → absorbed by greenhouse gases
 
-The atmosphere is transparent to incoming visible light but opaque to
-outgoing infrared. That's the essence of the greenhouse effect!
+The atmosphere is largely transparent to incoming visible light but selectively absorbs outgoing infrared in key wavelength bands. That's the essence of the greenhouse effect!
 :::
 ```
 
@@ -284,10 +443,7 @@ outgoing infrared. That's the essence of the greenhouse effect!
 ::: {.callout-warning title="The Sobering Lesson"}
 Venus shows what happens when the greenhouse effect runs away.
 
-The *same physics* applies to Earth. We're not in danger of becoming
-Venus — our Sun is dimmer and we're farther away. But adding CO₂ to our
-atmosphere shifts the balance. The physics is the same; only the degree
-is different.
+The **same radiative physics** governs all planetary climates — but Earth and Venus occupy vastly different regimes. Earth is not on a trajectory toward Venus-style runaway; our solar flux is too low and our oceans act as a CO₂ buffer. What *is* happening: adding greenhouse gases shifts Earth's energy balance, raising surface temperatures by degrees, not hundreds of degrees. Small shifts still have large consequences.
 :::
 ```
 
@@ -306,10 +462,7 @@ Why?
 
 ::: {.callout-tip title="Solution" collapse="true"}
 **B) Venus has a thick CO₂ atmosphere causing a strong greenhouse effect.**
-Mercury has essentially no atmosphere, so its temperature is close to
-equilibrium (~430 K day side). Venus's massive CO₂ atmosphere traps heat,
-raising the surface to 735 K — hotter than Mercury despite being farther
-from the Sun.
+Mercury has almost no atmosphere, so it experiences huge day–night temperature swings (~700 K dayside, ~100 K nightside) with no greenhouse warming. Venus's thick CO₂ atmosphere traps heat uniformly, raising the surface to ~735 K everywhere — hotter than Mercury's dayside despite being farther from the Sun.
 :::
 ```
 
@@ -358,7 +511,7 @@ from the Sun.
 
 > Here's where this matters for us today:
 >
-> Burning fossil fuels releases CO₂ that was locked in rocks for millions of years. We're adding ~40 billion tons of CO₂ per year to the atmosphere.
+> Burning fossil fuels releases CO₂ that was locked in rocks for millions of years. Humanity currently emits roughly 40 billion metric tons (40 Gt) of CO₂ per year; about half is absorbed by the ocean and biosphere, with the rest accumulating in the atmosphere.
 >
 > The physics is exactly what we discussed:
 > - More CO₂ → more infrared absorption → less heat escapes → surface warms
@@ -490,6 +643,8 @@ are gold: we know exactly how the orbit is tilted (edge-on)!
 :::
 ```
 
+> **Selection effect:** Because transit probability scales as $R_*/a$, transit surveys are biased toward **close-in planets** with short orbital periods. Hot Jupiters were the first transiting exoplanets discovered for exactly this reason — they're big *and* close to their stars.
+
 ### The Transit Light Curve
 
 **Figure placeholder:**
@@ -513,7 +668,7 @@ transit, with labeled features.
 | Observable | What It Tells Us |
 |-----------|------------------|
 | **Transit depth** | Planet radius: depth ≈ $(R_p/R_*)^2$ |
-| **Transit duration** | Orbital distance (combined with period) |
+| **Transit duration** | Orbital distance (combined with period, stellar mass, and transit geometry) |
 | **Orbital period** | Time between transits |
 | **Orbital inclination** | Must be nearly edge-on (~90°) to transit |
 
@@ -616,9 +771,11 @@ ALT TEXT: The habitable zone as a green band around a star, with
 > 2. **Atmospheric greenhouse effect:** Strong greenhouse → HZ extends farther out
 > 3. **Planetary albedo:** More reflective → needs to be closer to absorb enough heat
 >
-> For the Sun:
-> - Inner edge: ~0.95 AU (Venus is just inside — but runaway greenhouse happened)
-> - Outer edge: ~1.4 AU (Mars is just outside — but had liquid water with thicker atmosphere)
+> For the Sun (approximate, model-dependent):
+> - Inner edge: ~0.95–0.99 AU (Venus is just inside — but runaway greenhouse happened)
+> - Outer edge: ~1.4–1.7 AU (Mars is near the edge — and had liquid water with a thicker early atmosphere)
+>
+> These boundaries depend on assumptions about atmospheric composition, cloud feedbacks, and planetary rotation. Different climate models give different estimates — the numbers above span "conservative" to "optimistic" 1-D models.
 
 ### Habitable Zone ≠ Habitable
 
@@ -708,7 +865,8 @@ star's HZ would be at ~2 AU.
 
 | Term | Definition |
 |------|------------|
-| **Equilibrium temperature** | Temperature a planet would have if it only balanced incoming sunlight and outgoing thermal radiation |
+| **Albedo (Bond)** | Fraction of total incoming energy reflected back to space, averaged over all wavelengths and angles (ranges 0–1); used for energy-balance calculations |
+| **Equilibrium temperature** | Temperature a planet would have if it only balanced incoming sunlight and outgoing thermal radiation; derived from energy balance |
 | **Greenhouse effect** | Warming of a planetary surface because the atmosphere absorbs and re-radiates infrared radiation |
 | **Runaway greenhouse** | Positive feedback where warming causes more greenhouse gases, causing more warming |
 | **Transit** | When a planet passes in front of its star, blocking some starlight |
@@ -722,6 +880,7 @@ star's HZ would be at ~2 AU.
 
 | Figure ID | Description | Status |
 |-----------|-------------|--------|
+| `disk-approximation` | Why planets intercept light as disks (πR²) | ☐ |
 | `greenhouse-effect` | Diagram of greenhouse effect mechanism | ☐ |
 | `transit-geometry` | Geometry of planetary transit | ☐ |
 | `transit-light-curve` | Light curve with labeled features | ☐ |
@@ -741,4 +900,4 @@ Then: review and Q&A for the Module 1 Exam (Monday).
 
 ---
 
-*End of L12 Outline (v1)*
+*End of L12 Outline (v3)*
