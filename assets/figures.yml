@@ -456,8 +456,22 @@ figures:
 
   kepler-third-law-graph:
     path: /assets/images/module-01/lec05/kepler-third-law-graph.svg
-    caption: "What to notice: on a log–log plot, Kepler's Third Law is a straight line — the slope (3/2) encodes the exponent."
+    caption: "What to notice: on a log–log plot, Kepler’s Third Law is a straight line — the slope (3/2) encodes the exponent."
     alt: "Log–log plot of orbital period versus semimajor axis for the eight planets. The points fall on a straight line with slope 3/2, illustrating the power-law relationship between period and distance for Solar System orbits."
+    credit: "Illustration: A. Rosen (SVG)"
+    module: 1
+
+  kepler-third-law-linear:
+    path: /assets/images/module-01/lec05/kepler-third-law-linear.svg
+    caption: "What to notice: on linear axes, Kepler’s Third Law looks curved — and the inner planets bunch up near the origin."
+    alt: "Linear-axis plot of orbital period P versus semimajor axis a for the eight planets. The curve rises steeply for outer planets, and an inset zoom shows the inner planets (up to 2 AU and 2.5 years) more clearly."
+    credit: "Illustration: A. Rosen (SVG)"
+    module: 1
+
+  kepler-third-law-loglog:
+    path: /assets/images/module-01/lec05/kepler-third-law-loglog.svg
+    caption: "What to notice: on a log–log plot, Kepler’s Third Law becomes a straight line — the slope (3/2) encodes the exponent."
+    alt: "Log–log plot of orbital period P versus semimajor axis a for the eight planets. The points line up along a straight best-fit line with slope 3/2."
     credit: "Illustration: A. Rosen (SVG)"
     module: 1
 

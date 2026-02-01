@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540" role="img" aria-labelledby="title desc" data-theme="dark" data-palette="aurora">
+  <title id="title">Kepler’s Third Law on linear axes</title>
+  <desc id="desc">Linear-axis plot of orbital period P versus semimajor axis a for the eight planets. The relationship appears curved, and the inner planets cluster near the origin. An inset zoom shows the inner planets (a up to 2 AU, P up to 2.5 years) more clearly.</desc>
+
+  <defs>
+    <style>
+      :root{
+        --bg:#0b0b0f;
+        --panel:#13162a;
+        --fg:#eef0ff;
+        --muted:#c9cbe5;
+        --faint:#8f92ad;
+        --grid:#1a1c28;
+        --grid-strong:#24263a;
+
+        --aurora-teal:#028391;
+        --aurora-teal-bright:#41A2AC;
+        --aurora-teal-dim:#02626D;
+        --aurora-teal-pale:#A6D4D8;
+
+        --aurora-pink:#BE5A83;
+        --aurora-pink-bright:#CE83A2;
+        --aurora-pink-dim:#8E4462;
+        --aurora-pink-pale:#E8C5D4;
+
+        --aurora-violet:#7077A1;
+        --aurora-violet-bright:#9499B8;
+        --aurora-violet-dim:#545979;
+        --aurora-violet-pale:#CDCFDE;
+
+        --teal:var(--aurora-teal);
+        --teal-bright:var(--aurora-teal-bright);
+        --teal-dim:var(--aurora-teal-dim);
+        --teal-pale:var(--aurora-teal-pale);
+
+        --pink:var(--aurora-pink);
+        --pink-bright:var(--aurora-pink-bright);
+        --pink-dim:var(--aurora-pink-dim);
+        --pink-pale:var(--aurora-pink-pale);
+
+        --violet:var(--aurora-violet);
+        --violet-bright:var(--aurora-violet-bright);
+        --violet-dim:var(--aurora-violet-dim);
+        --violet-pale:var(--aurora-violet-pale);
+      }
+
+      text{
+        font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+        fill: var(--fg);
+      }
+      .label{ font-size: 22px; font-weight: 750; }
+      .small{ font-size: 18px; letter-spacing: 0.2px; fill: var(--muted); }
+      .tick{ font-size: 20px; fill: var(--muted); }
+      .tiny{ font-size: 16px; letter-spacing: 0.2px; fill: var(--muted); }
+      .outline{ paint-order: stroke; stroke: var(--bg); stroke-width: 6px; stroke-linejoin: round; }
+      .panel{ fill: var(--panel); stroke: var(--violet); stroke-width: 1.5; opacity: 0.96; }
+      .dash{ stroke-dasharray: 10 10; }
+      .math{ font-style: italic; }
+    </style>
+
+    <filter id="softGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="2.0" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="960" height="540" fill="var(--bg)"/>
+
+  <!-- Compact (for side-by-side use): no big header/footer -->
+  <g>
+    <rect x="36" y="36" width="888" height="468" rx="16" class="panel"/>
+
+    <!-- Main axes -->
+    <!-- Plot box: x=[110,910], y=[130,430] -->
+    <line x1="110" y1="430" x2="910" y2="430" stroke="var(--teal)" stroke-width="4"/>
+    <line x1="110" y1="430" x2="110" y2="130" stroke="var(--teal)" stroke-width="4"/>
+
+    <!-- Grid (light) -->
+    <g opacity="0.45">
+      <!-- x grid every 5 AU -->
+      <line x1="235" y1="130" x2="235" y2="430" stroke="var(--grid)" stroke-width="1.5"/>
+      <line x1="360" y1="130" x2="360" y2="430" stroke="var(--grid)" stroke-width="1.5"/>
+      <line x1="485" y1="130" x2="485" y2="430" stroke="var(--grid)" stroke-width="1.5"/>
+      <line x1="610" y1="130" x2="610" y2="430" stroke="var(--grid)" stroke-width="1.5"/>
+      <line x1="735" y1="130" x2="735" y2="430" stroke="var(--grid)" stroke-width="1.5"/>
+      <line x1="860" y1="130" x2="860" y2="430" stroke="var(--grid)" stroke-width="1.5"/>
+
+      <!-- y grid every 50 years -->
+      <line x1="110" y1="341.8" x2="910" y2="341.8" stroke="var(--grid)" stroke-width="1.5"/>
+      <line x1="110" y1="253.5" x2="910" y2="253.5" stroke="var(--grid)" stroke-width="1.5"/>
+      <line x1="110" y1="165.3" x2="910" y2="165.3" stroke="var(--grid)" stroke-width="1.5"/>
+    </g>
+
+    <!-- Tick labels (x) -->
+    <g class="tick">
+      <text x="110" y="460" text-anchor="middle">0</text>
+      <text x="235" y="460" text-anchor="middle">5</text>
+      <text x="360" y="460" text-anchor="middle">10</text>
+      <text x="485" y="460" text-anchor="middle">15</text>
+      <text x="610" y="460" text-anchor="middle">20</text>
+      <text x="735" y="460" text-anchor="middle">25</text>
+      <text x="860" y="460" text-anchor="middle">30</text>
+    </g>
+
+    <!-- Tick labels (y) -->
+    <g class="tick">
+      <text x="90" y="436" text-anchor="end">0</text>
+      <text x="90" y="348" text-anchor="end">50</text>
+      <text x="90" y="260" text-anchor="end">100</text>
+      <text x="90" y="172" text-anchor="end">150</text>
+    </g>
+
+    <!-- Axis labels -->
+    <text x="900" y="410" class="label outline" text-anchor="end" fill="var(--muted)"><tspan class="math">a</tspan> (AU)</text>
+    <text x="130" y="160" class="label outline" text-anchor="start" fill="var(--muted)"><tspan class="math">P</tspan> (years)</text>
+
+    <!-- Curve: P = a^(3/2) on linear axes (sampled polyline) -->
+    <polyline
+      points="110.0,430.0 122.5,429.4 135.0,428.2 147.5,426.8 160.0,425.0 172.5,423.0 185.0,420.8 197.5,418.4 210.0,415.9 222.5,413.2 235.0,410.3 247.5,407.2 260.0,404.1 272.5,400.8 285.0,397.3 297.5,393.8 310.0,390.1 322.5,386.3 335.0,382.4 347.5,378.3 360.0,374.2 372.5,370.0 385.0,365.6 397.5,361.2 410.0,356.6 422.5,352.0 435.0,347.3 447.5,342.5 460.0,337.6 472.5,332.6 485.0,327.5 497.5,322.3 510.0,317.1 522.5,311.7 535.0,306.3 547.5,300.8 560.0,295.2 572.5,289.6 585.0,283.8 597.5,278.0 610.0,272.2 622.5,266.2 635.0,260.2 647.5,254.1 660.0,247.9 672.5,241.7 685.0,235.3 697.5,229.0 710.0,222.5 722.5,216.0 735.0,209.4 747.5,202.8 760.0,196.0 772.5,189.3 785.0,182.4 797.5,175.5 810.0,168.5 822.5,161.5 835.0,154.4 847.5,147.2 860.0,140.0 872.5,132.7 885.0,125.4 897.5,118.0 910.0,110.6"
+      fill="none" stroke="var(--violet)" stroke-width="4.2" opacity="0.85"/>
+
+    <!-- Planet points (linear axes) -->
+    <g>
+      <circle cx="119.8" cy="429.6" r="6.5" fill="var(--pink)"/>
+      <circle cx="128.0" cy="428.9" r="6.5" fill="var(--pink)"/>
+      <circle cx="135.0" cy="428.2" r="7.5" fill="var(--pink-bright)"/>
+      <circle cx="148.0" cy="426.7" r="6.5" fill="var(--pink)"/>
+      <circle cx="240.0" cy="409.1" r="6.5" fill="var(--pink)"/>
+      <circle cx="348.5" cy="378.0" r="6.5" fill="var(--pink)"/>
+      <circle cx="590.0" cy="281.5" r="6.5" fill="var(--pink)"/>
+      <circle cx="862.5" cy="138.6" r="6.5" fill="var(--pink)"/>
+
+      <text x="156" y="418" class="tiny outline">inner planets cluster here</text>
+      <text x="874" y="142" class="tiny outline">Neptune</text>
+      <text x="600" y="286" class="tiny outline">Uranus</text>
+      <text x="360" y="383" class="tiny outline">Saturn</text>
+      <text x="252" y="414" class="tiny outline">Jupiter</text>
+    </g>
+
+    <!-- Inset zoom (0–2 AU, 0–2.5 years) -->
+    <g>
+      <rect x="150" y="90" width="300" height="200" rx="14" fill="none" stroke="var(--grid-strong)" stroke-width="1.6" opacity="0.95"/>
+      <text x="170" y="118" class="small outline">zoom: inner planets</text>
+
+      <!-- inset axes -->
+      <line x1="170" y1="250" x2="410" y2="250" stroke="var(--teal)" stroke-width="3.0" opacity="0.9"/>
+      <line x1="170" y1="250" x2="170" y2="120" stroke="var(--teal)" stroke-width="3.0" opacity="0.9"/>
+      <text x="406" y="270" class="tiny outline" text-anchor="end"><tspan class="math">a</tspan></text>
+      <text x="186" y="140" class="tiny outline"><tspan class="math">P</tspan></text>
+
+      <!-- inset points (computed) -->
+      <circle cx="220.7" cy="233.4" r="6.0" fill="var(--pink)"/>
+      <text x="232" y="238" class="tiny outline">Mercury</text>
+      <circle cx="263.6" cy="208.5" r="6.0" fill="var(--pink)"/>
+      <text x="275" y="213" class="tiny outline">Venus</text>
+      <circle cx="300.0" cy="182.0" r="7.0" fill="var(--pink-bright)"/>
+      <text x="312" y="186" class="tiny outline">Earth</text>
+      <circle cx="367.6" cy="122.6" r="6.0" fill="var(--pink)"/>
+      <text x="350" y="116" class="tiny outline">Mars</text>
+    </g>
+  </g>
+</svg>
+

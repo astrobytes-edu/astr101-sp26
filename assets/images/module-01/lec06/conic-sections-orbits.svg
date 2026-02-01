@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540" role="img" aria-labelledby="title desc" data-theme="dark" data-palette="aurora">
+  <title id="title">Conic sections from inverse-square gravity</title>
+  <desc id="desc">Four panels show possible trajectories around a central mass under inverse-square gravity: circle (e=0), ellipse (0&lt;e&lt;1), parabola (e=1), and hyperbola (e&gt;1). The central mass is at a focus of each trajectory. Bound versus escape paths are labeled.</desc>
+
+  <defs>
+    <style>
+      :root{
+        --bg:#0b0b0f;
+        --panel:#13162a;
+        --fg:#eef0ff;
+        --muted:#c9cbe5;
+        --faint:#8f92ad;
+        --grid:#1a1c28;
+        --grid-strong:#24263a;
+
+        --aurora-teal:#028391;
+        --aurora-teal-bright:#41A2AC;
+        --aurora-teal-dim:#02626D;
+        --aurora-teal-pale:#A6D4D8;
+
+        --aurora-pink:#BE5A83;
+        --aurora-pink-bright:#CE83A2;
+        --aurora-pink-dim:#8E4462;
+        --aurora-pink-pale:#E8C5D4;
+
+        --aurora-violet:#7077A1;
+        --aurora-violet-bright:#9499B8;
+        --aurora-violet-dim:#545979;
+        --aurora-violet-pale:#CDCFDE;
+
+        --teal:var(--aurora-teal);
+        --teal-bright:var(--aurora-teal-bright);
+        --teal-dim:var(--aurora-teal-dim);
+        --teal-pale:var(--aurora-teal-pale);
+
+        --pink:var(--aurora-pink);
+        --pink-bright:var(--aurora-pink-bright);
+        --pink-dim:var(--aurora-pink-dim);
+        --pink-pale:var(--aurora-pink-pale);
+
+        --violet:var(--aurora-violet);
+        --violet-bright:var(--aurora-violet-bright);
+        --violet-dim:var(--aurora-violet-dim);
+        --violet-pale:var(--aurora-violet-pale);
+
+        --sun:#f6d55c;
+      }
+
+      text{
+        font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+        fill: var(--fg);
+      }
+      .title{ font-size: 28px; font-weight: 750; }
+      .subtitle{ font-size: 18px; fill: var(--muted); }
+      .label{ font-size: 20px; font-weight: 700; }
+      .small{ font-size: 18px; letter-spacing: 0.2px; fill: var(--muted); }
+      .outline{ paint-order: stroke; stroke: var(--bg); stroke-width: 6px; stroke-linejoin: round; }
+      .panel{ fill: var(--panel); stroke: var(--violet); stroke-width: 1.5; opacity: 0.96; }
+      .dash{ stroke-dasharray: 10 10; }
+      .math{ font-style: italic; }
+    </style>
+
+    <filter id="softGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="2.0" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="960" height="540" fill="var(--bg)"/>
+
+  <text x="48" y="56" class="title">Conic sections from gravity</text>
+  <text x="48" y="82" class="subtitle">Inverse-square, central gravity produces circle, ellipse, parabola, or hyperbola.</text>
+
+  <g>
+    <rect x="48" y="110" width="864" height="340" rx="16" class="panel"/>
+
+    <!-- Four subpanels -->
+    <rect x="72" y="132" width="400" height="148" rx="14" fill="none" stroke="var(--grid-strong)" stroke-width="1.5" opacity="0.9"/>
+    <rect x="488" y="132" width="400" height="148" rx="14" fill="none" stroke="var(--grid-strong)" stroke-width="1.5" opacity="0.9"/>
+    <rect x="72" y="292" width="400" height="148" rx="14" fill="none" stroke="var(--grid-strong)" stroke-width="1.5" opacity="0.9"/>
+    <rect x="488" y="292" width="400" height="148" rx="14" fill="none" stroke="var(--grid-strong)" stroke-width="1.5" opacity="0.9"/>
+
+    <!-- Circle -->
+    <text x="92" y="164" class="label">Circle</text>
+    <text x="92" y="188" class="small"><tspan class="math">e</tspan> = 0 (bound)</text>
+    <circle cx="262" cy="206" r="56" fill="none" stroke="var(--teal)" stroke-width="4.6" opacity="0.95"/>
+    <circle cx="262" cy="206" r="9" fill="var(--sun)" filter="url(#softGlow)"/>
+    <text x="262" y="242" class="small outline" text-anchor="middle">focus = center</text>
+
+    <!-- Ellipse (Sun at a focus) -->
+    <text x="508" y="164" class="label">Ellipse</text>
+    <text x="508" y="188" class="small">0 &lt; <tspan class="math">e</tspan> &lt; 1 (bound)</text>
+    <ellipse cx="694" cy="206" rx="88" ry="50" fill="none" stroke="var(--teal)" stroke-width="4.6" opacity="0.95"/>
+    <!-- Foci for rx=88, ry=50: c = sqrt(a^2 - b^2) ≈ 72.4 -->
+    <circle cx="622" cy="206" r="9" fill="var(--sun)" filter="url(#softGlow)"/>
+    <circle cx="766" cy="206" r="6" fill="var(--grid-strong)" opacity="0.85"/>
+    <text x="622" y="242" class="small outline" text-anchor="middle">Sun at a focus</text>
+
+    <!-- Parabola (escape at threshold) -->
+    <text x="92" y="324" class="label">Parabola</text>
+    <text x="92" y="348" class="small"><tspan class="math">e</tspan> = 1 (just escapes)</text>
+    <circle cx="224" cy="366" r="9" fill="var(--sun)" filter="url(#softGlow)"/>
+    <!-- Parabola opening right (stylized) -->
+    <path d="M 172 432 C 208 404 208 332 172 304" fill="none" stroke="var(--teal)" stroke-width="4.6" opacity="0.95"/>
+    <path d="M 172 304 C 292 304 360 336 420 366 C 360 396 292 428 172 432" fill="none" stroke="var(--teal)" stroke-width="4.6" opacity="0.95"/>
+    <text x="224" y="402" class="small outline" text-anchor="middle">escape threshold</text>
+
+    <!-- Hyperbola (escape with extra energy) -->
+    <text x="508" y="324" class="label">Hyperbola</text>
+    <text x="508" y="348" class="small"><tspan class="math">e</tspan> &gt; 1 (escapes)</text>
+    <circle cx="628" cy="366" r="9" fill="var(--sun)" filter="url(#softGlow)"/>
+    <!-- Hyperbola branch (stylized) -->
+    <path d="M 600 304 C 640 328 664 348 682 366 C 664 384 640 404 600 428" fill="none" stroke="var(--teal)" stroke-width="4.6" opacity="0.95"/>
+    <path d="M 682 366 C 744 324 820 312 872 314" fill="none" stroke="var(--teal)" stroke-width="4.6" opacity="0.95"/>
+    <path d="M 682 366 C 744 408 820 420 872 418" fill="none" stroke="var(--teal)" stroke-width="4.6" opacity="0.95"/>
+    <text x="628" y="402" class="small outline" text-anchor="middle">unbound path</text>
+
+    <!-- Bound vs escape callout -->
+    <text x="480" y="446" class="label outline" text-anchor="middle">
+      Bound orbits close (circle/ellipse). Escape orbits do not (parabola/hyperbola).
+    </text>
+  </g>
+
+  <g transform="translate(48,470)">
+    <rect x="0" y="0" width="864" height="70" rx="12" class="panel"/>
+    <text x="18" y="30" class="label">Key idea: the orbit shape is a consequence of inverse-square gravity, not an assumption.</text>
+    <text x="18" y="54" class="small">Most planets are bound, so their paths are ellipses (circles are a special case).</text>
+  </g>
+</svg>

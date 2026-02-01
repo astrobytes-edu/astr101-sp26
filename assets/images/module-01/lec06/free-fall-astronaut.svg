@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540" role="img" aria-labelledby="title desc" data-theme="dark" data-palette="aurora">
+  <title id="title">Free fall creates weightlessness</title>
+  <desc id="desc">Two-panel diagram. Left: a person standing on Earth experiences gravity downward and a normal force upward from the floor, producing the sensation of weight. Right: an astronaut in orbit experiences gravity but no normal force because everything is falling together, producing apparent weightlessness.</desc>
+
+  <defs>
+    <style>
+      :root{
+        --bg:#0b0b0f;
+        --panel:#13162a;
+        --fg:#eef0ff;
+        --muted:#c9cbe5;
+        --faint:#8f92ad;
+        --grid:#1a1c28;
+        --grid-strong:#24263a;
+
+        --aurora-teal:#028391;
+        --aurora-teal-bright:#41A2AC;
+        --aurora-teal-dim:#02626D;
+        --aurora-teal-pale:#A6D4D8;
+
+        --aurora-pink:#BE5A83;
+        --aurora-pink-bright:#CE83A2;
+        --aurora-pink-dim:#8E4462;
+        --aurora-pink-pale:#E8C5D4;
+
+        --aurora-violet:#7077A1;
+        --aurora-violet-bright:#9499B8;
+        --aurora-violet-dim:#545979;
+        --aurora-violet-pale:#CDCFDE;
+
+        --teal:var(--aurora-teal);
+        --teal-bright:var(--aurora-teal-bright);
+        --teal-dim:var(--aurora-teal-dim);
+        --teal-pale:var(--aurora-teal-pale);
+
+        --pink:var(--aurora-pink);
+        --pink-bright:var(--aurora-pink-bright);
+        --pink-dim:var(--aurora-pink-dim);
+        --pink-pale:var(--aurora-pink-pale);
+
+        --violet:var(--aurora-violet);
+        --violet-bright:var(--aurora-violet-bright);
+        --violet-dim:var(--aurora-violet-dim);
+        --violet-pale:var(--aurora-violet-pale);
+      }
+
+      text{
+        font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+        fill: var(--fg);
+      }
+      .title{ font-size: 28px; font-weight: 750; }
+      .subtitle{ font-size: 18px; fill: var(--muted); }
+      .label{ font-size: 20px; font-weight: 700; }
+      .small{ font-size: 18px; letter-spacing: 0.2px; fill: var(--muted); }
+      .outline{ paint-order: stroke; stroke: var(--bg); stroke-width: 6px; stroke-linejoin: round; }
+      .panel{ fill: var(--panel); stroke: var(--violet); stroke-width: 1.5; opacity: 0.96; }
+    </style>
+
+    <filter id="softGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="2.0" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <marker id="arrow-pink" markerWidth="10" markerHeight="10" refX="7" refY="5" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="var(--pink)"/>
+    </marker>
+    <marker id="arrow-teal" markerWidth="10" markerHeight="10" refX="7" refY="5" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="var(--teal)"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="960" height="540" fill="var(--bg)"/>
+
+  <text x="48" y="56" class="title">Why astronauts float</text>
+  <text x="48" y="82" class="subtitle">Weight is the floor’s push (normal force) — in free fall, there is no push.</text>
+
+  <g>
+    <rect x="48" y="110" width="864" height="340" rx="16" class="panel"/>
+
+    <!-- Subpanels -->
+    <rect x="72" y="132" width="388" height="296" rx="14" fill="none" stroke="var(--grid-strong)" stroke-width="1.5" opacity="0.9"/>
+    <rect x="500" y="132" width="388" height="296" rx="14" fill="none" stroke="var(--grid-strong)" stroke-width="1.5" opacity="0.9"/>
+
+    <text x="266" y="164" class="label" text-anchor="middle">Standing on Earth</text>
+    <text x="694" y="164" class="label" text-anchor="middle">Orbit (free fall)</text>
+
+    <!-- Left: standing -->
+    <g>
+      <line x1="110" y1="396" x2="422" y2="396" stroke="var(--grid-strong)" stroke-width="4" opacity="0.85"/>
+
+      <!-- Person (simple silhouette) -->
+      <circle cx="266" cy="248" r="14" fill="var(--fg)" opacity="0.9"/>
+      <path d="M 266 262 L 266 312" stroke="var(--fg)" stroke-width="6" stroke-linecap="round" opacity="0.9"/>
+      <path d="M 246 284 L 286 284" stroke="var(--fg)" stroke-width="6" stroke-linecap="round" opacity="0.9"/>
+      <path d="M 266 312 L 246 356" stroke="var(--fg)" stroke-width="6" stroke-linecap="round" opacity="0.9"/>
+      <path d="M 266 312 L 286 356" stroke="var(--fg)" stroke-width="6" stroke-linecap="round" opacity="0.9"/>
+
+      <!-- Forces -->
+      <line x1="326" y1="272" x2="326" y2="344" stroke="var(--pink)" stroke-width="4" marker-end="url(#arrow-pink)" opacity="0.95"/>
+      <text x="338" y="314" class="small outline" fill="var(--pink)">gravity</text>
+
+      <line x1="206" y1="360" x2="206" y2="296" stroke="var(--teal)" stroke-width="4" marker-end="url(#arrow-teal)" opacity="0.95"/>
+      <text x="194" y="298" class="small outline" fill="var(--teal)" text-anchor="end">normal</text>
+
+      <text x="266" y="426" class="small outline" text-anchor="middle">you feel weight because the floor pushes up</text>
+    </g>
+
+    <!-- Right: free fall -->
+    <g>
+      <!-- ISS / floor frame -->
+      <rect x="560" y="306" width="268" height="92" rx="14" fill="none" stroke="var(--grid-strong)" stroke-width="2.2" opacity="0.8"/>
+      <text x="694" y="420" class="small outline" text-anchor="middle">no normal force inside the station</text>
+
+      <!-- Astronaut -->
+      <circle cx="654" cy="226" r="14" fill="var(--fg)" opacity="0.9"/>
+      <path d="M 654 240 L 654 290" stroke="var(--fg)" stroke-width="6" stroke-linecap="round" opacity="0.9"/>
+      <path d="M 634 258 L 674 246" stroke="var(--fg)" stroke-width="6" stroke-linecap="round" opacity="0.9"/>
+      <path d="M 644 292 L 620 324" stroke="var(--fg)" stroke-width="6" stroke-linecap="round" opacity="0.9"/>
+      <path d="M 664 292 L 696 320" stroke="var(--fg)" stroke-width="6" stroke-linecap="round" opacity="0.9"/>
+
+      <!-- Gravity still acts -->
+      <line x1="724" y1="232" x2="724" y2="318" stroke="var(--pink)" stroke-width="4" marker-end="url(#arrow-pink)" opacity="0.95"/>
+      <text x="736" y="278" class="small outline" fill="var(--pink)">gravity</text>
+
+      <text x="694" y="190" class="small outline" text-anchor="middle">everything falls together</text>
+      <path d="M 694 204 C 676 214 668 232 668 252" fill="none" stroke="var(--violet)" stroke-width="2.4" opacity="0.85" marker-end="url(#arrow-teal)"/>
+    </g>
+  </g>
+
+  <g transform="translate(48,470)">
+    <rect x="0" y="0" width="864" height="70" rx="12" class="panel"/>
+    <text x="18" y="30" class="label">Key idea: astronauts float because they are in free fall, not because gravity is zero.</text>
+    <text x="18" y="54" class="small">“Weightless” means “no supporting force,” not “no gravitational pull.”</text>
+  </g>
+</svg>
+

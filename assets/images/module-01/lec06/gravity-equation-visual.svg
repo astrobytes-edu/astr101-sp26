@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540" role="img" aria-labelledby="title desc" data-theme="dark" data-palette="aurora">
+  <title id="title">Newton’s law of universal gravitation (visual)</title>
+  <desc id="desc">Two masses m1 and m2 are separated by a center-to-center distance r. Equal and opposite force arrows point toward each other. The equation F = G m1 m2 / r^2 is displayed and the inverse-square dependence is highlighted.</desc>
+
+  <defs>
+    <style>
+      :root{
+        --bg:#0b0b0f;
+        --panel:#13162a;
+        --fg:#eef0ff;
+        --muted:#c9cbe5;
+        --faint:#8f92ad;
+        --grid:#1a1c28;
+        --grid-strong:#24263a;
+
+        --aurora-teal:#028391;
+        --aurora-teal-bright:#41A2AC;
+        --aurora-teal-dim:#02626D;
+        --aurora-teal-pale:#A6D4D8;
+
+        --aurora-pink:#BE5A83;
+        --aurora-pink-bright:#CE83A2;
+        --aurora-pink-dim:#8E4462;
+        --aurora-pink-pale:#E8C5D4;
+
+        --aurora-violet:#7077A1;
+        --aurora-violet-bright:#9499B8;
+        --aurora-violet-dim:#545979;
+        --aurora-violet-pale:#CDCFDE;
+
+        --teal:var(--aurora-teal);
+        --teal-bright:var(--aurora-teal-bright);
+        --teal-dim:var(--aurora-teal-dim);
+        --teal-pale:var(--aurora-teal-pale);
+
+        --pink:var(--aurora-pink);
+        --pink-bright:var(--aurora-pink-bright);
+        --pink-dim:var(--aurora-pink-dim);
+        --pink-pale:var(--aurora-pink-pale);
+
+        --violet:var(--aurora-violet);
+        --violet-bright:var(--aurora-violet-bright);
+        --violet-dim:var(--aurora-violet-dim);
+        --violet-pale:var(--aurora-violet-pale);
+      }
+
+      text{
+        font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+        fill: var(--fg);
+      }
+      .title{ font-size: 28px; font-weight: 750; }
+      .subtitle{ font-size: 18px; fill: var(--muted); }
+      .label{ font-size: 20px; font-weight: 700; }
+      .small{ font-size: 18px; letter-spacing: 0.2px; fill: var(--muted); }
+      .outline{ paint-order: stroke; stroke: var(--bg); stroke-width: 6px; stroke-linejoin: round; }
+      .panel{ fill: var(--panel); stroke: var(--violet); stroke-width: 1.5; opacity: 0.96; }
+      .dash{ stroke-dasharray: 10 10; }
+      .math{ font-style: italic; }
+    </style>
+
+    <filter id="softGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="2.0" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <marker id="arrow-pink" markerWidth="10" markerHeight="10" refX="7" refY="5" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="var(--pink)"/>
+    </marker>
+    <marker id="arrow-violet" markerWidth="10" markerHeight="10" refX="7" refY="5" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="var(--violet)"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="960" height="540" fill="var(--bg)"/>
+
+  <text x="48" y="56" class="title">Universal gravitation</text>
+  <text x="48" y="82" class="subtitle">Both masses pull — the forces are equal in magnitude and opposite in direction.</text>
+
+  <g>
+    <rect x="48" y="110" width="864" height="340" rx="16" class="panel"/>
+
+    <!-- Masses -->
+    <circle cx="300" cy="300" r="58" fill="var(--teal)" opacity="0.92" filter="url(#softGlow)"/>
+    <circle cx="680" cy="300" r="38" fill="var(--teal-dim)" opacity="0.92" filter="url(#softGlow)"/>
+    <text x="300" y="372" class="label outline" text-anchor="middle"><tspan class="math">m</tspan><tspan baseline-shift="-30%" font-size="70%">1</tspan></text>
+    <text x="680" y="362" class="label outline" text-anchor="middle"><tspan class="math">m</tspan><tspan baseline-shift="-30%" font-size="70%">2</tspan></text>
+
+    <!-- Center-to-center distance r -->
+    <line x1="300" y1="300" x2="680" y2="300" stroke="var(--violet)" stroke-width="2.8" opacity="0.85" class="dash"/>
+    <line x1="320" y1="272" x2="660" y2="272" stroke="var(--violet)" stroke-width="3.0" marker-end="url(#arrow-violet)" opacity="0.85"/>
+    <text x="490" y="258" class="label outline" fill="var(--violet)" text-anchor="middle"><tspan class="math">r</tspan></text>
+
+    <!-- Force arrows -->
+    <line x1="360" y1="300" x2="432" y2="300" stroke="var(--pink)" stroke-width="4" marker-end="url(#arrow-pink)" opacity="0.95"/>
+    <line x1="620" y1="300" x2="548" y2="300" stroke="var(--pink)" stroke-width="4" marker-end="url(#arrow-pink)" opacity="0.95"/>
+    <text x="396" y="332" class="small outline" fill="var(--pink)" text-anchor="middle"><tspan class="math">F</tspan></text>
+    <text x="584" y="332" class="small outline" fill="var(--pink)" text-anchor="middle"><tspan class="math">F</tspan></text>
+
+    <!-- Equation (typography via tspans) -->
+    <g transform="translate(140,140)">
+      <rect x="0" y="0" width="320" height="88" rx="12" fill="none" stroke="var(--grid-strong)" stroke-width="1.6" opacity="0.9"/>
+      <text x="18" y="36" class="label outline">
+        <tspan class="math">F</tspan>
+        <tspan> = </tspan>
+        <tspan class="math">G</tspan>
+        <tspan> </tspan>
+        <tspan class="math">m</tspan><tspan baseline-shift="-30%" font-size="70%">1</tspan>
+        <tspan> </tspan>
+        <tspan class="math">m</tspan><tspan baseline-shift="-30%" font-size="70%">2</tspan>
+        <tspan> / </tspan>
+        <tspan class="math">r</tspan><tspan baseline-shift="super" font-size="70%">2</tspan>
+      </text>
+      <text x="18" y="66" class="small outline">
+        Double <tspan class="math">r</tspan> → <tspan fill="var(--pink)" font-weight="800">1/4</tspan> the force
+      </text>
+    </g>
+
+    <!-- Misconception guard -->
+    <text x="480" y="424" class="label outline" text-anchor="middle">
+      Both objects feel the same force (Newton’s Third Law).
+    </text>
+  </g>
+
+  <g transform="translate(48,470)">
+    <rect x="0" y="0" width="864" height="70" rx="12" class="panel"/>
+    <text x="18" y="30" class="label">Key idea: gravity depends on both masses and on the distance squared.</text>
+    <text x="18" y="54" class="small">The forces are equal and opposite — but the accelerations differ if the masses differ.</text>
+  </g>
+</svg>
+

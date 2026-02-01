@@ -127,13 +127,13 @@
       <text x="146" y="147.9" text-anchor="end">200</text>
     </g>
 
-    <!-- Axis titles -->
-    <text x="490" y="492" class="small" text-anchor="middle">Semimajor axis, <tspan font-style="italic">a</tspan> (AU) — log scale</text>
-    <text x="92" y="288" class="small" text-anchor="middle" transform="rotate(-90 92 288)">Orbital period, <tspan font-style="italic">P</tspan> (years) — log scale</text>
+    <!-- Axis titles (kept inside the plot so they don't collide with the footer panel) -->
+    <text x="790" y="412" class="small outline" text-anchor="end" fill="var(--muted)"><tspan font-style="italic">a</tspan> (AU)</text>
+    <text x="192" y="170" class="small outline" text-anchor="start" fill="var(--muted)"><tspan font-style="italic">P</tspan> (years)</text>
 
-    <!-- Best-fit (Kepler III) line: P ∝ a^(3/2) -->
+    <!-- Best-fit (Kepler III) line: P scales as a^(3/2) -->
     <line x1="160.0" y1="424.3" x2="820.0" y2="142.5" stroke="var(--violet)" stroke-width="3.5" opacity="0.85"/>
-    <path d="M 620 223 L 700 189" fill="none" stroke="var(--violet)" stroke-width="0" marker-end="url(#arrow-violet)"/>
+    <path d="M 620 223 L 700 189" fill="none" stroke="var(--violet)" stroke-width="2.4" opacity="0.0" marker-end="url(#arrow-violet)"/>
     <text x="690" y="196" class="label outline" fill="var(--violet)" text-anchor="end">
       slope = 3<tspan baseline-shift="super" font-size="70%">/</tspan>2
     </text>
@@ -170,10 +170,10 @@
   <g transform="translate(48,470)">
     <rect x="0" y="0" width="864" height="70" rx="12" class="panel"/>
     <text x="18" y="30" class="label">
-      Key idea: <tspan font-style="italic">P</tspan><tspan baseline-shift="super" font-size="70%">2</tspan> ∝ <tspan font-style="italic">a</tspan><tspan baseline-shift="super" font-size="70%">3</tspan> becomes a straight line in log–log space.
+      Key idea: a power law becomes a straight line in log–log space.
     </text>
     <text x="18" y="54" class="small">
-      A power law turns into “line + slope” — the slope here encodes the 3/2 exponent.
+      The slope encodes the exponent: <tspan font-style="italic">P</tspan> scales as <tspan font-style="italic">a</tspan><tspan baseline-shift="super" font-size="70%">3/2</tspan>.
     </text>
   </g>
 </svg>

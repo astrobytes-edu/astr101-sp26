@@ -189,11 +189,11 @@
       <line x1="767" y1="330" x2="806" y2="336" stroke="var(--violet)" stroke-width="2.2" opacity="0.55"/>
 
       <!-- Fixed direction cue (moved down to avoid overlapping the panel subtitle) -->
-      <line x1="707" y1="206" x2="707" y2="232" stroke="var(--grid-strong)" stroke-width="2.2" marker-end="url(#arrow-violet)" opacity="0.8"/>
-      <text x="707" y="198" class="small outline" text-anchor="middle">toward fixed stars</text>
+      <line x1="590" y1="212" x2="590" y2="236" stroke="var(--grid-strong)" stroke-width="2.2" marker-end="url(#arrow-violet)" opacity="0.8"/>
+      <text x="590" y="206" class="small faint outline" text-anchor="middle">toward fixed stars</text>
 
-      <!-- Legend -->
-      <text x="872" y="196" class="small outline" text-anchor="end">E = Earth, M = Mars</text>
+      <!-- Legend (kept separate from the direction cue) -->
+      <text x="890" y="242" class="small outline" text-anchor="end">E = Earth, M = Mars</text>
     </g>
 
     <text x="524" y="420" class="label outline">Mars always moves forward</text>

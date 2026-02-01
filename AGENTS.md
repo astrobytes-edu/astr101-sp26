@@ -17,6 +17,12 @@ This repo is a Quarto website + RevealJS slide system for **ASTR 101: Principles
 - Run `quarto render` (or `make render`) before claiming success on any content/site change.
 - Fix one root cause at a time when debugging; don’t bundle “drive-by” refactors.
 
+## File Safety (Non‑Negotiable)
+
+- **Do not delete, move, or rename any files without explicit, prior user approval.**
+- If a file seems “unrelated,” ask first; do not clean it up proactively.
+- If you accidentally delete something, stop and restore it immediately (do not commit the deletion).
+
 ## Typography (Non‑Negotiable)
 
 - **Em dash spacing:** When using an em dash (—) in prose, **always put a space on both sides**.

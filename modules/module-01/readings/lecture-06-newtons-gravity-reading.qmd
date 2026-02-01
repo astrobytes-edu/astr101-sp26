@@ -77,13 +77,9 @@ It sounds paradoxical. In Newton's time, "earthly" physics and "celestial" physi
 
 Newton's insight was radical: **the Moon IS falling**. Right now. Continuously. It's falling toward Earth at every moment — but it's also moving sideways so fast that it keeps missing. That combination of falling and moving sideways is what we call an orbit.
 
-::: {.callout-note title="FIGURE PLACEHOLDER: Newton's Cannon" collapse="false"}
-**Figure ID:** `newtons-cannon`
+{{< fig newtons-cannon >}}
 
-**Description:** Classic Newton's cannon thought experiment. A cannon on top of a very tall mountain with multiple trajectories showing: (1) Low speed → projectile curves and hits Earth, (2) Medium speed → projectile curves more, still hits Earth, (3) Orbital speed → projectile "falls around" Earth continuously, (4) Escape speed → projectile escapes to infinity. Caption: "The Moon is simply a cannonball moving fast enough to keep missing Earth as it falls."
-
-**Alt text:** Newton's cannon fires projectiles at increasing speeds; at orbital velocity, the projectile falls continuously around Earth.
-:::
+{{< fig apple-and-moon >}}
 
 ::: {.callout-note title="✏️ Sketch It: Newton's Cannon" collapse="true"}
 Draw a circular Earth. On top of it, draw a tall mountain with a cannon pointing horizontally (parallel to the ground).
@@ -278,13 +274,7 @@ This surprises people. A car driving around a curve at constant speedometer read
 
 **Astronomical payoff:** A planet moving in a circle at constant speed is **accelerating** because its direction constantly changes. That acceleration requires a force — and gravity provides it. This is the key to understanding orbits!
 
-::: {.callout-note title="FIGURE PLACEHOLDER: Acceleration Includes Direction Changes" collapse="false"}
-**Figure ID:** `acceleration-direction-change`
-
-**Description:** Show a ball moving in a circle at constant speed. Velocity vectors at several points (always tangent to circle). Show that velocity vector changes direction. Show acceleration vector pointing toward center. Caption: "Even at constant speed, the changing direction means changing velocity — which means acceleration."
-
-**Alt text:** A ball moves in a circle with velocity arrows tangent to the path; the change in velocity direction shows there is acceleration toward the center.
-:::
+{{< fig acceleration-direction-change >}}
 
 ::: {.callout-check-yourself title="Check Yourself 4 — Circular Motion"}
 A car drives around a circular track at a constant speedometer reading of 60 mph. Is the car accelerating?
@@ -345,13 +335,7 @@ $$F_c = ma_c = \frac{mv^2}{r}$$
 
 The formula tells us how *strong* the center-directed force must be. Something has to provide that force — otherwise no circular motion.
 
-::: {.callout-note title="FIGURE PLACEHOLDER: Centripetal Force Examples" collapse="false"}
-**Figure ID:** `centripetal-force-examples`
-
-**Description:** Three examples side by side: (1) Planet orbiting Sun — gravity provides centripetal force, (2) Ball on string swung in circle — tension provides centripetal force, (3) Car turning on road — friction provides centripetal force. Each shows force arrow pointing toward center.
-
-**Alt text:** Three examples showing different forces (gravity, tension, friction) all providing the centripetal force for circular motion.
-:::
+{{< fig centripetal-force-examples >}}
 
 ::: {.callout-tip title="What About Centrifugal Force?" collapse="true"}
 You may have heard of "centrifugal force" — the outward push you feel when a car turns. In an **inertial frame** (standing on the ground watching), there is no outward force. The real force points **inward** (centripetal), curving the car's path.
@@ -469,13 +453,7 @@ Pre-Newton assumption: **Different rules govern Earth and the heavens.**
 Newton's claim: **One equation governs everything that has mass.**
 :::
 
-::: {.callout-note title="FIGURE PLACEHOLDER: Gravity Equation Visualized" collapse="false"}
-**Figure ID:** `gravity-equation-visual`
-
-**Description:** Show two masses $m_1$ and $m_2$ separated by distance $r$. Force arrows pointing toward each other (both feel the same force). Label all quantities. Perhaps show what happens when you double $r$ (force becomes 1/4).
-
-**Alt text:** Two masses attract each other with equal and opposite forces; the force depends on both masses and decreases with distance squared.
-:::
+{{< fig gravity-equation-visual >}}
 
 ### Verification: Does Gravity Really Reach the Moon?
 
@@ -527,13 +505,7 @@ Gravity "spreads" the same way. The gravitational influence of a mass spreads ov
 
 **The mechanism in one line:** Surface area of a sphere grows like $4\pi r^2$, so spreading over that area makes the "per-area effect" drop like $1/r^2$.
 
-::: {.callout-note title="FIGURE PLACEHOLDER: The Inverse-Square Law" collapse="false"}
-**Figure ID:** `inverse-square-diagram`
-
-**Description:** Show concentric spheres around a mass (or light source). At $r$: one unit of "intensity" per unit area. At $2r$: sphere has 4× the surface area, so 1/4 intensity per unit area. At $3r$: sphere has 9× the surface area, so 1/9 intensity per unit area.
-
-**Alt text:** As distance from a source doubles, the same influence spreads over 4× the area, resulting in 1/4 the intensity at any point.
-:::
+{{< fig inverse-square-diagram >}}
 
 ::: {.callout-check-yourself title="Check Yourself 7 — Inverse-Square Calculation"}
 The Moon is about 60 Earth radii from Earth's center. Compared to gravitational acceleration at Earth's surface, the Moon experiences gravitational acceleration that is:
@@ -635,13 +607,7 @@ You haven't escaped gravity. You've just eliminated the floor's push by falling 
 
 **Analogy:** If you're in an elevator and the cable snaps, during the fall you'd feel weightless too — not because gravity disappeared, but because you and the elevator are falling together. (Please don't test this.)
 
-::: {.callout-note title="FIGURE PLACEHOLDER: Free Fall Creates Weightlessness" collapse="false"}
-**Figure ID:** `free-fall-astronaut`
-
-**Description:** Two panels: (1) Person standing on Earth: gravity pulls down, floor pushes up. These forces balance, person feels weight. (2) Astronaut in ISS: gravity pulls down, but floor is also falling. No normal force, so no sensation of weight.
-
-**Alt text:** On Earth, the floor's push creates the sensation of weight. In orbit, everything falls together, so there's no floor push — weightlessness.
-:::
+{{< fig free-fall-astronaut >}}
 
 ::: {.callout-check-yourself title="Check Yourself 9 — Weightlessness"}
 An astronaut floats inside the ISS, 400 km above Earth's surface. At this location, Earth's gravitational pull on the astronaut is:
@@ -698,13 +664,7 @@ Most planets have bound orbits (they don't escape), so they follow ellipses. The
 
 **Kepler discovered the pattern. Newton explained why it had to be that way.**
 
-::: {.callout-note title="FIGURE PLACEHOLDER: Conic Sections from Gravity" collapse="false"}
-**Figure ID:** `conic-sections-orbits`
-
-**Description:** Show a central mass (Sun) with different trajectories: Circle (bound, e=0), Ellipse (bound, 0<e<1), Parabola (just escapes, e=1), Hyperbola (escapes with speed to spare, e>1). Label each with its energy condition.
-
-**Alt text:** Objects under inverse-square gravity follow conic sections: bound objects trace ellipses or circles; escaping objects trace parabolas or hyperbolas.
-:::
+{{< fig conic-sections-orbits >}}
 
 ::: {.callout-check-yourself title="Check Yourself 10 — First Law Explained"}
 Newton explained that planetary orbits are ellipses because:

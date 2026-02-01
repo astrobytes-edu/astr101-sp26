@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540" role="img" aria-labelledby="title desc" data-theme="dark" data-palette="aurora">
+  <title id="title">Inverse-square law: spreading over spheres</title>
+  <desc id="desc">A source at the center is surrounded by three concentric circles representing spheres at distances r, 2r, and 3r. Labels indicate that surface area grows like r squared, so the per-area strength drops like one over r squared. The relative strengths 1, 1/4, and 1/9 are shown.</desc>
+
+  <defs>
+    <style>
+      :root{
+        --bg:#0b0b0f;
+        --panel:#13162a;
+        --fg:#eef0ff;
+        --muted:#c9cbe5;
+        --faint:#8f92ad;
+        --grid:#1a1c28;
+        --grid-strong:#24263a;
+
+        --aurora-teal:#028391;
+        --aurora-teal-bright:#41A2AC;
+        --aurora-teal-dim:#02626D;
+        --aurora-teal-pale:#A6D4D8;
+
+        --aurora-pink:#BE5A83;
+        --aurora-pink-bright:#CE83A2;
+        --aurora-pink-dim:#8E4462;
+        --aurora-pink-pale:#E8C5D4;
+
+        --aurora-violet:#7077A1;
+        --aurora-violet-bright:#9499B8;
+        --aurora-violet-dim:#545979;
+        --aurora-violet-pale:#CDCFDE;
+
+        --teal:var(--aurora-teal);
+        --teal-bright:var(--aurora-teal-bright);
+        --teal-dim:var(--aurora-teal-dim);
+        --teal-pale:var(--aurora-teal-pale);
+
+        --pink:var(--aurora-pink);
+        --pink-bright:var(--aurora-pink-bright);
+        --pink-dim:var(--aurora-pink-dim);
+        --pink-pale:var(--aurora-pink-pale);
+
+        --violet:var(--aurora-violet);
+        --violet-bright:var(--aurora-violet-bright);
+        --violet-dim:var(--aurora-violet-dim);
+        --violet-pale:var(--aurora-violet-pale);
+      }
+
+      text{
+        font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+        fill: var(--fg);
+      }
+      .title{ font-size: 28px; font-weight: 750; }
+      .subtitle{ font-size: 18px; fill: var(--muted); }
+      .label{ font-size: 20px; font-weight: 700; }
+      .small{ font-size: 18px; letter-spacing: 0.2px; fill: var(--muted); }
+      .outline{ paint-order: stroke; stroke: var(--bg); stroke-width: 6px; stroke-linejoin: round; }
+      .panel{ fill: var(--panel); stroke: var(--violet); stroke-width: 1.5; opacity: 0.96; }
+      .dash{ stroke-dasharray: 10 10; }
+      .math{ font-style: italic; }
+    </style>
+
+    <filter id="softGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="2.0" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="960" height="540" fill="var(--bg)"/>
+
+  <text x="48" y="56" class="title">The inverse-square law</text>
+  <text x="48" y="82" class="subtitle">Same influence spreads over spheres whose area grows like <tspan class="math">r</tspan>².</text>
+
+  <g>
+    <rect x="48" y="110" width="864" height="340" rx="16" class="panel"/>
+
+    <!-- Central source -->
+    <circle cx="390" cy="290" r="12" fill="var(--teal-bright)" opacity="0.95" filter="url(#softGlow)"/>
+    <circle cx="390" cy="290" r="20" fill="none" stroke="var(--teal)" stroke-width="2" opacity="0.5"/>
+    <text x="390" y="328" class="small outline" text-anchor="middle">source</text>
+
+    <!-- Spheres (shown as circles in cross-section) -->
+    <circle cx="390" cy="290" r="70" fill="none" stroke="var(--violet)" stroke-width="2.8" opacity="0.75"/>
+    <circle cx="390" cy="290" r="140" fill="none" stroke="var(--violet)" stroke-width="2.8" opacity="0.55"/>
+    <circle cx="390" cy="290" r="210" fill="none" stroke="var(--violet)" stroke-width="2.8" opacity="0.4"/>
+
+    <!-- Radius markers -->
+    <line x1="390" y1="290" x2="460" y2="290" stroke="var(--grid-strong)" stroke-width="2.2" opacity="0.9"/>
+    <line x1="390" y1="290" x2="530" y2="290" stroke="var(--grid-strong)" stroke-width="2.2" opacity="0.55"/>
+    <line x1="390" y1="290" x2="600" y2="290" stroke="var(--grid-strong)" stroke-width="2.2" opacity="0.35"/>
+
+    <text x="468" y="278" class="small outline"><tspan class="math">r</tspan></text>
+    <text x="538" y="278" class="small outline">2<tspan class="math">r</tspan></text>
+    <text x="608" y="278" class="small outline">3<tspan class="math">r</tspan></text>
+
+    <!-- Strength labels -->
+    <g>
+      <rect x="640" y="164" width="240" height="204" rx="14" fill="none" stroke="var(--grid-strong)" stroke-width="1.6" opacity="0.9"/>
+      <text x="660" y="196" class="label outline">Per-area strength</text>
+      <text x="660" y="226" class="small outline">
+        at <tspan class="math">r</tspan>: <tspan fill="var(--pink)" font-weight="800">1</tspan>
+      </text>
+      <text x="660" y="256" class="small outline">
+        at 2<tspan class="math">r</tspan>: <tspan fill="var(--pink)" font-weight="800">1/4</tspan>
+      </text>
+      <text x="660" y="286" class="small outline">
+        at 3<tspan class="math">r</tspan>: <tspan fill="var(--pink)" font-weight="800">1/9</tspan>
+      </text>
+      <text x="660" y="324" class="small outline">
+        because area scales as <tspan class="math">r</tspan><tspan baseline-shift="super" font-size="70%">2</tspan>
+      </text>
+      <text x="660" y="352" class="small outline">
+        so strength scales as 1/<tspan class="math">r</tspan><tspan baseline-shift="super" font-size="70%">2</tspan>
+      </text>
+    </g>
+
+    <!-- Visual emphasis on the r^2 idea -->
+    <text x="120" y="176" class="label outline">
+      Surface area of a sphere: 4π<tspan class="math">r</tspan><tspan baseline-shift="super" font-size="70%">2</tspan>
+    </text>
+    <text x="120" y="204" class="small outline">Double distance → 4× the area → 1/4 the strength.</text>
+  </g>
+
+  <g transform="translate(48,470)">
+    <rect x="0" y="0" width="864" height="70" rx="12" class="panel"/>
+    <text x="18" y="30" class="label">Key idea: inverse-square comes from geometry — not from “gravity running out.”</text>
+    <text x="18" y="54" class="small">The same total influence spreads over larger spherical surfaces as you move farther away.</text>
+  </g>
+</svg>

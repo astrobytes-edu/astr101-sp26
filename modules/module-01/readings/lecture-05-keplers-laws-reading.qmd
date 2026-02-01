@@ -537,7 +537,17 @@ $$a = \sqrt[3]{729} \times 1\,\text{AU} = 9 \text{ AU}$$
 
 Notice that $a^3 \approx P^2$ in every row — that's the Third Law in action. The agreement is remarkable; Kepler's pattern fits perfectly.
 
-{{< fig kepler-third-law-graph >}}
+::: {.columns}
+::: {.column width="50%"}
+{{< fig kepler-third-law-linear >}}
+:::
+
+::: {.column width="50%"}
+{{< fig kepler-third-law-loglog >}}
+:::
+:::
+
+The same data can look totally different depending on how you scale the axes. On linear axes, the inner planets bunch up; on a log–log plot, the power law becomes a straight line whose slope tells you the exponent.
 
 ::: {.callout-check-yourself title="Check Yourself 7 — Basic Calculation"}
 An asteroid orbits the Sun at a distance of 4 AU. What is its orbital period?
