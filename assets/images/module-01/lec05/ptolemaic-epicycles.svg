@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540" role="img" aria-labelledby="title desc" data-theme="dark" data-palette="aurora">
+  <title id="title">Ptolemy’s epicycle model (circles-on-circles)</title>
+  <desc id="desc">Diagram of the geocentric epicycle model: Earth at the center, a deferent circle around Earth, and an epicycle whose center moves along the deferent. The planet moves along the epicycle, producing apparent backward motion (retrograde) against the background stars.</desc>
+
+  <defs>
+    <style>
+      :root{
+        --bg:#0b0b0f;
+        --panel:#13162a;
+        --fg:#eef0ff;
+        --muted:#c9cbe5;
+        --faint:#8f92ad;
+        --grid:#1a1c28;
+        --grid-strong:#24263a;
+
+        --aurora-teal:#028391;
+        --aurora-teal-bright:#41A2AC;
+        --aurora-teal-dim:#02626D;
+        --aurora-teal-pale:#A6D4D8;
+
+        --aurora-pink:#BE5A83;
+        --aurora-pink-bright:#CE83A2;
+        --aurora-pink-dim:#8E4462;
+        --aurora-pink-pale:#E8C5D4;
+
+        --aurora-violet:#7077A1;
+        --aurora-violet-bright:#9499B8;
+        --aurora-violet-dim:#545979;
+        --aurora-violet-pale:#CDCFDE;
+
+        --teal:var(--aurora-teal);
+        --teal-bright:var(--aurora-teal-bright);
+        --teal-dim:var(--aurora-teal-dim);
+        --teal-pale:var(--aurora-teal-pale);
+
+        --pink:var(--aurora-pink);
+        --pink-bright:var(--aurora-pink-bright);
+        --pink-dim:var(--aurora-pink-dim);
+        --pink-pale:var(--aurora-pink-pale);
+
+        --violet:var(--aurora-violet);
+        --violet-bright:var(--aurora-violet-bright);
+        --violet-dim:var(--aurora-violet-dim);
+        --violet-pale:var(--aurora-violet-pale);
+      }
+
+      text{
+        font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+        fill: var(--fg);
+      }
+      .title{ font-size: 28px; font-weight: 750; }
+      .subtitle{ font-size: 18px; fill: var(--muted); }
+      .label{ font-size: 20px; font-weight: 700; }
+      .small{ font-size: 18px; letter-spacing: 0.2px; fill: var(--muted); }
+      .panel{ fill: var(--panel); stroke: var(--violet); stroke-width: 1.5; opacity: 0.96; }
+      .outline{ paint-order: stroke; stroke: var(--bg); stroke-width: 6px; stroke-linejoin: round; }
+      .outline-thin{ paint-order: stroke; stroke: var(--bg); stroke-width: 4px; stroke-linejoin: round; }
+      .dash{ stroke-dasharray: 10 10; }
+    </style>
+
+    <filter id="softGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="2.0" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <marker id="arrow-teal" markerWidth="10" markerHeight="10" refX="7" refY="5" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="var(--teal)"/>
+    </marker>
+    <marker id="arrow-violet" markerWidth="10" markerHeight="10" refX="7" refY="5" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="var(--violet)"/>
+    </marker>
+    <marker id="arrow-pink" markerWidth="10" markerHeight="10" refX="7" refY="5" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="var(--pink)"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="960" height="540" fill="var(--bg)"/>
+
+  <!-- Header -->
+  <text x="48" y="56" class="title">Ptolemy’s epicycle model</text>
+  <text x="48" y="82" class="subtitle">Circles-on-circles can mimic retrograde — while keeping Earth fixed at the center.</text>
+
+  <!-- Diagram -->
+  <g transform="translate(0,0)">
+    <!-- Main panel -->
+    <rect x="120" y="110" width="720" height="340" rx="16" class="panel"/>
+
+    <!-- Earth -->
+    <circle cx="480" cy="280" r="16" fill="var(--teal)" filter="url(#softGlow)"/>
+    <circle cx="480" cy="280" r="26" fill="none" stroke="var(--teal)" stroke-width="2" opacity="0.6"/>
+    <text x="480" y="320" class="label outline" text-anchor="middle">Earth</text>
+
+    <!-- Deferent -->
+    <circle cx="480" cy="280" r="150" fill="none" stroke="var(--teal)" stroke-width="4" opacity="0.95"/>
+    <text x="480" y="120" class="label outline" text-anchor="middle" fill="var(--teal)">deferent</text>
+
+    <!-- Epicycle center (a point on the deferent) -->
+    <circle cx="600" cy="205" r="6" fill="var(--violet)" opacity="0.95"/>
+    <text x="616" y="212" class="small outline">epicycle center</text>
+
+    <!-- Epicycle -->
+    <circle cx="600" cy="205" r="70" fill="none" stroke="var(--violet)" stroke-width="3.5" opacity="0.9"/>
+    <text x="600" y="128" class="label outline" text-anchor="middle" fill="var(--violet)">epicycle</text>
+
+    <!-- Planet positions on epicycle -->
+    <circle cx="652" cy="165" r="7" fill="var(--fg)" opacity="0.95"/>
+    <circle cx="630" cy="268" r="7" fill="var(--fg)" opacity="0.95"/>
+    <circle cx="544" cy="224" r="7.5" fill="var(--pink)" opacity="0.95"/>
+    <text x="530" y="212" class="small outline" fill="var(--pink)">planet</text>
+
+    <!-- Motion arrows -->
+    <path d="M 604 130 A 150 150 0 0 1 615 431" fill="none" stroke="var(--teal)" stroke-width="3.2" marker-end="url(#arrow-teal)" opacity="0.9"/>
+    <path d="M 664 205 A 70 70 0 0 1 561 249" fill="none" stroke="var(--violet)" stroke-width="3.0" marker-end="url(#arrow-violet)" opacity="0.9"/>
+
+    <!-- Apparent sky direction cue (qualitative) -->
+    <g opacity="0.9">
+      <line x1="210" y1="158" x2="370" y2="158" stroke="var(--grid-strong)" stroke-width="2.2" marker-end="url(#arrow-pink)"/>
+      <text x="210" y="138" class="small outline-thin">apparent drift on sky</text>
+      <text x="210" y="198" class="small outline-thin" fill="var(--faint)">can reverse during part of the epicycle</text>
+    </g>
+  </g>
+
+  <!-- Footer takeaway -->
+  <g transform="translate(48,470)">
+    <rect x="0" y="0" width="864" height="70" rx="12" class="panel"/>
+    <text x="18" y="30" class="label">
+      Key idea: retrograde can be “explained” by geometry — but at the cost of many added circles.
+    </text>
+    <text x="18" y="54" class="small">
+      The epicycle lets the planet move backward relative to the background while the model preserves circular motion.
+    </text>
+  </g>
+</svg>

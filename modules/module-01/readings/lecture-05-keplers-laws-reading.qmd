@@ -78,13 +78,7 @@ This puzzle — explaining retrograde motion — drove astronomical thinking for
 **Inference:** Retrograde is an **apparent** motion caused by geometry, not a real reversal. This supports the heliocentric model.
 :::
 
-::: {.callout-note title="FIGURE PLACEHOLDER: Retrograde Motion of Mars" collapse="false"}
-**Figure ID:** `retrograde-motion-mars`
-
-**Description:** Composite showing Mars's position against background stars over several months. Show the characteristic "loop" where Mars appears to reverse direction. Label key dates. Include Earth's position in its orbit at corresponding times to show the "passing" geometry.
-
-**Alt text:** Mars traces a looping path against the stars, appearing to move backward for several weeks before resuming forward motion.
-:::
+{{< fig retrograde-motion-mars >}}
 
 ---
 
@@ -108,13 +102,7 @@ Ptolemy's solution was ingenious. He proposed that planets move on small circles
 
 But at what cost? By medieval times, the model required dozens of circles — epicycles on epicycles — to match increasingly precise observations. The system was accurate but ugly, a baroque machinery of nested circles.
 
-::: {.callout-note title="FIGURE PLACEHOLDER: Ptolemy's Epicycle Model" collapse="false"}
-**Figure ID:** `ptolemaic-epicycles`
-
-**Description:** Diagram showing Earth at center, with a planet moving on an epicycle whose center moves on a deferent. Show how this creates apparent retrograde motion when the planet is on the "inner" part of its epicycle. Label: Earth, deferent, epicycle, planet, direction of motion. Keep it simple — don't try to show all the complexity.
-
-**Alt text:** In Ptolemy's model, a planet moves on a small circle (epicycle) while that circle's center orbits Earth on a larger circle (deferent).
-:::
+{{< fig ptolemaic-epicycles >}}
 
 ::: {.callout-note title="🔍 Spot the Assumption" collapse="false"}
 The geocentric model protected two assumptions:
@@ -216,6 +204,8 @@ Each model so far has protected certain assumptions:
 
 What assumption will Kepler finally abandon?
 :::
+
+{{< fig orbits-historical-infographic-nblm >}}
 
 ---
 
@@ -547,13 +537,7 @@ $$a = \sqrt[3]{729} \times 1\,\text{AU} = 9 \text{ AU}$$
 
 Notice that $a^3 \approx P^2$ in every row — that's the Third Law in action. The agreement is remarkable; Kepler's pattern fits perfectly.
 
-::: {.callout-note title="FIGURE PLACEHOLDER: Kepler's Third Law — The Pattern" collapse="false"}
-**Figure ID:** `kepler-third-law-graph`
-
-**Description:** Log-log plot with X-axis showing semi-major axis (AU) on log scale, Y-axis showing orbital period (years) on log scale. Points for all 8 planets, labeled. A straight line with slope 3/2 fitting through all points. Maybe include some asteroids and dwarf planets. Caption: "On a log-log plot, Kepler's Third Law is a straight line with slope 3/2."
-
-**Alt text:** A log-log plot showing all planets falling on a straight line when plotting period vs. distance, demonstrating Kepler's Third Law.
-:::
+{{< fig kepler-third-law-graph >}}
 
 ::: {.callout-check-yourself title="Check Yourself 7 — Basic Calculation"}
 An asteroid orbits the Sun at a distance of 4 AU. What is its orbital period?

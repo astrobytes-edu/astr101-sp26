@@ -437,6 +437,98 @@ figures:
     module: 1
 
   # ==============================================================
+  # Lecture 05: Kepler’s Laws (additional figures)
+  # ==============================================================
+
+  retrograde-motion-mars:
+    path: /assets/images/module-01/lec05/retrograde-motion-mars.svg
+    caption: "What to notice: retrograde is apparent motion against the star background — Earth passes Mars, so our line of sight temporarily sweeps backward."
+    alt: "Two-panel diagram: Mars positions trace a loop against background stars, with the retrograde segment highlighted; a top-down view shows Earth overtaking Mars and the changing lines of sight that produce the apparent reversal."
+    credit: "Illustration: A. Rosen (SVG)"
+    module: 1
+
+  ptolemaic-epicycles:
+    path: /assets/images/module-01/lec05/ptolemaic-epicycles.svg
+    caption: "What to notice: epicycle + deferent can reproduce retrograde-like backtracking while preserving the assumption of circular motion around Earth."
+    alt: "Diagram with Earth at the center, a large deferent circle, and a smaller epicycle circle carrying the planet; arrows show how the combined motion can create an apparent backward drift."
+    credit: "Illustration: A. Rosen (SVG)"
+    module: 1
+
+  kepler-third-law-graph:
+    path: /assets/images/module-01/lec05/kepler-third-law-graph.svg
+    caption: "What to notice: on a log–log plot, Kepler's Third Law is a straight line — the slope (3/2) encodes the exponent."
+    alt: "Log–log plot of orbital period versus semimajor axis for the eight planets. The points fall on a straight line with slope 3/2, illustrating the power-law relationship between period and distance for Solar System orbits."
+    credit: "Illustration: A. Rosen (SVG)"
+    module: 1
+
+  orbits-historical-infographic-nblm:
+    path: /assets/images/module-01/lec05/orbits-historical-infographic-nblm.webp
+    caption: "What to notice: each revolution in astronomical thinking required abandoning an assumption — from Earth-centered (Ptolemy) to Sun-centered (Copernicus) to elliptical (Kepler)."
+    alt: "Infographic showing the evolution of orbital models: Ptolemaic geocentric system with Earth at center and epicycles, Copernican heliocentric system with Sun at center and circular orbits, and Keplerian system with elliptical orbits and the Sun at one focus."
+    credit: "(A. Rosen/NotebookLM)"
+    module: 1
+
+  # ==============================================================
+  # Lecture 06: Newton’s Gravity (figures)
+  # ==============================================================
+
+  newtons-cannon:
+    path: /assets/images/module-01/lec06/newtons-cannon.svg
+    caption: "What to notice: orbiting is falling — with enough sideways speed, you keep missing Earth."
+    alt: "Newton’s cannon thought experiment: from a mountain, four projectiles are fired with increasing sideways speed, showing near crash, far crash, orbit (keeps missing Earth), and escape. A gravity arrow indicates inward pull on all paths."
+    credit: "Illustration: A. Rosen (SVG)"
+    module: 1
+
+  apple-and-moon:
+    path: /assets/images/module-01/lec06/apple-and-moon.svg
+    caption: "What to notice: the apple and the Moon are both pulled inward by gravity — the difference is sideways motion."
+    alt: "Two panels: an apple falls straight down under gravity; the Moon also accelerates inward but has sideways velocity, so it keeps missing Earth and orbits."
+    credit: "Illustration: A. Rosen (SVG)"
+    module: 1
+
+  acceleration-direction-change:
+    path: /assets/images/module-01/lec06/acceleration-direction-change.svg
+    caption: "What to notice: changing direction changes velocity — so an object can accelerate even at constant speed."
+    alt: "Circular-motion diagram showing velocity vectors tangent to the path at multiple points and an inward acceleration vector, demonstrating that direction change implies acceleration."
+    credit: "Illustration: A. Rosen (SVG)"
+    module: 1
+
+  centripetal-force-examples:
+    path: /assets/images/module-01/lec06/centripetal-force-examples.svg
+    caption: "What to notice: “centripetal” is a role, not a new force — gravity, tension, or friction can supply the required inward pull."
+    alt: "Three-panel diagram showing an orbit (gravity inward), a ball on a string (tension inward), and a car turning (friction inward), each with an inward force arrow."
+    credit: "Illustration: A. Rosen (SVG)"
+    module: 1
+
+  gravity-equation-visual:
+    path: /assets/images/module-01/lec06/gravity-equation-visual.svg
+    caption: "What to notice: both masses pull with equal and opposite forces, and the force drops with distance squared."
+    alt: "Two masses labeled m1 and m2 separated by distance r, with equal and opposite force arrows pointing inward. A callout shows F = G m1 m2 / r^2 and highlights the inverse-square dependence."
+    credit: "Illustration: A. Rosen (SVG)"
+    module: 1
+
+  inverse-square-diagram:
+    path: /assets/images/module-01/lec06/inverse-square-diagram.svg
+    caption: "What to notice: inverse-square comes from spreading over spherical area — double distance means 4× the area and 1/4 the per-area strength."
+    alt: "Concentric spheres shown as circles at distances r, 2r, and 3r around a source. Labels show per-area strength decreasing as 1, 1/4, and 1/9 because surface area grows like r squared."
+    credit: "Illustration: A. Rosen (SVG)"
+    module: 1
+
+  free-fall-astronaut:
+    path: /assets/images/module-01/lec06/free-fall-astronaut.svg
+    caption: "What to notice: weight is the floor’s push (normal force) — in free fall there is gravity but no supporting push, so you feel weightless."
+    alt: "Two panels: standing on Earth shows gravity down and a normal force up; in orbit, gravity still acts but there is no normal force because everything falls together."
+    credit: "Illustration: A. Rosen (SVG)"
+    module: 1
+
+  conic-sections-orbits:
+    path: /assets/images/module-01/lec06/conic-sections-orbits.svg
+    caption: "What to notice: inverse-square gravity produces conic-section paths — bound orbits (circle/ellipse) versus escape (parabola/hyperbola)."
+    alt: "Four panels show trajectories around a central mass: circle (e=0), ellipse (0<e<1), parabola (e=1), and hyperbola (e>1). The central mass is shown at a focus and bound versus escape cases are labeled."
+    credit: "Illustration: A. Rosen (SVG)"
+    module: 1
+
+  # ==============================================================
   # Lecture 03: Sky Is a Map
   # ==============================================================
 
