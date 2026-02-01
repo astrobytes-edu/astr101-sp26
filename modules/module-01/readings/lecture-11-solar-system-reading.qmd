@@ -122,7 +122,7 @@ Think of the solar system as organized into distinct zones, each with characteri
 
 **The Ice Giants (19–30 AU):** Uranus and Neptune are often grouped with Jupiter and Saturn as "giant planets," but they're fundamentally different. They're smaller, and instead of being hydrogen-dominated, they contain substantial amounts of water, ammonia, and methane ices. Their blue-green colors come from methane absorbing red light.
 
-**The Kuiper Belt (30–50 AU):** Beyond Neptune lies a disk of icy bodies left over from the solar system's formation. Pluto lives here, along with other dwarf planets like Makemake and Haumea. The Kuiper Belt is the source of many short-period comets. Scattered disk objects (like Eris) occupy even more eccentric and inclined orbits beyond the classical Kuiper Belt.
+**The Kuiper Belt (30–55 AU):** Beyond Neptune lies a disk of icy bodies left over from the solar system's formation. Pluto lives here, along with other dwarf planets like Makemake and Haumea. The Kuiper Belt is the source of many short-period comets. Scattered disk objects (like Eris) occupy even more eccentric and inclined orbits beyond the classical Kuiper Belt.
 
 **The Oort Cloud (~2,000–100,000 AU):** At the outer edges of the Sun's gravitational influence lies a vast spherical shell of icy bodies. The inner Oort Cloud extends from roughly 2,000-5,000 AU; the outer cloud reaches from ~10,000 to perhaps 100,000 AU. Objects here are so loosely bound that passing stars and the Milky Way's gravity can nudge them into the inner solar system as long-period comets.
 
@@ -140,7 +140,7 @@ Notice something striking: **rocky planets are close to the Sun; gas giants are 
 | **Asteroid belt** | 2–4 AU | Millions of rocky/metallic bodies | Planetesimals that never formed a planet |
 | **Gas giants** | 5–10 AU | Jupiter, Saturn | Massive, H/He dominated, no solid surface |
 | **Ice giants** | 19–30 AU | Uranus, Neptune | Smaller, more ices (water, ammonia, methane) |
-| **Kuiper Belt** | 30–50 AU | Pluto, dwarf planets, icy bodies | Source of short-period comets |
+| **Kuiper Belt** | 30–55 AU | Pluto, dwarf planets, icy bodies | Source of short-period comets |
 | **Oort Cloud** | ~2,000–100,000 AU | Long-period comets | Spherical halo, barely bound to Sun |
 
 ---
@@ -166,7 +166,7 @@ Students learn patterns faster through paired comparisons. As you read, think ab
 
 **Mercury vs. Venus:** Both inner planets, but Mercury has no atmosphere (extreme temperature swings: 430°C day, -180°C night) while Venus has a thick atmosphere (constant 460°C everywhere). Same region, different fates.
 
-**Venus vs. Earth:** Nearly the same size and distance from Sun, but Venus is 450°C hotter than Earth. Why? (Answer in L12: greenhouse effect.)
+**Venus vs. Earth:** Nearly the same size, but Venus receives ~2× Earth's sunlight (0.72 AU vs. 1.0 AU) and is 450°C hotter. Why so extreme? (Answer in L12: runaway greenhouse effect.)
 
 **Jupiter vs. Saturn:** Both gas giants with similar composition, but Saturn's density (0.69 g/cm³) is lower than water's. Why? Saturn is less massive, so less compressed.
 
@@ -326,7 +326,7 @@ Always compare the two to diagnose what's going on!
 ::: {.callout-note title="Mercury's Exosphere: Not Quite 'No Atmosphere'" collapse="true"}
 Technically, Mercury has an **exosphere** — an extremely thin envelope of atoms (sodium, potassium, oxygen, hydrogen) that are constantly escaping to space and being replenished by solar wind bombardment, micrometeorite impacts, and outgassing from the surface.
 
-The exosphere is so thin (surface pressure ~10⁻¹⁵ bar, compared to Earth's 1 bar) that atoms rarely collide with each other. It provides essentially **no insulation, no heat redistribution, no greenhouse effect** — which is why Mercury's temperature swings are so extreme.
+The exosphere is so thin (surface pressure < ~10⁻¹² bar, compared to Earth's 1 bar) that atoms rarely collide with each other. It provides essentially **no insulation, no heat redistribution, no greenhouse effect** — which is why Mercury's temperature swings are so extreme.
 
 For our purposes: Mercury effectively has "no atmosphere" in the thermodynamic sense that matters for climate.
 :::
@@ -566,7 +566,7 @@ The **planet** pattern supports the disk story. Moon orbits are messier because 
 | **Terrestrial planet** | Small, rocky planet with solid surface (Mercury, Venus, Earth, Mars) |
 | **Gas giant** | Massive planet dominated by hydrogen and helium (Jupiter, Saturn) |
 | **Ice giant** | Large planet with substantial water, ammonia, methane (Uranus, Neptune) |
-| **Kuiper Belt** | Region of icy bodies beyond Neptune, 30-50 AU; includes Pluto |
+| **Kuiper Belt** | Region of icy bodies beyond Neptune, 30–55 AU; includes Pluto |
 | **Oort Cloud** | Spherical shell of icy bodies from ~2,000 to ~100,000 AU; source of long-period comets |
 | **Exosphere** | Extremely thin atmospheric layer where atoms rarely collide; Mercury has only an exosphere |
 | **Solar nebula** | The cloud of gas and dust from which the solar system formed |
@@ -574,5 +574,3 @@ The **planet** pattern supports the disk story. Moon orbits are messier because 
 | **Frost line (snow line)** | Distance where temperature allows water ice to form; ~3 AU in early solar nebula |
 | **Protoplanetary disk** | Disk of gas and dust around a young star where planets form |
 | **Equilibrium temperature** | Predicted temperature from Stefan-Boltzmann, assuming no atmosphere |
-
-{{< glossary module=1 >}}
