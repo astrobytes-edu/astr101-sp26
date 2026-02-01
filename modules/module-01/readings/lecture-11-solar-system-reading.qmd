@@ -422,6 +422,8 @@ How did the solar system form? The leading model — the **nebular hypothesis** 
 
 The solar system formed ~4.6 billion years ago from a collapsing cloud of gas and dust called the **solar nebula**. Here's the cause → effect chain:
 
+{{< fig l11-young-solar-nebula-disk >}}
+
 ::: {.callout-important title="Formation: The Causal Ladder"}
 **1. Gravity → Collapse**
 

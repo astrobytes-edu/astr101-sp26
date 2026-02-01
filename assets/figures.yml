@@ -333,6 +333,12 @@ figures:
     credit: "NASA"
     module: 1
 
+  l11-young-solar-nebula-disk:
+    path: /assets/images/module-01/lec11/solar-system-young-disk-artist-schematic-nasa.jpg
+    caption: "**What to notice:** The nebular hypothesis starts with a rotating disk of gas and dust. Collisions and gravity flatten the system into a plane, which is why most planets end up orbiting in nearly the same plane and direction."
+    alt: "Artist’s concept of the young Sun surrounded by a dusty protoplanetary disk, with material clumping and forming planets and smaller bodies within the disk."
+    module: 1
+
   # Spoilers 6-8: Multi-wavelength
   multi-wavelength-reality:
     path: /assets/images/module-01/multi-wavelength-reality-nblm.png
