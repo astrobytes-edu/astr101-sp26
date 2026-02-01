@@ -581,6 +581,102 @@
   color: var(--text-muted);
 }
 
+.small-help {
+  font-size: var(--font-size-xs);
+  color: var(--text-muted);
+}
+
+/* ============================================
+   RV Overlay (RV curve + spectral inset)
+   ============================================ */
+.rv-controls {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 0.75rem;
+  align-items: end;
+  margin-top: 0.75rem;
+}
+
+.rv-controls .overlay-toggle {
+  margin-bottom: 0.25rem;
+}
+
+.rv-controls .unit-select select {
+  width: 100%;
+}
+
+.rv-viz {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+  margin-top: 0.75rem;
+}
+
+.rv-plot-card {
+  background: rgba(18, 18, 31, 0.7);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-md);
+  padding: 0.6rem 0.6rem 0.75rem 0.6rem;
+}
+
+.rv-plot-title {
+  font-size: var(--font-size-xs);
+  color: var(--text-secondary);
+  font-weight: 600;
+  margin-bottom: 0.35rem;
+}
+
+#rv-curve-svg,
+#rv-line-svg {
+  width: 100%;
+  height: auto;
+  background: rgba(0, 0, 0, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 10px;
+}
+
+.rv-inset-readouts {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.25rem 0.75rem;
+  margin-top: 0.5rem;
+  font-family: var(--font-mono);
+}
+
+.rv-readout-title {
+  grid-column: 1 / -1;
+  font-family: var(--font-sans);
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.rv-readout-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+  font-size: var(--font-size-xs);
+  color: var(--text-muted);
+}
+
+.rv-readout-label {
+  color: var(--text-secondary);
+}
+
+.rv-readout-value {
+  color: var(--text-primary);
+}
+
+.verify-badge {
+  display: inline-block;
+  padding: 0.1rem 0.35rem;
+  border-radius: 999px;
+  font-size: 0.75em;
+  background: rgba(243, 156, 18, 0.16);
+  border: 1px solid rgba(243, 156, 18, 0.45);
+  color: #f39c12;
+  vertical-align: middle;
+}
+
 .insight-box {
   background: rgba(18, 18, 31, 0.9);
   border-left: 3px solid var(--stellar-amber);
@@ -678,6 +774,14 @@
 
   .presets-row {
     justify-content: center;
+  }
+
+  .rv-controls {
+    grid-template-columns: 1fr;
+  }
+
+  .rv-viz {
+    grid-template-columns: 1fr;
   }
 }
 

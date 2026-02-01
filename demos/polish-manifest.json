@@ -4,11 +4,13 @@
     "binary-orbits",
     "blackbody-radiation",
     "conservation-laws",
+    "doppler-shift-spectrometer",
     "eclipse-geometry",
     "em-spectrum",
     "keplers-laws",
     "moon-phases",
     "parallax-distance",
+    "spectral-lines-lab",
     "seasons",
     "telescope-resolution"
   ]

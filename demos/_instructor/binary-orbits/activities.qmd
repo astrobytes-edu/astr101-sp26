@@ -111,5 +111,5 @@ Model deep dive: `model.qmd`
 ::: {.callout-deep-dive title="Demo: Stellar wobble for exoplanet detection" collapse="true"}
 **Setup:** Sun + Jupiter preset, zoom in on Sun's orbit.
 
-**Script:** "The Sun wobbles due to Jupiter. This wobble is about 13 km/s - measurable via Doppler shift in the Sun's spectrum. This is the radial velocity method for detecting exoplanets."
+**Script:** "The Sun wobbles due to Jupiter. This wobble is about ~12 m/s - measurable via Doppler shift in the Sun's spectrum. This is the radial velocity method for detecting exoplanets."
 :::

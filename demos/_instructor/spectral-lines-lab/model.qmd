@@ -1,0 +1,35 @@
+---
+title: "Spectral Lines Lab — Model + Assumptions"
+subtitle: "What the demo models, what it simplifies, and what is verified"
+page-layout: article
+toc: true
+search: false
+---
+
+::: {.callout-note title="Navigation"}
+- Instructor hub: [/demos/_instructor/](/demos/_instructor/)
+- Back to this demo guide: [Guide](index.qmd)
+- Student demo: [/demos/spectral-lines-lab/](/demos/spectral-lines-lab/)
+- This demo: [Model](model.qmd) · [Activities](activities.qmd) · [Assessment](assessment.qmd) · [Backlog](backlog.qmd)
+:::
+
+## Data integrity (non-negotiable)
+
+This demo uses the shared spectra contract:
+
+- Contract: `docs/contracts/spectra-data-contract.md`
+- Seed atomic lines: `demos/_assets/spectra/atomic-lines.v1.json`
+
+Rule: if a feature is not sourced, it must be marked `verified: false` and displayed with a visible “VERIFY” badge.
+
+## Instrument model (teaching simplification)
+
+- The demo can broaden lines to mimic finite instrument resolution.
+- Line “strengths” are illustrative and are not treated as physical transition probabilities in v1.
+
+## Kirchhoff mode mapping
+
+- Hot dense source → continuous spectrum
+- Hot thin gas → emission spectrum
+- Cool gas in front of hot source → absorption spectrum on a continuum
+

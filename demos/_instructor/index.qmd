@@ -157,7 +157,7 @@ How wavelength choice, thermal spectra, and instrument resolution fit into one o
 [Capstone rotation](light-and-telescopes/capstone.qmd){.hub-link}
 :::
 
-Includes: EM spectrum · Blackbody radiation · Telescope resolution
+Includes: EM spectrum · Blackbody radiation · Spectral lines lab · Doppler shift spectrometer · Telescope resolution
 :::
 
 ::: {.hub-card}
@@ -289,6 +289,40 @@ Temperature changes the peak wavelength + total emitted power (star color ≠ �
 :::
 
 Embed: `{{</* demo blackbody-radiation height="650px" */>}}`
+:::
+
+::: {.hub-card}
+### 🧪 Spectral lines lab
+
+Kirchhoff’s laws + line-pattern fingerprints; practice matching an unknown spectrum to element cards.
+
+::: {.hub-links}
+[Student demo](/demos/spectral-lines-lab/){.hub-link .primary}
+[Guide](spectral-lines-lab/){.hub-link}
+[Model](spectral-lines-lab/model.qmd){.hub-link}
+[Activities](spectral-lines-lab/activities.qmd){.hub-link}
+[Assessment](spectral-lines-lab/assessment.qmd){.hub-link}
+[Backlog](spectral-lines-lab/backlog.qmd){.hub-link}
+:::
+
+Embed: `{{</* demo spectral-lines-lab height="650px" */>}}`
+:::
+
+::: {.hub-card}
+### 🚑 Doppler shift spectrometer
+
+Radial velocity slider + rest/observed overlays; reinforces sign and “radial vs transverse.”
+
+::: {.hub-links}
+[Student demo](/demos/doppler-shift-spectrometer/){.hub-link .primary}
+[Guide](doppler-shift-spectrometer/){.hub-link}
+[Model](doppler-shift-spectrometer/model.qmd){.hub-link}
+[Activities](doppler-shift-spectrometer/activities.qmd){.hub-link}
+[Assessment](doppler-shift-spectrometer/assessment.qmd){.hub-link}
+[Backlog](doppler-shift-spectrometer/backlog.qmd){.hub-link}
+:::
+
+Embed: `{{</* demo doppler-shift-spectrometer height="650px" */>}}`
 :::
 
 ::: {.hub-card}

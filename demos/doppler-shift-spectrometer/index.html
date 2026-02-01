@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Doppler Shift Spectrometer | AstroEd</title>
+  <link rel="stylesheet" href="../_assets/astro-theme.css">
+  <link rel="stylesheet" href="../_assets/demo-shell.css">
+  <link rel="stylesheet" href="../_assets/demo-legacy.css">
+  <link rel="stylesheet" href="doppler-shift-spectrometer.css">
+</head>
+<body>
+  <div class="demo-wrapper">
+    <canvas id="starfield"></canvas>
+
+    <div class="demo-content">
+      <header class="demo-header">
+        <h1 class="demo-title">Doppler Shift Spectrometer</h1>
+        <p class="demo-subtitle">Measure radial velocity from line shifts (Lecture 10)</p>
+        <div class="btn-group demo-tools">
+          <a class="astro-btn secondary" href="./doppler-shift-spectrometer-station-card.pdf" target="_blank" rel="noopener">Station Card (PDF)</a>
+        </div>
+      </header>
+
+      <div class="mission-banner" role="note" aria-label="Mission prompt">
+        <div class="mission-title">Mission</div>
+        <div class="mission-text" id="mission-text">
+          If Δλ is negative, is the object approaching or receding?
+        </div>
+      </div>
+
+      <div class="stage-card">
+        <div class="stage-header">
+          <div class="stage-title">Rest vs observed spectrum</div>
+          <div class="stage-meta" id="stage-meta"></div>
+        </div>
+        <div class="stage" aria-label="Spectrum stage">
+          <svg id="spectrum-svg" viewBox="0 0 1000 220" role="img" aria-label="Two spectra overlaid: rest and observed"></svg>
+        </div>
+      </div>
+
+      <div class="readout-panel">
+        <div class="readout-item">
+          <div class="readout-label">v<sub>r</sub></div>
+          <div class="readout-value" id="readout-vr">0</div>
+          <div class="readout-unit">km/s</div>
+        </div>
+        <div class="readout-item">
+          <div class="readout-label">λ<sub>0</sub></div>
+          <div class="readout-value" id="readout-l0">656.281</div>
+          <div class="readout-unit">nm</div>
+        </div>
+        <div class="readout-item">
+          <div class="readout-label">λ<sub>obs</sub></div>
+          <div class="readout-value" id="readout-lobs">656.281</div>
+          <div class="readout-unit">nm</div>
+        </div>
+        <div class="readout-item">
+          <div class="readout-label">Δλ</div>
+          <div class="readout-value" id="readout-dl">0.000</div>
+          <div class="readout-unit">nm</div>
+        </div>
+        <div class="readout-item">
+          <div class="readout-label">v from Δλ/λ<sub>0</sub></div>
+          <div class="readout-value" id="readout-vcalc">0</div>
+          <div class="readout-unit">km/s</div>
+        </div>
+      </div>
+
+      <div class="controls-grid">
+        <div class="control-card">
+          <div class="control-title">
+            Motion mode
+            <span class="control-value" id="motion-display">radial</span>
+          </div>
+          <div class="btn-row" role="group" aria-label="Radial or transverse motion selector">
+            <button class="astro-btn secondary motion-btn active" data-motion="radial" type="button">Radial</button>
+            <button class="astro-btn secondary motion-btn" data-motion="transverse" type="button">Transverse</button>
+          </div>
+          <div class="small-help">
+            Only radial (line-of-sight) motion shifts wavelengths.
+          </div>
+        </div>
+
+        <div class="control-card">
+          <div class="control-title">
+            Radial velocity
+            <span class="control-value" id="vr-display">0 km/s</span>
+          </div>
+          <input
+            type="range"
+            id="vr-slider"
+            class="astro-slider"
+            min="-300"
+            max="300"
+            value="0"
+            aria-label="Radial velocity slider"
+            data-tooltip-source="#vr-display"
+          >
+          <div class="slider-labels">
+            <span>approaching</span>
+            <span>receding</span>
+          </div>
+        </div>
+
+        <div class="control-card">
+          <div class="control-title">
+            Line selection
+            <span class="control-value" id="line-display">Hα</span>
+          </div>
+          <label class="sr-only" for="line-select">Select a spectral line</label>
+          <select id="line-select" class="astro-select" aria-label="Select a spectral line"></select>
+          <div class="small-help">
+            Rest spectrum is gray; observed spectrum is blue.
+          </div>
+        </div>
+
+        <div class="control-card">
+          <div class="control-title">
+            Instrument resolution (broadening)
+            <span class="control-value" id="resolution-display">0.20 nm</span>
+          </div>
+          <input
+            type="range"
+            id="resolution-slider"
+            class="astro-slider"
+            min="5"
+            max="200"
+            value="20"
+            aria-label="Instrument resolution slider"
+            data-tooltip-source="#resolution-display"
+          >
+          <div class="slider-labels">
+            <span>narrow</span>
+            <span>wide</span>
+          </div>
+        </div>
+
+        <div class="control-card">
+          <div class="control-title">
+            Check your sign
+            <span class="control-value" id="sign-result">—</span>
+          </div>
+          <fieldset class="sign-fieldset">
+            <legend class="sr-only">Approaching or receding</legend>
+            <label class="sign-option"><input type="radio" name="sign" value="approaching"> Approaching</label>
+            <label class="sign-option"><input type="radio" name="sign" value="receding"> Receding</label>
+          </fieldset>
+          <button class="astro-btn" id="btn-check-sign" type="button">Check</button>
+          <div class="small-help">
+            Convention: Δλ = λ<sub>obs</sub> − λ<sub>0</sub>. Δλ &gt; 0 is redshift (receding).
+          </div>
+        </div>
+      </div>
+
+      <div class="insight-box">
+        <h4>Predict → Play → Explain</h4>
+        <p>
+          Predict the sign first, then use the slider. Use the readouts to justify your choice.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <script src="../_assets/astro-utils.js"></script>
+  <script src="../_assets/demo-polish.js"></script>
+  <script src="../_assets/starfield.js"></script>
+
+  <script src="../_assets/spectra/spectra-data.v1.js"></script>
+  <script src="../_assets/doppler-shift-model.js"></script>
+
+  <script src="doppler-shift-spectrometer.js"></script>
+</body>
+</html>
+

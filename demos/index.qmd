@@ -250,6 +250,38 @@ Journey from radio waves to gamma rays. See which telescopes observe each band a
 </div>
 :::
 
+:::{.demo-card}
+<div class="demo-preview">🧪</div>
+<div class="demo-info">
+<h3 class="demo-title">Spectral Lines Lab</h3>
+<p class="demo-description">
+Practice Kirchhoff’s laws and use line-pattern fingerprints to identify elements in an unknown spectrum.
+</p>
+<a href="spectral-lines-lab/" class="demo-link">Open Demo →</a>
+<div class="demo-concepts">
+<span class="concept-tag">spectral lines</span>
+<span class="concept-tag">Kirchhoff</span>
+<span class="concept-tag">fingerprints</span>
+</div>
+</div>
+:::
+
+:::{.demo-card}
+<div class="demo-preview">🚑</div>
+<div class="demo-info">
+<h3 class="demo-title">Doppler Shift Spectrometer</h3>
+<p class="demo-description">
+Move a radial-velocity slider and watch spectral lines shift. Connect sign, fraction shift, and velocity.
+</p>
+<a href="doppler-shift-spectrometer/" class="demo-link">Open Demo →</a>
+<div class="demo-concepts">
+<span class="concept-tag">Doppler</span>
+<span class="concept-tag">radial velocity</span>
+<span class="concept-tag">spectroscopy</span>
+</div>
+</div>
+:::
+
 :::
 :::
 

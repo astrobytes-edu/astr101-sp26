@@ -1,0 +1,36 @@
+---
+title: "Spectral Lines Lab — Activity Protocols"
+subtitle: "MW quick + MW short + station rotation"
+page-layout: article
+toc: true
+search: false
+---
+
+::: {.callout-note title="Navigation"}
+- Instructor hub: [/demos/_instructor/](/demos/_instructor/)
+- Back to this demo guide: [Guide](index.qmd)
+- Student demo: [/demos/spectral-lines-lab/](/demos/spectral-lines-lab/)
+- This demo: [Model](model.qmd) · [Activities](activities.qmd) · [Assessment](assessment.qmd) · [Backlog](backlog.qmd)
+:::
+
+## MW Quick (3–5 min)
+
+**Goal:** Make “absorption vs emission” a prediction, not a vocabulary recall.
+
+1. Open the student demo: `/demos/spectral-lines-lab/`
+2. Show the three setups and ask: “Which one makes **absorption** lines?”
+3. Have students vote, then reveal by switching setups.
+4. Say explicitly: “Absorption lines are **missing photons** at specific wavelengths — those same wavelengths appear as emission lines when the gas glows on its own.”
+
+## MW Short (8–12 min, pairs)
+
+**Goal:** Build pattern-matching confidence.
+
+1. Turn on the unknown overlay.
+2. Students choose 1–3 elements and write a claim: “Unknown contains ____ because ____.”
+3. Students hit **Check Match** and revise their claim until they reach a high score.
+
+## Station version (6–8 min)
+
+{{< include ../../_assets/station-cards/spectral-lines-lab.qmd >}}
+

@@ -1,0 +1,26 @@
+::: {.callout-problem title="Station card: Spectral Lines Lab (6–8 minutes)"}
+**Artifact:** a “spectrum ID” card (setup + elements + evidence).
+
+1) **Kirchhoff setup:** Which setup makes **absorption** lines? Write your prediction first, then test it.
+2) Turn on **Unknown Spectrum**.
+3) Choose element cards until you get a strong match.
+4) Record:
+   - setup type (continuous/emission/absorption),
+   - the elements you think are present,
+   - at least **two** line wavelengths (nm) you used as evidence.
+5) Write one sentence:
+   - “I think the unknown contains ____ because the line pattern matches at ____ nm and ____ nm.”
+:::
+
+::: {.callout-tip title="Word bank + sanity checks"}
+**Word bank:**
+- **Continuous spectrum:** smooth light at all wavelengths (hot, dense source).
+- **Emission lines:** bright lines at specific wavelengths (hot, thin gas).
+- **Absorption lines:** dark dips at specific wavelengths (cool gas in front of a continuum).
+- **Fingerprint:** a pattern of line positions.
+
+**Sanity checks:**
+- The same element has emission and absorption at the **same wavelengths** (only contrast flips).
+- “Instrument resolution” makes lines wider — real spectrographs do not produce infinitely thin lines.
+:::
+

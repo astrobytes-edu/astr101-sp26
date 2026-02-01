@@ -1,0 +1,104 @@
+{
+  "schema_version": "1.0.0",
+  "dataset_id": "molecular-bands.v1",
+  "description": "Verified IR molecular band centers used in ASTR 101 spectra demos (v1). Band centers are sourced; shapes are illustrative.",
+  "generated_at": "2026-02-01",
+  "features": [
+    {
+      "kind": "molecular_band",
+      "id": "CH4_3p3um",
+      "label": "CH₄ ~3.3 µm band",
+      "molecule": "CH4",
+      "band_type": "rovibrational",
+      "center": { "value": 3.3, "unit": "um" },
+      "profile": "gaussian",
+      "verified": true,
+      "sources": [
+        {
+          "name": "NASA Technical Reports Server — Optical Parametric Technology for Methane Measurements",
+          "url": "https://ntrs.nasa.gov/api/citations/20150021063/downloads/20150021063.pdf?utm_source=chatgpt.com",
+          "accessed": "2026-02-01",
+          "notes": "band center anchor; seed dataset"
+        }
+      ],
+      "notes": "Band center sourced; shape is illustrative (not HITRAN line-by-line)."
+    },
+    {
+      "kind": "molecular_band",
+      "id": "CO2_4p3um",
+      "label": "CO₂ ~4.3 µm band",
+      "molecule": "CO2",
+      "band_type": "rovibrational",
+      "center": { "value": 4.3, "unit": "um" },
+      "profile": "gaussian",
+      "verified": true,
+      "sources": [
+        {
+          "name": "NASA Technical Reports Server — Synthetic atmospheric transmittance spectra near 15 and ...",
+          "url": "https://ntrs.nasa.gov/citations/19780040862?utm_source=chatgpt.com",
+          "accessed": "2026-02-01",
+          "notes": "band center anchor; seed dataset"
+        }
+      ],
+      "notes": "Band center sourced; shape is illustrative (not HITRAN line-by-line)."
+    },
+    {
+      "kind": "molecular_band",
+      "id": "CO_4p67um",
+      "label": "CO ~4.67 µm band",
+      "molecule": "CO",
+      "band_type": "rovibrational",
+      "center": { "value": 4.67, "unit": "um" },
+      "profile": "gaussian",
+      "verified": true,
+      "sources": [
+        {
+          "name": "NASA Technical Reports Server — Imaging spectroscopy of the solar CO lines at 4.67 microns",
+          "url": "https://ntrs.nasa.gov/citations/19950038198?utm_source=chatgpt.com",
+          "accessed": "2026-02-01",
+          "notes": "band center anchor; seed dataset"
+        }
+      ],
+      "notes": "Band center sourced; shape is illustrative (not HITRAN line-by-line)."
+    },
+    {
+      "kind": "molecular_band",
+      "id": "H2O_6p3um",
+      "label": "H₂O ~6.3 µm band",
+      "molecule": "H2O",
+      "band_type": "rovibrational",
+      "center": { "value": 6.3, "unit": "um" },
+      "profile": "gaussian",
+      "verified": true,
+      "sources": [
+        {
+          "name": "NOAA / NESDIS / STAR — Quick Guide ABI Band 8 (6.2 μm)",
+          "url": "https://www.star.nesdis.noaa.gov/GOES/documents/ABIQuickGuide_Band08.pdf?utm_source=chatgpt.com",
+          "accessed": "2026-02-01",
+          "notes": "water vapor band anchor; seed dataset"
+        }
+      ],
+      "notes": "Band center sourced; shape is illustrative (not HITRAN line-by-line)."
+    },
+    {
+      "kind": "molecular_band",
+      "id": "CO2_15um",
+      "label": "CO₂ ~15 µm band",
+      "molecule": "CO2",
+      "band_type": "rovibrational",
+      "center": { "value": 15.0, "unit": "um" },
+      "profile": "gaussian",
+      "verified": true,
+      "sources": [
+        {
+          "name": "NASA Technical Reports Server — Synthetic atmospheric transmittance spectra near 15 and ...",
+          "url": "https://ntrs.nasa.gov/citations/19780040862?utm_source=chatgpt.com",
+          "accessed": "2026-02-01",
+          "notes": "band center anchor; seed dataset"
+        }
+      ],
+      "notes": "Band center sourced; shape is illustrative (not HITRAN line-by-line)."
+    }
+  ]
+}
+

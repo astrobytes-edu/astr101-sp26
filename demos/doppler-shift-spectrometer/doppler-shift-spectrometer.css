@@ -1,0 +1,117 @@
+.mission-banner {
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-left: 4px solid var(--accent-blue);
+  border-radius: 12px;
+  padding: 0.9rem 1rem;
+  background: rgba(0, 0, 0, 0.25);
+  margin-bottom: 1rem;
+}
+
+.mission-title {
+  font-weight: 700;
+  color: var(--accent-blue);
+  margin-bottom: 0.25rem;
+}
+
+.mission-text {
+  color: var(--text-secondary);
+  line-height: 1.35;
+}
+
+.stage-card {
+  background: rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+
+.stage-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.stage-title {
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.stage-meta {
+  font-family: var(--font-mono);
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.stage {
+  padding: 0.75rem 1rem 1rem 1rem;
+}
+
+#spectrum-svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.controls-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+}
+
+.control-card {
+  background: rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 12px;
+  padding: 1rem;
+}
+
+.control-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.control-value {
+  font-family: var(--font-mono);
+  color: var(--accent-gold);
+  font-weight: 600;
+}
+
+.small-help {
+  margin-top: 0.5rem;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  line-height: 1.35;
+}
+
+.btn-row {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.motion-btn.active {
+  border-color: var(--accent-blue);
+  box-shadow: 0 0 0 2px rgba(93, 173, 226, 0.18);
+}
+
+.sign-fieldset {
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 10px;
+  padding: 0.6rem 0.75rem;
+  margin: 0 0 0.5rem 0;
+}
+
+.sign-option {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text-secondary);
+  margin: 0.2rem 0;
+}
+

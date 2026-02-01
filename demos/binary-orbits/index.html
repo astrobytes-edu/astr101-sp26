@@ -263,6 +263,49 @@
         </div>
       </details>
 
+      <details class="model-note" id="rv-method-note">
+        <summary>Radial velocity method (RV curve + spectral line)</summary>
+        <p>
+          This view connects the orbit to what a spectrograph measures. The star’s line-of-sight velocity produces a
+          Doppler shift in a spectral line. Tracking that shift over time produces an RV curve.
+        </p>
+        <p class="small-help">
+          Convention: Δλ = λ<sub>obs</sub> − λ<sub>0</sub>. Positive RV means receding (redshift).
+        </p>
+
+        <div class="rv-controls">
+          <label class="overlay-toggle">
+            <input type="checkbox" id="toggle-rv-method"> Enable RV overlay
+          </label>
+
+          <div class="slider-group">
+            <label>
+              Inclination (i)
+              <span class="value-display" id="inclination-display">90°</span>
+            </label>
+            <input type="range" id="inclination-slider" class="astro-slider" min="0" max="90" step="1" value="90">
+            <div class="scale-hint">RV amplitude ∝ sin i (0° face-on → no RV signal)</div>
+          </div>
+
+          <div class="unit-select">
+            <label for="rv-line-select">Spectral line:</label>
+            <select id="rv-line-select"></select>
+          </div>
+        </div>
+
+        <div class="rv-viz">
+          <div class="rv-plot-card">
+            <div class="rv-plot-title">RV curve (primary)</div>
+            <svg id="rv-curve-svg" viewBox="0 0 1000 240" role="img" aria-label="Radial velocity curve plot"></svg>
+          </div>
+          <div class="rv-plot-card">
+            <div class="rv-plot-title">Spectral line inset</div>
+            <svg id="rv-line-svg" viewBox="0 0 1000 140" role="img" aria-label="Spectral line shifting due to radial velocity"></svg>
+            <div class="rv-inset-readouts" id="rv-inset-readouts"></div>
+          </div>
+        </div>
+      </details>
+
       <!-- Conservation Laws -->
       <details class="model-note">
         <summary>Conservation laws (energy & angular momentum)</summary>
@@ -388,6 +431,8 @@
   <script src="../_assets/demo-polish.js"></script>
   <script src="../_assets/starfield.js"></script>
   <script src="../_assets/katex/katex.min.js"></script>
+  <script src="../_assets/spectra/spectra-data.v1.js"></script>
+  <script src="../_assets/doppler-shift-model.js"></script>
   <script src="../_assets/binary-orbits-model.js"></script>
   <script src="binary-orbits.js"></script>
 </body>

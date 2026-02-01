@@ -1,0 +1,19 @@
+---
+title: "Station Card: Spectral Lines Lab"
+subtitle: "Kirchhoff modes + element fingerprints"
+format:
+  pdf:
+    toc: false
+    number-sections: false
+    geometry: margin=0.9in
+    fontsize: 12pt
+---
+
+{{< include ../_assets/station-cards/_student-header.qmd >}}
+
+**Demo:** `/demos/spectral-lines-lab/`
+
+---
+
+{{< include ../_assets/station-cards/spectral-lines-lab.qmd >}}
+

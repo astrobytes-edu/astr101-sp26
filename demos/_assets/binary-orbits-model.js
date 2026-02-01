@@ -320,6 +320,36 @@
     return TwoBody.trueToMeanAnomalyRad({ thetaRad, e });
   }
 
+  /**
+   * Project an in-plane velocity vector onto a line of sight (RV).
+   *
+   * Teaching convention:
+   * - Positive RV means receding (redshift) when lineOfSightUnit points away from the observer.
+   *
+   * This helper is intentionally simple: it applies a sin(i) projection factor without
+   * implementing full 3D orbital geometry. The host demo controls the meaning of i and LOS.
+   *
+   * @param {Object} params
+   * @param {number} params.vxKms - x component of velocity in km/s
+   * @param {number} params.vyKms - y component of velocity in km/s
+   * @param {{x:number,y:number}} params.lineOfSightUnit - LOS direction (will be normalized)
+   * @param {number} params.sinI - sin(inclination), where i=0 is face-on and i=90° is edge-on
+   * @returns {number} Radial velocity in km/s
+   */
+  function radialVelocityKms({ vxKms, vyKms, lineOfSightUnit, sinI }) {
+    if (!Number.isFinite(vxKms) || !Number.isFinite(vyKms)) return NaN;
+    if (!Number.isFinite(sinI)) sinI = 1;
+
+    const los = lineOfSightUnit ?? { x: 1, y: 0 };
+    const lx = Number(los.x);
+    const ly = Number(los.y);
+    const norm = Math.sqrt(lx * lx + ly * ly);
+    if (!Number.isFinite(norm) || norm === 0) return NaN;
+
+    const dot = (vxKms * lx + vyKms * ly) / norm;
+    return dot * sinI;
+  }
+
   // ============================================
   // Module Export
   // ============================================
@@ -342,6 +372,7 @@
     orbitalRadiusAu,
     orbitalVelocityKms,
     gravAccelerationMs2,
+    radialVelocityKms,
     orbitTangentAngleRad,
     meanToTrueAnomalyRad,
     trueToMeanAnomalyRad

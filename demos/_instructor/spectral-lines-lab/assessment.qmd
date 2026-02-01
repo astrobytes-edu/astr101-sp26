@@ -1,0 +1,43 @@
+---
+title: "Spectral Lines Lab — Assessment Bank"
+subtitle: "Clickers + short answer + exit ticket"
+page-layout: article
+toc: true
+search: false
+---
+
+::: {.callout-note title="Navigation"}
+- Instructor hub: [/demos/_instructor/](/demos/_instructor/)
+- Back to this demo guide: [Guide](index.qmd)
+- Student demo: [/demos/spectral-lines-lab/](/demos/spectral-lines-lab/)
+- This demo: [Model](model.qmd) · [Activities](activities.qmd) · [Assessment](assessment.qmd) · [Backlog](backlog.qmd)
+:::
+
+## Clicker 1 (Kirchhoff)
+
+**Question:** Which setup produces an absorption spectrum?
+
+A) Hot dense object  
+B) Hot thin gas  
+C) Cool gas in front of a hot dense source  
+
+**Answer:** C
+
+## Clicker 2 (inversion idea)
+
+**Question:** If a gas shows an emission line at 589 nm, where will it absorb?
+
+A) 589 nm  
+B) 5890 nm  
+C) It depends on temperature; there is no fixed wavelength  
+
+**Answer:** A
+
+## Short answer (pattern matching)
+
+“Why is identifying an element by one line risky? Explain in one or two sentences.”
+
+## Exit ticket
+
+“In your own words: what is the difference between a continuous spectrum and an absorption spectrum?”
+

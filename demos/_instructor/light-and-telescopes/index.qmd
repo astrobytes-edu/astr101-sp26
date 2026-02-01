@@ -8,30 +8,34 @@ search: false
 
 ::: {.callout-note title="Navigation"}
 - Instructor hub: [/demos/_instructor/](/demos/_instructor/)
-- Demos: [EM spectrum](/demos/_instructor/em-spectrum/) · [Blackbody radiation](/demos/_instructor/blackbody-radiation/) · [Telescope resolution](/demos/_instructor/telescope-resolution/)
+- Demos: [EM spectrum](/demos/_instructor/em-spectrum/) · [Blackbody radiation](/demos/_instructor/blackbody-radiation/) · [Spectral lines lab](/demos/_instructor/spectral-lines-lab/) · [Doppler shift spectrometer](/demos/_instructor/doppler-shift-spectrometer/) · [Telescope resolution](/demos/_instructor/telescope-resolution/)
 - Capstone: [Rotation + synthesis](capstone.qmd)
 :::
 
 ::: {.callout-roadmap title="What this page is"}
-This is the instructor-facing throughline tying together three “light” demos into one measurement story: **what you observe (wavelength)**, **what it means (temperature/physics)**, and **what you can resolve (instrument limits)**.
+This is the instructor-facing throughline tying together a “light and spectra” sequence into one measurement story: **what you observe (wavelength)**, **what it means (temperature/composition/motion)**, and **what you can resolve (instrument limits)**.
 :::
 
 ## The throughline (one sentence)
 
 Astronomy is constrained by *light and instruments*: we choose a **wavelength band**, use a **model** to interpret what that light implies, and accept that every inference is filtered by **resolution and detection limits**.
 
-## The three-demos connection map
+## The demo connection map
 
 1. **EM spectrum** establishes the shared vocabulary: $\lambda$, $\nu$, and photon energy $E$, plus the idea that different bands require different detectors.
 
 2. **Blackbody radiation** connects an observable spectrum shape (and peak wavelength) to a physical inference: temperature (and steep changes in emitted power with $T$).
 
-3. **Telescope resolution** introduces the measurement constraint: even perfect optics cannot resolve arbitrarily fine detail; resolution depends on $\lambda$ and aperture.
+3. **Spectral lines lab** adds the next information layer: composition is encoded in line patterns at specific wavelengths (Kirchhoff’s laws + fingerprints).
+
+4. **Doppler shift spectrometer** turns spectral lines into a motion tool: the same pattern shifts together, and $\Delta\lambda/\lambda_0$ gives radial velocity (with sign).
+
+5. **Telescope resolution** introduces the measurement constraint: even perfect optics cannot resolve arbitrarily fine detail; resolution depends on $\lambda$ and aperture.
 
 ## Recommended sequencing
 
-- **MW lecture moments:** use EM spectrum first (vocabulary), then blackbody (interpretation), then telescope resolution (constraints).
-- **Friday lab:** run the capstone rotation so students must use *all three* to make a defendable observing choice.
+- **MW lecture moments:** use EM spectrum first (vocabulary), then blackbody (temperature), then spectral lines (composition), then Doppler (motion), then telescope resolution (constraints).
+- **Friday lab:** run the capstone rotation so students must use the toolkit to make a defendable observing choice.
 
 ## Capstone
 

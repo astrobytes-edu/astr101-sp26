@@ -1,0 +1,24 @@
+::: {.callout-problem title="Station card: Doppler Shift Spectrometer (6–8 minutes)"}
+**Artifact:** a “radial velocity” card (line + shift + claim).
+
+1) Pick a line (Hα or Na D).
+2) Set a nonzero velocity with the slider.
+3) Record:
+   - $\lambda_0$ (nm),
+   - $\lambda_{\text{obs}}$ (nm),
+   - $\Delta\lambda = \lambda_{\text{obs}} - \lambda_0$ (nm),
+   - the inferred direction (approaching or receding).
+4) Compute $v = c\,\Delta\lambda/\lambda_0$ and compare to the slider readout.
+:::
+
+::: {.callout-tip title="Word bank + sanity checks"}
+**Word bank:**
+- **Radial velocity:** line-of-sight motion (toward/away).
+- **Redshift:** $\Delta\lambda > 0$ (receding).
+- **Blueshift:** $\Delta\lambda < 0$ (approaching).
+
+**Sanity checks:**
+- If $v_r = 0$, then $\lambda_{\text{obs}} = \lambda_0$ and $\Delta\lambda = 0$.
+- In transverse mode, wavelengths do not change.
+:::
+

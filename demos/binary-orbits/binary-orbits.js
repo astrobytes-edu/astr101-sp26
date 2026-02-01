@@ -84,6 +84,13 @@
       force: false
     },
 
+    // Radial velocity (RV) overlay (L10 bridge)
+    rv: {
+      enabled: false,
+      inclinationDeg: 90,
+      lineId: 'H_I_Ha'
+    },
+
     // View controls
     view: {
       zoom: 10,         // dimensionless multiplier applied to view scale (capped to fit)
@@ -516,6 +523,7 @@
   // ============================================
 
   let elements = {};
+  let rvUi = null;
 
   /**
    * Cache references to all UI elements from the HTML
@@ -626,7 +634,16 @@
       insightText: document.getElementById('insight-text'),
 
       // Accessibility
-      statusAnnounce: document.getElementById('status-announce')
+      statusAnnounce: document.getElementById('status-announce'),
+
+      // RV method overlay (optional details panel)
+      toggleRvMethod: document.getElementById('toggle-rv-method'),
+      inclinationSlider: document.getElementById('inclination-slider'),
+      inclinationDisplay: document.getElementById('inclination-display'),
+      rvLineSelect: document.getElementById('rv-line-select'),
+      rvCurveSvg: document.getElementById('rv-curve-svg'),
+      rvLineSvg: document.getElementById('rv-line-svg'),
+      rvInsetReadouts: document.getElementById('rv-inset-readouts')
     };
   }
 
@@ -1083,6 +1100,353 @@
         elements.arealUnit.textContent = 'AU²/yr';
       }
     }
+
+    updateRvOverlay();
+  }
+
+  // ============================================
+  // RV Overlay (RV curve + spectral inset)
+  // ============================================
+
+  const RV_DEFAULTS = {
+    samples: 240,
+    lineOfSightUnit: { x: 1, y: 0 } // +x points away from observer → positive RV = receding
+  };
+
+  function hasRvDependencies() {
+    return Boolean(window.SpectraDataV1 && window.DopplerShiftModel);
+  }
+
+  function getAtomicLineById(lineId) {
+    const lines = window.SpectraDataV1?.atomicLines ?? [];
+    return lines.find((l) => l && l.kind === 'atomic_line' && l.id === lineId) ?? null;
+  }
+
+  function getRvConfigKey() {
+    return [
+      `M1=${state.M1}`,
+      `M2=${state.M2}`,
+      `a=${state.a}`,
+      `e=${state.e}`,
+      `i=${state.rv.inclinationDeg}`,
+      `line=${state.rv.lineId}`
+    ].join('|');
+  }
+
+  function computePrimaryVelocityAtThetaKms(thetaRad) {
+    const { a1 } = individualSemiMajor(state.a, state.M1, state.M2);
+
+    const rRelAu = orbitalRadius(state.a, state.e, thetaRad);
+    const vRelKms = orbitalVelocity(rRelAu, state.a, state.M1, state.M2);
+
+    const M_tot = state.M1 + state.M2;
+    const v1SpeedKms = vRelKms * state.M2 / M_tot;
+
+    const vAngle1 = orbitTangentAngle(a1, state.e, thetaRad);
+    return { vxKms: v1SpeedKms * Math.cos(vAngle1), vyKms: v1SpeedKms * Math.sin(vAngle1) };
+  }
+
+  function computeRvCurveSamplesKms({ sinI }) {
+    const samples = [];
+    for (let i = 0; i < RV_DEFAULTS.samples; i++) {
+      const phase = i / (RV_DEFAULTS.samples - 1); // 0..1 inclusive
+      const M = phase * 2 * Math.PI; // uniform in time
+      const theta = meanAnomalyToTrue(M, state.e);
+      const { vxKms, vyKms } = computePrimaryVelocityAtThetaKms(theta);
+      const vR = Model.radialVelocityKms({
+        vxKms,
+        vyKms,
+        lineOfSightUnit: RV_DEFAULTS.lineOfSightUnit,
+        sinI
+      });
+      samples.push({ phase, vR });
+    }
+    return samples;
+  }
+
+  function formatRvValue(vKms) {
+    if (!Number.isFinite(vKms)) return '—';
+    const vAbs = Math.abs(vKms);
+    if (vAbs < 0.5) {
+      const vMs = vKms * 1000;
+      return `${formatValue(vMs)} m/s`;
+    }
+    return `${formatValue(vKms)} km/s`;
+  }
+
+  function clearSvg(svg) {
+    while (svg.firstChild) svg.removeChild(svg.firstChild);
+  }
+
+  function renderRvCurveSvg({ svg, samples, vMaxAbsKms }) {
+    clearSvg(svg);
+
+    const NS = 'http://www.w3.org/2000/svg';
+    const W = 1000;
+    const H = 240;
+    const margin = { l: 70, r: 20, t: 18, b: 34 };
+    const x0 = margin.l;
+    const x1 = W - margin.r;
+    const y0 = margin.t;
+    const y1 = H - margin.b;
+    const yMid = (y0 + y1) / 2;
+    const yAmp = (y1 - y0) / 2;
+
+    const K = vMaxAbsKms > 0 ? vMaxAbsKms : 1e-9;
+
+    const axis = document.createElementNS(NS, 'path');
+    axis.setAttribute('d', `M ${x0} ${y0} V ${y1} M ${x0} ${yMid} H ${x1} M ${x0} ${y1} H ${x1}`);
+    axis.setAttribute('stroke', 'rgba(255,255,255,0.25)');
+    axis.setAttribute('stroke-width', '2');
+    axis.setAttribute('fill', 'none');
+    svg.appendChild(axis);
+
+    const curvePath = document.createElementNS(NS, 'path');
+    const d = samples
+      .map(({ phase, vR }, idx) => {
+        const x = x0 + phase * (x1 - x0);
+        const y = yMid - (vR / K) * yAmp;
+        return `${idx === 0 ? 'M' : 'L'} ${x.toFixed(2)} ${y.toFixed(2)}`;
+      })
+      .join(' ');
+    curvePath.setAttribute('d', d);
+    curvePath.setAttribute('stroke', 'var(--cosmic-teal)');
+    curvePath.setAttribute('stroke-width', '3');
+    curvePath.setAttribute('fill', 'none');
+    curvePath.setAttribute('stroke-linecap', 'round');
+    curvePath.setAttribute('stroke-linejoin', 'round');
+    svg.appendChild(curvePath);
+
+    const label = document.createElementNS(NS, 'text');
+    label.setAttribute('x', String(x0));
+    label.setAttribute('y', String(margin.t - 4));
+    label.setAttribute('fill', 'rgba(255,255,255,0.7)');
+    label.setAttribute('font-size', '14');
+    label.textContent = `RV amplitude ≈ ${formatRvValue(K)}`;
+    svg.appendChild(label);
+
+    const marker = document.createElementNS(NS, 'circle');
+    marker.setAttribute('r', '7');
+    marker.setAttribute('fill', 'var(--accent-gold)');
+    marker.setAttribute('stroke', 'rgba(0,0,0,0.6)');
+    marker.setAttribute('stroke-width', '2');
+    svg.appendChild(marker);
+
+    return {
+      x0,
+      x1,
+      yMid,
+      yAmp,
+      K,
+      marker
+    };
+  }
+
+  function gaussianDipPath({ centerNm, sigmaNm, lamMinNm, lamMaxNm, xMap, yContinuum, depthPx }) {
+    const N = 120;
+    const pts = [];
+    for (let i = 0; i <= N; i++) {
+      const lam = lamMinNm + (i / N) * (lamMaxNm - lamMinNm);
+      const dx = (lam - centerNm) / sigmaNm;
+      const y = yContinuum + depthPx * Math.exp(-0.5 * dx * dx);
+      pts.push({ x: xMap(lam), y });
+    }
+    return pts
+      .map((p, idx) => `${idx === 0 ? 'M' : 'L'} ${p.x.toFixed(2)} ${p.y.toFixed(2)}`)
+      .join(' ');
+  }
+
+  function renderRvLineInsetBase({ svg, lambda0Nm, spanNm }) {
+    clearSvg(svg);
+
+    const NS = 'http://www.w3.org/2000/svg';
+    const W = 1000;
+    const H = 140;
+    const margin = { l: 70, r: 20, t: 14, b: 30 };
+    const x0 = margin.l;
+    const x1 = W - margin.r;
+
+    const span = Math.max(0.25, Number(spanNm) || 0.25);
+    const lamMin = lambda0Nm - span;
+    const lamMax = lambda0Nm + span;
+
+    const xMap = (lam) => x0 + ((lam - lamMin) / (lamMax - lamMin)) * (x1 - x0);
+    const yContinuum = 36;
+    const depthPx = 70;
+    const sigma = Math.max(0.02, span / 22);
+
+    const axis = document.createElementNS(NS, 'path');
+    axis.setAttribute('d', `M ${x0} ${yContinuum} H ${x1} M ${x0} ${H - margin.b} H ${x1}`);
+    axis.setAttribute('stroke', 'rgba(255,255,255,0.18)');
+    axis.setAttribute('stroke-width', '2');
+    axis.setAttribute('fill', 'none');
+    svg.appendChild(axis);
+
+    const rest = document.createElementNS(NS, 'path');
+    rest.setAttribute(
+      'd',
+      gaussianDipPath({
+        centerNm: lambda0Nm,
+        sigmaNm: sigma,
+        lamMinNm: lamMin,
+        lamMaxNm: lamMax,
+        xMap,
+        yContinuum,
+        depthPx
+      })
+    );
+    rest.setAttribute('stroke', 'rgba(255,255,255,0.45)');
+    rest.setAttribute('stroke-width', '2.5');
+    rest.setAttribute('fill', 'none');
+    svg.appendChild(rest);
+
+    const obs = document.createElementNS(NS, 'path');
+    obs.setAttribute('stroke', 'var(--cosmic-teal)');
+    obs.setAttribute('stroke-width', '3');
+    obs.setAttribute('fill', 'none');
+    svg.appendChild(obs);
+
+    const label = document.createElementNS(NS, 'text');
+    label.setAttribute('x', String(x0));
+    label.setAttribute('y', String(18));
+    label.setAttribute('fill', 'rgba(255,255,255,0.7)');
+    label.setAttribute('font-size', '14');
+    label.textContent = `λ₀ = ${lambda0Nm.toFixed(3)} nm`;
+    svg.appendChild(label);
+
+    const label2 = document.createElementNS(NS, 'text');
+    label2.setAttribute('x', String(x0));
+    label2.setAttribute('y', String(H - 10));
+    label2.setAttribute('fill', 'rgba(255,255,255,0.6)');
+    label2.setAttribute('font-size', '12');
+    label2.textContent = `window: ${lamMin.toFixed(2)}–${lamMax.toFixed(2)} nm`;
+    svg.appendChild(label2);
+
+    return { xMap, lamMin, lamMax, yContinuum, depthPx, sigmaNm: sigma, obsPath: obs, restPath: rest };
+  }
+
+  function updateRvLineInsetObserved({ inset, lambdaObsNm }) {
+    inset.obsPath.setAttribute(
+      'd',
+      gaussianDipPath({
+        centerNm: lambdaObsNm,
+        sigmaNm: inset.sigmaNm,
+        lamMinNm: inset.lamMin,
+        lamMaxNm: inset.lamMax,
+        xMap: inset.xMap,
+        yContinuum: inset.yContinuum,
+        depthPx: inset.depthPx
+      })
+    );
+  }
+
+  function updateRvReadouts({ line, lambda0Nm, lambdaObsNm, vKms }) {
+    const container = elements.rvInsetReadouts;
+    if (!container) return;
+
+    while (container.firstChild) container.removeChild(container.firstChild);
+
+    const dLambda = window.DopplerShiftModel.deltaLambdaNm({ lambda0Nm, lambdaObsNm });
+    const verdict = vKms >= 0 ? 'receding (redshift)' : 'approaching (blueshift)';
+
+    const makeRow = (label, value) => {
+      const row = document.createElement('div');
+      row.className = 'rv-readout-row';
+      const k = document.createElement('div');
+      k.className = 'rv-readout-label';
+      k.textContent = label;
+      const v = document.createElement('div');
+      v.className = 'rv-readout-value';
+      v.textContent = value;
+      row.appendChild(k);
+      row.appendChild(v);
+      return row;
+    };
+
+    const title = document.createElement('div');
+    title.className = 'rv-readout-title';
+    title.textContent = line?.label ?? 'Selected line';
+    container.appendChild(title);
+
+    if (line && line.verified === false) {
+      const badge = document.createElement('span');
+      badge.className = 'verify-badge';
+      badge.textContent = 'VERIFY';
+      title.appendChild(document.createTextNode(' '));
+      title.appendChild(badge);
+    }
+
+    container.appendChild(makeRow('v_r', `${formatRvValue(vKms)} (${verdict})`));
+    container.appendChild(makeRow('λ₀', `${lambda0Nm.toFixed(4)} nm`));
+    container.appendChild(makeRow('λobs', `${lambdaObsNm.toFixed(4)} nm`));
+    container.appendChild(makeRow('Δλ', `${dLambda.toFixed(4)} nm`));
+  }
+
+  function updateRvOverlay({ forceRecompute = false } = {}) {
+    if (!elements.toggleRvMethod) return;
+    if (!hasRvDependencies()) return;
+    if (!elements.rvCurveSvg || !elements.rvLineSvg) return;
+
+    const enabled = Boolean(state.rv.enabled);
+    elements.rvCurveSvg.style.display = enabled ? 'block' : 'none';
+    elements.rvLineSvg.style.display = enabled ? 'block' : 'none';
+    if (elements.rvInsetReadouts) elements.rvInsetReadouts.style.display = enabled ? 'block' : 'none';
+
+    if (!enabled) return;
+
+    const sinI = Math.sin((state.rv.inclinationDeg * Math.PI) / 180);
+
+    const key = getRvConfigKey();
+    if (!rvUi) rvUi = { lastKey: '', plot: null, inset: null };
+
+    if (forceRecompute || key !== rvUi.lastKey) {
+      const samples = computeRvCurveSamplesKms({ sinI });
+      const vMaxAbsKms = samples.reduce((m, s) => Math.max(m, Math.abs(s.vR)), 0);
+      rvUi.plot = renderRvCurveSvg({ svg: elements.rvCurveSvg, samples, vMaxAbsKms });
+      rvUi.lastKey = key;
+
+      const lineForInset = getAtomicLineById(state.rv.lineId) ?? getAtomicLineById('H_I_Ha');
+      if (lineForInset) {
+        const lambda0Nm = lineForInset.wavelength.value;
+        const maxShiftNm = (lambda0Nm * vMaxAbsKms) / window.DopplerShiftModel.C_KM_S;
+        rvUi.inset = renderRvLineInsetBase({
+          svg: elements.rvLineSvg,
+          lambda0Nm,
+          spanNm: Math.max(0.25, maxShiftNm * 6)
+        });
+      } else {
+        rvUi.inset = null;
+      }
+    }
+
+    // Marker sync to current phase/time.
+    const M = trueToMeanAnomaly(state.theta, state.e);
+    const phaseNow = (((M % (2 * Math.PI)) + 2 * Math.PI) % (2 * Math.PI)) / (2 * Math.PI);
+    const velocities = computeVelocities();
+    const vKms = Model.radialVelocityKms({
+      vxKms: velocities.v1.vx,
+      vyKms: velocities.v1.vy,
+      lineOfSightUnit: RV_DEFAULTS.lineOfSightUnit,
+      sinI
+    });
+
+    if (rvUi.plot?.marker) {
+      const x = rvUi.plot.x0 + phaseNow * (rvUi.plot.x1 - rvUi.plot.x0);
+      const y = rvUi.plot.yMid - (vKms / rvUi.plot.K) * rvUi.plot.yAmp;
+      rvUi.plot.marker.setAttribute('cx', x.toFixed(2));
+      rvUi.plot.marker.setAttribute('cy', y.toFixed(2));
+    }
+
+    // Spectral inset sync to the same RV.
+    const line = getAtomicLineById(state.rv.lineId) ?? getAtomicLineById('H_I_Ha');
+    if (!line) return;
+    const lambda0Nm = line.wavelength.value;
+    const lambdaObsNm = window.DopplerShiftModel.dopplerShiftNm({ lambda0Nm, vKms });
+    if (!rvUi.inset) {
+      rvUi.inset = renderRvLineInsetBase({ svg: elements.rvLineSvg, lambda0Nm, spanNm: 0.25 });
+    }
+    updateRvLineInsetObserved({ inset: rvUi.inset, lambdaObsNm });
+    updateRvReadouts({ line, lambda0Nm, lambdaObsNm, vKms });
   }
 
   /**
@@ -1332,6 +1696,67 @@
       state.overlays.force = elements.toggleForce.checked;
       updateVectors();
     });
+  }
+
+  function setupRvOverlay() {
+    if (!elements.toggleRvMethod) return;
+
+    if (!hasRvDependencies()) {
+      elements.toggleRvMethod.disabled = true;
+      if (elements.rvInsetReadouts) {
+        elements.rvInsetReadouts.textContent = 'RV overlay unavailable (missing spectra or Doppler model).';
+      }
+      return;
+    }
+
+    // Populate the spectral line picker (from the shared, verified dataset).
+    if (elements.rvLineSelect) {
+      const lines = (window.SpectraDataV1?.atomicLines ?? []).filter((l) => l && l.kind === 'atomic_line');
+      while (elements.rvLineSelect.firstChild) elements.rvLineSelect.removeChild(elements.rvLineSelect.firstChild);
+
+      for (const l of lines) {
+        const opt = document.createElement('option');
+        opt.value = l.id;
+        opt.textContent = `${l.line_name} (${l.species}) — ${l.wavelength.value.toFixed(2)} nm`;
+        elements.rvLineSelect.appendChild(opt);
+      }
+    }
+
+    // Initialize controls.
+    elements.toggleRvMethod.checked = state.rv.enabled;
+    if (elements.inclinationSlider) {
+      elements.inclinationSlider.value = String(state.rv.inclinationDeg);
+    }
+    if (elements.inclinationDisplay) {
+      elements.inclinationDisplay.textContent = `${state.rv.inclinationDeg}°`;
+    }
+    if (elements.rvLineSelect) {
+      elements.rvLineSelect.value = state.rv.lineId;
+    }
+
+    elements.toggleRvMethod.addEventListener('change', () => {
+      state.rv.enabled = elements.toggleRvMethod.checked;
+      updateRvOverlay({ forceRecompute: true });
+    });
+
+    if (elements.inclinationSlider) {
+      elements.inclinationSlider.addEventListener('input', () => {
+        state.rv.inclinationDeg = parseFloat(elements.inclinationSlider.value);
+        if (elements.inclinationDisplay) {
+          elements.inclinationDisplay.textContent = `${Math.round(state.rv.inclinationDeg)}°`;
+        }
+        updateRvOverlay({ forceRecompute: true });
+      });
+    }
+
+    if (elements.rvLineSelect) {
+      elements.rvLineSelect.addEventListener('change', () => {
+        state.rv.lineId = elements.rvLineSelect.value;
+        updateRvOverlay({ forceRecompute: true });
+      });
+    }
+
+    updateRvOverlay({ forceRecompute: true });
   }
 
   // ============================================
@@ -1610,6 +2035,7 @@
     setupUnitSelectors();
     setupPresets();
     setupOverlays();
+    setupRvOverlay();
     setupAnimation();
     setupBodyDrag();
     setupKeyboard();

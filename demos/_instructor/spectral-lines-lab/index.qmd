@@ -1,0 +1,61 @@
+---
+title: "Spectral Lines Lab"
+subtitle: "Instructor guide (teach-first) + links to model, activities, assessments"
+page-layout: article
+toc: true
+search: false
+---
+
+::: {.callout-note title="Navigation"}
+- Instructor hub: [/demos/_instructor/](/demos/_instructor/)
+- Student demo: [/demos/spectral-lines-lab/](/demos/spectral-lines-lab/)
+- This demo: [Model](model.qmd) · [Activities](activities.qmd) · [Assessment](assessment.qmd) · [Backlog](backlog.qmd)
+:::
+
+::: {.callout-roadmap title="This guide is instructor-facing"}
+Student demo: `/demos/spectral-lines-lab/`  
+Main code: `demos/spectral-lines-lab/spectral-lines-lab.js`  
+Shared model: `demos/_assets/spectral-lines-model.js`  
+Shared data: `demos/_assets/spectra/atomic-lines.v1.json` (+ `spectra-data.v1.js`)  
+Contract: `docs/contracts/spectra-data-contract.md`
+:::
+
+## Why this demo exists
+
+::: {.callout-why-this-matters}
+Lecture 9 is where students learn that spectra are not just “pretty rainbows.” Spectral lines are **measurable features** that encode composition — and they are only useful if students can recognize **patterns**, not just memorize a single line.
+:::
+
+This demo is built around your course loop:
+
+- **Predict:** which setup produces continuous vs emission vs absorption?
+- **Play:** add and remove element cards; broaden the instrument; overlay an unknown.
+- **Explain:** commit to an element set and check the match.
+
+## Learning goals (ASTR 101)
+
+Students should be able to:
+
+1. Predict which spectrum type appears for a physical setup (continuous / emission / absorption).
+2. Explain why absorption and emission occur at the **same wavelengths** (inverted contrast).
+3. Identify an unknown spectrum by matching **line patterns** to element cards.
+
+## 10–15 minute live-teach script (projector)
+
+1. Open the student demo: `/demos/spectral-lines-lab/`
+2. **Mission A (Kirchhoff):** Ask: “Which setup produces absorption lines?” Then click through setups and narrate what changes physically.
+3. **Fingerprint idea:** Multi-select Hydrogen and Sodium. Ask: “If I add a second element, what happens to the spectrum?” (Prediction first, then reveal.)
+4. Turn on the unknown overlay. Ask students to vote on which element(s) are present and why (pattern matching).
+5. **Key takeaway sentence:** “Astronomers identify elements by **patterns of features** at specific wavelengths, not by one magic line.”
+
+## Misconceptions to target (quick prompts)
+
+- “Elements have one signature line.” → Ask: “Would two different elements ever share one line by coincidence?”
+- “Absorption and emission lines happen at different wavelengths.” → Ask: “If it’s the same transition, should the photon energy change?”
+
+## Connections to other demos
+
+- **Blackbody radiation:** provides the continuous background that absorption lines sit on.
+- **Doppler Shift Spectrometer:** the same line pattern shifts together when the source moves.
+- **Binary orbits (RV overlay):** tracking the shifting line over time builds the RV curve.
+

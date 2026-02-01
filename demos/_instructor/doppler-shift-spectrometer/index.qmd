@@ -1,0 +1,49 @@
+---
+title: "Doppler Shift Spectrometer"
+subtitle: "Instructor guide (teach-first) + links to model, activities, assessments"
+page-layout: article
+toc: true
+search: false
+---
+
+::: {.callout-note title="Navigation"}
+- Instructor hub: [/demos/_instructor/](/demos/_instructor/)
+- Student demo: [/demos/doppler-shift-spectrometer/](/demos/doppler-shift-spectrometer/)
+- This demo: [Model](model.qmd) · [Activities](activities.qmd) · [Assessment](assessment.qmd) · [Backlog](backlog.qmd)
+:::
+
+::: {.callout-roadmap title="This guide is instructor-facing"}
+Student demo: `/demos/doppler-shift-spectrometer/`  
+Main code: `demos/doppler-shift-spectrometer/doppler-shift-spectrometer.js`  
+Shared Doppler model: `demos/_assets/doppler-shift-model.js`  
+Shared data: `demos/_assets/spectra/atomic-lines.v1.json` (+ `spectra-data.v1.js`)  
+Contract: `docs/contracts/spectra-data-contract.md`
+:::
+
+## Why this demo exists
+
+::: {.callout-why-this-matters}
+Students often remember “redshift means moving away,” but struggle with sign and with the idea that Doppler applies to the whole spectrum as the same **fractional shift**. This demo makes the sign convention and the fraction shift visible and checkable.
+:::
+
+## Learning goals (ASTR 101)
+
+Students should be able to:
+
+1. Use $\Delta\lambda/\lambda_0 = v/c$ with the correct sign.
+2. Explain why only **radial** motion produces Doppler shifts.
+3. Explain that the Doppler effect applies across the spectrum as the same fractional shift.
+
+## 10–15 minute live-teach script (projector)
+
+1. Open the student demo: `/demos/doppler-shift-spectrometer/`
+2. Set $v_r = 0$ and show that the curves coincide.
+3. Slide to positive $v_r$ and narrate: “Positive $v_r$ means receding — wavelengths increase — redshift.”
+4. Use the line cursor readout to compute $v$ from $\Delta\lambda/\lambda_0$ and check it.
+5. Flip to **transverse** mode and ask: “What should happen?” (Prediction.) Then show no shift.
+
+## Connections to other demos
+
+- **Spectral Lines Lab:** provides the “lines are features” intuition.
+- **Binary orbits (RV overlay):** shows why the shift repeats over time for an orbiting system.
+

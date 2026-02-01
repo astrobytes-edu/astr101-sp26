@@ -110,7 +110,25 @@ test('Binary Orbits includes view zoom + marker size controls', () => {
   assert.match(html, /id="marker-size-display"/);
 });
 
+test('Binary Orbits RV overlay loads DopplerShiftModel and spectra data', () => {
+  const html = readText('demos', 'binary-orbits', 'index.html');
+  assert.match(html, /_assets\/spectra\/spectra-data\.v1\.js/);
+  assert.match(html, /_assets\/doppler-shift-model\.js/);
+});
+
 test('Telescope Resolution loads the shared TelescopeResolutionModel', () => {
   const html = readText('demos', 'telescope-resolution', 'index.html');
   assert.match(html, /_assets\/telescope-resolution-model\.js/);
+});
+
+test('Spectral Lines Lab loads shared spectra models', () => {
+  const html = readText('demos', 'spectral-lines-lab', 'index.html');
+  assert.match(html, /_assets\/spectra\/spectra-data\.v1\.js/);
+  assert.match(html, /_assets\/spectral-lines-model\.js/);
+});
+
+test('Doppler Shift Spectrometer loads DopplerShiftModel and spectra data', () => {
+  const html = readText('demos', 'doppler-shift-spectrometer', 'index.html');
+  assert.match(html, /_assets\/doppler-shift-model\.js/);
+  assert.match(html, /_assets\/spectra\/spectra-data\.v1\.js/);
 });

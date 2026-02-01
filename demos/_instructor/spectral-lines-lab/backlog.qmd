@@ -1,0 +1,21 @@
+---
+title: "Spectral Lines Lab — Backlog"
+subtitle: "Future enhancements (after teaching validation)"
+page-layout: article
+toc: true
+search: false
+---
+
+::: {.callout-note title="Navigation"}
+- Instructor hub: [/demos/_instructor/](/demos/_instructor/)
+- Back to this demo guide: [Guide](index.qmd)
+- Student demo: [/demos/spectral-lines-lab/](/demos/spectral-lines-lab/)
+- This demo: [Model](model.qmd) · [Activities](activities.qmd) · [Assessment](assessment.qmd) · [Backlog](backlog.qmd)
+:::
+
+## High-impact next steps
+
+- Add more verified elements (expand the atomic seed dataset only with sources).
+- Add an optional “molecules in IR” mode using sourced band centers (broad dips, explicitly illustrative shapes).
+- Add an optional “mechanism view” explaining quantized transitions (deep-dive toggle; keep the default view pattern-based).
+

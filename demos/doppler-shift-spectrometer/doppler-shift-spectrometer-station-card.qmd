@@ -1,0 +1,19 @@
+---
+title: "Station Card: Doppler Shift Spectrometer"
+subtitle: "Radial velocity from spectral line shifts"
+format:
+  pdf:
+    toc: false
+    number-sections: false
+    geometry: margin=0.9in
+    fontsize: 12pt
+---
+
+{{< include ../_assets/station-cards/_student-header.qmd >}}
+
+**Demo:** `/demos/doppler-shift-spectrometer/`
+
+---
+
+{{< include ../_assets/station-cards/doppler-shift-spectrometer.qmd >}}
+
