@@ -257,13 +257,7 @@ An ellipse is an oval shape with a precise mathematical definition. It has two s
 **Focus (plural: foci):** One of two special points inside an ellipse; the Sun sits at one focus of each planetary orbit.
 :::
 
-::: {.callout-note title="FIGURE PLACEHOLDER: Anatomy of an Ellipse" collapse="false"}
-**Figure ID:** `ellipse-anatomy`
-
-**Description:** Clean diagram of an ellipse with labels: both foci (F₁ and F₂), semi-major axis (a) — half the longest diameter, semi-minor axis (b) — half the shortest diameter, center point. A point P on the ellipse with lines drawn to both foci, showing that distance PF₁ + PF₂ = constant.
-
-**Alt text:** An ellipse with its two foci, semi-major axis, and semi-minor axis labeled. Lines from a point on the ellipse to both foci illustrate that their sum is constant.
-:::
+{{< fig kepler-1st-law-eccentricity-variants >}}
 
 ::: {.callout-note title="✏️ Sketch It: Drawing an Ellipse" collapse="true"}
 Here's how to draw an ellipse with household items:
@@ -286,13 +280,7 @@ The string ensures that the total distance to both foci stays constant — that'
 | Perihelion | $r_p$ | Closest point to the Sun; $r_p = a(1-e)$ |
 | Aphelion | $r_a$ | Farthest point from the Sun; $r_a = a(1+e)$ |
 
-::: {.callout-note title="FIGURE PLACEHOLDER: Orbital Terminology" collapse="false"}
-**Figure ID:** `orbit-terminology`
-
-**Description:** Elliptical orbit with Sun at one focus. Label: Sun (at one focus, NOT the center!), empty focus (nothing there), perihelion (closest point), aphelion (farthest point), semi-major axis (a). Show clearly that Sun is offset from center.
-
-**Alt text:** An elliptical planetary orbit with the Sun at one focus, showing perihelion (closest approach) and aphelion (farthest point).
-:::
+{{< fig kepler-1st-law-ellipse >}}
 
 Notice that the Sun is at one **focus**, not the **center** of the ellipse. The other focus is empty — nothing sits there. This offset is why the planet's distance from the Sun varies throughout its orbit.
 
@@ -386,13 +374,7 @@ Imagine a line from the Sun to a planet. As the planet moves, this line sweeps o
 
 The consequence: near **perihelion** (close to Sun), the planet moves **faster** — it must cover more arc length to sweep the same area with a shorter radius. Near **aphelion** (far from Sun), the planet moves **slower** — it covers less arc length to sweep the same area with a longer radius.
 
-::: {.callout-note title="FIGURE PLACEHOLDER: Kepler's Second Law — Equal Areas" collapse="false"}
-**Figure ID:** `kepler-second-law`
-
-**Description:** Elliptical orbit with Sun at focus. Show two wedge-shaped areas: one near perihelion (short radius, wide angle — planet moving fast) and one near aphelion (long radius, narrow angle — planet moving slowly). Label both areas as "Area = A" to show they're equal. Indicate same time interval for both (e.g., "30 days"). Arrows showing direction of motion.
-
-**Alt text:** Two wedge-shaped areas swept by a planet: a short wide wedge near perihelion and a long narrow wedge near aphelion, both equal in area.
-:::
+{{< fig kepler-2nd-law-equal-areas >}}
 
 ### What Does "Area" Even Mean Here?
 

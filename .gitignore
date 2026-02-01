@@ -53,3 +53,9 @@ demos/**/*-station-card.pdf
 # But keep local preview renders out of git.
 assets/images/**/_previews/*.png
 assets/images/**/_previews/*.PNG
+assets/images/**/_previews/*.pdf
+assets/images/**/_previews/*.PDF
+
+# Python bytecode / caches
+__pycache__/
+*.py[cod]

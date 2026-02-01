@@ -1,46 +1,108 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540" role="img" aria-labelledby="title desc" data-theme="dark">
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540" role="img" aria-labelledby="title desc" data-theme="dark" data-palette="aurora">
   <title id="title">SVG Template (ASTR 101)</title>
   <desc id="desc">Template for course SVG figures with accessible metadata and consistent palettes for dark/light backgrounds.</desc>
 
   <defs>
     <style>
       :root{
-        /* Neutrals */
+        /* =========
+           Neutrals
+           ========= */
         --bg:#0b0b0f;
+        --panel:#13162a;
         --fg:#eef0ff;
         --muted:#c9cbe5;
+        --faint:#8f92ad;
         --grid:#1a1c28;
+        --grid-strong:#24263a;
 
-        /* Palette: Jewel Aurora (deep but visible) */
+        /* =========
+           Accent palettes (course colors)
+           ========= */
+        /* Jewel Aurora (deep but visible) */
         --aurora-teal:#028391;
+        --aurora-teal-bright:#41A2AC;
+        --aurora-teal-dim:#02626D;
+        --aurora-teal-pale:#A6D4D8;
+
         --aurora-pink:#BE5A83;
+        --aurora-pink-bright:#CE83A2;
+        --aurora-pink-dim:#8E4462;
+        --aurora-pink-pale:#E8C5D4;
+
         --aurora-violet:#7077A1;
+        --aurora-violet-bright:#9499B8;
+        --aurora-violet-dim:#545979;
+        --aurora-violet-pale:#CDCFDE;
 
-        /* Palette: Deep Jewel (maximum twilight) */
+        /* Deep Jewel (maximum twilight) */
         --deep-teal:#257180;
+        --deep-teal-bright:#5C94A0;
+        --deep-teal-dim:#1C5560;
+        --deep-teal-pale:#B3CDD3;
+
         --deep-pink:#A35C7A;
+        --deep-pink-bright:#BA859B;
+        --deep-pink-dim:#7A455C;
+        --deep-pink-pale:#DFC6D0;
+
         --deep-violet:#655D8A;
+        --deep-violet-bright:#8C86A7;
+        --deep-violet-dim:#4C4668;
+        --deep-violet-pale:#C9C6D6;
 
-        /* Default mapping (dark theme) */
+        /* =========
+           Semantic mapping (do not change meaning)
+           ========= */
         --teal:var(--aurora-teal);
-        --pink:var(--aurora-pink);
-        --violet:var(--aurora-violet);
+        --teal-bright:var(--aurora-teal-bright);
+        --teal-dim:var(--aurora-teal-dim);
+        --teal-pale:var(--aurora-teal-pale);
 
-        --stroke-primary:6;
-        --stroke-secondary:2.5;
+        --pink:var(--aurora-pink);
+        --pink-bright:var(--aurora-pink-bright);
+        --pink-dim:var(--aurora-pink-dim);
+        --pink-pale:var(--aurora-pink-pale);
+
+        --violet:var(--aurora-violet);
+        --violet-bright:var(--aurora-violet-bright);
+        --violet-dim:var(--aurora-violet-dim);
+        --violet-pale:var(--aurora-violet-pale);
+
+        /* =========
+           Figure constants
+           ========= */
+        --sun:#f6d55c;
+        --orbitW:5;
+        --guideW:2.5;
       }
 
-      /* Optional: switch to Deep Jewel palette by setting data-theme="light" */
+      svg[data-palette="deep"]{
+        --teal:var(--deep-teal);
+        --teal-bright:var(--deep-teal-bright);
+        --teal-dim:var(--deep-teal-dim);
+        --teal-pale:var(--deep-teal-pale);
+
+        --pink:var(--deep-pink);
+        --pink-bright:var(--deep-pink-bright);
+        --pink-dim:var(--deep-pink-dim);
+        --pink-pale:var(--deep-pink-pale);
+
+        --violet:var(--deep-violet);
+        --violet-bright:var(--deep-violet-bright);
+        --violet-dim:var(--deep-violet-dim);
+        --violet-pale:var(--deep-violet-pale);
+      }
+
       svg[data-theme="light"]{
         --bg:#ffffff;
+        --panel:#f2f3fb;
         --fg:#111218;
         --muted:#3a3d52;
+        --faint:#666b85;
         --grid:#e7e8f0;
-
-        --teal:var(--deep-teal);
-        --pink:var(--deep-pink);
-        --violet:var(--deep-violet);
+        --grid-strong:#cfd1df;
       }
 
       text{
@@ -51,14 +113,42 @@
       .subtitle{ font-size: 18px; fill: var(--muted); }
       .label{ font-size: 20px; font-weight: 650; }
       .small{ font-size: 18px; letter-spacing: 0.2px; fill: var(--muted); }
+      .faint{ fill: var(--faint); }
       .dash{ stroke-dasharray: 10 10; }
+
+      /* Text safety when labels sit on top of lines/fills */
+      .outline{
+        paint-order: stroke;
+        stroke: var(--bg);
+        stroke-width: 6px;
+        stroke-linejoin: round;
+      }
+
+      /* Panels (footer/callouts) */
+      .panel{
+        fill: var(--panel);
+        stroke: var(--violet);
+        stroke-width: 1.5;
+        opacity: 0.96;
+      }
+      .panel-title{ font-size: 18px; font-weight: 750; fill: var(--muted); letter-spacing: 0.2px; }
+
+      .accent-teal{ fill: var(--teal); }
+      .accent-pink{ fill: var(--pink); }
+      .accent-violet{ fill: var(--violet); }
+
+      /* Minimal “math” conventions (full LaTeX is a separate pipeline) */
+      .math{ font-style: italic; }
     </style>
 
-    <marker id="arrow-teal" markerWidth="14" markerHeight="14" refX="10" refY="7" orient="auto">
-      <path d="M 0 0 L 14 7 L 0 14 z" fill="var(--teal)"/>
+    <marker id="arrow-teal" markerWidth="10" markerHeight="10" refX="7" refY="5" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="var(--teal)"/>
     </marker>
-    <marker id="arrow-pink" markerWidth="14" markerHeight="14" refX="10" refY="7" orient="auto">
-      <path d="M 0 0 L 14 7 L 0 14 z" fill="var(--pink)"/>
+    <marker id="arrow-pink" markerWidth="10" markerHeight="10" refX="7" refY="5" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="var(--pink)"/>
+    </marker>
+    <marker id="arrow-violet" markerWidth="10" markerHeight="10" refX="7" refY="5" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="var(--violet)"/>
     </marker>
   </defs>
 
@@ -82,4 +172,3 @@
     <text x="500" y="305" class="label">Example mark</text>
   </g>
 </svg>
-
