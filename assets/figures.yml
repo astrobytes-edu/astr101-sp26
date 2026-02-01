@@ -19,6 +19,11 @@ figures:
     alt: "H-R diagram plotting luminosity vs temperature for stars"
     credit: "ESO"
 
+  hr-diagram-chatgpt:
+    path: /assets/images/common/HR-diagram-chatGPT.png
+    caption: "**What to notice:** The main sequence is a diagonal band; giants and supergiants sit above it (high luminosity), and white dwarfs sit below it (low luminosity). Hotter stars are on the left; cooler stars are on the right."
+    alt: "Hertzsprung-Russell diagram plotting luminosity (in solar units) versus surface temperature (Kelvin), with regions labeled main sequence, giants, supergiants, and white dwarfs, and a spectral class bar across the top."
+
   blackbody-curves:
     path: /assets/images/common/blackbody-curves.png
     caption: "Blackbody radiation curves at different temperatures"
@@ -225,6 +230,107 @@ figures:
     caption: "**What to notice:** The EM spectrum is a temperature ladder. Gamma/X-ray = million-degree plasma; UV/Visible = stellar surfaces (3,000–50,000 K); Infrared/Radio = dust and cold gas (10–100 K)."
     alt: "Vertical electromagnetic spectrum showing wavelength bands with corresponding temperatures: Gamma/X-Ray at top for million-degree plasma and black holes, UV/Visible in middle for stars (3,000K–50,000K), Infrared/Radio at bottom for dust (100K) and cold gas (10K). Rainbow colors shown in visible band."
     credit: "(A. Rosen/NotebookLM)"
+    module: 1
+
+  # --------------------------------------------------------------
+  # Module 1: Lecture 11 (Solar System)
+  # --------------------------------------------------------------
+
+  l11-mercury-messenger:
+    path: /assets/images/module-01/lec11/mercury-from-messenger-pia15160-nasa.webp
+    caption: "**What to notice:** Mercury’s surface is heavily cratered and airless — a record of early impacts with little erosion."
+    alt: "Spacecraft image of Mercury showing a gray, heavily cratered rocky surface."
+    credit: "NASA"
+    module: 1
+
+  l11-venus-mariner-10:
+    path: /assets/images/module-01/lec11/venus-mariner-10-nasa.jpg
+    caption: "**What to notice:** Venus is completely cloud-covered in visible light — we do not see the surface directly without using other wavelengths or radar."
+    alt: "Image of Venus as a bright disk with thick cloud patterns and no visible surface features."
+    credit: "NASA"
+    module: 1
+
+  l11-earth:
+    path: /assets/images/module-01/lec11/earth-1-nasa.webp
+    caption: "**What to notice:** Earth’s oceans and atmosphere matter — they shape temperature, weather, and habitability."
+    alt: "Image of Earth showing blue oceans, white cloud swirls, and landmasses."
+    credit: "NASA"
+    module: 1
+
+  l11-mars:
+    path: /assets/images/module-01/lec11/mars-nasa.webp
+    caption: "**What to notice:** Mars is a cold, rocky world with a thin atmosphere — a contrast case for climate and habitability."
+    alt: "Spacecraft image of Mars showing a reddish rocky surface and polar ice cap."
+    credit: "NASA"
+    module: 1
+
+  l11-phobos:
+    path: /assets/images/module-01/lec11/phobos-nasa.webp
+    caption: "**What to notice:** Small moons can be irregular and heavily cratered — they look more like asteroids than planets."
+    alt: "Image of Phobos showing an irregular, cratered, gray-brown surface."
+    credit: "NASA"
+    module: 1
+
+  l11-deimos:
+    path: /assets/images/module-01/lec11/deimos-demos.webp
+    caption: "**What to notice:** Deimos is tiny and irregular — evidence that not all moons form the same way."
+    alt: "Image of Deimos showing a small, irregularly shaped moon against space."
+    module: 1
+
+  l11-ceres:
+    path: /assets/images/module-01/lec11/ceres-dawn-nasa.webp
+    caption: "**What to notice:** The asteroid belt contains large bodies too — Ceres is a dwarf planet with its own geology."
+    alt: "Image of Ceres showing a round, gray dwarf planet with bright spots and craters."
+    credit: "NASA"
+    module: 1
+
+  l11-jupiter:
+    path: /assets/images/module-01/lec11/jupiter-nasa.webp
+    caption: "**What to notice:** Jupiter is a gas giant with banded cloud layers — atmosphere, not a solid surface, dominates what we see."
+    alt: "Image of Jupiter showing alternating light and dark cloud bands and a large oval storm."
+    credit: "NASA"
+    module: 1
+
+  l11-saturn:
+    path: /assets/images/module-01/lec11/saturn-farewell-nasa.webp
+    caption: "**What to notice:** Saturn’s rings make its structure obvious: a planet plus a disk of countless small particles."
+    alt: "Image of Saturn showing its rings and cloud-banded atmosphere."
+    credit: "NASA"
+    module: 1
+
+  l11-titan:
+    path: /assets/images/module-01/lec11/titan_carousel2_nasa.jpg
+    caption: "**What to notice:** Titan is a moon with a thick atmosphere — moons can have their own ‘planet-like’ complexity."
+    alt: "Image of Titan showing a hazy orange disk with an atmosphere obscuring the surface."
+    credit: "NASA"
+    module: 1
+
+  l11-uranus:
+    path: /assets/images/module-01/lec11/uranus-voyager-2-nasa.jpg
+    caption: "**What to notice:** The ice giants are distant and cold — their atmospheres and compositions differ from Jupiter and Saturn."
+    alt: "Image of Uranus showing a pale blue-green disk with subtle cloud features."
+    credit: "NASA"
+    module: 1
+
+  l11-neptune:
+    path: /assets/images/module-01/lec11/neptune-voyager-2-nasa.webp
+    caption: "**What to notice:** Neptune’s deep blue color and storms emphasize that ice giant atmospheres can be active."
+    alt: "Image of Neptune showing a deep blue disk with bright clouds and a dark storm feature."
+    credit: "NASA"
+    module: 1
+
+  l11-pluto:
+    path: /assets/images/module-01/lec11/pluto-new-horizons-nasa.webp
+    caption: "**What to notice:** Pluto lives in the Kuiper Belt — the outer solar system includes dwarf planets and icy worlds, not just the eight planets."
+    alt: "Image of Pluto showing a mottled surface with a bright heart-shaped region."
+    credit: "NASA"
+    module: 1
+
+  l11-jupiter-position-illustration:
+    path: /assets/images/module-01/lec11/Illustration_showing_Jupiters_position_in_the_solar_system_relative_to_Earth_and_the_Sun-nasa.jpeg
+    caption: "**What to notice:** Distances in the solar system are easiest to compare in AU — the inner planets are packed close together compared to the giant-planet region."
+    alt: "Illustration showing Jupiter’s position relative to Earth and the Sun, with orbits drawn to compare distances."
+    credit: "NASA"
     module: 1
 
   # Spoilers 6-8: Multi-wavelength
