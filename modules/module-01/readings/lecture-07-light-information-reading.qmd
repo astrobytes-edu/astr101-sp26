@@ -80,13 +80,7 @@ In Lectures 5 and 6, we learned that **motion reveals mass** — by watching how
 
 This lecture is about what light IS and why wavelength matters. Next lecture, we'll see how to read temperature from light. Together, they give astronomers the tools to decode the cosmos without ever leaving Earth.
 
-::: {.callout-note title="FIGURE PLACEHOLDER: Information from Light" collapse="false"}
-**Figure ID:** `proxima-centauri-info`
-
-**Description:** Show Proxima Centauri with arrows pointing to different pieces of information we know about it (temperature ~3,000 K, mass ~0.12 solar masses, distance 4.2 ly, composition, planets detected). Caption: "We've never been there. We know all of this from light."
-
-**Alt text:** Proxima Centauri with labeled arrows showing temperature, mass, distance, and other properties all determined from analyzing its light.
-:::
+{{< fig proxima-centauri-info >}}
 
 ::: {.callout-note title="🔍 Spot the Assumption" collapse="false"}
 Before this lecture, you might have assumed:
@@ -367,13 +361,7 @@ $$\frac{\text{Blue scattering}}{\text{Red scattering}} = \left(\frac{700}{450}\r
 
 Blue light scatters about **6 times more** than red light! This is why the sky is blue — blue photons get scattered all over the sky, reaching your eyes from every direction. Meanwhile, red photons mostly travel straight through without scattering.
 
-::: {.callout-note title="FIGURE PLACEHOLDER: Rayleigh Scattering and the Blue Sky" collapse="false"}
-**Figure ID:** `rayleigh-scattering-sky`
-
-**Description:** Show sunlight entering Earth's atmosphere. Blue photons being scattered in many directions by air molecules. Red/yellow photons passing through with less scattering. Observer on ground sees blue scattered from all directions. Direct Sun path shows mostly red/yellow getting through.
-
-**Alt text:** Blue light scatters more than red as sunlight passes through air, filling the sky with scattered blue while red passes through.
-:::
+{{< fig rayleigh-scattering-sky >}}
 
 ::: {.callout-tip title="The Sky Isn't Violet (Even Though Violet Scatters More)" collapse="true"}
 Violet light *does* scatter even more than blue (it has shorter wavelength). But the sky doesn't look violet because:
@@ -391,13 +379,7 @@ At sunset, sunlight travels through **much more atmosphere** to reach your eyes.
 
 The same physics, different geometry: at noon, you're looking at scattered blue from a short path through the atmosphere. At sunset, the direct sunlight has lost most of its blue.
 
-::: {.callout-note title="FIGURE PLACEHOLDER: Why Sunsets Are Red" collapse="false"}
-**Figure ID:** `sunset-scattering`
-
-**Description:** Compare midday vs sunset geometry. Midday: short path through atmosphere, plenty of blue scattered toward observer. Sunset: long path through atmosphere, blue scattered away, red remains to reach observer. Show the much longer atmospheric path at sunset.
-
-**Alt text:** At sunset, sunlight travels through more atmosphere; blue is scattered away, leaving red and orange to reach the observer.
-:::
+{{< fig sunset-scattering >}}
 
 ::: {.callout-check-yourself title="Check Yourself 5 — Rayleigh Scattering"}
 Blue light scatters more than red light because:

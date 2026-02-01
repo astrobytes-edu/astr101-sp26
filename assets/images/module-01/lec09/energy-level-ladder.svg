@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540" role="img" aria-labelledby="title desc" data-theme="dark" data-palette="aurora">
+  <title id="title">Energy levels are rungs, not a ramp</title>
+  <desc id="desc">Two-panel diagram comparing quantized energy levels, shown as discrete ladder rungs with allowed transitions, to a continuous energy ramp, which represents the incorrect classical assumption.</desc>
+
+  <defs>
+    <style>
+      :root{
+        --bg:#0b0b0f;
+        --panel:#13162a;
+        --fg:#eef0ff;
+        --muted:#c9cbe5;
+        --faint:#8f92ad;
+
+        --aurora-teal:#028391;
+        --aurora-teal-bright:#41A2AC;
+        --aurora-teal-dim:#02626D;
+        --aurora-pink:#BE5A83;
+        --aurora-pink-bright:#CE83A2;
+        --aurora-violet:#7077A1;
+        --aurora-violet-bright:#9499B8;
+
+        --teal:var(--aurora-teal);
+        --teal-bright:var(--aurora-teal-bright);
+        --teal-dim:var(--aurora-teal-dim);
+        --pink:var(--aurora-pink);
+        --pink-bright:var(--aurora-pink-bright);
+        --violet:var(--aurora-violet);
+        --violet-bright:var(--aurora-violet-bright);
+      }
+
+      text{
+        font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+        fill: var(--fg);
+      }
+      .title{ font-size: 34px; font-weight: 800; }
+      .subtitle{ font-size: 18px; fill: var(--muted); }
+      .label{ font-size: 20px; font-weight: 750; }
+      .small{ font-size: 18px; fill: var(--muted); }
+      .tiny{ font-size: 16px; fill: var(--muted); }
+      .faint{ fill: var(--faint); }
+      .outline{ paint-order: stroke; stroke: var(--bg); stroke-width: 6px; stroke-linejoin: round; }
+
+      .panel{ fill: var(--panel); stroke: var(--violet); stroke-width: 1.6; opacity: 0.96; }
+      .panel-soft{ fill: #101327; stroke: var(--violet); stroke-width: 1.2; opacity: 0.95; }
+
+      .rung{ stroke: var(--teal); stroke-width: 5; stroke-linecap: round; }
+      .rail{ stroke: var(--teal-dim); stroke-width: 5; stroke-linecap: round; opacity: 0.9; }
+      .ramp{ stroke: var(--violet-bright); stroke-width: 6; stroke-linecap: round; opacity: 0.85; }
+      .xmark{ stroke: var(--pink); stroke-width: 8; stroke-linecap: round; opacity: 0.9; }
+
+      .arrow{ stroke: var(--pink); stroke-width: 5; fill: none; marker-end: url(#arrow-pink); }
+      .arrow2{ stroke: var(--violet-bright); stroke-width: 4; fill: none; marker-end: url(#arrow-violet); opacity: 0.9; }
+    </style>
+
+    <marker id="arrow-pink" markerWidth="12" markerHeight="12" refX="8" refY="6" orient="auto">
+      <path d="M0 0 L12 6 L0 12 z" fill="var(--pink)"/>
+    </marker>
+    <marker id="arrow-violet" markerWidth="12" markerHeight="12" refX="8" refY="6" orient="auto">
+      <path d="M0 0 L12 6 L0 12 z" fill="var(--violet-bright)"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="960" height="540" fill="var(--bg)"/>
+
+  <!-- Header -->
+  <text x="44" y="58" class="title">Energy levels are rungs, not a ramp</text>
+  <text x="44" y="86" class="subtitle">Only specific energies are allowed — so only specific photon energies (wavelengths) appear.</text>
+
+  <!-- Main two-panel container -->
+  <rect x="36" y="110" width="888" height="340" rx="18" class="panel"/>
+  <line x1="480" y1="126" x2="480" y2="434" stroke="var(--violet)" stroke-width="1.2" opacity="0.7"/>
+
+  <!-- Left: quantized -->
+  <g transform="translate(0,0)">
+    <text x="70" y="152" class="label">Quantized (real)</text>
+    <text x="70" y="178" class="small">Electrons can stand only on the rungs.</text>
+
+    <!-- Ladder rails -->
+    <line x1="140" y1="210" x2="140" y2="405" class="rail"/>
+    <line x1="270" y1="210" x2="270" y2="405" class="rail"/>
+
+    <!-- Rungs -->
+    <line x1="140" y1="392" x2="270" y2="392" class="rung"/>
+    <line x1="140" y1="350" x2="270" y2="350" class="rung"/>
+    <line x1="140" y1="308" x2="270" y2="308" class="rung"/>
+    <line x1="140" y1="266" x2="270" y2="266" class="rung"/>
+    <line x1="140" y1="224" x2="270" y2="224" class="rung"/>
+
+    <!-- Labels for rungs -->
+    <text x="292" y="398" class="tiny">lower</text>
+    <text x="292" y="230" class="tiny">higher</text>
+    <text x="292" y="318" class="tiny">…</text>
+
+    <!-- "Electron" marker on a rung -->
+    <circle cx="205" cy="350" r="10" fill="var(--fg)" opacity="0.95"/>
+    <circle cx="205" cy="350" r="16" fill="none" stroke="var(--teal-bright)" stroke-width="3" opacity="0.9"/>
+
+    <!-- Allowed jump arrows -->
+    <path d="M330 350 C 365 330, 365 288, 330 266" class="arrow"/>
+    <path d="M330 350 C 365 370, 365 412, 330 392" class="arrow"/>
+    <text x="374" y="305" class="tiny outline">absorb photon</text>
+    <text x="374" y="388" class="tiny outline">emit photon</text>
+  </g>
+
+  <!-- Right: continuous (wrong model) -->
+  <g transform="translate(0,0)">
+    <text x="520" y="152" class="label">Continuous (classical assumption)</text>
+    <text x="520" y="178" class="small">“Any energy” would allow any wavelength.</text>
+
+    <!-- Ramp -->
+    <path d="M610 398 L 820 220" class="ramp"/>
+    <text x="828" y="230" class="tiny">higher</text>
+    <text x="590" y="412" class="tiny">lower</text>
+
+    <!-- Many possible “positions” on ramp -->
+    <g opacity="0.9">
+      <circle cx="650" cy="360" r="6" fill="var(--violet-bright)"/>
+      <circle cx="690" cy="326" r="6" fill="var(--violet-bright)"/>
+      <circle cx="730" cy="292" r="6" fill="var(--violet-bright)"/>
+      <circle cx="770" cy="258" r="6" fill="var(--violet-bright)"/>
+    </g>
+
+    <!-- “Any jump” arrows -->
+    <path d="M845 360 C 870 330, 872 290, 846 260" class="arrow2"/>
+    <path d="M845 345 C 875 338, 885 318, 862 300" class="arrow2"/>
+    <text x="892" y="314" class="tiny outline">many possible gaps</text>
+
+    <!-- Cross-out to mark “not how atoms work” -->
+    <line x1="594" y1="222" x2="840" y2="418" class="xmark"/>
+    <line x1="840" y1="222" x2="594" y2="418" class="xmark"/>
+    <text x="520" y="430" class="tiny outline">Not how atoms behave</text>
+  </g>
+
+  <!-- Key idea footer -->
+  <rect x="36" y="468" width="888" height="56" rx="16" class="panel"/>
+  <text x="60" y="502" class="label">
+    <tspan class="small">Key idea:</tspan>
+    <tspan> discrete energy levels</tspan>
+    <tspan class="small"> → discrete photon energies → spectral lines.</tspan>
+  </text>
+</svg>
+

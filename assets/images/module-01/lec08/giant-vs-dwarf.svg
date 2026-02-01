@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540" role="img" aria-labelledby="title desc" data-theme="dark" data-palette="aurora">
+  <title id="title">Same temperature, different size</title>
+  <desc id="desc">Two-panel comparison of a small red dwarf and a large red giant. Both are drawn with the same color to indicate the same surface temperature, but the giant has a much larger radius and therefore much higher luminosity.</desc>
+
+  <defs>
+    <style>
+      :root{
+        --bg:#0b0b0f;
+        --panel:#13162a;
+        --fg:#eef0ff;
+        --muted:#c9cbe5;
+        --faint:#8f92ad;
+
+        --aurora-teal:#028391;
+        --aurora-teal-bright:#41A2AC;
+        --aurora-teal-dim:#02626D;
+        --aurora-pink:#BE5A83;
+        --aurora-pink-bright:#CE83A2;
+        --aurora-violet:#7077A1;
+        --aurora-violet-bright:#9499B8;
+
+        --teal:var(--aurora-teal);
+        --teal-bright:var(--aurora-teal-bright);
+        --teal-dim:var(--aurora-teal-dim);
+        --pink:var(--aurora-pink);
+        --pink-bright:var(--aurora-pink-bright);
+        --violet:var(--aurora-violet);
+        --violet-bright:var(--aurora-violet-bright);
+
+        --star:#d97a72; /* neutral “red-star” tone (not the semantic pink) */
+      }
+
+      text{
+        font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+        fill: var(--fg);
+      }
+      .title{ font-size: 34px; font-weight: 800; }
+      .subtitle{ font-size: 18px; fill: var(--muted); }
+      .label{ font-size: 20px; font-weight: 750; }
+      .small{ font-size: 18px; fill: var(--muted); }
+      .tiny{ font-size: 16px; fill: var(--muted); }
+      .outline{ paint-order: stroke; stroke: var(--bg); stroke-width: 6px; stroke-linejoin: round; }
+
+      .panel{ fill: var(--panel); stroke: var(--violet); stroke-width: 1.6; opacity: 0.96; }
+      .subpanel{ fill: #101327; stroke: var(--violet); stroke-width: 1.2; opacity: 0.96; }
+
+      .starDisk{ fill: var(--star); opacity: 0.95; }
+      .glow{ fill: none; stroke: var(--star); stroke-width: 18; opacity: 0.18; }
+      .glow2{ fill: none; stroke: var(--star); stroke-width: 8; opacity: 0.25; }
+
+      .arrow{ stroke: var(--pink); stroke-width: 5; fill: none; marker-end: url(#arrow-pink); }
+      .guide{ stroke: var(--violet-bright); stroke-width: 2.5; stroke-dasharray: 8 8; opacity: 0.8; }
+    </style>
+
+    <marker id="arrow-pink" markerWidth="12" markerHeight="12" refX="8" refY="6" orient="auto">
+      <path d="M0 0 L12 6 L0 12 z" fill="var(--pink)"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="960" height="540" fill="var(--bg)"/>
+
+  <!-- Header -->
+  <text x="44" y="58" class="title">Same temperature, different size</text>
+  <text x="44" y="86" class="subtitle">Same color means same surface temperature — brightness can still differ because radius differs.</text>
+
+  <rect x="36" y="110" width="888" height="340" rx="18" class="panel"/>
+  <line x1="480" y1="126" x2="480" y2="434" stroke="var(--violet)" stroke-width="1.2" opacity="0.7"/>
+
+  <!-- Left: dwarf -->
+  <rect x="56" y="136" width="404" height="294" rx="16" class="subpanel"/>
+  <text x="80" y="170" class="label">Red dwarf</text>
+  <text x="80" y="196" class="small">Small radius → low luminosity (at same T)</text>
+
+  <!-- Dwarf star -->
+  <g transform="translate(0,0)">
+    <circle cx="258" cy="308" r="62" class="glow"/>
+    <circle cx="258" cy="308" r="44" class="glow2"/>
+    <circle cx="258" cy="308" r="34" class="starDisk"/>
+    <text x="258" y="300" text-anchor="middle" class="tiny outline">same T</text>
+    <text x="258" y="324" text-anchor="middle" class="tiny outline">(same color)</text>
+
+    <!-- Radius arrow -->
+    <line x1="258" y1="308" x2="292" y2="308" class="arrow"/>
+    <text x="298" y="314" class="tiny outline">R</text>
+  </g>
+
+  <!-- Right: giant -->
+  <rect x="500" y="136" width="404" height="294" rx="16" class="subpanel"/>
+  <text x="524" y="170" class="label">Red giant</text>
+  <text x="524" y="196" class="small">Large radius → high luminosity (at same T)</text>
+
+  <!-- Giant star -->
+  <g transform="translate(0,0)">
+    <circle cx="702" cy="308" r="142" class="glow"/>
+    <circle cx="702" cy="308" r="104" class="glow2"/>
+    <circle cx="702" cy="308" r="86" class="starDisk"/>
+    <text x="702" y="300" text-anchor="middle" class="tiny outline">same T</text>
+    <text x="702" y="324" text-anchor="middle" class="tiny outline">(same color)</text>
+
+    <!-- Radius arrow -->
+    <line x1="702" y1="308" x2="788" y2="308" class="arrow"/>
+    <text x="796" y="314" class="tiny outline">R</text>
+  </g>
+
+  <!-- Shared guide: same temperature callout -->
+  <g>
+    <line x1="132" y1="236" x2="828" y2="236" class="guide"/>
+    <text x="480" y="230" text-anchor="middle" class="tiny outline">both stars have the same surface temperature (same spectrum peak)</text>
+  </g>
+
+  <!-- Footer -->
+  <rect x="36" y="468" width="888" height="56" rx="16" class="panel"/>
+  <text x="60" y="502" class="label">
+    <tspan class="small">Key idea:</tspan>
+    <tspan> at fixed temperature,</tspan>
+    <tspan class="small"> luminosity scales with surface area:</tspan>
+    <tspan> L ∝ R²</tspan>
+    <tspan class="small">.</tspan>
+  </text>
+</svg>
+

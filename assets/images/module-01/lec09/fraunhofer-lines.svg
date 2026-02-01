@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540" role="img" aria-labelledby="title desc" data-theme="dark" data-palette="aurora">
+  <title id="title">Fraunhofer lines — missing colors in sunlight</title>
+  <desc id="desc">A schematic solar spectrum from violet to red with multiple dark absorption lines (Fraunhofer lines) crossing the rainbow, illustrating that specific wavelengths are missing.</desc>
+
+  <defs>
+    <style>
+      :root{
+        --bg:#0b0b0f;
+        --panel:#13162a;
+        --fg:#eef0ff;
+        --muted:#c9cbe5;
+        --faint:#8f92ad;
+
+        --aurora-teal:#028391;
+        --aurora-teal-bright:#41A2AC;
+        --aurora-teal-dim:#02626D;
+        --aurora-pink:#BE5A83;
+        --aurora-violet:#7077A1;
+        --aurora-violet-bright:#9499B8;
+
+        --teal:var(--aurora-teal);
+        --teal-bright:var(--aurora-teal-bright);
+        --teal-dim:var(--aurora-teal-dim);
+        --pink:var(--aurora-pink);
+        --violet:var(--aurora-violet);
+        --violet-bright:var(--aurora-violet-bright);
+      }
+
+      text{
+        font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+        fill: var(--fg);
+      }
+      .title{ font-size: 34px; font-weight: 800; }
+      .subtitle{ font-size: 18px; fill: var(--muted); }
+      .label{ font-size: 20px; font-weight: 750; }
+      .small{ font-size: 18px; fill: var(--muted); }
+      .tiny{ font-size: 16px; fill: var(--muted); }
+      .outline{ paint-order: stroke; stroke: var(--bg); stroke-width: 6px; stroke-linejoin: round; }
+
+      .panel{ fill: var(--panel); stroke: var(--violet); stroke-width: 1.6; opacity: 0.96; }
+      .specFrame{ fill: #0d1024; stroke: var(--violet); stroke-width: 1.2; opacity: 0.98; }
+      .axis{ stroke: var(--teal); stroke-width: 4; }
+      .tick{ stroke: var(--teal-dim); stroke-width: 2.5; opacity: 0.9; }
+      .line{ stroke: #06070d; stroke-width: 6; opacity: 0.92; }
+      .lineThin{ stroke: #06070d; stroke-width: 3; opacity: 0.92; }
+    </style>
+
+    <linearGradient id="rainbow" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%"  stop-color="#6a2ca8"/>
+      <stop offset="16%" stop-color="#2f4de0"/>
+      <stop offset="33%" stop-color="#1aa8ff"/>
+      <stop offset="50%" stop-color="#46d26a"/>
+      <stop offset="66%" stop-color="#f1e64b"/>
+      <stop offset="82%" stop-color="#ff9a2f"/>
+      <stop offset="100%" stop-color="#ff3a3a"/>
+    </linearGradient>
+  </defs>
+
+  <rect x="0" y="0" width="960" height="540" fill="var(--bg)"/>
+
+  <!-- Header -->
+  <text x="44" y="58" class="title">Fraunhofer lines — missing colors in sunlight</text>
+  <text x="44" y="86" class="subtitle">The solar spectrum is crossed by dark lines where specific wavelengths are absorbed.</text>
+
+  <rect x="36" y="110" width="888" height="340" rx="18" class="panel"/>
+
+  <!-- Spectrum strip -->
+  <g transform="translate(0,0)">
+    <text x="70" y="156" class="label">Schematic sunlight spectrum</text>
+    <text x="70" y="182" class="small">Dark lines = wavelengths missing from the rainbow</text>
+
+    <rect x="90" y="220" width="780" height="140" rx="16" class="specFrame"/>
+    <rect x="120" y="252" width="720" height="76" rx="10" fill="url(#rainbow)" opacity="0.98"/>
+
+    <!-- Absorption lines (representative, not to scale) -->
+    <g>
+      <line x1="170" y1="246" x2="170" y2="334" class="line"/>
+      <line x1="210" y1="246" x2="210" y2="334" class="lineThin"/>
+      <line x1="265" y1="246" x2="265" y2="334" class="lineThin"/>
+      <line x1="318" y1="246" x2="318" y2="334" class="line"/>
+      <line x1="410" y1="246" x2="410" y2="334" class="lineThin"/>
+      <line x1="520" y1="246" x2="520" y2="334" class="line"/>
+      <line x1="612" y1="246" x2="612" y2="334" class="lineThin"/>
+      <line x1="690" y1="246" x2="690" y2="334" class="line"/>
+      <line x1="742" y1="246" x2="742" y2="334" class="lineThin"/>
+      <line x1="780" y1="246" x2="780" y2="334" class="line"/>
+    </g>
+
+    <!-- Simple axis cue -->
+    <line x1="120" y1="360" x2="840" y2="360" class="axis"/>
+    <line x1="120" y1="360" x2="120" y2="372" class="tick"/>
+    <line x1="300" y1="360" x2="300" y2="372" class="tick"/>
+    <line x1="480" y1="360" x2="480" y2="372" class="tick"/>
+    <line x1="660" y1="360" x2="660" y2="372" class="tick"/>
+    <line x1="840" y1="360" x2="840" y2="372" class="tick"/>
+    <text x="120" y="396" class="tiny">shorter λ</text>
+    <text x="840" y="396" text-anchor="end" class="tiny">longer λ</text>
+    <text x="480" y="396" text-anchor="middle" class="tiny">wavelength</text>
+
+    <!-- Fraunhofer letter labels (conceptual) -->
+    <text x="162" y="238" class="tiny outline">A</text>
+    <text x="310" y="238" class="tiny outline">B</text>
+    <text x="512" y="238" class="tiny outline">C</text>
+    <text x="682" y="238" class="tiny outline">D</text>
+  </g>
+
+  <!-- Footer -->
+  <rect x="36" y="468" width="888" height="56" rx="16" class="panel"/>
+  <text x="60" y="502" class="label">
+    <tspan class="small">Key idea:</tspan>
+    <tspan> those missing wavelengths are a “barcode” of atoms in the Sun’s atmosphere.</tspan>
+  </text>
+</svg>
+

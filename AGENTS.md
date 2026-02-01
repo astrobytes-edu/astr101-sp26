@@ -20,6 +20,8 @@ This repo is a Quarto website + RevealJS slide system for **ASTR 101: Principles
 ## File Safety (Non‑Negotiable)
 
 - **Do not delete, move, or rename any files without explicit, prior user approval.**
+- **Only stage and commit files you personally edited for the current request.** If `git status` shows unrelated changes, stop and ask before staging/committing/reverting anything.
+- **Do not restore/reset/revert any files** (e.g., `git restore`, `git checkout -- <file>`, `git reset --hard`) unless the user explicitly asked you to revert them.
 - If a file seems “unrelated,” ask first; do not clean it up proactively.
 - If you accidentally delete something, stop and restore it immediately (do not commit the deletion).
 

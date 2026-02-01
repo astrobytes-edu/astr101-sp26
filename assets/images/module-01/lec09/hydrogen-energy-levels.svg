@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540" role="img" aria-labelledby="title desc" data-theme="dark" data-palette="aurora">
+  <title id="title">Hydrogen energy levels and the Balmer series</title>
+  <desc id="desc">Energy level diagram for hydrogen showing discrete levels n=1 through n=5 and the ionization limit at 0 eV. Transitions down to n=2 are highlighted to indicate the Balmer series, labeled with H-alpha, H-beta, and H-gamma wavelengths.</desc>
+
+  <defs>
+    <style>
+      :root{
+        --bg:#0b0b0f;
+        --panel:#13162a;
+        --fg:#eef0ff;
+        --muted:#c9cbe5;
+        --faint:#8f92ad;
+
+        --aurora-teal:#028391;
+        --aurora-teal-bright:#41A2AC;
+        --aurora-teal-dim:#02626D;
+        --aurora-pink:#BE5A83;
+        --aurora-pink-bright:#CE83A2;
+        --aurora-violet:#7077A1;
+        --aurora-violet-bright:#9499B8;
+
+        --teal:var(--aurora-teal);
+        --teal-bright:var(--aurora-teal-bright);
+        --teal-dim:var(--aurora-teal-dim);
+        --pink:var(--aurora-pink);
+        --pink-bright:var(--aurora-pink-bright);
+        --violet:var(--aurora-violet);
+        --violet-bright:var(--aurora-violet-bright);
+      }
+
+      text{
+        font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+        fill: var(--fg);
+      }
+      .title{ font-size: 34px; font-weight: 800; }
+      .subtitle{ font-size: 18px; fill: var(--muted); }
+      .label{ font-size: 20px; font-weight: 750; }
+      .small{ font-size: 18px; fill: var(--muted); }
+      .tiny{ font-size: 16px; fill: var(--muted); }
+      .faint{ fill: var(--faint); }
+      .outline{ paint-order: stroke; stroke: var(--bg); stroke-width: 6px; stroke-linejoin: round; }
+      .math{ font-style: italic; }
+
+      .panel{ fill: var(--panel); stroke: var(--violet); stroke-width: 1.6; opacity: 0.96; }
+      .axis{ stroke: var(--teal); stroke-width: 4; }
+      .grid{ stroke: var(--teal-dim); stroke-width: 1.6; stroke-dasharray: 8 8; opacity: 0.55; }
+
+      .level{ stroke: var(--teal-bright); stroke-width: 5; stroke-linecap: round; }
+      .level2{ stroke: var(--pink); stroke-width: 6; stroke-linecap: round; }
+      .limit{ stroke: var(--violet-bright); stroke-width: 4; stroke-dasharray: 10 8; opacity: 0.85; }
+
+      .arrow{ stroke: var(--pink-bright); stroke-width: 5; fill: none; marker-end: url(#arrow-pink); }
+      .arrow2{ stroke: var(--pink); stroke-width: 5; fill: none; marker-end: url(#arrow-pink); opacity: 0.95; }
+    </style>
+
+    <marker id="arrow-pink" markerWidth="12" markerHeight="12" refX="8" refY="6" orient="auto">
+      <path d="M0 0 L12 6 L0 12 z" fill="var(--pink)"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="960" height="540" fill="var(--bg)"/>
+
+  <!-- Header -->
+  <text x="44" y="58" class="title">Hydrogen energy levels (Balmer series)</text>
+  <text x="44" y="86" class="subtitle">Electrons can occupy only specific energies; drops to n = 2 produce visible Balmer lines.</text>
+
+  <rect x="36" y="110" width="888" height="340" rx="18" class="panel"/>
+
+  <!-- Plot area -->
+  <!-- y-axis maps energy from 0 eV (top) to -14 eV (bottom) -->
+  <!-- y = 140 + (0 - E)/14 * 270 -->
+  <g transform="translate(0,0)">
+    <!-- Axes -->
+    <line x1="140" y1="150" x2="140" y2="420" class="axis"/>
+    <text x="104" y="176" class="tiny" transform="rotate(-90 104 176)">Energy (eV)</text>
+
+    <!-- Reference gridlines (0, -3.4, -13.6) -->
+    <line x1="140" y1="150" x2="820" y2="150" class="grid"/>
+    <text x="120" y="156" text-anchor="end" class="tiny">0</text>
+
+    <line x1="140" y1="216" x2="820" y2="216" class="grid"/>
+    <text x="120" y="222" text-anchor="end" class="tiny">-3.4</text>
+
+    <line x1="140" y1="412" x2="820" y2="412" class="grid"/>
+    <text x="120" y="418" text-anchor="end" class="tiny">-13.6</text>
+
+    <!-- Ionization limit -->
+    <line x1="230" y1="150" x2="760" y2="150" class="limit"/>
+    <text x="770" y="156" class="tiny outline">ionized (n → ∞)</text>
+
+    <!-- Energy levels (approx values) -->
+    <!-- n=1: -13.6 eV -->
+    <line x1="280" y1="412" x2="720" y2="412" class="level"/>
+    <text x="740" y="418" class="tiny outline">n = 1</text>
+    <text x="280" y="438" class="tiny faint">E<tspan baseline-shift="-30%" font-size="70%">1</tspan> = −13.6 eV</text>
+
+    <!-- n=2: -3.4 eV (highlight) -->
+    <line x1="320" y1="216" x2="720" y2="216" class="level2"/>
+    <text x="740" y="222" class="tiny outline">n = 2</text>
+    <text x="320" y="244" class="tiny faint">E<tspan baseline-shift="-30%" font-size="70%">2</tspan> = −3.4 eV</text>
+
+    <!-- n=3: -1.51 eV -->
+    <line x1="360" y1="179" x2="720" y2="179" class="level"/>
+    <text x="740" y="185" class="tiny outline">n = 3</text>
+    <text x="360" y="206" class="tiny faint">E<tspan baseline-shift="-30%" font-size="70%">3</tspan> = −1.51 eV</text>
+
+    <!-- n=4: -0.85 eV -->
+    <line x1="400" y1="166" x2="720" y2="166" class="level"/>
+    <text x="740" y="172" class="tiny outline">n = 4</text>
+    <text x="400" y="194" class="tiny faint">E<tspan baseline-shift="-30%" font-size="70%">4</tspan> = −0.85 eV</text>
+
+    <!-- n=5: -0.54 eV -->
+    <line x1="440" y1="160" x2="720" y2="160" class="level"/>
+    <text x="740" y="166" class="tiny outline">n = 5</text>
+    <text x="440" y="188" class="tiny faint">E<tspan baseline-shift="-30%" font-size="70%">5</tspan> = −0.54 eV</text>
+
+    <!-- Balmer transitions to n=2 -->
+    <path d="M520 179 C 540 190, 560 204, 590 216" class="arrow"/>
+    <text x="538" y="206" class="tiny outline">Hα 656 nm</text>
+
+    <path d="M560 166 C 585 180, 610 198, 650 216" class="arrow2"/>
+    <text x="600" y="190" class="tiny outline">Hβ 486 nm</text>
+
+    <path d="M600 160 C 628 176, 656 196, 700 216" class="arrow2"/>
+    <text x="650" y="176" class="tiny outline">Hγ 434 nm</text>
+
+    <text x="230" y="332" class="small">
+      <tspan class="outline">What to notice:</tspan>
+      <tspan> levels crowd together as n increases.</tspan>
+    </text>
+    <text x="230" y="360" class="tiny faint">That crowding creates many possible UV lines and a sharp “limit” for each series.</text>
+  </g>
+
+  <!-- Footer -->
+  <rect x="36" y="468" width="888" height="56" rx="16" class="panel"/>
+  <text x="60" y="502" class="label">
+    <tspan class="small">Key idea:</tspan>
+    <tspan> Balmer lines are transitions</tspan>
+    <tspan class="small"> ending at n = 2 (visible light).</tspan>
+  </text>
+</svg>
+

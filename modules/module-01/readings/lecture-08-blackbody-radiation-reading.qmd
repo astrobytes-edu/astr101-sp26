@@ -77,13 +77,7 @@ In Lecture 7, we learned that light carries information and that wavelength matt
 
 This is the astronomer's thermometer: point a telescope at a star, spread its light into a spectrum, and read its temperature — from 40 trillion kilometers away, without touching anything.
 
-::: {.callout-note title="FIGURE PLACEHOLDER: Seeing Temperature in Infrared" collapse="false"}
-**Figure ID:** `infrared-thermal-image`
-
-**Description:** An infrared/thermal camera image showing warm person against cooler background. Different objects at different temperatures shown in false color. Caption: "Infrared cameras reveal thermal radiation — light emitted by objects because of their temperature."
-
-**Alt text:** Infrared image showing warm objects glowing brightly against cooler surroundings, demonstrating thermal radiation.
-:::
+{{< fig infrared-thermal-image >}}
 
 ::: {.callout-note title="🔍 Spot the Assumption" collapse="false"}
 You might assume:
@@ -564,13 +558,7 @@ This is how we distinguish **giants** from **dwarfs** observationally: same temp
 **Inference:** Star A has $\sqrt{10,000} = 100×$ the radius of Star B. Star A is a red giant; Star B is a red dwarf.
 :::
 
-::: {.callout-note title="FIGURE PLACEHOLDER: Same Temperature, Different Size" collapse="false"}
-**Figure ID:** `giant-vs-dwarf`
-
-**Description:** Show two stars at the same temperature (same color): a small "dwarf" star (Sun-sized) and a large "giant" star (much bigger radius). Both same color (same T), but giant is much brighter. Label luminosities and radii.
-
-**Alt text:** A red giant and a red dwarf at the same temperature but vastly different sizes and luminosities.
-:::
+{{< fig giant-vs-dwarf >}}
 
 ### Worked Example
 

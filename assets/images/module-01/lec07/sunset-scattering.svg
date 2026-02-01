@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540" role="img" aria-labelledby="title desc" data-theme="dark" data-palette="aurora">
+  <title id="title">Why sunsets are red and orange</title>
+  <desc id="desc">Two-panel schematic comparing sunlight at noon versus at sunset. At noon the path through the atmosphere is short and blue light is scattered into the sky. At sunset the path is much longer; blue light is scattered out along the way and the remaining direct light reaching the observer is redder.</desc>
+
+  <defs>
+    <style>
+      :root{
+        --bg:#0b0b0f;
+        --panel:#13162a;
+        --fg:#eef0ff;
+        --muted:#c9cbe5;
+        --faint:#8f92ad;
+
+        --aurora-teal:#028391;
+        --aurora-teal-bright:#41A2AC;
+        --aurora-teal-dim:#02626D;
+        --aurora-pink:#BE5A83;
+        --aurora-violet:#7077A1;
+        --aurora-violet-bright:#9499B8;
+
+        --teal:var(--aurora-teal);
+        --teal-bright:var(--aurora-teal-bright);
+        --teal-dim:var(--aurora-teal-dim);
+        --pink:var(--aurora-pink);
+        --violet:var(--aurora-violet);
+        --violet-bright:var(--aurora-violet-bright);
+
+        --sun:#f6d55c;
+        --blue:#5aa8ff;
+        --red:#ff7a5c;
+      }
+
+      text{
+        font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+        fill: var(--fg);
+      }
+      .title{ font-size: 34px; font-weight: 800; }
+      .subtitle{ font-size: 18px; fill: var(--muted); }
+      .label{ font-size: 20px; font-weight: 750; }
+      .small{ font-size: 18px; fill: var(--muted); }
+      .tiny{ font-size: 16px; fill: var(--muted); }
+      .outline{ paint-order: stroke; stroke: var(--bg); stroke-width: 6px; stroke-linejoin: round; }
+
+      .panel{ fill: var(--panel); stroke: var(--violet); stroke-width: 1.6; opacity: 0.96; }
+      .subpanel{ fill: #101327; stroke: var(--violet); stroke-width: 1.2; opacity: 0.96; }
+      .atm{ fill: none; stroke: var(--violet-bright); stroke-width: 3.2; opacity: 0.75; }
+      .ground{ stroke: var(--teal-dim); stroke-width: 6; opacity: 0.9; }
+
+      .pathShort{ stroke: var(--fg); stroke-width: 6; opacity: 0.22; }
+      .pathLong{ stroke: var(--fg); stroke-width: 6; opacity: 0.22; stroke-dasharray: 10 10; }
+
+      .blueRay{ stroke: var(--blue); stroke-width: 4.2; opacity: 0.85; marker-end: url(#arrow-blue); }
+      .redRay{ stroke: var(--red); stroke-width: 4.2; opacity: 0.8; marker-end: url(#arrow-red); }
+      .hint{ stroke: var(--pink); stroke-width: 4; opacity: 0.8; marker-end: url(#arrow-pink); }
+    </style>
+
+    <marker id="arrow-blue" markerWidth="12" markerHeight="12" refX="8" refY="6" orient="auto">
+      <path d="M0 0 L12 6 L0 12 z" fill="var(--blue)"/>
+    </marker>
+    <marker id="arrow-red" markerWidth="12" markerHeight="12" refX="8" refY="6" orient="auto">
+      <path d="M0 0 L12 6 L0 12 z" fill="var(--red)"/>
+    </marker>
+    <marker id="arrow-pink" markerWidth="12" markerHeight="12" refX="8" refY="6" orient="auto">
+      <path d="M0 0 L12 6 L0 12 z" fill="var(--pink)"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="960" height="540" fill="var(--bg)"/>
+
+  <!-- Header -->
+  <text x="44" y="58" class="title">Why sunsets are red and orange</text>
+  <text x="44" y="86" class="subtitle">At sunset, sunlight travels through much more atmosphere — blue scatters out along the way.</text>
+
+  <rect x="36" y="110" width="888" height="340" rx="18" class="panel"/>
+  <line x1="480" y1="126" x2="480" y2="434" stroke="var(--violet)" stroke-width="1.2" opacity="0.7"/>
+
+  <!-- Left: noon -->
+  <rect x="56" y="136" width="404" height="294" rx="16" class="subpanel"/>
+  <text x="80" y="170" class="label">Noon</text>
+  <text x="80" y="196" class="small">Short path through air</text>
+
+  <g>
+    <path d="M120 382 C 200 292, 316 292, 396 382" class="atm"/>
+    <line x1="120" y1="382" x2="396" y2="382" class="ground"/>
+    <circle cx="260" cy="156" r="18" fill="var(--sun)" opacity="0.98"/>
+    <text x="282" y="162" class="tiny outline">Sun</text>
+
+    <!-- short path -->
+    <path d="M260 174 C 260 250, 260 308, 260 382" class="pathShort"/>
+    <text x="270" y="258" class="tiny outline">short path</text>
+
+    <!-- scattered blue -->
+    <path d="M260 286 C 210 270, 170 250, 140 220" class="blueRay"/>
+    <text x="132" y="216" class="tiny outline">blue scatters</text>
+    <text x="132" y="236" class="tiny outline">into the sky</text>
+
+    <!-- observer sees blue -->
+    <circle cx="160" cy="370" r="6" fill="var(--fg)" opacity="0.9"/>
+    <path d="M152 382 L168 382 L160 398 Z" fill="var(--fg)" opacity="0.8"/>
+    <text x="120" y="356" class="tiny outline">observer</text>
+  </g>
+
+  <!-- Right: sunset -->
+  <rect x="500" y="136" width="404" height="294" rx="16" class="subpanel"/>
+  <text x="524" y="170" class="label">Sunset</text>
+  <text x="524" y="196" class="small">Long path through air</text>
+
+  <g>
+    <path d="M564 382 C 644 292, 760 292, 840 382" class="atm"/>
+    <line x1="564" y1="382" x2="840" y2="382" class="ground"/>
+
+    <!-- Sun near horizon -->
+    <circle cx="832" cy="344" r="16" fill="var(--sun)" opacity="0.98"/>
+    <text x="786" y="330" class="tiny outline">Sun</text>
+
+    <!-- long path -->
+    <path d="M832 344 C 740 320, 660 308, 590 300 C 570 302, 560 330, 560 382" class="pathLong"/>
+    <text x="650" y="272" class="tiny outline">long path</text>
+
+    <!-- blue scattered out along the way -->
+    <path d="M720 318 C 690 290, 660 270, 620 244" class="blueRay"/>
+    <path d="M650 306 C 620 332, 592 350, 570 366" class="blueRay"/>
+    <text x="566" y="238" class="tiny outline">blue scatters out</text>
+
+    <!-- red reaches observer -->
+    <path d="M560 382 C 610 360, 660 346, 720 334" class="redRay"/>
+    <text x="724" y="352" class="tiny outline">remaining light is redder</text>
+
+    <!-- observer -->
+    <circle cx="586" cy="370" r="6" fill="var(--fg)" opacity="0.9"/>
+    <path d="M578 382 L594 382 L586 398 Z" fill="var(--fg)" opacity="0.8"/>
+    <text x="548" y="356" class="tiny outline">observer</text>
+  </g>
+
+  <!-- Footer -->
+  <rect x="36" y="468" width="888" height="56" rx="16" class="panel"/>
+  <text x="60" y="502" class="label">
+    <tspan class="small">Key idea:</tspan>
+    <tspan> longer path length</tspan>
+    <tspan class="small"> → more scattering of blue → sunsets look red/orange.</tspan>
+  </text>
+</svg>
+

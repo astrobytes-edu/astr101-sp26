@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540" role="img" aria-labelledby="title desc" data-theme="dark" data-palette="aurora">
+  <title id="title">Radial vs. transverse motion</title>
+  <desc id="desc">Two-panel diagram showing that only line-of-sight (radial) motion produces a Doppler shift in spectral lines, while purely sideways (transverse) motion does not shift the spectrum.</desc>
+
+  <defs>
+    <style>
+      :root{
+        --bg:#0b0b0f;
+        --panel:#13162a;
+        --fg:#eef0ff;
+        --muted:#c9cbe5;
+        --faint:#8f92ad;
+        --grid:#1a1c28;
+
+        --aurora-teal:#028391;
+        --aurora-teal-bright:#41A2AC;
+        --aurora-teal-dim:#02626D;
+        --aurora-pink:#BE5A83;
+        --aurora-pink-bright:#CE83A2;
+        --aurora-violet:#7077A1;
+        --aurora-violet-bright:#9499B8;
+
+        --teal:var(--aurora-teal);
+        --teal-bright:var(--aurora-teal-bright);
+        --teal-dim:var(--aurora-teal-dim);
+        --pink:var(--aurora-pink);
+        --pink-bright:var(--aurora-pink-bright);
+        --violet:var(--aurora-violet);
+        --violet-bright:var(--aurora-violet-bright);
+
+        --red:#ff5b5b;
+        --blue:#59a8ff;
+      }
+
+      text{
+        font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+        fill: var(--fg);
+      }
+      .title{ font-size: 34px; font-weight: 800; }
+      .subtitle{ font-size: 18px; fill: var(--muted); }
+      .label{ font-size: 20px; font-weight: 750; }
+      .small{ font-size: 18px; fill: var(--muted); }
+      .tiny{ font-size: 16px; fill: var(--muted); }
+      .outline{ paint-order: stroke; stroke: var(--bg); stroke-width: 6px; stroke-linejoin: round; }
+
+      .panel{ fill: var(--panel); stroke: var(--violet); stroke-width: 1.6; opacity: 0.96; }
+      .subpanel{ fill: #101327; stroke: var(--violet); stroke-width: 1.2; opacity: 0.96; }
+
+      .los{ stroke: var(--teal); stroke-width: 4; stroke-dasharray: 10 10; opacity: 0.9; }
+      .radial{ stroke: var(--pink); stroke-width: 5; marker-end: url(#arrow-pink); }
+      .trans{ stroke: var(--violet-bright); stroke-width: 5; marker-end: url(#arrow-violet); }
+
+      .scope{ fill: none; stroke: var(--teal-bright); stroke-width: 4; stroke-linecap: round; }
+      .star{ fill: var(--fg); opacity: 0.95; }
+      .star-glow{ fill: none; stroke: var(--teal-bright); stroke-width: 3; opacity: 0.8; }
+
+      .spec-bar{ fill: #0d1024; stroke: var(--violet); stroke-width: 1.2; opacity: 0.98; }
+      .spec-line{ stroke: var(--fg); stroke-width: 3; opacity: 0.95; }
+      .spec-line-shift-red{ stroke: var(--red); stroke-width: 4; opacity: 0.95; }
+      .spec-line-shift-blue{ stroke: var(--blue); stroke-width: 4; opacity: 0.95; }
+      .spec-axis{ stroke: var(--teal-dim); stroke-width: 3; opacity: 0.9; }
+    </style>
+
+    <marker id="arrow-pink" markerWidth="12" markerHeight="12" refX="8" refY="6" orient="auto">
+      <path d="M0 0 L12 6 L0 12 z" fill="var(--pink)"/>
+    </marker>
+    <marker id="arrow-violet" markerWidth="12" markerHeight="12" refX="8" refY="6" orient="auto">
+      <path d="M0 0 L12 6 L0 12 z" fill="var(--violet-bright)"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="960" height="540" fill="var(--bg)"/>
+
+  <!-- Header -->
+  <text x="44" y="58" class="title">Radial vs. transverse motion</text>
+  <text x="44" y="86" class="subtitle">Only motion along your line of sight produces a Doppler shift.</text>
+
+  <rect x="36" y="110" width="888" height="340" rx="18" class="panel"/>
+  <line x1="480" y1="126" x2="480" y2="434" stroke="var(--violet)" stroke-width="1.2" opacity="0.7"/>
+
+  <!-- Left subpanel: radial -->
+  <rect x="56" y="136" width="404" height="294" rx="16" class="subpanel"/>
+  <text x="80" y="170" class="label">Radial (line-of-sight)</text>
+  <text x="80" y="196" class="small">Toward / away → wavelength shifts</text>
+
+  <!-- Telescope icon -->
+  <g transform="translate(0,0)">
+    <path d="M110 288 L160 268 L170 286 L120 306 Z" class="scope"/>
+    <line x1="130" y1="306" x2="148" y2="336" class="scope"/>
+    <line x1="116" y1="312" x2="134" y2="342" class="scope"/>
+    <circle cx="152" cy="268" r="10" fill="var(--teal-bright)" opacity="0.9"/>
+  </g>
+
+  <!-- Line of sight -->
+  <line x1="178" y1="292" x2="420" y2="292" class="los"/>
+  <text x="240" y="278" class="tiny outline">line of sight</text>
+
+  <!-- Star + radial arrow -->
+  <circle cx="400" cy="292" r="10" class="star"/>
+  <circle cx="400" cy="292" r="18" class="star-glow"/>
+  <line x1="382" y1="292" x2="330" y2="292" class="radial"/>
+  <text x="326" y="320" class="tiny outline">radial <tspan class="tiny">v</tspan></text>
+
+  <!-- Spectra mini-bars -->
+  <g transform="translate(86,206)">
+    <rect x="0" y="0" width="170" height="56" rx="10" class="spec-bar"/>
+    <line x1="12" y1="48" x2="158" y2="48" class="spec-axis"/>
+    <line x1="86" y1="10" x2="86" y2="48" class="spec-line"/>
+    <text x="8" y="74" class="tiny">rest</text>
+
+    <rect x="0" y="86" width="170" height="56" rx="10" class="spec-bar"/>
+    <line x1="12" y1="134" x2="158" y2="134" class="spec-axis"/>
+    <line x1="104" y1="96" x2="104" y2="134" class="spec-line-shift-red"/>
+    <text x="8" y="160" class="tiny">receding → redshift</text>
+  </g>
+
+  <!-- Right subpanel: transverse -->
+  <rect x="500" y="136" width="404" height="294" rx="16" class="subpanel"/>
+  <text x="524" y="170" class="label">Transverse (sideways)</text>
+  <text x="524" y="196" class="small">Across the sky → no Doppler shift</text>
+
+  <!-- Telescope + LOS -->
+  <g transform="translate(444,0)">
+    <path d="M110 288 L160 268 L170 286 L120 306 Z" class="scope"/>
+    <line x1="130" y1="306" x2="148" y2="336" class="scope"/>
+    <line x1="116" y1="312" x2="134" y2="342" class="scope"/>
+    <circle cx="152" cy="268" r="10" fill="var(--teal-bright)" opacity="0.9"/>
+  </g>
+  <line x1="622" y1="292" x2="864" y2="292" class="los"/>
+
+  <!-- Star + transverse arrow -->
+  <circle cx="844" cy="292" r="10" class="star"/>
+  <circle cx="844" cy="292" r="18" class="star-glow"/>
+  <line x1="844" y1="310" x2="844" y2="368" class="trans"/>
+  <text x="760" y="362" class="tiny outline">transverse <tspan class="tiny">v</tspan> (no shift)</text>
+
+  <!-- Spectra mini-bars: unchanged -->
+  <g transform="translate(544,206)">
+    <rect x="0" y="0" width="170" height="56" rx="10" class="spec-bar"/>
+    <line x1="12" y1="48" x2="158" y2="48" class="spec-axis"/>
+    <line x1="86" y1="10" x2="86" y2="48" class="spec-line"/>
+    <text x="8" y="74" class="tiny">rest</text>
+
+    <rect x="0" y="86" width="170" height="56" rx="10" class="spec-bar"/>
+    <line x1="12" y1="134" x2="158" y2="134" class="spec-axis"/>
+    <line x1="86" y1="96" x2="86" y2="134" class="spec-line"/>
+    <text x="8" y="160" class="tiny">purely sideways → same line</text>
+  </g>
+
+  <!-- Footer -->
+  <rect x="36" y="468" width="888" height="56" rx="16" class="panel"/>
+  <text x="60" y="502" class="label">
+    <tspan class="small">Key idea:</tspan>
+    <tspan> Doppler measures only line-of-sight velocity</tspan>
+    <tspan class="small"> (a star can move fast sideways and show zero shift).</tspan>
+  </text>
+</svg>
+

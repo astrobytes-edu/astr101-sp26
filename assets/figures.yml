@@ -870,6 +870,100 @@ figures:
     module: 1
 
   # ==============================================================
+  # Lectures 07–10: Light → Spectra → Doppler (SVG + registry aliases)
+  # ==============================================================
+
+  proxima-centauri-info:
+    path: /assets/images/module-01/lec07/proxima-centauri-info.svg
+    caption: "What to notice: we can infer temperature, composition, motion, distance, and even planets by analyzing a star’s light — without visiting it."
+    alt: "Diagram of an example nearby star with arrows to callouts for temperature, composition, motion, distance, and planets, emphasizing that these properties are inferred from light."
+    credit: "Illustration: A. Rosen (SVG)"
+    module: 1
+
+  rayleigh-scattering-sky:
+    path: /assets/images/module-01/lec07/rayleigh-scattering-sky.svg
+    caption: "What to notice: short-wavelength (blue) light scatters much more than long-wavelength (red) light, filling the sky with scattered blue photons."
+    alt: "Cross-section schematic of sunlight entering Earth’s atmosphere where blue light is scattered in many directions by air molecules while red light mostly continues forward; an observer sees scattered blue from the sky."
+    credit: "Illustration: A. Rosen (SVG)"
+    module: 1
+
+  sunset-scattering:
+    path: /assets/images/module-01/lec07/sunset-scattering.svg
+    caption: "What to notice: at sunset, sunlight travels through much more atmosphere; blue light scatters out along the long path, leaving redder light to reach you."
+    alt: "Two-panel schematic comparing noon (short atmospheric path) and sunset (long atmospheric path); blue light scatters out more during the longer sunset path so the remaining direct light is redder."
+    credit: "Illustration: A. Rosen (SVG)"
+    module: 1
+
+  infrared-thermal-image:
+    path: /assets/images/module-01/lec08/infrared-thermal-image.svg
+    caption: "Placeholder figure: an infrared camera makes thermal radiation visible as false color; replace this sketch with a real thermal image when ready."
+    alt: "Two-panel schematic placeholder showing a dark visible-light scene and an infrared false-color view where a person silhouette appears bright due to thermal emission."
+    credit: "Illustration: A. Rosen (SVG — placeholder)"
+    module: 1
+
+  giant-vs-dwarf:
+    path: /assets/images/module-01/lec08/giant-vs-dwarf.svg
+    caption: "What to notice: two stars can have the same temperature (same color) but very different luminosities if their radii differ — at fixed temperature, L scales with R²."
+    alt: "Side-by-side diagram of a small red dwarf and a large red giant drawn with the same color to indicate the same temperature; the giant is much larger and therefore much more luminous."
+    credit: "Illustration: A. Rosen (SVG)"
+    module: 1
+
+  fraunhofer-lines:
+    path: /assets/images/module-01/lec09/fraunhofer-lines.svg
+    caption: "What to notice: the solar spectrum has many missing wavelengths (dark absorption lines) — those lines are chemical fingerprints of atoms."
+    alt: "Schematic rainbow spectrum crossed by multiple dark absorption lines, labeled as Fraunhofer lines to illustrate that specific wavelengths are missing."
+    credit: "Illustration: A. Rosen (SVG)"
+    module: 1
+
+  kirchhoff-three-laws:
+    path: /assets/images/module-01/week-04/types-of-spectra-jwst.png
+    caption: "What to notice: continuous, emission-line, and absorption-line spectra come from different physical setups (Kirchhoff’s three laws)."
+    alt: "Illustration showing a continuous spectrum, an emission-line spectrum from hot thin gas, and an absorption-line spectrum produced when light passes through cooler gas."
+    credit: "Illustration: NASA, ESA, CSA"
+    module: 1
+
+  energy-level-ladder:
+    path: /assets/images/module-01/lec09/energy-level-ladder.svg
+    caption: "What to notice: energy levels in atoms are rungs, not a ramp; only specific energy gaps are allowed, so only specific photon energies (wavelengths) appear."
+    alt: "Two-panel diagram comparing quantized energy levels shown as ladder rungs to an incorrect continuous ramp, highlighting that discrete levels produce discrete photon energies."
+    credit: "Illustration: A. Rosen (SVG)"
+    module: 1
+
+  hydrogen-energy-levels:
+    path: /assets/images/module-01/lec09/hydrogen-energy-levels.svg
+    caption: "What to notice: hydrogen’s energy levels get closer together as n increases; drops to n = 2 produce the visible Balmer lines."
+    alt: "Hydrogen energy-level diagram with labeled levels and arrows for transitions to n=2 (Balmer series), annotated with representative line names and wavelengths."
+    credit: "Illustration: A. Rosen (SVG)"
+    module: 1
+
+  hr-diagram-preview:
+    path: /assets/images/common/hr-diagram.png
+    caption: "What to notice: the H–R diagram maps stars by temperature and luminosity; the main sequence, giants, and white dwarfs occupy distinct regions."
+    alt: "Hertzsprung–Russell diagram plotting stellar luminosity versus temperature, showing the main sequence and other regions where stars cluster."
+    credit: "ESO"
+    module: 1
+
+  radial-vs-transverse:
+    path: /assets/images/module-01/lec10/radial-vs-transverse.svg
+    caption: "What to notice: Doppler shifts measure only line-of-sight (radial) velocity; purely sideways (transverse) motion produces no wavelength shift."
+    alt: "Two-panel diagram showing a star moving toward or away from an observer produces a shifted spectral line, while a star moving sideways shows the same spectral line."
+    credit: "Illustration: A. Rosen (SVG)"
+    module: 1
+
+  radial-velocity-method:
+    path: /assets/images/module-01/lec10/radial-velocity-method.svg
+    caption: "What to notice: an orbiting planet makes its star wobble; the star’s back-and-forth line-of-sight motion produces a periodic Doppler signal."
+    alt: "Two-panel diagram showing star–planet orbits about a barycenter and a corresponding sinusoidal radial-velocity curve labeled for approaching and receding motion."
+    credit: "Illustration: A. Rosen (SVG)"
+    module: 1
+
+  galaxy-rotation-curve:
+    path: /assets/images/module-04/rotation-curve.png
+    caption: "What to notice: galaxy rotation curves stay flat at large radii — visible matter alone would predict a decline, so extra mass is implied."
+    alt: "Plot comparing expected Keplerian decline in orbital speed with observed flat galaxy rotation curve as radius increases."
+    module: 1
+
+  # ==============================================================
   # Module 2: Inferring Star Properties
   # ==============================================================
 

@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540" role="img" aria-labelledby="title desc" data-theme="dark" data-palette="aurora">
+  <title id="title">Seeing temperature in infrared (placeholder)</title>
+  <desc id="desc">Two-panel schematic placeholder. Left panel shows a dark visible-light scene with a person silhouette. Right panel shows the same silhouette with a false-color thermal gradient to represent an infrared camera view.</desc>
+
+  <defs>
+    <style>
+      :root{
+        --bg:#0b0b0f;
+        --panel:#13162a;
+        --fg:#eef0ff;
+        --muted:#c9cbe5;
+        --faint:#8f92ad;
+
+        --aurora-teal:#028391;
+        --aurora-teal-bright:#41A2AC;
+        --aurora-teal-dim:#02626D;
+        --aurora-pink:#BE5A83;
+        --aurora-violet:#7077A1;
+        --aurora-violet-bright:#9499B8;
+
+        --teal:var(--aurora-teal);
+        --teal-bright:var(--aurora-teal-bright);
+        --teal-dim:var(--aurora-teal-dim);
+        --pink:var(--aurora-pink);
+        --violet:var(--aurora-violet);
+        --violet-bright:var(--aurora-violet-bright);
+      }
+
+      text{
+        font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+        fill: var(--fg);
+      }
+      .title{ font-size: 34px; font-weight: 800; }
+      .subtitle{ font-size: 18px; fill: var(--muted); }
+      .label{ font-size: 20px; font-weight: 750; }
+      .small{ font-size: 18px; fill: var(--muted); }
+      .tiny{ font-size: 16px; fill: var(--muted); }
+      .outline{ paint-order: stroke; stroke: var(--bg); stroke-width: 6px; stroke-linejoin: round; }
+
+      .panel{ fill: var(--panel); stroke: var(--violet); stroke-width: 1.6; opacity: 0.96; }
+      .subpanel{ fill: #101327; stroke: var(--violet); stroke-width: 1.2; opacity: 0.96; }
+
+      .silhouette{ fill: #1b1e33; stroke: var(--violet-bright); stroke-width: 2.2; opacity: 0.95; }
+      .frame{ fill: #0d1024; stroke: var(--violet); stroke-width: 1.2; opacity: 0.98; }
+    </style>
+
+    <linearGradient id="thermal" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0%" stop-color="#2f4de0"/>
+      <stop offset="35%" stop-color="#1aa8ff"/>
+      <stop offset="60%" stop-color="#46d26a"/>
+      <stop offset="78%" stop-color="#f1e64b"/>
+      <stop offset="92%" stop-color="#ff9a2f"/>
+      <stop offset="100%" stop-color="#ff3a3a"/>
+    </linearGradient>
+    <clipPath id="personClip">
+      <path d="M0,-60
+               C -18,-60 -30,-44 -30,-26
+               C -30,-12 -22,0 -10,6
+               L -10,62
+               C -10,76 -20,86 -34,86
+               L -54,86
+               C -60,86 -64,92 -64,98
+               L -64,116
+               C -64,124 -58,130 -50,130
+               L -18,130
+               C 0,130 0,118 0,110
+               C 0,118 0,130 18,130
+               L 50,130
+               C 58,130 64,124 64,116
+               L 64,98
+               C 64,92 60,86 54,86
+               L 34,86
+               C 20,86 10,76 10,62
+               L 10,6
+               C 22,0 30,-12 30,-26
+               C 30,-44 18,-60 0,-60 Z"/>
+    </clipPath>
+  </defs>
+
+  <rect x="0" y="0" width="960" height="540" fill="var(--bg)"/>
+
+  <!-- Header -->
+  <text x="44" y="58" class="title">Seeing temperature in infrared</text>
+  <text x="44" y="86" class="subtitle">Placeholder: replace with a real thermal photo later; this sketch shows the idea.</text>
+
+  <rect x="36" y="110" width="888" height="340" rx="18" class="panel"/>
+  <line x1="480" y1="126" x2="480" y2="434" stroke="var(--violet)" stroke-width="1.2" opacity="0.7"/>
+
+  <!-- Left: visible -->
+  <rect x="56" y="136" width="404" height="294" rx="16" class="subpanel"/>
+  <text x="80" y="170" class="label">Visible light</text>
+  <text x="80" y="196" class="small">In the dark, you see little</text>
+  <rect x="120" y="230" width="280" height="170" rx="16" class="frame"/>
+  <g transform="translate(260,318)">
+    <path d="M0,-60
+             C -18,-60 -30,-44 -30,-26
+             C -30,-12 -22,0 -10,6
+             L -10,62
+             C -10,76 -20,86 -34,86
+             L -54,86
+             C -60,86 -64,92 -64,98
+             L -64,116
+             C -64,124 -58,130 -50,130
+             L -18,130
+             C 0,130 0,118 0,110
+             C 0,118 0,130 18,130
+             L 50,130
+             C 58,130 64,124 64,116
+             L 64,98
+             C 64,92 60,86 54,86
+             L 34,86
+             C 20,86 10,76 10,62
+             L 10,6
+             C 22,0 30,-12 30,-26
+             C 30,-44 18,-60 0,-60 Z" class="silhouette"/>
+  </g>
+  <text x="260" y="416" text-anchor="middle" class="tiny">no emitted visible glow</text>
+
+  <!-- Right: infrared -->
+  <rect x="500" y="136" width="404" height="294" rx="16" class="subpanel"/>
+  <text x="524" y="170" class="label">Infrared camera</text>
+  <text x="524" y="196" class="small">Thermal radiation becomes visible</text>
+  <rect x="564" y="230" width="280" height="170" rx="16" class="frame"/>
+  <g transform="translate(704,318)">
+    <rect x="-70" y="-70" width="140" height="220" fill="url(#thermal)" opacity="0.9" clip-path="url(#personClip)"/>
+    <path d="M0,-60
+             C -18,-60 -30,-44 -30,-26
+             C -30,-12 -22,0 -10,6
+             L -10,62
+             C -10,76 -20,86 -34,86
+             L -54,86
+             C -60,86 -64,92 -64,98
+             L -64,116
+             C -64,124 -58,130 -50,130
+             L -18,130
+             C 0,130 0,118 0,110
+             C 0,118 0,130 18,130
+             L 50,130
+             C 58,130 64,124 64,116
+             L 64,98
+             C 64,92 60,86 54,86
+             L 34,86
+             C 20,86 10,76 10,62
+             L 10,6
+             C 22,0 30,-12 30,-26
+             C 30,-44 18,-60 0,-60 Z" class="silhouette"/>
+  </g>
+
+  <!-- Legend -->
+  <g>
+    <rect x="812" y="252" width="16" height="112" rx="6" fill="url(#thermal)" opacity="0.95"/>
+    <text x="840" y="262" class="tiny">warmer</text>
+    <text x="840" y="360" class="tiny">cooler</text>
+  </g>
+
+  <!-- Footer -->
+  <rect x="36" y="468" width="888" height="56" rx="16" class="panel"/>
+  <text x="60" y="502" class="label">
+    <tspan class="small">Key idea:</tspan>
+    <tspan> everything with temperature emits infrared light</tspan>
+    <tspan class="small"> — an IR camera makes “heat glow” visible.</tspan>
+  </text>
+</svg>
+
