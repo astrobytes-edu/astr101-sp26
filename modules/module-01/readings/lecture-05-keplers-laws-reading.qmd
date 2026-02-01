@@ -183,7 +183,7 @@ What was the key advantage of Copernicus's heliocentric model over Ptolemy's geo
 
 **Galileo Galilei (1564–1642)** provided actual *evidence*. In 1610, using a telescope he'd refined, he discovered four moons orbiting Jupiter. This proved that not everything orbited Earth. He also observed that Venus showed a full range of phases — from crescent to full — which was impossible in the classic Ptolemaic model where Venus always stayed between Earth and Sun.
 
-Venus's phases showed that Venus must orbit the Sun — ruling out the classic Ptolemaic model. However, they didn't uniquely prove Copernicus: a "hybrid" Tychonic system (Earth-centered but with planets orbiting the Sun) could also explain the phases. The evidence was mounting, but not yet decisive.
+Venus's phases showed that Venus must orbit the Sun — ruling out the simplest version of Ptolemy's model, where Venus always stays between Earth and the Sun. However, the phases didn't uniquely prove Copernicus: a "hybrid" Tychonic system (Earth-centered but with planets orbiting the Sun) could also explain them. The evidence was mounting, but not yet decisive.
 
 Despite the evidence, Galileo faced the Inquisition in 1633 and was forced to publicly renounce his support for heliocentrism. He spent his remaining years under house arrest. The scientific evidence eventually won — but it took courage to follow it.
 
@@ -359,7 +359,7 @@ Write your prediction here before continuing: _______________
 **Do this:**
 
 1. Set **Eccentricity** to about 0.6 (fairly elliptical)
-2. Toggle on **Show Foci** and **Show Apsides**
+2. Check the **Foci** and **Apsides** boxes (in the overlays row below the presets)
 3. Observe where the Sun sits relative to the ellipse's geometric center
 
 **Key question:** Is the Sun at the center of the ellipse?
@@ -402,7 +402,7 @@ The wedge area depends on two things: **how far** the planet is from the Sun (ra
 
 So if the radius is **smaller** (planet near perihelion), the angle must be **larger** to keep the area the same. Larger angle in the same time = **faster motion**.
 
-No calculus needed — just geometry.
+No calculus needed — just geometry. Imagine cutting each wedge out of paper: near perihelion, your paper wedge is short and fat; near aphelion, it's long and thin. Both pieces weigh the same (same area).
 
 ### Physical Intuition: The Ice Skater Analogy
 
@@ -437,12 +437,12 @@ A planet is moving fastest when it is at:
 :::
 
 ::: {.callout-check-yourself title="Check Yourself 6 — Equal Areas Interpretation"}
-According to Kepler's Second Law, if a planet takes 30 days to travel from point A to point B (sweeping a certain area), how long will it take to sweep the *same area* on a different part of its orbit?
+According to Kepler's Second Law, if a planet takes 30 days to sweep a certain area near aphelion, how long will it take to sweep *an equal area* near perihelion?
 
-- A) It depends on where in the orbit
-- B) Less than 30 days if closer to the Sun
-- C) Exactly 30 days, regardless of position
-- D) More than 30 days if closer to the Sun
+- A) It depends on exactly where in the orbit
+- B) Less than 30 days (it's moving faster there)
+- C) Exactly 30 days (equal areas require equal times)
+- D) More than 30 days (it has less distance to cover)
 :::
 
 ::: {.callout-tip title="Solution" collapse="true"}
@@ -466,8 +466,8 @@ Write your prediction here before continuing: _______________
 **Do this:**
 
 1. Keep eccentricity at ~0.5 so speed differences are visible
-2. Toggle on **Show Equal Areas**
-3. Click **Play** and watch the animation
+2. Check the **Equal Areas** box (in the overlays row below the presets)
+3. Click **▶ Play** and watch the animation
 4. Observe the wedge-shaped areas being swept out
 
 **Key observations:**
@@ -492,6 +492,8 @@ The planet moves **faster** near perihelion and **slower** near aphelion. The eq
 
 $$P^2 \propto a^3$$
 :::
+
+In plain English: planets farther from the Sun take *disproportionately* longer to orbit — not just because they have farther to travel, but because they also move slower.
 
 ### What This Means
 
@@ -549,6 +551,8 @@ $$\left(\frac{27\,\text{yr}}{1\,\text{yr}}\right)^2 = \left(\frac{a}{1\,\text{AU
 $$729 = \left(\frac{a}{1\,\text{AU}}\right)^3$$
 $$a = \sqrt[3]{729} \times 1\,\text{AU} = 9 \text{ AU}$$
 
+(The symbol $\sqrt[3]{\phantom{x}}$ means "cube root" — the number that, when multiplied by itself three times, gives 729. Since $9 \times 9 \times 9 = 729$, the cube root of 729 is 9.)
+
 ### Solar System Examples
 
 | Planet | $a$ (AU) | $a^3$ | $P^2$ | $P$ (years) | Actual $P$ |
@@ -559,7 +563,7 @@ $$a = \sqrt[3]{729} \times 1\,\text{AU} = 9 \text{ AU}$$
 | Saturn | 9.54 | 868 | 868 | 29.5 | 29.46 |
 | Neptune | 30.1 | 27,300 | 27,300 | 165 | 165 |
 
-The agreement is remarkable — Kepler's pattern fits perfectly.
+Notice that $a^3 \approx P^2$ in every row — that's the Third Law in action. The agreement is remarkable; Kepler's pattern fits perfectly.
 
 ::: {.callout-note title="FIGURE PLACEHOLDER: Kepler's Third Law — The Pattern" collapse="false"}
 **Figure ID:** `kepler-third-law-graph`
@@ -647,10 +651,10 @@ Calculate first: Using $(P/1\,\text{yr})^2 = (a/1\,\text{AU})^3$, if $a = 4$ AU,
 
 **Do this:**
 
-1. Select the **Jupiter** preset (~5.2 AU)
-2. Read the **Period** readout
+1. Click the **Jupiter** preset button (~5.2 AU) — the Period readout updates automatically
+2. Note the **Period (P)** value shown in the readout panel
 3. Check: Does $P^2$ approximately equal $a^3$?
-4. Try **Saturn** (~9.5 AU) and repeat the check
+4. Click **Saturn** (~9.5 AU) and repeat the check
 
 | Preset | Semi-major Axis (AU) | $a^3$ | Period (years) | $P^2$ | Match? |
 |--------|---------------------|-------|----------------|-------|--------|
@@ -680,9 +684,9 @@ Write your prediction here before continuing: _______________
 
 **Do this:**
 
-1. Switch to **Newton Mode**
-2. Note the current period at $a = 1$ AU with $M = 1\,M_\odot$
-3. Increase the star mass to $2\,M_\odot$
+1. Click **NEWTON MODE** at the top of the demo
+2. Note the current period at $a = 1$ AU with **Star Mass (M★)** = 1.0 M☉
+3. Drag the **Star Mass (M★)** slider to 2.0 M☉
 4. Observe what happens to the period
 
 ::: {.callout-tip title="What You Should Have Found" collapse="true"}
@@ -829,6 +833,8 @@ Which best describes how Kepler made his discoveries?
 $$\left(\frac{P_2}{P_1}\right)^2 = \left(\frac{a_2}{a_1}\right)^3$$
 *(This works because both moons orbit the same central body.)*
 
+*(Hint: Compute $a_2/a_1$ first, then cube it, then take the square root to get $P_2/P_1$.)*
+
 **6. Conceptual:** Why couldn't Kepler answer the question "Do these laws apply to planets around other stars?" What additional information would Newton provide?
 
 ---
@@ -844,7 +850,7 @@ $$\left(\frac{P_2}{P_1}\right)^2 = \left(\frac{a_2}{a_1}\right)^3$$
 | **Occam's Razor** | The heuristic that simpler explanations should be preferred, all else equal |
 | **Ellipse** | An oval curve with two foci; planetary orbits are ellipses |
 | **Semi-major axis ($a$)** | Half the longest diameter of an ellipse; average orbital distance |
-| **Eccentricity ($e$)** | How elongated an ellipse is (0 = circle, approaching 1 = very elongated) |
+| **Eccentricity ($e$)** | How stretched an ellipse is (0 = perfect circle, close to 1 = very elongated) |
 | **Perihelion** | The point in an orbit closest to the Sun |
 | **Aphelion** | The point in an orbit farthest from the Sun |
 | **Angular momentum** | A measure of rotational motion; conserved under gravity |
