@@ -20,7 +20,7 @@ prerequisites: Lectures 5-10 (this lecture applies all prior tools)
 ::: {.callout-important #the-big-idea}
 ## The Big Idea
 
-The solar system is our laboratory for testing everything we've learned. We can measure planetary distances (Kepler), masses (Newton), temperatures (Wien), and compositions (spectroscopy) — all from Earth. Understanding how it formed explains why rocky planets are close to the Sun and gas giants are far away. This is Module 1 in action.
+We can measure worlds we will never stand on — masses from orbits, temperatures from infrared glow, compositions from spectral fingerprints. The solar system is where we apply every tool from Module 1. Understanding how it formed explains why rocky planets huddle close to the Sun while gas giants rule the outer reaches.
 :::
 
 ::: {.callout-important title="How to Use This Reading" collapse="true"}
@@ -53,19 +53,31 @@ Now for the details...
 
 ---
 
-## Your Toolkit, Applied
+## Worlds We've Never Stood On
 
-Over the past weeks, you've assembled a powerful toolkit. Kepler's Laws describe orbits. Newton's gravity reveals mass. Blackbody radiation encodes temperature. Spectral lines fingerprint composition. The Doppler effect measures motion.
+**We know the mass of Jupiter** — and we didn't learn it by "weighing" a planet. We learned it by watching how other things move around it.
 
-Now let's use these tools on something close to home: **our own solar system**.
+That's the superpower of astronomy: we can measure worlds we will never stand on. A planet's mass from orbits. Its temperature from infrared glow. Its composition from spectral fingerprints. All from billions of kilometers away.
 
-How do we know Mercury is rocky? Its high density (5.4 g/cm³) tells us it's made of rock and iron — density comes from mass (Newton) divided by volume (measured from angular size + distance). How do we know Mercury's daytime surface reaches 430°C while nighttime plunges to -180°C? Wien's Law — we measure its infrared emission at different times. That 600°C swing also tells us Mercury has essentially no atmosphere to trap or distribute heat.
+::: {.callout-note title="A Preview of What's Ahead" collapse="false"}
+Here are facts that sound like science fiction but aren't:
 
-How do we know Jupiter is 318 times Earth's mass? Newton's gravity — we watch its moons orbit and apply $M = 4\pi^2 a^3 / (GP^2)$. How do we know Mars has CO₂ in its atmosphere? Spectroscopy — we see absorption lines at CO₂'s fingerprint wavelengths.
+{{< fig planetary-portraits >}}
 
-Every fact you've learned about planets comes from the physics in this course. The solar system isn't just a list of objects to memorize — it's a **laboratory** where we apply our tools.
+**Saturn** would float in water — its density is only 0.69 g/cm³, less than water's 1.0 g/cm³.
 
-Today we'll tour the solar system's architecture: rocky planets, gas giants, ice giants, and the swarms of small bodies beyond. Then we'll explain *why* it looks this way — how a collapsing cloud of gas and dust became the orderly system we see today. Along the way, we'll reinforce every major concept from Module 1.
+**Jupiter** outweighs all the other planets *combined* — 318 Earth masses.
+
+**Venus** is hotter than Mercury, even though it's farther from the Sun — 460°C surface, hot enough to melt lead.
+
+**Neptune** has the fastest winds in the solar system — 2,000 km/h, five times faster than the strongest hurricanes on Earth.
+
+How do we know these are true? That's what this lecture is about.
+:::
+
+Over the past weeks, you've assembled a powerful toolkit: Kepler's Laws describe orbits. Newton's gravity reveals mass. Blackbody radiation encodes temperature. Spectral lines fingerprint composition. The Doppler effect measures motion.
+
+Now we apply these tools to **our own solar system** — the best practice ground we have.
 
 ---
 
@@ -391,6 +403,10 @@ Mars appears red to our eyes. Neptune appears blue. Using concepts from L7-L9, w
 ---
 
 # Part 3: Solar System Formation
+
+The solar system's layout is **fossil evidence**. Rocky worlds huddle inside. Gas giants patrol the outer system. A belt of rubble sits where a fifth rocky planet might have formed. Icy debris extends to the edge of the Sun's gravitational influence.
+
+This isn't random. It's the preserved record of what happened 4.6 billion years ago. If we can read the pattern, we can reconstruct the story.
 
 ## The Nebular Hypothesis
 
