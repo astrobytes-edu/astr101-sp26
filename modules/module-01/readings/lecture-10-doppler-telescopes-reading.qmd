@@ -633,7 +633,7 @@ To get even better resolution, multiple radio dishes work together (**interferom
 
 ---
 
-## Module 1 Complete!
+## Toolkit Complete — Now We Apply It
 
 With L10 complete, you now have the full astronomer's toolkit:
 
@@ -647,14 +647,11 @@ With L10 complete, you now have the full astronomer's toolkit:
 | **L10** | Light reveals motion | Doppler, exoplanets, dark matter |
 | **L10** | Telescopes collect light | Light-gathering, resolution, wavelengths |
 
-**In Module 2, we apply these tools to understand stars:**
+**Your toolkit is complete. Now let's use it.**
 
-- How are they born?
-- Why do they shine?
-- How do they evolve and die?
-- What determines their fates — white dwarfs, neutron stars, or black holes?
+Next week (L11–L13) is our **capstone week**: we apply every tool to the solar system, planetary climates, exoplanets, and the search for life. Think of it as a victory lap that also prepares you for the Module 1 Exam.
 
-**Next:** Module 1 Exam (Week 7), then Module 2 — Stars!
+**Next up:** L11 — Our Cosmic Backyard (Solar System Architecture & Formation)
 
 ---
 

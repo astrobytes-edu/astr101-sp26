@@ -1,0 +1,73 @@
+---
+title: "Module 1 Synthesis"
+subtitle: "Foundations — Putting It All Together"
+description: "Consolidate your learning from Lectures 1-13 with glossaries, concept maps, practice problems, and exam preparation materials."
+---
+
+## Welcome to Module 1 Synthesis
+
+You've completed 13 lectures covering the astronomer's toolkit. These synthesis materials help you consolidate that learning, see connections between concepts, and prepare for assessment.
+
+::: {.callout-tip title="What You Can Now Do"}
+Given only light from a distant object, you can now determine:
+
+- **Distances** — from parallax, standard candles, or Kepler's Third Law
+- **Masses** — from orbital motion (Newton's version of Kepler's Third Law)
+- **Temperatures** — from peak wavelength (Wien's Law) or total brightness (Stefan-Boltzmann)
+- **Compositions** — from spectral absorption/emission lines
+- **Motions** — from Doppler shifts of spectral lines
+
+This is not memorization. This is the actual toolkit professional astronomers use.
+:::
+
+---
+
+## Synthesis Materials
+
+::: {.grid}
+
+::: {.g-col-6}
+### [Complete Glossary](glossary.qmd)
+All terms from Module 1, organized by lecture and tiered by importance (★ Core vs ◇ Supporting).
+:::
+
+::: {.g-col-6}
+### [Concept Map](concept-map.qmd)
+Visual diagrams showing how the four observables connect to our toolkit and what each tool reveals.
+:::
+
+::: {.g-col-6}
+### [Putting It Together](putting-it-together.qmd)
+Narrative synthesis: the story of Module 1, common misconceptions revisited, and connections to Module 2.
+:::
+
+::: {.g-col-6}
+### [Practice Problems](practice-problems.qmd)
+Multi-concept problems organized by difficulty (★/★★/★★★) plus real-data capstone challenges.
+:::
+
+::: {.g-col-12}
+### [Exam Prep](exam-prep.qmd)
+Self-assessment checklists, key equations, sample questions, and common mistakes to avoid.
+:::
+
+:::
+
+---
+
+## Module 1 Learning Arc
+
+| Week | Lectures | Theme |
+|------|----------|-------|
+| 1-2 | L1-L4 | **The Sky as Data** — Observables, geometry, seasons, moon phases |
+| 3-4 | L5-L6 | **From Patterns to Physics** — Kepler's empirical laws → Newton's explanations |
+| 4-5 | L7-L10 | **Light as Information** — EM spectrum, blackbody, spectroscopy, Doppler |
+| 6 | L11-L13 | **Capstone Applications** — Solar system, exoplanets, search for life |
+
+---
+
+## Quick Links
+
+- [Return to Module 1 Overview](/modules/module-01/)
+- [Module 1 Exam Information](/exams/)
+- [Office Hours & Help](/course-info/getting-help.qmd)

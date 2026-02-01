@@ -51,6 +51,14 @@ If you only remember three things:
 Now for the details...
 :::
 
+::: {.callout-note title="Why Start with the Solar System?"}
+In L10, we finished building your toolkit: Kepler, Newton, blackbody, spectroscopy, Doppler, telescopes. Now we need something to *point* that toolkit at.
+
+The solar system is the perfect target. It's close enough that we have ground truth (spacecraft have visited every planet). It's diverse enough to test every tool. And its architecture tells a story about how planetary systems form — knowledge we'll need when we hunt for exoplanets in L12.
+
+Think of L11–L13 as the final exam prep you didn't know you wanted: applying everything in context.
+:::
+
 ---
 
 ## Worlds We've Never Stood On

@@ -1,0 +1,248 @@
+---
+title: "Module 1 Concept Map"
+subtitle: "How the Pieces Fit Together"
+description: "Visual diagrams showing the connections between observables, tools, and inferences in Module 1."
+---
+
+## The Big Picture
+
+Module 1 built your astronomer's toolkit. These diagrams show how everything connects.
+
+---
+
+## The Observable → Model → Inference Framework
+
+This is the course thesis: **astronomers measure a few things directly and infer everything else**.
+
+```{mermaid}
+flowchart LR
+    subgraph observe["What We Measure"]
+        O1[Brightness]
+        O2[Position]
+        O3[Wavelength]
+        O4[Timing]
+    end
+
+    subgraph model["Physical Models"]
+        M1[Inverse-Square Law]
+        M2[Kepler's Laws]
+        M3[Blackbody / Wien]
+        M4[Spectral Lines]
+        M5[Doppler Effect]
+        M6[Newton's Gravity]
+    end
+
+    subgraph infer["What We Learn"]
+        I1[Distances]
+        I2[Orbital Properties]
+        I3[Temperatures]
+        I4[Compositions]
+        I5[Velocities]
+        I6[Masses]
+    end
+
+    O1 --> M1 --> I1
+    O2 --> M2 --> I2
+    O3 --> M3 --> I3
+    O3 --> M4 --> I4
+    O3 --> M5 --> I5
+    O4 --> M6 --> I6
+
+    style observe fill:#e8f4f8,stroke:#2c5282
+    style model fill:#fef3c7,stroke:#92400e
+    style infer fill:#d1fae5,stroke:#065f46
+```
+
+::: {.callout-note title="Key Insight"}
+Notice that **wavelength** appears three times in the observable column. This is why spectroscopy is so powerful — a single spectrum can reveal temperature, composition, AND motion.
+:::
+
+---
+
+## The Toolkit by Lecture
+
+Each lecture added a new capability. Here's the progression:
+
+```{mermaid}
+flowchart TB
+    subgraph week1["Weeks 1-2: Sky Geometry"]
+        L1[L1: Course Thesis<br/>Four Observables]
+        L2[L2: Math Tools<br/>Ratio Method]
+        L3[L3: Celestial Sphere<br/>Seasons, Angular Size]
+        L4[L4: Moon Phases<br/>Eclipse Geometry]
+    end
+
+    subgraph week2["Weeks 3-4: Gravity & Orbits"]
+        L5[L5: Kepler's Laws<br/>Empirical Patterns]
+        L6[L6: Newton's Gravity<br/>Physical Explanation]
+    end
+
+    subgraph week3["Weeks 4-5: Light"]
+        L7[L7: EM Spectrum<br/>Light as Information]
+        L8[L8: Blackbody<br/>Temperature from Color]
+        L9[L9: Spectral Lines<br/>Composition from Absorption]
+        L10[L10: Doppler Effect<br/>Motion from Shifts]
+    end
+
+    subgraph week4["Week 6: Applications"]
+        L11[L11: Solar System<br/>Apply All Tools]
+        L12[L12: Exoplanets<br/>Finding Other Worlds]
+        L13[L13: Drake Equation<br/>Are We Alone?]
+    end
+
+    L1 --> L2 --> L3 --> L4
+    L4 --> L5 --> L6
+    L6 --> L7 --> L8 --> L9 --> L10
+    L10 --> L11 --> L12 --> L13
+
+    style week1 fill:#dbeafe,stroke:#1e40af
+    style week2 fill:#fef3c7,stroke:#92400e
+    style week3 fill:#dcfce7,stroke:#166534
+    style week4 fill:#f3e8ff,stroke:#7e22ce
+```
+
+---
+
+## From Kepler to Newton
+
+The L5 → L6 transition is a model for how science works: patterns first, then explanations.
+
+```{mermaid}
+flowchart LR
+    subgraph kepler["Kepler (L5): What"]
+        K1[Law 1: Elliptical Orbits]
+        K2[Law 2: Equal Areas]
+        K3[Law 3: P² ∝ a³]
+    end
+
+    subgraph newton["Newton (L6): Why"]
+        N1[Gravity: F = GMm/r²]
+        N2[Centripetal Force]
+        N3[Mass from Orbits]
+    end
+
+    K1 --> N1
+    K2 --> N2
+    K3 --> N3
+
+    style kepler fill:#fef3c7,stroke:#92400e
+    style newton fill:#dbeafe,stroke:#1e40af
+```
+
+::: {.callout-important title="The Key Transition"}
+Kepler could **predict** where planets would be.
+Newton could **explain** why they moved that way — and use that explanation to **measure mass**.
+:::
+
+---
+
+## The Light Lectures (L7-L10)
+
+These four lectures show how much information is encoded in starlight.
+
+```{mermaid}
+flowchart TB
+    LIGHT[Starlight Arrives]
+
+    subgraph L7["L7: EM Spectrum"]
+        EM[What is light?<br/>Wavelength, frequency, energy]
+    end
+
+    subgraph L8["L8: Blackbody"]
+        BB[Continuous spectrum<br/>Wien's Law → Temperature<br/>Stefan-Boltzmann → Luminosity]
+    end
+
+    subgraph L9["L9: Spectral Lines"]
+        SL[Absorption/Emission lines<br/>Kirchhoff's Laws<br/>OBAFGKM Classification]
+    end
+
+    subgraph L10["L10: Doppler"]
+        DOP[Line shifts<br/>Radial velocity<br/>Exoplanet detection]
+    end
+
+    LIGHT --> L7
+    L7 --> L8
+    L7 --> L9
+    L9 --> L10
+
+    L8 --> |"Temperature"| TEMP[T from peak λ]
+    L8 --> |"Luminosity"| LUM[L from T and R]
+    L9 --> |"Composition"| COMP[Elements present]
+    L10 --> |"Motion"| MOT[Radial velocity]
+
+    style L7 fill:#e0e7ff,stroke:#3730a3
+    style L8 fill:#fef3c7,stroke:#92400e
+    style L9 fill:#dcfce7,stroke:#166534
+    style L10 fill:#fce7f3,stroke:#9d174d
+```
+
+---
+
+## Module 1 Capstone: Everything Connects
+
+L11-L13 applied every tool to real questions:
+
+```{mermaid}
+flowchart TB
+    subgraph tools["Your Toolkit"]
+        T1[Kepler/Newton<br/>→ Masses, Orbits]
+        T2[Blackbody/Wien<br/>→ Temperatures]
+        T3[Spectroscopy<br/>→ Compositions]
+        T4[Doppler<br/>→ Velocities]
+    end
+
+    subgraph L11["L11: Solar System"]
+        SS1[Why rocky planets inside?]
+        SS2[Why gas giants outside?]
+        SS3[Frost line explanation]
+    end
+
+    subgraph L12["L12: Exoplanets"]
+        EX1[Transit method]
+        EX2[Radial velocity method]
+        EX3[Habitable zones]
+    end
+
+    subgraph L13["L13: Drake Equation"]
+        DR1[Estimating N]
+        DR2[Which terms do we know?]
+        DR3[Scientific uncertainty]
+    end
+
+    T1 & T2 & T3 & T4 --> SS1 & SS2 & SS3
+    T1 & T2 & T3 & T4 --> EX1 & EX2 & EX3
+    SS1 & SS2 & SS3 & EX1 & EX2 & EX3 --> DR1 & DR2 & DR3
+
+    style tools fill:#f0fdf4,stroke:#166534
+    style L11 fill:#dbeafe,stroke:#1e40af
+    style L12 fill:#fef3c7,stroke:#92400e
+    style L13 fill:#f3e8ff,stroke:#7e22ce
+```
+
+---
+
+## Summary Table
+
+| Observable | Model/Tool | What It Reveals | Key Lecture |
+|------------|-----------|-----------------|-------------|
+| Position (angles) | Celestial sphere, parallax | Directions, distances | L3, L7 |
+| Position (over time) | Kepler's Laws | Orbital periods, distances | L5 |
+| Timing (orbital period) | Newton's gravity | Masses | L6 |
+| Brightness | Inverse-square law | Distances (with L known) | L7 |
+| Wavelength (peak) | Wien's Law | Temperature | L8 |
+| Wavelength (total flux) | Stefan-Boltzmann | Luminosity | L8 |
+| Wavelength (lines) | Kirchhoff's Laws | Composition | L9 |
+| Wavelength (line shifts) | Doppler effect | Radial velocity | L10 |
+
+---
+
+## What's Next?
+
+In **Module 2: Stars**, we apply this toolkit to understand:
+
+- How stars are born (gravity + gas clouds)
+- Why they shine (nuclear fusion)
+- How they evolve (main sequence → giants → endpoints)
+- What determines their fate (mass!)
+
+The same Observable → Model → Inference framework continues.

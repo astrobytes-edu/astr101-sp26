@@ -1,0 +1,163 @@
+---
+title: "Putting It Together"
+subtitle: "The Story of Module 1"
+description: "A narrative synthesis of Module 1, connecting the dots between lectures and previewing what comes next."
+---
+
+## The Module 1 Story
+
+You started this module knowing that stars are far away and hot. Now you know **how** we know — and more importantly, you can calculate it yourself.
+
+The journey had three acts:
+
+**Act I (L1-L4)** established that astronomy begins with observation. The sky is a coordinate system. Angles tell us positions. Time tells us periods. The celestial sphere, seasons, and moon phases aren't just phenomena to memorize — they're geometric consequences of how things move. You learned to distinguish what we *see* (angular size, brightness, phases) from what we *infer* (actual size, luminosity, orbital mechanics).
+
+**Act II (L5-L10)** built your toolkit. Kepler found patterns; Newton explained them. Light carries information in its wavelength: temperature in the continuum, composition in the lines, motion in the shifts. Each lecture added a new capability, and by L10 you had the complete set of tools astronomers use to study anything from asteroids to galaxies.
+
+**Act III (L11-L13)** applied those tools. The solar system became a testing ground where every method gets validated. Exoplanets showed the toolkit works on worlds we've never seen directly. The Drake Equation demonstrated how to reason about the unknown while being explicit about uncertainty.
+
+---
+
+## What You Can Now Do
+
+Here's what Module 1 taught you to determine — given only light from a distant object:
+
+| Given... | You can determine... | Using... |
+|----------|---------------------|----------|
+| Peak wavelength of spectrum | Surface temperature | Wien's Law: $\lambda_{peak} = b/T$ |
+| Total flux + distance | Luminosity | Inverse-square: $L = 4\pi d^2 F$ |
+| Temperature + luminosity | Radius | Stefan-Boltzmann: $L = 4\pi R^2 \sigma T^4$ |
+| Absorption line wavelengths | Chemical composition | Kirchhoff's Laws + atomic physics |
+| Line wavelength shift | Radial velocity | Doppler: $v = c \cdot \Delta\lambda/\lambda_0$ |
+| Orbital period of companion | System mass | Newton-Kepler: $M = 4\pi^2 a^3 / (GP^2)$ |
+
+::: {.callout-tip title="The Power of Combination"}
+These tools combine. From a single spectrum, you can determine:
+1. Temperature (from peak wavelength)
+2. Composition (from line patterns)
+3. Radial velocity (from line shifts)
+4. Luminosity class (from line widths)
+
+Add a distance measurement, and you also get luminosity, radius, and (with binary companions) mass.
+:::
+
+---
+
+## The Observable → Model → Inference Framework
+
+Every measurement in astronomy follows this pattern:
+
+```
+OBSERVABLE (what we measure directly)
+     ↓
+MODEL (physical relationship)
+     ↓
+INFERENCE (what we want to know)
+```
+
+Here's how each major tool fits:
+
+| Observable | Model | Inference | Key Assumption |
+|------------|-------|-----------|----------------|
+| Peak wavelength | Wien's Law | Temperature | Object radiates as blackbody |
+| Flux | Inverse-square law | Distance (if L known) | No intervening absorption |
+| Line wavelengths | Atomic physics | Composition | Lines correctly identified |
+| Line shifts | Doppler effect | Radial velocity | Shifts are due to motion (not other effects) |
+| Orbital period | Kepler-Newton | Mass | Orbit is gravitationally dominated |
+
+::: {.callout-warning title="Spot the Assumption"}
+Every inference depends on assumptions. When those assumptions fail, our inferences go wrong. This is why "Spot the Assumption" boxes appear throughout the readings — training you to think like a scientist.
+:::
+
+---
+
+## Common Misconceptions Revisited
+
+Throughout Module 1, we corrected several persistent misconceptions:
+
+::: {.callout-note title="Misconception 1: Seasons are caused by distance" collapse="true"}
+**Wrong:** Earth is closer to the Sun in summer.
+
+**Right:** Seasons are caused by Earth's 23.5° axial tilt. The hemisphere tilted toward the Sun receives more direct sunlight and longer days. (In fact, Earth is closest to the Sun in January — Northern Hemisphere winter!)
+
+**Lecture:** L3
+:::
+
+::: {.callout-note title="Misconception 2: Moon phases are caused by Earth's shadow" collapse="true"}
+**Wrong:** The Moon's phases happen because Earth's shadow falls on it.
+
+**Right:** Phases result from the Moon's position relative to the Sun. We see different amounts of the illuminated half depending on viewing angle. Earth's shadow only falls on the Moon during lunar eclipses (full moon, when Moon is near a node).
+
+**Lecture:** L4
+:::
+
+::: {.callout-note title="Misconception 3: Hotter objects are red, cooler objects are blue" collapse="true"}
+**Wrong:** Red means hot (like fire).
+
+**Right:** In blackbody radiation, hotter objects peak at shorter (bluer) wavelengths. The Sun (5800 K) is yellow-white; Betelgeuse (3500 K) is red; Rigel (12,000 K) is blue-white. Wien's Law: $\lambda_{peak} \propto 1/T$.
+
+**Lecture:** L8
+:::
+
+::: {.callout-note title="Misconception 4: Spectral lines tell us temperature directly" collapse="true"}
+**Wrong:** Different elements appear at different temperatures.
+
+**Right:** The *same* element shows different lines at different temperatures because temperature determines which energy levels are populated. Hydrogen shows strong Balmer lines around 10,000 K but weak lines at both higher and lower temperatures. This is why we can determine temperature from line *strengths*, not just line *identities*.
+
+**Lecture:** L9
+:::
+
+::: {.callout-note title="Misconception 5: Doppler shift changes the color we see" collapse="true"}
+**Wrong:** A star moving toward us looks blue; one moving away looks red.
+
+**Right:** The Doppler shifts from stellar motions are tiny — typically parts per thousand of a wavelength. You can't see the color change; you need a spectrograph to measure line positions precisely. "Redshift" and "blueshift" refer to the direction of the shift, not the perceived color.
+
+**Lecture:** L10
+:::
+
+---
+
+## Connections Forward: Module 2 Preview
+
+Module 1 gave you the tools. Module 2 asks: **What can we learn about stars?**
+
+| Module 1 Tool | Module 2 Application |
+|---------------|---------------------|
+| Kepler-Newton (mass from orbits) | Stellar masses from binary star systems |
+| Wien's Law (temperature) | Spectral classification (OBAFGKM) |
+| Stefan-Boltzmann (L-T-R relation) | The Hertzsprung-Russell diagram |
+| Spectroscopy (composition) | Stellar atmospheres and chemical evolution |
+
+**Key Question for Module 2:** Stars have different masses. How does mass determine:
+- How hot they burn?
+- How long they live?
+- How they die (white dwarf vs. neutron star vs. black hole)?
+
+The answer — **mass is destiny** — will drive the entire module.
+
+---
+
+## Self-Check: Am I Ready?
+
+Before moving to Module 2, you should be able to:
+
+- [ ] Explain the Observable → Model → Inference framework
+- [ ] List the four direct observables (brightness, position, wavelength, timing)
+- [ ] Use Wien's Law to find temperature from peak wavelength
+- [ ] Use Stefan-Boltzmann to compare luminosities
+- [ ] Interpret absorption and emission spectra using Kirchhoff's Laws
+- [ ] Calculate radial velocity from Doppler shift
+- [ ] Explain how we measure mass using orbital motion
+- [ ] Describe why rocky planets form close to the Sun and gas giants form farther out
+
+If you're uncertain about any of these, revisit the relevant lecture before the exam.
+
+---
+
+## Final Thought
+
+Astronomy is the science of inference. We can't touch stars, visit exoplanets, or replay the formation of the solar system. But by understanding how light carries information, we can know temperatures of objects trillions of kilometers away, detect planets we'll never see directly, and reconstruct events that happened billions of years ago.
+
+That's not magic. That's physics, carefully applied.
+
+Welcome to the cosmos.

@@ -1,0 +1,107 @@
+---
+title: "Module 1 Complete Glossary"
+subtitle: "All Terms from Lectures 1-13"
+description: "Comprehensive vocabulary reference for Module 1: Foundations. Terms are organized by lecture and marked by importance."
+---
+
+## How to Use This Glossary
+
+This glossary contains all terms introduced in Module 1, organized by the lecture where they first appear.
+
+**Tier Legend:**
+
+- ★ **Core terms** — You should be able to define and use these on an exam
+- ◇ **Supporting terms** — Helpful vocabulary; less likely to be tested directly
+
+::: {.callout-tip title="Study Strategy" collapse="true"}
+1. Start with ★ Core terms — these are your priority
+2. Use the lecture headers to focus on specific topics
+3. Test yourself: cover the definition and try to explain from memory
+4. Cross-reference with the [Concept Map](concept-map.qmd) to see how terms connect
+:::
+
+---
+
+## Lecture 1: Spoiler Alerts — The Universe Is Weird
+
+{{< glossary lecture=1 >}}
+
+---
+
+## Lecture 2: Tools of the Trade — Math Survival Kit
+
+{{< glossary lecture=2 >}}
+
+---
+
+## Lecture 3: The Sky Is a Map
+
+{{< glossary lecture=3 >}}
+
+---
+
+## Lecture 4: Moon Geometry
+
+{{< glossary lecture=4 >}}
+
+---
+
+## Lecture 5: From Ancient Skies to Kepler's Laws
+
+{{< glossary lecture=5 >}}
+
+---
+
+## Lecture 6: Newton's Revolution — From Patterns to Physics
+
+{{< glossary lecture=6 >}}
+
+---
+
+## Lecture 7: The Cosmic Messenger — Light Carries Information
+
+{{< glossary lecture=7 >}}
+
+---
+
+## Lecture 8: Reading the Glow — Temperature Written in Light
+
+{{< glossary lecture=8 >}}
+
+---
+
+## Lecture 9: Decoding Starlight — Spectral Lines and Chemical Fingerprints
+
+{{< glossary lecture=9 >}}
+
+---
+
+## Lecture 10: Motion Revealed — Doppler Effect and the Astronomer's Toolkit
+
+{{< glossary lecture=10 >}}
+
+---
+
+## Lecture 11: Our Cosmic Backyard — Solar System Architecture & Formation
+
+{{< glossary lecture=11 >}}
+
+---
+
+## Lecture 12: Climates and Exoplanets
+
+{{< glossary lecture=12 >}}
+
+---
+
+## Lecture 13: Are We Alone?
+
+{{< glossary lecture=13 >}}
+
+---
+
+## Alphabetical Index
+
+For quick lookup, here's an alphabetical listing of all Module 1 terms:
+
+{{< glossary module=1 format=alphabetical >}}

@@ -928,7 +928,7 @@ The [Kepler's Laws Demo](https://astrobytes-edu.github.io/astr101-sp26/demos/kep
 
 ---
 
-::: {.callout-note title="🔬 Deep Dive: Orbital Velocity" collapse="true"}
+::: {.callout-note title="🔬 Deep Dive: Orbital Velocity" collapse="false"}
 ### Deriving the Orbital Velocity
 
 For a stable circular orbit, gravity provides the centripetal force:
