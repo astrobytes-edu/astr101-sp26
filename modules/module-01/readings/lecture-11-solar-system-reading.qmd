@@ -584,17 +584,4 @@ The **planet** pattern supports the disk story. Moon orbits are messier because 
 
 ## Glossary
 
-| Term | Definition |
-|------|------------|
-| **Astronomical Unit (AU)** | Average Earth-Sun distance; ~150 million km |
-| **Terrestrial planet** | Small, rocky planet with solid surface (Mercury, Venus, Earth, Mars) |
-| **Gas giant** | Massive planet dominated by hydrogen and helium (Jupiter, Saturn) |
-| **Ice giant** | Large planet with substantial water, ammonia, methane (Uranus, Neptune) |
-| **Kuiper Belt** | Region of icy bodies beyond Neptune, 30–55 AU; includes Pluto |
-| **Oort Cloud** | Spherical shell of icy bodies from ~2,000 to ~100,000 AU; source of long-period comets |
-| **Exosphere** | Extremely thin atmospheric layer where atoms rarely collide; Mercury has only an exosphere |
-| **Solar nebula** | The cloud of gas and dust from which the solar system formed |
-| **Nebular hypothesis** | Model where solar system forms from a collapsing, rotating disk |
-| **Frost line (snow line)** | Distance where temperature allows water ice to form; ~3 AU in early solar nebula |
-| **Protoplanetary disk** | Disk of gas and dust around a young star where planets form |
-| **Equilibrium temperature** | Predicted temperature from Stefan-Boltzmann, assuming no atmosphere |
+{{< glossary lecture=11 >}}

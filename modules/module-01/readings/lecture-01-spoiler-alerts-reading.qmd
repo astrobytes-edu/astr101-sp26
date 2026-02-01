@@ -576,4 +576,4 @@ Today you saw the spoilers. Now we build the tools to understand them — one in
 
 ## Glossary
 
-{{< glossary module=1 >}}
+{{< glossary lecture=1 >}}

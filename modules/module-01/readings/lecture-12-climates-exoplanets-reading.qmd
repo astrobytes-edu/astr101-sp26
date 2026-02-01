@@ -680,13 +680,4 @@ If a star is 4× as luminous as the Sun, how does its habitable zone compare?
 
 ## Glossary
 
-| Term | Definition |
-|------|------------|
-| **Albedo (Bond)** | Fraction of total incoming energy reflected back to space, averaged over all wavelengths and angles; used for energy-balance calculations |
-| **Equilibrium temperature** | Temperature a planet would have if it only balanced incoming sunlight and outgoing thermal radiation |
-| **Greenhouse effect** | Warming of a planetary surface because the atmosphere absorbs and re-radiates infrared radiation |
-| **Runaway greenhouse** | Positive feedback where warming causes more greenhouse gases, causing more warming |
-| **Transit** | When a planet passes in front of its star, blocking some starlight |
-| **Transit depth** | Fraction of starlight blocked during transit; equals $(R_p/R_*)^2$ |
-| **Light curve** | Brightness vs. time plot showing transits and eclipses |
-| **Habitable zone** | Region around a star where liquid water could exist on a planet's surface |
+{{< glossary lecture=12 >}}

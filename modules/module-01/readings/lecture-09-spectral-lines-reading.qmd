@@ -111,6 +111,30 @@ A cool gas in front of a hot, continuous source absorbs light at **specific wave
 **Absorption spectrum:** Dark lines at specific wavelengths on a continuous background. Produced when cool gas sits in front of a hot source.
 :::
 
+---
+
+## 🔭 Demo Exploration: Spectral Lines Lab
+
+**Open the Spectral Lines Lab demo:** [/demos/spectral-lines-lab/](/demos/spectral-lines-lab/)
+
+This demo lets you switch physical setups (Kirchhoff’s laws) and practice identifying elements by **line patterns**, not single lines.
+
+### Mission A (Kirchhoff)
+
+*Predict before you click:* Which setup produces an **absorption** spectrum?
+
+::: {.callout-note title="My Prediction" collapse="true"}
+Write your prediction here: _______________
+:::
+
+### Mission B (fingerprints)
+
+Turn on the **unknown spectrum** overlay. Your goal is to find the element set that matches the unknown by pattern matching.
+
+### Mission C (mixtures)
+
+Explain in one sentence: “Why does the Sun have a continuous spectrum *and* absorption lines?”
+
 ### Visual Summary
 
 Picture three scenarios:
@@ -600,4 +624,4 @@ In L10, we'll see what happens when these spectral fingerprints **shift** — th
 | **OBAFGKM** | The stellar spectral classification sequence from hot to cool |
 | **Ionization** | Removal of an electron from an atom |
 
-{{< glossary module=1 >}}
+{{< glossary lecture=9 >}}

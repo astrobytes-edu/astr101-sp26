@@ -739,4 +739,4 @@ The key insight: **hotter objects emit shorter-wavelength light**. There's a pre
 | **Intensity (flux)** | Power received per unit area; apparent brightness |
 | **Photon** | A particle of light; the quantum of electromagnetic radiation |
 
-{{< glossary module=1 >}}
+{{< glossary lecture=7 >}}

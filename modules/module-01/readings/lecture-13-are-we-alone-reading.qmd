@@ -542,14 +542,7 @@ Based on Module 1 content, be comfortable with:
 
 ## Glossary
 
-| Term | Definition |
-|------|------------|
-| **Drake Equation** | Framework for estimating the number of communicating civilizations in the galaxy |
-| **SETI** | Search for Extraterrestrial Intelligence |
-| **Fermi Paradox** | The apparent contradiction between high probability of extraterrestrial life and lack of evidence |
-| **Metals (astronomy)** | Elements heavier than helium (different from chemistry definition) |
-| **Nucleosynthesis** | Creation of new atomic nuclei through fusion in stars |
-| **Expected value** | Statistical mean; if $N = 0.01$, it means "probably zero, but not guaranteed" |
+{{< glossary lecture=13 >}}
 
 ---
 

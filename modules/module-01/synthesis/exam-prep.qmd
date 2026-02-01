@@ -1,0 +1,277 @@
+---
+title: "Module 1 Exam Prep"
+subtitle: "Self-Assessment & Review Guide"
+description: "Everything you need to prepare for the Module 1 Exam: checklists, key equations, sample questions, and common mistakes."
+---
+
+## Exam Logistics
+
+::: {.callout-important title="Exam Information"}
+**Date:** Week 7 (see course schedule for exact date)
+
+**Duration:** 50 minutes
+
+**Format:** Closed-book, closed-notes
+
+**Allowed:** Scientific calculator (no graphing calculators or phones)
+
+**Provided:** Equation sheet (see below for what's included)
+:::
+
+---
+
+## What's On the Equation Sheet
+
+You will receive a sheet with these equations — you don't need to memorize them:
+
+| Equation | What It's For |
+|----------|---------------|
+| $c = \lambda \nu$ | Wave relation |
+| $E = h\nu$ | Photon energy |
+| $\lambda_{peak} = \frac{b}{T}$ | Wien's Law (temperature from peak λ) |
+| $L = 4\pi R^2 \sigma T^4$ | Stefan-Boltzmann (luminosity) |
+| $F = \frac{L}{4\pi d^2}$ | Inverse-square law |
+| $P^2 = \frac{4\pi^2}{GM} a^3$ | Kepler's Third Law (Newton's form) |
+| $\frac{\Delta\lambda}{\lambda_0} = \frac{v}{c}$ | Doppler effect |
+| $b = 2.9 \times 10^6$ nm·K | Wien's constant |
+| $c = 3 \times 10^8$ m/s | Speed of light |
+
+::: {.callout-warning title="What's NOT on the Sheet"}
+- Definitions of terms (you need to know these)
+- Conceptual explanations (you need to understand these)
+- Problem-solving strategies (you need to practice these)
+:::
+
+---
+
+## Self-Assessment Checklist
+
+Use this checklist to identify gaps in your understanding. Check each item you can confidently do.
+
+### Lecture 1: Spoiler Alerts
+- [ ] I can list the four direct observables (brightness, position, wavelength, timing)
+- [ ] I can explain the Observable → Model → Inference framework
+- [ ] I can distinguish what we measure from what we infer
+
+### Lecture 2: Math Survival Kit
+- [ ] I can convert between units using dimensional analysis
+- [ ] I can use the ratio method to compare quantities
+- [ ] I can work with scientific notation and SI prefixes
+
+### Lecture 3: The Sky Is a Map
+- [ ] I can explain why seasons are caused by axial tilt, not distance
+- [ ] I can describe the celestial sphere coordinate system
+- [ ] I can use the small-angle formula for angular size
+
+### Lecture 4: Moon Geometry
+- [ ] I can explain why moon phases are NOT caused by Earth's shadow
+- [ ] I can identify the phase from the Moon's position relative to the Sun
+- [ ] I can explain why eclipses don't happen every month (nodes)
+
+### Lecture 5: Kepler's Laws
+- [ ] I can state all three of Kepler's Laws
+- [ ] I can use Kepler's Third Law to relate period and distance
+- [ ] I can explain what "empirical law" means (pattern without explanation)
+
+### Lecture 6: Newton's Gravity
+- [ ] I can use Newton's form of Kepler's Third Law to find mass
+- [ ] I can explain why orbital motion reveals mass
+- [ ] I can describe how gravity explains Kepler's empirical patterns
+
+### Lecture 7: Light as Information
+- [ ] I can describe the electromagnetic spectrum (radio → gamma)
+- [ ] I can relate wavelength, frequency, and energy
+- [ ] I can explain why different wavelengths reveal different physics
+
+### Lecture 8: Blackbody Radiation
+- [ ] I can use Wien's Law to find temperature from peak wavelength
+- [ ] I can use Stefan-Boltzmann to compare luminosities
+- [ ] I can explain why hotter objects peak at shorter wavelengths
+
+### Lecture 9: Spectral Lines
+- [ ] I can explain the difference between emission and absorption spectra
+- [ ] I can state Kirchhoff's Three Laws
+- [ ] I can explain why line strength depends on temperature
+
+### Lecture 10: Doppler Effect
+- [ ] I can calculate radial velocity from wavelength shift
+- [ ] I can identify blueshift (approach) vs redshift (recession)
+- [ ] I can explain how Doppler shifts reveal exoplanets and dark matter
+
+### Lecture 11: Solar System
+- [ ] I can explain why rocky planets are close and gas giants are far (frost line)
+- [ ] I can apply multiple tools to determine planetary properties
+
+### Lecture 12: Exoplanets
+- [ ] I can explain the transit and radial velocity detection methods
+- [ ] I can describe what determines a habitable zone
+
+### Lecture 13: Are We Alone?
+- [ ] I can identify which Drake Equation terms are well-constrained
+- [ ] I can explain why uncertainty compounds in the Drake Equation
+
+---
+
+## Key Concepts to Know (No Equation Needed)
+
+These require conceptual understanding, not calculation:
+
+1. **Observable → Model → Inference** — How astronomers extract information from light
+
+2. **Seasons** — Caused by axial tilt, not distance from Sun
+
+3. **Moon phases** — Caused by illumination geometry, not Earth's shadow
+
+4. **Kepler vs Newton** — Kepler found patterns; Newton explained why
+
+5. **Spectral types (OBAFGKM)** — Temperature sequence from hot (O) to cool (M)
+
+6. **Kirchhoff's Laws** — Three types of spectra and when each appears
+
+7. **Frost line** — Explains solar system architecture
+
+8. **Detection bias** — Transit and RV methods favor certain planet types
+
+---
+
+## Sample Exam Questions
+
+### Conceptual Questions
+
+::: {.callout-note title="Sample Question 1" collapse="false"}
+Explain why we can determine the mass of a star that has a planet orbiting it, but we cannot determine the mass of an isolated star with no companions.
+
+*Hint: What does Newton's gravity tell us about orbital motion?*
+:::
+
+::: {.callout-tip title="Answer" collapse="true"}
+Mass is revealed through gravitational effects on other objects. Newton's form of Kepler's Third Law ($M = 4\pi^2 a^3 / GP^2$) requires measuring orbital period and distance — which requires something to be orbiting.
+
+An isolated star with no companions has no orbit to measure, so we cannot directly determine its mass. (We can estimate mass from temperature and luminosity using stellar models, but that's an indirect inference, not a direct measurement.)
+:::
+
+---
+
+::: {.callout-note title="Sample Question 2" collapse="false"}
+Star A and Star B have identical temperatures, but Star A is 16 times more luminous than Star B.
+
+How do their radii compare?
+:::
+
+::: {.callout-tip title="Answer" collapse="true"}
+Stefan-Boltzmann: $L = 4\pi R^2 \sigma T^4$
+
+If temperatures are equal, luminosity scales as $R^2$:
+
+$$\frac{L_A}{L_B} = \frac{R_A^2}{R_B^2} = 16$$
+
+$$\frac{R_A}{R_B} = 4$$
+
+Star A has **4 times** the radius of Star B.
+:::
+
+---
+
+### Calculation Questions
+
+::: {.callout-note title="Sample Question 3" collapse="false"}
+A star's spectrum peaks at 725 nm.
+
+(a) What is the star's surface temperature?
+(b) What spectral type is this star likely to be?
+(c) Would you expect to see strong or weak hydrogen Balmer lines? Explain.
+:::
+
+::: {.callout-tip title="Answer" collapse="true"}
+**(a)** Wien's Law: $T = b/\lambda_{peak} = (2.9 \times 10^6)/725 = 4000$ K
+
+**(b)** K-type or early M-type (cool star, ~4000 K)
+
+**(c)** **Weak** hydrogen lines. At 4000 K:
+- Temperature is too low to excite many electrons to the n=2 level
+- Fewer atoms ready to absorb Balmer-series photons
+- Balmer lines peak around 10,000 K (A-type stars)
+:::
+
+---
+
+::: {.callout-note title="Sample Question 4" collapse="false"}
+An astronomer observes the sodium D line (rest wavelength 589.0 nm) in a star's spectrum and finds it at 589.3 nm.
+
+(a) Calculate the star's radial velocity.
+(b) Is the star approaching or receding?
+(c) If the star is also moving across the sky at 50 km/s, does this affect your Doppler measurement? Why or why not?
+:::
+
+::: {.callout-tip title="Answer" collapse="true"}
+**(a)** Doppler formula:
+$$v = c \cdot \frac{\Delta\lambda}{\lambda_0} = (3 \times 10^5) \cdot \frac{0.3}{589.0} = 153 \text{ km/s}$$
+
+**(b)** $\lambda_{obs} > \lambda_0$ → Redshift → **Receding**
+
+**(c)** **No effect.** The Doppler effect measures only the **radial** (line-of-sight) component of velocity. Motion perpendicular to our line of sight (transverse velocity) does not cause a Doppler shift.
+:::
+
+---
+
+## Common Mistakes to Avoid
+
+::: {.callout-warning title="Mistake 1: Confusing wavelength and frequency trends"}
+**Wrong:** Higher temperature → longer peak wavelength
+
+**Right:** Higher temperature → shorter peak wavelength (Wien's Law: $\lambda \propto 1/T$)
+
+**Memory trick:** Hot = short (blue). Cool = long (red).
+:::
+
+::: {.callout-warning title="Mistake 2: Using the wrong form of Kepler's Third Law"}
+**Watch out:** $P^2 = a^3$ only works in solar system units (years, AU) for objects orbiting the Sun.
+
+For other systems, use Newton's form: $M = 4\pi^2 a^3 / (GP^2)$
+:::
+
+::: {.callout-warning title="Mistake 3: Forgetting that Stefan-Boltzmann has R² and T⁴"}
+Luminosity scales as:
+- $R^2$ (area effect — linear, squared)
+- $T^4$ (temperature effect — very steep!)
+
+A star twice as hot is 16× more luminous (at same radius).
+:::
+
+::: {.callout-warning title="Mistake 4: Thinking Doppler shift is visible to the eye"}
+Stellar Doppler shifts are tiny — typically ~0.1 nm for velocities of ~50 km/s. You need a spectrograph to measure them precisely. "Redshift" and "blueshift" refer to the direction of the shift, not visible color change.
+:::
+
+::: {.callout-warning title="Mistake 5: Confusing phases with eclipses"}
+- **Phases:** Happen every month (geometry of illumination)
+- **Eclipses:** Rare (Moon must be near a node during new/full phase)
+
+The Moon's orbit is tilted 5° relative to the ecliptic — usually the Moon passes above or below Earth's shadow.
+:::
+
+---
+
+## Last-Minute Review Strategy
+
+::: {.callout-tip title="The Night Before"}
+1. Review the [Concept Map](concept-map.qmd) — see how everything connects
+2. Go through this checklist — identify weak spots
+3. Do 2-3 [Practice Problems](practice-problems.qmd) — especially ★★ difficulty
+4. Get sleep — a rested brain performs better
+:::
+
+::: {.callout-tip title="Day of Exam"}
+1. Eat breakfast
+2. Bring: pencil, eraser, scientific calculator
+3. Read each question carefully before calculating
+4. Check units on every calculation
+5. If stuck, move on and return later
+:::
+
+---
+
+## You've Got This
+
+You've spent six weeks building the astronomer's toolkit. Trust the preparation. The exam is designed to test whether you can apply these tools — and you've been practicing exactly that in every lecture reading.
+
+Good luck!

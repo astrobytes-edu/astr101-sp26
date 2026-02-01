@@ -1092,4 +1092,4 @@ Every time we measure a mass in astronomy, we're using Newton's insight: **motio
 | **Physical law** | An explanation from fundamental principles; tells us *why* |
 | **Empirical law** | A pattern from data; tells us *what* without explaining why. (Introduced in [Lecture 5](lecture-05-keplers-laws-reading.qmd#glossary)) |
 
-{{< glossary module=1 >}}
+{{< glossary lecture=6 >}}

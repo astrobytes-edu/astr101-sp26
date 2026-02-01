@@ -899,4 +899,4 @@ Let's synthesize everything from today:
 
 ## Glossary
 
-{{< glossary module=1 >}}
+{{< glossary lecture=4 >}}

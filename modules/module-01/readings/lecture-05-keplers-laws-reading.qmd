@@ -832,4 +832,4 @@ $$\left(\frac{P_2}{P_1}\right)^2 = \left(\frac{a_2}{a_1}\right)^3$$
 | **Angular momentum** | A measure of rotational motion; conserved under gravity |
 | **Empirical law** | A pattern from data; describes *what* without explaining *why* |
 
-{{< glossary module=1 >}}
+{{< glossary lecture=5 >}}

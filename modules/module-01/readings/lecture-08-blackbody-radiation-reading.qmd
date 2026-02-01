@@ -837,4 +837,4 @@ $$\frac{R_{\text{Betelgeuse}}}{R_\odot} = \sqrt{\frac{L_{\text{Betelgeuse}}}{L_\
 | **Dwarf star** | A star with small radius and low luminosity relative to its temperature |
 | **Spectral lines** | Discrete features in a spectrum from absorption or emission by specific elements (covered in L9) |
 
-{{< glossary module=1 >}}
+{{< glossary lecture=8 >}}

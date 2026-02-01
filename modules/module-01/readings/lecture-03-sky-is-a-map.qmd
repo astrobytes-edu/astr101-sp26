@@ -839,4 +839,4 @@ Then, in 1–2 sentences: which noon altitude is higher, and what geometric reas
 
 ## Glossary
 
-{{< glossary module=1 >}}
+{{< glossary lecture=3 >}}

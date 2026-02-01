@@ -611,4 +611,4 @@ When you see a big number or a scaling question, you'll know which tool to reach
 
 ## Glossary
 
-{{< glossary module=1 >}}
+{{< glossary lecture=2 >}}

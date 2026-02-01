@@ -304,6 +304,30 @@ $v = c \times |\Delta\lambda|/\lambda_0 = (3 \times 10^5) \times (0.2/589.0) \ap
 
 ---
 
+## 🔭 Demo Exploration: Doppler Shift Spectrometer
+
+**Open the Doppler Shift Spectrometer demo:** [/demos/doppler-shift-spectrometer/](/demos/doppler-shift-spectrometer/)
+
+This demo overlays a **rest** spectrum and an **observed** spectrum so you can see Doppler shifts directly and practice the sign convention.
+
+### Mission A (sign)
+
+*Predict before you slide:* When $v_r$ is **positive**, is the star approaching or receding?
+
+::: {.callout-note title="My Prediction" collapse="true"}
+Write your prediction here: _______________
+:::
+
+### Mission B (radial vs transverse)
+
+Switch to **transverse** motion. What happens to the spectrum? Explain why in one sentence.
+
+### Mission C (compute)
+
+Pick a line and use the readouts to compute $v = c\,\Delta\lambda/\lambda_0$. Then check your computed $v$ against the demo.
+
+---
+
 ## Exoplanet Detection: The Radial Velocity Method
 
 ### The Conceptual Idea
@@ -313,6 +337,10 @@ Here's a beautiful application of the Doppler effect: detecting planets around o
 By Newton's Third Law, a planet doesn't just orbit its star — the star also wobbles in response. The planet pulls on the star just as the star pulls on the planet. Both orbit their common center of mass.
 
 This stellar wobble is tiny — the Sun moves only about 12 m/s due to Jupiter's pull — but it's detectable with precise Doppler measurements. As the star wobbles toward and away from us, its spectral lines shift back and forth. The periodic pattern reveals an orbiting planet.
+
+::: {.callout-note title="Demo: RV curve + spectral line inset"}
+Open the **[Binary Orbits demo](/demos/binary-orbits/)**, expand the “Radial velocity method” panel, and enable the RV overlay. Watch the spectral line shift back and forth as the RV curve marker moves — this is the measurement that produces the curve.
+:::
 
 {{< fig radial-velocity-method >}}
 
@@ -694,4 +722,4 @@ Next week (L11–L13) is our **capstone week**: we apply every tool to the solar
 | **Rayleigh criterion** | The formula $\theta = 1.22\lambda/D$ for diffraction-limited resolution |
 | **Interferometry** | Combining signals from multiple telescopes to achieve higher resolution |
 
-{{< glossary module=1 >}}
+{{< glossary lecture=10 >}}
