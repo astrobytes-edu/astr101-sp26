@@ -136,13 +136,7 @@ Every electromagnetic wave has two fundamental properties:
 | Wavelength | λ (lambda) | Distance between wave crests | meters (m) or nanometers (nm) |
 | Frequency | f | Wave crests passing per second | hertz (Hz) = cycles/second |
 
-::: {.callout-note title="FIGURE PLACEHOLDER: Anatomy of a Wave" collapse="false"}
-**Figure ID:** `electromagnetic-wave`
-
-**Description:** Simple sinusoidal wave with wavelength (λ) labeled as distance between crests. Arrow showing direction of propagation. Keep it simple — focus on wavelength.
-
-**Alt text:** An electromagnetic wave showing wavelength as the distance between successive crests.
-:::
+{{< fig electromagnetic-wave >}}
 
 ### The Key Relationship
 
@@ -211,13 +205,7 @@ What we call "visible light" — the colors of the rainbow — is just a tiny sl
 | **X-ray** | 0.01 – 10 nm | Extremely hot gas, accretion | Black holes, neutron stars |
 | **Gamma ray** | < 0.01 nm | Nuclear reactions, explosions | Supernovae, gamma-ray bursts |
 
-::: {.callout-note title="FIGURE PLACEHOLDER: The Electromagnetic Spectrum" collapse="false"}
-**Figure ID:** `em-spectrum-full`
-
-**Description:** Full EM spectrum from radio to gamma rays. Wavelength scale (logarithmic) along bottom. Frequency scale along top (increasing in opposite direction). Visible light expanded to show ROYGBIV. Icons for astronomical sources at each region. Arrows showing "longer wavelength / lower frequency" and "shorter / higher."
-
-**Alt text:** The electromagnetic spectrum from long-wavelength radio waves to short-wavelength gamma rays, with visible light as a narrow band.
-:::
+{{< fig em-spectrum-full >}}
 
 **Mnemonic for visible light order:** **R**ed, **O**range, **Y**ellow, **G**reen, **B**lue, **V**iolet — "Roy G. Biv." Red has the longest visible wavelength (~700 nm); violet has the shortest (~400 nm).
 
@@ -227,13 +215,7 @@ Different wavelengths reveal different phenomena. Radio waves penetrate dust tha
 
 **The universe looks different at every wavelength.** To understand the cosmos fully, we need to observe across the spectrum — which is why astronomers build radio dishes, infrared satellites, X-ray telescopes, and more.
 
-::: {.callout-note title="FIGURE PLACEHOLDER: The Crab Nebula at Multiple Wavelengths" collapse="false"}
-**Figure ID:** `multiwavelength-crab`
-
-**Description:** Show the Crab Nebula observed in radio, infrared, visible, X-ray. Each reveals different structures: radio shows synchrotron emission; infrared shows warm dust; visible shows expanding gas filaments; X-ray shows high-energy particles from central pulsar.
-
-**Alt text:** The Crab Nebula looks strikingly different at each wavelength, revealing different physical processes happening simultaneously.
-:::
+{{< fig multiwavelength-crab >}}
 
 ::: {.callout-note title="Atmospheric Windows" collapse="true"}
 Earth's atmosphere is transparent mainly in two broad windows: **visible light** and parts of **radio**. It absorbs most **ultraviolet, X-rays, and gamma rays**, and it absorbs a lot of **infrared** (though some IR gets through from high, dry sites).
@@ -465,13 +447,7 @@ It's the same physics as a sunset, but projected onto the Moon!
 
 Earth's atmosphere acts like a lens, bending sunlight around our planet. But it's also a filter: the same Rayleigh scattering that makes skies blue removes blue light from the transmitted beam. What reaches the Moon is essentially the light from every sunset and sunrise on Earth, all focused together.
 
-::: {.callout-note title="FIGURE PLACEHOLDER: Why Lunar Eclipses Are Red" collapse="false"}
-**Figure ID:** `lunar-eclipse-red`
-
-**Description:** Show Earth blocking direct sunlight to the Moon. Sun on left, Earth in middle, Moon on right (in shadow). Earth's atmosphere bending light around the edges. Blue light scattered away, red transmitted through atmosphere. Red light reaching the Moon. Label showing this is "sunset/sunrise light" bent toward Moon.
-
-**Alt text:** During a lunar eclipse, Earth's atmosphere bends sunlight around the planet; blue scatters away, and only red reaches the Moon.
-:::
+{{< fig lunar-eclipse-red >}}
 
 ### The Cosmic Connection
 
@@ -545,13 +521,7 @@ The explanation is geometric: light spreads out in all directions from a source.
 
 This is exactly the same "spreading over a sphere" argument we used for gravity in Lecture 6! Both gravity and light "dilute" as they spread over ever-larger spheres.
 
-::: {.callout-note title="FIGURE PLACEHOLDER: Light Spreads Over Larger Spheres" collapse="false"}
-**Figure ID:** `light-inverse-square`
-
-**Description:** Show a light source with concentric spheres. At radius r: light spread over area 4πr². At radius 2r: same light spread over area 4π(2r)² = 16πr². Show intensity squares at each distance, with 1 square at r, 1/4 intensity at 2r, 1/9 at 3r.
-
-**Alt text:** Light from a source spreads over ever-larger spheres; at twice the distance, the same light covers 4× the area, so intensity is 1/4.
-:::
+{{< fig light-inverse-square >}}
 
 | Distance Change | Intensity Change |
 |-----------------|------------------|
