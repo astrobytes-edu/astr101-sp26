@@ -21,7 +21,7 @@ prerequisites: Lecture 8 (blackbody, Stefan-Boltzmann), Lecture 10 (Doppler), Le
 ::: {.callout-important #the-big-idea}
 ## The Big Idea
 
-Everything glows. You, your laptop, the walls around you — all emit light. Most of it is infrared, invisible to your eyes. But heat it up enough, and anything will glow visibly: first red, then orange, yellow, white, blue. The color of the glow tells you the temperature. This simple principle lets astronomers measure the temperatures of stars billions of kilometers away.
+Planet climates are an energy-balance problem. Sunlight in, infrared out. Equilibrium temperature is the baseline; atmospheres (greenhouse gases, clouds, pressure) push real surface temperatures above or below that baseline. The same physics that explains Venus, Earth, and Mars is what we use to judge exoplanet habitability — after we find those planets using transits and radial velocity.
 :::
 
 ::: {.callout-important title="How to Use This Reading" collapse="true"}
@@ -48,7 +48,7 @@ This reading has two main parts:
 ::: {.callout-tip title="Climate & Exoplanets in 60 Seconds" collapse="true"}
 If you only remember three things:
 
-1. **Greenhouse effect:** Atmospheres absorb outgoing infrared, warming the surface above equilibrium. Venus = extreme (+500 K), Earth = moderate (+33 K), Mars = minimal (+8 K).
+1. **Greenhouse effect:** Atmospheres absorb *some* outgoing infrared, warming the surface above equilibrium. Venus = extreme (+500 K), Earth = moderate (+33 K), Mars = minimal (+8 K).
 
 2. **Transits detect exoplanets:** When a planet crosses its star, brightness dips by $(R_p/R_*)^2$. Combined with radial velocity → mass + radius → density → rocky or gaseous?
 
@@ -117,9 +117,13 @@ At equilibrium, energy in equals energy out:
 
 $$\text{Power absorbed from Sun} = \text{Power radiated to space}$$
 
-We already know the right side from L8: a blackbody radiates power according to **Stefan-Boltzmann**:
+We already know the right side from L8: a blackbody radiates power according to the **Stefan-Boltzmann Law**:
 
 $$P_{out} = \sigma T^4 \times (\text{surface area})$$
+
+::: {.column-margin}
+**This is the key connection!** The Stefan-Boltzmann Law from L8 tells us how much power a planet radiates at temperature T. Setting this equal to absorbed sunlight gives us the equilibrium temperature.
+:::
 
 But how much solar power does a planet actually intercept?
 
@@ -279,7 +283,7 @@ The equilibrium calculation assumes the planet radiates directly to space. But i
 
 2. **The surface emits infrared radiation** (thermal, from Wien's Law)
 
-3. **Greenhouse gases absorb infrared** — they're opaque at these wavelengths
+3. **Greenhouse gases selectively absorb infrared** — they're transparent to visible light but absorb in key IR wavelength bands
 
 4. **The atmosphere re-radiates** — some back down to the surface
 
@@ -313,7 +317,7 @@ The atmosphere is largely transparent to incoming visible light but selectively 
 
 ### What Went Wrong on Venus?
 
-Venus likely started with conditions similar to Earth — perhaps even with liquid water oceans. But it was closer to the Sun, so it was warmer. Here's what happened:
+Venus may have started with conditions similar to Earth — perhaps even with liquid water oceans. But it was closer to the Sun, so it was warmer. Here's what may have happened:
 
 1. **Higher temperature → more water evaporates**
 
@@ -400,7 +404,7 @@ Earth sits in a sweet spot:
 
 Here's where this matters for us today:
 
-Burning fossil fuels releases CO₂ that was locked in rocks for millions of years. Humanity currently emits roughly 40 billion metric tons (40 Gt) of CO₂ per year; about half is absorbed by the ocean and biosphere, with the rest accumulating in the atmosphere.
+Burning fossil fuels releases CO₂ that was locked in rocks for millions of years. Humanity currently emits ~40 GtCO₂/yr (order-of-magnitude; exact values vary by year and accounting method); about half is absorbed by the ocean and biosphere, with the rest accumulating in the atmosphere.
 
 The physics is exactly what we discussed:
 
@@ -569,6 +573,10 @@ $$\text{Density} = \frac{M_p}{\frac{4}{3}\pi R_p^3}$$
 | ~1.3 g/cm³ | Gas giant (H/He) | Jupiter |
 | ~2-3 g/cm³ | Water world? Mini-Neptune? | Some super-Earths |
 
+::: {.callout-note title="Density Is a Clue, Not a Solution"}
+Intermediate densities (2–4 g/cm³) can be **degenerate**: different mixtures of rock, water, and gas can produce the same bulk density. Density is a strong clue to composition, but not a complete answer — additional constraints (atmospheric spectra, formation models) help break the degeneracy.
+:::
+
 Density distinguishes **rocky planets** (potential for habitability) from **gas/ice worlds** (probably not habitable at the surface).
 
 ---
@@ -682,5 +690,3 @@ If a star is 4× as luminous as the Sun, how does its habitable zone compare?
 | **Transit depth** | Fraction of starlight blocked during transit; equals $(R_p/R_*)^2$ |
 | **Light curve** | Brightness vs. time plot showing transits and eclipses |
 | **Habitable zone** | Region around a star where liquid water could exist on a planet's surface |
-
-{{< glossary module=1 >}}
