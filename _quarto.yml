@@ -194,6 +194,10 @@ website:
                 text: "Lecture 7: The Cosmic Messenger — Light Carries Information"
               - href: modules/module-01/readings/lecture-08-blackbody-radiation-reading.qmd
                 text: "Lecture 8: Reading the Glow — Temperature Written in Light"
+              - href: modules/module-01/readings/lecture-09-spectral-lines-reading.qmd
+                text: "Lecture 9: Decoding Starlight — Spectral Lines and Chemical Fingerprints"
+              - href: modules/module-01/readings/lecture-10-doppler-telescopes-reading.qmd
+                text: "Lecture 10: Motion Revealed — Doppler Effect and the Astronomer's Toolkit"
 
       - section: "Module 2: Stars & Stellar Evolution"
         href: modules/module-02/index.qmd
