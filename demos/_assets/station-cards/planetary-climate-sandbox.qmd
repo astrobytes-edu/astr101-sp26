@@ -1,0 +1,65 @@
+::: {.callout-problem title="Station card: Planetary Climate Sandbox (6–8 minutes)"}
+This station is about **energy in = energy out** and how **greenhouse strength changes infrared escape**.
+
+Use **full redistribution (global average)** unless the prompt says otherwise.
+:::
+
+## Part A — Solar System comparison (2 minutes)
+
+Load **Venus**, **Earth**, and **Mars** presets and record:
+
+| Planet | $A$ (Bond) | $T_{eq}$ (K) | $\tau_{IR}$ | $T_{surf}$ (K) | $\Delta T = T_{surf}-T_{eq}$ (K) |
+|---|---:|---:|---:|---:|---:|
+| Venus | ____ | ____ | ____ | ____ | ____ |
+| Earth | ____ | ____ | ____ | ____ | ____ |
+| Mars | ____ | ____ | ____ | ____ | ____ |
+
+**One sentence:** Why is Venus so hot even though it reflects a lot of sunlight?
+
+> ______________________________________________________________________
+
+## Part B — Albedo experiment (2 minutes)
+
+Start from the **Earth** preset.
+
+1. Increase Bond albedo from $A=0.30$ to $A=0.60$ (leave everything else unchanged).
+2. Record the absorbed flux and the new $T_{eq}$:
+
+Absorbed flux: ____ W/m$^2$  
+$T_{eq}$: ____ K
+
+**Claim:** Increasing $A$ makes $T_{eq}$ (circle one): **warmer / cooler / unchanged**
+
+## Part C — Greenhouse experiment (2–3 minutes)
+
+Return to the **Earth** preset.
+
+1. Increase greenhouse strength from $\tau_{IR}=0.49$ to $\tau_{IR}=1.50$.
+2. Record:
+
+$\varepsilon_{out}$: ____  
+$T_{surf}$: ____ K  
+$\Delta T$: ____ K
+
+**Claim:** Increasing $\tau_{IR}$ makes $T_{surf}$ (circle one): **warmer / cooler / unchanged**
+
+::: {.callout-tip title="Word bank + sanity checks"}
+**Word bank:**
+- **Flux (W/m$^2$):** power per area.
+- **Bond albedo $A$ (dimensionless):** fraction of incoming energy reflected.
+- **Equilibrium temperature $T_{eq}$ (K):** the airless baseline set by absorbed starlight and emission to space.
+- **Optical depth $\tau_{IR}$ (dimensionless):** how hard it is for infrared to escape.
+- **Escape fraction $\varepsilon_{out}$ (dimensionless):** effective to-space emissivity, $\varepsilon_{out}=e^{-\tau_{IR}}$.
+
+**Key relationships (model):**
+
+$$T_{eq}=\left[\frac{(1-A)L_\star}{16\pi\sigma d^2}\right]^{1/4}$$
+
+$$T_{surf}=T_{eq}\,e^{\tau_{IR}/4}$$
+
+**Sanity checks:**
+- If $A\\to1$, absorbed energy $\\to0$ so $T_{eq}\\to0$.
+- If $\\tau_{IR}=0$, then $\\varepsilon_{out}=1$ and $T_{surf}=T_{eq}$.
+- If $d$ increases, flux falls as $1/d^2$, so $T_{eq}$ decreases.
+:::
+

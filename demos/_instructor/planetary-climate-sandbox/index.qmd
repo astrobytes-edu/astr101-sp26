@@ -1,0 +1,62 @@
+---
+title: "Planetary Climate Sandbox"
+subtitle: "Instructor guide (teach-first) + links to model, activities, assessments"
+page-layout: article
+toc: true
+search: false
+---
+
+::: {.callout-note title="Navigation"}
+- Instructor hub: [/demos/_instructor/](/demos/_instructor/)
+- Student demo: [/demos/planetary-climate-sandbox/](/demos/planetary-climate-sandbox/)
+- This demo: [Model](model.qmd) · [Activities](activities.qmd) · [Assessment](assessment.qmd) · [Backlog](backlog.qmd)
+:::
+
+::: {.callout-roadmap title="This guide is instructor-facing"}
+Student demo: `/demos/planetary-climate-sandbox/`
+Main code: `demos/planetary-climate-sandbox/planetary-climate-sandbox.js`
+Model code (tests + shared): `demos/_assets/planetary-climate-model.js`
+Presets dataset: `demos/_assets/climate/planet-presets.v1.json`
+:::
+
+## Why this demo exists
+
+::: {.callout-why-this-matters}
+Students often treat “greenhouse effect” as a mysterious extra heat source. This demo anchors the story in **energy flow**: in the long run, energy in must equal energy out. If the atmosphere makes it harder for infrared to escape, the surface must warm to push enough energy out.
+:::
+
+## Learning goals
+
+### ASTR 101
+
+Students should be able to:
+
+- Explain why flux falls as $1/d^2$ and how that changes heating
+- Predict how Bond albedo $A$ changes absorbed energy and $T_{eq}$
+- Distinguish **equilibrium temperature** $T_{eq}$ (airless baseline) from **surface temperature** $T_{surf}$
+- Explain why increasing greenhouse strength (larger $\tau_{IR}$) increases $T_{surf}$ at fixed $T_{eq}$
+- Use the Venus/Earth/Mars comparison to diagnose the “Venus paradox”
+
+## 10–15 minute live-teach script (projector)
+
+1. **Start on Earth (full redistribution).** Ask: *“Is $T_{eq}$ Earth’s actual temperature?”* No — it is a baseline.
+
+2. **Make the energy-budget readouts the anchor.** Point to absorbed flux, $T_{eq}$, $\tau_{IR}$, and $\varepsilon_{out}$.
+
+3. **Run the albedo-only prediction.** Ask: *“If $A$ increases, does $T_{eq}$ go up or down?”* Commit to a direction, then adjust $A$ and verify.
+
+4. **Run the greenhouse-only prediction.** Keep $L_\star$, $d$, and $A$ fixed; increase $\tau_{IR}$. Ask: *“What changes — energy in or energy out?”* The atmosphere changes **escape**, so the surface warms until the same to-space output is restored.
+
+5. **Load Venus.** Pause on the surprising part: Venus has high $A$ yet is extremely hot.
+
+6. **Do the Venus paradox workflow.** Hold Venus distance and albedo fixed, then reduce $\tau_{IR}$ toward Earth-like. Students should see Venus become much cooler, reinforcing that albedo alone cannot explain Venus.
+
+7. **Optional extension (if time): redistribution toggle.** Switch to dayside emission. Ask: *“If less area emits, what must happen to temperature to radiate the same total power?”*
+
+8. **Optional extension (if time): spectral greenhouse view.** Switch views and point out that greenhouse gases absorb in specific infrared bands. Emphasize: band centers are sourced; band shapes are illustrative.
+
+## Suggested connections to other demos
+
+- **Blackbody Radiation Sandbox:** where the thermal spectrum curve comes from.
+- **Spectral Lines Lab / Doppler Shift Spectrometer:** molecules and wavelengths are how we infer atmospheric composition.
+

@@ -1,0 +1,131 @@
+{
+  "schema_version": "1.0.0",
+  "dataset_id": "planet-presets.v1",
+  "description": "Planet presets for the Planetary Climate Sandbox (v1). Values are either verified (with sources) or explicitly marked as assumed.",
+  "generated_at": "2026-02-01",
+  "presets": [
+    {
+      "id": "venus",
+      "label": "Venus",
+      "kind": "solar_system",
+      "lstar_lsun": 1.0,
+      "d_au": 0.72,
+      "bond_albedo": 0.76,
+      "t_eq_k": 230,
+      "t_surf_k": 735,
+      "tau_ir": 4.65,
+      "verified": true,
+      "sources": [
+        {
+          "name": "modules/module-01/readings/lecture-12-climates-exoplanets-reading.qmd",
+          "citation": "Solar System calibration table (Venus/Earth/Mars): d (AU), Bond albedo, Teq, Tsurf.",
+          "notes": "Course reading; in-repo source of table values."
+        },
+        {
+          "name": "docs/specs/demos/planetary_climate_sandbox_demo_spec_narrative.md",
+          "citation": "Toy greenhouse mapping and tauIR calibration formula.",
+          "notes": "Defines tauIR = 4 ln(Tsurf/Teq) and Tsurf = Teq * exp(tauIR/4)."
+        }
+      ]
+    },
+    {
+      "id": "earth",
+      "label": "Earth",
+      "kind": "solar_system",
+      "lstar_lsun": 1.0,
+      "d_au": 1.0,
+      "bond_albedo": 0.3,
+      "t_eq_k": 255,
+      "t_surf_k": 288,
+      "tau_ir": 0.49,
+      "verified": true,
+      "sources": [
+        {
+          "name": "modules/module-01/readings/lecture-12-climates-exoplanets-reading.qmd",
+          "citation": "Solar System calibration table (Venus/Earth/Mars): d (AU), Bond albedo, Teq, Tsurf.",
+          "notes": "Course reading; in-repo source of table values."
+        },
+        {
+          "name": "docs/specs/demos/planetary_climate_sandbox_demo_spec_narrative.md",
+          "citation": "Toy greenhouse mapping and tauIR calibration formula.",
+          "notes": "Defines tauIR = 4 ln(Tsurf/Teq) and Tsurf = Teq * exp(tauIR/4)."
+        }
+      ]
+    },
+    {
+      "id": "mars",
+      "label": "Mars",
+      "kind": "solar_system",
+      "lstar_lsun": 1.0,
+      "d_au": 1.52,
+      "bond_albedo": 0.25,
+      "t_eq_k": 210,
+      "t_surf_k": 218,
+      "tau_ir": 0.15,
+      "verified": true,
+      "sources": [
+        {
+          "name": "modules/module-01/readings/lecture-12-climates-exoplanets-reading.qmd",
+          "citation": "Solar System calibration table (Venus/Earth/Mars): d (AU), Bond albedo, Teq, Tsurf.",
+          "notes": "Course reading; in-repo source of table values."
+        },
+        {
+          "name": "docs/specs/demos/planetary_climate_sandbox_demo_spec_narrative.md",
+          "citation": "Toy greenhouse mapping and tauIR calibration formula.",
+          "notes": "Defines tauIR = 4 ln(Tsurf/Teq) and Tsurf = Teq * exp(tauIR/4)."
+        }
+      ]
+    },
+    {
+      "id": "proxima-b",
+      "label": "Proxima b (assumptions)",
+      "kind": "exoplanet",
+      "lstar_lsun": 1.0,
+      "lstar_lsun_assumed": true,
+      "d_au": 0.049,
+      "bond_albedo": 0.3,
+      "bond_albedo_assumed": true,
+      "tau_ir": 0.49,
+      "tau_ir_assumed": true,
+      "verified": false,
+      "sources": [
+        {
+          "name": "demos/binary-orbits/README.md",
+          "citation": "Star+planet preset table includes Proxima b separation 0.049 AU.",
+          "notes": "We treat separation as orbital distance d for a circular-orbit climate baseline."
+        },
+        {
+          "name": "docs/specs/demos/planetary_climate_sandbox_demo_spec_narrative.md",
+          "citation": "Exoplanet guidance: albedo and greenhouse are usually unknown; allow an explicitly labeled assumed Earth-like option (A=0.30, tauIR=0.49).",
+          "notes": "Host star luminosity also defaults to an explicit assumption (lstar_lsun = 1.0) for sandbox exploration."
+        }
+      ]
+    },
+    {
+      "id": "51-peg-b",
+      "label": "51 Peg b (assumptions)",
+      "kind": "exoplanet",
+      "lstar_lsun": 1.0,
+      "lstar_lsun_assumed": true,
+      "d_au": 0.052,
+      "bond_albedo": 0.3,
+      "bond_albedo_assumed": true,
+      "tau_ir": 0.49,
+      "tau_ir_assumed": true,
+      "verified": false,
+      "sources": [
+        {
+          "name": "demos/binary-orbits/README.md",
+          "citation": "Star+planet preset table includes 51 Peg b separation 0.052 AU.",
+          "notes": "We treat separation as orbital distance d for a circular-orbit climate baseline."
+        },
+        {
+          "name": "docs/specs/demos/planetary_climate_sandbox_demo_spec_narrative.md",
+          "citation": "Exoplanet guidance: albedo and greenhouse are usually unknown; allow an explicitly labeled assumed Earth-like option (A=0.30, tauIR=0.49).",
+          "notes": "Host star luminosity also defaults to an explicit assumption (lstar_lsun = 1.0) for sandbox exploration."
+        }
+      ]
+    }
+  ]
+}
+

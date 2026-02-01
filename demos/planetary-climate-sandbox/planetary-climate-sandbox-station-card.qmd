@@ -1,0 +1,19 @@
+---
+title: "Station Card: Planetary Climate Sandbox"
+subtitle: "Energy balance and the greenhouse effect (toy model)"
+format:
+  pdf:
+    toc: false
+    number-sections: false
+    geometry: margin=0.9in
+    fontsize: 12pt
+---
+
+{{< include ../_assets/station-cards/_student-header.qmd >}}
+
+**Demo:** `/demos/planetary-climate-sandbox/`
+
+---
+
+{{< include ../_assets/station-cards/planetary-climate-sandbox.qmd >}}
+

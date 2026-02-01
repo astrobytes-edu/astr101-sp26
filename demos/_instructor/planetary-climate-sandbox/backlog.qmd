@@ -1,0 +1,19 @@
+---
+title: "Backlog"
+subtitle: "Future improvements (after v1)"
+page-layout: article
+toc: true
+search: false
+---
+
+::: {.callout-note title="Navigation"}
+- Back: [Instructor index](index.qmd)
+:::
+
+## Candidate enhancements
+
+- Add a clear “known vs assumed” panel that lists which preset parameters are verified and which are assumptions.
+- Add an internal heat control (additional flux term) for giant planets, with explicit units (W/m$^2$).
+- Add more exoplanet presets once in-repo sources for $L_\star/L_\odot$ and $a$ (AU) are included.
+- Add a “lock knobs” instructor mode for the first five minutes of class activity.
+

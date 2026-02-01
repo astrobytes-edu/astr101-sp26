@@ -1,0 +1,38 @@
+---
+title: "Activities"
+subtitle: "MW quick + MW short + station version"
+page-layout: article
+toc: true
+search: false
+---
+
+::: {.callout-note title="Navigation"}
+- Back: [Instructor index](index.qmd)
+- Student demo: [/demos/planetary-climate-sandbox/](/demos/planetary-climate-sandbox/)
+:::
+
+## MW quick (3–4 minutes): direction checks
+
+1. **Albedo direction:** “If Bond albedo increases, does $T_{eq}$ increase or decrease?”
+2. **Greenhouse direction:** “If $\tau_{IR}$ increases, does $T_{surf}$ increase or decrease?”
+
+Have students commit to a direction before touching sliders, then verify with the demo.
+
+## MW short (8–10 minutes): Venus paradox workflow
+
+**Goal:** Albedo alone cannot explain Venus.
+
+1. Start with **Earth** preset. Record $T_{eq}$ and $T_{surf}$.
+2. Load **Venus** preset. Record $T_{eq}$ and $T_{surf}$.
+3. Ask: “Venus reflects more — so why is it hotter?”
+4. Hold Venus distance and albedo fixed and reduce $\tau_{IR}$ toward Earth-like values. Record the new $T_{surf}$.
+5. Discussion prompt: “What does the demo say is the causal role of greenhouse strength?”
+
+## Station version (6–8 minutes)
+
+Use the station card PDF linked from the demo:
+
+- `/demos/planetary-climate-sandbox/planetary-climate-sandbox-station-card.pdf`
+
+Recommended focus: albedo vs greenhouse contrast (Parts B and C).
+

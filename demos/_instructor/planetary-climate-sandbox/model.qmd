@@ -1,0 +1,84 @@
+---
+title: "Model and Assumptions"
+subtitle: "Energy balance + toy greenhouse mapping (teach-first)"
+page-layout: article
+toc: true
+search: false
+---
+
+::: {.callout-note title="Navigation"}
+- Back: [Instructor index](index.qmd)
+- Student demo: [/demos/planetary-climate-sandbox/](/demos/planetary-climate-sandbox/)
+:::
+
+## What this model is (and is not)
+
+This is an **energy-balance** model with a **toy greenhouse mapping**. It is designed to support qualitative reasoning and controlled “what if” experiments, not to reproduce full climate physics.
+
+What the model does:
+- Computes a baseline equilibrium temperature $T_{eq}$ from absorbed starlight and thermal emission to space.
+- Uses an infrared optical depth $\tau_{IR}$ to represent how efficiently infrared escapes.
+
+What the model does not do:
+- No atmospheric circulation, clouds, or feedback loops.
+- No line-by-line radiative transfer.
+- No internal heat term (unless you add it later).
+
+## Step 1 — Flux at a planet
+
+Flux is power per area (W/m$^2$). At distance $d$ from a star of luminosity $L_\star$ (W),
+
+$$F_\star(d) = \frac{L_\star}{4\pi d^2}.$$
+
+## Step 2 — Absorbed energy and $T_{eq}$
+
+If Bond albedo is $A$ (dimensionless), the planet absorbs a fraction $(1-A)$ of the incoming energy.
+
+For **full redistribution** (global average), the absorbed flux is:
+
+$$F_{\mathrm{abs}} = (1-A)\,\frac{F_\star}{4}.$$
+
+Equilibrium means “absorbed = emitted to space,” and a blackbody emits $\sigma T^4$ (W/m$^2$):
+
+$$\sigma T_{eq}^4 = F_{\mathrm{abs}}.$$
+
+Solving gives the standard form:
+
+$$T_{eq}=\left[\frac{(1-A)L_\star}{16\pi\sigma d^2}\right]^{1/4}.$$
+
+## Step 3 — Toy greenhouse mapping
+
+We represent greenhouse strength with an infrared optical depth $\tau_{IR}$ (dimensionless) and define an effective to-space emissivity:
+
+$$\varepsilon_{out}=e^{-\tau_{IR}}.$$
+
+Then we enforce top-of-atmosphere energy balance:
+
+$$\sigma T_{eq}^4 = \varepsilon_{out}\,\sigma T_{surf}^4.$$
+
+So,
+
+$$T_{surf}=T_{eq}\,e^{\tau_{IR}/4}.$$
+
+This keeps the causal story honest: if infrared escape is less efficient, the surface must be warmer to maintain the same to-space power.
+
+## Optional — Redistribution toggle (dayside emission)
+
+The demo supports a redistribution mode that changes the emitting-area assumption:
+
+- **Global average:** divide by 4.
+- **Dayside emission:** divide by 2 (less emitting area, so higher temperature is required).
+
+In this simplified setup, the equilibrium temperatures satisfy:
+
+$$\frac{T_{eq,\mathrm{dayside}}}{T_{eq,\mathrm{global}}} \approx 2^{1/4}.$$
+
+## Spectral greenhouse view (teaching visualization)
+
+The spectral view is an explanatory bridge:
+
+- A blackbody emission curve at $T_{surf}$
+- Broad absorption “dips” centered on sourced molecular band centers
+
+Band centers are sourced; the dip shapes and depths are illustrative.
+

@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Planetary Climate Sandbox | AstroEd</title>
+  <link rel="stylesheet" href="../_assets/astro-theme.css">
+  <link rel="stylesheet" href="../_assets/demo-shell.css">
+  <link rel="stylesheet" href="../_assets/demo-legacy.css">
+  <link rel="stylesheet" href="planetary-climate-sandbox.css">
+</head>
+<body>
+  <div class="demo-wrapper">
+    <canvas id="starfield"></canvas>
+
+    <div class="demo-content">
+      <header class="demo-header">
+        <h1 class="demo-title">Planetary Climate Sandbox</h1>
+        <p class="demo-subtitle">Energy balance, greenhouse strength, and habitability reasoning</p>
+        <div class="btn-group demo-tools">
+          <a class="astro-btn secondary" href="./planetary-climate-sandbox-station-card.pdf" target="_blank" rel="noopener">Station Card (PDF)</a>
+        </div>
+      </header>
+
+      <div class="stage-tabs" role="tablist" aria-label="View selector">
+        <button class="stage-tab active" id="btn-view-budget" role="tab" aria-selected="true" aria-controls="panel-budget">Energy budget</button>
+        <button class="stage-tab" id="btn-view-spectral" role="tab" aria-selected="false" aria-controls="panel-spectral">Spectral greenhouse</button>
+      </div>
+
+      <div class="stage-panel">
+        <div id="panel-budget" class="stage-view" role="tabpanel" aria-labelledby="btn-view-budget">
+          <svg id="budget-svg" viewBox="0 0 900 320" role="img" aria-label="Energy budget diagram showing incoming starlight, reflected light, and outgoing infrared">
+            <defs>
+              <marker id="arrowHead" markerWidth="12" markerHeight="8" refX="10" refY="4" orient="auto">
+                <polygon points="0 0, 12 4, 0 8" fill="rgba(255,255,255,0.85)"></polygon>
+              </marker>
+            </defs>
+
+            <text x="30" y="40" fill="rgba(255,255,255,0.75)" font-size="16">Energy in / out</text>
+
+            <circle id="planet-disc" cx="520" cy="170" r="70" fill="rgba(93, 173, 226, 0.9)"></circle>
+            <circle id="planet-glow" cx="520" cy="170" r="78" fill="rgba(93, 173, 226, 0.12)"></circle>
+
+            <line id="arrow-in" x1="140" y1="130" x2="440" y2="130" stroke="rgba(255,255,255,0.85)" stroke-width="10" marker-end="url(#arrowHead)"></line>
+            <text id="label-in" x="150" y="110" fill="rgba(255,255,255,0.75)" font-size="14">incoming</text>
+
+            <line id="arrow-reflect" x1="440" y1="210" x2="160" y2="210" stroke="rgba(244, 208, 63, 0.85)" stroke-width="6" marker-end="url(#arrowHead)"></line>
+            <text id="label-reflect" x="170" y="235" fill="rgba(244, 208, 63, 0.85)" font-size="14">reflected</text>
+
+            <line id="arrow-ir" x1="600" y1="170" x2="820" y2="170" stroke="rgba(255,255,255,0.75)" stroke-width="8" marker-end="url(#arrowHead)"></line>
+            <text id="label-ir" x="610" y="150" fill="rgba(255,255,255,0.7)" font-size="14">to space (IR)</text>
+
+            <text id="label-escape" x="610" y="200" fill="rgba(255,255,255,0.55)" font-size="13">escape fraction ε_out = <tspan id="readout-epsilon-inline">1.00</tspan></text>
+          </svg>
+        </div>
+
+        <div id="panel-spectral" class="stage-view hidden" role="tabpanel" aria-labelledby="btn-view-spectral">
+          <div class="spectral-note">
+            Band centers are sourced; band shapes are illustrative (not line-by-line spectroscopy).
+          </div>
+          <canvas id="spectral-canvas" width="900" height="320" role="img" aria-label="Illustrative thermal emission curve with greenhouse absorption bands"></canvas>
+        </div>
+      </div>
+
+      <div class="readout-panel">
+        <div class="readout-item">
+          <div class="readout-label">L<sub>★</sub></div>
+          <div class="readout-value" id="readout-lstar">1.00</div>
+          <div class="readout-unit">L<sub>☉</sub></div>
+        </div>
+        <div class="readout-item">
+          <div class="readout-label">d</div>
+          <div class="readout-value" id="readout-distance">1.00</div>
+          <div class="readout-unit">AU</div>
+        </div>
+        <div class="readout-item">
+          <div class="readout-label">A (Bond)</div>
+          <div class="readout-value" id="readout-albedo">0.30</div>
+          <div class="readout-unit">—</div>
+        </div>
+        <div class="readout-item">
+          <div class="readout-label">Absorbed</div>
+          <div class="readout-value" id="readout-absorbed">0</div>
+          <div class="readout-unit">W/m²</div>
+        </div>
+        <div class="readout-item">
+          <div class="readout-label">T<sub>eq</sub></div>
+          <div class="readout-value" id="readout-teq">0</div>
+          <div class="readout-unit">K</div>
+        </div>
+        <div class="readout-item">
+          <div class="readout-label">τ<sub>IR</sub></div>
+          <div class="readout-value" id="readout-tau">0.00</div>
+          <div class="readout-unit">—</div>
+        </div>
+        <div class="readout-item">
+          <div class="readout-label">ε<sub>out</sub></div>
+          <div class="readout-value" id="readout-epsilon">1.00</div>
+          <div class="readout-unit">—</div>
+        </div>
+        <div class="readout-item">
+          <div class="readout-label">T<sub>surf</sub></div>
+          <div class="readout-value" id="readout-tsurf">0</div>
+          <div class="readout-unit">K</div>
+        </div>
+        <div class="readout-item">
+          <div class="readout-label">ΔT</div>
+          <div class="readout-value" id="readout-deltaT">0</div>
+          <div class="readout-unit">K</div>
+        </div>
+      </div>
+
+      <div class="controls-grid">
+        <div class="control-card">
+          <h2 class="control-title">Controls</h2>
+
+          <div class="control-row">
+            <label for="preset-select">Preset:</label>
+            <select id="preset-select"></select>
+            <span id="preset-badges" class="preset-badges" aria-live="polite"></span>
+          </div>
+
+          <div class="slider-group">
+            <label for="lstar-slider">
+              Stellar luminosity
+              <span class="value-display" id="lstar-display">1.00 L☉</span>
+            </label>
+            <input type="range" id="lstar-slider" class="astro-slider" min="0.05" max="5.00" step="0.01" value="1.00" data-tooltip-source="#lstar-display">
+          </div>
+
+          <div class="slider-group">
+            <label for="distance-slider">
+              Distance
+              <span class="value-display" id="distance-display">1.00 AU</span>
+            </label>
+            <input type="range" id="distance-slider" class="astro-slider" min="0.03" max="3.00" step="0.001" value="1.00" data-tooltip-source="#distance-display">
+          </div>
+
+          <div class="slider-group">
+            <label for="albedo-slider">
+              Bond albedo
+              <span class="value-display" id="albedo-display">0.30</span>
+            </label>
+            <input type="range" id="albedo-slider" class="astro-slider" min="0.00" max="1.00" step="0.01" value="0.30" data-tooltip-source="#albedo-display">
+          </div>
+
+          <div class="slider-group">
+            <label for="tau-slider">
+              Greenhouse strength (τ<sub>IR</sub>)
+              <span class="value-display" id="tau-display">0.49</span>
+            </label>
+            <input type="range" id="tau-slider" class="astro-slider" min="0.00" max="8.00" step="0.01" value="0.49" data-tooltip-source="#tau-display">
+          </div>
+
+          <fieldset class="toggle-group" aria-label="Heat redistribution mode">
+            <legend>Heat redistribution</legend>
+            <label class="toggle-option">
+              <input type="radio" name="redistribution" value="global" checked>
+              Full redistribution (global average)
+            </label>
+            <label class="toggle-option">
+              <input type="radio" name="redistribution" value="dayside">
+              Dayside emission (less emitting area → warmer)
+            </label>
+          </fieldset>
+        </div>
+
+        <div class="control-card">
+          <h2 class="control-title">Predict → Play → Explain</h2>
+
+          <div class="mission-row">
+            <label for="mission-select">Mission:</label>
+            <select id="mission-select">
+              <option value="albedo">Albedo experiment</option>
+              <option value="greenhouse">Greenhouse experiment</option>
+              <option value="redistribution">Redistribution experiment</option>
+            </select>
+          </div>
+
+          <div class="mission-prompt" id="mission-prompt"></div>
+
+          <fieldset class="prediction-group" aria-label="Prediction choice">
+            <legend>My prediction</legend>
+            <label><input type="radio" name="prediction" value="up"> Goes up</label>
+            <label><input type="radio" name="prediction" value="down"> Goes down</label>
+            <label><input type="radio" name="prediction" value="same"> Stays the same</label>
+          </fieldset>
+
+          <div class="mission-actions">
+            <button class="astro-btn primary" id="btn-check">Check</button>
+            <div id="check-result" class="check-result" aria-live="polite"></div>
+          </div>
+
+          <div class="explain-box">
+            <label for="explain-text">Explain (1–2 sentences):</label>
+            <textarea id="explain-text" rows="3" placeholder="Use energy flow language: what changes about energy in vs energy out?"></textarea>
+          </div>
+        </div>
+      </div>
+
+      <div id="status-announce" aria-live="polite" aria-atomic="true" class="sr-only"></div>
+    </div>
+  </div>
+
+  <script src="../_assets/astro-utils.js"></script>
+  <script src="../_assets/demo-polish.js"></script>
+  <script src="../_assets/starfield.js"></script>
+  <script src="../_assets/planetary-climate-model.js"></script>
+  <script src="../_assets/blackbody-model.js"></script>
+  <script src="../_assets/spectra/spectra-data.v1.js"></script>
+  <script src="../_assets/climate/planet-presets.v1.js"></script>
+  <script src="planetary-climate-sandbox.js"></script>
+</body>
+</html>

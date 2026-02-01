@@ -1,0 +1,35 @@
+---
+title: "Assessment Bank"
+subtitle: "Clickers + short answer"
+page-layout: article
+toc: true
+search: false
+---
+
+::: {.callout-note title="Navigation"}
+- Back: [Instructor index](index.qmd)
+- Student demo: [/demos/planetary-climate-sandbox/](/demos/planetary-climate-sandbox/)
+:::
+
+## Clicker 1 — Albedo
+
+Two otherwise identical planets orbit identical stars at the same distance. Planet B has a higher Bond albedo than Planet A. In this model, Planet B’s equilibrium temperature $T_{eq}$ is:
+
+A. Higher  
+B. Lower  
+C. The same  
+D. Not enough information
+
+## Clicker 2 — Greenhouse strength
+
+Two planets have the same $T_{eq}$ but different $T_{surf}$. In this model, the planet with higher $T_{surf}$ must have:
+
+A. Higher Bond albedo  
+B. Lower Bond albedo  
+C. Larger $\tau_{IR}$  
+D. Smaller $\tau_{IR}$
+
+## Short answer (2–4 sentences)
+
+Venus has a much higher Bond albedo than Earth, yet Venus’s surface temperature is far higher. Using energy-flow language, explain how this can happen in the toy model.
+
