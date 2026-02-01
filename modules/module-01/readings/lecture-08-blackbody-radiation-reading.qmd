@@ -58,7 +58,7 @@ If you only remember three things:
 
 2. **Wien's Law:** $\lambda_{\text{peak}} \propto 1/T$. Measure the peak wavelength of emitted light → know the temperature.
 
-3. **Stefan-Boltzmann Law:** $L \propto T^4$. Temperature has a **huge** effect on luminosity. Double the temperature → 16× the luminosity.
+3. **Stefan-Boltzmann Law:** Power per unit area $= \sigma T^4$. At the same size, doubling $T$ makes emission **16× larger**. (Total luminosity: $L = 4\pi R^2 \sigma T^4$.)
 
 Now for the details...
 :::
@@ -69,7 +69,7 @@ Now for the details...
 
 Imagine looking through an infrared camera. In pitch darkness, you see a person walking — their body glows brightly against the cool background. A coffee mug just removed from the microwave blazes with infrared light. The cold night sky is nearly black, but the warm buildings stand out in eerie detail.
 
-Here's the remarkable thing: that infrared "glow" isn't reflected light — it's light the objects are **emitting** because of their temperature. Everything with temperature above absolute zero radiates electromagnetic waves. At room temperature, that radiation is mostly infrared, invisible to our eyes. But heat something to 500°C and it glows dull red. At 1000°C, bright orange. At 6000°C (the Sun's surface), brilliant yellow-white.
+Here's the remarkable thing: that infrared "glow" isn't reflected light — it's light the objects are **emitting** because of their temperature. Everything with temperature above absolute zero radiates electromagnetic waves. At room temperature, that radiation is mostly infrared, invisible to our eyes. But heat something to 500°C and it glows dull red. At 1000°C, bright orange. At ~5800 K (about 5500°C; the Sun's photosphere), brilliant yellow-white.
 
 This isn't metaphor — it's physics. **Temperature is written in light.**
 
@@ -95,6 +95,47 @@ You might assume:
 But everything above absolute zero emits electromagnetic radiation. At room temperature, you emit infrared light constantly — roughly 100 W of thermal radiation (it depends on your body, clothing, and surroundings). You're glowing right now!
 :::
 
+::: {.callout-tip title="🌡️ Deep Dive: The Kelvin Temperature Scale" collapse="true"}
+Throughout this lecture (and all of astrophysics), we use the **Kelvin scale** for temperature. Here's why — and how to convert.
+
+**Why Kelvin?**
+
+The Kelvin scale starts at **absolute zero** — the coldest possible temperature, where all thermal motion stops. This makes physics formulas simpler because there are no negative temperatures to worry about. When we say "double the temperature," that makes physical sense in Kelvin (2 × 300 K = 600 K), but not in Celsius (2 × 27°C ≠ 54°C in any meaningful sense).
+
+**Kelvin vs. Celsius**
+
+Kelvin and Celsius use the same-sized degrees — they just start at different places:
+
+$$T_K = T_C + 273$$
+
+| Description | Celsius | Kelvin |
+|-------------|---------|--------|
+| Absolute zero (thermal motion stops) | −273°C | 0 K |
+| Water freezes | 0°C | 273 K |
+| Room temperature | ~20°C | ~293 K |
+| Water boils | 100°C | 373 K |
+| Oven temperature | ~200°C | ~473 K |
+| Red-hot metal | ~700°C | ~1000 K |
+| Sun's surface | ~5500°C | ~5800 K |
+
+**Quick conversion:** Add 273 to Celsius to get Kelvin. For rough estimates, remember that room temperature is about 300 K, and the Sun is about 6000 K.
+
+**Kelvin vs. Fahrenheit**
+
+For completeness (though Fahrenheit is rarely used in science):
+
+$$T_K = \frac{5}{9}(T_F - 32) + 273 = \frac{5}{9}(T_F + 460)$$
+
+| Description | Fahrenheit | Kelvin |
+|-------------|------------|--------|
+| Water freezes | 32°F | 273 K |
+| Room temperature | ~70°F | ~294 K |
+| Body temperature | 98.6°F | 310 K |
+| Water boils | 212°F | 373 K |
+
+**The bottom line:** Kelvin is the physicist's temperature scale because it starts at true zero. Throughout this reading, temperatures are in Kelvin unless otherwise noted.
+:::
+
 ::: {.callout-note title="Where We Left Off (Lecture 7)"}
 In Lecture 7, we established that **light is information**:
 
@@ -116,7 +157,7 @@ The answer: **temperature.** Today we connect temperature to the spectrum of emi
 
 ### The Basic Principle
 
-All objects with temperature above absolute zero emit electromagnetic radiation. This is called **thermal radiation** (or **blackbody radiation**). The radiation comes from the thermal motion of charged particles — atoms and electrons jiggling around because they have internal energy.
+All objects with temperature above absolute zero emit electromagnetic radiation. This is called **thermal radiation**. The radiation comes from the thermal motion of charged particles — atoms and electrons jiggling around because they have internal energy. A **blackbody** is an idealized object that emits a very specific "blackbody spectrum" determined only by its temperature — many real objects approximate this, but not perfectly.
 
 ::: {.column-margin}
 **Thermal radiation:** Electromagnetic radiation emitted by an object due to its temperature. Every object above absolute zero emits it.
@@ -167,7 +208,9 @@ Which of the following emits thermal radiation?
 A **blackbody** is an idealized object with two special properties:
 
 1. It **absorbs all incident radiation** — nothing is reflected
-2. It re-emits that energy as thermal radiation with a spectrum that depends **only on temperature**
+2. It emits thermal radiation with a spectrum that depends **only on its temperature**
+
+A blackbody glows even in complete darkness — the emission comes from its own internal thermal energy, not from reflected or re-radiated external light.
 
 The spectrum shape is universal — same for any blackbody at the same temperature. A blackbody iron ball at 5800 K emits the same spectrum as a blackbody tungsten ball at 5800 K (or the Sun at 5800 K). Temperature alone determines the spectrum.
 
@@ -210,9 +253,9 @@ The blackbody spectrum was a major puzzle in 19th-century physics. Classical the
 Planck's explanation of the blackbody spectrum earned him the 1918 Nobel Prize and revolutionized physics. The smooth blackbody curve you see in the demo is a triumph of quantum physics — classical physics couldn't explain it.
 
 ::: {.callout-tip title="The More You Know: Cosmic Microwave Background" collapse="true"}
-The most perfect blackbody ever measured isn't a star — it's the **Cosmic Microwave Background (CMB)**, the afterglow of the Big Bang. The CMB has a temperature of 2.725 K and its spectrum matches a perfect blackbody curve to extraordinary precision (better than 1 part in 100,000).
+The most perfect blackbody ever measured isn't a star — it's the **Cosmic Microwave Background (CMB)**, the afterglow of the Big Bang. The CMB has a temperature of 2.725 K and its spectrum matches a perfect blackbody curve to extraordinary precision (deviations constrained to **tens of parts per million** of the peak brightness in COBE/FIRAS analyses).
 
-This perfect blackbody signature is powerful evidence that the early universe was in thermal equilibrium — hot, dense, and uniform — before it expanded and cooled to its current state. The CMB was discovered in 1965 and its blackbody nature was confirmed by the COBE satellite in 1990, earning the 2006 Nobel Prize.
+This perfect blackbody signature is powerful evidence that the early universe was in thermal equilibrium — hot, dense, and uniform — before it expanded and cooled to its current state. The CMB was discovered in 1965, and its blackbody nature was measured by COBE/FIRAS in the early 1990s — work that contributed to the 2006 Nobel Prize recognition of the CMB's blackbody form.
 :::
 
 ::: {.callout-tip title="🖥️ Demo: Explore Blackbody Spectra" collapse="false"}
@@ -269,6 +312,10 @@ $$\lambda_{\text{peak}} \text{ (nm)} = \frac{2,900,000}{T \text{ (K)}}$$
 **Wien's Law:** The relationship between temperature and peak emission wavelength; $\lambda_{\text{peak}} \propto 1/T$. Hotter objects peak at shorter (bluer) wavelengths.
 :::
 
+::: {.callout-note title="🤓 Nerd Note: Peak Depends on How You Plot" collapse="true"}
+"Peak wavelength" here means the peak of the curve when plotted **per unit wavelength** (intensity vs. λ). If you plot the same spectrum per unit frequency (intensity vs. ν), the numerical peak shifts to a different value — same physics, different way of labeling the curve. This is a mathematical subtlety that occasionally confuses advanced students, but for ASTR 101, just know that Wien's Law as written applies to the wavelength form of the spectrum.
+:::
+
 ::: {.callout-tip title="Unit Check for Wien's Law" collapse="true"}
 Use **one** version at a time and match the units:
 
@@ -296,7 +343,7 @@ Wien's Law is the astronomer's thermometer. Measure where an object's spectrum p
 **Solution:**
 $$T = \frac{2,900,000 \text{ nm·K}}{\lambda_{\text{peak}}} = \frac{2,900,000}{290} = 10,000 \text{ K}$$
 
-This is a hot, blue-white star — about twice the Sun's temperature.
+This is a hot, blue-white star — about 1.7× the Sun's temperature.
 
 ::: {.callout-note title="Observable → Model → Inference: Measuring Stellar Temperature"}
 **Observable:** A star's spectrum peaks at 580 nm (yellow-orange light). (Wavelength observation)
@@ -595,7 +642,7 @@ This demo lets you explore how temperature affects the blackbody spectrum — bo
 *Predict before you explore:* Where should the Sun's spectrum peak? In what color?
 
 ::: {.callout-note title="My Prediction" collapse="true"}
-Using Wien's Law with T = 5800 K: $\lambda_{\text{peak}} = $ _____ nm. This is in the _____ part of the visible spectrum.
+Using Wien's Law with $T \approx 5800\text{ K}$: $\lambda_{\text{peak}} =$ _____ nm. This is in the _____ part of the visible spectrum.
 :::
 
 **Do this:**
@@ -654,7 +701,7 @@ The 3000 K star:
 
 **Do this:**
 
-1. Use the "Unknown Star" preset (if available) or have someone else set a temperature
+1. Have a partner click **Cycle Presets** (or choose a preset like O/B/A/Sun/K/M) while you look away, or have them set a random temperature with the slider
 2. Look at where the spectrum peaks
 3. Use Wien's Law to estimate the temperature: $T = 2,900,000/\lambda_{\text{peak}}$ (nm and K)
 4. Check your answer against the slider
@@ -704,6 +751,22 @@ Here's the key insight for Lecture 9: **Real stars aren't perfect blackbodies.**
 - By identifying the lines, we identify the elements present
 - By measuring line shifts, we detect motion (Doppler effect)
 
+### Every Atom Has Its Own Fingerprint
+
+Why do elements produce lines at specific wavelengths? It comes down to quantum mechanics: electrons in atoms can only occupy certain energy levels. When an electron jumps between levels, it absorbs or emits a photon with **exactly** the right energy — and therefore exactly the right wavelength.
+
+Hydrogen, the simplest atom, produces a distinctive pattern of lines called the **Balmer series** (in visible light). These appear at 656 nm (red), 486 nm (blue-green), 434 nm (violet), and so on. No other element produces this exact pattern.
+
+::: {layout-ncol=2}
+{{< fig absorption-of-light-hydrogen-jwst >}}
+
+{{< fig emission-of-light-hydrogen-jwst >}}
+:::
+
+**Absorption vs. Emission:** When light from a hot, bright source passes through cooler gas, the gas absorbs specific wavelengths — creating **dark lines** against a bright continuum. When hot, thin gas glows on its own, it emits **only those same wavelengths** — creating bright lines against a dark background. Same atomic fingerprint, opposite appearance.
+
+Every element and molecule — hydrogen, helium, sodium, water vapor, carbon dioxide — has its own unique pattern of lines. By matching observed patterns to laboratory measurements, astronomers can identify what's present in a star, nebula, or exoplanet atmosphere from across the cosmos.
+
 ::: {.callout-note title="Coming Up: Spectral Lines (Lecture 9)"}
 **Lecture 8 (today):** Blackbody radiation tells us temperature (Wien's Law) and luminosity (Stefan-Boltzmann). Peak wavelength reveals how hot a star is.
 
@@ -727,7 +790,7 @@ We'll explore this in detail in Lecture 9, where we'll learn to "read" stellar s
 
 4. **The Sun peaks at green (~500 nm)** but appears white because it emits broadly across all visible wavelengths.
 
-5. **Stefan-Boltzmann Law:** Energy output scales as $T^4$. Double temperature → 16× more luminous.
+5. **Stefan-Boltzmann Law:** Power **per unit area** scales as $T^4$. At fixed radius, doubling $T$ makes luminosity 16× larger.
 
 6. **L-T-R Relationship:** $L = 4\pi R^2 \sigma T^4$. Same temperature, different luminosity → different size. This distinguishes giants from dwarfs.
 
