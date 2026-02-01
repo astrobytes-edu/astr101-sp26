@@ -404,7 +404,7 @@ When we say "the Sun's gravity pulls on Earth," we must also acknowledge that Ea
 
 But the *accelerations* are not equal! By $F = ma$, the same force produces less acceleration on the more massive object. The Sun is 330,000 times more massive than Earth, so it accelerates 330,000 times less. The Sun wobbles, but barely.
 
-This tiny wobble is actually how we detect exoplanets: we measure the parent star's subtle back-and-forth motion caused by an orbiting planet tugging on it.
+This tiny wobble is **one major way** astronomers detect exoplanets: by measuring a star's subtle back-and-forth motion caused by an orbiting planet tugging on it. (Other methods — like transits — also exist.)
 
 ::: {.callout-check-yourself title="Check Yourself 6 — Third Law"}
 Earth exerts a gravitational force on the Moon. According to Newton's Third Law, the Moon exerts a gravitational force on Earth that is:
@@ -416,7 +416,7 @@ Earth exerts a gravitational force on the Moon. According to Newton's Third Law,
 :::
 
 ::: {.callout-tip title="Solution" collapse="true"}
-**C) Exactly equal in magnitude but opposite in direction.** Newton's Third Law is absolute: every force has an equal and opposite reaction. Earth pulls on the Moon with exactly the same force that the Moon pulls on Earth. (The *accelerations* differ because the masses differ, but the *forces* are equal.) This is why Earth has tides — the Moon's pull is real and measurable!
+**C) Exactly equal in magnitude but opposite in direction.** Newton's Third Law is absolute: every force has an equal and opposite reaction. Earth pulls on the Moon with exactly the same force that the Moon pulls on Earth. (The *accelerations* differ because the masses differ, but the *forces* are equal.) This also connects to tides: tidal forces come from the Moon's gravity being **slightly stronger on Earth's near side than on the far side**, which stretches Earth and its oceans.
 :::
 
 ---
@@ -481,7 +481,7 @@ Newton's claim: **One equation governs everything that has mass.**
 
 Newton calculated that if gravity follows an inverse-square law, the Moon (60 Earth radii away) should experience gravity about $1/60^2 = 1/3600$ as strong as at Earth's surface. He checked: is that enough to curve the Moon's path into its observed orbit?
 
-Yes — the numbers matched perfectly. Same equation, same physics, from apple to Moon.
+Yes — the numbers matched remarkably well once the Earth–Moon distance and Earth's radius were measured accurately enough. Same equation, same physics, from apple to Moon.
 
 ::: {.callout-tip title="The More You Know: Gravity From People" collapse="true"}
 Every mass attracts every other mass — so why don't you get pulled toward the person next to you?
@@ -735,11 +735,11 @@ Gravity is a **central force** — it always points directly toward the Sun. Cen
 
 ### What Does "Angular Momentum" Mean?
 
-Angular momentum combines two things: **how far** you are from the rotation center and **how fast** you're moving sideways (tangentially).
+Angular momentum combines two things: **how far** you are from the center ($r$) and **how fast** you're moving **sideways** (tangential speed, $v_t$). A simple version is:
 
-$$L = mvr_\perp$$
+$$L = m r v_t$$
 
-If $L$ must stay constant and $r$ (distance from Sun) decreases, then $v$ (speed) must increase. Closer → faster. Farther → slower.
+If $L$ stays constant and $r$ gets smaller, $v_t$ must get larger. **Closer → faster. Farther → slower.**
 
 **The ice skater analogy (callback from Lecture 5):** When an ice skater pulls their arms in, they spin faster. When they extend their arms, they spin slower. The rotational motion is conserved — it just gets concentrated in a smaller space or spread over a larger one.
 
@@ -783,6 +783,8 @@ Think about it before reading on...
 If a central force follows a power law ($F \propto 1/r^n$), then there's a corresponding relationship between period and orbital size:
 
 $$P^2 \propto a^{n+1}$$
+
+*(This quick scaling argument assumes circular or nearly circular orbits, so you can treat $a \approx r$. For elliptical orbits under gravity, $a$ is the semi-major axis.)*
 
 So the exponent in Kepler's pattern directly tells you the exponent in the force law:
 
@@ -877,7 +879,7 @@ This demo shows the full physics of two-body orbits. Both the star AND the plane
 
 **What you'll see:**
 
-- **Both bodies move** — the star wobbles too (this is how we detect exoplanets!)
+- **Both bodies move** — the star wobbles too (one way we detect exoplanets!)
 - **Mass sliders** for both objects
 - **Period readout** that changes with total mass
 - **Presets** for real systems (Sun-Jupiter, exoplanets, binary stars)
@@ -896,7 +898,7 @@ Write your prediction here: _______________
 
 1. Select the **Sun + Jupiter** preset
 2. Click **Play** and watch both bodies move
-3. Toggle on **Show Barycenter**
+3. Check the **Barycenter** box to see the center of mass
 4. Observe: Is the Sun stationary?
 
 ::: {.callout-tip title="What You Should Have Found" collapse="true"}
@@ -904,7 +906,7 @@ The Sun is NOT stationary — it wobbles in a tiny orbit around the barycenter (
 
 **Claim:** Newton's Third Law requires both bodies to move. If Jupiter pulls on the Sun, the Sun pulls back — and both accelerate.
 
-**Evidence:** The demo shows the Sun's small orbit. In fact, the Sun-Jupiter barycenter is actually just outside the Sun's surface! This wobble is how we detect exoplanets around distant stars (radial velocity method).
+**Evidence:** The demo shows the Sun's small orbit. In fact, the Sun-Jupiter barycenter is actually just outside the Sun's surface! This wobble is one way astronomers detect exoplanets around distant stars — called the **radial velocity method**.
 :::
 
 ---
@@ -921,7 +923,7 @@ From $P^2 = a^3/M_{total}$: If $M$ doubles, $P^2$ becomes half as large, so $P$ 
 
 1. Select **Equal Mass** binary preset (1 $M_\odot$ + 1 $M_\odot$)
 2. Note the orbital period
-3. Increase M₁ to 2 $M_\odot$ (now 2 + 1 = 3 $M_\odot$ total)
+3. Drag the **M₁** slider to 2.0 M☉ (now 2 + 1 = 3 M☉ total)
 4. Compare the new period to the original
 
 | Configuration | Total Mass | Period | $P^2$ |
@@ -953,7 +955,7 @@ Increasing total mass → shorter period. More mass = stronger gravity = faster 
 ::: {.callout-tip title="What You Should Have Found" collapse="true"}
 51 Peg b (a "hot Jupiter") causes a MUCH larger stellar wobble than Earth does. Why? It's more massive AND closer to its star.
 
-**Claim:** We detect exoplanets by measuring their host star's wobble. Bigger planets cause bigger wobbles.
+**Claim:** The radial velocity method detects exoplanets by measuring their host star's wobble. Bigger planets cause bigger wobbles.
 
 **Evidence:** The demo shows 51 Peg b causing obvious stellar motion, while Earth's effect on the Sun is nearly invisible. This is why hot Jupiters were discovered first — they cause the largest, easiest-to-detect wobbles.
 :::
@@ -961,7 +963,7 @@ Increasing total mass → shorter period. More mass = stronger gravity = faster 
 ---
 
 ::: {.callout-note title="Also Try: Kepler Demo Newton Mode"}
-The [Kepler's Laws Demo](https://astrobytes-edu.github.io/astr101-sp26/demos/keplers-laws/) has a **Newton Mode** that shows velocity and acceleration vectors. Try it to see how centripetal acceleration always points toward the Sun.
+The [Kepler's Laws Demo](https://astrobytes-edu.github.io/astr101-sp26/demos/keplers-laws/) has a **NEWTON MODE** button that shows velocity and acceleration vectors. Try it to see how centripetal acceleration always points toward the Sun.
 :::
 
 ---
@@ -1093,7 +1095,8 @@ Every time we measure a mass in astronomy, we're using Newton's insight: **motio
 
 **5. Weightlessness:** Explain why astronauts on the ISS appear weightless, even though gravity there is about 90% as strong as on Earth's surface.
 
-**6. Orbital Mass:** A moon orbits a planet at 500,000 km with a period of 10 days. Calculate the planet's mass. (Assume circular orbit and moon mass ≪ planet mass.)
+**6. Orbital Mass:** A moon orbits a planet at 500,000 km with a period of 10 days. Calculate the planet's mass. (Assume a circular orbit and moon mass ≪ planet mass.)
+*Helpful conversions:* $1\text{ km} = 10^3\text{ m}$, $1\text{ day} = 86{,}400\text{ s}$.
 
 ### Challenge (synthesis)
 
