@@ -1,6 +1,8 @@
 # Lectures 7–10 Demos Implementation Plan (TDD)
 
 > **For Claude:** REQUIRED SUB-SKILL: Use `superpowers:executing-plans` to implement this plan task-by-task.
+>
+> **For Codex (this session):** Execute directly in-session (no subagents). Use `tests/` + `scripts/check_demo_polish.py` + `make render` as the acceptance gates.
 
 **Goal:** Make Lectures 7–10 demo support publish-ready by (1) fixing the binary-orbits instructor unit error, (2) adding student-facing practice demos for spectral fingerprints (L9) and Doppler shifts (L10), and (3) upgrading the binary-orbits demo with an RV-curve overlay plus a synchronized “spectral line inset” so RV feels like “measuring spectra over time,” not abstract graphing.
 

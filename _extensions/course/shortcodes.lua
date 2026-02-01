@@ -990,28 +990,72 @@ function defn(args, kwargs)
   return pandoc.Str(definition)
 end
 
--- {{< glossary >}} or {{< glossary module=1 >}} - full glossary section
+-- {{< glossary >}} - full glossary section
+-- Supports: module=1, lecture=3, tier=core|supporting|all, format=alphabetical
 function glossary(args, kwargs)
   local glossary_data = get_glossary()
   local filter_module = nil
+  local filter_lecture = nil
+  local filter_tier = nil
+  local format_mode = nil
 
-  if kwargs and kwargs.module then
-    filter_module = tonumber(pandoc.utils.stringify(kwargs.module))
+  if kwargs then
+    if kwargs.module then
+      filter_module = tonumber(pandoc.utils.stringify(kwargs.module))
+    end
+    if kwargs.lecture then
+      filter_lecture = tonumber(pandoc.utils.stringify(kwargs.lecture))
+    end
+    if kwargs.tier then
+      filter_tier = pandoc.utils.stringify(kwargs.tier)
+      if filter_tier == "all" then filter_tier = nil end
+    end
+    if kwargs.format then
+      format_mode = pandoc.utils.stringify(kwargs.format)
+    end
   end
 
   if not glossary_data or not next(glossary_data) then
     return pandoc.RawBlock("html", '<div class="callout callout-warning"><p>No glossary found.</p></div>')
   end
 
-  -- Sort keys alphabetically by term name
+  -- Filter and collect matching entries
   local sorted = {}
   for id, entry in pairs(glossary_data) do
+    local include = true
+
     -- Filter by module if specified
-    if not filter_module or (entry.module and tonumber(entry.module) == filter_module) then
+    if filter_module and (not entry.module or tonumber(entry.module) ~= filter_module) then
+      include = false
+    end
+
+    -- Filter by lecture if specified
+    if include and filter_lecture and (not entry.lecture or tonumber(entry.lecture) ~= filter_lecture) then
+      include = false
+    end
+
+    -- Filter by tier if specified
+    if include and filter_tier and entry.tier ~= filter_tier then
+      include = false
+    end
+
+    if include then
       table.insert(sorted, {id = id, entry = entry, sort_key = (entry.term or id):lower()})
     end
   end
+
+  -- Sort alphabetically by term name
   table.sort(sorted, function(a, b) return a.sort_key < b.sort_key end)
+
+  if #sorted == 0 then
+    local filter_desc = ""
+    if filter_lecture then filter_desc = "lecture " .. filter_lecture end
+    if filter_module then
+      if filter_desc ~= "" then filter_desc = filter_desc .. ", " end
+      filter_desc = filter_desc .. "module " .. filter_module
+    end
+    return pandoc.RawBlock("html", '<div class="callout callout-note"><p>No glossary terms for ' .. filter_desc .. '.</p></div>')
+  end
 
   local html = '<div class="glossary">\n<dl>\n'
 
@@ -1020,11 +1064,21 @@ function glossary(args, kwargs)
     local term_name = entry.term or item.id
     local definition = convert_math_for_html(entry.definition or "")
     local context = convert_math_for_html(entry.context or "")
+    local tier = entry.tier or "supporting"
 
-    html = html .. string.format('  <dt id="glossary-%s"><strong>%s</strong></dt>\n', item.id, term_name)
-    html = html .. string.format('  <dd>%s', definition)
+    -- Add tier indicator
+    local tier_icon = ""
+    if tier == "core" then
+      tier_icon = '<span class="tier-core" title="Core term (exam-essential)">★</span> '
+    else
+      tier_icon = '<span class="tier-supporting" title="Supporting term">◇</span> '
+    end
+
+    html = html .. string.format('  <dt id="glossary-%s" class="glossary-term tier-%s">%s<strong>%s</strong></dt>\n',
+      item.id, tier, tier_icon, term_name)
+    html = html .. string.format('  <dd class="glossary-def">%s', definition)
     if context ~= "" then
-      html = html .. string.format(' <em>%s</em>', context)
+      html = html .. string.format(' <em class="glossary-context">%s</em>', context)
     end
     html = html .. '</dd>\n'
   end

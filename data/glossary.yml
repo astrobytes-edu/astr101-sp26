@@ -1,544 +1,1224 @@
 # Glossary Registry
 # Terms and definitions for ASTR 101
-# Usage: {{< term id >}} for inline term with margin note
-#        {{< glossary >}} for full glossary section
 #
-# Each term has:
+# Usage:
+#   {{< term id >}}           - Inline term with margin note
+#   {{< glossary lecture=3 >}} - All terms from lecture 3
+#   {{< glossary module=1 >}}  - All terms from module 1
+#
+# Schema:
 #   term: display name
 #   definition: short definition (1-2 sentences)
 #   context: (optional) additional context or formula
-#   first_use: (optional) where term is first introduced
-#   module: (optional) which module introduces this
+#   lecture: numeric lecture number (for filtering)
+#   module: which module introduces this
+#   tier: "core" (★ exam-essential) or "supporting" (◇ helpful context)
 
 # =============================================================
 # Module 1: Foundations
 # =============================================================
 
-# Core Concepts
+# -------------------------------------------------------------
+# Lecture 1: Spoiler Alerts — The Universe Is Weird
+# -------------------------------------------------------------
+
 inference:
   term: "Inference"
   definition: "Drawing conclusions about quantities we cannot directly access (like a star's temperature) from quantities we can measure (like its color)."
   context: "Inference requires a model—a physical relationship connecting observable to unobservable."
-  first_use: "Lecture 1"
+  lecture: 1
   module: 1
+  tier: core
 
 observable:
   term: "Observable"
   definition: "A quantity that can be directly measured—brightness, position, wavelength, timing."
   context: "Astronomers have remarkably few types of observables; nearly everything else is inferred."
-  first_use: "Lecture 1"
+  lecture: 1
   module: 1
-
-constellation:
-  term: "Constellation"
-  definition: "A named pattern of stars on the sky."
-  context: "Constellations are defined by directions (angles) on the celestial sphere; the stars in a constellation are not necessarily close together in space."
-  first_use: "Lecture 3"
-  module: 1
+  tier: core
 
 model:
   term: "Model"
   definition: "A mathematical relationship encoding physical assumptions that connects what we measure to what we want to know."
   context: "Models can be tested by comparing their predictions to new observations."
-  first_use: "Lecture 1"
+  lecture: 1
   module: 1
+  tier: core
 
-# Light and Radiation
 photon:
   term: "Photon"
   definition: "A discrete packet of electromagnetic energy; the quantum of light."
   context: "Each photon carries energy $E = h\\nu$, where $h$ is Planck's constant and $\\nu$ is frequency."
-  first_use: "Lecture 1"
+  lecture: 1
   module: 1
+  tier: core
 
 wavelength:
   term: "Wavelength (λ)"
   definition: "The spatial period of a light wave—the distance between successive crests."
   context: "Measured in nanometers (nm) for visible light, centimeters for radio. Related to frequency by $c = \\lambda\\nu$."
-  first_use: "Lecture 1"
+  lecture: 1
   module: 1
+  tier: core
 
 frequency:
   term: "Frequency (ν)"
   definition: "The number of wave cycles passing a point per second, measured in Hertz (Hz)."
   context: "Higher frequency means higher energy photons: $E = h\\nu$."
-  first_use: "Lecture 1"
+  lecture: 1
   module: 1
+  tier: core
 
 spectrum:
   term: "Spectrum"
   definition: "Brightness measured as a function of wavelength—the distribution of light across different colors/energies."
   context: "A spectrum contains far more information than a single brightness measurement."
-  first_use: "Lecture 1"
+  lecture: 1
   module: 1
+  tier: core
 
 spectroscopy:
   term: "Spectroscopy"
   definition: "The technique of spreading light into its component wavelengths to analyze composition, temperature, and motion."
   context: "Spectroscopy transformed astronomy from cataloging what's there to understanding what it's made of."
-  first_use: "Lecture 1"
+  lecture: 1
   module: 1
+  tier: core
 
-# Brightness and Distance
 flux:
   term: "Flux (F)"
   definition: "The amount of light energy arriving at a detector per unit time per unit area."
   context: "Measured in erg s⁻¹ cm⁻². Flux depends on both luminosity and distance: $F = L/(4\\pi d^2)$."
-  first_use: "Lecture 1"
+  lecture: 1
   module: 1
+  tier: core
 
 luminosity:
   term: "Luminosity (L)"
   definition: "The total light energy emitted by a source per unit time—its intrinsic brightness."
   context: "Measured in erg/s or solar luminosities ($L_\\odot$). Luminosity is what the object emits; flux is what we receive."
-  first_use: "Lecture 1"
+  lecture: 1
   module: 1
+  tier: core
 
 standard_candle:
   term: "Standard candle"
   definition: "An object whose intrinsic luminosity can be determined independently, allowing distance to be calculated from observed brightness."
   context: "Examples: Cepheid variables (period → luminosity), Type Ia supernovae (consistent peak brightness)."
-  first_use: "Lecture 1"
+  lecture: 1
   module: 1
+  tier: supporting
 
 inverse_square_law:
   term: "Inverse-square law"
   definition: "The principle that flux decreases with the square of distance: double the distance, quarter the brightness."
   context: "$F = L/(4\\pi d^2)$. This geometric spreading is why distance determination is central to astronomy."
-  first_use: "Lecture 1"
+  lecture: 1
   module: 1
+  tier: core
 
-# Atomic Physics
 emission:
   term: "Emission"
   definition: "Light produced and sent out by a source, often at specific wavelengths determined by atomic transitions."
   context: "Emission lines appear bright against a darker background."
-  first_use: "Lecture 1"
+  lecture: 1
   module: 1
+  tier: core
 
 absorption:
   term: "Absorption"
   definition: "Light removed from a beam by intervening material, often at specific wavelengths where atoms absorb photons."
   context: "Absorption lines appear dark against a brighter continuum."
-  first_use: "Lecture 1"
+  lecture: 1
   module: 1
+  tier: core
 
 ionized:
   term: "Ionized"
   definition: "An atom that has lost one or more electrons, leaving it with a net positive charge."
   context: "Ionization requires energy (heat or UV radiation). Ionized gas emits different spectral lines than neutral gas."
-  first_use: "Lecture 1"
+  lecture: 1
   module: 1
+  tier: supporting
 
 neutral:
   term: "Neutral"
   definition: "An atom with equal numbers of protons and electrons, having no net electric charge."
   context: "Neutral hydrogen emits at 21 cm (radio); ionized hydrogen emits at 656 nm (optical)."
-  first_use: "Lecture 1"
+  lecture: 1
   module: 1
+  tier: supporting
 
-# Thermal Radiation
 thermal_radiation:
   term: "Thermal radiation"
   definition: "Light emitted by an object due to its temperature—all objects above absolute zero emit thermal radiation."
   context: "Hotter objects emit more light at shorter wavelengths (Wien's law)."
-  first_use: "Lecture 1"
+  lecture: 1
   module: 1
+  tier: supporting
 
 blackbody:
   term: "Blackbody"
   definition: "An idealized object that absorbs all incident radiation and emits a characteristic spectrum determined only by its temperature."
   context: "Stars approximate blackbodies. The blackbody spectrum peaks at $\\lambda_{\\text{peak}} = b/T$ (Wien's law)."
-  first_use: "Lecture 1"
+  lecture: 1
   module: 1
+  tier: core
 
-# Dust and Extinction
 extinction:
   term: "Extinction"
   definition: "The dimming of light by dust through a combination of absorption and scattering."
   context: "Extinction is wavelength-dependent: blue light is extinguished more than red (interstellar reddening)."
-  first_use: "Lecture 1"
+  lecture: 1
   module: 1
+  tier: supporting
 
-# Time and Distance
 lookback_time:
   term: "Lookback time"
   definition: "The time light takes to travel from a distant object to us—we see the object as it was that long ago."
   context: "Looking at the Andromeda Galaxy (2.5 million light-years away), we see it as it was 2.5 million years ago."
-  first_use: "Lecture 1"
+  lecture: 1
   module: 1
+  tier: supporting
 
 light_year:
   term: "Light-year"
   definition: "The distance light travels in one year—approximately $10^{18}$ cm or about 63,000 AU."
   context: "A unit of distance, not time. Proxima Centauri is 4.2 light-years away."
-  first_use: "Lecture 1"
+  lecture: 1
   module: 1
+  tier: core
 
-# Constants
 planck_constant:
   term: "Planck's constant (h)"
   definition: "A fundamental constant that relates photon energy to frequency: $h = 6.63 \\times 10^{-27}$ erg·s."
   context: "The appearance of $h$ in an equation signals that quantum mechanics is involved."
-  first_use: "Lecture 1"
+  lecture: 1
   module: 1
+  tier: supporting
 
 speed_of_light:
   term: "Speed of light (c)"
   definition: "The speed at which light travels in vacuum: $c = 3 \\times 10^{10}$ cm/s."
   context: "A universal constant—the speed limit of the universe. Nothing with mass can reach this speed."
-  first_use: "Lecture 1"
+  lecture: 1
   module: 1
+  tier: core
 
-# Cosmology (Spoilers 9-10)
+# Cosmology Spoilers (still L1, but supporting tier)
 dark-matter:
   term: "Dark Matter"
   definition: "Invisible matter that does not emit, absorb, or reflect light but exerts gravitational influence."
   context: "Dark matter outweighs ordinary matter ~5:1 and is essential for explaining galaxy rotation curves and cosmic structure formation."
-  first_use: "Lecture 1"
+  lecture: 1
   module: 1
+  tier: supporting
 
 dark-energy:
   term: "Dark Energy"
   definition: "The unknown cause of the accelerating expansion of the universe, comprising ~68% of the cosmic energy budget."
   context: "Often modeled as a cosmological constant (Λ), but its physical origin remains one of the deepest mysteries in physics."
-  first_use: "Lecture 1"
+  lecture: 1
   module: 1
+  tier: supporting
 
 hubble-constant:
   term: "Hubble Constant (H₀)"
   definition: "The current expansion rate of the universe, approximately 70 km/s/Mpc."
   context: "A galaxy 1 Mpc away recedes at ~70 km/s; one 10 Mpc away recedes at ~700 km/s. The inverse of H₀ gives a rough estimate of the universe's age."
-  first_use: "Lecture 1"
+  lecture: 1
   module: 1
+  tier: supporting
 
 rotation-curve:
   term: "Rotation Curve"
   definition: "A plot of orbital speed versus distance from a galaxy's center."
   context: "Flat rotation curves—where speed stays constant at large radii—are the primary evidence for dark matter halos around galaxies."
-  first_use: "Lecture 1"
+  lecture: 1
   module: 1
+  tier: supporting
 
 redshift-cosmological:
   term: "Redshift (Cosmological)"
   definition: "The stretching of light wavelengths due to the expansion of space."
   context: "More distant galaxies show larger redshifts because light has traveled through more expanding space to reach us."
-  first_use: "Lecture 1"
+  lecture: 1
   module: 1
+  tier: supporting
 
 lcdm:
   term: "ΛCDM"
   definition: "The standard cosmological model: Λ (cosmological constant/dark energy) + CDM (Cold Dark Matter)."
   context: "Fits observations remarkably well with only six free parameters, but leaves dark matter and dark energy unexplained."
-  first_use: "Lecture 1"
+  lecture: 1
   module: 1
+  tier: supporting
 
 cosmic-web:
   term: "Cosmic Web"
   definition: "The large-scale structure of the universe: galaxies arranged in filaments, walls, and clusters, separated by vast voids."
   context: "The cosmic web is still evolving—gravity continues to pull matter from voids into filaments and clusters."
-  first_use: "Lecture 1"
+  lecture: 1
   module: 1
+  tier: supporting
 
-# Sky Geometry (Lecture 3)
+# -------------------------------------------------------------
+# Lecture 2: Tools of the Trade — Math Survival Kit
+# -------------------------------------------------------------
+
+scientific_notation:
+  term: "Scientific notation"
+  definition: "A way of writing numbers as a coefficient times a power of ten, e.g., $3.0 \\times 10^8$ m/s."
+  context: "Essential for handling the extreme scales in astronomy without drowning in zeros."
+  lecture: 2
+  module: 1
+  tier: core
+
+si_prefix:
+  term: "SI prefix"
+  definition: "Prefixes that denote powers of ten: kilo (10³), mega (10⁶), giga (10⁹), micro (10⁻⁶), nano (10⁻⁹), etc."
+  context: "Allows compact notation: 1 km = 1000 m; 1 nm = 10⁻⁹ m."
+  lecture: 2
+  module: 1
+  tier: supporting
+
+ratio_method:
+  term: "Ratio method"
+  definition: "A problem-solving technique that compares two situations using the same physical law, canceling constants and simplifying calculations."
+  context: "Avoids big-number pain: instead of computing absolute values, compare ratios."
+  lecture: 2
+  module: 1
+  tier: core
+
+astronomical_unit:
+  term: "Astronomical Unit (AU)"
+  definition: "The average distance from Earth to the Sun, approximately $1.5 \\times 10^{11}$ m."
+  context: "A convenient unit for solar system distances. Neptune is ~30 AU from the Sun."
+  lecture: 2
+  module: 1
+  tier: core
+
+parsec:
+  term: "Parsec (pc)"
+  definition: "The distance at which 1 AU subtends an angle of 1 arcsecond; approximately 3.26 light-years or $3.1 \\times 10^{16}$ m."
+  context: "Derived from 'parallax arcsecond.' The nearest star is about 1.3 pc away."
+  lecture: 2
+  module: 1
+  tier: core
+
+# -------------------------------------------------------------
+# Lecture 3: The Sky Is a Map
+# -------------------------------------------------------------
+
+constellation:
+  term: "Constellation"
+  definition: "A named pattern of stars on the sky."
+  context: "Constellations are defined by directions (angles) on the celestial sphere; the stars in a constellation are not necessarily close together in space."
+  lecture: 3
+  module: 1
+  tier: supporting
+
 celestial_sphere:
   term: "Celestial sphere"
   definition: "An imaginary sphere centered on the observer onto which all celestial objects are projected."
   context: "A coordinate system for directions on the sky, not a representation of actual distances."
-  first_use: "Lecture 3"
+  lecture: 3
   module: 1
+  tier: core
 
 celestial_pole:
   term: "Celestial pole"
-  definition: "A point on the celestial sphere directly above Earth’s geographic pole."
-  context: "Stars appear to circle the celestial poles due to Earth’s rotation."
-  first_use: "Lecture 3"
+  definition: "A point on the celestial sphere directly above Earth's geographic pole."
+  context: "Stars appear to circle the celestial poles due to Earth's rotation."
+  lecture: 3
   module: 1
+  tier: core
 
 celestial_equator:
   term: "Celestial equator"
-  definition: "Earth’s equator projected outward onto the celestial sphere."
+  definition: "Earth's equator projected outward onto the celestial sphere."
   context: "A great circle that divides the celestial sphere into northern and southern hemispheres."
-  first_use: "Lecture 3"
+  lecture: 3
   module: 1
+  tier: core
 
 ecliptic:
   term: "Ecliptic"
-  definition: "The Sun’s apparent yearly path across the celestial sphere, corresponding to the plane of Earth’s orbit."
+  definition: "The Sun's apparent yearly path across the celestial sphere, corresponding to the plane of Earth's orbit."
   context: "Tilted by about 23.5° relative to the celestial equator; the zodiac constellations lie along it."
-  first_use: "Lecture 3"
+  lecture: 3
   module: 1
+  tier: core
 
 horizon:
   term: "Horizon"
   definition: "The great circle that marks the boundary between directions above and below your local ground plane."
   context: "Depends on your location on Earth."
-  first_use: "Lecture 3"
+  lecture: 3
   module: 1
+  tier: supporting
 
 zenith:
   term: "Zenith"
   definition: "The point on the celestial sphere directly overhead for a given observer."
   context: "Depends on your location on Earth."
-  first_use: "Lecture 3"
+  lecture: 3
   module: 1
+  tier: supporting
 
 great_circle:
   term: "Great circle"
-  definition: "Any circle on a sphere whose plane passes through the sphere’s center."
+  definition: "Any circle on a sphere whose plane passes through the sphere's center."
   context: "The celestial equator, ecliptic, and horizon are all great circles."
-  first_use: "Lecture 3"
+  lecture: 3
   module: 1
+  tier: supporting
 
 solstice:
   term: "Solstice"
   definition: "A time when the Sun reaches its farthest angular distance north or south of the celestial equator, producing the longest or shortest day."
   context: "Occurs around June 21 and December 21; from Latin for 'Sun stands still'."
-  first_use: "Lecture 3"
+  lecture: 3
   module: 1
+  tier: core
 
 equinox:
   term: "Equinox"
   definition: "A time when the Sun crosses the celestial equator, making day and night approximately equal in length worldwide."
-  context: "Occurs around March 20 and September 22; exact day length depends slightly on refraction and the Sun’s finite size."
-  first_use: "Lecture 3"
+  context: "Occurs around March 20 and September 22; exact day length depends slightly on refraction and the Sun's finite size."
+  lecture: 3
   module: 1
+  tier: core
 
 angular_size:
   term: "Angular size"
   definition: "The angle an object subtends as seen by an observer, measured in degrees, arcminutes, or arcseconds."
   context: "Angular size depends on physical size and distance; for small angles, θ (radians) ≈ D/d where D is diameter and d is distance."
-  first_use: "Lecture 3"
+  lecture: 3
   module: 1
+  tier: core
 
-# Moon Geometry (Lecture 4)
+axial_tilt:
+  term: "Axial tilt"
+  definition: "The angle between a planet's rotational axis and its orbital axis; Earth's tilt is 23.5°."
+  context: "The cause of Earth's seasons—NOT distance from the Sun."
+  lecture: 3
+  module: 1
+  tier: core
+
+# -------------------------------------------------------------
+# Lecture 4: Moon Geometry
+# -------------------------------------------------------------
+
 eclipse:
   term: "Eclipse"
   definition: "An astronomical event where one celestial body passes into the shadow of another."
   context: "Solar eclipses occur when the Moon's shadow falls on Earth; lunar eclipses occur when the Moon passes through Earth's shadow."
-  first_use: "Lecture 4"
+  lecture: 4
   module: 1
+  tier: core
 
 solar_eclipse:
   term: "Solar eclipse"
   definition: "An eclipse that occurs when the Moon's shadow falls on Earth."
   context: "Possible only at new moon when the Moon is near a node; visible only from a limited area (the shadow path)."
-  first_use: "Lecture 4"
+  lecture: 4
   module: 1
+  tier: core
 
 lunar_eclipse:
   term: "Lunar eclipse"
   definition: "An eclipse that occurs when the Moon passes through Earth's shadow."
   context: "Possible only at full moon when the Moon is near a node; visible from the entire night side of Earth."
-  first_use: "Lecture 4"
+  lecture: 4
   module: 1
+  tier: core
 
 annular_eclipse:
   term: "Annular eclipse"
   definition: "A solar eclipse in which the Moon appears smaller than the Sun, leaving a ring ('annulus') of sunlight visible."
   context: "Occurs when the Moon is near apogee in its elliptical orbit."
-  first_use: "Lecture 4"
+  lecture: 4
   module: 1
+  tier: supporting
 
 totality:
   term: "Totality"
   definition: "The phase of a total eclipse when the Sun (solar eclipse) or Moon (lunar eclipse) is completely blocked or immersed in shadow."
   context: "During total solar eclipses, the corona becomes visible."
-  first_use: "Lecture 4"
+  lecture: 4
   module: 1
+  tier: supporting
 
 umbra:
   term: "Umbra"
   definition: "The darkest, central portion of a shadow where the light source is completely blocked."
   context: "The Moon entering Earth's umbra creates a total or partial lunar eclipse."
-  first_use: "Lecture 4"
+  lecture: 4
   module: 1
+  tier: core
 
 penumbra:
   term: "Penumbra"
   definition: "The lighter, outer portion of a shadow where only part of the light source is blocked."
   context: "The Moon passing through Earth's penumbra creates a subtle penumbral lunar eclipse."
-  first_use: "Lecture 4"
+  lecture: 4
   module: 1
+  tier: supporting
 
 blood_moon:
   term: "Blood moon"
   definition: "Colloquial term for the reddish appearance of the Moon during a total lunar eclipse."
   context: "Caused by Earth's atmosphere filtering and refracting sunlight into the shadow zone."
-  first_use: "Lecture 4"
+  lecture: 4
   module: 1
+  tier: supporting
 
 node:
   term: "Node"
   definition: "One of two points where the Moon's orbital plane intersects the ecliptic plane."
   context: "Eclipses can only occur when the Moon is near a node during new moon (solar) or full moon (lunar) phase."
-  first_use: "Lecture 4"
+  lecture: 4
   module: 1
+  tier: core
 
 ascending_node:
   term: "Ascending node"
   definition: "The point where the Moon crosses the ecliptic plane moving from south to north."
   context: "One of two points where the Moon's tilted orbit intersects the ecliptic."
-  first_use: "Lecture 4"
+  lecture: 4
   module: 1
+  tier: supporting
 
 descending_node:
   term: "Descending node"
   definition: "The point where the Moon crosses the ecliptic plane moving from north to south."
   context: "One of two points where the Moon's tilted orbit intersects the ecliptic."
-  first_use: "Lecture 4"
+  lecture: 4
   module: 1
+  tier: supporting
 
 eclipse_season:
   term: "Eclipse season"
   definition: "A period of about 34–35 days during which eclipses are possible, occurring when the Sun is near one of the Moon's orbital nodes."
   context: "Two eclipse seasons occur each year, about 173 days apart."
-  first_use: "Lecture 4"
+  lecture: 4
   module: 1
+  tier: supporting
 
 saros_cycle:
   term: "Saros cycle"
   definition: "A period of approximately 18 years, 11 days, and 8 hours after which similar eclipses repeat."
-  context: "Results from the alignment of the synodic, draconic, and anomalistic months; each successive eclipse in a Saros series is shifted about 120° in longitude due to the extra ~8 hours."
-  first_use: "Lecture 4"
+  context: "Results from the alignment of the synodic, draconic, and anomalistic months."
+  lecture: 4
   module: 1
+  tier: supporting
 
 apogee:
   term: "Apogee"
   definition: "The point in the Moon's orbit when it is farthest from Earth (~406,700 km)."
-  context: "At apogee, the Moon appears smallest; if a solar eclipse occurs, it cannot be total (it will be annular or partial)."
-  first_use: "Lecture 4"
+  context: "At apogee, the Moon appears smallest; if a solar eclipse occurs, it cannot be total."
+  lecture: 4
   module: 1
+  tier: supporting
 
 perigee:
   term: "Perigee"
   definition: "The point in the Moon's orbit when it is closest to Earth (~356,500 km)."
-  context: "At perigee, the Moon appears largest; total solar eclipses are possible (if alignment is central)."
-  first_use: "Lecture 4"
+  context: "At perigee, the Moon appears largest; total solar eclipses are possible."
+  lecture: 4
   module: 1
+  tier: supporting
 
 new_moon:
   term: "New moon"
   definition: "The lunar phase when the Moon is between Earth and the Sun, with the illuminated side facing away from Earth."
   context: "The Moon is lost in the Sun's glare during this phase."
-  first_use: "Lecture 4"
+  lecture: 4
   module: 1
+  tier: core
 
 first_quarter:
   term: "First quarter"
   definition: "The lunar phase when the Moon is 90° east of the Sun."
-  context: "Right half illuminated (as seen from the Northern Hemisphere); rises around noon and sets around midnight."
-  first_use: "Lecture 4"
+  context: "Right half illuminated (as seen from the Northern Hemisphere); rises around noon."
+  lecture: 4
   module: 1
+  tier: core
 
 full_moon:
   term: "Full moon"
   definition: "The lunar phase when the Moon is opposite the Sun, with essentially 100% of the Earth-facing side illuminated."
   context: "Rises at sunset and sets at sunrise."
-  first_use: "Lecture 4"
+  lecture: 4
   module: 1
+  tier: core
 
 third_quarter:
   term: "Third quarter"
   definition: "The lunar phase when the Moon is 90° west of the Sun."
-  context: "Left half illuminated (as seen from the Northern Hemisphere); rises around midnight and sets around noon."
-  first_use: "Lecture 4"
+  context: "Left half illuminated (as seen from the Northern Hemisphere); rises around midnight."
+  lecture: 4
   module: 1
+  tier: core
 
 gibbous:
   term: "Gibbous"
   definition: "A lunar phase between quarter and full, with more than half but less than all of the Moon's face illuminated."
   context: "From Latin 'gibbosus' meaning 'humpbacked'."
-  first_use: "Lecture 4"
+  lecture: 4
   module: 1
+  tier: supporting
 
 crescent:
   term: "Crescent (Moon)"
   definition: "A Moon phase with less than half of the Earth-facing disk appearing illuminated."
   context: "A waxing crescent occurs after new moon; a waning crescent occurs before new moon."
-  first_use: "Lecture 4"
+  lecture: 4
   module: 1
+  tier: supporting
 
 waxing:
   term: "Waxing"
   definition: "Increasing in illumination; the Moon is waxing between new moon and full moon."
   context: "From Old English 'weaxan' meaning 'to grow'."
-  first_use: "Lecture 4"
+  lecture: 4
   module: 1
+  tier: supporting
 
 waning:
   term: "Waning"
   definition: "Decreasing in illumination; the Moon is waning between full moon and new moon."
   context: "From Old English 'wanian' meaning 'to lessen'."
-  first_use: "Lecture 4"
+  lecture: 4
   module: 1
+  tier: supporting
 
 synodic_month:
   term: "Synodic month"
   definition: "The time for the Moon to complete one cycle of phases (new moon to new moon), approximately 29.5 days."
   context: "Longer than the sidereal month because Earth is also moving around the Sun."
-  first_use: "Lecture 4"
+  lecture: 4
   module: 1
+  tier: core
 
 conjunction:
   term: "Conjunction"
   definition: "An alignment where two objects appear in nearly the same direction on the sky."
-  context: "For the Sun–Earth–Moon system, new moon corresponds to (near) conjunction of the Moon with the Sun as seen from Earth."
-  first_use: "Lecture 4"
+  context: "New moon corresponds to conjunction of the Moon with the Sun as seen from Earth."
+  lecture: 4
   module: 1
+  tier: supporting
 
 opposition:
   term: "Opposition"
   definition: "An alignment where two objects appear 180° apart on the sky."
-  context: "For the Sun–Earth–Moon system, full moon corresponds to (near) opposition of the Moon relative to the Sun as seen from Earth."
-  first_use: "Lecture 4"
+  context: "Full moon corresponds to opposition of the Moon relative to the Sun."
+  lecture: 4
   module: 1
-
-solar-eclipse-total:
-  term: "Solar eclipse (total)"
-  definition: "A solar eclipse in which the Moon completely covers the Sun for observers in the umbra."
-  context: "Totality is visible only along a narrow path on Earth."
-  first_use: "Lecture 4"
-  module: 1
-
-solar-eclipse-partial:
-  term: "Solar eclipse (partial)"
-  definition: "A solar eclipse in which the Moon covers only part of the Sun for observers in the penumbra."
-  context: "Much larger region of Earth sees a partial eclipse than totality."
-  first_use: "Lecture 4"
-  module: 1
-
-solar-eclipse-hybrid:
-  term: "Solar eclipse (hybrid)"
-  definition: "A rare solar eclipse that is total along part of its path and annular along another part."
-  context: "Caused by geometry near the threshold where the Moon’s apparent size is close to the Sun’s."
-  first_use: "Lecture 4"
-  module: 1
-
-lunar-eclipse-total:
-  term: "Lunar eclipse (total)"
-  definition: "A lunar eclipse in which the Moon fully enters Earth’s umbra."
-  context: "The Moon can appear red due to sunlight filtered through Earth’s atmosphere."
-  first_use: "Lecture 4"
-  module: 1
-
-lunar-eclipse-partial:
-  term: "Lunar eclipse (partial)"
-  definition: "A lunar eclipse in which only part of the Moon enters Earth’s umbra."
-  context: "The shadowed portion appears noticeably darkened."
-  first_use: "Lecture 4"
-  module: 1
-
-lunar-eclipse-penumbral:
-  term: "Lunar eclipse (penumbral)"
-  definition: "A lunar eclipse in which the Moon passes only through Earth’s penumbra."
-  context: "Often subtle and hard to notice without careful observation."
-  first_use: "Lecture 4"
-  module: 1
+  tier: supporting
 
 lunar_phase:
   term: "Phase (lunar)"
-  definition: "The apparent shape of the Moon's illuminated portion as seen from Earth, determined by the Moon's position in its orbit relative to the Sun."
+  definition: "The apparent shape of the Moon's illuminated portion as seen from Earth, determined by the Moon's position relative to the Sun."
   context: "The eight traditional phases cycle over about 29.5 days."
-  first_use: "Lecture 4"
+  lecture: 4
   module: 1
+  tier: core
+
+# -------------------------------------------------------------
+# Lecture 5: From Ancient Skies to Kepler's Laws
+# -------------------------------------------------------------
+
+kepler_first_law:
+  term: "Kepler's First Law"
+  definition: "Planets orbit the Sun in ellipses, with the Sun at one focus."
+  context: "Replaced the ancient assumption of perfect circular orbits."
+  lecture: 5
+  module: 1
+  tier: core
+
+kepler_second_law:
+  term: "Kepler's Second Law"
+  definition: "A line from the Sun to a planet sweeps out equal areas in equal times."
+  context: "Planets move faster when closer to the Sun, slower when farther."
+  lecture: 5
+  module: 1
+  tier: core
+
+kepler_third_law:
+  term: "Kepler's Third Law"
+  definition: "The square of a planet's orbital period is proportional to the cube of its semi-major axis: $P^2 \\propto a^3$."
+  context: "In solar system units, $P^2 = a^3$ (years, AU). Connects orbital size to orbital time."
+  lecture: 5
+  module: 1
+  tier: core
+
+ellipse:
+  term: "Ellipse"
+  definition: "An oval shape defined by two foci; the sum of distances from any point to both foci is constant."
+  context: "A circle is a special ellipse where both foci coincide."
+  lecture: 5
+  module: 1
+  tier: core
+
+semi_major_axis:
+  term: "Semi-major axis (a)"
+  definition: "Half the longest diameter of an ellipse; the average distance from the orbiting body to the focus."
+  context: "For planetary orbits, it's the 'average' orbital radius used in Kepler's Third Law."
+  lecture: 5
+  module: 1
+  tier: core
+
+eccentricity:
+  term: "Eccentricity (e)"
+  definition: "A measure of how elongated an ellipse is, ranging from 0 (circle) to just under 1 (very elongated)."
+  context: "Earth's orbit has e ≈ 0.017 (nearly circular); Pluto's has e ≈ 0.25."
+  lecture: 5
+  module: 1
+  tier: core
+
+perihelion:
+  term: "Perihelion"
+  definition: "The point in a planet's orbit when it is closest to the Sun."
+  context: "Earth reaches perihelion in early January."
+  lecture: 5
+  module: 1
+  tier: core
+
+aphelion:
+  term: "Aphelion"
+  definition: "The point in a planet's orbit when it is farthest from the Sun."
+  context: "Earth reaches aphelion in early July."
+  lecture: 5
+  module: 1
+  tier: core
+
+empirical_law:
+  term: "Empirical law"
+  definition: "A pattern or relationship derived from observations, without a theoretical explanation for why it holds."
+  context: "Kepler's laws were empirical—they described what happens but not why."
+  lecture: 5
+  module: 1
+  tier: core
+
+retrograde_motion:
+  term: "Retrograde motion"
+  definition: "The apparent backward (westward) motion of a planet against the background stars."
+  context: "Caused by Earth overtaking outer planets or being overtaken by inner planets."
+  lecture: 5
+  module: 1
+  tier: supporting
+
+# -------------------------------------------------------------
+# Lecture 6: Newton's Revolution — From Patterns to Physics
+# -------------------------------------------------------------
+
+newton_first_law:
+  term: "Newton's First Law"
+  definition: "An object at rest stays at rest, and an object in motion stays in motion at constant velocity, unless acted upon by a net external force."
+  context: "Also called the law of inertia."
+  lecture: 6
+  module: 1
+  tier: core
+
+newton_second_law:
+  term: "Newton's Second Law"
+  definition: "The acceleration of an object is proportional to the net force and inversely proportional to its mass: $\\vec{F}_{net} = m\\vec{a}$."
+  context: "Force causes acceleration, not velocity."
+  lecture: 6
+  module: 1
+  tier: core
+
+newton_third_law:
+  term: "Newton's Third Law"
+  definition: "For every action, there is an equal and opposite reaction."
+  context: "Forces come in pairs acting on different objects."
+  lecture: 6
+  module: 1
+  tier: core
+
+universal_gravitation:
+  term: "Universal Gravitation"
+  definition: "Every mass attracts every other mass with force $F = GMm/r^2$, where G is the gravitational constant."
+  context: "The same law governs falling apples and orbiting moons."
+  lecture: 6
+  module: 1
+  tier: core
+
+gravitational_constant:
+  term: "Gravitational constant (G)"
+  definition: "The fundamental constant in Newton's law of gravitation: $G = 6.67 \\times 10^{-11}$ N·m²/kg²."
+  context: "Determines the strength of gravity; measured by Cavendish in 1798."
+  lecture: 6
+  module: 1
+  tier: supporting
+
+centripetal_force:
+  term: "Centripetal force"
+  definition: "The net inward force required to keep an object moving in a circle: $F = mv^2/r$."
+  context: "For orbital motion, gravity provides the centripetal force."
+  lecture: 6
+  module: 1
+  tier: core
+
+orbital_velocity:
+  term: "Orbital velocity"
+  definition: "The speed required for a stable circular orbit: $v = \\sqrt{GM/r}$."
+  context: "Depends on the central mass and orbital radius, not the orbiting object's mass."
+  lecture: 6
+  module: 1
+  tier: core
+
+kepler_newton:
+  term: "Newton's form of Kepler's Third Law"
+  definition: "The relationship $P^2 = 4\\pi^2 a^3 / (GM)$ that allows mass to be determined from orbital measurements."
+  context: "This is how we 'weigh' stars, planets, and galaxies."
+  lecture: 6
+  module: 1
+  tier: core
+
+# -------------------------------------------------------------
+# Lecture 7: The Cosmic Messenger — Light Carries Information
+# -------------------------------------------------------------
+
+electromagnetic_spectrum:
+  term: "Electromagnetic spectrum"
+  definition: "The full range of electromagnetic radiation, from radio waves (long wavelength) to gamma rays (short wavelength)."
+  context: "Visible light is a tiny slice; most of the spectrum is invisible to human eyes."
+  lecture: 7
+  module: 1
+  tier: core
+
+radio_waves:
+  term: "Radio waves"
+  definition: "Electromagnetic radiation with the longest wavelengths (> 1 mm), used to study cold gas and cosmic backgrounds."
+  context: "Radio telescopes can observe day or night, through clouds."
+  lecture: 7
+  module: 1
+  tier: supporting
+
+infrared:
+  term: "Infrared (IR)"
+  definition: "Electromagnetic radiation between radio and visible, with wavelengths ~1 μm to 1 mm."
+  context: "Reveals warm dust and can penetrate through gas clouds that block visible light."
+  lecture: 7
+  module: 1
+  tier: supporting
+
+ultraviolet:
+  term: "Ultraviolet (UV)"
+  definition: "Electromagnetic radiation between visible and X-rays, with wavelengths ~10–400 nm."
+  context: "Absorbed by Earth's ozone layer; requires space telescopes to observe."
+  lecture: 7
+  module: 1
+  tier: supporting
+
+xrays:
+  term: "X-rays"
+  definition: "High-energy electromagnetic radiation with wavelengths ~0.01–10 nm."
+  context: "Emitted by hot gas (millions of K) around black holes and in galaxy clusters."
+  lecture: 7
+  module: 1
+  tier: supporting
+
+gamma_rays:
+  term: "Gamma rays"
+  definition: "The highest-energy electromagnetic radiation, with wavelengths < 0.01 nm."
+  context: "Produced in extreme events: supernovae, pulsars, active galactic nuclei."
+  lecture: 7
+  module: 1
+  tier: supporting
+
+rayleigh_scattering:
+  term: "Rayleigh scattering"
+  definition: "The scattering of light by particles much smaller than the wavelength, with efficiency proportional to 1/λ⁴."
+  context: "Explains why the sky is blue (blue light scattered more than red) and sunsets are red."
+  lecture: 7
+  module: 1
+  tier: supporting
+
+atmospheric_window:
+  term: "Atmospheric window"
+  definition: "A range of wavelengths that can pass through Earth's atmosphere without being absorbed."
+  context: "Visible and radio windows allow ground-based astronomy; other wavelengths require space telescopes."
+  lecture: 7
+  module: 1
+  tier: supporting
+
+# -------------------------------------------------------------
+# Lecture 8: Reading the Glow — Temperature Written in Light
+# -------------------------------------------------------------
+
+wiens_law:
+  term: "Wien's Law"
+  definition: "The peak wavelength of a blackbody spectrum is inversely proportional to temperature: $\\lambda_{peak} = b/T$."
+  context: "Hotter objects peak at shorter (bluer) wavelengths; b = 2.9 × 10⁶ nm·K."
+  lecture: 8
+  module: 1
+  tier: core
+
+stefan_boltzmann:
+  term: "Stefan-Boltzmann Law"
+  definition: "The total power radiated by a blackbody is proportional to the fourth power of temperature: $L = 4\\pi R^2 \\sigma T^4$."
+  context: "Doubling temperature increases luminosity by 16×."
+  lecture: 8
+  module: 1
+  tier: core
+
+blackbody_spectrum:
+  term: "Blackbody spectrum"
+  definition: "The characteristic continuous spectrum emitted by an idealized thermal radiator, determined only by temperature."
+  context: "The shape is universal; only the peak position and height change with temperature."
+  lecture: 8
+  module: 1
+  tier: core
+
+luminosity_temperature_radius:
+  term: "L-T-R Relation"
+  definition: "The relationship $L = 4\\pi R^2 \\sigma T^4$ connecting luminosity, radius, and temperature."
+  context: "Knowing any two quantities allows calculation of the third."
+  lecture: 8
+  module: 1
+  tier: core
+
+# -------------------------------------------------------------
+# Lecture 9: Decoding Starlight — Spectral Lines
+# -------------------------------------------------------------
+
+kirchhoff_first:
+  term: "Kirchhoff's First Law"
+  definition: "A hot, dense gas or solid produces a continuous spectrum (all wavelengths)."
+  context: "Examples: the interior of a star, a glowing filament."
+  lecture: 9
+  module: 1
+  tier: core
+
+kirchhoff_second:
+  term: "Kirchhoff's Second Law"
+  definition: "A hot, low-density gas produces an emission-line spectrum (bright lines at specific wavelengths)."
+  context: "Examples: neon signs, nebulae."
+  lecture: 9
+  module: 1
+  tier: core
+
+kirchhoff_third:
+  term: "Kirchhoff's Third Law"
+  definition: "A cool gas in front of a hot source produces an absorption-line spectrum (dark lines at specific wavelengths)."
+  context: "This is what we see in stellar spectra—absorption lines from the cooler outer atmosphere."
+  lecture: 9
+  module: 1
+  tier: core
+
+spectral_line:
+  term: "Spectral line"
+  definition: "A bright or dark feature at a specific wavelength in a spectrum, corresponding to an atomic transition."
+  context: "Each element has a unique pattern of lines—its 'fingerprint'."
+  lecture: 9
+  module: 1
+  tier: core
+
+balmer_series:
+  term: "Balmer series"
+  definition: "The set of hydrogen emission/absorption lines corresponding to transitions to/from the n=2 energy level."
+  context: "Includes Hα (656 nm, red), Hβ (486 nm, blue-green), Hγ (434 nm, violet)."
+  lecture: 9
+  module: 1
+  tier: core
+
+energy_level:
+  term: "Energy level"
+  definition: "A discrete allowed energy state for an electron in an atom; electrons can only occupy specific levels."
+  context: "Transitions between levels produce photons with specific energies (and wavelengths)."
+  lecture: 9
+  module: 1
+  tier: core
+
+ground_state:
+  term: "Ground state"
+  definition: "The lowest energy level of an atom; the n=1 level for hydrogen."
+  context: "Atoms 'prefer' the ground state; excited atoms quickly return to it."
+  lecture: 9
+  module: 1
+  tier: supporting
+
+excited_state:
+  term: "Excited state"
+  definition: "Any energy level above the ground state; atoms in excited states tend to emit photons and drop to lower levels."
+  context: "An atom can be excited by absorbing a photon or through collisions."
+  lecture: 9
+  module: 1
+  tier: supporting
+
+obafgkm:
+  term: "OBAFGKM"
+  definition: "The spectral classification sequence for stars, ordered from hottest (O, ~40,000 K) to coolest (M, ~3,000 K)."
+  context: "Mnemonic: 'Oh Be A Fine Girl/Guy, Kiss Me.' Based on line strengths, which depend on temperature."
+  lecture: 9
+  module: 1
+  tier: core
+
+# -------------------------------------------------------------
+# Lecture 10: Motion Revealed — Doppler Effect
+# -------------------------------------------------------------
+
+doppler_effect:
+  term: "Doppler effect"
+  definition: "The change in observed wavelength due to relative motion between source and observer."
+  context: "Approaching sources are blueshifted; receding sources are redshifted."
+  lecture: 10
+  module: 1
+  tier: core
+
+blueshift:
+  term: "Blueshift"
+  definition: "A shift to shorter wavelengths, indicating the source is approaching the observer."
+  context: "$\\lambda_{obs} < \\lambda_0$; negative $\\Delta\\lambda$."
+  lecture: 10
+  module: 1
+  tier: core
+
+redshift:
+  term: "Redshift"
+  definition: "A shift to longer wavelengths, indicating the source is receding from the observer."
+  context: "$\\lambda_{obs} > \\lambda_0$; positive $\\Delta\\lambda$."
+  lecture: 10
+  module: 1
+  tier: core
+
+radial_velocity:
+  term: "Radial velocity"
+  definition: "The component of an object's velocity along the line of sight (toward or away from the observer)."
+  context: "This is what Doppler measurements detect; transverse motion produces no Doppler shift."
+  lecture: 10
+  module: 1
+  tier: core
+
+transverse_velocity:
+  term: "Transverse velocity"
+  definition: "The component of an object's velocity perpendicular to the line of sight (across the sky)."
+  context: "Produces proper motion but no Doppler shift."
+  lecture: 10
+  module: 1
+  tier: supporting
+
+rest_wavelength:
+  term: "Rest wavelength (λ₀)"
+  definition: "The wavelength of a spectral line as measured in the laboratory, with no relative motion."
+  context: "The reference against which Doppler shifts are measured."
+  lecture: 10
+  module: 1
+  tier: core
+
+light_gathering_power:
+  term: "Light-gathering power"
+  definition: "A telescope's ability to collect light, proportional to the area of its primary mirror: $\\propto D^2$."
+  context: "Doubling diameter quadruples the light collected."
+  lecture: 10
+  module: 1
+  tier: core
+
+angular_resolution:
+  term: "Angular resolution"
+  definition: "A telescope's ability to distinguish closely-spaced objects; limited by $\\theta \\approx 1.22\\lambda/D$."
+  context: "Larger aperture and shorter wavelength give finer resolution."
+  lecture: 10
+  module: 1
+  tier: core
+
+rayleigh_criterion:
+  term: "Rayleigh criterion"
+  definition: "The formula $\\theta = 1.22\\lambda/D$ for diffraction-limited angular resolution."
+  context: "Sets the fundamental limit; atmospheric seeing often dominates for ground telescopes."
+  lecture: 10
+  module: 1
+  tier: supporting
+
+interferometry:
+  term: "Interferometry"
+  definition: "Combining signals from multiple telescopes to achieve the resolution of a single telescope the size of their separation."
+  context: "Used extensively in radio astronomy; enabled imaging of a black hole's shadow."
+  lecture: 10
+  module: 1
+  tier: supporting
+
+# -------------------------------------------------------------
+# Lecture 11: Our Cosmic Backyard — Solar System
+# -------------------------------------------------------------
+
+terrestrial_planet:
+  term: "Terrestrial planet"
+  definition: "A rocky planet with a solid surface; Mercury, Venus, Earth, and Mars in our solar system."
+  context: "Small, dense, close to the Sun; formed inside the frost line."
+  lecture: 11
+  module: 1
+  tier: core
+
+gas_giant:
+  term: "Gas giant"
+  definition: "A large planet composed primarily of hydrogen and helium; Jupiter and Saturn."
+  context: "No solid surface; formed beyond the frost line where more material was available."
+  lecture: 11
+  module: 1
+  tier: core
+
+ice_giant:
+  term: "Ice giant"
+  definition: "A large planet composed primarily of heavier volatiles (water, ammonia, methane); Uranus and Neptune."
+  context: "Distinguished from gas giants by their composition and smaller size."
+  lecture: 11
+  module: 1
+  tier: core
+
+frost_line:
+  term: "Frost line"
+  definition: "The distance from the Sun (~3 AU) beyond which water ice could condense in the early solar nebula."
+  context: "Explains why rocky planets are close and gas/ice giants are far."
+  lecture: 11
+  module: 1
+  tier: core
+
+nebular_hypothesis:
+  term: "Nebular hypothesis"
+  definition: "The theory that the solar system formed from a rotating disk of gas and dust around the young Sun."
+  context: "Explains common orbital direction, planetary spacing, and composition gradient."
+  lecture: 11
+  module: 1
+  tier: core
+
+protoplanetary_disk:
+  term: "Protoplanetary disk"
+  definition: "A rotating disk of gas and dust around a young star from which planets form."
+  context: "Observed around many young stars; confirms the nebular hypothesis."
+  lecture: 11
+  module: 1
+  tier: supporting
+
+kuiper_belt:
+  term: "Kuiper Belt"
+  definition: "A region of icy bodies beyond Neptune, from ~30 to ~50 AU."
+  context: "Home to Pluto, Eris, and many other dwarf planets and comets."
+  lecture: 11
+  module: 1
+  tier: supporting
+
+oort_cloud:
+  term: "Oort Cloud"
+  definition: "A hypothetical spherical shell of icy objects at ~10,000–100,000 AU, the source of long-period comets."
+  context: "Never directly observed; inferred from comet orbits."
+  lecture: 11
+  module: 1
+  tier: supporting
+
+# -------------------------------------------------------------
+# Lecture 12: Climates and Exoplanets
+# -------------------------------------------------------------
+
+greenhouse_effect:
+  term: "Greenhouse effect"
+  definition: "The warming of a planet's surface when atmospheric gases absorb and re-emit infrared radiation."
+  context: "CO₂, H₂O, CH₄ are key greenhouse gases; Venus is an extreme example."
+  lecture: 12
+  module: 1
+  tier: core
+
+habitable_zone:
+  term: "Habitable zone"
+  definition: "The range of orbital distances from a star where liquid water could exist on a planet's surface."
+  context: "Also called the 'Goldilocks zone'; depends on stellar luminosity."
+  lecture: 12
+  module: 1
+  tier: core
+
+transit_method:
+  term: "Transit method"
+  definition: "Detecting exoplanets by measuring the tiny dimming when a planet passes in front of its star."
+  context: "Gives planet size; requires edge-on orbital alignment."
+  lecture: 12
+  module: 1
+  tier: core
+
+radial_velocity_method:
+  term: "Radial velocity method"
+  definition: "Detecting exoplanets by measuring the Doppler shift caused by the star's wobble around the system's center of mass."
+  context: "Gives minimum planet mass; most effective for massive planets close to their stars."
+  lecture: 12
+  module: 1
+  tier: core
+
+exoplanet:
+  term: "Exoplanet"
+  definition: "A planet orbiting a star other than the Sun."
+  context: "Over 5,000 confirmed as of 2024; many are unlike anything in our solar system."
+  lecture: 12
+  module: 1
+  tier: core
+
+hot_jupiter:
+  term: "Hot Jupiter"
+  definition: "A gas giant exoplanet orbiting very close to its star (< 0.1 AU), with orbital periods of days."
+  context: "Easiest to detect but puzzling—gas giants should form far from their stars."
+  lecture: 12
+  module: 1
+  tier: supporting
+
+runaway_greenhouse:
+  term: "Runaway greenhouse"
+  definition: "A feedback loop where rising temperatures evaporate more water, which traps more heat, leading to extreme warming."
+  context: "May explain Venus's current state; a cautionary tale for Earth's climate."
+  lecture: 12
+  module: 1
+  tier: supporting
+
+# -------------------------------------------------------------
+# Lecture 13: Are We Alone?
+# -------------------------------------------------------------
+
+drake_equation:
+  term: "Drake Equation"
+  definition: "A framework for estimating the number of communicating civilizations in the galaxy: N = R* × fp × ne × fl × fi × fc × L."
+  context: "Not a calculation but a way to organize our ignorance about astrobiology."
+  lecture: 13
+  module: 1
+  tier: core
+
+fermi_paradox:
+  term: "Fermi Paradox"
+  definition: "The apparent contradiction between the high probability of extraterrestrial civilizations and the lack of evidence for them."
+  context: "'Where is everybody?' — Enrico Fermi, 1950."
+  lecture: 13
+  module: 1
+  tier: core
+
+biosignature:
+  term: "Biosignature"
+  definition: "A detectable sign of life, such as atmospheric gases (O₂, CH₄) that are unlikely without biological processes."
+  context: "A key target for future telescope observations of exoplanet atmospheres."
+  lecture: 13
+  module: 1
+  tier: core
+
+seti:
+  term: "SETI"
+  definition: "Search for Extraterrestrial Intelligence; the scientific effort to detect signals from alien civilizations."
+  context: "Primarily searches for artificial radio or optical signals."
+  lecture: 13
+  module: 1
+  tier: supporting
+
+great_filter:
+  term: "Great Filter"
+  definition: "A hypothetical barrier in the evolution of life that makes advanced civilizations extremely rare."
+  context: "Could be in our past (we passed it) or our future (we haven't reached it yet)."
+  lecture: 13
+  module: 1
+  tier: supporting
+
+abiogenesis:
+  term: "Abiogenesis"
+  definition: "The natural process by which life arises from non-living matter."
+  context: "How common is this? We have one example (Earth) and don't know the probability."
+  lecture: 13
+  module: 1
+  tier: supporting

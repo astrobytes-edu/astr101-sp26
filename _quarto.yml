@@ -57,6 +57,7 @@ project:
     - modules/module-*/index.qmd
     - modules/module-*/slides/*.qmd
     - modules/module-*/readings/*.qmd
+    - modules/module-*/synthesis/*.qmd
     - activities/*.qmd
     - activities/_instructor/index.qmd
     - exams/*.qmd
@@ -198,6 +199,26 @@ website:
                 text: "Lecture 9: Decoding Starlight — Spectral Lines and Chemical Fingerprints"
               - href: modules/module-01/readings/lecture-10-doppler-telescopes-reading.qmd
                 text: "Lecture 10: Motion Revealed — Doppler Effect and the Astronomer's Toolkit"
+              - href: modules/module-01/readings/lecture-11-solar-system-reading.qmd
+                text: "Lecture 11: Our Solar System — A Case Study"
+              - href: modules/module-01/readings/lecture-12-climates-exoplanets-reading.qmd
+                text: "Lecture 12: Climates and Exoplanets"
+              - href: modules/module-01/readings/lecture-13-are-we-alone-reading.qmd
+                text: "Lecture 13: Are We Alone? — The Drake Equation"
+          - section: "Module 1 Synthesis"
+            contents:
+              - href: modules/module-01/synthesis/index.qmd
+                text: "Synthesis Overview"
+              - href: modules/module-01/synthesis/glossary.qmd
+                text: "Complete Glossary"
+              - href: modules/module-01/synthesis/concept-map.qmd
+                text: "Concept Maps"
+              - href: modules/module-01/synthesis/putting-it-together.qmd
+                text: "Putting It All Together"
+              - href: modules/module-01/synthesis/practice-problems.qmd
+                text: "Practice Problems"
+              - href: modules/module-01/synthesis/exam-prep.qmd
+                text: "Exam Prep Guide"
 
       - section: "Module 2: Stars & Stellar Evolution"
         href: modules/module-02/index.qmd
@@ -253,6 +274,7 @@ format:
         - assets/theme/nav-markers.scss
         - assets/theme/dashboard.scss
         - assets/theme/collapsible-cards.scss
+        - assets/theme/glossary.scss
       dark:
         - darkly
         - assets/theme/site-dark.scss
@@ -261,6 +283,7 @@ format:
         - assets/theme/nav-markers.scss
         - assets/theme/dashboard.scss
         - assets/theme/collapsible-cards.scss
+        - assets/theme/glossary.scss
     include-in-header: assets/partials/head.html
     include-after-body: assets/partials/after-body.html
     mainfont: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif

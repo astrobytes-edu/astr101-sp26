@@ -1,0 +1,147 @@
+/*-- scss:defaults --*/
+// ASTR 101 Glossary Styling
+// Styles for glossary tables with tiered terms
+
+@import 'tokens_generated';
+@import 'design_tokens';
+
+/*-- scss:rules --*/
+
+// === GLOSSARY CONTAINER ===
+.glossary {
+  margin: 1.5rem 0;
+}
+
+.glossary dl {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.glossary dt {
+  font-size: 1.05rem;
+  margin-bottom: 0.25rem;
+}
+
+.glossary dd {
+  margin-left: 0;
+  margin-bottom: 1rem;
+  padding-left: 1.5rem;
+  border-left: 3px solid rgba($indigo-light, 0.15);
+  line-height: 1.6;
+}
+
+.glossary-context {
+  display: block;
+  margin-top: 0.35rem;
+  color: rgba($text-light, 0.7);
+  font-size: 0.9em;
+}
+
+// === TIER INDICATOR STYLING ===
+// Core terms (exam-essential) - Gold star
+span.tier-core {
+  color: #ca8a04;
+  font-size: 1rem;
+  margin-right: 0.35rem;
+}
+
+// Supporting terms (helpful context) - Teal diamond
+span.tier-supporting {
+  color: $teal-light;
+  font-size: 1rem;
+  margin-right: 0.35rem;
+}
+
+// Styling for dt elements based on tier
+dt.tier-core {
+  border-left: 3px solid #ca8a04;
+  padding-left: 0.5rem;
+}
+
+dt.tier-supporting {
+  border-left: 3px solid $teal-light;
+  padding-left: 0.5rem;
+}
+
+// === TERM STYLING ===
+.glossary-term {
+  font-weight: 600;
+  color: $indigo-light;
+}
+
+.glossary-definition {
+  color: $text-light;
+  line-height: 1.5;
+}
+
+.glossary-context {
+  color: rgba($text-light, 0.7);
+  font-size: 0.9em;
+  font-style: italic;
+  margin-top: 0.25rem;
+}
+
+// === TIER LEGEND ===
+.tier-legend {
+  display: flex;
+  gap: 1.5rem;
+  padding: 0.75rem 1rem;
+  background: rgba($bg-light, 0.5);
+  border-radius: 0.5rem;
+  margin-bottom: 1.5rem;
+  font-size: 0.9rem;
+  border: 1px solid rgba($text-light, 0.1);
+}
+
+.tier-legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.tier-legend .tier-core,
+.tier-legend .tier-supporting {
+  font-size: 1.1rem;
+}
+
+// === GLOSSARY SECTION HEADER ===
+.glossary-section-header {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid rgba($indigo-light, 0.15);
+  color: $indigo-light;
+  font-weight: 600;
+}
+
+// === DARK MODE ADJUSTMENTS ===
+[data-bs-theme="dark"] {
+  .glossary dd {
+    border-left-color: rgba($indigo-dark, 0.25);
+  }
+
+  .glossary-context {
+    color: rgba($text-dark, 0.7);
+  }
+
+  span.tier-core {
+    color: #fbbf24; // Brighter gold for dark mode
+  }
+
+  span.tier-supporting {
+    color: $teal-dark;
+  }
+
+  dt.tier-core {
+    border-left-color: #fbbf24;
+  }
+
+  dt.tier-supporting {
+    border-left-color: $teal-dark;
+  }
+
+  .tier-legend {
+    background: rgba($bg-dark, 0.3);
+    border-color: rgba($text-dark, 0.15);
+  }
+}
