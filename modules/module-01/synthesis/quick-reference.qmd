@@ -63,7 +63,7 @@ Use this guide for quick review before exams or when you need a refresher on cor
 - Constellations are projection patterns — stars in them are NOT physically close
 - **Seasons are caused by axial tilt** (23.5°), not distance from Sun
 - The ecliptic is tilted 23.5° relative to the celestial equator
-- Angular size formula: $\theta \approx d/D$ (object size / distance)
+- Angular size formula: $\theta \approx D/d$ ($D$ = diameter, $d$ = distance)
 - The Moon and Sun appear the same angular size (~0.5°) by cosmic coincidence
 :::
 
