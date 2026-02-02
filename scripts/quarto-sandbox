@@ -1,0 +1,101 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+# Quarto's upstream launcher script calls sysctl on macOS to detect the
+# "machine" architecture. In some sandboxed environments sysctl is blocked,
+# which prevents Quarto from running at all. This wrapper avoids sysctl by
+# mapping `uname -m` → Quarto's tool directory names.
+
+QUARTO_LAUNCHER="/usr/local/bin/quarto"
+if [[ ! -x "$QUARTO_LAUNCHER" ]]; then
+  QUARTO_LAUNCHER="$(command -v quarto || true)"
+fi
+if [[ -z "${QUARTO_LAUNCHER:-}" ]]; then
+  echo "ERROR: quarto not found on PATH (expected /usr/local/bin/quarto)." >&2
+  exit 1
+fi
+
+resolved_bin_path=""
+resolved_share_path=""
+while IFS= read -r line; do
+  if [[ -z "$resolved_bin_path" ]]; then
+    resolved_bin_path="$line"
+  elif [[ -z "$resolved_share_path" ]]; then
+    resolved_share_path="$line"
+    break
+  fi
+done < <("$QUARTO_LAUNCHER" --paths)
+if [[ -z "$resolved_bin_path" || -z "$resolved_share_path" ]]; then
+  echo "ERROR: failed to resolve quarto paths from: $QUARTO_LAUNCHER" >&2
+  exit 1
+fi
+
+QUARTO_BIN_PATH="$resolved_bin_path"
+QUARTO_SHARE_PATH="$resolved_share_path"
+
+# Quarto (on macOS) uses `$HOME/Library/Caches/quarto` for its cache directory.
+# In this repo's sandboxed execution, writes outside the workspace may be blocked,
+# so we sandbox HOME into a workspace-local directory by default.
+if [[ "${QUARTO_SANDBOX_KEEP_HOME:-}" != "1" ]]; then
+  sandbox_home="${QUARTO_SANDBOX_HOME:-$PWD/.quarto/sandbox-home}"
+  mkdir -p "$sandbox_home"
+  export HOME="$sandbox_home"
+fi
+
+machine="$(uname -m)"
+case "$machine" in
+  x86_64)
+    ARCH_DIR="x86_64"
+    ;;
+  arm64|aarch64)
+    ARCH_DIR="aarch64"
+    ;;
+  *)
+    echo "ERROR: unsupported uname -m: $machine" >&2
+    exit 1
+    ;;
+esac
+
+export QUARTO_BIN_PATH
+export QUARTO_SHARE_PATH
+
+# Allow callers to provide explicit plugin/bin paths, but default to the
+# arch-resolved tool locations.
+if [[ -z "${QUARTO_DENO_DOM:-}" ]]; then
+  export DENO_DOM_PLUGIN="$QUARTO_BIN_PATH/tools/${ARCH_DIR}/deno_dom/libplugin.dylib"
+else
+  export DENO_DOM_PLUGIN="$QUARTO_DENO_DOM"
+fi
+
+if [[ -z "${QUARTO_DENO:-}" ]]; then
+  export QUARTO_DENO="$QUARTO_BIN_PATH/tools/${ARCH_DIR}/deno"
+fi
+
+export DENO_TLS_CA_STORE=system,mozilla
+export DENO_NO_UPDATE_CHECK=1
+export DENO_DIR="${DENO_DIR:-$PWD/.quarto/deno_cache}"
+mkdir -p "$DENO_DIR"
+
+QUARTO_ACTION="${QUARTO_ACTION:-run}"
+QUARTO_TARGET="${QUARTO_TARGET:-$QUARTO_BIN_PATH/quarto.js}"
+QUARTO_CACHE_OPTIONS="${QUARTO_CACHE_OPTIONS:---cached-only}"
+
+v8_flags="--enable-experimental-regexp-engine,--max-old-space-size=8192,--max-heap-size=8192"
+if [[ -n "${QUARTO_DENO_V8_OPTIONS:-}" ]]; then
+  v8_flags="${v8_flags},${QUARTO_DENO_V8_OPTIONS}"
+fi
+
+deno_args=(
+  "$QUARTO_ACTION"
+  --unstable-ffi
+  --unstable-kv
+  --no-config
+  --no-lock
+  "$QUARTO_CACHE_OPTIONS"
+  --allow-all
+  --no-check
+  --v8-flags="$v8_flags"
+  "$QUARTO_TARGET"
+)
+
+exec "$QUARTO_DENO" "${deno_args[@]}" "$@"

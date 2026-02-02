@@ -21,7 +21,11 @@ _test-*
 **/*.html
 
 # Exception: Demo HTML files are source files, not generated output
-!demos/**/*.html
+!demos/*/index.html
+
+# Quarto support assets sometimes appear in the project root during local renders
+site_libs/
+**/*-listing.json
 
 # LaTeX build artifacts
 **/*.aux
@@ -39,6 +43,12 @@ _test-*
 
 # Station-card PDFs are built artifacts (the website outputs them in _site/)
 demos/**/*-station-card.pdf
+
+# Rendered PDFs next to their sources (Quarto format: pdf)
+course-info/*.pdf
+handouts/*.pdf
+homework/*.pdf
+activities/*.pdf
 
 
 /.luarc.json
