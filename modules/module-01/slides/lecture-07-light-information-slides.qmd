@@ -4,7 +4,7 @@ subtitle: "Light Carries Information"
 author: "Dr. Anna Rosen"
 date: "2026-02-09"
 description: "You've never touched a star, yet you know what it's made of. Light is how the universe talks to us."
-draft: false
+draft: true
 
 metadata-files:
   - _metadata.yml

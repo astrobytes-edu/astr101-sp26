@@ -4,7 +4,7 @@ subtitle: "Lecture 13 Reading Companion"
 author: "Dr. Anna Rosen"
 date: "2026-02-27"
 description: "You voted this your favorite NASA science question. Now let's take it seriously — not as philosophy, but as astronomy. The Drake Equation provides a framework, the numbers are staggering, and stellar evolution explains why life-friendly rocky worlds were unlikely early on until the universe was enriched with heavy elements. This lecture synthesizes Module 1 and previews Module 2."
-draft: false
+draft: true
 categories: [synthesis, astrobiology, drake-equation]
 course: ASTR 101
 module: "1 - Foundations"

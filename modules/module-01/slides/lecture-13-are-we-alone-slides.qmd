@@ -4,7 +4,7 @@ subtitle: "Module 1 Synthesis — The Drake Equation"
 author: "Dr. Anna Rosen"
 date: "2026-02-27"
 description: "Your favorite NASA science question — approached as astronomy. The Drake Equation organizes what we know and don't know about cosmic company."
-draft: false
+draft: true
 
 format:
   revealjs:

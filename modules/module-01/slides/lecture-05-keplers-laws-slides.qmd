@@ -370,12 +370,13 @@ When he died in 1601, his observations passed to his young assistant...
 
 ## {.center}
 
-::: {.r-fit-text}
+::: {.text-xl}
 Kepler's Laws
 :::
 
 ::: {.text-lg}
 *The Main Event*
+:::
 
 ::: {.notes}
 Section transition. "Now we get to the good stuff. Three laws that describe all planetary motion."

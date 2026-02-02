@@ -4,7 +4,7 @@ subtitle: "The Doppler Effect and the Astronomer's Toolkit"
 author: "Dr. Anna Rosen"
 date: "2026-02-20"
 description: "Spectral lines shift when objects move. The Doppler effect reveals velocities from exoplanets to dark matter. Telescopes collect this light."
-draft: false
+draft: true
 
 format:
   revealjs:

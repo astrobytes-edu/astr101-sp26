@@ -22,6 +22,8 @@ _test-*
 
 # Exception: Demo HTML files are source files, not generated output
 !demos/*/index.html
+# Quarto output artifact (do not track)
+demos/_instructor/index.html
 
 # Quarto support assets sometimes appear in the project root during local renders
 site_libs/

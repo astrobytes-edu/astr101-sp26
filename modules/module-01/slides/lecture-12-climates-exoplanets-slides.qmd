@@ -4,7 +4,7 @@ subtitle: "Greenhouse Effect, Transits, and Habitability"
 author: "Dr. Anna Rosen"
 date: "2026-02-25"
 description: "Venus is a hellscape. Mars is frozen. Earth is just right. Why? The greenhouse effect. Then: how we find exoplanets and assess habitability."
-draft: false
+draft: true
 
 format:
   revealjs:

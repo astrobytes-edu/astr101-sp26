@@ -4,7 +4,7 @@ subtitle: "Lecture 9 Reading Companion"
 author: "Dr. Anna Rosen"
 date: "2026-02-18"
 description: "Spectral lines are chemical fingerprints. Each element absorbs and emits light at unique wavelengths. By understanding the quantum origin of these lines, we can determine the composition of any star in the universe — without ever touching it."
-draft: false
+draft: true
 categories: [foundations, spectra, quantum]
 course: ASTR 101
 module: "1 - Foundations"

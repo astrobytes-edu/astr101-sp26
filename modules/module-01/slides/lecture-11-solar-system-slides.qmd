@@ -4,7 +4,7 @@ subtitle: "Solar System Architecture & Formation"
 author: "Dr. Anna Rosen"
 date: "2026-02-23"
 description: "The solar system is where we apply everything we've learned. Kepler's Laws, Newton's gravity, blackbody radiation, spectroscopy — all used to understand our cosmic neighborhood."
-draft: false
+draft: true
 
 format:
   revealjs:

@@ -4,7 +4,7 @@ subtitle: "Lecture 12 Reading Companion"
 author: "Dr. Anna Rosen"
 date: "2026-02-25"
 description: "Venus is a hellscape. Mars is a frozen desert. Earth is just right. Why? The greenhouse effect — the same physics that determines planetary habitability is reshaping Earth's climate today. Then we learn to find planets around other stars, building toward the biggest question: Are we alone?"
-draft: false
+draft: true
 categories: [climate, exoplanets, capstone]
 course: ASTR 101
 module: "1 - Foundations"
