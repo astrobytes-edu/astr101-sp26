@@ -192,6 +192,24 @@ website:
                 text: "Lecture 3: The Sky Is a Map"
               - href: modules/module-01/slides/lecture-04-moon-geometry-slides.qmd
                 text: "Lecture 4: Moon Geometry"
+              - href: modules/module-01/slides/lecture-05-keplers-laws-slides.qmd
+                text: "Lecture 5: Kepler's Laws"
+              - href: modules/module-01/slides/lecture-06-newtons-gravity-slides.qmd
+                text: "Lecture 6: Newton's Gravity"
+              - href: modules/module-01/slides/lecture-07-light-information-slides.qmd
+                text: "Lecture 7: Light as Information"
+              - href: modules/module-01/slides/lecture-08-blackbody-radiation-slides.qmd
+                text: "Lecture 8: Blackbody Radiation"
+              - href: modules/module-01/slides/lecture-09-spectral-lines-slides.qmd
+                text: "Lecture 9: Spectral Lines"
+              - href: modules/module-01/slides/lecture-10-doppler-telescopes-slides.qmd
+                text: "Lecture 10: Doppler & Telescopes"
+              - href: modules/module-01/slides/lecture-11-solar-system-slides.qmd
+                text: "Lecture 11: Solar System"
+              - href: modules/module-01/slides/lecture-12-climates-exoplanets-slides.qmd
+                text: "Lecture 12: Climates & Exoplanets"
+              - href: modules/module-01/slides/lecture-13-are-we-alone-slides.qmd
+                text: "Lecture 13: Are We Alone?"
           - section: "Readings"
             contents:
               - href: modules/module-01/readings/lecture-01-spoiler-alerts-reading.qmd

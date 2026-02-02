@@ -1,0 +1,877 @@
+---
+title: "Planetary Climates & Finding Other Worlds"
+subtitle: "Greenhouse Effect, Transits, and Habitability"
+author: "Dr. Anna Rosen"
+date: "2026-02-25"
+description: "Venus is a hellscape. Mars is frozen. Earth is just right. Why? The greenhouse effect. Then: how we find exoplanets and assess habitability."
+draft: false
+
+format:
+  revealjs:
+    theme: [default, ../../../assets/theme/slides/theme.scss]
+    footer: "ASTR 101 • Lecture 12 • Dr. Anna Rosen"
+    slide-number: true
+    transition: fade
+    transition-speed: fast
+    center: false
+    chalkboard: true
+    title-slide-attributes:
+      data-background-image: "/assets/images/common/cosmic-cliffs-jwst.png"
+      data-background-opacity: "0.35"
+    pointer:
+      key: "q"
+      color: "#5dbfbf"
+      pointerSize: 18
+      alwaysVisible: true
+    spotlight:
+      size: 80
+      toggleSpotlightOnMouseDown: true
+      presentingCursor: "crosshair"
+      fadeInAndOut: 100
+    quiz:
+      shuffleOptions: true
+      defaultCorrect: "Correct!"
+      defaultIncorrect: "Not quite — let's discuss."
+
+revealjs-plugins:
+  - pointer
+  - spotlight
+  - attribution
+  - quiz
+
+filters:
+  - roughnotation
+
+execute:
+  echo: false
+  warning: false
+  message: false
+---
+
+## Join iClicker {background-color="black"}
+
+::: {.text-center}
+{{< img iclicker-qr-astr101 width="36%" class="img-center" >}}
+
+::: {.text-xl .font-semibold .mt-2}
+[join.iclicker.com/ASES](https://join.iclicker.com/ASES)
+:::
+:::
+
+::: {.notes}
+30–60 sec. Get everyone connected before starting.
+:::
+
+---
+
+## {background-color="black"}
+
+::: {.r-fit-text}
+Three Worlds, Three Fates
+:::
+
+::: {.fragment .text-center .mt-4}
+Venus, Earth, Mars — rocky planets from the same solar nebula.
+
+Why such different outcomes?
+:::
+
+::: {.notes}
+0–1 min. "Same starting materials, radically different results."
+:::
+
+---
+
+## The Outcomes {background-color="#1a1a2e"}
+
+| Planet | T_observed | Pressure | Surface |
+|--------|------------|----------|---------|
+| Venus | 735 K (462°C) | 90× Earth | Hellscape |
+| Earth | 288 K (15°C) | 1 bar | Oceans, life |
+| Mars | 218 K (-55°C) | 0.006 bar | Frozen desert |
+
+::: {.fragment .mt-4}
+**The physics that explains this:** energy balance + greenhouse effect.
+:::
+
+::: {.notes}
+1–2 min. "Radically different surface conditions."
+:::
+
+---
+
+## Today's Learning Objectives {background-image="/assets/images/common/cosmic-cliffs-jwst.png" background-opacity="0.2"}
+
+::: {.bg-muted .p-2}
+
+By the end of today, you'll be able to:
+
+::: {.incremental .text-sm}
+- Explain why **surface temperatures differ** from equilibrium temperatures
+- Describe the **greenhouse effect** and its role in climate
+- Apply the **transit method** to detect exoplanets
+- Combine **RV + transit** to determine exoplanet densities
+- Define the **habitable zone** and what makes a planet potentially habitable
+:::
+
+:::
+
+::: {.notes}
+2–3 min. "Climate physics and exoplanet detection."
+:::
+
+---
+
+## {.center}
+
+::: {.r-fit-text}
+Part 1: Planetary Climates
+:::
+
+*Energy balance and the greenhouse effect*
+
+---
+
+## Equilibrium Temperature {background-color="#0a2f5c"}
+
+::: {.text-center .bg-muted .p-3}
+**Equilibrium:** Energy absorbed = Energy radiated
+
+$$T_{eq} = \left[ \frac{(1-A) L_\odot}{16\pi \sigma d^2} \right]^{1/4}$$
+:::
+
+::: {.fragment .mt-4}
+This is the temperature a planet *would* have with no atmosphere.
+
+When observed ≠ equilibrium, **something interesting is happening**.
+:::
+
+::: {.notes}
+3–4 min. "Equilibrium is the baseline prediction."
+:::
+
+---
+
+## Predictions vs. Reality {background-color="#1a1a2e"}
+
+| Planet | T_equilibrium | T_observed | Difference |
+|--------|---------------|------------|------------|
+| Venus | ~230 K | **735 K** | **+505 K** |
+| Earth | ~255 K | 288 K | +33 K |
+| Mars | ~210 K | 218 K | +8 K |
+
+::: {.fragment .mt-4 .text-center .text-xl}
+**Venus is 500 K hotter than predicted!**
+:::
+
+::: {.notes}
+4–5 min. "Venus is the extreme outlier."
+:::
+
+---
+
+## The Greenhouse Effect {background-color="black"}
+
+{{< fig greenhouse-effect >}}
+
+::: {.fragment .mt-2}
+1. Sunlight (visible) heats surface
+2. Surface emits infrared
+3. Greenhouse gases **absorb infrared**
+4. Atmosphere re-radiates — some back down
+5. Surface must warm to compensate
+:::
+
+::: {.notes}
+5–6 min. "The greenhouse effect mechanism."
+:::
+
+---
+
+## Quick Check: Why Venus? {background-color="#1a1a2e"}
+
+::: {.quiz}
+Venus is hotter than Mercury, even though Mercury is closer to the Sun. Why?
+
+- [ ] Stronger magnetic field
+- [x] Thick CO₂ atmosphere causing strong greenhouse effect
+- [ ] Slower rotation
+- [ ] Active volcanoes
+:::
+
+::: {.notes}
+1 min. iClicker poll.
+:::
+
+---
+
+## Venus: Runaway Greenhouse {background-color="#dc2626"}
+
+::: {.text-center}
+Venus may have started with conditions like early Earth.
+
+But it was closer to the Sun...
+:::
+
+::: {.fragment .mt-4 .incremental .text-sm}
+1. Higher T → more water evaporates
+2. Water vapor is a greenhouse gas → T rises more
+3. More evaporation → more warming (positive feedback!)
+4. Oceans boil completely
+5. UV breaks water → H escapes to space
+6. CO₂ from volcanoes accumulates
+7. **Result:** 96% CO₂, 735 K
+:::
+
+::: {.notes}
+6–8 min. "The runaway greenhouse cascade."
+:::
+
+---
+
+## Mars: Too Little Atmosphere {background-color="#1e3a5f"}
+
+::: {.incremental}
+- Surface pressure: **0.6%** of Earth's
+- 95% CO₂, but so thin it barely matters
+- Only ~8 K of greenhouse warming
+- Lost atmosphere to solar wind (weak gravity, no magnetic field)
+:::
+
+::: {.fragment .mt-4}
+**Evidence of past water:** Ancient river channels, minerals that form in liquid water.
+
+Mars wasn't always this cold.
+:::
+
+::: {.notes}
+8–9 min. "Mars has the opposite problem."
+:::
+
+---
+
+## Earth: The Goldilocks Planet {background-color="#16a34a"}
+
+::: {.incremental}
+- **Right distance:** Warm enough for liquid water
+- **Right atmosphere:** ~33 K greenhouse (not too much, not too little)
+- **Carbon cycle:** Natural thermostat (oceans, rocks, volcanoes)
+- **Magnetic field:** Protects atmosphere
+:::
+
+::: {.notes}
+9–10 min. "Earth hits the sweet spot."
+:::
+
+---
+
+## Quick Check: Climate Change {background-color="#1a1a2e"}
+
+::: {.quiz}
+If Earth's CO₂ levels increase, what happens?
+
+- [ ] Temperature decreases (CO₂ reflects sunlight)
+- [ ] Temperature stays the same (equilibrium is fixed)
+- [x] Temperature increases (more IR absorbed)
+- [ ] Temperature increases only at night
+:::
+
+::: {.notes}
+1 min. iClicker poll.
+:::
+
+---
+
+## {.center}
+
+::: {.r-fit-text}
+Part 2: Finding Exoplanets
+:::
+
+*Transits and the habitable zone*
+
+---
+
+## The Challenge {background-color="black"}
+
+::: {.text-center .text-xl}
+Planets don't produce visible light.
+
+Seeing an exoplanet directly is like spotting a firefly next to a searchlight.
+:::
+
+::: {.fragment .mt-4}
+**Solution:** Look for the planet's **effect on its star**.
+:::
+
+::: {.notes}
+10–11 min. "We detect planets indirectly."
+:::
+
+---
+
+## The Transit Method {background-color="#0a2f5c"}
+
+::: {.text-center .bg-muted .p-3}
+When a planet crosses in front of its star, brightness dips.
+
+$$\text{Transit depth} = \left(\frac{R_p}{R_*}\right)^2$$
+:::
+
+::: {.fragment .mt-4}
+- Depth tells us **planet radius**
+- Duration tells us **orbital distance**
+- Period tells us **orbital period**
+:::
+
+::: {.notes}
+11–12 min. "Transit geometry reveals planet size."
+:::
+
+---
+
+## {background-color="black"}
+
+{{< fig transit-light-curve >}}
+
+::: {.notes}
+12–13 min. Transit light curve visual.
+:::
+
+---
+
+## Worked Example: Planet Size {background-color="black"}
+
+**Problem:** A Sun-like star dims by 1% during transit. How big is the planet?
+
+::: {.fragment}
+$$\text{depth} = \left(\frac{R_p}{R_*}\right)^2 = 0.01$$
+:::
+
+::: {.fragment}
+$$\frac{R_p}{R_*} = \sqrt{0.01} = 0.1$$
+:::
+
+::: {.fragment}
+$$R_p = 0.1 \times R_\odot = 69,600 \text{ km}$$
+
+**That's Jupiter-sized!**
+:::
+
+::: {.notes}
+13–14 min. Walk through the calculation.
+:::
+
+---
+
+## Quick Check: Transit Depth {background-color="#1a1a2e"}
+
+::: {.quiz}
+An Earth-sized planet (radius ~1% of Sun's) transiting a Sun-like star produces what depth?
+
+- [ ] 1%
+- [ ] 0.1%
+- [x] 0.01%
+- [ ] 0.001%
+:::
+
+::: {.fragment .mt-2 .text-sm}
+**$(0.01)^2 = 0.0001 = 0.01\%$ — Earth-sized planets are HARD to detect!**
+:::
+
+::: {.notes}
+1–2 min. iClicker poll, then explain.
+:::
+
+---
+
+## Combining Methods: The Jackpot {background-color="#1a1a2e"}
+
+| Method | What It Gives |
+|--------|---------------|
+| Transit | Planet **radius** |
+| Radial Velocity (L10) | Planet **mass** |
+
+::: {.fragment .mt-4}
+**Combined:**
+
+$$\text{Density} = \frac{M_p}{\frac{4}{3}\pi R_p^3}$$
+
+Density → **rocky or gaseous?**
+:::
+
+::: {.notes}
+14–15 min. "RV + transit gives us density."
+:::
+
+---
+
+## What Density Tells Us {background-color="black"}
+
+| Density | Composition | Example |
+|---------|-------------|---------|
+| ~5.5 g/cm³ | Rocky | Earth |
+| ~1.3 g/cm³ | Gas giant | Jupiter |
+| ~2-3 g/cm³ | Water world? Mini-Neptune? | Some super-Earths |
+
+::: {.fragment .mt-4}
+**Density distinguishes potentially habitable rocky worlds from gas/ice balls.**
+:::
+
+::: {.notes}
+15–16 min. "Density reveals composition."
+:::
+
+---
+
+## The Habitable Zone {background-color="#0a2f5c"}
+
+::: {.text-center .bg-muted .p-3}
+The range of distances where **liquid water could exist** on a planet's surface.
+:::
+
+{{< fig habitable-zone >}}
+
+::: {.notes}
+16–17 min. "The Goldilocks zone."
+:::
+
+---
+
+## Habitable Zone ≠ Habitable! {background-color="#dc2626"}
+
+::: {.text-center}
+Being in the habitable zone doesn't guarantee habitability!
+:::
+
+::: {.fragment .mt-4}
+- **Venus:** Near inner edge → 735 K hellscape
+- **Mars:** Near outer edge → frozen desert
+:::
+
+::: {.fragment .mt-4 .text-muted}
+Habitability requires atmosphere, right greenhouse effect, liquid water...
+
+The zone is a **starting point**, not a guarantee.
+:::
+
+::: {.notes}
+17–18 min. "Important caveat."
+:::
+
+---
+
+## Quick Check: Habitable Zone {background-color="#1a1a2e"}
+
+::: {.quiz}
+If a star is 4× as luminous as the Sun, its habitable zone is:
+
+- [ ] Same location as the Sun's
+- [ ] Closer to the star
+- [x] Farther from the star
+- [ ] No habitable zone exists
+:::
+
+::: {.fragment .mt-2 .text-sm}
+**More luminous → more energy → HZ moves out by $\sqrt{4} = 2×$.**
+:::
+
+::: {.notes}
+1–2 min. iClicker poll, then explain.
+:::
+
+---
+
+## Key Takeaways {background-color="#0a2f5c"}
+
+::: {.text-sm}
+
+**Planetary Climates:**
+
+1. Equilibrium T depends on distance and albedo
+2. **Greenhouse effect:** Atmosphere absorbs IR → surface warms
+3. Venus: Runaway greenhouse → 735 K. Mars: Too thin → 218 K.
+
+**Exoplanet Detection:**
+
+4. **Transit depth** = $(R_p/R_*)^2$ → planet radius
+5. **RV + Transit** → mass + radius → density → rocky vs. gaseous
+6. **Habitable zone:** Where liquid water *could* exist
+
+:::
+
+::: {.notes}
+18–20 min. Rapid recap.
+:::
+
+---
+
+## Coming Up: Are We Alone? {background-color="black"}
+
+::: {.text-center .text-xl}
+**Next lecture:** The Drake Equation and the search for life.
+:::
+
+::: {.fragment .mt-4}
+Your favorite NASA science question — approached as astronomy.
+:::
+
+::: {.notes}
+20–21 min. Preview L13 synthesis lecture.
+:::
+
+---
+
+## {.center background-color="#1a1a2e"}
+
+::: {.r-fit-text}
+Numerical Verification
+:::
+
+*Calculating equilibrium temperatures and transit depths*
+
+::: {.notes}
+Let's verify our climate and exoplanet equations with explicit calculations.
+:::
+
+---
+
+## Equilibrium Temperature: Derivation {background-color="#1a1a2e"}
+
+**Energy in = Energy out (at equilibrium)**
+
+::: {.fragment}
+**Power absorbed** from the Sun:
+
+$$P_{in} = (1-A) \times \pi R_p^2 \times \frac{L_\odot}{4\pi d^2}$$
+
+- $(1-A)$ = fraction absorbed (A = albedo)
+- $\pi R_p^2$ = cross-sectional area facing Sun
+- $L_\odot/(4\pi d^2)$ = solar flux at distance $d$
+:::
+
+::: {.fragment}
+**Power radiated** as thermal emission:
+
+$$P_{out} = 4\pi R_p^2 \times \sigma T^4$$
+:::
+
+::: {.notes}
+"The planet intercepts sunlight on its cross-section, radiates from its whole surface."
+:::
+
+---
+
+## Equilibrium Temperature: Solution {background-color="#1a1a2e"}
+
+**Set $P_{in} = P_{out}$:**
+
+$$$(1-A) \pi R_p^2 \frac{L_\odot}{4\pi d^2} = 4\pi R_p^2 \sigma T^4$$
+
+::: {.fragment}
+**Cancel $\pi R_p^2$ and solve for T:**
+
+$$T_{eq} = \left[\frac{(1-A) L_\odot}{16 \pi \sigma d^2}\right]^{1/4}$$
+:::
+
+::: {.fragment}
+**For objects orbiting the Sun:**
+
+$$T_{eq} = 279 \text{ K} \times (1-A)^{1/4} \times \left(\frac{1 \text{ AU}}{d}\right)^{1/2}$$
+:::
+
+::: {.notes}
+"The 279 K comes from plugging in solar luminosity and Stefan-Boltzmann constant."
+:::
+
+---
+
+## Earth's Equilibrium Temperature {background-color="#1a1a2e"}
+
+**Given:**
+
+- Distance: $d = 1$ AU
+- Albedo: $A = 0.30$ (Earth reflects 30% of sunlight)
+
+::: {.fragment}
+$$T_{eq} = 279 \text{ K} \times (1-0.30)^{1/4} \times \left(\frac{1}{1}\right)^{1/2}$$
+:::
+
+::: {.fragment}
+$$T_{eq} = 279 \text{ K} \times (0.70)^{0.25} = 279 \times 0.915$$
+:::
+
+::: {.fragment}
+$$T_{eq} = 255 \text{ K} = -18°\text{C}$$
+:::
+
+::: {.fragment .bg-warning-subtle .p-2}
+**But Earth's actual average is 288 K = +15°C!**
+
+The +33 K difference is the **greenhouse effect**.
+:::
+
+::: {.notes}
+"Without greenhouse gases, Earth would be frozen."
+:::
+
+---
+
+## Venus: Why So Hot? {background-color="#1a1a2e"}
+
+**Given:**
+
+- Distance: $d = 0.72$ AU
+- Albedo: $A = 0.75$ (Venus is VERY reflective)
+
+::: {.fragment}
+$$T_{eq} = 279 \text{ K} \times (1-0.75)^{1/4} \times \left(\frac{1}{0.72}\right)^{1/2}$$
+:::
+
+::: {.fragment}
+$$T_{eq} = 279 \times (0.25)^{0.25} \times (1.39)^{0.5} = 279 \times 0.707 \times 1.18$$
+:::
+
+::: {.fragment}
+$$T_{eq} = 232 \text{ K} = -41°\text{C}$$
+:::
+
+::: {.fragment .bg-danger-subtle .p-2}
+**But Venus's actual surface is 735 K = +462°C!**
+
+The +503 K difference is the **runaway greenhouse effect**.
+:::
+
+::: {.notes}
+"Venus's equilibrium temperature is COLDER than Earth's (high albedo). But its surface is hellish."
+:::
+
+---
+
+## Transit Depth: Earth Around the Sun {background-color="#1a1a2e"}
+
+**How deep would Earth's transit be?**
+
+::: {.fragment}
+**Given:**
+
+- $R_E = 6,371$ km = $6.371 \times 10^6$ m
+- $R_\odot = 6.96 \times 10^8$ m
+:::
+
+::: {.fragment}
+**Transit depth:**
+
+$$\delta = \left(\frac{R_E}{R_\odot}\right)^2 = \left(\frac{6.371 \times 10^6}{6.96 \times 10^8}\right)^2$$
+:::
+
+::: {.fragment}
+$$= (9.15 \times 10^{-3})^2 = 8.4 \times 10^{-5}$$
+:::
+
+::: {.fragment .bg-muted .p-2}
+**Transit depth = 0.0084% = 84 parts per million**
+
+This is why Kepler needed such precise photometry!
+:::
+
+::: {.notes}
+"Finding Earth-like planets requires detecting 84 ppm dips in stellar brightness."
+:::
+
+---
+
+## TRAPPIST-1 System: Full Calculation {background-color="#1a1a2e"}
+
+**TRAPPIST-1 has 7 Earth-sized planets around a small red dwarf!**
+
+**Given:**
+
+- Star radius: $R_* = 0.121 R_\odot$
+- Planet e radius: $R_p \approx 0.92 R_E$
+
+::: {.fragment}
+$$\delta = \left(\frac{R_p}{R_*}\right)^2 = \left(\frac{0.92 \times 6.371 \times 10^6}{0.121 \times 6.96 \times 10^8}\right)^2$$
+:::
+
+::: {.fragment}
+$$= \left(\frac{5.86 \times 10^6}{8.42 \times 10^7}\right)^2 = (0.0696)^2 = 0.0048 = 0.48\%$$
+:::
+
+::: {.fragment .bg-success-subtle .p-2}
+**Transit depth = 0.48%** — 57× deeper than Earth around the Sun!
+
+Small stars → bigger transit signals → easier to find small planets.
+:::
+
+::: {.notes}
+"This is why TRAPPIST-1 was such a breakthrough system."
+:::
+
+---
+
+## Habitable Zone Distance: Full Derivation {background-color="#1a1a2e"}
+
+**Where does $T_{eq} = 273$ K (water freezing point)?**
+
+Using $T_{eq} = 279(1-A)^{1/4}(d/\text{AU})^{-1/2}$ with $A \approx 0.3$:
+
+::: {.fragment}
+$$273 = 279 \times (0.7)^{0.25} \times d^{-0.5}$$
+$$273 = 255 \times d^{-0.5}$$
+:::
+
+::: {.fragment}
+$$d^{0.5} = \frac{255}{273} = 0.934$$
+$$d = 0.87 \text{ AU}$$
+:::
+
+::: {.fragment}
+**For $T = 373$ K (boiling):**
+
+$$d = \left(\frac{255}{373}\right)^2 = 0.47 \text{ AU}$$
+:::
+
+::: {.fragment .bg-muted .p-2}
+**Sun's HZ (simple estimate): ~0.5–0.9 AU**
+
+(More detailed models: 0.95–1.7 AU accounting for atmosphere effects)
+:::
+
+::: {.notes}
+"This simple estimate puts Earth near the outer edge. Venus is inside the inner edge."
+:::
+
+---
+
+## {.center background-color="#0a2f5c"}
+
+::: {.r-fit-text}
+Deeper Dive
+:::
+
+*Atmospheric escape and biosignatures*
+
+::: {.notes}
+Optional advanced content.
+:::
+
+---
+
+## Why Mars Lost Its Atmosphere {background-color="#0a2f5c"}
+
+**Atmospheric escape velocity** for a gas molecule:
+
+$$v_{thermal} = \sqrt{\frac{3k_B T}{m}}$$
+
+::: {.fragment}
+**For hydrogen (H₂) at 300 K:**
+
+$$v_H = \sqrt{\frac{3 \times 1.38 \times 10^{-23} \times 300}{3.3 \times 10^{-27}}} = 1,580 \text{ m/s}$$
+:::
+
+::: {.fragment}
+**Compare to escape velocities:**
+
+- Mars: $v_{esc} = 5.0$ km/s → H₂ escapes easily (v_thermal × 6 = 9.5 km/s tail)
+- Earth: $v_{esc} = 11.2$ km/s → H₂ escapes, but slowly
+- Jupiter: $v_{esc} = 59.5$ km/s → H₂ retained
+:::
+
+::: {.notes}
+"Light molecules at the high-velocity tail of the distribution can escape."
+:::
+
+---
+
+## The Rule of Six {background-color="#0a2f5c"}
+
+**Atmospheric retention rule:**
+
+If $v_{esc} < 6 \times v_{thermal}$ for a molecule, that molecule **gradually escapes**.
+
+::: {.fragment}
+**Why 6?** The Maxwell-Boltzmann distribution has a high-velocity tail. At 6× the average, there's still enough molecules escaping to matter over billions of years.
+:::
+
+::: {.fragment .mt-4}
+| Planet | $v_{esc}$ | H₂ retained? | CO₂ retained? | N₂ retained? |
+|--------|-----------|--------------|---------------|--------------|
+| Mars | 5.0 km/s | ✗ | Marginal | ✓ |
+| Earth | 11.2 km/s | ✗ | ✓ | ✓ |
+| Venus | 10.4 km/s | ✗ | ✓ | ✓ |
+:::
+
+::: {.notes}
+"Mars couldn't hold onto its early atmosphere. Earth can retain heavy molecules but not hydrogen."
+:::
+
+---
+
+## Biosignatures: What to Look For {background-color="#0a2f5c"}
+
+**Atmospheric signatures of life:**
+
+::: {.incremental}
+1. **Oxygen (O₂):** Highly reactive; needs continuous production. On Earth: photosynthesis.
+
+2. **Ozone (O₃):** Product of O₂; detectable in UV spectra.
+
+3. **Methane (CH₄):** Short-lived in oxidizing atmosphere; needs ongoing source.
+
+4. **Methane + Oxygen together:** Thermodynamically unstable. Both present = something replenishing them!
+:::
+
+::: {.fragment .mt-2 .bg-muted .p-2}
+**JWST can detect some of these in transiting exoplanet atmospheres!**
+:::
+
+::: {.notes}
+"This is cutting-edge astrobiology happening right now."
+:::
+
+---
+
+## JWST Transmission Spectroscopy {background-color="#0a2f5c"}
+
+**How it works:**
+
+During transit, starlight passes through the planet's atmosphere.
+
+Different molecules absorb different wavelengths.
+
+::: {.fragment}
+**The signal:**
+
+$$\delta_{atm} = \frac{2 R_p H}{R_*^2}$$
+
+where $H$ = atmospheric scale height (typically 10-30 km for rocky planets)
+:::
+
+::: {.fragment}
+**For Earth around the Sun:**
+
+$$\delta_{atm} \approx \frac{2 \times 6371 \times 10 \text{ km}}{(696,000)^2} \approx 2.6 \times 10^{-7} = 0.26 \text{ ppm}$$
+:::
+
+::: {.fragment .text-muted}
+Incredibly small! But detectable for larger planets around smaller stars.
+:::
+
+::: {.notes}
+"JWST has already detected water, CO₂, and SO₂ in exoplanet atmospheres."
+:::
+
+---
+
+## Questions? {background-image="/assets/images/common/cosmic-cliffs-jwst.png" background-opacity="0.25"}
+
+::: {.text-center .text-xl .mt-4}
+**Climate:** Same physics for Venus, Earth, Mars, and us.
+
+**Exoplanets:** Transits + RV = density = composition.
+:::
+
+::: {.notes}
+Remaining time for questions.
+:::

@@ -1,0 +1,1055 @@
+---
+title: "Motion Revealed"
+subtitle: "The Doppler Effect and the Astronomer's Toolkit"
+author: "Dr. Anna Rosen"
+date: "2026-02-21"
+description: "Spectral lines shift when objects move. The Doppler effect reveals velocities from exoplanets to dark matter. Telescopes collect this light."
+draft: false
+
+format:
+  revealjs:
+    theme: [default, ../../../assets/theme/slides/theme.scss]
+    footer: "ASTR 101 • Lecture 10 • Dr. Anna Rosen"
+    slide-number: true
+    transition: fade
+    transition-speed: fast
+    center: false
+    chalkboard: true
+    title-slide-attributes:
+      data-background-image: "/assets/images/common/cosmic-cliffs-jwst.png"
+      data-background-opacity: "0.35"
+    pointer:
+      key: "q"
+      color: "#5dbfbf"
+      pointerSize: 18
+      alwaysVisible: true
+    spotlight:
+      size: 80
+      toggleSpotlightOnMouseDown: true
+      presentingCursor: "crosshair"
+      fadeInAndOut: 100
+    quiz:
+      shuffleOptions: true
+      defaultCorrect: "Correct!"
+      defaultIncorrect: "Not quite — let's discuss."
+
+revealjs-plugins:
+  - pointer
+  - spotlight
+  - attribution
+  - quiz
+
+filters:
+  - roughnotation
+
+execute:
+  echo: false
+  warning: false
+  message: false
+---
+
+## Join iClicker {background-color="black"}
+
+::: {.text-center}
+{{< img iclicker-qr-astr101 width="36%" class="img-center" >}}
+
+::: {.text-xl .font-semibold .mt-2}
+[join.iclicker.com/ASES](https://join.iclicker.com/ASES)
+:::
+
+::: {.text-sm .text-muted .mt-2}
+If you can't scan: open the link and enter the course code **ASES**.
+:::
+:::
+
+::: {.notes}
+30–60 sec. Get everyone connected before starting.
+:::
+
+---
+
+## {background-color="black"}
+
+::: {.r-fit-text}
+The Fingerprints Move
+:::
+
+::: {.fragment .text-center .mt-4}
+In L9, we learned spectral lines are chemical fingerprints.
+:::
+
+::: {.fragment .text-center .mt-4}
+But what if those fingerprints are **shifted** from their expected wavelengths?
+:::
+
+::: {.notes}
+0–1 min. "Shifted lines mean the source is moving."
+:::
+
+---
+
+## Motion Causes Shifts {background-image="/assets/images/common/cosmic-cliffs-jwst.png" background-opacity="0.2"}
+
+::: {.text-center .text-xl}
+Just like an ambulance siren changes pitch as it passes...
+:::
+
+::: {.fragment .mt-4}
+Light waves get **compressed** or **stretched** depending on motion.
+
+This is the **Doppler effect**.
+:::
+
+::: {.notes}
+1–2 min. "The Doppler effect for light."
+:::
+
+---
+
+## Today's Learning Objectives {background-image="/assets/images/common/cosmic-cliffs-jwst.png" background-opacity="0.2"}
+
+::: {.bg-muted .p-2}
+
+By the end of today, you'll be able to:
+
+::: {.incremental .text-sm}
+- Apply the **Doppler formula** to calculate radial velocities
+- Distinguish **radial** (line-of-sight) from **transverse** motion
+- Explain how Doppler reveals **exoplanets** and **dark matter**
+- Compare **light-gathering power** and **resolution** for telescopes
+- Explain why we observe from **space** at certain wavelengths
+:::
+
+:::
+
+::: {.notes}
+2–3 min. "Today completes the astronomer's toolkit."
+:::
+
+---
+
+## {.center}
+
+::: {.r-fit-text}
+Part 1: The Doppler Effect
+:::
+
+*Measuring motion from light*
+
+---
+
+## The Doppler Formula {background-color="#0a2f5c"}
+
+::: {.text-center .text-xl .bg-muted .p-3}
+$$\frac{\Delta\lambda}{\lambda_0} = \frac{v}{c}$$
+:::
+
+::: {.fragment .mt-4}
+| Symbol | Meaning |
+|--------|---------|
+| $\lambda_0$ | Rest wavelength (lab measurement) |
+| $\Delta\lambda$ | Observed shift from rest |
+| $v$ | Radial velocity (toward/away) |
+| $c$ | Speed of light (300,000 km/s) |
+:::
+
+::: {.notes}
+3–4 min. "The Doppler formula connects wavelength shift to velocity."
+:::
+
+---
+
+## Blueshift and Redshift {background-color="#1a1a2e"}
+
+:::: {.columns}
+::: {.column width="50%"}
+**Blueshift**
+
+$\Delta\lambda < 0$
+
+Wavelength **decreased**
+
+Source **approaching**
+:::
+
+::: {.column width="50%"}
+**Redshift**
+
+$\Delta\lambda > 0$
+
+Wavelength **increased**
+
+Source **receding**
+:::
+::::
+
+::: {.fragment .mt-4 .text-muted}
+These names apply to ALL wavelengths — radio, X-ray, everything. "Blue direction" = shorter; "red direction" = longer.
+:::
+
+::: {.notes}
+4–5 min. "Blueshift = approaching. Redshift = receding."
+:::
+
+---
+
+## Worked Example {background-color="black"}
+
+**Problem:** A star's Hα line is observed at 656.50 nm. Rest wavelength = 656.28 nm. Find the velocity.
+
+::: {.fragment}
+$$\Delta\lambda = 656.50 - 656.28 = +0.22 \text{ nm}$$
+:::
+
+::: {.fragment}
+$$\frac{\Delta\lambda}{\lambda_0} = \frac{0.22}{656.28} = 3.35 \times 10^{-4}$$
+:::
+
+::: {.fragment}
+$$v = c \times 3.35 \times 10^{-4} = 100 \text{ km/s}$$
+:::
+
+::: {.fragment .mt-2}
+**Positive shift → redshift → moving away at 100 km/s**
+:::
+
+::: {.notes}
+5–6 min. Walk through the calculation.
+:::
+
+---
+
+## Quick Check: Doppler Calculation {background-color="#1a1a2e"}
+
+::: {.quiz}
+A star's sodium D line (rest 589.0 nm) is observed at 588.8 nm. The star is:
+
+- [x] Moving toward us at ~100 km/s
+- [ ] Moving away from us at ~100 km/s
+- [ ] Moving toward us at ~1000 km/s
+- [ ] Not moving
+:::
+
+::: {.fragment .mt-2 .text-sm}
+**$\Delta\lambda = -0.2$ nm (blueshift) → approaching**
+:::
+
+::: {.notes}
+1–2 min. iClicker poll, then explain.
+:::
+
+---
+
+## Critical Distinction: Radial vs. Transverse {background-color="black"}
+
+{{< fig radial-vs-transverse >}}
+
+::: {.fragment .mt-2}
+- **Radial:** Toward/away → Doppler shift detected
+- **Transverse:** Across sky → **No Doppler shift!**
+:::
+
+::: {.notes}
+6–7 min. "Doppler only measures the radial component."
+:::
+
+---
+
+## Quick Check: What Doppler Measures {background-color="#1a1a2e"}
+
+::: {.quiz}
+A star moves at 100 km/s exactly across the sky (perpendicular to our line of sight). Its Doppler shift is:
+
+- [ ] Large redshift
+- [ ] Large blueshift
+- [x] Zero
+- [ ] Cannot determine
+:::
+
+::: {.notes}
+1 min. iClicker poll.
+:::
+
+---
+
+## {.center}
+
+::: {.r-fit-text}
+Exoplanet Detection
+:::
+
+*The radial velocity method*
+
+---
+
+## Stars Wobble Too {background-color="black"}
+
+::: {.text-center}
+A planet doesn't just orbit its star...
+:::
+
+::: {.fragment .mt-4}
+By Newton's Third Law, the **star also wobbles** in response.
+
+Both orbit their common center of mass.
+:::
+
+::: {.fragment .mt-4}
+This tiny wobble is **detectable** with precise Doppler measurements.
+:::
+
+::: {.notes}
+7–8 min. "The star wobbles, and we can measure it."
+:::
+
+---
+
+## {background-color="black"}
+
+{{< fig radial-velocity-method >}}
+
+::: {.fragment .mt-2}
+As the star wobbles toward/away from us, spectral lines shift back and forth.
+
+The periodic pattern reveals an orbiting planet.
+:::
+
+::: {.notes}
+8–9 min. Diagram of the RV method.
+:::
+
+---
+
+## Example: Detecting a Hot Jupiter {background-color="#1a1a2e"}
+
+::: {.text-sm}
+**51 Pegasi b** (first exoplanet around Sun-like star, 1995):
+
+| Measurement | Value |
+|-------------|-------|
+| Stellar wobble | ±56 m/s |
+| Period | 4.2 days |
+| Inferred planet | ~0.5 Jupiter mass |
+| Orbit | Very close to star |
+:::
+
+::: {.fragment .mt-2}
+This "hot Jupiter" was discovered entirely through Doppler shifts!
+:::
+
+::: {.notes}
+9–10 min. "The discovery that won the 2019 Nobel Prize."
+:::
+
+---
+
+## Quick Check: Exoplanet Detection {background-color="#1a1a2e"}
+
+::: {.quiz}
+The radial velocity method detects exoplanets by measuring:
+
+- [ ] The planet's light directly
+- [x] The star's periodic Doppler shift due to its wobble
+- [ ] The planet blocking starlight during transit
+- [ ] Gravitational lensing by the planet
+:::
+
+::: {.notes}
+1 min. iClicker poll.
+:::
+
+---
+
+## {.center}
+
+::: {.r-fit-text}
+Dark Matter
+:::
+
+*When orbits don't add up*
+
+---
+
+## Galaxy Rotation Puzzle {background-color="black"}
+
+::: {.text-center}
+1970s: Vera Rubin measured how fast stars orbit within galaxies.
+:::
+
+::: {.fragment .mt-4}
+**Expected:** Outer stars orbit slower (like outer planets)
+
+$$v_{orbit} = \sqrt{\frac{GM}{r}}$$
+:::
+
+::: {.fragment .mt-4}
+**Observed:** Outer stars orbit **just as fast** as inner stars!
+:::
+
+::: {.notes}
+10–11 min. "The galaxy rotation puzzle."
+:::
+
+---
+
+## {background-color="black"}
+
+{{< fig galaxy-rotation-curve >}}
+
+::: {.fragment .mt-2}
+The flat rotation curve means there's **more mass** than we can see.
+:::
+
+::: {.notes}
+11–12 min. Galaxy rotation curve showing the dark matter problem.
+:::
+
+---
+
+## Dark Matter {background-color="#1a1a2e"}
+
+::: {.text-center .text-xl}
+The leading explanation: **dark matter**
+:::
+
+::: {.fragment .mt-4}
+- Doesn't emit, absorb, or reflect light
+- **Does** have gravitational effects
+- ~5× more abundant than normal matter
+- Forms invisible "halos" around galaxies
+:::
+
+::: {.fragment .mt-4 .text-muted}
+**Motion reveals mass** — even invisible mass.
+:::
+
+::: {.notes}
+12–13 min. "Dark matter: we can't see it, but gravity reveals it."
+:::
+
+---
+
+## Quick Check: Dark Matter Evidence {background-color="#1a1a2e"}
+
+::: {.quiz}
+Galaxy rotation curves provide evidence for dark matter because:
+
+- [ ] Stars at galaxy edges move slower than expected
+- [x] Stars at galaxy edges move faster than expected from visible matter
+- [ ] Galaxies don't rotate at all
+- [ ] We can see dark matter directly
+:::
+
+::: {.notes}
+1 min. iClicker poll.
+:::
+
+---
+
+## {.center}
+
+::: {.r-fit-text}
+Part 2: Telescopes
+:::
+
+*Collecting the light*
+
+---
+
+## Two Key Properties {background-color="black"}
+
+::: {.text-center}
+Telescopes have two main jobs:
+:::
+
+:::: {.columns .mt-4}
+::: {.column width="50%"}
+**1. Collect Light**
+
+More photons → fainter objects detected
+
+$\propto D^2$ (area)
+:::
+
+::: {.column width="50%"}
+**2. Resolve Detail**
+
+Separate closely-spaced objects
+
+$\theta \propto \lambda/D$
+:::
+::::
+
+::: {.notes}
+13–14 min. "The two key telescope properties."
+:::
+
+---
+
+## Light-Gathering Power {background-color="#0a2f5c"}
+
+::: {.text-center .text-xl .bg-muted .p-3}
+$$\text{Light collected} \propto D^2$$
+
+**Double the diameter → 4× the light**
+:::
+
+::: {.fragment .mt-4}
+| Telescope | Diameter | Relative Power |
+|-----------|----------|----------------|
+| Human eye | 7 mm | 1 |
+| Hubble | 2.4 m | ~120,000 |
+| Keck | 10 m | ~2,000,000 |
+:::
+
+::: {.notes}
+14–15 min. "Bigger mirrors collect more light."
+:::
+
+---
+
+## Quick Check: Light-Gathering Power {background-color="#1a1a2e"}
+
+::: {.quiz}
+Telescope A has twice the diameter of Telescope B. A's light-gathering power is:
+
+- [ ] 2× greater
+- [x] 4× greater
+- [ ] 8× greater
+- [ ] The same
+:::
+
+::: {.notes}
+1 min. iClicker poll.
+:::
+
+---
+
+## Angular Resolution {background-color="#0a2f5c"}
+
+::: {.text-center .text-xl .bg-muted .p-3}
+$$\theta = 1.22 \frac{\lambda}{D}$$
+
+**Larger D → finer detail (smaller θ)**
+:::
+
+::: {.fragment .mt-4}
+- **Larger telescope** → better resolution
+- **Shorter wavelength** → better resolution
+:::
+
+::: {.fragment .mt-4 .text-muted}
+This is why radio telescopes must be huge — radio waves are long.
+:::
+
+::: {.notes}
+15–16 min. "Resolution depends on diameter and wavelength."
+:::
+
+---
+
+## Quick Check: Resolution {background-color="#1a1a2e"}
+
+::: {.quiz}
+Which change would improve a telescope's angular resolution?
+
+- [ ] Using a smaller mirror
+- [ ] Observing at longer wavelengths
+- [x] Using a larger mirror
+- [ ] Observing from a lower altitude
+:::
+
+::: {.notes}
+1 min. iClicker poll.
+:::
+
+---
+
+## Why Space Telescopes? {background-color="black"}
+
+::: {.text-sm}
+| Wavelength | Ground? | Why Space? |
+|------------|---------|------------|
+| Radio | ✓ | Atmosphere transparent |
+| Infrared | Partial | Water vapor absorbs |
+| Visible | ✓ | But atmosphere blurs |
+| UV | ✗ | Ozone absorbs |
+| X-ray | ✗ | Atmosphere absorbs |
+| Gamma | ✗ | Atmosphere absorbs |
+:::
+
+::: {.fragment .mt-2}
+**Different wavelengths require different observatories.**
+:::
+
+::: {.notes}
+16–17 min. "Atmospheric windows determine what we can observe from Earth."
+:::
+
+---
+
+## Modern Observatories {background-color="#1a1a2e"}
+
+**Ground-based:**
+
+- Keck (10m), VLT (4×8m), ALMA (radio)
+- ELT (39m, under construction)
+
+**Space:**
+
+- Hubble (optical/UV)
+- JWST (infrared)
+- Chandra (X-ray)
+- Fermi (gamma-ray)
+
+::: {.notes}
+17–18 min. "Modern astronomy uses telescopes across the spectrum."
+:::
+
+---
+
+## Key Takeaways {background-color="#0a2f5c"}
+
+::: {.text-sm}
+
+**Doppler Effect:**
+
+1. $\Delta\lambda/\lambda_0 = v/c$ measures **radial velocity** only
+2. Blueshift = approaching; Redshift = receding
+3. Exoplanets detected via stellar wobble
+4. Dark matter revealed by flat galaxy rotation curves
+
+**Telescopes:**
+
+5. Light-gathering power ∝ $D^2$
+6. Resolution: $\theta \propto \lambda/D$
+7. Space telescopes access blocked wavelengths
+
+:::
+
+::: {.notes}
+18–20 min. Rapid recap.
+:::
+
+---
+
+## Toolkit Complete! {background-color="black"}
+
+::: {.text-sm}
+| Tool | What It Reveals |
+|------|-----------------|
+| L5-L6: Orbits | Mass (Kepler + Newton) |
+| L7-L8: Blackbody | Temperature |
+| L9: Spectral lines | Composition |
+| L10: Doppler | Motion/velocity |
+| L10: Telescopes | How we collect light |
+:::
+
+::: {.fragment .mt-4 .text-center}
+**Now we apply these tools** — solar system, exoplanets, life in the universe.
+:::
+
+::: {.notes}
+20–21 min. "Your toolkit is complete."
+:::
+
+---
+
+## Coming Up: Capstone Week {background-color="black"}
+
+::: {.text-center .text-xl}
+**Lectures 11-13:** Apply the toolkit
+:::
+
+::: {.fragment .mt-4}
+- L11: Solar System Architecture
+- L12: Planetary Climates & Exoplanets
+- L13: Are We Alone? (Module 1 Synthesis)
+:::
+
+::: {.notes}
+21–22 min. Preview the capstone lectures.
+:::
+
+---
+
+## {.center background-color="#1a1a2e"}
+
+::: {.r-fit-text}
+Numerical Verification
+:::
+
+*Calculating radial velocities and telescope properties*
+
+::: {.notes}
+Let's verify our equations with explicit calculations.
+:::
+
+---
+
+## Doppler Calculation: 51 Pegasi b {background-color="#1a1a2e"}
+
+**The discovery that won the 2019 Nobel Prize!**
+
+**Observed:** Hα line (rest wavelength λ₀ = 656.28 nm) oscillates between:
+
+- Maximum: λ = 656.29 nm
+- Minimum: λ = 656.27 nm
+
+::: {.fragment}
+**Step 1: Calculate the shift**
+
+$$\Delta\lambda_{\text{max}} = 656.29 - 656.28 = +0.01 \text{ nm (redshift)}$$
+$$\Delta\lambda_{\text{min}} = 656.27 - 656.28 = -0.01 \text{ nm (blueshift)}$$
+:::
+
+::: {.notes}
+"The star wobbles toward us and away from us as the planet orbits."
+:::
+
+---
+
+## 51 Pegasi: Velocity Calculation {background-color="#1a1a2e"}
+
+**Step 2: Apply Doppler formula**
+
+$$v = c \times \frac{\Delta\lambda}{\lambda_0}$$
+
+::: {.fragment}
+$$v = (3.00 \times 10^8 \text{ m/s}) \times \frac{0.01 \text{ nm}}{656.28 \text{ nm}}$$
+:::
+
+::: {.fragment}
+$$v = 3.00 \times 10^8 \times 1.52 \times 10^{-5} \text{ m/s}$$
+:::
+
+::: {.fragment}
+$$v = 4570 \text{ m/s} \approx 4.6 \text{ km/s}$$
+:::
+
+::: {.fragment .bg-muted .p-2}
+**Unit check:** $\frac{\text{m/s} \times \text{nm}}{\text{nm}} = \text{m/s}$ ✓
+
+The star wobbles at ~5 km/s — walking speed for an elephant, but detectable!
+:::
+
+::: {.notes}
+"Modern spectrographs can measure shifts of 1 m/s. This was 'easy' by comparison."
+:::
+
+---
+
+## From Stellar Wobble to Planet Mass {background-color="#1a1a2e"}
+
+**Given:**
+
+- Star's wobble velocity: $v_* = 56$ m/s
+- Orbital period: $P = 4.23$ days
+- Star's mass: $M_* = 1.06 M_\odot$
+
+::: {.fragment}
+**Step 1: Find semi-major axis from Kepler III**
+
+First convert period: $P = 4.23$ days $\times \frac{1 \text{ yr}}{365.25 \text{ days}} = 0.0116$ yr
+:::
+
+::: {.fragment}
+$$a^3 = M_* \times P^2 = 1.06 \times (0.0116)^2 = 1.43 \times 10^{-4} \text{ AU}^3$$
+$$a = 0.052 \text{ AU}$$
+:::
+
+::: {.notes}
+"The planet orbits very close to its star — a 'hot Jupiter'."
+:::
+
+---
+
+## Planet Mass Calculation {background-color="#1a1a2e"}
+
+**Step 2: Use momentum conservation**
+
+The star and planet orbit their common center of mass:
+
+$$M_* v_* = M_p v_p$$
+
+::: {.fragment}
+**Planet's orbital velocity:**
+
+$$v_p = \frac{2\pi a}{P} = \frac{2\pi \times 0.052 \text{ AU}}{4.23 \text{ days}}$$
+:::
+
+::: {.fragment}
+Convert: 0.052 AU = $7.78 \times 10^9$ m; 4.23 days = $3.65 \times 10^5$ s
+
+$$v_p = \frac{2\pi \times 7.78 \times 10^9 \text{ m}}{3.65 \times 10^5 \text{ s}} = 1.34 \times 10^5 \text{ m/s} = 134 \text{ km/s}$$
+:::
+
+::: {.notes}
+"The planet moves much faster than the star wobbles."
+:::
+
+---
+
+## Planet Mass: Final Calculation {background-color="#1a1a2e"}
+
+$$M_p = M_* \times \frac{v_*}{v_p} = 1.06 M_\odot \times \frac{56 \text{ m/s}}{134,000 \text{ m/s}}$$
+
+::: {.fragment}
+$$M_p = 1.06 M_\odot \times 4.2 \times 10^{-4}$$
+:::
+
+::: {.fragment}
+Convert to Jupiter masses ($M_J = 10^{-3} M_\odot$):
+
+$$M_p = 1.06 \times 4.2 \times 10^{-4} M_\odot = 4.45 \times 10^{-4} M_\odot$$
+$$M_p = 0.45 M_J$$
+:::
+
+::: {.fragment .bg-success-subtle .p-2}
+**51 Pegasi b has about half Jupiter's mass.** (Actual: 0.47 $M_J$ ✓)
+:::
+
+::: {.notes}
+"From a tiny wavelength shift, we determined a planet's mass from 50 light-years away!"
+:::
+
+---
+
+## Telescope Resolution: JWST {background-color="#1a1a2e"}
+
+**Given:**
+
+- JWST mirror diameter: $D = 6.5$ m
+- Observing wavelength: $\lambda = 2000$ nm (infrared)
+
+::: {.fragment}
+$$\theta = 1.22 \frac{\lambda}{D} = 1.22 \times \frac{2000 \times 10^{-9} \text{ m}}{6.5 \text{ m}}$$
+:::
+
+::: {.fragment}
+$$\theta = 1.22 \times 3.08 \times 10^{-7} = 3.76 \times 10^{-7} \text{ radians}$$
+:::
+
+::: {.fragment}
+**Convert to arcseconds:**
+
+$$\theta = 3.76 \times 10^{-7} \text{ rad} \times \frac{206,265 \text{ arcsec}}{1 \text{ rad}} = 0.078 \text{ arcsec}$$
+:::
+
+::: {.fragment .bg-muted .p-2}
+**JWST resolves ~0.08 arcsec at 2 μm** — a dime from 50 km away!
+:::
+
+::: {.notes}
+"The conversion factor 206,265 arcsec/rad comes from (360° × 3600 arcsec/°)/(2π rad)."
+:::
+
+---
+
+## Comparing Telescope Resolutions {background-color="#1a1a2e"}
+
+**Resolution = 1.22 λ/D (in arcseconds)**
+
+| Telescope | D | λ | θ (arcsec) | Calculation |
+|-----------|---|---|------------|-------------|
+| Human eye | 7 mm | 550 nm | 20" | $1.22 \times 550/7 \times 10^6 \times 206265$ |
+| Hubble | 2.4 m | 550 nm | 0.05" | $1.22 \times 550/2.4 \times 10^9 \times 206265$ |
+| JWST | 6.5 m | 2000 nm | 0.08" | $1.22 \times 2000/6.5 \times 10^9 \times 206265$ |
+| Keck | 10 m | 2000 nm | 0.05" | $1.22 \times 2000/10 \times 10^9 \times 206265$ |
+
+::: {.fragment .mt-2}
+**Note:** JWST at IR has similar resolution to Hubble at visible because of the wavelength difference!
+:::
+
+::: {.notes}
+"Longer wavelengths need larger mirrors to achieve the same resolution."
+:::
+
+---
+
+## Light-Gathering Power: Full Calculation {background-color="#1a1a2e"}
+
+**How much more light does Keck collect than your eye?**
+
+::: {.fragment}
+**Human eye (dark-adapted):** $D_{eye} = 7$ mm = 0.007 m
+**Keck:** $D_{Keck} = 10$ m
+:::
+
+::: {.fragment}
+**Ratio:**
+
+$$\frac{\text{Power}_{Keck}}{\text{Power}_{eye}} = \left(\frac{D_{Keck}}{D_{eye}}\right)^2 = \left(\frac{10 \text{ m}}{0.007 \text{ m}}\right)^2$$
+:::
+
+::: {.fragment}
+$$= (1429)^2 = 2.04 \times 10^6$$
+:::
+
+::: {.fragment .bg-success-subtle .p-2}
+**Keck collects 2 million times more light than your eye!**
+:::
+
+::: {.notes}
+"This is why we build big telescopes. More photons means fainter objects visible."
+:::
+
+---
+
+## {.center background-color="#0a2f5c"}
+
+::: {.r-fit-text}
+Deeper Dive
+:::
+
+*Relativistic Doppler and interferometry*
+
+::: {.notes}
+Optional advanced content.
+:::
+
+---
+
+## When v Approaches c: Relativistic Doppler {background-color="#0a2f5c"}
+
+Our simple formula $\Delta\lambda/\lambda = v/c$ assumes $v \ll c$.
+
+**For fast objects, use the relativistic formula:**
+
+$$\frac{\lambda_{observed}}{\lambda_{rest}} = \sqrt{\frac{1 + v/c}{1 - v/c}}$$
+
+::: {.fragment}
+**Example:** A quasar receding at $v = 0.9c$
+
+$$\frac{\lambda_{obs}}{\lambda_{rest}} = \sqrt{\frac{1.9}{0.1}} = \sqrt{19} = 4.36$$
+
+Light is **redshifted by a factor of 4.36!**
+:::
+
+::: {.notes}
+"Distant quasars and galaxies require relativistic corrections."
+:::
+
+---
+
+## Cosmological Redshift {background-color="#0a2f5c"}
+
+**For very distant galaxies, there's another effect:**
+
+The **expansion of space itself** stretches light waves.
+
+$$z = \frac{\lambda_{obs} - \lambda_{rest}}{\lambda_{rest}} = \frac{\Delta\lambda}{\lambda}$$
+
+::: {.fragment}
+**Relationship to expansion:**
+
+$$1 + z = \frac{a_{now}}{a_{then}}$$
+
+where $a$ is the cosmic scale factor.
+:::
+
+::: {.fragment .mt-2 .text-muted}
+A galaxy at $z = 1$ has light that was emitted when the universe was **half its current size**.
+:::
+
+::: {.notes}
+"Cosmological redshift isn't really a Doppler shift — it's space expanding."
+:::
+
+---
+
+## Interferometry: Virtual Giant Telescopes {background-color="#0a2f5c"}
+
+**Problem:** Building a 100 m mirror is impractical.
+
+**Solution:** Combine light from multiple telescopes!
+
+::: {.fragment}
+**Resolution:**
+
+$$\theta = 1.22 \frac{\lambda}{B}$$
+
+where $B$ = **baseline** (distance between telescopes)
+:::
+
+::: {.fragment}
+**Examples:**
+
+- VLBA (radio): $B = 8600$ km → milliarcsecond resolution
+- Event Horizon Telescope: $B$ = Earth diameter → imaged black hole shadows!
+:::
+
+::: {.notes}
+"This is how we got the famous M87 black hole image."
+:::
+
+---
+
+## EHT Black Hole Image: The Math {background-color="#0a2f5c"}
+
+**Event Horizon Telescope parameters:**
+
+- Baseline: $B \approx 10,000$ km = $10^7$ m
+- Wavelength: $\lambda = 1.3$ mm = $1.3 \times 10^{-3}$ m
+
+::: {.fragment}
+$$\theta = 1.22 \times \frac{1.3 \times 10^{-3}}{10^7} = 1.6 \times 10^{-10} \text{ rad}$$
+:::
+
+::: {.fragment}
+**Convert to microarcseconds:**
+
+$$\theta = 1.6 \times 10^{-10} \times 206,265 \times 10^6 = 33 \text{ μas}$$
+:::
+
+::: {.fragment .bg-muted .p-2}
+**EHT resolution: ~30 microarcseconds**
+
+That's like reading a newspaper in New York from Los Angeles!
+:::
+
+::: {.notes}
+"This resolution was needed to image M87's black hole shadow (about 40 μas)."
+:::
+
+---
+
+## Adaptive Optics: Beating the Atmosphere {background-color="#0a2f5c"}
+
+**Problem:** Earth's atmosphere blurs images ("seeing").
+
+**Solution:** Deformable mirrors that correct in real-time.
+
+::: {.fragment}
+**How it works:**
+
+1. Observe a bright reference star (or create one with a laser)
+2. Measure how atmosphere distorts its image
+3. Flex a mirror hundreds of times per second to compensate
+:::
+
+::: {.fragment .mt-2}
+**Result:** Ground-based telescopes achieve near-space resolution!
+
+Keck with AO: 0.04 arcsec (better than Hubble's 0.05 arcsec)
+:::
+
+::: {.notes}
+"Adaptive optics turns 10 m ground telescopes into Hubble-beaters."
+:::
+
+---
+
+## Questions? {background-image="/assets/images/common/cosmic-cliffs-jwst.png" background-opacity="0.25"}
+
+::: {.text-center .text-xl .mt-4}
+**Doppler reveals motion.**
+
+**Telescopes collect the light.**
+
+**Your toolkit is complete.**
+:::
+
+::: {.notes}
+Remaining time for questions.
+:::

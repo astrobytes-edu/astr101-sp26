@@ -1,0 +1,1084 @@
+---
+title: "The Cosmic Messenger"
+subtitle: "Light Carries Information"
+author: "Dr. Anna Rosen"
+date: "2026-02-09"
+description: "You've never touched a star, yet you know what it's made of. Light is how the universe talks to us."
+draft: false
+
+format:
+  revealjs:
+    theme: [default, ../../../assets/theme/slides/theme.scss]
+    footer: "ASTR 101 • Lecture 7 • Dr. Anna Rosen"
+    slide-number: true
+    transition: fade
+    transition-speed: fast
+    center: false
+    chalkboard: true
+    title-slide-attributes:
+      data-background-image: "/assets/images/common/cosmic-cliffs-jwst.png"
+      data-background-opacity: "0.4"
+    pointer:
+      key: "q"
+      color: "#5dbfbf"
+      pointerSize: 18
+      alwaysVisible: true
+    spotlight:
+      size: 80
+      toggleSpotlightOnMouseDown: true
+      presentingCursor: "crosshair"
+      fadeInAndOut: 100
+    quiz:
+      shuffleOptions: true
+      defaultCorrect: "Correct!"
+      defaultIncorrect: "Not quite — let's discuss."
+
+revealjs-plugins:
+  - pointer
+  - spotlight
+  - attribution
+  - quiz
+
+filters:
+  - roughnotation
+
+execute:
+  echo: false
+  warning: false
+  message: false
+---
+
+## Join iClicker {background-color="black"}
+
+::: {.text-center}
+{{< img iclicker-qr-astr101 width="36%" class="img-center" >}}
+
+::: {.text-xl .font-semibold .mt-2}
+[join.iclicker.com/ASES](https://join.iclicker.com/ASES)
+:::
+
+::: {.text-sm .text-muted .mt-2}
+If you can't scan: open the link and enter the course code **ASES**.
+:::
+:::
+
+::: {.notes}
+30–60 sec. Get everyone connected before starting.
+:::
+
+---
+
+## {background-color="black"}
+
+::: {.r-fit-text}
+You've never touched a star.
+:::
+
+::: {.fragment .text-center .mt-4}
+You never will.
+:::
+
+::: {.fragment .text-center .mt-4}
+Yet you know its temperature, composition, age, mass, and motion.
+:::
+
+::: {.fragment .text-center .mt-4 .text-xl}
+**How?**
+:::
+
+::: {.notes}
+0–1 min. Let the question hang. "The answer is light."
+:::
+
+---
+
+## {background-image="/assets/images/common/cosmic-cliffs-jwst.png" background-opacity="0.3"}
+
+::: {.text-center .text-xl}
+**Light is the universe's messenger.**
+:::
+
+::: {.fragment .mt-4}
+Every photon has a story:
+
+- Its wavelength reveals temperature
+- Spectral shifts reveal motion
+- Specific wavelengths reveal composition
+:::
+
+::: {.notes}
+1–2 min. "Light is how the universe communicates with us."
+:::
+
+---
+
+## Today's Learning Objectives {background-image="/assets/images/common/cosmic-cliffs-jwst.png" background-opacity="0.2"}
+
+::: {.bg-muted .p-2}
+
+By the end of today, you'll be able to:
+
+::: {.incremental .text-sm}
+- Describe light as an **electromagnetic wave** and relate wavelength, frequency, and speed ($c = \lambda f$)
+- Identify the major regions of the **electromagnetic spectrum**
+- Explain why the **sky is blue** and **sunsets are red** (Rayleigh scattering)
+- Explain why **lunar eclipses produce a "blood moon"**
+- Apply the **inverse-square law** for light intensity
+:::
+
+:::
+
+::: {.notes}
+2–3 min. "Today is about what light IS and why wavelength matters."
+:::
+
+---
+
+## Where We Left Off
+
+::: {.text-center}
+**Lectures 5-6:** Motion reveals mass
+:::
+
+::: {.incremental .mt-4}
+- Kepler found patterns in planetary motion
+- Newton explained those patterns with gravity
+- By measuring orbits, we can "weigh" invisible objects
+:::
+
+::: {.fragment .mt-4 .bg-muted .p-2}
+**Today:** Light reveals **everything else** — temperature, composition, velocity, distance.
+:::
+
+::: {.notes}
+3–4 min. "Motion → mass. Light → everything else."
+:::
+
+---
+
+## {.center}
+
+::: {.r-fit-text}
+Part 1: What Is Light?
+:::
+
+*The electromagnetic wave*
+
+---
+
+## Light Is an Electromagnetic Wave {background-color="black"}
+
+:::: {.columns}
+::: {.column width="50%"}
+{{< fig electromagnetic-wave >}}
+:::
+
+::: {.column width="50%"}
+**Electromagnetic wave:**
+
+Self-propagating oscillation of electric and magnetic fields.
+
+::: {.fragment}
+Unlike sound or ocean waves — **no medium needed!**
+
+Light travels perfectly through the vacuum of space.
+:::
+:::
+::::
+
+::: {.notes}
+4–5 min. "This is why we can see starlight from billions of light-years away."
+:::
+
+---
+
+## Two Key Properties {background-color="#1a1a2e"}
+
+| Property | Symbol | What it measures | Units |
+|----------|--------|------------------|-------|
+| **Wavelength** | λ (lambda) | Distance between wave crests | meters (m) or nanometers (nm) |
+| **Frequency** | f | Wave crests passing per second | hertz (Hz) |
+
+::: {.fragment .mt-4 .text-center .text-xl}
+All light travels at the same speed: $c = 3 \times 10^8$ m/s
+:::
+
+::: {.notes}
+5–6 min. "Wavelength and frequency are the two key descriptors."
+:::
+
+---
+
+## The Wave Equation {background-color="#0a2f5c"}
+
+::: {.text-center .text-xl .bg-muted .p-3}
+$$c = \lambda f$$
+:::
+
+::: {.fragment .mt-4}
+Since $c$ is constant:
+
+- **Longer wavelength** ↔ **lower frequency**
+- **Shorter wavelength** ↔ **higher frequency**
+:::
+
+::: {.fragment .mt-4 .text-muted}
+Wavelength and frequency carry the same information — two ways to describe the same wave.
+:::
+
+::: {.notes}
+6–7 min. "Double the wavelength means half the frequency."
+:::
+
+---
+
+## Quick Check: Wavelength and Frequency {background-color="#1a1a2e"}
+
+::: {.quiz}
+If one type of light has twice the wavelength of another, it has:
+
+- [ ] Twice the frequency
+- [x] Half the frequency
+- [ ] The same frequency
+- [ ] Four times the frequency
+:::
+
+::: {.notes}
+1 min. iClicker poll.
+:::
+
+---
+
+## {.center}
+
+::: {.r-fit-text}
+The Electromagnetic Spectrum
+:::
+
+*More than meets the eye*
+
+---
+
+## Visible Light Is a Tiny Sliver {background-color="black"}
+
+{{< fig jwst-em-spectrum >}}
+
+::: {.fragment .mt-2 .text-center}
+"Visible light" — the colors we see — is just a tiny fraction of the full spectrum.
+:::
+
+::: {.notes}
+7–8 min. "Radio to gamma rays — all are light. All travel at speed c."
+:::
+
+---
+
+## The Full Spectrum {background-color="#1a1a2e"}
+
+| Region | Wavelength | Astronomical Uses |
+|--------|------------|-------------------|
+| **Radio** | > 10 cm | Mapping hydrogen, pulsars |
+| **Microwave** | 1 mm – 10 cm | CMB, cold dust |
+| **Infrared** | 700 nm – 1 mm | Dust-obscured regions, cool stars |
+| **Visible** | 400 – 700 nm | Direct imaging, stellar classification |
+| **Ultraviolet** | 10 – 400 nm | Hot gas, stellar nurseries |
+| **X-ray** | 0.01 – 10 nm | Black holes, neutron stars |
+| **Gamma ray** | < 0.01 nm | Supernovae, gamma-ray bursts |
+
+::: {.notes}
+8–9 min. "Different wavelengths reveal different physics."
+:::
+
+---
+
+## Same Object, Different Wavelengths {background-color="black"}
+
+{{< fig jwst-vs-hst-ngc1566 >}}
+
+::: {.fragment .mt-2 .text-center}
+**The universe looks different at every wavelength.**
+:::
+
+::: {.notes}
+9–10 min. "This is why astronomers build different types of telescopes."
+:::
+
+---
+
+## Quick Check: Ordering the Spectrum {background-color="#1a1a2e"}
+
+::: {.quiz}
+Which correctly orders these from longest to shortest wavelength?
+
+- [ ] Gamma rays → X-rays → UV → Visible → Infrared → Radio
+- [x] Radio → Infrared → Visible → UV → X-rays → Gamma rays
+- [ ] Visible → UV → Infrared → Radio → X-rays → Gamma rays
+- [ ] Microwave → Radio → Visible → Infrared → Gamma rays
+:::
+
+::: {.notes}
+1 min. iClicker poll.
+:::
+
+---
+
+## Quick Check: Multiwavelength Astronomy {background-color="#1a1a2e"}
+
+::: {.quiz}
+Why do astronomers observe the same object at different wavelengths?
+
+- [ ] Different telescopes are in different locations
+- [x] Different wavelengths reveal different physical processes
+- [ ] It's cheaper to use old telescopes
+- [ ] Visible light is too faint
+:::
+
+::: {.notes}
+1 min. iClicker poll.
+:::
+
+---
+
+## The Speed of Light {background-color="black"}
+
+::: {.text-center .text-xl}
+$c = 299,792,458$ m/s
+
+~300,000 km/s
+:::
+
+::: {.fragment .mt-4}
+**This is the cosmic speed limit.**
+
+Nothing with mass can reach it.
+:::
+
+::: {.fragment .mt-4 .text-muted}
+And because light has finite speed...
+
+**looking out in space is looking back in time.**
+:::
+
+::: {.notes}
+10–11 min. "The farther we see, the younger the universe appears."
+:::
+
+---
+
+## Light-Travel Time {background-color="#1a1a2e"}
+
+| Object | Distance | Light-Travel Time |
+|--------|----------|-------------------|
+| Moon | 384,000 km | 1.3 seconds |
+| Sun | 150 million km | 8 minutes |
+| Proxima Centauri | 4.2 light-years | 4.2 years |
+| Andromeda Galaxy | 2.5 million light-years | 2.5 million years |
+| Distant galaxies | Billions of light-years | Billions of years |
+
+::: {.fragment .mt-2 .text-muted}
+When we observe the most distant galaxies, we're seeing the early universe directly.
+:::
+
+::: {.notes}
+11–12 min. "The farther we look, the farther back in time we see."
+:::
+
+---
+
+## Quick Check: Light Travel Time {background-color="#1a1a2e"}
+
+::: {.quiz}
+When we observe the Andromeda Galaxy (2.5 million light-years away), we see it as it was:
+
+- [ ] Right now, in real time
+- [ ] 2.5 years ago
+- [x] 2.5 million years ago
+- [ ] Billions of years ago
+:::
+
+::: {.notes}
+1 min. iClicker poll.
+:::
+
+---
+
+## {.center}
+
+::: {.r-fit-text}
+Part 2: Why Is the Sky Blue?
+:::
+
+*Rayleigh scattering*
+
+---
+
+## Sunlight Is All Colors {background-color="black"}
+
+{{< fig prism-spectrum-jwst >}}
+
+::: {.fragment .mt-2}
+Sunlight is **white light** — a mix of all visible wavelengths.
+
+So why does the sky favor blue?
+:::
+
+::: {.notes}
+12–13 min. "If sunlight has all colors, why is the sky blue?"
+:::
+
+---
+
+## Rayleigh Scattering {background-color="#0a2f5c"}
+
+::: {.text-center .text-xl .bg-muted .p-3}
+$$\text{Scattering} \propto \frac{1}{\lambda^4}$$
+
+**Shorter wavelengths scatter MUCH more.**
+:::
+
+::: {.fragment .mt-4}
+Comparing blue ($\lambda \approx 450$ nm) and red ($\lambda \approx 700$ nm):
+
+$$\left(\frac{700}{450}\right)^4 \approx 6$$
+
+Blue scatters about **6× more** than red!
+:::
+
+::: {.notes}
+13–14 min. "The 1/λ⁴ makes a huge difference."
+:::
+
+---
+
+## Why the Sky Is Blue {background-color="black"}
+
+{{< fig rayleigh-scattering-sky >}}
+
+::: {.fragment}
+Blue photons scatter all over the sky → reach your eyes from every direction.
+
+Red photons mostly travel straight through.
+:::
+
+::: {.notes}
+14–15 min. "Blue gets scattered everywhere; red goes straight through."
+:::
+
+---
+
+## Why Sunsets Are Red {background-color="black"}
+
+{{< fig sunset-scattering >}}
+
+::: {.fragment}
+At sunset, sunlight travels through **much more atmosphere**.
+
+Blue is scattered away → you see the remaining **reds and oranges**.
+:::
+
+::: {.notes}
+15–16 min. "Same physics, different geometry."
+:::
+
+---
+
+## Quick Check: Rayleigh Scattering {background-color="#1a1a2e"}
+
+::: {.quiz}
+Blue light scatters more than red light because:
+
+- [ ] Blue light is faster than red light
+- [x] Shorter wavelengths scatter more in Rayleigh scattering ($\propto 1/\lambda^4$)
+- [ ] Air molecules are blue
+- [ ] The Sun emits more blue light
+:::
+
+::: {.notes}
+1 min. iClicker poll.
+:::
+
+---
+
+## Quick Check: Sunsets {background-color="#1a1a2e"}
+
+::: {.quiz}
+Sunsets appear red because:
+
+- [ ] The Sun turns red as it sets
+- [ ] The atmosphere filters out red light, leaving blue
+- [x] Blue light has been scattered away on the long path through atmosphere
+- [ ] Dust particles block the blue
+:::
+
+::: {.notes}
+1 min. iClicker poll.
+:::
+
+---
+
+## {.center}
+
+::: {.r-fit-text}
+The Blood Moon
+:::
+
+*Same physics, cosmic scale*
+
+---
+
+## Lunar Eclipse Puzzle {background-color="black"}
+
+::: {.text-center .text-xl}
+During a total lunar eclipse, the Moon doesn't go dark — it turns **deep red**.
+:::
+
+::: {.fragment .mt-4}
+Why doesn't it go completely dark?
+
+The Moon is in Earth's shadow — no direct sunlight reaches it...
+:::
+
+::: {.notes}
+16–17 min. "Apply what you just learned about Rayleigh scattering!"
+:::
+
+---
+
+## Earth's Atmosphere as Filter {background-color="black"}
+
+{{< fig lunar-eclipse-red >}}
+
+::: {.fragment}
+1. Sunlight passes through Earth's atmosphere
+2. Blue light scatters away (Rayleigh!)
+3. Only **red light** makes it through
+4. That red light bends toward the Moon
+:::
+
+::: {.notes}
+17–18 min. "It's the light from every sunset on Earth, focused on the Moon."
+:::
+
+---
+
+## Quick Check: Blood Moon {background-color="#1a1a2e"}
+
+::: {.quiz}
+During a total lunar eclipse, the Moon appears red because:
+
+- [ ] The Moon reflects Mars's light
+- [x] Earth's atmosphere scatters blue away, letting red sunlight reach the Moon
+- [ ] The Moon's surface is actually red
+- [ ] The Sun becomes cooler during eclipses
+:::
+
+::: {.notes}
+1 min. iClicker poll.
+:::
+
+---
+
+## {.center}
+
+::: {.r-fit-text}
+Part 3: Light Intensity
+:::
+
+*Another inverse-square law*
+
+---
+
+## Inverse-Square Law for Light {background-color="#0a2f5c"}
+
+::: {.text-center .text-xl .bg-muted .p-3}
+$$I \propto \frac{1}{r^2}$$
+
+**Double your distance → receive 1/4 the intensity**
+:::
+
+::: {.fragment .mt-4}
+Why? Light spreads over spheres.
+
+Sphere area $= 4\pi r^2$ → intensity drops as $1/r^2$.
+:::
+
+::: {.fragment .mt-4 .text-muted}
+Same geometric argument as gravity (L6)!
+:::
+
+::: {.notes}
+18–19 min. "Same spreading-over-spheres argument as gravity."
+:::
+
+---
+
+## {background-color="black"}
+
+{{< fig light-inverse-square >}}
+
+::: {.notes}
+19–20 min. Visual of inverse-square spreading.
+:::
+
+---
+
+## Distance and Brightness {background-color="#1a1a2e"}
+
+| Distance Change | Intensity Change |
+|-----------------|------------------|
+| 2× farther | 1/4 as bright |
+| 3× farther | 1/9 as bright |
+| 10× farther | 1/100 as bright |
+| 100× farther | 1/10,000 as bright |
+
+::: {.fragment .mt-4 .text-center}
+**If we know true luminosity and measure apparent brightness, we can calculate distance!**
+:::
+
+::: {.notes}
+20–21 min. "This is the foundation of distance measurement in astronomy."
+:::
+
+---
+
+## Quick Check: Distance and Brightness {background-color="#1a1a2e"}
+
+::: {.quiz}
+A star appears 16 times fainter than an identical star nearby. How much farther away is the faint star?
+
+- [x] 4× farther
+- [ ] 16× farther
+- [ ] 8× farther
+- [ ] 2× farther
+:::
+
+::: {.fragment .mt-2 .text-sm}
+**Solution:** $I \propto 1/r^2$. If $I = 1/16$, then $r = 4$.
+:::
+
+::: {.notes}
+1–2 min. iClicker poll, then explain.
+:::
+
+---
+
+## Quick Check: Two Stars {background-color="#1a1a2e"}
+
+::: {.quiz}
+Star A is 5× farther away than Star B. If they have the same luminosity, Star A appears:
+
+- [ ] 5× fainter
+- [ ] 10× fainter
+- [x] 25× fainter
+- [ ] 125× fainter
+:::
+
+::: {.fragment .mt-2 .text-sm}
+**Solution:** Distance ×5 → intensity drops by $5^2 = 25$.
+:::
+
+::: {.notes}
+1–2 min. iClicker poll, then explain.
+:::
+
+---
+
+## Key Takeaways {background-color="#0a2f5c"}
+
+::: {.text-sm}
+
+1. **Light is an electromagnetic wave.** $c = \lambda f$ where $c = 3 \times 10^8$ m/s.
+
+2. **The EM spectrum spans radio → gamma rays.** Visible light is a tiny sliver.
+
+3. **Rayleigh scattering:** Short wavelengths scatter more ($\propto 1/\lambda^4$). Sky = blue. Sunset = red.
+
+4. **Lunar eclipses are red** — same physics as sunsets, projected on the Moon.
+
+5. **Light intensity follows the inverse-square law:** $I \propto 1/r^2$.
+
+6. **Light is the astronomer's primary tool.** We extract temperature, composition, motion, and distance — all from light.
+
+:::
+
+::: {.notes}
+21–23 min. Rapid recap.
+:::
+
+---
+
+## The Course Connection {background-color="black"}
+
+::: {.text-center}
+**L5-L6:** Motion reveals mass
+
+**L7-L8:** Light reveals temperature
+
+**L9:** Spectral lines reveal composition and motion
+:::
+
+::: {.fragment .mt-4}
+Together: We can measure a star's temperature, mass, composition, and velocity — all without touching anything.
+:::
+
+::: {.notes}
+23–24 min. "The astronomer's toolkit."
+:::
+
+---
+
+## Coming Up: Temperature from Light {background-color="black"}
+
+::: {.text-center .text-xl}
+**Next lecture:** Everything glows.
+:::
+
+::: {.fragment .mt-4}
+Hotter objects glow **bluer** and **brighter**.
+
+By analyzing the spectrum, we can read an object's temperature from billions of kilometers away.
+:::
+
+::: {.fragment .mt-4 .text-muted}
+**Reading:** Lecture 8 Reading Companion
+:::
+
+::: {.notes}
+24–25 min. Preview blackbody radiation.
+:::
+
+---
+
+## {.center background-color="#1a1a2e"}
+
+::: {.r-fit-text}
+Numerical Verification
+:::
+
+*Checking the wave equation and scattering*
+
+::: {.notes}
+Let's verify our equations with explicit calculations.
+:::
+
+---
+
+## Verifying c = λf {background-color="#1a1a2e"}
+
+**Given:** Red light has wavelength $\lambda = 700$ nm. What's its frequency?
+
+::: {.fragment}
+**Step 1: Convert wavelength to meters**
+
+$$\lambda = 700 \text{ nm} \times \frac{10^{-9} \text{ m}}{1 \text{ nm}} = 7.00 \times 10^{-7} \text{ m}$$
+:::
+
+::: {.fragment}
+**Step 2: Solve for frequency**
+
+$$f = \frac{c}{\lambda} = \frac{3.00 \times 10^8 \text{ m/s}}{7.00 \times 10^{-7} \text{ m}}$$
+:::
+
+::: {.fragment}
+$$f = 4.29 \times 10^{14} \text{ Hz} = 4.29 \times 10^{14} \text{ s}^{-1}$$
+:::
+
+::: {.fragment .mt-2 .text-muted}
+**Unit check:** $\frac{\text{m/s}}{\text{m}} = \frac{1}{\text{s}} = \text{Hz}$ ✓
+:::
+
+::: {.notes}
+"Red light oscillates 429 trillion times per second. That's what frequency means."
+:::
+
+---
+
+## Frequency Comparison Across the Spectrum {background-color="#1a1a2e"}
+
+| Type | Wavelength | Frequency | Calculation |
+|------|------------|-----------|-------------|
+| Radio (FM) | 3 m | $10^8$ Hz | $\frac{3 \times 10^8}{3} = 10^8$ |
+| Microwave | 1 cm | $3 \times 10^{10}$ Hz | $\frac{3 \times 10^8}{10^{-2}}$ |
+| Red light | 700 nm | $4.3 \times 10^{14}$ Hz | $\frac{3 \times 10^8}{7 \times 10^{-7}}$ |
+| Blue light | 450 nm | $6.7 \times 10^{14}$ Hz | $\frac{3 \times 10^8}{4.5 \times 10^{-7}}$ |
+| X-ray | 1 nm | $3 \times 10^{17}$ Hz | $\frac{3 \times 10^8}{10^{-9}}$ |
+
+::: {.fragment .mt-2}
+**Pattern:** Shorter wavelength → higher frequency (always!)
+:::
+
+::: {.notes}
+"The relationship is inverse. As λ decreases, f increases proportionally."
+:::
+
+---
+
+## Rayleigh Scattering: Full Calculation {background-color="#1a1a2e"}
+
+**How much more does blue scatter than red?**
+
+Blue: $\lambda_b = 450$ nm, Red: $\lambda_r = 700$ nm
+
+::: {.fragment}
+**Scattering ratio:**
+
+$$\frac{\text{Scattering}_{\text{blue}}}{\text{Scattering}_{\text{red}}} = \frac{1/\lambda_b^4}{1/\lambda_r^4} = \left(\frac{\lambda_r}{\lambda_b}\right)^4$$
+:::
+
+::: {.fragment}
+$$= \left(\frac{700 \text{ nm}}{450 \text{ nm}}\right)^4 = (1.556)^4$$
+:::
+
+::: {.fragment}
+$$= 5.86 \approx 6$$
+:::
+
+::: {.fragment .bg-muted .p-2}
+**Blue light scatters ~6× more than red light.**
+
+Units cancel (nm/nm)⁴ = dimensionless ratio ✓
+:::
+
+::: {.notes}
+"The fourth power makes a huge difference. Even a modest wavelength ratio becomes significant."
+:::
+
+---
+
+## Why Not Violet? {background-color="#1a1a2e"}
+
+Violet ($\lambda \approx 400$ nm) scatters even MORE than blue:
+
+$$\left(\frac{700}{400}\right)^4 = (1.75)^4 = 9.4$$
+
+**Violet scatters 9× more than red!**
+
+::: {.fragment .mt-4}
+**So why isn't the sky violet?**
+
+1. The Sun emits **less violet** than blue (blackbody spectrum)
+2. Our eyes are **less sensitive** to violet
+3. Some violet is absorbed by ozone
+:::
+
+::: {.fragment .mt-2}
+**Result:** We perceive the scattered light as **blue**, not violet.
+:::
+
+::: {.notes}
+"Physics says violet should dominate, but the Sun's spectrum and our eye sensitivity favor blue."
+:::
+
+---
+
+## Inverse-Square Law: Star Distance Problem {background-color="#1a1a2e"}
+
+**Problem:** Star A appears 100× fainter than Star B. If they're identical, how much farther is Star A?
+
+::: {.fragment}
+**From inverse-square law:**
+
+$$\frac{I_A}{I_B} = \frac{r_B^2}{r_A^2}$$
+:::
+
+::: {.fragment}
+$$\frac{1}{100} = \frac{r_B^2}{r_A^2}$$
+:::
+
+::: {.fragment}
+**Solving for distance ratio:**
+
+$$\frac{r_A}{r_B} = \sqrt{100} = 10$$
+:::
+
+::: {.fragment .bg-success-subtle .p-2}
+**Star A is 10× farther away.**
+
+Note: We don't need absolute distances — just the ratio!
+:::
+
+::: {.notes}
+"This is how astronomers bootstrap the distance ladder. Compare identical objects at different distances."
+:::
+
+---
+
+## Light Travel Time: Proxima Centauri {background-color="#1a1a2e"}
+
+**Given:** Proxima Centauri is 4.24 light-years away. Express this in km.
+
+::: {.fragment}
+**Step 1: How far does light travel in 1 year?**
+
+$$d_{1\text{yr}} = c \times t = (3.00 \times 10^5 \text{ km/s}) \times (1 \text{ year})$$
+:::
+
+::: {.fragment}
+**Convert 1 year to seconds:**
+
+$$1 \text{ yr} = 365.25 \text{ days} \times 24 \text{ hr/day} \times 3600 \text{ s/hr} = 3.156 \times 10^7 \text{ s}$$
+:::
+
+::: {.fragment}
+$$d_{1\text{ly}} = 3.00 \times 10^5 \times 3.156 \times 10^7 = 9.47 \times 10^{12} \text{ km}$$
+:::
+
+::: {.fragment}
+**Distance to Proxima Centauri:**
+
+$$d = 4.24 \times 9.47 \times 10^{12} \text{ km} = 4.01 \times 10^{13} \text{ km}$$
+:::
+
+::: {.notes}
+"40 trillion km to the nearest star. Space is incomprehensibly vast."
+:::
+
+---
+
+## {.center background-color="#0a2f5c"}
+
+::: {.r-fit-text}
+Deeper Dive
+:::
+
+*Photon energy and the quantum nature of light*
+
+::: {.notes}
+Optional advanced content bridging to L8-L9.
+:::
+
+---
+
+## Light as Particles: Photons {background-color="#0a2f5c"}
+
+Light behaves as both a **wave** and a **particle**.
+
+Each particle of light — a **photon** — carries energy:
+
+$$E = hf = \frac{hc}{\lambda}$$
+
+::: {.fragment}
+**Where:**
+
+- $h = 6.626 \times 10^{-34}$ J·s (Planck's constant)
+- $c = 3.00 \times 10^8$ m/s
+- $hc = 1.986 \times 10^{-25}$ J·m
+:::
+
+::: {.notes}
+"This quantum nature of light is what we'll need to understand spectral lines in L9."
+:::
+
+---
+
+## Photon Energy: Useful Forms {background-color="#0a2f5c"}
+
+**In Joules** (SI units):
+
+$$E = \frac{1.986 \times 10^{-25} \text{ J·m}}{\lambda \text{ (in meters)}}$$
+
+::: {.fragment}
+**In electron-volts** (more convenient for atoms):
+
+$$E = \frac{1240 \text{ eV·nm}}{\lambda \text{ (in nm)}}$$
+:::
+
+::: {.fragment .mt-4}
+**Example:** Red photon ($\lambda = 620$ nm)
+
+$$E = \frac{1240 \text{ eV·nm}}{620 \text{ nm}} = 2.0 \text{ eV}$$
+:::
+
+::: {.notes}
+"The 1240 eV·nm is a convenient number to memorize. It comes from hc in these units."
+:::
+
+---
+
+## Where Does 1240 eV·nm Come From? {background-color="#0a2f5c"}
+
+::: {.text-sm}
+$$hc = (6.626 \times 10^{-34} \text{ J·s}) \times (3.00 \times 10^8 \text{ m/s})$$
+
+$$= 1.988 \times 10^{-25} \text{ J·m}$$
+
+::: {.fragment}
+**Convert J to eV:**
+
+$$1 \text{ eV} = 1.602 \times 10^{-19} \text{ J}$$
+
+$$hc = \frac{1.988 \times 10^{-25} \text{ J·m}}{1.602 \times 10^{-19} \text{ J/eV}} = 1.241 \times 10^{-6} \text{ eV·m}$$
+:::
+
+::: {.fragment}
+**Convert m to nm:**
+
+$$hc = 1.241 \times 10^{-6} \text{ eV·m} \times \frac{10^9 \text{ nm}}{1 \text{ m}} = 1241 \text{ eV·nm}$$
+:::
+:::
+
+::: {.fragment .bg-muted .p-2}
+We round to **1240 eV·nm** for convenience.
+:::
+
+::: {.notes}
+"I'm showing you the derivation so you understand where this number comes from. Always know your units!"
+:::
+
+---
+
+## Photon Energies Across the Spectrum {background-color="#0a2f5c"}
+
+| Light Type | Wavelength | Energy | Calculation |
+|------------|------------|--------|-------------|
+| Radio | 1 m = 10⁹ nm | $1.24 \times 10^{-6}$ eV | $\frac{1240}{10^9}$ |
+| Infrared | 10,000 nm | 0.124 eV | $\frac{1240}{10000}$ |
+| Red | 620 nm | 2.0 eV | $\frac{1240}{620}$ |
+| Blue | 450 nm | 2.76 eV | $\frac{1240}{450}$ |
+| UV | 100 nm | 12.4 eV | $\frac{1240}{100}$ |
+| X-ray | 1 nm | 1,240 eV | $\frac{1240}{1}$ |
+
+::: {.fragment .mt-2}
+**Pattern:** Shorter wavelength = higher energy photons
+:::
+
+::: {.notes}
+"This is why X-rays are dangerous and radio waves aren't. It's about energy per photon."
+:::
+
+---
+
+## Why UV Causes Sunburn {background-color="#0a2f5c"}
+
+**Key threshold:** Breaking chemical bonds requires ~3-10 eV.
+
+::: {.fragment}
+- **Visible light** (1.8-3.1 eV): Not enough energy to break bonds
+- **UV-A** (3.1-3.9 eV): Can damage some molecules
+- **UV-B** (3.9-4.4 eV): Breaks DNA bonds → sunburn
+- **UV-C** (4.4-12.4 eV): Very damaging (blocked by ozone)
+:::
+
+::: {.fragment .mt-4 .bg-warning-subtle .p-2}
+**It's not about intensity — it's about energy per photon.**
+
+A trillion low-energy photons won't break a bond that one high-energy photon can.
+:::
+
+::: {.notes}
+"This is why you can sit under a bright red lamp all day with no damage, but minutes of UV causes burns."
+:::
+
+---
+
+## Questions? {background-image="/assets/images/common/cosmic-cliffs-jwst.png" background-opacity="0.25"}
+
+::: {.text-center .text-xl .mt-4}
+**Light is the universe's messenger.**
+
+Every photon carries information.
+:::
+
+::: {.notes}
+Remaining time for questions.
+:::

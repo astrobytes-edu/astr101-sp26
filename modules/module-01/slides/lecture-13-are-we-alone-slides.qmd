@@ -1,0 +1,842 @@
+---
+title: "Are We Alone?"
+subtitle: "Module 1 Synthesis — The Drake Equation"
+author: "Dr. Anna Rosen"
+date: "2026-02-27"
+description: "Your favorite NASA science question — approached as astronomy. The Drake Equation organizes what we know and don't know about cosmic company."
+draft: false
+
+format:
+  revealjs:
+    theme: [default, ../../../assets/theme/slides/theme.scss]
+    footer: "ASTR 101 • Lecture 13 • Dr. Anna Rosen"
+    slide-number: true
+    transition: fade
+    transition-speed: fast
+    center: false
+    chalkboard: true
+    title-slide-attributes:
+      data-background-image: "/assets/images/common/cosmic-cliffs-jwst.png"
+      data-background-opacity: "0.4"
+    pointer:
+      key: "q"
+      color: "#5dbfbf"
+      pointerSize: 18
+      alwaysVisible: true
+    spotlight:
+      size: 80
+      toggleSpotlightOnMouseDown: true
+      presentingCursor: "crosshair"
+      fadeInAndOut: 100
+    quiz:
+      shuffleOptions: true
+      defaultCorrect: "Correct!"
+      defaultIncorrect: "Not quite — let's discuss."
+
+revealjs-plugins:
+  - pointer
+  - spotlight
+  - attribution
+  - quiz
+
+filters:
+  - roughnotation
+
+execute:
+  echo: false
+  warning: false
+  message: false
+---
+
+## Join iClicker {background-color="black"}
+
+::: {.text-center}
+{{< img iclicker-qr-astr101 width="36%" class="img-center" >}}
+
+::: {.text-xl .font-semibold .mt-2}
+[join.iclicker.com/ASES](https://join.iclicker.com/ASES)
+:::
+:::
+
+::: {.notes}
+30–60 sec. Get everyone connected before starting.
+:::
+
+---
+
+## {background-color="black"}
+
+::: {.r-fit-text}
+Your Favorite Question
+:::
+
+::: {.fragment .text-center .mt-4 .text-xl}
+"Are we alone in the universe?"
+:::
+
+::: {.fragment .mt-4 .text-muted}
+Today: Not philosophy. Not science fiction.
+
+**Astronomy.**
+:::
+
+::: {.notes}
+0–1 min. "We'll approach this as scientists."
+:::
+
+---
+
+## Today's Objectives {background-image="/assets/images/common/cosmic-cliffs-jwst.png" background-opacity="0.2"}
+
+::: {.bg-muted .p-2}
+
+By the end of today, you'll be able to:
+
+::: {.incremental .text-sm}
+- Explain the **Drake Equation** and identify which terms we know vs. don't know
+- Describe why **heavy elements** are necessary for rocky planets and life
+- Connect **Module 1 concepts** to the search for life
+- **Synthesize** all Module 1 tools: gravity, orbits, light, spectra, Doppler
+:::
+
+:::
+
+::: {.notes}
+1–2 min. "This is the Module 1 synthesis lecture."
+:::
+
+---
+
+## {.center}
+
+::: {.r-fit-text}
+Part 1: The Drake Equation
+:::
+
+*A framework for the question*
+
+---
+
+## The Drake Equation (1961) {background-color="#0a2f5c"}
+
+::: {.text-center .bg-muted .p-3}
+$$N = R_* \times f_p \times n_e \times f_l \times f_i \times f_c \times L$$
+
+$N$ = number of communicating civilizations in our galaxy
+:::
+
+::: {.fragment .mt-4 .text-muted}
+Frank Drake didn't expect to calculate an exact answer.
+
+The equation is a **framework** — it organizes what we need to know.
+:::
+
+::: {.notes}
+2–3 min. "Drake's equation organizes the question."
+:::
+
+---
+
+## The Terms {background-color="#1a1a2e"}
+
+::: {.text-sm}
+| Symbol | Meaning |
+|--------|---------|
+| $R_*$ | Star formation rate (new stars/year) |
+| $f_p$ | Fraction of stars with planets |
+| $n_e$ | Habitable planets per system |
+| $f_l$ | Fraction that develop life |
+| $f_i$ | Fraction with intelligence |
+| $f_c$ | Fraction that communicate |
+| $L$ | Civilization lifetime (years) |
+:::
+
+::: {.notes}
+3–4 min. "Seven terms to estimate."
+:::
+
+---
+
+## What We Know (Terms 1-3) {background-color="#16a34a"}
+
+| Term | Value | How We Know |
+|------|-------|-------------|
+| $R_*$ | ~2-7/year | Star counts, luminosity |
+| $f_p$ | ~1 | **Kepler mission!** (L12) |
+| $n_e$ | ~0.1-0.5 | Kepler + habitable zone (L12) |
+
+::: {.fragment .mt-4}
+**Major progress:** Before Kepler (2009), we didn't know if planets were common.
+
+Now we know: **at least one planet per star on average.**
+:::
+
+::: {.notes}
+4–5 min. "The first three terms are now reasonably constrained."
+:::
+
+---
+
+## Quick Check: What Kepler Told Us {background-color="#1a1a2e"}
+
+::: {.quiz}
+Which Drake Equation term became MUCH better constrained thanks to the Kepler mission?
+
+- [ ] $f_l$ (fraction that develop life)
+- [x] $f_p$ (fraction of stars with planets)
+- [ ] $L$ (civilization lifetime)
+- [ ] $f_i$ (fraction with intelligence)
+:::
+
+::: {.notes}
+1 min. iClicker poll.
+:::
+
+---
+
+## What We Don't Know (Terms 4-7) {background-color="#dc2626"}
+
+| Term | Value | Status |
+|------|-------|--------|
+| $f_l$ | ? | **Unknown** — 1 data point (Earth) |
+| $f_i$ | ? | **Unknown** |
+| $f_c$ | ? | **Unknown** |
+| $L$ | ? | **The most sobering term** |
+
+::: {.fragment .mt-4 .text-muted}
+These four terms span our ignorance — and swing $N$ by **billions**.
+:::
+
+::: {.notes}
+5–6 min. "The last four terms are completely uncertain."
+:::
+
+---
+
+## Three Scenarios {background-color="#1a1a2e"}
+
+::: {.text-sm}
+| Scenario | Known terms | $f_l \times f_i \times f_c$ | $L$ | **N** |
+|----------|-------------|---------------------------|-----|-------|
+| Pessimistic | 0.6 | 0.000001 | 100 | ~0.00006 |
+| Middle | 0.6 | 0.001 | 10,000 | ~6 |
+| Optimistic | 0.6 | 0.125 | 1,000,000 | ~75,000 |
+:::
+
+::: {.fragment .mt-4 .text-center}
+**Same first three terms — result swings by 9 orders of magnitude!**
+:::
+
+::: {.notes}
+6–7 min. "The uncertainty is enormous."
+:::
+
+---
+
+## The Staggering Numbers {background-color="black"}
+
+::: {.text-center}
+The Drake Equation applies to the **Milky Way**.
+
+But zoom out...
+:::
+
+::: {.fragment .mt-4}
+| Scale | Number |
+|-------|--------|
+| Stars in Milky Way | ~10¹¹ (100-400 billion) |
+| Galaxies in observable universe | ~10¹¹-10¹² |
+| **Total stars** | up to ~10²⁴ |
+:::
+
+::: {.fragment .mt-4 .text-muted}
+More stars than grains of sand on all of Earth's beaches.
+:::
+
+::: {.notes}
+7–8 min. "The scale is incomprehensible."
+:::
+
+---
+
+## The Fermi Paradox {background-color="#1a1a2e"}
+
+::: {.text-center .text-xl}
+"Where is everybody?" — Enrico Fermi (1950)
+:::
+
+::: {.fragment .mt-4}
+If numbers are so large, why no signs of extraterrestrial intelligence?
+
+**Possible answers:**
+
+- Life is extremely rare ($f_l \times f_i \ll 1$)
+- Civilizations don't last long ($L$ is small)
+- They're not interested in communicating
+- We haven't looked hard enough yet
+:::
+
+::: {.notes}
+8–9 min. "The Fermi Paradox remains unsolved."
+:::
+
+---
+
+## {.center}
+
+::: {.r-fit-text}
+Part 2: The Missing Ingredients
+:::
+
+*Why the early universe was metal-poor*
+
+---
+
+## Stars Made the Ingredients {background-color="black"}
+
+::: {.text-center}
+The early universe was **almost entirely hydrogen and helium**.
+
+No carbon. No oxygen. No iron.
+:::
+
+::: {.fragment .mt-4}
+**Rocky planets require heavy elements.**
+
+Life requires carbon, oxygen, nitrogen...
+
+**Where did they come from?**
+:::
+
+::: {.fragment .mt-4 .text-xl}
+**Stars made them.**
+:::
+
+::: {.notes}
+9–10 min. "Heavy elements came from stars."
+:::
+
+---
+
+## Stars as Element Factories {background-color="#1a1a2e"}
+
+::: {.incremental}
+- **H → He:** Main sequence stars (like the Sun)
+- **He → C, O:** Red giant stars
+- **C, O → ... → Fe:** Massive stars
+- **Beyond Fe:** Supernovae, neutron star mergers
+:::
+
+::: {.fragment .mt-4}
+When stars die, they scatter elements into space.
+
+Next generation of stars (and planets) forms from enriched material.
+:::
+
+::: {.notes}
+10–11 min. "Stellar nucleosynthesis."
+:::
+
+---
+
+## Quick Check: Early Universe {background-color="#1a1a2e"}
+
+::: {.quiz}
+Why were Earth-like rocky planets unlikely in the early universe?
+
+- [ ] It was too hot
+- [ ] There were no galaxies yet
+- [x] Heavy elements (metals) hadn't been created yet
+- [ ] Gravity was weaker
+:::
+
+::: {.notes}
+1 min. iClicker poll.
+:::
+
+---
+
+## {.center}
+
+::: {.r-fit-text}
+Part 3: Module 1 Synthesis
+:::
+
+*The toolkit, complete*
+
+---
+
+## Your Module 1 Toolkit {background-color="#0a2f5c"}
+
+::: {.text-sm}
+| Lecture | Tool | What It Reveals |
+|---------|------|-----------------|
+| L5 | Kepler's Laws | Orbits, periods, distances |
+| L6 | Newton's Gravity | **Mass from motion** |
+| L7-L8 | Blackbody/Wien | **Temperature from light** |
+| L9 | Spectral Lines | **Composition from light** |
+| L10 | Doppler Effect | **Motion from light** |
+| L11-12 | Applications | Solar system, exoplanets, climate |
+:::
+
+::: {.notes}
+11–12 min. "All the tools you've learned."
+:::
+
+---
+
+## How Everything Connects {background-color="black"}
+
+**LIGHT (L7-L10):**
+
+- Continuous spectrum → Temperature (Wien, Stefan-Boltzmann)
+- Spectral lines → Composition
+- Doppler shift → Radial velocity
+
+**GRAVITY (L5-L6):**
+
+- Kepler → Orbits
+- Newton → Mass from motion
+
+**TOGETHER → Exoplanets, climate, search for life**
+
+::: {.notes}
+12–13 min. "Everything connects."
+:::
+
+---
+
+## Key Equations {background-color="#1a1a2e"}
+
+::: {.text-sm}
+| Equation | What It Does |
+|----------|--------------|
+| $P^2 = a^3$ (years, AU) | Kepler III — periods & distances |
+| $M = 4\pi^2 a^3/(GP^2)$ | Mass from orbits |
+| $\lambda_{peak} = 2.9 \times 10^6/T$ | Wien — temperature |
+| $L = 4\pi R^2 \sigma T^4$ | Stefan-Boltzmann — luminosity |
+| $\Delta\lambda/\lambda_0 = v/c$ | Doppler — velocity |
+| depth = $(R_p/R_*)^2$ | Transit — planet size |
+:::
+
+::: {.notes}
+13–14 min. "Key equations for the exam."
+:::
+
+---
+
+## Key Takeaways {background-color="#0a2f5c"}
+
+::: {.text-sm}
+
+**Drake Equation:**
+
+1. Framework for "Are we alone?" — terms 1-3 known, 4-7 unknown
+2. Numbers are staggering: up to ~10²⁴ stars
+3. Fermi Paradox: If life is common, where is everybody?
+
+**Cosmic Context:**
+
+4. Early universe metal-poor → rocky planets unlikely at first
+5. Stars create heavy elements → dispersed via supernovae
+6. Life requires stellar evolution (Module 2 preview)
+
+**Module 1 Synthesis:**
+
+7. Light reveals temperature, composition, motion
+8. Gravity + orbits reveal mass
+9. All tools work together
+
+:::
+
+::: {.notes}
+14–15 min. Rapid recap.
+:::
+
+---
+
+## Module 1 Exam Prep {background-color="#1a1a2e"}
+
+::: {.text-sm}
+**Can you...**
+
+☐ Use Kepler III to find periods/distances?
+
+☐ Apply Newton to find mass from orbits?
+
+☐ Use Wien's Law for temperature?
+
+☐ Explain Kirchhoff's Laws (3 spectrum types)?
+
+☐ Apply Doppler to find radial velocity?
+
+☐ Explain transit depth and what it measures?
+
+☐ Describe greenhouse effect (Venus vs. Earth vs. Mars)?
+
+☐ Explain why early universe couldn't form rocky planets?
+:::
+
+::: {.notes}
+15–16 min. "Self-assessment for the exam."
+:::
+
+---
+
+## What's Next {background-color="black"}
+
+::: {.text-center .text-xl}
+**Monday: Module 1 Exam**
+:::
+
+::: {.fragment .mt-4}
+Then: **Module 2 — Stars!**
+
+- How stars are born
+- How they live and die
+- Where the elements in your body came from
+:::
+
+::: {.notes}
+16–17 min. "After the exam, we study stars."
+:::
+
+---
+
+## {.center background-color="#1a1a2e"}
+
+::: {.r-fit-text}
+Numerical Verification
+:::
+
+*Drake Equation calculations and unit checks*
+
+::: {.notes}
+Let's work through Drake Equation scenarios with explicit numbers.
+:::
+
+---
+
+## Drake Equation: Explicit Calculation {background-color="#1a1a2e"}
+
+$$N = R_* \times f_p \times n_e \times f_l \times f_i \times f_c \times L$$
+
+**Using optimistic estimates:**
+
+::: {.text-sm}
+| Term | Value | Reasoning |
+|------|-------|-----------|
+| $R_*$ | 3 yr⁻¹ | Star formation rate in Milky Way |
+| $f_p$ | 0.5 | Half of stars have planets (Kepler data) |
+| $n_e$ | 2 | Average Earth-like planets per system |
+| $f_l$ | 1 | Life develops where possible (optimistic) |
+| $f_i$ | 0.01 | 1% develop intelligence |
+| $f_c$ | 0.01 | 1% develop communications |
+| $L$ | 10,000 yr | Civilization lifetime |
+:::
+
+::: {.notes}
+"These numbers span huge uncertainties. Let's see what they give."
+:::
+
+---
+
+## Drake Calculation: Step by Step {background-color="#1a1a2e"}
+
+$$N = 3 \times 0.5 \times 2 \times 1 \times 0.01 \times 0.01 \times 10,000$$
+
+::: {.fragment}
+**Step by step:**
+
+$$= 3 \times 0.5 = 1.5 \text{ (systems with planets per year)}$$
+$$= 1.5 \times 2 = 3 \text{ (Earth-like planets per year)}$$
+$$= 3 \times 1 = 3 \text{ (planets with life per year)}$$
+:::
+
+::: {.fragment}
+$$= 3 \times 0.01 = 0.03 \text{ (intelligent life per year)}$$
+$$= 0.03 \times 0.01 = 0.0003 \text{ (communicating per year)}$$
+$$= 0.0003 \times 10,000 = 3$$
+:::
+
+::: {.fragment .bg-muted .p-2}
+**N ≈ 3 communicating civilizations** in the Milky Way right now.
+
+But change $f_l$ from 1 to 0.01 → N drops to 0.03 (probably alone)!
+:::
+
+::: {.notes}
+"The result depends HUGELY on the unknown factors."
+:::
+
+---
+
+## Unit Analysis: Drake Equation {background-color="#1a1a2e"}
+
+**Check that units work out to "number of civilizations":**
+
+$$N = \underbrace{R_*}_{\text{yr}^{-1}} \times \underbrace{f_p}_{\text{dimensionless}} \times \underbrace{n_e}_{\text{planets/system}} \times \underbrace{f_l}_{\text{dimensionless}} \times \underbrace{f_i}_{\text{dimensionless}} \times \underbrace{f_c}_{\text{dimensionless}} \times \underbrace{L}_{\text{yr}}$$
+
+::: {.fragment}
+$$[N] = \frac{1}{\text{yr}} \times \text{yr} = \text{dimensionless}$$
+
+**Units cancel to give a pure number!** ✓
+:::
+
+::: {.fragment .mt-2}
+**Physical interpretation:**
+
+$R_* \times L$ = total stars formed during a civilization's lifetime
+
+The $f$ factors filter down to those currently communicating.
+:::
+
+::: {.notes}
+"The units make sense: stars per year times years gives a number."
+:::
+
+---
+
+## Number of Stars: Scale Calculation {background-color="#1a1a2e"}
+
+**How many stars are in the observable universe?**
+
+::: {.fragment}
+**Given:**
+
+- Milky Way: ~200 billion stars = $2 \times 10^{11}$
+- Observable universe: ~200 billion galaxies = $2 \times 10^{11}$
+:::
+
+::: {.fragment}
+**Total stars:**
+
+$$N_{stars} \approx 2 \times 10^{11} \times 2 \times 10^{11} = 4 \times 10^{22}$$
+:::
+
+::: {.fragment}
+**In words:** ~40 sextillion stars.
+
+More stars than grains of sand on all Earth's beaches.
+:::
+
+::: {.notes}
+"The numbers are staggering. Even with tiny probabilities, the outcomes could be large."
+:::
+
+---
+
+## Number of Potentially Habitable Planets {background-color="#1a1a2e"}
+
+**Kepler mission estimate:**
+
+~22% of Sun-like stars have Earth-sized planets in habitable zones.
+
+::: {.fragment}
+**For the Milky Way:**
+
+Sun-like stars: ~10% of 200 billion = $2 \times 10^{10}$
+
+HZ Earth-analogs: $0.22 \times 2 \times 10^{10} = 4.4 \times 10^9$
+:::
+
+::: {.fragment .bg-success-subtle .p-2}
+**~4 billion Earth-like planets** in habitable zones in our galaxy alone!
+
+And that's just around Sun-like stars. Red dwarfs add many more.
+:::
+
+::: {.notes}
+"Kepler revolutionized our estimates of f_p and n_e."
+:::
+
+---
+
+## {.center background-color="#0a2f5c"}
+
+::: {.r-fit-text}
+Deeper Dive
+:::
+
+*The Fermi Paradox and information theory*
+
+::: {.notes}
+Optional advanced content on SETI and the paradox.
+:::
+
+---
+
+## The Fermi Paradox: Timeline {background-color="#0a2f5c"}
+
+**Galaxy crossing time:**
+
+At 1% of light speed (achievable with current-concept technology):
+
+$$t_{cross} = \frac{100,000 \text{ ly}}{0.01c} = 10^7 \text{ years}$$
+
+::: {.fragment}
+**The Milky Way is ~10 billion years old.**
+
+Even with slow ships, a colonizing civilization could have crossed the galaxy **1000 times**.
+:::
+
+::: {.fragment .mt-2 .bg-warning-subtle .p-2}
+**Fermi's question:** If life is common and civilizations spread, the galaxy should be FULL of them by now.
+
+**Where is everybody?**
+:::
+
+::: {.notes}
+"The timescales work against us being alone unless something stops civilizations."
+:::
+
+---
+
+## Possible Resolutions {background-color="#0a2f5c"}
+
+**Why might we not see evidence of other civilizations?**
+
+::: {.incremental}
+1. **We ARE rare:** Life or intelligence might be incredibly improbable
+2. **The Great Filter:** Something wipes out civilizations (before or after us?)
+3. **They're quiet:** Advanced civilizations go "dark" (energy efficiency, hiding)
+4. **We're not looking right:** Wrong frequencies, wrong modalities
+5. **Zoo hypothesis:** They're watching but not contacting
+6. **We're first:** Someone has to be first in the galaxy
+:::
+
+::: {.notes}
+"Each possibility has profound implications."
+:::
+
+---
+
+## The Great Filter {background-color="#0a2f5c"}
+
+**Somewhere between dead matter and galaxy-spanning civilizations, something is very rare.**
+
+::: {.fragment}
+**If the filter is behind us:** We're lucky survivors of something improbable.
+
+(Life? Multicellular life? Intelligence? Civilization?)
+:::
+
+::: {.fragment}
+**If the filter is ahead of us:** Civilizations destroy themselves.
+
+(Nuclear war? Climate? AI? Biotech?)
+:::
+
+::: {.fragment .mt-2 .bg-warning-subtle .p-2}
+**Finding microbial life on Mars would be BAD news!**
+
+It would mean the filter isn't "life arising" — it must be ahead of us.
+:::
+
+::: {.notes}
+"This is why finding life elsewhere has philosophical implications."
+:::
+
+---
+
+## SETI Signal Detection {background-color="#0a2f5c"}
+
+**How would we recognize an artificial signal?**
+
+::: {.fragment}
+**Natural sources are broadband** (emit across many frequencies).
+
+**Artificial signals could be:**
+
+- Narrowband (concentrated at one frequency)
+- Pulsed with regular patterns
+- Carrying encoded information
+:::
+
+::: {.fragment}
+**The "water hole":**
+
+Frequencies between H (1420 MHz) and OH (1665 MHz) are quiet in the galaxy.
+
+Water = H + OH → maybe aliens use this band too?
+:::
+
+::: {.notes}
+"SETI looks for signals that don't fit natural explanations."
+:::
+
+---
+
+## How Far Have Our Signals Reached? {background-color="#0a2f5c"}
+
+**First powerful radio transmissions:** ~1930s
+
+::: {.fragment}
+Our signals have traveled: $\sim 90$ light-years
+
+**Volume covered:**
+
+$$V = \frac{4}{3}\pi r^3 = \frac{4}{3}\pi (90)^3 \approx 3 \times 10^6 \text{ ly}^3$$
+:::
+
+::: {.fragment}
+**Stars in this volume:**
+
+Local stellar density ≈ 0.14 stars/ly³
+
+$$N \approx 0.14 \times 3 \times 10^6 \approx 400,000 \text{ stars}$$
+:::
+
+::: {.fragment .text-muted}
+~400,000 stars could have received our earliest signals.
+
+But they're spreading and weakening. Only nearby stars could detect them.
+:::
+
+::: {.notes}
+"Our radio bubble is tiny compared to the galaxy."
+:::
+
+---
+
+## Module 1 Synthesis: Final Checklist {background-color="#0a2f5c"}
+
+::: {.text-sm}
+**Can you calculate these?**
+
+☐ Orbital period from distance: $P^2 = a^3$ (years, AU)
+
+☐ Mass from orbital data: $M = 4\pi^2 a^3 / GP^2$ (SI units!)
+
+☐ Temperature from peak wavelength: $T = 2.9 \times 10^6 / \lambda_{peak}$ (nm, K)
+
+☐ Luminosity from T and R: $L = 4\pi R^2 \sigma T^4$
+
+☐ Radial velocity from Doppler: $v = c \times \Delta\lambda/\lambda_0$
+
+☐ Planet radius from transit: $R_p = R_* \sqrt{\text{depth}}$
+
+☐ Equilibrium temperature: $T_{eq} = 279(1-A)^{1/4}(d/\text{AU})^{-1/2}$
+
+**Do you track units at every step?** This is the key to not making mistakes!
+:::
+
+::: {.notes}
+"If you can do all of these with proper units, you're ready for the exam."
+:::
+
+---
+
+## Questions? {background-image="/assets/images/common/cosmic-cliffs-jwst.png" background-opacity="0.25"}
+
+::: {.text-center .text-xl .mt-4}
+**Module 1 complete.**
+
+Motion → mass. Light → everything else.
+
+Now: **Are we alone?**
+:::
+
+::: {.notes}
+Remaining time for questions and exam prep discussion.
+:::

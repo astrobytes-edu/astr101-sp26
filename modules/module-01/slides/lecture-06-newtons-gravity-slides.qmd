@@ -1,0 +1,1403 @@
+---
+title: "Newton's Revolution"
+subtitle: "From Patterns to Physics"
+author: "Dr. Anna Rosen"
+date: "2026-02-04"
+description: "Newton unified heaven and Earth: the same gravity that drops apples also guides planets. His laws transform Kepler's patterns into physics — and give astronomers the power to weigh the universe."
+draft: false
+
+format:
+  revealjs:
+    theme: [default, ../../../assets/theme/slides/theme.scss]
+    footer: "ASTR 101 • Lecture 6 • Dr. Anna Rosen"
+    slide-number: true
+    transition: fade
+    transition-speed: fast
+    center: false
+    chalkboard: true
+    title-slide-attributes:
+      data-background-image: "/assets/images/common/cosmic-cliffs-jwst.png"
+      data-background-opacity: "0.35"
+    pointer:
+      key: "q"
+      color: "#5dbfbf"
+      pointerSize: 18
+      alwaysVisible: true
+    spotlight:
+      size: 80
+      toggleSpotlightOnMouseDown: true
+      presentingCursor: "crosshair"
+      fadeInAndOut: 100
+    quiz:
+      shuffleOptions: true
+      defaultCorrect: "Correct!"
+      defaultIncorrect: "Not quite — let's discuss."
+
+revealjs-plugins:
+  - pointer
+  - spotlight
+  - attribution
+  - quiz
+
+filters:
+  - roughnotation
+
+execute:
+  echo: false
+  warning: false
+  message: false
+---
+
+## Join iClicker {background-color="black"}
+
+::: {.text-center}
+{{< img iclicker-qr-astr101 width="36%" class="img-center" >}}
+
+::: {.text-xl .font-semibold .mt-2}
+[join.iclicker.com/ASES](https://join.iclicker.com/ASES)
+:::
+
+::: {.text-sm .text-muted .mt-2}
+If you can't scan: open the link and enter the course code **ASES**.
+:::
+:::
+
+::: {.notes}
+30–60 sec. Get everyone connected before starting.
+:::
+
+---
+
+## {background-color="black"}
+
+::: {.r-fit-text}
+The Apple and the Moon
+:::
+
+::: {.fragment .text-center .mt-4}
+Does the force that pulls an apple to the ground...
+
+also reach up to the **Moon**?
+:::
+
+::: {.notes}
+0–1 min. "Whether or not the story happened exactly this way, it captures Newton's core insight."
+:::
+
+---
+
+## The Moon Is Falling {background-image="/assets/images/common/eso-milky-way-panoramic.jpg" background-opacity="0.2"}
+
+::: {.text-center .text-xl}
+The Moon IS falling toward Earth.
+:::
+
+::: {.fragment .mt-4}
+Right now. Continuously. Every second.
+:::
+
+::: {.fragment .mt-4}
+But it's moving **sideways** so fast that it keeps **missing**.
+:::
+
+::: {.fragment .mt-4 .bg-muted .p-2}
+That combination of falling + moving sideways is what we call an **orbit**.
+:::
+
+::: {.notes}
+1–2 min. "Before Newton, 'earthly' physics and 'celestial' physics were separate. Newton unified them with one equation."
+:::
+
+---
+
+## Newton's Cannon {background-color="black"}
+
+{{< fig newtons-cannon >}}
+
+::: {.fragment .mt-2 .text-muted .text-center}
+Fire fast enough → fall *around* Earth instead of hitting it.
+:::
+
+::: {.notes}
+2–3 min. "Orbiting is falling, but moving sideways fast enough to keep missing the ground."
+:::
+
+---
+
+## Today's Learning Objectives {background-image="/assets/images/common/cosmic-cliffs-jwst.png" background-opacity="0.2"}
+
+::: {.bg-muted .p-2}
+
+By the end of today, you'll be able to:
+
+::: {.incremental .text-sm}
+- State **Newton's three laws of motion** and apply $F = ma$
+- Explain why circular motion requires **centripetal acceleration**
+- State **Newton's Law of Universal Gravitation** and its inverse-square nature
+- Distinguish **mass** (inertia) from **gravitational force** and **apparent weight**
+- Explain why **astronauts float** (free fall, not zero gravity!)
+- Describe how Newton's gravity explains **each of Kepler's laws**
+- Use orbital motion to **infer the mass** of a central object
+:::
+
+:::
+
+::: {.notes}
+3–4 min. "This is the lecture that explains *why* Kepler's patterns exist."
+:::
+
+---
+
+## Where We Left Off (Lecture 5)
+
+Kepler discovered three **empirical laws**:
+
+::: {.incremental}
+1. Orbits are **ellipses** with the Sun at one focus
+2. Planets sweep **equal areas in equal times**
+3. $P^2 \propto a^3$ (period-distance relation)
+:::
+
+::: {.fragment .mt-4}
+These describe *what* planets do.
+
+But Kepler couldn't explain *why*.
+:::
+
+::: {.notes}
+4–5 min. "Today, Newton gives us the *why*."
+:::
+
+---
+
+## {.center}
+
+::: {.r-fit-text}
+Part 1: The Rules of Motion
+:::
+
+*Newton's Three Laws*
+
+---
+
+## Newton's First Law: Inertia {background-color="#0a2f5c"}
+
+::: {.text-center .text-xl .bg-muted .p-3}
+**An object at rest stays at rest. An object in motion stays in motion (constant velocity) — unless acted upon by a net force.**
+:::
+
+::: {.fragment .mt-4}
+**Key insight:** Things don't change their motion on their own.
+
+If something speeds up, slows down, or changes direction — a **net force** caused it.
+:::
+
+::: {.notes}
+5–6 min. "This contradicts Aristotle, who thought motion requires continuous effort."
+:::
+
+---
+
+## First Law Example: Deep Space
+
+::: {.quiz}
+A spacecraft in deep space fires its engines briefly, then shuts them off. What happens next?
+
+- [ ] It gradually slows down and stops
+- [x] It continues at constant velocity indefinitely
+- [ ] It starts drifting toward the nearest star
+- [ ] It needs to keep firing to maintain speed
+:::
+
+::: {.notes}
+1 min. iClicker poll. "No friction in space = no slowing down."
+:::
+
+---
+
+## Newton's Second Law: F = ma {background-color="#0a2f5c"}
+
+::: {.text-center .text-xl .bg-muted .p-3}
+$$\vec{F}_{net} = m\vec{a}$$
+
+**Net force tells matter how to accelerate.**
+
+**Mass tells matter how much to resist.**
+:::
+
+:::: {.columns .mt-4}
+::: {.column width="50%"}
+::: {.fragment}
+More net force → more acceleration
+:::
+:::
+
+::: {.column width="50%"}
+::: {.fragment}
+More mass → less acceleration
+:::
+:::
+::::
+
+::: {.notes}
+6–7 min. "The arrow notation means these are vectors — direction matters."
+:::
+
+---
+
+## Quick Check: F = ma {background-color="#1a1a2e"}
+
+::: {.quiz}
+The same force is applied to a bowling ball and a tennis ball. Which experiences greater acceleration?
+
+- [ ] The bowling ball (more mass)
+- [x] The tennis ball (less mass)
+- [ ] Both experience the same acceleration
+- [ ] Neither accelerates
+:::
+
+::: {.notes}
+1 min. iClicker poll.
+:::
+
+---
+
+## Critical Insight: Direction Changes = Acceleration {background-color="#1a1a2e"}
+
+::: {.text-center .text-xl}
+**Constant speed ≠ constant velocity**
+:::
+
+::: {.fragment .mt-4}
+Acceleration happens when *either* changes:
+
+- Speeding up ✓
+- Slowing down ✓
+- **Changing direction at constant speed** ✓
+:::
+
+::: {.fragment .mt-4 .bg-warning-subtle .p-2}
+A planet moving in a circle at constant speed **is accelerating** because its direction constantly changes!
+:::
+
+::: {.notes}
+7–8 min. "This is the key to understanding orbits. Circular motion requires a force."
+:::
+
+---
+
+## Quick Check: Circular Motion {background-color="#1a1a2e"}
+
+::: {.quiz}
+A car drives around a circular track at a constant speedometer reading of 60 mph. Is the car accelerating?
+
+- [ ] No — the speed is constant
+- [x] Yes — the direction is constantly changing
+- [ ] Only if the driver presses the gas pedal
+- [ ] Only if there's friction
+:::
+
+::: {.notes}
+1 min. iClicker poll. "The tires push sideways — that's the centripetal force."
+:::
+
+---
+
+## Centripetal Acceleration {background-color="black"}
+
+For circular motion at speed $v$ and radius $r$:
+
+$$a_c = \frac{v^2}{r}$$
+
+::: {.fragment}
+This acceleration points **toward the center**.
+:::
+
+::: {.fragment .mt-4}
+**The force required:**
+
+$$F_c = ma_c = \frac{mv^2}{r}$$
+:::
+
+::: {.notes}
+8–9 min. "Centripetal means 'center-seeking.' Something has to provide this force."
+:::
+
+---
+
+## What Provides the Centripetal Force?
+
+**Centripetal force is not a new type of force.**
+
+It's whatever force happens to be pulling the object toward the center:
+
+::: {.incremental}
+- For **planets**: gravity
+- For a ball on a **string**: tension
+- For a **car turning**: friction between tires and road
+:::
+
+::: {.notes}
+9–10 min. "For orbits, gravity provides the centripetal force."
+:::
+
+---
+
+## Quick Check: Centripetal Force {background-color="#1a1a2e"}
+
+::: {.quiz}
+A planet orbits the Sun in a nearly circular orbit. What force provides the centripetal acceleration?
+
+- [ ] The planet's inertia
+- [ ] The planet's momentum
+- [x] Gravity from the Sun
+- [ ] The planet's rotational spin
+:::
+
+::: {.notes}
+1 min. iClicker poll.
+:::
+
+---
+
+## Newton's Third Law: Action-Reaction {background-color="#0a2f5c"}
+
+::: {.text-center .text-xl .bg-muted .p-3}
+**For every force, there is an equal and opposite reaction force.**
+:::
+
+::: {.fragment .mt-4}
+Examples:
+
+- You push on the ground → the ground pushes back on you
+- Earth pulls on the Moon → the Moon pulls on Earth
+- Sun pulls on Jupiter → Jupiter pulls on the Sun
+:::
+
+::: {.notes}
+10–11 min. "The forces are equal. The accelerations are not — because masses differ."
+:::
+
+---
+
+## The Astronomical Payoff {background-color="black"}
+
+::: {.text-center}
+Jupiter pulls on the Sun with the **same force** the Sun pulls on Jupiter.
+:::
+
+::: {.fragment .mt-4}
+But the Sun is 1000× more massive, so it accelerates 1000× less.
+
+The Sun **wobbles** — just barely.
+:::
+
+::: {.fragment .mt-4 .bg-success-subtle .p-2}
+This tiny stellar wobble is **one major way** we detect exoplanets!
+:::
+
+::: {.notes}
+11–12 min. "The radial velocity method — we see the star wobble and infer the planet."
+:::
+
+---
+
+## Quick Check: Third Law {background-color="#1a1a2e"}
+
+::: {.quiz}
+Earth exerts a gravitational force on the Moon. The Moon exerts a force on Earth that is:
+
+- [ ] Much weaker, because the Moon is smaller
+- [ ] Much stronger, because Earth is closer
+- [x] Exactly equal in magnitude, opposite in direction
+- [ ] Zero, because the Moon is in space
+:::
+
+::: {.notes}
+1 min. iClicker poll. "Forces equal, accelerations differ."
+:::
+
+---
+
+## {.center}
+
+::: {.r-fit-text}
+Part 2: Universal Gravitation
+:::
+
+*One equation rules all*
+
+---
+
+## Predict First! {background-color="#1a1a2e"}
+
+::: {.text-center .text-xl}
+If you **double** your distance from Earth's center, gravity becomes...
+:::
+
+:::: {.columns .mt-4}
+::: {.column width="33%"}
+::: {.fragment}
+A) 1/2 as strong
+:::
+:::
+
+::: {.column width="33%"}
+::: {.fragment}
+B) 1/4 as strong ✓
+:::
+:::
+
+::: {.column width="33%"}
+::: {.fragment}
+C) 1/8 as strong
+:::
+:::
+::::
+
+::: {.notes}
+30 sec. Have students vote before revealing.
+:::
+
+---
+
+## Newton's Law of Universal Gravitation {background-color="#0a2f5c"}
+
+::: {.text-center .text-xl .bg-muted .p-3}
+$$F_g = \frac{Gm_1m_2}{r^2}$$
+:::
+
+::: {.fragment .mt-4}
+| Part | Meaning |
+|------|---------|
+| $G$ | Universal constant ($6.67 \times 10^{-11}$ N·m²/kg²) |
+| $m_1 m_2$ | Force depends on *both* masses |
+| $r^2$ | Force weakens with distance **squared** |
+:::
+
+::: {.notes}
+12–14 min. "The same equation works for apples, moons, and galaxies."
+:::
+
+---
+
+## {background-color="black"}
+
+{{< fig gravity-equation-visual >}}
+
+::: {.notes}
+14–15 min. Let the visual speak.
+:::
+
+---
+
+## The Inverse-Square Law {background-color="#1a1a2e"}
+
+::: {.text-center .text-xl}
+"$r^2$ in the denominator" is profound:
+:::
+
+| Distance change | Force change |
+|-----------------|--------------|
+| Double the distance | Force drops to **1/4** |
+| Triple the distance | Force drops to **1/9** |
+| 10× the distance | Force drops to **1/100** |
+
+::: {.fragment .mt-2}
+**Physical intuition:** Gravitational influence spreads over sphere surfaces.
+
+Sphere area grows like $r^2$ → effect per area drops like $1/r^2$.
+:::
+
+::: {.notes}
+15–16 min. "Like light spreading from a flashlight — same total, more area, less per spot."
+:::
+
+---
+
+## {background-color="black"}
+
+{{< fig inverse-square-diagram >}}
+
+::: {.notes}
+16–17 min. Visual explanation of inverse-square spreading.
+:::
+
+---
+
+## Quick Check: Inverse-Square {background-color="#1a1a2e"}
+
+::: {.quiz}
+The Moon is about 60 Earth radii from Earth's center. The Moon experiences gravitational acceleration that is:
+
+- [ ] 60 times weaker
+- [ ] 360 times weaker
+- [x] 3,600 times weaker
+- [ ] The same strength
+:::
+
+::: {.fragment .mt-4 .text-sm}
+**Solution:** At 60× the distance: $1/60^2 = 1/3600$.
+:::
+
+::: {.notes}
+1–2 min. iClicker poll, then explain.
+:::
+
+---
+
+## {.center}
+
+::: {.r-fit-text}
+Mass vs. Weight
+:::
+
+*A critical distinction*
+
+---
+
+## The Distinction {background-color="#1a1a2e"}
+
+| Quantity | What it measures | Changes with location? |
+|----------|------------------|------------------------|
+| **Mass** ($m$) | Resistance to acceleration (inertia) | **No** — same everywhere |
+| **Gravitational force** ($F_g$) | Force from gravity | **Yes** — depends on local $g$ |
+| **Apparent weight** | What you *feel* (scale reading) | **Yes** — depends on gravity AND motion |
+
+::: {.notes}
+17–18 min. "Mass is intrinsic. Weight depends on where you are."
+:::
+
+---
+
+## Quick Check: Mass vs. Weight {background-color="#1a1a2e"}
+
+::: {.quiz}
+An astronaut has mass 70 kg on Earth. On the Moon (gravity ~1/6 as strong), their:
+
+- [ ] Mass decreases to about 12 kg
+- [x] Scale reading decreases to ~1/6, but mass stays 70 kg
+- [ ] Both mass and scale reading stay the same
+- [ ] Mass increases because there's less gravity
+:::
+
+::: {.notes}
+1 min. iClicker poll.
+:::
+
+---
+
+## {.center background-color="black"}
+
+::: {.r-fit-text}
+Why Astronauts Float
+:::
+
+*Fixing the biggest misconception*
+
+---
+
+## The Wrong Answer {background-color="#dc2626"}
+
+::: {.text-center .text-xl}
+❌ "Astronauts float because there's no gravity in space."
+:::
+
+::: {.fragment .mt-4}
+At ISS altitude (~400 km), Earth's gravity is still **~90%** as strong as at the surface!
+:::
+
+::: {.notes}
+18–19 min. "This is one of the most common misconceptions in physics."
+:::
+
+---
+
+## The Right Answer {background-color="#16a34a"}
+
+::: {.text-center .text-xl}
+✓ Astronauts float because they're in **free fall**.
+:::
+
+::: {.fragment .mt-4}
+The ISS and everyone inside are falling toward Earth together.
+
+But moving sideways so fast they keep missing.
+:::
+
+::: {.fragment .mt-4}
+Everything falls together at the same rate → nothing pushes back on you → **no sensation of weight**.
+:::
+
+::: {.notes}
+19–20 min. "You haven't escaped gravity. You've eliminated the floor's push."
+:::
+
+---
+
+## {background-color="black"}
+
+{{< fig free-fall-astronaut >}}
+
+::: {.fragment .mt-2 .text-muted .text-center}
+**Free fall = apparent weightlessness**
+
+Not because gravity is gone — because everything is falling together.
+:::
+
+::: {.notes}
+20–21 min. Let the image drive it home.
+:::
+
+---
+
+## Quick Check: Weightlessness {background-color="#1a1a2e"}
+
+::: {.quiz}
+An astronaut floats inside the ISS, 400 km above Earth. Earth's gravitational pull on the astronaut is:
+
+- [ ] Zero — that's why they float
+- [x] About 90% of what it would be on Earth's surface
+- [ ] Exactly the same as on Earth's surface
+- [ ] Much stronger than on Earth's surface
+:::
+
+::: {.notes}
+1 min. iClicker poll.
+:::
+
+---
+
+## {.center background-color="black"}
+
+::: {.r-fit-text}
+Part 3: Newton Explains Kepler
+:::
+
+*From patterns to physics*
+
+---
+
+## The Big Picture
+
+| Kepler's Law | Newton's Explanation |
+|--------------|---------------------|
+| Orbits are **ellipses** | Inverse-square force → conic sections |
+| **Equal areas** in equal times | Central force → angular momentum conserved |
+| $P^2 \propto a^3$ | Inverse-square gives this exact exponent |
+
+::: {.fragment .mt-4 .text-center}
+**Kepler said "here's what happens."**
+
+**Newton said "here's why it must happen."**
+:::
+
+::: {.notes}
+21–23 min. "All three laws flow from one equation."
+:::
+
+---
+
+## Explaining Kepler I: Ellipses {background-color="black"}
+
+**Question:** Why are orbits ellipses?
+
+::: {.fragment .mt-4}
+**Newton's Answer:**
+
+Any object moving under an **inverse-square central force** traces a **conic section**.
+:::
+
+::: {.fragment}
+- Not enough energy to escape → **ellipse**
+- Just enough energy to escape → **parabola**
+- More than escape energy → **hyperbola**
+:::
+
+::: {.notes}
+23–24 min. "The shape is a CONSEQUENCE of inverse-square, not an assumption."
+:::
+
+---
+
+## {background-color="black"}
+
+{{< fig conic-sections-orbits >}}
+
+::: {.notes}
+24–25 min. Visual of conic sections.
+:::
+
+---
+
+## Quick Check: First Law Explained {background-color="#1a1a2e"}
+
+::: {.quiz}
+Newton explained that planetary orbits are ellipses because:
+
+- [ ] Planets were created in elliptical paths
+- [x] Inverse-square gravity mathematically produces conic sections
+- [ ] Ellipses are the simplest possible curves
+- [ ] The Sun's rotation shapes the orbits
+:::
+
+::: {.notes}
+1 min. iClicker poll.
+:::
+
+---
+
+## Explaining Kepler II: Equal Areas {background-color="black"}
+
+**Question:** Why do planets sweep equal areas in equal times?
+
+::: {.fragment .mt-4}
+**Newton's Answer:**
+
+Gravity is a **central force** — always pointing toward the Sun.
+
+Central forces **conserve angular momentum**.
+:::
+
+::: {.fragment .mt-4}
+If $L$ is constant and you get closer ($r$ smaller), you must move faster ($v$ larger).
+:::
+
+::: {.notes}
+25–26 min. "Same physics as the ice skater pulling arms in."
+:::
+
+---
+
+## The Ice Skater (Again) {background-color="#1a1a2e"}
+
+:::: {.columns}
+::: {.column width="50%"}
+**Arms in** → spins **faster**
+
+(smaller $r$)
+:::
+
+::: {.column width="50%"}
+**Arms out** → spins **slower**
+
+(larger $r$)
+:::
+::::
+
+::: {.fragment .mt-4 .text-center}
+**Conservation of angular momentum.**
+
+Same physics for planets: closer → faster, farther → slower.
+:::
+
+::: {.notes}
+26–27 min. "Kepler described the pattern. Newton explained the mechanism."
+:::
+
+---
+
+## Quick Check: Second Law Explained {background-color="#1a1a2e"}
+
+::: {.quiz}
+Newton explained Kepler's Second Law (equal areas) as a consequence of:
+
+- [ ] The inverse-square nature of gravity
+- [x] Conservation of angular momentum because gravity is a central force
+- [ ] The fact that planets have elliptical orbits
+- [ ] Energy conservation
+:::
+
+::: {.notes}
+1 min. iClicker poll.
+:::
+
+---
+
+## Explaining Kepler III: $P^2 \propto a^3$ {background-color="black"}
+
+**Question:** Why this exact relationship?
+
+::: {.fragment .mt-4}
+**Newton's Answer:**
+
+For a force $F \propto 1/r^n$, the period-distance relationship is:
+
+$$P^2 \propto a^{n+1}$$
+:::
+
+::: {.fragment}
+- If $n = 2$ (inverse-square): $P^2 \propto a^3$ ✓
+- If $n = 1$: $P^2 \propto a^2$ ✗
+- If $n = 3$: $P^2 \propto a^4$ ✗
+:::
+
+::: {.notes}
+27–28 min. "Only inverse-square matches Kepler's observations!"
+:::
+
+---
+
+## Newton's Improved Version {background-color="#0a2f5c"}
+
+::: {.text-center .bg-muted .p-3}
+$$P^2 = \frac{4\pi^2}{G(M + m)} a^3$$
+:::
+
+::: {.fragment .mt-4}
+**What's new compared to Kepler:**
+
+- The constant includes $G$ and the **total mass**
+- Works for **any** gravitational system, not just our Solar System
+- **We can solve for mass!**
+:::
+
+::: {.notes}
+28–29 min. "This is the mass-measuring power tool."
+:::
+
+---
+
+## Motion Reveals Mass {background-color="black"}
+
+Rearranging Newton's version:
+
+$$M \approx \frac{4\pi^2 a^3}{G P^2}$$
+
+::: {.fragment .mt-4 .text-center .text-xl}
+**Measure orbital period and distance → Calculate central mass**
+:::
+
+::: {.fragment .mt-4 .text-muted}
+This is how we "weigh" the Sun, black holes, and galaxies.
+
+We never touch them — we just watch how things move around them.
+:::
+
+::: {.notes}
+29–31 min. "This technique will come up again and again."
+:::
+
+---
+
+## Quick Check: Weighing the Sun {background-color="#1a1a2e"}
+
+::: {.quiz}
+How do astronomers determine the mass of the Sun?
+
+- [ ] By measuring how bright it is
+- [x] By measuring Earth's orbital period and distance
+- [ ] By sending a spacecraft to collect a sample
+- [ ] By measuring the Sun's size
+:::
+
+::: {.notes}
+1 min. iClicker poll.
+:::
+
+---
+
+## Quick Check: Different Stars {background-color="#1a1a2e"}
+
+::: {.quiz}
+Two planets orbit different stars at the same distance. Planet A orbits a 2 $M_\odot$ star. Planet B orbits a 0.5 $M_\odot$ star. Which has the shorter orbital period?
+
+- [x] Planet A (around the more massive star)
+- [ ] Planet B (around the less massive star)
+- [ ] Both have the same period
+- [ ] Cannot determine without knowing planet masses
+:::
+
+::: {.fragment .mt-2 .text-sm}
+**More massive star → stronger gravity → faster orbits → shorter period.**
+:::
+
+::: {.notes}
+1–2 min. iClicker poll, then explain.
+:::
+
+---
+
+## {.center}
+
+::: {.r-fit-text}
+Part 4: Synthesis
+:::
+
+*From empirical to physical*
+
+---
+
+## From Kepler to Newton {background-color="#1a1a2e"}
+
+| Kepler (Empirical) | Newton (Physical) |
+|-------------------|-------------------|
+| Describes *what* planets do | Explains *why* they do it |
+| Patterns from data | Mechanisms from principles |
+| Limited to observed systems | Universal — applies everywhere |
+| Can predict within Solar System | Can predict **anywhere gravity acts** |
+
+::: {.notes}
+31–33 min. "This is the transition from pattern to physics."
+:::
+
+---
+
+## One Equation Rules All {background-color="black"}
+
+::: {.text-center}
+$$F = \frac{Gm_1m_2}{r^2}$$
+:::
+
+::: {.fragment .mt-4}
+With this single equation, Newton explained:
+
+- Why apples fall
+- Why the Moon orbits Earth
+- Why planets orbit the Sun
+- Why all three of Kepler's laws hold
+- How to weigh objects we'll never touch
+:::
+
+::: {.notes}
+33–34 min. "One of the greatest unifications in the history of science."
+:::
+
+---
+
+## Key Takeaways {background-color="#0a2f5c"}
+
+::: {.text-sm}
+
+1. **Newton's Three Laws:** (1) Inertia, (2) $F = ma$, (3) Action-Reaction
+
+2. **Circular motion = acceleration** (direction changes), requiring centripetal force
+
+3. **Universal Gravitation:** $F = GMm/r^2$ — inverse-square law
+
+4. **Mass vs. Weight:** Mass is intrinsic; weight depends on local gravity
+
+5. **Astronauts float because of free fall** — not because gravity is absent!
+
+6. **Newton explains Kepler:**
+   - Ellipses → inverse-square force
+   - Equal areas → angular momentum conservation
+   - $P^2 \propto a^3$ → inverse-square gives this exponent
+
+7. **Motion reveals mass:** $M = 4\pi^2 a^3/(GP^2)$
+
+:::
+
+::: {.notes}
+34–36 min. Rapid recap.
+:::
+
+---
+
+## The Course Connection {background-color="black"}
+
+::: {.text-center}
+**Motion reveals mass** — the foundation for nearly everything else:
+:::
+
+::: {.incremental .mt-4}
+- **Stars:** Binary star orbits → stellar masses
+- **Galaxies:** Rotation curves → dark matter
+- **Black holes:** Orbiting stars → invisible mass
+- **Exoplanets:** Stellar wobbles → planet detection
+:::
+
+::: {.notes}
+36–38 min. "We'll use Newton's insight over and over."
+:::
+
+---
+
+## Coming Up: Light as Information {background-color="black"}
+
+::: {.text-center .text-xl}
+**Next lecture:** Light is our only messenger from the cosmos.
+:::
+
+::: {.fragment .mt-4}
+We'll learn to decode what light tells us:
+
+- How fast is it moving? (wavelength)
+- How hot is it? (spectrum)
+- What is it made of? (spectral lines)
+:::
+
+::: {.fragment .mt-4 .text-muted}
+**Reading:** Lecture 7 Reading Companion
+:::
+
+::: {.notes}
+38–40 min. Preview the light physics sequence (L7-L10).
+:::
+
+---
+
+## {.center background-color="#1a1a2e"}
+
+::: {.r-fit-text}
+Numerical Verification
+:::
+
+*Newton's claim: the Moon is falling*
+
+::: {.notes}
+Let's verify Newton's revolutionary claim with actual numbers.
+:::
+
+---
+
+## The Moon IS Falling: Calculation {background-color="#1a1a2e"}
+
+**Newton's claim:** The same gravity that pulls apples pulls the Moon.
+
+**Test:** Calculate the Moon's centripetal acceleration and compare to surface gravity.
+
+::: {.fragment}
+**Given data:**
+
+- Earth-Moon distance: $r = 384,400$ km $= 3.844 \times 10^8$ m
+- Moon's orbital period: $P = 27.3$ days
+- Earth's radius: $R_E = 6,371$ km
+- Surface gravity: $g = 9.81$ m/s²
+:::
+
+::: {.notes}
+"Let's verify Newton's claim quantitatively. This is the calculation that unified heaven and Earth."
+:::
+
+---
+
+## Step 1: Find the Moon's Orbital Speed {background-color="#1a1a2e"}
+
+The Moon travels a circular path of circumference $2\pi r$ in time $P$.
+
+::: {.fragment}
+**Convert period to seconds:**
+
+$$P = 27.3 \text{ days} \times \frac{24 \text{ hr}}{1 \text{ day}} \times \frac{3600 \text{ s}}{1 \text{ hr}} = 2.36 \times 10^6 \text{ s}$$
+:::
+
+::: {.fragment}
+**Calculate orbital speed:**
+
+$$v = \frac{2\pi r}{P} = \frac{2\pi \times 3.844 \times 10^8 \text{ m}}{2.36 \times 10^6 \text{ s}}$$
+
+$$v = \frac{2.415 \times 10^9 \text{ m}}{2.36 \times 10^6 \text{ s}} = 1,023 \text{ m/s} \approx 1.0 \text{ km/s}$$
+:::
+
+::: {.notes}
+"The Moon moves at about 1 km/s. Not that fast by space standards, but remember it's very far away."
+:::
+
+---
+
+## Step 2: Calculate Centripetal Acceleration {background-color="#1a1a2e"}
+
+$$a_c = \frac{v^2}{r} = \frac{(1,023 \text{ m/s})^2}{3.844 \times 10^8 \text{ m}}$$
+
+::: {.fragment}
+$$a_c = \frac{1.047 \times 10^6 \text{ m}^2/\text{s}^2}{3.844 \times 10^8 \text{ m}} = 2.72 \times 10^{-3} \text{ m/s}^2$$
+:::
+
+::: {.fragment .mt-4}
+**Unit check:** $\frac{\text{m}^2/\text{s}^2}{\text{m}} = \frac{\text{m}}{\text{s}^2}$ ✓ (acceleration)
+:::
+
+::: {.fragment .mt-2}
+The Moon's acceleration toward Earth is $a_c = 0.00272$ m/s².
+
+**Compare to surface gravity:** $g = 9.81$ m/s².
+:::
+
+::: {.notes}
+"Always check your units. If they don't work out to m/s² for acceleration, you made a mistake."
+:::
+
+---
+
+## Step 3: Test the Inverse-Square Law {background-color="#1a1a2e"}
+
+**If gravity follows** $1/r^2$, then at the Moon's distance:
+
+$$\frac{a_{\text{Moon}}}{g_{\text{surface}}} = \frac{1}{(\text{distance ratio})^2}$$
+
+::: {.fragment}
+**Calculate distance ratio:**
+
+$$\frac{r_{\text{Moon}}}{R_E} = \frac{3.844 \times 10^8 \text{ m}}{6.371 \times 10^6 \text{ m}} = 60.3$$
+
+The Moon is **60.3 Earth radii** away.
+:::
+
+::: {.fragment}
+**Predicted acceleration ratio:**
+
+$$\frac{a_{\text{Moon}}}{g} = \frac{1}{(60.3)^2} = \frac{1}{3636} = 2.75 \times 10^{-4}$$
+:::
+
+::: {.notes}
+"Now we compare prediction to measurement."
+:::
+
+---
+
+## Step 4: Compare Prediction to Measurement {background-color="#1a1a2e"}
+
+**Predicted** (from inverse-square):
+
+$$a_{\text{predicted}} = \frac{g}{3636} = \frac{9.81}{3636} = 2.70 \times 10^{-3} \text{ m/s}^2$$
+
+**Measured** (from orbital motion):
+
+$$a_{\text{measured}} = 2.72 \times 10^{-3} \text{ m/s}^2$$
+
+::: {.fragment .mt-4 .bg-success-subtle .p-2 .text-center}
+**Match!** Difference < 1%
+
+**The same gravity that pulls apples pulls the Moon.**
+:::
+
+::: {.fragment .mt-2 .text-muted}
+This was Newton's triumph: unifying terrestrial and celestial physics.
+:::
+
+::: {.notes}
+"Newton showed that there's no separate 'celestial physics.' The same laws work everywhere."
+:::
+
+---
+
+## Verifying ISS "Weightlessness" {background-color="#1a1a2e"}
+
+**Claim:** At ISS altitude (400 km), gravity is still ~90% of surface value.
+
+::: {.fragment}
+**Calculate:**
+
+$$r_{\text{ISS}} = R_E + h = 6,371 + 400 = 6,771 \text{ km}$$
+
+$$\frac{g_{\text{ISS}}}{g_{\text{surface}}} = \left(\frac{R_E}{r_{\text{ISS}}}\right)^2 = \left(\frac{6,371}{6,771}\right)^2$$
+:::
+
+::: {.fragment}
+$$= (0.941)^2 = 0.885 = 88.5\%$$
+:::
+
+::: {.fragment .mt-2 .bg-warning-subtle .p-2}
+**Gravity at ISS altitude is 88.5% of surface gravity!**
+
+Astronauts float because they're **falling**, not because gravity is gone.
+:::
+
+::: {.notes}
+"400 km sounds high, but it's only 6% farther from Earth's center. Gravity barely decreases."
+:::
+
+---
+
+## Weighing the Sun: Full Calculation {background-color="#1a1a2e"}
+
+**Given:**
+
+- Earth's orbital period: $P = 365.25$ days $= 3.156 \times 10^7$ s
+- Earth's orbital radius: $a = 1.496 \times 10^{11}$ m (1 AU)
+- $G = 6.674 \times 10^{-11}$ N·m²/kg²
+
+::: {.fragment}
+**From Newton's form of Kepler III:**
+
+$$M_\odot = \frac{4\pi^2 a^3}{G P^2}$$
+:::
+
+::: {.fragment}
+$$M_\odot = \frac{4\pi^2 (1.496 \times 10^{11})^3}{(6.674 \times 10^{-11})(3.156 \times 10^7)^2}$$
+:::
+
+::: {.notes}
+"Let's compute this step by step with careful unit tracking."
+:::
+
+---
+
+## Weighing the Sun: Unit Analysis {background-color="#1a1a2e"}
+
+::: {.text-sm}
+$$M_\odot = \frac{4\pi^2 a^3}{G P^2}$$
+
+**Numerator units:**
+
+$$[\text{m}^3] \quad \text{(since } a^3 \text{ is in meters cubed)}$$
+
+**Denominator units:**
+
+$$\left[\frac{\text{N} \cdot \text{m}^2}{\text{kg}^2}\right] \times [\text{s}^2] = \left[\frac{\text{kg} \cdot \text{m/s}^2 \cdot \text{m}^2}{\text{kg}^2}\right] \times [\text{s}^2] = \frac{\text{m}^3}{\text{kg}}$$
+
+::: {.fragment}
+**Result units:**
+
+$$\frac{\text{m}^3}{\text{m}^3/\text{kg}} = \text{kg} \quad \checkmark$$
+:::
+:::
+
+::: {.notes}
+"The units work out to kg, which is what we want for mass. Always check!"
+:::
+
+---
+
+## Weighing the Sun: Result {background-color="#1a1a2e"}
+
+**Calculating numerator:**
+
+$$4\pi^2 (1.496 \times 10^{11})^3 = 4\pi^2 \times 3.348 \times 10^{33} = 1.322 \times 10^{35} \text{ m}^3$$
+
+**Calculating denominator:**
+
+$$(6.674 \times 10^{-11})(3.156 \times 10^7)^2 = 6.674 \times 10^{-11} \times 9.96 \times 10^{14}$$
+$$= 6.65 \times 10^{4} \text{ m}^3/\text{kg}$$
+
+::: {.fragment}
+**Final result:**
+
+$$M_\odot = \frac{1.322 \times 10^{35}}{6.65 \times 10^{4}} = 1.99 \times 10^{30} \text{ kg}$$
+:::
+
+::: {.fragment .bg-success-subtle .p-2}
+**The Sun's mass is $2 \times 10^{30}$ kg** — determined just by watching Earth orbit!
+:::
+
+::: {.notes}
+"We weighed an object 150 million km away, using only geometry and timing."
+:::
+
+---
+
+## {.center background-color="#0a2f5c"}
+
+::: {.r-fit-text}
+Deeper Dive
+:::
+
+*Escape velocity and orbital energy*
+
+::: {.notes}
+Optional advanced content.
+:::
+
+---
+
+## Escape Velocity {background-color="#0a2f5c"}
+
+**Question:** How fast must you launch an object so it never falls back?
+
+::: {.fragment}
+**Energy conservation:**
+
+$$\frac{1}{2}mv^2 - \frac{GMm}{r} = 0$$
+
+(Kinetic energy at launch = gravitational potential energy to escape)
+:::
+
+::: {.fragment}
+**Solving for escape velocity:**
+
+$$v_{\text{escape}} = \sqrt{\frac{2GM}{r}}$$
+:::
+
+::: {.notes}
+"This is the minimum speed to escape a gravitational well."
+:::
+
+---
+
+## Earth's Escape Velocity: Calculation {background-color="#0a2f5c"}
+
+$$v_{\text{escape}} = \sqrt{\frac{2GM_E}{R_E}}$$
+
+**Given:**
+
+- $G = 6.674 \times 10^{-11}$ N·m²/kg²
+- $M_E = 5.97 \times 10^{24}$ kg
+- $R_E = 6.371 \times 10^6$ m
+
+::: {.fragment}
+$$v_{\text{escape}} = \sqrt{\frac{2 \times 6.674 \times 10^{-11} \times 5.97 \times 10^{24}}{6.371 \times 10^6}}$$
+
+$$= \sqrt{\frac{7.97 \times 10^{14}}{6.371 \times 10^6}} = \sqrt{1.25 \times 10^8} \text{ m}^2/\text{s}^2$$
+:::
+
+::: {.fragment}
+$$v_{\text{escape}} = 11,200 \text{ m/s} = \boxed{11.2 \text{ km/s}}$$
+:::
+
+::: {.notes}
+"To escape Earth, you need 11.2 km/s — about 40,000 km/hr or Mach 33."
+:::
+
+---
+
+## Escape Velocities Across the Solar System {background-color="#0a2f5c"}
+
+| Object | Mass (Earth = 1) | Radius (Earth = 1) | $v_{\text{escape}}$ |
+|--------|------------------|--------------------|--------------------|
+| Moon | 0.012 | 0.27 | 2.4 km/s |
+| Earth | 1 | 1 | 11.2 km/s |
+| Jupiter | 318 | 11.2 | 59.5 km/s |
+| Sun | 333,000 | 109 | 618 km/s |
+
+::: {.fragment .mt-2}
+**Notice:** $v_{\text{escape}} \propto \sqrt{M/R}$
+
+Jupiter is massive but also large → moderate increase in escape velocity.
+:::
+
+::: {.notes}
+"Escape velocity depends on the ratio M/R, not mass alone."
+:::
+
+---
+
+## Circular Orbital Velocity {background-color="#0a2f5c"}
+
+For a **circular orbit**, set gravitational force = centripetal force:
+
+$$\frac{GMm}{r^2} = \frac{mv^2}{r}$$
+
+::: {.fragment}
+**Solving for orbital velocity:**
+
+$$v_{\text{circular}} = \sqrt{\frac{GM}{r}}$$
+:::
+
+::: {.fragment .mt-4 .bg-muted .p-2}
+**Key relationship:**
+
+$$v_{\text{escape}} = \sqrt{2} \times v_{\text{circular}}$$
+
+To escape, you need only **41% more speed** than circular orbit speed!
+:::
+
+::: {.notes}
+"This is why it's relatively easy to send probes to other planets once you're in orbit."
+:::
+
+---
+
+## Questions? {background-image="/assets/images/common/cosmic-cliffs-jwst.png" background-opacity="0.25"}
+
+::: {.text-center .text-xl .mt-4}
+**Kepler** gave us the patterns.
+
+**Newton** gave us the physics.
+
+**Next:** Light gives us the information.
+:::
+
+::: {.notes}
+Remaining time for questions.
+:::

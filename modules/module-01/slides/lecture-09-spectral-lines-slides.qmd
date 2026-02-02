@@ -1,0 +1,1015 @@
+---
+title: "Decoding Starlight"
+subtitle: "Spectral Lines and Chemical Fingerprints"
+author: "Dr. Anna Rosen"
+date: "2026-02-19"
+description: "Spectral lines are chemical fingerprints. Each element has unique wavelengths. Quantum mechanics explains why."
+draft: false
+
+format:
+  revealjs:
+    theme: [default, ../../../assets/theme/slides/theme.scss]
+    footer: "ASTR 101 • Lecture 9 • Dr. Anna Rosen"
+    slide-number: true
+    transition: fade
+    transition-speed: fast
+    center: false
+    chalkboard: true
+    title-slide-attributes:
+      data-background-image: "/assets/images/common/cosmic-cliffs-jwst.png"
+      data-background-opacity: "0.35"
+    pointer:
+      key: "q"
+      color: "#5dbfbf"
+      pointerSize: 18
+      alwaysVisible: true
+    spotlight:
+      size: 80
+      toggleSpotlightOnMouseDown: true
+      presentingCursor: "crosshair"
+      fadeInAndOut: 100
+    quiz:
+      shuffleOptions: true
+      defaultCorrect: "Correct!"
+      defaultIncorrect: "Not quite — let's discuss."
+
+revealjs-plugins:
+  - pointer
+  - spotlight
+  - attribution
+  - quiz
+
+filters:
+  - roughnotation
+
+execute:
+  echo: false
+  warning: false
+  message: false
+---
+
+## Join iClicker {background-color="black"}
+
+::: {.text-center}
+{{< img iclicker-qr-astr101 width="36%" class="img-center" >}}
+
+::: {.text-xl .font-semibold .mt-2}
+[join.iclicker.com/ASES](https://join.iclicker.com/ASES)
+:::
+
+::: {.text-sm .text-muted .mt-2}
+If you can't scan: open the link and enter the course code **ASES**.
+:::
+:::
+
+::: {.notes}
+30–60 sec. Get everyone connected before starting.
+:::
+
+---
+
+## {background-color="black"}
+
+::: {.r-fit-text}
+The Missing Colors
+:::
+
+::: {.fragment .text-center .mt-4}
+In 1814, Joseph von Fraunhofer found **dark lines** crossing the Sun's spectrum.
+:::
+
+::: {.fragment .text-center .mt-4}
+Specific wavelengths where light was **missing**.
+:::
+
+::: {.notes}
+0–1 min. "These dark lines would reveal the composition of stars."
+:::
+
+---
+
+## Chemical Fingerprints {background-image="/assets/images/common/cosmic-cliffs-jwst.png" background-opacity="0.2"}
+
+::: {.text-center .text-xl}
+Each chemical element absorbs and emits at **unique wavelengths**.
+:::
+
+::: {.fragment .mt-4}
+The pattern is like a barcode — match it, identify the element.
+
+This is how we know what stars are made of, from 150 million km away.
+:::
+
+::: {.notes}
+1–2 min. "Spectral lines are chemical fingerprints."
+:::
+
+---
+
+## Today's Learning Objectives {background-image="/assets/images/common/cosmic-cliffs-jwst.png" background-opacity="0.2"}
+
+::: {.bg-muted .p-2}
+
+By the end of today, you'll be able to:
+
+::: {.incremental .text-sm}
+- Describe how **emission** and **absorption spectra** form (Kirchhoff's Laws)
+- Explain why spectra have **discrete lines** (quantized energy levels)
+- Apply the **hydrogen energy level** formula to predict line wavelengths
+- Identify the **OBAFGKM** spectral sequence and its temperature basis
+- Explain why hydrogen lines are strongest in **A-type stars**
+:::
+
+:::
+
+::: {.notes}
+2–3 min. "Today: where spectral lines come from and what they tell us."
+:::
+
+---
+
+## {.center}
+
+::: {.r-fit-text}
+Part 1: Three Types of Spectra
+:::
+
+*Kirchhoff's Laws*
+
+---
+
+## Kirchhoff's Three Laws {background-color="#0a2f5c"}
+
+::: {.text-sm .bg-muted .p-3}
+**1. Continuous Spectrum**
+
+Hot, dense object → light at **all wavelengths** (smooth rainbow)
+
+**2. Emission Spectrum**
+
+Hot, thin gas → light at **specific wavelengths only** (bright lines on dark)
+
+**3. Absorption Spectrum**
+
+Cool gas in front of hot source → **dark lines** on bright rainbow
+:::
+
+::: {.notes}
+3–5 min. "The physical setup determines the spectrum type."
+:::
+
+---
+
+## {background-color="black"}
+
+{{< fig kirchhoff-three-laws >}}
+
+::: {.notes}
+5–6 min. Visual summary of the three spectrum types.
+:::
+
+---
+
+## Why Stars Have Absorption Lines {background-color="#1a1a2e"}
+
+::: {.incremental}
+1. **Hot interior (dense)** → continuous blackbody spectrum
+2. **Cooler outer atmosphere (thin gas)** → absorbs specific wavelengths
+3. **What we see:** continuous spectrum with dark lines
+:::
+
+::: {.fragment .mt-4}
+The pattern of dark lines tells us which elements are in the star's atmosphere.
+:::
+
+::: {.notes}
+6–7 min. "Every star works like a light bulb behind a filter."
+:::
+
+---
+
+## Quick Check: Kirchhoff's Laws {background-color="#1a1a2e"}
+
+::: {.quiz}
+The dark lines in the Sun's spectrum are caused by:
+
+- [ ] The Sun's core being too cool to emit those wavelengths
+- [x] Cool gas in the Sun's outer atmosphere absorbing specific wavelengths
+- [ ] Earth's atmosphere blocking the light
+- [ ] The Sun rotating and shifting the wavelengths
+:::
+
+::: {.notes}
+1 min. iClicker poll.
+:::
+
+---
+
+## Each Element Has a Unique Pattern {background-color="black"}
+
+::: {.text-sm}
+| Element | Signature Lines |
+|---------|-----------------|
+| **Hydrogen** | 656 nm (red), 486 nm (blue-green), 434 nm (violet)... |
+| **Sodium** | Bright yellow doublet at 589 nm |
+| **Calcium** | Violet H and K lines (397, 393 nm) |
+| **Iron** | Hundreds of lines throughout visible |
+:::
+
+::: {.fragment .mt-4 .text-center}
+**Match the pattern → identify the element.**
+:::
+
+::: {.notes}
+7–8 min. "Like barcodes for atoms."
+:::
+
+---
+
+## Quick Check: Element Identification {background-color="#1a1a2e"}
+
+::: {.quiz}
+How do astronomers determine which elements are present in a star?
+
+- [ ] By measuring the star's temperature
+- [x] By matching the pattern of spectral lines to laboratory measurements
+- [ ] By observing the star's color
+- [ ] By measuring how bright the star is
+:::
+
+::: {.notes}
+1 min. iClicker poll.
+:::
+
+---
+
+## {.center}
+
+::: {.r-fit-text}
+Part 2: Why Discrete Lines?
+:::
+
+*Quantum mechanics*
+
+---
+
+## The Puzzle {background-color="black"}
+
+::: {.text-center .text-xl}
+Why do atoms absorb and emit at **specific wavelengths only**?
+:::
+
+::: {.fragment .mt-4}
+Why not a continuous range?
+:::
+
+::: {.fragment .mt-4 .text-muted}
+Classical physics couldn't explain this.
+
+The answer required a revolution: **quantum mechanics**.
+:::
+
+::: {.notes}
+8–9 min. "This puzzle led to quantum mechanics."
+:::
+
+---
+
+## Energy Is Quantized {background-color="#0a2f5c"}
+
+::: {.text-center .text-xl .bg-muted .p-3}
+Electrons can only occupy **specific energy levels** — like rungs on a ladder, not a ramp.
+:::
+
+::: {.fragment .mt-4}
+To move between levels, an electron must absorb or emit a photon with **exactly** the right energy.
+
+Specific energies → specific wavelengths → discrete lines.
+:::
+
+::: {.notes}
+9–10 min. "Quantized energy levels are the key insight."
+:::
+
+---
+
+## The Ladder Analogy {background-color="black"}
+
+{{< fig energy-level-ladder >}}
+
+::: {.fragment .mt-2}
+You can stand on the rungs, never between them.
+
+Electrons in atoms are the same — discrete levels only.
+:::
+
+::: {.notes}
+10–11 min. "The ladder analogy for energy levels."
+:::
+
+---
+
+## Photon Energy and Wavelength {background-color="#1a1a2e"}
+
+::: {.text-center .text-xl}
+$$E_{photon} = \frac{hc}{\lambda}$$
+:::
+
+::: {.fragment .mt-4}
+**Higher energy** ↔ **shorter wavelength**
+
+**Lower energy** ↔ **longer wavelength**
+:::
+
+::: {.fragment .mt-4}
+The photon energy must **exactly match** the gap between two levels.
+:::
+
+::: {.notes}
+11–12 min. "The energy-wavelength connection."
+:::
+
+---
+
+## Hydrogen Energy Levels {background-color="#0a2f5c"}
+
+::: {.text-center .bg-muted .p-3}
+$$E_n = -\frac{13.6 \text{ eV}}{n^2}$$
+
+where $n = 1, 2, 3, ...$
+:::
+
+::: {.fragment .mt-4}
+| Level | Energy |
+|-------|--------|
+| $n=1$ (ground) | -13.6 eV |
+| $n=2$ | -3.4 eV |
+| $n=3$ | -1.51 eV |
+| $n=4$ | -0.85 eV |
+| $n=\infty$ (ionized) | 0 eV |
+:::
+
+::: {.notes}
+12–13 min. "Hydrogen's energy levels follow a simple formula."
+:::
+
+---
+
+## {background-color="black"}
+
+{{< fig hydrogen-energy-levels >}}
+
+::: {.fragment .text-center .mt-2}
+Levels get closer together as $n$ increases.
+:::
+
+::: {.notes}
+13–14 min. Energy level diagram for hydrogen.
+:::
+
+---
+
+## The Balmer Series (Visible Lines) {background-color="#1a1a2e"}
+
+Transitions **ending at n = 2** produce visible light:
+
+| Transition | Wavelength | Color | Name |
+|------------|------------|-------|------|
+| 3 → 2 | 656 nm | Red | Hα |
+| 4 → 2 | 486 nm | Blue-green | Hβ |
+| 5 → 2 | 434 nm | Violet | Hγ |
+| 6 → 2 | 410 nm | Violet | Hδ |
+
+::: {.fragment .mt-2}
+**Hα is the famous red hydrogen line** — why nebulae glow pinkish-red.
+:::
+
+::: {.notes}
+14–15 min. "The Balmer series is what we see in visible light."
+:::
+
+---
+
+## Worked Example: Calculating Hα
+
+**Problem:** Calculate the wavelength when a hydrogen electron drops from n=3 to n=2.
+
+::: {.fragment}
+$$E_3 = -\frac{13.6}{9} = -1.51 \text{ eV}$$
+$$E_2 = -\frac{13.6}{4} = -3.4 \text{ eV}$$
+:::
+
+::: {.fragment}
+$$E_{photon} = E_3 - E_2 = -1.51 - (-3.4) = 1.89 \text{ eV}$$
+:::
+
+::: {.fragment}
+$$\lambda = \frac{1240}{1.89} = 656 \text{ nm}$$
+:::
+
+::: {.notes}
+15–16 min. Walk through the calculation.
+:::
+
+---
+
+## Quick Check: Hydrogen Transitions {background-color="#1a1a2e"}
+
+::: {.quiz}
+Which transition produces the shortest wavelength (highest energy) photon?
+
+- [x] n = 2 → n = 1
+- [ ] n = 3 → n = 2
+- [ ] n = 4 → n = 3
+- [ ] n = 5 → n = 4
+:::
+
+::: {.fragment .mt-2 .text-sm}
+**Largest energy gap → highest energy photon → shortest wavelength.**
+:::
+
+::: {.notes}
+1–2 min. iClicker poll, then explain.
+:::
+
+---
+
+## Quick Check: Why Discrete Lines? {background-color="#1a1a2e"}
+
+::: {.quiz}
+Spectral lines are discrete (specific wavelengths only) because:
+
+- [ ] Telescopes can only detect certain wavelengths
+- [ ] Atoms can only absorb red, green, and blue light
+- [x] Electrons in atoms can only occupy specific quantized energy levels
+- [ ] Light travels at a constant speed
+:::
+
+::: {.notes}
+1 min. iClicker poll.
+:::
+
+---
+
+## {.center}
+
+::: {.r-fit-text}
+Part 3: Stellar Classification
+:::
+
+*OBAFGKM*
+
+---
+
+## The OBAFGKM Sequence {background-color="black"}
+
+::: {.text-center .text-xl}
+**O - B - A - F - G - K - M**
+:::
+
+::: {.fragment .mt-4}
+Stars classified by **surface temperature**:
+
+**O** = hottest (blue) → **M** = coolest (red)
+:::
+
+::: {.fragment .mt-4 .text-muted}
+Mnemonic: "Oh Be A Fine Girl/Guy, Kiss Me"
+:::
+
+::: {.notes}
+16–17 min. "The spectral classification sequence."
+:::
+
+---
+
+## Spectral Types {background-color="#1a1a2e"}
+
+::: {.text-sm}
+| Type | Color | Temperature | Features |
+|------|-------|-------------|----------|
+| **O** | Blue | 30,000–50,000+ K | Ionized helium |
+| **B** | Blue-white | 10,000–30,000 K | Neutral helium |
+| **A** | White | 7,500–10,000 K | **Strongest H lines** |
+| **F** | Yellow-white | 6,000–7,500 K | H + metals |
+| **G** | Yellow | 5,000–6,000 K | Ca, Fe (Sun!) |
+| **K** | Orange | 3,500–5,000 K | Strong metals |
+| **M** | Red | 2,500–3,500 K | Molecular bands |
+:::
+
+::: {.notes}
+17–18 min. "Each type has distinctive spectral features."
+:::
+
+---
+
+## Quick Check: Spectral Types {background-color="#1a1a2e"}
+
+::: {.quiz}
+Which spectral type corresponds to the hottest stars?
+
+- [ ] M
+- [ ] G
+- [ ] A
+- [x] O
+:::
+
+::: {.notes}
+1 min. iClicker poll.
+:::
+
+---
+
+## Why Do H Lines Peak at A Stars? {background-color="black"}
+
+::: {.text-center}
+Hydrogen is the most abundant element everywhere.
+
+Yet H lines are strongest in **A stars** (~10,000 K), not the hottest.
+:::
+
+::: {.fragment .mt-4}
+**Why?**
+:::
+
+::: {.notes}
+18–19 min. "This puzzled early astronomers."
+:::
+
+---
+
+## The Ionization Physics {background-color="#1a1a2e"}
+
+:::: {.columns}
+::: {.column width="33%"}
+**Too Hot (O, B)**
+
+H is **ionized** — no bound electron to absorb.
+:::
+
+::: {.column width="33%"}
+::: {.fragment}
+**Too Cool (K, M)**
+
+H electrons in ground state — can't absorb Balmer (need n=2).
+:::
+:::
+
+::: {.column width="33%"}
+::: {.fragment}
+**Just Right (A)**
+
+H neutral + electrons excited to n=2 → maximum Balmer absorption!
+:::
+:::
+::::
+
+::: {.notes}
+19–20 min. "Temperature affects which lines appear, not just abundance."
+:::
+
+---
+
+## Quick Check: Why Weak H in O Stars? {background-color="#1a1a2e"}
+
+::: {.quiz}
+Hydrogen absorption lines are weak in O-type stars because:
+
+- [ ] O stars contain very little hydrogen
+- [x] O stars are so hot that hydrogen is mostly ionized
+- [ ] O stars are too cool to excite hydrogen
+- [ ] O stars have thick atmospheres that block H lines
+:::
+
+::: {.notes}
+1 min. iClicker poll.
+:::
+
+---
+
+## Key Takeaways {background-color="#0a2f5c"}
+
+::: {.text-sm}
+
+1. **Kirchhoff's Laws:** Hot dense → continuous; hot thin → emission; cool gas in front → absorption.
+
+2. **Each element has unique spectral lines** — match the pattern, identify the element.
+
+3. **Energy is quantized:** Electrons occupy discrete levels → discrete lines.
+
+4. **Hydrogen:** $E_n = -13.6/n^2$ eV. Balmer series (to n=2) gives visible lines.
+
+5. **OBAFGKM:** Hot (O, blue) to cool (M, red). H lines peak at A stars due to ionization physics.
+
+:::
+
+::: {.notes}
+20–22 min. Rapid recap.
+:::
+
+---
+
+## Coming Up: The Doppler Effect {background-color="black"}
+
+::: {.text-center .text-xl}
+**Next lecture:** What happens when spectral lines **shift**?
+:::
+
+::: {.fragment .mt-4}
+Motion causes Doppler shifts → reveals velocities
+
+- Stellar wobbles → exoplanets
+- Galaxy rotation → dark matter
+:::
+
+::: {.fragment .mt-4 .text-muted}
+**Reading:** Lecture 10 Reading Companion
+:::
+
+::: {.notes}
+22–23 min. Preview Doppler and telescopes.
+:::
+
+---
+
+## {.center background-color="#1a1a2e"}
+
+::: {.r-fit-text}
+Numerical Verification
+:::
+
+*Calculating hydrogen spectral lines from first principles*
+
+::: {.notes}
+Let's verify our spectral line calculations with explicit unit tracking.
+:::
+
+---
+
+## Hydrogen Energy Levels: Full Calculation {background-color="#1a1a2e"}
+
+**The energy level formula:**
+
+$$E_n = -\frac{13.6 \text{ eV}}{n^2}$$
+
+::: {.fragment}
+**Calculate the first four levels:**
+
+| n | Calculation | Energy (eV) |
+|---|-------------|-------------|
+| 1 | $-13.6/1^2$ | -13.60 eV |
+| 2 | $-13.6/2^2$ | -3.40 eV |
+| 3 | $-13.6/3^2$ | -1.51 eV |
+| 4 | $-13.6/4^2$ | -0.85 eV |
+| 5 | $-13.6/5^2$ | -0.54 eV |
+:::
+
+::: {.notes}
+"Negative energies mean the electron is bound. Zero would mean ionized (free electron)."
+:::
+
+---
+
+## Why Negative Energies? {background-color="#1a1a2e"}
+
+**Convention:** A free electron at rest has $E = 0$.
+
+::: {.fragment}
+- **Negative energy** = bound to the atom (need to ADD energy to escape)
+- **$E = 0$** = barely escaped, no kinetic energy
+- **Positive energy** = escaped with kinetic energy to spare
+:::
+
+::: {.fragment .mt-4 .bg-muted .p-2}
+**Ionization energy = energy needed to go from $E_n$ to $E = 0$**
+
+From ground state: $E_{\text{ionize}} = 0 - (-13.6) = 13.6$ eV
+:::
+
+::: {.notes}
+"It takes 13.6 eV to rip an electron out of hydrogen's ground state."
+:::
+
+---
+
+## Hα Calculation: Complete {background-color="#1a1a2e"}
+
+**Transition:** $n = 3 \to n = 2$ (electron falls from level 3 to level 2)
+
+::: {.fragment}
+**Step 1: Calculate energy difference**
+
+$$\Delta E = E_3 - E_2 = (-1.51 \text{ eV}) - (-3.40 \text{ eV})$$
+
+$$\Delta E = -1.51 + 3.40 = +1.89 \text{ eV}$$
+
+*Positive because the electron releases energy (emits a photon)*
+:::
+
+::: {.notes}
+"The electron loses 1.89 eV of potential energy, which goes into the photon."
+:::
+
+---
+
+## Hα Calculation: Wavelength {background-color="#1a1a2e"}
+
+**Step 2: Convert energy to wavelength**
+
+Using $E = hc/\lambda$, so $\lambda = hc/E$
+
+::: {.fragment}
+**The convenient form:**
+
+$$\lambda = \frac{1240 \text{ eV·nm}}{E \text{ (eV)}}$$
+:::
+
+::: {.fragment}
+$$\lambda = \frac{1240 \text{ eV·nm}}{1.89 \text{ eV}} = 656.1 \text{ nm}$$
+:::
+
+::: {.fragment}
+**Unit check:** $\frac{\text{eV·nm}}{\text{eV}} = \text{nm}$ ✓
+:::
+
+::: {.fragment .bg-success-subtle .p-2}
+**Hα = 656 nm** — the famous red hydrogen line! (Actual: 656.28 nm)
+:::
+
+::: {.notes}
+"This is the red glow you see in images of nebulae. We calculated it from quantum mechanics!"
+:::
+
+---
+
+## Calculating the Entire Balmer Series {background-color="#1a1a2e"}
+
+**Transitions to $n = 2$ (Balmer series):**
+
+::: {.text-sm}
+| Transition | $\Delta E$ (eV) | Calculation | $\lambda$ (nm) | Actual (nm) |
+|------------|-----------------|-------------|----------------|-------------|
+| 3→2 (Hα) | $-1.51-(-3.40) = 1.89$ | $1240/1.89$ | 656 | 656.3 |
+| 4→2 (Hβ) | $-0.85-(-3.40) = 2.55$ | $1240/2.55$ | 486 | 486.1 |
+| 5→2 (Hγ) | $-0.54-(-3.40) = 2.86$ | $1240/2.86$ | 434 | 434.0 |
+| 6→2 (Hδ) | $-0.38-(-3.40) = 3.02$ | $1240/3.02$ | 411 | 410.2 |
+:::
+
+::: {.fragment .mt-2 .bg-success-subtle .p-2}
+**All calculated values match measured values within 1%!**
+:::
+
+::: {.notes}
+"The quantum model works. We can predict spectral lines from first principles."
+:::
+
+---
+
+## The Lyman Series: UV Lines {background-color="#1a1a2e"}
+
+**Transitions to $n = 1$ (ground state):**
+
+::: {.fragment}
+**Lyman-α (2→1):**
+
+$$\Delta E = E_2 - E_1 = (-3.40) - (-13.60) = 10.2 \text{ eV}$$
+
+$$\lambda = \frac{1240 \text{ eV·nm}}{10.2 \text{ eV}} = 121.6 \text{ nm}$$
+:::
+
+::: {.fragment}
+**This is far-ultraviolet!** (Absorbed by Earth's atmosphere)
+
+Astronomers need space telescopes to see Lyman-α from cosmic sources.
+:::
+
+::: {.notes}
+"The Lyman series is in the UV because transitions to n=1 involve much more energy."
+:::
+
+---
+
+## Series Limit and Ionization {background-color="#1a1a2e"}
+
+**What happens as n → ∞?**
+
+For the Balmer series (transitions to $n = 2$):
+
+::: {.fragment}
+$$\Delta E_{\text{max}} = E_\infty - E_2 = 0 - (-3.40) = 3.40 \text{ eV}$$
+
+$$\lambda_{\text{min}} = \frac{1240}{3.40} = 365 \text{ nm}$$
+:::
+
+::: {.fragment}
+**365 nm is the "series limit"** — the shortest Balmer wavelength.
+
+Photons shorter than this **ionize** the atom from $n = 2$!
+:::
+
+::: {.notes}
+"Beyond the series limit, the electron is freed entirely."
+:::
+
+---
+
+## Ionization Energies by Level {background-color="#1a1a2e"}
+
+| Starting Level | Energy (eV) | Ionization Energy | Photon λ to ionize |
+|----------------|-------------|-------------------|-------------------|
+| n = 1 (ground) | -13.60 | 13.6 eV | < 91 nm (far-UV) |
+| n = 2 | -3.40 | 3.4 eV | < 365 nm (UV) |
+| n = 3 | -1.51 | 1.51 eV | < 821 nm (IR) |
+
+::: {.fragment .mt-2}
+**Excited atoms are easier to ionize!**
+
+An H atom with an electron in $n = 3$ can be ionized by infrared light.
+:::
+
+::: {.notes}
+"This is why temperature matters for spectral lines. Hot stars have many excited atoms."
+:::
+
+---
+
+## {.center background-color="#0a2f5c"}
+
+::: {.r-fit-text}
+Deeper Dive
+:::
+
+*The Rydberg formula and other elements*
+
+::: {.notes}
+Optional advanced content.
+:::
+
+---
+
+## The Rydberg Formula {background-color="#0a2f5c"}
+
+**A single formula for all hydrogen wavelengths:**
+
+$$\frac{1}{\lambda} = R_H \left( \frac{1}{n_f^2} - \frac{1}{n_i^2} \right)$$
+
+::: {.fragment}
+**Where:**
+
+- $R_H = 1.097 \times 10^7$ m⁻¹ (Rydberg constant)
+- $n_f$ = final level (lower)
+- $n_i$ = initial level (higher)
+:::
+
+::: {.fragment .mt-2}
+**Different series:**
+
+- $n_f = 1$: Lyman series (UV)
+- $n_f = 2$: Balmer series (visible)
+- $n_f = 3$: Paschen series (IR)
+:::
+
+::: {.notes}
+"Rydberg found this pattern empirically in 1888. Bohr explained it in 1913."
+:::
+
+---
+
+## Rydberg Example: Hα {background-color="#0a2f5c"}
+
+$$\frac{1}{\lambda} = R_H \left( \frac{1}{2^2} - \frac{1}{3^2} \right)$$
+
+::: {.fragment}
+$$= 1.097 \times 10^7 \text{ m}^{-1} \left( \frac{1}{4} - \frac{1}{9} \right)$$
+:::
+
+::: {.fragment}
+$$= 1.097 \times 10^7 \text{ m}^{-1} \left( \frac{9-4}{36} \right) = 1.097 \times 10^7 \times \frac{5}{36}$$
+:::
+
+::: {.fragment}
+$$= 1.524 \times 10^6 \text{ m}^{-1}$$
+:::
+
+::: {.fragment}
+$$\lambda = \frac{1}{1.524 \times 10^6 \text{ m}^{-1}} = 6.56 \times 10^{-7} \text{ m} = 656 \text{ nm}$$
+:::
+
+::: {.notes}
+"Same answer we got before! The Rydberg formula is equivalent to our energy level approach."
+:::
+
+---
+
+## Where Does 13.6 eV Come From? {background-color="#0a2f5c"}
+
+**Bohr model derivation (simplified):**
+
+::: {.text-sm}
+Balance Coulomb force with centripetal acceleration:
+
+$$\frac{e^2}{4\pi\epsilon_0 r^2} = \frac{m_e v^2}{r}$$
+
+Quantize angular momentum:
+
+$$m_e v r = n\hbar \quad \text{where } \hbar = h/2\pi$$
+:::
+
+::: {.fragment}
+**Solving these together gives:**
+
+$$E_n = -\frac{m_e e^4}{8\epsilon_0^2 h^2} \times \frac{1}{n^2}$$
+
+The constant evaluates to **13.6 eV**.
+:::
+
+::: {.notes}
+"The 13.6 eV comes from fundamental constants: electron mass, charge, Planck's constant."
+:::
+
+---
+
+## Other Elements: Scaling {background-color="#0a2f5c"}
+
+**For hydrogen-like ions** (one electron, nuclear charge $Z$):
+
+$$E_n = -\frac{13.6 \text{ eV} \times Z^2}{n^2}$$
+
+::: {.fragment}
+**Examples:**
+
+| Ion | Z | Ground state energy | Ionization energy |
+|-----|---|--------------------|--------------------|
+| H | 1 | -13.6 eV | 13.6 eV |
+| He⁺ | 2 | -54.4 eV | 54.4 eV |
+| Li²⁺ | 3 | -122.4 eV | 122.4 eV |
+:::
+
+::: {.fragment .mt-2 .text-muted}
+More protons → electron bound more tightly → higher ionization energy.
+:::
+
+::: {.notes}
+"Helium with one electron stripped (He⁺) has 4× the ionization energy of hydrogen."
+:::
+
+---
+
+## Multi-Electron Atoms: Complications {background-color="#0a2f5c"}
+
+**For atoms with multiple electrons:**
+
+- Electrons **shield** each other from the nucleus
+- Energy levels don't follow simple $1/n^2$ pattern
+- Each element has a **unique** energy level structure
+- This is why each element has **unique** spectral lines!
+
+::: {.fragment .mt-4 .bg-muted .p-2}
+**The uniqueness of spectra is a feature, not a bug.**
+
+It's what allows us to identify elements across the universe.
+:::
+
+::: {.notes}
+"The complexity of multi-electron atoms is what gives each element its fingerprint."
+:::
+
+---
+
+## Why "Metals" in Astronomy? {background-color="#0a2f5c"}
+
+**Astronomical definition of "metal":** Anything heavier than helium!
+
+::: {.fragment}
+**Why this weird definition?**
+
+- H and He are ~98% of ordinary matter
+- Everything else is trace amounts
+- From a spectroscopist's view: H lines, He lines, and "all the rest"
+:::
+
+::: {.fragment .mt-2}
+**Metallicity** = fraction of elements heavier than He
+
+- Sun: ~2% metals (by mass)
+- Old stars: <0.1% metals
+- Young stars: up to ~3% metals
+:::
+
+::: {.notes}
+"When astronomers say 'metal-rich star,' they might mean iron, calcium, or even carbon!"
+:::
+
+---
+
+## Questions? {background-image="/assets/images/common/cosmic-cliffs-jwst.png" background-opacity="0.25"}
+
+::: {.text-center .text-xl .mt-4}
+**Spectral lines are chemical fingerprints.**
+
+Quantum mechanics explains why they're discrete.
+:::
+
+::: {.notes}
+Remaining time for questions.
+:::

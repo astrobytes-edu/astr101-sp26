@@ -1,0 +1,833 @@
+---
+title: "Our Cosmic Backyard"
+subtitle: "Solar System Architecture & Formation"
+author: "Dr. Anna Rosen"
+date: "2026-02-23"
+description: "The solar system is where we apply everything we've learned. Kepler's Laws, Newton's gravity, blackbody radiation, spectroscopy — all used to understand our cosmic neighborhood."
+draft: false
+
+format:
+  revealjs:
+    theme: [default, ../../../assets/theme/slides/theme.scss]
+    footer: "ASTR 101 • Lecture 11 • Dr. Anna Rosen"
+    slide-number: true
+    transition: fade
+    transition-speed: fast
+    center: false
+    chalkboard: true
+    title-slide-attributes:
+      data-background-image: "/assets/images/common/cosmic-cliffs-jwst.png"
+      data-background-opacity: "0.35"
+    pointer:
+      key: "q"
+      color: "#5dbfbf"
+      pointerSize: 18
+      alwaysVisible: true
+    spotlight:
+      size: 80
+      toggleSpotlightOnMouseDown: true
+      presentingCursor: "crosshair"
+      fadeInAndOut: 100
+    quiz:
+      shuffleOptions: true
+      defaultCorrect: "Correct!"
+      defaultIncorrect: "Not quite — let's discuss."
+
+revealjs-plugins:
+  - pointer
+  - spotlight
+  - attribution
+  - quiz
+
+filters:
+  - roughnotation
+
+execute:
+  echo: false
+  warning: false
+  message: false
+---
+
+## Join iClicker {background-color="black"}
+
+::: {.text-center}
+{{< img iclicker-qr-astr101 width="36%" class="img-center" >}}
+
+::: {.text-xl .font-semibold .mt-2}
+[join.iclicker.com/ASES](https://join.iclicker.com/ASES)
+:::
+:::
+
+::: {.notes}
+30–60 sec. Get everyone connected before starting.
+:::
+
+---
+
+## {background-color="black"}
+
+::: {.r-fit-text}
+Worlds We've Never Stood On
+:::
+
+::: {.fragment .text-center .mt-4}
+We know the mass of Jupiter.
+
+We didn't weigh it. We watched how things **move around it**.
+:::
+
+::: {.notes}
+0–1 min. "We can measure worlds we will never touch."
+:::
+
+---
+
+## The Power of Remote Sensing {background-image="/assets/images/common/cosmic-cliffs-jwst.png" background-opacity="0.2"}
+
+From billions of kilometers away, we can measure:
+
+::: {.incremental}
+- **Mass** from orbits (Newton, L6)
+- **Temperature** from infrared glow (Wien, L8)
+- **Composition** from spectral lines (L9)
+- **Motion** from Doppler shifts (L10)
+:::
+
+::: {.fragment .mt-4}
+Today: **Apply the entire Module 1 toolkit** to our solar system.
+:::
+
+::: {.notes}
+1–2 min. "Everything we've learned comes together today."
+:::
+
+---
+
+## Today's Learning Objectives {background-image="/assets/images/common/cosmic-cliffs-jwst.png" background-opacity="0.2"}
+
+::: {.bg-muted .p-2}
+
+By the end of today, you'll be able to:
+
+::: {.incremental .text-sm}
+- Describe the **architecture** of the solar system (rocky, gas giants, ice giants, small bodies)
+- Explain the **nebular hypothesis** for solar system formation
+- Apply **Kepler, Newton, spectroscopy** to determine planetary properties
+- Explain why **rocky planets formed close** and **gas giants formed far**
+:::
+
+:::
+
+::: {.notes}
+2–3 min. "This is a capstone lecture — applying everything."
+:::
+
+---
+
+## {.center}
+
+::: {.r-fit-text}
+Part 1: Solar System Architecture
+:::
+
+*The grand tour*
+
+---
+
+## The Zones {background-color="black"}
+
+{{< fig solar-system-architecture >}}
+
+::: {.notes}
+3–4 min. "The solar system has a clear structure."
+:::
+
+---
+
+## Rocky Planets (0.4–1.5 AU) {background-color="#1a1a2e"}
+
+::: {.text-sm}
+| Planet | Distance | Size | Surface |
+|--------|----------|------|---------|
+| Mercury | 0.39 AU | 0.38 R⊕ | Cratered, no atmosphere |
+| Venus | 0.72 AU | 0.95 R⊕ | Hellscape, 735 K |
+| Earth | 1.0 AU | 1.0 R⊕ | Oceans, life |
+| Mars | 1.52 AU | 0.53 R⊕ | Cold desert |
+:::
+
+::: {.fragment .mt-2}
+**Common features:** Small, dense (4-5 g/cm³), solid surfaces
+:::
+
+::: {.notes}
+4–5 min. "Rocky planets are small and dense."
+:::
+
+---
+
+## Gas Giants (5–10 AU) {background-color="#1a1a2e"}
+
+::: {.text-sm}
+| Planet | Distance | Size | Composition |
+|--------|----------|------|-------------|
+| Jupiter | 5.2 AU | 11 R⊕ | H/He dominated |
+| Saturn | 9.5 AU | 9.4 R⊕ | H/He, famous rings |
+:::
+
+::: {.fragment .mt-2}
+**Key facts:**
+
+- Jupiter has **318 Earth masses** (more than all other planets combined!)
+- Saturn would **float in water** (density 0.69 g/cm³)
+- **No solid surface** — just deeper and denser gas/liquid
+:::
+
+::: {.notes}
+5–6 min. "Gas giants are dominated by hydrogen and helium."
+:::
+
+---
+
+## Ice Giants (19–30 AU) {background-color="#1a1a2e"}
+
+::: {.text-sm}
+| Planet | Distance | Size | Composition |
+|--------|----------|------|-------------|
+| Uranus | 19.2 AU | 4.0 R⊕ | H/He + ices |
+| Neptune | 30.1 AU | 3.9 R⊕ | H/He + ices |
+:::
+
+::: {.fragment .mt-2}
+**Different from gas giants:**
+
+- More water, ammonia, methane **ices**
+- Blue-green from **methane absorbing red light**
+- Smaller but still massive (~15-17 M⊕)
+:::
+
+::: {.notes}
+6–7 min. "Ice giants are distinct from gas giants."
+:::
+
+---
+
+## Two Families of Planets {background-color="black"}
+
+| Property | Rocky | Giants |
+|----------|------:|-------:|
+| Size | Small | Large |
+| Mass | Low | High |
+| Density | High (4-5 g/cm³) | Low (0.7-1.6 g/cm³) |
+| Composition | Rock, metal | H, He, ices |
+| Surface | Solid | None |
+
+::: {.fragment .mt-4 .text-center}
+**Why this pattern?** Formation explains everything.
+:::
+
+::: {.notes}
+7–8 min. "Two families with different properties."
+:::
+
+---
+
+## Quick Check: Planet Classification {background-color="#1a1a2e"}
+
+::: {.quiz}
+Saturn has density 0.69 g/cm³ — less than water. What does this tell you about its composition?
+
+- [ ] Rock and metal
+- [x] Primarily lightweight gases (hydrogen, helium)
+- [ ] No atmosphere
+- [ ] Same as Earth
+:::
+
+::: {.notes}
+1 min. iClicker poll.
+:::
+
+---
+
+## {.center}
+
+::: {.r-fit-text}
+Part 2: Applying Our Toolkit
+:::
+
+*How do we know what we know?*
+
+---
+
+## The Module 1 Toolkit {background-color="#1a1a2e"}
+
+::: {.text-sm}
+| What We Measure | The Tool | The Physics |
+|-----------------|----------|-------------|
+| Distance from Sun | Kepler III | $P^2 \propto a^3$ |
+| Mass (with moons) | Moon orbits + Newton | $M = 4\pi^2 a^3/(GP^2)$ |
+| Temperature | IR spectrum + Wien | Peak → T |
+| Composition | Spectral lines | Fingerprints |
+:::
+
+::: {.notes}
+8–9 min. "All Module 1 tools applied to planets."
+:::
+
+---
+
+## Worked Example: Jupiter's Mass {background-color="black"}
+
+**Problem:** Io orbits Jupiter at a = 422,000 km with P = 1.77 days. Find Jupiter's mass.
+
+::: {.fragment}
+Using Newton's form of Kepler III:
+$$M = \frac{4\pi^2 a^3}{GP^2}$$
+:::
+
+::: {.fragment}
+$$M = \frac{4\pi^2 (4.22 \times 10^8 \text{ m})^3}{(6.67 \times 10^{-11})(1.53 \times 10^5 \text{ s})^2}$$
+:::
+
+::: {.fragment}
+$$M = 1.9 \times 10^{27} \text{ kg} = 318 \text{ Earth masses}$$
+:::
+
+::: {.notes}
+9–10 min. Walk through the calculation.
+:::
+
+---
+
+## Quick Check: Applying Newton {background-color="#1a1a2e"}
+
+::: {.quiz}
+If a moon orbits at twice the distance but with the same period, the planet's mass is:
+
+- [ ] The same
+- [ ] 2× larger
+- [ ] 4× larger
+- [x] 8× larger
+:::
+
+::: {.fragment .mt-2 .text-sm}
+**From $M \propto a^3/P^2$:** if $a$ doubles and $P$ stays same → $M$ increases by $2^3 = 8$.
+:::
+
+::: {.notes}
+1–2 min. iClicker poll, then explain.
+:::
+
+---
+
+## Temperature from Wien's Law {background-color="#1a1a2e"}
+
+::: {.text-sm}
+| Planet | T_equilibrium | T_observed | Difference |
+|--------|---------------|------------|------------|
+| Mercury | ~440 K | 90–700 K | Extreme swings |
+| Venus | ~230 K | **735 K** | +505 K! |
+| Earth | ~255 K | 288 K | +33 K |
+| Mars | ~210 K | 218 K | +8 K |
+:::
+
+::: {.fragment .mt-2}
+**Venus stands out:** 500 K hotter than expected!
+
+**Why?** Greenhouse effect (L12 preview).
+:::
+
+::: {.notes}
+10–11 min. "Compare equilibrium to observed temperatures."
+:::
+
+---
+
+## {.center}
+
+::: {.r-fit-text}
+Part 3: Formation
+:::
+
+*Why does it look this way?*
+
+---
+
+## The Nebular Hypothesis {background-color="black"}
+
+The solar system formed ~4.6 billion years ago from a collapsing cloud of gas and dust.
+
+::: {.incremental}
+1. **Gravity → Collapse**
+2. **Collapse → Spin-up** (angular momentum)
+3. **Spin-up → Disk** (material settles)
+4. **Temperature gradient** → different materials condense
+5. **Core growth outside frost line** → gas capture
+:::
+
+::: {.notes}
+11–13 min. "The causal chain of formation."
+:::
+
+---
+
+## {background-color="black"}
+
+{{< fig nebular-hypothesis >}}
+
+::: {.notes}
+13–14 min. Visual of nebular formation.
+:::
+
+---
+
+## The Frost Line {background-color="#0a2f5c"}
+
+::: {.text-center .text-xl .bg-muted .p-3}
+**Frost line:** ~3 AU from young Sun
+
+Where it was cold enough for **ices to form**.
+:::
+
+::: {.fragment .mt-4}
+| Region | Solid Material | Result |
+|--------|----------------|--------|
+| Inside frost line | Rock, metal only | **Small rocky planets** |
+| Outside frost line | Rock + metal + ices | **Large cores → gas giants** |
+:::
+
+::: {.notes}
+14–15 min. "The frost line explains the planet distribution."
+:::
+
+---
+
+## Quick Check: Formation {background-color="#1a1a2e"}
+
+::: {.quiz}
+Why didn't Earth become a gas giant like Jupiter?
+
+- [ ] Earth formed before Jupiter
+- [ ] Not enough hydrogen near Earth
+- [x] Earth was inside the frost line, so its core stayed small
+- [ ] Jupiter stole all the gas
+:::
+
+::: {.notes}
+1 min. iClicker poll.
+:::
+
+---
+
+## Evidence for the Nebular Hypothesis {background-color="#1a1a2e"}
+
+::: {.incremental}
+1. All planets orbit in the **same direction** — from the disk's rotation
+2. All planets orbit in nearly the **same plane** — the disk was flat
+3. **Rocky inside, giants outside** — frost line
+4. **We observe protoplanetary disks** around other young stars!
+:::
+
+::: {.notes}
+15–16 min. "Multiple lines of evidence support the model."
+:::
+
+---
+
+## {background-color="black"}
+
+{{< fig protoplanetary-disk >}}
+
+::: {.fragment .text-center .mt-2}
+**We see solar systems forming around other stars.**
+:::
+
+::: {.notes}
+16–17 min. "Protoplanetary disks are observed directly."
+:::
+
+---
+
+## Key Takeaways {background-color="#0a2f5c"}
+
+::: {.text-sm}
+
+**Architecture:**
+
+1. Rocky planets inside (~1.5 AU), gas giants (5–10 AU), ice giants (19–30 AU)
+2. Two families: small/dense/rocky vs. large/low-density/gaseous
+
+**Toolkit:**
+
+3. Masses from orbits (Newton), temperatures from IR (Wien), compositions from spectra
+
+**Formation:**
+
+4. Nebular hypothesis: collapse → disk → condensation
+5. Frost line (~3 AU) explains rocky vs. gas giant distribution
+
+:::
+
+::: {.notes}
+17–18 min. Rapid recap.
+:::
+
+---
+
+## Coming Up: Planetary Climates {background-color="black"}
+
+::: {.text-center .text-xl}
+**Next lecture:** Why Venus is a hellscape, Earth is habitable, and Mars is frozen.
+:::
+
+::: {.fragment .mt-4}
+Then: Exoplanet detection — finding worlds around other stars.
+:::
+
+::: {.notes}
+18–19 min. Preview L12.
+:::
+
+---
+
+## {.center background-color="#1a1a2e"}
+
+::: {.r-fit-text}
+Numerical Verification
+:::
+
+*Calculating solar system properties with careful units*
+
+::: {.notes}
+Let's apply our toolkit with explicit calculations.
+:::
+
+---
+
+## Jupiter's Mass from Io's Orbit {background-color="#1a1a2e"}
+
+**Given:**
+
+- Io's orbital period: $P = 1.77$ days
+- Io's orbital radius: $a = 421,700$ km
+
+::: {.fragment}
+**Step 1: Convert to SI units**
+
+$$P = 1.77 \text{ days} \times \frac{86,400 \text{ s}}{1 \text{ day}} = 1.53 \times 10^5 \text{ s}$$
+
+$$a = 421,700 \text{ km} \times \frac{1000 \text{ m}}{1 \text{ km}} = 4.217 \times 10^8 \text{ m}$$
+:::
+
+::: {.notes}
+"Always convert to SI before using Newton's form of Kepler III."
+:::
+
+---
+
+## Jupiter's Mass: Calculation {background-color="#1a1a2e"}
+
+**Newton's form of Kepler III:**
+
+$$M = \frac{4\pi^2 a^3}{G P^2}$$
+
+::: {.fragment}
+**Substitute values:**
+
+$$M_J = \frac{4\pi^2 \times (4.217 \times 10^8)^3}{(6.674 \times 10^{-11}) \times (1.53 \times 10^5)^2}$$
+:::
+
+::: {.fragment}
+**Numerator:**
+
+$$4\pi^2 \times (4.217 \times 10^8)^3 = 39.48 \times 7.50 \times 10^{25} = 2.96 \times 10^{27} \text{ m}^3$$
+:::
+
+::: {.fragment}
+**Denominator:**
+
+$$(6.674 \times 10^{-11}) \times (2.34 \times 10^{10}) = 1.56 \times 10^{0} \text{ m}^3/\text{kg}$$
+:::
+
+::: {.notes}
+"Let me work through the units carefully."
+:::
+
+---
+
+## Jupiter's Mass: Unit Analysis {background-color="#1a1a2e"}
+
+**Check the denominator units:**
+
+$$[G \times P^2] = \frac{\text{N} \cdot \text{m}^2}{\text{kg}^2} \times \text{s}^2 = \frac{\text{kg} \cdot \text{m}}{\text{s}^2} \times \frac{\text{m}^2}{\text{kg}^2} \times \text{s}^2$$
+
+::: {.fragment}
+$$= \frac{\text{m}^3}{\text{kg}} \quad \checkmark$$
+:::
+
+::: {.fragment}
+**Final result:**
+
+$$M_J = \frac{2.96 \times 10^{27} \text{ m}^3}{1.56 \text{ m}^3/\text{kg}} = 1.90 \times 10^{27} \text{ kg}$$
+:::
+
+::: {.fragment .bg-success-subtle .p-2}
+**Jupiter's mass: $1.9 \times 10^{27}$ kg** (Actual: $1.898 \times 10^{27}$ kg ✓)
+:::
+
+::: {.notes}
+"We 'weighed' Jupiter by watching one of its moons orbit."
+:::
+
+---
+
+## Frost Line Temperature {background-color="#1a1a2e"}
+
+**Where does water ice become stable?**
+
+Water ice sublimes (vaporizes) at temperatures above ~170 K in vacuum.
+
+::: {.fragment}
+**Equilibrium temperature:**
+
+$$T_{eq} \approx 280 \text{ K} \times \left(\frac{1 \text{ AU}}{r}\right)^{1/2}$$
+
+(Simplified formula; assumes Earth's equilibrium temp ~280 K)
+:::
+
+::: {.fragment}
+**Solve for $r$ where $T = 170$ K:**
+
+$$170 = 280 \times \left(\frac{1}{r}\right)^{1/2}$$
+$$\left(\frac{1}{r}\right)^{1/2} = \frac{170}{280} = 0.607$$
+$$r = \frac{1}{(0.607)^2} = 2.7 \text{ AU}$$
+:::
+
+::: {.fragment .bg-muted .p-2}
+**Frost line ≈ 2.7 AU** — between Mars (1.5 AU) and Jupiter (5.2 AU) ✓
+:::
+
+::: {.notes}
+"This explains why rocky planets are inside ~3 AU and giants are outside."
+:::
+
+---
+
+## Planetary Density Calculation {background-color="#1a1a2e"}
+
+**Calculate Earth's average density:**
+
+::: {.fragment}
+**Given:**
+
+- Mass: $M_E = 5.97 \times 10^{24}$ kg
+- Radius: $R_E = 6.371 \times 10^6$ m
+:::
+
+::: {.fragment}
+**Volume:**
+
+$$V = \frac{4}{3}\pi R^3 = \frac{4}{3}\pi (6.371 \times 10^6)^3 = 1.083 \times 10^{21} \text{ m}^3$$
+:::
+
+::: {.fragment}
+**Density:**
+
+$$\rho = \frac{M}{V} = \frac{5.97 \times 10^{24} \text{ kg}}{1.083 \times 10^{21} \text{ m}^3} = 5,510 \text{ kg/m}^3$$
+:::
+
+::: {.fragment}
+**Convert to g/cm³:** (water = 1 g/cm³)
+
+$$\rho = 5510 \text{ kg/m}^3 \times \frac{1 \text{ g/cm}^3}{1000 \text{ kg/m}^3} = 5.51 \text{ g/cm}^3$$
+:::
+
+::: {.notes}
+"Earth is 5.5× denser than water — made of rock and metal."
+:::
+
+---
+
+## Density Comparison {background-color="#1a1a2e"}
+
+| Planet | Mass ($M_E$) | Radius ($R_E$) | Density (g/cm³) |
+|--------|--------------|----------------|-----------------|
+| Mercury | 0.055 | 0.38 | 5.43 |
+| Venus | 0.82 | 0.95 | 5.24 |
+| Earth | 1.00 | 1.00 | 5.51 |
+| Mars | 0.11 | 0.53 | 3.93 |
+| Jupiter | 318 | 11.2 | **1.33** |
+| Saturn | 95 | 9.4 | **0.69** |
+
+::: {.fragment .mt-2 .bg-warning-subtle .p-2}
+**Saturn's density < water!** It would float (if you had a big enough bathtub).
+
+$\rho = \frac{95 M_E}{(9.4 R_E)^3} = \frac{95}{830} \times 5.51 = 0.63$ g/cm³
+:::
+
+::: {.notes}
+"Low density = lots of gas (H, He). High density = rock and metal."
+:::
+
+---
+
+## {.center background-color="#0a2f5c"}
+
+::: {.r-fit-text}
+Deeper Dive
+:::
+
+*Orbital mechanics and the Roche limit*
+
+::: {.notes}
+Optional advanced content.
+:::
+
+---
+
+## Orbital Velocity Around the Sun {background-color="#0a2f5c"}
+
+**For a circular orbit:**
+
+$$v = \sqrt{\frac{GM_\odot}{r}}$$
+
+::: {.fragment}
+**Earth's orbital velocity:**
+
+$$v_E = \sqrt{\frac{6.674 \times 10^{-11} \times 1.99 \times 10^{30}}{1.496 \times 10^{11}}}$$
+:::
+
+::: {.fragment}
+$$v_E = \sqrt{\frac{1.33 \times 10^{20}}{1.50 \times 10^{11}}} = \sqrt{8.87 \times 10^{8}} \text{ m}^2/\text{s}^2$$
+:::
+
+::: {.fragment}
+$$v_E = 29,800 \text{ m/s} = 29.8 \text{ km/s}$$
+:::
+
+::: {.fragment .text-muted}
+Earth moves at **107,000 km/hr** around the Sun!
+:::
+
+::: {.notes}
+"We're moving fast, we just don't feel it because everything around us moves too."
+:::
+
+---
+
+## Orbital Velocities Across the Solar System {background-color="#0a2f5c"}
+
+Since $v \propto 1/\sqrt{r}$:
+
+| Planet | r (AU) | v (km/s) | Calculation |
+|--------|--------|----------|-------------|
+| Mercury | 0.39 | 47.4 | $29.8/\sqrt{0.39}$ |
+| Venus | 0.72 | 35.0 | $29.8/\sqrt{0.72}$ |
+| Earth | 1.00 | 29.8 | (reference) |
+| Mars | 1.52 | 24.1 | $29.8/\sqrt{1.52}$ |
+| Jupiter | 5.20 | 13.1 | $29.8/\sqrt{5.20}$ |
+| Neptune | 30.1 | 5.4 | $29.8/\sqrt{30.1}$ |
+
+::: {.fragment .mt-2}
+**Pattern:** Outer planets move slower — both because of longer paths AND lower speeds!
+:::
+
+::: {.notes}
+"This is Kepler's Second Law in action. Farther = slower."
+:::
+
+---
+
+## The Roche Limit {background-color="#0a2f5c"}
+
+**What happens when a moon gets too close?**
+
+Tidal forces (gravity gradient) can tear it apart!
+
+::: {.fragment}
+**The Roche limit:**
+
+$$d_{Roche} \approx 2.44 R_p \left(\frac{\rho_p}{\rho_m}\right)^{1/3}$$
+
+where $R_p$ = planet radius, $\rho$ = densities
+:::
+
+::: {.fragment}
+**For Saturn (using similar densities):**
+
+$$d_{Roche} \approx 2.44 \times 58,232 \text{ km} = 142,000 \text{ km}$$
+
+Saturn's rings extend to ~137,000 km — **inside the Roche limit!**
+:::
+
+::: {.notes}
+"This is why Saturn has rings instead of a moon at that distance."
+:::
+
+---
+
+## Why Rings, Not Moons? {background-color="#0a2f5c"}
+
+**Inside the Roche limit:**
+
+- Material can't coalesce into a moon
+- Existing moons would be torn apart
+- Only small particles can survive → **rings**
+
+::: {.fragment}
+**Outside the Roche limit:**
+
+- Material can gravitationally clump
+- Moons form and survive
+- Saturn has 146+ moons beyond its rings!
+:::
+
+::: {.fragment .mt-2 .bg-muted .p-2}
+**Ring systems mark the Roche limit.**
+
+All four giant planets have rings inside their Roche limits.
+:::
+
+::: {.notes}
+"The ring-moon boundary is the Roche limit in action."
+:::
+
+---
+
+## Lagrange Points {background-color="#0a2f5c"}
+
+**Special locations where gravity and orbital motion balance:**
+
+::: {.text-sm}
+- **L1:** Between Sun and Earth (~1.5 million km sunward) — solar observatories
+- **L2:** Beyond Earth (~1.5 million km away) — JWST location!
+- **L3:** Opposite side of Sun — sci-fi "Counter-Earth"
+- **L4/L5:** 60° ahead/behind in orbit — trapped asteroids (Trojans)
+:::
+
+::: {.fragment .mt-2}
+**JWST at L2:**
+
+Always in Earth's shadow, stable orbit, uninterrupted sky view.
+
+Distance: $\approx 1\%$ of Earth-Sun distance toward night side.
+:::
+
+::: {.notes}
+"Lagrange points are 'parking spots' in the gravitational landscape."
+:::
+
+---
+
+## Questions? {background-image="/assets/images/common/cosmic-cliffs-jwst.png" background-opacity="0.25"}
+
+::: {.text-center .text-xl .mt-4}
+**Module 1 toolkit applied:**
+
+Motion → mass. Light → temperature & composition.
+
+Formation → explains the pattern.
+:::
+
+::: {.notes}
+Remaining time for questions.
+:::
