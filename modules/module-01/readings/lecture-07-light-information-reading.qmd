@@ -113,6 +113,8 @@ What exactly is light? For centuries, scientists debated whether light was made 
 
 Light is an **electromagnetic wave** — a self-propagating oscillation of electric and magnetic fields. Unlike ocean waves (which need water) or sound waves (which need air), electromagnetic waves need no medium at all. They travel perfectly well through the vacuum of space. This is why we can see starlight from billions of light-years away.
 
+{{< fig mechanical-vs-em-wave >}}
+
 ::: {.column-margin}
 **Electromagnetic wave:** A self-propagating wave of oscillating electric and magnetic fields. Light, radio, X-rays — all are electromagnetic waves.
 :::
@@ -187,6 +189,8 @@ If one type of light has twice the wavelength of another, it has:
 
 What we call "visible light" — the colors of the rainbow — is just a tiny sliver of the electromagnetic spectrum. There's a vast range of wavelengths our eyes can't see, from radio waves longer than buildings to gamma rays smaller than atoms. **All of them are light.** All of them are electromagnetic waves. All of them travel at speed $c$. And all of them carry information.
 
+{{< fig em-spectrum-jwst >}}
+
 ### The Full Spectrum
 
 | Region | Wavelength Range (approx.) | Typical Sources | Astronomical Uses |
@@ -238,6 +242,8 @@ Which correctly orders these types of light from longest wavelength to shortest?
 You'll hear X-rays and gamma rays called "high-energy" light, while radio waves are "low-energy." Why?
 
 Photon energy increases with frequency: $E = hf$ (where $h$ is Planck's constant). Since shorter wavelength means higher frequency, **shorter-wavelength photons carry more energy per photon**.
+
+{{< fig wavelength-energy >}}
 
 A single gamma-ray photon can carry millions of times more energy than a radio photon — which is why gamma rays are dangerous and radio waves are harmless.
 :::
@@ -334,6 +340,8 @@ Which of these is wrong? (Hint: all of them — but especially the last one.)
 ### Sunlight Is All Colors
 
 First, the setup: sunlight is **white light** — a mix of all visible wavelengths. When a prism spreads sunlight into a rainbow, it reveals the full spectrum: red, orange, yellow, green, blue, violet.
+
+{{< fig prism-spectrum-jwst >}}
 
 The key question: if sunlight contains all colors equally, why does the sky favor blue?
 
