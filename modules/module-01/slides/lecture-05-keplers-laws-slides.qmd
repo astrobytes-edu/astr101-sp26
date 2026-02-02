@@ -6,10 +6,13 @@ date: "2026-02-02"
 description: "How retrograde motion puzzled ancient astronomers, and how Kepler's three laws finally cracked the code of planetary motion."
 draft: false
 
+metadata-files:
+  - _metadata.yml
+
 format:
   revealjs:
     theme: [default, ../../../assets/theme/slides/theme.scss]
-    footer: "ASTR 101 • Lecture 5 • Dr. Anna Rosen"
+    footer: "ASTR 101 - Lecture 5 - Dr. Anna Rosen"
     slide-number: true
     transition: fade
     transition-speed: fast
@@ -48,7 +51,7 @@ execute:
   message: false
 ---
 
-## Join iClicker {background-color="black"}
+## Join iClicker
 
 ::: {.text-center}
 {{< img iclicker-qr-astr101 width="36%" class="img-center" >}}
@@ -88,14 +91,27 @@ For 2,000 years, astronomers asked **why**.
 
 ::: {.bg-muted .p-2}
 
-By the end of today, you'll be able to:
+By the end of today, you can:
 
 ::: {.incremental .text-sm}
-- Explain why **retrograde motion** puzzled ancient astronomers and how heliocentrism resolves it
-- Describe how scientific models evolve through evidence and simplification (**Occam's Razor**)
-- State **Kepler's three laws** of planetary motion
-- Apply **Kepler's Third Law** to calculate orbital periods from distances
-- Distinguish **empirical laws** (patterns) from **physical explanations** (mechanisms)
+- Explain retrograde motion as **perspective + geometry**
+- Describe why models change (evidence + simplicity)
+- State **Kepler's three laws**
+:::
+
+:::
+
+---
+
+## Today's Learning Objectives (continued) {background-image="../../../assets/images/common/cosmic-cliffs-jwst.png" background-opacity="0.2"}
+
+::: {.bg-muted .p-2}
+
+By the end of today, you can:
+
+::: {.incremental .text-sm}
+- Use Kepler III to relate $P$ and $a$ (ratio or Sun-only form)
+- Distinguish **empirical patterns** from **physical mechanisms**
 :::
 
 :::
@@ -120,7 +136,7 @@ Section transition. 30 sec.
 
 ---
 
-## The Wanderers {background-color="black"}
+## The Wanderers
 
 :::: {.columns}
 ::: {.column width="55%"}
@@ -159,7 +175,7 @@ Retrograde is an **apparent** motion — an illusion of perspective.
 :::
 
 ::: {.fragment .mt-2}
-Like passing a slower car on the highway: the car seems to drift backward relative to distant mountains, even though it's still moving forward.
+Like passing a slower car: it can *look* like it drifts backward against distant mountains.
 :::
 
 ::: {.notes}
@@ -168,7 +184,7 @@ Like passing a slower car on the highway: the car seems to drift backward relati
 
 ---
 
-## The Highway Analogy {background-color="#1a1a2e"}
+## The Highway Analogy
 
 :::: {.columns}
 ::: {.column width="50%"}
@@ -199,7 +215,7 @@ This is **exactly** what happens with Mars.
 
 ---
 
-## Quick Check: Retrograde Motion {background-color="#1a1a2e"}
+## Quick Check: Retrograde Motion
 
 ::: {.quiz}
 During Mars retrograde, Mars is actually moving:
@@ -226,7 +242,7 @@ The Ancient Answer
 
 ---
 
-## Ptolemy's Geocentric Model (~150 CE) {background-color="black"}
+## Ptolemy's Geocentric Model (~150 CE)
 
 :::: {.columns}
 ::: {.column width="50%"}
@@ -255,9 +271,9 @@ Earth felt **obviously** central:
 To explain retrograde, Ptolemy proposed **epicycles**:
 
 ::: {.incremental}
-- Planets move on small circles (**epicycles**)
-- The epicycle centers travel on larger circles (**deferents**)
-- When a planet is on the "backward" part of its epicycle, it appears to reverse
+- Planets move on a small circle (**epicycle**)
+- The epicycle center moves on a larger circle (**deferent**)
+- The combined motion can trace a *loop* (apparent retrograde)
 :::
 
 ::: {.fragment .mt-4 .bg-warning-subtle .p-2}
@@ -270,7 +286,7 @@ To explain retrograde, Ptolemy proposed **epicycles**:
 
 ---
 
-## Spot the Assumption {background-color="#1a1a2e"}
+## Spot the Assumption
 
 The geocentric model protected two assumptions:
 
@@ -300,7 +316,7 @@ The Revolution Begins
 
 ---
 
-## Copernicus (1543): A Simpler Idea {background-color="black"}
+## Copernicus (1543): A Simpler Idea
 
 ::: {.text-center .text-xl}
 What if the **Sun** is at the center?
@@ -330,7 +346,7 @@ What if the **Sun** is at the center?
 
 ---
 
-## Quick Check: The Copernican Shift {background-color="#1a1a2e"}
+## Quick Check: The Copernican Shift
 
 ::: {.quiz}
 What was the key advantage of Copernicus's heliocentric model?
@@ -349,24 +365,24 @@ What was the key advantage of Copernicus's heliocentric model?
 
 ## The Evidence Mounts
 
-**Galileo (1610)** provided actual *evidence*:
+**Galileo (1610)** used telescopes to test models:
 
 ::: {.incremental}
-- **Jupiter's moons:** Four moons orbiting Jupiter — not everything orbits Earth!
-- **Venus phases:** Full range from crescent to full — impossible if Venus always stays between Earth and Sun
+- Jupiter has moons — not everything orbits Earth
+- Venus shows phases — consistent with heliocentrism
 :::
 
 ::: {.fragment .mt-4}
-Despite the evidence, Galileo faced the Inquisition (1633) and spent his remaining years under house arrest.
+Evidence did not end the controversy.
 :::
 
 ::: {.notes}
-10–12 min. "The scientific evidence eventually won — but it took courage to follow it."
+10–12 min. "The scientific evidence eventually won — but it took courage to follow it." Galileo faced the Inquisition (1633) and spent his remaining years under house arrest.
 :::
 
 ---
 
-## Tycho Brahe: The Master Observer {background-color="black"}
+## Tycho Brahe: The Master Observer
 
 :::: {.columns}
 ::: {.column width="40%"}
@@ -396,7 +412,7 @@ When he died in 1601, his observations passed to his young assistant...
 
 ---
 
-## {.center background-color="black"}
+## {.center}
 
 ::: {.r-fit-text}
 Kepler's Laws
@@ -434,7 +450,7 @@ And suddenly, **everything fit**.
 
 ---
 
-## Kepler's First Law: The Shape of Orbits {background-color="#0a2f5c"}
+## Kepler's First Law: The Shape of Orbits
 
 ::: {.text-center .text-xl .bg-muted .p-3}
 **Planets orbit the Sun in ellipses, with the Sun at one focus.**
@@ -467,8 +483,8 @@ An ellipse has two special points called **foci**.
 ::: {.fragment .mt-2}
 **Eccentricity ($e$):** How "squashed" the ellipse is
 
-- $e = 0$ → perfect circle
-- $e$ near 1 → very elongated
+- $e = 0$ means a perfect circle
+- $e$ close to 1 means a very elongated ellipse
 :::
 :::
 ::::
@@ -479,7 +495,7 @@ An ellipse has two special points called **foci**.
 
 ---
 
-## Key Orbital Terms {background-color="#1a1a2e"}
+## Key Orbital Terms
 
 | Term | Symbol | Definition |
 |------|--------|------------|
@@ -518,7 +534,7 @@ Most planets have nearly circular orbits — this is why Ptolemy got *reasonably
 
 ---
 
-## Quick Check: Eccentricity {background-color="#1a1a2e"}
+## Quick Check: Eccentricity
 
 ::: {.quiz}
 An orbit with eccentricity $e = 0$ would be:
@@ -535,7 +551,7 @@ An orbit with eccentricity $e = 0$ would be:
 
 ---
 
-## Kepler's Second Law: Orbital Speed {background-color="#0a2f5c"}
+## Kepler's Second Law: Orbital Speed
 
 ::: {.text-center .text-xl .bg-muted .p-3}
 **A line connecting a planet to the Sun sweeps out equal areas in equal times.**
@@ -579,7 +595,7 @@ Near **aphelion** (far from Sun):
 
 ---
 
-## The Ice Skater Analogy {background-color="#1a1a2e"}
+## The Ice Skater Analogy
 
 ::: {.text-center}
 Think of an ice skater spinning with arms extended.
@@ -588,13 +604,13 @@ Think of an ice skater spinning with arms extended.
 :::: {.columns .mt-4}
 ::: {.column width="50%"}
 ::: {.fragment}
-**Arms in** → spins **faster**
+**Arms in:** spins **faster**
 :::
 :::
 
 ::: {.column width="50%"}
 ::: {.fragment}
-**Arms out** → spins **slower**
+**Arms out:** spins **slower**
 :::
 :::
 ::::
@@ -602,7 +618,7 @@ Think of an ice skater spinning with arms extended.
 ::: {.fragment .mt-4}
 This is **conservation of angular momentum**.
 
-Same principle: closer to Sun → faster; farther from Sun → slower.
+Same idea: closer to the Sun means faster; farther means slower.
 :::
 
 ::: {.notes}
@@ -618,12 +634,13 @@ Same principle: closer to Sun → faster; farther from Sun → slower.
 | Perihelion | ~Jan 3 | 147.1 million km | 30.3 km/s |
 | Aphelion | ~Jul 4 | 152.1 million km | 29.3 km/s |
 
-::: {.fragment .mt-4}
-Earth moves about **3% faster** in January than in July!
+---
 
-::: {.text-muted}
-Northern Hemisphere winter is slightly shorter than summer.
-:::
+## Earth's Orbit: What This Means
+
+::: {.text-sm}
+- Earth moves about **3% faster** near perihelion than near aphelion.
+- Northern Hemisphere winter is slightly shorter than summer.
 :::
 
 ::: {.notes}
@@ -632,7 +649,7 @@ Northern Hemisphere winter is slightly shorter than summer.
 
 ---
 
-## Quick Check: Fastest Point {background-color="#1a1a2e"}
+## Quick Check: Fastest Point
 
 ::: {.quiz}
 A planet is moving fastest when it is at:
@@ -649,25 +666,25 @@ A planet is moving fastest when it is at:
 
 ---
 
-## Predict First! {background-color="#1a1a2e"}
+## Predict First!
 
-Before we see the law: if we double the orbital size ($a \\rightarrow 2a$), the orbital period $P$ becomes…
+Before we see the law: if we double the orbital size ($a \\rightarrow 2a$), the orbital period $P$ becomes:
 
 :::: {.columns .mt-4}
 ::: {.column width="25%"}
-A) 2×
+A) $2\\times$
 :::
 
 ::: {.column width="25%"}
-B) ~2.8×
+B) $\\approx 2.8\\times$
 :::
 
 ::: {.column width="25%"}
-C) 4×
+C) $4\\times$
 :::
 
 ::: {.column width="25%"}
-D) 8×
+D) $8\\times$
 :::
 ::::
 
@@ -677,7 +694,7 @@ D) 8×
 
 ---
 
-## Kepler's Third Law: The Period-Distance Relation {background-color="#0a2f5c"}
+## Kepler's Third Law: The Period-Distance Relation
 
 ::: {.text-center .text-xl .bg-muted .p-3}
 **The square of a planet's orbital period is proportional to the cube of its semi-major axis.**
@@ -685,16 +702,23 @@ D) 8×
 $$P^2 \propto a^3$$
 :::
 
-::: {.fragment .mt-3 .text-muted}
-$P$ is orbital period (time per orbit). $a$ is the semi-major axis (a measure of orbit size / average distance).
-:::
-
-::: {.fragment .mt-4}
-In plain English: planets farther from the Sun take *disproportionately* longer to orbit.
-:::
-
 ::: {.notes}
 25–27 min. "This is the harmonic law. It connects distance and time."
+:::
+
+---
+
+## Reading Kepler III
+
+::: {.text-sm}
+Let’s unpack the symbols:
+
+- $P$: orbital period (time per orbit)
+- $a$: semi-major axis (a measure of orbit size)
+:::
+
+::: {.fragment .mt-3}
+In plain English: if you increase orbit size, the period increases *more* than linearly.
 :::
 
 ---
@@ -706,7 +730,7 @@ Two effects compound:
 ::: {.incremental}
 1. They have **farther to travel** (larger orbit circumference)
 
-2. They **move slower** (farther from the Sun → weaker gravitational pull)
+2. They **move slower** (farther from the Sun means weaker gravitational pull)
 :::
 
 ::: {.fragment .mt-4}
@@ -719,7 +743,7 @@ These combine to give the precise $P^2 \propto a^3$ relationship.
 
 ---
 
-## How to Use Kepler's Third Law {background-color="#1a1a2e"}
+## How to Use Kepler's Third Law
 
 ::: {.text-sm}
 
@@ -780,12 +804,12 @@ $$a = \sqrt[3]{729} \times 1\,\text{AU} = \boxed{9 \text{ AU}}$$
 :::
 
 ::: {.notes}
-30–31 min. "Cube root of 729 is 9, because 9×9×9 = 729."
+30–31 min. "Cube root of 729 is 9, because $9\\times 9\\times 9 = 729$."
 :::
 
 ---
 
-## Quick Check: Basic Calculation {background-color="#1a1a2e"}
+## Quick Check: Basic Calculation
 
 ::: {.quiz}
 An asteroid orbits the Sun at a distance of 4 AU. What is its orbital period?
@@ -802,17 +826,15 @@ An asteroid orbits the Sun at a distance of 4 AU. What is its orbital period?
 
 ---
 
-## Solar System Examples {background-color="black"}
+## Solar System Examples
 
 | Planet | $a$ (AU) | $a^3$ | $P$ (years) | $P^2$ |
 |--------|----------|-------|-------------|-------|
 | Earth | 1.00 | 1.00 | 1.00 | 1.00 |
 | Mars | 1.52 | 3.51 | 1.88 | 3.53 |
-| Jupiter | 5.20 | 141 | 11.86 | 141 |
-| Saturn | 9.54 | 868 | 29.46 | 868 |
 
 ::: {.fragment .mt-2 .text-center}
-Notice: $a^3 \approx P^2$ in every row. The pattern is **exact**.
+Notice: $a^3 \approx P^2$.
 :::
 
 ::: {.notes}
@@ -821,7 +843,20 @@ Notice: $a^3 \approx P^2$ in every row. The pattern is **exact**.
 
 ---
 
-## Quick Check: Scaling {background-color="#1a1a2e"}
+## Solar System Examples (continued)
+
+| Planet | $a$ (AU) | $a^3$ | $P$ (years) | $P^2$ |
+|--------|----------|-------|-------------|-------|
+| Jupiter | 5.20 | 141 | 11.86 | 141 |
+| Saturn | 9.54 | 868 | 29.46 | 868 |
+
+::: {.text-sm .text-muted}
+Same pattern: $a^3 \approx P^2$.
+:::
+
+---
+
+## Quick Check: Scaling
 
 ::: {.quiz}
 If a planet's orbital distance $a$ increases by a factor of 4, its orbital period $P$ increases by a factor of:
@@ -854,7 +889,7 @@ The Limits of Patterns
 
 ---
 
-## What Kepler Could Do {background-color="black"}
+## What Kepler Could Do
 
 ::: {.incremental}
 - Predict planetary positions for centuries
@@ -875,13 +910,13 @@ For the first time, humanity had a precise mathematical description of planetary
 ## What Kepler Couldn't Explain
 
 ::: {.incremental}
-1. **Why ellipses?** Why not circles, spirals, or some other curve?
+1. **Why ellipses?** Why not circles?
 
-2. **Why do planets speed up near the Sun?** He described the pattern but not the mechanism.
+2. **Why do planets speed up when closer?**
 
-3. **Why $P^2 \propto a^3$?** Why this precise relationship?
+3. **Why $P^2 \propto a^3$?**
 
-4. **Does this work everywhere?** Would it apply to planets around other stars?
+4. **Does it work around other stars?**
 :::
 
 ::: {.notes}
@@ -890,7 +925,7 @@ For the first time, humanity had a precise mathematical description of planetary
 
 ---
 
-## Empirical vs. Physical Laws {background-color="#1a1a2e"}
+## Empirical vs. Physical Laws
 
 ::: {.text-center .text-xl}
 **Empirical law:** A pattern from data. Describes *what* happens.
@@ -912,7 +947,7 @@ But they don't explain the underlying mechanism.
 
 ---
 
-## Quick Check: Empirical vs. Physical {background-color="#1a1a2e"}
+## Quick Check: Empirical vs. Physical
 
 ::: {.quiz}
 Kepler's laws are considered "empirical" rather than "physical" because:
@@ -929,22 +964,26 @@ Kepler's laws are considered "empirical" rather than "physical" because:
 
 ---
 
-## The Setup for Newton {background-color="black"}
+## The Setup for Newton
 
 ::: {.text-center}
-For **sixty years** after Kepler, the "why" questions remained unanswered.
-
-::: {.fragment .mt-4}
-Then, in 1687, Isaac Newton published the *Principia*.
-:::
-
 ::: {.fragment .mt-4 .text-xl}
-Newton showed that **all three of Kepler's laws** emerge from a single principle:
+Newton (1687) gives the mechanism:
 
 $$F = \frac{Gm_1m_2}{r^2}$$
 
-::: {.mt-3 .text-muted}
-Here, $F$ is the gravitational force magnitude, $m_1$ and $m_2$ are masses, $r$ is the separation, and $G$ is a constant. The key idea: double $r$ → force becomes 4× weaker.
+::: {.mt-3 .text-sm .text-muted}
+Symbols:
+
+- $F$: force magnitude (N)
+- $m_1, m_2$: masses (kg)
+- $r$: separation between centers (m)
+
+**Key idea:** $F \propto 1/r^2$.
+:::
+
+::: {.notes}
+Assumptions (for this course): Newtonian gravity, two-body approximation, and objects behave like point masses / spherical bodies.
 :::
 :::
 :::
@@ -966,13 +1005,13 @@ How Science Evolves
 
 ---
 
-## The Power of Simplicity {background-color="#1a1a2e"}
+## The Power of Simplicity
 
 | Era | Model | Complexity |
 |-----|-------|------------|
 | Ptolemy (~150 CE) | Geocentric + epicycles | Dozens of circles |
 | Copernicus (1543) | Heliocentric + circles | Fewer circles, still complex |
-| Kepler (1609–1619) | Heliocentric + ellipses | **3 laws, no epicycles** |
+| Kepler (1609-1619) | Heliocentric + ellipses | **3 laws, no epicycles** |
 
 ::: {.fragment .mt-4}
 Each step toward truth was also a step toward **simplicity**.
@@ -987,24 +1026,20 @@ Each step toward truth was also a step toward **simplicity**.
 ## The Chain of Discovery
 
 ::: {.incremental}
-- **Islamic scholars** preserved and refined Greek astronomy
-- **Copernicus** proposed the heliocentric framework
-- **Tycho** gathered unprecedented precision data
-- **Kepler** found the patterns in that data
-- **Newton** (next lecture) explained *why* those patterns exist
-:::
-
-::: {.fragment .mt-4 .text-muted}
-No one worked in isolation. Science progresses through communities of scholars, across cultures and centuries.
+- Islamic scholars preserved Greek astronomy
+- Copernicus proposed heliocentrism
+- Tycho gathered precision data
+- Kepler found the patterns
+- Newton explained the physics
 :::
 
 ::: {.notes}
-40–42 min. "And it continues. Newton's laws would eventually be refined by Einstein."
+40–42 min. "And it continues. Newton's laws would eventually be refined by Einstein." Emphasize: science is a community effort across cultures and centuries.
 :::
 
 ---
 
-## {background-color="black"}
+## {.center}
 
 {{< fig orbits-historical-infographic-nblm >}}
 
@@ -1014,22 +1049,14 @@ No one worked in isolation. Science progresses through communities of scholars, 
 
 ---
 
-## Key Takeaways {background-color="#0a2f5c"}
+## Key Takeaways
 
 ::: {.text-sm}
+1. Retrograde is **apparent** (a geometry effect).
 
-1. **Retrograde motion** is an *apparent* backward motion — planets never actually reverse.
+2. Kepler I: **ellipses**, Sun at a focus.
 
-2. **Kepler's First Law:** Orbits are ellipses with the Sun at one focus.
-
-3. **Kepler's Second Law:** Equal areas in equal times → faster when closer to Sun.
-
-4. **Kepler's Third Law:** $P^2 \propto a^3$ — use the ratio form or Sun-only scaling.
-
-5. **Empirical vs. Physical:** Kepler's laws describe patterns but don't explain *why*.
-
-6. **Occam's Razor:** Simpler models often win. 3 laws replaced dozens of epicycles.
-
+3. Kepler II: **equal areas** in equal times.
 :::
 
 ::: {.notes}
@@ -1038,20 +1065,32 @@ No one worked in isolation. Science progresses through communities of scholars, 
 
 ---
 
-## Coming Up: Newton's Gravity {background-color="black"}
+## Key Takeaways (continued)
+
+::: {.text-sm}
+4. Kepler III: $P^2 \propto a^3$ (use ratio or Sun-only form).
+
+5. Kepler describes **patterns**; Newton explains **mechanisms**.
+
+6. Better models are often **simpler** and **more predictive**.
+:::
+
+---
+
+## Coming Up: Newton's Gravity
 
 ::: {.text-center .text-xl}
 **Next lecture:** Newton transforms patterns into physics.
 :::
 
 ::: {.fragment .mt-4}
-We'll see how **one equation** explains all three of Kepler's laws — and how it lets astronomers **weigh** objects billions of kilometers away.
+We'll see how **one equation** explains Kepler's three laws.
 :::
 
 ::: {.fragment .mt-4 .text-muted}
 **Reading:** Lecture 6 Reading Companion
 
-**Demo:** Continue exploring the Kepler's Laws demo in Newton Mode: [../../../demos/keplers-laws/](../../../demos/keplers-laws/)
+**Demo:** Kepler's Laws (Newton Mode): [../../../demos/keplers-laws/](../../../demos/keplers-laws/)
 :::
 
 ::: {.notes}
@@ -1060,7 +1099,21 @@ We'll see how **one equation** explains all three of Kepler's laws — and how i
 
 ---
 
-## {.center background-color="#1a1a2e"}
+## Questions? {background-image="../../../assets/images/common/eso-milky-way-panoramic.jpg" background-opacity="0.25"}
+
+::: {.text-center .text-xl .mt-4}
+Kepler gave us the **patterns**.
+
+Newton will give us the **physics**.
+:::
+
+::: {.notes}
+Remaining time for questions (before optional math appendices).
+:::
+
+---
+
+## {.center}
 
 ::: {.r-fit-text}
 Numerical Verification
@@ -1074,19 +1127,23 @@ Optional section for students who want to see the math verified explicitly.
 
 ---
 
-## Verifying Kepler III: Mars {background-color="#1a1a2e"}
+## Verifying Kepler III: Mars
 
+::: {.text-sm}
 **Given data:**
 
 - Mars semi-major axis: $a = 1.524$ AU
 - Mars orbital period: $P = 687$ days
 
 **Step 1: Convert period to years**
+:::
 
 $$P = 687 \text{ days} \times \frac{1 \text{ year}}{365.25 \text{ days}} = 1.881 \text{ years}$$
 
 ::: {.fragment}
+::: {.text-sm}
 **Step 2: Check $P^2 = a^3$**
+:::
 
 $$P^2 = (1.881)^2 = 3.538 \text{ yr}^2$$
 
@@ -1094,37 +1151,38 @@ $$a^3 = (1.524)^3 = 3.540 \text{ AU}^3$$
 :::
 
 ::: {.fragment .mt-2 .bg-success-subtle .p-2}
-**Match!** $3.538 \approx 3.540$ ✓ (0.06% error from rounding)
+**Match within rounding:** $3.538 \approx 3.540$ (0.06% difference from rounding)
 :::
 
 ::: {.notes}
-Walk through unit conversions explicitly. "Notice the units: yr² on the left, AU³ on the right. They match because we defined our system so that Earth has P=1 yr at a=1 AU."
+Walk through unit conversions explicitly. "Notice the units: yr$^2$ on the left, AU$^3$ on the right. They match because we defined our system so that Earth has $P=1$ yr at $a=1$ AU."
 :::
 
 ---
 
-## Unit Analysis: Why yr² = AU³? {background-color="#1a1a2e"}
+## Unit Analysis: Why $\mathrm{yr}^2 = \mathrm{AU}^3$?
 
 ::: {.text-sm}
-This seems strange: how can time² equal distance³?
+Why does the shortcut look like time-squared equals distance-cubed?
 
 ::: {.fragment}
-**The answer:** These aren't really equal — they're *proportional* with a hidden constant.
+The full physics statement is:
 
 $$P^2 = \left(\frac{4\pi^2}{GM_\odot}\right) a^3$$
 :::
 
-::: {.fragment}
-The constant $\frac{4\pi^2}{GM_\odot}$ has units that convert AU³ → yr².
-
-When we use AU and years, this constant **equals 1** by definition!
+::: {.fragment .mt-2}
+The constant $\frac{4\pi^2}{GM_\odot}$ is doing the unit conversion.
+:::
 :::
 
-::: {.fragment .mt-2 .bg-muted .p-2}
-**Key insight:** The "simple" form $P^2 = a^3$ only works with these specific units.
+---
 
-If you use meters and seconds, you need the full constant.
-:::
+## Unit Analysis: What the Constant Means
+
+::: {.text-sm}
+- Sun-only shorthand: $a$ in AU and $P$ in years $\Rightarrow P^2 \\approx a^3$
+- Change units or change the central mass $\Rightarrow$ use the full form (or the ratio method)
 :::
 
 ::: {.notes}
@@ -1133,15 +1191,28 @@ If you use meters and seconds, you need the full constant.
 
 ---
 
-## Verifying Kepler III: Jupiter {background-color="#1a1a2e"}
+## Unit Analysis: Why the Ratio Method Is Safe
 
+::: {.text-sm}
+- Compare two orbits around the same central mass: hidden constants cancel.
+- It reduces unit mistakes and keeps the physics visible.
+:::
+
+---
+
+## Verifying Kepler III: Jupiter
+
+::: {.text-sm}
 **Given data:**
 
 - Jupiter semi-major axis: $a = 5.203$ AU
 - Jupiter orbital period: $P = 4333$ days
+:::
 
 ::: {.fragment}
+::: {.text-sm}
 **Convert and verify:**
+:::
 
 $$P = 4333 \text{ days} \times \frac{1 \text{ yr}}{365.25 \text{ days}} = 11.86 \text{ yr}$$
 
@@ -1151,7 +1222,7 @@ $$a^3 = (5.203)^3 = 140.9 \text{ AU}^3$$
 :::
 
 ::: {.fragment .bg-success-subtle .p-2}
-**Match!** $140.7 \approx 140.9$ ✓
+**Match within rounding:** $140.7 \approx 140.9$
 :::
 
 ::: {.notes}
@@ -1160,32 +1231,44 @@ $$a^3 = (5.203)^3 = 140.9 \text{ AU}^3$$
 
 ---
 
-## Common Unit Mistakes to Avoid {background-color="#dc2626"}
+## Common Unit Mistake: Mixing Units
+
+:::: {.columns}
+::: {.column width="45%"}
+::: {.text-sm}
+**Mistake (unit mismatch):**
+
+> "$a = 778$ million km, $P = 12$ years, so $P^2 = 144$ and $a^3 = 4.7 \\times 10^{26}$... they don't match!"
+:::
+:::
+
+::: {.column width="55%"}
+::: {.text-sm}
+**Fix (convert first):**
+
+$$a = 778 \\times 10^6 \\text{ km} \\times \\frac{1 \\text{ AU}}{1.496 \\times 10^8 \\text{ km}} = 5.20 \\text{ AU}$$
+
+Then compare $P^2$ (in yr$^2$) to $a^3$ (in AU$^3$).
+:::
+:::
+::::
+
+---
+
+## Common Unit Mistake: Forgetting Squares and Cubes
 
 ::: {.text-sm}
+**Mistake (wrong powers):**
 
-❌ **Mixing units:**
+> "$P = 12$ years and $a = 5.2$ AU, so $12 = 5.2$... wrong!"
 
-"$a = 778$ million km, $P = 12$ years, so $P^2 = 144$ and $a^3 = 4.7 \times 10^{26}$... they don't match!"
+::: {.fragment .mt-3}
+**Fix:** Kepler III is about $P^2$ and $a^3$.
 
-::: {.fragment}
-✓ **Fix:** Convert to AU first!
+In Sun-only units (years and AU), you can do a quick consistency check:
 
-$$a = 778 \times 10^6 \text{ km} \times \frac{1 \text{ AU}}{1.496 \times 10^8 \text{ km}} = 5.20 \text{ AU}$$
+$$(12)^2 = 144 \\quad \\text{and} \\quad (5.2)^3 \\approx 141$$
 :::
-
-::: {.fragment .mt-4}
-❌ **Forgetting to square/cube:**
-
-"$P = 12$ years and $a = 5.2$ AU, so $12 = 5.2$... wrong!"
-
-✓ **Fix:** Kepler III is about **squares and cubes** — and you must use a **unit-safe form**.
-
-In Sun-only units (years and AU), you can compare $P^2$ and $a^3$ as a quick check:
-
-$$(12)^2 = 144 \quad \text{vs} \quad (5.2)^3 = 141 \quad \checkmark$$
-:::
-
 :::
 
 ::: {.notes}
@@ -1194,7 +1277,7 @@ $$(12)^2 = 144 \quad \text{vs} \quad (5.2)^3 = 141 \quad \checkmark$$
 
 ---
 
-## {.center background-color="#0a2f5c"}
+## {.center}
 
 ::: {.r-fit-text}
 Deeper Dive
@@ -1208,7 +1291,7 @@ Optional advanced content.
 
 ---
 
-## How Fast at Perihelion vs Aphelion? {background-color="#0a2f5c"}
+## How Fast at Perihelion vs Aphelion?
 
 Kepler II says planets move faster when closer to the Sun. But how much faster?
 
@@ -1220,10 +1303,34 @@ $$v_p \times r_p = v_a \times r_a$$
 where $v_p$ = speed at perihelion, $v_a$ = speed at aphelion.
 :::
 
+---
+
+## Perihelion vs Aphelion: Symbols
+
+::: {.fragment .mt-3 .text-sm}
+What the symbols mean:
+
+- $r_p, r_a$ are the perihelion/aphelion distances (same distance units as $a$)
+- $a$ is the semi-major axis (a distance)
+- $e$ is eccentricity (unitless)
+:::
+
+---
+
+## Speed Ratio from Eccentricity
+
+Starting from conservation of angular momentum:
+
+$$v_p \times r_p = v_a \times r_a$$
+
 ::: {.fragment}
 **Rearranging:**
 
 $$\frac{v_p}{v_a} = \frac{r_a}{r_p} = \frac{a(1+e)}{a(1-e)} = \frac{1+e}{1-e}$$
+:::
+
+::: {.fragment .mt-3 .text-sm}
+Sanity check: if $e=0$ (a circle), then $r_p=r_a$ and $\frac{v_p}{v_a}=1$.
 :::
 
 ::: {.notes}
@@ -1232,7 +1339,7 @@ $$\frac{v_p}{v_a} = \frac{r_a}{r_p} = \frac{a(1+e)}{a(1-e)} = \frac{1+e}{1-e}$$
 
 ---
 
-## Worked Example: Mercury's Speed Ratio {background-color="#0a2f5c"}
+## Worked Example: Mercury's Speed Ratio
 
 Mercury has eccentricity $e = 0.206$.
 
@@ -1258,11 +1365,38 @@ Earth only varies by **3.5%** — nearly circular orbit.
 
 ---
 
-## The Vis-Viva Equation (Preview) {background-color="#0a2f5c"}
+## The Vis-Viva Equation (Preview)
 
-Newton will show us that orbital speed at any point is:
+Newton will show us that orbital speed at distance $r$ is:
 
 $$v = \sqrt{GM\left(\frac{2}{r} - \frac{1}{a}\right)}$$
+
+---
+
+## Vis-Viva: Symbols and Sanity Check
+
+:::: {.columns}
+::: {.column width="55%"}
+::: {.text-sm}
+- $v$: speed
+- $r$: current distance
+- $a$: semi-major axis
+- $M$: central mass
+:::
+:::
+
+::: {.column width="45%"}
+::: {.text-sm .text-muted}
+Assumptions: two-body, Newtonian gravity, spherical bodies.
+
+Sanity check: if the orbit is circular, then $r=a$ and $v=\\sqrt{GM/a}$ is constant.
+:::
+:::
+::::
+
+---
+
+## Vis-Viva: Perihelion vs Aphelion
 
 ::: {.fragment}
 **At perihelion** ($r = r_p = a(1-e)$):
@@ -1282,18 +1416,4 @@ We'll derive this properly in L6 with Newton's laws. For now, notice how $e$ con
 
 ::: {.notes}
 "This is a preview. Newton's physics will let us derive actual speeds, not just ratios."
-:::
-
----
-
-## Questions? {background-image="../../../assets/images/common/eso-milky-way-panoramic.jpg" background-opacity="0.25"}
-
-::: {.text-center .text-xl .mt-4}
-Kepler gave us the **patterns**.
-
-Newton will give us the **physics**.
-:::
-
-::: {.notes}
-Remaining time for questions.
 :::
