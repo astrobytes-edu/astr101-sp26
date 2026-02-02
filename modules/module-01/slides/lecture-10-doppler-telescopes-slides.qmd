@@ -140,7 +140,7 @@ Part 1: The Doppler Effect
 
 ## Predict First! {background-color="#1a1a2e"}
 
-You measure a spectral line at a **longer wavelength** than its lab value ($\\Delta\\lambda > 0$). Is the source moving…
+You measure a spectral line at a **longer wavelength** than its lab value ($\Delta\lambda > 0$). Is the source moving…
 
 :::: {.columns .mt-4}
 ::: {.column width="50%"}
@@ -785,7 +785,7 @@ $$a = 0.052 \text{ AU}$$
 :::
 
 ::: {.fragment .mt-2 .text-muted}
-This uses Newton’s Kepler III in a convenient unit system: $a$ in AU, $P$ in years, $M_*$ in solar masses, and assumes $M_p \\ll M_*$.
+This uses Newton’s Kepler III in a convenient unit system: $a$ in AU, $P$ in years, $M_*$ in solar masses, and assumes $M_p \ll M_*$.
 :::
 
 ::: {.notes}

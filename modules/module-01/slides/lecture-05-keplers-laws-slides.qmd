@@ -28,7 +28,7 @@ format:
       alwaysVisible: true
     spotlight:
       size: 80
-      toggleSpotlightOnMouseDown: true
+      toggleSpotlightOnMouseDown: false
       presentingCursor: "crosshair"
       fadeInAndOut: 100
     quiz:
@@ -53,11 +53,11 @@ execute:
 
 ## The planets wander
 
-::: {.r-fit-text}
-"The planets wander..."
+::: {.text-xl}
+"The planets wander... sometimes they appeared to move *backward*."
 :::
 
-::: {.fragment .text-center .mt-4}
+::: {.fragment .text-center .text-lg .mt-4}
 For 2,000 years, astronomers asked **why**.
 :::
 
@@ -71,19 +71,10 @@ For 2,000 years, astronomers asked **why**.
 
 By the end of today, you can:
 
-::: {.incremental .text-sm}
+::: {.incremental}
 - Explain retrograde motion as **perspective + geometry**
 - Describe why models change (evidence + simplicity)
 - State **Kepler's three laws**
-:::
-
----
-
-## Today's Learning Objectives (continued)
-
-By the end of today, you can:
-
-::: {.incremental .text-sm}
 - Use Kepler III to relate $P$ and $a$ (ratio or Sun-only form)
 - Distinguish **empirical patterns** from **physical mechanisms**
 :::
@@ -100,7 +91,9 @@ By the end of today, you can:
 The Cosmic Puzzle
 :::
 
+::: {.text-lg}
 *Why do planets move backward?*
+:::
 
 ::: {.notes}
 Section transition. 30 sec.
@@ -158,20 +151,16 @@ Like passing a slower car: it can *look* like it drifts backward against distant
 
 :::: {.columns}
 ::: {.column width="50%"}
-::: {.text-sm}
 - **Earth:** faster, inner orbit
 - **Mars:** slower, outer orbit
 - **Stars:** distant background
 :::
-:::
 
 ::: {.column width="50%"}
 ::: {.fragment}
-::: {.text-sm}
 As Earth passes Mars, Mars appears to drift **backward** against the stars.
 
 But Mars never reverses its orbital direction.
-:::
 :::
 :::
 ::::
@@ -203,7 +192,9 @@ During Mars retrograde, Mars is actually moving:
 The Ancient Answer
 :::
 
+::: {.text-lg}
 *Earth at the center*
+:::
 
 ---
 
@@ -277,7 +268,9 @@ The geocentric model protected two assumptions:
 The Revolution Begins
 :::
 
+::: {.text-lg}
 *Copernicus, Galileo, Tycho, Kepler*
+:::
 
 ---
 
@@ -381,6 +374,7 @@ When he died in 1601, his observations passed to his young assistant...
 Kepler's Laws
 :::
 
+::: {.text-lg}
 *The Main Event*
 
 ::: {.notes}
@@ -464,14 +458,12 @@ An ellipse has two special points called **foci**.
 
 ## Key Orbital Terms
 
-::: {.text-sm}
 | Term | Symbol | Definition |
 |------|--------|------------|
 | **Semi-major axis** | $a$ | Half the longest diameter; "average" orbital distance |
 | **Eccentricity** | $e$ | How "squashed" (0 = circle, near 1 = elongated) |
 | **Perihelion** | $r_p$ | Closest point to Sun; $r_p = a(1-e)$ |
 | **Aphelion** | $r_a$ | Farthest point from Sun; $r_a = a(1+e)$ |
-:::
 
 ::: {.fragment .mt-4}
 **The Sun sits at one focus, not the center.**
@@ -485,7 +477,6 @@ An ellipse has two special points called **foci**.
 
 ## Real Planetary Eccentricities
 
-::: {.text-sm}
 | Planet | Eccentricity | Description |
 |--------|--------------|-------------|
 | Venus | 0.007 | Nearly circular |
@@ -493,7 +484,6 @@ An ellipse has two special points called **foci**.
 | Mars | 0.093 | Noticeably elliptical |
 | Mercury | 0.206 | Most eccentric planet |
 | Halley's Comet | 0.97 | Extremely elongated |
-:::
 
 ::: {.fragment .mt-2 .text-muted}
 Most planets have nearly circular orbits — this is why Ptolemy got *reasonably* good results with circles.
@@ -604,18 +594,16 @@ Same idea: closer to the Sun means faster; farther means slower.
 
 ## Real Example: Earth's Orbit
 
-::: {.text-sm}
 | Position | Date | Distance from Sun | Earth's Speed |
 |----------|------|-------------------|---------------|
 | Perihelion | ~Jan 3 | 147.1 million km | 30.3 km/s |
 | Aphelion | ~Jul 4 | 152.1 million km | 29.3 km/s |
-:::
 
 ---
 
 ## Earth's Orbit: What This Means
 
-::: {.text-sm}
+::: {.text-base}
 - Earth moves about **3% faster** near perihelion than near aphelion.
 - Northern Hemisphere winter is slightly shorter than summer.
 :::
@@ -685,7 +673,7 @@ $$P^2 \propto a^3$$
 
 ## Reading Kepler III
 
-::: {.text-sm}
+::: {.text-base}
 Let's unpack the symbols:
 
 - $P$: orbital period (time per orbit)
@@ -720,7 +708,7 @@ These combine to give the precise $P^2 \propto a^3$ relationship.
 
 ## How to Use Kepler's Third Law
 
-::: {.text-sm}
+::: {.text-base}
 
 **Form 1: Ratio Method** (recommended default)
 
@@ -801,7 +789,7 @@ An asteroid orbits the Sun at a distance of 4 AU. What is its orbital period?
 
 ## Solar System Examples
 
-::: {.text-sm}
+::: {.text-base}
 | Planet | $a$ (AU) | $a^3$ | $P$ (years) | $P^2$ |
 |--------|----------|-------|-------------|-------|
 | Earth | 1.00 | 1.00 | 1.00 | 1.00 |
@@ -820,14 +808,14 @@ Notice: $a^3 \approx P^2$.
 
 ## Solar System Examples (continued)
 
-::: {.text-sm}
+::: {.text-base}
 | Planet | $a$ (AU) | $a^3$ | $P$ (years) | $P^2$ |
 |--------|----------|-------|-------------|-------|
 | Jupiter | 5.20 | 141 | 11.86 | 141 |
 | Saturn | 9.54 | 868 | 29.46 | 868 |
 :::
 
-::: {.text-sm .text-muted}
+::: {.text-base .text-muted}
 Same pattern: $a^3 \approx P^2$.
 :::
 
@@ -940,7 +928,7 @@ Newton (1687) gives the mechanism:
 
 $$F = \frac{Gm_1m_2}{r^2}$$
 
-::: {.mt-3 .text-sm .text-muted}
+::: {.mt-3 .text-base .text-muted}
 Symbols:
 
 - $F$: force magnitude (N)
@@ -1019,7 +1007,7 @@ Each step toward truth was also a step toward **simplicity**.
 
 ## Key Takeaways
 
-::: {.text-sm}
+::: {.text-base}
 1. Retrograde is **apparent** (a geometry effect).
 
 2. Kepler I: **ellipses**, Sun at a focus.
@@ -1035,7 +1023,7 @@ Each step toward truth was also a step toward **simplicity**.
 
 ## Key Takeaways (continued)
 
-::: {.text-sm}
+::: {.text-base}
 4. Kepler III: $P^2 \propto a^3$ (use ratio or Sun-only form).
 
 5. Kepler describes **patterns**; Newton explains **mechanisms**.
@@ -1097,7 +1085,7 @@ Optional section for students who want to see the math verified explicitly.
 
 ## Verifying Kepler III: Mars
 
-::: {.text-sm}
+::: {.text-base}
 **Given data:**
 
 - Mars semi-major axis: $a = 1.524$ AU
@@ -1109,7 +1097,7 @@ Optional section for students who want to see the math verified explicitly.
 $$P = 687 \text{ days} \times \frac{1 \text{ year}}{365.25 \text{ days}} = 1.881 \text{ years}$$
 
 ::: {.fragment}
-::: {.text-sm}
+::: {.text-base}
 **Step 2: Check $P^2 = a^3$**
 :::
 
@@ -1130,7 +1118,7 @@ Walk through unit conversions explicitly. "Notice the units: yr$^2$ on the left,
 
 ## Unit Analysis: Why $\mathrm{yr}^2 = \mathrm{AU}^3$?
 
-::: {.text-sm}
+::: {.text-base}
 Why does the shortcut look like time-squared equals distance-cubed?
 
 ::: {.fragment}
@@ -1148,7 +1136,7 @@ The constant $\frac{4\pi^2}{GM_\odot}$ is doing the unit conversion.
 
 ## Unit Analysis: What the Constant Means
 
-::: {.text-sm}
+::: {.text-base}
 - Sun-only shorthand: $a$ in AU and $P$ in years $\Rightarrow P^2 \approx a^3$
 - Change units or change the central mass $\Rightarrow$ use the full form (or the ratio method)
 :::
@@ -1161,7 +1149,7 @@ The constant $\frac{4\pi^2}{GM_\odot}$ is doing the unit conversion.
 
 ## Unit Analysis: Why the Ratio Method Is Safe
 
-::: {.text-sm}
+::: {.text-base}
 - Compare two orbits around the same central mass: hidden constants cancel.
 - It reduces unit mistakes and keeps the physics visible.
 :::
@@ -1170,17 +1158,14 @@ The constant $\frac{4\pi^2}{GM_\odot}$ is doing the unit conversion.
 
 ## Verifying Kepler III: Jupiter
 
-::: {.text-sm}
 **Given data:**
 
 - Jupiter semi-major axis: $a = 5.203$ AU
 - Jupiter orbital period: $P = 4333$ days
-:::
 
 ::: {.fragment}
-::: {.text-sm}
+
 **Convert and verify:**
-:::
 
 $$P = 4333 \text{ days} \times \frac{1 \text{ yr}}{365.25 \text{ days}} = 11.86 \text{ yr}$$
 
@@ -1203,21 +1188,17 @@ $$a^3 = (5.203)^3 = 140.9 \text{ AU}^3$$
 
 :::: {.columns}
 ::: {.column width="45%"}
-::: {.text-sm}
 **Mistake (unit mismatch):**
 
 > "$a = 778$ million km, $P = 12$ years, so $P^2 = 144$ and $a^3 = 4.7 \times 10^{26}$... they don't match!"
 :::
-:::
 
 ::: {.column width="55%"}
-::: {.text-sm}
 **Fix (convert first):**
 
 $$a = 778 \times 10^6 \text{ km} \times \frac{1 \text{ AU}}{1.496 \times 10^8 \text{ km}} = 5.20 \text{ AU}$$
 
 Then compare $P^2$ (in yr$^2$) to $a^3$ (in AU$^3$).
-:::
 :::
 ::::
 
@@ -1225,7 +1206,6 @@ Then compare $P^2$ (in yr$^2$) to $a^3$ (in AU$^3$).
 
 ## Common Unit Mistake: Forgetting Squares and Cubes
 
-::: {.text-sm}
 **Mistake (wrong powers):**
 
 > "$P = 12$ years and $a = 5.2$ AU, so $12 = 5.2$... wrong!"
@@ -1236,7 +1216,6 @@ Then compare $P^2$ (in yr$^2$) to $a^3$ (in AU$^3$).
 In Sun-only units (years and AU), you can do a quick consistency check:
 
 $$(12)^2 = 144 \quad \text{and} \quad (5.2)^3 \approx 141$$
-:::
 :::
 
 ::: {.notes}
@@ -1275,7 +1254,7 @@ where $v_p$ = speed at perihelion, $v_a$ = speed at aphelion.
 
 ## Perihelion vs Aphelion: Symbols
 
-::: {.fragment .mt-3 .text-sm}
+::: {.fragment .mt-3}
 What the symbols mean:
 
 - $r_p, r_a$ are the perihelion/aphelion distances (same distance units as $a$)
@@ -1297,7 +1276,7 @@ $$v_p \times r_p = v_a \times r_a$$
 $$\frac{v_p}{v_a} = \frac{r_a}{r_p} = \frac{a(1+e)}{a(1-e)} = \frac{1+e}{1-e}$$
 :::
 
-::: {.fragment .mt-3 .text-sm}
+::: {.fragment .mt-3}
 Sanity check: if $e=0$ (a circle), then $r_p=r_a$ and $\frac{v_p}{v_a}=1$.
 :::
 
@@ -1345,16 +1324,14 @@ $$v = \sqrt{GM\left(\frac{2}{r} - \frac{1}{a}\right)}$$
 
 :::: {.columns}
 ::: {.column width="55%"}
-::: {.text-sm}
 - $v$: speed
 - $r$: current distance
 - $a$: semi-major axis
 - $M$: central mass
 :::
-:::
 
 ::: {.column width="45%"}
-::: {.text-sm .text-muted}
+::: {.text-muted}
 Assumptions: two-body, Newtonian gravity, spherical bodies.
 
 Sanity check: if the orbit is circular, then $r=a$ and $v=\sqrt{GM/a}$ is constant.

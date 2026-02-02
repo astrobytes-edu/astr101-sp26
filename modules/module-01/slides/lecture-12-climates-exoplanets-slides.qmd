@@ -155,7 +155,7 @@ D) 1/4×
 ::::
 
 ::: {.notes}
-30 s. Commit first. Then reveal with the formula: $T_{eq}\\propto d^{-1/2}$, so doubling distance multiplies $T_{eq}$ by $1/\\sqrt{2}\\approx 0.7$.
+30 s. Commit first. Then reveal with the formula: $T_{eq}\propto d^{-1/2}$, so doubling distance multiplies $T_{eq}$ by $1/\sqrt{2}\approx 0.7$.
 :::
 
 ---

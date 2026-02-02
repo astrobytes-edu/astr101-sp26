@@ -873,7 +873,7 @@ How do astronomers determine the mass of the Sun?
 
 ## Quick Check: Different Stars
 
-Two planets orbit at the same distance. Star A: $2M_\\odot$. Star B: $0.5M_\\odot$. Which planet has the shorter orbital period?
+Two planets orbit at the same distance. Star A: $2M_\odot$. Star B: $0.5M_\odot$. Which planet has the shorter orbital period?
 
 - [Planet A]{.correct}
 - Planet B

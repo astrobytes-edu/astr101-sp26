@@ -342,7 +342,7 @@ D) 1/4×
 ::::
 
 ::: {.notes}
-30 s. Commit first. Then connect: equilibrium temperature scales like distance$^{-1/2}$, so doubling distance multiplies $T_{eq}$ by $1/\\sqrt{2}\\approx 0.7$ (under the simple radiative-equilibrium model).
+30 s. Commit first. Then connect: equilibrium temperature scales like distance$^{-1/2}$, so doubling distance multiplies $T_{eq}$ by $1/\sqrt{2}\approx 0.7$ (under the simple radiative-equilibrium model).
 :::
 
 ---

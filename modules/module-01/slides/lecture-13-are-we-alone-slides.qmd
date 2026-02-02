@@ -235,7 +235,7 @@ These four terms span our ignorance — and swing $N$ by **billions**.
 
 ## Predict First! {background-color="#1a1a2e"}
 
-In the pessimistic scenario, $N \\approx 0.00006$. What does $N \\ll 1$ mean?
+In the pessimistic scenario, $N \approx 0.00006$. What does $N \ll 1$ mean?
 
 :::: {.columns .mt-4}
 ::: {.column width="50%"}
@@ -448,7 +448,7 @@ Which measurement most directly lets you infer a planet’s **radius**?
 ::: {.text-sm}
 | Equation | What It Does |
 |----------|--------------|
-| $(P/1\\,\\text{yr})^2 = (a/1\\,\\text{AU})^3$ | Kepler III (Sun-only scaling) — periods & distances |
+| $(P/1\,\text{yr})^2 = (a/1\,\text{AU})^3$ | Kepler III (Sun-only scaling) — periods & distances |
 | $M = 4\pi^2 a^3/(GP^2)$ | Mass from orbits |
 | $\lambda_{peak} = 2.9 \times 10^6/T$ | Wien — temperature |
 | $L = 4\pi R^2 \sigma T^4$ | Stefan-Boltzmann — luminosity |

@@ -6,10 +6,13 @@ date: "2026-02-11"
 description: "Everything glows. Hotter objects glow bluer and brighter. By analyzing the spectrum, astronomers can read temperature from billions of kilometers away."
 draft: false
 
+metadata-files:
+  - _metadata.yml
+
 format:
   revealjs:
     theme: [default, ../../../assets/theme/slides/theme.scss]
-    footer: "ASTR 101 • Lecture 8 • Dr. Anna Rosen"
+    footer: "ASTR 101 - Lecture 8 - Dr. Anna Rosen"
     slide-number: true
     transition: fade
     transition-speed: fast
@@ -48,27 +51,9 @@ execute:
   message: false
 ---
 
-## Join iClicker {background-color="black"}
-
-::: {.text-center}
-{{< img iclicker-qr-astr101 width="36%" class="img-center" >}}
-
-::: {.text-xl .font-semibold .mt-2}
-[join.iclicker.com/ASES](https://join.iclicker.com/ASES)
-:::
-
-::: {.text-sm .text-muted .mt-2}
-If you can't scan: open the link and enter the course code **ASES**.
-:::
-:::
-
-::: {.notes}
-30–60 sec. Get everyone connected before starting.
-:::
-
 ---
 
-## {background-color="black"}
+## {.center}
 
 ::: {.r-fit-text}
 Everything glows.
@@ -92,14 +77,14 @@ But heat something up...
 
 ---
 
-## {background-color="black"}
+## Color tracks temperature
 
 ::: {.text-center .text-xl}
-Heat it to **500°C** → dull red
+Heat it to **$500^{\circ}\mathrm{C}$** $\to$ dull red
 
-Heat it to **1000°C** → bright orange
+Heat it to **$1000^{\circ}\mathrm{C}$** $\to$ bright orange
 
-Heat it to **5800 K** → brilliant white
+Heat it to **5800 K** $\to$ brilliant white
 :::
 
 ::: {.fragment .mt-4 .text-center}
@@ -112,9 +97,7 @@ Heat it to **5800 K** → brilliant white
 
 ---
 
-## Today's Learning Objectives {background-image="../../../assets/images/common/cosmic-cliffs-jwst.png" background-opacity="0.2"}
-
-::: {.bg-muted .p-2}
+## Today's Learning Objectives
 
 By the end of today, you'll be able to:
 
@@ -125,8 +108,6 @@ By the end of today, you'll be able to:
 - Explain why the Sun appears **white** even though its peak is green
 - Apply the **Stefan-Boltzmann Law** to relate temperature and luminosity
 - Connect **luminosity, temperature, and radius**: $L = 4\pi R^2 \sigma T^4$
-:::
-
 :::
 
 ::: {.notes}
@@ -145,7 +126,7 @@ Part 1: Everything Glows
 
 ---
 
-## Thermal Radiation {background-color="black"}
+## Thermal Radiation
 
 ::: {.text-center .text-xl}
 All objects with temperature above **absolute zero** emit electromagnetic radiation.
@@ -163,18 +144,20 @@ No external source needed — the object emits because it has internal energy.
 
 ---
 
-## Examples Across Temperatures {background-color="#1a1a2e"}
+## Examples Across Temperatures
 
+::: {.text-sm}
 | Object | Temperature | Peak Wavelength | Emission |
 |--------|-------------|-----------------|----------|
 | Cosmic background | 2.7 K | ~1 mm | Microwaves |
-| Room temperature | 300 K | ~10 μm | Infrared |
-| Red-hot metal | ~1000 K | ~3 μm | Near-IR, dull red |
+| Room temperature | 300 K | ~$10\,\mu\mathrm{m}$ | Infrared |
+| Red-hot metal | ~1000 K | ~$3\,\mu\mathrm{m}$ | Near-IR, dull red |
 | Sun's surface | 5800 K | ~500 nm | Visible (green peak) |
 | Hot blue star | 30,000 K | ~100 nm | Ultraviolet |
+:::
 
 ::: {.fragment .mt-2 .text-center}
-**Pattern:** Hotter → shorter wavelength
+**Pattern:** hotter $\to$ shorter wavelength
 :::
 
 ::: {.notes}
@@ -183,24 +166,22 @@ No external source needed — the object emits because it has internal energy.
 
 ---
 
-## Quick Check: Thermal Radiation {background-color="#1a1a2e"}
+## Quick Check: Thermal Radiation {.quiz-question}
 
-::: {.quiz}
 Which of the following emits thermal radiation?
 
-- [ ] Only the Sun and stars
-- [ ] Only objects that are visibly glowing
-- [x] Everything with temperature above absolute zero
-- [ ] Only objects connected to power sources
-:::
+- Only the Sun and stars
+- Only objects that are visibly glowing
+- [Everything with temperature above absolute zero]{.correct}
+- Only objects connected to power sources
 
 ::: {.notes}
-1 min. iClicker poll.
+1 min. Poll.
 :::
 
 ---
 
-## What Is a Blackbody? {background-color="black"}
+## What Is a Blackbody?
 
 A **blackbody** is an idealized object with two properties:
 
@@ -221,13 +202,13 @@ A blackbody iron ball at 5800 K emits the same spectrum as a blackbody tungsten 
 
 ---
 
-## The Blackbody Spectrum {background-color="black"}
+## The Blackbody Spectrum
 
-{{< fig blackbody-spectrum-temps >}}
+{{< img blackbody-spectrum-temps width="95%" >}}
 
 ::: {.fragment .mt-2}
-- Hotter → peak shifts to shorter wavelengths (bluer)
-- Hotter → curve is taller (more total energy)
+- Hotter $\to$ peak shifts to shorter wavelengths (bluer)
+- Hotter $\to$ curve is taller (more total energy)
 :::
 
 ::: {.notes}
@@ -236,7 +217,7 @@ A blackbody iron ball at 5800 K emits the same spectrum as a blackbody tungsten 
 
 ---
 
-## Why Stars Are (Nearly) Blackbodies {background-color="#1a1a2e"}
+## Why Stars Are (Nearly) Blackbodies
 
 ::: {.incremental}
 1. Stars are **opaque** — photons interact many times before escaping
@@ -256,19 +237,17 @@ We'll use those lines in Lecture 9 for composition and motion.
 
 ---
 
-## Quick Check: Blackbody Concept {background-color="#1a1a2e"}
+## Quick Check: Blackbody Concept {.quiz-question}
 
-::: {.quiz}
 A blackbody's emission spectrum depends on:
 
-- [ ] What the object is made of
-- [ ] The object's color and reflectivity
-- [x] Only the object's temperature
-- [ ] The type of EM wave hitting it
-:::
+- What the object is made of
+- The object's color and reflectivity
+- [Only the object's temperature]{.correct}
+- The type of EM wave hitting it
 
 ::: {.notes}
-1 min. iClicker poll.
+1 min. Poll.
 :::
 
 ---
@@ -283,7 +262,7 @@ Part 2: Wien's Law
 
 ---
 
-## Predict First! {background-color="#1a1a2e"}
+## Predict First!
 
 ::: {.text-center .text-xl}
 If you **double** an object's temperature (in Kelvin), its peak wavelength...
@@ -299,7 +278,7 @@ B) Stays the same
 :::
 
 ::: {.column width="25%"}
-**C) Halves** ✓
+C) Halves
 :::
 
 ::: {.column width="25%"}
@@ -313,9 +292,9 @@ D) Drops to 1/4
 
 ---
 
-## Wien's Displacement Law {background-color="#0a2f5c"}
+## Wien's Displacement Law
 
-::: {.text-center .text-xl .bg-muted .p-3}
+::: {.text-center .text-xl}
 $$\lambda_{\text{peak}} = \frac{2,900,000 \text{ nm}}{T \text{ (K)}}$$
 
 **Hotter objects peak at shorter wavelengths.**
@@ -324,7 +303,7 @@ $$\lambda_{\text{peak}} = \frac{2,900,000 \text{ nm}}{T \text{ (K)}}$$
 ::: {.fragment .mt-4}
 This is the astronomer's thermometer:
 
-Measure peak wavelength → know the temperature.
+Measure peak wavelength $\to$ know the temperature.
 :::
 
 ::: {.notes}
@@ -333,7 +312,7 @@ Measure peak wavelength → know the temperature.
 
 ---
 
-## Wien's Law in Action {background-color="#1a1a2e"}
+## Wien's Law in Action
 
 | Object | Temperature | Peak Wavelength | Where |
 |--------|-------------|-----------------|-------|
@@ -357,7 +336,7 @@ $$T = \frac{2,900,000 \text{ nm}}{290 \text{ nm}} = 10,000 \text{ K}$$
 :::
 
 ::: {.fragment .mt-4}
-This is a hot, blue-white star — about 1.7× the Sun's temperature.
+This is a hot, blue-white star — about $1.7\times$ the Sun's temperature.
 :::
 
 ::: {.notes}
@@ -366,28 +345,24 @@ This is a hot, blue-white star — about 1.7× the Sun's temperature.
 
 ---
 
-## Quick Check: Wien's Law {background-color="#1a1a2e"}
+## Quick Check: Wien's Law {.quiz-question}
 
-::: {.quiz}
 A cool red star has a surface temperature of 3000 K. Where does its spectrum peak?
 
-- [ ] 100 nm (ultraviolet)
-- [ ] 500 nm (visible green)
-- [x] 970 nm (near-infrared)
-- [ ] 10,000 nm (far infrared)
-:::
-
-::: {.fragment .mt-2 .text-sm}
-**Solution:** $\lambda = 2,900,000/3000 = 967$ nm ≈ 970 nm (near-IR).
-:::
+- 100 nm (ultraviolet)
+- 500 nm (visible green)
+- [970 nm (near-infrared)]{.correct}
+- 10,000 nm (far infrared)
 
 ::: {.notes}
-1–2 min. iClicker poll, then explain.
+1–2 min. Poll, then explain.
+
+Calculation: $\lambda = 2{,}900{,}000/3000 = 967\,\text{nm} \approx 970\,\text{nm}$ (near-IR).
 :::
 
 ---
 
-## The "Sun Is Green" Puzzle {background-color="black"}
+## The "Sun Is Green" Puzzle
 
 ::: {.text-center}
 Plug in the Sun's temperature (5800 K):
@@ -407,7 +382,7 @@ Yet the Sun doesn't look green...
 
 ---
 
-## Why the Sun Isn't Green {background-color="#1a1a2e"}
+## Why the Sun Isn't Green
 
 :::: {.columns}
 ::: {.column width="50%"}
@@ -430,29 +405,27 @@ But blackbody spectra are continuous and broad.
 :::
 
 ::: {.notes}
-12–13 min. "Broad spectrum → white appearance."
+12–13 min. "Broad spectrum $\to$ white appearance."
 :::
 
 ---
 
-## Quick Check: Why Not Green? {background-color="#1a1a2e"}
+## Quick Check: Why Not Green? {.quiz-question}
 
-::: {.quiz}
 The Sun's blackbody spectrum peaks at ~500 nm (green). Why doesn't the Sun appear green?
 
-- [ ] The Sun doesn't actually emit green light
-- [ ] Earth's atmosphere absorbs all the green
-- [x] The Sun emits broadly across all visible wavelengths; we see white
-- [ ] Our eyes can't see green light
-:::
+- The Sun doesn't actually emit green light
+- Earth's atmosphere absorbs all the green
+- [The Sun emits broadly across all visible wavelengths; we see white]{.correct}
+- Our eyes can't see green light
 
 ::: {.notes}
-1 min. iClicker poll.
+1 min. Poll.
 :::
 
 ---
 
-## Star Colors = Temperatures {background-color="black"}
+## Star Colors = Temperatures
 
 | Color | Temperature | Example Stars |
 |-------|-------------|---------------|
@@ -471,19 +444,17 @@ The Sun's blackbody spectrum peaks at ~500 nm (green). Why doesn't the Sun appea
 
 ---
 
-## Quick Check: Star Colors {background-color="#1a1a2e"}
+## Quick Check: Star Colors {.quiz-question}
 
-::: {.quiz}
 Rank these stars from coolest to hottest: Rigel (blue-white), Betelgeuse (red), Sun (yellow-white).
 
-- [ ] Rigel, Sun, Betelgeuse
-- [x] Betelgeuse, Sun, Rigel
-- [ ] Sun, Betelgeuse, Rigel
-- [ ] They're all the same temperature
-:::
+- Rigel, Sun, Betelgeuse
+- [Betelgeuse, Sun, Rigel]{.correct}
+- Sun, Betelgeuse, Rigel
+- They're all the same temperature
 
 ::: {.notes}
-1 min. iClicker poll.
+1 min. Poll.
 :::
 
 ---
@@ -498,7 +469,7 @@ Part 3: Stefan-Boltzmann Law
 
 ---
 
-## Predict First! {background-color="#1a1a2e"}
+## Predict First!
 
 ::: {.text-center .text-xl}
 If you **double** an object's temperature, its total energy output...
@@ -514,11 +485,11 @@ B) Quadruples
 :::
 
 ::: {.column width="25%"}
-C) ×8
+C) $8\times$
 :::
 
 ::: {.column width="25%"}
-**D) ×16** ✓
+D) $16\times$
 :::
 ::::
 
@@ -528,16 +499,16 @@ C) ×8
 
 ---
 
-## Stefan-Boltzmann Law {background-color="#0a2f5c"}
+## Stefan-Boltzmann Law
 
-::: {.text-center .text-xl .bg-muted .p-3}
+::: {.text-center .text-xl}
 $$\text{Power per area} = \sigma T^4$$
 
 **Temperature has a HUGE effect on luminosity.**
 :::
 
 ::: {.fragment .mt-3 .text-muted}
-$\sigma$ is the **Stefan–Boltzmann constant** (a fixed constant). Use $T$ in **Kelvin**.
+$\sigma$ is the **Stefan-Boltzmann constant** (a fixed constant). Use $T$ in **Kelvin**.
 :::
 
 ::: {.fragment .mt-4}
@@ -545,9 +516,9 @@ The **fourth power** is dramatic:
 
 | Temperature Factor | Luminosity Factor |
 |-------------------|-------------------|
-| 2× hotter | $2^4 = 16×$ more luminous |
-| 3× hotter | $3^4 = 81×$ more luminous |
-| 10× hotter | $10^4 = 10,000×$ more luminous |
+| $2\times$ hotter | $2^4 = 16\times$ more luminous |
+| $3\times$ hotter | $3^4 = 81\times$ more luminous |
+| $10\times$ hotter | $10^4 = 10,000\times$ more luminous |
 :::
 
 ::: {.notes}
@@ -556,33 +527,31 @@ The **fourth power** is dramatic:
 
 ---
 
-## Quick Check: Stefan-Boltzmann {background-color="#1a1a2e"}
+## Quick Check: Stefan-Boltzmann {.quiz-question}
 
-::: {.quiz}
 Star A has twice the surface temperature of Star B. If both have the same radius, Star A is:
 
-- [ ] 2× more luminous
-- [ ] 4× more luminous
-- [ ] 8× more luminous
-- [x] 16× more luminous
-:::
+- $2\times$ more luminous
+- $4\times$ more luminous
+- $8\times$ more luminous
+- [$16\times$ more luminous]{.correct}
 
 ::: {.notes}
-1 min. iClicker poll.
+1 min. Poll.
 :::
 
 ---
 
-## The L-T-R Connection {background-color="#0a2f5c"}
+## The L-T-R Connection
 
-::: {.text-center .text-xl .bg-muted .p-3}
+::: {.text-center .text-xl}
 $$L = 4\pi R^2 \sigma T^4$$
 
-**Luminosity depends on both size (R²) and temperature (T⁴).**
+**Luminosity depends on both size ($R^2$) and temperature ($T^4$).**
 :::
 
 ::: {.fragment .mt-3 .text-muted}
-Here, $L$ is total power output (luminosity), $R$ is radius, and $T$ is the star’s effective surface temperature (K). This uses the **blackbody approximation**.
+Here, $L$ is total power output (luminosity), $R$ is radius, and $T$ is the star's effective surface temperature (K). This uses the **blackbody approximation**.
 :::
 
 ::: {.fragment .mt-4}
@@ -599,7 +568,7 @@ A star can be luminous because:
 
 ---
 
-## Same Temperature, Different Luminosity {background-color="black"}
+## Same Temperature, Different Luminosity
 
 ::: {.text-center}
 Two stars at the **same temperature** but **different luminosities**...
@@ -608,9 +577,9 @@ must have **different sizes**.
 :::
 
 ::: {.fragment .mt-4}
-If Star A and Star B have the same $T$ but Star A is 100× more luminous...
+If Star A and Star B have the same $T$ but Star A is $100\times$ more luminous...
 
-Then Star A has **10× the radius** (since $L \propto R^2$).
+Then Star A has **$10\times$ the radius** (since $L \propto R^2$).
 :::
 
 ::: {.fragment .mt-4 .text-muted}
@@ -618,17 +587,17 @@ This is how we distinguish **giants** from **dwarfs**.
 :::
 
 ::: {.notes}
-16–17 min. "Same color, different brightness → different size."
+16–17 min. "Same color, different brightness $\to$ different size."
 :::
 
 ---
 
-## {background-color="black"}
+## {.center}
 
-{{< fig betelgeuse-size-eso >}}
+{{< img betelgeuse-size-eso width="90%" >}}
 
 ::: {.fragment .mt-2 .text-center}
-**Betelgeuse** is a red giant — same color as red dwarfs, but ~1000× the radius.
+**Betelgeuse** is a red giant — same color as red dwarfs, but ~$1000\times$ the radius.
 :::
 
 ::: {.notes}
@@ -639,7 +608,7 @@ This is how we distinguish **giants** from **dwarfs**.
 
 ## Worked Example
 
-**Problem:** Two stars have the same temperature. Star A has 100× the luminosity of Star B. How do their radii compare?
+**Problem:** Two stars have the same temperature. Star A has $100\times$ the luminosity of Star B. How do their radii compare?
 
 ::: {.fragment}
 Since $L \propto R^2 T^4$ and $T$ is the same:
@@ -648,7 +617,7 @@ $$\frac{R_A}{R_B} = \sqrt{\frac{L_A}{L_B}} = \sqrt{100} = 10$$
 :::
 
 ::: {.fragment .mt-4}
-Star A has **10× the radius** of Star B.
+Star A has **$10\times$ the radius** of Star B.
 :::
 
 ::: {.notes}
@@ -657,63 +626,55 @@ Star A has **10× the radius** of Star B.
 
 ---
 
-## Quick Check: Giants vs Dwarfs {background-color="#1a1a2e"}
+## Quick Check: Giants vs Dwarfs {.quiz-question}
 
-::: {.quiz}
-A red giant and a red dwarf have the same surface temperature. The giant is 10,000× more luminous. How do their radii compare?
+A red giant and a red dwarf have the same surface temperature. The giant is $10{,}000\times$ more luminous. How do their radii compare?
 
-- [ ] Giant's radius is 10× the dwarf's
-- [x] Giant's radius is 100× the dwarf's
-- [ ] Giant's radius is 10,000× the dwarf's
-- [ ] Their radii are the same
-:::
-
-::: {.fragment .mt-2 .text-sm}
-**Solution:** $R_{giant}/R_{dwarf} = \sqrt{10,000} = 100$.
-:::
+- Giant's radius is $10\times$ the dwarf's
+- [Giant's radius is $100\times$ the dwarf's]{.correct}
+- Giant's radius is $10{,}000\times$ the dwarf's
+- Their radii are the same
 
 ::: {.notes}
-1–2 min. iClicker poll, then explain.
+1–2 min. Poll, then explain.
+
+Solution: $R_{giant}/R_{dwarf} = \sqrt{10{,}000} = 100$.
 :::
 
 ---
 
-## Quick Check: L-T-R Synthesis {background-color="#1a1a2e"}
+## Quick Check: L-T-R Synthesis {.quiz-question}
 
-::: {.quiz}
 Star X is twice as hot as Star Y and has half the radius. How does Star X's luminosity compare?
 
-- [ ] Same luminosity
-- [ ] 2× more luminous
-- [x] 4× more luminous
-- [ ] 8× more luminous
-:::
-
-::: {.fragment .mt-2 .text-sm}
-**Solution:** $L_X/L_Y = (1/2)^2 \times (2)^4 = 1/4 \times 16 = 4$.
-:::
+- Same luminosity
+- $2\times$ more luminous
+- [$4\times$ more luminous]{.correct}
+- $8\times$ more luminous
 
 ::: {.notes}
-1–2 min. iClicker poll, then explain.
+1–2 min. Poll, then explain.
+
+Solution: $L_X/L_Y = (1/2)^2 \times (2)^4 = (1/4) \times 16 = 4$.
 :::
 
 ---
 
-## Key Takeaways {background-color="#0a2f5c"}
+## Key Takeaways
 
 ::: {.text-sm}
 
-1. **Everything above absolute zero emits thermal radiation.** Hotter → more and at shorter wavelengths.
+1. **Everything above absolute zero emits thermal radiation.** Hotter $\to$ more and at shorter wavelengths.
 
 2. **Blackbody** spectrum depends only on temperature.
 
-3. **Wien's Law:** $\lambda_{peak} = 2,900,000/T$ (nm, K). Hot → blue. Cool → red.
+3. **Wien's Law:** $\lambda_{peak} = 2{,}900{,}000/T$ (nm, K). Hot $\to$ blue. Cool $\to$ red.
 
 4. **The Sun peaks at green** but appears white because it emits broadly.
 
-5. **Stefan-Boltzmann:** Power per area $\propto T^4$. Doubling $T$ → 16× more luminous.
+5. **Stefan-Boltzmann:** Power per area $\propto T^4$. Doubling $T$ $\to$ $16\times$ more luminous.
 
-6. **L-T-R:** $L = 4\pi R^2 \sigma T^4$. Same temperature, different luminosity → different size.
+6. **L-T-R:** $L = 4\pi R^2 \sigma T^4$. Same temperature, different luminosity $\to$ different size.
 
 7. **Blackbodies reveal temperature, but not composition.** For that, we need spectral lines (L9).
 
@@ -725,7 +686,7 @@ Star X is twice as hot as Star Y and has half the radius. How does Star X's lumi
 
 ---
 
-## Coming Up: Spectral Lines {background-color="black"}
+## Coming Up: Spectral Lines
 
 ::: {.text-center .text-xl}
 **Next lecture:** Spectral lines — the chemical fingerprints.
@@ -749,7 +710,7 @@ Spectral lines tell us **composition** and **motion**.
 
 ---
 
-## {.center background-color="#1a1a2e"}
+## {.center}
 
 ::: {.r-fit-text}
 Numerical Verification
@@ -763,21 +724,21 @@ Let's verify our equations with explicit calculations.
 
 ---
 
-## Wien's Law: The Sun {background-color="#1a1a2e"}
+## Wien's Law: The Sun
 
 **Given:** Sun's surface temperature $T = 5778$ K
 
-$$\lambda_{\text{peak}} = \frac{2.898 \times 10^6 \text{ nm·K}}{T}$$
+$$\lambda_{\text{peak}} = \frac{2.898 \times 10^6\ \mathrm{nm\cdot K}}{T}$$
 
 ::: {.fragment}
-$$\lambda_{\text{peak}} = \frac{2.898 \times 10^6 \text{ nm·K}}{5778 \text{ K}} = 501.5 \text{ nm}$$
+$$\lambda_{\text{peak}} = \frac{2.898 \times 10^6\ \mathrm{nm\cdot K}}{5778\ \mathrm{K}} = 501.5\ \mathrm{nm}$$
 :::
 
 ::: {.fragment}
-**Unit check:** $\frac{\text{nm·K}}{\text{K}} = \text{nm}$ ✓
+**Unit check:** $\frac{\mathrm{nm\cdot K}}{\mathrm{K}} = \mathrm{nm}$ ($\checkmark$)
 :::
 
-::: {.fragment .mt-2 .bg-muted .p-2}
+::: {.fragment .mt-2}
 **501 nm is green light!** Yet the Sun appears white because:
 
 1. Blackbody curves are broad (emits all visible colors)
@@ -785,17 +746,17 @@ $$\lambda_{\text{peak}} = \frac{2.898 \times 10^6 \text{ nm·K}}{5778 \text{ K}}
 :::
 
 ::: {.notes}
-"I'm using the more precise Wien constant 2.898×10⁶ nm·K. The rounded 2.9×10⁶ gives 502 nm."
+"I'm using the more precise Wien constant $2.898\times 10^6\,\mathrm{nm\cdot K}$. The rounded $2.9\times 10^6$ gives 502 nm."
 :::
 
 ---
 
-## Wien's Law: Betelgeuse {background-color="#1a1a2e"}
+## Wien's Law: Betelgeuse
 
 **Given:** Betelgeuse surface temperature $T \approx 3500$ K
 
 ::: {.fragment}
-$$\lambda_{\text{peak}} = \frac{2.898 \times 10^6 \text{ nm·K}}{3500 \text{ K}} = 828 \text{ nm}$$
+$$\lambda_{\text{peak}} = \frac{2.898 \times 10^6\ \mathrm{nm\cdot K}}{3500\ \mathrm{K}} = 828\ \mathrm{nm}$$
 :::
 
 ::: {.fragment}
@@ -816,12 +777,12 @@ The visible portion of its spectrum is dominated by red wavelengths (the "tail" 
 
 ---
 
-## Wien's Law: Rigel {background-color="#1a1a2e"}
+## Wien's Law: Rigel
 
 **Given:** Rigel surface temperature $T \approx 12,000$ K
 
 ::: {.fragment}
-$$\lambda_{\text{peak}} = \frac{2.898 \times 10^6 \text{ nm·K}}{12,000 \text{ K}} = 241.5 \text{ nm}$$
+$$\lambda_{\text{peak}} = \frac{2.898 \times 10^6\ \mathrm{nm\cdot K}}{12{,}000\ \mathrm{K}} = 241.5\ \mathrm{nm}$$
 :::
 
 ::: {.fragment}
@@ -842,9 +803,9 @@ The visible portion of its spectrum has more blue than red (we see the "rising e
 
 ---
 
-## Summary: Peak Wavelength vs. Appearance {background-color="#1a1a2e"}
+## Summary: Peak Wavelength vs. Appearance
 
-| Star | T (K) | λ_peak (nm) | Peak Location | Visible Color |
+| Star | $T$ (K) | $\lambda_{\text{peak}}$ (nm) | Peak Location | Visible Color |
 |------|-------|-------------|---------------|---------------|
 | Betelgeuse | 3,500 | 828 | Near-IR | Red |
 | Sun | 5,778 | 502 | Green | White |
@@ -854,9 +815,9 @@ The visible portion of its spectrum has more blue than red (we see the "rising e
 ::: {.fragment .mt-2}
 **Pattern:** We never see a "green star" because:
 
-- Cool stars peak in IR → red visible tail
-- Hot stars peak in UV → blue visible tail
-- In between → roughly equal visible colors → white
+- Cool stars peak in IR $\to$ red visible tail
+- Hot stars peak in UV $\to$ blue visible tail
+- In between $\to$ roughly equal visible colors $\to$ white
 :::
 
 ::: {.notes}
@@ -865,14 +826,14 @@ The visible portion of its spectrum has more blue than red (we see the "rising e
 
 ---
 
-## Stefan-Boltzmann: The Sun's Luminosity {background-color="#1a1a2e"}
+## Stefan-Boltzmann: The Sun's Luminosity
 
 **Calculate the Sun's total power output.**
 
 ::: {.fragment}
 **Given:**
 
-- Stefan-Boltzmann constant: $\sigma = 5.67 \times 10^{-8}$ W/(m²·K⁴)
+- Stefan-Boltzmann constant: $\sigma = 5.67 \times 10^{-8}\ \mathrm{W/(m^2\cdot K^4)}$
 - Sun's temperature: $T = 5778$ K
 - Sun's radius: $R_\odot = 6.96 \times 10^8$ m
 :::
@@ -889,14 +850,14 @@ $$L = 4\pi R^2 \sigma T^4$$
 
 ---
 
-## Sun's Luminosity: Step by Step {background-color="#1a1a2e"}
+## Sun's Luminosity: Step by Step
 
 **Step 1: Surface area**
 
 $$A = 4\pi R^2 = 4\pi (6.96 \times 10^8 \text{ m})^2 = 6.08 \times 10^{18} \text{ m}^2$$
 
 ::: {.fragment}
-**Step 2: T⁴ calculation**
+**Step 2: $T^4$ calculation**
 
 $$T^4 = (5778 \text{ K})^4 = 1.115 \times 10^{15} \text{ K}^4$$
 :::
@@ -913,12 +874,12 @@ $$L = (6.08 \times 10^{18} \text{ m}^2) \times (5.67 \times 10^{-8} \frac{\text{
 
 ---
 
-## Sun's Luminosity: Unit Analysis {background-color="#1a1a2e"}
+## Sun's Luminosity: Unit Analysis
 
 $$L = [\text{m}^2] \times \left[\frac{\text{W}}{\text{m}^2 \cdot \text{K}^4}\right] \times [\text{K}^4]$$
 
 ::: {.fragment}
-The m² cancels:
+The $m^2$ cancels:
 
 $$L = \left[\frac{\text{W} \cdot \text{m}^2}{\text{m}^2 \cdot \text{K}^4}\right] \times [\text{K}^4] = [\text{W}] \quad \checkmark$$
 :::
@@ -931,8 +892,8 @@ $$L = 6.08 \times 10^{18} \times 5.67 \times 10^{-8} \times 1.115 \times 10^{15}
 $$L = 3.84 \times 10^{26} \text{ W}$$
 :::
 
-::: {.fragment .bg-success-subtle .p-2}
-**The Sun outputs 3.84 × 10²⁶ watts** = 384 trillion trillion watts!
+::: {.fragment}
+**The Sun outputs $3.84 \times 10^{26}$ watts** = 384 trillion trillion watts!
 :::
 
 ::: {.notes}
@@ -941,7 +902,7 @@ $$L = 3.84 \times 10^{26} \text{ W}$$
 
 ---
 
-## How Many Light Bulbs? {background-color="#1a1a2e"}
+## How Many Light Bulbs?
 
 The Sun's luminosity: $L_\odot = 3.84 \times 10^{26}$ W
 
@@ -965,9 +926,9 @@ Or about 5 billion bulbs for every human who has ever lived.
 
 ---
 
-## L-T-R Verification: Comparing Stars {background-color="#1a1a2e"}
+## L-T-R Verification: Comparing Stars
 
-**Problem:** Sirius A is 25× more luminous than the Sun and has $T = 9940$ K. What's its radius?
+**Problem:** Sirius A is $25\times$ more luminous than the Sun and has $T = 9940$ K. What's its radius?
 
 ::: {.fragment}
 $$\frac{L_{\text{Sirius}}}{L_\odot} = \left(\frac{R_{\text{Sirius}}}{R_\odot}\right)^2 \left(\frac{T_{\text{Sirius}}}{T_\odot}\right)^4$$
@@ -985,8 +946,8 @@ $$25 = \left(\frac{R_{\text{Sirius}}}{R_\odot}\right)^2 \times (1.72)^4 = \left(
 $$\frac{R_{\text{Sirius}}}{R_\odot} = \sqrt{\frac{25}{8.76}} = \sqrt{2.85} = 1.69$$
 :::
 
-::: {.fragment .bg-success-subtle .p-2}
-**Sirius A is 1.7× the Sun's radius.**
+::: {.fragment}
+**Sirius A is $1.7\times$ the Sun's radius.**
 :::
 
 ::: {.notes}
@@ -995,7 +956,7 @@ $$\frac{R_{\text{Sirius}}}{R_\odot} = \sqrt{\frac{25}{8.76}} = \sqrt{2.85} = 1.6
 
 ---
 
-## {.center background-color="#0a2f5c"}
+## {.center}
 
 ::: {.r-fit-text}
 Deeper Dive
@@ -1009,7 +970,7 @@ Optional advanced content on the history of blackbody radiation.
 
 ---
 
-## The Ultraviolet Catastrophe {background-color="#0a2f5c"}
+## The Ultraviolet Catastrophe
 
 **The problem (circa 1900):**
 
@@ -1023,7 +984,7 @@ $$B(\lambda) \propto \frac{T}{\lambda^4}$$
 As $\lambda \to 0$, energy $\to \infty$. Obviously wrong!
 :::
 
-::: {.fragment .mt-2 .bg-warning-subtle .p-2}
+::: {.fragment .mt-2}
 This was called the **"ultraviolet catastrophe"** — classical physics broke down.
 :::
 
@@ -1033,7 +994,7 @@ This was called the **"ultraviolet catastrophe"** — classical physics broke do
 
 ---
 
-## Planck's Quantum Solution (1900) {background-color="#0a2f5c"}
+## Planck's Quantum Solution (1900)
 
 **Max Planck's radical idea:**
 
@@ -1059,7 +1020,7 @@ At finite temperature, high-energy quanta are exponentially suppressed.
 
 ---
 
-## The Planck Function {background-color="#0a2f5c"}
+## The Planck Function
 
 **The correct blackbody spectrum:**
 
@@ -1084,7 +1045,7 @@ Wien's Law and Stefan-Boltzmann are **consequences** of the Planck function, not
 
 ---
 
-## Birth of Quantum Mechanics {background-color="#0a2f5c"}
+## Birth of Quantum Mechanics
 
 Planck's solution (1900) required $E = hf$.
 
@@ -1093,10 +1054,10 @@ Planck's solution (1900) required $E = hf$.
 
 **Bohr (1913)** showed atoms have quantized energy levels.
 
-**Heisenberg & Schrödinger (1925-26)** developed full quantum mechanics.
+**Heisenberg & Schrodinger (1925-26)** developed full quantum mechanics.
 :::
 
-::: {.fragment .mt-4 .bg-muted .p-2}
+::: {.fragment .mt-4}
 **The blackbody problem launched the quantum revolution!**
 
 Planck's constant $h$ appears everywhere in modern physics.
@@ -1108,7 +1069,7 @@ Planck's constant $h$ appears everywhere in modern physics.
 
 ---
 
-## Why Stars Are Nearly Perfect Blackbodies {background-color="#0a2f5c"}
+## Why Stars Are Nearly Perfect Blackbodies
 
 **Three conditions for blackbody radiation:**
 

@@ -32,6 +32,16 @@ This repo is a Quarto website + RevealJS slide system for **ASTR 101: Principles
   - ❌ `an orbit is—and should be—an ellipse`
   - Applies to narrative text in `.md`/`.qmd` (not to YAML separators like `---` or code).
 
+## LaTeX / Math Markup (Non‑Negotiable)
+
+- In slide/readings body text (Markdown/Quarto), **use single backslashes for LaTeX commands** inside `$...$` or `$$...$$`.
+  - ✅ `$2.9\times 10^6\,\mathrm{nm\cdot K}$`
+  - ❌ `$2.9\\times 10^6\,\\mathrm{nm\\cdot K}$` (this usually breaks or renders wrong)
+- Use `\\` **only** when you truly mean a TeX line break (rare in slides) or when escaping is required inside **YAML double-quoted strings**.
+  - Prefer YAML **single quotes** for TeX-heavy strings to avoid accidental escapes.
+- Avoid Unicode “math lookalikes” in content (`×`, `→`, `·`, `λ`, `μ`, `Δ`, `°`, superscripts like `²`/`⁴`).
+  - Write them as LaTeX instead: `\times`, `\to`, `\cdot`, `\lambda`, `\mu`, `\Delta`, `^{\circ}`, `^2`, `^4`.
+
 ## Skills (Autoload for ASTR201 Work)
 
 At the start of any session in this repo, load the ASTR201 teaching skills; keep them active for the whole task and re-load as needed when switching contexts (writing vs auditing vs systems work).
