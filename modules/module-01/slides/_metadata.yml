@@ -19,6 +19,7 @@ format:
     min-scale: 0.55         # default 0.2; prevents unreadable shrinking
     max-scale: 2.0
     center: false
+    smaller: true           # reduce global font size to avoid overflow
 
     # Navigation / UX
     navigation-mode: linear

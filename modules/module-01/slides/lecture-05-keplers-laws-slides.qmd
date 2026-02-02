@@ -51,26 +51,6 @@ execute:
   message: false
 ---
 
-## Join iClicker
-
-::: {.text-center}
-{{< img iclicker-qr-astr101 width="36%" class="img-center" >}}
-
-::: {.text-xl .font-semibold .mt-2}
-[join.iclicker.com/ASES](https://join.iclicker.com/ASES)
-:::
-
-::: {.text-sm .text-muted .mt-2}
-If you can't scan: open the link and enter the course code **ASES**.
-:::
-:::
-
-::: {.notes}
-30–60 sec. Get everyone connected before starting.
-:::
-
----
-
 ## {background-image="../../../assets/images/common/eso-milky-way-panoramic.jpg" background-opacity="0.3"}
 
 ::: {.r-fit-text}
@@ -215,16 +195,14 @@ This is **exactly** what happens with Mars.
 
 ---
 
-## Quick Check: Retrograde Motion
+## Quick Check: Retrograde Motion {.quiz-question}
 
-::: {.quiz}
 During Mars retrograde, Mars is actually moving:
 
-- [ ] Backward in its orbit
-- [x] Forward in its orbit
-- [ ] Stopped in space
-- [ ] Falling toward the Sun
-:::
+- Backward in its orbit
+- [Forward in its orbit]{.correct}
+- Stopped in space
+- Falling toward the Sun
 
 ::: {.notes}
 1 min. iClicker poll. Most common misconception: students think Mars actually reverses.
@@ -346,16 +324,14 @@ What if the **Sun** is at the center?
 
 ---
 
-## Quick Check: The Copernican Shift
+## Quick Check: The Copernican Shift {.quiz-question}
 
-::: {.quiz}
 What was the key advantage of Copernicus's heliocentric model?
 
-- [ ] It was more accurate at predicting planetary positions
-- [x] It explained retrograde motion as geometry rather than requiring epicycles
-- [ ] It was immediately accepted by the Church
-- [ ] It used ellipses instead of circles
-:::
+- It was more accurate at predicting planetary positions
+- [It explained retrograde motion as geometry rather than requiring epicycles]{.correct}
+- It was immediately accepted by the Church
+- It used ellipses instead of circles
 
 ::: {.notes}
 1 min. iClicker poll. Note: Copernicus still used circles, so some complexity remained.
@@ -534,16 +510,14 @@ Most planets have nearly circular orbits — this is why Ptolemy got *reasonably
 
 ---
 
-## Quick Check: Eccentricity
+## Quick Check: Eccentricity {.quiz-question}
 
-::: {.quiz}
 An orbit with eccentricity $e = 0$ would be:
 
-- [ ] A very elongated ellipse
-- [x] A perfect circle
-- [ ] A parabola
-- [ ] Impossible for a planet
-:::
+- A very elongated ellipse
+- [A perfect circle]{.correct}
+- A parabola
+- Impossible for a planet
 
 ::: {.notes}
 1 min. iClicker poll.
@@ -649,16 +623,14 @@ Same idea: closer to the Sun means faster; farther means slower.
 
 ---
 
-## Quick Check: Fastest Point
+## Quick Check: Fastest Point {.quiz-question}
 
-::: {.quiz}
 A planet is moving fastest when it is at:
 
-- [ ] Aphelion (farthest from the Sun)
-- [x] Perihelion (closest to the Sun)
-- [ ] Halfway between perihelion and aphelion
-- [ ] The planet moves at constant speed
-:::
+- Aphelion (farthest from the Sun)
+- [Perihelion (closest to the Sun)]{.correct}
+- Halfway between perihelion and aphelion
+- The planet moves at constant speed
 
 ::: {.notes}
 1 min. iClicker poll.
@@ -809,16 +781,14 @@ $$a = \sqrt[3]{729} \times 1\,\text{AU} = \boxed{9 \text{ AU}}$$
 
 ---
 
-## Quick Check: Basic Calculation
+## Quick Check: Basic Calculation {.quiz-question}
 
-::: {.quiz}
 An asteroid orbits the Sun at a distance of 4 AU. What is its orbital period?
 
-- [ ] 4 years
-- [x] 8 years
-- [ ] 16 years
-- [ ] 64 years
-:::
+- 4 years
+- [8 years]{.correct}
+- 16 years
+- 64 years
 
 ::: {.notes}
 1 min. iClicker poll. Same as worked example — reinforcement.
@@ -856,25 +826,18 @@ Same pattern: $a^3 \approx P^2$.
 
 ---
 
-## Quick Check: Scaling
+## Quick Check: Scaling {.quiz-question}
 
-::: {.quiz}
 If a planet's orbital distance $a$ increases by a factor of 4, its orbital period $P$ increases by a factor of:
 
-- [ ] 4
-- [x] 8
-- [ ] 16
-- [ ] 64
-:::
-
-::: {.fragment .mt-4 .text-sm}
-**Solution:** From $P^2 \propto a^3$, we get $P \propto a^{3/2}$.
-
-If $a \times 4$, then $P \times 4^{3/2} = 4^{1.5} = 8$.
-:::
+- 4
+- [8]{.correct}
+- 16
+- 64
 
 ::: {.notes}
 1–2 min. iClicker poll, then explain.
+Reasoning: from $P^2 \\propto a^3$, we get $P \\propto a^{3/2}$. If $a$ increases by 4, then $P$ increases by $4^{3/2} = 8$.
 :::
 
 ---
@@ -947,16 +910,14 @@ But they don't explain the underlying mechanism.
 
 ---
 
-## Quick Check: Empirical vs. Physical
+## Quick Check: Empirical vs. Physical {.quiz-question}
 
-::: {.quiz}
 Kepler's laws are considered "empirical" rather than "physical" because:
 
-- [ ] They are approximately true, not exactly true
-- [x] They describe patterns without explaining the underlying mechanism
-- [ ] They only apply to the Solar System
-- [ ] They were discovered before telescopes existed
-:::
+- They are approximately true, not exactly true
+- [They describe patterns without explaining the underlying mechanism]{.correct}
+- They only apply to the Solar System
+- They were discovered before telescopes existed
 
 ::: {.notes}
 1 min. iClicker poll.
