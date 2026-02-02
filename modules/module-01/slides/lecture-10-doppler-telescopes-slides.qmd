@@ -2,7 +2,7 @@
 title: "Motion Revealed"
 subtitle: "The Doppler Effect and the Astronomer's Toolkit"
 author: "Dr. Anna Rosen"
-date: "2026-02-21"
+date: "2026-02-20"
 description: "Spectral lines shift when objects move. The Doppler effect reveals velocities from exoplanets to dark matter. Telescopes collect this light."
 draft: false
 
@@ -16,7 +16,7 @@ format:
     center: false
     chalkboard: true
     title-slide-attributes:
-      data-background-image: "/assets/images/common/cosmic-cliffs-jwst.png"
+      data-background-image: "../../../assets/images/common/cosmic-cliffs-jwst.png"
       data-background-opacity: "0.35"
     pointer:
       key: "q"
@@ -88,7 +88,7 @@ But what if those fingerprints are **shifted** from their expected wavelengths?
 
 ---
 
-## Motion Causes Shifts {background-image="/assets/images/common/cosmic-cliffs-jwst.png" background-opacity="0.2"}
+## Motion Causes Shifts {background-image="../../../assets/images/common/cosmic-cliffs-jwst.png" background-opacity="0.2"}
 
 ::: {.text-center .text-xl}
 Just like an ambulance siren changes pitch as it passes...
@@ -106,7 +106,7 @@ This is the **Doppler effect**.
 
 ---
 
-## Today's Learning Objectives {background-image="/assets/images/common/cosmic-cliffs-jwst.png" background-opacity="0.2"}
+## Today's Learning Objectives {background-image="../../../assets/images/common/cosmic-cliffs-jwst.png" background-opacity="0.2"}
 
 ::: {.bg-muted .p-2}
 
@@ -135,6 +135,26 @@ Part 1: The Doppler Effect
 :::
 
 *Measuring motion from light*
+
+---
+
+## Predict First! {background-color="#1a1a2e"}
+
+You measure a spectral line at a **longer wavelength** than its lab value ($\\Delta\\lambda > 0$). Is the source moving…
+
+:::: {.columns .mt-4}
+::: {.column width="50%"}
+A) Toward us
+:::
+
+::: {.column width="50%"}
+B) Away from us
+:::
+::::
+
+::: {.notes}
+30 s. Commit first. Then reveal: longer wavelength = redshift = moving away along our line of sight.
+:::
 
 ---
 
@@ -667,6 +687,12 @@ Which change would improve a telescope's angular resolution?
 - L13: Are We Alone? (Module 1 Synthesis)
 :::
 
+::: {.fragment .mt-4 .text-muted}
+**Demo:** Doppler Shift Spectrometer: [../../../demos/doppler-shift-spectrometer/](../../../demos/doppler-shift-spectrometer/)
+
+**Demo:** Telescope Resolution: [../../../demos/telescope-resolution/](../../../demos/telescope-resolution/)
+:::
+
 ::: {.notes}
 21–22 min. Preview the capstone lectures.
 :::
@@ -734,7 +760,7 @@ The star wobbles at ~5 km/s — walking speed for an elephant, but detectable!
 :::
 
 ::: {.notes}
-"Modern spectrographs can measure shifts of 1 m/s. This was 'easy' by comparison."
+This example uses a deliberately large shift for arithmetic clarity. Modern instruments can measure much smaller velocity signals (we won’t need a specific number today).
 :::
 
 ---
@@ -756,6 +782,10 @@ First convert period: $P = 4.23$ days $\times \frac{1 \text{ yr}}{365.25 \text{ 
 ::: {.fragment}
 $$a^3 = M_* \times P^2 = 1.06 \times (0.0116)^2 = 1.43 \times 10^{-4} \text{ AU}^3$$
 $$a = 0.052 \text{ AU}$$
+:::
+
+::: {.fragment .mt-2 .text-muted}
+This uses Newton’s Kepler III in a convenient unit system: $a$ in AU, $P$ in years, $M_*$ in solar masses, and assumes $M_p \\ll M_*$.
 :::
 
 ::: {.notes}
@@ -806,7 +836,7 @@ $$M_p = 0.45 M_J$$
 :::
 
 ::: {.fragment .bg-success-subtle .p-2}
-**51 Pegasi b has about half Jupiter's mass.** (Actual: 0.47 $M_J$ ✓)
+**51 Pegasi b has about half Jupiter's mass.**
 :::
 
 ::: {.notes}
@@ -1040,7 +1070,7 @@ Keck with AO: 0.04 arcsec (better than Hubble's 0.05 arcsec)
 
 ---
 
-## Questions? {background-image="/assets/images/common/cosmic-cliffs-jwst.png" background-opacity="0.25"}
+## Questions? {background-image="../../../assets/images/common/cosmic-cliffs-jwst.png" background-opacity="0.25"}
 
 ::: {.text-center .text-xl .mt-4}
 **Doppler reveals motion.**

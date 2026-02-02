@@ -16,7 +16,7 @@ format:
     center: false
     chalkboard: true
     title-slide-attributes:
-      data-background-image: "/assets/images/common/eso-milky-way-panoramic.jpg"
+      data-background-image: "../../../assets/images/common/eso-milky-way-panoramic.jpg"
       data-background-opacity: "0.35"
     pointer:
       key: "q"
@@ -68,7 +68,7 @@ If you can't scan: open the link and enter the course code **ASES**.
 
 ---
 
-## {background-image="/assets/images/common/eso-milky-way-panoramic.jpg" background-opacity="0.3"}
+## {background-image="../../../assets/images/common/eso-milky-way-panoramic.jpg" background-opacity="0.3"}
 
 ::: {.r-fit-text}
 "The planets wander..."
@@ -84,7 +84,7 @@ For 2,000 years, astronomers asked **why**.
 
 ---
 
-## Today's Learning Objectives {background-image="/assets/images/common/cosmic-cliffs-jwst.png" background-opacity="0.2"}
+## Today's Learning Objectives {background-image="../../../assets/images/common/cosmic-cliffs-jwst.png" background-opacity="0.2"}
 
 ::: {.bg-muted .p-2}
 
@@ -649,12 +649,44 @@ A planet is moving fastest when it is at:
 
 ---
 
+## Predict First! {background-color="#1a1a2e"}
+
+Before we see the law: if we double the orbital size ($a \\rightarrow 2a$), the orbital period $P$ becomes…
+
+:::: {.columns .mt-4}
+::: {.column width="25%"}
+A) 2×
+:::
+
+::: {.column width="25%"}
+B) ~2.8×
+:::
+
+::: {.column width="25%"}
+C) 4×
+:::
+
+::: {.column width="25%"}
+D) 8×
+:::
+::::
+
+::: {.notes}
+30 s. Have students commit to an option. Then reveal: from $P^2 \\propto a^3$, doubling $a$ multiplies $P$ by $\\sqrt{2^3}=\\sqrt{8}\\approx 2.8$.
+:::
+
+---
+
 ## Kepler's Third Law: The Period-Distance Relation {background-color="#0a2f5c"}
 
 ::: {.text-center .text-xl .bg-muted .p-3}
 **The square of a planet's orbital period is proportional to the cube of its semi-major axis.**
 
 $$P^2 \propto a^3$$
+:::
+
+::: {.fragment .mt-3 .text-muted}
+$P$ is orbital period (time per orbit). $a$ is the semi-major axis (a measure of orbit size / average distance).
 :::
 
 ::: {.fragment .mt-4}
@@ -910,11 +942,16 @@ Then, in 1687, Isaac Newton published the *Principia*.
 Newton showed that **all three of Kepler's laws** emerge from a single principle:
 
 $$F = \frac{Gm_1m_2}{r^2}$$
+
+::: {.mt-3 .text-muted}
+Here, $F$ is the gravitational force magnitude, $m_1$ and $m_2$ are masses, $r$ is the separation, and $G$ is a constant. The key idea: double $r$ → force becomes 4× weaker.
+:::
 :::
 :::
 
 ::: {.notes}
 36–38 min. "Kepler gave us a rulebook. Newton will give us the reason the rulebook exists."
+Assumptions to model explicitly (briefly): Newtonian gravity; objects behave like point masses / spherically symmetric bodies; two-body approximation.
 :::
 
 ---
@@ -1014,7 +1051,7 @@ We'll see how **one equation** explains all three of Kepler's laws — and how i
 ::: {.fragment .mt-4 .text-muted}
 **Reading:** Lecture 6 Reading Companion
 
-**Demo:** Continue exploring the Kepler's Laws demo in Newton Mode
+**Demo:** Continue exploring the Kepler's Laws demo in Newton Mode: [../../../demos/keplers-laws/](../../../demos/keplers-laws/)
 :::
 
 ::: {.notes}
@@ -1142,7 +1179,9 @@ $$a = 778 \times 10^6 \text{ km} \times \frac{1 \text{ AU}}{1.496 \times 10^8 \t
 
 "$P = 12$ years and $a = 5.2$ AU, so $12 = 5.2$... wrong!"
 
-✓ **Fix:** It's $P^2 = a^3$, not $P = a$!
+✓ **Fix:** Kepler III is about **squares and cubes** — and you must use a **unit-safe form**.
+
+In Sun-only units (years and AU), you can compare $P^2$ and $a^3$ as a quick check:
 
 $$(12)^2 = 144 \quad \text{vs} \quad (5.2)^3 = 141 \quad \checkmark$$
 :::
@@ -1247,7 +1286,7 @@ We'll derive this properly in L6 with Newton's laws. For now, notice how $e$ con
 
 ---
 
-## Questions? {background-image="/assets/images/common/eso-milky-way-panoramic.jpg" background-opacity="0.25"}
+## Questions? {background-image="../../../assets/images/common/eso-milky-way-panoramic.jpg" background-opacity="0.25"}
 
 ::: {.text-center .text-xl .mt-4}
 Kepler gave us the **patterns**.

@@ -833,7 +833,7 @@ This shows why Newton's version is more powerful than Kepler's: it tells us how 
 
 ## 🔭 Demo Exploration: Motion Reveals Mass
 
-**Open the Binary Orbits Demo:** [astrobytes-edu.github.io/astr101-sp26/demos/binary-orbits/](https://astrobytes-edu.github.io/astr101-sp26/demos/binary-orbits/)
+**Open the Binary Orbits Demo:** [../../../demos/binary-orbits/](../../../demos/binary-orbits/)
 
 This demo shows the full physics of two-body orbits. Both the star AND the planet orbit their common center of mass (barycenter). This is how astronomers "weigh" distant objects.
 
@@ -923,7 +923,7 @@ Increasing total mass → shorter period. More mass = stronger gravity = faster 
 ---
 
 ::: {.callout-note title="Also Try: Kepler Demo Newton Mode"}
-The [Kepler's Laws Demo](https://astrobytes-edu.github.io/astr101-sp26/demos/keplers-laws/) has a **NEWTON MODE** button that shows velocity and acceleration vectors. Try it to see how centripetal acceleration always points toward the Sun.
+The [Kepler's Laws Demo](../../../demos/keplers-laws/) has a **NEWTON MODE** button that shows velocity and acceleration vectors. Try it to see how centripetal acceleration always points toward the Sun.
 :::
 
 ---

@@ -222,7 +222,7 @@ This is why some astronomy must be done from space: the atmosphere blocks the ve
 :::
 
 ::: {.callout-tip title="🖥️ Demo: Explore the Spectrum" collapse="false"}
-Open the **[EM Spectrum Interactive Demo](/demos/em-spectrum/)** to explore different wavelengths and see what each region reveals about the universe. Try clicking on different astronomical sources!
+Open the **[EM Spectrum Interactive Demo](../../../demos/em-spectrum/)** to explore different wavelengths and see what each region reveals about the universe. Try clicking on different astronomical sources!
 :::
 
 ::: {.callout-check-yourself title="Check Yourself 2 — Ordering the Spectrum"}
@@ -574,7 +574,7 @@ Star A is 5× farther away than Star B. If they have the same intrinsic luminosi
 
 ## 🔭 Demo Exploration: The Electromagnetic Spectrum
 
-**Open the EM Spectrum Interactive Demo:** [/demos/em-spectrum/](/demos/em-spectrum/)
+**Open the EM Spectrum Interactive Demo:** [../../../demos/em-spectrum/](../../../demos/em-spectrum/)
 
 This demo lets you explore the electromagnetic spectrum and see what different wavelengths reveal about astronomical objects.
 

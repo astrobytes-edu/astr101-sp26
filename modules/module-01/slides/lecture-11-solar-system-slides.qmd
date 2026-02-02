@@ -16,7 +16,7 @@ format:
     center: false
     chalkboard: true
     title-slide-attributes:
-      data-background-image: "/assets/images/common/cosmic-cliffs-jwst.png"
+      data-background-image: "../../../assets/images/common/cosmic-cliffs-jwst.png"
       data-background-opacity: "0.35"
     pointer:
       key: "q"
@@ -82,7 +82,7 @@ We didn't weigh it. We watched how things **move around it**.
 
 ---
 
-## The Power of Remote Sensing {background-image="/assets/images/common/cosmic-cliffs-jwst.png" background-opacity="0.2"}
+## The Power of Remote Sensing {background-image="../../../assets/images/common/cosmic-cliffs-jwst.png" background-opacity="0.2"}
 
 From billions of kilometers away, we can measure:
 
@@ -103,7 +103,7 @@ Today: **Apply the entire Module 1 toolkit** to our solar system.
 
 ---
 
-## Today's Learning Objectives {background-image="/assets/images/common/cosmic-cliffs-jwst.png" background-opacity="0.2"}
+## Today's Learning Objectives {background-image="../../../assets/images/common/cosmic-cliffs-jwst.png" background-opacity="0.2"}
 
 ::: {.bg-muted .p-2}
 
@@ -315,6 +315,34 @@ If a moon orbits at twice the distance but with the same period, the planet's ma
 
 ::: {.notes}
 1–2 min. iClicker poll, then explain.
+:::
+
+---
+
+## Predict First! {background-color="#1a1a2e"}
+
+Before we look at the numbers: if a planet is **twice as far** from the Sun, its equilibrium temperature $T_{eq}$ (no-atmosphere baseline) should be…
+
+:::: {.columns .mt-4}
+::: {.column width="25%"}
+A) 2× higher
+:::
+
+::: {.column width="25%"}
+B) 1/2×
+:::
+
+::: {.column width="25%"}
+C) ~0.7×
+:::
+
+::: {.column width="25%"}
+D) 1/4×
+:::
+::::
+
+::: {.notes}
+30 s. Commit first. Then connect: equilibrium temperature scales like distance$^{-1/2}$, so doubling distance multiplies $T_{eq}$ by $1/\\sqrt{2}\\approx 0.7$ (under the simple radiative-equilibrium model).
 :::
 
 ---
@@ -571,7 +599,7 @@ $$M_J = \frac{2.96 \times 10^{27} \text{ m}^3}{1.56 \text{ m}^3/\text{kg}} = 1.9
 :::
 
 ::: {.fragment .bg-success-subtle .p-2}
-**Jupiter's mass: $1.9 \times 10^{27}$ kg** (Actual: $1.898 \times 10^{27}$ kg ✓)
+**Jupiter's mass: $1.9 \times 10^{27}$ kg**
 :::
 
 ::: {.notes}
@@ -582,32 +610,23 @@ $$M_J = \frac{2.96 \times 10^{27} \text{ m}^3}{1.56 \text{ m}^3/\text{kg}} = 1.9
 
 ## Frost Line Temperature {background-color="#1a1a2e"}
 
-**Where does water ice become stable?**
+**Why is the frost line “a few AU”?**
 
-Water ice sublimes (vaporizes) at temperatures above ~170 K in vacuum.
+In the early solar nebula, ices could only form where the disk was cold enough — so there was much more solid material (rock + metal + ice) beyond the frost line.
 
-::: {.fragment}
-**Equilibrium temperature:**
-
-$$T_{eq} \approx 280 \text{ K} \times \left(\frac{1 \text{ AU}}{r}\right)^{1/2}$$
-
-(Simplified formula; assumes Earth's equilibrium temp ~280 K)
-:::
+- **Order-of-magnitude for our solar system:** ~3 AU (between Mars and Jupiter)
+- **Not a fixed wall:** it shifts over time as the young Sun’s luminosity and disk heating change
 
 ::: {.fragment}
-**Solve for $r$ where $T = 170$ K:**
+**Simple scaling idea (radiative equilibrium):**
 
-$$170 = 280 \times \left(\frac{1}{r}\right)^{1/2}$$
-$$\left(\frac{1}{r}\right)^{1/2} = \frac{170}{280} = 0.607$$
-$$r = \frac{1}{(0.607)^2} = 2.7 \text{ AU}$$
-:::
+$$T \propto L^{1/4}\,r^{-1/2}$$
 
-::: {.fragment .bg-muted .p-2}
-**Frost line ≈ 2.7 AU** — between Mars (1.5 AU) and Jupiter (5.2 AU) ✓
+If the young Sun were more luminous (or the disk were hotter), the frost line would be farther out — and vice versa.
 :::
 
 ::: {.notes}
-"This explains why rocky planets are inside ~3 AU and giants are outside."
+Keep the message conceptual: the frost line is an order-of-magnitude location and a moving target. Avoid “exact” derivations from Earth’s present-day climate, because the protoplanetary disk is not the same physical system.
 :::
 
 ---
@@ -818,7 +837,7 @@ Distance: $\approx 1\%$ of Earth-Sun distance toward night side.
 
 ---
 
-## Questions? {background-image="/assets/images/common/cosmic-cliffs-jwst.png" background-opacity="0.25"}
+## Questions? {background-image="../../../assets/images/common/cosmic-cliffs-jwst.png" background-opacity="0.25"}
 
 ::: {.text-center .text-xl .mt-4}
 **Module 1 toolkit applied:**

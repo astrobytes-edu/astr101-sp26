@@ -16,7 +16,7 @@ format:
     center: false
     chalkboard: true
     title-slide-attributes:
-      data-background-image: "/assets/images/common/cosmic-cliffs-jwst.png"
+      data-background-image: "../../../assets/images/common/cosmic-cliffs-jwst.png"
       data-background-opacity: "0.35"
     pointer:
       key: "q"
@@ -100,7 +100,7 @@ Why such different outcomes?
 
 ---
 
-## Today's Learning Objectives {background-image="/assets/images/common/cosmic-cliffs-jwst.png" background-opacity="0.2"}
+## Today's Learning Objectives {background-image="../../../assets/images/common/cosmic-cliffs-jwst.png" background-opacity="0.2"}
 
 ::: {.bg-muted .p-2}
 
@@ -129,6 +129,34 @@ Part 1: Planetary Climates
 :::
 
 *Energy balance and the greenhouse effect*
+
+---
+
+## Predict First! {background-color="#1a1a2e"}
+
+Before we do any math: if a planet is **twice as far** from its star, its equilibrium temperature $T_{eq}$ should be…
+
+:::: {.columns .mt-4}
+::: {.column width="25%"}
+A) 2× higher
+:::
+
+::: {.column width="25%"}
+B) 1/2×
+:::
+
+::: {.column width="25%"}
+C) ~0.7×
+:::
+
+::: {.column width="25%"}
+D) 1/4×
+:::
+::::
+
+::: {.notes}
+30 s. Commit first. Then reveal with the formula: $T_{eq}\\propto d^{-1/2}$, so doubling distance multiplies $T_{eq}$ by $1/\\sqrt{2}\\approx 0.7$.
+:::
 
 ---
 
@@ -864,7 +892,7 @@ Incredibly small! But detectable for larger planets around smaller stars.
 
 ---
 
-## Questions? {background-image="/assets/images/common/cosmic-cliffs-jwst.png" background-opacity="0.25"}
+## Questions? {background-image="../../../assets/images/common/cosmic-cliffs-jwst.png" background-opacity="0.25"}
 
 ::: {.text-center .text-xl .mt-4}
 **Climate:** Same physics for Venus, Earth, Mars, and us.

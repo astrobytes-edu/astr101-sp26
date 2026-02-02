@@ -253,7 +253,7 @@ This perfect blackbody signature is powerful evidence that the early universe wa
 :::
 
 ::: {.callout-tip title="🖥️ Demo: Explore Blackbody Spectra" collapse="false"}
-Open the **[Blackbody Radiation Interactive Demo](/demos/blackbody-radiation/)** to see how the spectrum changes with temperature. Try adjusting the temperature slider and watch the peak shift from infrared through visible to ultraviolet.
+Open the **[Blackbody Radiation Interactive Demo](../../../demos/blackbody-radiation/)** to see how the spectrum changes with temperature. Try adjusting the temperature slider and watch the peak shift from infrared through visible to ultraviolet.
 :::
 
 ::: {.callout-check-yourself title="Check Yourself 2 — Blackbody Concept"}
@@ -619,7 +619,7 @@ Temperature's $T^4$ dependence dominates over the smaller size.
 
 ## 🔭 Demo Exploration: Blackbody Radiation
 
-**Open the Blackbody Radiation Demo:** [/demos/blackbody-radiation/](/demos/blackbody-radiation/)
+**Open the Blackbody Radiation Demo:** [../../../demos/blackbody-radiation/](../../../demos/blackbody-radiation/)
 
 This demo lets you explore how temperature affects the blackbody spectrum — both the peak wavelength (Wien's Law) and the total energy output (Stefan-Boltzmann).
 

@@ -16,7 +16,7 @@ format:
     center: false
     chalkboard: true
     title-slide-attributes:
-      data-background-image: "/assets/images/common/cosmic-cliffs-jwst.png"
+      data-background-image: "../../../assets/images/common/cosmic-cliffs-jwst.png"
       data-background-opacity: "0.35"
     pointer:
       key: "q"
@@ -112,7 +112,7 @@ Heat it to **5800 K** → brilliant white
 
 ---
 
-## Today's Learning Objectives {background-image="/assets/images/common/cosmic-cliffs-jwst.png" background-opacity="0.2"}
+## Today's Learning Objectives {background-image="../../../assets/images/common/cosmic-cliffs-jwst.png" background-opacity="0.2"}
 
 ::: {.bg-muted .p-2}
 
@@ -536,6 +536,10 @@ $$\text{Power per area} = \sigma T^4$$
 **Temperature has a HUGE effect on luminosity.**
 :::
 
+::: {.fragment .mt-3 .text-muted}
+$\sigma$ is the **Stefan–Boltzmann constant** (a fixed constant). Use $T$ in **Kelvin**.
+:::
+
 ::: {.fragment .mt-4}
 The **fourth power** is dramatic:
 
@@ -575,6 +579,10 @@ Star A has twice the surface temperature of Star B. If both have the same radius
 $$L = 4\pi R^2 \sigma T^4$$
 
 **Luminosity depends on both size (R²) and temperature (T⁴).**
+:::
+
+::: {.fragment .mt-3 .text-muted}
+Here, $L$ is total power output (luminosity), $R$ is radius, and $T$ is the star’s effective surface temperature (K). This uses the **blackbody approximation**.
 :::
 
 ::: {.fragment .mt-4}
@@ -731,6 +739,8 @@ Spectral lines tell us **composition** and **motion**.
 
 ::: {.fragment .mt-4 .text-muted}
 **Reading:** Lecture 9 Reading Companion
+
+**Demo:** Explore blackbody spectra: [../../../demos/blackbody-radiation/](../../../demos/blackbody-radiation/)
 :::
 
 ::: {.notes}
@@ -976,7 +986,7 @@ $$\frac{R_{\text{Sirius}}}{R_\odot} = \sqrt{\frac{25}{8.76}} = \sqrt{2.85} = 1.6
 :::
 
 ::: {.fragment .bg-success-subtle .p-2}
-**Sirius A is 1.7× the Sun's radius.** (Actual: 1.71 R☉ ✓)
+**Sirius A is 1.7× the Sun's radius.**
 :::
 
 ::: {.notes}
@@ -1120,7 +1130,7 @@ Planck's constant $h$ appears everywhere in modern physics.
 
 ---
 
-## Questions? {background-image="/assets/images/common/cosmic-cliffs-jwst.png" background-opacity="0.25"}
+## Questions? {background-image="../../../assets/images/common/cosmic-cliffs-jwst.png" background-opacity="0.25"}
 
 ::: {.text-center .text-xl .mt-4}
 **Temperature is written in light.**

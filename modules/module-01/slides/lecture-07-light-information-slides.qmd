@@ -16,7 +16,7 @@ format:
     center: false
     chalkboard: true
     title-slide-attributes:
-      data-background-image: "/assets/images/common/cosmic-cliffs-jwst.png"
+      data-background-image: "../../../assets/images/common/cosmic-cliffs-jwst.png"
       data-background-opacity: "0.4"
     pointer:
       key: "q"
@@ -92,7 +92,7 @@ Yet you know its temperature, composition, age, mass, and motion.
 
 ---
 
-## {background-image="/assets/images/common/cosmic-cliffs-jwst.png" background-opacity="0.3"}
+## {background-image="../../../assets/images/common/cosmic-cliffs-jwst.png" background-opacity="0.3"}
 
 ::: {.text-center .text-xl}
 **Light is the universe's messenger.**
@@ -112,7 +112,7 @@ Every photon has a story:
 
 ---
 
-## Today's Learning Objectives {background-image="/assets/images/common/cosmic-cliffs-jwst.png" background-opacity="0.2"}
+## Today's Learning Objectives {background-image="../../../assets/images/common/cosmic-cliffs-jwst.png" background-opacity="0.2"}
 
 ::: {.bg-muted .p-2}
 
@@ -205,6 +205,34 @@ All light travels at the same speed: $c = 3 \times 10^8$ m/s
 
 ::: {.notes}
 5–6 min. "Wavelength and frequency are the two key descriptors."
+:::
+
+---
+
+## Predict First! {background-color="#1a1a2e"}
+
+Without doing math: if the wavelength doubles ($\\lambda \\rightarrow 2\\lambda$), the frequency $f$ becomes…
+
+:::: {.columns .mt-4}
+::: {.column width="25%"}
+A) 2×
+:::
+
+::: {.column width="25%"}
+B) 1/2×
+:::
+
+::: {.column width="25%"}
+C) unchanged
+:::
+
+::: {.column width="25%"}
+D) 4×
+:::
+::::
+
+::: {.notes}
+30 s. Commit first. Then reveal with $c=\\lambda f$: since $c$ is constant, doubling $\\lambda$ halves $f$.
 :::
 
 ---
@@ -434,6 +462,10 @@ So why does the sky favor blue?
 $$\text{Scattering} \propto \frac{1}{\lambda^4}$$
 
 **Shorter wavelengths scatter MUCH more.**
+:::
+
+::: {.fragment .mt-3 .text-muted}
+Valid when the scatterers are **much smaller than the wavelength** (e.g., atmospheric molecules).
 :::
 
 ::: {.fragment .mt-4}
@@ -741,6 +773,8 @@ By analyzing the spectrum, we can read an object's temperature from billions of 
 
 ::: {.fragment .mt-4 .text-muted}
 **Reading:** Lecture 8 Reading Companion
+
+**Demo:** Explore the EM Spectrum: [../../../demos/em-spectrum/](../../../demos/em-spectrum/)
 :::
 
 ::: {.notes}
@@ -1071,7 +1105,7 @@ A trillion low-energy photons won't break a bond that one high-energy photon can
 
 ---
 
-## Questions? {background-image="/assets/images/common/cosmic-cliffs-jwst.png" background-opacity="0.25"}
+## Questions? {background-image="../../../assets/images/common/cosmic-cliffs-jwst.png" background-opacity="0.25"}
 
 ::: {.text-center .text-xl .mt-4}
 **Light is the universe's messenger.**

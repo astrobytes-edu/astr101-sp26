@@ -2,7 +2,7 @@
 title: "Motion Revealed — Doppler Effect and the Astronomer's Toolkit"
 subtitle: "Lecture 10 Reading Companion"
 author: "Dr. Anna Rosen"
-date: "2026-02-21"
+date: "2026-02-20"
 description: "Spectral lines shift when objects move. The Doppler effect reveals velocities — from exoplanets to dark matter. Telescopes collect this light so we can decode it. This completes the astronomer's toolkit for Module 2."
 draft: false
 categories: [foundations, doppler, telescopes]
@@ -308,7 +308,7 @@ $v = c \times |\Delta\lambda|/\lambda_0 = (3 \times 10^5) \times (0.2/589.0) \ap
 
 ## 🔭 Demo Exploration: Doppler Shift Spectrometer
 
-**Open the Doppler Shift Spectrometer demo:** [/demos/doppler-shift-spectrometer/](/demos/doppler-shift-spectrometer/)
+**Open the Doppler Shift Spectrometer demo:** [../../../demos/doppler-shift-spectrometer/](../../../demos/doppler-shift-spectrometer/)
 
 This demo overlays a **rest** spectrum and an **observed** spectrum so you can see Doppler shifts directly and practice the sign convention.
 
@@ -341,7 +341,7 @@ By Newton's Third Law, a planet doesn't just orbit its star — the star also wo
 This stellar wobble is tiny — the Sun moves only about 12 m/s due to Jupiter's pull — but it's detectable with precise Doppler measurements. As the star wobbles toward and away from us, its spectral lines shift back and forth. The periodic pattern reveals an orbiting planet.
 
 ::: {.callout-note title="Demo: RV curve + spectral line inset"}
-Open the **[Binary Orbits demo](/demos/binary-orbits/)**, expand the “Radial velocity method” panel, and enable the RV overlay. Watch the spectral line shift back and forth as the RV curve marker moves — this is the measurement that produces the curve.
+Open the **[Binary Orbits demo](../../../demos/binary-orbits/)**, expand the “Radial velocity method” panel, and enable the RV overlay. Watch the spectral line shift back and forth as the RV curve marker moves — this is the measurement that produces the curve.
 :::
 
 {{< fig radial-velocity-method >}}
@@ -564,7 +564,7 @@ $$\theta = 2.5 \times 10^{-7} \times 206,265 \approx 0.05"$$
 Hubble can resolve details as small as 0.05 arcseconds — about **10–20× sharper** than typical ground-based telescopes, which are limited to ~0.5–1" resolution by atmospheric blurring ("seeing").
 
 ::: {.callout-tip title="🖥️ Demo: Telescope Resolution" collapse="false"}
-Open the **[Telescope Resolution Interactive Demo](/demos/telescope-resolution/)** to see how changing telescope diameter and wavelength affects resolution. Try "observing" the same object at different wavelengths!
+Open the **[Telescope Resolution Interactive Demo](../../../demos/telescope-resolution/)** to see how changing telescope diameter and wavelength affects resolution. Try "observing" the same object at different wavelengths!
 :::
 
 ::: {.callout-check-yourself title="Check Yourself 6 — Resolution"}

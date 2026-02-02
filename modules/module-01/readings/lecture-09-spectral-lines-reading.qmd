@@ -2,7 +2,7 @@
 title: "Decoding Starlight — Spectral Lines and Chemical Fingerprints"
 subtitle: "Lecture 9 Reading Companion"
 author: "Dr. Anna Rosen"
-date: "2026-02-19"
+date: "2026-02-18"
 description: "Spectral lines are chemical fingerprints. Each element absorbs and emits light at unique wavelengths. By understanding the quantum origin of these lines, we can determine the composition of any star in the universe — without ever touching it."
 draft: false
 categories: [foundations, spectra, quantum]
@@ -115,7 +115,7 @@ A cool gas in front of a hot, continuous source absorbs light at **specific wave
 
 ## 🔭 Demo Exploration: Spectral Lines Lab
 
-**Open the Spectral Lines Lab demo:** [/demos/spectral-lines-lab/](/demos/spectral-lines-lab/)
+**Open the Spectral Lines Lab demo:** [../../../demos/spectral-lines-lab/](../../../demos/spectral-lines-lab/)
 
 This demo lets you switch physical setups (Kirchhoff’s laws) and practice identifying elements by **line patterns**, not single lines.
 

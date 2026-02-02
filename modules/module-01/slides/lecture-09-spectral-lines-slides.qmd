@@ -2,7 +2,7 @@
 title: "Decoding Starlight"
 subtitle: "Spectral Lines and Chemical Fingerprints"
 author: "Dr. Anna Rosen"
-date: "2026-02-19"
+date: "2026-02-18"
 description: "Spectral lines are chemical fingerprints. Each element has unique wavelengths. Quantum mechanics explains why."
 draft: false
 
@@ -16,7 +16,7 @@ format:
     center: false
     chalkboard: true
     title-slide-attributes:
-      data-background-image: "/assets/images/common/cosmic-cliffs-jwst.png"
+      data-background-image: "../../../assets/images/common/cosmic-cliffs-jwst.png"
       data-background-opacity: "0.35"
     pointer:
       key: "q"
@@ -88,7 +88,7 @@ Specific wavelengths where light was **missing**.
 
 ---
 
-## Chemical Fingerprints {background-image="/assets/images/common/cosmic-cliffs-jwst.png" background-opacity="0.2"}
+## Chemical Fingerprints {background-image="../../../assets/images/common/cosmic-cliffs-jwst.png" background-opacity="0.2"}
 
 ::: {.text-center .text-xl}
 Each chemical element absorbs and emits at **unique wavelengths**.
@@ -106,7 +106,7 @@ This is how we know what stars are made of, from 150 million km away.
 
 ---
 
-## Today's Learning Objectives {background-image="/assets/images/common/cosmic-cliffs-jwst.png" background-opacity="0.2"}
+## Today's Learning Objectives {background-image="../../../assets/images/common/cosmic-cliffs-jwst.png" background-opacity="0.2"}
 
 ::: {.bg-muted .p-2}
 
@@ -135,6 +135,30 @@ Part 1: Three Types of Spectra
 :::
 
 *Kirchhoff's Laws*
+
+---
+
+## Predict First! {background-color="#1a1a2e"}
+
+You observe light from a **hot, dense source** that passes through a **cooler, thin gas** on its way to you. What kind of spectrum do you expect?
+
+:::: {.columns .mt-4}
+::: {.column width="33%"}
+A) Continuous (smooth rainbow)
+:::
+
+::: {.column width="33%"}
+B) Emission lines (bright lines on dark)
+:::
+
+::: {.column width="33%"}
+C) Absorption lines (dark lines on bright)
+:::
+::::
+
+::: {.notes}
+30 s. Commit first, then reveal in Kirchhoff’s Laws: cool gas in front of a hot source produces an absorption spectrum.
+:::
 
 ---
 
@@ -313,6 +337,10 @@ Electrons in atoms are the same — discrete levels only.
 
 ::: {.text-center .text-xl}
 $$E_{photon} = \frac{hc}{\lambda}$$
+:::
+
+::: {.fragment .mt-3 .text-muted}
+$h$ is Planck’s constant, $c$ is the speed of light, and $\lambda$ is wavelength. Shorter $\lambda$ means higher photon energy.
 :::
 
 ::: {.fragment .mt-4}
@@ -624,6 +652,8 @@ Motion causes Doppler shifts → reveals velocities
 
 ::: {.fragment .mt-4 .text-muted}
 **Reading:** Lecture 10 Reading Companion
+
+**Demo:** Spectral Lines Lab: [../../../demos/spectral-lines-lab/](../../../demos/spectral-lines-lab/)
 :::
 
 ::: {.notes}
@@ -733,7 +763,7 @@ $$\lambda = \frac{1240 \text{ eV·nm}}{1.89 \text{ eV}} = 656.1 \text{ nm}$$
 :::
 
 ::: {.fragment .bg-success-subtle .p-2}
-**Hα = 656 nm** — the famous red hydrogen line! (Actual: 656.28 nm)
+**Hα = 656 nm** — the famous red hydrogen line! (Lab reference: 656.28 nm)
 :::
 
 ::: {.notes}
@@ -1002,7 +1032,7 @@ It's what allows us to identify elements across the universe.
 
 ---
 
-## Questions? {background-image="/assets/images/common/cosmic-cliffs-jwst.png" background-opacity="0.25"}
+## Questions? {background-image="../../../assets/images/common/cosmic-cliffs-jwst.png" background-opacity="0.25"}
 
 ::: {.text-center .text-xl .mt-4}
 **Spectral lines are chemical fingerprints.**

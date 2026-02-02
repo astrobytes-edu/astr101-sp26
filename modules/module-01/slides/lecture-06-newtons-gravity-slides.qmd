@@ -16,7 +16,7 @@ format:
     center: false
     chalkboard: true
     title-slide-attributes:
-      data-background-image: "/assets/images/common/cosmic-cliffs-jwst.png"
+      data-background-image: "../../../assets/images/common/cosmic-cliffs-jwst.png"
       data-background-opacity: "0.35"
     pointer:
       key: "q"
@@ -86,7 +86,7 @@ also reach up to the **Moon**?
 
 ---
 
-## The Moon Is Falling {background-image="/assets/images/common/eso-milky-way-panoramic.jpg" background-opacity="0.2"}
+## The Moon Is Falling {background-image="../../../assets/images/common/eso-milky-way-panoramic.jpg" background-opacity="0.2"}
 
 ::: {.text-center .text-xl}
 The Moon IS falling toward Earth.
@@ -124,7 +124,7 @@ Fire fast enough → fall *around* Earth instead of hitting it.
 
 ---
 
-## Today's Learning Objectives {background-image="/assets/images/common/cosmic-cliffs-jwst.png" background-opacity="0.2"}
+## Today's Learning Objectives {background-image="../../../assets/images/common/cosmic-cliffs-jwst.png" background-opacity="0.2"}
 
 ::: {.bg-muted .p-2}
 
@@ -223,6 +223,10 @@ $$\vec{F}_{net} = m\vec{a}$$
 **Net force tells matter how to accelerate.**
 
 **Mass tells matter how much to resist.**
+:::
+
+::: {.fragment .mt-3 .text-muted}
+Units: force in N, mass in kg, acceleration in m/s².
 :::
 
 :::: {.columns .mt-4}
@@ -477,6 +481,7 @@ $$F_g = \frac{Gm_1m_2}{r^2}$$
 
 ::: {.notes}
 12–14 min. "The same equation works for apples, moons, and galaxies."
+Assumptions (briefly): works well when objects act like point masses / spherically symmetric bodies, and in the Newtonian regime.
 :::
 
 ---
@@ -1029,6 +1034,8 @@ We'll learn to decode what light tells us:
 
 ::: {.fragment .mt-4 .text-muted}
 **Reading:** Lecture 7 Reading Companion
+
+**Demo:** Motion reveals mass (Binary Orbits): [../../../demos/binary-orbits/](../../../demos/binary-orbits/)
 :::
 
 ::: {.notes}
@@ -1388,7 +1395,7 @@ To escape, you need only **41% more speed** than circular orbit speed!
 
 ---
 
-## Questions? {background-image="/assets/images/common/cosmic-cliffs-jwst.png" background-opacity="0.25"}
+## Questions? {background-image="../../../assets/images/common/cosmic-cliffs-jwst.png" background-opacity="0.25"}
 
 ::: {.text-center .text-xl .mt-4}
 **Kepler** gave us the patterns.

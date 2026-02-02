@@ -165,6 +165,72 @@ local function get_figure_registry()
 end
 
 -- ==============================================================
+-- Project-relative path helpers (GitHub Pages base-path safe)
+-- ==============================================================
+
+local _project_offset_cache = nil
+
+local function compute_project_offset()
+  local project_dir = os.getenv("QUARTO_PROJECT_DIR") or "."
+
+  local input_file = nil
+  if PANDOC_STATE and PANDOC_STATE.input_files and #PANDOC_STATE.input_files > 0 then
+    input_file = PANDOC_STATE.input_files[1]
+  end
+
+  if not input_file or input_file == "" then
+    return ""
+  end
+
+  local input_dir = pandoc.path.directory(input_file)
+  local rel = pandoc.path.make_relative(input_dir, project_dir)
+
+  -- rel is "." when the input is in project root
+  if rel == "." or rel == "" then
+    return ""
+  end
+
+  local depth = 0
+  for part in rel:gmatch("[^/\\]+") do
+    if part ~= "." and part ~= "" then
+      depth = depth + 1
+    end
+  end
+
+  return string.rep("../", depth)
+end
+
+local function project_offset()
+  if _project_offset_cache == nil then
+    _project_offset_cache = compute_project_offset()
+  end
+  return _project_offset_cache
+end
+
+local function resolve_project_path(path)
+  if not path or path == "" then
+    return ""
+  end
+
+  -- Leave external URLs untouched
+  if path:match("^https?://") or path:match("^data:") then
+    return path
+  end
+
+  -- Normalize Quarto project-root absolute paths like "/assets/..."
+  if path:sub(1, 1) == "/" then
+    path = path:sub(2)
+  end
+
+  -- Preserve explicitly relative paths
+  if path:match("^%./") or path:match("^%.%./") then
+    return path
+  end
+
+  return project_offset() .. path
+end
+
+-- ==============================================================
 -- Media registry - videos/embeds (for slides)
 -- ==============================================================
 
@@ -263,7 +329,7 @@ function fig(args, kwargs)
   end
 
   -- Get figure properties
-  local path = fig_data.path or ""
+  local path = resolve_project_path(fig_data.path or "")
   local caption = fig_data.caption or ""
   local alt = fig_data.alt or caption
   local credit = fig_data.credit
@@ -330,7 +396,7 @@ function fig(args, kwargs)
     <p><em>%s</em></p>
   </div>
 </div>
-]], fig_id, width_style, path, alt, caption_html)
+]], fig_id, width_style, escape_html(path), escape_html(alt), caption_html)
     return pandoc.RawBlock("html", html)
   end
 
@@ -366,7 +432,7 @@ function img(args, kwargs)
   end
 
   -- Get figure properties
-  local path = fig_data.path or ""
+  local path = resolve_project_path(fig_data.path or "")
   local alt = fig_data.alt or fig_data.caption or ""
   local credit = fig_data.credit or ""
 

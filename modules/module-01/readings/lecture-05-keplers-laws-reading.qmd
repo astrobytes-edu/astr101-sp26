@@ -324,7 +324,7 @@ In a planetary orbit, the Sun is located:
 
 See the First Law in action! Open the interactive simulation and explore how the Sun's position relates to the ellipse.
 
-**Open the Kepler's Laws Demo:** [astrobytes-edu.github.io/astr101-sp26/demos/keplers-laws/](https://astrobytes-edu.github.io/astr101-sp26/demos/keplers-laws/)
+**Open the Kepler's Laws Demo:** [../../../demos/keplers-laws/](../../../demos/keplers-laws/)
 
 **Demo Mission: The Sun Is Not at the Center**
 
@@ -425,7 +425,7 @@ According to Kepler's Second Law, if a planet takes 30 days to sweep a certain a
 
 Now explore the Second Law in the simulation. Watch how orbital speed changes with distance from the Sun.
 
-**Open the Kepler's Laws Demo:** [astrobytes-edu.github.io/astr101-sp26/demos/keplers-laws/](https://astrobytes-edu.github.io/astr101-sp26/demos/keplers-laws/)
+**Open the Kepler's Laws Demo:** [../../../demos/keplers-laws/](../../../demos/keplers-laws/)
 
 **Demo Mission: Faster When Closer**
 
@@ -613,7 +613,7 @@ This is why the "Kepler constant" isn't really constant — it depends on what y
 
 You've already explored the First and Second Laws in the demo above. Now let's test the Third Law and preview Newton.
 
-**Open the Kepler's Laws Demo:** [astrobytes-edu.github.io/astr101-sp26/demos/keplers-laws/](https://astrobytes-edu.github.io/astr101-sp26/demos/keplers-laws/)
+**Open the Kepler's Laws Demo:** [../../../demos/keplers-laws/](../../../demos/keplers-laws/)
 
 ---
 

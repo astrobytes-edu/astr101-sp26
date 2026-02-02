@@ -16,7 +16,7 @@ format:
     center: false
     chalkboard: true
     title-slide-attributes:
-      data-background-image: "/assets/images/common/cosmic-cliffs-jwst.png"
+      data-background-image: "../../../assets/images/common/cosmic-cliffs-jwst.png"
       data-background-opacity: "0.4"
     pointer:
       key: "q"
@@ -86,7 +86,7 @@ Today: Not philosophy. Not science fiction.
 
 ---
 
-## Today's Objectives {background-image="/assets/images/common/cosmic-cliffs-jwst.png" background-opacity="0.2"}
+## Today's Objectives {background-image="../../../assets/images/common/cosmic-cliffs-jwst.png" background-opacity="0.2"}
 
 ::: {.bg-muted .p-2}
 
@@ -229,6 +229,26 @@ These four terms span our ignorance — and swing $N$ by **billions**.
 
 ::: {.notes}
 6–7 min. "The uncertainty is enormous."
+:::
+
+---
+
+## Predict First! {background-color="#1a1a2e"}
+
+In the pessimistic scenario, $N \\approx 0.00006$. What does $N \\ll 1$ mean?
+
+:::: {.columns .mt-4}
+::: {.column width="50%"}
+A) There are definitely zero civilizations.
+:::
+
+::: {.column width="50%"}
+B) The *expected value* is far below 1 — probably zero, but not guaranteed.
+:::
+::::
+
+::: {.notes}
+30–45 s. Commit first, then emphasize: $N$ is an expected value (a statistical mean), not a guarantee.
 :::
 
 ---
@@ -385,6 +405,23 @@ Part 3: Module 1 Synthesis
 
 ---
 
+## Quick Check: Toolkit → Inference {background-color="#1a1a2e"}
+
+::: {.quiz}
+Which measurement most directly lets you infer a planet’s **radius**?
+
+- [ ] Doppler shift of stellar lines
+- [x] Transit depth
+- [ ] Spectral line pattern
+- [ ] Orbital period alone
+:::
+
+::: {.notes}
+1 min. Retrieval practice: connect each “tool” to what it reveals.
+:::
+
+---
+
 ## How Everything Connects {background-color="black"}
 
 **LIGHT (L7-L10):**
@@ -411,7 +448,7 @@ Part 3: Module 1 Synthesis
 ::: {.text-sm}
 | Equation | What It Does |
 |----------|--------------|
-| $P^2 = a^3$ (years, AU) | Kepler III — periods & distances |
+| $(P/1\\,\\text{yr})^2 = (a/1\\,\\text{AU})^3$ | Kepler III (Sun-only scaling) — periods & distances |
 | $M = 4\pi^2 a^3/(GP^2)$ | Mass from orbits |
 | $\lambda_{peak} = 2.9 \times 10^6/T$ | Wien — temperature |
 | $L = 4\pi R^2 \sigma T^4$ | Stefan-Boltzmann — luminosity |
@@ -521,18 +558,18 @@ Let's work through Drake Equation scenarios with explicit numbers.
 
 $$N = R_* \times f_p \times n_e \times f_l \times f_i \times f_c \times L$$
 
-**Using optimistic estimates:**
+**Using the same “optimistic” scenario as the reading:**
 
 ::: {.text-sm}
 | Term | Value | Reasoning |
 |------|-------|-----------|
 | $R_*$ | 3 yr⁻¹ | Star formation rate in Milky Way |
-| $f_p$ | 0.5 | Half of stars have planets (Kepler data) |
-| $n_e$ | 2 | Average Earth-like planets per system |
-| $f_l$ | 1 | Life develops where possible (optimistic) |
-| $f_i$ | 0.01 | 1% develop intelligence |
-| $f_c$ | 0.01 | 1% develop communications |
-| $L$ | 10,000 yr | Civilization lifetime |
+| $f_p$ | 1 | Fraction of stars with planets (evidence-informed) |
+| $n_e$ | 0.2 | Habitable planets per system (order-of-magnitude) |
+| $f_l$ | 0.5 | Fraction that develop life (optimistic) |
+| $f_i$ | 0.5 | Fraction that develop intelligence (optimistic) |
+| $f_c$ | 0.5 | Fraction that communicate (optimistic) |
+| $L$ | 1,000,000 yr | Civilization lifetime (optimistic) |
 :::
 
 ::: {.notes}
@@ -543,26 +580,23 @@ $$N = R_* \times f_p \times n_e \times f_l \times f_i \times f_c \times L$$
 
 ## Drake Calculation: Step by Step {background-color="#1a1a2e"}
 
-$$N = 3 \times 0.5 \times 2 \times 1 \times 0.01 \times 0.01 \times 10,000$$
+$$N = 3 \times 1 \times 0.2 \times 0.5 \times 0.5 \times 0.5 \times 1{,}000{,}000$$
 
 ::: {.fragment}
 **Step by step:**
 
-$$= 3 \times 0.5 = 1.5 \text{ (systems with planets per year)}$$
-$$= 1.5 \times 2 = 3 \text{ (Earth-like planets per year)}$$
-$$= 3 \times 1 = 3 \text{ (planets with life per year)}$$
+$$= 3 \times 1 \times 0.2 = 0.6 \text{ (habitable planets per year)}$$
+$$= 0.6 \times 0.5 \times 0.5 \times 0.5 = 0.075 \text{ (communicating per year)}$$
 :::
 
 ::: {.fragment}
-$$= 3 \times 0.01 = 0.03 \text{ (intelligent life per year)}$$
-$$= 0.03 \times 0.01 = 0.0003 \text{ (communicating per year)}$$
-$$= 0.0003 \times 10,000 = 3$$
+$$= 0.075 \times 1{,}000{,}000 = 75{,}000$$
 :::
 
 ::: {.fragment .bg-muted .p-2}
-**N ≈ 3 communicating civilizations** in the Milky Way right now.
+**N ≈ 75,000 communicating civilizations** in the Milky Way right now.
 
-But change $f_l$ from 1 to 0.01 → N drops to 0.03 (probably alone)!
+Now compare to the pessimistic scenario: $N \ll 1$ (probably zero, but not guaranteed).
 :::
 
 ::: {.notes}
@@ -604,19 +638,17 @@ The $f$ factors filter down to those currently communicating.
 ::: {.fragment}
 **Given:**
 
-- Milky Way: ~200 billion stars = $2 \times 10^{11}$
-- Observable universe: ~200 billion galaxies = $2 \times 10^{11}$
+- Stars in the Milky Way: order $10^{11}$ (roughly 100–400 billion)
+- Galaxies in the observable universe: hundreds of billions to ~2 trillion (order $10^{11}$–$10^{12}$)
 :::
 
 ::: {.fragment}
-**Total stars:**
+**Total stars (order-of-magnitude):**
 
-$$N_{stars} \approx 2 \times 10^{11} \times 2 \times 10^{11} = 4 \times 10^{22}$$
+Up to about $10^{24}$ (a septillion).
 :::
 
 ::: {.fragment}
-**In words:** ~40 sextillion stars.
-
 More stars than grains of sand on all Earth's beaches.
 :::
 
@@ -628,22 +660,10 @@ More stars than grains of sand on all Earth's beaches.
 
 ## Number of Potentially Habitable Planets {background-color="#1a1a2e"}
 
-**Kepler mission estimate:**
+Some studies suggest **~22%** of Sun-like stars host Earth-sized planets in the habitable zone — but published estimates vary because “Earth-sized” and “habitable zone” depend on definitions and star type.
 
-~22% of Sun-like stars have Earth-sized planets in habitable zones.
-
-::: {.fragment}
-**For the Milky Way:**
-
-Sun-like stars: ~10% of 200 billion = $2 \times 10^{10}$
-
-HZ Earth-analogs: $0.22 \times 2 \times 10^{10} = 4.4 \times 10^9$
-:::
-
-::: {.fragment .bg-success-subtle .p-2}
-**~4 billion Earth-like planets** in habitable zones in our galaxy alone!
-
-And that's just around Sun-like stars. Red dwarfs add many more.
+::: {.fragment .bg-muted .p-2}
+**Takeaway:** Kepler (and follow-on surveys) tell us that planets are common and that “potentially habitable” worlds are not absurdly rare — but the exact number is uncertain.
 :::
 
 ::: {.notes}
@@ -769,28 +789,22 @@ Water = H + OH → maybe aliens use this band too?
 
 ## How Far Have Our Signals Reached? {background-color="#0a2f5c"}
 
-**First powerful radio transmissions:** ~1930s
+**First powerful radio transmissions:** about a century ago
 
 ::: {.fragment}
-Our signals have traveled: $\sim 90$ light-years
+Our signals have traveled: order $\sim 100$ light-years
 
 **Volume covered:**
 
-$$V = \frac{4}{3}\pi r^3 = \frac{4}{3}\pi (90)^3 \approx 3 \times 10^6 \text{ ly}^3$$
+$$V = \frac{4}{3}\pi r^3 \sim \frac{4}{3}\pi (100)^3 \approx \text{few} \times 10^6 \text{ ly}^3$$
 :::
 
 ::: {.fragment}
-**Stars in this volume:**
-
-Local stellar density ≈ 0.14 stars/ly³
-
-$$N \approx 0.14 \times 3 \times 10^6 \approx 400,000 \text{ stars}$$
+Even if that sphere contains many nearby stars, it is still a **tiny fraction** of the Milky Way.
 :::
 
 ::: {.fragment .text-muted}
-~400,000 stars could have received our earliest signals.
-
-But they're spreading and weakening. Only nearby stars could detect them.
+The key idea: our signals are spreading and weakening — only nearby stars could plausibly detect them.
 :::
 
 ::: {.notes}
@@ -804,7 +818,7 @@ But they're spreading and weakening. Only nearby stars could detect them.
 ::: {.text-sm}
 **Can you calculate these?**
 
-☐ Orbital period from distance: $P^2 = a^3$ (years, AU)
+☐ Orbital period from distance (Sun-only scaling): $\left(\frac{P}{1\,\text{yr}}\right)^2 = \left(\frac{a}{1\,\text{AU}}\right)^3$
 
 ☐ Mass from orbital data: $M = 4\pi^2 a^3 / GP^2$ (SI units!)
 
@@ -827,7 +841,7 @@ But they're spreading and weakening. Only nearby stars could detect them.
 
 ---
 
-## Questions? {background-image="/assets/images/common/cosmic-cliffs-jwst.png" background-opacity="0.25"}
+## Questions? {background-image="../../../assets/images/common/cosmic-cliffs-jwst.png" background-opacity="0.25"}
 
 ::: {.text-center .text-xl .mt-4}
 **Module 1 complete.**
