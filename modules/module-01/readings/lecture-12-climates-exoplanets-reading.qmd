@@ -258,6 +258,8 @@ That matches the table below — and it's about 33 K colder than Earth's actual 
 
 Something is very wrong with our prediction for Venus. It's **500 degrees hotter** than equilibrium! Earth is also warmer than expected, but by a modest 33 K. What's going on?
 
+{{< fig planet-temperatures-baseline-vs-reality >}}
+
 ::: {.callout-check-yourself title="Check Yourself 1 — Equilibrium Temperature"}
 Based only on distance from the Sun, which planet should be warmest?
 
@@ -560,6 +562,8 @@ When a planet **both** transits **and** shows radial velocity variations, we hit
 |--------|------------------|
 | Transit | Planet radius ($R_p$) |
 | Radial velocity | Planet mass ($M_p$) — and since it transits, $\sin i \approx 1$, so we get TRUE mass |
+
+{{< fig rv-transit-combined >}}
 
 With both mass and radius:
 

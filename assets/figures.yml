@@ -367,6 +367,59 @@ figures:
     alt: "Artist’s concept of the young Sun surrounded by a dusty protoplanetary disk, with material clumping and forming planets and smaller bodies within the disk."
     module: 1
 
+  # --------------------------------------------------------------
+  # Module 1: Lecture 12 (Planetary Climate + Exoplanets)
+  # --------------------------------------------------------------
+
+  disk-approximation:
+    path: /assets/images/module-01/lec12/planet-projected-disk-gemini.png
+    caption: "**What to notice:** a planet intercepts sunlight over its projected disk (πR²) but emits thermal radiation from its whole surface (4πR²) — that factor of 4 is why equilibrium temperatures use 16π in the denominator."
+    alt: "Two-panel schematic labeled 'Why πR² (Not 4πR²)?' showing incoming sunlight intercepted by a planet’s projected disk area πR² and thermal emission radiated from the full spherical surface 4πR², highlighting the factor-of-four difference."
+    credit: "(A. Rosen/Gemini — schematic)"
+    module: 1
+
+  greenhouse-effect:
+    path: /assets/images/module-01/lec12/greenhouse-effect-gemini.png
+    caption: "**What to notice:** the same energy must leave to space, but greenhouse gases shift the effective emission level upward to colder air, so the surface warms until energy balance is restored."
+    alt: "Schematic of the greenhouse effect showing incoming visible light, outgoing infrared, greenhouse-gas absorption and re-emission, and an effective emission level higher in the atmosphere where it is colder."
+    credit: "(A. Rosen/Gemini — schematic)"
+    module: 1
+
+  planet-temperatures-baseline-vs-reality:
+    path: /assets/images/module-01/lec12/planet-temperatures-baseline-vs-reality-gemini.png
+    caption: "**What to notice:** equilibrium temperature is a baseline from sunlight-in vs IR-out; greenhouse physics shifts the real surface temperature above that baseline by different amounts on Venus, Earth, and Mars."
+    alt: "Bar chart comparing equilibrium temperature and actual surface temperature for Venus, Earth, and Mars, with labeled temperature differences showing large greenhouse warming on Venus, moderate warming on Earth, and small warming on Mars."
+    credit: "(A. Rosen/Gemini — schematic)"
+    module: 1
+
+  transit-geometry:
+    path: /assets/images/module-01/lec12/transit-geometry-gemini.png
+    caption: "**What to notice:** transits require a lucky alignment — we only see a transit when the orbit is edge-on, so most planets do not transit from our viewpoint."
+    alt: "Two-panel diagram showing an edge-on orbit producing a transit across a star versus a tilted orbit producing no transit, emphasizing that alignment is rare."
+    credit: "(A. Rosen/Gemini — schematic)"
+    module: 1
+
+  transit-light-curve:
+    path: /assets/images/module-01/lec12/transit-light-curve-gemini.png
+    caption: "**What to notice:** the dip depth sets planet size (≈ (Rp/R*)²) and the timing between dips sets the orbital period."
+    alt: "Schematic transit light curve showing a normalized brightness dip with labeled ingress, duration, egress, and period, with an annotation that depth is approximately (Rp/R*) squared."
+    credit: "(A. Rosen/Gemini — schematic)"
+    module: 1
+
+  rv-transit-combined:
+    path: /assets/images/module-01/lec12/rv-transit-combined-gemini.png
+    caption: "**What to notice:** radial velocity gives planet mass (or minimum mass), transit gives radius; together they give density — a first clue to rocky vs gas/ice composition."
+    alt: "Three-step schematic showing radial velocity measuring stellar wobble to infer planet mass, transit measuring brightness dip to infer planet radius, and combining them to compute density and infer whether a planet is rocky or gas/ice-rich."
+    credit: "(A. Rosen/Gemini — schematic)"
+    module: 1
+
+  habitable-zone:
+    path: /assets/images/module-01/lec12/habitable-zone-gemini.png
+    caption: "**What to notice:** habitable zone distance depends on stellar luminosity — brighter stars push the zone outward, dimmer stars pull it inward — and the zone is not a guarantee of habitability."
+    alt: "Two-panel diagram comparing the habitable zone around a Sun-like star versus a dimmer star, showing that the habitable zone shifts closer for dim stars and farther out for brighter stars, with labels for too hot and too cold regions."
+    credit: "(A. Rosen/Gemini — schematic)"
+    module: 1
+
   # Spoilers 6-8: Multi-wavelength
   multi-wavelength-reality:
     path: /assets/images/module-01/multi-wavelength-reality-nblm.png
