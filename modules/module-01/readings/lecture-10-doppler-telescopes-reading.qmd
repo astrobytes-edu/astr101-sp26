@@ -72,6 +72,8 @@ In L9, we learned to read chemical fingerprints in starlight. Hydrogen always ab
 
 But astronomers noticed something strange. When they observed distant stars and galaxies, the fingerprints weren't always at the expected wavelengths. Sometimes the hydrogen line appeared at 656.50 nm. Sometimes at 656.10 nm. The pattern was shifted.
 
+{{< fig doppler-shift-star-jwst >}}
+
 The culprit? **Motion**. Just as an ambulance siren sounds higher-pitched when approaching and lower when receding, light waves get compressed or stretched depending on whether the source moves toward or away from us. This is the **Doppler effect** — and it's one of astronomy's most powerful tools.
 
 Today we'll learn how to extract velocities from wavelength shifts. We'll discover exoplanets through stellar wobbles, and we'll uncover evidence for invisible dark matter in galaxy rotation curves. And we'll explore the telescopes — the astronomer's eyes — that collect the light carrying all this information.
