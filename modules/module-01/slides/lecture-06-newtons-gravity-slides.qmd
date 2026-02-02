@@ -493,7 +493,7 @@ Assumptions (briefly): works well when objects act like point masses / spherical
 |-----------------|--------------|
 | Double the distance | Force drops to **1/4** |
 | Triple the distance | Force drops to **1/9** |
-| $10\\times$ the distance | Force drops to **1/100** |
+| $10\times$ the distance | Force drops to **1/100** |
 
 ::: {.notes}
 15–16 min. "Like light spreading from a flashlight — same total, more area, less per spot."
@@ -523,7 +523,7 @@ The Moon is about 60 Earth radii from Earth's center. The Moon experiences gravi
 
 ::: {.notes}
 1–2 min. iClicker poll, then explain.
-Reasoning: at $60\\times$ the distance, $1/60^2 = 1/3600$.
+Reasoning: at $60\times$ the distance, $1/60^2 = 1/3600$.
 :::
 
 ---
@@ -965,7 +965,7 @@ With this single equation, Newton explained:
    - Equal areas: central force implies angular momentum conservation
    - $P^2 \propto a^3$: inverse-square gives the exponent
 
-7. Motion reveals mass: $M \\approx 4\\pi^2 a^3/(G P^2)$
+7. Motion reveals mass: $M \approx 4\pi^2 a^3/(G P^2)$
 
 :::
 
