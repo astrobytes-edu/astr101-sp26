@@ -126,6 +126,21 @@ project:
     - demos/_instructor/conservation-laws/activities.qmd
     - demos/_instructor/conservation-laws/assessment.qmd
     - demos/_instructor/conservation-laws/backlog.qmd
+    - demos/_instructor/doppler-shift-spectrometer/index.qmd
+    - demos/_instructor/doppler-shift-spectrometer/model.qmd
+    - demos/_instructor/doppler-shift-spectrometer/activities.qmd
+    - demos/_instructor/doppler-shift-spectrometer/assessment.qmd
+    - demos/_instructor/doppler-shift-spectrometer/backlog.qmd
+    - demos/_instructor/planetary-climate-sandbox/index.qmd
+    - demos/_instructor/planetary-climate-sandbox/model.qmd
+    - demos/_instructor/planetary-climate-sandbox/activities.qmd
+    - demos/_instructor/planetary-climate-sandbox/assessment.qmd
+    - demos/_instructor/planetary-climate-sandbox/backlog.qmd
+    - demos/_instructor/spectral-lines-lab/index.qmd
+    - demos/_instructor/spectral-lines-lab/model.qmd
+    - demos/_instructor/spectral-lines-lab/activities.qmd
+    - demos/_instructor/spectral-lines-lab/assessment.qmd
+    - demos/_instructor/spectral-lines-lab/backlog.qmd
   resources:
     - "demos/**/*.html"
     - "demos/**/*.js"
@@ -209,6 +224,8 @@ website:
             contents:
               - href: modules/module-01/synthesis/index.qmd
                 text: "Synthesis Overview"
+              - href: modules/module-01/synthesis/quick-reference.qmd
+                text: "Quick Reference"
               - href: modules/module-01/synthesis/glossary.qmd
                 text: "Complete Glossary"
               - href: modules/module-01/synthesis/concept-map.qmd
@@ -251,12 +268,32 @@ website:
           - demos/index.qmd
           - href: demos/seasons/
             text: "Seasons"
-          - href: demos/angular-size/
-            text: "Angular Size"
           - href: demos/moon-phases/
             text: "Phases of the Moon"
           - href: demos/eclipse-geometry/
             text: "Eclipses"
+          - href: demos/angular-size/
+            text: "Angular Size"
+          - href: demos/parallax-distance/
+            text: "Stellar Parallax"
+          - href: demos/em-spectrum/
+            text: "EM Spectrum Explorer"
+          - href: demos/blackbody-radiation/
+            text: "Blackbody Radiation"
+          - href: demos/spectral-lines-lab/
+            text: "Spectral Lines Lab"
+          - href: demos/doppler-shift-spectrometer/
+            text: "Doppler Shift Spectrometer"
+          - href: demos/telescope-resolution/
+            text: "Telescope Resolution"
+          - href: demos/keplers-laws/
+            text: "Kepler's Laws"
+          - href: demos/binary-orbits/
+            text: "Binary Orbits"
+          - href: demos/conservation-laws/
+            text: "Conservation Laws (Orbits)"
+          - href: demos/planetary-climate-sandbox/
+            text: "Planetary Climate Sandbox"
 
       - section: "Explore"
         contents:

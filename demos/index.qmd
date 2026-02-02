@@ -410,3 +410,34 @@ How do astronomers measure distances to nearby stars? Watch stars shift as Earth
 
 :::
 :::
+
+<!-- ============================================ -->
+<!-- PLANETS & CLIMATE -->
+<!-- ============================================ -->
+
+:::{.demo-section}
+<div class="section-header">
+<span class="section-icon">🌤️</span>
+<h2 class="section-title">Planets & Climate</h2>
+</div>
+
+:::{.demo-gallery}
+
+:::{.demo-card}
+<div class="demo-preview">🌡️</div>
+<div class="demo-info">
+<h3 class="demo-title">Planetary Climate Sandbox</h3>
+<p class="demo-description">
+Change albedo, greenhouse strength, and distance from the star — then see how equilibrium temperature and surface temperature respond.
+</p>
+<a href="planetary-climate-sandbox/" class="demo-link">Open Demo →</a>
+<div class="demo-concepts">
+<span class="concept-tag">climate</span>
+<span class="concept-tag">greenhouse effect</span>
+<span class="concept-tag">habitability</span>
+</div>
+</div>
+:::
+
+:::
+:::

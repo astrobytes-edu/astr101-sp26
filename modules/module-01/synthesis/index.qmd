@@ -26,13 +26,18 @@ This is not memorization. This is the actual toolkit professional astronomers us
 
 ::: {.grid}
 
+::: {.g-col-12}
+### [Quick Reference](quick-reference.qmd)
+**Start here for exam review.** At-a-glance summaries of all 13 lectures: Big Ideas, key concepts, misconceptions to avoid, and self-check questions.
+:::
+
 ::: {.g-col-6}
 ### [Complete Glossary](glossary.qmd)
 All terms from Module 1, organized by lecture and tiered by importance (★ Core vs ◇ Supporting).
 :::
 
 ::: {.g-col-6}
-### [Concept Map](concept-map.qmd)
+### [Concept Maps](concept-map.qmd)
 Visual diagrams showing how the four observables connect to our toolkit and what each tool reveals.
 :::
 
@@ -47,7 +52,7 @@ Multi-concept problems organized by difficulty (★/★★/★★★) plus real-
 :::
 
 ::: {.g-col-12}
-### [Exam Prep](exam-prep.qmd)
+### [Exam Prep Guide](exam-prep.qmd)
 Self-assessment checklists, key equations, sample questions, and common mistakes to avoid.
 :::
 

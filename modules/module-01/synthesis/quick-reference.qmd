@@ -1,0 +1,326 @@
+---
+title: "Module 1 Quick Reference"
+subtitle: "At-a-Glance Review for All 13 Lectures"
+description: "Concise summaries with key concepts, common misconceptions, and self-check questions."
+---
+
+Use this guide for quick review before exams or when you need a refresher on core concepts. Each lecture is distilled to its essential ideas.
+
+::: {.callout-tip title="How to Use This Guide"}
+- **Big Idea**: The one sentence you should remember
+- **Know This**: Core concepts you must understand
+- **Misconception Alert**: Common errors to avoid
+- **Quick Check**: Test yourself (answers at bottom of each section)
+:::
+
+---
+
+# Part 1: Foundation — What Can We Observe?
+
+## Lecture 1: Spoiler Alerts — The Universe Is Weird
+
+**Big Idea:** Astronomers measure only four things directly (brightness, position, wavelength, timing); *everything else* is inferred using physics.
+
+::: {.callout-note title="Know This" collapse="false"}
+- **Course thesis:** Pretty pictures → measurements → models → inferences
+- The four observables: **B**rightness, **P**osition, **W**avelength, **T**iming
+- Temperature, composition, mass, distance — all *inferred*, not measured
+- A spectrum contains far more information than a single brightness measurement
+:::
+
+::: {.callout-warning title="Misconception Alert"}
+**"We measure a star's temperature directly."** → No! We infer temperature from color/spectrum using Wien's Law.
+:::
+
+**Quick Check:** A star's light dims by 1% every 3.5 days. Which observable? → *Brightness (and Timing)*
+
+---
+
+## Lecture 2: Tools of the Trade — Math Survival Kit
+
+**Big Idea:** The ratio method lets you solve astronomy problems without memorizing every number — just compare to something you know.
+
+::: {.callout-note title="Know This" collapse="false"}
+- Scientific notation: $3 \times 10^8$ means 300,000,000
+- Unit conversions: Use factor-label method (multiply by 1 in disguise)
+- **Ratio method:** $(P_1/P_2)^2 = (a_1/a_2)^3$ — no need for absolute values!
+- Light-year = distance light travels in one year (~9.5 trillion km)
+:::
+
+::: {.callout-warning title="Misconception Alert"}
+**"A light-year is a unit of time."** → No! It's a *distance* (how far light travels in one year).
+:::
+
+**Quick Check:** Planet A is at 4 AU, Planet B at 1 AU. How many times longer is A's orbital period? → *8 times* (using $P^2 \propto a^3$)
+
+---
+
+## Lecture 3: The Sky Is a Map
+
+**Big Idea:** Every position on the sky is an *angle*, not a distance — the celestial sphere is a direction-finder, not a depth-gauge.
+
+::: {.callout-note title="Know This" collapse="false"}
+- Constellations are projection patterns — stars in them are NOT physically close
+- **Seasons are caused by axial tilt** (23.5°), not distance from Sun
+- The ecliptic is tilted 23.5° relative to the celestial equator
+- Angular size formula: $\theta \approx d/D$ (object size / distance)
+- The Moon and Sun appear the same angular size (~0.5°) by cosmic coincidence
+:::
+
+::: {.callout-warning title="Misconception Alert"}
+**"Earth is closer to the Sun in summer."** → Northern Hemisphere summer occurs when Earth is actually *farther* from the Sun! Axial tilt causes seasons.
+:::
+
+**Quick Check:** What causes seasons? → *Axial tilt changes day length and Sun angle*
+
+---
+
+## Lecture 4: Moon Geometry
+
+**Big Idea:** Moon phases and eclipses are pure geometry — different viewing angles of an illuminated sphere, not Earth's shadow.
+
+::: {.callout-note title="Know This" collapse="false"}
+- **Half of the Moon is always lit by the Sun** — phases show different views of that lit half
+- New Moon → Waxing → Full Moon → Waning → New Moon (29.5-day cycle)
+- Eclipses require alignment: Moon must cross the ecliptic plane at new/full phase
+- Moon's orbit tilted 5.1° — that's why eclipses don't happen every month
+:::
+
+::: {.callout-warning title="Misconception Alert"}
+**"Moon phases are caused by Earth's shadow."** → No! Earth's shadow only touches the Moon during lunar *eclipses*. Phases are viewing geometry.
+:::
+
+**Quick Check:** During a total solar eclipse, what phase is the Moon? → *New Moon*
+
+---
+
+# Part 2: Gravity & Orbits — How Things Move
+
+## Lecture 5: From Ancient Skies to Kepler's Laws
+
+**Big Idea:** Kepler's three laws describe *what* planets do with stunning precision — but don't explain *why*. They're empirical patterns from data.
+
+::: {.callout-note title="Know This" collapse="false"}
+- **Retrograde motion:** Apparent backward movement when Earth passes an outer planet
+- **Kepler's 1st Law:** Orbits are ellipses with the Sun at one focus
+- **Kepler's 2nd Law:** Equal areas in equal times (planets move faster when closer to Sun)
+- **Kepler's 3rd Law:** $P^2 = a^3$ (period in years, distance in AU, for objects orbiting the Sun)
+- Eccentricity: e = 0 is a circle; e close to 1 is very elongated
+:::
+
+::: {.callout-warning title="Misconception Alert"}
+**"During retrograde, Mars actually moves backward."** → No! Mars always orbits forward. Retrograde is *apparent* motion from our perspective as Earth passes it.
+:::
+
+**Quick Check:** Where is the Sun in an elliptical orbit? → *At one focus (not the center)*
+
+---
+
+## Lecture 6: Newton's Revolution — From Patterns to Physics
+
+**Big Idea:** Newton unified heaven and Earth: the same gravity that pulls apples down keeps the Moon in orbit — and lets us "weigh" distant objects from their orbital motion.
+
+::: {.callout-note title="Know This" collapse="false"}
+- **Newton's Law of Gravity:** $F = GMm/r^2$ (inverse-square law)
+- Orbits reveal mass: $M = \frac{4\pi^2 a^3}{GP^2}$
+- **Circular motion requires force** — velocity changes direction even at constant speed
+- Gravitational acceleration: all objects fall at the same rate regardless of mass
+- Newton's 3rd Law: Forces are always equal and opposite
+:::
+
+::: {.callout-warning title="Misconception Alert"}
+**"Astronauts float because there's no gravity in space."** → At ISS altitude, gravity is ~90% as strong as on Earth's surface! They float because they're in *free fall* — continuously falling around Earth.
+:::
+
+**Quick Check:** How do astronomers determine the Sun's mass? → *From Earth's orbital period and distance using Newton's form of Kepler's 3rd Law*
+
+---
+
+# Part 3: Light — What It Tells Us
+
+## Lecture 7: Light Carries Information
+
+**Big Idea:** Light is the *only* messenger from the cosmos. Learning to decode it — wavelength, intensity, timing — is the astronomer's superpower.
+
+::: {.callout-note title="Know This" collapse="false"}
+- Light equation: $c = \lambda f$ (speed = wavelength × frequency)
+- Speed of light: $c = 3 \times 10^8$ m/s (nothing travels faster)
+- EM spectrum order: Radio → Infrared → Visible → UV → X-ray → Gamma
+- **Inverse-square law:** brightness falls as $1/r^2$ — double the distance, quarter the brightness
+- **Rayleigh scattering:** shorter wavelengths scatter more ($\propto 1/\lambda^4$) — why sky is blue
+:::
+
+::: {.callout-warning title="Misconception Alert"}
+**"The sky is blue because air is blue."** → Air is colorless! Blue light scatters more than red (Rayleigh scattering), making the sky appear blue.
+:::
+
+**Quick Check:** A star appears 16× fainter than an identical nearby star. How much farther away is it? → *4× farther* (inverse-square law: $16 = 4^2$)
+
+---
+
+## Lecture 8: Blackbody Radiation — Temperature from Color
+
+**Big Idea:** Everything glows. The color of the glow tells you the temperature — hotter objects peak at shorter (bluer) wavelengths.
+
+::: {.callout-note title="Know This" collapse="false"}
+- **Wien's Law:** $\lambda_{peak} = \frac{2.9 \times 10^6 \text{ nm·K}}{T}$ — hotter = bluer peak
+- **Stefan-Boltzmann Law:** $L \propto R^2 T^4$ — luminosity rises *steeply* with temperature
+- Red stars are cooler (~3000 K); blue stars are hotter (~30,000 K)
+- Everything above 0 K emits thermal radiation (you glow in infrared!)
+- Blackbody spectrum depends *only* on temperature
+:::
+
+::: {.callout-warning title="Misconception Alert"}
+**"A red star is red because of its composition."** → Stellar color comes from *temperature*, not composition. Composition shows in spectral lines (L9).
+:::
+
+**Quick Check:** If a star's temperature doubles, its luminosity increases by what factor? → *16× (since $L \propto T^4$, and $2^4 = 16$)*
+
+---
+
+## Lecture 9: Spectral Lines — Chemical Fingerprints
+
+**Big Idea:** Spectral lines are chemical fingerprints. Each element absorbs/emits at unique wavelengths, revealing composition from across the universe.
+
+::: {.callout-note title="Know This" collapse="false"}
+- **Continuous spectrum:** Hot dense object (blackbody)
+- **Emission spectrum:** Hot thin gas (bright lines on dark background)
+- **Absorption spectrum:** Cool gas in front of hot source (dark lines)
+- Energy levels are quantized — electrons can only exist at specific energies
+- **Stellar classification:** OBAFGKM (Oh Be A Fine Girl/Guy, Kiss Me) — hot to cool
+:::
+
+::: {.callout-warning title="Misconception Alert"}
+**"The Sun is yellow because it's made of yellow elements."** → The Sun's color comes from its 5800 K temperature (Wien's Law). Its composition is revealed by absorption lines, not overall color.
+:::
+
+**Quick Check:** Dark lines in a stellar spectrum are caused by what? → *Absorption by cooler gas in the star's outer atmosphere*
+
+---
+
+## Lecture 10: Doppler Effect — Motion from Wavelength
+
+**Big Idea:** Shifted spectral lines reveal motion. Blueshift = approaching; redshift = receding. This is how we find exoplanets and measure cosmic velocities.
+
+::: {.callout-note title="Know This" collapse="false"}
+- **Doppler formula:** $v = c \cdot \frac{\Delta\lambda}{\lambda_0}$
+- Blueshift: source approaching (shorter wavelength)
+- Redshift: source receding (longer wavelength)
+- **Radial velocity method:** Detect exoplanets by measuring the star's wobble
+- Doppler only measures motion toward/away from us (radial component)
+:::
+
+::: {.callout-warning title="Misconception Alert"}
+**"Doppler measures all components of velocity."** → It only measures *radial* (line-of-sight) velocity. Motion perpendicular to our line of sight produces zero Doppler shift.
+:::
+
+**Quick Check:** A star moves at 100 km/s perpendicular to your line of sight. Its Doppler shift is? → *Zero*
+
+---
+
+# Part 4: Capstone — Applying the Toolkit
+
+## Lecture 11: Our Solar System
+
+**Big Idea:** The Solar System is our laboratory. Rocky planets inside the frost line, gas giants outside — the structure records how planetary systems form.
+
+::: {.callout-note title="Know This" collapse="false"}
+- **Frost line (~3 AU):** Inside = only rock/metal survives; Outside = ices also condense
+- Terrestrial planets: Mercury, Venus, Earth, Mars (small, rocky, dense)
+- Gas giants: Jupiter, Saturn (massive, H/He dominated)
+- Ice giants: Uranus, Neptune (water, ammonia, methane)
+- **Nebular hypothesis:** Solar system formed from collapsing, rotating disk
+:::
+
+::: {.callout-warning title="Misconception Alert"}
+**"Earth didn't become a gas giant because there wasn't enough gas nearby."** → There was plenty of H/He everywhere. Earth stayed small because *inside the frost line*, only rock/metal could form solids — not enough mass to gravitationally capture gas.
+:::
+
+**Quick Check:** Why are gas giants only found beyond ~3 AU? → *Beyond the frost line, ices could condense, providing more solid material to build massive cores that captured H/He*
+
+---
+
+## Lecture 12: Climates and Exoplanets
+
+**Big Idea:** Planet climate is an energy balance problem. The greenhouse effect explains why Venus is hotter than Mercury — and the same physics applies to exoplanet habitability.
+
+::: {.callout-note title="Know This" collapse="false"}
+- **Equilibrium temperature:** Predicted T from energy balance (no atmosphere)
+- **Greenhouse effect:** Atmosphere absorbs IR → surface warms above equilibrium
+- Venus: Runaway greenhouse → 735 K (hotter than Mercury!)
+- **Transit method:** Planet blocks starlight; depth = $(R_p/R_*)^2$ → gives planet radius
+- **Radial velocity:** Star wobbles → gives planet mass
+- **Habitable zone:** Region where liquid water *could* exist (not guaranteed!)
+:::
+
+::: {.callout-warning title="Misconception Alert"}
+**"Venus is hot because it's close to the Sun."** → Mercury is closer but much cooler! Venus is hot because of its extreme greenhouse effect (thick CO₂ atmosphere).
+:::
+
+**Quick Check:** Transit + RV together give you what key property? → *Density (mass from RV + radius from transit → density → rocky vs. gaseous)*
+
+---
+
+## Lecture 13: Are We Alone? — The Drake Equation
+
+**Big Idea:** The Drake Equation is a framework for thinking about extraterrestrial life. We can constrain the first few terms; the rest remain deeply uncertain.
+
+::: {.callout-note title="Know This" collapse="false"}
+- **Drake Equation:** $N = R_* \cdot f_p \cdot n_e \cdot f_l \cdot f_i \cdot f_c \cdot L$
+- Well-constrained: $R_*$ (star formation rate), $f_p$ (fraction with planets), $n_e$ (habitable-zone planets)
+- Unknown: $f_l$ (life), $f_i$ (intelligence), $f_c$ (communication), $L$ (civilization lifetime)
+- **Early universe was metal-poor** — rocky planets required stellar nucleosynthesis first
+- Module 1 tools help constrain the astronomical terms
+:::
+
+::: {.callout-warning title="Misconception Alert"}
+**"The Drake Equation tells us how many aliens exist."** → It's a *framework* for organizing our uncertainty, not a calculator. Most terms are completely unknown.
+:::
+
+**Quick Check:** Why were rocky planets unlikely in the early universe? → *Heavy elements (metals) hadn't been created yet — only H and He existed*
+
+---
+
+# Quick Equation Reference
+
+| Law/Equation | Formula | What It Gives You |
+|-------------|---------|-------------------|
+| Wien's Law | $\lambda_{peak} = b/T$ | Temperature from peak wavelength |
+| Stefan-Boltzmann | $L = 4\pi R^2 \sigma T^4$ | Luminosity from radius and temperature |
+| Inverse-square | $F = L/(4\pi d^2)$ | How brightness falls with distance |
+| Kepler's 3rd | $P^2 = a^3$ (solar units) | Period from distance (or vice versa) |
+| Newton-Kepler | $M = 4\pi^2 a^3/(GP^2)$ | Mass from orbital motion |
+| Doppler | $v = c \cdot \Delta\lambda/\lambda_0$ | Radial velocity from line shift |
+| Transit depth | depth $= (R_p/R_*)^2$ | Planet radius from brightness dip |
+
+---
+
+# The Module 1 Framework
+
+```
+┌─────────────────────────────────────────────────────────────┐
+│                    WHAT WE OBSERVE                          │
+│    Brightness  •  Position  •  Wavelength  •  Timing        │
+└─────────────────────────────┬───────────────────────────────┘
+                              │
+                              ▼
+┌─────────────────────────────────────────────────────────────┐
+│                   PHYSICAL MODELS                           │
+│  Kepler • Newton • Wien • Stefan-Boltzmann • Doppler        │
+└─────────────────────────────┬───────────────────────────────┘
+                              │
+                              ▼
+┌─────────────────────────────────────────────────────────────┐
+│                    WHAT WE LEARN                            │
+│   Mass  •  Distance  •  Temperature  •  Composition         │
+│               Velocity  •  Size  •  Age                     │
+└─────────────────────────────────────────────────────────────┘
+```
+
+**This is the course thesis:** We measure very little directly. Everything else is inference through physics.
+
+---
+
+::: {.callout-important title="Ready for the Exam?"}
+If you can explain each "Big Idea" and avoid each "Misconception Alert," you've mastered Module 1. Use the [Practice Problems](practice-problems.qmd) and [Exam Prep Guide](exam-prep.qmd) for additional review.
+:::
