@@ -236,6 +236,34 @@ figures:
   # Module 1: Lecture 11 (Solar System)
   # --------------------------------------------------------------
 
+  planetary-portraits:
+    path: /assets/images/module-01/lec11/planetary-portraits-gemini.png
+    caption: "**What to notice:** we can infer basic planet properties (mass, density, temperature, winds) without visiting — by combining orbits, light, spectra, and Doppler."
+    alt: "Infographic with four tiles about solar-system worlds, emphasizing that we infer properties remotely using orbits and light, including examples like Saturn’s low density, Jupiter’s large mass, Venus’s extreme heat, and Neptune’s fast winds."
+    credit: "(A. Rosen/Gemini — illustrative)"
+    module: 1
+
+  solar-system-architecture:
+    path: /assets/images/module-01/lec11/solar-system-architecture-gemini.png
+    caption: "**What to notice:** the solar system is structured in zones (not to scale) — rocky planets inside, giant planets farther out, then icy small-body reservoirs (Kuiper Belt, Oort Cloud)."
+    alt: "Diagram of the solar system labeled with zones: inner rocky planets, gas giants, ice giants, Kuiper Belt, and a distant Oort Cloud, with approximate distances in AU and a note that it is not to scale."
+    credit: "(A. Rosen/Gemini — illustrative)"
+    module: 1
+
+  nebular-hypothesis:
+    path: /assets/images/module-01/lec11/solar-nebular-hypothesis-gemini.png
+    caption: "**What to notice:** formation as a causal chain — collapse spins up a rotating disk, temperature sets a condensation sequence, and the snow line separates rocky from ice-rich building blocks."
+    alt: "Step-by-step schematic of solar system formation: a molecular cloud collapses and spins up into a protoplanetary disk, a condensation sequence and snow line separate rocky from ice-rich regions, and accretion builds rocky planets inside and giant planets outside."
+    credit: "(A. Rosen/Gemini — illustrative)"
+    module: 1
+
+  protoplanetary-disk:
+    path: /assets/images/module-01/lec11/protoplanetary-disk-gemini.png
+    caption: "**What to notice:** we observe planet formation in progress — rings and gaps in young-star disks can be signatures of emerging planets."
+    alt: "Illustration of a young star surrounded by a protoplanetary disk with labeled rings and gaps, described as possible signs of planet formation."
+    credit: "(A. Rosen/Gemini — illustrative)"
+    module: 1
+
   l11-mercury-messenger:
     path: /assets/images/module-01/lec11/mercury-from-messenger-pia15160-nasa.webp
     caption: "**What to notice:** Mercury’s surface is heavily cratered and airless — a record of early impacts with little erosion."
