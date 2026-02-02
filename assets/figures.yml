@@ -420,6 +420,59 @@ figures:
     credit: "(A. Rosen/Gemini — schematic)"
     module: 1
 
+  # --------------------------------------------------------------
+  # Module 1: Lecture 13 (Are We Alone? — Synthesis)
+  # --------------------------------------------------------------
+
+  drake-equation-framework:
+    path: /assets/images/module-01/lec13/drake-equation-framework-gemini.png
+    caption: "**What to notice:** The Drake Equation is a framework — a product of factors. The first few terms are astronomy-constrained; the later terms are still unknown."
+    alt: "Graphic showing the Drake Equation N = R* × f_p × n_e × f_l × f_i × f_c × L with icons for each term; the first three terms are labeled constrained (evidence-informed) and the last four terms are labeled unknown."
+    credit: "(A. Rosen/Gemini — schematic)"
+    module: 1
+
+  drake-terms-measured-vs-unknown:
+    path: /assets/images/module-01/lec13/drake-equation-terms-gemini.png
+    caption: "**What to notice:** Today, astronomy constrains $R_*$, $f_p$, and $n_e$ reasonably well — but $f_l$, $f_i$, $f_c$, and $L$ remain unknown."
+    alt: "Two-column table titled 'The Drake Terms: Measured vs Unknown' listing R*, f_p, and n_e as mostly measurable today (astronomy-informed) and f_l, f_i, f_c, and L as unknown so far (biology and sociology)."
+    credit: "(A. Rosen/Gemini — schematic)"
+    module: 1
+
+  drake-equation-scenarios:
+    path: /assets/images/module-01/lec13/drake-equation-scenarios-gemini.png
+    caption: "**What to notice:** Holding $R_*$, $f_p$, and $n_e$ fixed, changing $f_l$, $f_i$, $f_c$, and $L$ can swing $N$ by many orders of magnitude. The numbers shown are illustrative."
+    alt: "Table comparing pessimistic, middle, and optimistic Drake-equation assumptions and resulting N, alongside a log-scale plot showing how N ranges from much less than 1 to tens of thousands."
+    credit: "(A. Rosen/Gemini — schematic)"
+    module: 1
+
+  drake-expected-value:
+    path: /assets/images/module-01/lec13/drake-equation-expected-value-meaning-gemini.png
+    caption: "**What to notice:** $N$ is an expected value — a long-run average, not a guarantee. Values like $N \\ll 1$ can still produce rare ‘one-off’ cases."
+    alt: "Three-panel graphic titled 'What Expected Value Means' showing examples for N much less than 1 (rare dot), N about 6 (several clusters), and N much greater than 1 (crowded network), emphasizing expected value as a statistical average."
+    credit: "(A. Rosen/Gemini — schematic)"
+    module: 1
+
+  fermi-paradox:
+    path: /assets/images/module-01/lec13/fermi-paradox-gemini.png
+    caption: "**What to notice:** The Fermi Paradox is the mismatch between ‘big expected numbers’ and ‘no detections yet.’ Multiple explanations are possible — we don’t know which (if any) is right."
+    alt: "Mind-map centered on 'Where is everybody?' with branches suggesting explanations such as life is rare, civilizations don’t last, we haven’t noticed, they aren’t interested in communicating, travel/communication is harder than we think, or we haven’t looked hard enough."
+    credit: "(A. Rosen/Gemini — schematic)"
+    module: 1
+
+  stars-make-elements:
+    path: /assets/images/module-01/lec13/stars-make-the-elements-gemini.png
+    caption: "**What to notice:** Stars build the periodic table over generations. Fusion makes elements up to iron; supernovae and neutron star mergers make many heavier elements, enriching gas for later stars and rocky planets."
+    alt: "Timeline-style diagram showing a star’s life stages producing H→He, He→C/O, and C/O→…→Fe, then explosions/mergers producing elements heavier than iron and enriching gas that forms new stars and rocky planets."
+    credit: "(A. Rosen/Gemini — schematic)"
+    module: 1
+
+  module-1-concept-map:
+    path: /assets/images/module-01/lec13/module-01-concept-map-gemini.png
+    caption: "**What to notice:** Module 1’s toolkit (geometry, gravity, and light) is how we infer properties of worlds and stars we can’t touch — and it all feeds into exoplanets and the Drake Equation."
+    alt: "Concept map titled 'Module 1 Concept Map (The Toolkit)' showing three circles labeled Geometry, Gravity, and Light feeding into 'How we know things we can’t touch,' with arrows toward Solar System, Climate and Exoplanets, and Drake Equation."
+    credit: "(A. Rosen/Gemini — schematic)"
+    module: 1
+
   # Spoilers 6-8: Multi-wavelength
   multi-wavelength-reality:
     path: /assets/images/module-01/multi-wavelength-reality-nblm.png
