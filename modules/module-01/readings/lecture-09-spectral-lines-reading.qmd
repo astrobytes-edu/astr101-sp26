@@ -70,7 +70,7 @@ This was revolutionary. For the first time, humans could determine what a star i
 
 In Lectures 7 and 8, we learned that **light carries information**: wavelength, intensity, temperature. Now we add another layer: spectral lines tell us **composition**. By the end of this lecture, you'll understand why each element has a unique fingerprint and how astronomers use this to classify stars.
 
-{{< fig fraunhofer-lines >}}
+{{< fig altair-spectrum-jwst >}}
 
 ::: {.callout-note title="Where We Left Off (Lecture 8)"}
 In Lecture 8, we discovered how **temperature is written in light**:
@@ -135,6 +135,8 @@ Turn on the **unknown spectrum** overlay. Your goal is to find the element set t
 
 Explain in one sentence: “Why does the Sun have a continuous spectrum *and* absorption lines?”
 
+{{< fig light-matter-interactions >}}
+
 ### Visual Summary
 
 Picture three scenarios:
@@ -186,6 +188,8 @@ Every element — hydrogen, helium, carbon, iron — absorbs and emits light at 
 - **Sodium:** Bright yellow doublet at 589 nm (the famous "D lines")
 - **Calcium:** Strong lines in the violet (H and K lines at 397 and 393 nm)
 - **Iron:** Hundreds of lines throughout the visible spectrum
+
+{{< fig absorption-emission-spectra-jwst >}}
 
 ::: {.column-margin}
 **Spectral line:** A bright or dark feature at a specific wavelength, caused by emission or absorption by atoms. Each element has its own unique set of lines.
