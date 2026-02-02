@@ -72,13 +72,13 @@ Here are facts that sound like science fiction but aren't:
 
 {{< fig planetary-portraits >}}
 
-**Saturn** would float in water — its density is only 0.69 g/cm³, less than water's 1.0 g/cm³.
+**Saturn** would float in water — its density is about 0.69 g/cm³, less than water's 1.0 g/cm³.
 
-**Jupiter** outweighs all the other planets *combined* — 318 Earth masses.
+**Jupiter** outweighs all the other planets *combined* — about 318 Earth masses.
 
-**Venus** is hotter than Mercury, even though it's farther from the Sun — 460°C surface, hot enough to melt lead.
+**Venus** is hotter than Mercury, even though it's farther from the Sun — about 460°C at the surface, hot enough to melt lead.
 
-**Neptune** has the fastest winds in the solar system — 2,000 km/h, five times faster than the strongest hurricanes on Earth.
+**Neptune** has the fastest winds in the solar system — roughly 2,000 km/h, several times faster than the strongest hurricanes on Earth.
 
 How do we know these are true? That's what this lecture is about.
 :::
@@ -129,6 +129,8 @@ If you struggled, review the relevant lecture before continuing. This reading as
 Our solar system has a clear structure, organized by distance from the Sun. Let's take a tour from the scorching inner regions to the frozen outer reaches.
 
 {{< fig solar-system-architecture >}}
+
+{{< fig l11-jupiter-position-illustration >}}
 
 ### The Zones
 
@@ -207,6 +209,66 @@ Saturn has a density of 0.69 g/cm³ — less than water. What does this tell you
 :::
 
 ---
+
+## A Quick Photo Tour (One World at a Time)
+
+Pictures help your intuition. As you read the rest of this lecture, keep asking the same question: *What does this world look like, and what physics makes it that way?*
+
+### Rocky planets: solid surfaces, big contrasts
+
+Mercury is the endmember for “no atmosphere.” Its surface is a cratered record of early impacts, and its temperature swings are extreme because there’s essentially no air to move heat around.
+
+{{< fig l11-mercury-messenger >}}
+
+Venus is the opposite: in visible light we don’t see a rocky surface at all, just a bright, global cloud deck. The climate physics lives in the atmosphere.
+
+{{< fig l11-venus-mariner-10 >}}
+
+Earth is our control case — oceans, clouds, and an atmosphere thick enough to matter.
+
+{{< fig l11-earth >}}
+
+Mars is a reminder that “rocky” doesn’t mean “Earth-like.” A thin atmosphere changes the climate story.
+
+{{< fig l11-mars >}}
+
+Mars also has two tiny, irregular moons — more like captured asteroids than scaled-down versions of our Moon.
+
+{{< fig l11-phobos >}}
+
+{{< fig l11-deimos >}}
+
+### The asteroid belt: leftovers and building blocks
+
+The asteroid belt is made of leftovers, not “mini-planets.” But it still contains large bodies — including the dwarf planet Ceres.
+
+{{< fig l11-ceres >}}
+
+### Giant planets: atmospheres without a surface
+
+Jupiter and Saturn are dominated by atmosphere: bands, storms, and deep fluid layers. The familiar “surface” is actually cloud tops.
+
+{{< fig l11-jupiter >}}
+
+Saturn adds the most obvious disk in the solar system: its rings.
+
+{{< fig l11-saturn >}}
+
+And moons can be worlds too — Titan has a thick atmosphere that hides its surface in visible light.
+
+{{< fig l11-titan >}}
+
+### Ice giants and beyond: cold, distant, and still active
+
+Uranus and Neptune are colder and smaller than Jupiter and Saturn, with different compositions and atmospheric chemistry.
+
+{{< fig l11-uranus >}}
+
+{{< fig l11-neptune >}}
+
+Pluto is a signpost: the outer solar system contains many icy worlds and dwarf planets beyond the eight planets.
+
+{{< fig l11-pluto >}}
 
 # Part 2: Applying Our Toolkit
 
