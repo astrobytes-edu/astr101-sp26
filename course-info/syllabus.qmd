@@ -22,7 +22,7 @@ execute:
 | **Instructor** | Dr. Anna Rosen |
 | **Email** | <alrosen@sdsu.edu> |
 | **Office** | Physics 239 |
-| **Office Hours** | Fridays 11:00 am–1:00 pm (and by appointment) |
+| **Office Hours** | Friday 11 am - 1 pm (and by appointment) |
 | **Class meetings** | Mon/Wed/Fri 10:00–10:50 am |
 | **Location** | LH 345 |
 | **Course website** | <https://astrobytes-edu.github.io/astr101-sp26> |
