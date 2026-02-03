@@ -70,7 +70,7 @@ Planets never actually reverse their orbital direction. **Retrograde motion** is
 
 This puzzle — explaining retrograde motion — drove astronomical thinking for two millennia. The answers people proposed reveal how science works: assumptions get built into models, and sometimes the right answer requires abandoning assumptions everyone took for granted.
 
-::: {.callout-note title="Observable → Model → Inference: Retrograde Motion"}
+::: {.callout-note title="Observable to Model to Inference: Retrograde Motion"}
 **Observable:** Mars appears to reverse direction against the background stars for several weeks each year. (Position observation)
 
 **Model:** Earth and Mars both orbit the Sun; Earth orbits faster. When Earth "passes" Mars, Mars appears to drift backward — like passing a car on the highway.
@@ -380,7 +380,7 @@ No calculus needed — just geometry. Imagine cutting each wedge out of paper: n
 
 Think of an ice skater spinning with arms extended. When they pull their arms in, they spin faster. When they extend arms out, they spin slower.
 
-This is **conservation of angular momentum**. The same principle applies to planets: closer to Sun → faster; farther from Sun → slower. Kepler described the pattern; Newton would later explain *why* (angular momentum conservation under central forces).
+This is **conservation of angular momentum**. The same principle applies to planets: closer to Sun means faster; farther from Sun means slower. Kepler described the pattern; Newton would later explain *why* (angular momentum conservation under central forces).
 
 ::: {.column-margin}
 **Angular momentum:** A measure of rotational motion. For orbits, it stays constant when only gravity acts — which is why planets speed up when closer to the Sun.
@@ -477,7 +477,7 @@ Planets farther from the Sun take longer to orbit — but not linearly. The rela
 Why do outer planets take longer to orbit? Two effects compound:
 
 1. They have **farther to travel** (larger orbit circumference)
-2. They **move slower** (farther from the Sun → weaker gravitational pull)
+2. They **move slower** (farther from the Sun means weaker gravitational pull)
 
 These effects combine to give the $P^2 \propto a^3$ relationship.
 
@@ -600,7 +600,7 @@ where $M$ is the central mass and $m$ is the orbiting mass (usually negligible).
 
 - The constant includes $G$ and the **mass of the central object**
 - The relationship applies to **any** gravitational system, not just our Solar System
-- We can solve for mass! Measure period and distance → calculate central mass
+- We can solve for mass! Measure period and distance, then calculate central mass
 
 This is why the "Kepler constant" isn't really constant — it depends on what you're orbiting. The Sun-only shorthand hides this by baking in $M = M_\odot$.
 
@@ -668,7 +668,7 @@ Write your prediction here before continuing: _______________
 ::: {.callout-tip title="What You Should Have Found" collapse="true"}
 Doubling the star mass makes the planet orbit **faster** (shorter period) at the same distance. With $M = 2\,M_\odot$, the period at 1 AU is about 0.71 years instead of 1 year.
 
-**Claim:** The "constant" in Kepler's Third Law depends on the central mass. More massive star → faster orbits at the same distance.
+**Claim:** The "constant" in Kepler's Third Law depends on the central mass. More massive star means faster orbits at the same distance.
 
 **Evidence:** The demo shows that $P^2 = a^3$ only works for a 1 solar mass star. Change the mass, and the relationship changes. This is the preview of Newton: the full law is $P^2 \propto a^3/M$.
 
@@ -780,7 +780,7 @@ Which best describes how Kepler made his discoveries?
 
 2. **Kepler's First Law:** Orbits are ellipses with the Sun at one focus.
 
-3. **Kepler's Second Law:** Planets sweep equal areas in equal times → faster when closer to the Sun.
+3. **Kepler's Second Law:** Planets sweep equal areas in equal times, so faster when closer to the Sun.
 
 4. **Kepler's Third Law:** $P^2 \propto a^3$. Use the ratio form or Sun-only scaling (years/AU) — not the bare "$P^2 = a^3$" shorthand. Equivalently, $P \propto a^{3/2}$.
 
@@ -793,25 +793,45 @@ Which best describes how Kepler made his discoveries?
 
 ## Practice Problems
 
-### Core (do these first)
+### Conceptual Questions
 
-**1. Kepler I:** Mars has orbital eccentricity $e = 0.093$ and semi-major axis $a = 1.52$ AU. Calculate its perihelion and aphelion distances.
+1. **Kepler I (shape):** What does it mean to say planets move in *elliptical* orbits with the Sun at *one focus*? In your own words, what is the difference between "focus" and "center"?
 
-**2. Kepler II:** A comet is at aphelion (farthest from the Sun). Is it moving at its fastest, slowest, or average speed? Explain using Kepler's Second Law.
+2. **Kepler II (speed):** At what point in an elliptical orbit is a planet moving fastest: perihelion or aphelion? Explain using Kepler's Second Law.
 
-**3. Kepler III:** Jupiter orbits at approximately 5.2 AU. Calculate its orbital period.
+3. **Kepler II (common misconception):** True or False (and explain): "Equal areas swept out in equal times means the planet travels equal distances in equal times."
 
-**4. Kepler III (reverse):** An astronomer discovers a comet with an orbital period of 64 years. What is its semi-major axis?
+4. **Retrograde motion (model-based explanation):** Mars appears to move eastward against the stars, then westward for a few weeks, then eastward again. What *changes* in our viewing geometry makes this happen without Mars actually reversing direction?
 
-### Challenge
+---
 
-**5. Ratio method:** Jupiter's moon Io orbits at 422,000 km with a period of 1.77 days. Callisto orbits at 1,883,000 km. Without knowing Jupiter's mass, estimate Callisto's orbital period using:
-$$\left(\frac{P_2}{P_1}\right)^2 = \left(\frac{a_2}{a_1}\right)^3$$
-*(This works because both moons orbit the same central body.)*
+### Calculations
 
-*(Hint: Compute $a_2/a_1$ first, then cube it, then take the square root to get $P_2/P_1$.)*
+5. **Kepler I (perihelion/aphelion):** Mars has semi-major axis ($a = 1.52$ AU) and eccentricity ($e = 0.093$). Calculate its perihelion distance and aphelion distance.
 
-**6. Conceptual:** Why couldn't Kepler answer the question "Do these laws apply to planets around other stars?" What additional information would Newton provide?
+6. **Kepler III (period):** Jupiter's semi-major axis is ($a = 5.2$ AU). Use Kepler's Third Law (in Sun–planet units) to estimate Jupiter's orbital period ($P$) in years.
+
+7. **Kepler III (scaling):** A planet has a semi-major axis 4 times larger than Earth's. By what factor is its orbital period larger than Earth's? (You can answer with a factor; no need for a full number.)
+
+8. **Ratio method (same central body):** Io orbits Jupiter at ($a_1 = 422{,}000$ km) with period ($P_1 = 1.77$ days). Callisto orbits at ($a_2 = 1{,}883{,}000$ km). Estimate Callisto's period ($P_2$) using:
+
+   $$\left(\frac{P_2}{P_1}\right)^2 = \left(\frac{a_2}{a_1}\right)^3$$
+
+---
+
+### Synthesis
+
+9. **Observable $\to$ Model $\to$ Inference (Kepler III as a tool):** You observe a repeating transit-like dip in a star's brightness every **8 days**.
+
+   - **Observable:** What quantity did you measure directly?
+   - **Model:** What assumption(s) let you apply Kepler's Third Law?
+   - **Inference:** Estimate the orbital distance ($a$) (in AU) assuming a Sun-like star.
+
+10. **Empirical laws and the process of science (Kepler $\to$ Newton):** Kepler found patterns that matched observations, but he could not explain **why** planets obeyed those patterns. In 3–5 sentences:
+
+   - What does it mean for a law to be **empirical**?
+   - Why are empirical laws still powerful and "real science" even without a mechanism?
+   - What did Newton add that changed the story from "what happens" to "why it happens"?
 
 ---
 
