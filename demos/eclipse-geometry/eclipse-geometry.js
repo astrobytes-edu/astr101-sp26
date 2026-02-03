@@ -996,81 +996,88 @@
 
     let currentMonth = 0;
 
-    function simulateBatch() {
-      if (!state.isAnimating) return;
-      if (currentMonth >= totalMonths) {
-        state.isAnimating = false;
-        state.yearsSimulated = yearsToSimulate;
-        updateStats();
-        updateLogTable();
-        return;
-      }
+	    function simulateBatch() {
+	      if (!state.isAnimating) return;
+	      if (currentMonth >= totalMonths) {
+	        state.isAnimating = false;
+	        state.yearsSimulated = yearsToSimulate;
+	        updateStats();
+	        updateLogTable();
+	        return;
+	      }
 
-      const { simMonthsPerTick, simTickMs } = getSpeedConfig();
-      for (let i = 0; i < simMonthsPerTick && currentMonth < totalMonths; i++, currentMonth++) {
-        // Time since simulation start.
-        const tNewDays = currentMonth * SYNODIC_MONTH_DAYS;
-        const tFullDays = tNewDays + 0.5 * SYNODIC_MONTH_DAYS;
+	      const { simMonthsPerTick, simTickMs } = getSpeedConfig();
+	      for (let i = 0; i < simMonthsPerTick && currentMonth < totalMonths; i++, currentMonth++) {
+	        const monthIndex = currentMonth;
 
-        // New Moon event (phase angle ~0): solar eclipses possible.
-	        {
-	          const sunLonDeg = normalizeAngleDeg(startSun + SUN_RATE_DEG_PER_DAY * tNewDays);
-	          const nodeLonDeg = normalizeAngleDeg(startNode + NODE_RATE_DEG_PER_DAY * tNewDays);
-	          const moonLonDeg = sunLonDeg; // conjunction
+	        // Time since simulation start.
+	        const tNewDays = monthIndex * SYNODIC_MONTH_DAYS;
+	        const tFullDays = tNewDays + 0.5 * SYNODIC_MONTH_DAYS;
 
-	          const betaAbs = Math.abs(Model.eclipticLatitudeDeg({ tiltDeg: state.orbitalTilt, moonLonDeg, nodeLonDeg }));
-	          const year = tNewDays / DAYS_PER_TROPICAL_YEAR;
+	        const sunLonNewDeg = normalizeAngleDeg(startSun + SUN_RATE_DEG_PER_DAY * tNewDays);
+	        const nodeLonNewDeg = normalizeAngleDeg(startNode + NODE_RATE_DEG_PER_DAY * tNewDays);
+	        const moonLonNewDeg = sunLonNewDeg; // conjunction
 
-	          const solar = Model.solarEclipseTypeFromBetaDeg({
-	            betaDeg: betaAbs,
-	            earthMoonDistanceKm,
-	          });
+	        const sunLonFullDeg = normalizeAngleDeg(startSun + SUN_RATE_DEG_PER_DAY * tFullDays);
+	        const nodeLonFullDeg = normalizeAngleDeg(startNode + NODE_RATE_DEG_PER_DAY * tFullDays);
+	        const moonLonFullDeg = normalizeAngleDeg(sunLonFullDeg + 180); // opposition
 
-	          if (solar.type === 'total-solar') {
-	            state.totalSolarEclipses++;
-	            state.eclipseLog.push({ year, type: 'total-solar', height: betaAbs });
-	          } else if (solar.type === 'annular-solar') {
-	            state.annularSolarEclipses++;
-	            state.eclipseLog.push({ year, type: 'annular-solar', height: betaAbs });
-	          } else if (solar.type === 'partial-solar') {
-	            state.partialSolarEclipses++;
-	            state.eclipseLog.push({ year, type: 'partial-solar', height: betaAbs });
-	          }
+	        const betaAbsNew = Math.abs(
+	          Model.eclipticLatitudeDeg({ tiltDeg: state.orbitalTilt, moonLonDeg: moonLonNewDeg, nodeLonDeg: nodeLonNewDeg })
+	        );
+	        const betaAbsFull = Math.abs(
+	          Model.eclipticLatitudeDeg({ tiltDeg: state.orbitalTilt, moonLonDeg: moonLonFullDeg, nodeLonDeg: nodeLonFullDeg })
+	        );
+
+	        const yearNew = tNewDays / DAYS_PER_TROPICAL_YEAR;
+	        const yearFull = tFullDays / DAYS_PER_TROPICAL_YEAR;
+
+	        // New Moon event (phase angle ~0): solar eclipses possible.
+	        const solar = Model.solarEclipseTypeFromBetaDeg({
+	          betaDeg: betaAbsNew,
+	          earthMoonDistanceKm,
+	        });
+
+	        if (solar.type === 'total-solar') {
+	          state.totalSolarEclipses++;
+	          state.eclipseLog.push({ year: yearNew, type: 'total-solar', height: betaAbsNew });
+	        } else if (solar.type === 'annular-solar') {
+	          state.annularSolarEclipses++;
+	          state.eclipseLog.push({ year: yearNew, type: 'annular-solar', height: betaAbsNew });
+	        } else if (solar.type === 'partial-solar') {
+	          state.partialSolarEclipses++;
+	          state.eclipseLog.push({ year: yearNew, type: 'partial-solar', height: betaAbsNew });
 	        }
 
-        // Full Moon event (phase angle ~180): lunar eclipses possible.
-        {
-          const sunLonDeg = normalizeAngleDeg(startSun + SUN_RATE_DEG_PER_DAY * tFullDays);
-          const nodeLonDeg = normalizeAngleDeg(startNode + NODE_RATE_DEG_PER_DAY * tFullDays);
-          const moonLonDeg = normalizeAngleDeg(sunLonDeg + 180); // opposition
+	        // Full Moon event (phase angle ~180): lunar eclipses possible.
+	        const lunar = Model.lunarEclipseTypeFromBetaDeg({
+	          betaDeg: betaAbsFull,
+	          earthMoonDistanceKm,
+	        });
 
-          const betaAbs = Math.abs(Model.eclipticLatitudeDeg({ tiltDeg: state.orbitalTilt, moonLonDeg, nodeLonDeg }));
-          const year = tFullDays / DAYS_PER_TROPICAL_YEAR;
+	        if (lunar.type === 'total-lunar') {
+	          state.totalLunarEclipses++;
+	          state.eclipseLog.push({ year: yearFull, type: 'total-lunar', height: betaAbsFull });
+	        } else if (lunar.type === 'partial-lunar') {
+	          state.partialLunarEclipses++;
+	          state.eclipseLog.push({ year: yearFull, type: 'partial-lunar', height: betaAbsFull });
+	        } else if (lunar.type === 'penumbral-lunar') {
+	          state.penumbralLunarEclipses++;
+	          state.eclipseLog.push({ year: yearFull, type: 'penumbral-lunar', height: betaAbsFull });
+	        }
 
-	          const lunar = Model.lunarEclipseTypeFromBetaDeg({
-	            betaDeg: betaAbs,
-	            earthMoonDistanceKm,
-	          });
-
-          if (lunar.type === 'total-lunar') {
-            state.totalLunarEclipses++;
-            state.eclipseLog.push({ year, type: 'total-lunar', height: betaAbs });
-          } else if (lunar.type === 'partial-lunar') {
-            state.partialLunarEclipses++;
-            state.eclipseLog.push({ year, type: 'partial-lunar', height: betaAbs });
-          } else if (lunar.type === 'penumbral-lunar') {
-            state.penumbralLunarEclipses++;
-            state.eclipseLog.push({ year, type: 'penumbral-lunar', height: betaAbs });
-          }
-        }
-
-        // Advance visible state (for the live animation during simulation).
-        const tDays = tNewDays;
-        state.sunLonDeg = normalizeAngleDeg(startSun + SUN_RATE_DEG_PER_DAY * tDays);
-        state.moonLonDeg = normalizeAngleDeg(startMoon + MOON_RATE_DEG_PER_DAY * tDays);
-        state.nodeLonDeg = normalizeAngleDeg(startNode + NODE_RATE_DEG_PER_DAY * tDays);
-        state.yearsSimulated = tDays / DAYS_PER_TROPICAL_YEAR;
-      }
+	        // Advance visible state (for the live animation during simulation).
+	        // NOTE: Stepping by whole synodic months samples the *same phase* each tick (by definition),
+	        // which makes the Moon appear stuck at Full/New depending on the starting phase. Instead,
+	        // we show either the eclipse-relevant event (if one occurs), or alternate New/Full so the
+	        // visualization doesn't look frozen while the counters update.
+	        const showNew =
+	          solar.type !== 'none' || (lunar.type === 'none' && monthIndex % 2 === 0);
+	        state.sunLonDeg = showNew ? sunLonNewDeg : sunLonFullDeg;
+	        state.nodeLonDeg = showNew ? nodeLonNewDeg : nodeLonFullDeg;
+	        state.moonLonDeg = showNew ? moonLonNewDeg : moonLonFullDeg;
+	        state.yearsSimulated = (showNew ? tNewDays : tFullDays) / DAYS_PER_TROPICAL_YEAR;
+	      }
 
       updateStats();
       update();
