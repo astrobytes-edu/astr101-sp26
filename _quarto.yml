@@ -163,7 +163,7 @@ website:
   announcement:
     icon: info-circle
     dismissable: true
-    content: "**[Homework 1](/homework/astr101-hw-01.qmd)** due Monday Feb 2nd | Explore the **[Interactive Demos](/demos/index.qmd)**"
+    content: "**[Homework 2](/homework/astr101-hw-02.qmd)** due Monday Feb 9, 2026 | Explore the **[Interactive Demos](/demos/index.qmd)**"
     type: primary
     position: below-navbar
   navbar:
@@ -286,9 +286,9 @@ website:
         contents:
           - homework/index.qmd
           - href: homework/astr101-hw-01.qmd
-            text: "Homework 1 (Due: xxx)"
+            text: "Homework 1 (Due: Feb 2, 2026)"
           - href: homework/astr101-hw-02.qmd
-            text: "Homework 2 (Due: xxx)"
+            text: "Homework 2 (Due: Feb 9, 2026)"
 
       - section: "Demos"
         contents:
