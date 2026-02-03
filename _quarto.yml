@@ -287,6 +287,8 @@ website:
           - homework/index.qmd
           - href: homework/astr101-hw-01.qmd
             text: "Homework 1 (Due: xxx)"
+          - href: homework/astr101-hw-02.qmd
+            text: "Homework 2 (Due: xxx)"
 
       - section: "Demos"
         contents:

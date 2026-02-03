@@ -75,4 +75,4 @@ Self-assessment checklists, key equations, sample questions, and common mistakes
 
 - [Return to Module 1 Overview](/modules/module-01/)
 - [Module 1 Exam Information](/exams/)
-- [Office Hours & Help](/course-info/getting-help.qmd)
+- [Office Hours & Help](/course-info/syllabus.qmd#sec-getting-help)
