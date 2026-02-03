@@ -245,6 +245,14 @@ website:
               #   text: "Lecture 12: Climates and Exoplanets"
               # - href: modules/module-01/readings/lecture-13-are-we-alone-reading.qmd
               #   text: "Lecture 13: Are We Alone? — The Drake Equation"
+          - section: "Solutions"
+            contents:
+              - href: modules/module-01/readings/lecture-01-spoiler-alerts-solutions.qmd
+                text: "Lecture 1 Solutions: Spoiler Alerts"
+              - href: modules/module-01/readings/lecture-02-foundations-solutions.qmd
+                text: "Lecture 2 Solutions: Math Survival Kit"
+              - href: modules/module-01/readings/lecture-03-sky-is-a-map-solutions.qmd
+                text: "Lecture 3 Solutions: The Sky Is a Map"
           - section: "Module 1 Synthesis"
             contents:
               - href: modules/module-01/synthesis/index.qmd

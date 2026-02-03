@@ -1,0 +1,228 @@
+---
+title: "Lecture 3 Solutions: The Sky Is a Map"
+subtitle: "Practice Problem Solutions"
+author: "Dr. Anna Rosen"
+date: "2026-01-26"
+description: "Solutions to the Lecture 3 practice problems."
+draft: false
+course: ASTR 101
+module: "1 - Foundations"
+---
+
+::: {.callout-note}
+**Student note:** These are model solutions written to show every step, units, and checks. I do not expect your work to be this detailed; shorter solutions are fine if your setup, units, and reasoning are correct.
+
+**HW note:** Homework uses only a subset of these problems; the full set is included for future study and self checking.
+:::
+
+## Core Problems
+
+### Problem 1: Observable vs. Inferred
+
+**Restatement:** Identify which quantity you directly observe when you look at the Moon.
+
+**Key insight:** What you see in the sky is an angle, not a distance or physical size.
+
+**Answer:** **(b) The Moon's angular size.** You directly observe how large it appears on the sky (an angle), not its physical diameter or distance.
+
+**Common misconception:** Thinking that an object's apparent size tells you its true physical size without geometry.
+
+---
+
+### Problem 2: Constellation Depth
+
+**Restatement:** Explain why a constellation is not a physical group of stars.
+
+**Key insight:** Constellations are line-of-sight patterns; the stars are at very different distances.
+
+**Answer:** Stars in a constellation only line up from our viewpoint on Earth. They are spread out in three-dimensional space at very different distances, so the pattern is a projection on the sky, not a real cluster.
+
+**Common misconception:** Assuming stars in the same constellation are close together in space.
+
+---
+
+### Problem 3: Seasons Logic
+
+**Restatement:** Explain why opposite seasons in Australia refute the distance-causes-seasons hypothesis.
+
+**Key insight:** If distance caused seasons, both hemispheres would share the same season at the same time.
+
+**Answer:** When Australia has summer, the northern hemisphere has winter. If distance to the Sun were the cause, both hemispheres would warm and cool together. Opposite seasons show that axial tilt and sun angle are the real cause, not distance.
+
+**Common misconception:** Thinking Earth's slightly changing distance is the dominant reason for seasons.
+
+---
+
+### Problem 4: Equinox Geometry
+
+**Restatement:** Explain why the Sun rises due east and sets due west on the equinoxes.
+
+**Key insight:** On the equinoxes the Sun is on the celestial equator, so its daily path is centered on east-west.
+
+**Answer:** When the Sun is on the celestial equator, its daily path is symmetric with respect to the horizon. That geometry means it rises due east and sets due west for most locations, aside from small refraction and horizon effects.
+
+**Common misconception:** Thinking east and west sunrise and sunset happen every day of the year.
+
+---
+
+### Problem 5: Arctic Extremes
+
+**Restatement:** Explain why the Arctic has 24-hour daylight in June and 24-hour darkness in December.
+
+**Key insight:** Axial tilt points the North Pole toward the Sun in June and away from the Sun in December.
+
+**Answer:** In June, the North Pole is tilted toward the Sun, so the Sun's daily path never dips below the horizon at high northern latitudes. In December, the North Pole tilts away, so the Sun never rises above the horizon. This is a geometric consequence of Earth's tilt.
+
+**Common misconception:** Blaming the effect on Earth's distance from the Sun rather than tilt.
+
+---
+
+### Problem 6: Why Geometry?
+
+**Restatement:** Explain why astronomers treat the sky as a geometric system of directions.
+
+**Key insight:** Positions on the sky are angles; distances are inferred later.
+
+**Answer:** Telescopes measure directions, not depth. The celestial sphere is a geometric map that lets us define positions, measure angular separations, and track motion. That geometry is the starting point for building models and inferring distances and sizes.
+
+**Common misconception:** Thinking the sky is a flat map of physical distances rather than a map of directions.
+
+---
+
+### Problem 7: Demo Integration
+
+**Restatement:** Name one seasons misconception corrected by the demo and explain which features provided the evidence.
+
+**Key insight:** The demo shows both distance and sun angle, allowing a direct test of competing ideas.
+
+**Answer:** A common misconception is that seasons are caused by Earth being closer to the Sun in summer. The Seasons demo's Earth-Sun Distance readout shows Earth is farthest during Northern summer, while the Day Length and Sun Altitude readouts change dramatically with tilt. That evidence rules out distance and supports axial tilt.
+
+**Common misconception:** Treating distance as the primary driver of seasonal temperature changes.
+
+---
+
+## Challenge Problems
+
+### Problem 8: Angular Size Practice
+
+**Restatement:** Compute Mars' angular size at closest approach using the small-angle formula.
+
+**Given:**
+- $D = 6{,}792$ km
+- $d = 55$ million km $= 5.5 \times 10^7$ km
+
+**Find:** Angular size in arcseconds
+
+**Equation:**
+$$\theta(^{\circ}) = 57.3^{\circ} \times \frac{D}{d}$$
+$$1^{\circ} = 3600 \text{ arcsec}$$
+
+**Solution:**
+$$\frac{D}{d} = \frac{6.792 \times 10^3}{5.5 \times 10^7} = 1.23 \times 10^{-4}$$
+$$\theta = 57.3^{\circ} \times 1.23 \times 10^{-4} = 7.0 \times 10^{-3} \, ^{\circ}$$
+Convert to arcseconds:
+$$\theta = 7.0 \times 10^{-3} \, ^{\circ} \times 3600 \frac{\text{arcsec}}{^{\circ}} \approx 25 \text{ arcsec}$$
+
+**Unit check:** Degrees convert to arcseconds; units are angular.
+
+**Sanity check:** Mars near opposition is a few tens of arcseconds across, so this is reasonable.
+
+**Answer:** **About 25 arcseconds.**
+
+---
+
+### Problem 9: Angular Size Scaling
+
+**Restatement:** A satellite appears 2 arcmin at 400 km. Find its angular size at 800 km.
+
+**Given:**
+- $\theta_1 = 2$ arcmin at $d_1 = 400$ km
+- $d_2 = 800$ km
+
+**Find:** $\theta_2$
+
+**Equation:** For small angles, $\theta \propto 1/d$
+
+**Solution:**
+$$\frac{\theta_2}{\theta_1} = \frac{d_1}{d_2} = \frac{400}{800} = \frac{1}{2}$$
+$$\theta_2 = 2 \text{ arcmin} \times \frac{1}{2} = 1 \text{ arcmin}$$
+
+**Unit check:** Arcminutes remain arcminutes.
+
+**Sanity check:** Doubling distance should halve angular size.
+
+**Answer:** **1 arcminute.**
+
+---
+
+### Problem 10: Day Length
+
+**Restatement:** Find the extra daylight at 45$^{\circ}$N in summer compared to a 12-hour day and total it over 90 days.
+
+**Given:**
+- Summer solstice day length at 45$^{\circ}$N: 15.5 hr
+- Equinox day length: 12.0 hr
+- Summer length: 90 days
+
+**Find:** Extra hours per day and total extra hours over 90 days
+
+**Equation:** Extra per day = (summer day length) - (12 hr)
+
+**Solution:**
+$$\Delta t_{\text{day}} = 15.5 - 12.0 = 3.5 \text{ hr}$$
+$$\Delta t_{\text{total}} = 3.5 \text{ hr/day} \times 90 \text{ days} = 315 \text{ hr}$$
+
+**Unit check:** Hours per day times days gives hours.
+
+**Sanity check:** A few extra hours per day over three months should yield a few hundred hours.
+
+**Answer:** **3.5 extra hours per day, about 315 extra hours over 90 days.**
+
+---
+
+### Problem 11: Sun Altitude (Noon Altitude Formula)
+
+**Restatement:** Compute the Sun's noon altitude for San Diego on the solstices.
+
+**Given:**
+- $\phi = 32^{\circ}$ N
+- Summer solstice: $\delta = +23.5^{\circ}$
+- Winter solstice: $\delta = -23.5^{\circ}$
+
+**Find:** $h_{\text{noon}}$ for each date and which is higher
+
+**Equation:**
+$$h_{\text{noon}} = 90^{\circ} - \left|\phi - \delta\right|$$
+
+**Solution:**
+Summer solstice:
+$$\left|\phi - \delta\right| = \left|32^{\circ} - 23.5^{\circ}\right| = 8.5^{\circ}$$
+$$h_{\text{noon}} = 90^{\circ} - 8.5^{\circ} = 81.5^{\circ}$$
+
+Winter solstice:
+$$\left|\phi - \delta\right| = \left|32^{\circ} - (-23.5^{\circ})\right| = 55.5^{\circ}$$
+$$h_{\text{noon}} = 90^{\circ} - 55.5^{\circ} = 34.5^{\circ}$$
+
+**Unit check:** All angles are in degrees.
+
+**Sanity check:** The Sun should be higher at noon in summer than in winter; this matches.
+
+**Answer:** **Summer: $81.5^{\circ}$; Winter: $34.5^{\circ}$.** The summer noon altitude is higher because the Sun's declination is closer to San Diego's latitude.
+
+---
+
+## Bridge Problems
+
+### Problem 12: Observable -> Model -> Inference
+
+**Restatement:** A star's position shifts by 0.5 arcseconds over 6 months. Identify the observable, the model, and the inference.
+
+**Key elements a full answer should include:**
+- Observable: position on the sky (tracked over time)
+- Model: parallax geometry from Earth's orbit
+- Inference: distance estimate and the star is relatively nearby
+
+**Sample response:**
+"The observable is the star's position on the sky, measured at different times. The model is parallax: as Earth orbits the Sun, a nearby star appears to shift against distant background stars. A measurable shift implies the star is relatively nearby, and the size of the shift lets us infer its distance."
+
+**Grading guidance:** Full credit requires naming the observable, the parallax model, and a clear inference about distance. Partial credit if one piece is missing.

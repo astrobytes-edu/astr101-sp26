@@ -4,86 +4,84 @@ subtitle: "Practice Problem Solutions"
 author: "Dr. Anna Rosen"
 date: "2026-01-20"
 description: "Solutions to the Lecture 1 practice problems."
-draft: true
+draft: false
 course: ASTR 101
 module: "1 - Foundations"
 ---
+
+::: {.callout-note}
+**Student note:** These are model solutions written to show every step, units, and checks. I do not expect your work to be this detailed; shorter solutions are fine if your setup, units, and reasoning are correct.
+
+**HW note:** Homework uses only a subset of these problems; the full set is included for future study and self checking.
+:::
 
 ## Conceptual Questions
 
 ### Problem 1: Observable vs. Inferred
 
-For each quantity, state whether it is *directly measured* or *inferred*:
+**Restatement:** Decide whether each quantity is directly measured or inferred.
 
-| Quantity | Answer |
-|----------|--------|
-| (a) The brightness of a star | **Directly measured** — we count photons arriving at our detector |
-| (b) The temperature of a star | **Inferred** — from spectrum or color using physics (hotter = bluer) |
-| (c) The position of a star on the sky | **Directly measured** — we record where it appears in our images |
-| (d) The distance to a star | **Inferred** — from parallax, standard candles, or other methods |
-| (e) The wavelength of light from a star | **Directly measured** — we spread light into a spectrum and measure which wavelengths are present |
+**Key insight:** The four direct observables are brightness, position, wavelength, and timing. Most physical properties are inferred from those measurements plus physics.
+
+**Answer:**
+
+| Quantity | Measured or Inferred? | Why |
+|----------|------------------------|-----|
+| (a) The brightness of a star | **Directly measured** | We count photons arriving at the detector (flux). |
+| (b) The temperature of a star | **Inferred** | From spectrum or color using physics (hotter objects are bluer). |
+| (c) The position of a star on the sky | **Directly measured** | We record where it appears in images (angles on the sky). |
+| (d) The distance to a star | **Inferred** | From parallax, standard candles, or other distance methods. |
+| (e) The wavelength of light from a star | **Directly measured** | We spread light into a spectrum and measure wavelengths. |
+
+**Common misconception:** Treating temperature or distance as directly measurable just because they are listed in catalogs.
 
 ---
 
 ### Problem 2: The Inference Pipeline
 
-**Question:** A student claims: "We know the Sun is made of hydrogen because we can see it." What's wrong with this statement?
+**Restatement:** Explain what is wrong with the claim that we know the Sun is hydrogen because we can see it, and state what we measure and infer.
 
-**Solution:**
+**Key insight:** We measure spectra (wavelengths), then use atomic physics to infer composition.
 
-The statement conflates *measurement* with *inference*. We don't "see" hydrogen directly.
+**Answer:** We do not see hydrogen directly. We measure the Sun's spectrum, specifically absorption lines at precise wavelengths. Those wavelengths match hydrogen's atomic fingerprint, so the composition is inferred by comparing measurements to a physical model (atomic energy levels). The inference chain is: spectrum (measurement)  ->  absorption line wavelengths (measurement)  ->  atomic physics model  ->  hydrogen present (inference).
 
-**What we actually measure:** The Sun's spectrum — brightness as a function of wavelength. When we spread sunlight through a spectrograph, we observe dark absorption lines at specific wavelengths.
-
-**How we infer composition:** Those absorption lines appear at wavelengths that match hydrogen's atomic fingerprint (e.g., the Balmer series at 656 nm, 486 nm, etc.). The physics of atomic energy levels tells us that only hydrogen atoms can absorb at those exact wavelengths.
-
-**The inference chain:** Spectrum (measurement) → absorption line wavelengths (measurement) → atomic physics model → hydrogen present (inference).
+**Common misconception:** Confusing a measurement (spectrum) with the inferred property (composition).
 
 ---
 
 ### Problem 3: Standard Candles
 
-**Question:** Why do astronomers need "standard candles" to measure distances? What problem do they solve?
+**Restatement:** Explain why astronomers need standard candles to measure distance.
 
-**Solution:**
+**Key insight:** Brightness alone is ambiguous without the intrinsic luminosity.
 
-**The problem:** Brightness alone cannot tell us distance. A faint nearby candle and a brilliant distant lighthouse can appear equally bright. To determine distance from brightness, we need to know the object's *intrinsic luminosity* — how much light it actually emits.
+**Answer:** Apparent brightness depends on both luminosity and distance. A faint nearby object and a bright distant object can look equally bright. Standard candles provide objects whose intrinsic luminosity is known, so once we measure the flux, the inverse square law lets us solve for distance.
 
-**What standard candles provide:** Objects whose luminosity we can determine independently. For example:
-- Cepheid variables: pulsation period tells us luminosity
-- Type Ia supernovae: explosion physics predicts consistent peak brightness
-
-**How they work:** Once we know luminosity $L$ and measure flux $F$, the inverse-square law ($F = L/4\pi d^2$) lets us solve for distance $d$.
-
-**Without standard candles,** we could only measure distances geometrically (parallax), which fails beyond ~100 parsecs. Standard candles extend our reach to billions of light-years.
+**Common misconception:** Thinking brightness by itself directly gives distance.
 
 ---
 
 ### Problem 4: Lookback Time
 
-**Question:** The Andromeda Galaxy is about 2.5 million light-years away. If an astronomer observes a supernova in Andromeda tonight, when did that explosion actually occur?
+**Restatement:** If Andromeda is 2.5 million light-years away, when did the supernova occur?
 
-**Solution:**
+**Key insight:** A light-year is a distance; light travel time equals the distance in years.
 
-The explosion occurred **2.5 million years ago**.
+**Answer:** The explosion occurred **2.5 million years ago**. The light takes 2.5 million years to reach us, so we are seeing the event long after it actually happened.
 
-**Reasoning:** A light-year is the distance light travels in one year. If Andromeda is 2.5 million light-years away, its light takes 2.5 million years to reach us. When we observe the supernova "tonight," we're seeing light that left Andromeda 2.5 million years ago — before *Homo sapiens* existed.
-
-**Key insight:** Looking far away = looking back in time. The supernova we see "now" is ancient history for anyone in Andromeda.
+**Common misconception:** Thinking the explosion happened when we see it.
 
 ---
 
 ### Problem 5: Four Observables
 
-**Question:** An astronomer reports: "We measured the star's spectrum and found absorption lines shifted toward the red." Which of the four observables is being measured here? What might be inferred from this observation?
+**Restatement:** Identify the observable in a redshifted absorption line measurement and what it implies.
 
-**Solution:**
+**Key insight:** Wavelength is the measured observable; Doppler shifts let us infer radial motion.
 
-**Observable being measured:** **Wavelength** — the astronomer is using spectroscopy to spread light into its component wavelengths and measure where absorption lines appear.
+**Answer:** The observable is **wavelength**, measured by spectroscopy. A redshift indicates the star is moving away from us. The amount of shift gives the radial velocity, and time variation could imply an orbiting companion.
 
-**What can be inferred:** The redshift of the absorption lines indicates the star is **moving away from us** (Doppler effect). The amount of shift tells us the velocity. If the shift changes periodically, we might infer an orbiting companion (planet or another star).
-
-**Key insight:** Wavelength measurements reveal motion toward/away from us through the Doppler shift — something position measurements cannot easily detect.
+**Common misconception:** Treating motion as a direct observable rather than an inference from wavelength shifts.
 
 ---
 
@@ -91,108 +89,125 @@ The explosion occurred **2.5 million years ago**.
 
 ### Problem 6: Relative Brightness
 
-**Question:** Two identical stars are observed. Star A appears 9× brighter than Star B. Using the inverse-square law, how many times farther away is Star B?
+**Restatement:** Two identical stars have fluxes that differ by a factor of 9. Find the distance ratio.
+
+**Given:**
+- Star A appears 9 times brighter than Star B: $F_A / F_B = 9$
+- Identical stars, so same luminosity $L$
+
+**Find:** $d_B / d_A$
+
+**Equation:**
+$$F = \frac{L}{4\pi d^2} \quad \Rightarrow \quad \frac{F_A}{F_B} = \frac{d_B^2}{d_A^2}$$
 
 **Solution:**
-
-**Given:** Stars are identical (same luminosity $L$). Star A appears 9× brighter than Star B.
-
-**The inverse-square law:** $F = \frac{L}{4\pi d^2}$
-
-**For identical stars:** The ratio of fluxes depends only on distance:
-$$\frac{F_A}{F_B} = \frac{d_B^2}{d_A^2}$$
-
-**Solve for distance ratio:**
 $$9 = \frac{d_B^2}{d_A^2}$$
 $$\frac{d_B}{d_A} = \sqrt{9} = 3$$
 
-**Answer:** Star B is **3× farther away** than Star A.
+**Unit check:** The ratio $d_B/d_A$ is dimensionless, as expected.
 
-**Check:** If Star B is 3× farther, its light spreads over $3^2 = 9$ times more area, so we receive 1/9 the flux. Star A appears 9× brighter. ✓
+**Sanity check:** If Star B is farther away, it should be dimmer. A factor of 3 in distance gives a factor of $3^2 = 9$ in brightness, consistent.
+
+**Answer:** **Star B is 3 times farther away than Star A.**
 
 ---
 
 ### Problem 7: Light Travel Time
 
-**Question:** Light travels at $3 \times 10^8$ m/s. The Sun is about $1.5 \times 10^{11}$ m away. How long does light take to travel from the Sun to Earth?
-
-**Solution:**
+**Restatement:** Find the light travel time from the Sun to Earth and convert to minutes.
 
 **Given:**
-- Speed of light: $c = 3 \times 10^8$ m/s
-- Distance to Sun: $d = 1.5 \times 10^{11}$ m
+- $c = 3 \times 10^8$ m/s
+- $d = 1.5 \times 10^{11}$ m
 
-**Using:** $\text{time} = \frac{\text{distance}}{\text{speed}}$
+**Find:** $t$ in seconds and minutes
 
-$$t = \frac{d}{c} = \frac{1.5 \times 10^{11} \text{ m}}{3 \times 10^8 \text{ m/s}}$$
+**Equation:**
+$$t = \frac{d}{c}$$
 
-**Calculate:**
-$$t = \frac{1.5}{3} \times 10^{11-8} \text{ s} = 0.5 \times 10^3 \text{ s} = 500 \text{ s}$$
+**Solution:**
+$$t = \frac{1.5 \times 10^{11} \text{ m}}{3 \times 10^8 \text{ m/s}} = \frac{1.5}{3} \times 10^{11-8} \text{ s} = 0.5 \times 10^3 \text{ s} = 5.0 \times 10^2 \text{ s}$$
 
-**Convert to minutes:**
-$$500 \text{ s} \times \frac{1 \text{ min}}{60 \text{ s}} = 8.3 \text{ min}$$
+Convert to minutes:
+$$5.0 \times 10^2 \text{ s} \times \frac{1 \text{ min}}{60 \text{ s}} = 8.3 \text{ min}$$
 
-**Answer:** Light takes **500 seconds**, or about **8.3 minutes**, to travel from the Sun to Earth.
+**Unit check:** m divided by (m/s) gives seconds.
 
-**Unit check:** $\frac{\text{m}}{\text{m/s}} = \text{s}$ ✓
+**Sanity check:** The standard value is about 8 minutes; this matches.
+
+**Answer:** **$5.0 \times 10^2$ s, or about 8.3 minutes.**
 
 ---
 
 ### Problem 8: Building a Light-Year
 
-**Question:** Using $c = 3 \times 10^8$ m/s and 1 year ≈ $3.15 \times 10^7$ s, calculate the distance light travels in one year.
-
-**Solution:**
+**Restatement:** Compute how far light travels in one year.
 
 **Given:**
-- Speed of light: $c = 3 \times 10^8$ m/s
-- Time: $t = 3.15 \times 10^7$ s
+- $c = 3 \times 10^8$ m/s
+- $t = 3.15 \times 10^7$ s
 
-**Using:** $\text{distance} = \text{speed} \times \text{time}$
+**Find:** $d$ in meters
 
-$$d = c \times t = (3 \times 10^8 \text{ m/s}) \times (3.15 \times 10^7 \text{ s})$$
+**Equation:**
+$$d = c t$$
 
-**Calculate (multiply coefficients, add exponents):**
-$$d = (3 \times 3.15) \times 10^{8+7} \text{ m} = 9.45 \times 10^{15} \text{ m}$$
+**Solution:**
+$$d = (3 \times 10^8 \text{ m/s})(3.15 \times 10^7 \text{ s}) = (3 \times 3.15) \times 10^{8+7} \text{ m}$$
+$$d = 9.45 \times 10^{15} \text{ m}$$
 
-**Answer:** One light-year ≈ $9.5 \times 10^{15}$ m (about 9.5 trillion kilometers).
+**Unit check:** (m/s) times s gives meters.
 
-**Unit check:** $\frac{\text{m}}{\text{s}} \times \text{s} = \text{m}$ ✓
+**Sanity check:** A light-year is of order $10^{16}$ m, so $9.45 \times 10^{15}$ m is reasonable.
+
+**Answer:** **$9.45 \times 10^{15}$ m.**
 
 ---
 
 ### Problem 9: Inverse-Square Reasoning
 
-**Question:** A star moves from 10 light-years away to 40 light-years away (4× the original distance). By what factor does its apparent brightness change?
+**Restatement:** A star moves from 10 ly to 40 ly. Find the brightness factor.
+
+**Given:**
+- $d_{\text{final}} = 40$ ly
+- $d_{\text{initial}} = 10$ ly
+
+**Find:** $B_{\text{final}}/B_{\text{initial}}$
+
+**Equation:**
+$$B \propto \frac{1}{d^2} \quad \Rightarrow \quad \frac{B_{\text{final}}}{B_{\text{initial}}} = \left(\frac{d_{\text{initial}}}{d_{\text{final}}}\right)^2$$
 
 **Solution:**
+$$\frac{B_{\text{final}}}{B_{\text{initial}}} = \left(\frac{10}{40}\right)^2 = \left(\frac{1}{4}\right)^2 = \frac{1}{16}$$
 
-**Given:** Distance increases by a factor of 4 (from 10 ly to 40 ly).
+**Unit check:** The brightness ratio is dimensionless.
 
-**The inverse-square law:** Brightness $\propto 1/d^2$
+**Sanity check:** Increasing distance should reduce brightness; 4 times farther gives $1/16$, which is correct.
 
-**Calculate the change:**
-$$\frac{B_\text{final}}{B_\text{initial}} = \left(\frac{d_\text{initial}}{d_\text{final}}\right)^2 = \left(\frac{10}{40}\right)^2 = \left(\frac{1}{4}\right)^2 = \frac{1}{16}$$
-
-**Answer:** The brightness drops to **1/16 of the original** (16× fainter).
-
-**Key insight:** Distance × 4 → Brightness ÷ 16. The inverse-square law means brightness falls off *much faster* than distance increases.
+**Answer:** **The star is 1/16 as bright (16 times fainter).**
 
 ---
 
 ### Problem 10: Lookback Time Calculation
 
-**Question:** A galaxy is 50 million light-years away. When did the light we're seeing actually leave that galaxy?
+**Restatement:** A galaxy is 50 million light-years away. When did the light leave it?
+
+**Given:**
+- Distance $= 50$ million light-years
+
+**Find:** Lookback time in years
+
+**Equation:**
+A light-year is the distance light travels in one year, so the numerical value in light-years equals the travel time in years.
 
 **Solution:**
+$$t = 50 \text{ million years}$$
 
-**Given:** Distance = 50 million light-years = 50 Mly
+**Unit check:** Light-years map directly to years of light travel time.
 
-**Reasoning:** A light-year is the distance light travels in one year. If the galaxy is 50 million light-years away, the light took 50 million years to reach us.
+**Sanity check:** Tens of millions of light-years correspond to tens of millions of years of lookback time.
 
-**Answer:** The light left the galaxy **50 million years ago**.
-
-**Context:** When we observe this galaxy today, we're seeing it as it was during the Eocene epoch on Earth — before humans, before apes, when early whales were just returning to the oceans. The galaxy we see "now" may look very different today.
+**Answer:** **The light left 50 million years ago.**
 
 ---
 
@@ -200,87 +215,65 @@ $$\frac{B_\text{final}}{B_\text{initial}} = \left(\frac{d_\text{initial}}{d_\tex
 
 ### Problem 11: The Course Thesis
 
-**Question:** In 2-3 sentences, explain the course thesis to a friend who has never taken astronomy.
+**Restatement:** Explain the course thesis in 2 to 3 sentences.
 
-**Sample Solution:**
-
-"Every beautiful space image you've seen is actually scientific data. Astronomers can only measure four things directly — how bright something is, where it appears, what colors of light it emits, and how those change over time. Everything else we claim to know about stars, galaxies, and the universe (their temperatures, distances, ages, compositions) is figured out by combining those measurements with the laws of physics."
-
-**Key elements a good answer should include:**
-- Images = data, not just pretty pictures
-- Limited direct measurements (the four observables)
+**Key elements a full answer should include:**
+- Images are data, not just pictures
+- We directly measure only a few observables
 - Physics connects measurements to inferences
-- Everything interesting is inferred, not directly measured
+- Most properties are inferred, not directly measured
+
+**Sample response:**
+"Astronomy turns pretty images into measurements, then uses physics to infer properties we cannot directly access. We can measure only a few things like brightness, position, wavelength, and timing. Everything else we claim about stars and galaxies comes from combining those measurements with physical models."
+
+**Grading guidance:** Full credit includes all four key elements; partial credit if one or more elements are missing or vague.
 
 ---
 
 ### Problem 12: Connecting Wavelength to Physics
 
-**Question:** Explain why observing the same galaxy at optical and radio wavelengths reveals different information.
+**Restatement:** Explain why optical and radio observations of the same galaxy show different information.
 
-**Solution:**
+**Key elements a full answer should include:**
+- Optical light traces stars and hot surfaces
+- Radio (21 cm) traces cold neutral hydrogen
+- Different wavelengths are produced by different physical processes
+- Same object, different wavelength reveals different components
 
-**Optical wavelengths (~500 nm)** show where the **stars** are. Hot stellar surfaces (thousands of degrees) emit thermal radiation that peaks in visible light. The spiral arms, bright center, and stellar populations are all visible.
+**Sample response:**
+"Optical light comes mainly from stars, so the optical image shows the stellar disk and spiral arms. Radio observations at 21 cm trace neutral hydrogen gas, which often extends beyond the visible stars. Different wavelengths are produced by different physical processes, so the same galaxy looks different depending on what physics the telescope is sensitive to."
 
-**Radio wavelengths (21 cm)** show where **cold hydrogen gas** is. Neutral hydrogen atoms emit at exactly 21 cm due to a quantum mechanical spin-flip transition. This gas can extend far beyond the visible stellar disk.
-
-**Why they differ:** Different physical processes produce different wavelengths.
-- Stars: thermal radiation from hot surfaces → visible light
-- Cold gas: atomic transition in neutral hydrogen → radio waves
-
-**The key insight:** Same object, different wavelength = different physical component revealed. This is why astronomers need telescopes spanning the entire electromagnetic spectrum — each wavelength probes different physics.
+**Grading guidance:** Full credit requires both components (stars and gas) and the physical reason different wavelengths reveal different structures.
 
 ---
 
 ### Problem 13: Dark Matter Evidence
 
-**Question:** A student says, "If we can't see dark matter, how do we know it exists?" Describe one piece of evidence.
+**Restatement:** Give one observational evidence for dark matter, stating what is measured and what is inferred.
 
-**Solution:**
+**Key elements a full answer should include:**
+- A specific observation (for example, galaxy rotation curves)
+- What is directly measured (for example, Doppler shifts and velocities)
+- The model used (gravity)
+- The inference (extra unseen mass)
 
-**One compelling piece of evidence: Galaxy rotation curves**
+**Sample response:**
+"From Doppler shifts of spectral lines, we measure how fast stars orbit at different radii in a galaxy. Using Newtonian gravity, we compute the mass needed to keep those stars in orbit. The required mass is far larger than the visible matter, so we infer a large amount of unseen mass, which we call dark matter."
 
-**What we measure:** The velocities of stars and gas at different distances from a galaxy's center, using the Doppler effect. When we spread the light into a spectrum, absorption lines appear shifted — redshifted if moving away, blueshifted if approaching.
-
-**What we find:** Stars in the outer regions of galaxies orbit at roughly the same speed as stars closer to the center. They don't slow down with distance.
-
-**What physics predicts without dark matter:** If most mass is concentrated in the visible center (where we see stars), orbital speed should decrease with distance — just like planets in our solar system (Mercury orbits faster than Neptune).
-
-**The inference:** For outer stars to orbit so fast, there must be much more mass than we can see — mass extending far beyond the visible galaxy. We call this invisible mass "dark matter."
-
-**The inference chain:**
-- Doppler shifts → stellar velocities (measurement)
-- Newton's gravity → mass required to explain velocities (model)
-- Mass required >> visible mass → dark matter exists (inference)
-
-**Key point:** We detect dark matter through its *gravitational effects* on things we can see — not by seeing dark matter itself.
+**Grading guidance:** Full credit must distinguish measurement from inference and reference the gravitational model; partial credit if any piece is missing.
 
 ---
 
-### Problem 14: Observable → Model → Inference
+### Problem 14: Observable  ->  Model  ->  Inference
 
-**Question:** A star's position on the sky changes periodically over several years. Using the Observable → Model → Inference pattern: (a) identify which observable is being measured, (b) explain what physical model connects this to unseen objects, and (c) state what you might infer about the star.
+**Restatement:** Use the Observable  ->  Model  ->  Inference pattern for a periodic position wobble.
 
-**Solution:**
+**Key elements a full answer should include:**
+- Observable: position (tracked over time)
+- Model: gravitational two-body orbit around a center of mass
+- Inference: an unseen companion and orbital properties
 
-**(a) Observable being measured:** **Position** (tracked over time via **Timing**)
+**Sample response:**
+"The observable is the star's position on the sky, measured repeatedly over time. The model is Newtonian gravity: if a star has a companion, both orbit their common center of mass, so the visible star wobbles. From the wobble's period and size, we infer an unseen companion and can estimate its orbital period and a lower limit on its mass."
 
-We measure the star's apparent location on the sky at multiple epochs and detect a periodic wobble in its position.
-
-**(b) Physical model:**
-
-Newton's laws of gravity and orbital mechanics. If a star has an unseen companion (planet or another star), both objects orbit their common center of mass. The visible star traces out a small orbit, appearing to wobble from our perspective. The wobble period equals the orbital period, and the wobble size depends on the companion's mass and orbital distance.
-
-**(c) What we infer:**
-
-The star has an **unseen companion** — most likely a planet or a dim stellar companion. From the period and amplitude of the wobble, we can infer:
-- The orbital period of the companion
-- A lower limit on the companion's mass
-- The shape (eccentricity) of the orbit
-
-**The complete inference chain:**
-- Position changes over time → periodic wobble (measurement)
-- Gravitational two-body problem → star orbits center of mass (model)
-- Wobble detected → unseen companion exists (inference)
-
-**Key insight:** We can detect objects we cannot see directly by observing their gravitational effects on objects we *can* see. This is how many exoplanets were first discovered (the "astrometric" method).
+**Grading guidance:** Full credit requires naming the observable, stating the gravity model, and making a clear inference about a companion.

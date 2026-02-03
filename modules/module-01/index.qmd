@@ -37,6 +37,14 @@ By the end of this module, you will be able to:
 :::
 :::
 
+## Solutions
+
+Solutions are posted for all practice problems. Homework uses a subset of these, but the full solutions are available for study and self-checking.
+
+- [Lecture 1 Solutions: Spoiler Alerts]({{< meta params.website-url >}}/modules/module-01/readings/lecture-01-spoiler-alerts-solutions.html)
+- [Lecture 2 Solutions: Math Survival Kit]({{< meta params.website-url >}}/modules/module-01/readings/lecture-02-foundations-solutions.html)
+- [Lecture 3 Solutions: The Sky Is a Map]({{< meta params.website-url >}}/modules/module-01/readings/lecture-03-sky-is-a-map-solutions.html)
+
 ## Lecture Slides
 
 ::: {.lecture-grid}

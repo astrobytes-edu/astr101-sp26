@@ -21,3 +21,11 @@ listing:
 {{< include ../_includes/hw-submission-instructions.qmd >}}
 
 Homework is one of the main ways you build the skills you need for exams: clear reasoning, careful units, and honest self-assessment.
+
+## Solutions
+
+Homework assignments use a **subset** of the practice problems from the lecture readings. The full solutions are posted so you can review and self-check now and later.
+
+- [Lecture 1 Solutions: Spoiler Alerts]({{< meta params.website-url >}}/modules/module-01/readings/lecture-01-spoiler-alerts-solutions.html)
+- [Lecture 2 Solutions: Math Survival Kit]({{< meta params.website-url >}}/modules/module-01/readings/lecture-02-foundations-solutions.html)
+- [Lecture 3 Solutions: The Sky Is a Map]({{< meta params.website-url >}}/modules/module-01/readings/lecture-03-sky-is-a-map-solutions.html)
