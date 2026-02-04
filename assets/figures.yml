@@ -789,6 +789,171 @@ figures:
     module: 1
 
   # ==============================================================
+  # Module 1: Cococubed figures (supplemental)
+  # ==============================================================
+
+  cococubed-center-of-mass-orbits:
+    path: /assets/images/module-01/cococubed/center_of_mass.svg
+    caption: "What to notice: both bodies orbit the shared center of mass, and the star’s orbit is smaller when it is more massive."
+    alt: "Diagram showing a star and a planet connected by a line with a marked center of mass between them; both bodies trace orbits around that point."
+    credit: "cococubed.com"
+    module: 1
+
+  cococubed-center-of-mass-location:
+    path: /assets/images/module-01/cococubed/center_of_mass1.svg
+    caption: "What to notice: the center of mass shifts toward the more massive body and can lie inside the star."
+    alt: "Two panels comparing center-of-mass location for a smaller star and for a much larger star; the center of mass moves closer to the larger body."
+    credit: "cococubed.com"
+    module: 1
+
+  cococubed-center-of-mass-examples:
+    path: /assets/images/module-01/cococubed/center_of_mass2.svg
+    caption: "What to notice: equal masses place the center of mass halfway; unequal masses move it toward the larger body."
+    alt: "Three panels showing the center of mass for equal-mass stars, a 2M star with an M companion, and a star with a small planet where the center lies inside the star."
+    credit: "cococubed.com"
+    module: 1
+
+  cococubed-angular-momentum-orbit:
+    path: /assets/images/module-01/cococubed/conservation_angular_momentum_01.svg
+    caption: "What to notice: when distance r is larger, speed v is smaller so angular momentum stays constant along the orbit."
+    alt: "Elliptical orbit with a star at one focus, showing larger r with smaller v and smaller r with larger v, emphasizing angular momentum conservation."
+    credit: "cococubed.com"
+    module: 1
+
+  cococubed-orbit-energy-conservation:
+    path: /assets/images/module-01/cococubed/conservation_energy_orbit.svg
+    caption: "What to notice: as r decreases, kinetic energy increases while gravitational potential energy decreases so total energy stays constant."
+    alt: "Elliptical orbit labeled with larger r and slower speed on one side and smaller r with faster speed on the other, illustrating energy exchange."
+    credit: "cococubed.com"
+    module: 1
+
+  cococubed-momentum-collision:
+    path: /assets/images/module-01/cococubed/conservation_momentum_01.svg
+    caption: "What to notice: momentum transfers between objects during a collision while total momentum is conserved."
+    alt: "Before-and-after collision diagram: a moving ball strikes a stationary ball, and after collision the second ball moves while the first stops."
+    credit: "cococubed.com"
+    module: 1
+
+  cococubed-coriolis-disk:
+    path: /assets/images/module-01/cococubed/coriolis_effect.svg
+    caption: "What to notice: on a rotating disk, motion appears to curve because different radii have different tangential speeds."
+    alt: "Rotating disk with balls moving inward and outward, showing curved paths relative to the rotation due to differing linear speeds."
+    credit: "cococubed.com"
+    module: 1
+
+  cococubed-escape-velocity-rocket:
+    path: /assets/images/module-01/cococubed/escape_velocity.svg
+    caption: "What to notice: adding energy raises an orbit, and enough energy produces an escape trajectory."
+    alt: "Earth with a rocket in low orbit, a higher elliptical orbit after a burn, and an open escape path after a stronger burn."
+    credit: "cococubed.com"
+    module: 1
+
+  cococubed-falling-to-orbit:
+    path: /assets/images/module-01/cococubed/falling_toward_earth_to_orbit.svg
+    caption: "What to notice: increasing sideways speed makes the fall land farther away; enough speed produces a circular orbit."
+    alt: "Earth with a tower and multiple trajectories showing a person falling closer or farther and eventually orbiting with sufficient sideways speed."
+    credit: "cococubed.com"
+    module: 1
+
+  cococubed-falling-to-orbit-trajectories:
+    path: /assets/images/module-01/cococubed/falling_toward_earth_to_orbit02.svg
+    caption: "What to notice: all trajectories curve toward Earth’s center; fast enough yields orbit or escape."
+    alt: "Multiple projectile paths around Earth showing impacts, bound orbits, and unbound escape trajectories."
+    credit: "cococubed.com"
+    module: 1
+
+  cococubed-kepler-first-law:
+    path: /assets/images/module-01/cococubed/first_law.svg
+    caption: "What to notice: an orbit is an ellipse with the Sun at one focus; the semimajor axis sets the size."
+    alt: "Elliptical orbit labeled aphelion and perihelion with the Sun at one focus and the semimajor axis marked."
+    credit: "cococubed.com"
+    module: 1
+
+  cococubed-gravity-curved-space:
+    path: /assets/images/module-01/cococubed/gravity_as_curved_space.svg
+    caption: "What to notice: Newton’s inverse-square law and Einstein’s curved spacetime are two descriptions of gravity, with different domains of use."
+    alt: "Split illustration with a Newtonian orbit and F = G m1 m2 / r^2 on the left and a curved spacetime grid with Einstein’s field equation on the right."
+    credit: "cococubed.com"
+    module: 1
+
+  cococubed-gravity-law:
+    path: /assets/images/module-01/cococubed/gravity_law.svg
+    caption: "What to notice: gravitational force depends on both masses and decreases with distance squared."
+    alt: "Two masses labeled M1 and M2 separated by distance d with the formula F = G M1 M2 / d^2 shown between them."
+    credit: "cococubed.com"
+    module: 1
+
+  cococubed-moon-falling:
+    path: /assets/images/module-01/cococubed/moon_falling.svg
+    caption: "What to notice: gravity pulls inward while velocity points sideways, producing an elliptical orbit."
+    alt: "Earth with a Moon moving along an elliptical path, showing tangent velocity arrows and inward gravitational force arrows."
+    credit: "cococubed.com"
+    module: 1
+
+  cococubed-ball-on-string:
+    path: /assets/images/module-01/cococubed/newton_ball_on_string.svg
+    caption: "What to notice: without inward force, circular motion becomes straight-line motion at constant velocity."
+    alt: "Two panels: a ball on a string moving in a circle with an inward force, and after the string breaks the ball moves straight."
+    credit: "cococubed.com"
+    module: 1
+
+  cococubed-orbit-types-simple:
+    path: /assets/images/module-01/cococubed/orbit_types.svg
+    caption: "What to notice: bound orbits are elliptical; escape paths are parabolic or hyperbolic."
+    alt: "Central mass with three trajectory types labeled bound elliptical, unbound parabolic, and unbound hyperbolic."
+    credit: "cococubed.com"
+    module: 1
+
+  cococubed-planet-orbits:
+    path: /assets/images/module-01/cococubed/planet_orbits2.svg
+    caption: "What to notice: the planets share nearly coplanar orbits, and the outer planets occupy much larger scales."
+    alt: "Diagram of the Solar System showing labeled planetary orbits with inner and outer planet scales shown separately."
+    credit: "cococubed.com"
+    module: 1
+
+  cococubed-retrograde-heliocentric:
+    path: /assets/images/module-01/cococubed/retrograde_heliocentric.svg
+    caption: "What to notice: apparent retrograde motion comes from Earth overtaking Mars in their heliocentric orbits."
+    alt: "Heliocentric diagram of Earth and Mars orbits with numbered positions and the apparent retrograde path of Mars against background stars."
+    credit: "cococubed.com"
+    module: 1
+
+  cococubed-rotation-curve-solar-system:
+    path: /assets/images/module-01/cococubed/rotation_curve_b.svg
+    caption: "What to notice: in the Solar System, orbital speed decreases with distance, following a Keplerian decline."
+    alt: "Plot of orbital speed versus mean distance from the Sun in AU with labeled planets and a downward-sloping curve."
+    credit: "cococubed.com"
+    module: 1
+
+  cococubed-kepler-second-law:
+    path: /assets/images/module-01/cococubed/second_law.svg
+    caption: "What to notice: equal areas are swept in equal times even though the shape of the swept region changes."
+    alt: "Elliptical orbit with two red swept areas at perihelion and aphelion labeled as equal for the same time interval."
+    credit: "cococubed.com"
+    module: 1
+
+  cococubed-tides-force-vectors:
+    path: /assets/images/module-01/cococubed/tides_force_vectors.svg
+    caption: "What to notice: the Moon’s gravity is stronger on the near side and weaker on the far side, stretching Earth into tidal bulges."
+    alt: "Earth with tidal bulge shading and gravity arrows pointing toward the Moon, which is shown to the right."
+    credit: "cococubed.com"
+    module: 1
+
+  cococubed-conic-sections:
+    path: /assets/images/module-01/cococubed/types_of_orbits.svg
+    caption: "What to notice: conic sections classify orbit types — circles and ellipses are bound; parabolas and hyperbolas are unbound."
+    alt: "Two-part diagram showing orbit curves around a planet and a cone section graphic labeling circle, ellipse, parabola, and hyperbola."
+    credit: "cococubed.com"
+    module: 1
+
+  cococubed-venus-geocentric-100yr:
+    path: /assets/images/module-01/cococubed/venus_orbit_geocentric_100year.svg
+    caption: "What to notice: Venus traces a repeating multi-lobed pattern in geocentric coordinates over long timescales."
+    alt: "Plot of Venus position in geocentric coordinates over 100 years, forming a flower-like pattern centered near the origin."
+    credit: "cococubed.com"
+    module: 1
+
+  # ==============================================================
   # Lecture 03: Sky Is a Map
   # ==============================================================
 

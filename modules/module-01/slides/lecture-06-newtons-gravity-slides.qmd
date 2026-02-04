@@ -219,6 +219,10 @@ $$\vec{F}_{net} = m\vec{a}$$
 **Mass tells matter how much to resist.**
 :::
 
+::: {.fragment .mt-2 .text-muted}
+A **vector** has magnitude **and** direction. The arrows show direction.
+:::
+
 ::: {.fragment .mt-3 .text-muted}
 Units: force in N, mass in kg, acceleration in $\mathrm{m/s^2}$.
 :::
@@ -1036,6 +1040,18 @@ We'll learn to decode what light tells us:
 
 ::: {.notes}
 Leave time for questions before optional appendices.
+:::
+
+---
+
+## {.center}
+
+::: {.r-fit-text}
+Appendix: Optional Numericals
+:::
+
+::: {.text-muted .text-center .mt-3}
+Use as backup or post-lecture reference.
 :::
 
 ---

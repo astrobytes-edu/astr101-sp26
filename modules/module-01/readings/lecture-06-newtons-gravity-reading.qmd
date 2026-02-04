@@ -46,7 +46,7 @@ This reading gives you the **physics behind Kepler's patterns**. You'll want Lec
 - Orbital velocity derivation
 - Detailed explanations of each Kepler law
 
-**Connection to Lecture 5:** This reading directly answers the "why" questions from Kepler's laws. The transition from empirical → physical is the key conceptual shift.
+**Connection to Lecture 5:** This reading directly answers the "why" questions from Kepler's laws. The transition from empirical $\to$ physical is the key conceptual shift.
 :::
 
 ::: {.callout-tip title="Newton in 60 Seconds (3 Key Takeaways)" collapse="true"}
@@ -54,7 +54,7 @@ If you only remember three things:
 
 1. **Newton's Three Laws:** (1) Objects stay in motion unless a *net* force acts, (2) $\vec{F}_{net} = m\vec{a}$, (3) forces come in equal-opposite pairs.
 
-2. **Universal Gravitation:** $F = GMm/r^2$ — same equation works for apples, moons, and planets. "Inverse-square" means double distance → 1/4 the force.
+2. **Universal Gravitation:** $F = GMm/r^2$ — same equation works for apples, moons, and planets. "Inverse-square" means double distance $\to$ 1/4 the force.
 
 3. **The Payoff:** By measuring orbits, we can calculate mass — that's how we "weigh" the Sun, black holes, and galaxies.
 
@@ -209,9 +209,9 @@ The arrows indicate that force and acceleration are **vectors** — they have bo
 
 | Symbol | Quantity | What it measures | SI Units |
 |--------|----------|------------------|----------|
-| $F_{net}$ | Net force | The total push/pull on an object (vector sum) | Newtons (N) = kg·m/s² |
+| $F_{net}$ | Net force | The total push/pull on an object (vector sum) | Newtons (N) = $\mathrm{kg\,m/s^2}$ |
 | $m$ | Mass | Amount of matter; resistance to acceleration | kilograms (kg) |
-| $a$ | Acceleration | Rate of change of velocity (vector) | m/s² |
+| $a$ | Acceleration | Rate of change of velocity (vector) | $\mathrm{m/s^2}$ |
 
 ::: {.column-margin}
 **Force:** A push or pull that causes acceleration; a vector quantity.
@@ -225,8 +225,8 @@ The arrows indicate that force and acceleration are **vectors** — they have bo
 
 **Net force tells matter how to accelerate. Mass tells matter how much to resist.**
 
-- More net force → more acceleration
-- More mass → less acceleration (for the same force)
+- More net force $\to$ more acceleration
+- More mass $\to$ less acceleration (for the same force)
 
 Push a shopping cart and it accelerates easily. Push a car with the same force and it barely budges. The car has more mass — more resistance to acceleration.
 
@@ -261,14 +261,14 @@ Two people push on opposite sides of a box with equal force. What is the box's a
 ### Critical Insight: Acceleration Includes Direction Changes
 
 ::: {.callout-warning title="Key Insight"}
-**Constant speed does NOT mean constant velocity.** Direction changes → velocity changes → acceleration.
+**Constant speed does NOT mean constant velocity.** Direction changes $\to$ velocity changes $\to$ acceleration.
 :::
 
 Students often think acceleration only means "speeding up." But velocity is a **vector** — it has both speed (how fast) and direction (which way). Acceleration happens whenever *either* changes:
 
-- Speeding up → acceleration ✓
-- Slowing down → acceleration ✓
-- **Changing direction at constant speed → acceleration ✓**
+- Speeding up $\to$ acceleration ✓
+- Slowing down $\to$ acceleration ✓
+- **Changing direction at constant speed $\to$ acceleration ✓**
 
 This surprises people. A car driving around a curve at constant speedometer reading is accelerating — because its direction is changing. And by $F = ma$, that acceleration requires a net force.
 
@@ -315,9 +315,9 @@ This acceleration points **toward the center** of the circle.
 
 The formula tells us how "hard" it is to maintain circular motion:
 
-- **Faster speed** → direction changes more rapidly → **larger acceleration** (and it scales as $v^2$!)
-- **Larger radius** → gentler curve → **smaller acceleration**
-- **Tighter turn at high speed** → very large acceleration
+- **Faster speed** $\to$ direction changes more rapidly $\to$ **larger acceleration** (and it scales as $v^2$!)
+- **Larger radius** $\to$ gentler curve $\to$ **smaller acceleration**
+- **Tighter turn at high speed** $\to$ very large acceleration
 
 This is why race cars have to slow down for tight turns — the required acceleration would be enormous otherwise.
 
@@ -372,9 +372,9 @@ If object A exerts a force on object B, then B exerts a force on A with equal ma
 
 ### Examples
 
-- You push on the ground → the ground pushes back on you (that's how walking works)
-- Earth pulls on the Moon → the Moon pulls on Earth
-- Sun pulls on Jupiter → Jupiter pulls on the Sun
+- You push on the ground $\to$ the ground pushes back on you (that's how walking works)
+- Earth pulls on the Moon $\to$ the Moon pulls on Earth
+- Sun pulls on Jupiter $\to$ Jupiter pulls on the Sun
 
 ### Why You Don't Fly When You Push a Wall
 
@@ -422,7 +422,7 @@ $$F_g = \frac{Gm_1m_2}{r^2}$$
 
 where:
 
-- $G = 6.67 \times 10^{-11}$ N·m²/kg² (gravitational constant)
+- $G = 6.67 \times 10^{-11}\ \mathrm{N\,m^2/kg^2}$ (gravitational constant)
 - $m_1$ and $m_2$ are the two masses (kg)
 - $r$ is the distance between their centers (m)
 :::
@@ -481,7 +481,7 @@ The "$r^2$ in the denominator" is profound:
 |-----------------|--------------|
 | Double the distance | Force drops to 1/4 |
 | Triple the distance | Force drops to 1/9 |
-| 10× the distance | Force drops to 1/100 |
+| $10\times$ the distance | Force drops to $1/100$ |
 
 ### What Does "Inverse-Square" Actually Mean?
 
@@ -491,13 +491,13 @@ The term can be confusing. Here's the breakdown:
 - **"Square"** means distance is raised to the second power
 - So $1/r^2$ means: square the distance, then take the reciprocal
 
-If $r$ doubles (×2), then $r^2$ quadruples (×4), so $1/r^2$ becomes 1/4.
+If $r$ doubles ($2\times$), then $r^2$ quadruples ($4\times$), so $1/r^2$ becomes $1/4$.
 
 ### Physical Intuition: The Sphere Area Connection
 
 **Analogy: Light spreading from a flashlight**
 
-Imagine light spreading from a point source. At twice the distance, the same amount of light spreads over a sphere with 4× the surface area. Why? Because the surface area of a sphere is $4\pi r^2$ — it grows like $r^2$.
+Imagine light spreading from a point source. At twice the distance, the same amount of light spreads over a sphere with $4\times$ the surface area. Why? Because the surface area of a sphere is $4\pi r^2$ — it grows like $r^2$.
 
 Any given spot receives 1/4 the intensity at twice the distance.
 
@@ -517,7 +517,7 @@ The Moon is about 60 Earth radii from Earth's center. Compared to gravitational 
 :::
 
 ::: {.callout-tip title="Solution" collapse="true"}
-**C) 3,600 times weaker.** By the inverse-square law: at 60× the distance, gravitational acceleration is $1/60^2 = 1/3600$ as strong. The Moon experiences only about 0.03% of the gravitational acceleration you feel standing on Earth's surface — but that's still enough to keep it in orbit!
+**C) 3,600 times weaker.** By the inverse-square law: at $60\times$ the distance, gravitational acceleration is $1/60^2 = 1/3600$ as strong. The Moon experiences only about 0.03% of the gravitational acceleration you feel standing on Earth's surface — but that's still enough to keep it in orbit!
 
 This was actually Newton's key test — he computed this and checked whether 1/3600 of surface gravity was enough to curve the Moon's path. It was.
 :::
@@ -560,7 +560,7 @@ When you're standing still (no vertical acceleration), these match: $N = mg$.
 
 **Key insight:** Mass stays the same everywhere. Gravity changes with location. And what you *feel* as "weight" is the floor's push on you (the normal force).
 
-On the Moon (where $g_{Moon} \approx 1.6$ m/s²), your scale reading would be about 1/6 as much, but your mass would be unchanged.
+On the Moon (where $g_{Moon} \approx 1.6\ \mathrm{m/s^2}$), your scale reading would be about 1/6 as much, but your mass would be unchanged.
 
 ::: {.callout-check-yourself title="Check Yourself 8 — Mass vs. Weight"}
 An astronaut has a mass of 70 kg on Earth. On the Moon (where gravity is about 1/6 as strong), their:
@@ -634,8 +634,8 @@ Here's where it all comes together. Newton didn't just describe gravity — he s
 
 | Kepler's Law | Newton's Explanation | Requires inverse-square? |
 |--------------|---------------------|-------------------------|
-| Orbits are ellipses | Inverse-square central force → conic sections | **Yes** |
-| Equal areas in equal times | Central force → angular momentum conserved | No — any central force |
+| Orbits are ellipses | Inverse-square central force $\to$ conic sections | **Yes** |
+| Equal areas in equal times | Central force $\to$ angular momentum conserved | No — any central force |
 | $P^2 \propto a^3$ | Inverse-square gives this exponent | **Yes** |
 
 This is the transition from **empirical** (patterns) to **physical** (mechanisms). Kepler said "here's what happens." Newton said "here's why it must happen."
@@ -699,7 +699,7 @@ Angular momentum combines two things: **how far** you are from the center ($r$) 
 
 $$L = m r v_t$$
 
-If $L$ stays constant and $r$ gets smaller, $v_t$ must get larger. **Closer → faster. Farther → slower.**
+If $L$ stays constant and $r$ gets smaller, $v_t$ must get larger. **Closer $\to$ faster. Farther $\to$ slower.**
 
 **The ice skater analogy (callback from Lecture 5):** When an ice skater pulls their arms in, they spin faster. When they extend their arms, they spin slower. The rotational motion is conserved — it just gets concentrated in a smaller space or spread over a larger one.
 
@@ -778,9 +778,9 @@ When $M \gg m$ (central body much more massive than orbiter):
 
 $$M \approx \frac{4\pi^2 a^3}{G P^2}$$
 
-**Translation:** Measure orbital period and distance → Calculate the central mass
+**Translation:** Measure orbital period and distance $\to$ Calculate the central mass
 
-::: {.callout-note title="Observable → Model → Inference: Weighing the Sun"}
+::: {.callout-note title="Observable $\to$ Model $\to$ Inference: Weighing the Sun"}
 **Observable:** Earth's orbital period is 1 year, and its orbital distance (semi-major axis) is 1 AU. (Timing + Position observations)
 
 **Model:** Newton's version of Kepler III: $M = 4\pi^2 a^3 / (GP^2)$
@@ -809,7 +809,7 @@ How do astronomers determine the mass of the Sun?
 :::
 
 ::: {.callout-tip title="Solution" collapse="true"}
-**B) By measuring Earth's orbital period and distance.** Using Newton's version of Kepler's Third Law, knowing Earth's orbital radius (1 AU) and period (1 year), we can calculate the Sun's mass. The formula is $M = 4\pi^2 a^3/(GP^2)$. This works for any central body: measure the orbit of something around it → calculate mass.
+**B) By measuring Earth's orbital period and distance.** Using Newton's version of Kepler's Third Law, knowing Earth's orbital radius (1 AU) and period (1 year), we can calculate the Sun's mass. The formula is $M = 4\pi^2 a^3/(GP^2)$. This works for any central body: measure the orbit of something around it $\to$ calculate mass.
 
 We'll use this technique throughout the course to "weigh" stars, galaxies, and even black holes.
 :::
@@ -883,7 +883,7 @@ From $P^2 = a^3/M_{total}$: If $M$ doubles, $P^2$ becomes half as large, so $P$ 
 
 1. Select **Equal Mass** binary preset (1 $M_\odot$ + 1 $M_\odot$)
 2. Note the orbital period
-3. Drag the **M₁** slider to 2.0 M☉ (now 2 + 1 = 3 M☉ total)
+3. Drag the **$M_1$** slider to 2.0 $M_\odot$ (now 2 + 1 = 3 $M_\odot$ total)
 4. Compare the new period to the original
 
 | Configuration | Total Mass | Period | $P^2$ |
@@ -892,7 +892,7 @@ From $P^2 = a^3/M_{total}$: If $M$ doubles, $P^2$ becomes half as large, so $P$ 
 | 2 + 1 $M_\odot$ | 3 $M_\odot$ | | |
 
 ::: {.callout-tip title="What You Should Have Found" collapse="true"}
-Increasing total mass → shorter period. More mass = stronger gravity = faster orbits.
+Increasing total mass $\to$ shorter period. More mass = stronger gravity = faster orbits.
 
 **Claim:** $P^2 \propto 1/M_{total}$ at fixed separation. This is Newton's version of Kepler III.
 
@@ -949,17 +949,17 @@ $$v_{orb} = \sqrt{\frac{GM}{r}}$$
 
 ### Physical Interpretation
 
-- Larger central mass $M$ → stronger gravity → must orbit **faster**
-- Larger orbital radius $r$ → weaker gravity → can orbit **slower**
+- Larger central mass $M$ $\to$ stronger gravity $\to$ must orbit **faster**
+- Larger orbital radius $r$ $\to$ weaker gravity $\to$ can orbit **slower**
 - The orbiting object's mass **doesn't matter**!
 
-This last point is remarkable. A satellite and a space station at the same altitude orbit at the same speed, even if one is 1000× more massive.
+This last point is remarkable. A satellite and a space station at the same altitude orbit at the same speed, even if one is $1000\times$ more massive.
 
 ### Example: Earth's Orbital Speed
 
 - $M_{Sun} = 2 \times 10^{30}$ kg
 - $r = 1.5 \times 10^{11}$ m (1 AU)
-- $G = 6.67 \times 10^{-11}$ N·m²/kg²
+- $G = 6.67 \times 10^{-11}\ \mathrm{N\,m^2/kg^2}$
 
 $$v = \sqrt{\frac{(6.67 \times 10^{-11})(2 \times 10^{30})}{1.5 \times 10^{11}}} \approx 30{,}000 \text{ m/s} = 30 \text{ km/s}$$
 
@@ -1009,9 +1009,9 @@ The gravitational tools we've developed are the foundation for nearly everything
 
 **Module 1 (remaining):** We'll use spectra to measure velocities (Doppler effect) — which feeds into orbital mass determinations.
 
-**Module 2 (Stars):** Binary star orbits → stellar masses. Escape velocity → understanding black holes. Hydrostatic equilibrium → stellar structure.
+**Module 2 (Stars):** Binary star orbits $\to$ stellar masses. Escape velocity $\to$ understanding black holes. Hydrostatic equilibrium $\to$ stellar structure.
 
-**Module 3 (Galaxies):** Galaxy rotation curves → dark matter. Cosmic expansion → the fate of the universe.
+**Module 3 (Galaxies):** Galaxy rotation curves $\to$ dark matter. Cosmic expansion $\to$ the fate of the universe.
 
 Every time we measure a mass in astronomy, we're using Newton's insight: **motion reveals mass**.
 
@@ -1025,18 +1025,18 @@ Every time we measure a mass in astronomy, we're using Newton's insight: **motio
 
 2. **Objects in circular motion are accelerating** (direction changes), requiring centripetal force: $F_c = mv^2/r$
 
-3. **Newton's Law of Gravitation:** $F = GMm/r^2$ — every mass attracts every other mass, with force decreasing as distance²
+3. **Newton's Law of Gravitation:** $F = GMm/r^2$ — every mass attracts every other mass, with force decreasing as distance squared ($r^2$)
 
 4. **Mass vs. Weight:** Mass (inertia) stays constant everywhere. Gravity depends on location ($F_g = mg$), and your *apparent weight* is the normal force (scale reading).
 
 5. **Astronauts float because they're in free fall** (microgravity), not because gravity is absent (~90% of surface gravity at ISS altitude!)
 
 6. **Newton explains all of Kepler's laws:**
-   - Ellipses → from inverse-square central force
-   - Equal areas → from angular momentum conservation (any central force)
-   - $P^2 \propto a^3$ → requires inverse-square; constant reveals mass
+   - Ellipses $\to$ from inverse-square central force
+   - Equal areas $\to$ from angular momentum conservation (any central force)
+   - $P^2 \propto a^3$ $\to$ requires inverse-square; constant reveals mass
 
-7. **Orbits reveal mass:** Measure period and distance → calculate central mass using $M = 4\pi^2 a^3/(GP^2)$
+7. **Orbits reveal mass:** Measure period and distance $\to$ calculate central mass using $M = 4\pi^2 a^3/(GP^2)$
 :::
 
 ---
@@ -1047,11 +1047,11 @@ Every time we measure a mass in astronomy, we're using Newton's insight: **motio
 
 **1. Newton's First Law:** A probe is coasting through interstellar space at 50 km/s. Its fuel tanks are empty. Describe its motion for the next million years, assuming negligible gravitational effects from distant objects.
 
-**2. Newton's Second Law:** A 1000 kg car accelerates at 3 m/s². What net force is acting on it?
+**2. Newton's Second Law:** A 1000 kg car accelerates at $3\ \mathrm{m/s^2}$. What net force is acting on it?
 
 **3. Inverse-Square:** At what distance from Earth's center would gravitational acceleration be 1/4 as strong as at the surface? (Earth's radius = 6,370 km)
 
-**4. Mass vs. Weight:** Your mass is 70 kg. What is the gravitational force on you on Earth (in newtons)? On the Moon where $g \approx 1.6$ m/s²? Does your mass change?
+**4. Mass vs. Weight:** Your mass is 70 kg. What is the gravitational force on you on Earth (in newtons)? On the Moon where $g \approx 1.6\ \mathrm{m/s^2}$? Does your mass change?
 
 **5. Weightlessness:** Explain why astronauts on the ISS appear weightless, even though gravity there is about 90% as strong as on Earth's surface.
 
