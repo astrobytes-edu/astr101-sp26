@@ -111,13 +111,84 @@ local function normalize_yaml_value(value)
   return value
 end
 
+local function path_join(a, b)
+  if not a or a == "" then return b end
+  if not b or b == "" then return a end
+  local last = a:sub(-1)
+  if last == "/" or last == "\\" then
+    return a .. b
+  end
+  return a .. "/" .. b
+end
+
+local function file_exists(path)
+  local f = io.open(path, "r")
+  if f then
+    f:close()
+    return true
+  end
+  return false
+end
+
+local function resolve_project_dir()
+  local env = os.getenv("QUARTO_PROJECT_DIR")
+  if env and env ~= "" then
+    return env
+  end
+
+  local cwd = nil
+  if pandoc and pandoc.system and pandoc.system.get_working_directory then
+    cwd = pandoc.system.get_working_directory()
+    if cwd and cwd ~= "" then
+      local cwd_quarto = path_join(cwd, "_quarto.yml")
+      if file_exists(cwd_quarto) then
+        return cwd
+      end
+    end
+  end
+
+  local input_file = nil
+  if PANDOC_STATE and PANDOC_STATE.input_files and #PANDOC_STATE.input_files > 0 then
+    input_file = PANDOC_STATE.input_files[1]
+  end
+
+  if not input_file or input_file == "" then
+    return "."
+  end
+
+  local dir = pandoc.path.directory(input_file)
+  if not dir or dir == "" then
+    return "."
+  end
+
+  local guard = 0
+  while dir and dir ~= "" and guard < 25 do
+    local candidate = path_join(dir, "_quarto.yml")
+    if file_exists(candidate) then
+      return dir
+    end
+    local parent = pandoc.path.directory(dir)
+    if parent == dir or parent == "" then
+      break
+    end
+    dir = parent
+    guard = guard + 1
+  end
+
+  if cwd and cwd ~= "" then
+    return cwd
+  end
+
+  return "."
+end
+
 -- Helper function to parse figure data from YAML file
 local function load_figure_registry()
   local registry = {}
 
   -- Try to find the figures.yml file from project root
   -- Quarto sets QUARTO_PROJECT_DIR when running
-  local project_dir = os.getenv("QUARTO_PROJECT_DIR") or "."
+  local project_dir = resolve_project_dir()
   local registry_path = project_dir .. "/assets/figures.yml"
 
   local f = io.open(registry_path, "r")
@@ -171,7 +242,7 @@ end
 local _project_offset_cache = nil
 
 local function compute_project_offset()
-  local project_dir = os.getenv("QUARTO_PROJECT_DIR") or "."
+  local project_dir = resolve_project_dir()
 
   local input_file = nil
   if PANDOC_STATE and PANDOC_STATE.input_files and #PANDOC_STATE.input_files > 0 then
@@ -238,7 +309,7 @@ end
 local function load_media_registry()
   local registry = {}
 
-  local project_dir = os.getenv("QUARTO_PROJECT_DIR") or "."
+  local project_dir = resolve_project_dir()
   local registry_path = project_dir .. "/assets/media.yml"
 
   local f = io.open(registry_path, "r")
@@ -642,7 +713,7 @@ end
 -- Load eqcards.yml (meaning scaffolds)
 local function load_eqcards()
   local cards = {}
-  local project_dir = os.getenv("QUARTO_PROJECT_DIR") or "."
+  local project_dir = resolve_project_dir()
   local path = project_dir .. "/data/eqcards.yml"
 
   local f = io.open(path, "r")
@@ -697,7 +768,7 @@ end
 -- Load equations.yml (registry)
 local function load_equations()
   local eqs = {}
-  local project_dir = os.getenv("QUARTO_PROJECT_DIR") or "."
+  local project_dir = resolve_project_dir()
   local path = project_dir .. "/data/equations.yml"
 
   local f = io.open(path, "r")
@@ -934,7 +1005,7 @@ end
 -- Load glossary.yml
 local function load_glossary()
   local terms = {}
-  local project_dir = os.getenv("QUARTO_PROJECT_DIR") or "."
+  local project_dir = resolve_project_dir()
   local path = project_dir .. "/data/glossary.yml"
 
   local f = io.open(path, "r")

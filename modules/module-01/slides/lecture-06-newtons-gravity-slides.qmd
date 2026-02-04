@@ -93,9 +93,32 @@ That combination of falling + moving sideways is what we call an **orbit**.
 
 ---
 
+## The Moon's Orbit: Velocity + Inward Force
+
+:::: {.columns}
+::: {.column width="45%"}
+Two ideas at once:
+
+- **Sideways velocity** carries the Moon forward
+- **Gravity** pulls inward
+
+The path curves because both happen **continuously**.
+:::
+
+::: {.column width="55%"}
+{{< img cococubed-moon-falling width="100%" >}}
+:::
+::::
+
+::: {.notes}
+Use the force/velocity arrows to explain why the Moon keeps missing Earth.
+:::
+
+---
+
 ## Newton's Cannon
 
-{{< fig newtons-cannon >}}
+{{< img cococubed-falling-to-orbit-trajectories width="100%" >}}
 
 ::: {.fragment .mt-2 .text-muted .text-center}
 Fire fast enough to fall *around* Earth instead of hitting it.
@@ -247,7 +270,7 @@ More mass, less acceleration.
 
 ---
 
-## Quick Check: F = ma
+## Quick Check: F = ma {.quiz-question}
 
 The same force is applied to a bowling ball and a tennis ball. Which experiences greater acceleration?
 
@@ -286,7 +309,7 @@ A planet moving in a circle at constant speed **is accelerating** because its di
 
 ---
 
-## Quick Check: Circular Motion
+## Quick Check: Circular Motion {.quiz-question}
 
 A car drives around a circular track at a constant speedometer reading of 60 mph. Is the car accelerating?
 
@@ -341,7 +364,27 @@ It's whatever force happens to be pulling the object toward the center:
 
 ---
 
-## Quick Check: Centripetal Force
+## Circular Motion Needs an Inward Force
+
+:::: {.columns}
+::: {.column width="45%"}
+If the inward force **vanishes**, the object keeps moving straight.
+
+That is Newton's First Law in action.
+:::
+
+::: {.column width="55%"}
+{{< img cococubed-ball-on-string width="100%" >}}
+:::
+::::
+
+::: {.notes}
+Shows why inward force is required for circular motion.
+:::
+
+---
+
+## Quick Check: Centripetal Force {.quiz-question}
 
 A planet orbits the Sun in a nearly circular orbit. What force provides the centripetal acceleration?
 
@@ -398,7 +441,27 @@ This tiny stellar wobble is **one major way** we detect exoplanets!
 
 ---
 
-## Quick Check: Third Law
+## Center of Mass: The Real Pivot Point
+
+:::: {.columns}
+::: {.column width="45%"}
+The **center of mass** is the balance point of a system. If you could put your finger exactly there, the system would not tip.
+
+For a star–planet pair, **both objects orbit this point**, not each other. The more massive object sits closer to it, so its orbit is smaller — that is the **wobble** we detect.
+:::
+
+::: {.column width="55%"}
+{{< img cococubed-center-of-mass-orbits width="100%" >}}
+:::
+::::
+
+::: {.notes}
+Tie directly to stellar wobble and exoplanet detection.
+:::
+
+---
+
+## Quick Check: Third Law {.quiz-question}
 
 Earth exerts a gravitational force on the Moon. The Moon exerts a force on Earth that is:
 
@@ -423,31 +486,13 @@ Part 2: Universal Gravitation
 
 ---
 
-## Predict First!
+## Predict First! {.quiz-question}
 
-::: {.text-center .text-xl}
 If you **double** your distance from Earth's center, gravity becomes...
-:::
 
-:::: {.columns .mt-4}
-::: {.column width="33%"}
-::: {.fragment}
-A) 1/2 as strong
-:::
-:::
-
-::: {.column width="33%"}
-::: {.fragment}
-B) 1/4 as strong
-:::
-:::
-
-::: {.column width="33%"}
-::: {.fragment}
-C) 1/8 as strong
-:::
-:::
-::::
+- 1/2 as strong
+- [1/4 as strong]{.correct}
+- 1/8 as strong
 
 ::: {.notes}
 30 sec. Have students vote before revealing.
@@ -477,12 +522,25 @@ Assumptions (briefly): works well when objects act like point masses / spherical
 
 ---
 
-## {.center}
+## The Gravity Equation in Pictures
 
-{{< fig gravity-equation-visual >}}
+:::: {.columns}
+::: {.column width="45%"}
+Gravity depends on:
+
+- **Both masses** ($m_1, m_2$)
+- **Distance squared** ($r^2$)
+
+Closer or more massive means **stronger** force.
+:::
+
+::: {.column width="55%"}
+{{< img cococubed-gravity-law width="100%" >}}
+:::
+::::
 
 ::: {.notes}
-14–15 min. Let the visual speak.
+14–15 min. Tie each symbol to a part of the image.
 :::
 
 ---
@@ -506,9 +564,19 @@ Physical intuition: sphere area grows like $r^2$, so effect per area drops like 
 
 ---
 
-## {.center}
+## Why Inverse-Square?
 
+:::: {.columns}
+::: {.column width="45%"}
+As distance grows, the same influence spreads over a larger **sphere**.
+
+Area grows like $r^2$, so strength drops like $1/r^2$.
+:::
+
+::: {.column width="55%"}
 {{< fig inverse-square-diagram >}}
+:::
+::::
 
 ::: {.notes}
 16–17 min. Visual explanation of inverse-square spreading.
@@ -516,7 +584,7 @@ Physical intuition: sphere area grows like $r^2$, so effect per area drops like 
 
 ---
 
-## Quick Check: Inverse-Square
+## Quick Check: Inverse-Square {.quiz-question}
 
 The Moon is about 60 Earth radii from Earth's center. The Moon experiences gravitational acceleration that is:
 
@@ -556,7 +624,7 @@ Mass vs. Weight
 
 ---
 
-## Quick Check: Mass vs. Weight
+## Quick Check: Mass vs. Weight {.quiz-question}
 
 An astronaut has mass 70 kg on Earth. On the Moon (about $1/6$ of Earth's $g$), their:
 
@@ -621,9 +689,19 @@ That means **no sensation of weight**.
 
 ---
 
-## {.center}
+## Free Fall Feels Weightless
 
+:::: {.columns}
+::: {.column width="45%"}
+You feel weight when a surface **pushes back** on you.
+
+In orbit, everything falls together, so there is **no push**.
+:::
+
+::: {.column width="55%"}
 {{< fig free-fall-astronaut >}}
+:::
+::::
 
 ::: {.fragment .mt-2 .text-muted .text-center}
 **Free fall = apparent weightlessness**
@@ -637,7 +715,7 @@ Not because gravity is gone — because everything is falling together.
 
 ---
 
-## Quick Check: Weightlessness
+## Quick Check: Weightlessness {.quiz-question}
 
 An astronaut floats inside the ISS, 400 km above Earth. Earth's gravitational pull on the astronaut is:
 
@@ -704,9 +782,21 @@ Any object moving under an **inverse-square central force** traces a **conic sec
 
 ---
 
-## {.center}
+## Orbits Are Conic Sections
 
-{{< fig conic-sections-orbits >}}
+:::: {.columns}
+::: {.column width="45%"}
+Energy decides the **shape**:
+
+- **Ellipse:** bound
+- **Parabola:** just escapes
+- **Hyperbola:** unbound
+:::
+
+::: {.column width="55%"}
+{{< img cococubed-conic-sections width="100%" >}}
+:::
+::::
 
 ::: {.notes}
 24–25 min. Visual of conic sections.
@@ -714,7 +804,7 @@ Any object moving under an **inverse-square central force** traces a **conic sec
 
 ---
 
-## Quick Check: First Law Explained
+## Quick Check: First Law Explained {.quiz-question}
 
 Newton explained that planetary orbits are ellipses because:
 
@@ -751,6 +841,29 @@ If $L$ is constant and you get closer ($r$ smaller), you must move faster ($v$ l
 
 ---
 
+## Equal Areas = Variable Speed
+
+:::: {.columns}
+::: {.column width="45%"}
+In the same time interval:
+
+- Near perihelion: **fast**, short arc
+- Near aphelion: **slow**, long arc
+
+Areas match because **speed changes**.
+:::
+
+::: {.column width="55%"}
+{{< img cococubed-kepler-second-law width="100%" >}}
+:::
+::::
+
+::: {.notes}
+Visually reinforce equal areas before the angular momentum link.
+:::
+
+---
+
 ## The Ice Skater (Again)
 
 :::: {.columns}
@@ -779,7 +892,7 @@ Same physics for planets: closer is faster, farther is slower.
 
 ---
 
-## Quick Check: Second Law Explained
+## Quick Check: Second Law Explained {.quiz-question}
 
 Newton explained Kepler's Second Law (equal areas) as a consequence of:
 
@@ -860,7 +973,7 @@ We never touch them — we just watch how things move around them.
 
 ---
 
-## Quick Check: Weighing the Sun
+## Quick Check: Weighing the Sun {.quiz-question}
 
 How do astronomers determine the mass of the Sun?
 
@@ -875,7 +988,7 @@ How do astronomers determine the mass of the Sun?
 
 ---
 
-## Quick Check: Different Stars
+## Quick Check: Different Stars {.quiz-question}
 
 Two planets orbit at the same distance. Star A: $2M_\odot$. Star B: $0.5M_\odot$. Which planet has the shorter orbital period?
 
@@ -1330,6 +1443,26 @@ $$v_{\text{escape}} = \sqrt{\frac{2GM}{r}}$$
 
 ::: {.notes}
 "This is the minimum speed to escape a gravitational well."
+:::
+
+---
+
+## Escape Velocity in One Picture
+
+:::: {.columns}
+::: {.column width="45%"}
+Add energy and the orbit **stretches**.
+
+Add enough and the path becomes **unbound**.
+:::
+
+::: {.column width="55%"}
+{{< img cococubed-escape-velocity-rocket width="100%" >}}
+:::
+::::
+
+::: {.notes}
+Shows orbit raising and escape trajectory visually.
 :::
 
 ---

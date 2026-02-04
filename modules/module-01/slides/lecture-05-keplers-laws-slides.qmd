@@ -67,6 +67,16 @@ For 2,000 years, astronomers asked **why**.
 
 ---
 
+## {.center}
+
+{{< img cococubed-planet-orbits width="90%" >}}
+
+::: {.notes}
+Quick visual grounding: the Solar System layout before the retrograde puzzle.
+:::
+
+---
+
 ## Today's Learning Objectives
 
 By the end of today, you can:
@@ -105,7 +115,7 @@ Section transition. 30 sec.
 
 :::: {.columns}
 ::: {.column width="55%"}
-{{< img retrograde-motion-mars width="100%" >}}
+{{< img cococubed-retrograde-heliocentric width="100%" >}}
 :::
 
 ::: {.column width="45%"}
@@ -417,7 +427,7 @@ Suddenly, the orbit fit.
 
 ::: {.column width="60%"}
 ::: {.fragment}
-{{< img kepler-1st-law-ellipse width="100%" >}}
+{{< img cococubed-kepler-first-law width="100%" >}}
 :::
 :::
 ::::
@@ -522,7 +532,7 @@ An orbit with eccentricity $e = 0$ would be:
 
 ::: {.column width="60%"}
 ::: {.fragment}
-{{< img kepler-2nd-law-equal-areas width="100%" >}}
+{{< img cococubed-kepler-second-law width="100%" >}}
 :::
 :::
 ::::
@@ -557,6 +567,16 @@ An orbit with eccentricity $e = 0$ would be:
 
 ::: {.notes}
 22–23 min. "Think of cutting wedges out of paper. Near perihelion: short and fat. Near aphelion: long and thin. Same area."
+:::
+
+---
+
+## {.center}
+
+{{< img cococubed-angular-momentum-orbit width="90%" >}}
+
+::: {.notes}
+Reinforce why closer = faster through angular momentum conservation.
 :::
 
 ---

@@ -154,6 +154,7 @@ project:
     - "demos/**/*.css"
     - "demos/**/*.json"
     - "demos/**/*.svg"
+    - "assets/images/**"
     - "assets/images/common/iclicker-qrcode-astr101.png"
   brand: _brand.yml
 

@@ -77,9 +77,11 @@ It sounds paradoxical. In Newton's time, "earthly" physics and "celestial" physi
 
 Newton's insight was radical: **the Moon IS falling**. Right now. Continuously. It's falling toward Earth at every moment — but it's also moving sideways so fast that it keeps missing. That combination of falling and moving sideways is what we call an orbit.
 
-{{< fig newtons-cannon >}}
+{{< fig cococubed-falling-to-orbit-trajectories >}}
 
 {{< fig apple-and-moon >}}
+
+{{< fig cococubed-moon-falling >}}
 
 ::: {.callout-note title="✏️ Sketch It: Newton's Cannon" collapse="true"}
 Draw a circular Earth. On top of it, draw a tall mountain with a cannon pointing horizontally (parallel to the ground).
@@ -390,6 +392,8 @@ But the *accelerations* are not equal! By $F = ma$, the same force produces less
 
 This tiny wobble is **one major way** astronomers detect exoplanets: by measuring a star's subtle back-and-forth motion caused by an orbiting planet tugging on it. (Other methods — like transits — also exist.)
 
+{{< fig cococubed-center-of-mass-orbits >}}
+
 ::: {.callout-check-yourself title="Check Yourself 6 — Third Law"}
 Earth exerts a gravitational force on the Moon. According to Newton's Third Law, the Moon exerts a gravitational force on Earth that is:
 
@@ -453,7 +457,7 @@ Pre-Newton assumption: **Different rules govern Earth and the heavens.**
 Newton's claim: **One equation governs everything that has mass.**
 :::
 
-{{< fig gravity-equation-visual >}}
+{{< fig cococubed-gravity-law >}}
 
 ### Verification: Does Gravity Really Reach the Moon?
 
@@ -664,7 +668,7 @@ Most planets have bound orbits (they don't escape), so they follow ellipses. The
 
 **Kepler discovered the pattern. Newton explained why it had to be that way.**
 
-{{< fig conic-sections-orbits >}}
+{{< fig cococubed-conic-sections >}}
 
 ::: {.callout-check-yourself title="Check Yourself 10 — First Law Explained"}
 Newton explained that planetary orbits are ellipses because:
@@ -708,6 +712,8 @@ Planets do the same thing. At perihelion (close to Sun), the planet is "pulled i
 **Connection to Kepler II:** Newton showed that "equal areas in equal times" is mathematically identical to "angular momentum is conserved." They're the same statement in different words.
 
 Kepler discovered the pattern. Newton explained the physics: gravity is central (points at the Sun), so angular momentum can't change, so equal areas must be swept.
+
+{{< fig cococubed-kepler-second-law >}}
 
 ::: {.callout-check-yourself title="Check Yourself 11 — Second Law Explained"}
 Newton explained Kepler's Second Law (equal areas) as a consequence of:
@@ -952,6 +958,8 @@ $$v_{orb} = \sqrt{\frac{GM}{r}}$$
 - Larger central mass $M$ $\to$ stronger gravity $\to$ must orbit **faster**
 - Larger orbital radius $r$ $\to$ weaker gravity $\to$ can orbit **slower**
 - The orbiting object's mass **doesn't matter**!
+
+{{< fig cococubed-escape-velocity-rocket >}}
 
 This last point is remarkable. A satellite and a space station at the same altitude orbit at the same speed, even if one is $1000\times$ more massive.
 

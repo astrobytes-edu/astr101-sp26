@@ -78,7 +78,7 @@ This puzzle — explaining retrograde motion — drove astronomical thinking for
 **Inference:** Retrograde is an **apparent** motion caused by geometry, not a real reversal. This supports the heliocentric model.
 :::
 
-{{< fig retrograde-motion-mars >}}
+{{< fig cococubed-retrograde-heliocentric >}}
 
 ---
 
@@ -270,7 +270,7 @@ The string ensures that the total distance to both foci stays constant — that'
 | Perihelion | $r_p$ | Closest point to the Sun; $r_p = a(1-e)$ |
 | Aphelion | $r_a$ | Farthest point from the Sun; $r_a = a(1+e)$ |
 
-{{< fig kepler-1st-law-ellipse >}}
+{{< fig cococubed-kepler-first-law >}}
 
 Notice that the Sun is at one **focus**, not the **center** of the ellipse. The other focus is empty — nothing sits there. This offset is why the planet's distance from the Sun varies throughout its orbit.
 
@@ -364,7 +364,7 @@ Imagine a line from the Sun to a planet. As the planet moves, this line sweeps o
 
 The consequence: near **perihelion** (close to Sun), the planet moves **faster** — it must cover more arc length to sweep the same area with a shorter radius. Near **aphelion** (far from Sun), the planet moves **slower** — it covers less arc length to sweep the same area with a longer radius.
 
-{{< fig kepler-2nd-law-equal-areas >}}
+{{< fig cococubed-kepler-second-law >}}
 
 ### What Does "Area" Even Mean Here?
 
@@ -456,6 +456,8 @@ The planet moves **faster** near perihelion and **slower** near aphelion. The eq
 :::
 
 ---
+
+{{< fig cococubed-planet-orbits >}}
 
 ## Kepler's Third Law — The Period-Distance Relation
 
