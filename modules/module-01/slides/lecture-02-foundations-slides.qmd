@@ -11,6 +11,7 @@ title-slide-attributes:
 format:
   revealjs:
     theme: [default, ../../../assets/theme/slides/theme.scss]
+    css: ../../../slides.css
     smaller: true
     slide-number: true
     transition: fade

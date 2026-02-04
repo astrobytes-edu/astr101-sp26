@@ -9,6 +9,7 @@ draft: true
 format:
   revealjs:
     theme: [default, ../../../assets/theme/slides/theme.scss]
+    css: ../../../slides.css
     footer: "ASTR 101 • Lecture 10 • Dr. Anna Rosen"
     slide-number: true
     transition: fade

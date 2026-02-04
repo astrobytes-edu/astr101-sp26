@@ -8,6 +8,7 @@ draft: false
 
 format:
   revealjs:
+    css: ../../../slides.css
     footer: "ASTR 101 • Lecture 1 • Dr. Anna Rosen"
     chalkboard: true
     title-slide-attributes:

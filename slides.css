@@ -1,0 +1,290 @@
+/* ============================================================
+   slides.css - Quarto (revealjs) guardrails + minimalist styling
+   Goals:
+   - Prevent overflow (images/tables/code)
+   - Make 2-column slides stable + readable
+   - Provide consistent "Quick Check" styling
+   - Add utility classes for density control (emergency use)
+   ============================================================ */
+
+/* ---------- 0) Design tokens (edit these to match your theme) ---------- */
+:root {
+  /* Soft cosmic palette (edit as desired) */
+  --cp-teal: #028391;
+  --cp-rose: #BE5A83;
+  --cp-mauve: #7077A1;
+
+  /* Neutrals */
+  --cp-ink: rgba(255, 255, 255, 0.92);
+  --cp-ink-dim: rgba(255, 255, 255, 0.72);
+  --cp-panel: rgba(255, 255, 255, 0.06);
+  --cp-panel-strong: rgba(255, 255, 255, 0.10);
+  --cp-border: rgba(255, 255, 255, 0.16);
+
+  /* Sizing */
+  --cp-radius: 18px;
+  --cp-gap: 1.2rem;
+  --cp-gap-tight: 0.8rem;
+
+  /* Figure constraints (tuned for 1280x720 decks) */
+  --cp-fig-max-h: 62vh;   /* main figure cap */
+  --cp-fig-max-h-tight: 54vh; /* use on dense slides */
+}
+
+/* ---------- 1) Global readability + spacing ---------- */
+.reveal {
+  /* Reveal themes differ; keep this light-touch */
+  text-rendering: geometricPrecision;
+}
+
+.reveal .slides section {
+  /* Prevent long URLs/words from detonating layouts */
+  overflow-wrap: anywhere;
+  word-break: normal;
+}
+
+.reveal .slides section p,
+.reveal .slides section li {
+  line-height: 1.25;
+}
+
+.reveal .slides section ul,
+.reveal .slides section ol {
+  margin-top: 0.35rem;
+}
+
+.reveal .slides section li {
+  margin: 0.22rem 0;
+}
+
+/* Titles: nudge spacing without fighting theme */
+.reveal .slides section h1,
+.reveal .slides section h2,
+.reveal .slides section h3 {
+  margin-bottom: 0.55rem;
+}
+
+/* Dim helper */
+.reveal .dim { color: var(--cp-ink-dim); }
+
+/* ---------- 2) Stable two-column layout ---------- */
+/* Quarto uses .columns/.column; this improves alignment + spacing */
+.reveal .slides section .columns {
+  display: flex !important;
+  gap: var(--cp-gap);
+  align-items: center; /* keeps text/figure aligned nicely */
+  flex-wrap: nowrap;
+}
+
+.reveal .slides section .column {
+  min-width: 0; /* critical: prevents overflow from long text/code */
+}
+
+/* Optional: top-align when you want text to start at the same baseline */
+.reveal .slides section .columns.top {
+  align-items: flex-start;
+}
+
+/* ---------- 3) Figures: prevent overflow, keep captions sane ---------- */
+.reveal .slides section figure {
+  margin: 0.25rem 0;
+}
+
+.reveal .slides section figure img,
+.reveal .slides section img {
+  max-height: var(--cp-fig-max-h);
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border-radius: 12px;
+}
+
+/* Common Quarto pattern: images in right column use width=100% */
+.reveal .slides section .column img[width="100%"],
+.reveal .slides section .column img[style*="width: 100%"] {
+  width: 100% !important;
+  height: auto !important;
+}
+
+/* Figure captions: readable but not noisy */
+.reveal .slides section figcaption {
+  margin-top: 0.35rem;
+  font-size: 0.72em;
+  color: var(--cp-ink-dim);
+}
+
+/* ---------- 3b) Cap ALL media types (not just <img>) ---------- */
+.reveal .slides section svg,
+.reveal .slides section video,
+.reveal .slides section iframe,
+.reveal .slides section object,
+.reveal .slides section embed {
+  max-width: 100%;
+  max-height: var(--cp-fig-max-h);
+}
+
+/* If you embed SVG inline, contain it cleanly */
+.reveal .slides section svg {
+  width: 100%;
+  height: auto;
+}
+
+/* Tight-figure mode for dense slides */
+.reveal .slides section.tight-fig img,
+.reveal .slides section.tight-fig figure img {
+  max-height: var(--cp-fig-max-h-tight);
+}
+
+/* ---------- 4) Tables: prevent wide-table explosions ---------- */
+.reveal .slides section table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-size: 0.78em;
+  display: block;        /* allows overflow-x to work reliably */
+  overflow-x: auto;
+  max-width: 100%;
+}
+
+.reveal .slides section table th,
+.reveal .slides section table td {
+  padding: 0.35rem 0.5rem;
+  vertical-align: top;
+}
+
+/* Allow horizontal scroll as a last resort (still better than clipping) */
+.reveal .slides section .table-wrap {
+  overflow-x: auto;
+  border: 1px solid var(--cp-border);
+  border-radius: var(--cp-radius);
+  padding: 0.35rem 0.5rem;
+  background: var(--cp-panel);
+}
+
+/* ---------- 5) Code blocks: keep them readable and contained ---------- */
+.reveal .slides section pre {
+  margin: 0.45rem 0;
+  max-height: 52vh; /* prevents code from eating the slide */
+  overflow: auto;
+  border-radius: 14px;
+}
+
+.reveal .slides section code {
+  /* inline code */
+  font-size: 0.92em;
+}
+
+/* ---------- 5b) Math overflow protection (MathJax + KaTeX) ---------- */
+.reveal .slides section mjx-container {
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.reveal .slides section .katex-display {
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+/* ---------- 6) Quick Check styling (apply slide class: {.quick-check}) ---------- */
+/* Usage in qmd:
+   ## Quick Check: Topic {.quick-check}
+   OR set slide attribute: ::: { .quick-check } ... ::: */
+.reveal .slides section.quick-check {
+  position: relative;
+}
+
+.reveal .slides section.quick-check h2 {
+  /* subtle accent bar */
+  padding-left: 0.9rem;
+  border-left: 6px solid var(--cp-rose);
+}
+
+.reveal .slides section.quick-check .qc-box {
+  margin-top: 0.65rem;
+  padding: 0.85rem 1.0rem;
+  border-radius: var(--cp-radius);
+  border: 1px solid var(--cp-border);
+  background: linear-gradient(180deg, var(--cp-panel), transparent);
+}
+
+/* Answer choices: keep compact + consistent */
+.reveal .slides section.quick-check .qc-choices {
+  margin-top: 0.55rem;
+}
+
+.reveal .slides section.quick-check .qc-choices p,
+.reveal .slides section.quick-check .qc-choices li {
+  margin: 0.18rem 0;
+}
+
+/* If you format choices as paragraphs (A. ...), align nicely */
+.reveal .slides section.quick-check .qc-choices p strong {
+  color: var(--cp-teal);
+}
+
+/* ---------- 7) Callouts that do not wreck layouts ---------- */
+/* Quarto callouts exist; these are gentle overrides */
+.reveal .slides section .callout {
+  border-radius: var(--cp-radius);
+  border: 1px solid var(--cp-border);
+  background: var(--cp-panel);
+}
+
+.reveal .slides section .callout-title {
+  font-weight: 700;
+}
+
+/* Avoid fragment + callout weirdness by keeping callouts simple */
+.reveal .slides section .callout p:last-child { margin-bottom: 0; }
+
+/* Normalize bullet list padding across themes */
+.reveal .slides section ul {
+  padding-left: 1.1em;
+}
+
+.reveal .slides section ul ul {
+  margin-top: 0.15rem;
+}
+
+/* ---------- 8) Utility classes (use sparingly; prefer splitting slides) ---------- */
+/* Slightly smaller overall text */
+.reveal .slides section.smaller { font-size: 0.88em; }
+.reveal .slides section.xsmall  { font-size: 0.80em; }
+
+/* Tighten list spacing on a slide that is almost too dense */
+.reveal .slides section.tight ul,
+.reveal .slides section.tight ol { margin-top: 0.2rem; }
+.reveal .slides section.tight li { margin: 0.12rem 0; }
+
+/* Two-column slides that should be top-aligned */
+.reveal .slides section.top-align .columns { align-items: flex-start; }
+
+/* Add a subtle panel behind a visual (helps on busy backgrounds) */
+.reveal .panel {
+  padding: 0.55rem 0.65rem;
+  border-radius: var(--cp-radius);
+  border: 1px solid var(--cp-border);
+  background: var(--cp-panel-strong);
+}
+
+/* Subtle blur for translucent panels (optional but intentional) */
+.reveal .panel,
+.reveal .slides section.quick-check .qc-box,
+.reveal .slides section .callout {
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
+/* ---------- 9) Speaker notes hint (does not show on slides) ---------- */
+/* Nothing needed here; Quarto/reveal handles notes.
+   Keep in contract: correct answer goes in ::: {.notes} ... ::: */
+
+/* ---------- 10) Print/PDF sanity (optional) ---------- */
+@media print {
+  .reveal .slides section figure img,
+  .reveal .slides section img {
+    max-height: none;
+  }
+}

@@ -6,6 +6,7 @@ format:
   revealjs:
     # Theme: built-in simple + custom SCSS overrides
     theme: [simple, ../../../assets/theme/slides/theme.scss]
+    css: ../../../slides.css
 
     # Use relative path (no leading /) for GitHub Pages project sites
     logo: assets/astr101-logo.png

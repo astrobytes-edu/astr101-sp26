@@ -9,6 +9,7 @@ draft: false
 format:
   revealjs:
     theme: [default, ../../../assets/theme/slides/theme.scss]
+    css: ../../../slides.css
     footer: "ASTR 101 • Lecture 3 • Dr. Anna Rosen"
     slide-number: true
     transition: fade
@@ -958,4 +959,3 @@ We'll apply angular size to understand:
 
 38–40 min. Open floor for questions. If none, dismiss with: "See you next time for moon phases and eclipses!"
 :::
-
