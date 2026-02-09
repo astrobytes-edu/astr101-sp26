@@ -95,20 +95,23 @@ Every photon has a story:
 
 ---
 
-## Proxima Centauri: What Light Reveals
+## From Observables to Inference
 
 :::: {.columns}
 ::: {.column width="68%"}
-{{< img proxima-centauri-info width="100%" >}}
+{{< img four-observables width="100%" >}}
 :::
 
 ::: {.column width="32%"}
 ::: {.text-sm}
-From starlight we infer:
+For Proxima, we measure:
 
-- temperature
-- activity
-- planetary context
+- brightness
+- position
+- wavelength
+- timing
+
+Then infer temperature, composition, motion, and planetary context.
 :::
 :::
 ::::
