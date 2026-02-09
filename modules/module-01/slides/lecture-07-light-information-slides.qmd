@@ -681,34 +681,26 @@ Blue scatters about **$6\times$ more** than red!
 
 ---
 
-## Why the Sky Is Blue
+## Why the Sky Is Blue and Sunsets Are Red
 
-{{< img rayleigh-scattering-nblm width="90%" >}}
-
-::: {.fragment}
-Blue photons scatter all over the sky, so they reach your eyes from every direction.
-
-Red photons mostly travel straight through.
+:::: {.columns .v-center-container}
+::: {.column width="56%"}
+{{< img rayleigh-scattering-nblm width="92%" >}}
 :::
+
+::: {.column width="44%"}
+::: {.fragment .text-sm}
+**Sky is blue:** blue photons scatter in many directions, so they reach your eyes from across the sky.
+:::
+
+::: {.fragment .text-sm .mt-2}
+**Sunsets are red:** along a longer atmospheric path, blue is scattered away and red/orange light remains.
+:::
+:::
+::::
 
 ::: {.notes}
-14–15 min. "Blue gets scattered everywhere; red goes straight through."
-:::
-
----
-
-## Why Sunsets Are Red
-
-{{< img rayleigh-scattering-nblm width="90%" >}}
-
-::: {.fragment}
-At sunset, sunlight travels through **much more atmosphere**.
-
-Blue is scattered away, so you see the remaining **reds and oranges**.
-:::
-
-::: {.notes}
-15–16 min. "Same physics, different geometry."
+14–16 min. Same physics, different geometry and line-of-sight path length.
 :::
 
 ---
