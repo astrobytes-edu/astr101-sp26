@@ -603,7 +603,7 @@ Red photons mostly travel straight through.
 
 ## Why Sunsets Are Red
 
-{{< img sunset-scattering width="90%" >}}
+{{< img rayleigh-scattering-nblm width="90%" >}}
 
 ::: {.fragment}
 At sunset, sunlight travels through **much more atmosphere**.
@@ -677,7 +677,7 @@ The Moon is in Earth's shadow — no direct sunlight reaches it...
 
 ## Earth's Atmosphere as Filter
 
-{{< img lunar-eclipse-red width="90%" >}}
+{{< img lunar-eclipse-red width="72%" >}}
 
 ::: {.fragment}
 1. Sunlight passes through Earth's atmosphere

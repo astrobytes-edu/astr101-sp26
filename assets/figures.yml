@@ -1292,10 +1292,10 @@ figures:
     module: 1
 
   rayleigh-scattering-sky:
-    path: /assets/images/module-01/lec07/rayleigh-scattering-sky.svg
+    path: /assets/images/module-01/lec07/rayleigh-scattering-nblm.png
     caption: "What to notice: short-wavelength (blue) light scatters much more than long-wavelength (red) light, filling the sky with scattered blue photons."
     alt: "Cross-section schematic of sunlight entering Earth’s atmosphere where blue light is scattered in many directions by air molecules while red light mostly continues forward; an observer sees scattered blue from the sky."
-    credit: "Illustration: A. Rosen (SVG)"
+    credit: "(A. Rosen/NotebookLM)"
     module: 1
 
   rayleigh-scattering-nblm:
@@ -1306,10 +1306,10 @@ figures:
     module: 1
 
   sunset-scattering:
-    path: /assets/images/module-01/lec07/sunset-scattering.svg
+    path: /assets/images/module-01/lec07/rayleigh-scattering-nblm.png
     caption: "What to notice: at sunset, sunlight travels through much more atmosphere; blue light scatters out along the long path, leaving redder light to reach you."
     alt: "Two-panel schematic comparing noon (short atmospheric path) and sunset (long atmospheric path); blue light scatters out more during the longer sunset path so the remaining direct light is redder."
-    credit: "Illustration: A. Rosen (SVG)"
+    credit: "(A. Rosen/NotebookLM)"
     module: 1
 
   infrared-thermal-image:
