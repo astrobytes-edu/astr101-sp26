@@ -97,6 +97,20 @@ Heat it to **5800 K** $\to$ brilliant white
 
 ---
 
+## Heat in the Dark
+
+{{< img infrared-thermal-image width="92%" >}}
+
+::: {.text-center .text-sm .mt-2}
+Infrared cameras reveal thermal radiation from ordinary objects.
+:::
+
+::: {.notes}
+Image-first reinforcement that "everything glows."
+:::
+
+---
+
 ## Today's Learning Objectives
 
 By the end of today, you'll be able to:
@@ -383,6 +397,20 @@ Yet the Sun doesn't look green...
 
 ---
 
+## The Sun's Spectrum Is Broad
+
+{{< img sun-spectrum-green width="94%" >}}
+
+::: {.text-center .text-sm .mt-2}
+The peak is near green, but the curve spans the full visible band.
+:::
+
+::: {.notes}
+Use the figure to make the white-light explanation intuitive.
+:::
+
+---
+
 ## Why the Sun Isn't Green
 
 :::: {.columns}
@@ -441,6 +469,20 @@ The Sun's blackbody spectrum peaks at ~500 nm (green). Why doesn't the Sun appea
 
 ::: {.notes}
 13–14 min. "No thermometer needed — just analyze the color."
+:::
+
+---
+
+## Stellar Color Sequence
+
+{{< img star-colors-temperature width="94%" >}}
+
+::: {.text-center .text-sm .mt-2}
+Color class provides a fast first estimate of stellar temperature.
+:::
+
+::: {.notes}
+Keep this visual and quick; table plus image strengthens recall.
 :::
 
 ---
@@ -593,6 +635,20 @@ This is how we distinguish **giants** from **dwarfs**.
 
 ---
 
+## Giants vs Dwarfs at the Same Color
+
+{{< img giant-vs-dwarf width="94%" >}}
+
+::: {.text-center .text-sm .mt-2}
+Same temperature does not imply same size or luminosity.
+:::
+
+::: {.notes}
+Use this before Betelgeuse to cement the size-luminosity idea.
+:::
+
+---
+
 ## {.center}
 
 {{< img betelgeuse-size-eso width="90%" >}}
@@ -707,6 +763,36 @@ Spectral lines tell us **composition** and **motion**.
 
 ::: {.notes}
 21–22 min. Preview spectral lines.
+:::
+
+---
+
+## Spectral Lines Preview: Absorption vs Emission
+
+:::: {.columns}
+::: {.column width="50%"}
+{{< img absorption-of-light-hydrogen-jwst width="98%" >}}
+
+::: {.text-center .text-sm}
+Absorption spectrum
+:::
+:::
+
+::: {.column width="50%"}
+{{< img emission-of-light-hydrogen-jwst width="98%" >}}
+
+::: {.text-center .text-sm}
+Emission spectrum
+:::
+:::
+::::
+
+::: {.text-center .text-sm .mt-2}
+Same element, same line wavelengths, different physical setup.
+:::
+
+::: {.notes}
+Bridge from blackbody continuum to Lecture 9 line physics.
 :::
 
 ---

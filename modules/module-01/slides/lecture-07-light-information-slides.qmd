@@ -95,6 +95,30 @@ Every photon has a story:
 
 ---
 
+## Proxima Centauri: What Light Reveals
+
+:::: {.columns}
+::: {.column width="68%"}
+{{< img proxima-centauri-info width="100%" >}}
+:::
+
+::: {.column width="32%"}
+::: {.text-sm}
+From starlight we infer:
+
+- temperature
+- activity
+- planetary context
+:::
+:::
+::::
+
+::: {.notes}
+Use this as a concrete anchor for "astronomy by inference."
+:::
+
+---
+
 ## Today's Learning Objectives
 
 By the end of today, you can:
@@ -177,6 +201,20 @@ Light travels perfectly through the vacuum of space.
 
 ::: {.notes}
 4–5 min. "This is why we can see starlight from billions of light-years away."
+:::
+
+---
+
+## Mechanical vs Electromagnetic Waves
+
+{{< img mechanical-vs-em-wave width="94%" >}}
+
+::: {.text-center .text-sm .mt-2}
+EM waves need no material medium, so light crosses interstellar vacuum.
+:::
+
+::: {.notes}
+Keep this slide visual-first; one sentence is enough.
 :::
 
 ---
@@ -294,6 +332,20 @@ The Electromagnetic Spectrum
 
 ---
 
+## Full Electromagnetic Spectrum
+
+{{< img em-spectrum-full width="95%" >}}
+
+::: {.text-center .text-sm .mt-2}
+Visible light is only a narrow window in a much larger spectrum.
+:::
+
+::: {.notes}
+Point to visible as context, then move on quickly.
+:::
+
+---
+
 ## The Full Spectrum (1/2)
 
 ::: {.text-sm}
@@ -327,6 +379,20 @@ The Electromagnetic Spectrum
 
 ---
 
+## EM Spectrum in Astronomy
+
+{{< img em-spectrum-jwst width="94%" >}}
+
+::: {.text-center .text-sm .mt-2}
+Different wavelength bands map to different physical regimes.
+:::
+
+::: {.notes}
+This complements the table with an image-first view.
+:::
+
+---
+
 ## Same Object, Different Wavelengths
 
 :::: {.columns}
@@ -343,6 +409,20 @@ The Electromagnetic Spectrum
 
 ::: {.notes}
 9–10 min. "This is why astronomers build different types of telescopes."
+:::
+
+---
+
+## Crab Nebula Across Wavelengths
+
+{{< img multiwavelength-crab width="94%" >}}
+
+::: {.text-center .text-sm .mt-2}
+One object, multiple observables, multiple physical inferences.
+:::
+
+::: {.notes}
+Connect directly to "same object, different wavelength" claim.
 :::
 
 ---
@@ -1010,6 +1090,20 @@ Deeper Dive
 
 ::: {.notes}
 Optional advanced content bridging to L8-L9.
+:::
+
+---
+
+## Wavelength and Photon Energy
+
+{{< img wavelength-energy width="92%" >}}
+
+::: {.text-center .text-sm .mt-2}
+Shorter wavelength means higher photon energy.
+:::
+
+::: {.notes}
+Use as a visual bridge before writing $E = h\nu$.
 :::
 
 ---
