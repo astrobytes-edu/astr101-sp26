@@ -4,7 +4,7 @@ subtitle: "Lecture 11 Reading Companion"
 author: "Dr. Anna Rosen"
 date: "2026-02-23"
 description: "The solar system is where we apply everything we've learned. Kepler's Laws give us distances. Newton's gravity gives us masses. Blackbody radiation gives us temperatures. Spectroscopy gives us compositions. This lecture tours our cosmic neighborhood and explains how it formed."
-draft: true
+draft: false
 categories: [solar-system, formation, capstone]
 course: ASTR 101
 module: "1 - Foundations"

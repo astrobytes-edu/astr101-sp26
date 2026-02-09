@@ -55,10 +55,11 @@ project:
     - homework/astr101-hw-*.qmd
     - modules/index.qmd
     - modules/module-*/index.qmd
-    # Module 1: temporarily render only Lectures 1–6 (slides + readings)
-    # (Lectures 7+ are commented out below to speed up rendering while editing.)
+    # Module 1: keep slides limited to Lectures 1–6 for now, but render all readings.
+    # (Lectures 7+ slides are still commented out below while those decks are finalized.)
     - modules/module-01/slides/lecture-0[1-6]-*-slides.qmd
-    - modules/module-01/readings/lecture-0[1-6]*.qmd
+    - modules/module-01/readings/lecture-0[1-9]*.qmd
+    - modules/module-01/readings/lecture-1[0-3]*.qmd
     # Other modules (render all)
     - modules/module-02/slides/*.qmd
     - modules/module-02/readings/*.qmd
@@ -232,20 +233,20 @@ website:
                 text: "Lecture 5: From Ancient Skies to Kepler's Laws"
               - href: modules/module-01/readings/lecture-06-newtons-gravity-reading.qmd
                 text: "Lecture 6: Newton's Revolution — From Patterns to Physics"
-              # - href: modules/module-01/readings/lecture-07-light-information-reading.qmd
-              #   text: "Lecture 7: The Cosmic Messenger — Light Carries Information"
-              # - href: modules/module-01/readings/lecture-08-blackbody-radiation-reading.qmd
-              #   text: "Lecture 8: Reading the Glow — Temperature Written in Light"
-              # - href: modules/module-01/readings/lecture-09-spectral-lines-reading.qmd
-              #   text: "Lecture 9: Decoding Starlight — Spectral Lines and Chemical Fingerprints"
-              # - href: modules/module-01/readings/lecture-10-doppler-telescopes-reading.qmd
-              #   text: "Lecture 10: Motion Revealed — Doppler Effect and the Astronomer's Toolkit"
-              # - href: modules/module-01/readings/lecture-11-solar-system-reading.qmd
-              #   text: "Lecture 11: Our Solar System — A Case Study"
-              # - href: modules/module-01/readings/lecture-12-climates-exoplanets-reading.qmd
-              #   text: "Lecture 12: Climates and Exoplanets"
-              # - href: modules/module-01/readings/lecture-13-are-we-alone-reading.qmd
-              #   text: "Lecture 13: Are We Alone? — The Drake Equation"
+              - href: modules/module-01/readings/lecture-07-light-information-reading.qmd
+                text: "Lecture 7: The Cosmic Messenger — Light Carries Information"
+              - href: modules/module-01/readings/lecture-08-blackbody-radiation-reading.qmd
+                text: "Lecture 8: Reading the Glow — Temperature Written in Light"
+              - href: modules/module-01/readings/lecture-09-spectral-lines-reading.qmd
+                text: "Lecture 9: Decoding Starlight — Spectral Lines and Chemical Fingerprints"
+              - href: modules/module-01/readings/lecture-10-doppler-telescopes-reading.qmd
+                text: "Lecture 10: Motion Revealed — Doppler Effect and the Astronomer's Toolkit"
+              - href: modules/module-01/readings/lecture-11-solar-system-reading.qmd
+                text: "Lecture 11: Our Solar System — A Case Study"
+              - href: modules/module-01/readings/lecture-12-climates-exoplanets-reading.qmd
+                text: "Lecture 12: Climates and Exoplanets"
+              - href: modules/module-01/readings/lecture-13-are-we-alone-reading.qmd
+                text: "Lecture 13: Are We Alone? — The Drake Equation"
           - section: "Solutions"
             contents:
               - href: modules/module-01/readings/lecture-01-spoiler-alerts-solutions.qmd

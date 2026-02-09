@@ -4,7 +4,7 @@ subtitle: "Lecture 7 Reading Companion"
 author: "Dr. Anna Rosen"
 date: "2026-02-09"
 description: "You've never touched a star, yet you know what it's made of. Light is how the universe talks to us — its wavelength encodes temperature, composition, motion, and more."
-draft: true
+draft: false
 categories: [foundations, light, em-spectrum]
 course: ASTR 101
 module: "1 - Foundations"
