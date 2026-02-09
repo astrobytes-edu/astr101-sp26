@@ -104,7 +104,7 @@ Every photon has a story:
 
 ::: {.column width="32%"}
 ::: {.text-sm}
-For Proxima, we measure:
+For any star, we measure:
 
 - brightness
 - position
