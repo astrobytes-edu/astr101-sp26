@@ -1203,6 +1203,13 @@ figures:
     credit: "Illustration: NASA, ESA, CSA"
     module: 1
 
+  atmospheric-transmission-windows:
+    path: /assets/images/module-01/week-04/EMS_Diagram_NASA.jpg
+    caption: "What to notice: Earth is transparent mainly in two windows (optical and radio), so many wavelengths require space telescopes."
+    alt: "Electromagnetic spectrum diagram with wavelength and frequency scales plus an atmospheric transmission curve showing strong opacity at many wavelengths and two major windows in optical and radio."
+    credit: "NASA"
+    module: 1
+
   light-matter-interactions:
     path: /assets/images/module-01/week-04/light-matter-interactions-jwst.png
     caption: "What to notice: light can be absorbed, emitted, transmitted, reflected, or refracted—those interactions are how spectra are made."
@@ -1303,6 +1310,13 @@ figures:
     caption: "What to notice: short-wavelength (blue) light scatters much more than long-wavelength (red) light, so scattered blue light dominates the daytime sky."
     alt: "Rayleigh-scattering diagram showing sunlight entering Earth’s atmosphere, with blue light scattered in many directions and red light traveling more directly along the incoming path."
     credit: "(A. Rosen/NotebookLM)"
+    module: 1
+
+  rayleigh-scattering-gemini:
+    path: /assets/images/module-01/week-04/rayleigh-scattering-gemini.png
+    caption: "What to notice: in real sky observations, shorter wavelengths scatter more, producing blue daytime skies and redder light when path length through atmosphere is long."
+    alt: "Educational sky-scattering visual showing how blue light scatters strongly through the atmosphere while redder light remains more direct along longer paths."
+    credit: "Gemini Observatory"
     module: 1
 
   sunset-scattering:

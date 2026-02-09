@@ -334,14 +334,44 @@ The Electromagnetic Spectrum
 
 ## Full Electromagnetic Spectrum
 
-{{< img em-spectrum-full width="95%" >}}
-
-::: {.text-center .text-sm .mt-2}
-Visible light is only a narrow window in a much larger spectrum.
+:::: {.columns .v-center-container}
+::: {.column width="64%"}
+{{< img em-spectrum-full width="100%" >}}
 :::
+
+::: {.column width="36%"}
+::: {.text-sm}
+Visible light is only a narrow window in a much larger spectrum.
+
+Different wavelength bands trace different physics.
+:::
+:::
+::::
 
 ::: {.notes}
 Point to visible as context, then move on quickly.
+:::
+
+---
+
+## Spectrum Through Earth's Atmosphere
+
+:::: {.columns .v-center-container}
+::: {.column width="64%"}
+{{< img atmospheric-transmission-windows width="100%" >}}
+:::
+
+::: {.column width="36%"}
+::: {.text-sm}
+Radio and optical windows reach the ground; many other wavelengths require space telescopes.
+
+Atmospheric transmission determines which observatories must be in space.
+:::
+:::
+::::
+
+::: {.notes}
+8 min. Reinforce why astronomy uses multiple telescope platforms.
 :::
 
 ---
@@ -375,6 +405,72 @@ Point to visible as context, then move on quickly.
 
 ::: {.notes}
 8–9 min. "Different wavelengths reveal different physics."
+:::
+
+---
+
+## How Light Interacts with Matter
+
+:::: {.columns .v-center-container}
+::: {.column width="64%"}
+{{< img light-matter-interactions width="100%" >}}
+:::
+
+::: {.column width="36%"}
+::: {.text-sm}
+- Absorption removes specific wavelengths.
+- Emission adds specific wavelengths.
+- Reflection, refraction, and transmission change light paths.
+:::
+:::
+::::
+
+::: {.notes}
+8–9 min. Use this as the bridge from spectrum bands to measurable signatures.
+:::
+
+---
+
+## Three Spectra Astronomers Use
+
+:::: {.columns .v-center-container}
+::: {.column width="64%"}
+{{< img types-of-spectra-jwst width="100%" >}}
+:::
+
+::: {.column width="36%"}
+::: {.text-sm}
+- Continuous: dense, hot source.
+- Emission-line: hot, thin gas.
+- Absorption-line: continuum through cooler gas.
+:::
+:::
+::::
+
+::: {.notes}
+9 min. This replaces the table with image-first interpretation.
+:::
+
+---
+
+## Absorption and Emission Fingerprints
+
+:::: {.columns .v-center-container}
+::: {.column width="64%"}
+{{< img absorption-emission-spectra-jwst width="100%" >}}
+:::
+
+::: {.column width="36%"}
+::: {.text-sm}
+- Same element means the same line wavelengths.
+- Absorption lines are dark where photons are removed.
+- Emission lines are bright where photons are added.
+:::
+:::
+::::
+
+::: {.notes}
+9–10 min. Set up Lecture 8/9 spectroscopy logic with a concrete visual.
 :::
 
 ---
@@ -545,7 +641,7 @@ Part 2: Why Is the Sky Blue?
 
 ## Sunlight Is All Colors
 
-{{< img prism-spectrum-jwst width="90%" >}}
+{{< img prism-spectrum-jwst width="78%" >}}
 
 ::: {.fragment .mt-2}
 Sunlight is **white light** — a mix of all visible wavelengths.
@@ -613,6 +709,20 @@ Blue is scattered away, so you see the remaining **reds and oranges**.
 
 ::: {.notes}
 15–16 min. "Same physics, different geometry."
+:::
+
+---
+
+## Rayleigh Scattering in Real Sky Data
+
+{{< img rayleigh-scattering-gemini width="90%" >}}
+
+::: {.text-center .text-sm .mt-2}
+The same wavelength-dependent scattering shows up in real atmospheric observations.
+:::
+
+::: {.notes}
+16 min. Tie model diagram to observed sky behavior.
 :::
 
 ---
