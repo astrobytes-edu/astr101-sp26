@@ -337,19 +337,11 @@ The Electromagnetic Spectrum
 
 ## Full Electromagnetic Spectrum
 
-:::: {.columns .v-center-container}
-::: {.column width="64%"}
-{{< img em-spectrum-full width="100%" >}}
-:::
+{{< img em-spectrum-full width="98%" >}}
 
-::: {.column width="36%"}
-::: {.text-sm}
-Visible light is only a narrow window in a much larger spectrum.
-
-Different wavelength bands trace different physics.
+::: {.text-center .text-sm .mt-2}
+Visible light is only a narrow window in a much larger spectrum. Different wavelength bands trace different physics.
 :::
-:::
-::::
 
 ::: {.notes}
 Point to visible as context, then move on quickly.

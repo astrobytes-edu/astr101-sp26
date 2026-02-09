@@ -1291,13 +1291,6 @@ figures:
   # Lectures 07–10: Light → Spectra → Doppler (SVG + registry aliases)
   # ==============================================================
 
-  proxima-centauri-info:
-    path: /assets/images/module-01/lec07/proxima-centauri-info.svg
-    caption: "What to notice: we can infer temperature, composition, motion, distance, and even planets by analyzing a star’s light — without visiting it."
-    alt: "Diagram of an example nearby star with arrows to callouts for temperature, composition, motion, distance, and planets, emphasizing that these properties are inferred from light."
-    credit: "Illustration: A. Rosen (SVG)"
-    module: 1
-
   rayleigh-scattering-sky:
     path: /assets/images/module-01/lec07/rayleigh-scattering-nblm.png
     caption: "What to notice: short-wavelength (blue) light scatters much more than long-wavelength (red) light, filling the sky with scattered blue photons."

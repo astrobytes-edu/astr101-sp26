@@ -80,7 +80,7 @@ In Lectures 5 and 6, we learned that **motion reveals mass** — by watching how
 
 This lecture is about what light IS and why wavelength matters. Next lecture, we'll see how to read temperature from light. Together, they give astronomers the tools to decode the cosmos without ever leaving Earth.
 
-{{< fig proxima-centauri-info >}}
+{{< fig four-observables >}}
 
 ::: {.callout-misconception title="🔍 Spot the Assumption" collapse="false"}
 Before this lecture, you might have assumed:
