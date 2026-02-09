@@ -1298,6 +1298,13 @@ figures:
     credit: "Illustration: A. Rosen (SVG)"
     module: 1
 
+  rayleigh-scattering-nblm:
+    path: /assets/images/module-01/lec07/rayleigh-scattering-nblm.png
+    caption: "What to notice: short-wavelength (blue) light scatters much more than long-wavelength (red) light, so scattered blue light dominates the daytime sky."
+    alt: "Rayleigh-scattering diagram showing sunlight entering Earth’s atmosphere, with blue light scattered in many directions and red light traveling more directly along the incoming path."
+    credit: "(A. Rosen/NotebookLM)"
+    module: 1
+
   sunset-scattering:
     path: /assets/images/module-01/lec07/sunset-scattering.svg
     caption: "What to notice: at sunset, sunlight travels through much more atmosphere; blue light scatters out along the long path, leaving redder light to reach you."

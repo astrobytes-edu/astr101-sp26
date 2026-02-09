@@ -587,7 +587,7 @@ Blue scatters about **$6\times$ more** than red!
 
 ## Why the Sky Is Blue
 
-{{< img rayleigh-scattering-sky width="90%" >}}
+{{< img rayleigh-scattering-nblm width="90%" >}}
 
 ::: {.fragment}
 Blue photons scatter all over the sky, so they reach your eyes from every direction.

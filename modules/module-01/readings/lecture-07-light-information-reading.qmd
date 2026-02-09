@@ -369,7 +369,7 @@ $$\frac{\text{Blue scattering}}{\text{Red scattering}} = \left(\frac{700}{450}\r
 
 Blue light scatters about **6 times more** than red light! This is why the sky is blue — blue photons get scattered all over the sky, reaching your eyes from every direction. Meanwhile, red photons mostly travel straight through without scattering.
 
-{{< fig rayleigh-scattering-sky >}}
+{{< fig rayleigh-scattering-nblm >}}
 
 ::: {.callout-the-more-you-know title="The Sky Isn't Violet (Even Though Violet Scatters More)" collapse="true"}
 Violet light *does* scatter even more than blue (it has shorter wavelength). But the sky doesn't look violet because:

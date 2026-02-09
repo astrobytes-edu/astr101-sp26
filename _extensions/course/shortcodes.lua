@@ -130,49 +130,92 @@ local function file_exists(path)
   return false
 end
 
+local function fig_debug(msg)
+  if os.getenv("FIG_DEBUG") == "1" then
+    io.stderr:write("[fig-debug] " .. tostring(msg) .. "\n")
+  end
+end
+
+local function normalize_slashes(path)
+  if not path then return path end
+  return path:gsub("\\", "/")
+end
+
+local function is_absolute_path(path)
+  if not path or path == "" then return false end
+  if path:match("^/") then return true end
+  if path:match("^[A-Za-z]:[/\\]") then return true end
+  return false
+end
+
+local function ascend_until_quarto(start_dir)
+  local dir = start_dir
+  local guard = 0
+  while dir and dir ~= "" and guard < 50 do
+    local candidate = path_join(dir, "_quarto.yml")
+    if file_exists(candidate) then
+      return dir
+    end
+    local parent = pandoc.path.directory(dir)
+    if not parent or parent == "" or parent == dir then
+      break
+    end
+    dir = parent
+    guard = guard + 1
+  end
+  return nil
+end
+
+local function resolve_input_file_abs()
+  local input_file = nil
+  if PANDOC_STATE and PANDOC_STATE.input_files and #PANDOC_STATE.input_files > 0 then
+    input_file = PANDOC_STATE.input_files[1]
+  end
+  if not input_file or input_file == "" then
+    return nil
+  end
+
+  local cwd = nil
+  if pandoc and pandoc.system and pandoc.system.get_working_directory then
+    cwd = pandoc.system.get_working_directory()
+  end
+
+  if is_absolute_path(input_file) then
+    return input_file
+  end
+
+  if cwd and cwd ~= "" then
+    return path_join(cwd, input_file)
+  end
+
+  return input_file
+end
+
 local function resolve_project_dir()
   local env = os.getenv("QUARTO_PROJECT_DIR")
   if env and env ~= "" then
-    return env
+    local from_env = ascend_until_quarto(env) or env
+    return from_env
   end
 
   local cwd = nil
   if pandoc and pandoc.system and pandoc.system.get_working_directory then
     cwd = pandoc.system.get_working_directory()
     if cwd and cwd ~= "" then
-      local cwd_quarto = path_join(cwd, "_quarto.yml")
-      if file_exists(cwd_quarto) then
-        return cwd
+      local from_cwd = ascend_until_quarto(cwd)
+      if from_cwd then
+        return from_cwd
       end
     end
   end
 
-  local input_file = nil
-  if PANDOC_STATE and PANDOC_STATE.input_files and #PANDOC_STATE.input_files > 0 then
-    input_file = PANDOC_STATE.input_files[1]
-  end
-
-  if not input_file or input_file == "" then
-    return "."
-  end
-
-  local dir = pandoc.path.directory(input_file)
-  if not dir or dir == "" then
-    return "."
-  end
-
-  local guard = 0
-  while dir and dir ~= "" and guard < 25 do
-    local candidate = path_join(dir, "_quarto.yml")
-    if file_exists(candidate) then
-      return dir
+  local input_abs = resolve_input_file_abs()
+  if input_abs and input_abs ~= "" then
+    local input_dir = pandoc.path.directory(input_abs)
+    local from_input = ascend_until_quarto(input_dir)
+    if from_input then
+      return from_input
     end
-    local parent = pandoc.path.directory(dir)
-    if parent == dir or parent == "" then
-      break
-    end
-    dir = parent
-    guard = guard + 1
   end
 
   if cwd and cwd ~= "" then
@@ -239,43 +282,58 @@ end
 -- Project-relative path helpers (GitHub Pages base-path safe)
 -- ==============================================================
 
-local _project_offset_cache = nil
-
 local function compute_project_offset()
+  -- Quarto renders each input with CWD set to the source directory.
+  -- Use that directly instead of temp input/output paths from PANDOC_STATE.
   local project_dir = resolve_project_dir()
-
-  local input_file = nil
-  if PANDOC_STATE and PANDOC_STATE.input_files and #PANDOC_STATE.input_files > 0 then
-    input_file = PANDOC_STATE.input_files[1]
+  local cwd = nil
+  if pandoc and pandoc.system and pandoc.system.get_working_directory then
+    cwd = pandoc.system.get_working_directory()
   end
 
-  if not input_file or input_file == "" then
+  fig_debug("project_dir=" .. tostring(project_dir))
+  fig_debug("cwd=" .. tostring(cwd))
+
+  if not cwd or cwd == "" then
     return ""
   end
 
-  local input_dir = pandoc.path.directory(input_file)
-  local rel = pandoc.path.make_relative(input_dir, project_dir)
+  local rel = pandoc.path.make_relative(cwd, project_dir)
+  fig_debug("rel(make_relative)=" .. tostring(rel))
 
-  -- rel is "." when the input is in project root
   if rel == "." or rel == "" then
     return ""
   end
 
+  local rel_norm = normalize_slashes(rel)
+  local proj_norm = normalize_slashes(project_dir)
+  local cwd_norm = normalize_slashes(cwd)
+
+  -- If make_relative returns absolute, strip project prefix manually.
+  if is_absolute_path(rel_norm) then
+    local prefix = proj_norm:gsub("/+$", "") .. "/"
+    if cwd_norm:sub(1, #prefix) == prefix then
+      rel_norm = cwd_norm:sub(#prefix + 1)
+    else
+      fig_debug("offset(fallback)=<empty>")
+      return ""
+    end
+  end
+
   local depth = 0
-  for part in rel:gmatch("[^/\\]+") do
+  for part in rel_norm:gmatch("[^/\\]+") do
     if part ~= "." and part ~= "" then
       depth = depth + 1
     end
   end
 
-  return string.rep("../", depth)
+  local offset = string.rep("../", depth)
+  fig_debug("offset(final)=" .. offset)
+  return offset
 end
 
 local function project_offset()
-  if _project_offset_cache == nil then
-    _project_offset_cache = compute_project_offset()
-  end
-  return _project_offset_cache
+  return compute_project_offset()
 end
 
 local function resolve_project_path(path)
