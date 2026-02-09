@@ -100,7 +100,7 @@ Every photon has a story:
 By the end of today, you can:
 
 ::: {.incremental .text-sm}
-- Describe light as an **electromagnetic wave** ($c = \lambda f$)
+- Describe light as an **electromagnetic wave** ($c = \lambda \nu$)
 - Identify the major regions of the **electromagnetic spectrum**
 - Explain why the **sky is blue** and **sunsets are red**
 :::
@@ -114,6 +114,7 @@ By the end of today, you can:
 ::: {.incremental .text-sm}
 - Explain why lunar eclipses produce a **red Moon**
 - Apply the inverse-square law for light intensity ($I \propto 1/r^2$)
+- Infer **temperature, composition, and motion** from starlight observations
 :::
 
 ::: {.notes}
@@ -185,10 +186,10 @@ Light travels perfectly through the vacuum of space.
 | Property | Symbol | What it measures | Units |
 |----------|--------|------------------|-------|
 | **Wavelength** | $\lambda$ | Distance between wave crests | meters (m) or nanometers (nm) |
-| **Frequency** | $f$ | Wave crests passing per second | hertz (Hz) |
+| **Frequency** | $\nu$ | Wave crests passing per second | hertz (Hz) |
 
 ::: {.fragment .mt-4 .text-center .text-xl}
-All light travels at the same speed: $c = 3 \times 10^8\ \mathrm{m/s}$
+Wave relation: $c = \lambda \nu$ (with $c = 3 \times 10^8\ \mathrm{m/s}$)
 :::
 
 ::: {.notes}
@@ -199,7 +200,7 @@ All light travels at the same speed: $c = 3 \times 10^8\ \mathrm{m/s}$
 
 ## Predict First!
 
-Without doing math: if the wavelength doubles ($\lambda \to 2\lambda$), the frequency $f$ becomes...
+Without doing math: if the wavelength doubles ($\lambda \to 2\lambda$), the frequency $\nu$ becomes...
 
 :::: {.columns .mt-4}
 ::: {.column width="25%"}
@@ -220,7 +221,7 @@ D) $4\times$
 ::::
 
 ::: {.notes}
-30 s. Commit first. Then reveal with $c=\lambda f$: since $c$ is constant, doubling $\lambda$ halves $f$.
+30 s. Commit first. Then reveal with $c=\lambda \nu$: since $c$ is constant, doubling $\lambda$ halves $\nu$.
 :::
 
 ---
@@ -228,7 +229,7 @@ D) $4\times$
 ## The Wave Equation
 
 ::: {.text-center .text-xl}
-$$c = \lambda f$$
+$$c = \lambda \nu$$
 :::
 
 ::: {.fragment .mt-4}
@@ -725,7 +726,7 @@ Reasoning: distance increases by $5$, so intensity drops by $5^2 = 25$.
 
 ::: {.text-sm}
 
-1. Light is an electromagnetic wave: $c = \lambda f$.
+1. Light is an electromagnetic wave: $c = \lambda \nu$.
 
 2. The EM spectrum spans radio to gamma rays.
 
@@ -813,7 +814,7 @@ Let's verify our equations with explicit calculations.
 
 ---
 
-## Verifying $c = \lambda f$
+## Verifying $c = \lambda \nu$
 
 **Given:** Red light has wavelength $\lambda = 700$ nm. What's its frequency?
 
@@ -826,11 +827,11 @@ $$\lambda = 700 \text{ nm} \times \frac{10^{-9} \text{ m}}{1 \text{ nm}} = 7.00 
 ::: {.fragment}
 **Step 2: Solve for frequency**
 
-$$f = \frac{c}{\lambda} = \frac{3.00 \times 10^8 \text{ m/s}}{7.00 \times 10^{-7} \text{ m}}$$
+$$\nu = \frac{c}{\lambda} = \frac{3.00 \times 10^8 \text{ m/s}}{7.00 \times 10^{-7} \text{ m}}$$
 :::
 
 ::: {.fragment}
-$$f = 4.29 \times 10^{14} \text{ Hz} = 4.29 \times 10^{14} \text{ s}^{-1}$$
+$$\nu = 4.29 \times 10^{14} \text{ Hz} = 4.29 \times 10^{14} \text{ s}^{-1}$$
 :::
 
 ::: {.fragment .mt-2 .text-muted}
@@ -858,7 +859,7 @@ $$f = 4.29 \times 10^{14} \text{ Hz} = 4.29 \times 10^{14} \text{ s}^{-1}$$
 :::
 
 ::: {.notes}
-  "The relationship is inverse. As $\lambda$ decreases, $f$ increases proportionally."
+  "The relationship is inverse. As $\lambda$ decreases, $\nu$ increases proportionally."
 :::
 
 ---
@@ -939,6 +940,16 @@ $$\frac{I_A}{I_B} = \frac{r_B^2}{r_A^2}$$
 $$\frac{1}{100} = \frac{r_B^2}{r_A^2}$$
 :::
 
+::: {.notes}
+"Set up the ratio first. Stop here and check that the ratio direction matches intuition."
+:::
+
+---
+
+## Inverse-Square Law: Solving the Distance Ratio
+
+**Problem:** Star A appears $100\times$ fainter than Star B. If they're identical, how much farther is Star A?
+
 ::: {.fragment}
 **Solving for distance ratio:**
 
@@ -1009,7 +1020,7 @@ Light behaves as both a **wave** and a **particle**.
 
 Each particle of light — a **photon** — carries energy:
 
-$$E = hf = \frac{hc}{\lambda}$$
+$$E = h\nu = \frac{hc}{\lambda}$$
 
 ::: {.fragment}
 **Where:**

@@ -108,6 +108,7 @@ By the end of today, you'll be able to:
 - Explain why the Sun appears **white** even though its peak is green
 - Apply the **Stefan-Boltzmann Law** to relate temperature and luminosity
 - Connect **luminosity, temperature, and radius**: $L = 4\pi R^2 \sigma T^4$
+- Infer **stellar size** when temperature is fixed but luminosity differs
 :::
 
 ::: {.notes}
@@ -1000,7 +1001,7 @@ This was called the **"ultraviolet catastrophe"** — classical physics broke do
 
 Energy isn't continuous — it comes in discrete packets: **quanta**.
 
-$$E = nhf$$
+$$E = nh\nu$$
 
 where $n = 0, 1, 2, 3, ...$ (integers only!)
 
@@ -1047,7 +1048,7 @@ Wien's Law and Stefan-Boltzmann are **consequences** of the Planck function, not
 
 ## Birth of Quantum Mechanics
 
-Planck's solution (1900) required $E = hf$.
+Planck's solution (1900) required $E = h\nu$.
 
 ::: {.fragment}
 **Einstein (1905)** showed light itself comes in quanta: **photons**.

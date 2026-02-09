@@ -14,19 +14,19 @@ learning-objectives:
   - Apply Wien's Law to connect peak wavelength and temperature
   - Explain why the Sun appears white even though its peak is in the green
   - Apply the Stefan-Boltzmann Law to relate temperature and luminosity
-  - Connect luminosity, temperature, and radius using L = 4πR²σT⁴
+  - Connect luminosity, temperature, and radius using $L = 4\pi R^2 \sigma T^4$
   - Recognize that two stars at the same temperature but different luminosities must have different sizes
 math-level: algebra_only
 prerequisites: Lecture 7 (Light as Information); understanding of EM spectrum
 ---
 
-::: {.callout-important #the-big-idea}
+::: {.callout-key-insight #the-big-idea}
 ## The Big Idea
 
 Everything glows. You, your laptop, the walls around you — all emit light. Most of it is infrared, invisible to your eyes. But heat it up enough, and anything will glow visibly: first red, then orange, yellow, white, blue. The color of the glow tells you the temperature. This simple principle lets astronomers measure the temperatures of stars billions of kilometers away.
 :::
 
-::: {.callout-important title="How to Use This Reading" collapse="true"}
+::: {.callout-roadmap title="How to Use This Reading" collapse="true"}
 This reading shows how temperature is encoded in light — the astronomer's remote thermometer.
 
 **Musts for today (~25 min):**
@@ -51,14 +51,14 @@ This reading shows how temperature is encoded in light — the astronomer's remo
 - L9: Spectral lines reveal composition and motion
 :::
 
-::: {.callout-tip title="Blackbody Physics in 60 Seconds" collapse="true"}
+::: {.callout-key-insight title="Blackbody Physics in 60 Seconds" collapse="true"}
 If you only remember three things:
 
 1. **Everything glows.** Objects emit thermal radiation because of their temperature. Hotter = brighter and bluer.
 
-2. **Wien's Law:** $\lambda_{\text{peak}} \propto 1/T$. Measure the peak wavelength of emitted light → know the temperature.
+2. **Wien's Law:** $\lambda_{\text{peak}} \propto 1/T$. Measure the peak wavelength of emitted light $\to$ know the temperature.
 
-3. **Stefan-Boltzmann Law:** Power per unit area $= \sigma T^4$. At the same size, doubling $T$ makes emission **16× larger**. (Total luminosity: $L = 4\pi R^2 \sigma T^4$.)
+3. **Stefan-Boltzmann Law:** Power per unit area $= \sigma T^4$. At the same size, doubling $T$ makes emission **$16\times$ larger**. (Total luminosity: $L = 4\pi R^2 \sigma T^4$.)
 
 Now for the details...
 :::
@@ -69,7 +69,7 @@ Now for the details...
 
 Imagine looking through an infrared camera. In pitch darkness, you see a person walking — their body glows brightly against the cool background. A coffee mug just removed from the microwave blazes with infrared light. The cold night sky is nearly black, but the warm buildings stand out in eerie detail.
 
-Here's the remarkable thing: that infrared "glow" isn't reflected light — it's light the objects are **emitting** because of their temperature. Everything with temperature above absolute zero radiates electromagnetic waves. At room temperature, that radiation is mostly infrared, invisible to our eyes. But heat something to 500°C and it glows dull red. At 1000°C, bright orange. At ~5800 K (about 5500°C; the Sun's photosphere), brilliant yellow-white.
+Here's the remarkable thing: that infrared "glow" isn't reflected light — it's light the objects are **emitting** because of their temperature. Everything with temperature above absolute zero radiates electromagnetic waves. At room temperature, that radiation is mostly infrared, invisible to our eyes. But heat something to $500^{\circ}\mathrm{C}$ and it glows dull red. At $1000^{\circ}\mathrm{C}$, bright orange. At ~5800 K (about $5500^{\circ}\mathrm{C}$; the Sun's photosphere), brilliant yellow-white.
 
 This isn't metaphor — it's physics. **Temperature is written in light.**
 
@@ -79,7 +79,7 @@ This is the astronomer's thermometer: point a telescope at a star, spread its li
 
 {{< fig infrared-thermal-image >}}
 
-::: {.callout-note title="🔍 Spot the Assumption" collapse="false"}
+::: {.callout-misconception title="🔍 Spot the Assumption" collapse="false"}
 You might assume:
 
 - **Only "hot" things emit light** (like fire or the Sun)
@@ -89,12 +89,12 @@ You might assume:
 But everything above absolute zero emits electromagnetic radiation. At room temperature, you emit infrared light constantly — roughly 100 W of thermal radiation (it depends on your body, clothing, and surroundings). You're glowing right now!
 :::
 
-::: {.callout-tip title="🌡️ Deep Dive: The Kelvin Temperature Scale" collapse="true"}
+::: {.callout-deep-dive title="🌡️ Deep Dive: The Kelvin Temperature Scale" collapse="true"}
 Throughout this lecture (and all of astrophysics), we use the **Kelvin scale** for temperature. Here's why — and how to convert.
 
 **Why Kelvin?**
 
-The Kelvin scale starts at **absolute zero** — the coldest possible temperature, where all thermal motion stops. This makes physics formulas simpler because there are no negative temperatures to worry about. When we say "double the temperature," that makes physical sense in Kelvin (2 × 300 K = 600 K), but not in Celsius (2 × 27°C ≠ 54°C in any meaningful sense).
+The Kelvin scale starts at **absolute zero** — the coldest possible temperature, where all thermal motion stops. This makes physics formulas simpler because there are no negative temperatures to worry about. When we say "double the temperature," that makes physical sense in Kelvin ($2 \times 300\,\mathrm{K} = 600\,\mathrm{K}$), but not in Celsius ($2 \times 27^{\circ}\mathrm{C} \neq 54^{\circ}\mathrm{C}$ in any meaningful sense).
 
 **Kelvin vs. Celsius**
 
@@ -104,13 +104,13 @@ $$T_K = T_C + 273$$
 
 | Description | Celsius | Kelvin |
 |-------------|---------|--------|
-| Absolute zero (thermal motion stops) | −273°C | 0 K |
-| Water freezes | 0°C | 273 K |
-| Room temperature | ~20°C | ~293 K |
-| Water boils | 100°C | 373 K |
-| Oven temperature | ~200°C | ~473 K |
-| Red-hot metal | ~700°C | ~1000 K |
-| Sun's surface | ~5500°C | ~5800 K |
+| Absolute zero (thermal motion stops) | $-273^{\circ}\mathrm{C}$ | 0 K |
+| Water freezes | $0^{\circ}\mathrm{C}$ | 273 K |
+| Room temperature | ~$20^{\circ}\mathrm{C}$ | ~293 K |
+| Water boils | $100^{\circ}\mathrm{C}$ | 373 K |
+| Oven temperature | ~$200^{\circ}\mathrm{C}$ | ~473 K |
+| Red-hot metal | ~$700^{\circ}\mathrm{C}$ | ~1000 K |
+| Sun's surface | ~$5500^{\circ}\mathrm{C}$ | ~5800 K |
 
 **Quick conversion:** Add 273 to Celsius to get Kelvin. For rough estimates, remember that room temperature is about 300 K, and the Sun is about 6000 K.
 
@@ -122,15 +122,15 @@ $$T_K = \frac{5}{9}(T_F - 32) + 273 = \frac{5}{9}(T_F + 460)$$
 
 | Description | Fahrenheit | Kelvin |
 |-------------|------------|--------|
-| Water freezes | 32°F | 273 K |
-| Room temperature | ~70°F | ~294 K |
-| Body temperature | 98.6°F | 310 K |
-| Water boils | 212°F | 373 K |
+| Water freezes | $32^{\circ}\mathrm{F}$ | 273 K |
+| Room temperature | ~$70^{\circ}\mathrm{F}$ | ~294 K |
+| Body temperature | $98.6^{\circ}\mathrm{F}$ | 310 K |
+| Water boils | $212^{\circ}\mathrm{F}$ | 373 K |
 
 **The bottom line:** Kelvin is the physicist's temperature scale because it starts at true zero. Throughout this reading, temperatures are in Kelvin unless otherwise noted.
 :::
 
-::: {.callout-note title="Where We Left Off (Lecture 7)"}
+::: {.callout-roadmap title="Where We Left Off (Lecture 7)"}
 In Lecture 7, we established that **light is information**:
 
 - Light is an electromagnetic wave with wavelength and frequency
@@ -156,7 +156,7 @@ All objects with temperature above absolute zero emit electromagnetic radiation.
 ::: {.column-margin}
 **Thermal radiation:** Electromagnetic radiation emitted by an object due to its temperature. Every object above absolute zero emits it.
 
-**Absolute zero:** The lowest possible temperature (0 K = -273°C). At this temperature, thermal motion stops and thermal radiation ceases.
+**Absolute zero:** The lowest possible temperature ($0\,\mathrm{K} = -273^{\circ}\mathrm{C}$). At this temperature, thermal motion stops and thermal radiation ceases.
 :::
 
 No external source is needed — the object emits because it has internal energy. The hotter it is, the more it emits, and the shorter the wavelength.
@@ -166,11 +166,11 @@ No external source is needed — the object emits because it has internal energy
 | Object | Temperature | Peak Wavelength | What It Emits |
 |--------|-------------|-----------------|---------------|
 | Cosmic microwave background | 2.7 K | ~1 mm | Microwaves |
-| Liquid nitrogen | 77 K | ~38 μm | Far infrared |
-| Room temperature | 300 K | ~10 μm | Infrared |
-| Boiling water | 373 K | ~8 μm | Infrared |
-| Red-hot metal | ~1000 K | ~3 μm | Near-IR, dull red visible |
-| Incandescent bulb | ~2500 K | ~1.2 μm | Mostly IR, some visible |
+| Liquid nitrogen | 77 K | ~$38\,\mu\mathrm{m}$ | Far infrared |
+| Room temperature | 300 K | ~$10\,\mu\mathrm{m}$ | Infrared |
+| Boiling water | 373 K | ~$8\,\mu\mathrm{m}$ | Infrared |
+| Red-hot metal | ~1000 K | ~$3\,\mu\mathrm{m}$ | Near-IR, dull red visible |
+| Incandescent bulb | ~2500 K | ~$1.2\,\mu\mathrm{m}$ | Mostly IR, some visible |
 | Sun's surface | 5800 K | ~500 nm | Visible (peaks in green) |
 | Hot blue star | 30,000 K | ~100 nm | Ultraviolet |
 
@@ -189,7 +189,7 @@ Which of the following emits thermal radiation?
 - D) Only objects connected to power sources
 :::
 
-::: {.callout-tip title="Solution" collapse="true"}
+::: {.callout-solution title="Solution" collapse="true"}
 **C) Everything with temperature above absolute zero.** Your body, the walls, the air — everything emits thermal radiation. At room temperature, this is mostly infrared (invisible to eyes), but it's still real EM radiation.
 :::
 
@@ -246,13 +246,13 @@ The blackbody spectrum was a major puzzle in 19th-century physics. Classical the
 
 Planck's explanation of the blackbody spectrum earned him the 1918 Nobel Prize and revolutionized physics. The smooth blackbody curve you see in the demo is a triumph of quantum physics — classical physics couldn't explain it.
 
-::: {.callout-tip title="The More You Know: Cosmic Microwave Background" collapse="true"}
+::: {.callout-the-more-you-know title="The More You Know: Cosmic Microwave Background" collapse="true"}
 The most perfect blackbody ever measured isn't a star — it's the **Cosmic Microwave Background (CMB)**, the afterglow of the Big Bang. The CMB has a temperature of 2.725 K and its spectrum matches a perfect blackbody curve to extraordinary precision (deviations constrained to **tens of parts per million** of the peak brightness in COBE/FIRAS analyses).
 
 This perfect blackbody signature is powerful evidence that the early universe was in thermal equilibrium — hot, dense, and uniform — before it expanded and cooled to its current state. The CMB was discovered in 1965, and its blackbody nature was measured by COBE/FIRAS in the early 1990s — work that contributed to the 2006 Nobel Prize recognition of the CMB's blackbody form.
 :::
 
-::: {.callout-tip title="🖥️ Demo: Explore Blackbody Spectra" collapse="false"}
+::: {.callout-roadmap title="🖥️ Demo: Explore Blackbody Spectra" collapse="false"}
 Open the **[Blackbody Radiation Interactive Demo](../../../demos/blackbody-radiation/)** to see how the spectrum changes with temperature. Try adjusting the temperature slider and watch the peak shift from infrared through visible to ultraviolet.
 :::
 
@@ -265,7 +265,7 @@ A blackbody's emission spectrum depends on:
 - D) The type of electromagnetic wave hitting it
 :::
 
-::: {.callout-tip title="Solution" collapse="true"}
+::: {.callout-solution title="Solution" collapse="true"}
 **C) Only the object's temperature.** This is the remarkable property of blackbodies: the shape of the spectrum is universal. A blackbody iron ball at 5800 K emits the same spectrum as a blackbody tungsten ball at 5800 K (or the Sun at 5800 K). Temperature alone determines the spectrum.
 :::
 
@@ -275,7 +275,7 @@ A blackbody's emission spectrum depends on:
 
 ## The Peak Wavelength
 
-::: {.callout-note title="🤔 Predict First"}
+::: {.callout-prediction title="🤔 Predict First"}
 If you double an object's temperature (in Kelvin), does its peak wavelength:
 
 A) Double
@@ -288,10 +288,10 @@ Think about it before reading on...
 
 ### Wien's Displacement Law
 
-::: {.callout-important title="Wien's Displacement Law"}
+::: {.callout-key-insight title="Wien's Displacement Law"}
 The peak wavelength of a blackbody's emission is inversely proportional to its temperature:
 
-$$\lambda_{\text{peak}} = \frac{2.9 \times 10^{-3} \text{ m·K}}{T}$$
+$$\lambda_{\text{peak}} = \frac{2.9 \times 10^{-3}\,\mathrm{m\cdot K}}{T}$$
 
 or in convenient form for visible light:
 
@@ -300,20 +300,20 @@ $$\lambda_{\text{peak}} \text{ (nm)} = \frac{2,900,000}{T \text{ (K)}}$$
 **Hotter objects peak at shorter wavelengths.**
 :::
 
-**Answer to prediction:** **C) Get cut in half.** Double the temperature → half the peak wavelength.
+**Answer to prediction:** **C) Get cut in half.** Double the temperature $\to$ half the peak wavelength.
 
 ::: {.column-margin}
 **Wien's Law:** The relationship between temperature and peak emission wavelength; $\lambda_{\text{peak}} \propto 1/T$. Hotter objects peak at shorter (bluer) wavelengths.
 :::
 
-::: {.callout-note title="🤓 Nerd Note: Peak Depends on How You Plot" collapse="true"}
-"Peak wavelength" here means the peak of the curve when plotted **per unit wavelength** (intensity vs. λ). If you plot the same spectrum per unit frequency (intensity vs. ν), the numerical peak shifts to a different value — same physics, different way of labeling the curve. This is a mathematical subtlety that occasionally confuses advanced students, but for ASTR 101, just know that Wien's Law as written applies to the wavelength form of the spectrum.
+::: {.callout-deep-dive title="🤓 Nerd Note: Peak Depends on How You Plot" collapse="true"}
+"Peak wavelength" here means the peak of the curve when plotted **per unit wavelength** (intensity vs. $\lambda$). If you plot the same spectrum per unit frequency (intensity vs. $\nu$), the numerical peak shifts to a different value — same physics, different way of labeling the curve. This is a mathematical subtlety that occasionally confuses advanced students, but for ASTR 101, just know that Wien's Law as written applies to the wavelength form of the spectrum.
 :::
 
-::: {.callout-tip title="Unit Check for Wien's Law" collapse="true"}
+::: {.callout-sanity-check title="Unit Check for Wien's Law" collapse="true"}
 Use **one** version at a time and match the units:
 
-- If you use the **m·K** form, $\lambda_{\text{peak}}$ must be in **meters** and $T$ in **Kelvin**
+- If you use the **$\mathrm{m\cdot K}$** form, $\lambda_{\text{peak}}$ must be in **meters** and $T$ in **Kelvin**
 - If you use the **2,900,000 nm** form, $\lambda_{\text{peak}}$ must be in **nanometers** and $T$ in **Kelvin**
 
 Mixing units gives nonsense answers!
@@ -335,11 +335,11 @@ Wien's Law is the astronomer's thermometer. Measure where an object's spectrum p
 **Problem:** A star's spectrum peaks at 290 nm (ultraviolet). What is its surface temperature?
 
 **Solution:**
-$$T = \frac{2,900,000 \text{ nm·K}}{\lambda_{\text{peak}}} = \frac{2,900,000}{290} = 10,000 \text{ K}$$
+$$T = \frac{2{,}900{,}000\,\mathrm{nm\cdot K}}{\lambda_{\text{peak}}} = \frac{2{,}900{,}000}{290} = 10{,}000\,\mathrm{K}$$
 
-This is a hot, blue-white star — about 1.7× the Sun's temperature.
+This is a hot, blue-white star — about $1.7\times$ the Sun's temperature.
 
-::: {.callout-note title="Observable → Model → Inference: Measuring Stellar Temperature"}
+::: {.callout-key-insight title="Observable -> Model -> Inference: Measuring Stellar Temperature"}
 **Observable:** A star's spectrum peaks at 580 nm (yellow-orange light). (Wavelength observation)
 
 **Model:** Wien's Law: $\lambda_{\text{peak}} = 2,900,000/T$ (nm and K).
@@ -356,7 +356,7 @@ A cool red star has a surface temperature of 3000 K. Approximately where does it
 - D) 10,000 nm (far infrared)
 :::
 
-::: {.callout-tip title="Solution" collapse="true"}
+::: {.callout-solution title="Solution" collapse="true"}
 **C) 970 nm (near-infrared).** Using Wien's Law:
 $\lambda_{\text{peak}} = 2,900,000/3000 = 967$ nm ≈ 970 nm.
 
@@ -387,7 +387,7 @@ If the Sun emitted **only** at its peak wavelength, it would look green. But bla
 
 {{< fig sun-spectrum-green >}}
 
-::: {.callout-tip title="The More You Know: Human Vision Evolved for Sunlight" collapse="true"}
+::: {.callout-the-more-you-know title="The More You Know: Human Vision Evolved for Sunlight" collapse="true"}
 It's probably not coincidence that human eyes are most sensitive to green light (~550 nm) — very close to where the Sun's spectrum peaks.
 
 Our visual system evolved under sunlight. It makes sense that we'd be most sensitive to the wavelengths where our primary light source is brightest. Fish that live in deep water (where only blue light penetrates) have eyes adapted for blue. Evolution matches perception to environment.
@@ -402,7 +402,7 @@ The Sun's blackbody spectrum peaks at ~500 nm (green). Why doesn't the Sun appea
 - D) Our eyes can't see green light
 :::
 
-::: {.callout-tip title="Solution" collapse="true"}
+::: {.callout-solution title="Solution" collapse="true"}
 **C) The Sun emits broadly across all visible wavelengths; we see the mix as white.** The peak is at green, but blackbody curves are wide — substantial light is emitted at all visible wavelengths. Our eyes combine them into white (or yellow-white through atmosphere). Only if the Sun emitted a spike at 500 nm and nothing else would we see green.
 :::
 
@@ -440,7 +440,7 @@ Rank these stars from coolest to hottest: Rigel (blue-white), Betelgeuse (red), 
 - D) They're all the same temperature
 :::
 
-::: {.callout-tip title="Solution" collapse="true"}
+::: {.callout-solution title="Solution" collapse="true"}
 **B) Betelgeuse, Sun, Rigel** (coolest to hottest). Red stars are cool (Wien's Law: longer peak wavelength = lower temperature). Blue stars are hot (shorter peak wavelength = higher temperature). The Sun is in between.
 :::
 
@@ -449,12 +449,12 @@ A newly discovered exoplanet has a surface temperature of approximately 1450 K (
 
 - A) ~200 nm, ultraviolet
 - B) ~500 nm, visible green
-- C) ~2000 nm (2 μm), infrared
-- D) ~5000 nm (5 μm), far infrared
+- C) ~2000 nm ($2\,\mu\mathrm{m}$), infrared
+- D) ~5000 nm ($5\,\mu\mathrm{m}$), far infrared
 :::
 
-::: {.callout-tip title="Solution" collapse="true"}
-**C) ~2000 nm (2 μm), infrared.** Using Wien's Law: $\lambda_{\text{peak}} = 2,900,000/1450 = 2000$ nm. This is in the near-infrared, well beyond the red end of visible light (700 nm). This is why infrared telescopes like JWST are essential for studying cool objects like brown dwarfs and directly-imaged exoplanets.
+::: {.callout-solution title="Solution" collapse="true"}
+**C) ~2000 nm ($2\,\mu\mathrm{m}$), infrared.** Using Wien's Law: $\lambda_{\text{peak}} = 2{,}900{,}000/1450 = 2000$ nm. This is in the near-infrared, well beyond the red end of visible light (700 nm). This is why infrared telescopes like JWST are essential for studying cool objects like brown dwarfs and directly-imaged exoplanets.
 :::
 
 ---
@@ -463,7 +463,7 @@ A newly discovered exoplanet has a surface temperature of approximately 1450 K (
 
 ## How Much Light Does an Object Emit?
 
-::: {.callout-note title="🤔 Predict First"}
+::: {.callout-prediction title="🤔 Predict First"}
 If you double an object's temperature (in Kelvin), does its total energy output (luminosity):
 
 A) Double
@@ -476,17 +476,17 @@ Think about it before reading on...
 
 ### The Stefan-Boltzmann Law
 
-::: {.callout-important title="Stefan-Boltzmann Law"}
+::: {.callout-key-insight title="Stefan-Boltzmann Law"}
 The total energy radiated per unit surface area by a blackbody is proportional to the **fourth power** of temperature:
 
 $$\text{Power per area} = \sigma T^4$$
 
-where $\sigma = 5.67 \times 10^{-8}$ W/m²/K⁴ (Stefan-Boltzmann constant)
+where $\sigma = 5.67 \times 10^{-8}\,\mathrm{W\,m^{-2}\,K^{-4}}$ (Stefan-Boltzmann constant)
 
 **Temperature has a HUGE effect on luminosity.**
 :::
 
-**Answer to prediction:** **D) Increase by a factor of 16.** Double the temperature → $2^4 = 16$ times the energy output!
+**Answer to prediction:** **D) Increase by a factor of 16.** Double the temperature $\to$ $2^4 = 16$ times the energy output!
 
 ::: {.column-margin}
 **Stefan-Boltzmann Law:** Radiated power per area scales as $T^4$. Hotter objects emit dramatically more energy.
@@ -498,23 +498,23 @@ The fourth power is dramatic:
 
 | Temperature Factor | Luminosity Factor |
 |-------------------|-------------------|
-| 2× hotter | $2^4 = 16×$ more luminous |
-| 3× hotter | $3^4 = 81×$ more luminous |
-| 10× hotter | $10^4 = 10,000×$ more luminous |
+| $2\times$ hotter | $2^4 = 16\times$ more luminous |
+| $3\times$ hotter | $3^4 = 81\times$ more luminous |
+| $10\times$ hotter | $10^4 = 10{,}000\times$ more luminous |
 
 A blue star twice as hot as the Sun (at the same size) would be **16 times more luminous** — not twice. Temperature is the dominant factor in stellar luminosity.
 
 ::: {.callout-check-yourself title="Check Yourself 7 — Stefan-Boltzmann"}
 Star A has twice the surface temperature of Star B. If both have the same radius, how does Star A's luminosity compare to Star B's?
 
-- A) 2× more luminous
-- B) 4× more luminous
-- C) 8× more luminous
-- D) 16× more luminous
+- A) $2\times$ more luminous
+- B) $4\times$ more luminous
+- C) $8\times$ more luminous
+- D) $16\times$ more luminous
 :::
 
-::: {.callout-tip title="Solution" collapse="true"}
-**D) 16× more luminous.** By the Stefan-Boltzmann Law, luminosity scales as $T^4$ (for same size). If Star A is twice as hot: $(2)^4 = 16$ times more luminous.
+::: {.callout-solution title="Solution" collapse="true"}
+**D) $16\times$ more luminous.** By the Stefan-Boltzmann Law, luminosity scales as $T^4$ (for same size). If Star A is twice as hot: $(2)^4 = 16$ times more luminous.
 :::
 
 ---
@@ -525,10 +525,10 @@ Star A has twice the surface temperature of Star B. If both have the same radius
 
 The Stefan-Boltzmann Law gives power per unit **area**. To get total luminosity, multiply by the star's surface area ($4\pi R^2$ for a sphere):
 
-::: {.callout-important title="The L-T-R Relationship"}
+::: {.callout-key-insight title="The L-T-R Relationship"}
 $$L = 4\pi R^2 \sigma T^4$$
 
-**Luminosity depends on both size (R²) and temperature (T⁴).**
+**Luminosity depends on both size ($R^2$) and temperature ($T^4$).**
 
 A star can be luminous because:
 
@@ -545,24 +545,24 @@ A star can be luminous because:
 
 Two stars at the **same temperature** but **different luminosities** must have **different sizes**:
 
-- If Star A and Star B have the same $T$ but Star A is 100× more luminous...
-- Then Star A must have 10× the radius (since $L \propto R^2$)
+- If Star A and Star B have the same $T$ but Star A is $100\times$ more luminous...
+- Then Star A must have $10\times$ the radius (since $L \propto R^2$)
 
-This is how we distinguish **giants** from **dwarfs** observationally: same temperature, different luminosity → different radius.
+This is how we distinguish **giants** from **dwarfs** observationally: same temperature, different luminosity $\to$ different radius.
 
-::: {.callout-note title="Observable → Model → Inference: Determining Stellar Size"}
-**Observable:** Two red stars have the same color (same temperature, ~3500 K), but Star A is 10,000× more luminous than Star B. (Brightness + Wavelength observations)
+::: {.callout-key-insight title="Observable -> Model -> Inference: Determining Stellar Size"}
+**Observable:** Two red stars have the same color (same temperature, ~3500 K), but Star A is $10{,}000\times$ more luminous than Star B. (Brightness + Wavelength observations)
 
 **Model:** $L = 4\pi R^2 \sigma T^4$. At fixed temperature, $L \propto R^2$.
 
-**Inference:** Star A has $\sqrt{10,000} = 100×$ the radius of Star B. Star A is a red giant; Star B is a red dwarf.
+**Inference:** Star A has $\sqrt{10{,}000} = 100\times$ the radius of Star B. Star A is a red giant; Star B is a red dwarf.
 :::
 
 {{< fig giant-vs-dwarf >}}
 
 ### Worked Example
 
-**Problem:** Two stars have the same surface temperature (same color). Star A has 100× the luminosity of Star B. How do their radii compare?
+**Problem:** Two stars have the same surface temperature (same color). Star A has $100\times$ the luminosity of Star B. How do their radii compare?
 
 **Solution:** Since $L \propto R^2 T^4$ and $T$ is the same:
 $$\frac{L_A}{L_B} = \frac{R_A^2}{R_B^2} = 100$$
@@ -583,32 +583,32 @@ The L-T-R relationship makes sense of the whole diagram.
 {{< fig betelgeuse-size-eso >}}
 
 ::: {.callout-check-yourself title="Check Yourself 8 — Giants vs Dwarfs"}
-A red giant and a red dwarf have the same surface temperature (both appear red). The red giant is 10,000× more luminous. How do their radii compare?
+A red giant and a red dwarf have the same surface temperature (both appear red). The red giant is $10{,}000\times$ more luminous. How do their radii compare?
 
-- A) The giant's radius is 10× the dwarf's
-- B) The giant's radius is 100× the dwarf's
-- C) The giant's radius is 10,000× the dwarf's
+- A) The giant's radius is $10\times$ the dwarf's
+- B) The giant's radius is $100\times$ the dwarf's
+- C) The giant's radius is $10{,}000\times$ the dwarf's
 - D) Their radii are the same
 :::
 
-::: {.callout-tip title="Solution" collapse="true"}
-**B) The giant's radius is 100× the dwarf's.** Since both have the same temperature, $L \propto R^2$. If luminosity ratio is 10,000, then:
+::: {.callout-solution title="Solution" collapse="true"}
+**B) The giant's radius is $100\times$ the dwarf's.** Since both have the same temperature, $L \propto R^2$. If luminosity ratio is 10,000, then:
 $R_{\text{giant}}/R_{\text{dwarf}} = \sqrt{10,000} = 100$.
 
-The red giant's radius is 100× larger than the red dwarf's!
+The red giant's radius is $100\times$ larger than the red dwarf's!
 :::
 
 ::: {.callout-check-yourself title="Check Yourself 9 — L-T-R Synthesis"}
 Star X is twice as hot as Star Y and has half the radius. How does Star X's luminosity compare to Star Y's?
 
 - A) Same luminosity
-- B) 2× more luminous
-- C) 4× more luminous
-- D) 8× more luminous
+- B) $2\times$ more luminous
+- C) $4\times$ more luminous
+- D) $8\times$ more luminous
 :::
 
-::: {.callout-tip title="Solution" collapse="true"}
-**C) 4× more luminous.** Using $L \propto R^2 T^4$:
+::: {.callout-solution title="Solution" collapse="true"}
+**C) $4\times$ more luminous.** Using $L \propto R^2 T^4$:
 
 $$\frac{L_X}{L_Y} = \left(\frac{R_X}{R_Y}\right)^2 \left(\frac{T_X}{T_Y}\right)^4 = \left(\frac{1}{2}\right)^2 \times (2)^4 = \frac{1}{4} \times 16 = 4$$
 
@@ -629,7 +629,7 @@ This demo lets you explore how temperature affects the blackbody spectrum — bo
 
 *Predict before you explore:* Where should the Sun's spectrum peak? In what color?
 
-::: {.callout-note title="My Prediction" collapse="true"}
+::: {.callout-prediction title="My Prediction" collapse="true"}
 Using Wien's Law with $T \approx 5800\text{ K}$: $\lambda_{\text{peak}} =$ _____ nm. This is in the _____ part of the visible spectrum.
 :::
 
@@ -639,7 +639,7 @@ Using Wien's Law with $T \approx 5800\text{ K}$: $\lambda_{\text{peak}} =$ _____
 2. Observe where the peak falls on the wavelength axis
 3. Note which visible color this corresponds to
 
-::: {.callout-tip title="What You Should Have Found" collapse="true"}
+::: {.callout-summary title="What You Should Have Found" collapse="true"}
 The peak falls at approximately 500 nm — **green light!** Yet the curve shows significant emission across the entire visible spectrum (400-700 nm), which is why the Sun appears white, not green.
 
 **Claim:** Wien's Law correctly predicts the Sun peaks in green, but the broad spectrum means we perceive white light.
@@ -656,7 +656,7 @@ The peak falls at approximately 500 nm — **green light!** Yet the curve shows 
 1. Which peaks at a shorter wavelength?
 2. Which emits more total energy (taller curve)?
 
-::: {.callout-note title="My Prediction" collapse="true"}
+::: {.callout-prediction title="My Prediction" collapse="true"}
 Shorter wavelength peak: _____
 Higher total energy: _____
 :::
@@ -667,7 +667,7 @@ Higher total energy: _____
 2. Change to 10,000 K and observe both changes
 3. Compare the two curves
 
-::: {.callout-tip title="What You Should Have Found" collapse="true"}
+::: {.callout-summary title="What You Should Have Found" collapse="true"}
 The 10,000 K star:
 
 - Peaks at a **much shorter wavelength** (around 290 nm, in UV)
@@ -680,7 +680,7 @@ The 3000 K star:
 
 **Claim:** Wien's Law (peak wavelength) and Stefan-Boltzmann Law (total power) both operate. Hot stars peak at shorter wavelengths AND emit dramatically more energy.
 
-**Evidence:** The 10,000 K curve is shifted left (shorter wavelength) AND higher (more total area under the curve). The $T^4$ dependence means the hot star emits $(10000/3000)^4 \approx 120×$ more power per unit area!
+**Evidence:** The 10,000 K curve is shifted left (shorter wavelength) AND higher (more total area under the curve). The $T^4$ dependence means the hot star emits $(10000/3000)^4 \approx 120\times$ more power per unit area!
 :::
 
 ---
@@ -694,7 +694,7 @@ The 3000 K star:
 3. Use Wien's Law to estimate the temperature: $T = 2,900,000/\lambda_{\text{peak}}$ (nm and K)
 4. Check your answer against the slider
 
-::: {.callout-tip title="What You Should Have Found" collapse="true"}
+::: {.callout-summary title="What You Should Have Found" collapse="true"}
 This is exactly what astronomers do! By measuring the peak wavelength of a star's spectrum, we can determine its temperature without ever touching it.
 
 **Claim:** Wien's Law lets us measure stellar temperatures remotely.
@@ -755,7 +755,7 @@ Hydrogen, the simplest atom, produces a distinctive pattern of lines called the 
 
 Every element and molecule — hydrogen, helium, sodium, water vapor, carbon dioxide — has its own unique pattern of lines. By matching observed patterns to laboratory measurements, astronomers can identify what's present in a star, nebula, or exoplanet atmosphere from across the cosmos.
 
-::: {.callout-note title="Coming Up: Spectral Lines (Lecture 9)"}
+::: {.callout-roadmap title="Coming Up: Spectral Lines (Lecture 9)"}
 **Lecture 8 (today):** Blackbody radiation tells us temperature (Wien's Law) and luminosity (Stefan-Boltzmann). Peak wavelength reveals how hot a star is.
 
 **Lecture 9 (next):** Spectral lines tell us composition (what elements are present) and motion (Doppler shifts). They're the missing pieces that turn temperature into a full chemical and kinematic portrait.
@@ -769,18 +769,18 @@ We'll explore this in detail in Lecture 9, where we'll learn to "read" stellar s
 
 ---
 
-::: {.callout-important title="Key Takeaways from Lecture 8"}
+::: {.callout-key-insight title="Key Takeaways from Lecture 8"}
 1. **Everything above absolute zero emits thermal radiation.** Hotter objects emit more and at shorter wavelengths.
 
 2. **A blackbody** is an idealized perfect emitter/absorber whose spectrum depends only on temperature.
 
-3. **Wien's Law:** $\lambda_{\text{peak}} = 2.9 \times 10^{-3}/T$ (in meters and K). Hot → peak at short wavelengths (blue). Cool → peak at long (red).
+3. **Wien's Law:** $\lambda_{\text{peak}} = 2.9 \times 10^{-3}/T$ (in meters and K). Hot $\to$ peak at short wavelengths (blue). Cool $\to$ peak at long (red).
 
 4. **The Sun peaks at green (~500 nm)** but appears white because it emits broadly across all visible wavelengths.
 
-5. **Stefan-Boltzmann Law:** Power **per unit area** scales as $T^4$. At fixed radius, doubling $T$ makes luminosity 16× larger.
+5. **Stefan-Boltzmann Law:** Power **per unit area** scales as $T^4$. At fixed radius, doubling $T$ makes luminosity $16\times$ larger.
 
-6. **L-T-R Relationship:** $L = 4\pi R^2 \sigma T^4$. Same temperature, different luminosity → different size. This distinguishes giants from dwarfs.
+6. **L-T-R Relationship:** $L = 4\pi R^2 \sigma T^4$. Same temperature, different luminosity $\to$ different size. This distinguishes giants from dwarfs.
 
 7. **Blackbodies reveal temperature, but not composition or motion.** For those, we need spectral lines (Lecture 9).
 :::
@@ -797,7 +797,7 @@ We'll explore this in detail in Lecture 9, where we'll learn to "read" stellar s
 
 **3. Stefan-Boltzmann:** Star A is three times hotter than Star B. If they have the same radius, how much more luminous is Star A?
 
-**4. L-T-R:** Two stars have identical temperatures but one is 400× more luminous. How do their radii compare?
+**4. L-T-R:** Two stars have identical temperatures but one is $400\times$ more luminous. How do their radii compare?
 
 **5. Conceptual:** Why does the Sun appear white rather than green, even though its peak wavelength is in the green part of the spectrum?
 
@@ -813,7 +813,7 @@ We'll explore this in detail in Lecture 9, where we'll learn to "read" stellar s
 
 **9. Size from L and T:** The star Betelgeuse has a surface temperature of about 3500 K and a luminosity of about $10^5 L_\odot$. The Sun has $T = 5800$ K and $L = 1 L_\odot$. Estimate the ratio $R_{\text{Betelgeuse}}/R_{\odot}$.
 
-::: {.callout-tip title="Hint" collapse="true"}
+::: {.callout-deep-dive title="Hint" collapse="true"}
 Use the L-T-R relationship in ratio form:
 $$\frac{R_{\text{Betelgeuse}}}{R_\odot} = \sqrt{\frac{L_{\text{Betelgeuse}}}{L_\odot}} \times \left(\frac{T_\odot}{T_{\text{Betelgeuse}}}\right)^2$$
 :::
