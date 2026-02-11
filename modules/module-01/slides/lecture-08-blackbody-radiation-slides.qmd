@@ -755,6 +755,36 @@ Or about 5 billion bulbs for every human who has ever lived.
 
 ---
 
+## The Pillars of Creation: Wien's Law in Action
+
+{{< img pillars-hubble-jwst width="80%" >}}
+
+:::: {.columns .mt-3 .text-sm}
+::: {.column width="50%"}
+**Hubble — visible light**
+
+- **Glowing gas** (~10,000 K) → peaks in visible
+- **Dust pillars** (~20–50 K) → opaque here
+:::
+
+::: {.column width="50%"}
+**Webb — near-infrared**
+
+- **Same dust** → now transparent at longer $\lambda$
+- **Newborn stars** (~3,000 K) → Wien's peak in near-IR
+:::
+::::
+
+::: {.fragment .mt-2 .text-center}
+Wien's Law told astronomers **where to look.** Stefan-Boltzmann told them **what they'd find.**
+:::
+
+::: {.notes}
+~1 min. "Every concept from the last 15 minutes is operating in this single image. The gas glows in visible because it's ~10,000 K — Wien's Law. The dust is cold (~20–50 K), peaks in far-IR, and blocks visible light. But Webb observes in near-infrared, where that dust becomes transparent — revealing thousands of newborn stars that Hubble could never see. This is what the physics buys you."
+:::
+
+---
+
 ## Same Temperature, Different Luminosity
 
 ::: {.text-center}
