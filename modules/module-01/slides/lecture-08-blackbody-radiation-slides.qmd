@@ -406,7 +406,7 @@ D) Drops to 1/4
 ## Wien's Displacement Law
 
 ::: {.text-center .text-xl}
-$$\lambda_{\text{peak}} = \frac{2.9 \times 10^6 \text{ nm·K}}{T \text{ (K)}}$$
+$$\lambda_{\text{peak}} = \frac{2.9 \times 10^6\,\mathrm{nm\cdot K}}{T\,(\mathrm{K})}$$
 
 **Hotter objects peak at shorter wavelengths.**
 :::
@@ -443,7 +443,7 @@ Measure peak wavelength $\to$ know the temperature.
 **Problem:** A star's spectrum peaks at 290 nm (UV). What is its temperature?
 
 ::: {.fragment}
-$$T = \frac{2.9 \times 10^6 \text{ nm·K}}{290 \text{ nm}} = 10{,}000 \text{ K}$$
+$$T = \frac{2.9 \times 10^6\,\mathrm{nm\cdot K}}{290\,\mathrm{nm}} = 10^4\,\mathrm{K}$$
 :::
 
 ::: {.fragment .mt-4}
@@ -468,7 +468,7 @@ A cool red star has a surface temperature of 3000 K. Where does its spectrum pea
 ::: {.notes}
 1–2 min. Poll, then explain.
 
-Calculation: $\lambda = 2.9 \times 10^6\,\text{nm·K}\, / \, 3000\,\text{K} = 967\,\text{nm} \approx 970\,\text{nm}$ (near-IR).
+Calculation: $\lambda = 2.9 \times 10^6\,\mathrm{nm\cdot K}\, / \, 3000\,\mathrm{K} = 967\,\mathrm{nm} \approx 970\,\mathrm{nm}$ (near-IR).
 :::
 
 ---
@@ -493,7 +493,7 @@ Ask students: "What color star would peak at 500 nm?" (Answer: the Sun!)
 ::: {.text-center}
 Plug in the Sun's temperature (5800 K):
 
-$$\lambda_{\text{peak}} = \frac{2.9 \times 10^6 \text{ nm·K}}{5800 \text{ K}} = 500 \text{ nm}$$
+$$\lambda_{\text{peak}} = \frac{2.9 \times 10^6\,\mathrm{nm\cdot K}}{5800\,\mathrm{K}} = 500\,\mathrm{nm}$$
 :::
 
 ::: {.fragment .mt-4 .text-center .text-xl}
@@ -624,11 +624,11 @@ The astronomer's thermometer:
 :::
 
 ::: {.fragment}
-**Model:** Wien's Law — $\lambda_{\text{peak}}\,(\text{nm}) = 2.9 \times 10^6\,\text{nm·K}\, / \, T\,(\text{K})$
+**Model:** Wien's Law — $\lambda_{\text{peak}}\,(\mathrm{nm}) = 2.9 \times 10^6\,\mathrm{nm\cdot K}\, / \, T\,(\mathrm{K})$
 :::
 
 ::: {.fragment}
-**Inference:** $T = 2.9 \times 10^6\,\text{nm·K}\, / \, 580\,\text{nm} = 5000\,\text{K}$. Slightly cooler than the Sun.
+**Inference:** $T = 2.9 \times 10^6\,\mathrm{nm\cdot K}\, / \, 580\,\mathrm{nm} = 5000\,\mathrm{K}$. Slightly cooler than the Sun.
 :::
 
 ::: {.fragment .mt-3 .text-muted}
@@ -886,7 +886,7 @@ Temperature ($x$-axis) vs. luminosity ($y$-axis). The L-T-R relationship organiz
 ::: {.fragment}
 Since $L \propto R^2 T^4$ and $T$ is the same:
 
-$$\frac{R_A}{R_B} = \sqrt{\frac{L_A}{L_B}} = \sqrt{100} = 10$$
+$$\frac{R_A}{R_B} = \left(\frac{L_A}{L_B}\right)^{1/2} = 100^{1/2} = 10$$
 :::
 
 ::: {.fragment .mt-4}
@@ -901,17 +901,17 @@ Star A has **$10\times$ the radius** of Star B.
 
 ## Quick Check: Giants vs Dwarfs {.quiz-question}
 
-A red giant and a red dwarf have the same surface temperature. The giant is $10{,}000\times$ more luminous. How do their radii compare?
+A red giant and a red dwarf have the same surface temperature. The giant is $10^4$ times more luminous. How do their radii compare?
 
 - Giant's radius is $10\times$ the dwarf's
 - [Giant's radius is $100\times$ the dwarf's]{.correct}
-- Giant's radius is $10{,}000\times$ the dwarf's
+- Giant's radius is $10^4$ times the dwarf's
 - Their radii are the same
 
 ::: {.notes}
 1–2 min. Poll, then explain.
 
-Solution: $R_{giant}/R_{dwarf} = \sqrt{10{,}000} = 100$.
+Solution: $R_{\text{giant}}/R_{\text{dwarf}} = (10^4)^{1/2} = 10^2 = 100$.
 :::
 
 ---
@@ -999,10 +999,10 @@ This works because $4\pi$ and $\sigma$ are the same for every star. The physics 
 
 ## Worked Example: Sirius A
 
-**Problem:** Sirius A is $25\times$ more luminous than the Sun and has $T = 9940$ K ($T_\odot = 5800$ K). What's its radius?
+**Problem:** Sirius A is $25\times$ more luminous than the Sun and has $T = 9940\,\mathrm{K}$ ($T_\odot = 5800\,\mathrm{K}$). What's its radius?
 
 ::: {.fragment}
-$$\frac{L}{L_\odot} = 25 = \left(\frac{R}{R_\odot}\right)^2 \left(\frac{9940\text{ K}}{5800\text{ K}}\right)^4$$
+$$\frac{L}{L_\odot} = 25 = \left(\frac{R}{R_\odot}\right)^2 \left(\frac{9940\,\mathrm{K}}{5800\,\mathrm{K}}\right)^4$$
 :::
 
 ::: {.fragment}
@@ -1010,7 +1010,7 @@ $$25 = \left(\frac{R}{R_\odot}\right)^2 \times (1.71)^4 = \left(\frac{R}{R_\odot
 :::
 
 ::: {.fragment}
-$$\left(\frac{R}{R_\odot}\right)^2 = \frac{25}{8.6} = 2.9 \quad \Rightarrow \quad \frac{R}{R_\odot} = \sqrt{2.9} = 1.7$$
+$$\left(\frac{R}{R_\odot}\right)^2 = \frac{25}{8.6} = 2.9 \quad \Rightarrow \quad \frac{R}{R_\odot} = 2.9^{1/2} = 1.7$$
 :::
 
 ::: {.fragment .mt-3}
@@ -1027,22 +1027,22 @@ $$\left(\frac{R}{R_\odot}\right)^2 = \frac{25}{8.6} = 2.9 \quad \Rightarrow \qua
 
 :::: {.columns}
 ::: {.column width="55%"}
-**Problem:** Betelgeuse has $T \approx 3500$ K and $L \approx 100{,}000\,L_\odot$. How big is it?
+**Problem:** Betelgeuse has $T \approx 3500\,\mathrm{K}$ and $L \approx 10^5\,L_\odot$. How big is it?
 
 ::: {.fragment}
-$$\frac{L}{L_\odot} = 100{,}000 = \left(\frac{R}{R_\odot}\right)^2 \left(\frac{3500\text{ K}}{5800\text{ K}}\right)^4$$
+$$\frac{L}{L_\odot} = 10^5 = \left(\frac{R}{R_\odot}\right)^2 \left(\frac{3500\,\mathrm{K}}{5800\,\mathrm{K}}\right)^4$$
 :::
 
 ::: {.fragment}
-$$100{,}000 = \left(\frac{R}{R_\odot}\right)^2 \times (0.60)^4 = \left(\frac{R}{R_\odot}\right)^2 \times 0.13$$
+$$10^5 = \left(\frac{R}{R_\odot}\right)^2 \times (0.60)^4 = \left(\frac{R}{R_\odot}\right)^2 \times 0.13$$
 :::
 
 ::: {.fragment}
-$$\left(\frac{R}{R_\odot}\right)^2 = \frac{100{,}000}{0.13} \approx 770{,}000$$
+$$\left(\frac{R}{R_\odot}\right)^2 = \frac{10^5}{0.13} \approx 7.7 \times 10^5$$
 :::
 
 ::: {.fragment}
-$$\frac{R}{R_\odot} = \sqrt{770{,}000} \approx \mathbf{880}$$
+$$\frac{R}{R_\odot} = (7.7 \times 10^5)^{1/2} \approx \mathbf{880}$$
 :::
 :::
 
@@ -1058,7 +1058,7 @@ $$\frac{R}{R_\odot} = \sqrt{770{,}000} \approx \mathbf{880}$$
 :::
 
 ::: {.notes}
-"Betelgeuse is cool but ENORMOUS. Its $T^4$ factor is only 0.13× the Sun's, so to reach 100,000 $L_\odot$ it needs a colossal surface area."
+"Betelgeuse is cool but ENORMOUS. Its $T^4$ factor is only $0.13\times$ the Sun's, so to reach $10^5\,L_\odot$ it needs a colossal surface area."
 :::
 
 ---
@@ -1249,7 +1249,7 @@ Key connection: The smooth curve is the blackbody continuum we just learned abou
 
 2. **Blackbody** spectrum depends only on temperature.
 
-3. **Wien's Law:** $\lambda_{\text{peak}}\,(\text{nm}) = 2.9 \times 10^6\,\text{nm·K}\, / \, T\,(\text{K})$. Hot $\to$ blue. Cool $\to$ red.
+3. **Wien's Law:** $\lambda_{\text{peak}}\,(\mathrm{nm}) = 2.9 \times 10^6\,\mathrm{nm\cdot K}\, / \, T\,(\mathrm{K})$. Hot $\to$ blue. Cool $\to$ red.
 
 4. **The Sun peaks at green** but appears white because it emits broadly.
 
