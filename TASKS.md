@@ -1,6 +1,6 @@
 # ASTR 101 — Active Tasks
 
-**Last updated:** 2026-02-10
+**Last updated:** 2026-02-11
 
 ---
 
@@ -10,15 +10,18 @@
 - [x] Draft reading: `lecture-08-blackbody-radiation-reading.qmd`
 - [x] Draft slides: `lecture-08-blackbody-radiation-slides.qmd`
 - [x] Register figures in `assets/figures.yml`
+- [x] Differentiate `star-colors-temperature` figure — now uses NGC 6355 Hubble image
+- [x] Add self-assessment checklist to reading (per content template)
+- [x] Add Observable → Model → Inference slide to slide deck
+- [x] Add Kelvin temperature overview slide (students need this context)
+- [x] Add demo moment slides with `background-iframe` (blackbody + EM spectrum)
+- [x] Add new figures: Sun flare (SDO), H-R diagram (ESO), NGC 6355, photosphere line formation
+- [x] Register 6 new figures in `figures.yml` (sun-flare-sdo, hr-diagram-eso, ngc6355-star-colors, jwst-spectroscopy-density, photosphere-line-formation, updated star-colors-temperature)
+- [x] Mark "Deeper Dive" section as "If Time Permits" with timing guidance
+- [x] Static validation: all figure refs, callout syntax, URLs — clean
 - [ ] Replace placeholder `infrared-thermal-image` SVG with a real thermal camera image
-- [ ] Differentiate `star-colors-temperature` figure from `blackbody-spectrum-temps` (both point to same file)
-- [ ] Add self-assessment checklist to reading (per content template)
-- [ ] Add Observable → Model → Inference slide to slide deck
-- [ ] Add Kelvin temperature overview slide (students need this context)
-- [ ] Add explicit demo moment slide in slide deck
-- [ ] Review "Deeper Dive" section timing — may exceed 50-minute class
 - [ ] Verify `{{< glossary lecture=8 >}}` shortcode renders correctly
-- [ ] Run `quarto render` and verify no warnings/errors
+- [ ] Run `quarto render` locally and verify no warnings/errors
 
 ### Upcoming Lectures (Module 1 Completion)
 - [x] Reading: L9 Spectral Lines (drafted)

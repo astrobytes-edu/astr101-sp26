@@ -131,6 +131,30 @@ By the end of today, you'll be able to:
 
 ---
 
+## Quick Review: The Kelvin Scale
+
+In physics, we measure temperature in **Kelvin** — starts at absolute zero.
+
+::: {.fragment .mt-3}
+| Landmark | Celsius | **Kelvin** |
+|----------|---------|--------|
+| Absolute zero | $-273^{\circ}\mathrm{C}$ | **0 K** |
+| Room temperature | $20^{\circ}\mathrm{C}$ | **293 K** |
+| Sun's surface | $5500^{\circ}\mathrm{C}$ | **5800 K** |
+:::
+
+::: {.fragment .mt-3}
+**Quick rule:** $T_K = T_C + 273$
+
+"Double the temperature" only makes physical sense in Kelvin.
+:::
+
+::: {.notes}
+~1 min. Many gen-ed students have never used Kelvin. Quick orientation before equations.
+:::
+
+---
+
 ## {.center}
 
 ::: {.r-fit-text}
@@ -234,20 +258,26 @@ A blackbody iron ball at 5800 K emits the same spectrum as a blackbody tungsten 
 
 ## Why Stars Are (Nearly) Blackbodies
 
+:::: {.columns}
+::: {.column width="45%"}
+{{< img sun-flare-sdo width="100%" >}}
+:::
+
+::: {.column width="55%"}
 ::: {.incremental}
 1. Stars are **opaque** — photons interact many times before escaping
 2. Those interactions **thermalize** the radiation
 3. The light we see comes from the **photosphere** — characterized by temperature
 :::
+:::
+::::
 
-::: {.fragment .mt-4 .text-muted}
-Real stellar spectra have **spectral lines** on top of the blackbody continuum.
-
-We'll use those lines in Lecture 9 for composition and motion.
+::: {.fragment .mt-3 .text-muted}
+Real stellar spectra have **spectral lines** on top of the blackbody continuum — we'll use those in Lecture 9.
 :::
 
 ::: {.notes}
-7–8 min. "Stars approximate blackbodies for the smooth continuum."
+7–8 min. "Stars approximate blackbodies for the smooth continuum." SDO image shows the Sun's photosphere glowing at ~5800 K.
 :::
 
 ---
@@ -377,6 +407,21 @@ Calculation: $\lambda = 2{,}900{,}000/3000 = 967\,\text{nm} \approx 970\,\text{n
 
 ---
 
+## 🖥️ Live Demo: Blackbody Radiation {background-iframe="https://astrobytes-edu.github.io/cosmic-playground/exhibits/blackbody-radiation/" background-interactive="true"}
+
+::: {.notes}
+~3 min. Live demo. Adjust the temperature slider:
+
+1. Start at ~5800 K (Sun) — note peak at green (~500 nm)
+2. Drop to ~3000 K (red star) — peak shifts to infrared
+3. Raise to ~10,000 K — peak shifts to UV
+4. Point out: the curve gets TALLER and shifts LEFT as T rises — two effects at once (Wien + Stefan-Boltzmann)
+
+Ask students: "What color star would peak at 500 nm?" (Answer: the Sun!)
+:::
+
+---
+
 ## The "Sun Is Green" Puzzle
 
 ::: {.text-center}
@@ -473,16 +518,16 @@ The Sun's blackbody spectrum peaks at ~500 nm (green). Why doesn't the Sun appea
 
 ---
 
-## Stellar Color Sequence
+## Star Colors in the Wild: NGC 6355
 
 {{< img star-colors-temperature width="94%" >}}
 
 ::: {.text-center .text-sm .mt-2}
-Color class provides a fast first estimate of stellar temperature.
+In this Hubble image of globular cluster NGC 6355, each star's color tells its temperature — Wien's Law in one glance.
 :::
 
 ::: {.notes}
-Keep this visual and quick; table plus image strengthens recall.
+"Look at the range of colors — blue-white, yellow, orange, red. Each color is a temperature. This is Wien's Law written across the sky."
 :::
 
 ---
@@ -498,6 +543,34 @@ Rank these stars from coolest to hottest: Rigel (blue-white), Betelgeuse (red), 
 
 ::: {.notes}
 1 min. Poll.
+:::
+
+---
+
+## Observable → Model → Inference
+
+::: {.text-center .text-xl}
+The astronomer's thermometer:
+:::
+
+::: {.fragment .mt-3}
+**Observable:** A star's spectrum peaks at 580 nm (yellow-orange light).
+:::
+
+::: {.fragment}
+**Model:** Wien's Law — $\lambda_{\text{peak}} = 2{,}900{,}000 / T$
+:::
+
+::: {.fragment}
+**Inference:** $T = 2{,}900{,}000 / 580 = 5000$ K. Slightly cooler than the Sun.
+:::
+
+::: {.fragment .mt-3 .text-muted}
+No thermometer. No contact. Just light carrying information across the cosmos.
+:::
+
+::: {.notes}
+~1 min. Reinforce the O→M→I framework. This is the course throughline: L5-L6 (motion reveals mass), L7-L8 (light reveals temperature).
 :::
 
 ---
@@ -663,6 +736,20 @@ Use this before Betelgeuse to cement the size-luminosity idea.
 
 ---
 
+## Preview: The H-R Diagram
+
+{{< img hr-diagram-eso width="56%" >}}
+
+::: {.text-center .text-sm .mt-2}
+Temperature ($x$-axis) vs. luminosity ($y$-axis). The L-T-R relationship organizes all of stellar astrophysics.
+:::
+
+::: {.notes}
+~1 min. "We'll study this diagram in detail in Module 2. For now, notice: same temperature but different luminosity means different size — that's what we just learned."
+:::
+
+---
+
 ## Worked Example
 
 **Problem:** Two stars have the same temperature. Star A has $100\times$ the luminosity of Star B. How do their radii compare?
@@ -758,7 +845,7 @@ Spectral lines tell us **composition** and **motion**.
 ::: {.fragment .mt-4 .text-muted}
 **Reading:** Lecture 9 Reading Companion
 
-**Demo:** Explore blackbody spectra: [../../../demos/blackbody-radiation/](../../../demos/blackbody-radiation/)
+**Demos:** [Blackbody Radiation](https://astrobytes-edu.github.io/cosmic-playground/exhibits/blackbody-radiation/){target="_blank"} | [EM Spectrum](https://astrobytes-edu.github.io/cosmic-playground/exhibits/em-spectrum/){target="_blank"}
 :::
 
 ::: {.notes}
@@ -1046,13 +1133,13 @@ $$\frac{R_{\text{Sirius}}}{R_\odot} = \sqrt{\frac{25}{8.76}} = \sqrt{2.85} = 1.6
 ## {.center}
 
 ::: {.r-fit-text}
-Deeper Dive
+Deeper Dive (If Time Permits)
 :::
 
 *The ultraviolet catastrophe and quantum mechanics*
 
 ::: {.notes}
-Optional advanced content on the history of blackbody radiation.
+OPTIONAL — use only if time remains (~10 min of content). These slides cover the historical puzzle that launched quantum mechanics. If running short, skip to "Questions?" and assign this as supplementary reading.
 :::
 
 ---
@@ -1158,22 +1245,32 @@ Planck's constant $h$ appears everywhere in modern physics.
 
 ## Why Stars Are Nearly Perfect Blackbodies
 
+:::: {.columns}
+::: {.column width="55%"}
 **Three conditions for blackbody radiation:**
 
-::: {.incremental}
-1. **Thermal equilibrium:** Radiation and matter have exchanged energy enough times to reach the same temperature.
+::: {.incremental .text-sm}
+1. **Thermal equilibrium:** Radiation and matter exchange energy until reaching the same temperature.
 
-2. **Opacity:** Photons scatter many times before escaping (information about source is "forgotten").
+2. **Opacity:** Photons scatter many times before escaping ("forget" their origin).
 
-3. **Temperature determines spectrum:** Only T matters, not composition.
+3. **Temperature determines spectrum:** Only $T$ matters, not composition.
 :::
 
-::: {.fragment .mt-2}
-**Stars satisfy all three:** Dense stellar interiors thermalize radiation over thousands of years before it escapes from the photosphere.
+::: {.fragment .mt-2 .text-sm}
+**Stars satisfy all three** — radiation thermalizes over thousands of years before escaping from the photosphere.
 :::
+:::
+
+::: {.column width="45%"}
+::: {.fragment}
+{{< img photosphere-line-formation width="100%" >}}
+:::
+:::
+::::
 
 ::: {.notes}
-"The interior of the Sun is a 15-million-degree blackbody. We see the cooler 5800 K photosphere."
+"The interior of the Sun is a 15-million-degree blackbody. We see the cooler 5800 K photosphere. The photosphere line formation diagram shows how the blackbody continuum gets absorption lines imprinted on it."
 :::
 
 ---

@@ -141,6 +141,25 @@ In Lecture 7, we established that **light is information**:
 But we left a key question unanswered: **What determines what wavelength an object emits?**
 
 The answer: **temperature.** Today we connect temperature to the spectrum of emitted light.
+
+::: {.callout-roadmap title="🖥️ Quick Refresher: The EM Spectrum" collapse="true"}
+Need a refresher on the electromagnetic spectrum from Lecture 7? Explore it below — pay attention to where **visible light** sits relative to infrared and ultraviolet. You'll need this mental map throughout today's reading.
+
+<div class="demo-embed" style="width: 100%; margin: 1rem 0;">
+  <iframe
+    src="https://astrobytes-edu.github.io/cosmic-playground/exhibits/em-spectrum/"
+    width="100%"
+    height="480px"
+    style="border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; background: #0a0a14;"
+    loading="lazy"
+    title="EM Spectrum Interactive Demo"
+    allow="fullscreen">
+  </iframe>
+  <p style="text-align: center; margin-top: 0.5rem; font-size: 0.875rem; color: #666;">
+    <a href="https://astrobytes-edu.github.io/cosmic-playground/exhibits/em-spectrum/" target="_blank" style="color: #5dade2;">Open in new tab ↗</a>
+  </p>
+</div>
+:::
 :::
 
 ---
@@ -232,6 +251,8 @@ When you plot intensity vs. wavelength for a blackbody, you get a characteristic
 
 ### Why Stars Are (Nearly) Blackbodies
 
+{{< fig sun-flare-sdo >}}
+
 Stars are excellent approximations of blackbodies (for their **smooth continuum spectrum**) because:
 
 1. They're **opaque** — photons interact many times before escaping
@@ -253,7 +274,22 @@ This perfect blackbody signature is powerful evidence that the early universe wa
 :::
 
 ::: {.callout-roadmap title="🖥️ Demo: Explore Blackbody Spectra" collapse="false"}
-Open the **[Blackbody Radiation Interactive Demo](../../../demos/blackbody-radiation/)** to see how the spectrum changes with temperature. Try adjusting the temperature slider and watch the peak shift from infrared through visible to ultraviolet.
+Adjust the temperature slider below and watch the peak shift from infrared through visible to ultraviolet. Notice two things: the peak moves left (shorter wavelength) as temperature rises, and the curve gets taller (more total energy).
+
+<div class="demo-embed" style="width: 100%; margin: 1rem 0;">
+  <iframe
+    src="https://astrobytes-edu.github.io/cosmic-playground/exhibits/blackbody-radiation/"
+    width="100%"
+    height="520px"
+    style="border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; background: #0a0a14;"
+    loading="lazy"
+    title="Blackbody Radiation Interactive Demo"
+    allow="fullscreen">
+  </iframe>
+  <p style="text-align: center; margin-top: 0.5rem; font-size: 0.875rem; color: #666;">
+    <a href="https://astrobytes-edu.github.io/cosmic-playground/exhibits/blackbody-radiation/" target="_blank" style="color: #5dade2;">Open in new tab ↗</a>
+  </p>
+</div>
 :::
 
 ::: {.callout-check-yourself title="Check Yourself 2 — Blackbody Concept"}
@@ -580,6 +616,8 @@ In Module 2, we'll study the **Hertzsprung-Russell (H-R) diagram** — a plot of
 
 The L-T-R relationship makes sense of the whole diagram.
 
+{{< fig hr-diagram-eso >}}
+
 {{< fig betelgeuse-size-eso >}}
 
 ::: {.callout-check-yourself title="Check Yourself 8 — Giants vs Dwarfs"}
@@ -619,9 +657,19 @@ Temperature's $T^4$ dependence dominates over the smaller size.
 
 ## 🔭 Demo Exploration: Blackbody Radiation
 
-**Open the Blackbody Radiation Demo:** [../../../demos/blackbody-radiation/](../../../demos/blackbody-radiation/)
+Use the interactive demo below (or <a href="https://astrobytes-edu.github.io/cosmic-playground/exhibits/blackbody-radiation/" target="_blank">open it in a new tab ↗</a>) to explore how temperature affects the blackbody spectrum — both the peak wavelength (Wien's Law) and the total energy output (Stefan-Boltzmann).
 
-This demo lets you explore how temperature affects the blackbody spectrum — both the peak wavelength (Wien's Law) and the total energy output (Stefan-Boltzmann).
+<div class="demo-embed" style="width: 100%; margin: 1rem 0;">
+  <iframe
+    src="https://astrobytes-edu.github.io/cosmic-playground/exhibits/blackbody-radiation/"
+    width="100%"
+    height="520px"
+    style="border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; background: #0a0a14;"
+    loading="lazy"
+    title="Blackbody Radiation Interactive Demo"
+    allow="fullscreen">
+  </iframe>
+</div>
 
 ---
 
@@ -765,6 +813,8 @@ Every element and molecule — hydrogen, helium, sodium, water vapor, carbon dio
 
 When you observe the Sun's spectrum, you see the smooth blackbody curve with hundreds of **dark lines** superimposed — wavelengths where light has been absorbed by atoms in the Sun's outer layers. In 1860, Gustav Kirchhoff showed that each element produces its own unique pattern of lines.
 
+{{< fig photosphere-line-formation >}}
+
 We'll explore this in detail in Lecture 9, where we'll learn to "read" stellar spectra like chemical barcodes.
 
 ---
@@ -784,6 +834,20 @@ We'll explore this in detail in Lecture 9, where we'll learn to "read" stellar s
 
 7. **Blackbodies reveal temperature, but not composition or motion.** For those, we need spectral lines (Lecture 9).
 :::
+
+---
+
+## Self-Assessment Checklist
+
+Before moving on, check whether you can do each of the following. If any feel shaky, revisit the corresponding section.
+
+- [ ] I can explain why all objects above absolute zero emit thermal radiation
+- [ ] I can define a blackbody and explain why stars approximate blackbodies
+- [ ] I can use Wien's Law ($\lambda_{\text{peak}} = 2{,}900{,}000/T$) to connect peak wavelength and temperature
+- [ ] I can explain why the Sun appears white even though its peak wavelength is green
+- [ ] I can apply the Stefan-Boltzmann Law to determine how luminosity changes with temperature
+- [ ] I can use $L = 4\pi R^2 \sigma T^4$ to relate luminosity, temperature, and radius
+- [ ] I can determine whether a star is a giant or dwarf given its temperature and luminosity
 
 ---
 

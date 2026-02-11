@@ -1281,10 +1281,10 @@ figures:
     module: 1
 
   star-colors-temperature:
-    path: /assets/images/module-01/week-04/blackbody-spectra-jwst.jpg
-    caption: "What to notice: star color tracks temperature because blackbody curves shift—cool stars peak toward red/infrared, hot stars peak toward blue/UV."
-    alt: "Blackbody spectra for cool, medium, and hot stars with the visible band highlighted, illustrating how peak wavelength shifts with temperature."
-    credit: "Illustration: NASA, ESA, CSA"
+    path: /assets/images/module-01/lec08/ngc-6355-colors-of-stars-nasa-esa-hubble.webp
+    caption: "What to notice: the globular cluster NGC 6355 shows stars of many colors — blue, white, yellow, orange, and red — each color directly reflecting the star's surface temperature via Wien's Law."
+    alt: "Hubble Space Telescope image of the globular cluster NGC 6355 showing a dense field of stars in a range of colors from blue-white through yellow to orange-red, illustrating the relationship between star color and temperature."
+    credit: "NASA, ESA, Hubble"
     module: 1
 
   # ==============================================================
@@ -1326,6 +1326,41 @@ figures:
     credit: "Illustration: A. Rosen (SVG — placeholder)"
     module: 1
 
+  sun-flare-sdo:
+    path: /assets/images/module-01/lec08/Sun_Emits_Flare_NASA_SDO.jpeg
+    caption: "What to notice: the Sun's surface (photosphere) glows because of its ~5800 K temperature — this is thermal radiation. The bright flares show localized regions of extreme heating, with magnetic loops visible at the limb."
+    alt: "NASA Solar Dynamics Observatory image of the Sun showing its glowing photosphere in extreme ultraviolet light, with bright solar flares and magnetic loop structures visible at the surface and limb."
+    credit: "NASA/SDO"
+    module: 1
+
+  hr-diagram-eso:
+    path: /assets/images/module-01/lec08/hr-diagram-eso.jpg
+    caption: "What to notice: the H-R diagram plots luminosity vs. temperature; most stars fall on the main sequence, while giants (upper right) and white dwarfs (lower left) occupy separate regions. Star size and color vary systematically with position."
+    alt: "ESO Hertzsprung-Russell diagram showing luminosity versus surface temperature, with the main sequence running diagonally, giants and supergiants in the upper right, and white dwarfs in the lower left. Stars are depicted as colored spheres whose size and color reflect their physical properties."
+    credit: "ESO"
+    module: 1
+
+  ngc6355-star-colors:
+    path: /assets/images/module-01/lec08/ngc-6355-colors-of-stars-nasa-esa-hubble.webp
+    caption: "What to notice: in the globular cluster NGC 6355, star colors range from blue-white (hot) through yellow to orange-red (cool) — Wien's Law in one image."
+    alt: "Hubble Space Telescope image of the dense globular cluster NGC 6355 showing thousands of stars in a range of colors from blue-white through yellow to orange-red."
+    credit: "NASA, ESA, Hubble"
+    module: 1
+
+  jwst-spectroscopy-density:
+    path: /assets/images/module-01/lec08/jwst-spectroscopy-1.png
+    caption: "What to notice: spectral lines carry information beyond composition — line widths reveal surface gravity and density. A giant star (low density) has narrow lines, while a white dwarf (high density) has broadened lines due to intense surface pressure."
+    alt: "JWST infographic comparing the spectra of a blue giant (large, low-density star with narrow spectral lines) and a white dwarf (small, high-density star with broad spectral lines), illustrating how spectral line width depends on surface pressure and density."
+    credit: "NASA, ESA, CSA"
+    module: 1
+
+  photosphere-line-formation:
+    path: /assets/images/module-01/lec08/photosphere_line_formation-cococubed.svg
+    caption: "What to notice: the photosphere is the layer where photons finally escape the star. Below it, the star is opaque and radiation is thermalized (blackbody). Absorption lines form as photons pass through the cooler outer layers."
+    alt: "Diagram showing photosphere line formation in a stellar atmosphere, with the hot opaque interior producing a blackbody continuum and the cooler outer layers imprinting absorption lines."
+    credit: "cococubed.com"
+    module: 1
+
   giant-vs-dwarf:
     path: /assets/images/module-01/lec08/giant-vs-dwarf.svg
     caption: "What to notice: two stars can have the same temperature (same color) but very different luminosities if their radii differ — at fixed temperature, L scales with R²."
@@ -1362,9 +1397,9 @@ figures:
     module: 1
 
   hr-diagram-preview:
-    path: /assets/images/common/hr-diagram.png
-    caption: "What to notice: the H–R diagram maps stars by temperature and luminosity; the main sequence, giants, and white dwarfs occupy distinct regions."
-    alt: "Hertzsprung–Russell diagram plotting stellar luminosity versus temperature, showing the main sequence and other regions where stars cluster."
+    path: /assets/images/module-01/lec08/hr-diagram-eso.jpg
+    caption: "What to notice: the H-R diagram maps stars by temperature and luminosity; the main sequence, giants, and white dwarfs occupy distinct regions."
+    alt: "ESO Hertzsprung-Russell diagram plotting stellar luminosity versus temperature, with the main sequence running diagonally, giants and supergiants in the upper right, and white dwarfs in the lower left."
     credit: "ESO"
     module: 1
 
