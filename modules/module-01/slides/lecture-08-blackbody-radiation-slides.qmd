@@ -111,6 +111,21 @@ Image-first reinforcement that "everything glows."
 
 ---
 
+## 🖥️ Explore: Infrared Animals {background-iframe="https://viewspace.org/interactives/unveiling_invisible_universe/forms_of_light/infrared_animals" background-interactive="true"}
+
+::: {.notes}
+~2 min. ViewSpace interactive (NASA/STScI). Drag the slider from VISIBLE to INFRARED.
+
+- Animals that blend in visually (camouflage) still glow in infrared — they can't hide their thermal radiation
+- Cold-blooded vs warm-blooded: meerkats glow bright, the tomistoma (crocodile relative) is much dimmer
+- Key connection: everything with temperature above absolute zero emits infrared — Wien's Law in action
+
+Ask: "Why does the crocodile almost disappear in infrared while the meerkats glow?"
+(Answer: Cold-blooded → lower body temperature → less thermal emission.)
+:::
+
+---
+
 ## Today's Learning Objectives
 
 By the end of today, you'll be able to:
@@ -880,6 +895,25 @@ Same element, same line wavelengths, different physical setup.
 
 ::: {.notes}
 Bridge from blackbody continuum to Lecture 9 line physics.
+:::
+
+---
+
+## 🖥️ Explore: Spectrum of Altair {background-iframe="https://viewspace.org/interactives/unveiling_invisible_universe/analyzing_light/spectrum_of_the_star_altair" background-interactive="true"}
+
+::: {.notes}
+~2 min. ViewSpace interactive (NASA/STScI). Walk through the slider steps:
+
+1. NAKED-EYE VIEW — Altair in the Summer Triangle
+2. TELESCOPE VIEW — zooming in on the star
+3. SPECTROGRAPH — spreading starlight into a rainbow
+4. SPECTRUM — the continuous rainbow with dark absorption lines
+5. GRAPH — intensity vs wavelength (a real blackbody-like curve!)
+6. INTERPRETATION — what the spectrum tells us
+
+Key connection: The smooth curve is the blackbody continuum we just learned about. The dark lines on top are spectral absorption lines — that's Lecture 9.
+
+"This is the Observable → Model → Inference pipeline in action."
 :::
 
 ---

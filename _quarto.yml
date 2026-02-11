@@ -165,7 +165,7 @@ website:
   announcement:
     icon: info-circle
     dismissable: true
-    content: "**[Homework 2](/homework/astr101-hw-02.qmd)** due Monday Feb 9, 2026 | Explore the **[Interactive Demos](/demos/index.qmd)**"
+    content: "**Homework 3** will be assigned Monday Feb 16 | Try the **[Cosmic Playground](https://astrobytes-edu.github.io/cosmic-playground/){target='_blank'}** interactive demos"
     type: primary
     position: below-navbar
   navbar:

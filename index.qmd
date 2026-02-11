@@ -46,6 +46,14 @@ No prior physics or astronomy background is required, just curiosity and a willi
 3. Submit homework on [Canvas](https://sdsu.instructure.com) — readings are on this website.
 :::
 
+::: {.callout-tip appearance="simple" icon=false}
+## <i class="bi bi-stars"></i> Cosmic Playground — Interactive Demos
+
+Explore astronomy concepts hands-on with our custom interactive simulations. Adjust a star's temperature and watch its spectrum shift, drag planets around elliptical orbits, slide between visible and infrared views of the night sky, and more.
+
+[<i class="bi bi-play-circle"></i> Launch Cosmic Playground](https://astrobytes-edu.github.io/cosmic-playground/){.btn .btn-primary} &nbsp; [Browse All Demos](demos/index.qmd){.btn .btn-outline-primary}
+:::
+
 ## Quick Navigation
 
 ::: {.dashboard-grid}

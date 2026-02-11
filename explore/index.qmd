@@ -20,6 +20,13 @@ This section contains optional resources for students who want to explore astron
 
 - [ESA Webb Image Gallery](https://esawebb.org/images/) — Latest images from the James Webb Space Telescope
 
+## Interactive Tools
+
+- **[Cosmic Playground](https://astrobytes-edu.github.io/cosmic-playground/)** — Our custom-built interactive demos for this course (blackbody radiation, EM spectrum, Kepler's laws, and more)
+- **[ViewSpace Interactives](https://viewspace.org)** (NASA/STScI) — Explore how different wavelengths reveal the invisible universe
+  - [Infrared Animals](https://viewspace.org/interactives/unveiling_invisible_universe/forms_of_light/infrared_animals) — Slide between visible and infrared to see how thermal radiation reveals hidden heat
+  - [Spectrum of the Star Altair](https://viewspace.org/interactives/unveiling_invisible_universe/analyzing_light/spectrum_of_the_star_altair) — Walk through how astronomers spread starlight into a spectrum and interpret it
+
 ## Useful Resources
 
 - [NASA Universe](https://science.nasa.gov/universe/) — NASA's portal for all things cosmic

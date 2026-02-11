@@ -19,6 +19,7 @@
 - [x] Register 6 new figures in `figures.yml` (sun-flare-sdo, hr-diagram-eso, ngc6355-star-colors, jwst-spectroscopy-density, photosphere-line-formation, updated star-colors-temperature)
 - [x] Mark "Deeper Dive" section as "If Time Permits" with timing guidance
 - [x] Static validation: all figure refs, callout syntax, URLs — clean
+- [x] Embed ViewSpace interactives into slides (Infrared Animals + Spectrum of Altair)
 - [ ] Replace placeholder `infrared-thermal-image` SVG with a real thermal camera image
 - [ ] Verify `{{< glossary lecture=8 >}}` shortcode renders correctly
 - [ ] Run `quarto render` locally and verify no warnings/errors
