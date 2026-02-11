@@ -24,10 +24,8 @@ Homework is one of the main ways you build the skills you need for exams: clear 
 
 ## Solutions
 
-Homework assignments use a **subset** of the practice problems from the lecture readings. Full solutions for Lectures 1–5 are posted so you can review and self-check now and later.
+Homework assignments use a **subset** of the practice problems from the lecture readings. Solutions for Lectures 1–3 are posted so you can review and self-check now; more will be posted later.
 
 - [Lecture 1 Solutions: Spoiler Alerts]({{< meta params.website-url >}}/modules/module-01/readings/lecture-01-spoiler-alerts-solutions.html)
 - [Lecture 2 Solutions: Math Survival Kit]({{< meta params.website-url >}}/modules/module-01/readings/lecture-02-foundations-solutions.html)
 - [Lecture 3 Solutions: The Sky Is a Map]({{< meta params.website-url >}}/modules/module-01/readings/lecture-03-sky-is-a-map-solutions.html)
-- [Lecture 4 Solutions: Moon Geometry]({{< meta params.website-url >}}/modules/module-01/readings/lecture-04-moon-geometry-solutions.html)
-- [Lecture 5 Solutions: Kepler's Laws]({{< meta params.website-url >}}/modules/module-01/readings/lecture-05-keplers-laws-solutions.html)
