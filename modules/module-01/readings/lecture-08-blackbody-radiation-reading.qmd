@@ -24,7 +24,9 @@ prerequisites: Lecture 7 (Light as Information); understanding of EM spectrum
 ::: {.callout-key-insight #the-big-idea}
 ## The Big Idea
 
-Everything glows. You, your laptop, the walls around you — all emit light. Most of it is infrared, invisible to your eyes. But heat it up enough, and anything will glow visibly: first red, then orange, yellow, white, blue. The color of the glow tells you the temperature. This simple principle lets astronomers measure the temperatures of stars billions of kilometers away.
+Everything glows. You, your laptop, the walls around you — all emit light. Most of it is infrared, invisible to your eyes. But heat it up enough, and anything will glow visibly: first red, then orange, yellow, white, blue. The color of the glow tells you the temperature.
+
+Here's what that buys us: Betelgeuse and Sirius are both among the brightest stars in the winter sky — but one is 880 times the Sun's radius and the other is just 1.7×. We've never visited either one. By the end of this reading, you'll understand exactly how astronomers figured that out using nothing but light.
 :::
 
 ::: {.callout-roadmap title="How to Use This Reading" collapse="true"}

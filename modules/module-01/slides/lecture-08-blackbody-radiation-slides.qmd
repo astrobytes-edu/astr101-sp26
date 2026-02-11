@@ -112,6 +112,30 @@ Ask: "Why does the crocodile almost disappear in infrared while the meerkats glo
 
 ---
 
+## {.center}
+
+::: {.text-center .text-xl}
+Betelgeuse and Sirius are both among the **brightest stars** in the winter sky.
+:::
+
+::: {.fragment .mt-4 .text-center .text-xl}
+One is **880 times the Sun's radius.** The other is just **1.7×.**
+:::
+
+::: {.fragment .mt-4 .text-center}
+How could we possibly know that — without visiting either one?
+:::
+
+::: {.fragment .mt-4 .text-center .text-muted}
+By the end of today, you'll be able to answer this.
+:::
+
+::: {.notes}
+~1 min. Let the mystery land. "This is today's question. We'll build the tools to solve it, one law at a time."
+:::
+
+---
+
 ## Today's Learning Objectives
 
 By the end of today, you'll be able to:
@@ -587,6 +611,27 @@ Part 3: Stefan-Boltzmann Law
 
 ---
 
+## Remember the Demo?
+
+::: {.text-center}
+When you raised the temperature, **two things happened:**
+:::
+
+::: {.fragment .mt-3}
+1. The peak **shifted left** — that was Wien's Law (Part 2)
+2. The curve got **much taller** — that's what we'll quantify now
+:::
+
+::: {.fragment .mt-4 .text-center .text-xl}
+How much taller? The answer is dramatic.
+:::
+
+::: {.notes}
+~30 sec. Bridge from demo to Stefan-Boltzmann. Students have the visual memory of the curve growing — anchor the math to that.
+:::
+
+---
+
 ## Predict First!
 
 ::: {.text-center .text-xl}
@@ -682,6 +727,30 @@ A star can be luminous because:
 
 ::: {.notes}
 15–16 min. "This is how we distinguish giants from dwarfs."
+:::
+
+---
+
+## How Many Light Bulbs?
+
+The Sun's luminosity: $L_\odot = 3.84 \times 10^{26}$ W
+
+A typical LED bulb: 10 W
+
+::: {.fragment}
+**Number of bulbs to match the Sun:**
+
+$$N = \frac{3.84 \times 10^{26} \text{ W}}{10 \text{ W}} = 3.84 \times 10^{25} \text{ bulbs}$$
+:::
+
+::: {.fragment .mt-2}
+That's **38 trillion trillion** LED bulbs!
+
+Or about 5 billion bulbs for every human who has ever lived.
+:::
+
+::: {.notes}
+~1 min. "Just to give you a sense of scale — the Sun is absurdly powerful. And that's just one star."
 :::
 
 ---
@@ -936,30 +1005,6 @@ $$\frac{R}{R_\odot} = \sqrt{770{,}000} \approx \mathbf{880}$$
 
 ---
 
-## How Many Light Bulbs?
-
-The Sun's luminosity: $L_\odot = 3.84 \times 10^{26}$ W
-
-A typical LED bulb: 10 W
-
-::: {.fragment}
-**Number of bulbs to match the Sun:**
-
-$$N = \frac{3.84 \times 10^{26} \text{ W}}{10 \text{ W}} = 3.84 \times 10^{25} \text{ bulbs}$$
-:::
-
-::: {.fragment .mt-2}
-That's **38 trillion trillion** LED bulbs!
-
-Or about 5 billion bulbs for every human who has ever lived.
-:::
-
-::: {.notes}
-"Just to give you a sense of scale. The Sun is absurdly powerful."
-:::
-
----
-
 ## Quick Check: The Ratio Method {.quiz-question}
 
 A star is $3\times$ hotter than the Sun and has the same radius. Using the ratio method, how luminous is it compared to the Sun?
@@ -1011,7 +1056,7 @@ Second O→M→I callback. "We went from color and brightness to physical size �
 Part 5: Where Does the Curve Come From?
 :::
 
-*A historical perspective — the puzzle that launched quantum mechanics*
+*We've used the blackbody curve all lecture — but in 1900, it was physics' most embarrassing failure.*
 
 ::: {.notes}
 ~8 min. Historical perspective. Students should absorb the story, not memorize the equations.
@@ -1119,6 +1164,25 @@ Trying to understand why hot things glow the way they do led to the theory that 
 
 ---
 
+## 🖥️ Explore: Spectrum of Altair {background-iframe="https://viewspace.org/interactives/unveiling_invisible_universe/analyzing_light/spectrum_of_the_star_altair" background-interactive="true"}
+
+::: {.notes}
+~2 min. Capstone interactive. ViewSpace (NASA/STScI). Walk through the slider steps:
+
+1. NAKED-EYE VIEW — Altair in the Summer Triangle
+2. TELESCOPE VIEW — zooming in on the star
+3. SPECTROGRAPH — spreading starlight into a rainbow
+4. SPECTRUM — the continuous rainbow with dark absorption lines
+5. GRAPH — intensity vs wavelength (a real blackbody-like curve!)
+6. INTERPRETATION — what the spectrum tells us
+
+Key connection: The smooth curve is the blackbody continuum we just learned about. The dark lines on top are spectral absorption lines — that's Lecture 9.
+
+"This is everything we learned today — Wien's Law, Stefan-Boltzmann, the ratio method — all feeding into reading a spectrum like this. The Observable → Model → Inference pipeline in action."
+:::
+
+---
+
 ## Key Takeaways
 
 ::: {.text-sm}
@@ -1195,25 +1259,6 @@ Same element, same line wavelengths, different physical setup.
 
 ::: {.notes}
 Bridge from blackbody continuum to Lecture 9 line physics.
-:::
-
----
-
-## 🖥️ Explore: Spectrum of Altair {background-iframe="https://viewspace.org/interactives/unveiling_invisible_universe/analyzing_light/spectrum_of_the_star_altair" background-interactive="true"}
-
-::: {.notes}
-~2 min. ViewSpace interactive (NASA/STScI). Walk through the slider steps:
-
-1. NAKED-EYE VIEW — Altair in the Summer Triangle
-2. TELESCOPE VIEW — zooming in on the star
-3. SPECTROGRAPH — spreading starlight into a rainbow
-4. SPECTRUM — the continuous rainbow with dark absorption lines
-5. GRAPH — intensity vs wavelength (a real blackbody-like curve!)
-6. INTERPRETATION — what the spectrum tells us
-
-Key connection: The smooth curve is the blackbody continuum we just learned about. The dark lines on top are spectral absorption lines — that's Lecture 9.
-
-"This is the Observable → Model → Inference pipeline in action."
 :::
 
 ---
