@@ -1,0 +1,238 @@
+---
+title: "Lecture 5 Solutions: Kepler's Laws"
+subtitle: "Practice Problem Solutions"
+author: "Dr. Anna Rosen"
+date: "2026-02-02"
+description: "Solutions to the Lecture 5 practice problems."
+draft: false
+course: ASTR 101
+module: "1 - Foundations"
+---
+
+::: {.callout-note}
+**Student note:** These are model solutions written to show every step, units, and checks. I do not expect your work to be this detailed; shorter solutions are fine if your setup, units, and reasoning are correct.
+
+**HW note:** Homework uses only a subset of these problems; the full set is included for future study and self checking.
+:::
+
+## Conceptual Questions
+
+### Problem 1: Kepler I (Shape) — Focus vs. Center
+
+**Restatement:** Explain what it means for an orbit to be an ellipse with the Sun at one focus, and clarify "focus" vs "center."
+
+**Key insight:** In an ellipse, the center is the midpoint of the major/minor axes, while foci are special off-center points that define the ellipse's geometry.
+
+**Answer:** Kepler's First Law says a planet's orbit is an **ellipse** and the Sun sits at **one focus** of that ellipse. The **center** of the ellipse is the geometric middle of the shape, but the **focus** is one of two special points inside the ellipse. A defining property is that the sum of distances from any point on the ellipse to the two foci is constant. Because the Sun is at a focus (not the center), the planet's distance to the Sun changes throughout the orbit.
+
+**Common misconception:** "The Sun is at the center of the orbit." That is only true for a perfect circle (eccentricity $e = 0$).
+
+**What you should learn from this:** "Focus" is not a synonym for "center" — it encodes how distance changes along the orbit.
+
+---
+
+### Problem 2: Kepler II (Speed) — Where Is It Fastest?
+
+**Restatement:** Decide whether a planet is moving fastest at perihelion or aphelion, and explain using Kepler's Second Law.
+
+**Key insight:** Equal areas in equal times implies higher speed when the planet is closer to the Sun (smaller radius).
+
+**Answer:** A planet moves **fastest at perihelion** (closest approach) and slowest at aphelion. Kepler's Second Law says equal areas are swept out in equal times. When the planet is closer to the Sun, the radius is smaller, so to sweep out the same area in the same time it must move through a larger angle and therefore move faster along the orbit.
+
+**Common misconception:** "It should move slowest when it is closest because gravity is stronger." Stronger gravity actually means stronger acceleration, not slower speed.
+
+**What you should learn from this:** Kepler II is a geometry + conservation statement: closer in means faster.
+
+---
+
+### Problem 3: Kepler II (Misconception) — Equal Areas vs. Equal Distances
+
+**Restatement:** Is it true that equal areas in equal times means equal distances in equal times? Explain.
+
+**Key insight:** Area depends on both distance from the Sun and angle swept; distance traveled along the orbit is not constant.
+
+**Answer:** **False.** Equal areas in equal times means the planet has a constant **areal speed** (area per time). Near perihelion, the planet is closer to the Sun, so the "triangle" swept out has a smaller radius; to make the same area in the same time, the planet must sweep a larger angle and travel a longer arc length. Near aphelion, it sweeps a smaller angle and travels a shorter arc length in the same time.
+
+**Common misconception:** Confusing "equal areas" with "equal arc lengths." The law is about area, not distance traveled.
+
+**What you should learn from this:** If you see "equal areas," think "speed changes," not "distance stays constant."
+
+---
+
+### Problem 4: Retrograde Motion (Model-Based Explanation)
+
+**Restatement:** Explain why Mars appears to reverse direction briefly without actually reversing its orbit.
+
+**Key insight:** Retrograde is an effect of changing viewing geometry when Earth overtakes Mars.
+
+**Answer:** Mars normally appears to drift eastward against the background stars because both Earth and Mars are orbiting the Sun in the same direction. During the time when **Earth passes Mars** on the inside track, our line of sight to Mars changes rapidly. Against the distant background, Mars appears to move westward for a short time. This is an apparent motion caused by relative motion and perspective, not Mars physically reversing direction.
+
+**Common misconception:** "Mars actually turns around." The change is in our viewpoint, not Mars's orbital direction.
+
+**What you should learn from this:** When something looks like it reverses, check whether the observer is moving too.
+
+---
+
+## Calculations
+
+### Problem 5: Kepler I (Perihelion/Aphelion)
+
+**Restatement:** Compute perihelion and aphelion distances from $a$ and $e$.
+
+**Given:**
+- Semi-major axis: $a = 1.52$ AU
+- Eccentricity: $e = 0.093$
+
+**Find:** Perihelion distance $r_p$ and aphelion distance $r_a$.
+
+**Equation:**
+$$r_p = a(1 - e)$$
+$$r_a = a(1 + e)$$
+
+**Solution:**
+$$r_p = (1.52\ \text{AU})(1 - 0.093) = (1.52\ \text{AU})(0.907) \approx 1.38\ \text{AU}$$
+$$r_a = (1.52\ \text{AU})(1 + 0.093) = (1.52\ \text{AU})(1.093) \approx 1.66\ \text{AU}$$
+
+**Unit check:** AU times a dimensionless factor is AU. ✓
+
+**Sanity check:** Because $e$ is small, the distances should be close to $a$; they are.
+
+**Answer:** $r_p \approx 1.38$ AU, $r_a \approx 1.66$ AU.
+
+**What you should learn from this:** $a$ sets the scale; $e$ tells you the fractional "stretch" around that scale.
+
+---
+
+### Problem 6: Kepler III (Period)
+
+**Restatement:** Use Kepler's Third Law (Sun units) to estimate Jupiter's orbital period.
+
+**Given:**
+- Semi-major axis: $a = 5.2$ AU
+
+**Find:** Period $P$ in years.
+
+**Equation (Sun units):**
+$$P^2 = a^3$$
+
+**Solution:**
+$$P = \sqrt{a^3} = \sqrt{(5.2)^3} = \sqrt{140.6} \approx 11.9\ \text{years}$$
+
+**Unit check:** In this unit system (years, AU, Sun as central mass), the equation returns years. ✓
+
+**Sanity check:** Jupiter is far from the Sun, so a decade-scale period is reasonable.
+
+**Answer:** $P \approx 11.9$ years.
+
+**What you should learn from this:** In Sun units, Kepler III becomes a fast scaling tool rather than a constants-heavy formula.
+
+---
+
+### Problem 7: Kepler III (Scaling)
+
+**Restatement:** If $a$ is 4 times Earth's, find the factor change in period.
+
+**Given:**
+- $a_{\text{new}} = 4a_{\oplus}$
+
+**Find:** Factor $P_{\text{new}}/P_{\oplus}$.
+
+**Equation:**
+$$P \propto a^{3/2}$$
+
+**Solution:**
+$$\frac{P_{\text{new}}}{P_{\oplus}} = \left(\frac{a_{\text{new}}}{a_{\oplus}}\right)^{3/2} = 4^{3/2} = \left(\sqrt{4}\right)^3 = 2^3 = 8$$
+
+**Unit check:** This is a ratio of periods, so it must be dimensionless. The right-hand side is a pure number. ✓
+
+**Sanity check:** Bigger orbit should mean much longer period; 8 times longer feels plausible.
+
+**Answer:** The period is **8 times** Earth's.
+
+**What you should learn from this:** The $3/2$ power is the heart of Kepler III scaling.
+
+---
+
+### Problem 8: Ratio Method (Same Central Body)
+
+**Restatement:** Use the ratio form of Kepler III to estimate Callisto's period from Io's.
+
+**Given:**
+- Io: $a_1 = 422{,}000$ km, $P_1 = 1.77$ days
+- Callisto: $a_2 = 1{,}883{,}000$ km
+
+**Find:** $P_2$ in days.
+
+**Equation:**
+$$\left(\frac{P_2}{P_1}\right)^2 = \left(\frac{a_2}{a_1}\right)^3 \quad \Rightarrow \quad \frac{P_2}{P_1} = \left(\frac{a_2}{a_1}\right)^{3/2}$$
+
+**Solution:**
+Compute the distance ratio:
+$$\frac{a_2}{a_1} = \frac{1{,}883{,}000}{422{,}000} \approx 4.46$$
+Now apply the $3/2$ power:
+$$\frac{P_2}{P_1} \approx (4.46)^{3/2} = 4.46\sqrt{4.46} \approx 4.46(2.11) \approx 9.4$$
+So:
+$$P_2 \approx (1.77\ \text{days})(9.4) \approx 16.6\ \text{days}$$
+
+**Unit check:** Days times a dimensionless factor is days. ✓
+
+**Sanity check:** Callisto is much farther out, so a much longer period than $1.77$ days makes sense.
+
+**Answer:** $P_2 \approx 17$ days (about $16.6$ days).
+
+**What you should learn from this:** Ratios let you avoid constants and focus on scaling, as long as the central mass is the same.
+
+---
+
+## Synthesis
+
+### Problem 9: Observable $\to$ Model $\to$ Inference (Kepler III as a Tool)
+
+**Restatement:** A star's brightness dips every 8 days. Identify the observable, state assumptions, and estimate the orbital distance $a$ (in AU) for a Sun-like star.
+
+**Key elements:**
+- Observable: the **period** of repeating brightness dips (brightness vs time).
+- Model assumptions: periodic dips are orbital; star is Sun-like; planet mass negligible; orbit approximately circular.
+- Use Kepler III in Sun units to infer $a$.
+
+**Given:**
+- Period: $P = 8$ days
+
+**Find:** $a$ in AU.
+
+**Equation (Sun units):**
+$$P^2 = a^3 \quad \Rightarrow \quad a = P^{2/3}$$
+
+**Solution:**
+Convert $P$ to years:
+$$P = 8\ \text{days} \times \frac{1\ \text{year}}{365.25\ \text{days}} \approx 2.19 \times 10^{-2}\ \text{years}$$
+Now compute $a$:
+$$a = P^{2/3} \approx (2.19 \times 10^{-2})^{2/3} \approx 7.8 \times 10^{-2}\ \text{AU}$$
+
+**Unit check:** We converted $P$ into years, so using $P^2 = a^3$ (Sun units) returns $a$ in AU. ✓
+
+**Sanity check:** Mercury is at $0.39$ AU, so $0.078$ AU is much closer in, meaning a very short period. That matches the 8-day repetition.
+
+**Answer:** $a \approx 0.078$ AU (about $0.08$ AU).
+
+**What you should learn from this:** A measured period plus a mass assumption turns into a distance inference through Kepler III.
+
+---
+
+### Problem 10: Empirical Laws and the Process of Science (Kepler $\to$ Newton)
+
+**Restatement:** Define "empirical," explain why empirical laws matter, and describe what Newton added.
+
+**Key elements:**
+- Empirical law: a pattern from data that predicts what happens.
+- Why it matters: prediction, compression of data, guides theory, testable.
+- Newton's addition: a mechanism (gravity) that explains why the pattern holds and generalizes it.
+
+**Sample response:**
+An **empirical law** is a relationship discovered from observations that reliably describes **what happens**. Kepler's laws are empirical because Kepler inferred them from careful positional data, not from a theory of forces. Empirical laws are still powerful because they let us **predict** new observations and summarize a huge dataset in a compact, testable form. Newton added the physical mechanism: the law of universal gravitation and the laws of motion. With gravity, Kepler's patterns become a consequence of deeper principles, and we can generalize beyond planets around the Sun to moons, exoplanets, and satellites around any central mass.
+
+**Grading guidance:**
+- Full credit: clearly defines "empirical," gives at least one reason empirical laws matter, and states that Newton provided a force-based explanation that generalizes Kepler's laws.
+- Partial credit: vague definitions or missing the "what vs why" distinction.
+
+**What you should learn from this:** Science often moves in two steps: first find reliable patterns, then explain them.

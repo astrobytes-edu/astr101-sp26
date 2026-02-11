@@ -1,0 +1,345 @@
+---
+title: "Lecture 4 Solutions: Moon Geometry"
+subtitle: "Practice Problem Solutions"
+author: "Dr. Anna Rosen"
+date: "2026-01-28"
+description: "Solutions to the Lecture 4 practice problems."
+draft: false
+course: ASTR 101
+module: "1 - Foundations"
+---
+
+::: {.callout-note}
+**Student note:** These are model solutions written to show every step, units, and checks. I do not expect your work to be this detailed; shorter solutions are fine if your setup, units, and reasoning are correct.
+
+**HW note:** Homework uses only a subset of these problems; the full set is included for future study and self checking.
+:::
+
+## Conceptual Questions
+
+### Problem 1: Phase vs. Eclipse
+
+**Restatement:** Explain what causes Moon phases and what causes lunar eclipses.
+
+**Key insight:** Phases happen all month from viewing geometry; eclipses are rare alignment events involving shadows.
+
+**Answer:** Moon phases happen because the Sun always illuminates half of the Moon, and as the Moon orbits Earth we see different fractions of that lit half. A **lunar eclipse** happens only when the Moon passes through **Earth's shadow** (near full moon, and only when the Moon is near an orbital node).
+
+**Common misconception:** "Phases are Earth's shadow." Earth's shadow matters only during a lunar eclipse.
+
+**What you should learn from this:** Always ask: "Is this a **geometry of illumination** question (phases) or a **shadow alignment** question (eclipses)?"
+
+---
+
+### Problem 2: The Misconception
+
+**Restatement:** Explain why the crescent moon cannot be caused by Earth's shadow.
+
+**Key insight:** Earth's shadow points directly away from the Sun; a crescent moon is observed near the Sun on the sky.
+
+**Answer:** If Earth's shadow were covering the Moon, the Moon would have to be on the **opposite side of Earth from the Sun**, which is the **full moon** geometry. But a crescent moon appears **near the Sun** in the sky and is seen shortly after sunset or shortly before sunrise. That viewing geometry means you are seeing a small fraction of the Moon's sunlit half, not Earth's shadow.
+
+**Common misconception:** "Shadow" feels like a natural explanation for "dark part." In reality, the dark part of the Moon in a normal phase is just the Moon's **night side**.
+
+**What you should learn from this:** Use a quick geometry test: "Is the Moon near the Sun (crescent) or opposite the Sun (full)?" Shadow explanations must match the geometry.
+
+---
+
+### Problem 3: Observing Challenge
+
+**Restatement:** A half-illuminated Moon is high at 6 AM. Identify the phase and explain.
+
+**Key insight:** Time of day tells you where the Moon is relative to the Sun.
+
+**Answer:** This is **third quarter**. A third quarter Moon is about $90^{\circ}$ **west** of the Sun, so it rises around midnight and is high in the sky near sunrise. A first quarter Moon is $90^{\circ}$ **east** of the Sun and would be high near sunset instead.
+
+**Common misconception:** "Half moon" does not uniquely identify the phase; you need timing or which side is lit.
+
+**What you should learn from this:** Use a time anchor: first quarter is an **evening** half-moon; third quarter is a **morning** half-moon.
+
+---
+
+### Problem 4: Eclipse Prediction
+
+**Restatement:** If a solar eclipse happened on April 8, would you expect another eclipse possibility around October 8? Why?
+
+**Key insight:** Eclipse seasons repeat roughly every 6 months because the Sun returns to the same node line.
+
+**Answer:** Yes, you would expect another **eclipse season** about 6 months later. Eclipses require the Sun to be near the line of nodes (the points where the Moon's orbit crosses Earth's orbital plane). As Earth orbits the Sun, the Sun appears to move along the ecliptic, and it lines up with the nodes roughly twice per year, producing eclipse seasons separated by about 6 months.
+
+**Common misconception:** "Eclipses happen every new moon." New moons happen monthly, but node alignment happens only during eclipse seasons.
+
+**What you should learn from this:** Separate "monthly cycle" (new/full moon) from "node alignment cycle" (eclipse seasons).
+
+---
+
+### Problem 5: Why Red?
+
+**Restatement:** Explain why the Moon looks reddish during a total lunar eclipse.
+
+**Key insight:** Earth's atmosphere bends and filters sunlight into the shadow.
+
+**Answer:** During totality, the Moon is inside Earth's shadow, but some sunlight still reaches it after passing through Earth's atmosphere. Earth's atmosphere **refracts** (bends) sunlight into the shadow and **scatters** short-wavelength (blue) light more strongly than long-wavelength (red) light. The transmitted, bent light is therefore redder, so the eclipsed Moon appears reddish.
+
+**Common misconception:** Thinking the Moon glows red by itself. The light is still sunlight, filtered and bent by Earth's atmosphere.
+
+**What you should learn from this:** The same physics that makes sunsets red also colors the eclipsed Moon.
+
+---
+
+## Calculations
+
+### Problem 6: Synodic Month
+
+**Restatement:** If new moon is on January 1, estimate the date of the next full moon.
+
+**Given:**
+- Synodic period (new to new): $29.5$ days
+
+**Find:** Time from new moon to full moon, then a calendar date.
+
+**Key idea:** Full moon is about halfway through the synodic cycle.
+
+**Solution:**
+Half of the synodic month is:
+$$\frac{29.5\ \text{days}}{2} = 14.75\ \text{days}$$
+So the full moon is about $15$ days after January 1, which is around **January 15 or 16**.
+
+**Unit check:** days divided by 2 is still days. ✓
+
+**Sanity check:** New to first quarter is about a week; new to full is about two weeks. That matches.
+
+**Answer:** Approximately **January 15–16**.
+
+**What you should learn from this:** Many Moon timing questions reduce to "a week per quarter phase" as a first estimate.
+
+---
+
+### Problem 7: Angular Size Comparison
+
+**Restatement:** Compare the Moon's angular diameter to Ganymede's.
+
+**Given:**
+- Moon angular diameter: $\theta_{\text{Moon}} = 0.52^{\circ}$
+- Ganymede angular diameter: $\theta_{\text{Gan}} = 1.7$ arcsec
+- Conversion: $1^{\circ} = 3600$ arcsec
+
+**Find:** Ratio $\theta_{\text{Moon}}/\theta_{\text{Gan}}$.
+
+**Solution:**
+Convert the Moon's angular diameter to arcseconds:
+$$\theta_{\text{Moon}} = 0.52^{\circ} \times \frac{3600\ \text{arcsec}}{1^{\circ}} = 1872\ \text{arcsec}$$
+Now compute the ratio:
+$$\frac{\theta_{\text{Moon}}}{\theta_{\text{Gan}}} = \frac{1872}{1.7} \approx 1100$$
+
+**Unit check:** arcsec divided by arcsec is dimensionless (a pure ratio). ✓
+
+**Sanity check:** $1^{\circ}$ is thousands of arcseconds, so the Moon should be "thousands of arcseconds" and the ratio to $1.7$ arcsec should be roughly a thousand. That matches.
+
+**Answer:** The Moon appears about **$1.1 \times 10^3$ times** larger than Ganymede.
+
+**What you should learn from this:** Unit conversions are often the whole problem; do them early and explicitly.
+
+---
+
+### Problem 8: Eclipse Frequency
+
+**Restatement:** Use eclipse rates to estimate what fraction of Earth's surface a typical totality path covers.
+
+**Given:**
+- Average solar eclipses per year: $2.4$
+- A given location gets a total solar eclipse about once every $375$ years
+
+**Find:** Fraction of Earth's surface covered by the path of totality per eclipse (rough estimate).
+
+**Model (assumption):** Each eclipse covers a random fraction $f$ of Earth's surface, so the chance a fixed location is in totality for a given eclipse is about $f$.
+
+**Solution:**
+The average number of **totality opportunities** a given location gets per year is about:
+$$\frac{1}{375}\ \text{per year}$$
+But there are $2.4$ solar eclipses per year, so the chance per eclipse is approximately:
+$$f \approx \frac{(1/375)\ \text{per year}}{2.4\ \text{eclipses per year}} = \frac{1}{900} \approx 1.1 \times 10^{-3}$$
+As a percentage:
+$$f \approx 0.11\%$$
+
+**Unit check:** (per year) divided by (eclipses per year) gives (per eclipse), which matches "chance per eclipse" (dimensionless probability). ✓
+
+**Sanity check:** Totality paths are narrow compared to Earth's surface, so a fraction well below $1\%$ makes sense.
+
+**Answer:** Roughly **$10^{-3}$ of Earth's surface** per eclipse (about **$0.1\%$**).
+
+**Important note:** This estimate assumes the $2.4$ eclipses/year in the prompt correspond to eclipses with a comparable path of totality. In reality, not every solar eclipse is total, and totality paths vary in size — so treat this as an order-of-magnitude inference from rates.
+
+**What you should learn from this:** Rates let you estimate geometric coverage when you assume "random hit" probabilities.
+
+---
+
+### Problem 9: Lunar Recession
+
+**Restatement:** Use a recession rate to estimate distance change and percent change over 1000 years.
+
+**Given:**
+- Recession rate: $3.8$ cm/year
+- Time: $1000$ years
+- Current average distance: $384{,}400$ km
+
+**Find:**
+- (a) Recession distance in 1000 years
+- (b) Percent increase relative to $384{,}400$ km
+
+**Solution (a):**
+$$\Delta d = (3.8\ \text{cm/year})(1000\ \text{years}) = 3800\ \text{cm}$$
+Convert to meters:
+$$3800\ \text{cm} \times \frac{1\ \text{m}}{100\ \text{cm}} = 38\ \text{m}$$
+Convert to kilometers:
+$$38\ \text{m} \times \frac{1\ \text{km}}{1000\ \text{m}} = 0.038\ \text{km}$$
+
+**Solution (b):**
+The fractional increase is:
+$$\frac{\Delta d}{d} = \frac{0.038\ \text{km}}{384{,}400\ \text{km}} \approx 9.9 \times 10^{-8}$$
+As a percentage:
+$$\%\ \text{increase} = 100\% \times \frac{\Delta d}{d} \approx 9.9 \times 10^{-6}\%$$
+
+**Unit check:** km/km is dimensionless, as it must be for a percent. ✓
+
+**Sanity check:** $38$ meters over 1000 years is tiny compared to hundreds of thousands of kilometers, so the percent change should be extremely small. It is.
+
+**Answer:**
+- (a) $\Delta d \approx 38$ m ($0.038$ km)
+- (b) Percent increase $\approx 1.0 \times 10^{-5}\%$
+
+**What you should learn from this:** When a change is many orders of magnitude smaller than the baseline, a percent change will look "absurdly small" on purpose.
+
+---
+
+### Problem 10: Day Length Connection
+
+**Restatement:** On first quarter, estimate the time between moonrise and moonset and explain.
+
+**Key insight:** First quarter means the Moon is about $90^{\circ}$ east of the Sun, so its rise/set times are about 6 hours offset from the Sun's.
+
+**Solution (reasoning):**
+- The Sun rises near 6 AM and sets near 6 PM (roughly; this varies with season and latitude).
+- A first quarter Moon is about $90^{\circ}$ east of the Sun, meaning it is "ahead" of the Sun on the sky by about a quarter turn.
+- That corresponds to about a **6 hour** difference in rise/set times.
+
+So the first quarter Moon rises around **noon** and sets around **midnight**. The time between rise and set is therefore about **12 hours**.
+
+**Unit check:** We're comparing times of day, so the output should be in hours. ✓
+
+**Sanity check:** Half of the sky above the horizon corresponds to about half a day of Earth's rotation, so a typical rise-to-set time near 12 hours is reasonable.
+
+**Answer:** About **12 hours** between moonrise and moonset.
+
+**What you should learn from this:** Link phase to a "daily schedule" (new rises with the Sun and culminates near noon, first quarter is an evening Moon, full culminates near midnight, third quarter is a morning Moon).
+
+---
+
+## Synthesis
+
+### Problem 11: Observable $\to$ Model $\to$ Inference
+
+**Restatement:** If the Moon's angular size changes slightly over time, identify the observable, propose a model, and state an inference.
+
+**Key elements (what a full answer must include):**
+- (a) The observable is an **angle** (angular diameter).
+- (b) A model that explains variation: **distance changes** while physical size is constant.
+- (c) An inference about the orbit: the Moon's orbit is **not perfectly circular** (it is slightly elliptical).
+
+**Sample response:**
+- (a) The astronomer measures the Moon's **angular diameter** on different nights, using a tool like a ruler-at-arm's-length or a simple angular scale.
+- (b) A physical model is that the Moon's true diameter stays essentially constant, but its **distance from Earth changes** as it orbits.
+- (c) If the distance changes, the orbit cannot be a perfect circle. The inference is that the Moon's orbit is **slightly elliptical**, with the Moon sometimes closer (larger angular size) and sometimes farther (smaller angular size).
+
+**Grading guidance:**
+- Full credit: explicitly identifies an angular observable, connects it to distance variation, and states "non-circular / elliptical orbit."
+- Partial credit: mentions "distance changes" but does not clearly connect to angular size or does not state the orbital inference.
+
+**What you should learn from this:** In astronomy, "size on the sky" is often a distance clue when you trust the physical size.
+
+---
+
+### Problem 12: Predicting Eclipses (Saros Cycle)
+
+**Restatement:** Explain why eclipses might repeat on a regular cycle like 18 years, 11 days.
+
+**Key elements:**
+- Eclipses require **new/full moon** plus **node alignment**.
+- Multiple lunar "clocks" are involved (phase cycle and node cycle).
+- A repeating cycle happens when those clocks line up again (approximately).
+
+**Sample response:**
+Eclipses need two things at once: the Moon must be at **new or full moon** (the phase cycle), and it must also be near an orbital **node** so that the Sun–Earth–Moon line is close to the Moon's orbital plane. Those two cycles have different periods, so most new/full moons do not produce eclipses. A cycle like the Saros exists because after a certain number of months, the phase cycle and the node alignment cycle return to nearly the same relative geometry. When the same geometry repeats, eclipse opportunities repeat too (though not necessarily at the same place on Earth).
+
+**Grading guidance:**
+- Full credit: mentions both phase and nodes, and the idea of cycles lining up.
+- Partial credit: describes "it repeats" without referencing nodes or the need for two conditions.
+
+**What you should learn from this:** Regularity in nature often comes from **multiple cycles** that occasionally re-align.
+
+---
+
+### Problem 13: Demo Integration (Why New Moon Usually Is Not an Eclipse)
+
+**Restatement:** Explain why a new moon usually does not produce a solar eclipse, and state the conditions needed for an eclipse.
+
+**Key elements:**
+- New moon is necessary but not sufficient.
+- The Moon's orbit is tilted; most new moons pass above/below the Sun on the sky.
+- Eclipse requires the Moon to be near a **node** during new moon (and the alignment must be close enough for partial/total).
+
+**Sample response:**
+A new moon means the Moon is between Earth and the Sun, but the Moon's orbit is tilted relative to Earth's orbital plane. Most months, at new moon the Moon is slightly above or below the line connecting Earth and the Sun, so its shadow misses Earth and no eclipse occurs. A solar eclipse happens only when new moon occurs during an **eclipse season**, when the Sun is near the line of nodes and the Moon is also near a node. For a **total** eclipse, the alignment must be very close and the Moon must appear large enough to cover the Sun.
+
+**Grading guidance:**
+- Full credit: new moon + node alignment (tilt) clearly stated.
+- Partial credit: "tilt" mentioned but nodes/alignment not clearly connected.
+
+**What you should learn from this:** "Same phase" does not guarantee "same geometry" when planes are tilted.
+
+---
+
+### Problem 14: Future Eclipses (Modeling)
+
+**Restatement:** If the Moon keeps receding at $3.8$ cm/year for 600 million years, estimate distance change, percent change, angular-size effect, and eclipse consequence.
+
+**Key elements:**
+- Convert the recession to a distance change (with units).
+- Percent increase relative to $384{,}400$ km.
+- Use $\theta \propto 1/d$ for small-angle scaling.
+- State the consequence: total eclipses become harder and eventually impossible.
+
+**Given:**
+- Recession rate: $3.8$ cm/year
+- Time: $6.0 \times 10^8$ years
+- Current distance: $384{,}400$ km
+
+**Solution (a):**
+$$\Delta d = (3.8\ \text{cm/year})(6.0 \times 10^8\ \text{years}) = 2.28 \times 10^9\ \text{cm}$$
+Convert to meters:
+$$2.28 \times 10^9\ \text{cm} \times \frac{1\ \text{m}}{100\ \text{cm}} = 2.28 \times 10^7\ \text{m}$$
+Convert to kilometers:
+$$2.28 \times 10^7\ \text{m} \times \frac{1\ \text{km}}{1000\ \text{m}} = 2.28 \times 10^4\ \text{km} = 22{,}800\ \text{km}$$
+
+**Solution (b):**
+$$\%\ \text{increase} = 100\% \times \frac{22{,}800\ \text{km}}{384{,}400\ \text{km}} \approx 5.9\%$$
+
+**Solution (c):**
+Angular size scales approximately as $\theta \propto 1/d$. If distance increases by $5.9\%$, angular size decreases by about $5.9\%$.
+
+**Solution (d):**
+If the Moon appears smaller, it is less able to cover the Sun. Total eclipses become less likely, and eventually only **annular** eclipses would be possible once the Moon's angular diameter becomes smaller than the Sun's.
+
+**Unit check:** (a) ends in km; (b) is a dimensionless ratio; (c) uses a proportionality; all consistent.
+
+**Sanity check:** $22{,}800$ km is much smaller than $384{,}400$ km, so a few-percent change makes sense.
+
+**Answer (summary):**
+- (a) $\Delta d \approx 22{,}800$ km
+- (b) Percent increase $\approx 5.9\%$
+- (c) Angular size decreases by $\approx 5.9\%$
+- (d) Total eclipses become harder and eventually impossible (annular only)
+
+**Important modeling note:** The question explicitly assumes the recession rate stays constant; in reality, the rate can change over geological time.
+
+**What you should learn from this:** A small fractional change in distance produces the same fractional change in angular size, and that can change what eclipses are possible.

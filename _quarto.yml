@@ -255,6 +255,10 @@ website:
                 text: "Lecture 2 Solutions: Math Survival Kit"
               - href: modules/module-01/readings/lecture-03-sky-is-a-map-solutions.qmd
                 text: "Lecture 3 Solutions: The Sky Is a Map"
+              - href: modules/module-01/readings/lecture-04-moon-geometry-solutions.qmd
+                text: "Lecture 4 Solutions: Moon Geometry"
+              - href: modules/module-01/readings/lecture-05-keplers-laws-solutions.qmd
+                text: "Lecture 5 Solutions: Kepler's Laws"
           - section: "Module 1 Synthesis"
             contents:
               - href: modules/module-01/synthesis/index.qmd
