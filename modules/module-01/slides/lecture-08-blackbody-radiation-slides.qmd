@@ -780,7 +780,7 @@ A typical LED bulb: 10 W
 ::: {.fragment}
 **Number of bulbs to match the Sun:**
 
-$$N = \frac{3.84 \times 10^{26} \text{ W}}{10 \text{ W}} = 3.84 \times 10^{25} \text{ bulbs}$$
+$$N = \frac{3.84 \times 10^{26}\,\mathrm{W}}{10\,\mathrm{W}} = 3.84 \times 10^{25} \text{ bulbs}$$
 :::
 
 ::: {.fragment .mt-2}

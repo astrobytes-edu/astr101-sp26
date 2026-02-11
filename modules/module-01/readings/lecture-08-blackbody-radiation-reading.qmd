@@ -339,7 +339,7 @@ $$\lambda_{\text{peak}} = \frac{2.9 \times 10^{-3}\,\mathrm{m\cdot K}}{T}$$
 
 or in convenient form for visible light:
 
-$$\lambda_{\text{peak}}\,(\text{nm}) = \frac{2.9 \times 10^6\,\mathrm{nm\cdot K}}{T\,(\text{K})}$$
+$$\lambda_{\text{peak}}\,(\mathrm{nm}) = \frac{2.9 \times 10^6\,\mathrm{nm\cdot K}}{T\,(\mathrm{K})}$$
 
 **Hotter objects peak at shorter wavelengths.**
 :::
@@ -379,16 +379,16 @@ Wien's Law is the astronomer's thermometer. Measure where an object's spectrum p
 **Problem:** A star's spectrum peaks at 290 nm (ultraviolet). What is its surface temperature?
 
 **Solution:**
-$$T = \frac{2.9 \times 10^6\,\mathrm{nm\cdot K}}{\lambda_{\text{peak}}} = \frac{2.9 \times 10^6\,\mathrm{nm\cdot K}}{290\,\mathrm{nm}} = 10{,}000\,\mathrm{K}$$
+$$T = \frac{2.9 \times 10^6\,\mathrm{nm\cdot K}}{\lambda_{\text{peak}}} = \frac{2.9 \times 10^6\,\mathrm{nm\cdot K}}{290\,\mathrm{nm}} = 10^4\,\mathrm{K}$$
 
 This is a hot, blue-white star — about $1.7\times$ the Sun's temperature.
 
 ::: {.callout-key-insight title="Observable -> Model -> Inference: Measuring Stellar Temperature"}
 **Observable:** A star's spectrum peaks at 580 nm (yellow-orange light). (Wavelength observation)
 
-**Model:** Wien's Law: $\lambda_{\text{peak}}\,(\text{nm}) = 2.9 \times 10^6\,\mathrm{nm\cdot K}\, / \, T\,(\text{K})$.
+**Model:** Wien's Law: $\lambda_{\text{peak}}\,(\mathrm{nm}) = 2.9 \times 10^6\,\mathrm{nm\cdot K}\, / \, T\,(\mathrm{K})$.
 
-**Inference:** $T = 2.9 \times 10^6\,\mathrm{nm\cdot K}\, / \, 580\,\text{nm} = 5000\,\text{K}$. This star is slightly cooler than the Sun.
+**Inference:** $T = 2.9 \times 10^6\,\mathrm{nm\cdot K}\, / \, 580\,\mathrm{nm} = 5000\,\mathrm{K}$. This star is slightly cooler than the Sun.
 :::
 
 ::: {.callout-check-yourself title="Check Yourself 3 — Wien's Law Calculation"}
@@ -402,7 +402,7 @@ A cool red star has a surface temperature of 3000 K. Approximately where does it
 
 ::: {.callout-solution title="Solution" collapse="true"}
 **C) 970 nm (near-infrared).** Using Wien's Law:
-$\lambda_{\text{peak}} = 2.9 \times 10^6\,\mathrm{nm\cdot K}\, / \, 3000\,\text{K} = 967\,\text{nm} \approx 970\,\text{nm}$.
+$\lambda_{\text{peak}} = 2.9 \times 10^6\,\mathrm{nm\cdot K}\, / \, 3000\,\mathrm{K} = 967\,\mathrm{nm} \approx 970\,\mathrm{nm}$.
 
 This is just beyond the red end of visible light (700 nm). The star appears red because the visible tail of its blackbody curve favors red wavelengths.
 :::
@@ -498,7 +498,7 @@ A newly discovered exoplanet has a surface temperature of approximately 1450 K (
 :::
 
 ::: {.callout-solution title="Solution" collapse="true"}
-**C) ~2000 nm ($2\,\mu\mathrm{m}$), infrared.** Using Wien's Law: $\lambda_{\text{peak}} = 2.9 \times 10^6\,\mathrm{nm\cdot K}\, / \, 1450\,\text{K} = 2000\,\text{nm}$. This is in the near-infrared, well beyond the red end of visible light (700 nm). This is why infrared telescopes like JWST are essential for studying cool objects like brown dwarfs and directly-imaged exoplanets.
+**C) ~2000 nm ($2\,\mu\mathrm{m}$), infrared.** Using Wien's Law: $\lambda_{\text{peak}} = 2.9 \times 10^6\,\mathrm{nm\cdot K}\, / \, 1450\,\mathrm{K} = 2000\,\mathrm{nm}$. This is in the near-infrared, well beyond the red end of visible light (700 nm). This is why infrared telescopes like JWST are essential for studying cool objects like brown dwarfs and directly-imaged exoplanets.
 :::
 
 ---
@@ -595,7 +595,7 @@ Two stars at the **same temperature** but **different luminosities** must have *
 This is how we distinguish **giants** from **dwarfs** observationally: same temperature, different luminosity $\to$ different radius.
 
 ::: {.callout-key-insight title="Observable -> Model -> Inference: Determining Stellar Size"}
-**Observable:** Two red stars have the same color (same temperature, ~3500 K), but Star A is $10{,}000\times$ more luminous than Star B. (Brightness + Wavelength observations)
+**Observable:** Two red stars have the same color (same temperature, ~3500 K), but Star A is $10^4$ times more luminous than Star B. (Brightness + Wavelength observations)
 
 **Model:** $L = 4\pi R^2 \sigma T^4$. At fixed temperature, $L \propto R^2$.
 
@@ -656,9 +656,9 @@ This works because $4\pi$ and $\sigma$ are the same for every star. The physics 
 
 **Worked Example — Sirius A:**
 
-Sirius A has $L = 25\,L_\odot$ and $T = 9940$ K. What is its radius?
+Sirius A has $L = 25\,L_\odot$ and $T = 9940\,\mathrm{K}$. What is its radius?
 
-$$25 = \left(\frac{R}{R_\odot}\right)^2 \left(\frac{9940\,\text{K}}{5800\,\text{K}}\right)^4 = \left(\frac{R}{R_\odot}\right)^2 \times (1.71)^4 = \left(\frac{R}{R_\odot}\right)^2 \times 8.6$$
+$$25 = \left(\frac{R}{R_\odot}\right)^2 \left(\frac{9940\,\mathrm{K}}{5800\,\mathrm{K}}\right)^4 = \left(\frac{R}{R_\odot}\right)^2 \times (1.71)^4 = \left(\frac{R}{R_\odot}\right)^2 \times 8.6$$
 
 $$\frac{R}{R_\odot} = \left(\frac{25}{8.6}\right)^{1/2} = 2.9^{1/2} = 1.7$$
 
@@ -691,16 +691,16 @@ The L-T-R relationship makes sense of the whole diagram.
 {{< fig betelgeuse-size-eso >}}
 
 ::: {.callout-check-yourself title="Check Yourself 8 — Giants vs Dwarfs"}
-A red giant and a red dwarf have the same surface temperature (both appear red). The red giant is $10{,}000\times$ more luminous. How do their radii compare?
+A red giant and a red dwarf have the same surface temperature (both appear red). The red giant is $10^4$ times more luminous. How do their radii compare?
 
 - A) The giant's radius is $10\times$ the dwarf's
 - B) The giant's radius is $100\times$ the dwarf's
-- C) The giant's radius is $10{,}000\times$ the dwarf's
+- C) The giant's radius is $10^4$ times the dwarf's
 - D) Their radii are the same
 :::
 
 ::: {.callout-solution title="Solution" collapse="true"}
-**B) The giant's radius is $100\times$ the dwarf's.** Since both have the same temperature, $L \propto R^2$. If luminosity ratio is 10,000, then:
+**B) The giant's radius is $100\times$ the dwarf's.** Since both have the same temperature, $L \propto R^2$. If luminosity ratio is $10^4$, then:
 $R_{\text{giant}}/R_{\text{dwarf}} = (10^4)^{1/2} = 100$.
 
 The red giant's radius is $100\times$ larger than the red dwarf's!
@@ -748,7 +748,7 @@ Use the interactive demo below (or <a href="https://astrobytes-edu.github.io/cos
 *Predict before you explore:* Where should the Sun's spectrum peak? In what color?
 
 ::: {.callout-prediction title="My Prediction" collapse="true"}
-Using Wien's Law with $T \approx 5800\text{ K}$: $\lambda_{\text{peak}} =$ _____ nm. This is in the _____ part of the visible spectrum.
+Using Wien's Law with $T \approx 5800\,\mathrm{K}$: $\lambda_{\text{peak}} =$ _____ nm. This is in the _____ part of the visible spectrum.
 :::
 
 **Do this:**
@@ -798,7 +798,7 @@ The 3000 K star:
 
 **Claim:** Wien's Law (peak wavelength) and Stefan-Boltzmann Law (total power) both operate. Hot stars peak at shorter wavelengths AND emit dramatically more energy.
 
-**Evidence:** The 10,000 K curve is shifted left (shorter wavelength) AND higher (more total area under the curve). The $T^4$ dependence means the hot star emits $(10{,}000\,\mathrm{K}/3{,}000\,\mathrm{K})^4 \approx 120\times$ more power per unit area!
+**Evidence:** The $10^4\,\mathrm{K}$ curve is shifted left (shorter wavelength) AND higher (more total area under the curve). The $T^4$ dependence means the hot star emits $(10^4\,\mathrm{K}/3000\,\mathrm{K})^4 \approx 120\times$ more power per unit area!
 :::
 
 ---
@@ -809,7 +809,7 @@ The 3000 K star:
 
 1. Have a partner click **Cycle Presets** (or choose a preset like O/B/A/Sun/K/M) while you look away, or have them set a random temperature with the slider
 2. Look at where the spectrum peaks
-3. Use Wien's Law to estimate the temperature: $T = 2.9 \times 10^6\,\mathrm{nm\cdot K}\, / \, \lambda_{\text{peak}}\,(\text{nm})$
+3. Use Wien's Law to estimate the temperature: $T = 2.9 \times 10^6\,\mathrm{nm\cdot K}\, / \, \lambda_{\text{peak}}\,(\mathrm{nm})$
 4. Check your answer against the slider
 
 ::: {.callout-summary title="What You Should Have Found" collapse="true"}
@@ -913,7 +913,7 @@ We'll explore this in detail in Lecture 9, where we'll learn to "read" stellar s
 
 2. **A blackbody** is an idealized perfect emitter/absorber whose spectrum depends only on temperature.
 
-3. **Wien's Law:** $\lambda_{\text{peak}}\,(\text{nm}) = 2.9 \times 10^6\,\mathrm{nm\cdot K}\, / \, T\,(\text{K})$. Hot $\to$ peak at short wavelengths (blue). Cool $\to$ peak at long (red).
+3. **Wien's Law:** $\lambda_{\text{peak}}\,(\mathrm{nm}) = 2.9 \times 10^6\,\mathrm{nm\cdot K}\, / \, T\,(\mathrm{K})$. Hot $\to$ peak at short wavelengths (blue). Cool $\to$ peak at long (red).
 
 4. **The Sun peaks at green (~500 nm)** but appears white because it emits broadly across all visible wavelengths.
 
@@ -932,7 +932,7 @@ Before moving on, check whether you can do each of the following. If any feel sh
 
 - [ ] I can explain why all objects above absolute zero emit thermal radiation
 - [ ] I can define a blackbody and explain why stars approximate blackbodies
-- [ ] I can use Wien's Law ($\lambda_{\text{peak}}\,(\text{nm}) = 2.9 \times 10^6\,\mathrm{nm\cdot K}\, / \, T\,(\text{K})$) to connect peak wavelength and temperature
+- [ ] I can use Wien's Law ($\lambda_{\text{peak}}\,(\mathrm{nm}) = 2.9 \times 10^6\,\mathrm{nm\cdot K}\, / \, T\,(\mathrm{K})$) to connect peak wavelength and temperature
 - [ ] I can explain why the Sun appears white even though its peak wavelength is green
 - [ ] I can apply the Stefan-Boltzmann Law to determine how luminosity changes with temperature
 - [ ] I can use $L = 4\pi R^2 \sigma T^4$ to relate luminosity, temperature, and radius
@@ -958,9 +958,9 @@ Before moving on, check whether you can do each of the following. If any feel sh
 **6. Star colors:** Rank these stars from coolest to hottest based on color: a red star, a blue star, a yellow star.
 
 ::: {.callout-solution title="Core Problem Solutions" collapse="true"}
-**1.** $T = 2.9 \times 10^6\,\mathrm{nm\cdot K}\, / \, 580\,\text{nm} = 5000\,\text{K}$. Slightly cooler than the Sun.
+**1.** $T = 2.9 \times 10^6\,\mathrm{nm\cdot K}\, / \, 580\,\mathrm{nm} = 5000\,\mathrm{K}$. Slightly cooler than the Sun.
 
-**2.** $\lambda_{\text{peak}} = 2.9 \times 10^6\,\mathrm{nm\cdot K}\, / \, 4000\,\text{K} = 725\,\text{nm}$. This is in the **near-infrared**, just beyond the red end of visible light (700 nm). The star would appear reddish.
+**2.** $\lambda_{\text{peak}} = 2.9 \times 10^6\,\mathrm{nm\cdot K}\, / \, 4000\,\mathrm{K} = 725\,\mathrm{nm}$. This is in the **near-infrared**, just beyond the red end of visible light (700 nm). The star would appear reddish.
 
 **3.** $L_A/L_B = (T_A/T_B)^4 = 3^4 = 81$. Star A is **81 times** more luminous.
 
@@ -979,7 +979,7 @@ Before moving on, check whether you can do each of the following. If any feel sh
 
 **8. Earth as a blackbody:** Earth has an effective temperature of about 255 K (due to energy balance with sunlight). At what wavelength does Earth's thermal emission peak? In what part of the EM spectrum is this?
 
-**9. Size from L and T:** The star Betelgeuse has a surface temperature of about 3500 K and a luminosity of about $10^5 L_\odot$. The Sun has $T = 5800$ K and $L = 1 L_\odot$. Estimate the ratio $R_{\text{Betelgeuse}}/R_{\odot}$.
+**9. Size from L and T:** The star Betelgeuse has a surface temperature of about $3500\,\mathrm{K}$ and a luminosity of about $10^5\,L_\odot$. The Sun has $T = 5800\,\mathrm{K}$ and $L = 1\,L_\odot$. Estimate the ratio $R_{\text{Betelgeuse}}/R_{\odot}$.
 
 ::: {.callout-deep-dive title="Hint" collapse="true"}
 Use the L-T-R relationship in ratio form:
@@ -991,7 +991,7 @@ $$\frac{R_{\text{Betelgeuse}}}{R_\odot} = \left(\frac{L_{\text{Betelgeuse}}}{L_\
 ::: {.callout-solution title="Challenge Problem Solutions" collapse="true"}
 **7.** Wien: Star X peaks at **half** the wavelength of Star Y (since $\lambda_{\text{peak}} \propto 1/T$ and $T_X = 2T_Y$). Stefan-Boltzmann: $L_X/L_Y = (R_X/R_Y)^2 (T_X/T_Y)^4 = (1/2)^2 \times 2^4 = (1/4) \times 16 = 4$. Star X is **$4\times$ more luminous**.
 
-**8.** $\lambda_{\text{peak}} = 2.9 \times 10^6\,\mathrm{nm\cdot K}\, / \, 255\,\text{K} \approx 11{,}400\,\text{nm} = 11.4\,\mu\text{m}$. This is in the **thermal infrared**. Earth's thermal emission peaks far beyond visible light — this is why greenhouse gases (which absorb infrared) affect Earth's energy balance.
+**8.** $\lambda_{\text{peak}} = 2.9 \times 10^6\,\mathrm{nm\cdot K}\, / \, 255\,\mathrm{K} \approx 1.14 \times 10^4\,\mathrm{nm} = 11.4\,\mu\mathrm{m}$. This is in the **thermal infrared**. Earth's thermal emission peaks far beyond visible light — this is why greenhouse gases (which absorb infrared) affect Earth's energy balance.
 
 **9.** Using the ratio method: $10^5 = (R/R_\odot)^2 \times (3500\,\mathrm{K}/5800\,\mathrm{K})^4 = (R/R_\odot)^2 \times 0.13$. So $(R/R_\odot)^2 = 10^5/0.13 \approx 7.7 \times 10^5$, giving $R/R_\odot \approx 880$. **Betelgeuse is about 880 times the Sun's radius** — roughly 4 AU, large enough to swallow Mars and the entire asteroid belt.
 
