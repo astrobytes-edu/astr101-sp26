@@ -1354,13 +1354,6 @@ figures:
     credit: "cococubed.com"
     module: 1
 
-  giant-vs-dwarf:
-    path: /assets/images/module-01/lec08/giant-vs-dwarf.svg
-    caption: "What to notice: two stars can have the same temperature (same color) but very different luminosities if their radii differ — at fixed temperature, L scales with R²."
-    alt: "Side-by-side diagram of a small red dwarf and a large red giant drawn with the same color to indicate the same temperature; the giant is much larger and therefore much more luminous."
-    credit: "Illustration: A. Rosen (SVG)"
-    module: 1
-
   betelgeuse-eso:
     path: /assets/images/module-01/lec08/betelgeuse-eso.jpg
     caption: "What to notice: Betelgeuse is a red supergiant with a surface temperature of only ~3500 K, yet its luminosity is ~100,000 L☉ — the ratio method reveals it must be ~880 times the Sun's radius."

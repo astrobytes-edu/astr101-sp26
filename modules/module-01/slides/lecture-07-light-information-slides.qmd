@@ -1180,13 +1180,13 @@ $$d = 4.24 \times 9.47 \times 10^{12} \text{ km} = 4.01 \times 10^{13} \text{ km
 ## {.center}
 
 ::: {.r-fit-text}
-Deeper Dive
+Photon Energy
 :::
 
-*Photon energy and the quantum nature of light*
+*The quantum nature of light — essential foundation for Lectures 8 and 9*
 
 ::: {.notes}
-Optional advanced content bridging to L8-L9.
+This section is NOT optional — photon energy ($E = hc/\lambda$) is required for understanding blackbody radiation (L8) and spectral lines (L9). Cover it fully.
 :::
 
 ---

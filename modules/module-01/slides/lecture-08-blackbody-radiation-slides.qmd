@@ -267,17 +267,57 @@ A blackbody iron ball at 5800 K emits the same spectrum as a blackbody tungsten 
 
 ---
 
+## Quick Recall: Photon Energy (Lecture 7)
+
+::: {.text-center .text-xl}
+Each photon carries energy:
+
+$$E = h\nu = \frac{hc}{\lambda}$$
+:::
+
+::: {.fragment .mt-2}
+- $h = 6.626 \times 10^{-34}\ \mathrm{J \cdot s}$ (Planck's constant)
+- $\nu$ = frequency (Hz), $\lambda$ = wavelength (m), linked by $c = \lambda\nu$
+- Shortcut: $E\ (\mathrm{eV}) \approx 1240 / \lambda\ (\mathrm{nm})$
+:::
+
+::: {.fragment .mt-3 .text-center}
+**Shorter wavelength → higher energy per photon**
+
+(high energy) Gamma → X-ray → UV → Visible → IR → Radio (low energy)
+:::
+
+::: {.fragment .mt-3 .text-center .text-xl}
+**Predict:** Hotter objects peak at shorter $\lambda$ — do they emit more energetic photons?
+:::
+
+::: {.notes}
+~1 min. Recall from L7 Part 6. Walk through the equation with units: $E = hc/\lambda$, so if $\lambda$ halves, $E$ doubles. The key bridge: hotter blackbodies peak at shorter wavelengths (Wien's Law) AND emit more energetic photons. Students should predict "yes" before you show the blackbody curves.
+:::
+
+---
+
 ## The Blackbody Spectrum
 
-{{< img blackbody-spectrum-temps width="95%" >}}
+:::: {.columns}
+::: {.column width="60%"}
+{{< img blackbody-spectrum-temps width="100%" >}}
+:::
 
+::: {.column width="40%"}
 ::: {.fragment .mt-2}
 - Hotter $\to$ peak shifts to shorter wavelengths (bluer)
 - Hotter $\to$ curve is taller (more total energy)
 :::
 
+::: {.fragment .mt-3 .text-muted}
+Both Wien's Law and Stefan-Boltzmann are visible in these curves.
+:::
+:::
+::::
+
 ::: {.notes}
-6–7 min. "Two effects: peak shifts AND total energy increases."
+6–7 min. "Two effects: peak shifts AND total energy increases." The two-column layout lets students study the curves while reading the key takeaways.
 :::
 
 ---
@@ -366,7 +406,7 @@ D) Drops to 1/4
 ## Wien's Displacement Law
 
 ::: {.text-center .text-xl}
-$$\lambda_{\text{peak}} = \frac{2,900,000 \text{ nm}}{T \text{ (K)}}$$
+$$\lambda_{\text{peak}} = \frac{2.9 \times 10^6 \text{ nm·K}}{T \text{ (K)}}$$
 
 **Hotter objects peak at shorter wavelengths.**
 :::
@@ -403,7 +443,7 @@ Measure peak wavelength $\to$ know the temperature.
 **Problem:** A star's spectrum peaks at 290 nm (UV). What is its temperature?
 
 ::: {.fragment}
-$$T = \frac{2,900,000 \text{ nm}}{290 \text{ nm}} = 10,000 \text{ K}$$
+$$T = \frac{2.9 \times 10^6 \text{ nm·K}}{290 \text{ nm}} = 10{,}000 \text{ K}$$
 :::
 
 ::: {.fragment .mt-4}
@@ -428,7 +468,7 @@ A cool red star has a surface temperature of 3000 K. Where does its spectrum pea
 ::: {.notes}
 1–2 min. Poll, then explain.
 
-Calculation: $\lambda = 2{,}900{,}000/3000 = 967\,\text{nm} \approx 970\,\text{nm}$ (near-IR).
+Calculation: $\lambda = 2.9 \times 10^6\,\text{nm·K}\, / \, 3000\,\text{K} = 967\,\text{nm} \approx 970\,\text{nm}$ (near-IR).
 :::
 
 ---
@@ -453,7 +493,7 @@ Ask students: "What color star would peak at 500 nm?" (Answer: the Sun!)
 ::: {.text-center}
 Plug in the Sun's temperature (5800 K):
 
-$$\lambda_{\text{peak}} = \frac{2,900,000}{5800} = 500 \text{ nm}$$
+$$\lambda_{\text{peak}} = \frac{2.9 \times 10^6 \text{ nm·K}}{5800 \text{ K}} = 500 \text{ nm}$$
 :::
 
 ::: {.fragment .mt-4 .text-center .text-xl}
@@ -470,7 +510,7 @@ Yet the Sun doesn't look green...
 
 ## The Sun's Spectrum Is Broad
 
-{{< img sun-spectrum-green width="94%" >}}
+{{< img sun-spectrum-green width="82%" >}}
 
 ::: {.text-center .text-sm .mt-2}
 The peak is near green, but the curve spans the full visible band.
@@ -584,11 +624,11 @@ The astronomer's thermometer:
 :::
 
 ::: {.fragment}
-**Model:** Wien's Law — $\lambda_{\text{peak}} = 2{,}900{,}000 / T$
+**Model:** Wien's Law — $\lambda_{\text{peak}}\,(\text{nm}) = 2.9 \times 10^6\,\text{nm·K}\, / \, T\,(\text{K})$
 :::
 
 ::: {.fragment}
-**Inference:** $T = 2{,}900{,}000 / 580 = 5000$ K. Slightly cooler than the Sun.
+**Inference:** $T = 2.9 \times 10^6\,\text{nm·K}\, / \, 580\,\text{nm} = 5000\,\text{K}$. Slightly cooler than the Sun.
 :::
 
 ::: {.fragment .mt-3 .text-muted}
@@ -671,7 +711,7 @@ $$\text{Power per area} = \sigma T^4$$
 :::
 
 ::: {.fragment .mt-3 .text-muted}
-$\sigma$ is the **Stefan-Boltzmann constant** (a fixed constant). Use $T$ in **Kelvin**.
+$\sigma = 5.67 \times 10^{-8}\ \mathrm{W\,m^{-2}\,K^{-4}}$ (Stefan-Boltzmann constant). Use $T$ in **Kelvin**.
 :::
 
 ::: {.fragment .mt-4}
@@ -714,7 +754,7 @@ $$L = 4\pi R^2 \sigma T^4$$
 :::
 
 ::: {.fragment .mt-3 .text-muted}
-Here, $L$ is total power output (luminosity), $R$ is radius, and $T$ is the star's effective surface temperature (K). This uses the **blackbody approximation**.
+$L$ = luminosity (W), $R$ = radius (m), $T$ = surface temperature (K), $\sigma = 5.67 \times 10^{-8}\ \mathrm{W\,m^{-2}\,K^{-4}}$.
 :::
 
 ::: {.fragment .mt-4}
@@ -757,21 +797,23 @@ Or about 5 billion bulbs for every human who has ever lived.
 
 ## The Pillars of Creation: Wien's Law in Action
 
-{{< img pillars-hubble-jwst width="80%" >}}
+:::: {.columns}
+::: {.column width="55%"}
+{{< img pillars-hubble-jwst width="100%" >}}
 
-:::: {.columns .mt-3 .text-sm}
-::: {.column width="50%"}
-**Hubble — visible light**
-
-- **Glowing gas** (~10,000 K) → peaks in visible
-- **Dust pillars** (~20–50 K) → opaque here
+::: {.text-center .text-xs .mt-1}
+Left: Hubble (visible) — Right: Webb (near-IR)
+:::
 :::
 
-::: {.column width="50%"}
-**Webb — near-infrared**
+::: {.column width="45%"}
+{{< img blackbody-spectrum-temps width="100%" >}}
 
-- **Same dust** → now transparent at longer $\lambda$
-- **Newborn stars** (~3,000 K) → Wien's peak in near-IR
+::: {.text-sm .mt-2}
+- **Glowing gas** (~10,000 K) → peaks in visible
+- **Dust pillars** (~20–50 K) → opaque here
+- **Newborn stars** (~3,000 K) → peaks in near-IR
+:::
 :::
 ::::
 
@@ -780,7 +822,7 @@ Wien's Law told astronomers **where to look.** Stefan-Boltzmann told them **what
 :::
 
 ::: {.notes}
-~1 min. "Every concept from the last 15 minutes is operating in this single image. The gas glows in visible because it's ~10,000 K — Wien's Law. The dust is cold (~20–50 K), peaks in far-IR, and blocks visible light. But Webb observes in near-infrared, where that dust becomes transparent — revealing thousands of newborn stars that Hubble could never see. This is what the physics buys you."
+~1 min. The blackbody curves on the right show exactly where each component falls. The gas glows in visible because it's ~10,000 K. The dust is cold (~20–50 K), peaks in far-IR, and blocks visible light. But Webb observes in near-infrared, where that dust becomes transparent — revealing thousands of newborn stars that Hubble could never see. "This is what the physics buys you."
 :::
 
 ---
@@ -805,20 +847,6 @@ This is how we distinguish **giants** from **dwarfs**.
 
 ::: {.notes}
 16–17 min. "Same color, different brightness $\to$ different size."
-:::
-
----
-
-## Giants vs Dwarfs at the Same Color
-
-{{< img giant-vs-dwarf width="94%" >}}
-
-::: {.text-center .text-sm .mt-2}
-Same temperature does not imply same size or luminosity.
-:::
-
-::: {.notes}
-Use this before Betelgeuse to cement the size-luminosity idea.
 :::
 
 ---
@@ -974,7 +1002,7 @@ This works because $4\pi$ and $\sigma$ are the same for every star. The physics 
 **Problem:** Sirius A is $25\times$ more luminous than the Sun and has $T = 9940$ K ($T_\odot = 5800$ K). What's its radius?
 
 ::: {.fragment}
-$$25 = \left(\frac{R}{R_\odot}\right)^2 \left(\frac{9940}{5800}\right)^4$$
+$$\frac{L}{L_\odot} = 25 = \left(\frac{R}{R_\odot}\right)^2 \left(\frac{9940\text{ K}}{5800\text{ K}}\right)^4$$
 :::
 
 ::: {.fragment}
@@ -1002,7 +1030,7 @@ $$\left(\frac{R}{R_\odot}\right)^2 = \frac{25}{8.6} = 2.9 \quad \Rightarrow \qua
 **Problem:** Betelgeuse has $T \approx 3500$ K and $L \approx 100{,}000\,L_\odot$. How big is it?
 
 ::: {.fragment}
-$$100{,}000 = \left(\frac{R}{R_\odot}\right)^2 \left(\frac{3500}{5800}\right)^4$$
+$$\frac{L}{L_\odot} = 100{,}000 = \left(\frac{R}{R_\odot}\right)^2 \left(\frac{3500\text{ K}}{5800\text{ K}}\right)^4$$
 :::
 
 ::: {.fragment}
@@ -1221,7 +1249,7 @@ Key connection: The smooth curve is the blackbody continuum we just learned abou
 
 2. **Blackbody** spectrum depends only on temperature.
 
-3. **Wien's Law:** $\lambda_{\text{peak}} = 2{,}900{,}000/T$ (nm, K). Hot $\to$ blue. Cool $\to$ red.
+3. **Wien's Law:** $\lambda_{\text{peak}}\,(\text{nm}) = 2.9 \times 10^6\,\text{nm·K}\, / \, T\,(\text{K})$. Hot $\to$ blue. Cool $\to$ red.
 
 4. **The Sun peaks at green** but appears white because it emits broadly.
 
