@@ -1319,13 +1319,6 @@ figures:
     credit: "(A. Rosen/NotebookLM)"
     module: 1
 
-  infrared-thermal-image:
-    path: /assets/images/module-01/lec08/infrared-thermal-image.svg
-    caption: "Placeholder figure: an infrared camera makes thermal radiation visible as false color; replace this sketch with a real thermal image when ready."
-    alt: "Two-panel schematic placeholder showing a dark visible-light scene and an infrared false-color view where a person silhouette appears bright due to thermal emission."
-    credit: "Illustration: A. Rosen (SVG — placeholder)"
-    module: 1
-
   sun-flare-sdo:
     path: /assets/images/module-01/lec08/Sun_Emits_Flare_NASA_SDO.jpeg
     caption: "What to notice: the Sun's surface (photosphere) glows because of its ~5800 K temperature — this is thermal radiation. The bright flares show localized regions of extreme heating, with magnetic loops visible at the limb."
@@ -1366,6 +1359,13 @@ figures:
     caption: "What to notice: two stars can have the same temperature (same color) but very different luminosities if their radii differ — at fixed temperature, L scales with R²."
     alt: "Side-by-side diagram of a small red dwarf and a large red giant drawn with the same color to indicate the same temperature; the giant is much larger and therefore much more luminous."
     credit: "Illustration: A. Rosen (SVG)"
+    module: 1
+
+  betelgeuse-eso:
+    path: /assets/images/module-01/lec08/betelgeuse-eso.jpg
+    caption: "What to notice: Betelgeuse is a red supergiant with a surface temperature of only ~3500 K, yet its luminosity is ~100,000 L☉ — the ratio method reveals it must be ~880 times the Sun's radius."
+    alt: "ESO image of the red supergiant star Betelgeuse showing its resolved surface and extended atmosphere."
+    credit: "ESO"
     module: 1
 
   fraunhofer-lines:
@@ -1418,9 +1418,10 @@ figures:
     module: 1
 
   galaxy-rotation-curve:
-    path: /assets/images/module-04/rotation-curve.png
+    path: /assets/images/module-01/cococubed/rotation_curve_b.svg
     caption: "What to notice: galaxy rotation curves stay flat at large radii — visible matter alone would predict a decline, so extra mass is implied."
     alt: "Plot comparing expected Keplerian decline in orbital speed with observed flat galaxy rotation curve as radius increases."
+    credit: "Figure: CoCoCubed (SVG)"
     module: 1
 
   # ==============================================================
@@ -1478,9 +1479,10 @@ figures:
     module: 4
 
   rotation-curve:
-    path: /assets/images/module-04/rotation-curve.png
+    path: /assets/images/module-01/cococubed/rotation_curve_b.svg
     caption: "Galaxy rotation curves reveal dark matter"
     alt: "Graph comparing expected Keplerian rotation to observed flat rotation curve"
+    credit: "Figure: CoCoCubed (SVG)"
     module: 4
 
   hubble-diagram:

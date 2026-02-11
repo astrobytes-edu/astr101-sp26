@@ -97,20 +97,6 @@ Heat it to **5800 K** $\to$ brilliant white
 
 ---
 
-## Heat in the Dark
-
-{{< img infrared-thermal-image width="92%" >}}
-
-::: {.text-center .text-sm .mt-2}
-Infrared cameras reveal thermal radiation from ordinary objects.
-:::
-
-::: {.notes}
-Image-first reinforcement that "everything glows."
-:::
-
----
-
 ## 🖥️ Explore: Infrared Animals {background-iframe="https://viewspace.org/interactives/unveiling_invisible_universe/forms_of_light/infrared_animals" background-interactive="true"}
 
 ::: {.notes}
@@ -137,6 +123,7 @@ By the end of today, you'll be able to:
 - Explain why the Sun appears **white** even though its peak is green
 - Apply the **Stefan-Boltzmann Law** to relate temperature and luminosity
 - Connect **luminosity, temperature, and radius**: $L = 4\pi R^2 \sigma T^4$
+- Use the **ratio method** to calculate stellar properties in solar units
 - Infer **stellar size** when temperature is fixed but luminosity differs
 :::
 
@@ -819,6 +806,319 @@ Solution: $L_X/L_Y = (1/2)^2 \times (2)^4 = (1/4) \times 16 = 4$.
 
 ---
 
+## {.center}
+
+::: {.r-fit-text}
+Part 4: The Astronomer's Shortcut
+:::
+
+*Ratios and solar units*
+
+---
+
+## Working in Solar Units
+
+The L-T-R equation has constants ($4\pi$, $\sigma$) that are awkward to use. But there's a trick:
+
+::: {.fragment .mt-3}
+**Write the equation for any star:**
+
+$$L_{\star} = 4\pi R_{\star}^2 \sigma T_{\star}^4$$
+:::
+
+::: {.fragment}
+**Write the same equation for the Sun:**
+
+$$L_\odot = 4\pi R_\odot^2 \sigma T_\odot^4$$
+:::
+
+::: {.fragment}
+**Divide star by Sun — constants cancel!**
+
+$$\frac{L_{\star}}{L_\odot} = \left(\frac{R_{\star}}{R_\odot}\right)^2 \left(\frac{T_{\star}}{T_\odot}\right)^4$$
+:::
+
+::: {.notes}
+~2 min. "This is the ratio method — the astronomer's shortcut. No constants needed, just compare to the Sun."
+:::
+
+---
+
+## Why This Works
+
+::: {.text-center .text-xl}
+$$\frac{L}{L_\odot} = \left(\frac{R}{R_\odot}\right)^2 \left(\frac{T}{T_\odot}\right)^4$$
+:::
+
+::: {.fragment .mt-4}
+**What happened?**
+
+- $4\pi$ canceled
+- $\sigma$ canceled
+- We only need **ratios** — no SI units, no scientific notation!
+:::
+
+::: {.fragment .mt-3 .text-muted}
+This works because $4\pi$ and $\sigma$ are the same for every star. The physics is in the ratios.
+:::
+
+::: {.notes}
+"This is what professional astronomers actually use. Textbooks give you $\sigma = 5.67 \times 10^{-8}$ — we almost never plug that in."
+
+**Think-Pair-Share:** Why does this trick work? What's special about dividing one equation by the same equation for a different star? (Answer: same constants appear in both, so they cancel.)
+:::
+
+---
+
+## Worked Example: Sirius A
+
+**Problem:** Sirius A is $25\times$ more luminous than the Sun and has $T = 9940$ K ($T_\odot = 5800$ K). What's its radius?
+
+::: {.fragment}
+$$25 = \left(\frac{R}{R_\odot}\right)^2 \left(\frac{9940}{5800}\right)^4$$
+:::
+
+::: {.fragment}
+$$25 = \left(\frac{R}{R_\odot}\right)^2 \times (1.71)^4 = \left(\frac{R}{R_\odot}\right)^2 \times 8.6$$
+:::
+
+::: {.fragment}
+$$\left(\frac{R}{R_\odot}\right)^2 = \frac{25}{8.6} = 2.9 \quad \Rightarrow \quad \frac{R}{R_\odot} = \sqrt{2.9} = 1.7$$
+:::
+
+::: {.fragment .mt-3}
+**Sirius A is $1.7\times$ the Sun's radius** — hot and slightly larger.
+:::
+
+::: {.notes}
+"The temperature ratio does the heavy lifting here. Sirius is almost twice as hot, so most of its extra luminosity comes from higher temperature, not bigger size."
+:::
+
+---
+
+## Worked Example: Betelgeuse
+
+:::: {.columns}
+::: {.column width="55%"}
+**Problem:** Betelgeuse has $T \approx 3500$ K and $L \approx 100{,}000\,L_\odot$. How big is it?
+
+::: {.fragment}
+$$100{,}000 = \left(\frac{R}{R_\odot}\right)^2 \left(\frac{3500}{5800}\right)^4$$
+:::
+
+::: {.fragment}
+$$100{,}000 = \left(\frac{R}{R_\odot}\right)^2 \times (0.60)^4 = \left(\frac{R}{R_\odot}\right)^2 \times 0.13$$
+:::
+
+::: {.fragment}
+$$\left(\frac{R}{R_\odot}\right)^2 = \frac{100{,}000}{0.13} \approx 770{,}000$$
+:::
+
+::: {.fragment}
+$$\frac{R}{R_\odot} = \sqrt{770{,}000} \approx \mathbf{880}$$
+:::
+:::
+
+::: {.column width="45%"}
+::: {.fragment}
+{{< img betelgeuse-eso width="100%" >}}
+:::
+:::
+::::
+
+::: {.fragment .mt-2 .text-center}
+**Betelgeuse is ~880 times the Sun's radius** (~4 AU). It would swallow Mars and the entire asteroid belt!
+:::
+
+::: {.notes}
+"Betelgeuse is cool but ENORMOUS. Its $T^4$ factor is only 0.13× the Sun's, so to reach 100,000 $L_\odot$ it needs a colossal surface area."
+:::
+
+---
+
+## How Many Light Bulbs?
+
+The Sun's luminosity: $L_\odot = 3.84 \times 10^{26}$ W
+
+A typical LED bulb: 10 W
+
+::: {.fragment}
+**Number of bulbs to match the Sun:**
+
+$$N = \frac{3.84 \times 10^{26} \text{ W}}{10 \text{ W}} = 3.84 \times 10^{25} \text{ bulbs}$$
+:::
+
+::: {.fragment .mt-2}
+That's **38 trillion trillion** LED bulbs!
+
+Or about 5 billion bulbs for every human who has ever lived.
+:::
+
+::: {.notes}
+"Just to give you a sense of scale. The Sun is absurdly powerful."
+:::
+
+---
+
+## Quick Check: The Ratio Method {.quiz-question}
+
+A star is $3\times$ hotter than the Sun and has the same radius. Using the ratio method, how luminous is it compared to the Sun?
+
+- $3\times$ more luminous
+- $9\times$ more luminous
+- [$81\times$ more luminous]{.correct}
+- $27\times$ more luminous
+
+::: {.notes}
+1 min. Poll.
+
+Solution: $L/L_\odot = (R/R_\odot)^2 (T/T_\odot)^4 = (1)^2 \times (3)^4 = 81$.
+:::
+
+---
+
+## Observable → Model → Inference
+
+::: {.text-center .text-xl}
+The astronomer's tape measure:
+:::
+
+::: {.fragment .mt-3}
+**Observable:** Betelgeuse appears red (peak in near-IR) and is $100{,}000\times$ more luminous than the Sun.
+:::
+
+::: {.fragment}
+**Model:** $L/L_\odot = (R/R_\odot)^2 (T/T_\odot)^4$ — the ratio method.
+:::
+
+::: {.fragment}
+**Inference:** Betelgeuse must be ~880× the Sun's radius. A cool but enormous star.
+:::
+
+::: {.fragment .mt-3 .text-muted}
+No ruler. No spacecraft. Just light and one equation — with all constants canceled.
+:::
+
+::: {.notes}
+Second O→M→I callback. "We went from color and brightness to physical size — using ratios."
+:::
+
+---
+
+## {.center}
+
+::: {.r-fit-text}
+Part 5: Where Does the Curve Come From?
+:::
+
+*A historical perspective — the puzzle that launched quantum mechanics*
+
+::: {.notes}
+~8 min. Historical perspective. Students should absorb the story, not memorize the equations.
+:::
+
+---
+
+## The Ultraviolet Catastrophe
+
+**The problem (circa 1900):**
+
+Classical physics predicted that a hot object should emit **infinite energy** at short wavelengths!
+
+::: {.fragment}
+Classical prediction (Rayleigh-Jeans):
+
+$$B(\lambda) \propto \frac{T}{\lambda^4}$$
+
+As $\lambda \to 0$, energy $\to \infty$. Obviously wrong!
+:::
+
+::: {.fragment .mt-2}
+This was called the **"ultraviolet catastrophe"** — classical physics broke down.
+:::
+
+::: {.notes}
+"This was a crisis. The best physics of the time predicted nonsense — infinite energy from a warm object."
+:::
+
+---
+
+## Planck's Quantum Solution (1900)
+
+**Max Planck's radical idea:**
+
+Energy isn't continuous — it comes in discrete packets: **quanta**.
+
+$$E = nh\nu$$
+
+where $n = 0, 1, 2, 3, ...$ (integers only!)
+
+::: {.fragment}
+**Why this fixes the catastrophe:**
+
+At short wavelengths, $h\nu$ is large.
+
+Creating even ONE quantum requires lots of energy.
+
+At finite temperature, high-energy quanta are exponentially suppressed.
+:::
+
+::: {.notes}
+"Planck didn't fully believe his own solution at first. He called it an 'act of desperation.' But it worked."
+:::
+
+---
+
+## The Model Behind the Curve
+
+::: {.callout-note appearance="simple"}
+You don't need to memorize this equation. But it's worth seeing — this single formula produces every blackbody curve you've explored in the demo.
+:::
+
+$$B_\lambda(T) = \frac{2hc^2}{\lambda^5} \times \frac{1}{e^{hc/\lambda k_B T} - 1}$$
+
+::: {.fragment .mt-3}
+This is the **Planck function** — temperature is the ONLY variable.
+
+- At long wavelengths: matches classical predictions
+- At short wavelengths: exponentially suppressed (no catastrophe!)
+- **Wien's Law** and **Stefan-Boltzmann** both emerge from this one equation
+:::
+
+::: {.fragment .mt-2 .text-muted}
+When you move the temperature slider in the demo, you're watching the Planck function respond.
+:::
+
+::: {.notes}
+"Every curve you saw in the interactive demo is generated by this equation. Wien's Law, Stefan-Boltzmann — they're all consequences. One model, all of blackbody physics."
+:::
+
+---
+
+## Birth of Quantum Mechanics
+
+Planck's solution (1900) required $E = h\nu$.
+
+::: {.fragment}
+**Einstein (1905)** showed light itself comes in quanta: **photons**.
+
+**Bohr (1913)** showed atoms have quantized energy levels.
+
+**Heisenberg & Schrödinger (1925–26)** developed full quantum mechanics.
+:::
+
+::: {.fragment .mt-4}
+**The blackbody problem launched the quantum revolution!**
+
+Trying to understand why hot things glow the way they do led to the theory that governs atoms, chemistry, and modern technology.
+:::
+
+::: {.notes}
+"All of quantum mechanics — semiconductors, lasers, MRI machines — traces back to Planck trying to fix the blackbody spectrum."
+:::
+
+---
+
 ## Key Takeaways
 
 ::: {.text-sm}
@@ -827,20 +1127,20 @@ Solution: $L_X/L_Y = (1/2)^2 \times (2)^4 = (1/4) \times 16 = 4$.
 
 2. **Blackbody** spectrum depends only on temperature.
 
-3. **Wien's Law:** $\lambda_{peak} = 2{,}900{,}000/T$ (nm, K). Hot $\to$ blue. Cool $\to$ red.
+3. **Wien's Law:** $\lambda_{\text{peak}} = 2{,}900{,}000/T$ (nm, K). Hot $\to$ blue. Cool $\to$ red.
 
 4. **The Sun peaks at green** but appears white because it emits broadly.
 
 5. **Stefan-Boltzmann:** Power per area $\propto T^4$. Doubling $T$ $\to$ $16\times$ more luminous.
 
-6. **L-T-R:** $L = 4\pi R^2 \sigma T^4$. Same temperature, different luminosity $\to$ different size.
+6. **L-T-R:** $L = 4\pi R^2 \sigma T^4$. Use the **ratio method** to skip the constants.
 
-7. **Blackbodies reveal temperature, but not composition.** For that, we need spectral lines (L9).
+7. **The Planck function** is the model behind every blackbody curve — it launched quantum mechanics.
 
 :::
 
 ::: {.notes}
-19–21 min. Rapid recap.
+Rapid recap before spectral lines preview.
 :::
 
 ---
@@ -864,7 +1164,7 @@ Spectral lines tell us **composition** and **motion**.
 :::
 
 ::: {.notes}
-21–22 min. Preview spectral lines.
+Preview spectral lines.
 :::
 
 ---
@@ -918,403 +1218,12 @@ Key connection: The smooth curve is the blackbody continuum we just learned abou
 
 ---
 
-## {.center}
-
-::: {.r-fit-text}
-Numerical Verification
-:::
-
-*Checking Wien and Stefan-Boltzmann with real stars*
-
-::: {.notes}
-Let's verify our equations with explicit calculations.
-:::
-
----
-
-## Wien's Law: The Sun
-
-**Given:** Sun's surface temperature $T = 5778$ K
-
-$$\lambda_{\text{peak}} = \frac{2.898 \times 10^6\ \mathrm{nm\cdot K}}{T}$$
-
-::: {.fragment}
-$$\lambda_{\text{peak}} = \frac{2.898 \times 10^6\ \mathrm{nm\cdot K}}{5778\ \mathrm{K}} = 501.5\ \mathrm{nm}$$
-:::
-
-::: {.fragment}
-**Unit check:** $\frac{\mathrm{nm\cdot K}}{\mathrm{K}} = \mathrm{nm}$ ($\checkmark$)
-:::
-
-::: {.fragment .mt-2}
-**501 nm is green light!** Yet the Sun appears white because:
-
-1. Blackbody curves are broad (emits all visible colors)
-2. Our eyes see the mix as white
-:::
-
-::: {.notes}
-"I'm using the more precise Wien constant $2.898\times 10^6\,\mathrm{nm\cdot K}$. The rounded $2.9\times 10^6$ gives 502 nm."
-:::
-
----
-
-## Wien's Law: Betelgeuse
-
-**Given:** Betelgeuse surface temperature $T \approx 3500$ K
-
-::: {.fragment}
-$$\lambda_{\text{peak}} = \frac{2.898 \times 10^6\ \mathrm{nm\cdot K}}{3500\ \mathrm{K}} = 828\ \mathrm{nm}$$
-:::
-
-::: {.fragment}
-**828 nm is in the near-infrared!**
-
-Betelgeuse's peak is *beyond* visible light.
-:::
-
-::: {.fragment .mt-2}
-**Why does it look red?**
-
-The visible portion of its spectrum is dominated by red wavelengths (the "tail" of the blackbody curve in the visible range).
-:::
-
-::: {.notes}
-"Cool stars peak in the infrared. We see the red edge of their emission."
-:::
-
----
-
-## Wien's Law: Rigel
-
-**Given:** Rigel surface temperature $T \approx 12,000$ K
-
-::: {.fragment}
-$$\lambda_{\text{peak}} = \frac{2.898 \times 10^6\ \mathrm{nm\cdot K}}{12{,}000\ \mathrm{K}} = 241.5\ \mathrm{nm}$$
-:::
-
-::: {.fragment}
-**241 nm is ultraviolet!**
-
-Rigel's peak is *shorter* than visible light.
-:::
-
-::: {.fragment .mt-2}
-**Why does it look blue-white?**
-
-The visible portion of its spectrum has more blue than red (we see the "rising edge" toward the UV peak).
-:::
-
-::: {.notes}
-"Hot stars peak in UV. We see the blue-dominated tail in the visible."
-:::
-
----
-
-## Summary: Peak Wavelength vs. Appearance
-
-| Star | $T$ (K) | $\lambda_{\text{peak}}$ (nm) | Peak Location | Visible Color |
-|------|-------|-------------|---------------|---------------|
-| Betelgeuse | 3,500 | 828 | Near-IR | Red |
-| Sun | 5,778 | 502 | Green | White |
-| Sirius A | 9,940 | 292 | UV | Blue-white |
-| Rigel | 12,000 | 242 | UV | Blue |
-
-::: {.fragment .mt-2}
-**Pattern:** We never see a "green star" because:
-
-- Cool stars peak in IR $\to$ red visible tail
-- Hot stars peak in UV $\to$ blue visible tail
-- In between $\to$ roughly equal visible colors $\to$ white
-:::
-
-::: {.notes}
-"The blackbody curve shape prevents green stars from existing."
-:::
-
----
-
-## Stefan-Boltzmann: The Sun's Luminosity
-
-**Calculate the Sun's total power output.**
-
-::: {.fragment}
-**Given:**
-
-- Stefan-Boltzmann constant: $\sigma = 5.67 \times 10^{-8}\ \mathrm{W/(m^2\cdot K^4)}$
-- Sun's temperature: $T = 5778$ K
-- Sun's radius: $R_\odot = 6.96 \times 10^8$ m
-:::
-
-::: {.fragment}
-**Formula:**
-
-$$L = 4\pi R^2 \sigma T^4$$
-:::
-
-::: {.notes}
-"Let's compute this step by step with careful units."
-:::
-
----
-
-## Sun's Luminosity: Step by Step
-
-**Step 1: Surface area**
-
-$$A = 4\pi R^2 = 4\pi (6.96 \times 10^8 \text{ m})^2 = 6.08 \times 10^{18} \text{ m}^2$$
-
-::: {.fragment}
-**Step 2: $T^4$ calculation**
-
-$$T^4 = (5778 \text{ K})^4 = 1.115 \times 10^{15} \text{ K}^4$$
-:::
-
-::: {.fragment}
-**Step 3: Combine**
-
-$$L = (6.08 \times 10^{18} \text{ m}^2) \times (5.67 \times 10^{-8} \frac{\text{W}}{\text{m}^2 \cdot \text{K}^4}) \times (1.115 \times 10^{15} \text{ K}^4)$$
-:::
-
-::: {.notes}
-"Let's track units carefully through this calculation."
-:::
-
----
-
-## Sun's Luminosity: Unit Analysis
-
-$$L = [\text{m}^2] \times \left[\frac{\text{W}}{\text{m}^2 \cdot \text{K}^4}\right] \times [\text{K}^4]$$
-
-::: {.fragment}
-The $m^2$ cancels:
-
-$$L = \left[\frac{\text{W} \cdot \text{m}^2}{\text{m}^2 \cdot \text{K}^4}\right] \times [\text{K}^4] = [\text{W}] \quad \checkmark$$
-:::
-
-::: {.fragment}
-**Numerical result:**
-
-$$L = 6.08 \times 10^{18} \times 5.67 \times 10^{-8} \times 1.115 \times 10^{15}$$
-
-$$L = 3.84 \times 10^{26} \text{ W}$$
-:::
-
-::: {.fragment}
-**The Sun outputs $3.84 \times 10^{26}$ watts** = 384 trillion trillion watts!
-:::
-
-::: {.notes}
-"This matches the measured solar luminosity. Stefan-Boltzmann works!"
-:::
-
----
-
-## How Many Light Bulbs?
-
-The Sun's luminosity: $L_\odot = 3.84 \times 10^{26}$ W
-
-A typical LED bulb: 10 W
-
-::: {.fragment}
-**Number of bulbs to match the Sun:**
-
-$$N = \frac{3.84 \times 10^{26} \text{ W}}{10 \text{ W}} = 3.84 \times 10^{25} \text{ bulbs}$$
-:::
-
-::: {.fragment .mt-2}
-That's **38 trillion trillion** LED bulbs!
-
-Or about 5 billion bulbs for every human who has ever lived.
-:::
-
-::: {.notes}
-"Just to give you a sense of scale. The Sun is absurdly powerful."
-:::
-
----
-
-## L-T-R Verification: Comparing Stars
-
-**Problem:** Sirius A is $25\times$ more luminous than the Sun and has $T = 9940$ K. What's its radius?
-
-::: {.fragment}
-$$\frac{L_{\text{Sirius}}}{L_\odot} = \left(\frac{R_{\text{Sirius}}}{R_\odot}\right)^2 \left(\frac{T_{\text{Sirius}}}{T_\odot}\right)^4$$
-:::
-
-::: {.fragment}
-$$25 = \left(\frac{R_{\text{Sirius}}}{R_\odot}\right)^2 \left(\frac{9940}{5778}\right)^4$$
-:::
-
-::: {.fragment}
-$$25 = \left(\frac{R_{\text{Sirius}}}{R_\odot}\right)^2 \times (1.72)^4 = \left(\frac{R_{\text{Sirius}}}{R_\odot}\right)^2 \times 8.76$$
-:::
-
-::: {.fragment}
-$$\frac{R_{\text{Sirius}}}{R_\odot} = \sqrt{\frac{25}{8.76}} = \sqrt{2.85} = 1.69$$
-:::
-
-::: {.fragment}
-**Sirius A is $1.7\times$ the Sun's radius.**
-:::
-
-::: {.notes}
-"Sirius is hot (so more luminous per area) and slightly larger."
-:::
-
----
-
-## {.center}
-
-::: {.r-fit-text}
-Deeper Dive (If Time Permits)
-:::
-
-*The ultraviolet catastrophe and quantum mechanics*
-
-::: {.notes}
-OPTIONAL — use only if time remains (~10 min of content). These slides cover the historical puzzle that launched quantum mechanics. If running short, skip to "Questions?" and assign this as supplementary reading.
-:::
-
----
-
-## The Ultraviolet Catastrophe
-
-**The problem (circa 1900):**
-
-Classical physics predicted that a hot object should emit **infinite energy** at short wavelengths!
-
-::: {.fragment}
-Classical prediction (Rayleigh-Jeans):
-
-$$B(\lambda) \propto \frac{T}{\lambda^4}$$
-
-As $\lambda \to 0$, energy $\to \infty$. Obviously wrong!
-:::
-
-::: {.fragment .mt-2}
-This was called the **"ultraviolet catastrophe"** — classical physics broke down.
-:::
-
-::: {.notes}
-"This was a crisis. The best physics of the time predicted nonsense."
-:::
-
----
-
-## Planck's Quantum Solution (1900)
-
-**Max Planck's radical idea:**
-
-Energy isn't continuous — it comes in discrete packets: **quanta**.
-
-$$E = nh\nu$$
-
-where $n = 0, 1, 2, 3, ...$ (integers only!)
-
-::: {.fragment}
-**Why this fixes the catastrophe:**
-
-At short wavelengths, $hf$ is large.
-
-Creating even ONE quantum requires lots of energy.
-
-At finite temperature, high-energy quanta are exponentially suppressed.
-:::
-
-::: {.notes}
-"Planck didn't fully believe his own solution at first. But it worked."
-:::
-
----
-
-## The Planck Function
-
-**The correct blackbody spectrum:**
-
-$$B_\lambda(T) = \frac{2hc^2}{\lambda^5} \times \frac{1}{e^{hc/\lambda k_B T} - 1}$$
-
-::: {.fragment}
-**Key features:**
-
-- At long wavelengths: reduces to classical Rayleigh-Jeans
-- At short wavelengths: exponentially suppressed (no catastrophe!)
-- Peak wavelength: Wien's Law emerges naturally
-- Total power: Stefan-Boltzmann emerges naturally
-:::
-
-::: {.fragment .mt-2 .text-muted}
-Wien's Law and Stefan-Boltzmann are **consequences** of the Planck function, not independent laws!
-:::
-
-::: {.notes}
-"This equation contains all of blackbody physics. Everything we learned follows from it."
-:::
-
----
-
-## Birth of Quantum Mechanics
-
-Planck's solution (1900) required $E = h\nu$.
-
-::: {.fragment}
-**Einstein (1905)** showed light itself comes in quanta: **photons**.
-
-**Bohr (1913)** showed atoms have quantized energy levels.
-
-**Heisenberg & Schrodinger (1925-26)** developed full quantum mechanics.
-:::
-
-::: {.fragment .mt-4}
-**The blackbody problem launched the quantum revolution!**
-
-Planck's constant $h$ appears everywhere in modern physics.
-:::
-
-::: {.notes}
-"Trying to understand why hot things glow the way they do led to quantum mechanics."
-:::
-
----
-
-## Why Stars Are Nearly Perfect Blackbodies
-
-:::: {.columns}
-::: {.column width="55%"}
-**Three conditions for blackbody radiation:**
-
-::: {.incremental .text-sm}
-1. **Thermal equilibrium:** Radiation and matter exchange energy until reaching the same temperature.
-
-2. **Opacity:** Photons scatter many times before escaping ("forget" their origin).
-
-3. **Temperature determines spectrum:** Only $T$ matters, not composition.
-:::
-
-::: {.fragment .mt-2 .text-sm}
-**Stars satisfy all three** — radiation thermalizes over thousands of years before escaping from the photosphere.
-:::
-:::
-
-::: {.column width="45%"}
-::: {.fragment}
-{{< img photosphere-line-formation width="100%" >}}
-:::
-:::
-::::
-
-::: {.notes}
-"The interior of the Sun is a 15-million-degree blackbody. We see the cooler 5800 K photosphere. The photosphere line formation diagram shows how the blackbody continuum gets absorption lines imprinted on it."
-:::
-
----
-
 ## Questions? {background-image="../../../assets/images/common/cosmic-cliffs-jwst.png" background-opacity="0.25"}
 
 ::: {.text-center .text-xl .mt-4}
 **Temperature is written in light.**
 
-Wien's Law + Stefan-Boltzmann = the astronomer's thermometer.
+Wien's Law + Stefan-Boltzmann + the ratio method = the astronomer's thermometer.
 :::
 
 ::: {.notes}

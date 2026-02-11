@@ -15,6 +15,7 @@ learning-objectives:
   - Explain why the Sun appears white even though its peak is in the green
   - Apply the Stefan-Boltzmann Law to relate temperature and luminosity
   - Connect luminosity, temperature, and radius using $L = 4\pi R^2 \sigma T^4$
+  - Use the ratio method to calculate stellar properties in solar units without memorizing constants
   - Recognize that two stars at the same temperature but different luminosities must have different sizes
 math-level: algebra_only
 prerequisites: Lecture 7 (Light as Information); understanding of EM spectrum
@@ -36,12 +37,13 @@ This reading shows how temperature is encoded in light — the astronomer's remo
 - Wien's Law: peak wavelength tells temperature
 - The "Sun is green" puzzle (and why we see white)
 - Stefan-Boltzmann Law: temperature affects luminosity powerfully
+- The ratio method: calculating stellar properties in solar units
 
 **Non-negotiable:** Stop at every **Check Yourself** question — don't just read past them!
 
 **Deep Dives (important but save for later):**
 
-- L-T-R connection (luminosity, temperature, radius)
+- L-T-R connection and worked examples (giants vs. dwarfs)
 - Why blackbodies matter for stellar physics
 
 **Connection to the Course:**
@@ -77,7 +79,24 @@ In Lecture 7, we learned that light carries information and that wavelength matt
 
 This is the astronomer's thermometer: point a telescope at a star, spread its light into a spectrum, and read its temperature — from 40 trillion kilometers away, without touching anything.
 
-{{< fig infrared-thermal-image >}}
+::: {.callout-roadmap title="🖥️ Explore: Infrared Animals" collapse="false"}
+Drag the slider below from **VISIBLE** to **INFRARED** and watch camouflaged animals appear. Warm-blooded animals (like meerkats) glow brightly in infrared — they can't hide their thermal radiation! Cold-blooded animals (like the tomistoma) barely show up because their body temperature is much lower.
+
+<div class="demo-embed" style="width: 100%; margin: 1rem 0;">
+  <iframe
+    src="https://viewspace.org/interactives/unveiling_invisible_universe/forms_of_light/infrared_animals"
+    width="100%"
+    height="520px"
+    style="border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; background: #0a0a14;"
+    loading="lazy"
+    title="ViewSpace: Infrared Animals Interactive"
+    allow="fullscreen">
+  </iframe>
+  <p style="text-align: center; margin-top: 0.5rem; font-size: 0.875rem; color: #666;">
+    <a href="https://viewspace.org/interactives/unveiling_invisible_universe/forms_of_light/infrared_animals" target="_blank" style="color: #5dade2;">Open in new tab ↗</a> (NASA/STScI ViewSpace)
+  </p>
+</div>
+:::
 
 ::: {.callout-misconception title="🔍 Spot the Assumption" collapse="false"}
 You might assume:
@@ -113,19 +132,6 @@ $$T_K = T_C + 273$$
 | Sun's surface | ~$5500^{\circ}\mathrm{C}$ | ~5800 K |
 
 **Quick conversion:** Add 273 to Celsius to get Kelvin. For rough estimates, remember that room temperature is about 300 K, and the Sun is about 6000 K.
-
-**Kelvin vs. Fahrenheit**
-
-For completeness (though Fahrenheit is rarely used in science):
-
-$$T_K = \frac{5}{9}(T_F - 32) + 273 = \frac{5}{9}(T_F + 460)$$
-
-| Description | Fahrenheit | Kelvin |
-|-------------|------------|--------|
-| Water freezes | $32^{\circ}\mathrm{F}$ | 273 K |
-| Room temperature | ~$70^{\circ}\mathrm{F}$ | ~294 K |
-| Body temperature | $98.6^{\circ}\mathrm{F}$ | 310 K |
-| Water boils | $212^{\circ}\mathrm{F}$ | 373 K |
 
 **The bottom line:** Kelvin is the physicist's temperature scale because it starts at true zero. Throughout this reading, temperatures are in Kelvin unless otherwise noted.
 :::
@@ -606,6 +612,46 @@ $$\frac{R_A}{R_B} = \sqrt{100} = 10$$
 
 Star A has **10 times the radius** of Star B.
 
+### The Astronomer's Shortcut: Working in Solar Units
+
+The L-T-R equation ($L = 4\pi R^2 \sigma T^4$) has constants like $4\pi$ and $\sigma$ that are awkward to use in practice. Professional astronomers avoid them with a simple trick: **write the equation for a star and for the Sun, then divide.**
+
+Write the equation for any star: $L_\star = 4\pi R_\star^2 \sigma T_\star^4$
+
+Write the same equation for the Sun: $L_\odot = 4\pi R_\odot^2 \sigma T_\odot^4$
+
+Divide star by Sun:
+
+::: {.callout-key-insight title="The Ratio Method (Solar Units)"}
+$$\frac{L}{L_\odot} = \left(\frac{R}{R_\odot}\right)^2 \left(\frac{T}{T_\odot}\right)^4$$
+
+**All constants cancel!** You only need ratios — no SI units, no scientific notation, no $\sigma$.
+:::
+
+This works because $4\pi$ and $\sigma$ are the same for every star. The physics is in how a star **compares** to the Sun.
+
+**Worked Example — Sirius A:**
+
+Sirius A has $L = 25\,L_\odot$ and $T = 9940$ K. What is its radius?
+
+$$25 = \left(\frac{R}{R_\odot}\right)^2 \left(\frac{9940}{5800}\right)^4 = \left(\frac{R}{R_\odot}\right)^2 \times (1.71)^4 = \left(\frac{R}{R_\odot}\right)^2 \times 8.6$$
+
+$$\frac{R}{R_\odot} = \sqrt{\frac{25}{8.6}} = \sqrt{2.9} = 1.7$$
+
+**Sirius A is about 1.7 times the Sun's radius** — hot and slightly larger.
+
+**Worked Example — Betelgeuse:**
+
+Betelgeuse has $T \approx 3500$ K and $L \approx 100{,}000\,L_\odot$. How big is it?
+
+$$100{,}000 = \left(\frac{R}{R_\odot}\right)^2 \left(\frac{3500}{5800}\right)^4 = \left(\frac{R}{R_\odot}\right)^2 \times (0.60)^4 = \left(\frac{R}{R_\odot}\right)^2 \times 0.13$$
+
+$$\frac{R}{R_\odot} = \sqrt{\frac{100{,}000}{0.13}} = \sqrt{770{,}000} \approx 880$$
+
+**Betelgeuse is about 880 times the Sun's radius** — roughly 4 AU, large enough to swallow Mars and the entire asteroid belt. Its temperature is low (so $T^4$ is small), but its enormous surface area makes it incredibly luminous.
+
+{{< fig betelgeuse-eso >}}
+
 ### Preview: The H-R Diagram
 
 In Module 2, we'll study the **Hertzsprung-Russell (H-R) diagram** — a plot of stellar luminosity vs. temperature. You'll see that:
@@ -754,6 +800,25 @@ This is exactly what astronomers do! By measuring the peak wavelength of a star'
 
 # Part 4: Transition to Spectral Lines
 
+::: {.callout-roadmap title="🖥️ Explore: Spectrum of the Star Altair" collapse="false"}
+Step through how astronomers analyze starlight — from naked-eye view to spectrum to physical interpretation. The smooth curve is the blackbody continuum; the dark lines on top are spectral absorption lines (Lecture 9).
+
+<div class="demo-embed" style="width: 100%; margin: 1rem 0;">
+  <iframe
+    src="https://viewspace.org/interactives/unveiling_invisible_universe/analyzing_light/spectrum_of_the_star_altair"
+    width="100%"
+    height="520px"
+    style="border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; background: #0a0a14;"
+    loading="lazy"
+    title="ViewSpace: Spectrum of the Star Altair Interactive"
+    allow="fullscreen">
+  </iframe>
+  <p style="text-align: center; margin-top: 0.5rem; font-size: 0.875rem; color: #666;">
+    <a href="https://viewspace.org/interactives/unveiling_invisible_universe/analyzing_light/spectrum_of_the_star_altair" target="_blank" style="color: #5dade2;">Open in new tab ↗</a> (NASA/STScI ViewSpace)
+  </p>
+</div>
+:::
+
 ## What Blackbodies Can and Cannot Tell Us
 
 ### The Power of Blackbody Physics
@@ -824,13 +889,13 @@ We'll explore this in detail in Lecture 9, where we'll learn to "read" stellar s
 
 2. **A blackbody** is an idealized perfect emitter/absorber whose spectrum depends only on temperature.
 
-3. **Wien's Law:** $\lambda_{\text{peak}} = 2.9 \times 10^{-3}/T$ (in meters and K). Hot $\to$ peak at short wavelengths (blue). Cool $\to$ peak at long (red).
+3. **Wien's Law:** $\lambda_{\text{peak}} = 2{,}900{,}000/T$ (nm, K). Hot $\to$ peak at short wavelengths (blue). Cool $\to$ peak at long (red).
 
 4. **The Sun peaks at green (~500 nm)** but appears white because it emits broadly across all visible wavelengths.
 
 5. **Stefan-Boltzmann Law:** Power **per unit area** scales as $T^4$. At fixed radius, doubling $T$ makes luminosity $16\times$ larger.
 
-6. **L-T-R Relationship:** $L = 4\pi R^2 \sigma T^4$. Same temperature, different luminosity $\to$ different size. This distinguishes giants from dwarfs.
+6. **L-T-R Relationship:** $L = 4\pi R^2 \sigma T^4$. Use the **ratio method** — $L/L_\odot = (R/R_\odot)^2 (T/T_\odot)^4$ — to skip the constants.
 
 7. **Blackbodies reveal temperature, but not composition or motion.** For those, we need spectral lines (Lecture 9).
 :::
@@ -847,6 +912,7 @@ Before moving on, check whether you can do each of the following. If any feel sh
 - [ ] I can explain why the Sun appears white even though its peak wavelength is green
 - [ ] I can apply the Stefan-Boltzmann Law to determine how luminosity changes with temperature
 - [ ] I can use $L = 4\pi R^2 \sigma T^4$ to relate luminosity, temperature, and radius
+- [ ] I can use the ratio method ($L/L_\odot = (R/R_\odot)^2 (T/T_\odot)^4$) to find stellar properties without memorizing constants
 - [ ] I can determine whether a star is a giant or dwarf given its temperature and luminosity
 
 ---
@@ -867,6 +933,20 @@ Before moving on, check whether you can do each of the following. If any feel sh
 
 **6. Star colors:** Rank these stars from coolest to hottest based on color: a red star, a blue star, a yellow star.
 
+::: {.callout-solution title="Core Problem Solutions" collapse="true"}
+**1.** $T = 2{,}900{,}000/580 = 5000$ K. Slightly cooler than the Sun.
+
+**2.** $\lambda_{\text{peak}} = 2{,}900{,}000/4000 = 725$ nm. This is in the **near-infrared**, just beyond the red end of visible light (700 nm). The star would appear reddish.
+
+**3.** $L_A/L_B = (T_A/T_B)^4 = 3^4 = 81$. Star A is **81 times** more luminous.
+
+**4.** Since $L \propto R^2$ at fixed $T$: $R_A/R_B = \sqrt{400} = 20$. The brighter star has **20 times the radius**.
+
+**5.** The Sun emits broadly across all visible wavelengths (the blackbody curve is wide, not a spike). Our eyes combine all those colors into white. Only if the Sun emitted exclusively at 500 nm would we see green.
+
+**6.** Coolest to hottest: **red, yellow, blue**. Wien's Law: red peaks at longer wavelengths (lower $T$), blue peaks at shorter wavelengths (higher $T$).
+:::
+
 ### Challenge
 
 **7. Combined Wien + Stefan-Boltzmann:** Star X has twice the temperature and half the radius of Star Y.
@@ -884,6 +964,16 @@ $$\frac{R_{\text{Betelgeuse}}}{R_\odot} = \sqrt{\frac{L_{\text{Betelgeuse}}}{L_\
 
 **10. Why blackbodies matter:** Explain in your own words why blackbody physics is useful for astronomy, and what additional information (beyond temperature) requires spectral lines.
 
+::: {.callout-solution title="Challenge Problem Solutions" collapse="true"}
+**7.** Wien: Star X peaks at **half** the wavelength of Star Y (since $\lambda_{\text{peak}} \propto 1/T$ and $T_X = 2T_Y$). Stefan-Boltzmann: $L_X/L_Y = (R_X/R_Y)^2 (T_X/T_Y)^4 = (1/2)^2 \times 2^4 = (1/4) \times 16 = 4$. Star X is **$4\times$ more luminous**.
+
+**8.** $\lambda_{\text{peak}} = 2{,}900{,}000/255 \approx 11{,}400$ nm $= 11.4\,\mu$m. This is in the **thermal infrared**. Earth's thermal emission peaks far beyond visible light — this is why greenhouse gases (which absorb infrared) affect Earth's energy balance.
+
+**9.** Using the ratio method: $100{,}000 = (R/R_\odot)^2 \times (3500/5800)^4 = (R/R_\odot)^2 \times 0.13$. So $(R/R_\odot)^2 = 100{,}000/0.13 \approx 770{,}000$, giving $R/R_\odot \approx 880$. **Betelgeuse is about 880 times the Sun's radius** — roughly 4 AU, large enough to swallow Mars and the entire asteroid belt.
+
+**10.** Blackbody physics lets us remotely measure temperature (Wien's Law), luminosity (Stefan-Boltzmann), and radius (L-T-R relationship) — fundamental properties of any star. But blackbody spectra are smooth and featureless. To determine composition (what elements are present) and motion (radial velocity via Doppler shifts), we need spectral lines — discrete features caused by atoms absorbing or emitting at specific wavelengths.
+:::
+
 ---
 
 ## Glossary
@@ -897,6 +987,9 @@ $$\frac{R_{\text{Betelgeuse}}}{R_\odot} = \sqrt{\frac{L_{\text{Betelgeuse}}}{L_\
 | **Stefan-Boltzmann Law** | Power per area $= \sigma T^4$; radiated energy scales steeply with temperature |
 | **Luminosity (L)** | Total power radiated by an object (watts or $L_\odot$) |
 | **L-T-R relationship** | $L = 4\pi R^2 \sigma T^4$; connects luminosity, temperature, and radius |
+| **Ratio method** | Dividing the L-T-R equation for a star by the same equation for the Sun; all constants cancel, leaving $L/L_\odot = (R/R_\odot)^2 (T/T_\odot)^4$ |
+| **Photosphere** | The visible "surface" layer of a star from which light escapes; characterized by an effective temperature |
+| **Planck function** | The equation $B_\lambda(T)$ that describes the blackbody spectrum; temperature is the only variable |
 | **Giant star** | A star with large radius and high luminosity relative to its temperature |
 | **Dwarf star** | A star with small radius and low luminosity relative to its temperature |
 | **Spectral lines** | Discrete features in a spectrum from absorption or emission by specific elements (covered in L9) |

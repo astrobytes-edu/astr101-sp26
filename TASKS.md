@@ -17,9 +17,20 @@
 - [x] Add demo moment slides with `background-iframe` (blackbody + EM spectrum)
 - [x] Add new figures: Sun flare (SDO), H-R diagram (ESO), NGC 6355, photosphere line formation
 - [x] Register 6 new figures in `figures.yml` (sun-flare-sdo, hr-diagram-eso, ngc6355-star-colors, jwst-spectroscopy-density, photosphere-line-formation, updated star-colors-temperature)
-- [x] Mark "Deeper Dive" section as "If Time Permits" with timing guidance
-- [x] Static validation: all figure refs, callout syntax, URLs — clean
 - [x] Embed ViewSpace interactives into slides (Infrared Animals + Spectrum of Altair)
+- [x] Embed ViewSpace interactives into reading (Infrared Animals + Spectrum of Altair)
+- [x] Remove Numerical Verification section; replace with ratio method / solar units (Part 4)
+- [x] Move Deeper Dive into main flow as historical perspective (Part 5: Where Does the Curve Come From?)
+- [x] Add Betelgeuse + Sirius worked examples using ratio method
+- [x] Register `betelgeuse-eso.jpg` in `figures.yml`
+- [x] Add second O→M→I callback (Betelgeuse tape-measure inference)
+- [x] Add think-pair-share prompt to ratio method slides
+- [x] Show Planck function with disclaimer, connect to demo curve shape
+- [x] Add ratio method section to reading with Sirius + Betelgeuse worked examples
+- [x] Add practice problem answer keys to reading (Core + Challenge)
+- [x] Trim Kelvin deep dive (removed Fahrenheit conversion)
+- [x] Update Key Takeaways (slides + reading) to include ratio method + Planck function
+- [x] Add quiz question for ratio method
 - [ ] Replace placeholder `infrared-thermal-image` SVG with a real thermal camera image
 - [ ] Verify `{{< glossary lecture=8 >}}` shortcode renders correctly
 - [ ] Run `quarto render` locally and verify no warnings/errors
