@@ -168,7 +168,7 @@ $$f \approx 0.11\%$$
 
 **Answer:** Roughly **$10^{-3}$ of Earth's surface** per eclipse (about **$0.1\%$**).
 
-**Important note:** This estimate assumes the $2.4$ eclipses/year in the prompt correspond to eclipses with a comparable path of totality. In reality, not every solar eclipse is total, and totality paths vary in size — so treat this as an order-of-magnitude inference from rates.
+**Important note:** The $2.4$ eclipses/year figure counts *all* solar eclipses (total, annular, and partial). The $1/375$-year figure is specifically for *total* eclipses at a given location. Strictly, we should divide by the number of *total* eclipses per year (roughly $0.7$), which would give a larger fraction ($\sim 1/260 \approx 0.4\%$). Our answer of $\sim 0.1\%$ is an underestimate because we divided by all eclipses rather than just total ones — but it is the right order of magnitude, and the point stands: totality paths cover a tiny fraction of Earth's surface.
 
 **What you should learn from this:** Rates let you estimate geometric coverage when you assume "random hit" probabilities.
 

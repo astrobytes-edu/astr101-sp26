@@ -113,6 +113,7 @@ $$r_a = (1.52\ \text{AU})(1 + 0.093) = (1.52\ \text{AU})(1.093) \approx 1.66\ \t
 **Find:** Period $P$ in years.
 
 **Equation (Sun units):**
+When $P$ is in **years**, $a$ is in **AU**, and the central mass is the **Sun**, Kepler's Third Law simplifies to:
 $$P^2 = a^3$$
 
 **Solution:**
