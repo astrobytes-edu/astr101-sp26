@@ -4,13 +4,16 @@ subtitle: "Spectral Lines and Chemical Fingerprints"
 author: "Dr. Anna Rosen"
 date: "2026-02-18"
 description: "Spectral lines are chemical fingerprints. Each element has unique wavelengths. Quantum mechanics explains why."
-draft: true
+draft: false
+
+metadata-files:
+  - _metadata.yml
 
 format:
   revealjs:
     theme: [default, ../../../assets/theme/slides/theme.scss]
     css: ../../../slides.css
-    footer: "ASTR 101 • Lecture 9 • Dr. Anna Rosen"
+    footer: "ASTR 101 - Lecture 9 - Dr. Anna Rosen"
     slide-number: true
     transition: fade
     transition-speed: fast
@@ -29,11 +32,6 @@ format:
       toggleSpotlightOnMouseDown: true
       presentingCursor: "crosshair"
       fadeInAndOut: 100
-    quiz:
-      shuffleOptions: true
-      defaultCorrect: "Correct!"
-      defaultIncorrect: "Not quite — let's discuss."
-
 revealjs-plugins:
   - pointer
   - spotlight
@@ -213,19 +211,58 @@ The pattern of dark lines tells us which elements are in the star's atmosphere.
 
 ---
 
-## Quick Check: Kirchhoff's Laws {background-color="#1a1a2e"}
+## Quick Check: Kirchhoff's Laws {.quiz-question}
 
-::: {.quiz}
 The dark lines in the Sun's spectrum are caused by:
 
-- [ ] The Sun's core being too cool to emit those wavelengths
-- [x] Cool gas in the Sun's outer atmosphere absorbing specific wavelengths
-- [ ] Earth's atmosphere blocking the light
-- [ ] The Sun rotating and shifting the wavelengths
-:::
+- The Sun's core being too cool to emit those wavelengths
+- [Cool gas in the Sun's outer atmosphere absorbing specific wavelengths]{.correct}
+- Earth's atmosphere blocking the light
+- The Sun rotating and shifting the wavelengths
 
 ::: {.notes}
 1 min. iClicker poll.
+:::
+
+---
+
+## 🖥️ Live Demo: Spectral Lines Lab {background-iframe="../../../demos/spectral-lines-lab/" background-interactive="true"}
+
+::: {.notes}
+~3 min. Live demo. Walk through the three Kirchhoff setups:
+
+1. Start with the **continuous source** — smooth rainbow, no lines
+2. Switch to **hot thin gas** — bright emission lines appear on a dark background
+3. Place **cool gas in front of hot source** — dark absorption lines on the rainbow
+
+Then switch to element fingerprints:
+
+4. Show hydrogen lines — ask: "How many lines does hydrogen have in the visible?"
+5. Overlay a second element — ask: "Could you tell these apart by pattern alone?"
+
+**Key message:** The pattern is the fingerprint, not any single line.
+:::
+
+---
+
+## What Did You Notice? {background-color="#1a1a2e"}
+
+::: {.text-center .text-xl}
+**Think-Pair-Share** (~90 seconds)
+:::
+
+::: {.mt-4}
+Turn to your neighbor and discuss:
+
+> "In the demo, how could you tell which element was which? What feature of the spectrum mattered — individual line positions, the overall pattern, or something else?"
+:::
+
+::: {.fragment .mt-4 .text-muted}
+The **pattern** of lines is the fingerprint — like a barcode. A single line isn't enough; elements share some wavelengths. The full set is unique.
+:::
+
+::: {.notes}
+~2 min. Think-Pair-Share. Let pairs discuss for 60–90 sec, then cold-call 1–2 pairs. Reinforce: pattern matching, not single-line identification. This bridges the demo into the next section on chemical fingerprints.
 :::
 
 ---
@@ -251,16 +288,14 @@ The dark lines in the Sun's spectrum are caused by:
 
 ---
 
-## Quick Check: Element Identification {background-color="#1a1a2e"}
+## Quick Check: Element Identification {.quiz-question}
 
-::: {.quiz}
 How do astronomers determine which elements are present in a star?
 
-- [ ] By measuring the star's temperature
-- [x] By matching the pattern of spectral lines to laboratory measurements
-- [ ] By observing the star's color
-- [ ] By measuring how bright the star is
-:::
+- By measuring the star's temperature
+- [By matching the pattern of spectral lines to laboratory measurements]{.correct}
+- By observing the star's color
+- By measuring how bright the star is
 
 ::: {.notes}
 1 min. iClicker poll.
@@ -442,16 +477,14 @@ $$\lambda = \frac{1240}{1.89} = 656 \text{ nm}$$
 
 ---
 
-## Quick Check: Hydrogen Transitions {background-color="#1a1a2e"}
+## Quick Check: Hydrogen Transitions {.quiz-question}
 
-::: {.quiz}
 Which transition produces the shortest wavelength (highest energy) photon?
 
-- [x] n = 2 → n = 1
-- [ ] n = 3 → n = 2
-- [ ] n = 4 → n = 3
-- [ ] n = 5 → n = 4
-:::
+- [n = 2 → n = 1]{.correct}
+- n = 3 → n = 2
+- n = 4 → n = 3
+- n = 5 → n = 4
 
 ::: {.fragment .mt-2 .text-sm}
 **Largest energy gap → highest energy photon → shortest wavelength.**
@@ -463,16 +496,14 @@ Which transition produces the shortest wavelength (highest energy) photon?
 
 ---
 
-## Quick Check: Why Discrete Lines? {background-color="#1a1a2e"}
+## Quick Check: Why Discrete Lines? {.quiz-question}
 
-::: {.quiz}
 Spectral lines are discrete (specific wavelengths only) because:
 
-- [ ] Telescopes can only detect certain wavelengths
-- [ ] Atoms can only absorb red, green, and blue light
-- [x] Electrons in atoms can only occupy specific quantized energy levels
-- [ ] Light travels at a constant speed
-:::
+- Telescopes can only detect certain wavelengths
+- Atoms can only absorb red, green, and blue light
+- [Electrons in atoms can only occupy specific quantized energy levels]{.correct}
+- Light travels at a constant speed
 
 ::: {.notes}
 1 min. iClicker poll.
@@ -532,16 +563,14 @@ Mnemonic: "Oh Be A Fine Girl/Guy, Kiss Me"
 
 ---
 
-## Quick Check: Spectral Types {background-color="#1a1a2e"}
+## Quick Check: Spectral Types {.quiz-question}
 
-::: {.quiz}
 Which spectral type corresponds to the hottest stars?
 
-- [ ] M
-- [ ] G
-- [ ] A
-- [x] O
-:::
+- M
+- G
+- A
+- [O]{.correct}
 
 ::: {.notes}
 1 min. iClicker poll.
@@ -599,19 +628,45 @@ H neutral + electrons excited to n=2 → maximum Balmer absorption!
 
 ---
 
-## Quick Check: Why Weak H in O Stars? {background-color="#1a1a2e"}
+## Quick Check: Why Weak H in O Stars? {.quiz-question}
 
-::: {.quiz}
 Hydrogen absorption lines are weak in O-type stars because:
 
-- [ ] O stars contain very little hydrogen
-- [x] O stars are so hot that hydrogen is mostly ionized
-- [ ] O stars are too cool to excite hydrogen
-- [ ] O stars have thick atmospheres that block H lines
-:::
+- O stars contain very little hydrogen
+- [O stars are so hot that hydrogen is mostly ionized]{.correct}
+- O stars are too cool to excite hydrogen
+- O stars have thick atmospheres that block H lines
 
 ::: {.notes}
 1 min. iClicker poll.
+:::
+
+---
+
+## Observable → Model → Inference
+
+::: {.text-center .text-xl}
+The astronomer's chemical lab:
+:::
+
+::: {.fragment .mt-3}
+**Observable:** A star's spectrum shows dark lines at 656 nm, 486 nm, 434 nm, plus lines at 393/397 nm.
+:::
+
+::: {.fragment}
+**Model:** Each element absorbs at unique wavelengths (quantum mechanics). OBAFGKM classifies stars by which lines dominate.
+:::
+
+::: {.fragment}
+**Inference:** Hydrogen and calcium are present. The line strengths indicate ~10,000 K → A-type star.
+:::
+
+::: {.fragment .mt-3 .text-muted}
+No sample. No visit. Just photons and pattern matching — from any distance.
+:::
+
+::: {.notes}
+~1 min. Reinforce the O→M→I framework. This is the course throughline: L5-L6 (motion reveals mass), L7-L8 (light reveals temperature), L9 (spectral lines reveal composition).
 :::
 
 ---
@@ -654,7 +709,7 @@ Motion causes Doppler shifts → reveals velocities
 ::: {.fragment .mt-4 .text-muted}
 **Reading:** Lecture 10 Reading Companion
 
-**Demo:** Spectral Lines Lab: [../../../demos/spectral-lines-lab/](../../../demos/spectral-lines-lab/)
+**Demos:** [Spectral Lines Lab](../../../demos/spectral-lines-lab/){target="_blank"} | [Blackbody Radiation](https://astrobytes-edu.github.io/cosmic-playground/exhibits/blackbody-radiation/){target="_blank"}
 :::
 
 ::: {.notes}
@@ -672,7 +727,7 @@ Numerical Verification
 *Calculating hydrogen spectral lines from first principles*
 
 ::: {.notes}
-Let's verify our spectral line calculations with explicit unit tracking.
+~25 min mark. **Guided Practice block (~10 min, slides through Ionization Energies).** Walk through the Hα calculation live — students follow along. The full Balmer table is a "reveal and confirm" slide, not a derivation. Lyman and ionization slides are quick conceptual extensions. If short on time, skip to Key Takeaways after the Balmer table.
 :::
 
 ---
@@ -696,7 +751,7 @@ $$E_n = -\frac{13.6 \text{ eV}}{n^2}$$
 :::
 
 ::: {.notes}
-"Negative energies mean the electron is bound. Zero would mean ionized (free electron)."
+~26 min. "Negative energies mean the electron is bound. Zero would mean ionized (free electron)." This table is review from the main lecture — confirm, don't re-derive.
 :::
 
 ---
@@ -718,7 +773,7 @@ From ground state: $E_{\text{ionize}} = 0 - (-13.6) = 13.6$ eV
 :::
 
 ::: {.notes}
-"It takes 13.6 eV to rip an electron out of hydrogen's ground state."
+~27 min. "It takes 13.6 eV to rip an electron out of hydrogen's ground state." Quick conceptual aside — don't dwell.
 :::
 
 ---
@@ -738,7 +793,7 @@ $$\Delta E = -1.51 + 3.40 = +1.89 \text{ eV}$$
 :::
 
 ::: {.notes}
-"The electron loses 1.89 eV of potential energy, which goes into the photon."
+~28 min. "The electron loses 1.89 eV of potential energy, which goes into the photon." This is the key calculation — work it step-by-step on the board or walk through fragments slowly.
 :::
 
 ---
@@ -768,7 +823,7 @@ $$\lambda = \frac{1240 \text{ eV·nm}}{1.89 \text{ eV}} = 656.1 \text{ nm}$$
 :::
 
 ::: {.notes}
-"This is the red glow you see in images of nebulae. We calculated it from quantum mechanics!"
+~29 min. "This is the red glow you see in images of nebulae. We calculated it from quantum mechanics!" Emphasize the unit check — modeling good practice.
 :::
 
 ---
@@ -791,7 +846,7 @@ $$\lambda = \frac{1240 \text{ eV·nm}}{1.89 \text{ eV}} = 656.1 \text{ nm}$$
 :::
 
 ::: {.notes}
-"The quantum model works. We can predict spectral lines from first principles."
+~30 min. "The quantum model works. We can predict spectral lines from first principles." The payoff slide — all four lines match. Let this land.
 :::
 
 ---
@@ -815,7 +870,7 @@ Astronomers need space telescopes to see Lyman-α from cosmic sources.
 :::
 
 ::: {.notes}
-"The Lyman series is in the UV because transitions to n=1 involve much more energy."
+~31 min. "The Lyman series is in the UV because transitions to n=1 involve much more energy." Quick — the point is UV vs visible, not the calculation.
 :::
 
 ---
@@ -839,7 +894,7 @@ Photons shorter than this **ionize** the atom from $n = 2$!
 :::
 
 ::: {.notes}
-"Beyond the series limit, the electron is freed entirely."
+~32 min. "Beyond the series limit, the electron is freed entirely." Connects to ionization physics from the OBAFGKM section.
 :::
 
 ---
@@ -859,7 +914,7 @@ An H atom with an electron in $n = 3$ can be ionized by infrared light.
 :::
 
 ::: {.notes}
-"This is why temperature matters for spectral lines. Hot stars have many excited atoms."
+~33 min. "This is why temperature matters for spectral lines. Hot stars have many excited atoms." This table ties the numerical section back to the OBAFGKM ionization argument. Good place to end Numerical Verification if time is tight.
 :::
 
 ---
@@ -873,7 +928,7 @@ Deeper Dive
 *The Rydberg formula and other elements*
 
 ::: {.notes}
-Optional advanced content.
+~34 min mark. **Optional enrichment block (~8–10 min).** Use if time permits or as a reference for curious students. Cover Rydberg formula quickly (1–2 min), show the Bohr derivation as "here's where 13.6 comes from" without derivation details (1 min), then hydrogen-like ions and multi-electron atoms as conceptual bookends (2 min each). Metallicity slide is a fun cultural aside (~1 min). **If under 10 min remain, skip to Questions slide.**
 :::
 
 ---
@@ -901,7 +956,7 @@ $$\frac{1}{\lambda} = R_H \left( \frac{1}{n_f^2} - \frac{1}{n_i^2} \right)$$
 :::
 
 ::: {.notes}
-"Rydberg found this pattern empirically in 1888. Bohr explained it in 1913."
+~35 min. "Rydberg found this pattern empirically in 1888. Bohr explained it in 1913." Show the formula structure — don't derive. The historical point is powerful: pattern found 25 years before the explanation.
 :::
 
 ---
@@ -927,7 +982,7 @@ $$\lambda = \frac{1}{1.524 \times 10^6 \text{ m}^{-1}} = 6.56 \times 10^{-7} \te
 :::
 
 ::: {.notes}
-"Same answer we got before! The Rydberg formula is equivalent to our energy level approach."
+~36 min. "Same answer we got before! The Rydberg formula is equivalent to our energy level approach." Quick confirmation — don't re-derive. The point: two roads to the same destination.
 :::
 
 ---
@@ -955,7 +1010,7 @@ The constant evaluates to **13.6 eV**.
 :::
 
 ::: {.notes}
-"The 13.6 eV comes from fundamental constants: electron mass, charge, Planck's constant."
+~37 min. "The 13.6 eV comes from fundamental constants: electron mass, charge, Planck's constant." Show, don't derive. The takeaway: one number from three constants — that's elegant physics.
 :::
 
 ---
@@ -981,7 +1036,7 @@ More protons → electron bound more tightly → higher ionization energy.
 :::
 
 ::: {.notes}
-"Helium with one electron stripped (He⁺) has 4× the ionization energy of hydrogen."
+~38 min. "Helium with one electron stripped (He⁺) has 4× the ionization energy of hydrogen." The Z² scaling is the key insight — more protons, tighter grip.
 :::
 
 ---
@@ -1002,7 +1057,7 @@ It's what allows us to identify elements across the universe.
 :::
 
 ::: {.notes}
-"The complexity of multi-electron atoms is what gives each element its fingerprint."
+~39 min. "The complexity of multi-electron atoms is what gives each element its fingerprint." This closes the loop: hydrogen is simple → real atoms are complex → complexity = uniqueness = spectroscopy works.
 :::
 
 ---
@@ -1028,7 +1083,7 @@ It's what allows us to identify elements across the universe.
 :::
 
 ::: {.notes}
-"When astronomers say 'metal-rich star,' they might mean iron, calcium, or even carbon!"
+~40 min. "When astronomers say 'metal-rich star,' they might mean iron, calcium, or even carbon!" Fun cultural aside — students enjoy learning jargon. Good energy note to end on before Q&A.
 :::
 
 ---

@@ -18,13 +18,13 @@ math-level: algebra_only
 prerequisites: Lecture 8 (Blackbody Radiation); understanding of EM spectrum
 ---
 
-::: {.callout-important #the-big-idea}
+::: {.callout-key-insight #the-big-idea}
 ## The Big Idea
 
 Blackbody radiation tells us temperature. But real stellar spectra have something more: **spectral lines** — bright or dark features at specific wavelengths. These lines are chemical fingerprints, revealing what stars are made of. Each element has its own unique pattern, and quantum mechanics explains why.
 :::
 
-::: {.callout-important title="How to Use This Reading" collapse="true"}
+::: {.callout-roadmap title="How to Use This Reading" collapse="true"}
 This reading covers spectral lines, the quantum origin of discrete spectra, and stellar classification — the foundation for understanding stellar composition.
 
 **Structure:**
@@ -46,7 +46,7 @@ This reading covers spectral lines, the quantum origin of discrete spectra, and 
 **What's next:** In L10 (Friday), we'll learn how these same spectral lines reveal **motion** through the Doppler effect — and how telescopes collect this light.
 :::
 
-::: {.callout-tip title="Spectral Lines in 60 Seconds" collapse="true"}
+::: {.callout-key-insight title="Spectral Lines in 60 Seconds" collapse="true"}
 If you only remember three things:
 
 1. **Each element has a unique fingerprint.** Hydrogen absorbs at 656 nm, 486 nm, 434 nm... No other element produces this exact pattern.
@@ -72,7 +72,7 @@ In Lectures 7 and 8, we learned that **light carries information**: wavelength, 
 
 {{< fig altair-spectrum-jwst >}}
 
-::: {.callout-note title="Where We Left Off (Lecture 8)"}
+::: {.callout-roadmap title="Where We Left Off (Lecture 8)"}
 In Lecture 8, we discovered how **temperature is written in light**:
 
 - Blackbody radiation: hot objects glow, with spectrum determined by temperature
@@ -92,7 +92,7 @@ But we noted that real stellar spectra aren't perfect blackbodies — they have 
 
 In the 1860s, Kirchhoff discovered three rules that predict what kind of spectrum you'll see, depending on the physical conditions. These became the foundation of spectroscopy — the science of reading light.
 
-::: {.callout-important title="Kirchhoff's Three Laws of Spectroscopy"}
+::: {.callout-key-insight title="Kirchhoff's Three Laws of Spectroscopy"}
 **1. Continuous Spectrum (Blackbody)**
 A hot, dense object (solid, liquid, or dense gas) emits light at **all wavelengths** — a smooth rainbow with no gaps.
 
@@ -170,7 +170,7 @@ The dark lines in the Sun's spectrum are caused by:
 - D) The Sun rotating and shifting the wavelengths
 :::
 
-::: {.callout-tip title="Solution" collapse="true"}
+::: {.callout-solution title="Solution" collapse="true"}
 **B) Cool gas in the Sun's outer atmosphere absorbing specific wavelengths.**
 
 The Sun's photosphere produces a continuous spectrum. As that light passes through the cooler layers above it, atoms absorb light at their characteristic wavelengths, creating dark absorption lines. (Earth's atmosphere does add some lines, but the Fraunhofer lines are solar in origin.)
@@ -206,7 +206,7 @@ To identify elements in a star:
 
 This is how we know the Sun is ~74% hydrogen, ~24% helium, and ~2% heavier elements **by mass** ("metals" in astronomy jargon) — without ever collecting a sample.
 
-::: {.callout-note title="Observable → Model → Inference: Solar Composition"}
+::: {.callout-key-insight title="Observable → Model → Inference: Solar Composition"}
 **Observable:** The Sun's spectrum shows absorption lines at 656.28 nm, 486.13 nm, 434.05 nm (and many more). Dark lines also appear at 589 nm (sodium) and 393/397 nm (calcium).
 
 **Model:** Each element produces absorption at specific wavelengths. Laboratory measurements give us the reference patterns.
@@ -214,7 +214,7 @@ This is how we know the Sun is ~74% hydrogen, ~24% helium, and ~2% heavier eleme
 **Inference:** The Sun's atmosphere contains hydrogen, sodium, calcium, and many other elements. By measuring line strengths, we can estimate relative abundances.
 :::
 
-::: {.callout-tip title="The More You Know: Helium Was Discovered in the Sun First" collapse="true"}
+::: {.callout-the-more-you-know title="The More You Know: Helium Was Discovered in the Sun First" collapse="true"}
 In 1868, astronomers observing a solar eclipse noticed an emission line at 587.6 nm that didn't match any known element on Earth. They named the mystery element **helium** — from *helios*, the Greek word for Sun.
 
 Helium wasn't isolated on Earth until 1895, nearly 30 years later. Spectroscopy revealed a new element 150 million km away before we found it in our own laboratories!
@@ -231,7 +231,7 @@ How do astronomers determine which elements are present in a star?
 - D) By measuring how bright the star is
 :::
 
-::: {.callout-tip title="Solution" collapse="true"}
+::: {.callout-solution title="Solution" collapse="true"}
 **B) By matching the pattern of spectral lines to laboratory measurements.**
 
 Each element produces a unique pattern of absorption or emission lines. By comparing observed stellar spectra to lab spectra of known elements, astronomers identify which elements are present. Temperature affects which lines are *visible* (more on that soon), but the identification comes from pattern matching.
@@ -269,7 +269,7 @@ To move from one rung to another, the electron must gain or lose **exactly** the
 
 {{< fig energy-level-ladder >}}
 
-::: {.callout-note title="🔍 Spot the Assumption" collapse="false"}
+::: {.callout-misconception title="🔍 Spot the Assumption" collapse="false"}
 **Classical assumption:** Energy can vary continuously, like a ramp. An electron could have any energy, and atoms could emit any wavelength.
 
 **Quantum reality:** Energy is quantized, like a staircase. Only specific energy values are allowed, so only specific wavelengths appear.
@@ -288,7 +288,7 @@ When an electron jumps between energy levels:
 - **Absorption:** Electron jumps UP to higher energy level. A photon with exactly the right energy is absorbed.
 - **Emission:** Electron jumps DOWN to lower energy level. A photon with exactly that energy is emitted.
 
-::: {.callout-important title="Photon Energy and Wavelength"}
+::: {.callout-key-insight title="Photon Energy and Wavelength"}
 $$E_{photon} = h\nu = \frac{hc}{\lambda}$$
 
 where:
@@ -327,7 +327,7 @@ We focus on hydrogen because it's the **simplest** case — and the only atom wh
 But the **principle** is the same: quantized energy levels → discrete spectral lines. Once you understand hydrogen, you have the conceptual foundation for all atomic spectroscopy.
 :::
 
-::: {.callout-important title="Hydrogen Energy Levels"}
+::: {.callout-key-insight title="Hydrogen Energy Levels"}
 $$E_n = -\frac{13.6 \text{ eV}}{n^2} \quad (n = 1, 2, 3, ...)$$
 
 where:
@@ -395,7 +395,7 @@ $$\lambda = \frac{1240}{1.89} = 656 \text{ nm}$$
 
 This is **Hα** — the famous red hydrogen line! It's the brightest line in many emission nebulae and the reason hydrogen nebulae glow reddish-pink.
 
-::: {.callout-tip title="The More You Know: Why 1240 eV·nm?" collapse="true"}
+::: {.callout-the-more-you-know title="The More You Know: Why 1240 eV·nm?" collapse="true"}
 The "1240" shortcut comes from combining fundamental constants:
 
 $$\lambda = \frac{hc}{E} = \frac{(6.63 \times 10^{-34} \text{ J·s})(3 \times 10^8 \text{ m/s})}{E}$$
@@ -422,7 +422,7 @@ Which transition produces the shortest wavelength (highest energy) photon?
 - D) n = 5 → n = 4
 :::
 
-::: {.callout-tip title="Solution" collapse="true"}
+::: {.callout-solution title="Solution" collapse="true"}
 **A) n = 2 → n = 1.** This transition has the largest energy gap:
 
 $|E_1 - E_2| = |{-13.6} - ({-3.4})| = 13.6 - 3.4 = 10.2$ eV
@@ -439,7 +439,7 @@ Spectral lines are discrete (specific wavelengths only) because:
 - D) Light travels at a constant speed
 :::
 
-::: {.callout-tip title="Solution" collapse="true"}
+::: {.callout-solution title="Solution" collapse="true"}
 **C) Electrons in atoms can only occupy specific quantized energy levels.**
 
 Photons are absorbed or emitted only when their energy exactly matches the gap between two allowed levels. Discrete levels → discrete photon energies → discrete wavelengths. This is quantum mechanics in action!
@@ -479,7 +479,7 @@ This sequence orders stars by **surface temperature**, from hottest (O) to coole
 
 (Or if you prefer: "Only Brilliant Astronomers Figure Galactic Kinematics Meaningfully")
 
-::: {.callout-tip title="The More You Know: Subdivision" collapse="true"}
+::: {.callout-the-more-you-know title="The More You Know: Subdivision" collapse="true"}
 Each spectral type is subdivided 0–9, from hottest to coolest within the class. The Sun is a G2 star (toward the hot end of G). Vega is A0 (hottest A star). This gives astronomers finer temperature resolution.
 :::
 
@@ -497,7 +497,7 @@ The answer involves temperature and ionization:
 
 This is a beautiful example of physics: the strength of spectral lines depends not just on abundance but on **temperature and ionization state**. A star with weak hydrogen lines isn't necessarily hydrogen-poor — it might just be too hot or too cool for hydrogen to produce visible absorption.
 
-::: {.callout-note title="🔍 Spot the Assumption" collapse="false"}
+::: {.callout-misconception title="🔍 Spot the Assumption" collapse="false"}
 **Intuitive assumption:** Stronger lines = more of that element present.
 
 **Reality:** Line strength depends on temperature and ionization, not just abundance. An O star has as much hydrogen as an A star, but you can't see it in visible absorption because the hydrogen is ionized.
@@ -514,7 +514,7 @@ Which spectral type corresponds to the hottest stars?
 - D) O
 :::
 
-::: {.callout-tip title="Solution" collapse="true"}
+::: {.callout-solution title="Solution" collapse="true"}
 **D) O.** The sequence OBAFGKM runs from hottest to coolest. O stars have temperatures above 30,000 K — they appear blue and have short lifetimes because they burn through fuel so fast. (M stars are the coolest, below 3,500 K — they appear red and can live for trillions of years.)
 :::
 
@@ -527,7 +527,7 @@ Hydrogen absorption lines are weak in O-type stars because:
 - D) O stars have thick atmospheres that block hydrogen lines
 :::
 
-::: {.callout-tip title="Solution" collapse="true"}
+::: {.callout-solution title="Solution" collapse="true"}
 **B) O stars are so hot that hydrogen is mostly ionized.**
 
 At temperatures above ~15,000 K, hydrogen loses its electron and becomes ionized. No bound electron means no absorption lines. The hydrogen is abundant — you just can't see it in visible spectral lines. This fooled early astronomers into thinking O stars were hydrogen-poor!
@@ -555,7 +555,7 @@ This diagram is the astronomer's periodic table — a map of stellar properties 
 
 In Module 2, we'll trace stellar evolution across this diagram — from birth in molecular clouds to death as white dwarfs, neutron stars, or black holes.
 
-::: {.callout-note title="You Now Have the Tools" collapse="false"}
+::: {.callout-roadmap title="You Now Have the Tools" collapse="false"}
 With the physics from Module 1, you can now understand the HR diagram:
 
 - **Why giants are giant:** Same T as dwarfs, higher L → larger R (Stefan-Boltzmann from L8)
@@ -568,7 +568,7 @@ Module 2 is where we apply these tools to understand stellar **lives**.
 
 ---
 
-::: {.callout-important title="Key Takeaways from Lecture 9"}
+::: {.callout-key-insight title="Key Takeaways from Lecture 9"}
 **Spectral Lines:**
 
 1. **Kirchhoff's Laws:** Hot dense → continuous spectrum; hot thin gas → emission lines; cool gas in front of hot source → absorption lines
@@ -588,27 +588,66 @@ In L10, we'll see what happens when these spectral fingerprints **shift** — th
 
 ---
 
+## Self-Assessment Checklist
+
+Before moving on, check your understanding. You should be able to do all of the following:
+
+::: {.callout-check-yourself title="How Well Did I Learn This?" collapse="false"}
+**Kirchhoff's Laws (Part 1):**
+
+- [ ] I can describe the three types of spectra and the physical conditions that produce each one.
+- [ ] I can explain why stars have absorption lines (hot interior + cooler atmosphere).
+- [ ] I can identify an element from its pattern of spectral lines.
+
+**Quantum Mechanics (Part 2):**
+
+- [ ] I can explain why spectral lines are discrete (quantized energy levels).
+- [ ] I can use $E_n = -13.6/n^2$ eV to calculate hydrogen energy levels.
+- [ ] I can calculate the wavelength of a photon from a hydrogen transition using $\lambda = 1240/E$.
+- [ ] I know what the Balmer series is and can name the first two lines (Hα, Hβ).
+
+**Stellar Classification (Part 3):**
+
+- [ ] I can list the OBAFGKM sequence from hot to cool.
+- [ ] I can explain why hydrogen lines are strongest in A stars (not O or M), even though all stars contain hydrogen.
+- [ ] I understand that line strength depends on temperature and ionization, not just abundance.
+
+**If any box is unchecked**, go back to that section and re-read it before attempting the practice problems.
+:::
+
+---
+
 ## Practice Problems
 
 ### Core (do these first)
 
-**1. Kirchhoff's Laws:** What type of spectrum (continuous, emission, or absorption) would you see from a hot, thin gas cloud with no background light source?
+**1. Kirchhoff's Laws** *(Conceptual):* What type of spectrum (continuous, emission, or absorption) would you see from a hot, thin gas cloud with no background light source?
 
-**2. Hydrogen Levels:** Using $E_n = -13.6/n^2$ eV, calculate the energy of a photon emitted when a hydrogen electron falls from n=4 to n=2. What color would this light be? (Use $\lambda = 1240/E$ with E in eV to get wavelength in nm.)
+**2. Hydrogen Levels** *(Calculation):* Using $E_n = -13.6/n^2$ eV, calculate the energy of a photon emitted when a hydrogen electron falls from n=4 to n=2. What color would this light be? (Use $\lambda = 1240/E$ with E in eV to get wavelength in nm.)
 
-**3. Spectral Types:** A star shows very strong hydrogen Balmer lines but no helium lines. What spectral type is most likely? Is it hotter or cooler than the Sun?
+**3. Spectral Types** *(Application):* A star shows very strong hydrogen Balmer lines but no helium lines. What spectral type is most likely? Is it hotter or cooler than the Sun?
 
-**4. Ionization and Lines:** Explain in your own words why hydrogen absorption lines are weak in both O stars and M stars, even though both contain abundant hydrogen.
+**4. Ionization and Lines** *(Conceptual):* Explain in your own words why hydrogen absorption lines are weak in both O stars and M stars, even though both contain abundant hydrogen.
 
-**5. Line Identification:** A star's spectrum shows strong absorption at 656 nm and 486 nm. What element is definitely present?
+**5. Line Identification** *(Application):* A star's spectrum shows strong absorption at 656 nm and 486 nm. What element is definitely present?
 
 ### Challenge
 
-**6. Balmer Limit:** What is the shortest wavelength of the Balmer series (n=∞ → 2)? In what part of the spectrum is this? (Hint: what's the maximum energy a Balmer photon can have?)
+**6. Balmer Limit** *(Calculation):* What is the shortest wavelength of the Balmer series (n=∞ → 2)? In what part of the spectrum is this? (Hint: what's the maximum energy a Balmer photon can have?)
 
-**7. Why Not Hotter?:** Explain why hydrogen absorption lines are *weaker* in O stars than in A stars, even though O stars are hotter and hydrogen is the most abundant element.
+**7. Why Not Hotter?** *(Conceptual):* Explain why hydrogen absorption lines are *weaker* in O stars than in A stars, even though O stars are hotter and hydrogen is the most abundant element.
 
-**8. Lyman Series:** The Lyman series consists of transitions to n=1. The Lyman-alpha line (n=2 → 1) has a wavelength of 121.6 nm. In what part of the EM spectrum is this? Why can't ground-based telescopes observe Lyman-alpha lines from stars?
+**8. Lyman Series** *(Calculation):* The Lyman series consists of transitions to n=1. The Lyman-alpha line (n=2 → 1) has a wavelength of 121.6 nm. In what part of the EM spectrum is this? Why can't ground-based telescopes observe Lyman-alpha lines from stars?
+
+### Synthesis
+
+**9. Mystery Star** *(Synthesis):* A star's spectrum shows Hα absorption at 656 nm with no wavelength shift, strong calcium H and K lines (393 and 397 nm), many iron lines, but no helium lines. The hydrogen Balmer lines are moderate — not the strongest you've seen, but clearly present.
+
+- (a) What elements can you identify in this star's atmosphere?
+- (b) What spectral type is most consistent with these features? Explain your reasoning using what you know about temperature and ionization.
+- (c) Using the Observable → Model → Inference framework, write a 2–3 sentence summary of what this spectrum tells us about the star.
+
+*(Hint: Think about which spectral type shows moderate hydrogen, strong calcium and iron, and no helium.)*
 
 ---
 
