@@ -55,9 +55,8 @@ project:
     - homework/astr101-hw-*.qmd
     - modules/index.qmd
     - modules/module-*/index.qmd
-    # Module 1: render slides through Lecture 8, but keep 9+ gated for now.
-    # (Lectures 9+ slides are still commented out below while those decks are finalized.)
-    - modules/module-01/slides/lecture-0[1-8]-*-slides.qmd
+    # Module 1: render slides through Lecture 9; lectures 10+ gated while finalized.
+    - modules/module-01/slides/lecture-0[1-9]-*-slides.qmd
     - modules/module-01/readings/lecture-0[1-9]*.qmd
     - modules/module-01/readings/lecture-1[0-3]*.qmd
     # Other modules (render all)
