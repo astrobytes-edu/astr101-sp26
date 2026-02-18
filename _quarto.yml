@@ -302,6 +302,8 @@ website:
             text: "Homework 1 (Due: Feb 2, 2026)"
           - href: homework/astr101-hw-02.qmd
             text: "Homework 2 (Due: Feb 9, 2026)"
+          - href: homework/astr101-hw-03.qmd
+            text: "Homework 3 (Due: Feb 24, 2026)"
 
       - section: "Demos"
         contents:

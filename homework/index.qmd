@@ -24,8 +24,10 @@ Homework is one of the main ways you build the skills you need for exams: clear 
 
 ## Solutions
 
-Homework assignments use a **subset** of the practice problems from the lecture readings. Solutions for Lectures 1–3 are posted so you can review and self-check now; more will be posted later.
+Homework assignments use a **subset** of the practice problems from the lecture readings. Full solutions for all practice problems (including ones not assigned) are linked below.
 
-- [Lecture 1 Solutions: Spoiler Alerts]({{< meta params.website-url >}}/modules/module-01/readings/lecture-01-spoiler-alerts-solutions.html)
-- [Lecture 2 Solutions: Math Survival Kit]({{< meta params.website-url >}}/modules/module-01/readings/lecture-02-foundations-solutions.html)
-- [Lecture 3 Solutions: The Sky Is a Map]({{< meta params.website-url >}}/modules/module-01/readings/lecture-03-sky-is-a-map-solutions.html)
+| Homework | Lectures | Solutions |
+|:---------|:---------|:----------|
+| [HW 1]({{< meta params.website-url >}}/homework/astr101-hw-01.html) (L1–3) | Spoiler Alerts, Foundations, The Sky Is a Map | [L1]({{< meta params.website-url >}}/modules/module-01/readings/lecture-01-spoiler-alerts-solutions.html), [L2]({{< meta params.website-url >}}/modules/module-01/readings/lecture-02-foundations-solutions.html), [L3]({{< meta params.website-url >}}/modules/module-01/readings/lecture-03-sky-is-a-map-solutions.html) |
+| [HW 2]({{< meta params.website-url >}}/homework/astr101-hw-02.html) (L4–5) | Moon Geometry, Kepler's Laws | [L4]({{< meta params.website-url >}}/modules/module-01/readings/lecture-04-moon-geometry-solutions.html), [L5]({{< meta params.website-url >}}/modules/module-01/readings/lecture-05-keplers-laws-solutions.html) |
+| [HW 3]({{< meta params.website-url >}}/homework/astr101-hw-03.html) (L6–9) | Gravity, Light, Blackbody, Spectral Lines | *Posted after due date* |
