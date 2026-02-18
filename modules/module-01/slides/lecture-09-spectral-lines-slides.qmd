@@ -403,7 +403,7 @@ $$E_n = -\frac{13.6 \text{ eV}}{n^2}$$
 where $n = 1, 2, 3, ...$
 :::
 
-::: {.fragment .mt-4}
+::: {.fragment .mt-2 .text-sm}
 | Level | Energy |
 |-------|--------|
 | $n=1$ (ground) | -13.6 eV |
@@ -435,6 +435,7 @@ Levels get closer together as $n$ increases.
 
 ## The Balmer Series (Visible Lines) {background-color="#1a1a2e"}
 
+::: {.text-sm}
 Transitions **ending at n = 2** produce visible light:
 
 | Transition | Wavelength | Color | Name |
@@ -443,6 +444,7 @@ Transitions **ending at n = 2** produce visible light:
 | 4 → 2 | 486 nm | Blue-green | Hβ |
 | 5 → 2 | 434 nm | Violet | Hγ |
 | 6 → 2 | 410 nm | Violet | Hδ |
+:::
 
 ::: {.fragment .mt-2}
 **Hα is the famous red hydrogen line** — why nebulae glow pinkish-red.
@@ -454,7 +456,7 @@ Transitions **ending at n = 2** produce visible light:
 
 ---
 
-## Worked Example: Calculating Hα
+## Worked Example: Calculating Hα {.smaller}
 
 **Problem:** Calculate the wavelength when a hydrogen electron drops from n=3 to n=2.
 
@@ -545,7 +547,7 @@ Mnemonic: "Oh Be A Fine Girl/Guy, Kiss Me"
 
 ## Spectral Types {background-color="#1a1a2e"}
 
-::: {.text-sm}
+::: {.text-xs .leading-tight}
 | Type | Color | Temperature | Features |
 |------|-------|-------------|----------|
 | **O** | Blue | 30,000–50,000+ K | Ionized helium |
@@ -663,25 +665,25 @@ Hydrogen absorption lines are weak in O-type stars because:
 
 ---
 
-## Observable → Model → Inference
+## Observable → Model → Inference {.smaller}
 
-::: {.text-center .text-xl}
+::: {.text-center .text-lg}
 The astronomer's chemical lab:
 :::
 
-::: {.fragment .mt-3}
+::: {.fragment .mt-2}
 **Observable:** A star's spectrum shows dark lines at 656 nm, 486 nm, 434 nm, plus lines at 393/397 nm.
 :::
 
-::: {.fragment}
+::: {.fragment .mt-1}
 **Model:** Each element absorbs at unique wavelengths (quantum mechanics). OBAFGKM classifies stars by which lines dominate.
 :::
 
-::: {.fragment}
+::: {.fragment .mt-1}
 **Inference:** Hydrogen and calcium are present. The line strengths indicate ~10,000 K → A-type star.
 :::
 
-::: {.fragment .mt-3 .text-muted}
+::: {.fragment .mt-2 .text-muted}
 No sample. No visit. Just photons and pattern matching — from any distance.
 :::
 
@@ -693,7 +695,7 @@ No sample. No visit. Just photons and pattern matching — from any distance.
 
 ## Key Takeaways {background-color="#0a2f5c"}
 
-::: {.text-sm}
+::: {.text-xs .leading-tight}
 
 1. **Kirchhoff's Laws:** Hot dense → continuous; hot thin → emission; cool gas in front → absorption.
 
@@ -713,20 +715,20 @@ No sample. No visit. Just photons and pattern matching — from any distance.
 
 ---
 
-## Coming Up: The Doppler Effect {background-color="black"}
+## Coming Up: The Doppler Effect {background-color="black" .smaller}
 
-::: {.text-center .text-xl}
+::: {.text-center .text-lg}
 **Next lecture:** What happens when spectral lines **shift**?
 :::
 
-::: {.fragment .mt-4}
+::: {.fragment .mt-2}
 Motion causes Doppler shifts → reveals velocities
 
 - Stellar wobbles → exoplanets
 - Galaxy rotation → dark matter
 :::
 
-::: {.fragment .mt-4 .text-muted}
+::: {.fragment .mt-2 .text-muted .text-sm}
 **Reading:** Lecture 10 Reading Companion
 
 **Demos:** [Spectral Lines Lab](../../../demos/spectral-lines-lab/){target="_blank"} | [Blackbody Radiation](https://astrobytes-edu.github.io/cosmic-playground/exhibits/blackbody-radiation/){target="_blank"}
@@ -752,14 +754,12 @@ Numerical Verification
 
 ---
 
-## Hydrogen Energy Levels: Full Calculation {background-color="#1a1a2e"}
+## Hydrogen Energy Levels: Full Calculation {background-color="#1a1a2e" .smaller}
 
-**The energy level formula:**
+**The energy level formula:** $\quad E_n = -\dfrac{13.6 \text{ eV}}{n^2}$
 
-$$E_n = -\frac{13.6 \text{ eV}}{n^2}$$
-
-::: {.fragment}
-**Calculate the first four levels:**
+::: {.fragment .text-sm}
+**Calculate the first five levels:**
 
 | n | Calculation | Energy (eV) |
 |---|-------------|-------------|
@@ -776,7 +776,7 @@ $$E_n = -\frac{13.6 \text{ eV}}{n^2}$$
 
 ---
 
-## Why Negative Energies? {background-color="#1a1a2e"}
+## Why Negative Energies? {background-color="#1a1a2e" .smaller}
 
 **Convention:** A free electron at rest has $E = 0$.
 
@@ -786,7 +786,7 @@ $$E_n = -\frac{13.6 \text{ eV}}{n^2}$$
 - **Positive energy** = escaped with kinetic energy to spare
 :::
 
-::: {.fragment .mt-4 .bg-muted .p-2}
+::: {.fragment .mt-2 .bg-muted .p-2}
 **Ionization energy = energy needed to go from $E_n$ to $E = 0$**
 
 From ground state: $E_{\text{ionize}} = 0 - (-13.6) = 13.6$ eV
@@ -798,18 +798,18 @@ From ground state: $E_{\text{ionize}} = 0 - (-13.6) = 13.6$ eV
 
 ---
 
-## Hα Calculation: Complete {background-color="#1a1a2e"}
+## Hα Calculation: Complete {background-color="#1a1a2e" .smaller}
 
 **Transition:** $n = 3 \to n = 2$ (electron falls from level 3 to level 2)
 
 ::: {.fragment}
 **Step 1: Calculate energy difference**
 
-$$\Delta E = E_3 - E_2 = (-1.51 \text{ eV}) - (-3.40 \text{ eV})$$
+$$\Delta E = E_3 - E_2 = (-1.51 \text{ eV}) - (-3.40 \text{ eV}) = +1.89 \text{ eV}$$
 
-$$\Delta E = -1.51 + 3.40 = +1.89 \text{ eV}$$
-
-*Positive because the electron releases energy (emits a photon)*
+::: {.text-sm .text-muted}
+Positive because the electron releases energy (emits a photon)
+:::
 :::
 
 ::: {.notes}
@@ -818,23 +818,19 @@ $$\Delta E = -1.51 + 3.40 = +1.89 \text{ eV}$$
 
 ---
 
-## Hα Calculation: Wavelength {background-color="#1a1a2e"}
+## Hα Calculation: Wavelength {background-color="#1a1a2e" .smaller}
 
-**Step 2: Convert energy to wavelength**
-
-Using $E = hc/\lambda$, so $\lambda = hc/E$
+**Step 2: Convert energy to wavelength** — Using $E = hc/\lambda$, so $\lambda = hc/E$
 
 ::: {.fragment}
-**The convenient form:**
-
-$$\lambda = \frac{1240 \text{ eV·nm}}{E \text{ (eV)}}$$
+**The convenient form:** $\quad \lambda = \dfrac{1240 \text{ eV·nm}}{E \text{ (eV)}}$
 :::
 
 ::: {.fragment}
 $$\lambda = \frac{1240 \text{ eV·nm}}{1.89 \text{ eV}} = 656.1 \text{ nm}$$
 :::
 
-::: {.fragment}
+::: {.fragment .text-sm}
 **Unit check:** $\frac{\text{eV·nm}}{\text{eV}} = \text{nm}$ ✓
 :::
 
@@ -852,7 +848,7 @@ $$\lambda = \frac{1240 \text{ eV·nm}}{1.89 \text{ eV}} = 656.1 \text{ nm}$$
 
 **Transitions to $n = 2$ (Balmer series):**
 
-::: {.text-sm}
+::: {.text-xs .leading-tight}
 | Transition | $\Delta E$ (eV) | Calculation | $\lambda$ (nm) | Actual (nm) |
 |------------|-----------------|-------------|----------------|-------------|
 | 3→2 (Hα) | $-1.51-(-3.40) = 1.89$ | $1240/1.89$ | 656 | 656.3 |
@@ -861,7 +857,7 @@ $$\lambda = \frac{1240 \text{ eV·nm}}{1.89 \text{ eV}} = 656.1 \text{ nm}$$
 | 6→2 (Hδ) | $-0.38-(-3.40) = 3.02$ | $1240/3.02$ | 411 | 410.2 |
 :::
 
-::: {.fragment .mt-2 .bg-success-subtle .p-2}
+::: {.fragment .mt-1 .bg-success-subtle .p-2}
 **All calculated values match measured values within 1%!**
 :::
 
@@ -871,7 +867,7 @@ $$\lambda = \frac{1240 \text{ eV·nm}}{1.89 \text{ eV}} = 656.1 \text{ nm}$$
 
 ---
 
-## The Lyman Series: UV Lines {background-color="#1a1a2e"}
+## The Lyman Series: UV Lines {background-color="#1a1a2e" .smaller}
 
 **Transitions to $n = 1$ (ground state):**
 
@@ -895,11 +891,9 @@ Astronomers need space telescopes to see Lyman-α from cosmic sources.
 
 ---
 
-## Series Limit and Ionization {background-color="#1a1a2e"}
+## Series Limit and Ionization {background-color="#1a1a2e" .smaller}
 
-**What happens as n → ∞?**
-
-For the Balmer series (transitions to $n = 2$):
+**What happens as n → ∞?** For the Balmer series (transitions to $n = 2$):
 
 ::: {.fragment}
 $$\Delta E_{\text{max}} = E_\infty - E_2 = 0 - (-3.40) = 3.40 \text{ eV}$$
@@ -921,11 +915,13 @@ Photons shorter than this **ionize** the atom from $n = 2$!
 
 ## Ionization Energies by Level {background-color="#1a1a2e"}
 
+::: {.text-sm}
 | Starting Level | Energy (eV) | Ionization Energy | Photon λ to ionize |
 |----------------|-------------|-------------------|-------------------|
 | n = 1 (ground) | -13.60 | 13.6 eV | < 91 nm (far-UV) |
 | n = 2 | -3.40 | 3.4 eV | < 365 nm (UV) |
 | n = 3 | -1.51 | 1.51 eV | < 821 nm (IR) |
+:::
 
 ::: {.fragment .mt-2}
 **Excited atoms are easier to ionize!**
@@ -953,13 +949,14 @@ Deeper Dive
 
 ---
 
-## The Rydberg Formula {background-color="#0a2f5c"}
+## The Rydberg Formula {background-color="#0a2f5c" .smaller}
 
 **A single formula for all hydrogen wavelengths:**
 
 $$\frac{1}{\lambda} = R_H \left( \frac{1}{n_f^2} - \frac{1}{n_i^2} \right)$$
 
-::: {.fragment}
+:::: {.columns .fragment}
+::: {.column width="50%" .text-sm}
 **Where:**
 
 - $R_H = 1.097 \times 10^7$ m⁻¹ (Rydberg constant)
@@ -967,13 +964,14 @@ $$\frac{1}{\lambda} = R_H \left( \frac{1}{n_f^2} - \frac{1}{n_i^2} \right)$$
 - $n_i$ = initial level (higher)
 :::
 
-::: {.fragment .mt-2}
+::: {.column width="50%" .text-sm}
 **Different series:**
 
 - $n_f = 1$: Lyman series (UV)
 - $n_f = 2$: Balmer series (visible)
 - $n_f = 3$: Paschen series (IR)
 :::
+::::
 
 ::: {.notes}
 ~35 min. "Rydberg found this pattern empirically in 1888. Bohr explained it in 1913." Show the formula structure — don't derive. The historical point is powerful: pattern found 25 years before the explanation.
@@ -981,16 +979,12 @@ $$\frac{1}{\lambda} = R_H \left( \frac{1}{n_f^2} - \frac{1}{n_i^2} \right)$$
 
 ---
 
-## Rydberg Example: Hα {background-color="#0a2f5c"}
+## Rydberg Example: Hα {background-color="#0a2f5c" .xsmall}
 
 $$\frac{1}{\lambda} = R_H \left( \frac{1}{2^2} - \frac{1}{3^2} \right)$$
 
 ::: {.fragment}
-$$= 1.097 \times 10^7 \text{ m}^{-1} \left( \frac{1}{4} - \frac{1}{9} \right)$$
-:::
-
-::: {.fragment}
-$$= 1.097 \times 10^7 \text{ m}^{-1} \left( \frac{9-4}{36} \right) = 1.097 \times 10^7 \times \frac{5}{36}$$
+$$= 1.097 \times 10^7 \text{ m}^{-1} \left( \frac{1}{4} - \frac{1}{9} \right) = 1.097 \times 10^7 \text{ m}^{-1} \left( \frac{5}{36} \right)$$
 :::
 
 ::: {.fragment}
@@ -1007,18 +1001,14 @@ $$\lambda = \frac{1}{1.524 \times 10^6 \text{ m}^{-1}} = 6.56 \times 10^{-7} \te
 
 ---
 
-## Where Does 13.6 eV Come From? {background-color="#0a2f5c"}
+## Where Does 13.6 eV Come From? {background-color="#0a2f5c" .smaller}
 
 **Bohr model derivation (simplified):**
 
 ::: {.text-sm}
-Balance Coulomb force with centripetal acceleration:
+Balance Coulomb force with centripetal acceleration: $\quad \dfrac{e^2}{4\pi\epsilon_0 r^2} = \dfrac{m_e v^2}{r}$
 
-$$\frac{e^2}{4\pi\epsilon_0 r^2} = \frac{m_e v^2}{r}$$
-
-Quantize angular momentum:
-
-$$m_e v r = n\hbar \quad \text{where } \hbar = h/2\pi$$
+Quantize angular momentum: $\quad m_e v r = n\hbar \quad \text{where } \hbar = h/2\pi$
 :::
 
 ::: {.fragment}
@@ -1035,15 +1025,11 @@ The constant evaluates to **13.6 eV**.
 
 ---
 
-## Other Elements: Scaling {background-color="#0a2f5c"}
+## Other Elements: Scaling {background-color="#0a2f5c" .smaller}
 
-**For hydrogen-like ions** (one electron, nuclear charge $Z$):
+**For hydrogen-like ions** (one electron, nuclear charge $Z$): $\quad E_n = -\dfrac{13.6 \text{ eV} \times Z^2}{n^2}$
 
-$$E_n = -\frac{13.6 \text{ eV} \times Z^2}{n^2}$$
-
-::: {.fragment}
-**Examples:**
-
+::: {.fragment .text-sm}
 | Ion | Z | Ground state energy | Ionization energy |
 |-----|---|--------------------|--------------------|
 | H | 1 | -13.6 eV | 13.6 eV |
@@ -1051,7 +1037,7 @@ $$E_n = -\frac{13.6 \text{ eV} \times Z^2}{n^2}$$
 | Li²⁺ | 3 | -122.4 eV | 122.4 eV |
 :::
 
-::: {.fragment .mt-2 .text-muted}
+::: {.fragment .mt-1 .text-muted}
 More protons → electron bound more tightly → higher ionization energy.
 :::
 
@@ -1082,25 +1068,27 @@ It's what allows us to identify elements across the universe.
 
 ---
 
-## Why "Metals" in Astronomy? {background-color="#0a2f5c"}
+## Why "Metals" in Astronomy? {background-color="#0a2f5c" .smaller}
 
 **Astronomical definition of "metal":** Anything heavier than helium!
 
-::: {.fragment}
+:::: {.columns .fragment}
+::: {.column width="50%"}
 **Why this weird definition?**
 
 - H and He are ~98% of ordinary matter
 - Everything else is trace amounts
-- From a spectroscopist's view: H lines, He lines, and "all the rest"
+- Spectroscopist's view: H lines, He lines, and "all the rest"
 :::
 
-::: {.fragment .mt-2}
+::: {.column width="50%"}
 **Metallicity** = fraction of elements heavier than He
 
 - Sun: ~2% metals (by mass)
 - Old stars: <0.1% metals
 - Young stars: up to ~3% metals
 :::
+::::
 
 ::: {.notes}
 ~40 min. "When astronomers say 'metal-rich star,' they might mean iron, calcium, or even carbon!" Fun cultural aside — students enjoy learning jargon. Good energy note to end on before Q&A.
