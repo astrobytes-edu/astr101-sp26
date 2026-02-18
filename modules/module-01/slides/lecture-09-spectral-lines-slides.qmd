@@ -87,6 +87,16 @@ Specific wavelengths where light was **missing**.
 
 ---
 
+## {background-color="black"}
+
+{{< img fraunhofer-lines width="100%" >}}
+
+::: {.notes}
+0–1 min. Let this image sit. "Look at how many dark lines cross the solar rainbow. Each one is a wavelength that's been absorbed — stolen from the sunlight — by atoms in the Sun's atmosphere. Fraunhofer catalogued hundreds of these. Today we'll learn why they exist and what they tell us."
+:::
+
+---
+
 ## Chemical Fingerprints {background-image="../../../assets/images/common/cosmic-cliffs-jwst.png" background-opacity="0.2"}
 
 ::: {.text-center .text-xl}
@@ -196,9 +206,9 @@ Cool gas in front of hot source → **dark lines** on bright rainbow
 ## Why Stars Have Absorption Lines {background-color="#1a1a2e"}
 
 ::: {.incremental}
-1. **Hot interior (dense)** → continuous blackbody spectrum
+1. **Hot interior (dense)** → continuous blackbody spectrum *(the Planck curve from last lecture!)*
 2. **Cooler outer atmosphere (thin gas)** → absorbs specific wavelengths
-3. **What we see:** continuous spectrum with dark lines
+3. **What we see:** that smooth blackbody rainbow, but with dark lines carved into it
 :::
 
 ::: {.fragment .mt-4}
@@ -206,7 +216,7 @@ The pattern of dark lines tells us which elements are in the star's atmosphere.
 :::
 
 ::: {.notes}
-6–7 min. "Every star works like a light bulb behind a filter."
+6–7 min. "Remember the blackbody curve from Lectures 7–8? That's the continuous spectrum — the starting point. Today we're learning what carves those dark lines into it. Every star works like a light bulb behind a filter."
 :::
 
 ---
@@ -254,15 +264,15 @@ Then switch to element fingerprints:
 ::: {.mt-4}
 Turn to your neighbor and discuss:
 
-> "In the demo, how could you tell which element was which? What feature of the spectrum mattered — individual line positions, the overall pattern, or something else?"
+> "Could you identify an element from just **one** spectral line? Why or why not?"
 :::
 
 ::: {.fragment .mt-4 .text-muted}
-The **pattern** of lines is the fingerprint — like a barcode. A single line isn't enough; elements share some wavelengths. The full set is unique.
+No — different elements can share individual wavelengths. The **full pattern** of lines is the fingerprint, like a barcode. You need multiple lines to make a unique match.
 :::
 
 ::: {.notes}
-~2 min. Think-Pair-Share. Let pairs discuss for 60–90 sec, then cold-call 1–2 pairs. Reinforce: pattern matching, not single-line identification. This bridges the demo into the next section on chemical fingerprints.
+~2 min. Think-Pair-Share. Let pairs discuss for 60–90 sec, then cold-call 1–2 pairs. This question targets the common misconception that one line = one element. Reinforce: it's pattern matching, not single-line identification. The barcode analogy lands hard here. This bridges into the next section on chemical fingerprints.
 :::
 
 ---
@@ -309,7 +319,7 @@ How do astronomers determine which elements are present in a star?
 Part 2: Why Discrete Lines?
 :::
 
-*Quantum mechanics*
+*The deepest puzzle in spectroscopy*
 
 ---
 
@@ -579,23 +589,31 @@ Mnemonic: "Oh Be A Fine Girl/Guy, Kiss Me"
 
 {{< img obafgkm-spectra-noao width="100%" >}}
 
+::: {.fragment .text-center .mt-1 .text-sm}
+**Challenge:** Which spectrum shows the strongest hydrogen (Balmer) lines? Why that one and not the hottest?
+:::
+
 ::: {.notes}
-18 min. "These are real spectra from NOAO. Hot O stars show few, broad lines — most hydrogen is ionized. A stars show the strongest Balmer lines. Cool M stars show molecular absorption bands instead of sharp atomic lines."
+18 min. Show the image first. Give students 15–20 seconds to look. Then reveal the challenge question. Cold-call: "Which row has the strongest hydrogen lines?" (A stars.) "But O stars are hotter — why don't they win?" This primes the ionization physics slide that follows. "Hot O stars show few, broad lines — most hydrogen is ionized. A stars show the strongest Balmer lines. Cool M stars show molecular absorption bands instead of sharp atomic lines."
 :::
 
 ---
 
 ## Quick Check: Spectral Types {.quiz-question}
 
-Which spectral type corresponds to the hottest stars?
+A star's spectrum shows strong calcium and iron lines but no helium lines. Which spectral type is most consistent?
 
-- M
-- G
+- O or B
 - A
-- [O]{.correct}
+- [G or K]{.correct}
+- This can't be determined from spectral lines
+
+::: {.fragment .mt-2 .text-sm}
+**Helium requires very high temperatures** to excite — no He lines rules out O and B. Strong metal lines point to cooler stars (G or K).
+:::
 
 ::: {.notes}
-1 min. iClicker poll.
+1–2 min. iClicker poll. This question forces students to *use* the spectral types table rather than just recall the sequence. Common wrong answer: "A" (students remember A has strongest H lines but don't distinguish H from metals). Debrief: "This is exactly how real classification works — you read the line pattern, not just the color."
 :::
 
 ---
@@ -846,23 +864,34 @@ $$\lambda = \frac{1240 \text{ eV·nm}}{1.89 \text{ eV}} = 656.1 \text{ nm}$$
 
 ## Calculating the Entire Balmer Series {background-color="#1a1a2e"}
 
-**Transitions to $n = 2$ (Balmer series):**
+**Transitions to $n = 2$ — our predictions:**
 
 ::: {.text-xs .leading-tight}
-| Transition | $\Delta E$ (eV) | Calculation | $\lambda$ (nm) | Actual (nm) |
+| Transition | $\Delta E$ (eV) | Calculation | **Predicted λ** | **Measured λ** |
 |------------|-----------------|-------------|----------------|-------------|
-| 3→2 (Hα) | $-1.51-(-3.40) = 1.89$ | $1240/1.89$ | 656 | 656.3 |
-| 4→2 (Hβ) | $-0.85-(-3.40) = 2.55$ | $1240/2.55$ | 486 | 486.1 |
-| 5→2 (Hγ) | $-0.54-(-3.40) = 2.86$ | $1240/2.86$ | 434 | 434.0 |
-| 6→2 (Hδ) | $-0.38-(-3.40) = 3.02$ | $1240/3.02$ | 411 | 410.2 |
+| 3→2 (Hα) | $-1.51-(-3.40) = 1.89$ | $1240/1.89$ | **656 nm** | |
+| 4→2 (Hβ) | $-0.85-(-3.40) = 2.55$ | $1240/2.55$ | **486 nm** | |
+| 5→2 (Hγ) | $-0.54-(-3.40) = 2.86$ | $1240/2.86$ | **434 nm** | |
+| 6→2 (Hδ) | $-0.38-(-3.40) = 3.02$ | $1240/3.02$ | **411 nm** | |
 :::
 
-::: {.fragment .mt-1 .bg-success-subtle .p-2}
-**All calculated values match measured values within 1%!**
+::: {.fragment .mt-1 .text-xs .leading-tight}
+| Transition | $\Delta E$ (eV) | Calculation | **Predicted λ** | **Measured λ** |
+|------------|-----------------|-------------|----------------|-------------|
+| 3→2 (Hα) | $-1.51-(-3.40) = 1.89$ | $1240/1.89$ | **656 nm** | 656.3 nm |
+| 4→2 (Hβ) | $-0.85-(-3.40) = 2.55$ | $1240/2.55$ | **486 nm** | 486.1 nm |
+| 5→2 (Hγ) | $-0.54-(-3.40) = 2.86$ | $1240/2.86$ | **434 nm** | 434.0 nm |
+| 6→2 (Hδ) | $-0.38-(-3.40) = 3.02$ | $1240/3.02$ | **411 nm** | 410.2 nm |
+:::
+
+::: {.fragment .mt-1 .bg-success-subtle .p-2 .text-center}
+**We just predicted the exact colors of starlight from an equation on a blackboard.**
+
+Every value matches the lab measurement within 1%.
 :::
 
 ::: {.notes}
-~30 min. "The quantum model works. We can predict spectral lines from first principles." The payoff slide — all four lines match. Let this land.
+~30 min. **This is the money slide.** Show the predicted column first (no measured values). Pause. Ask: "Do you think these will match reality?" Then reveal the measured column alongside. Let the match register. The closing callout is the emotional payoff — don't rush past it.
 :::
 
 ---
@@ -1090,8 +1119,12 @@ It's what allows us to identify elements across the universe.
 :::
 ::::
 
+::: {.fragment .mt-1 .text-center .text-muted .text-sm}
+Yes, this means oxygen is a "metal" and carbon is a "metal." Chemists love this about us.
+:::
+
 ::: {.notes}
-~40 min. "When astronomers say 'metal-rich star,' they might mean iron, calcium, or even carbon!" Fun cultural aside — students enjoy learning jargon. Good energy note to end on before Q&A.
+~40 min. "When astronomers say 'metal-rich star,' they might mean iron, calcium, or even carbon!" Fun cultural aside — students enjoy learning jargon. The punchline always gets a laugh. Good energy note to end on before Q&A.
 :::
 
 ---

@@ -1363,9 +1363,9 @@ figures:
 
   fraunhofer-lines:
     path: /assets/images/module-01/lec09/fraunhofer-lines.svg
-    caption: "What to notice: the solar spectrum has many missing wavelengths (dark absorption lines) — those lines are chemical fingerprints of atoms."
-    alt: "Schematic rainbow spectrum crossed by multiple dark absorption lines, labeled as Fraunhofer lines to illustrate that specific wavelengths are missing."
-    credit: "Illustration: A. Rosen (SVG)"
+    caption: "What to notice: the solar spectrum is crossed by dark absorption lines at specific wavelengths. Each line is labeled with its Fraunhofer letter and the element responsible — hydrogen (Hα, Hβ, Hδ), sodium (D doublet), calcium (H & K), iron, and magnesium. These are the chemical fingerprints of atoms in the Sun's atmosphere."
+    alt: "Visible solar spectrum from 380 to 750 nm crossed by dark absorption lines at scientifically correct wavelengths, with major Fraunhofer lines labeled by letter designation and absorbing element."
+    credit: "Illustration: A. Rosen"
     module: 1
 
   kirchhoff-three-laws:
