@@ -1384,9 +1384,36 @@ figures:
 
   hydrogen-energy-levels:
     path: /assets/images/module-01/lec09/hydrogen-energy-levels.svg
-    caption: "What to notice: hydrogen’s energy levels get closer together as n increases; drops to n = 2 produce the visible Balmer lines."
+    caption: "What to notice: hydrogen's energy levels get closer together as n increases; drops to n = 2 produce the visible Balmer lines."
     alt: "Hydrogen energy-level diagram with labeled levels and arrows for transitions to n=2 (Balmer series), annotated with representative line names and wavelengths."
     credit: "Illustration: A. Rosen (SVG)"
+    module: 1
+
+  morgan-keenan-classification:
+    path: /assets/images/module-01/lec09/800px-Morgan-Keenan_spectral_classificatio.max-1000x1000.png
+    caption: "What to notice: the Morgan–Keenan system classifies stars by spectral type (O through M) and luminosity class. Hotter stars are bluer and more luminous; cooler stars are redder and dimmer. Size differences between giants and dwarfs are dramatic."
+    alt: "Chart showing the Morgan–Keenan spectral classification system with representative stars arranged by spectral type (O, B, A, F, G, K, M) and luminosity class, illustrating color and size differences from hot blue supergiants to cool red dwarfs."
+    credit: "Wikimedia Commons (public domain)"
+    module: 1
+
+  obafgkm-spectra-noao:
+    path: /assets/images/module-01/lec09/obafgkm_noao_big.jpg
+    caption: "What to notice: real stellar spectra change dramatically across spectral types. Hot O stars show few lines (ionized gas); A stars show strong hydrogen Balmer lines; cool M stars show broad molecular absorption bands. The pattern reflects temperature, not composition."
+    alt: "Montage of real stellar spectra from the National Optical Astronomy Observatory showing spectral types O6.5 through M5, with absorption lines and molecular bands changing systematically with temperature."
+    credit: "NOAO/AURA/NSF"
+    module: 1
+
+  energy-radiation-breakdown:
+    path: /assets/images/module-01/lec09/energy_breakdown.png
+    caption: "What to notice: incoming solar radiation is partially reflected, partially absorbed by the atmosphere, and partially absorbed by the surface. Outgoing radiation is emitted as infrared from the surface and atmosphere. The balance between incoming and outgoing determines equilibrium temperature."
+    alt: "Diagram showing the breakdown of incoming solar radiation and outgoing thermal radiation for a planet, with arrows indicating reflection, atmospheric absorption, surface absorption, and infrared emission."
+    module: 1
+
+  harvard-computers:
+    path: /assets/images/module-01/lec09/harvard-computers.jpg
+    caption: "What to notice: the women of the Harvard Observatory — including Williamina Fleming, Annie Jump Cannon, and Cecilia Payne — classified hundreds of thousands of stellar spectra by hand, creating the system we still use today."
+    alt: "Historical photograph of the Harvard Computers, a group of women astronomers at Harvard College Observatory in the late 1800s who classified stellar spectra and made foundational contributions to astrophysics."
+    credit: "Harvard College Observatory"
     module: 1
 
   hr-diagram-preview:

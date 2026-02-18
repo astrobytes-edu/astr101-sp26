@@ -185,7 +185,7 @@ Cool gas in front of hot source → **dark lines** on bright rainbow
 
 ## {background-color="black"}
 
-{{< fig kirchhoff-three-laws >}}
+{{< img kirchhoff-three-laws width="100%" >}}
 
 ::: {.notes}
 5–6 min. Visual summary of the three spectrum types.
@@ -355,7 +355,7 @@ Specific energies → specific wavelengths → discrete lines.
 
 ## The Ladder Analogy {background-color="black"}
 
-{{< fig energy-level-ladder >}}
+{{< img absorption-of-light-hydrogen-jwst width="98%" >}}
 
 ::: {.fragment .mt-2}
 You can stand on the rungs, never between them.
@@ -421,7 +421,7 @@ where $n = 1, 2, 3, ...$
 
 ## {background-color="black"}
 
-{{< fig hydrogen-energy-levels >}}
+{{< img emission-of-light-hydrogen-jwst width="98%" >}}
 
 ::: {.fragment .text-center .mt-2}
 Levels get closer together as $n$ increases.
@@ -559,6 +559,26 @@ Mnemonic: "Oh Be A Fine Girl/Guy, Kiss Me"
 
 ::: {.notes}
 17–18 min. "Each type has distinctive spectral features."
+:::
+
+---
+
+## {background-color="black"}
+
+{{< img morgan-keenan-classification width="90%" class="img-center" >}}
+
+::: {.notes}
+17–18 min. "This chart shows the Morgan–Keenan system — spectral type plus luminosity class. Notice the dramatic size and color differences."
+:::
+
+---
+
+## Real Stellar Spectra {background-color="black"}
+
+{{< img obafgkm-spectra-noao width="100%" >}}
+
+::: {.notes}
+18 min. "These are real spectra from NOAO. Hot O stars show few, broad lines — most hydrogen is ionized. A stars show the strongest Balmer lines. Cool M stars show molecular absorption bands instead of sharp atomic lines."
 :::
 
 ---

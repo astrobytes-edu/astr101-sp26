@@ -267,7 +267,7 @@ Imagine a ladder where you can only stand on the rungs, never between them. Elec
 
 To move from one rung to another, the electron must gain or lose **exactly** the right amount of energy. That energy comes from (or goes into) a photon.
 
-{{< fig energy-level-ladder >}}
+{{< fig absorption-of-light-hydrogen-jwst >}}
 
 ::: {.callout-misconception title="🔍 Spot the Assumption" collapse="false"}
 **Classical assumption:** Energy can vary continuously, like a ramp. An electron could have any energy, and atoms could emit any wavelength.
@@ -356,7 +356,7 @@ Let's calculate some energy levels:
 | 4 | $-13.6/4^2$ | -0.85 eV | Third excited state |
 | ∞ | $-13.6/\infty^2$ | 0 eV | Ionized (free electron) |
 
-{{< fig hydrogen-energy-levels >}}
+{{< fig emission-of-light-hydrogen-jwst >}}
 
 Notice that the levels get closer together as $n$ increases. This is because of the $1/n^2$ dependence — a characteristic signature of hydrogen.
 
@@ -455,6 +455,10 @@ Photons are absorbed or emitted only when their energy exactly matches the gap b
 
 When astronomers began systematically classifying stellar spectra in the late 1800s, they noticed that stars grouped into categories based on the strength of various absorption lines. Originally the classes were labeled alphabetically by hydrogen line strength. After much sorting and re-sorting (and realizing the pattern was really about temperature), the modern sequence emerged:
 
+{{< fig harvard-computers >}}
+
+Much of this monumental classification work was done by the "Harvard Computers" — women astronomers at Harvard College Observatory including Williamina Fleming, Annie Jump Cannon, and Cecilia Payne-Gaposchkin. Cannon personally classified over 350,000 stellar spectra, and Payne-Gaposchkin's 1925 thesis demonstrated that stars are made primarily of hydrogen and helium — one of the most important results in 20th-century astrophysics.
+
 **O - B - A - F - G - K - M**
 
 This sequence orders stars by **surface temperature**, from hottest (O) to coolest (M).
@@ -478,6 +482,10 @@ This sequence orders stars by **surface temperature**, from hottest (O) to coole
 **Classic mnemonic:** "Oh Be A Fine Girl/Guy, Kiss Me"
 
 (Or if you prefer: "Only Brilliant Astronomers Figure Galactic Kinematics Meaningfully")
+
+{{< fig morgan-keenan-classification >}}
+
+{{< fig obafgkm-spectra-noao >}}
 
 ::: {.callout-the-more-you-know title="The More You Know: Subdivision" collapse="true"}
 Each spectral type is subdivided 0–9, from hottest to coolest within the class. The Sun is a G2 star (toward the hot end of G). Vega is A0 (hottest A star). This gives astronomers finer temperature resolution.
