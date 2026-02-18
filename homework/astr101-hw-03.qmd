@@ -1,0 +1,106 @@
+---
+title: "ASTR 101 — Homework #3 (Lectures 6–9)"
+subtitle: "Practice problems from Lectures 6–9 (Gravity, Light, Blackbody Radiation, Spectral Lines)"
+author: "Dr. Anna Rosen"
+draft: false
+order: 3
+description: "Practice problems from Lectures 6–9 (Gravity, Light, Blackbody Radiation, Spectral Lines)"
+solutions_due: "Tuesday, February 24 at 11:59 pm PT (Canvas)"
+memo_due: "Friday, February 27 at 11:59 pm PT (Canvas)"
+pdf: true
+toc: true
+format:
+  html: default
+  pdf: default
+---
+
+{{< include ../_includes/hw-submission-instructions.qmd >}}
+
+{{< include ../_includes/ai-policy.qmd >}}
+
+***Topics:** Newton's laws & gravity • orbital mass • wave equation • inverse-square law for light • Wien's law • Stefan-Boltzmann law • stellar sizes • Kirchhoff's laws • hydrogen energy levels • spectral classification*
+
+**Estimated time:** ~3–4 hours
+
+## Why this homework exists (read this)
+
+_This is not busy work._ This assignment covers the physics of gravity and light — the two pillars you'll use for the rest of the semester. Gravity tells us about mass; light tells us about temperature, composition, and distance. Every topic from here forward builds on these ideas.
+
+This assignment is designed to:
+
+- build fluency with the key equations (wave equation, Wien's law, Stefan-Boltzmann law, Newton's Kepler III),
+- connect observations to physical models (the Observable → Model → Inference chain),
+- and prepare you for the Module 1 Exam.
+
+---
+
+### What to do
+
+Complete the assigned Practice Problems from the end of the following lecture readings:
+
+- **Lecture 6:** Newton's Gravity — [Practice Problems]({{< meta params.website-url >}}/modules/module-01/readings/lecture-06-newtons-gravity-reading.html#practice-problems)
+
+- **Lecture 7:** Light as Information — [Practice Problems]({{< meta params.website-url >}}/modules/module-01/readings/lecture-07-light-information-reading.html#practice-problems)
+
+- **Lecture 8:** Blackbody Radiation — [Practice Problems]({{< meta params.website-url >}}/modules/module-01/readings/lecture-08-blackbody-radiation-reading.html#practice-problems)
+
+- **Lecture 9:** Spectral Lines — [Practice Problems]({{< meta params.website-url >}}/modules/module-01/readings/lecture-09-spectral-lines-reading.html#practice-problems)
+
+Use the lecture pages for the full problem statements (located at the end of each lecture).
+
+---
+
+## Problems to complete
+
+### Lecture 6 — Newton's Gravity
+
+> 5, 6
+
+### Lecture 7 — Light as Information
+
+> 1, 4
+
+### Lecture 8 — Blackbody Radiation
+
+> 1, 3, 9
+
+### Lecture 9 — Spectral Lines
+
+> 1, 2, 9
+
+---
+
+## Optional extra practice (not collected, strongly recommended)
+
+If you want more study problems for quiz/exam prep:
+
+- **Lecture 6:** Try 3 (inverse-square scaling) and 10 (why $P^2 = a^3$ only works in solar units)
+- **Lecture 7:** Try 3 (Rayleigh scattering) and 6 (scattering ratio calculation)
+- **Lecture 8:** Try 7 (combined Wien + Stefan-Boltzmann) and 8 (Earth as a blackbody)
+- **Lecture 9:** Try 4 (why H lines are weak in both O and M stars) and 7 (why not hotter?)
+
+---
+
+## How to earn full credit
+
+{{< include ../_includes/homework/how-to-earn-full-credit.qmd >}}
+
+For this homework, diagrams and sketches are especially helpful for the synthesis problems. Show your equation setup and unit tracking for all calculation problems — partial credit depends on seeing your reasoning.
+
+## Collaboration and resources
+
+{{< include ../_includes/homework/collaboration-and-resources.qmd >}}
+
+## Pro tips (to save time and pain)
+
+- Start with the conceptual questions first, then do the calculations.
+- When stuck, ask: **"What is observable here? What is inferred?"**
+- Use **units** as your lie detector.
+- Do a quick sanity check: is the answer the right order of magnitude?
+- For the Mystery Star problem (L9 #9): work through parts (a)–(c) in order — each part builds on the last.
+
+---
+
+## Help
+
+{{< include ../_includes/homework/help.qmd >}}
