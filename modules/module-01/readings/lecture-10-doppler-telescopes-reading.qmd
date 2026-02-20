@@ -150,6 +150,23 @@ where:
 **Blueshift:** Shift to shorter wavelengths (source approaching).
 :::
 
+::: {.callout-tip title="📺 Video: The Doppler Effect Explained" collapse="true"}
+This short video walks through the Doppler effect for both sound and light — a helpful complement to the reading above.
+
+<div class="demo-embed" style="width: 100%; margin: 1rem 0;">
+  <iframe
+    src="https://www.youtube.com/embed/bZrRRWoXfnM"
+    width="100%"
+    height="400px"
+    style="border: 1px solid #ddd; border-radius: 8px;"
+    loading="lazy"
+    title="The Doppler Effect Explained"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"
+    allowfullscreen>
+  </iframe>
+</div>
+:::
+
 ---
 
 ## What Do These Symbols Mean?
@@ -372,6 +389,26 @@ Expand the "Radial velocity method" panel and enable the RV overlay. Watch the s
 </div>
 :::
 
+::: {.callout-tip title="📺 Video: NASA — Exoplanet Detection via Radial Velocity" collapse="true"}
+This NASA animation shows how a planet's gravitational tug makes its star wobble — and how that wobble produces a periodic Doppler signal.
+
+<div class="demo-embed" style="width: 100%; margin: 1rem 0;">
+  <iframe
+    src="https://science.nasa.gov/resource/exoplanet-detection-radial-velocity-method/"
+    width="100%"
+    height="400px"
+    style="border: 1px solid #ddd; border-radius: 8px;"
+    loading="lazy"
+    title="NASA: Exoplanet Detection — Radial Velocity Method"
+    allow="fullscreen"
+    allowfullscreen>
+  </iframe>
+  <p style="text-align: center; margin-top: 0.5rem; font-size: 0.875rem; color: #666;">
+    <a href="https://science.nasa.gov/resource/exoplanet-detection-radial-velocity-method/" target="_blank" style="color: #5dade2;">Open on NASA.gov ↗</a>
+  </p>
+</div>
+:::
+
 {{< fig radial-velocity-method >}}
 
 ### Quantitative Example: Detecting a Hot Jupiter
@@ -430,6 +467,8 @@ The planet's gravity causes the star to move in a small orbit around the center 
 ### The Galaxy Rotation Puzzle
 
 In the 1970s, astronomer Vera Rubin used the Doppler effect to measure how fast stars orbit within spiral galaxies. She expected to find that stars far from the galaxy center orbit more slowly — just as outer planets in our solar system orbit more slowly than inner ones (Kepler's Third Law).
+
+{{< fig cococubed-rotation-curve-solar-system >}}
 
 What she found was shocking: **stars at the edges of galaxies move just as fast as stars near the center**.
 
@@ -700,6 +739,14 @@ Different wavelengths reveal different physics. A complete picture requires obse
 The same object can look completely different at radio, infrared, visible, X-ray, and gamma-ray wavelengths. Each reveals a different physical process: cold gas, warm dust, starlight, hot plasma, relativistic particles.
 
 {{< fig multiwavelength-crab >}}
+
+The power of infrared becomes especially clear in side-by-side comparisons. Hubble's optical view of the Pillars of Creation shows dark, opaque dust columns — but JWST's infrared vision pierces right through, revealing thousands of newborn stars hidden inside:
+
+{{< fig pillars-hubble-jwst >}}
+
+The same effect applies to entire galaxies. Compare NGC 1566 in optical light (where dust lanes obscure structure) versus infrared (where the dust becomes transparent):
+
+{{< fig jwst-vs-hst-ngc1566 >}}
 
 ---
 
