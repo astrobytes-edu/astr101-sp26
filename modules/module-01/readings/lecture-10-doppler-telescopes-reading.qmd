@@ -18,13 +18,13 @@ math-level: algebra_only
 prerequisites: Lecture 9 (Spectral Lines); understanding of spectral fingerprints
 ---
 
-::: {.callout-important #the-big-idea}
+::: {.callout-key-insight #the-big-idea}
 ## The Big Idea
 
 In L9, we learned that spectral lines are chemical fingerprints — each element absorbs and emits at specific wavelengths. But what happens when those fingerprints **shift**? A shifted spectral line means the source is moving. The **Doppler effect** lets us measure velocities across cosmic distances — revealing orbiting exoplanets, spinning galaxies, and the invisible dark matter that holds them together. And **telescopes** are the eyes that collect this light, letting us decode the cosmos.
 :::
 
-::: {.callout-important title="How to Use This Reading" collapse="true"}
+::: {.callout-roadmap title="How to Use This Reading" collapse="true"}
 This reading covers the Doppler effect and telescopes — completing the astronomer's toolkit.
 
 **Structure:**
@@ -32,7 +32,7 @@ This reading covers the Doppler effect and telescopes — completing the astrono
 - **Part 1:** The Doppler effect — motion from wavelength shifts
 - **Part 2:** Telescopes — collecting the light
 
-**Musts for today (~30-40 min):**
+**Musts for today (~40-50 min):**
 
 - The Doppler formula and what each term means
 - Radial vs. transverse velocity (crucial distinction!)
@@ -218,7 +218,7 @@ A star is moving at 100 km/s exactly perpendicular to your line of sight (direct
 - D) Cannot be determined
 :::
 
-::: {.callout-tip title="Solution" collapse="true"}
+::: {.callout-solution title="Solution" collapse="true"}
 **C) Zero.** The Doppler effect only measures radial velocity (along the line of sight). Motion purely across the sky (transverse) produces no wavelength shift. To detect transverse motion, you'd need to measure the star's position change over time (proper motion).
 :::
 
@@ -296,7 +296,7 @@ A star's sodium D line (rest wavelength 589.0 nm) is observed at 588.8 nm. The s
 - D) Not moving
 :::
 
-::: {.callout-tip title="Solution" collapse="true"}
+::: {.callout-solution title="Solution" collapse="true"}
 **A) Moving toward us at ~100 km/s.**
 
 $\Delta\lambda = 588.8 - 589.0 = -0.2$ nm (negative = blueshift = approaching)
@@ -308,9 +308,22 @@ $v = c \times |\Delta\lambda|/\lambda_0 = (3 \times 10^5) \times (0.2/589.0) \ap
 
 ## 🔭 Demo Exploration: Doppler Shift Spectrometer
 
-**Open the Doppler Shift Spectrometer demo:** [../../../demos/doppler-shift-spectrometer/](../../../demos/doppler-shift-spectrometer/)
-
 This demo overlays a **rest** spectrum and an **observed** spectrum so you can see Doppler shifts directly and practice the sign convention.
+
+<div class="demo-embed" style="width: 100%; margin: 1rem 0;">
+  <iframe
+    src="../../../demos/doppler-shift-spectrometer/"
+    width="100%"
+    height="520px"
+    style="border: 1px solid #ddd; border-radius: 8px;"
+    loading="lazy"
+    title="Doppler Shift Spectrometer Interactive Demo"
+    allow="fullscreen">
+  </iframe>
+  <p style="text-align: center; margin-top: 0.5rem; font-size: 0.875rem; color: #666;">
+    <a href="../../../demos/doppler-shift-spectrometer/" target="_blank" style="color: #5dade2;">Open in new tab ↗</a>
+  </p>
+</div>
 
 ### Mission A (sign)
 
@@ -340,8 +353,23 @@ By Newton's Third Law, a planet doesn't just orbit its star — the star also wo
 
 This stellar wobble is tiny — the Sun moves only about 12 m/s due to Jupiter's pull — but it's detectable with precise Doppler measurements. As the star wobbles toward and away from us, its spectral lines shift back and forth. The periodic pattern reveals an orbiting planet.
 
-::: {.callout-note title="Demo: RV curve + spectral line inset"}
-Open the **[Binary Orbits demo](../../../demos/binary-orbits/)**, expand the “Radial velocity method” panel, and enable the RV overlay. Watch the spectral line shift back and forth as the RV curve marker moves — this is the measurement that produces the curve.
+::: {.callout-roadmap title="🖥️ Demo: Binary Orbits & Radial Velocity" collapse="false"}
+Expand the "Radial velocity method" panel and enable the RV overlay. Watch the spectral line shift back and forth as the RV curve marker moves — this is the measurement that produces the curve.
+
+<div class="demo-embed" style="width: 100%; margin: 1rem 0;">
+  <iframe
+    src="../../../demos/binary-orbits/"
+    width="100%"
+    height="520px"
+    style="border: 1px solid #ddd; border-radius: 8px;"
+    loading="lazy"
+    title="Binary Orbits Interactive Demo"
+    allow="fullscreen">
+  </iframe>
+  <p style="text-align: center; margin-top: 0.5rem; font-size: 0.875rem; color: #666;">
+    <a href="../../../demos/binary-orbits/" target="_blank" style="color: #5dade2;">Open in new tab ↗</a>
+  </p>
+</div>
 :::
 
 {{< fig radial-velocity-method >}}
@@ -389,7 +417,7 @@ The radial velocity method detects exoplanets by measuring:
 - D) Gravitational lensing by the planet
 :::
 
-::: {.callout-tip title="Solution" collapse="true"}
+::: {.callout-solution title="Solution" collapse="true"}
 **B) The star's periodic Doppler shift due to its wobble.**
 
 The planet's gravity causes the star to move in a small orbit around the center of mass. This motion creates periodic Doppler shifts that we can measure. The planet itself is far too faint to see directly in most cases.
@@ -413,7 +441,7 @@ By Newton's gravity and Kepler's Laws, the orbital velocity should depend on the
 
 $$v_{orbit} = \sqrt{\frac{GM_{interior}}{r}}$$
 
-If most of a galaxy's mass is concentrated in the bright central bulge, then at large distances, $M_{interior}$ should be roughly constant, and $v_{orbit}$ should decrease as $1/\sqrt{r}$.
+If most of a galaxy's mass is concentrated in the bright central region, then at large distances, $M_{interior}$ should be roughly constant, and $v_{orbit}$ should decrease as $1/\sqrt{r}$.
 
 But the velocity stays **flat**. This means $M_{interior}$ must **keep increasing** with distance — there's more mass out there than we can see!
 
@@ -433,6 +461,14 @@ This is the ultimate payoff of L5-L6: **motion reveals mass**. Vera Rubin watche
 
 We've never directly detected a dark matter particle. But we know it's there because of gravity. The Doppler effect — measuring stellar velocities from spectral line shifts — was the key tool.
 
+::: {.callout-note title="Observable → Model → Inference: Dark Matter"}
+**Observable:** Stars at the edges of spiral galaxies orbit at the same speed as stars near the center (flat rotation curve), measured via Doppler shifts of their spectral lines.
+
+**Model:** Newtonian gravity predicts $v_{orbit} = \sqrt{GM_{interior}/r}$. If only visible matter exists, velocity should decline at large $r$.
+
+**Inference:** The flat rotation curve requires additional unseen mass — **dark matter** — extending far beyond the visible galaxy. Galaxies contain ~5× more dark matter than ordinary matter.
+:::
+
 ::: {.callout-note title="We'll Return to This" collapse="false"}
 Dark matter is one of the biggest mysteries in modern astrophysics. In Module 3, when we study galaxies and cosmology, we'll explore:
 
@@ -443,7 +479,28 @@ Dark matter is one of the biggest mysteries in modern astrophysics. In Module 3,
 The story of dark matter began with Doppler shifts and Newton's gravity.
 :::
 
-::: {.callout-check-yourself title="Check Yourself 4 — Dark Matter Evidence"}
+::: {.callout-check-yourself title="Check Yourself 4 — Rotation Curve Math"}
+A star orbits at the edge of a galaxy at 200 km/s. Using $v_{orbit} = \sqrt{GM/r}$ with $r = 20$ kpc ($\approx 6 \times 10^{20}$ m) and $G = 6.67 \times 10^{-11}$ N m²/kg², the total mass inside the orbit is approximately:
+
+- A) $10^{11}$ solar masses ($\approx 2 \times 10^{41}$ kg)
+- B) $10^{8}$ solar masses ($\approx 2 \times 10^{38}$ kg)
+- C) $10^{14}$ solar masses ($\approx 2 \times 10^{44}$ kg)
+- D) Cannot be estimated from this information
+:::
+
+::: {.callout-solution title="Solution" collapse="true"}
+**A) $\sim 10^{11}$ solar masses.**
+
+Rearrange the orbital velocity equation: $M = v^2 r / G$
+
+$M = \frac{(200 \times 10^3)^2 \times (6 \times 10^{20})}{6.67 \times 10^{-11}} = \frac{4 \times 10^{10} \times 6 \times 10^{20}}{6.67 \times 10^{-11}} = \frac{2.4 \times 10^{31}}{6.67 \times 10^{-11}} \approx 3.6 \times 10^{41}$ kg
+
+In solar masses: $3.6 \times 10^{41} / 2 \times 10^{30} \approx 1.8 \times 10^{11}$ solar masses.
+
+But the **visible** stars in a typical spiral galaxy account for only $\sim 5 \times 10^{10}$ solar masses — about one-third of the total. The rest must be dark matter!
+:::
+
+::: {.callout-check-yourself title="Check Yourself 5 — Dark Matter Evidence"}
 Galaxy rotation curves provide evidence for dark matter because:
 
 - A) Stars at galaxy edges move slower than expected
@@ -452,7 +509,7 @@ Galaxy rotation curves provide evidence for dark matter because:
 - D) We can see dark matter directly in telescope images
 :::
 
-::: {.callout-tip title="Solution" collapse="true"}
+::: {.callout-solution title="Solution" collapse="true"}
 **B) Stars at galaxy edges move faster than expected from visible matter alone.**
 
 If only the visible matter existed, outer stars should orbit slowly (Keplerian decline: $v \propto 1/\sqrt{r}$). But they orbit fast — requiring additional invisible mass (dark matter) to provide the gravitational pull. We can't see dark matter, but we can measure its gravitational effects.
@@ -463,6 +520,8 @@ If only the visible matter existed, outer stars should orbit slowly (Keplerian d
 # Part 2: Telescopes — Collecting the Light
 
 ## Why Telescopes Matter
+
+When Galileo first pointed a homemade telescope at Jupiter in 1610, he saw four tiny "stars" that moved from night to night — the moons that now bear his name. That modest tube of glass, just a few centimeters across, revealed an entire world invisible to the naked eye. Four centuries later, the same impulse drives us to build mirrors the size of swimming pools and launch observatories beyond the atmosphere.
 
 We've learned how much information light carries: temperature (blackbody), composition (spectral lines), motion (Doppler). But to decode that information, we need to **collect** the light first.
 
@@ -507,7 +566,7 @@ This is why astronomers build ever-larger telescopes:
 
 The Extremely Large Telescope (ELT) will collect 31 million times more light than your eye!
 
-::: {.callout-check-yourself title="Check Yourself 5 — Light-Gathering Power"}
+::: {.callout-check-yourself title="Check Yourself 6 — Light-Gathering Power"}
 Telescope A has twice the diameter of Telescope B. How does A's light-gathering power compare to B's?
 
 - A) 2× greater
@@ -516,7 +575,7 @@ Telescope A has twice the diameter of Telescope B. How does A's light-gathering 
 - D) The same
 :::
 
-::: {.callout-tip title="Solution" collapse="true"}
+::: {.callout-solution title="Solution" collapse="true"}
 **B) 4× greater.** Light-gathering power scales as area, which goes as $D^2$. Twice the diameter → $2^2 = 4$ times the collecting area. This is why the push for larger telescopes is so important — each doubling of diameter quadruples the light collected.
 :::
 
@@ -563,11 +622,26 @@ $$\theta = 2.5 \times 10^{-7} \times 206,265 \approx 0.05"$$
 
 Hubble can resolve details as small as 0.05 arcseconds — about **10–20× sharper** than typical ground-based telescopes, which are limited to ~0.5–1" resolution by atmospheric blurring ("seeing").
 
-::: {.callout-tip title="🖥️ Demo: Telescope Resolution" collapse="false"}
-Open the **[Telescope Resolution Interactive Demo](../../../demos/telescope-resolution/)** to see how changing telescope diameter and wavelength affects resolution. Try "observing" the same object at different wavelengths!
+::: {.callout-roadmap title="🖥️ Demo: Telescope Resolution" collapse="false"}
+See how changing telescope diameter and wavelength affects resolution. Try "observing" the same object at different wavelengths!
+
+<div class="demo-embed" style="width: 100%; margin: 1rem 0;">
+  <iframe
+    src="../../../demos/telescope-resolution/"
+    width="100%"
+    height="520px"
+    style="border: 1px solid #ddd; border-radius: 8px;"
+    loading="lazy"
+    title="Telescope Resolution Interactive Demo"
+    allow="fullscreen">
+  </iframe>
+  <p style="text-align: center; margin-top: 0.5rem; font-size: 0.875rem; color: #666;">
+    <a href="../../../demos/telescope-resolution/" target="_blank" style="color: #5dade2;">Open in new tab ↗</a>
+  </p>
+</div>
 :::
 
-::: {.callout-check-yourself title="Check Yourself 6 — Resolution"}
+::: {.callout-check-yourself title="Check Yourself 7 — Resolution"}
 Which change would improve a telescope's angular resolution?
 
 - A) Using a smaller mirror
@@ -576,7 +650,7 @@ Which change would improve a telescope's angular resolution?
 - D) Observing from a lower altitude
 :::
 
-::: {.callout-tip title="Solution" collapse="true"}
+::: {.callout-solution title="Solution" collapse="true"}
 **C) Using a larger mirror.** Resolution $\theta \propto \lambda/D$. Larger D means smaller θ (finer resolution). Shorter wavelength would also help, but that wasn't an option here. Smaller mirror or longer wavelength would make resolution worse.
 :::
 
@@ -601,6 +675,8 @@ To observe at these blocked wavelengths, we must go to **space**.
 | X-ray | ✗ No | Atmosphere absorbs completely |
 | Gamma ray | ✗ No | Atmosphere absorbs completely |
 
+{{< fig atmospheric-transmission-windows >}}
+
 ### Modern Observatories
 
 **Ground-based giants:**
@@ -622,6 +698,8 @@ To observe at these blocked wavelengths, we must go to **space**.
 Different wavelengths reveal different physics. A complete picture requires observations across the spectrum — which is why we build telescopes of all kinds.
 
 The same object can look completely different at radio, infrared, visible, X-ray, and gamma-ray wavelengths. Each reveals a different physical process: cold gas, warm dust, starlight, hot plasma, relativistic particles.
+
+{{< fig multiwavelength-crab >}}
 
 ---
 
@@ -697,13 +775,17 @@ Next week (L11–L13) is our **capstone week**: we apply every tool to the solar
 
 **4. Multi-wavelength Astronomy:** Why do astronomers observe the same object at different wavelengths? Give an example of something you'd learn from infrared that you couldn't learn from visible light alone.
 
+### Synthesis
+
+**5. Doppler + Wien's Law:** A distant star has its Hα line observed at 656.50 nm (rest wavelength 656.28 nm). Separately, you measure the star's blackbody peak at $\lambda_{peak} = 580$ nm. Using Wien's Law ($\lambda_{peak} = 2.9 \times 10^6 / T$ with $\lambda$ in nm and $T$ in K), determine both the star's radial velocity **and** its surface temperature. How do these two measurements use different properties of the same starlight?
+
 ### Challenge
 
-**5. Exoplanet or Binary?:** A star's spectral lines shift with amplitude ±0.005 nm around a rest wavelength of 500 nm, with a period of 3 days. Calculate the star's radial velocity amplitude. Is this likely caused by a planet or a stellar companion? Explain your reasoning.
+**6. Exoplanet or Binary?:** A star's spectral lines shift with amplitude ±0.005 nm around a rest wavelength of 500 nm, with a period of 3 days. Calculate the star's radial velocity amplitude. Is this likely caused by a planet or a stellar companion? Explain your reasoning.
 
-**6. Dark Matter:** Explain in your own words how galaxy rotation curves provide evidence for dark matter. Use the concepts of orbital velocity, gravity, and mass.
+**7. Dark Matter:** Explain in your own words how galaxy rotation curves provide evidence for dark matter. Use the concepts of orbital velocity, gravity, and mass.
 
-**7. Space vs. Ground:** The James Webb Space Telescope (JWST) observes in infrared. Why couldn't we just build a larger infrared telescope on the ground instead of spending billions on a space mission?
+**8. Space vs. Ground:** The James Webb Space Telescope (JWST) observes in infrared. Why couldn't we just build a larger infrared telescope on the ground instead of spending billions on a space mission?
 
 ---
 
