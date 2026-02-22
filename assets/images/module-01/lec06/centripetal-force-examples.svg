@@ -1,131 +1,118 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540" role="img" aria-labelledby="title desc" data-theme="dark" data-palette="aurora">
-  <title id="title">Centripetal force examples</title>
-  <desc id="desc">Three side-by-side panels showing different physical forces providing the required inward (centripetal) force for circular motion: gravity for an orbiting planet, tension for a ball on a string, and friction for a car turning.</desc>
+<svg viewBox="0 0 960 540" width="960" height="540" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title>Centripetal Force Examples</title>
+  <desc>Three panels showing different sources of centripetal force. Panel 1: Orbit with gravity providing the inward force. Panel 2: Ball on string with tension providing the inward force. Panel 3: Car turning with friction providing the inward force. All three demonstrate the same inward centripetal acceleration a = v²/r.</desc>
 
   <defs>
     <style>
       :root{
-        --bg:#0b0b0f;
-        --panel:#13162a;
-        --fg:#eef0ff;
-        --muted:#c9cbe5;
-        --faint:#8f92ad;
-        --grid:#1a1c28;
-        --grid-strong:#24263a;
-
-        --aurora-teal:#028391;
-        --aurora-teal-bright:#41A2AC;
-        --aurora-teal-dim:#02626D;
-        --aurora-teal-pale:#A6D4D8;
-
-        --aurora-pink:#BE5A83;
-        --aurora-pink-bright:#CE83A2;
-        --aurora-pink-dim:#8E4462;
-        --aurora-pink-pale:#E8C5D4;
-
-        --aurora-violet:#7077A1;
-        --aurora-violet-bright:#9499B8;
-        --aurora-violet-dim:#545979;
-        --aurora-violet-pale:#CDCFDE;
-
-        --teal:var(--aurora-teal);
-        --teal-bright:var(--aurora-teal-bright);
-        --teal-dim:var(--aurora-teal-dim);
-        --teal-pale:var(--aurora-teal-pale);
-
-        --pink:var(--aurora-pink);
-        --pink-bright:var(--aurora-pink-bright);
-        --pink-dim:var(--aurora-pink-dim);
-        --pink-pale:var(--aurora-pink-pale);
-
-        --violet:var(--aurora-violet);
-        --violet-bright:var(--aurora-violet-bright);
-        --violet-dim:var(--aurora-violet-dim);
-        --violet-pale:var(--aurora-violet-pale);
-
-        --sun:#f6d55c;
+        --bg:#ffffff; --surface:#eef1f5; --border:#d4d0cc; --border-light:#e8e5e1;
+        --navy:#1a3a52; --text:#0d1f2d; --muted:#5c6470; --faint:#a99f99;
+        --teal:#6b9fa1; --teal-light:#8fbfc0; --teal-dark:#4a7e80;
+        --gold:#c9a66b; --gold-light:#dcc194; --gold-dark:#7f6d44;
+        --mauve:#8b7a8b; --mauve-light:#b8a8b8; --mauve-dark:#6b5a6b;
+        --grid:#e0ddd8; --sun:#d4a843;
       }
 
-      text{
-        font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
-        fill: var(--fg);
-      }
-      .title{ font-size: 28px; font-weight: 750; }
-      .subtitle{ font-size: 18px; fill: var(--muted); }
-      .label{ font-size: 20px; font-weight: 700; }
-      .small{ font-size: 18px; letter-spacing: 0.2px; fill: var(--muted); }
-      .outline{ paint-order: stroke; stroke: var(--bg); stroke-width: 6px; stroke-linejoin: round; }
-      .panel{ fill: var(--panel); stroke: var(--violet); stroke-width: 1.5; opacity: 0.96; }
-      .dash{ stroke-dasharray: 10 10; }
+      text { font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+      .title { font-size: 26px; font-weight: 650; fill: var(--navy); }
+      .subtitle { font-size: 18px; font-weight: 600; fill: var(--navy); }
+      .label { font-size: 15px; fill: var(--muted); }
+      .panelTitle { font-size: 16px; font-weight: 600; fill: var(--navy); }
+      .small { font-size: 13px; fill: var(--muted); }
+
+      marker { overflow: visible; }
     </style>
 
-    <filter id="softGlow" x="-30%" y="-30%" width="160%" height="160%">
-      <feGaussianBlur stdDeviation="2.0" result="blur"/>
-      <feMerge>
-        <feMergeNode in="blur"/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
-    </filter>
-
-    <marker id="arrow-pink" markerWidth="10" markerHeight="10" refX="7" refY="5" orient="auto">
-      <path d="M 0 0 L 10 5 L 0 10 z" fill="var(--pink)"/>
-    </marker>
-    <marker id="arrow-teal" markerWidth="10" markerHeight="10" refX="7" refY="5" orient="auto">
-      <path d="M 0 0 L 10 5 L 0 10 z" fill="var(--teal)"/>
+    <marker id="arrowGold" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L0,8 L8,4 z" fill="var(--gold)" />
     </marker>
   </defs>
 
-  <rect x="0" y="0" width="960" height="540" fill="var(--bg)"/>
+  <rect width="960" height="540" fill="#ffffff"/>
 
-  <text x="48" y="56" class="title">Centripetal force is a role</text>
-  <text x="48" y="82" class="subtitle">Different forces can supply the inward pull needed for circular motion.</text>
+  <text x="480" y="45" text-anchor="middle" class="title">Centripetal Force Examples</text>
+  <text x="480" y="70" text-anchor="middle" class="subtitle">Different forces, same inward role</text>
 
+  <!-- PANEL 1: Orbit -->
   <g>
-    <rect x="48" y="110" width="864" height="340" rx="16" class="panel"/>
+    <!-- Panel background -->
+    <rect x="36" y="110" width="270" height="300" fill="var(--surface)" stroke="var(--border)" stroke-width="1" rx="2"/>
 
-    <!-- Three subpanels -->
-    <rect x="72" y="132" width="264" height="296" rx="14" fill="none" stroke="var(--grid-strong)" stroke-width="1.5" opacity="0.9"/>
-    <rect x="348" y="132" width="264" height="296" rx="14" fill="none" stroke="var(--grid-strong)" stroke-width="1.5" opacity="0.9"/>
-    <rect x="624" y="132" width="264" height="296" rx="14" fill="none" stroke="var(--grid-strong)" stroke-width="1.5" opacity="0.9"/>
+    <!-- Title -->
+    <text x="171" y="135" text-anchor="middle" class="panelTitle">Orbit</text>
 
-    <!-- Panel 1: orbit -->
-    <text x="204" y="164" class="label" text-anchor="middle">Orbit</text>
-    <text x="204" y="188" class="small" text-anchor="middle">inward force = gravity</text>
-    <circle cx="204" cy="288" r="86" fill="none" stroke="var(--teal)" stroke-width="4" opacity="0.9"/>
-    <circle cx="180" cy="288" r="10" fill="var(--sun)" filter="url(#softGlow)"/>
-    <circle cx="286" cy="252" r="7" fill="var(--fg)" opacity="0.95"/>
-    <line x1="286" y1="252" x2="206" y2="288" stroke="var(--pink)" stroke-width="3.4" marker-end="url(#arrow-pink)" opacity="0.95"/>
-    <text x="270" y="316" class="small outline" fill="var(--pink)" text-anchor="end">gravity</text>
+    <!-- Circular orbit -->
+    <circle cx="171" cy="240" r="70" fill="none" stroke="var(--teal)" stroke-width="2.5"/>
 
-    <!-- Panel 2: ball on string -->
-    <text x="480" y="164" class="label" text-anchor="middle">Ball on string</text>
-    <text x="480" y="188" class="small" text-anchor="middle">inward force = tension</text>
-    <circle cx="480" cy="298" r="86" fill="none" stroke="var(--teal)" stroke-width="4" opacity="0.9"/>
-    <circle cx="480" cy="298" r="5" fill="var(--violet)" opacity="0.9"/>
-    <circle cx="566" cy="298" r="7" fill="var(--fg)" opacity="0.95"/>
-    <line x1="566" y1="298" x2="486" y2="298" stroke="var(--pink)" stroke-width="3.4" marker-end="url(#arrow-pink)" opacity="0.95"/>
-    <text x="566" y="326" class="small outline" fill="var(--pink)" text-anchor="end">tension</text>
+    <!-- Sun at center -->
+    <circle cx="171" cy="240" r="10" fill="var(--sun)"/>
 
-    <!-- Panel 3: car turning -->
-    <text x="756" y="164" class="label" text-anchor="middle">Car turning</text>
-    <text x="756" y="188" class="small" text-anchor="middle">inward force = friction</text>
-    <path d="M 680 360 C 720 270 792 240 860 270" fill="none" stroke="var(--teal)" stroke-width="4.5" opacity="0.9"/>
-    <rect x="756" y="292" width="52" height="22" rx="6" fill="var(--fg)" opacity="0.9"/>
-    <circle cx="768" cy="318" r="4" fill="var(--grid-strong)"/>
-    <circle cx="796" cy="318" r="4" fill="var(--grid-strong)"/>
-    <!-- inward (toward curve center) arrow -->
-    <line x1="782" y1="303" x2="752" y2="278" stroke="var(--pink)" stroke-width="3.4" marker-end="url(#arrow-pink)" opacity="0.95"/>
-    <text x="870" y="308" class="small outline" fill="var(--pink)" text-anchor="end">friction</text>
+    <!-- Planet on orbit (right side) -->
+    <circle cx="241" cy="240" r="6" fill="var(--navy)"/>
 
-    <!-- Unifying callout -->
-    <text x="480" y="428" class="label outline" text-anchor="middle">“Centripetal” is not a new force — it’s the inward direction the net force must point.</text>
+    <!-- Inward arrow from planet to Sun -->
+    <line x1="235" y1="240" x2="181" y2="240" stroke="var(--gold)" stroke-width="3" marker-end="url(#arrowGold)"/>
+    <text x="210" y="225" text-anchor="middle" class="label" fill="var(--gold)">gravity</text>
   </g>
 
-  <g transform="translate(48,470)">
-    <rect x="0" y="0" width="864" height="70" rx="12" class="panel"/>
-    <text x="18" y="30" class="label">Key idea: same motion requirement, different physical mechanisms.</text>
-    <text x="18" y="54" class="small">Any circular motion needs an inward acceleration a = v²/r, so the net force must point inward.</text>
+  <!-- PANEL 2: Ball on String -->
+  <g>
+    <!-- Panel background -->
+    <rect x="345" y="110" width="270" height="300" fill="var(--surface)" stroke="var(--border)" stroke-width="1" rx="2"/>
+
+    <!-- Title -->
+    <text x="480" y="135" text-anchor="middle" class="panelTitle">Ball on String</text>
+
+    <!-- Circular path (dashed) -->
+    <circle cx="480" cy="240" r="80" fill="none" stroke="var(--teal)" stroke-width="2.5" stroke-dasharray="5,5"/>
+
+    <!-- Center point -->
+    <circle cx="480" cy="240" r="4" fill="var(--navy)"/>
+
+    <!-- Ball on path -->
+    <circle cx="560" cy="240" r="6" fill="var(--navy)"/>
+
+    <!-- String line from ball to center -->
+    <line x1="554" y1="240" x2="484" y2="240" stroke="var(--navy)" stroke-width="2"/>
+
+    <!-- Inward arrow -->
+    <line x1="554" y1="240" x2="490" y2="240" stroke="var(--gold)" stroke-width="3" marker-end="url(#arrowGold)"/>
+    <text x="520" y="225" text-anchor="middle" class="label" fill="var(--gold)">tension</text>
   </g>
+
+  <!-- PANEL 3: Car Turning -->
+  <g>
+    <!-- Panel background -->
+    <rect x="654" y="110" width="270" height="300" fill="var(--surface)" stroke="var(--border)" stroke-width="1" rx="2"/>
+
+    <!-- Title -->
+    <text x="789" y="135" text-anchor="middle" class="panelTitle">Car Turning</text>
+
+    <!-- Curved road arc (teal) -->
+    <path d="M 685 310 Q 735 160 845 240" fill="none" stroke="var(--teal)" stroke-width="8" opacity="0.5"/>
+
+    <!-- Car body (tapered rectangle, rounded) -->
+    <rect x="750" y="228" width="58" height="24" rx="8" fill="var(--navy)"/>
+
+    <!-- Car windshield -->
+    <rect x="763" y="232" width="28" height="8" rx="2" fill="var(--teal)" opacity="0.5"/>
+
+    <!-- Front wheel -->
+    <circle cx="765" cy="254" r="5" fill="var(--navy)"/>
+    <circle cx="765" cy="254" r="3" fill="var(--teal)" opacity="0.4"/>
+
+    <!-- Rear wheel -->
+    <circle cx="797" cy="254" r="5" fill="var(--navy)"/>
+    <circle cx="797" cy="254" r="3" fill="var(--teal)" opacity="0.4"/>
+
+    <!-- Inward friction arrow pointing toward curve center -->
+    <line x1="789" y1="240" x2="745" y2="210" stroke="var(--gold)" stroke-width="3" marker-end="url(#arrowGold)"/>
+    <text x="755" y="215" text-anchor="middle" class="label" fill="var(--gold)">friction</text>
+  </g>
+
+  <!-- Bottom callout -->
+  <rect x="80" y="440" width="800" height="70" fill="var(--surface)" stroke="var(--border)" stroke-width="1.5" rx="4"/>
+  <text x="480" y="465" text-anchor="middle" class="label" fill="var(--navy)" font-weight="600">All three: different forces, same inward role → centripetal acceleration</text>
+  <text x="480" y="490" text-anchor="middle" class="small" fill="var(--muted)">a = v²/r</text>
+
 </svg>
-

@@ -1,157 +1,95 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540" role="img" aria-labelledby="title desc" data-theme="dark" data-palette="aurora">
-  <title id="title">Newton’s cannon: orbiting is falling</title>
-  <desc id="desc">Earth is shown as a circle with a mountain and cannon firing horizontally. Four trajectories illustrate increasing sideways speed: slow projectiles crash quickly, faster ones crash farther away, an orbital-speed projectile keeps missing Earth and circles, and an even faster projectile escapes. A gravity arrow indicates inward acceleration on all paths.</desc>
+<svg viewBox="0 0 960 540" width="960" height="540" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title>Newton's Cannon</title>
+  <desc>Illustration of Newton's Cannon thought experiment showing Earth with a cannon on a mountain. Four trajectories demonstrate increasing muzzle velocity: projectiles that crash at increasing distances (navy), a circular orbit (teal), and an escape trajectory (mauve dashed). Left side shows a speed progression arrow. Gravity arrow points toward Earth's center.</desc>
 
   <defs>
     <style>
       :root{
-        --bg:#0b0b0f;
-        --panel:#13162a;
-        --fg:#eef0ff;
-        --muted:#c9cbe5;
-        --faint:#8f92ad;
-        --grid:#1a1c28;
-        --grid-strong:#24263a;
-
-        --aurora-teal:#028391;
-        --aurora-teal-bright:#41A2AC;
-        --aurora-teal-dim:#02626D;
-        --aurora-teal-pale:#A6D4D8;
-
-        --aurora-pink:#BE5A83;
-        --aurora-pink-bright:#CE83A2;
-        --aurora-pink-dim:#8E4462;
-        --aurora-pink-pale:#E8C5D4;
-
-        --aurora-violet:#7077A1;
-        --aurora-violet-bright:#9499B8;
-        --aurora-violet-dim:#545979;
-        --aurora-violet-pale:#CDCFDE;
-
-        --teal:var(--aurora-teal);
-        --teal-bright:var(--aurora-teal-bright);
-        --teal-dim:var(--aurora-teal-dim);
-        --teal-pale:var(--aurora-teal-pale);
-
-        --pink:var(--aurora-pink);
-        --pink-bright:var(--aurora-pink-bright);
-        --pink-dim:var(--aurora-pink-dim);
-        --pink-pale:var(--aurora-pink-pale);
-
-        --violet:var(--aurora-violet);
-        --violet-bright:var(--aurora-violet-bright);
-        --violet-dim:var(--aurora-violet-dim);
-        --violet-pale:var(--aurora-violet-pale);
-
-        --earth:#1b2238;
+        --bg:#ffffff; --surface:#eef1f5; --border:#d4d0cc; --border-light:#e8e5e1;
+        --navy:#1a3a52; --text:#0d1f2d; --muted:#5c6470; --faint:#a99f99;
+        --teal:#6b9fa1; --teal-light:#8fbfc0; --teal-dark:#4a7e80;
+        --gold:#c9a66b; --gold-light:#dcc194; --gold-dark:#7f6d44;
+        --mauve:#8b7a8b; --mauve-light:#b8a8b8; --mauve-dark:#6b5a6b;
+        --grid:#e0ddd8; --sun:#d4a843;
       }
 
-      text{
-        font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
-        fill: var(--fg);
-      }
-      .title{ font-size: 28px; font-weight: 750; }
-      .subtitle{ font-size: 18px; fill: var(--muted); }
-      .label{ font-size: 20px; font-weight: 700; }
-      .small{ font-size: 18px; letter-spacing: 0.2px; fill: var(--muted); }
-      .outline{ paint-order: stroke; stroke: var(--bg); stroke-width: 6px; stroke-linejoin: round; }
-      .panel{ fill: var(--panel); stroke: var(--violet); stroke-width: 1.5; opacity: 0.96; }
-      .dash{ stroke-dasharray: 10 10; }
+      text { font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+      .title { font-size: 26px; font-weight: 650; fill: var(--navy); }
+      .subtitle { font-size: 18px; font-weight: 600; fill: var(--navy); }
+      .label { font-size: 15px; fill: var(--muted); }
+      .annotation { font-size: 13px; fill: var(--muted); }
+
+      marker { overflow: visible; }
     </style>
 
-    <filter id="softGlow" x="-30%" y="-30%" width="160%" height="160%">
-      <feGaussianBlur stdDeviation="2.2" result="blur"/>
-      <feMerge>
-        <feMergeNode in="blur"/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
-    </filter>
-
-    <radialGradient id="earthFill" cx="35%" cy="30%" r="75%">
-      <stop offset="0%" stop-color="var(--grid-strong)" stop-opacity="0.9"/>
-      <stop offset="55%" stop-color="var(--earth)" stop-opacity="1.0"/>
-      <stop offset="100%" stop-color="var(--panel)" stop-opacity="1.0"/>
-    </radialGradient>
-
-    <marker id="arrow-teal" markerWidth="10" markerHeight="10" refX="7" refY="5" orient="auto">
-      <path d="M 0 0 L 10 5 L 0 10 z" fill="var(--teal)"/>
+    <marker id="arrowGold" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L0,8 L8,4 z" fill="var(--gold)" />
     </marker>
-    <marker id="arrow-pink" markerWidth="10" markerHeight="10" refX="7" refY="5" orient="auto">
-      <path d="M 0 0 L 10 5 L 0 10 z" fill="var(--pink)"/>
-    </marker>
-    <marker id="arrow-violet" markerWidth="10" markerHeight="10" refX="7" refY="5" orient="auto">
-      <path d="M 0 0 L 10 5 L 0 10 z" fill="var(--violet)"/>
+
+    <marker id="arrowGoldSmall" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L0,6 L6,3 z" fill="var(--gold)" />
     </marker>
   </defs>
 
-  <rect x="0" y="0" width="960" height="540" fill="var(--bg)"/>
+  <rect width="960" height="540" fill="#ffffff"/>
 
-  <!-- Header -->
-  <text x="48" y="56" class="title">Newton’s cannon</text>
-  <text x="48" y="82" class="subtitle">Orbiting is falling — with enough sideways speed, you keep missing Earth.</text>
+  <text x="480" y="45" text-anchor="middle" class="title">Newton's Cannon</text>
+  <text x="480" y="70" text-anchor="middle" class="subtitle">Orbiting is falling sideways fast enough to miss everything</text>
 
-  <!-- Main panel -->
+  <!-- Earth circle -->
+  <circle cx="480" cy="360" r="130" fill="var(--navy)"/>
+  <circle cx="480" cy="360" r="130" fill="none" stroke="var(--teal)" stroke-width="2.5"/>
+
+  <!-- Mountain peak on top (triangle) -->
+  <polygon points="480,230 455,255 505,255" fill="var(--navy)"/>
+
+  <!-- Cannon: barrel + wheel assembly -->
+  <!-- Cannon barrel (tapered, tilted) -->
+  <g transform="translate(480, 250) rotate(-15)">
+    <!-- Barrel (tapered rectangle) -->
+    <polygon points="0,0 35,-4 40,0 35,4" fill="var(--navy)"/>
+    <!-- Breech (wider back) -->
+    <circle cx="-8" cy="0" r="5" fill="var(--navy)"/>
+  </g>
+
+  <!-- Cannon wheel -->
+  <circle cx="480" cy="270" r="12" fill="var(--navy)"/>
+  <circle cx="480" cy="270" r="12" fill="none" stroke="var(--teal)" stroke-width="1.5"/>
+  <!-- Wheel hub and spokes -->
+  <circle cx="480" cy="270" r="4" fill="var(--navy)"/>
+  <line x1="480" y1="266" x2="480" y2="274" stroke="var(--navy)" stroke-width="1"/>
+  <line x1="476" y1="270" x2="484" y2="270" stroke="var(--navy)" stroke-width="1"/>
+
+  <!-- Gravity arrow pointing toward Earth center -->
+  <line x1="480" y1="290" x2="480" y2="330" stroke="var(--gold)" stroke-width="3" marker-end="url(#arrowGold)"/>
+  <text x="515" y="315" class="label" fill="var(--gold)">gravity</text>
+
+  <!-- Trajectory 1: crashes nearby (thin navy, labeled "too slow") -->
+  <path d="M 510 245 Q 540 270 535 340" fill="none" stroke="var(--navy)" stroke-width="1.5" opacity="0.6"/>
+  <circle cx="535" cy="340" r="2.5" fill="var(--navy)" opacity="0.7"/>
+  <text x="565" y="280" class="annotation" fill="var(--muted)">too slow</text>
+
+  <!-- Trajectory 2: crashes farther (medium navy, labeled "faster") -->
+  <path d="M 510 245 Q 580 260 570 330" fill="none" stroke="var(--navy)" stroke-width="1.5" opacity="0.75"/>
+  <circle cx="570" cy="330" r="2.5" fill="var(--navy)" opacity="0.8"/>
+  <text x="610" y="270" class="annotation" fill="var(--muted)">faster</text>
+
+  <!-- Trajectory 3: circular orbit (teal, labeled "orbital speed") -->
+  <circle cx="480" cy="360" r="150" fill="none" stroke="var(--teal)" stroke-width="2.5"/>
+  <text x="650" y="360" class="annotation" fill="var(--teal)" font-weight="600">orbital</text>
+  <text x="650" y="378" class="annotation" fill="var(--teal)" font-weight="600">speed</text>
+
+  <!-- Trajectory 4: escape trajectory (mauve dashed, labeled "escape speed") -->
+  <path d="M 510 245 Q 650 180 760 120" fill="none" stroke="var(--mauve)" stroke-width="2" stroke-dasharray="4,4"/>
+  <text x="680" y="155" class="annotation" fill="var(--mauve)">escape</text>
+  <text x="680" y="173" class="annotation" fill="var(--mauve)">speed</text>
+
+  <!-- Left side speed progression arrow and label -->
   <g>
-    <rect x="48" y="110" width="864" height="340" rx="16" class="panel"/>
-
-    <!-- Earth (kept fully inside the panel) -->
-    <circle cx="480" cy="280" r="110" fill="url(#earthFill)" stroke="var(--teal)" stroke-width="4" opacity="0.98"/>
-    <circle cx="480" cy="280" r="116" fill="none" stroke="var(--teal-pale)" stroke-width="2" opacity="0.35"/>
-
-    <!-- Surface highlight arc -->
-    <path d="M 378 240 A 110 110 0 0 1 582 240" fill="none" stroke="var(--grid-strong)" stroke-width="2.3" opacity="0.55"/>
-
-    <!-- Mountain + cannon (on the top of Earth, firing sideways) -->
-    <path d="M 470 170 L 510 170 L 494 148 L 456 170 Z" fill="var(--grid-strong)" opacity="0.95"/>
-    <rect x="508" y="152" width="40" height="12" rx="4" fill="var(--violet)" opacity="0.95"/>
-    <circle cx="552" cy="158" r="4" fill="var(--violet-bright)" opacity="0.95"/>
-    <text x="482" y="146" class="small outline" text-anchor="middle">cannon</text>
-
-    <!-- Launch point -->
-    <circle cx="552" cy="158" r="4.5" fill="var(--pink)" filter="url(#softGlow)"/>
-
-    <!-- Trajectories (stylized; increasing sideways speed) -->
-    <!-- 1: slow — crashes quickly -->
-    <path d="M 552 158 C 590 168 612 186 564 209"
-          fill="none" stroke="var(--teal-dim)" stroke-width="3.1" stroke-linecap="round" opacity="0.95"/>
-    <!-- 2: faster — crashes farther -->
-    <path d="M 552 158 C 668 178 692 262 564 351"
-          fill="none" stroke="var(--teal)" stroke-width="3.1" stroke-linecap="round" opacity="0.92"/>
-    <!-- 3: orbital — keeps missing (closed path around Earth) -->
-    <circle cx="480" cy="280" r="160" fill="none" stroke="var(--pink)" stroke-width="4.6" opacity="0.92" filter="url(#softGlow)"/>
-    <!-- 4: escape — leaves -->
-    <path d="M 552 158 C 716 138 860 132 912 120"
-          fill="none" stroke="var(--violet)" stroke-width="3.4" stroke-linecap="round" opacity="0.9" marker-end="url(#arrow-violet)"/>
-
-    <!-- Impact markers (on Earth’s surface) -->
-    <circle cx="564" cy="209" r="5.5" fill="var(--teal-dim)" opacity="0.9"/>
-    <circle cx="564" cy="351" r="5.5" fill="var(--teal)" opacity="0.9"/>
-
-    <!-- Labels -->
-    <text x="606" y="226" class="small outline" fill="var(--teal-dim)">too slow — hits Earth</text>
-    <text x="606" y="366" class="small outline" fill="var(--teal)">faster — still hits</text>
-    <text x="132" y="220" class="label outline" fill="var(--pink)">orbital speed</text>
-    <text x="132" y="244" class="small outline">keeps missing Earth</text>
-    <text x="770" y="146" class="small outline" fill="var(--violet)">escape</text>
-
-    <!-- Speed direction cue (moved inside the panel) -->
-    <line x1="132" y1="154" x2="300" y2="154" stroke="var(--muted)" stroke-width="2.2" marker-end="url(#arrow-teal)" opacity="0.8"/>
-    <text x="132" y="142" class="small">increasing sideways speed</text>
-
-    <!-- Gravity cue (inward acceleration on all paths) -->
-    <line x1="820" y1="334" x2="716" y2="292" stroke="var(--pink)" stroke-width="3.0" marker-end="url(#arrow-pink)" opacity="0.9"/>
-    <text x="888" y="332" class="small outline" fill="var(--pink)" text-anchor="end">gravity pulls inward</text>
+    <!-- Vertical arrow showing increasing speed -->
+    <line x1="120" y1="480" x2="120" y2="250" stroke="var(--gold)" stroke-width="2.5" marker-end="url(#arrowGold)"/>
+    <text x="105" y="370" text-anchor="end" class="annotation" fill="var(--gold)" font-weight="600">increasing</text>
+    <text x="105" y="388" text-anchor="end" class="annotation" fill="var(--gold)" font-weight="600">speed</text>
   </g>
 
-  <!-- Footer takeaway -->
-  <g transform="translate(48,470)">
-    <rect x="0" y="0" width="864" height="70" rx="12" class="panel"/>
-    <text x="18" y="30" class="label">
-      Key idea: an orbit is <tspan fill="var(--pink)" font-weight="800">continuous free fall</tspan>, not “no gravity.”
-    </text>
-    <text x="18" y="54" class="small">
-      With enough sideways speed, the surface curves away at the same rate you fall.
-    </text>
-  </g>
 </svg>

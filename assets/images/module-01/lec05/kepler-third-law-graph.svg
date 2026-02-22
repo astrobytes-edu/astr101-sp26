@@ -1,179 +1,165 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540" role="img" aria-labelledby="title desc" data-theme="dark" data-palette="aurora">
-  <title id="title">Kepler’s Third Law on a log–log plot</title>
-  <desc id="desc">Log–log plot of orbital period versus semimajor axis for the eight planets. The points fall on a straight line with slope 3/2, illustrating the power-law relationship P proportional to a to the three-halves power for objects orbiting the Sun.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540">
+  <title>Kepler's Third Law: Log-Log Plot</title>
+  <desc>A logarithmic-scale plot of orbital period P (years) versus semi-major axis a (AU). On log-log axes, the power law P = a^(3/2) becomes a straight line with slope 3/2. All planets lie on this best-fit line.</desc>
 
   <defs>
     <style>
-      :root{
-        --bg:#0b0b0f;
-        --panel:#13162a;
-        --fg:#eef0ff;
-        --muted:#c9cbe5;
-        --faint:#8f92ad;
-        --grid:#1a1c28;
-        --grid-strong:#24263a;
-
-        --aurora-teal:#028391;
-        --aurora-teal-bright:#41A2AC;
-        --aurora-teal-dim:#02626D;
-        --aurora-teal-pale:#A6D4D8;
-
-        --aurora-pink:#BE5A83;
-        --aurora-pink-bright:#CE83A2;
-        --aurora-pink-dim:#8E4462;
-        --aurora-pink-pale:#E8C5D4;
-
-        --aurora-violet:#7077A1;
-        --aurora-violet-bright:#9499B8;
-        --aurora-violet-dim:#545979;
-        --aurora-violet-pale:#CDCFDE;
-
-        --teal:var(--aurora-teal);
-        --teal-bright:var(--aurora-teal-bright);
-        --teal-dim:var(--aurora-teal-dim);
-        --teal-pale:var(--aurora-teal-pale);
-
-        --pink:var(--aurora-pink);
-        --pink-bright:var(--aurora-pink-bright);
-        --pink-dim:var(--aurora-pink-dim);
-        --pink-pale:var(--aurora-pink-pale);
-
-        --violet:var(--aurora-violet);
-        --violet-bright:var(--aurora-violet-bright);
-        --violet-dim:var(--aurora-violet-dim);
-        --violet-pale:var(--aurora-violet-pale);
-      }
-
-      text{
-        font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
-        fill: var(--fg);
-      }
-      .title{ font-size: 28px; font-weight: 750; }
-      .subtitle{ font-size: 18px; fill: var(--muted); }
-      .label{ font-size: 20px; font-weight: 700; }
-      .small{ font-size: 18px; letter-spacing: 0.2px; fill: var(--muted); }
-      .tiny{ font-size: 16px; letter-spacing: 0.2px; fill: var(--muted); }
-      .outline{ paint-order: stroke; stroke: var(--bg); stroke-width: 6px; stroke-linejoin: round; }
-      .panel{ fill: var(--panel); stroke: var(--violet); stroke-width: 1.5; opacity: 0.96; }
-      .dash{ stroke-dasharray: 10 10; }
+      text { font-family: Inter, system-ui, sans-serif; }
+      .axis-label { font-size: 14px; font-weight: 500; fill: #1a3a52; }
+      .tick-label { font-size: 12px; fill: #5c6470; }
+      .grid-line { stroke: #ccc7c0; stroke-width: 1; }
+      .axis-line { stroke: #1a3a52; stroke-width: 2; }
+      .fit-line { fill: none; stroke: #6b9fa1; stroke-width: 2.5; }
+      .planet-dot { fill: #c9a66b; }
+      .earth-dot { fill: #c9a66b; stroke: #1a3a52; stroke-width: 2; }
+      .planet-label { font-size: 13px; fill: #5c6470; text-anchor: middle; }
+      .annotation { font-size: 13px; fill: #6b9fa1; font-weight: 600; }
     </style>
-
-    <marker id="arrow-violet" markerWidth="10" markerHeight="10" refX="7" refY="5" orient="auto">
-      <path d="M 0 0 L 10 5 L 0 10 z" fill="var(--violet)"/>
-    </marker>
   </defs>
 
-  <rect x="0" y="0" width="960" height="540" fill="var(--bg)"/>
+  <!-- Background -->
+  <rect width="960" height="540" fill="#ffffff"/>
 
-  <!-- Header -->
-  <text x="48" y="56" class="title">Kepler’s Third Law</text>
-  <text x="48" y="82" class="subtitle">On a log–log plot, a power law becomes a straight line (slope = 3/2).</text>
+  <!-- Title -->
+  <text x="480" y="30" font-size="18" font-weight="600" fill="#1a3a52" text-anchor="middle">
+    Kepler's Third Law: Log-Log Plot
+  </text>
+  <text x="480" y="50" font-size="13" fill="#5c6470" text-anchor="middle">
+    On log scales, power law becomes a straight line (slope = 3/2)
+  </text>
 
-  <!-- Plot area -->
-  <!-- Plot box: x=[160,820], y=[140,430] -->
-  <g>
-    <rect x="120" y="110" width="780" height="350" rx="16" class="panel"/>
+  <!-- Main plot area background -->
+  <rect x="160" y="100" width="660" height="330" fill="white" stroke="#d4d0cc" stroke-width="1"/>
 
-    <!-- Gridlines (log ticks) -->
-    <g opacity="0.6">
-      <!-- vertical -->
-      <line x1="211.1" y1="140" x2="211.1" y2="430" stroke="var(--grid)" stroke-width="1.5"/>
-      <line x1="310.5" y1="140" x2="310.5" y2="430" stroke="var(--grid)" stroke-width="1.5"/>
-      <line x1="409.8" y1="140" x2="409.8" y2="430" stroke="var(--grid)" stroke-width="1.5"/>
-      <line x1="541.1" y1="140" x2="541.1" y2="430" stroke="var(--grid)" stroke-width="1.5"/>
-      <line x1="640.5" y1="140" x2="640.5" y2="430" stroke="var(--grid)" stroke-width="1.5"/>
-      <line x1="739.8" y1="140" x2="739.8" y2="430" stroke="var(--grid)" stroke-width="1.5"/>
-      <line x1="797.9" y1="140" x2="797.9" y2="430" stroke="var(--grid)" stroke-width="1.5"/>
+  <!-- Axes -->
+  <line x1="160" y1="100" x2="160" y2="430" class="axis-line"/>
+  <line x1="820" y1="100" x2="820" y2="430" class="axis-line"/>
+  <line x1="160" y1="430" x2="820" y2="430" class="axis-line"/>
 
-      <!-- horizontal -->
-      <line x1="160" y1="425.7" x2="820" y2="425.7" stroke="var(--grid)" stroke-width="1.5"/>
-      <line x1="160" y1="388.3" x2="820" y2="388.3" stroke="var(--grid)" stroke-width="1.5"/>
-      <line x1="160" y1="360.0" x2="820" y2="360.0" stroke="var(--grid)" stroke-width="1.5"/>
-      <line x1="160" y1="331.8" x2="820" y2="331.8" stroke="var(--grid)" stroke-width="1.5"/>
-      <line x1="160" y1="294.4" x2="820" y2="294.4" stroke="var(--grid)" stroke-width="1.5"/>
-      <line x1="160" y1="266.1" x2="820" y2="266.1" stroke="var(--grid)" stroke-width="1.5"/>
-      <line x1="160" y1="237.8" x2="820" y2="237.8" stroke="var(--grid)" stroke-width="1.5"/>
-      <line x1="160" y1="200.4" x2="820" y2="200.4" stroke="var(--grid)" stroke-width="1.5"/>
-      <line x1="160" y1="172.2" x2="820" y2="172.2" stroke="var(--grid)" stroke-width="1.5"/>
-      <line x1="160" y1="143.9" x2="820" y2="143.9" stroke="var(--grid)" stroke-width="1.5"/>
-    </g>
+  <!-- Vertical grid lines at log(a) positions for 0.5, 1, 2, 5, 10, 20 AU -->
+  <!-- log(0.5)=-0.301, log(1)=0, log(2)=0.301, log(5)=0.699, log(10)=1, log(20)=1.301 -->
+  <!-- Range: log(0.3)=-0.523 to log(40)=1.602, span=2.125 -->
+  <!-- px = 160 + 660*(log(a)+0.523)/2.125 -->
+  <line x1="215.8" y1="100" x2="215.8" y2="430" class="grid-line"/>
+  <line x1="310.2" y1="100" x2="310.2" y2="430" class="grid-line"/>
+  <line x1="404.6" y1="100" x2="404.6" y2="430" class="grid-line"/>
+  <line x1="581.5" y1="100" x2="581.5" y2="430" class="grid-line"/>
+  <line x1="675.8" y1="100" x2="675.8" y2="430" class="grid-line"/>
+  <line x1="770.2" y1="100" x2="770.2" y2="430" class="grid-line"/>
 
-    <!-- Axes -->
-    <line x1="160" y1="430" x2="820" y2="430" stroke="var(--teal)" stroke-width="3.2"/>
-    <line x1="160" y1="430" x2="160" y2="140" stroke="var(--teal)" stroke-width="3.2"/>
+  <!-- Horizontal grid lines at log(P) positions for 0.2, 0.5, 1, 2, 5, 10, 20, 50, 100, 200 yr -->
+  <!-- log(0.2)=-0.699, log(0.5)=-0.301, log(1)=0, log(2)=0.301, log(5)=0.699, log(10)=1, log(20)=1.301, log(50)=1.699, log(100)=2, log(200)=2.301 -->
+  <!-- Range: log(0.2)=-0.699 to log(200)=2.301, span=3.0 -->
+  <!-- py = 430 - 330*(log(P)+0.699)/3.0 -->
+  <line x1="160" y1="403.3" x2="820" y2="403.3" class="grid-line"/>
+  <line x1="160" y1="369.0" x2="820" y2="369.0" class="grid-line"/>
+  <line x1="160" y1="334.7" x2="820" y2="334.7" class="grid-line"/>
+  <line x1="160" y1="300.4" x2="820" y2="300.4" class="grid-line"/>
+  <line x1="160" y1="249.7" x2="820" y2="249.7" class="grid-line"/>
+  <line x1="160" y1="215.4" x2="820" y2="215.4" class="grid-line"/>
+  <line x1="160" y1="181.1" x2="820" y2="181.1" class="grid-line"/>
+  <line x1="160" y1="130.4" x2="820" y2="130.4" class="grid-line"/>
 
-    <!-- Tick labels -->
-    <g class="tiny">
-      <!-- x ticks -->
-      <text x="211.1" y="454" text-anchor="middle">0.5</text>
-      <text x="310.5" y="454" text-anchor="middle">1</text>
-      <text x="409.8" y="454" text-anchor="middle">2</text>
-      <text x="541.1" y="454" text-anchor="middle">5</text>
-      <text x="640.5" y="454" text-anchor="middle">10</text>
-      <text x="739.8" y="454" text-anchor="middle">20</text>
-      <text x="797.9" y="454" text-anchor="middle">30</text>
+  <!-- X-axis tick marks and labels -->
+  <line x1="215.8" y1="430" x2="215.8" y2="440" stroke="#1a3a52" stroke-width="1.5"/>
+  <text x="215.8" y="455" class="tick-label">0.5</text>
 
-      <!-- y ticks -->
-      <text x="146" y="429.7" text-anchor="end">0.2</text>
-      <text x="146" y="392.3" text-anchor="end">0.5</text>
-      <text x="146" y="364.0" text-anchor="end">1</text>
-      <text x="146" y="335.8" text-anchor="end">2</text>
-      <text x="146" y="298.4" text-anchor="end">5</text>
-      <text x="146" y="270.1" text-anchor="end">10</text>
-      <text x="146" y="241.8" text-anchor="end">20</text>
-      <text x="146" y="204.4" text-anchor="end">50</text>
-      <text x="146" y="176.2" text-anchor="end">100</text>
-      <text x="146" y="147.9" text-anchor="end">200</text>
-    </g>
+  <line x1="310.2" y1="430" x2="310.2" y2="440" stroke="#1a3a52" stroke-width="1.5"/>
+  <text x="310.2" y="455" class="tick-label">1</text>
 
-    <!-- Axis titles (kept inside the plot so they don't collide with the footer panel) -->
-    <text x="790" y="412" class="small outline" text-anchor="end" fill="var(--muted)"><tspan font-style="italic">a</tspan> (AU)</text>
-    <text x="192" y="170" class="small outline" text-anchor="start" fill="var(--muted)"><tspan font-style="italic">P</tspan> (years)</text>
+  <line x1="404.6" y1="430" x2="404.6" y2="440" stroke="#1a3a52" stroke-width="1.5"/>
+  <text x="404.6" y="455" class="tick-label">2</text>
 
-    <!-- Best-fit (Kepler III) line: P scales as a^(3/2) -->
-    <line x1="160.0" y1="424.3" x2="820.0" y2="142.5" stroke="var(--violet)" stroke-width="3.5" opacity="0.85"/>
-    <path d="M 620 223 L 700 189" fill="none" stroke="var(--violet)" stroke-width="2.4" opacity="0.0" marker-end="url(#arrow-violet)"/>
-    <text x="690" y="196" class="label outline" fill="var(--violet)" text-anchor="end">
-      slope = 3<tspan baseline-shift="super" font-size="70%">/</tspan>2
-    </text>
+  <line x1="581.5" y1="430" x2="581.5" y2="440" stroke="#1a3a52" stroke-width="1.5"/>
+  <text x="581.5" y="455" class="tick-label">5</text>
 
-    <!-- Planet points (positions computed in log space; P shown here follows P = a^(3/2) in years) -->
-    <g>
-      <circle cx="175.5" cy="417.7" r="6.5" fill="var(--pink)"/>
-      <text x="188" y="422" class="tiny outline">Mercury</text>
+  <line x1="675.8" y1="430" x2="675.8" y2="440" stroke="#1a3a52" stroke-width="1.5"/>
+  <text x="675.8" y="455" class="tick-label">10</text>
 
-      <circle cx="263.4" cy="380.1" r="6.5" fill="var(--pink)"/>
-      <text x="275" y="384" class="tiny outline">Venus</text>
+  <line x1="770.2" y1="430" x2="770.2" y2="440" stroke="#1a3a52" stroke-width="1.5"/>
+  <text x="770.2" y="455" class="tick-label">20</text>
 
-      <circle cx="310.5" cy="360.0" r="7.5" fill="var(--pink-bright)"/>
-      <text x="324" y="364" class="tiny outline">Earth</text>
+  <!-- Y-axis tick marks and labels -->
+  <line x1="150" y1="403.3" x2="160" y2="403.3" stroke="#1a3a52" stroke-width="1.5"/>
+  <text x="145" y="407" class="tick-label" text-anchor="end">0.2</text>
 
-      <circle cx="370.5" cy="334.4" r="6.5" fill="var(--pink)"/>
-      <text x="384" y="338" class="tiny outline">Mars</text>
+  <line x1="150" y1="369.0" x2="160" y2="369.0" stroke="#1a3a52" stroke-width="1.5"/>
+  <text x="145" y="373" class="tick-label" text-anchor="end">0.5</text>
 
-      <circle cx="546.7" cy="259.2" r="6.5" fill="var(--pink)"/>
-      <text x="560" y="263" class="tiny outline">Jupiter</text>
+  <line x1="150" y1="334.7" x2="160" y2="334.7" stroke="#1a3a52" stroke-width="1.5"/>
+  <text x="145" y="338" class="tick-label" text-anchor="end">1</text>
 
-      <circle cx="633.7" cy="222.0" r="6.5" fill="var(--pink)"/>
-      <text x="647" y="226" class="tiny outline">Saturn</text>
+  <line x1="150" y1="300.4" x2="160" y2="300.4" stroke="#1a3a52" stroke-width="1.5"/>
+  <text x="145" y="304" class="tick-label" text-anchor="end">2</text>
 
-      <circle cx="733.9" cy="179.2" r="6.5" fill="var(--pink)"/>
-      <text x="747" y="183" class="tiny outline">Uranus</text>
+  <line x1="150" y1="249.7" x2="160" y2="249.7" stroke="#1a3a52" stroke-width="1.5"/>
+  <text x="145" y="253" class="tick-label" text-anchor="end">5</text>
 
-      <circle cx="798.4" cy="151.7" r="6.5" fill="var(--pink)"/>
-      <text x="812" y="156" class="tiny outline">Neptune</text>
-    </g>
-  </g>
+  <line x1="150" y1="215.4" x2="160" y2="215.4" stroke="#1a3a52" stroke-width="1.5"/>
+  <text x="145" y="219" class="tick-label" text-anchor="end">10</text>
 
-  <!-- Footer takeaway -->
-  <g transform="translate(48,470)">
-    <rect x="0" y="0" width="864" height="70" rx="12" class="panel"/>
-    <text x="18" y="30" class="label">
-      Key idea: a power law becomes a straight line in log–log space.
-    </text>
-    <text x="18" y="54" class="small">
-      The slope encodes the exponent: <tspan font-style="italic">P</tspan> scales as <tspan font-style="italic">a</tspan><tspan baseline-shift="super" font-size="70%">3/2</tspan>.
-    </text>
-  </g>
+  <line x1="150" y1="181.1" x2="160" y2="181.1" stroke="#1a3a52" stroke-width="1.5"/>
+  <text x="145" y="185" class="tick-label" text-anchor="end">20</text>
+
+  <line x1="150" y1="130.4" x2="160" y2="130.4" stroke="#1a3a52" stroke-width="1.5"/>
+  <text x="145" y="134" class="tick-label" text-anchor="end">50</text>
+
+  <!-- Axis labels -->
+  <text x="490" y="500" class="axis-label" text-anchor="middle">a (AU)</text>
+  <text x="90" y="265" class="axis-label" text-anchor="middle" transform="rotate(-90 90 265)">P (years)</text>
+
+  <!-- Best-fit line: P = a^(3/2), or log(P) = 1.5 * log(a) -->
+  <!-- Sample points: a=0.3 (px=160), a=1 (px=310), a=10 (px=630), a=40 (px=820) -->
+  <!-- P=0.164 (py=421), P=1 (py=335), P=31.6 (py=219), P=253 (py=132) -->
+  <polyline points="160,421 310,335 630,219 820,132" class="fit-line"/>
+
+  <!-- Planet data points -->
+  <!-- Mercury: a=0.387, log(a)=-0.411, P=0.241, log(P)=-0.618 -->
+  <!-- px = 160 + 660*(-0.411+0.523)/2.125 = 177.1, py = 430 - 330*(-0.618+0.699)/3 = 418.1 -->
+  <circle cx="177" cy="418" r="3.5" class="planet-dot"/>
+  <text x="177" y="435" class="planet-label">Me</text>
+
+  <!-- Venus: a=0.723, log(a)=-0.141, P=0.615, log(P)=-0.211 -->
+  <!-- px = 160 + 660*(-0.141+0.523)/2.125 = 238.9, py = 430 - 330*(-0.211+0.699)/3 = 376.8 -->
+  <circle cx="239" cy="377" r="3.5" class="planet-dot"/>
+  <text x="239" y="394" class="planet-label">V</text>
+
+  <!-- Earth: a=1.000, log(a)=0, P=1.000, log(P)=0 -->
+  <!-- px = 160 + 660*(0+0.523)/2.125 = 310.2, py = 430 - 330*(0+0.699)/3 = 334.7 -->
+  <circle cx="310" cy="335" r="4.5" class="earth-dot"/>
+  <text x="310" y="352" class="planet-label">Earth</text>
+
+  <!-- Mars: a=1.524, log(a)=0.183, P=1.881, log(P)=0.274 -->
+  <!-- px = 160 + 660*(0.183+0.523)/2.125 = 347.1, py = 430 - 330*(0.274+0.699)/3 = 321.7 -->
+  <circle cx="347" cy="322" r="3.5" class="planet-dot"/>
+  <text x="347" y="339" class="planet-label">Ma</text>
+
+  <!-- Jupiter: a=5.203, log(a)=0.716, P=11.86, log(P)=1.074 -->
+  <!-- px = 160 + 660*(0.716+0.523)/2.125 = 537.4, py = 430 - 330*(1.074+0.699)/3 = 266.4 -->
+  <circle cx="537" cy="266" r="4" class="planet-dot"/>
+  <text x="537" y="283" class="planet-label">Jupiter</text>
+
+  <!-- Saturn: a=9.537, log(a)=0.980, P=29.46, log(P)=1.469 -->
+  <!-- px = 160 + 660*(0.980+0.523)/2.125 = 638.0, py = 430 - 330*(1.469+0.699)/3 = 237.5 -->
+  <circle cx="638" cy="238" r="4" class="planet-dot"/>
+  <text x="638" y="255" class="planet-label">Saturn</text>
+
+  <!-- Uranus: a=19.19, log(a)=1.283, P=84.01, log(P)=1.924 -->
+  <!-- px = 160 + 660*(1.283+0.523)/2.125 = 753.0, py = 430 - 330*(1.924+0.699)/3 = 205.3 -->
+  <circle cx="753" cy="205" r="4" class="planet-dot"/>
+  <text x="753" y="222" class="planet-label">Uranus</text>
+
+  <!-- Neptune: a=30.07, log(a)=1.478, P=164.8, log(P)=2.217 -->
+  <!-- px = 160 + 660*(1.478+0.523)/2.125 = 815.0, py = 430 - 330*(2.217+0.699)/3 = 176.0 -->
+  <circle cx="815" cy="176" r="4" class="planet-dot"/>
+  <text x="815" y="193" class="planet-label">Neptune</text>
+
+  <!-- Slope annotation -->
+  <text x="745" y="160" class="annotation">slope = 3/2</text>
+
+  <!-- Bottom insight -->
+  <text x="480" y="525" font-size="12" fill="#5c6470" text-anchor="middle" font-style="italic">
+    All planets fit one straight line → same central mass (the Sun)
+  </text>
 </svg>

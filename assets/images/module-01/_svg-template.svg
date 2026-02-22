@@ -1,174 +1,113 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540" role="img" aria-labelledby="title desc" data-theme="dark" data-palette="aurora">
-  <title id="title">SVG Template (ASTR 101)</title>
-  <desc id="desc">Template for course SVG figures with accessible metadata and consistent palettes for dark/light backgrounds.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540" role="img" aria-labelledby="title desc">
+  <title id="title">SVG Template (ASTR 101 — Academic Brand)</title>
+  <desc id="desc">Template for course SVG figures using the academic brand palette: cream background, navy text, teal/gold/mauve accents.</desc>
 
   <defs>
     <style>
       :root{
-        /* =========
-           Neutrals
-           ========= */
-        --bg:#0b0b0f;
-        --panel:#13162a;
-        --fg:#eef0ff;
-        --muted:#c9cbe5;
-        --faint:#8f92ad;
-        --grid:#1a1c28;
-        --grid-strong:#24263a;
-
-        /* =========
-           Accent palettes (course colors)
-           ========= */
-        /* Jewel Aurora (deep but visible) */
-        --aurora-teal:#028391;
-        --aurora-teal-bright:#41A2AC;
-        --aurora-teal-dim:#02626D;
-        --aurora-teal-pale:#A6D4D8;
-
-        --aurora-pink:#BE5A83;
-        --aurora-pink-bright:#CE83A2;
-        --aurora-pink-dim:#8E4462;
-        --aurora-pink-pale:#E8C5D4;
-
-        --aurora-violet:#7077A1;
-        --aurora-violet-bright:#9499B8;
-        --aurora-violet-dim:#545979;
-        --aurora-violet-pale:#CDCFDE;
-
-        /* Deep Jewel (maximum twilight) */
-        --deep-teal:#257180;
-        --deep-teal-bright:#5C94A0;
-        --deep-teal-dim:#1C5560;
-        --deep-teal-pale:#B3CDD3;
-
-        --deep-pink:#A35C7A;
-        --deep-pink-bright:#BA859B;
-        --deep-pink-dim:#7A455C;
-        --deep-pink-pale:#DFC6D0;
-
-        --deep-violet:#655D8A;
-        --deep-violet-bright:#8C86A7;
-        --deep-violet-dim:#4C4668;
-        --deep-violet-pale:#C9C6D6;
-
-        /* =========
-           Semantic mapping (do not change meaning)
-           ========= */
-        --teal:var(--aurora-teal);
-        --teal-bright:var(--aurora-teal-bright);
-        --teal-dim:var(--aurora-teal-dim);
-        --teal-pale:var(--aurora-teal-pale);
-
-        --pink:var(--aurora-pink);
-        --pink-bright:var(--aurora-pink-bright);
-        --pink-dim:var(--aurora-pink-dim);
-        --pink-pale:var(--aurora-pink-pale);
-
-        --violet:var(--aurora-violet);
-        --violet-bright:var(--aurora-violet-bright);
-        --violet-dim:var(--aurora-violet-dim);
-        --violet-pale:var(--aurora-violet-pale);
-
-        /* =========
-           Figure constants
-           ========= */
-        --sun:#f6d55c;
-        --orbitW:5;
-        --guideW:2.5;
-      }
-
-      svg[data-palette="deep"]{
-        --teal:var(--deep-teal);
-        --teal-bright:var(--deep-teal-bright);
-        --teal-dim:var(--deep-teal-dim);
-        --teal-pale:var(--deep-teal-pale);
-
-        --pink:var(--deep-pink);
-        --pink-bright:var(--deep-pink-bright);
-        --pink-dim:var(--deep-pink-dim);
-        --pink-pale:var(--deep-pink-pale);
-
-        --violet:var(--deep-violet);
-        --violet-bright:var(--deep-violet-bright);
-        --violet-dim:var(--deep-violet-dim);
-        --violet-pale:var(--deep-violet-pale);
-      }
-
-      svg[data-theme="light"]{
+        /* ===== Background & Surface ===== */
         --bg:#ffffff;
-        --panel:#f2f3fb;
-        --fg:#111218;
-        --muted:#3a3d52;
-        --faint:#666b85;
-        --grid:#e7e8f0;
-        --grid-strong:#cfd1df;
+        --surface:#eef1f5;
+        --border:#d4d0cc;
+        --border-light:#e8e5e1;
+
+        /* ===== Text ===== */
+        --text:#0d1f2d;
+        --navy:#1a3a52;
+        --muted:#5c6470;
+        --faint:#a99f99;
+
+        /* ===== Accents ===== */
+        --teal:#6b9fa1;
+        --teal-light:#8fbfc0;
+        --teal-dark:#4a7e80;
+
+        --gold:#c9a66b;
+        --gold-light:#dcc194;
+        --gold-dark:#7f6d44;
+
+        --mauve:#8b7a8b;
+        --mauve-light:#b8a8b8;
+        --mauve-dark:#6b5a6b;
+
+        /* ===== Semantic ===== */
+        --sun:#d4a843;
+        --orbit:var(--teal);
+        --force:var(--gold);
+        --annotation:var(--mauve);
+
+        /* ===== Grid ===== */
+        --grid:#e0ddd8;
+        --grid-strong:#d4d0cc;
+
+        /* ===== Figure constants ===== */
+        --orbitW:2;
+        --guideW:1.5;
       }
 
       text{
-        font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
-        fill: var(--fg);
+        font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        fill: var(--navy);
       }
-      .title{ font-size: 28px; font-weight: 750; }
-      .subtitle{ font-size: 18px; fill: var(--muted); }
-      .label{ font-size: 20px; font-weight: 650; }
-      .small{ font-size: 18px; letter-spacing: 0.2px; fill: var(--muted); }
+      .title{ font-size: 26px; font-weight: 650; fill: var(--navy); }
+      .subtitle{ font-size: 16px; font-weight: 400; fill: var(--muted); }
+      .label{ font-size: 18px; font-weight: 600; fill: var(--navy); }
+      .small{ font-size: 15px; letter-spacing: 0.15px; fill: var(--muted); }
+      .tiny{ font-size: 13px; letter-spacing: 0.15px; fill: var(--muted); }
       .faint{ fill: var(--faint); }
-      .dash{ stroke-dasharray: 10 10; }
+      .dash{ stroke-dasharray: 8 6; }
 
-      /* Text safety when labels sit on top of lines/fills */
+      /* Text readability on colored fills */
       .outline{
         paint-order: stroke;
         stroke: var(--bg);
-        stroke-width: 6px;
+        stroke-width: 5px;
         stroke-linejoin: round;
       }
 
-      /* Panels (footer/callouts) */
+      /* Panels / callout boxes */
       .panel{
-        fill: var(--panel);
-        stroke: var(--violet);
-        stroke-width: 1.5;
-        opacity: 0.96;
+        fill: var(--surface);
+        stroke: var(--border);
+        stroke-width: 1;
+        rx: 8;
       }
-      .panel-title{ font-size: 18px; font-weight: 750; fill: var(--muted); letter-spacing: 0.2px; }
+      .panel-title{ font-size: 15px; font-weight: 650; fill: var(--navy); letter-spacing: 0.2px; }
 
       .accent-teal{ fill: var(--teal); }
-      .accent-pink{ fill: var(--pink); }
-      .accent-violet{ fill: var(--violet); }
+      .accent-gold{ fill: var(--gold); }
+      .accent-mauve{ fill: var(--mauve); }
 
-      /* Minimal “math” conventions (full LaTeX is a separate pipeline) */
       .math{ font-style: italic; }
     </style>
 
-    <marker id="arrow-teal" markerWidth="10" markerHeight="10" refX="7" refY="5" orient="auto">
-      <path d="M 0 0 L 10 5 L 0 10 z" fill="var(--teal)"/>
+    <!-- Arrow markers -->
+    <marker id="arrow-navy" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+      <path d="M 0 0 L 8 4 L 0 8 z" fill="var(--navy)"/>
     </marker>
-    <marker id="arrow-pink" markerWidth="10" markerHeight="10" refX="7" refY="5" orient="auto">
-      <path d="M 0 0 L 10 5 L 0 10 z" fill="var(--pink)"/>
+    <marker id="arrow-teal" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+      <path d="M 0 0 L 8 4 L 0 8 z" fill="var(--teal)"/>
     </marker>
-    <marker id="arrow-violet" markerWidth="10" markerHeight="10" refX="7" refY="5" orient="auto">
-      <path d="M 0 0 L 10 5 L 0 10 z" fill="var(--violet)"/>
+    <marker id="arrow-gold" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+      <path d="M 0 0 L 8 4 L 0 8 z" fill="var(--gold)"/>
+    </marker>
+    <marker id="arrow-mauve" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+      <path d="M 0 0 L 8 4 L 0 8 z" fill="var(--mauve)"/>
     </marker>
   </defs>
 
-  <!-- Background (set --bg: transparent to remove) -->
+  <!-- Background -->
   <rect x="0" y="0" width="960" height="540" fill="var(--bg)"/>
 
-  <!-- Optional grid -->
-  <g opacity="0.25">
-    <path d="M0 90 H960 M0 180 H960 M0 270 H960 M0 360 H960 M0 450 H960" stroke="var(--grid)" stroke-width="1"/>
-    <path d="M120 0 V540 M240 0 V540 M360 0 V540 M480 0 V540 M600 0 V540 M720 0 V540 M840 0 V540" stroke="var(--grid)" stroke-width="1"/>
-  </g>
-
   <!-- Header -->
-  <text x="48" y="56" class="title">Figure Title</text>
-  <text x="48" y="82" class="subtitle">Subtitle / “what to notice” prompt (keep short here; prefer caption in registry).</text>
+  <text x="48" y="48" class="title">Figure Title</text>
+  <text x="48" y="72" class="subtitle">What to notice — keep short; detail goes in the figure registry caption.</text>
 
   <!-- Diagram area -->
   <g transform="translate(0,0)">
     <!-- Your figure goes here -->
-    <circle cx="480" cy="300" r="6" fill="var(--pink)"/>
-    <text x="500" y="305" class="label">Example mark</text>
+    <circle cx="480" cy="300" r="6" fill="var(--teal)"/>
+    <text x="500" y="305" class="label">Example</text>
   </g>
 </svg>

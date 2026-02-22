@@ -1,213 +1,176 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540" role="img" aria-labelledby="title desc" data-theme="dark" data-palette="aurora">
-  <title id="title">Retrograde motion is an illusion of perspective</title>
-  <desc id="desc">Two-panel conceptual diagram. Left: Mars positions against background stars trace a loop, with the retrograde segment highlighted. Right: top-down view of Earth and Mars orbiting the Sun shows Earth overtaking Mars; changing lines of sight produce the apparent backward motion on the sky.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540">
+  <title>Retrograde Motion of Mars</title>
+  <desc>Two-panel figure showing retrograde motion. Left: Mars path on sky showing numbered positions and retrograde loop. Right: Heliocentric view with Earth overtaking Mars.</desc>
 
   <defs>
     <style>
-      :root{
-        /* Neutrals */
-        --bg:#0b0b0f;
-        --panel:#13162a;
-        --fg:#eef0ff;
-        --muted:#c9cbe5;
-        --faint:#8f92ad;
-        --grid:#1a1c28;
-        --grid-strong:#24263a;
-
-        /* Accent palettes (course colors) */
-        --aurora-teal:#028391;
-        --aurora-teal-bright:#41A2AC;
-        --aurora-teal-dim:#02626D;
-        --aurora-teal-pale:#A6D4D8;
-
-        --aurora-pink:#BE5A83;
-        --aurora-pink-bright:#CE83A2;
-        --aurora-pink-dim:#8E4462;
-        --aurora-pink-pale:#E8C5D4;
-
-        --aurora-violet:#7077A1;
-        --aurora-violet-bright:#9499B8;
-        --aurora-violet-dim:#545979;
-        --aurora-violet-pale:#CDCFDE;
-
-        /* Semantic mapping */
-        --teal:var(--aurora-teal);
-        --teal-bright:var(--aurora-teal-bright);
-        --teal-dim:var(--aurora-teal-dim);
-        --teal-pale:var(--aurora-teal-pale);
-
-        --pink:var(--aurora-pink);
-        --pink-bright:var(--aurora-pink-bright);
-        --pink-dim:var(--aurora-pink-dim);
-        --pink-pale:var(--aurora-pink-pale);
-
-        --violet:var(--aurora-violet);
-        --violet-bright:var(--aurora-violet-bright);
-        --violet-dim:var(--aurora-violet-dim);
-        --violet-pale:var(--aurora-violet-pale);
-
-        /* Constants */
-        --sun:#f6d55c;
-      }
-
-      text{
-        font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
-        fill: var(--fg);
-      }
-      .title{ font-size: 28px; font-weight: 750; }
-      .subtitle{ font-size: 18px; fill: var(--muted); }
-      .label{ font-size: 20px; font-weight: 700; }
-      .small{ font-size: 18px; letter-spacing: 0.2px; fill: var(--muted); }
-      .faint{ fill: var(--faint); }
-      .outline{ paint-order: stroke; stroke: var(--bg); stroke-width: 6px; stroke-linejoin: round; }
-      .panel{ fill: var(--panel); stroke: var(--violet); stroke-width: 1.5; opacity: 0.96; }
-      .panel-title{ font-size: 18px; font-weight: 800; fill: var(--muted); letter-spacing: 0.2px; }
-      .dash{ stroke-dasharray: 10 10; }
-
-      .stroke-teal{ stroke: var(--teal); }
-      .stroke-pink{ stroke: var(--pink); }
-      .stroke-violet{ stroke: var(--violet); }
+      text { font-family: Inter, system-ui, sans-serif; font-size: 14px; }
+      .title-main { font-size: 18px; font-weight: 600; fill: #1a3a52; }
+      .title-sub { font-size: 15px; fill: #5c6470; }
+      .label-panel { font-size: 14px; font-weight: 500; fill: #1a3a52; }
+      .label-sm { font-size: 12px; fill: #5c6470; }
+      .label-tiny { font-size: 13px; fill: #5c6470; }
+      .text-gold { fill: #c9a66b; }
+      .text-mauve { fill: #8b7a8b; }
+      .text-teal { fill: #6b9fa1; }
     </style>
 
-    <filter id="softGlow" x="-30%" y="-30%" width="160%" height="160%">
-      <feGaussianBlur stdDeviation="2.0" result="blur"/>
+    <marker id="arrowTeal" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0 0 L8 3 L0 6 Z" fill="#6b9fa1"/>
+    </marker>
+
+    <marker id="arrowGold" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0 0 L8 3 L0 6 Z" fill="#c9a66b"/>
+    </marker>
+
+    <filter id="glow-sun">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
       <feMerge>
-        <feMergeNode in="blur"/>
+        <feMergeNode in="coloredBlur"/>
         <feMergeNode in="SourceGraphic"/>
       </feMerge>
     </filter>
-
-    <marker id="arrow-teal" markerWidth="10" markerHeight="10" refX="7" refY="5" orient="auto">
-      <path d="M 0 0 L 10 5 L 0 10 z" fill="var(--teal)"/>
-    </marker>
-    <marker id="arrow-pink" markerWidth="10" markerHeight="10" refX="7" refY="5" orient="auto">
-      <path d="M 0 0 L 10 5 L 0 10 z" fill="var(--pink)"/>
-    </marker>
-    <marker id="arrow-violet" markerWidth="10" markerHeight="10" refX="7" refY="5" orient="auto">
-      <path d="M 0 0 L 10 5 L 0 10 z" fill="var(--violet)"/>
-    </marker>
   </defs>
 
   <!-- Background -->
-  <rect x="0" y="0" width="960" height="540" fill="var(--bg)"/>
+  <rect width="960" height="540" fill="#ffffff"/>
 
-  <!-- Header -->
-  <text x="48" y="56" class="title">Retrograde motion is an illusion</text>
-  <text x="48" y="82" class="subtitle">Mars never reverses its orbit — Earth passes it, and our line of sight changes.</text>
+  <!-- Main title -->
+  <text x="480" y="35" text-anchor="middle" class="title-main">Retrograde Motion of Mars</text>
+  <text x="480" y="52" text-anchor="middle" class="title-sub">Earth overtaking Mars creates an apparent backward loop</text>
 
-  <!-- Panels -->
-  <g>
-    <!-- Left: sky-view loop -->
-    <rect x="48" y="110" width="430" height="340" rx="14" class="panel"/>
-    <text x="70" y="146" class="panel-title">Sky view (against “fixed stars”)</text>
-    <text x="70" y="172" class="small">Apparent motion only</text>
+  <!-- Divider line between panels -->
+  <line x1="480" y1="70" x2="480" y2="530" stroke="#d4d0cc" stroke-width="1.5"/>
 
-    <!-- subtle starfield -->
-    <g opacity="0.75">
-      <circle cx="92" cy="214" r="1.7" fill="var(--grid-strong)"/>
-      <circle cx="128" cy="334" r="1.3" fill="var(--grid-strong)"/>
-      <circle cx="160" cy="260" r="1.4" fill="var(--grid-strong)"/>
-      <circle cx="196" cy="206" r="1.5" fill="var(--grid-strong)"/>
-      <circle cx="224" cy="352" r="1.2" fill="var(--grid-strong)"/>
-      <circle cx="264" cy="232" r="1.3" fill="var(--grid-strong)"/>
-      <circle cx="286" cy="392" r="1.5" fill="var(--grid-strong)"/>
-      <circle cx="328" cy="206" r="1.2" fill="var(--grid-strong)"/>
-      <circle cx="346" cy="290" r="1.4" fill="var(--grid-strong)"/>
-      <circle cx="388" cy="250" r="1.3" fill="var(--grid-strong)"/>
-      <circle cx="420" cy="360" r="1.2" fill="var(--grid-strong)"/>
-      <circle cx="450" cy="210" r="1.4" fill="var(--grid-strong)"/>
-    </g>
+  <!-- ===== LEFT PANEL: Sky View ===== -->
+  <g id="sky-view">
+    <text x="240" y="90" text-anchor="middle" class="label-panel">As Seen on the Sky</text>
+    <text x="240" y="107" text-anchor="middle" class="label-sm">(against fixed stars)</text>
 
-    <!-- Apparent track (stylized loop) -->
-    <!-- Pre-retrograde: forward -->
-    <path d="M 105 370 C 175 320 245 300 320 320"
-          fill="none" stroke="var(--teal)" stroke-width="4" stroke-linecap="round" filter="url(#softGlow)"
-          marker-end="url(#arrow-teal)"/>
-    <!-- Retrograde segment: backward along the sky -->
-    <path d="M 320 320 C 370 335 370 400 320 410 C 260 422 238 380 268 358 C 292 340 310 342 328 348"
-          fill="none" stroke="var(--pink)" stroke-width="5" stroke-linecap="round" filter="url(#softGlow)"
-          marker-end="url(#arrow-pink)"/>
-    <!-- Post-retrograde: forward again -->
-    <path d="M 328 348 C 360 360 396 382 440 410"
-          fill="none" stroke="var(--teal)" stroke-width="4" stroke-linecap="round" filter="url(#softGlow)"
-          marker-end="url(#arrow-teal)"/>
+    <!-- Starfield background - opacity 0.7 -->
+    <circle cx="140" cy="160" r="1.5" fill="#a99f99" opacity="0.7"/>
+    <circle cx="180" cy="130" r="1" fill="#a99f99" opacity="0.7"/>
+    <circle cx="260" cy="180" r="1.5" fill="#a99f99" opacity="0.7"/>
+    <circle cx="300" cy="150" r="1" fill="#a99f99" opacity="0.7"/>
+    <circle cx="160" cy="270" r="1" fill="#a99f99" opacity="0.7"/>
+    <circle cx="220" cy="310" r="1.5" fill="#a99f99" opacity="0.7"/>
+    <circle cx="280" cy="280" r="1" fill="#a99f99" opacity="0.7"/>
+    <circle cx="230" cy="230" r="1" fill="#a99f99" opacity="0.7"/>
+    <circle cx="320" cy="240" r="1" fill="#a99f99" opacity="0.7"/>
+    <circle cx="130" cy="240" r="1.5" fill="#a99f99" opacity="0.7"/>
+    <circle cx="200" cy="390" r="1" fill="#a99f99" opacity="0.7"/>
+    <circle cx="290" cy="360" r="1" fill="#a99f99" opacity="0.7"/>
+    <circle cx="270" cy="420" r="1.5" fill="#a99f99" opacity="0.7"/>
+    <circle cx="150" cy="350" r="1" fill="#a99f99" opacity="0.7"/>
+    <circle cx="310" cy="310" r="1" fill="#a99f99" opacity="0.7"/>
 
-    <!-- Observation points -->
-    <g opacity="0.95">
-      <circle cx="105" cy="370" r="5" fill="var(--fg)"/>
-      <circle cx="160" cy="338" r="5" fill="var(--fg)"/>
-      <circle cx="220" cy="316" r="5" fill="var(--fg)"/>
-      <circle cx="280" cy="312" r="5" fill="var(--fg)"/>
-      <circle cx="320" cy="320" r="5.5" fill="var(--pink)"/>
-      <circle cx="318" cy="410" r="5.5" fill="var(--pink)"/>
-      <circle cx="440" cy="410" r="5" fill="var(--fg)"/>
-    </g>
+    <text x="240" y="520" text-anchor="middle" class="label-tiny" fill="#a99f99">Fixed stars (background)</text>
 
-    <text x="70" y="420" class="label outline" fill="var(--pink)">retrograde segment</text>
-    <text x="70" y="444" class="small outline">apparent “backward” drift on the sky</text>
+    <!-- Mars path: forward (teal) → backward/retrograde (gold) → forward (teal) -->
+    <!-- Forward segment 1 (positions 1-2) -->
+    <path d="M 160 240 Q 180 260 200 270" fill="none" stroke="#6b9fa1" stroke-width="2.5" opacity="0.8"/>
 
-    <!-- Right: top-down geometry -->
-    <rect x="502" y="110" width="410" height="340" rx="14" class="panel"/>
-    <text x="524" y="146" class="panel-title">Top-down view (heliocentric geometry)</text>
-    <text x="524" y="172" class="small">Earth overtakes Mars</text>
+    <!-- Retrograde loop (positions 3-4-5, gold) -->
+    <path d="M 200 270 Q 220 290 240 280 Q 255 240 240 210 Q 220 200 200 210 Q 190 235 200 270"
+          fill="none" stroke="#c9a66b" stroke-width="3" opacity="0.9"/>
 
-    <!-- Orbits -->
-    <g>
-      <circle cx="707" cy="300" r="112" fill="none" stroke="var(--teal)" stroke-width="3.5" opacity="0.95"/>
-      <circle cx="707" cy="300" r="72" fill="none" stroke="var(--violet)" stroke-width="2.5" opacity="0.75" class="dash"/>
+    <!-- Forward segment 2 (positions 6-7) -->
+    <path d="M 240 210 Q 260 190 290 180" fill="none" stroke="#6b9fa1" stroke-width="2.5" opacity="0.8"/>
 
-      <!-- Sun -->
-      <circle cx="707" cy="300" r="14" fill="var(--sun)" filter="url(#softGlow)"/>
-      <circle cx="707" cy="300" r="20" fill="none" stroke="var(--sun)" stroke-width="2" opacity="0.55"/>
-      <text x="707" y="332" class="small outline" text-anchor="middle">Sun</text>
+    <!-- Numbered position markers -->
+    <!-- Pos 1: forward motion start -->
+    <circle cx="160" cy="240" r="4" fill="white" stroke="#1a3a52" stroke-width="1.5"/>
+    <text x="155" y="265" text-anchor="middle" class="label-sm" fill="#1a3a52">1</text>
 
-      <!-- Positions: three moments (t1, t2, t3) -->
-      <!-- Earth (inner orbit) -->
-      <circle cx="767" cy="270" r="5.5" fill="var(--fg)"/>
-      <circle cx="777" cy="300" r="6.5" fill="var(--pink)"/>
-      <circle cx="767" cy="330" r="5.5" fill="var(--fg)"/>
-      <text x="790" y="272" class="small outline">E1</text>
-      <text x="795" y="304" class="small outline" fill="var(--pink)">E2</text>
-      <text x="790" y="336" class="small outline">E3</text>
+    <!-- Pos 2: forward motion continues -->
+    <circle cx="180" cy="260" r="4" fill="white" stroke="#1a3a52" stroke-width="1.5"/>
+    <text x="175" y="285" text-anchor="middle" class="label-sm" fill="#1a3a52">2</text>
 
-      <!-- Mars (outer orbit) -->
-      <circle cx="816" cy="262" r="5.5" fill="var(--fg)"/>
-      <circle cx="819" cy="300" r="6.5" fill="var(--pink)"/>
-      <circle cx="806" cy="336" r="5.5" fill="var(--fg)"/>
-      <text x="832" y="264" class="small outline">M1</text>
-      <text x="835" y="304" class="small outline" fill="var(--pink)">M2</text>
-      <text x="820" y="342" class="small outline">M3</text>
+    <!-- Pos 3: retrograde begins -->
+    <circle cx="200" cy="270" r="4" fill="white" stroke="#c9a66b" stroke-width="1.5"/>
+    <text x="210" y="295" text-anchor="middle" class="label-sm text-gold">3</text>
 
-      <!-- Motion arrows (qualitative) -->
-      <path d="M 772 252 A 72 72 0 0 1 772 348" fill="none" stroke="var(--violet)" stroke-width="2.8" marker-end="url(#arrow-violet)" opacity="0.85"/>
-      <path d="M 818 248 A 112 112 0 0 1 808 352" fill="none" stroke="var(--teal)" stroke-width="3.2" marker-end="url(#arrow-teal)" opacity="0.9"/>
+    <!-- Pos 4: retrograde maximum (leftmost) -->
+    <circle cx="220" cy="290" r="4" fill="white" stroke="#c9a66b" stroke-width="1.5"/>
+    <text x="230" y="315" text-anchor="middle" class="label-sm text-gold">4</text>
 
-      <!-- Lines of sight -->
-      <line x1="767" y1="270" x2="816" y2="262" stroke="var(--violet)" stroke-width="2.2" opacity="0.55"/>
-      <line x1="777" y1="300" x2="819" y2="300" stroke="var(--pink)" stroke-width="2.6" opacity="0.8"/>
-      <line x1="767" y1="330" x2="806" y2="336" stroke="var(--violet)" stroke-width="2.2" opacity="0.55"/>
+    <!-- Pos 5: retrograde upward turn -->
+    <circle cx="240" cy="250" r="4" fill="white" stroke="#c9a66b" stroke-width="1.5"/>
+    <text x="250" y="270" text-anchor="middle" class="label-sm text-gold">5</text>
 
-      <!-- Fixed direction cue (moved down to avoid overlapping the panel subtitle) -->
-      <line x1="590" y1="212" x2="590" y2="236" stroke="var(--grid-strong)" stroke-width="2.2" marker-end="url(#arrow-violet)" opacity="0.8"/>
-      <text x="590" y="206" class="small faint outline" text-anchor="middle">toward fixed stars</text>
+    <!-- Pos 6: returning to forward -->
+    <circle cx="240" cy="210" r="4" fill="white" stroke="#1a3a52" stroke-width="1.5"/>
+    <text x="250" y="195" text-anchor="middle" class="label-sm" fill="#1a3a52">6</text>
 
-      <!-- Legend (kept separate from the direction cue) -->
-      <text x="890" y="242" class="small outline" text-anchor="end">E = Earth, M = Mars</text>
-    </g>
+    <!-- Pos 7: forward motion resumes -->
+    <circle cx="290" cy="180" r="4" fill="white" stroke="#1a3a52" stroke-width="1.5"/>
+    <text x="305" y="165" text-anchor="middle" class="label-sm" fill="#1a3a52">7</text>
 
-    <text x="524" y="420" class="label outline">Mars always moves forward</text>
-    <text x="524" y="444" class="small outline">the “backward” part comes from changing viewpoint</text>
+    <!-- Retrograde label moved below the loop -->
+    <text x="220" y="340" text-anchor="middle" class="label-sm text-gold" font-weight="600">Retrograde</text>
+    <text x="220" y="357" text-anchor="middle" class="label-sm text-gold">backward</text>
   </g>
 
-  <!-- Footer takeaway -->
-  <g transform="translate(48,470)">
-    <rect x="0" y="0" width="864" height="70" rx="12" class="panel"/>
-    <text x="18" y="30" class="label">
-      Key idea: retrograde is a <tspan fill="var(--pink)" font-weight="800">viewing-geometry</tspan> effect.
-    </text>
-    <text x="18" y="54" class="small">
-      Earth overtakes Mars, so the line of sight sweeps backward across the star background for a while.
-    </text>
+  <!-- ===== RIGHT PANEL: Heliocentric View ===== -->
+  <g id="heliocentric-view">
+    <text x="720" y="90" text-anchor="middle" class="label-panel">Top-Down Heliocentric View</text>
+    <text x="720" y="107" text-anchor="middle" class="label-sm">(Sun at center)</text>
+
+    <!-- Sun at center -->
+    <circle cx="720" cy="280" r="10" fill="#c9a66b" filter="url(#glow-sun)"/>
+    <text x="720" y="325" text-anchor="middle" class="label-sm text-gold" font-weight="600">Sun</text>
+
+    <!-- Earth orbit (teal circle) -->
+    <circle cx="720" cy="280" r="85" fill="none" stroke="#6b9fa1" stroke-width="2" opacity="0.6"/>
+
+    <!-- Mars orbit (mauve dashed circle, outer) -->
+    <circle cx="720" cy="280" r="140" fill="none" stroke="#8b7a8b" stroke-width="2" stroke-dasharray="4,4" opacity="0.6"/>
+
+    <!-- Configuration 1: E before M, Earth approaching -->
+    <!-- Earth position E1 (right of orbit) -->
+    <circle cx="805" cy="280" r="5" fill="#6b9fa1"/>
+    <text x="820" y="285" class="label-sm text-teal" font-weight="600">E₁</text>
+
+    <!-- Mars position M1 (upper right, ahead of Earth) -->
+    <circle cx="835" cy="215" r="6" fill="#8b7a8b"/>
+    <text x="850" y="220" class="label-sm text-mauve" font-weight="600">M₁</text>
+
+    <!-- Sight line 1 -->
+    <line x1="805" y1="280" x2="835" y2="215" stroke="#1a3a52" stroke-width="1" stroke-dasharray="3,3" opacity="0.5"/>
+
+    <!-- Configuration 2: E overtaking M -->
+    <!-- Earth position E2 (top) -->
+    <circle cx="720" cy="195" r="5" fill="#6b9fa1"/>
+    <text x="735" y="200" class="label-sm text-teal" font-weight="600">E₂</text>
+
+    <!-- Mars position M2 (upper right, Earth catching up) -->
+    <circle cx="780" cy="155" r="6" fill="#8b7a8b"/>
+    <text x="795" y="160" class="label-sm text-mauve" font-weight="600">M₂</text>
+
+    <!-- Sight line 2 -->
+    <line x1="720" y1="195" x2="780" y2="155" stroke="#1a3a52" stroke-width="1" stroke-dasharray="3,3" opacity="0.5"/>
+
+    <!-- Configuration 3: E overtakes M (maximum retrograde) -->
+    <!-- Earth position E3 (lower left) -->
+    <circle cx="635" cy="280" r="5" fill="#6b9fa1"/>
+    <text x="610" y="285" class="label-sm text-teal" font-weight="600">E₃</text>
+
+    <!-- Mars position M3 (further out, overtaken by Earth) -->
+    <circle cx="600" cy="360" r="6" fill="#8b7a8b"/>
+    <text x="585" y="370" class="label-sm text-mauve" font-weight="600">M₃</text>
+
+    <!-- Sight line 3 -->
+    <line x1="635" y1="280" x2="600" y2="360" stroke="#1a3a52" stroke-width="1" stroke-dasharray="3,3" opacity="0.5"/>
+
+    <!-- Earth orbit arrow (CCW) -->
+    <path d="M 805 280 A 85 85 0 0 1 720 195" fill="none" stroke="#6b9fa1" stroke-width="2.5" marker-end="url(#arrowTeal)"/>
+    <text x="750" y="235" class="label-tiny text-teal">Earth orbit</text>
+
+    <!-- Mars orbit label -->
+    <text x="720" y="440" text-anchor="middle" class="label-tiny text-mauve">Mars orbit (slower, outer)</text>
+
+    <!-- Key insight -->
+    <text x="720" y="480" text-anchor="middle" class="label-sm" font-weight="600">Earth catches Mars → Mars appears to drift backward</text>
   </g>
 </svg>

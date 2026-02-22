@@ -715,7 +715,7 @@ figures:
     module: 1
 
   kepler-third-law-loglog:
-    path: /assets/images/module-01/lec05/kepler-third-law-loglog.svg
+    path: /assets/images/module-01/lec05/kepler-third-law-graph.svg
     caption: "What to notice: on a log–log plot, Kepler’s Third Law becomes a straight line — the slope (3/2) encodes the exponent."
     alt: "Log–log plot of orbital period P versus semimajor axis a for the eight planets. The points line up along a straight best-fit line with slope 3/2."
     credit: "Illustration: A. Rosen (SVG)"

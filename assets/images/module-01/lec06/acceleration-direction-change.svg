@@ -1,124 +1,85 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540" role="img" aria-labelledby="title desc" data-theme="dark" data-palette="aurora">
-  <title id="title">Acceleration includes direction changes</title>
-  <desc id="desc">An object moves at constant speed around a circle. Velocity vectors are tangent to the path and point in different directions. An acceleration vector points inward toward the center, showing that changing direction means changing velocity.</desc>
+<svg viewBox="0 0 960 540" width="960" height="540" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title>Acceleration Includes Direction Changes</title>
+  <desc>A circular path showing six evenly-spaced object positions. At each position, a tangent velocity arrow (teal) points along the circle. At the rightmost position, a gold arrow points inward toward the center, labeled as acceleration. The diagram illustrates that even at constant speed, changing direction requires acceleration.</desc>
 
   <defs>
     <style>
       :root{
-        --bg:#0b0b0f;
-        --panel:#13162a;
-        --fg:#eef0ff;
-        --muted:#c9cbe5;
-        --faint:#8f92ad;
-        --grid:#1a1c28;
-        --grid-strong:#24263a;
-
-        --aurora-teal:#028391;
-        --aurora-teal-bright:#41A2AC;
-        --aurora-teal-dim:#02626D;
-        --aurora-teal-pale:#A6D4D8;
-
-        --aurora-pink:#BE5A83;
-        --aurora-pink-bright:#CE83A2;
-        --aurora-pink-dim:#8E4462;
-        --aurora-pink-pale:#E8C5D4;
-
-        --aurora-violet:#7077A1;
-        --aurora-violet-bright:#9499B8;
-        --aurora-violet-dim:#545979;
-        --aurora-violet-pale:#CDCFDE;
-
-        --teal:var(--aurora-teal);
-        --teal-bright:var(--aurora-teal-bright);
-        --teal-dim:var(--aurora-teal-dim);
-        --teal-pale:var(--aurora-teal-pale);
-
-        --pink:var(--aurora-pink);
-        --pink-bright:var(--aurora-pink-bright);
-        --pink-dim:var(--aurora-pink-dim);
-        --pink-pale:var(--aurora-pink-pale);
-
-        --violet:var(--aurora-violet);
-        --violet-bright:var(--aurora-violet-bright);
-        --violet-dim:var(--aurora-violet-dim);
-        --violet-pale:var(--aurora-violet-pale);
+        --bg:#ffffff; --surface:#eef1f5; --border:#d4d0cc; --border-light:#e8e5e1;
+        --navy:#1a3a52; --text:#0d1f2d; --muted:#5c6470; --faint:#a99f99;
+        --teal:#6b9fa1; --teal-light:#8fbfc0; --teal-dark:#4a7e80;
+        --gold:#c9a66b; --gold-light:#dcc194; --gold-dark:#7f6d44;
+        --mauve:#8b7a8b; --mauve-light:#b8a8b8; --mauve-dark:#6b5a6b;
+        --grid:#e0ddd8; --sun:#d4a843;
       }
 
-      text{
-        font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
-        fill: var(--fg);
-      }
-      .title{ font-size: 28px; font-weight: 750; }
-      .subtitle{ font-size: 18px; fill: var(--muted); }
-      .label{ font-size: 20px; font-weight: 700; }
-      .small{ font-size: 18px; letter-spacing: 0.2px; fill: var(--muted); }
-      .outline{ paint-order: stroke; stroke: var(--bg); stroke-width: 6px; stroke-linejoin: round; }
-      .panel{ fill: var(--panel); stroke: var(--violet); stroke-width: 1.5; opacity: 0.96; }
+      text { font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+      .title { font-size: 26px; font-weight: 650; fill: var(--navy); }
+      .subtitle { font-size: 18px; font-weight: 600; fill: var(--navy); }
+      .label { font-size: 15px; fill: var(--muted); }
+      .small { font-size: 13px; fill: var(--muted); }
+
+      marker { overflow: visible; }
     </style>
 
-    <filter id="softGlow" x="-30%" y="-30%" width="160%" height="160%">
-      <feGaussianBlur stdDeviation="2.0" result="blur"/>
-      <feMerge>
-        <feMergeNode in="blur"/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
-    </filter>
+    <marker id="arrowTeal" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L0,8 L8,4 z" fill="var(--teal)" />
+    </marker>
 
-    <marker id="arrow-teal" markerWidth="10" markerHeight="10" refX="7" refY="5" orient="auto">
-      <path d="M 0 0 L 10 5 L 0 10 z" fill="var(--teal)"/>
-    </marker>
-    <marker id="arrow-violet" markerWidth="10" markerHeight="10" refX="7" refY="5" orient="auto">
-      <path d="M 0 0 L 10 5 L 0 10 z" fill="var(--violet)"/>
-    </marker>
-    <marker id="arrow-pink" markerWidth="10" markerHeight="10" refX="7" refY="5" orient="auto">
-      <path d="M 0 0 L 10 5 L 0 10 z" fill="var(--pink)"/>
+    <marker id="arrowGold" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L0,8 L8,4 z" fill="var(--gold)" />
     </marker>
   </defs>
 
-  <rect x="0" y="0" width="960" height="540" fill="var(--bg)"/>
+  <rect width="960" height="540" fill="#ffffff"/>
 
-  <!-- Header -->
-  <text x="48" y="56" class="title">Acceleration includes direction changes</text>
-  <text x="48" y="82" class="subtitle">Constant speed does not mean constant velocity.</text>
+  <text x="480" y="45" text-anchor="middle" class="title">Acceleration Includes Direction Changes</text>
+  <text x="480" y="70" text-anchor="middle" class="subtitle">Even at constant speed, changing direction means acceleration</text>
 
-  <g>
-    <rect x="48" y="110" width="864" height="340" rx="16" class="panel"/>
+  <!-- Circular path -->
+  <circle cx="480" cy="280" r="135" fill="none" stroke="var(--teal)" stroke-width="2.5"/>
 
-    <!-- Circular path -->
-    <circle cx="480" cy="285" r="135" fill="none" stroke="var(--teal)" stroke-width="5" opacity="0.95" filter="url(#softGlow)"/>
-    <circle cx="480" cy="285" r="6" fill="var(--violet)" opacity="0.9"/>
-    <text x="480" y="322" class="small outline" text-anchor="middle">center</text>
+  <!-- Center dot -->
+  <circle cx="480" cy="280" r="4" fill="var(--navy)"/>
+  <text x="480" y="310" text-anchor="middle" class="label">center</text>
 
-    <!-- Object positions -->
-    <circle cx="615" cy="285" r="7" fill="var(--fg)" opacity="0.95"/>
-    <circle cx="548" cy="167" r="7" fill="var(--fg)" opacity="0.95"/>
-    <circle cx="412" cy="167" r="7" fill="var(--fg)" opacity="0.95"/>
-    <circle cx="345" cy="285" r="7" fill="var(--fg)" opacity="0.95"/>
-    <circle cx="412" cy="403" r="7" fill="var(--fg)" opacity="0.95"/>
-    <circle cx="548" cy="403" r="7" fill="var(--fg)" opacity="0.95"/>
+  <!-- Six object positions around circle (evenly spaced at 60° intervals) -->
+  <!-- Top position (0°) -->
+  <circle cx="480" cy="145" r="5" fill="var(--navy)"/>
+  <line x1="480" y1="145" x2="555" y2="145" stroke="var(--teal)" stroke-width="2.5" marker-end="url(#arrowTeal)"/>
 
-    <!-- Velocity vectors (tangent) -->
-    <line x1="615" y1="285" x2="615" y2="220" stroke="var(--violet)" stroke-width="3.2" marker-end="url(#arrow-violet)" opacity="0.95"/>
-    <line x1="548" y1="167" x2="608" y2="167" stroke="var(--violet)" stroke-width="3.2" marker-end="url(#arrow-violet)" opacity="0.95"/>
-    <line x1="412" y1="167" x2="352" y2="167" stroke="var(--violet)" stroke-width="3.2" marker-end="url(#arrow-violet)" opacity="0.95"/>
-    <line x1="345" y1="285" x2="345" y2="350" stroke="var(--violet)" stroke-width="3.2" marker-end="url(#arrow-violet)" opacity="0.95"/>
-    <line x1="412" y1="403" x2="352" y2="403" stroke="var(--violet)" stroke-width="3.2" marker-end="url(#arrow-violet)" opacity="0.95"/>
-    <line x1="548" y1="403" x2="608" y2="403" stroke="var(--violet)" stroke-width="3.2" marker-end="url(#arrow-violet)" opacity="0.95"/>
+  <!-- Upper right (60°) -->
+  <circle cx="592" cy="162" r="5" fill="var(--navy)"/>
+  <line x1="592" y1="162" x2="640" y2="95" stroke="var(--teal)" stroke-width="2.5" marker-end="url(#arrowTeal)"/>
 
-    <!-- Acceleration vector (inward) -->
-    <line x1="615" y1="285" x2="535" y2="285" stroke="var(--pink)" stroke-width="4.0" marker-end="url(#arrow-pink)" opacity="0.95"/>
-    <text x="620" y="316" class="label outline" fill="var(--pink)">a points inward</text>
-    <text x="620" y="340" class="small outline">direction changes → velocity changes</text>
+  <!-- Lower right (120°) -->
+  <circle cx="592" cy="398" r="5" fill="var(--navy)"/>
+  <line x1="592" y1="398" x2="640" y2="465" stroke="var(--teal)" stroke-width="2.5" marker-end="url(#arrowTeal)"/>
 
-    <text x="120" y="178" class="label outline">v is always tangent</text>
-    <text x="120" y="202" class="small outline">even if the speed is constant</text>
-  </g>
+  <!-- Bottom position (180°) -->
+  <circle cx="480" cy="415" r="5" fill="var(--navy)"/>
+  <line x1="480" y1="415" x2="480" y2="470" stroke="var(--teal)" stroke-width="2.5" marker-end="url(#arrowTeal)"/>
 
-  <g transform="translate(48,470)">
-    <rect x="0" y="0" width="864" height="70" rx="12" class="panel"/>
-    <text x="18" y="30" class="label">Key idea: acceleration is any change in velocity — including turning.</text>
-    <text x="18" y="54" class="small">Circular motion requires a net inward force (because F = ma).</text>
-  </g>
+  <!-- Lower left (240°) -->
+  <circle cx="368" cy="398" r="5" fill="var(--navy)"/>
+  <line x1="368" y1="398" x2="320" y2="465" stroke="var(--teal)" stroke-width="2.5" marker-end="url(#arrowTeal)"/>
+
+  <!-- Upper left (300°) -->
+  <circle cx="368" cy="162" r="5" fill="var(--navy)"/>
+  <line x1="368" y1="162" x2="320" y2="95" stroke="var(--teal)" stroke-width="2.5" marker-end="url(#arrowTeal)"/>
+
+  <!-- Rightmost position with acceleration arrow -->
+  <!-- Overwrite one of the velocity arrows with a labeled one -->
+  <circle cx="615" cy="280" r="5" fill="var(--navy)"/>
+  <line x1="615" y1="280" x2="685" y2="280" stroke="var(--teal)" stroke-width="2.5" marker-end="url(#arrowTeal)"/>
+  <text x="705" y="285" class="label">v</text>
+
+  <!-- Gold inward acceleration arrow at rightmost position -->
+  <line x1="615" y1="280" x2="545" y2="280" stroke="var(--gold)" stroke-width="3" marker-end="url(#arrowGold)"/>
+  <text x="570" y="300" text-anchor="middle" class="label" fill="var(--gold)">a</text>
+
+  <!-- Bottom annotations -->
+  <text x="480" y="500" text-anchor="middle" class="small" fill="var(--muted)">v always tangent • a always inward (centripetal)</text>
+  <text x="480" y="520" text-anchor="middle" class="small" fill="var(--muted)">direction changes → acceleration exists</text>
+
 </svg>
-

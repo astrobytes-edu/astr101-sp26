@@ -1,153 +1,95 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540" role="img" aria-labelledby="title desc" data-theme="dark" data-palette="aurora">
-  <title id="title">The apple and the Moon: same inward pull</title>
-  <desc id="desc">Two-panel diagram. Left: an apple falls straight down under gravity. Right: the Moon also accelerates inward under gravity, but its sideways motion means it keeps missing Earth, producing an orbit. Force and velocity arrows are labeled.</desc>
+<svg viewBox="0 0 960 540" width="960" height="540" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title>The Apple and the Moon</title>
+  <desc>Two-panel diagram comparing falling motion on Earth and in orbit. Left panel shows a person on the ground with an apple above, with a gravity arrow pointing downward. Right panel shows the Moon orbiting Earth with both a gravity arrow pointing toward Earth and a velocity arrow pointing tangent to the orbit. The diagram illustrates how sideways speed determines whether an object falls straight down or keeps missing everything.</desc>
 
   <defs>
     <style>
       :root{
-        --bg:#0b0b0f;
-        --panel:#13162a;
-        --fg:#eef0ff;
-        --muted:#c9cbe5;
-        --faint:#8f92ad;
-        --grid:#1a1c28;
-        --grid-strong:#24263a;
-
-        --aurora-teal:#028391;
-        --aurora-teal-bright:#41A2AC;
-        --aurora-teal-dim:#02626D;
-        --aurora-teal-pale:#A6D4D8;
-
-        --aurora-pink:#BE5A83;
-        --aurora-pink-bright:#CE83A2;
-        --aurora-pink-dim:#8E4462;
-        --aurora-pink-pale:#E8C5D4;
-
-        --aurora-violet:#7077A1;
-        --aurora-violet-bright:#9499B8;
-        --aurora-violet-dim:#545979;
-        --aurora-violet-pale:#CDCFDE;
-
-        --teal:var(--aurora-teal);
-        --teal-bright:var(--aurora-teal-bright);
-        --teal-dim:var(--aurora-teal-dim);
-        --teal-pale:var(--aurora-teal-pale);
-
-        --pink:var(--aurora-pink);
-        --pink-bright:var(--aurora-pink-bright);
-        --pink-dim:var(--aurora-pink-dim);
-        --pink-pale:var(--aurora-pink-pale);
-
-        --violet:var(--aurora-violet);
-        --violet-bright:var(--aurora-violet-bright);
-        --violet-dim:var(--aurora-violet-dim);
-        --violet-pale:var(--aurora-violet-pale);
-
-        --earth:#1b2238;
+        --bg:#ffffff; --surface:#eef1f5; --border:#d4d0cc; --border-light:#e8e5e1;
+        --navy:#1a3a52; --text:#0d1f2d; --muted:#5c6470; --faint:#a99f99;
+        --teal:#6b9fa1; --teal-light:#8fbfc0; --teal-dark:#4a7e80;
+        --gold:#c9a66b; --gold-light:#dcc194; --gold-dark:#7f6d44;
+        --mauve:#8b7a8b; --mauve-light:#b8a8b8; --mauve-dark:#6b5a6b;
+        --grid:#e0ddd8; --sun:#d4a843;
       }
 
-      text{
-        font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
-        fill: var(--fg);
-      }
-      .title{ font-size: 28px; font-weight: 750; }
-      .subtitle{ font-size: 18px; fill: var(--muted); }
-      .label{ font-size: 20px; font-weight: 700; }
-      .small{ font-size: 18px; letter-spacing: 0.2px; fill: var(--muted); }
-      .outline{ paint-order: stroke; stroke: var(--bg); stroke-width: 6px; stroke-linejoin: round; }
-      .panel{ fill: var(--panel); stroke: var(--violet); stroke-width: 1.5; opacity: 0.96; }
-      .dash{ stroke-dasharray: 10 10; }
+      text { font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+      .title { font-size: 26px; font-weight: 650; fill: var(--navy); }
+      .subtitle { font-size: 18px; font-weight: 600; fill: var(--navy); }
+      .label { font-size: 15px; fill: var(--muted); }
+      .small { font-size: 13px; fill: var(--muted); }
+
+      marker { overflow: visible; }
     </style>
 
-    <filter id="softGlow" x="-30%" y="-30%" width="160%" height="160%">
-      <feGaussianBlur stdDeviation="2.2" result="blur"/>
-      <feMerge>
-        <feMergeNode in="blur"/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
-    </filter>
-
-    <radialGradient id="earthFill" cx="35%" cy="30%" r="75%">
-      <stop offset="0%" stop-color="var(--grid-strong)" stop-opacity="0.9"/>
-      <stop offset="55%" stop-color="var(--earth)" stop-opacity="1.0"/>
-      <stop offset="100%" stop-color="var(--panel)" stop-opacity="1.0"/>
-    </radialGradient>
-
-    <marker id="arrow-pink" markerWidth="10" markerHeight="10" refX="7" refY="5" orient="auto">
-      <path d="M 0 0 L 10 5 L 0 10 z" fill="var(--pink)"/>
+    <marker id="arrowGold" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L0,8 L8,4 z" fill="var(--gold)" />
     </marker>
-    <marker id="arrow-teal" markerWidth="10" markerHeight="10" refX="7" refY="5" orient="auto">
-      <path d="M 0 0 L 10 5 L 0 10 z" fill="var(--teal)"/>
-    </marker>
-    <marker id="arrow-violet" markerWidth="10" markerHeight="10" refX="7" refY="5" orient="auto">
-      <path d="M 0 0 L 10 5 L 0 10 z" fill="var(--violet)"/>
+
+    <marker id="arrowTeal" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L0,8 L8,4 z" fill="var(--teal)" />
     </marker>
   </defs>
 
-  <rect x="0" y="0" width="960" height="540" fill="var(--bg)"/>
+  <rect width="960" height="540" fill="#ffffff"/>
 
-  <!-- Header -->
-  <text x="48" y="56" class="title">The apple and the Moon</text>
-  <text x="48" y="82" class="subtitle">Same inward pull — different motion because of sideways speed.</text>
+  <text x="480" y="45" text-anchor="middle" class="title">The Apple and the Moon</text>
+  <text x="480" y="70" text-anchor="middle" class="subtitle">Same gravity, different sideways speed</text>
 
-  <!-- Panels -->
-  <g>
-    <rect x="48" y="110" width="430" height="340" rx="14" class="panel"/>
-    <rect x="502" y="110" width="410" height="340" rx="14" class="panel"/>
+  <!-- Vertical divider line -->
+  <line x1="480" y1="100" x2="480" y2="500" stroke="var(--border-light)" stroke-width="1.5" stroke-dasharray="4,4"/>
 
-    <text x="70" y="146" class="label">On Earth</text>
-    <text x="70" y="172" class="small">falling looks “straight down”</text>
+  <!-- LEFT PANEL: On Earth -->
+  <text x="240" y="100" text-anchor="middle" class="subtitle" fill="var(--navy)">On Earth</text>
 
-    <text x="524" y="146" class="label">In space</text>
-    <text x="524" y="172" class="small">falling + sideways motion = orbit</text>
+  <!-- Ground line -->
+  <line x1="80" y1="420" x2="380" y2="420" stroke="var(--navy)" stroke-width="3"/>
+  <polygon points="80,420 85,425 75,425" fill="var(--navy)"/>
+  <polygon points="380,420 375,425 385,425" fill="var(--navy)"/>
 
-    <!-- Left panel: apple fall -->
-    <g>
-      <line x1="80" y1="410" x2="446" y2="410" stroke="var(--grid-strong)" stroke-width="3" opacity="0.8"/>
-      <path d="M 124 410 C 140 360 150 320 170 280" fill="none" stroke="var(--teal-dim)" stroke-width="5" opacity="0.75"/>
+  <!-- Person: geometric shapes (circle head, rounded rect torso, rect legs) -->
+  <circle cx="240" cy="360" r="12" fill="var(--navy)"/>
+  <rect x="228" y="375" width="24" height="28" rx="6" fill="var(--navy)"/>
+  <rect x="232" y="403" width="7" height="15" fill="var(--navy)"/>
+  <rect x="244" y="403" width="7" height="15" fill="var(--navy)"/>
 
-      <!-- Apple (simple, non-cartoon) -->
-      <circle cx="190" cy="250" r="18" fill="var(--pink)" opacity="0.95" filter="url(#softGlow)"/>
-      <path d="M 190 232 C 188 220 195 214 203 214" fill="none" stroke="var(--pink-pale)" stroke-width="3" opacity="0.85" stroke-linecap="round"/>
-      <path d="M 204 216 C 212 212 220 214 224 222 C 215 226 208 226 204 216 Z" fill="var(--teal)" opacity="0.9"/>
+  <!-- Apple: gold circle with stem -->
+  <circle cx="240" cy="315" r="7" fill="var(--gold)"/>
+  <line x1="240" y1="308" x2="240" y2="295" stroke="var(--navy)" stroke-width="1.5"/>
+  <path d="M 245 300 Q 248 298 246 295" fill="none" stroke="var(--navy)" stroke-width="1"/>
 
-      <!-- Gravity arrow -->
-      <line x1="240" y1="240" x2="240" y2="330" stroke="var(--pink)" stroke-width="4" marker-end="url(#arrow-pink)" opacity="0.95"/>
-      <text x="252" y="286" class="small outline" fill="var(--pink)">gravity</text>
+  <!-- Gravity arrow (downward) -->
+  <line x1="240" y1="325" x2="240" y2="390" stroke="var(--gold)" stroke-width="3" marker-end="url(#arrowGold)"/>
+  <text x="270" y="360" class="label" fill="var(--gold)">gravity</text>
 
-      <text x="70" y="446" class="small outline">no sideways speed → hits the ground</text>
-    </g>
+  <!-- Text annotation -->
+  <text x="240" y="460" text-anchor="middle" class="small" fill="var(--muted)">no sideways speed</text>
+  <text x="240" y="480" text-anchor="middle" class="small" fill="var(--muted)">→ falls straight down</text>
 
-    <!-- Right panel: orbit -->
-    <g>
-      <!-- Earth -->
-      <circle cx="690" cy="360" r="120" fill="url(#earthFill)" stroke="var(--teal)" stroke-width="4" opacity="0.98"/>
-      <circle cx="690" cy="360" r="126" fill="none" stroke="var(--teal-pale)" stroke-width="2" opacity="0.35"/>
+  <!-- RIGHT PANEL: In Orbit -->
+  <text x="720" y="100" text-anchor="middle" class="subtitle" fill="var(--navy)">In Orbit</text>
 
-      <!-- Moon orbit (guide) -->
-      <circle cx="690" cy="360" r="170" fill="none" stroke="var(--violet)" stroke-width="2.6" opacity="0.7" class="dash"/>
+  <!-- Earth -->
+  <circle cx="720" cy="285" r="60" fill="var(--navy)"/>
+  <circle cx="720" cy="285" r="57" fill="none" stroke="var(--teal)" stroke-width="2.5"/>
 
-      <!-- Moon -->
-      <circle cx="820" cy="285" r="10" fill="var(--fg)" opacity="0.95"/>
-      <text x="834" y="288" class="small outline">Moon</text>
+  <!-- Orbital path (dashed) -->
+  <circle cx="720" cy="285" r="110" fill="none" stroke="var(--mauve)" stroke-width="1.5" stroke-dasharray="5,5"/>
 
-      <!-- Velocity arrow (tangent) -->
-      <line x1="820" y1="285" x2="874" y2="255" stroke="var(--teal)" stroke-width="3.2" marker-end="url(#arrow-teal)" opacity="0.95"/>
-      <text x="896" y="246" class="small outline" fill="var(--teal)" text-anchor="end">sideways <tspan font-style="italic">v</tspan></text>
+  <!-- Moon on orbit -->
+  <circle cx="835" cy="285" r="6" fill="var(--navy)"/>
 
-      <!-- Gravity arrow (inward) -->
-      <line x1="820" y1="285" x2="744" y2="330" stroke="var(--pink)" stroke-width="3.6" marker-end="url(#arrow-pink)" opacity="0.95"/>
-      <text x="742" y="332" class="small outline" fill="var(--pink)" text-anchor="end">inward pull</text>
+  <!-- Gravity arrow (from Moon toward Earth) -->
+  <line x1="828" y1="285" x2="770" y2="285" stroke="var(--gold)" stroke-width="3" marker-end="url(#arrowGold)"/>
+  <text x="800" y="270" text-anchor="middle" class="label" fill="var(--gold)">gravity</text>
 
-      <text x="524" y="446" class="small outline">gravity is still strong — motion is free fall</text>
-    </g>
-  </g>
+  <!-- Velocity arrow (tangent, upward from Moon) -->
+  <line x1="835" y1="285" x2="835" y2="215" stroke="var(--teal)" stroke-width="3" marker-end="url(#arrowTeal)"/>
+  <text x="860" y="255" class="label" fill="var(--teal)">v</text>
 
-  <!-- Footer takeaway -->
-  <g transform="translate(48,470)">
-    <rect x="0" y="0" width="864" height="70" rx="12" class="panel"/>
-    <text x="18" y="30" class="label">Key idea: gravity points inward in both cases — an orbit is falling while moving sideways.</text>
-    <text x="18" y="54" class="small">The Moon is not hovering; it is continuously accelerating toward Earth.</text>
-  </g>
+  <!-- Text annotation -->
+  <text x="720" y="460" text-anchor="middle" class="small" fill="var(--muted)">sideways speed</text>
+  <text x="720" y="480" text-anchor="middle" class="small" fill="var(--muted)">→ keeps missing Earth</text>
+  <text x="720" y="500" text-anchor="middle" class="small" fill="var(--muted)">everything falls together</text>
+
 </svg>

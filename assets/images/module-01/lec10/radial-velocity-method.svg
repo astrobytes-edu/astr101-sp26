@@ -1,164 +1,93 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540" role="img" aria-labelledby="title desc" data-theme="dark" data-palette="aurora">
-  <title id="title">The radial velocity method (stellar wobble)</title>
-  <desc id="desc">Two-panel figure. Left panel: star and planet orbit a barycenter; the star’s motion toward and away from an observer produces Doppler shifts. Right panel: the star’s radial velocity versus time is a sinusoidal curve with approaching and receding halves labeled.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540">
+  <title>Radial Velocity Method</title>
+  <desc>Exoplanet detection via star's radial velocity wobble caused by orbiting planet.</desc>
 
   <defs>
     <style>
-      :root{
-        --bg:#0b0b0f;
-        --panel:#13162a;
-        --fg:#eef0ff;
-        --muted:#c9cbe5;
-        --faint:#8f92ad;
-
-        --aurora-teal:#028391;
-        --aurora-teal-bright:#41A2AC;
-        --aurora-teal-dim:#02626D;
-        --aurora-pink:#BE5A83;
-        --aurora-pink-bright:#CE83A2;
-        --aurora-violet:#7077A1;
-        --aurora-violet-bright:#9499B8;
-
-        --teal:var(--aurora-teal);
-        --teal-bright:var(--aurora-teal-bright);
-        --teal-dim:var(--aurora-teal-dim);
-        --pink:var(--aurora-pink);
-        --pink-bright:var(--aurora-pink-bright);
-        --violet:var(--aurora-violet);
-        --violet-bright:var(--aurora-violet-bright);
-
-        --sun:#f6d55c;
-      }
-
-      text{
-        font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
-        fill: var(--fg);
-      }
-      .title{ font-size: 34px; font-weight: 800; }
-      .subtitle{ font-size: 18px; fill: var(--muted); }
-      .label{ font-size: 20px; font-weight: 750; }
-      .small{ font-size: 18px; fill: var(--muted); }
-      .tiny{ font-size: 16px; fill: var(--muted); }
-      .outline{ paint-order: stroke; stroke: var(--bg); stroke-width: 6px; stroke-linejoin: round; }
-
-      .panel{ fill: var(--panel); stroke: var(--violet); stroke-width: 1.6; opacity: 0.96; }
-      .subpanel{ fill: #101327; stroke: var(--violet); stroke-width: 1.2; opacity: 0.96; }
-
-      .orbit{ fill: none; stroke: var(--teal); stroke-width: 4; opacity: 0.9; }
-      .orbit2{ fill: none; stroke: var(--teal-dim); stroke-width: 4; opacity: 0.75; stroke-dasharray: 10 10; }
-      .bary{ fill: var(--violet-bright); opacity: 0.95; }
-      .star{ fill: var(--sun); opacity: 0.98; }
-      .planet{ fill: var(--teal-bright); opacity: 0.95; }
-
-      .los{ stroke: var(--teal-bright); stroke-width: 4; marker-end: url(#arrow-teal); }
-      .vToward{ stroke: var(--pink-bright); stroke-width: 5; marker-end: url(#arrow-pink); }
-      .vAway{ stroke: var(--pink); stroke-width: 5; marker-end: url(#arrow-pink); }
-
-      .axis{ stroke: var(--teal); stroke-width: 4; }
-      .grid{ stroke: var(--teal-dim); stroke-width: 1.6; stroke-dasharray: 8 8; opacity: 0.55; }
-      .curve{ fill: none; stroke: var(--violet-bright); stroke-width: 5; }
-      .pt{ fill: var(--pink); opacity: 0.95; }
-      .zero{ stroke: var(--violet); stroke-width: 2.5; stroke-dasharray: 8 8; opacity: 0.75; }
+      text { font-family: Inter, system-ui, sans-serif; }
+      .title-text { font-size: 15px; font-weight: 600; fill: #1a3a52; }
+      .label-text { font-size: 12px; fill: #1a3a52; }
+      .small-text { font-size: 13px; fill: #5c6470; }
+      .axis-label { font-size: 13px; fill: #5c6470; }
     </style>
-
-    <marker id="arrow-teal" markerWidth="12" markerHeight="12" refX="8" refY="6" orient="auto">
-      <path d="M0 0 L12 6 L0 12 z" fill="var(--teal-bright)"/>
-    </marker>
-    <marker id="arrow-pink" markerWidth="12" markerHeight="12" refX="8" refY="6" orient="auto">
-      <path d="M0 0 L12 6 L0 12 z" fill="var(--pink)"/>
-    </marker>
   </defs>
 
-  <rect x="0" y="0" width="960" height="540" fill="var(--bg)"/>
+  <!-- Background -->
+  <rect width="960" height="540" fill="#ffffff"/>
 
-  <!-- Header -->
-  <text x="44" y="58" class="title">The radial velocity method</text>
-  <text x="44" y="86" class="subtitle">We detect a planet by measuring the star’s back-and-forth Doppler shift.</text>
-
-  <rect x="36" y="110" width="888" height="340" rx="18" class="panel"/>
-  <line x1="480" y1="126" x2="480" y2="434" stroke="var(--violet)" stroke-width="1.2" opacity="0.7"/>
-
-  <!-- Left panel: geometry -->
-  <rect x="56" y="136" width="404" height="294" rx="16" class="subpanel"/>
-  <text x="80" y="170" class="label">Geometry: both bodies orbit the barycenter</text>
-  <text x="80" y="196" class="small">Only the star’s line-of-sight velocity is measured.</text>
-
-  <g transform="translate(0,0)">
-    <!-- Observer and line of sight -->
-    <circle cx="96" cy="318" r="8" fill="var(--fg)" opacity="0.9"/>
-    <path d="M86 336 L106 336 L96 356 Z" fill="var(--fg)" opacity="0.85"/>
-    <text x="76" y="300" class="tiny outline">observer</text>
-    <line x1="112" y1="318" x2="240" y2="318" class="los"/>
-    <text x="144" y="304" class="tiny outline">line of sight</text>
-
-    <!-- Orbits about barycenter -->
-    <circle cx="300" cy="318" r="92" class="orbit2"/>
-    <circle cx="300" cy="318" r="34" class="orbit"/>
-    <circle cx="300" cy="318" r="5" class="bary"/>
-    <text x="312" y="324" class="tiny outline">barycenter</text>
-
-    <!-- Two star positions (top and bottom of star orbit) -->
-    <circle cx="300" cy="284" r="12" class="star"/>
-    <circle cx="300" cy="352" r="12" class="star"/>
-    <text x="318" y="290" class="tiny outline">star</text>
-
-    <!-- Two planet positions (opposite on larger orbit) -->
-    <circle cx="300" cy="410" r="8" class="planet"/>
-    <circle cx="300" cy="226" r="8" class="planet"/>
-    <text x="318" y="416" class="tiny outline">planet</text>
-
-    <!-- Radial velocity arrows (projected component) -->
-    <!-- At top: star’s velocity points left (toward observer) -->
-    <line x1="294" y1="284" x2="232" y2="284" class="vToward"/>
-    <text x="188" y="276" class="tiny outline">toward → blueshift</text>
-
-    <!-- At bottom: star’s velocity points right (away from observer) -->
-    <line x1="306" y1="352" x2="368" y2="352" class="vAway"/>
-    <text x="360" y="374" class="tiny outline">away → redshift</text>
-  </g>
-
-  <!-- Right panel: RV curve -->
-  <rect x="500" y="136" width="404" height="294" rx="16" class="subpanel"/>
-  <text x="524" y="170" class="label">Observable: radial velocity vs time</text>
-  <text x="524" y="196" class="small">A repeating Doppler pattern reveals a planet.</text>
-
-  <!-- Plot coordinates: x=[540,880], y=[240,400] (zero at y=320) -->
+  <!-- LEFT PANEL: Geometry -->
   <g>
-    <line x1="540" y1="400" x2="880" y2="400" class="axis"/>
-    <line x1="540" y1="240" x2="540" y2="400" class="axis"/>
-    <line x1="540" y1="320" x2="880" y2="320" class="zero"/>
-    <text x="532" y="326" text-anchor="end" class="tiny">0</text>
+    <text x="230" y="35" class="title-text" text-anchor="middle">Geometry</text>
 
-    <!-- Light grid -->
-    <line x1="540" y1="260" x2="880" y2="260" class="grid"/>
-    <line x1="540" y1="380" x2="880" y2="380" class="grid"/>
+    <!-- Observer (telescope shape) -->
+    <g transform="translate(100, 150)">
+      <!-- Telescope barrel (trapezoid) -->
+      <polygon points="0,5 15,0 15,15 0,20" fill="#5c6470"/>
+      <!-- Lens (circle) -->
+      <circle cx="17" cy="10" r="4" fill="#5c6470" stroke="#d4d0cc" stroke-width="0.5"/>
+    </g>
 
-    <!-- Sine-like RV curve (one period) -->
-    <path d="M540 320
-             C 595 250, 650 250, 705 320
-             C 760 390, 815 390, 880 320" class="curve"/>
+    <!-- Line of sight (dashed) -->
+    <line x1="120" y1="155" x2="350" y2="155" stroke="#d4d0cc" stroke-width="1" stroke-dasharray="3,2"/>
 
-    <!-- Markers corresponding to “toward” and “away” moments -->
-    <circle cx="610" cy="260" r="6" class="pt"/>
-    <circle cx="792" cy="380" r="6" class="pt"/>
+    <!-- Barycenter -->
+    <circle cx="240" cy="280" r="6" fill="#1a3a52"/>
+    <text x="240" y="310" class="small-text" text-anchor="middle">barycenter</text>
 
-    <text x="610" y="244" text-anchor="middle" class="tiny outline">receding</text>
-    <text x="610" y="226" text-anchor="middle" class="tiny outline">(redshift)</text>
-    <text x="792" y="410" text-anchor="middle" class="tiny outline">approaching</text>
-    <text x="792" y="428" text-anchor="middle" class="tiny outline">(blueshift)</text>
+    <!-- Star orbit (small circle) -->
+    <circle cx="240" cy="280" r="30" fill="none" stroke="#d4d0cc" stroke-width="1" stroke-dasharray="2,2"/>
 
-    <text x="710" y="420" text-anchor="middle" class="tiny">time</text>
-    <text x="512" y="320" text-anchor="middle" class="tiny" transform="rotate(-90 512 320)">v<tspan baseline-shift="-30%" font-size="70%">r</tspan></text>
-    <text x="876" y="246" text-anchor="end" class="tiny outline">period P</text>
+    <!-- Star at approaching position (left of barycenter) -->
+    <circle cx="210" cy="280" r="8" fill="#c9a66b"/>
+    <text x="210" y="305" class="small-text" text-anchor="middle" fill="#4da6d6">blueshift</text>
+
+    <!-- Star at receding position (right of barycenter) -->
+    <circle cx="270" cy="280" r="8" fill="#c9a66b" opacity="0.5" stroke="#d4d0cc" stroke-width="1" stroke-dasharray="2,2"/>
+    <text x="270" y="305" class="small-text" text-anchor="middle" fill="#c75050">redshift</text>
+
+    <!-- Planet (larger orbit) -->
+    <circle cx="240" cy="280" r="60" fill="none" stroke="#d4d0cc" stroke-width="0.5" stroke-dasharray="3,2"/>
+    <circle cx="300" cy="280" r="6" fill="#6b9fa1" opacity="0.6"/>
+    <text x="310" y="285" class="small-text">planet</text>
   </g>
 
-  <!-- Footer -->
-  <rect x="36" y="468" width="888" height="56" rx="16" class="panel"/>
-  <text x="60" y="502" class="label">
-    <tspan class="small">Key idea:</tspan>
-    <tspan> a planet makes the star wobble</tspan>
-    <tspan class="small"> — the wobble shows up as a periodic Doppler shift.</tspan>
-  </text>
-</svg>
+  <!-- RIGHT PANEL: Radial Velocity Curve -->
+  <g>
+    <text x="730" y="35" class="title-text" text-anchor="middle">Radial Velocity Curve</text>
 
+    <!-- Axes -->
+    <line x1="550" y1="420" x2="900" y2="420" stroke="#d4d0cc" stroke-width="1.5"/>
+    <line x1="550" y1="80" x2="550" y2="420" stroke="#d4d0cc" stroke-width="1.5"/>
+
+    <!-- Axis labels -->
+    <text x="540" y="300" class="axis-label" text-anchor="end">velocity</text>
+    <text x="725" y="445" class="axis-label" text-anchor="middle">time</text>
+
+    <!-- Zero velocity line (dashed) -->
+    <line x1="550" y1="250" x2="900" y2="250" stroke="#d4d0cc" stroke-width="1" stroke-dasharray="2,2"/>
+
+    <!-- Sinusoidal RV curve (parametric sine wave) -->
+    <!-- Using sine wave: y = 250 - 70*sin(phase), x increases linearly -->
+    <!-- Points at phase = 0, π/4, π/2, 3π/4, π, 5π/4, 3π/2, 7π/4, 2π -->
+    <path d="M 550,250 L 570,224 L 590,200 L 610,182 L 630,170 L 650,165 L 670,170 L 690,182 L 710,200 L 730,224 L 750,250 L 770,276 L 790,300 L 810,318 L 830,330 L 850,335 L 870,330 L 880,320 L 900,250"
+          stroke="#6b9fa1" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <!-- Semi-amplitude arrow -->
+    <line x1="920" y1="180" x2="920" y2="320" stroke="#c9a66b" stroke-width="2"/>
+    <polygon points="920,180 916,190 924,190" fill="#c9a66b"/>
+    <polygon points="920,320 916,310 924,310" fill="#c9a66b"/>
+    <text x="940" y="255" class="small-text" fill="#c9a66b">K</text>
+
+    <!-- Trough label (at peak velocity, minimum y) -->
+    <text x="650" y="145" class="small-text" text-anchor="middle" fill="#4da6d6">approaching (blueshift)</text>
+
+    <!-- Peak label (at trough velocity, maximum y) -->
+    <text x="830" y="360" class="small-text" text-anchor="middle" fill="#c75050">receding (redshift)</text>
+
+    <!-- Period annotation -->
+    <line x1="570" y1="100" x2="750" y2="100" stroke="#8b7a8b" stroke-width="1" stroke-dasharray="2,2"/>
+    <polygon points="570,100 574,95 574,105" fill="#8b7a8b"/>
+    <polygon points="750,100 746,95 746,105" fill="#8b7a8b"/>
+    <text x="660" y="90" class="small-text" text-anchor="middle" fill="#8b7a8b">Period P</text>
+  </g>
+</svg>

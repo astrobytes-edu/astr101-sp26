@@ -1,161 +1,130 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540" role="img" aria-labelledby="title desc" data-theme="dark" data-palette="aurora">
-  <title id="title">Kepler’s First Law: Eccentricity changes orbit shape and focus offset</title>
-  <desc id="desc">Three side-by-side orbits with the same semimajor axis. Panel 1 shows a circle (e=0) with the foci at the center. Panel 2 shows a mildly elliptical orbit (e=0.3) with the Sun at the left focus. Panel 3 shows a more elongated ellipse (e=0.6) with a larger focus offset. Each panel marks the center and foci.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540">
+  <title>Eccentricity Controls Orbit Shape</title>
+  <desc>Three panels showing how eccentricity controls orbit shape. e=0 (circle), e=0.3 (mild ellipse), e=0.6 (elongated ellipse). Same semimajor axis a=110.</desc>
 
   <defs>
     <style>
-      :root{
-        --bg:#0b0b0f;
-        --panel:#13162a;
-        --fg:#eef0ff;
-        --muted:#c9cbe5;
-        --grid:#1a1c28;
-
-        /* Jewel Aurora */
-        --aurora-teal:#028391;
-        --aurora-pink:#BE5A83;
-        --aurora-violet:#7077A1;
-
-        /* Deep Jewel */
-        --deep-teal:#257180;
-        --deep-pink:#A35C7A;
-        --deep-violet:#655D8A;
-
-        /* Default mapping (dark) */
-        --teal:var(--aurora-teal);
-        --pink:var(--aurora-pink);
-        --violet:var(--aurora-violet);
-
-        --sun:#f6d55c;
-        --orbitW:5;
-        --guideW:2.5;
-      }
-
-      svg[data-palette="deep"]{
-        --teal:var(--deep-teal);
-        --pink:var(--deep-pink);
-        --violet:var(--deep-violet);
-      }
-
-      svg[data-theme="light"]{
-        --bg:#ffffff;
-        --panel:#f2f3fb;
-        --fg:#111218;
-        --muted:#3a3d52;
-        --grid:#e7e8f0;
-      }
-
-      text{
-        font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
-        fill: var(--fg);
-      }
-      .title{ font-size: 28px; font-weight: 750; }
-      .subtitle{ font-size: 18px; fill: var(--muted); }
-      .panel-title{ font-size: 18px; font-weight: 750; fill: var(--muted); letter-spacing: 0.2px; }
-      .label{ font-size: 18px; font-weight: 650; }
-      .small{ font-size: 16px; fill: var(--muted); }
-      .dash{ stroke-dasharray: 10 10; }
-      .panel{ fill: var(--panel); stroke: var(--violet); stroke-width: 1.5; opacity: 0.96; }
+      text { font-family: Inter, system-ui, sans-serif; font-size: 14px; }
+      .title-main { font-size: 18px; font-weight: 600; fill: #1a3a52; }
+      .title-sub { font-size: 15px; fill: #5c6470; }
+      .panel-title { font-size: 13px; font-weight: 600; fill: #1a3a52; }
+      .label-sm { font-size: 12px; fill: #5c6470; }
+      .label-tiny { font-size: 13px; fill: #5c6470; }
+      .text-gold { fill: #c9a66b; }
+      .text-mauve { fill: #8b7a8b; }
+      .callout-text { font-size: 13px; fill: #1a3a52; font-weight: 500; }
     </style>
 
-    <filter id="softGlow" x="-30%" y="-30%" width="160%" height="160%">
-      <feGaussianBlur stdDeviation="2.0" result="blur"/>
+    <filter id="glow-sun">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
       <feMerge>
-        <feMergeNode in="blur"/>
+        <feMergeNode in="coloredBlur"/>
         <feMergeNode in="SourceGraphic"/>
       </feMerge>
     </filter>
-
-    <marker id="arrow-pink" markerWidth="14" markerHeight="14" refX="10" refY="7" orient="auto">
-      <path d="M 0 0 L 14 7 L 0 14 z" fill="var(--pink)"/>
-    </marker>
   </defs>
 
   <!-- Background -->
-  <rect x="0" y="0" width="960" height="540" fill="var(--bg)"/>
+  <rect width="960" height="540" fill="#ffffff"/>
 
-  <!-- Subtle grid -->
-  <g opacity="0.22">
-    <path d="M0 90 H960 M0 180 H960 M0 270 H960 M0 360 H960 M0 450 H960" stroke="var(--grid)" stroke-width="1"/>
-    <path d="M120 0 V540 M240 0 V540 M360 0 V540 M480 0 V540 M600 0 V540 M720 0 V540 M840 0 V540" stroke="var(--grid)" stroke-width="1"/>
+  <!-- Main title -->
+  <text x="480" y="38" text-anchor="middle" class="title-main">How Eccentricity Controls Orbit Shape</text>
+  <text x="480" y="56" text-anchor="middle" class="title-sub">Same semimajor axis (a = 110), different eccentricities</text>
+
+  <!-- ===== PANEL 1: e = 0 (Perfect Circle) ===== -->
+  <g id="panel-e0">
+    <!-- Panel background -->
+    <rect x="40" y="100" width="240" height="280" fill="#eef1f5" stroke="#d4d0cc" stroke-width="1" rx="3" opacity="0.4"/>
+
+    <!-- Panel title -->
+    <text x="160" y="125" text-anchor="middle" class="panel-title">e = 0 (Circle)</text>
+
+    <!-- Circle (teal) -->
+    <circle cx="160" cy="240" r="110" fill="none" stroke="#6b9fa1" stroke-width="2.5"/>
+
+    <!-- Center/Sun position (both foci coincide) -->
+    <circle cx="160" cy="240" r="9" fill="#c9a66b" filter="url(#glow-sun)"/>
+    <text x="160" y="295" text-anchor="middle" class="label-sm text-gold" font-weight="600">Sun</text>
+
+    <!-- Description -->
+    <text x="160" y="330" text-anchor="middle" class="label-tiny">(Foci coincide at center)</text>
+
+    <!-- Planet dot on circle -->
+    <circle cx="160" cy="130" r="4" fill="#1a3a52"/>
   </g>
 
-  <!-- Header -->
-  <text x="48" y="56" class="title">Kepler I: Shape and Focus Offset</text>
-  <text x="48" y="82" class="subtitle">Eccentricity <tspan fill="var(--pink)" font-weight="750">e</tspan> controls how “stretched” the orbit is — and how far the focus is from the center.</text>
+  <!-- ===== PANEL 2: e = 0.3 (Mild Ellipse) ===== -->
+  <g id="panel-e03">
+    <!-- Panel background -->
+    <rect x="360" y="100" width="240" height="280" fill="#eef1f5" stroke="#d4d0cc" stroke-width="1" rx="3" opacity="0.4"/>
 
-  <!-- Panel separators -->
-  <line x1="320" y1="118" x2="320" y2="420" stroke="var(--grid)" stroke-width="2"/>
-  <line x1="640" y1="118" x2="640" y2="420" stroke="var(--grid)" stroke-width="2"/>
+    <!-- Panel title -->
+    <text x="480" y="125" text-anchor="middle" class="panel-title">e = 0.3 (Mild Ellipse)</text>
 
-  <!-- Panels: each uses same semimajor axis a = 120 -->
-  <!-- Panel centers: (160,270), (480,270), (800,270) -->
-  <!-- Panel 1: e = 0.0, b = 120, focus offset c = e*a = 0 -->
-  <g>
-    <text x="160" y="132" class="panel-title" text-anchor="middle">e = 0 (circle)</text>
+    <!-- Ellipse: a=110, b=110*√(1-0.09)=110*√0.91≈105, c=33 -->
+    <ellipse cx="480" cy="240" rx="110" ry="105" fill="none" stroke="#6b9fa1" stroke-width="2.5"/>
 
-    <ellipse cx="160" cy="270" rx="120" ry="120" fill="none" stroke="var(--teal)" stroke-width="var(--orbitW)" filter="url(#softGlow)"/>
+    <!-- Major axis guide (dashed, faint) -->
+    <line x1="370" y1="240" x2="590" y2="240" stroke="#ccc7c0" stroke-width="1" stroke-dasharray="3,3" opacity="0.4"/>
 
-    <!-- major axis guide -->
-    <line x1="40" y1="270" x2="280" y2="270" stroke="var(--violet)" stroke-width="var(--guideW)" class="dash" opacity="0.9"/>
+    <!-- Left focus (Sun): 480-33=447 -->
+    <circle cx="447" cy="240" r="8" fill="#c9a66b" filter="url(#glow-sun)"/>
+    <text x="447" y="280" text-anchor="middle" class="label-tiny text-gold" font-weight="600">Sun</text>
 
-    <!-- center marker -->
-    <line x1="152" y1="270" x2="168" y2="270" stroke="var(--muted)" stroke-width="2"/>
-    <line x1="160" y1="262" x2="160" y2="278" stroke="var(--muted)" stroke-width="2"/>
-    <text x="160" y="294" class="small" text-anchor="middle">center</text>
+    <!-- Right focus (empty): 480+33=513 -->
+    <circle cx="513" cy="240" r="5" fill="none" stroke="#8b7a8b" stroke-width="2"/>
+    <text x="513" y="280" text-anchor="middle" class="label-tiny text-mauve">empty</text>
 
-    <!-- foci coincide -->
-    <circle cx="160" cy="270" r="16" fill="var(--sun)" filter="url(#softGlow)"/>
-    <text x="160" y="238" class="label" text-anchor="middle">foci coincide</text>
+    <!-- Center mark -->
+    <circle cx="480" cy="240" r="2" fill="#1a3a52" opacity="0.5"/>
+
+    <!-- Description -->
+    <text x="480" y="330" text-anchor="middle" class="label-tiny">Offset increases</text>
+
+    <!-- Planet dot on ellipse -->
+    <circle cx="480" cy="135" r="4" fill="#1a3a52"/>
   </g>
 
-  <!-- Panel 2: e = 0.3, b = a*sqrt(1-e^2) ≈ 114.47, c = 36 -->
-  <g>
-    <text x="480" y="132" class="panel-title" text-anchor="middle">e = 0.3 (mild ellipse)</text>
+  <!-- ===== PANEL 3: e = 0.6 (Elongated Ellipse) ===== -->
+  <g id="panel-e06">
+    <!-- Panel background -->
+    <rect x="680" y="100" width="240" height="280" fill="#eef1f5" stroke="#d4d0cc" stroke-width="1" rx="3" opacity="0.4"/>
 
-    <ellipse cx="480" cy="270" rx="120" ry="114.5" fill="none" stroke="var(--teal)" stroke-width="var(--orbitW)" filter="url(#softGlow)"/>
-    <line x1="360" y1="270" x2="600" y2="270" stroke="var(--violet)" stroke-width="var(--guideW)" class="dash" opacity="0.85"/>
+    <!-- Panel title -->
+    <text x="800" y="125" text-anchor="middle" class="panel-title">e = 0.6 (Elongated)</text>
 
-    <!-- center marker -->
-    <line x1="472" y1="270" x2="488" y2="270" stroke="var(--muted)" stroke-width="2"/>
-    <line x1="480" y1="262" x2="480" y2="278" stroke="var(--muted)" stroke-width="2"/>
-    <text x="480" y="294" class="small" text-anchor="middle">center</text>
+    <!-- Ellipse: a=110, b=110*√(1-0.36)=110*√0.64=88, c=66 -->
+    <ellipse cx="800" cy="240" rx="110" ry="88" fill="none" stroke="#6b9fa1" stroke-width="2.5"/>
 
-    <!-- foci -->
-    <circle cx="444" cy="270" r="14" fill="var(--sun)" filter="url(#softGlow)"/>
-    <circle cx="516" cy="270" r="8" fill="var(--violet)" opacity="0.95"/>
-    <text x="444" y="238" class="label" text-anchor="middle">Sun</text>
-    <text x="516" y="238" class="small" text-anchor="middle">empty focus</text>
+    <!-- Major axis guide (dashed, faint) -->
+    <line x1="690" y1="240" x2="910" y2="240" stroke="#ccc7c0" stroke-width="1" stroke-dasharray="3,3" opacity="0.4"/>
+
+    <!-- Left focus (Sun): 800-66=734 -->
+    <circle cx="734" cy="240" r="8" fill="#c9a66b" filter="url(#glow-sun)"/>
+    <text x="734" y="280" text-anchor="middle" class="label-tiny text-gold" font-weight="600">Sun</text>
+
+    <!-- Right focus (empty): 800+66=866 -->
+    <circle cx="866" cy="240" r="5" fill="none" stroke="#8b7a8b" stroke-width="2"/>
+    <text x="866" y="280" text-anchor="middle" class="label-tiny text-mauve">empty</text>
+
+    <!-- Center mark -->
+    <circle cx="800" cy="240" r="2" fill="#1a3a52" opacity="0.5"/>
+
+    <!-- Description -->
+    <text x="800" y="330" text-anchor="middle" class="label-tiny">Sun far from center</text>
+
+    <!-- Planet dot on ellipse -->
+    <circle cx="800" cy="152" r="4" fill="#1a3a52"/>
   </g>
 
-  <!-- Panel 3: e = 0.6, b = a*sqrt(1-e^2) = 96, c = 72 -->
-  <g>
-    <text x="800" y="132" class="panel-title" text-anchor="middle">e = 0.6 (elongated)</text>
+  <!-- Bottom callout panel -->
+  <rect x="80" y="420" width="800" height="90" fill="#eef1f5" stroke="#d4d0cc" stroke-width="1.5" rx="4"/>
 
-    <ellipse cx="800" cy="270" rx="120" ry="96" fill="none" stroke="var(--teal)" stroke-width="var(--orbitW)" filter="url(#softGlow)"/>
-    <line x1="680" y1="270" x2="920" y2="270" stroke="var(--violet)" stroke-width="var(--guideW)" class="dash" opacity="0.85"/>
+  <text x="480" y="448" text-anchor="middle" class="callout-text" font-weight="600">The Mathematics of Eccentricity</text>
 
-    <!-- center marker -->
-    <line x1="792" y1="270" x2="808" y2="270" stroke="var(--muted)" stroke-width="2"/>
-    <line x1="800" y1="262" x2="800" y2="278" stroke="var(--muted)" stroke-width="2"/>
-    <text x="800" y="294" class="small" text-anchor="middle">center</text>
+  <text x="100" y="472" class="label-sm">• All three orbits have the same semimajor axis: a = 110</text>
+  <text x="100" y="489" class="label-sm">• As e increases (0 → 0.3 → 0.6), the orbit stretches along the major axis</text>
+  <text x="100" y="506" class="label-sm">• The Sun's distance from the ellipse center is given by c = ae</text>
 
-    <!-- foci -->
-    <circle cx="728" cy="270" r="14" fill="var(--sun)" filter="url(#softGlow)"/>
-    <circle cx="872" cy="270" r="8" fill="var(--violet)" opacity="0.95"/>
-    <text x="728" y="238" class="label" text-anchor="middle">Sun</text>
-    <text x="872" y="238" class="small" text-anchor="middle">empty focus</text>
-  </g>
-
-  <!-- Bottom takeaway box -->
-  <g transform="translate(48,440)">
-    <rect x="0" y="0" width="864" height="70" rx="14" class="panel"/>
-    <text x="18" y="30" class="label">
-      What to notice: same <tspan fill="var(--pink)" font-weight="800">semimajor axis</tspan>; larger <tspan fill="var(--pink)" font-weight="800">e</tspan> ⇒ more stretched orbit.
-    </text>
-    <text x="18" y="56" class="small">
-      Larger <tspan fill="var(--pink)" font-weight="800">e</tspan> also means a bigger focus offset; the Sun is always at a focus (not at the center) — that’s Kepler I.
-    </text>
-  </g>
 </svg>

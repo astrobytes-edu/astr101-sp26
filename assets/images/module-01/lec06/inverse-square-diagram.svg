@@ -1,131 +1,96 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540" role="img" aria-labelledby="title desc" data-theme="dark" data-palette="aurora">
-  <title id="title">Inverse-square law: spreading over spheres</title>
-  <desc id="desc">A source at the center is surrounded by three concentric circles representing spheres at distances r, 2r, and 3r. Labels indicate that surface area grows like r squared, so the per-area strength drops like one over r squared. The relative strengths 1, 1/4, and 1/9 are shown.</desc>
+<svg viewBox="0 0 960 540" width="960" height="540" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title>The Inverse-Square Law</title>
+  <desc>Diagram showing a central gold source with three concentric circles at distances r, 2r, and 3r with decreasing opacity. Radial arrows show energy spreading outward. Right panel table shows strength = 1 at r, strength = 1/4 at 2r, strength = 1/9 at 3r. Explains the inverse-square relationship between strength and distance.</desc>
 
   <defs>
     <style>
       :root{
-        --bg:#0b0b0f;
-        --panel:#13162a;
-        --fg:#eef0ff;
-        --muted:#c9cbe5;
-        --faint:#8f92ad;
-        --grid:#1a1c28;
-        --grid-strong:#24263a;
-
-        --aurora-teal:#028391;
-        --aurora-teal-bright:#41A2AC;
-        --aurora-teal-dim:#02626D;
-        --aurora-teal-pale:#A6D4D8;
-
-        --aurora-pink:#BE5A83;
-        --aurora-pink-bright:#CE83A2;
-        --aurora-pink-dim:#8E4462;
-        --aurora-pink-pale:#E8C5D4;
-
-        --aurora-violet:#7077A1;
-        --aurora-violet-bright:#9499B8;
-        --aurora-violet-dim:#545979;
-        --aurora-violet-pale:#CDCFDE;
-
-        --teal:var(--aurora-teal);
-        --teal-bright:var(--aurora-teal-bright);
-        --teal-dim:var(--aurora-teal-dim);
-        --teal-pale:var(--aurora-teal-pale);
-
-        --pink:var(--aurora-pink);
-        --pink-bright:var(--aurora-pink-bright);
-        --pink-dim:var(--aurora-pink-dim);
-        --pink-pale:var(--aurora-pink-pale);
-
-        --violet:var(--aurora-violet);
-        --violet-bright:var(--aurora-violet-bright);
-        --violet-dim:var(--aurora-violet-dim);
-        --violet-pale:var(--aurora-violet-pale);
+        --bg:#ffffff; --surface:#eef1f5; --border:#d4d0cc; --border-light:#e8e5e1;
+        --navy:#1a3a52; --text:#0d1f2d; --muted:#5c6470; --faint:#a99f99;
+        --teal:#6b9fa1; --teal-light:#8fbfc0; --teal-dark:#4a7e80;
+        --gold:#c9a66b; --gold-light:#dcc194; --gold-dark:#7f6d44;
+        --mauve:#8b7a8b; --mauve-light:#b8a8b8; --mauve-dark:#6b5a6b;
+        --grid:#e0ddd8; --sun:#d4a843;
       }
 
-      text{
-        font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
-        fill: var(--fg);
-      }
-      .title{ font-size: 28px; font-weight: 750; }
-      .subtitle{ font-size: 18px; fill: var(--muted); }
-      .label{ font-size: 20px; font-weight: 700; }
-      .small{ font-size: 18px; letter-spacing: 0.2px; fill: var(--muted); }
-      .outline{ paint-order: stroke; stroke: var(--bg); stroke-width: 6px; stroke-linejoin: round; }
-      .panel{ fill: var(--panel); stroke: var(--violet); stroke-width: 1.5; opacity: 0.96; }
-      .dash{ stroke-dasharray: 10 10; }
-      .math{ font-style: italic; }
+      text { font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+      .title { font-size: 26px; font-weight: 650; fill: var(--navy); }
+      .subtitle { font-size: 18px; font-weight: 600; fill: var(--navy); }
+      .label { font-size: 15px; fill: var(--muted); }
+      .small { font-size: 13px; fill: var(--muted); }
+      .strength { font-size: 14px; font-weight: 600; }
+
+      marker { overflow: visible; }
     </style>
 
-    <filter id="softGlow" x="-30%" y="-30%" width="160%" height="160%">
-      <feGaussianBlur stdDeviation="2.0" result="blur"/>
-      <feMerge>
-        <feMergeNode in="blur"/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
-    </filter>
+    <marker id="arrowGold" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L0,8 L8,4 z" fill="var(--gold)" />
+    </marker>
   </defs>
 
-  <rect x="0" y="0" width="960" height="540" fill="var(--bg)"/>
+  <rect width="960" height="540" fill="#ffffff"/>
 
-  <text x="48" y="56" class="title">The inverse-square law</text>
-  <text x="48" y="82" class="subtitle">Same influence spreads over spheres whose area grows like <tspan class="math">r</tspan>².</text>
+  <text x="480" y="45" text-anchor="middle" class="title">The Inverse-Square Law</text>
+  <text x="480" y="70" text-anchor="middle" class="subtitle">Energy spreading over larger spheres</text>
 
-  <g>
-    <rect x="48" y="110" width="864" height="340" rx="16" class="panel"/>
+  <!-- Central source -->
+  <circle cx="280" cy="280" r="10" fill="var(--sun)"/>
 
-    <!-- Central source -->
-    <circle cx="390" cy="290" r="12" fill="var(--teal-bright)" opacity="0.95" filter="url(#softGlow)"/>
-    <circle cx="390" cy="290" r="20" fill="none" stroke="var(--teal)" stroke-width="2" opacity="0.5"/>
-    <text x="390" y="328" class="small outline" text-anchor="middle">source</text>
+  <!-- Three concentric circles at r, 2r, 3r with decreasing stroke width and opacity -->
+  <!-- Circle at r (r=80) -->
+  <circle cx="280" cy="280" r="80" fill="none" stroke="var(--teal)" stroke-width="2.5" opacity="1.0"/>
 
-    <!-- Spheres (shown as circles in cross-section) -->
-    <circle cx="390" cy="290" r="70" fill="none" stroke="var(--violet)" stroke-width="2.8" opacity="0.75"/>
-    <circle cx="390" cy="290" r="140" fill="none" stroke="var(--violet)" stroke-width="2.8" opacity="0.55"/>
-    <circle cx="390" cy="290" r="210" fill="none" stroke="var(--violet)" stroke-width="2.8" opacity="0.4"/>
+  <!-- Circle at 2r (r=160) -->
+  <circle cx="280" cy="280" r="160" fill="none" stroke="var(--teal)" stroke-width="2" opacity="0.6"/>
 
-    <!-- Radius markers -->
-    <line x1="390" y1="290" x2="460" y2="290" stroke="var(--grid-strong)" stroke-width="2.2" opacity="0.9"/>
-    <line x1="390" y1="290" x2="530" y2="290" stroke="var(--grid-strong)" stroke-width="2.2" opacity="0.55"/>
-    <line x1="390" y1="290" x2="600" y2="290" stroke="var(--grid-strong)" stroke-width="2.2" opacity="0.35"/>
+  <!-- Circle at 3r (r=240) — clipped but visible -->
+  <circle cx="280" cy="280" r="240" fill="none" stroke="var(--teal)" stroke-width="1.5" opacity="0.3"/>
 
-    <text x="468" y="278" class="small outline"><tspan class="math">r</tspan></text>
-    <text x="538" y="278" class="small outline">2<tspan class="math">r</tspan></text>
-    <text x="608" y="278" class="small outline">3<tspan class="math">r</tspan></text>
+  <!-- Radial arrows showing energy spreading (4 at 45° intervals) -->
+  <!-- Arrow at 45° -->
+  <line x1="343" y1="217" x2="413" y2="147" stroke="var(--gold)" stroke-width="2.5" opacity="1.0" marker-end="url(#arrowGold)"/>
 
-    <!-- Strength labels -->
-    <g>
-      <rect x="640" y="164" width="240" height="204" rx="14" fill="none" stroke="var(--grid-strong)" stroke-width="1.6" opacity="0.9"/>
-      <text x="660" y="196" class="label outline">Per-area strength</text>
-      <text x="660" y="226" class="small outline">
-        at <tspan class="math">r</tspan>: <tspan fill="var(--pink)" font-weight="800">1</tspan>
-      </text>
-      <text x="660" y="256" class="small outline">
-        at 2<tspan class="math">r</tspan>: <tspan fill="var(--pink)" font-weight="800">1/4</tspan>
-      </text>
-      <text x="660" y="286" class="small outline">
-        at 3<tspan class="math">r</tspan>: <tspan fill="var(--pink)" font-weight="800">1/9</tspan>
-      </text>
-      <text x="660" y="324" class="small outline">
-        because area scales as <tspan class="math">r</tspan><tspan baseline-shift="super" font-size="70%">2</tspan>
-      </text>
-      <text x="660" y="352" class="small outline">
-        so strength scales as 1/<tspan class="math">r</tspan><tspan baseline-shift="super" font-size="70%">2</tspan>
-      </text>
-    </g>
+  <!-- Arrow at 135° -->
+  <line x1="217" y1="217" x2="147" y2="147" stroke="var(--gold)" stroke-width="2" opacity="0.7" marker-end="url(#arrowGold)"/>
 
-    <!-- Visual emphasis on the r^2 idea -->
-    <text x="120" y="176" class="label outline">
-      Surface area of a sphere: 4π<tspan class="math">r</tspan><tspan baseline-shift="super" font-size="70%">2</tspan>
-    </text>
-    <text x="120" y="204" class="small outline">Double distance → 4× the area → 1/4 the strength.</text>
-  </g>
+  <!-- Arrow at 225° -->
+  <line x1="217" y1="343" x2="147" y2="413" stroke="var(--gold)" stroke-width="2" opacity="0.7" marker-end="url(#arrowGold)"/>
 
-  <g transform="translate(48,470)">
-    <rect x="0" y="0" width="864" height="70" rx="12" class="panel"/>
-    <text x="18" y="30" class="label">Key idea: inverse-square comes from geometry — not from “gravity running out.”</text>
-    <text x="18" y="54" class="small">The same total influence spreads over larger spherical surfaces as you move farther away.</text>
-  </g>
+  <!-- Arrow at 315° -->
+  <line x1="343" y1="343" x2="413" y2="413" stroke="var(--gold)" stroke-width="2.5" opacity="1.0" marker-end="url(#arrowGold)"/>
+
+  <!-- Distance markers and labels -->
+  <!-- Label at r -->
+  <text x="370" y="295" class="label" fill="var(--navy)" font-weight="600">r</text>
+
+  <!-- Label at 2r -->
+  <text x="450" y="295" class="label" fill="var(--navy)" font-weight="600">2r</text>
+
+  <!-- Right-side info panel -->
+  <rect x="560" y="140" width="370" height="300" fill="var(--surface)" stroke="var(--border)" stroke-width="1.5" rx="4"/>
+
+  <!-- Panel title -->
+  <text x="745" y="170" text-anchor="middle" class="label" fill="var(--navy)" font-weight="600">Strength vs. Distance</text>
+
+  <!-- Table entries -->
+  <text x="590" y="215" class="strength" fill="var(--gold)">At r:</text>
+  <text x="880" y="215" text-anchor="end" class="strength" fill="var(--gold)">strength = 1</text>
+  <line x1="570" y1="222" x2="920" y2="222" stroke="var(--border-light)" stroke-width="1"/>
+
+  <text x="590" y="265" class="strength" fill="var(--teal)">At 2r:</text>
+  <text x="880" y="265" text-anchor="end" class="strength" fill="var(--teal)">strength = 1/4</text>
+  <line x1="570" y1="272" x2="920" y2="272" stroke="var(--border-light)" stroke-width="1"/>
+
+  <text x="590" y="315" class="strength" fill="var(--muted)">At 3r:</text>
+  <text x="880" y="315" text-anchor="end" class="strength" fill="var(--muted)">strength = 1/9</text>
+
+  <!-- Formula explanation -->
+  <text x="745" y="365" text-anchor="middle" class="small" fill="var(--muted)">Area ∝ r²</text>
+  <text x="745" y="383" text-anchor="middle" class="small" fill="var(--muted)">Strength ∝ 1/r²</text>
+
+  <!-- Bottom callout -->
+  <rect x="80" y="450" width="800" height="60" fill="none" stroke="var(--navy)" stroke-width="2" rx="4"/>
+  <text x="480" y="475" text-anchor="middle" class="label" fill="var(--navy)" font-weight="600">Double distance → 4× area → 1/4 strength</text>
+  <text x="480" y="497" text-anchor="middle" class="small" fill="var(--muted)">(inverse-square law)</text>
+
 </svg>

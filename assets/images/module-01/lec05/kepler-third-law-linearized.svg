@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540">
+  <title>Kepler's Third Law: Linearized (P² vs a³)</title>
+  <desc>A linear plot of P² (years²) versus a³ (AU³) showing Kepler's third law as a straight line through the origin with slope 1. Inner planets are shown in detail in an inset zoom panel.</desc>
+
+  <defs>
+    <style>
+      text { font-family: Inter, system-ui, sans-serif; }
+      .axis-label { font-size: 14px; font-weight: 500; fill: #1a3a52; }
+      .tick-label { font-size: 12px; fill: #5c6470; }
+      .grid-line { stroke: #ccc7c0; stroke-width: 1; }
+      .axis-line { stroke: #1a3a52; stroke-width: 2; }
+      .fit-line { fill: none; stroke: #6b9fa1; stroke-width: 2.5; }
+      .planet-dot { fill: #c9a66b; }
+      .earth-dot { fill: #c9a66b; stroke: #1a3a52; stroke-width: 2; }
+      .planet-label { font-size: 13px; fill: #5c6470; text-anchor: middle; }
+      .inset-border { fill: none; stroke: #d4d0cc; stroke-width: 1.5; }
+      .inset-bg { fill: #eef1f5; opacity: 0.85; }
+      .note { font-size: 12px; fill: #5c6470; font-style: italic; }
+      .annotation { font-size: 13px; fill: #6b9fa1; font-weight: 600; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="960" height="540" fill="#ffffff"/>
+
+  <!-- Title -->
+  <text x="480" y="30" font-size="18" font-weight="600" fill="#1a3a52" text-anchor="middle">
+    Kepler's Third Law: Linearized (P² vs a³)
+  </text>
+
+  <!-- Main plot area background -->
+  <rect x="160" y="100" width="660" height="330" fill="white" stroke="#d4d0cc" stroke-width="1"/>
+
+  <!-- Axes -->
+  <line x1="160" y1="100" x2="160" y2="430" class="axis-line"/>
+  <line x1="820" y1="100" x2="820" y2="430" class="axis-line"/>
+  <line x1="160" y1="430" x2="820" y2="430" class="axis-line"/>
+
+  <!-- Grid lines at a³ = 5000, 10000, 15000, 20000, 25000 -->
+  <!-- Linear mapping: px = 160 + 660*(a³/28000) -->
+  <line x1="278.2" y1="100" x2="278.2" y2="430" class="grid-line"/>
+  <line x1="396.4" y1="100" x2="396.4" y2="430" class="grid-line"/>
+  <line x1="514.6" y1="100" x2="514.6" y2="430" class="grid-line"/>
+  <line x1="632.8" y1="100" x2="632.8" y2="430" class="grid-line"/>
+  <line x1="751.0" y1="100" x2="751.0" y2="430" class="grid-line"/>
+
+  <!-- Grid lines at P² = 5000, 10000, 15000, 20000, 25000 -->
+  <!-- Linear mapping: py = 430 - 330*(P²/28000) -->
+  <line x1="160" y1="378.1" x2="820" y2="378.1" class="grid-line"/>
+  <line x1="160" y1="326.2" x2="820" y2="326.2" class="grid-line"/>
+  <line x1="160" y1="274.3" x2="820" y2="274.3" class="grid-line"/>
+  <line x1="160" y1="222.4" x2="820" y2="222.4" class="grid-line"/>
+  <line x1="160" y1="170.5" x2="820" y2="170.5" class="grid-line"/>
+
+  <!-- X-axis ticks and labels -->
+  <line x1="278.2" y1="430" x2="278.2" y2="440" stroke="#1a3a52" stroke-width="1.5"/>
+  <text x="278.2" y="455" class="tick-label">5k</text>
+
+  <line x1="396.4" y1="430" x2="396.4" y2="440" stroke="#1a3a52" stroke-width="1.5"/>
+  <text x="396.4" y="455" class="tick-label">10k</text>
+
+  <line x1="514.6" y1="430" x2="514.6" y2="440" stroke="#1a3a52" stroke-width="1.5"/>
+  <text x="514.6" y="455" class="tick-label">15k</text>
+
+  <line x1="632.8" y1="430" x2="632.8" y2="440" stroke="#1a3a52" stroke-width="1.5"/>
+  <text x="632.8" y="455" class="tick-label">20k</text>
+
+  <line x1="751.0" y1="430" x2="751.0" y2="440" stroke="#1a3a52" stroke-width="1.5"/>
+  <text x="751.0" y="455" class="tick-label">25k</text>
+
+  <!-- Y-axis ticks and labels -->
+  <line x1="150" y1="378.1" x2="160" y2="378.1" stroke="#1a3a52" stroke-width="1.5"/>
+  <text x="145" y="382" class="tick-label" text-anchor="end">5k</text>
+
+  <line x1="150" y1="326.2" x2="160" y2="326.2" stroke="#1a3a52" stroke-width="1.5"/>
+  <text x="145" y="330" class="tick-label" text-anchor="end">10k</text>
+
+  <line x1="150" y1="274.3" x2="160" y2="274.3" stroke="#1a3a52" stroke-width="1.5"/>
+  <text x="145" y="278" class="tick-label" text-anchor="end">15k</text>
+
+  <line x1="150" y1="222.4" x2="160" y2="222.4" stroke="#1a3a52" stroke-width="1.5"/>
+  <text x="145" y="226" class="tick-label" text-anchor="end">20k</text>
+
+  <line x1="150" y1="170.5" x2="160" y2="170.5" stroke="#1a3a52" stroke-width="1.5"/>
+  <text x="145" y="174" class="tick-label" text-anchor="end">25k</text>
+
+  <!-- Axis labels -->
+  <text x="490" y="500" class="axis-label" text-anchor="middle">a³ (AU³)</text>
+  <text x="90" y="265" class="axis-label" text-anchor="middle" transform="rotate(-90 90 265)">P² (years²)</text>
+
+  <!-- Best-fit line: P² = a³ through origin -->
+  <!-- Points: (0,0) at (160,430), (28000,28000) at (820,140) -->
+  <line x1="160" y1="430" x2="820" y2="140" class="fit-line"/>
+
+  <!-- Outer planets (visible at main scale) -->
+  <!-- Jupiter: a³=140.8, P²=140.6 -->
+  <!-- px = 160 + 660*140.8/28000 = 163.32, py = 430 - 330*140.6/28000 = 428.54 -->
+  <circle cx="163.3" cy="428.5" r="4" class="planet-dot"/>
+  <text x="163.3" y="410" class="planet-label">J</text>
+
+  <!-- Saturn: a³=866.7, P²=867.9 -->
+  <!-- px = 160 + 660*866.7/28000 = 180.43, py = 430 - 330*867.9/28000 = 421.0 -->
+  <circle cx="180.4" cy="421.0" r="4" class="planet-dot"/>
+  <text x="210" y="438" class="planet-label">Sa</text>
+
+  <!-- Uranus: a³=7067, P²=7058 -->
+  <!-- px = 160 + 660*7067/28000 = 326.5, py = 430 - 330*7058/28000 = 296.8 -->
+  <circle cx="326.5" cy="296.8" r="4" class="planet-dot"/>
+  <text x="326.5" y="313" class="planet-label">Uranus</text>
+
+  <!-- Neptune: a³=27189, P²=27159 -->
+  <!-- px = 160 + 660*27189/28000 = 801.1, py = 430 - 330*27159/28000 = 149.1 -->
+  <circle cx="801.1" cy="149.1" r="4" class="planet-dot"/>
+  <text x="801.1" y="166" class="planet-label">Neptune</text>
+
+  <!-- Slope annotation -->
+  <text x="710" y="185" class="annotation">slope = 1</text>
+
+  <!-- Inset zoom for inner planets -->
+  <g id="inset">
+    <!-- Background -->
+    <rect x="610" y="340" width="200" height="80" class="inset-bg"/>
+    <rect x="610" y="340" width="200" height="80" class="inset-border"/>
+
+    <!-- Inset title -->
+    <text x="710" y="352" font-size="12" fill="#5c6470" text-anchor="middle" font-weight="600">Inner planets (zoom)</text>
+
+    <!-- Inset axes -->
+    <line x1="620" y1="415" x2="805" y2="415" stroke="#5c6470" stroke-width="1"/>
+    <line x1="620" y1="360" x2="620" y2="415" stroke="#5c6470" stroke-width="1"/>
+
+    <!-- Inset grid -->
+    <!-- Range: a³ 0-15, P² 0-15 -->
+    <!-- Inset pixel mapping: px_inset = 620 + 185*(a³/15), py_inset = 415 - 55*(P²/15) -->
+    <line x1="643.3" y1="360" x2="643.3" y2="415" stroke="#ccc7c0" stroke-width="0.5" opacity="0.6"/>
+    <line x1="666.7" y1="360" x2="666.7" y2="415" stroke="#ccc7c0" stroke-width="0.5" opacity="0.6"/>
+    <line x1="690.0" y1="360" x2="690.0" y2="415" stroke="#ccc7c0" stroke-width="0.5" opacity="0.6"/>
+    <line x1="713.3" y1="360" x2="713.3" y2="415" stroke="#ccc7c0" stroke-width="0.5" opacity="0.6"/>
+    <line x1="736.7" y1="360" x2="736.7" y2="415" stroke="#ccc7c0" stroke-width="0.5" opacity="0.6"/>
+    <line x1="760.0" y1="360" x2="760.0" y2="415" stroke="#ccc7c0" stroke-width="0.5" opacity="0.6"/>
+    <line x1="783.3" y1="360" x2="783.3" y2="415" stroke="#ccc7c0" stroke-width="0.5" opacity="0.6"/>
+
+    <line x1="620" y1="393.3" x2="805" y2="393.3" stroke="#ccc7c0" stroke-width="0.5" opacity="0.6"/>
+    <line x1="620" y1="371.7" x2="805" y2="371.7" stroke="#ccc7c0" stroke-width="0.5" opacity="0.6"/>
+
+    <!-- Inset line: P² = a³ scaled to inset -->
+    <!-- (0,0) at (620,415), (15,15) at (805,360) -->
+    <line x1="620" y1="415" x2="805" y2="360" stroke="#6b9fa1" stroke-width="2"/>
+
+    <!-- Inner planet points in inset -->
+    <!-- Mercury: a³=0.058, P²=0.058 -->
+    <!-- px_inset = 620 + 185*0.058/15 = 620.72, py_inset = 415 - 55*0.058/15 = 414.79 -->
+    <circle cx="620.7" cy="414.8" r="2.5" class="planet-dot"/>
+
+    <!-- Venus: a³=0.378, P²=0.378 -->
+    <!-- px_inset = 620 + 185*0.378/15 = 624.67, py_inset = 415 - 55*0.378/15 = 413.61 -->
+    <circle cx="624.7" cy="413.6" r="2.5" class="planet-dot"/>
+
+    <!-- Earth: a³=1.0, P²=1.0 -->
+    <!-- px_inset = 620 + 185*1/15 = 632.33, py_inset = 415 - 55*1/15 = 411.33 -->
+    <circle cx="632.3" cy="411.3" r="3" class="earth-dot"/>
+
+    <!-- Mars: a³=3.54, P²=3.54 -->
+    <!-- px_inset = 620 + 185*3.54/15 = 643.86, py_inset = 415 - 55*3.54/15 = 402.03 -->
+    <circle cx="643.9" cy="402.0" r="2.5" class="planet-dot"/>
+
+    <!-- Inset labels -->
+    <text x="752" y="430" font-size="10" fill="#5c6470" text-anchor="middle">a³</text>
+    <text x="612" y="375" font-size="10" fill="#5c6470" text-anchor="end">P²</text>
+  </g>
+
+  <!-- Bottom insight -->
+  <text x="480" y="525" class="note" text-anchor="middle">
+    All planets lie on the same line — same central mass (the Sun)
+  </text>
+</svg>

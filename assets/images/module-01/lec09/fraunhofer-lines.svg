@@ -1,290 +1,127 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="540" viewBox="0 0 1920 540"
-     role="img" aria-labelledby="title desc">
-  <title id="title">Fraunhofer Lines in the Solar Spectrum</title>
-  <desc id="desc">The visible solar spectrum from 380 nm (violet) to 750 nm (red) crossed by dark absorption lines at their scientifically correct wavelengths. Major Fraunhofer lines are labeled with their traditional letter designations and the absorbing element.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 540">
+  <title>Fraunhofer Absorption Lines</title>
+  <desc>Solar spectrum showing characteristic absorption lines from atmospheric elements.</desc>
 
   <defs>
     <style>
-      text {
-        font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
-        fill: #eef0ff;
-      }
-      .label     { font-size: 22px; font-weight: 700; }
-      .element   { font-size: 16px; fill: #b0b4d0; font-weight: 500; }
-      .tick-label { font-size: 15px; fill: #8f92ad; font-weight: 500; }
-      .axis-label { font-size: 16px; fill: #8f92ad; font-weight: 600; letter-spacing: 0.5px; }
-      .line-strong { stroke: #050510; stroke-width: 5.5; opacity: 0.93; }
-      .line-medium { stroke: #050510; stroke-width: 3.5; opacity: 0.90; }
-      .line-weak   { stroke: #050510; stroke-width: 2.0; opacity: 0.85; }
-      .line-faint  { stroke: #050510; stroke-width: 1.2; opacity: 0.75; }
-      .tick        { stroke: #5a5e80; stroke-width: 1.5; }
-      .leader      { stroke: #8f92ad; stroke-width: 1; opacity: 0.6; }
+      text { font-family: Inter, system-ui, sans-serif; }
+      .title-text { font-size: 18px; font-weight: 600; fill: #1a3a52; }
+      .label-text { font-size: 12px; fill: #1a3a52; }
+      .small-text { font-size: 12px; fill: #5c6470; }
+      .wavelength-text { font-size: 12px; fill: #5c6470; }
+      .line-label { font-size: 13px; font-weight: 600; fill: #1a3a52; }
     </style>
-
-    <!-- Physically-motivated visible spectrum gradient (sRGB approximations) -->
-    <linearGradient id="spectrum" x1="0" y1="0" x2="1" y2="0">
-      <!-- 380 nm  deep violet -->
-      <stop offset="0.000" stop-color="#2b0040"/>
-      <!-- 400 nm  violet -->
-      <stop offset="0.054" stop-color="#44007a"/>
-      <!-- 420 nm -->
-      <stop offset="0.108" stop-color="#3700b3"/>
-      <!-- 440 nm  blue-violet -->
-      <stop offset="0.162" stop-color="#1b00ff"/>
-      <!-- 460 nm  blue -->
-      <stop offset="0.216" stop-color="#0048ff"/>
-      <!-- 480 nm -->
-      <stop offset="0.270" stop-color="#0088ff"/>
-      <!-- 500 nm  cyan -->
-      <stop offset="0.324" stop-color="#00b7a8"/>
-      <!-- 520 nm  green -->
-      <stop offset="0.378" stop-color="#00c43a"/>
-      <!-- 540 nm -->
-      <stop offset="0.432" stop-color="#4fd800"/>
-      <!-- 560 nm  yellow-green -->
-      <stop offset="0.486" stop-color="#a0e800"/>
-      <!-- 570 nm  yellow -->
-      <stop offset="0.514" stop-color="#d4e800"/>
-      <!-- 580 nm -->
-      <stop offset="0.541" stop-color="#ffd600"/>
-      <!-- 590 nm  orange-yellow -->
-      <stop offset="0.568" stop-color="#ffb300"/>
-      <!-- 600 nm  orange -->
-      <stop offset="0.595" stop-color="#ff8c00"/>
-      <!-- 620 nm -->
-      <stop offset="0.649" stop-color="#ff5500"/>
-      <!-- 640 nm  orange-red -->
-      <stop offset="0.703" stop-color="#ff2800"/>
-      <!-- 660 nm  red -->
-      <stop offset="0.757" stop-color="#ef0000"/>
-      <!-- 680 nm -->
-      <stop offset="0.811" stop-color="#c00000"/>
-      <!-- 700 nm  deep red -->
-      <stop offset="0.865" stop-color="#900000"/>
-      <!-- 720 nm -->
-      <stop offset="0.919" stop-color="#600000"/>
-      <!-- 750 nm  limit of visibility -->
-      <stop offset="1.000" stop-color="#3a0000"/>
+    <linearGradient id="visibleSpectrum" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#4B0082"/>
+      <stop offset="16.66%" style="stop-color:#4169E1"/>
+      <stop offset="33.33%" style="stop-color:#00FF00"/>
+      <stop offset="50%" style="stop-color:#FFFF00"/>
+      <stop offset="66.66%" style="stop-color:#FF7F00"/>
+      <stop offset="83.33%" style="stop-color:#FF4500"/>
+      <stop offset="100%" style="stop-color:#DC143C"/>
     </linearGradient>
   </defs>
 
   <!-- Background -->
-  <rect width="1920" height="540" fill="#08080e"/>
+  <rect width="1920" height="540" fill="#ffffff"/>
 
-  <!--
-    Coordinate system for the spectrum strip:
-      Left edge  x = 80   corresponds to 380 nm
-      Right edge x = 1840  corresponds to 750 nm
-      Strip width = 1760 px over 370 nm
-      Scale: 1 nm = 1760/370 = 4.7568 px
-      x(λ) = 80 + (λ - 380) × 4.7568
-  -->
+  <!-- Title -->
+  <text x="960" y="40" class="title-text" text-anchor="middle">Solar Spectrum — Fraunhofer Absorption Lines</text>
+
+  <!-- Wavelength axis labels -->
+  <text x="80" y="530" class="wavelength-text" text-anchor="middle">380 nm</text>
+  <text x="360" y="530" class="wavelength-text" text-anchor="middle">450 nm</text>
+  <text x="640" y="530" class="wavelength-text" text-anchor="middle">520 nm</text>
+  <text x="920" y="530" class="wavelength-text" text-anchor="middle">590 nm</text>
+  <text x="1200" y="530" class="wavelength-text" text-anchor="middle">660 nm</text>
+  <text x="1480" y="530" class="wavelength-text" text-anchor="middle">730 nm</text>
+
+  <!-- Wavelength axis ticks -->
+  <line x1="80" y1="480" x2="80" y2="490" stroke="#d4d0cc" stroke-width="1"/>
+  <line x1="360" y1="480" x2="360" y2="490" stroke="#d4d0cc" stroke-width="1"/>
+  <line x1="640" y1="480" x2="640" y2="490" stroke="#d4d0cc" stroke-width="1"/>
+  <line x1="920" y1="480" x2="920" y2="490" stroke="#d4d0cc" stroke-width="1"/>
+  <line x1="1200" y1="480" x2="1200" y2="490" stroke="#d4d0cc" stroke-width="1"/>
+  <line x1="1480" y1="480" x2="1480" y2="490" stroke="#d4d0cc" stroke-width="1"/>
 
   <!-- Spectrum strip -->
-  <rect x="80" y="160" width="1760" height="200" rx="6" fill="url(#spectrum)"/>
+  <rect x="80" y="200" width="1760" height="180" fill="url(#visibleSpectrum)" stroke="#d4d0cc" stroke-width="1"/>
 
-  <!--
-    FRAUNHOFER ABSORPTION LINES — scientifically correct wavelengths
-    Positions computed as x = 80 + (λ_nm - 380) × 4.7568
+  <!-- Color labels -->
+  <text x="50" y="295" class="small-text" text-anchor="end">violet</text>
+  <text x="1890" y="295" class="small-text" text-anchor="start">red</text>
 
-    Line    λ (nm)    Element     x (px)     Strength
-    K       393.4     Ca II       143.8      strong
-    H       396.8     Ca II       159.9      strong
-    h       410.2     Hδ          223.6      medium
-    G'      430.8     Fe          321.6      medium
-    G       430.8     Ca          321.6      (blended with G')
-    F       486.1     Hβ          584.7      strong
-    e       527.0     Fe          779.2      medium
-    D₂      589.0     Na         1074.2      strong
-    D₁      589.6     Na         1077.1      strong
-    C       656.3     Hα         1394.4      strong
-    B       686.7     O₂         1539.1      strong (telluric)
-    A       759.4     O₂         1884.7      strong (telluric)
+  <!-- STRONG ABSORPTION LINES (width=4-5px, opacity=0.9) -->
+  <!-- Ca II K 393.4nm (violet side) -->
+  <rect x="213" y="200" width="5" height="180" fill="#2a2a2a" opacity="0.9"/>
+  <text x="213" y="165" class="line-label" text-anchor="middle">K</text>
+  <text x="213" y="415" class="wavelength-text" text-anchor="middle">Ca II</text>
 
-    Additional weaker lines for realism:
-    λ 382.0  Fe        89.5       faint
-    λ 404.7  Fe       197.5       weak
-    λ 422.7  Ca I     263.1       weak
-    λ 438.4  Fe       357.8       faint
-    λ 447.1  Fe/He    399.2       faint
-    λ 466.8  Fe       493.0       faint
-    λ 495.8  Fe       631.0       faint
-    λ 516.7  Mg I     750.2       medium
-    λ 518.4  Mg I     758.3       weak
-    λ 532.8  Fe       806.8       faint
-    λ 546.1  Hg       870.0       faint
-    λ 557.6  Fe       924.7       faint
-    λ 570.0  unknown  983.7       faint
-    λ 579.1  Fe      1027.0       faint
-    λ 610.4  Fe      1175.1       faint
-    λ 627.7  O₂ atm  1257.4       weak
-    λ 630.2  O I     1269.3       faint
-    λ 649.7  H₂O atm 1362.0       faint
-    λ 718.5  H₂O atm 1690.2       weak
-  -->
+  <!-- Ca II H 396.8nm -->
+  <rect x="230" y="200" width="5" height="180" fill="#2a2a2a" opacity="0.9"/>
+  <text x="230" y="165" class="line-label" text-anchor="middle">H</text>
+  <text x="230" y="415" class="wavelength-text" text-anchor="middle">Ca II</text>
 
-  <!-- ===== FAINT background lines (Fe, etc.) — atmospheric detail ===== -->
-  <line x1="90"   y1="160" x2="90"   y2="360" class="line-faint"/>   <!-- 382.0 Fe -->
-  <line x1="358"  y1="160" x2="358"  y2="360" class="line-faint"/>   <!-- 438.4 Fe -->
-  <line x1="399"  y1="160" x2="399"  y2="360" class="line-faint"/>   <!-- 447.1 Fe/He -->
-  <line x1="493"  y1="160" x2="493"  y2="360" class="line-faint"/>   <!-- 466.8 Fe -->
-  <line x1="631"  y1="160" x2="631"  y2="360" class="line-faint"/>   <!-- 495.8 Fe -->
-  <line x1="807"  y1="160" x2="807"  y2="360" class="line-faint"/>   <!-- 532.8 Fe -->
-  <line x1="870"  y1="160" x2="870"  y2="360" class="line-faint"/>   <!-- 546.1 Hg -->
-  <line x1="925"  y1="160" x2="925"  y2="360" class="line-faint"/>   <!-- 557.6 Fe -->
-  <line x1="984"  y1="160" x2="984"  y2="360" class="line-faint"/>   <!-- 570.0 -->
-  <line x1="1027" y1="160" x2="1027" y2="360" class="line-faint"/>   <!-- 579.1 Fe -->
-  <line x1="1175" y1="160" x2="1175" y2="360" class="line-faint"/>   <!-- 610.4 Fe -->
-  <line x1="1269" y1="160" x2="1269" y2="360" class="line-faint"/>   <!-- 630.2 O I -->
-  <line x1="1362" y1="160" x2="1362" y2="360" class="line-faint"/>   <!-- 649.7 H₂O -->
+  <!-- Hα (Balmer) 656.3nm (red side, very prominent) -->
+  <rect x="1207" y="200" width="5" height="180" fill="#1a1a1a" opacity="0.95"/>
+  <text x="1207" y="165" class="line-label" text-anchor="middle">Hα</text>
+  <text x="1207" y="415" class="wavelength-text" text-anchor="middle" font-weight="600">656 nm</text>
 
-  <!-- ===== WEAK lines ===== -->
-  <line x1="198"  y1="160" x2="198"  y2="360" class="line-weak"/>    <!-- 404.7 Fe -->
-  <line x1="263"  y1="160" x2="263"  y2="360" class="line-weak"/>    <!-- 422.7 Ca I -->
-  <line x1="758"  y1="160" x2="758"  y2="360" class="line-weak"/>    <!-- 518.4 Mg I -->
-  <line x1="1257" y1="160" x2="1257" y2="360" class="line-weak"/>    <!-- 627.7 O₂ atm -->
-  <line x1="1690" y1="160" x2="1690" y2="360" class="line-weak"/>    <!-- 718.5 H₂O atm -->
+  <!-- Na D doublet 589.0/589.6nm (very strong, yellow region) -->
+  <rect x="946" y="200" width="4" height="180" fill="#1a1a1a" opacity="0.95"/>
+  <text x="946" y="165" class="line-label" text-anchor="middle">D₁</text>
+  <rect x="965" y="200" width="4" height="180" fill="#1a1a1a" opacity="0.95"/>
+  <text x="965" y="165" class="line-label" text-anchor="middle">D₂</text>
+  <text x="955" y="415" class="wavelength-text" text-anchor="middle" font-weight="600">Na D</text>
 
-  <!-- ===== MEDIUM lines ===== -->
-  <line x1="224"  y1="160" x2="224"  y2="360" class="line-medium"/>  <!-- h  410.2 Hδ -->
-  <line x1="322"  y1="160" x2="322"  y2="360" class="line-medium"/>  <!-- G  430.8 Fe/Ca -->
-  <line x1="750"  y1="160" x2="750"  y2="360" class="line-medium"/>  <!-- b₁ 516.7 Mg I -->
-  <line x1="779"  y1="160" x2="779"  y2="360" class="line-medium"/>  <!-- e  527.0 Fe -->
+  <!-- MEDIUM STRENGTH LINES (width=2.5-3px, opacity=0.8) -->
+  <!-- Hβ F 486.1nm (cyan region) -->
+  <rect x="766" y="200" width="3" height="180" fill="#2a2a2a" opacity="0.8"/>
+  <text x="766" y="165" class="line-label" text-anchor="middle">Hβ</text>
+  <text x="766" y="415" class="wavelength-text" text-anchor="middle">486 nm</text>
 
-  <!-- ===== STRONG (major named) lines ===== -->
-  <line x1="144"  y1="160" x2="144"  y2="360" class="line-strong"/>  <!-- K  393.4 Ca II -->
-  <line x1="160"  y1="160" x2="160"  y2="360" class="line-strong"/>  <!-- H  396.8 Ca II -->
-  <line x1="585"  y1="160" x2="585"  y2="360" class="line-strong"/>  <!-- F  486.1 Hβ -->
-  <line x1="1074" y1="160" x2="1074" y2="360" class="line-strong"/>  <!-- D₂ 589.0 Na -->
-  <line x1="1077" y1="160" x2="1077" y2="360" class="line-strong"/>  <!-- D₁ 589.6 Na -->
-  <line x1="1394" y1="160" x2="1394" y2="360" class="line-strong"/>  <!-- C  656.3 Hα -->
-  <line x1="1539" y1="160" x2="1539" y2="360" class="line-strong"/>  <!-- B  686.7 O₂ -->
-  <line x1="1885" y1="160" x2="1885" y2="360" class="line-strong"/>  <!-- A  759.4 O₂ -->
+  <!-- Hδ h 410.2nm -->
+  <rect x="306" y="200" width="3" height="180" fill="#2a2a2a" opacity="0.8"/>
+  <text x="306" y="165" class="line-label" text-anchor="middle">Hδ</text>
+  <text x="306" y="415" class="wavelength-text" text-anchor="middle">410 nm</text>
 
-  <!-- ===== LABELS for major lines (above spectrum) ===== -->
-  <!-- Leader lines from label down to spectrum top -->
+  <!-- Ca/Fe G 430.8nm -->
+  <rect x="387" y="200" width="3" height="180" fill="#2a2a2a" opacity="0.8"/>
+  <text x="387" y="165" class="line-label" text-anchor="middle">G</text>
+  <text x="387" y="415" class="wavelength-text" text-anchor="middle">Ca/Fe</text>
 
-  <!-- K  393.4 Ca II -->
-  <line x1="144" y1="135" x2="144" y2="158" class="leader"/>
-  <text x="144" y="124" text-anchor="middle" class="label">K</text>
-  <text x="144" y="106" text-anchor="middle" class="element">Ca II</text>
+  <!-- Mg b 516.7nm (green region) -->
+  <rect x="599" y="200" width="2.5" height="180" fill="#2a2a2a" opacity="0.8"/>
+  <text x="599" y="165" class="line-label" text-anchor="middle">b</text>
+  <text x="599" y="415" class="wavelength-text" text-anchor="middle">517 nm</text>
 
-  <!-- H  396.8 Ca II -->
-  <line x1="160" y1="135" x2="160" y2="158" class="leader"/>
-  <text x="172" y="124" text-anchor="middle" class="label">H</text>
-  <text x="172" y="106" text-anchor="middle" class="element">Ca II</text>
+  <!-- O₂ B 686.7nm (red side) -->
+  <rect x="1354" y="200" width="2.5" height="180" fill="#2a2a2a" opacity="0.8"/>
+  <text x="1354" y="165" class="line-label" text-anchor="middle">B</text>
+  <text x="1354" y="415" class="wavelength-text" text-anchor="middle">O₂</text>
 
-  <!-- h  410.2 Hδ -->
-  <line x1="224" y1="135" x2="224" y2="158" class="leader"/>
-  <text x="224" y="124" text-anchor="middle" class="label">h</text>
-  <text x="224" y="106" text-anchor="middle" class="element">Hδ</text>
+  <!-- O₂ A 759.4nm (far red) -->
+  <rect x="1543" y="200" width="2.5" height="180" fill="#2a2a2a" opacity="0.8"/>
+  <text x="1543" y="165" class="line-label" text-anchor="middle">A</text>
+  <text x="1543" y="415" class="wavelength-text" text-anchor="middle">O₂</text>
 
-  <!-- G  430.8 Ca/Fe -->
-  <line x1="322" y1="135" x2="322" y2="158" class="leader"/>
-  <text x="322" y="124" text-anchor="middle" class="label">G</text>
-  <text x="322" y="106" text-anchor="middle" class="element">Ca/Fe</text>
+  <!-- WEAK LINES (width=1.5-2px, opacity=0.65) -->
+  <!-- Fe e 527nm -->
+  <rect x="627" y="200" width="2" height="180" fill="#3a3a3a" opacity="0.65"/>
+  <text x="627" y="440" class="small-text" text-anchor="middle">Fe e</text>
 
-  <!-- F  486.1 Hβ -->
-  <line x1="585" y1="135" x2="585" y2="158" class="leader"/>
-  <text x="585" y="124" text-anchor="middle" class="label">F</text>
-  <text x="585" y="106" text-anchor="middle" class="element">Hβ</text>
+  <!-- Callout annotations -->
+  <!-- Hydrogen Balmer series callout -->
+  <g>
+    <path d="M 766 130 L 766 100 L 600 60" stroke="#6b9fa1" stroke-width="1.5" fill="none" stroke-dasharray="2,2"/>
+    <text x="590" y="55" class="label-text" text-anchor="end" fill="#6b9fa1">Hydrogen Balmer</text>
+    <text x="590" y="70" class="label-text" text-anchor="end" fill="#6b9fa1">series (→ n=2)</text>
+  </g>
 
-  <!-- b  516.7 Mg I -->
-  <line x1="750" y1="135" x2="750" y2="158" class="leader"/>
-  <text x="750" y="124" text-anchor="middle" class="label">b</text>
-  <text x="750" y="106" text-anchor="middle" class="element">Mg I</text>
-
-  <!-- e  527.0 Fe -->
-  <line x1="779" y1="135" x2="779" y2="158" class="leader"/>
-  <text x="800" y="124" text-anchor="middle" class="label">e</text>
-  <text x="800" y="106" text-anchor="middle" class="element">Fe</text>
-
-  <!-- D₁D₂  589 Na -->
-  <line x1="1076" y1="135" x2="1076" y2="158" class="leader"/>
-  <text x="1076" y="124" text-anchor="middle" class="label">D</text>
-  <text x="1076" y="106" text-anchor="middle" class="element">Na</text>
-
-  <!-- C  656.3 Hα -->
-  <line x1="1394" y1="135" x2="1394" y2="158" class="leader"/>
-  <text x="1394" y="124" text-anchor="middle" class="label">C</text>
-  <text x="1394" y="106" text-anchor="middle" class="element">Hα</text>
-
-  <!-- B  686.7 O₂ -->
-  <line x1="1539" y1="135" x2="1539" y2="158" class="leader"/>
-  <text x="1539" y="124" text-anchor="middle" class="label">B</text>
-  <text x="1539" y="106" text-anchor="middle" class="element">O₂</text>
-
-  <!-- A  759.4 O₂ -->
-  <line x1="1885" y1="135" x2="1885" y2="158" class="leader"/>
-  <text x="1885" y="124" text-anchor="middle" class="label">A</text>
-  <text x="1885" y="106" text-anchor="middle" class="element">O₂</text>
-
-  <!-- ===== WAVELENGTH AXIS ===== -->
-  <line x1="80" y1="375" x2="1840" y2="375" stroke="#5a5e80" stroke-width="2"/>
-
-  <!-- Tick marks every 50 nm from 400 to 750 -->
-  <!-- 400 nm: x = 80 + 20×4.7568 = 175.1 -->
-  <line x1="175"  y1="375" x2="175"  y2="390" class="tick"/>
-  <text x="175"  y="410" text-anchor="middle" class="tick-label">400</text>
-
-  <!-- 450 nm: x = 80 + 70×4.7568 = 413.0 -->
-  <line x1="413"  y1="375" x2="413"  y2="390" class="tick"/>
-  <text x="413"  y="410" text-anchor="middle" class="tick-label">450</text>
-
-  <!-- 500 nm: x = 80 + 120×4.7568 = 650.8 -->
-  <line x1="651"  y1="375" x2="651"  y2="390" class="tick"/>
-  <text x="651"  y="410" text-anchor="middle" class="tick-label">500</text>
-
-  <!-- 550 nm: x = 80 + 170×4.7568 = 888.7 -->
-  <line x1="889"  y1="375" x2="889"  y2="390" class="tick"/>
-  <text x="889"  y="410" text-anchor="middle" class="tick-label">550</text>
-
-  <!-- 600 nm: x = 80 + 220×4.7568 = 1126.5 -->
-  <line x1="1127" y1="375" x2="1127" y2="390" class="tick"/>
-  <text x="1127" y="410" text-anchor="middle" class="tick-label">600</text>
-
-  <!-- 650 nm: x = 80 + 270×4.7568 = 1364.3 -->
-  <line x1="1364" y1="375" x2="1364" y2="390" class="tick"/>
-  <text x="1364" y="410" text-anchor="middle" class="tick-label">650</text>
-
-  <!-- 700 nm: x = 80 + 320×4.7568 = 1602.2 -->
-  <line x1="1602" y1="375" x2="1602" y2="390" class="tick"/>
-  <text x="1602" y="410" text-anchor="middle" class="tick-label">700</text>
-
-  <!-- 750 nm: x = 1840 -->
-  <line x1="1840" y1="375" x2="1840" y2="390" class="tick"/>
-  <text x="1840" y="410" text-anchor="middle" class="tick-label">750</text>
-
-  <!-- Axis label -->
-  <text x="960" y="445" text-anchor="middle" class="axis-label">Wavelength (nm)</text>
-
-  <!-- ===== ANNOTATIONS ===== -->
-  <!-- Violet end label -->
-  <text x="80"  y="490" text-anchor="start" class="tick-label">violet</text>
-  <!-- Red end label -->
-  <text x="1840" y="490" text-anchor="end" class="tick-label">red</text>
-
-  <!-- Title region -->
-  <text x="960" y="52" text-anchor="middle" font-size="36" font-weight="800" fill="#eef0ff"
-        font-family="Inter, system-ui, sans-serif">
-    The Solar Spectrum — Fraunhofer Lines
-  </text>
-  <text x="960" y="80" text-anchor="middle" font-size="20" fill="#8f92ad"
-        font-family="Inter, system-ui, sans-serif">
-    Dark lines mark wavelengths absorbed by atoms in the Sun's atmosphere and Earth's atmosphere
-  </text>
-
-  <!-- Hydrogen line callout bracket -->
-  <text x="990" y="505" text-anchor="middle" font-size="16" fill="#6EB5FF"
-        font-family="Inter, system-ui, sans-serif" font-weight="600">
-    Hydrogen lines: Hα (C), Hβ (F), Hγ, Hδ (h) — the Balmer series
-  </text>
-
-  <!-- Sodium doublet callout -->
-  <text x="1076" y="530" text-anchor="middle" font-size="14" fill="#FFD06B"
-        font-family="Inter, system-ui, sans-serif" font-weight="500">
-    The famous sodium D doublet — two lines just 0.6 nm apart
-  </text>
-
+  <!-- Sodium D doublet callout -->
+  <g>
+    <path d="M 955 130 L 955 100 L 1150 60" stroke="#c9a66b" stroke-width="1.5" fill="none" stroke-dasharray="2,2"/>
+    <text x="1160" y="55" class="label-text" text-anchor="start" fill="#c9a66b">Sodium D</text>
+    <text x="1160" y="70" class="label-text" text-anchor="start" fill="#c9a66b">doublet</text>
+  </g>
 </svg>
