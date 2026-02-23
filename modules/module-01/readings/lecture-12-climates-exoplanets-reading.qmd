@@ -799,21 +799,31 @@ In L13, we'll zoom out and ask the biggest question of all: **How many civilizat
 
 ## Practice Problems
 
+*Solutions are available in the [Lecture 12 Solutions](lecture-12-climates-exoplanets-solutions.qmd).*
+
 ### Core (do these first)
 
-**1. Greenhouse Calculation:** Earth's equilibrium temperature is ~255 K, but its actual surface temperature is ~288 K. Calculate the greenhouse warming effect in Kelvin. Compare to Venus (T_eq ≈ 230 K, T_actual = 735 K).
+**1. Greenhouse Calculation:** Earth's equilibrium temperature is ~255 K, but its actual surface temperature is ~288 K. Calculate the greenhouse warming effect in Kelvin. Compare to Venus ($T_{\text{eq}} \approx 230$ K, $T_{\text{actual}} = 735$ K).
 
-**2. Transit Depth:** A planet with radius 2× Earth's transits a Sun-like star. What is the transit depth? By what factor is this easier to detect than an Earth-sized planet?
+**2. Transit Depth:** A planet with radius $2 \times$ Earth's transits a Sun-like star. What is the transit depth? By what factor is this easier to detect than an Earth-sized planet?
 
-**3. Habitable Zone Scaling:** A star has luminosity 1/4 that of the Sun. Where is its habitable zone compared to the Sun's? (Hint: Consider the Stefan-Boltzmann law and equilibrium temperature.)
+**3. Habitable Zone Scaling:** A star has luminosity $1/4$ that of the Sun. Where is its habitable zone compared to the Sun's? (Hint: the habitable zone distance scales as $\sqrt{L/L_\odot}$.)
 
 **4. Detection Methods:** You detect a planet via both radial velocity (star wobbles at 100 m/s) and transit (1% depth). What two properties can you now calculate that you couldn't with just one method?
 
+**5. Albedo and Equilibrium Temperature:** Earth's equilibrium temperature with its current Bond albedo ($A = 0.30$) is 255 K. If Earth's albedo increased to 0.40 (e.g., more ice and cloud cover), what would the new equilibrium temperature be? Use the scaling $T_{\text{eq}} \propto (1 - A)^{1/4}$.
+
+**6. Radial Velocity Detection:** A Sun-like star shows a periodic radial velocity wobble of 50 m/s with a period of 4.2 days. Is the companion more likely a planet or a star? Compare to Jupiter's effect on the Sun (~13 m/s, period 12 years). What does the short period suggest about the planet's orbit?
+
 ### Challenge
 
-**5. Venus's History:** Explain in your own words how Venus went from possibly habitable to its current state. Include the role of distance from Sun, water vapor feedback, and CO₂ accumulation.
+**7. Habitable Zone Width:** The Sun's habitable zone extends from roughly 0.95 AU to 1.4 AU. A red dwarf star with luminosity $L = 0.01\,L_\odot$ has its habitable zone scaled inward by $\sqrt{L/L_\odot}$. Calculate the inner and outer edges. How does the *width* of this habitable zone compare to the Sun's?
 
-**6. Density Interpretation:** You discover a planet with the same mass as Neptune but the same radius as Earth. Calculate its density and compare to Earth (5.5 g/cm³) and Neptune (1.6 g/cm³). What might this planet be made of?
+**8. Biosignature Reasoning:** Earth's atmosphere contains both O₂ (produced by photosynthesis) and CH₄ (produced by biology and geology). These two gases react with each other and would disappear without continuous replenishment. Explain why detecting *both* O₂ and CH₄ in an exoplanet atmosphere would be more compelling evidence for life than detecting either one alone.
+
+**9. Venus's History:** Explain in your own words how Venus went from possibly habitable to its current state. Include the role of distance from the Sun, water vapor feedback, and CO₂ accumulation.
+
+**10. Density Interpretation:** You discover a planet with the same mass as Neptune ($1.02 \times 10^{26}$ kg) but the same radius as Earth ($6.37 \times 10^6$ m). Calculate its average density and compare to Earth (5.5 g/cm³) and Neptune (1.6 g/cm³). What might this planet be made of?
 
 ---
 

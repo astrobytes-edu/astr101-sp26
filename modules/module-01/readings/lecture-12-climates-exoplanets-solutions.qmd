@@ -1,0 +1,393 @@
+---
+title: "Lecture 12 Solutions: Planetary Climates & Finding Other Worlds"
+subtitle: "Practice Problem Solutions"
+author: "Dr. Anna Rosen"
+date: "2026-02-25"
+description: "Solutions to the Lecture 12 practice problems."
+draft: true
+course: ASTR 101
+module: "1 - Foundations"
+---
+
+::: {.callout-note}
+**Student note:** These are model solutions written to show every step, units, and checks. I do not expect your work to be this detailed; shorter solutions are fine if your setup, units, and reasoning are correct.
+
+**HW note:** Homework uses only a subset of these problems; the full set is included for future study and self checking.
+:::
+
+## Core Problems
+
+### Problem 1: Greenhouse Calculation
+
+**Restatement:** Calculate the greenhouse warming for Earth and Venus from the difference between actual and equilibrium temperatures.
+
+**Given:**
+
+- Earth: $T_{\text{eq}} = 255$ K, $T_{\text{actual}} = 288$ K
+- Venus: $T_{\text{eq}} \approx 230$ K, $T_{\text{actual}} = 735$ K
+
+**Find:** Greenhouse warming $\Delta T = T_{\text{actual}} - T_{\text{eq}}$ for each planet.
+
+**Solution:**
+
+**Earth:**
+
+$$\Delta T_{\text{Earth}} = 288 \text{ K} - 255 \text{ K} = 33 \text{ K}$$
+
+**Venus:**
+
+$$\Delta T_{\text{Venus}} = 735 \text{ K} - 230 \text{ K} = 505 \text{ K}$$
+
+**Unit check:** $\text{K} - \text{K} = \text{K}$ ✓
+
+**Comparison:**
+
+$$\frac{\Delta T_{\text{Venus}}}{\Delta T_{\text{Earth}}} = \frac{505 \text{ K}}{33 \text{ K}} \approx 15$$
+
+Venus's greenhouse warming is about **15 times** larger than Earth's.
+
+**Sanity check:** Earth's 33 K warming is modest — it raises the temperature from below freezing (255 K = −18°C) to a comfortable 288 K (15°C). Venus's 505 K warming is extreme — it turns a cool planet into a 735 K (462°C) oven, hotter than Mercury despite being farther from the Sun. This dramatic difference is driven by Venus's thick CO₂ atmosphere (~96% CO₂, 90 atm surface pressure). ✓
+
+**Answer:** Earth: $\Delta T = 33$ K. Venus: $\Delta T = 505$ K. Venus's greenhouse effect is ~15× stronger than Earth's.
+
+**What you should learn from this:** The greenhouse effect is not binary (present or absent) — it's a matter of degree. Earth's modest greenhouse makes our planet habitable. Venus's runaway greenhouse makes it uninhabitable. The difference is atmospheric composition and thickness.
+
+---
+
+### Problem 2: Transit Depth
+
+**Restatement:** Calculate the transit depth for a planet with $R_p = 2\,R_\oplus$ transiting a Sun-like star, and compare to an Earth-sized planet.
+
+**Given:**
+
+- Planet radius: $R_p = 2\,R_\oplus$
+- Star radius: $R_* = R_\odot$
+- Earth's radius: $R_\oplus = 6.37 \times 10^6$ m
+- Sun's radius: $R_\odot = 6.96 \times 10^8$ m
+
+**Find:** Transit depth; comparison factor to Earth-transit depth.
+
+**Equation:**
+
+$$\text{depth} = \left(\frac{R_p}{R_*}\right)^2$$
+
+**Solution:**
+
+Step 1 — Calculate the radius ratio:
+
+$$\frac{R_p}{R_*} = \frac{2\,R_\oplus}{R_\odot} = \frac{2 \times 6.37 \times 10^6 \text{ m}}{6.96 \times 10^8 \text{ m}} = \frac{1.274 \times 10^7}{6.96 \times 10^8} = 0.0183$$
+
+Step 2 — Calculate the transit depth:
+
+$$\text{depth} = (0.0183)^2 = 3.35 \times 10^{-4} = 0.034\%$$
+
+Step 3 — Compare to an Earth-sized planet:
+
+For Earth: $R_p/R_* = R_\oplus/R_\odot = 6.37 \times 10^6 / 6.96 \times 10^8 = 0.00915$
+
+$$\text{depth}_\oplus = (0.00915)^2 = 8.4 \times 10^{-5} = 0.0084\%$$
+
+The ratio of transit depths:
+
+$$\frac{\text{depth}_{2R_\oplus}}{\text{depth}_{R_\oplus}} = \frac{(2R_\oplus)^2}{(R_\oplus)^2} = 4$$
+
+**Unit check:** $(R_p/R_*)^2$ is a ratio of lengths squared — dimensionless. ✓
+
+**Sanity check:** The $2R_\oplus$ planet blocks $4\times$ more starlight than Earth, which makes sense since transit depth scales as area ($\propto R^2$). A 0.034% dip is small but detectable by space missions like Kepler and TESS. ✓
+
+**Answer:** Transit depth = 0.034%. This is **4 times** easier to detect than an Earth-sized planet.
+
+**What you should learn from this:** Transit depth goes as $(R_p/R_*)^2$ — it's an area ratio. Doubling the planet radius quadruples the signal. This is why larger planets (hot Jupiters, super-Earths) were discovered first.
+
+---
+
+### Problem 3: Habitable Zone Scaling
+
+**Restatement:** Find the habitable zone location for a star with $L = L_\odot/4$.
+
+**Given:**
+
+- Star luminosity: $L = 0.25\,L_\odot$
+- Sun's habitable zone: centered near 1 AU
+
+**Find:** Location of the habitable zone relative to the Sun's.
+
+**Equation:**
+
+The habitable zone distance scales as:
+$$a_{\text{HZ}} \propto \sqrt{\frac{L}{L_\odot}}$$
+
+This follows from the equilibrium temperature formula: $T_{\text{eq}} \propto L^{1/4}/\sqrt{a}$. To keep the same temperature (liquid water range), you need to adjust $a$ with $L$.
+
+**Solution:**
+
+$$\frac{a_{\text{HZ}}}{a_{\text{HZ},\odot}} = \sqrt{\frac{L}{L_\odot}} = \sqrt{\frac{0.25\,L_\odot}{L_\odot}} = \sqrt{0.25} = 0.5$$
+
+The habitable zone is at **half the distance** compared to the Sun's.
+
+If the Sun's habitable zone is near 1 AU:
+
+$$a_{\text{HZ}} = 0.5 \times 1 \text{ AU} = 0.5 \text{ AU}$$
+
+**Unit check:** $\sqrt{L_\odot / L_\odot}$ is dimensionless; multiplied by AU gives AU. ✓
+
+**Sanity check:** A dimmer star provides less energy, so you need to be closer to stay warm — the HZ moves inward. $L = L_\odot/4$ → HZ at half the distance. This is consistent with real observations: K and M dwarf stars have habitable zones much closer in than the Sun's. ✓
+
+**Answer:** The habitable zone is at $\sim 0.5$ AU — **half** the distance of the Sun's habitable zone.
+
+**What you should learn from this:** The habitable zone scales as $\sqrt{L}$. Dimmer stars have closer-in habitable zones. This is why planets in red dwarf habitable zones have short orbital periods (days to weeks), making them easier to detect by both transit and radial velocity methods.
+
+---
+
+### Problem 4: Detection Methods (RV + Transit Combined)
+
+**Restatement:** What two properties can you determine from combined RV and transit detections that you couldn't from either alone?
+
+**Answer:**
+
+From RV alone, you get the **planet's mass** (technically a minimum mass, $M_p \sin i$, because the orbital inclination $i$ is unknown).
+
+From transit alone, you get the **planet's radius** (from the transit depth: depth $= (R_p/R_*)^2$).
+
+When you have **both**:
+
+1. **True mass** — because a transiting planet must have $i \approx 90°$ (edge-on), so $\sin i \approx 1$, and the RV gives the true mass rather than a minimum.
+
+2. **Density** — with both mass $M_p$ and radius $R_p$:
+
+$$\rho = \frac{M_p}{\frac{4}{3}\pi R_p^3}$$
+
+Density tells you the planet's **bulk composition** — is it rocky ($\rho \sim 5.5$ g/cm³ like Earth), gaseous ($\rho \sim 1.3$ g/cm³ like Jupiter), or something in between (ice giant, water world)?
+
+**What you should learn from this:** No single method tells the full story. RV gives mass; transits give radius. Together they give density — the key to understanding what a planet is *made of*. This is why astronomers work so hard to get both measurements for the same planet.
+
+---
+
+### Problem 5: Albedo and Equilibrium Temperature
+
+**Restatement:** Calculate Earth's equilibrium temperature if its albedo increased from 0.30 to 0.40.
+
+**Given:**
+
+- Current albedo: $A_1 = 0.30$
+- Current equilibrium temperature: $T_1 = 255$ K
+- New albedo: $A_2 = 0.40$
+
+**Find:** New equilibrium temperature $T_2$.
+
+**Equation:**
+
+$$T_{\text{eq}} \propto (1 - A)^{1/4}$$
+
+Therefore:
+
+$$\frac{T_2}{T_1} = \left(\frac{1 - A_2}{1 - A_1}\right)^{1/4}$$
+
+**Solution:**
+
+Step 1 — Calculate the absorbed-fraction ratio:
+
+$$\frac{1 - A_2}{1 - A_1} = \frac{1 - 0.40}{1 - 0.30} = \frac{0.60}{0.70} = 0.857$$
+
+Step 2 — Raise to the 1/4 power:
+
+$$(0.857)^{1/4} = (0.857)^{0.25} = 0.962$$
+
+Step 3 — Calculate the new temperature:
+
+$$T_2 = 255 \text{ K} \times 0.962 = 245 \text{ K}$$
+
+**Unit check:** K × (dimensionless) = K ✓
+
+**Sanity check:** Higher albedo → more light reflected → less energy absorbed → cooler planet. A 10-percentage-point increase in albedo (0.30 → 0.40) lowers the equilibrium temperature by ~10 K. The $1/4$ power makes the dependence weak — you need a large albedo change to produce a modest temperature change. ✓
+
+**Answer:** $T_{\text{eq}} \approx 245$ K. The 10-point increase in albedo cools Earth by about 10 K.
+
+**What you should learn from this:** Albedo enters the equilibrium temperature formula to the 1/4 power, so it has a relatively weak effect. Even a significant change (0.30 → 0.40) only shifts the temperature by ~4%. This is why the greenhouse effect (which can add tens to hundreds of degrees) typically dominates over albedo in setting planetary surface temperatures.
+
+---
+
+### Problem 6: Radial Velocity Detection
+
+**Restatement:** Classify a companion producing a 50 m/s RV wobble with a 4.2-day period.
+
+**Given:**
+
+- RV amplitude: 50 m/s
+- Period: 4.2 days
+- Comparison: Jupiter causes ~13 m/s wobble on the Sun with a 12-year period
+
+**Find:** Is the companion a planet or a star? What does the short period imply?
+
+**Answer:**
+
+**Planet or star?** The companion is most likely a **planet**.
+
+- Binary star companions produce RV amplitudes of ~1–100 km/s (1,000–100,000 m/s). Our 50 m/s signal is far too small for a stellar companion.
+- Jupiter causes ~13 m/s on the Sun; a more massive planet (several Jupiter masses) or a planet in a closer orbit would produce a larger signal.
+- 50 m/s is well within the range of planetary companions (~1–200 m/s for giant planets).
+
+**What does the 4.2-day period mean?** This is a very short orbital period — the planet orbits extremely close to the star. Using Kepler's Third Law (qualitatively): short period → small orbital distance. At 4.2 days, the planet is roughly 0.05 AU from the star — about 10 stellar radii.
+
+This is a **"hot Jupiter"** — a gas giant in a very tight orbit. Hot Jupiters were the first exoplanets discovered by the RV method precisely because they produce large, short-period signals that are easy to detect.
+
+**Sanity check:** The first exoplanet around a Sun-like star (51 Pegasi b, discovered 1995) had an RV amplitude of ~55 m/s and a period of 4.23 days — almost identical to our problem! This is consistent with a hot Jupiter. ✓
+
+**What you should learn from this:** RV amplitude scales with companion mass (heavier companions → larger wobble) and inversely with orbital distance (closer companions → larger wobble). The combination of amplitude and period lets you distinguish planets from stars and identify the type of planet (hot Jupiter vs. cold gas giant vs. super-Earth).
+
+---
+
+## Challenge Problems
+
+### Problem 7: Habitable Zone Width
+
+**Restatement:** Calculate the habitable zone boundaries for a red dwarf with $L = 0.01\,L_\odot$ and compare its width to the Sun's.
+
+**Given:**
+
+- Sun's HZ: inner edge = 0.95 AU, outer edge = 1.4 AU
+- Red dwarf luminosity: $L = 0.01\,L_\odot$
+- HZ scaling: $a_{\text{HZ}} \propto \sqrt{L/L_\odot}$
+
+**Find:** Inner and outer HZ edges; width comparison.
+
+**Equation:**
+
+$$a_{\text{new}} = a_{\text{Sun}} \times \sqrt{\frac{L}{L_\odot}}$$
+
+**Solution:**
+
+Step 1 — Calculate the scaling factor:
+
+$$\sqrt{\frac{L}{L_\odot}} = \sqrt{0.01} = 0.1$$
+
+Step 2 — Scale the inner edge:
+
+$$a_{\text{inner}} = 0.95 \text{ AU} \times 0.1 = 0.095 \text{ AU}$$
+
+Step 3 — Scale the outer edge:
+
+$$a_{\text{outer}} = 1.4 \text{ AU} \times 0.1 = 0.14 \text{ AU}$$
+
+Step 4 — Calculate the widths:
+
+Sun's HZ width: $1.4 - 0.95 = 0.45$ AU
+
+Red dwarf HZ width: $0.14 - 0.095 = 0.045$ AU
+
+$$\frac{\text{width}_{\text{dwarf}}}{\text{width}_\odot} = \frac{0.045 \text{ AU}}{0.45 \text{ AU}} = 0.1$$
+
+**Unit check:** AU × (dimensionless) = AU ✓
+
+**Sanity check:** The HZ scales linearly with $\sqrt{L/L_\odot} = 0.1$, so the width also scales by the same factor (0.1). A red dwarf's HZ is 10× narrower and 10× closer in than the Sun's. At 0.095–0.14 AU, a planet in this HZ would have an orbital period of roughly 10–25 days — which is why TESS finds habitable-zone planets around M dwarfs so efficiently. ✓
+
+**Answer:** Inner edge $\approx 0.095$ AU, outer edge $\approx 0.14$ AU. The width is $0.045$ AU — **10 times narrower** than the Sun's habitable zone.
+
+**What you should learn from this:** The habitable zone *width* scales the same way as the HZ *distance*: both go as $\sqrt{L}$. Dimmer stars have narrower habitable zones, meaning planets need to orbit in a more precise range to maintain liquid water. But the close-in orbits make these planets easier to detect.
+
+---
+
+### Problem 8: Biosignature Reasoning
+
+**Restatement:** Explain why detecting both O₂ and CH₄ together is stronger evidence for life than either alone.
+
+**Answer:**
+
+**The key concept is chemical disequilibrium.**
+
+O₂ and CH₄ are **thermodynamically incompatible** — they react with each other:
+
+$$\text{CH}_4 + 2\,\text{O}_2 \rightarrow \text{CO}_2 + 2\,\text{H}_2\text{O}$$
+
+In a lifeless atmosphere, this reaction would proceed to completion, consuming whichever gas is less abundant. Within a few million years (geologically fast), one or both would disappear.
+
+**Why either gas alone is ambiguous:**
+
+- **O₂ alone** could be produced abiotically: UV light can split water molecules (photolysis), and the hydrogen escapes to space, leaving oxygen behind. This may have happened on Venus and Mars.
+- **CH₄ alone** could be produced geologically: volcanic and hydrothermal activity produces methane without biology. Titan has a methane-rich atmosphere with no life.
+
+**Why both together are compelling:**
+
+If both O₂ and CH₄ are present *simultaneously* in significant quantities, something must be continuously replenishing them to counteract the reaction that destroys them. On Earth, that "something" is life — photosynthesis produces O₂, and methanogenic archaea and other biological processes produce CH₄.
+
+The **simultaneous presence** of two reactive gases that should destroy each other is called **chemical disequilibrium**. It's a signature of an active biosphere maintaining the atmosphere far from its equilibrium state.
+
+**Sanity check:** Earth's atmosphere is wildly out of chemical equilibrium — O₂ at 21% and CH₄ at ~1.8 ppm coexist only because life continually replenishes both. Remove life, and Earth's atmosphere would relax to a CO₂/N₂ mixture within millions of years. ✓
+
+**What you should learn from this:** Biosignature detection isn't about finding a single "life molecule." It's about finding combinations that shouldn't coexist without an active source. Chemical disequilibrium — the simultaneous presence of reactive pairs like O₂ + CH₄ — is the most robust atmospheric biosignature concept.
+
+---
+
+### Problem 9: Venus's History
+
+**Restatement:** Describe how Venus transitioned from possibly habitable to a 735 K hellscape.
+
+**Answer:**
+
+**Step 1 — Early Venus may have been habitable.** Venus is only 28% closer to the Sun than Earth. Early in solar system history, the young Sun was ~30% dimmer than today (the "faint young Sun"). With less solar energy, Venus may have had surface temperatures cool enough for liquid water — possibly oceans.
+
+**Step 2 — Water vapor feedback began.** As the Sun gradually brightened over billions of years, Venus's surface warmed. Warmer temperatures evaporated more water into the atmosphere. Water vapor is a powerful greenhouse gas, which raised temperatures further, evaporating more water — a **positive feedback loop**.
+
+**Step 3 — Runaway greenhouse.** Eventually, the feedback loop became self-sustaining: all surface water evaporated into the atmosphere. The thick water vapor atmosphere trapped enormous amounts of infrared radiation, driving temperatures higher and higher.
+
+**Step 4 — Water loss.** In the upper atmosphere, UV light from the Sun split water molecules (H₂O → H + OH). The lightweight hydrogen atoms escaped to space. Over hundreds of millions of years, Venus lost essentially all of its water — permanently and irreversibly.
+
+**Step 5 — CO₂ accumulation.** Without liquid water, there was no ocean to dissolve CO₂ (on Earth, oceans absorb CO₂ and it gets locked into carbonate rocks). Volcanic outgassing continued to add CO₂ to the atmosphere with no removal mechanism. Venus's atmosphere accumulated to ~96% CO₂ at 90 atmospheres of pressure.
+
+**Step 6 — Present-day Venus.** Surface temperature: 735 K (462°C). Atmospheric pressure: 90 atm. No liquid water. Dense sulfuric acid clouds. The greenhouse warming ($\Delta T = 505$ K) is the most extreme in the solar system.
+
+**The sobering lesson:** Venus shows that a planet at a "reasonable" distance from its star can become uninhabitable through atmospheric feedback. The difference between Earth and Venus may be as simple as Earth being *just far enough* from the Sun to avoid the runaway threshold.
+
+**What you should learn from this:** Planetary habitability is not just about distance from the star — it depends critically on atmospheric feedback loops. Small initial differences (Earth is 28% farther from the Sun than Venus) can lead to vastly different outcomes through the greenhouse effect.
+
+---
+
+### Problem 10: Density Interpretation
+
+**Restatement:** Calculate the density of a planet with Neptune's mass and Earth's radius.
+
+**Given:**
+
+- Mass: $M_p = 1.02 \times 10^{26}$ kg (Neptune's mass)
+- Radius: $R_p = 6.37 \times 10^6$ m (Earth's radius)
+- Comparison: Earth = 5.5 g/cm³, Neptune = 1.6 g/cm³
+
+**Find:** Average density $\rho$ in g/cm³.
+
+**Equation:**
+
+$$\rho = \frac{M_p}{\frac{4}{3}\pi R_p^3}$$
+
+**Solution:**
+
+Step 1 — Calculate the volume:
+
+$$R_p^3 = (6.37 \times 10^6 \text{ m})^3 = 2.583 \times 10^{20} \text{ m}^3$$
+
+$$V = \frac{4}{3}\pi \times 2.583 \times 10^{20} \text{ m}^3 = 1.083 \times 10^{21} \text{ m}^3$$
+
+Step 2 — Calculate the density in kg/m³:
+
+$$\rho = \frac{1.02 \times 10^{26} \text{ kg}}{1.083 \times 10^{21} \text{ m}^3} = 9.42 \times 10^4 \text{ kg/m}^3$$
+
+Step 3 — Convert to g/cm³:
+
+$$\rho = 9.42 \times 10^4 \text{ kg/m}^3 \times \frac{1 \text{ g/cm}^3}{1000 \text{ kg/m}^3} = 94 \text{ g/cm}^3$$
+
+**Unit check:** $\frac{\text{kg}}{\text{m}^3} = \text{kg/m}^3$; conversion: $1 \text{ g/cm}^3 = 1000 \text{ kg/m}^3$ ✓
+
+**Comparison:**
+
+| Object | Density (g/cm³) |
+|--------|----------------|
+| Neptune (actual) | 1.6 |
+| Earth | 5.5 |
+| Iron | 7.9 |
+| **This planet** | **94** |
+| Osmium (densest natural element) | 22.6 |
+
+**Interpretation:** This density (94 g/cm³) is absurdly high — more than 4× the density of osmium, the densest naturally occurring element. No known material has this density under normal conditions. This tells us that **this combination of mass and radius is physically unrealistic** for a planet made of ordinary matter.
+
+In reality, if you tried to pack Neptune's mass into Earth's radius, the material would need to be compressed to densities far beyond what normal matter supports (without extreme pressures like those inside neutron stars). This is why exoplanet scientists plot mass vs. radius diagrams — not all combinations are physically achievable.
+
+**What you should learn from this:** Density = mass/volume is a powerful diagnostic, but it must be physically plausible. Real planets follow mass-radius relationships that depend on composition. A density of 94 g/cm³ would require exotic physics — this exercise shows why astronomers care about getting *both* mass and radius right, and why mass-radius diagrams are essential for classifying exoplanets.

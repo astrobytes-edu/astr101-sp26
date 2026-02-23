@@ -536,6 +536,8 @@ Based on Module 1 content, be comfortable with:
 
 ## Practice Problems
 
+*Solutions are available in the [Lecture 13 Solutions](lecture-13-are-we-alone-solutions.qmd).*
+
 ### Core (do these first)
 
 **1. Drake Equation:** If $R_* = 3$/year, $f_p = 1$, $n_e = 0.2$, and we assume all remaining factors equal 1, how many civilizations are currently in our galaxy? What's unrealistic about this assumption?
@@ -544,11 +546,17 @@ Based on Module 1 content, be comfortable with:
 
 **3. Early Universe:** Explain why Earth-like rocky planets were unlikely in the early universe. What had to happen first?
 
+**4. Tool Identification (Synthesis):** For each measurement below, identify which Module 1 tool or law provides it: (a) a star's surface temperature, (b) whether a star is approaching or receding, (c) a planet's radius, (d) a planet's orbital period from radial velocity data, (e) the total mass enclosed within a galaxy at a given radius.
+
 ### Challenge
 
-**4. Fermi Paradox:** The Milky Way has been forming stars for ~13 billion years; the Sun formed ~4.6 billion years ago. Estimate how much "head start" an alien civilization around an older star could have on us. What might they have accomplished in that time?
-
 **5. Full Synthesis:** You detect an exoplanet via both radial velocity (amplitude 50 m/s, period 10 days) and transit (depth 0.5%). The host star is Sun-like. What can you determine about the planet? List each property and which observation/method gives it.
+
+**6. Drake Sensitivity:** In the Drake Equation, the "middle" scenario uses $f_l = f_i = f_c = 0.1$ and $L = 10{,}000$ years (with $R_* = 3$, $f_p = 1$, $n_e = 0.2$), giving $N \approx 6$. If civilizations last $10\times$ longer ($L = 100{,}000$ years) but intelligence is $10\times$ rarer ($f_i = 0.01$), does $N$ change? What does this tell you about the structure of the Drake Equation?
+
+**7. Habitable Zone + Wien's Law Integration:** A star's spectrum peaks at 350 nm. (a) Use Wien's Law ($b = 2.9 \times 10^6$ nm·K) to find its surface temperature. (b) Assuming the star has the same radius as the Sun, use $L \propto T^4$ to estimate its luminosity relative to the Sun ($T_\odot = 5800$ K). (c) The habitable zone scales as $\sqrt{L/L_\odot}$ in AU — where is this star's habitable zone compared to Earth's orbit?
+
+**8. Fermi Paradox:** The Milky Way has been forming stars for ~13 billion years; the Sun formed ~4.6 billion years ago. Estimate how much "head start" an alien civilization around an older star could have on us. What might they have accomplished in that time?
 
 ---
 

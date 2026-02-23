@@ -1,0 +1,389 @@
+---
+title: "Lecture 13 Solutions: Module 1 Synthesis — Are We Alone?"
+subtitle: "Practice Problem Solutions"
+author: "Dr. Anna Rosen"
+date: "2026-02-27"
+description: "Solutions to the Lecture 13 practice problems."
+draft: true
+course: ASTR 101
+module: "1 - Foundations"
+---
+
+::: {.callout-note}
+**Student note:** These are model solutions written to show every step, units, and checks. I do not expect your work to be this detailed; shorter solutions are fine if your setup, units, and reasoning are correct.
+
+**HW note:** Homework uses only a subset of these problems; the full set is included for future study and self checking.
+:::
+
+## Core Problems
+
+### Problem 1: Drake Equation
+
+**Restatement:** Calculate the number of communicating civilizations $N$ using the first three terms at their measured values and all remaining terms set to 1. Identify what's unrealistic.
+
+**Given:**
+
+- $R_* = 3$ per year
+- $f_p = 1$
+- $n_e = 0.2$
+- $f_l = f_i = f_c = 1$
+- $L = 1$ year
+
+**Find:** $N$; what's unrealistic?
+
+**Equation:**
+
+$$N = R_* \times f_p \times n_e \times f_l \times f_i \times f_c \times L$$
+
+**Solution:**
+
+$$N = 3 \times 1 \times 0.2 \times 1 \times 1 \times 1 \times 1 = 0.6$$
+
+**Unit check:** The product is dimensionless except for $R_*$ (stars/year) $\times$ $L$ (years) = stars, and the fractions are dimensionless → $N$ is a number. ✓
+
+**What's unrealistic:** Setting $f_l = f_i = f_c = 1$ assumes that *every* habitable planet develops life, *every* living world produces intelligence, and *every* intelligent species builds interstellar communication technology. These are extraordinarily optimistic assumptions. On Earth, life took ~1 billion years to arise, intelligence took ~3.5 billion years after that, and radio technology has existed for only ~100 years. Each of these factors is likely much less than 1.
+
+Also, $L = 1$ year is unrealistically *short* — it implies civilizations exist for only one year. Realistic estimates for $L$ range from ~100 to ~10 million years.
+
+**Note:** With all remaining factors set to 1 and $L = 1$ year, the answer ($N \approx 0.6$) is a lower bound driven entirely by the short civilization lifetime. More realistic assumptions with longer $L$ but smaller $f$ values can give much larger or much smaller $N$, as shown by the three scenarios in the reading.
+
+**Answer:** $N = 0.6$. This is unrealistic because it assumes every habitable planet produces communicating life — an extreme overestimate of the biological terms ($f_l$, $f_i$, $f_c$).
+
+**What you should learn from this:** The Drake Equation is a *framework*, not a calculator. The first three terms ($R_*$, $f_p$, $n_e$) are now reasonably constrained by observations (Kepler, etc.). The last four terms ($f_l$, $f_i$, $f_c$, $L$) are essentially unknown — and they dominate the uncertainty. Plugging in extreme values shows how sensitive $N$ is to our ignorance.
+
+---
+
+### Problem 2: Synthesis Question (Blackbody + Doppler)
+
+**Restatement:** A star's spectrum peaks at 500 nm and its absorption lines are shifted 0.1% toward longer wavelengths. Determine what each observation tells us.
+
+**Given:**
+
+- Blackbody peak: $\lambda_{\text{peak}} = 500$ nm
+- Line shift: 0.1% toward longer wavelengths (redshift)
+- Wien's Law constant: $b = 2.9 \times 10^6$ nm·K
+- Speed of light: $c = 3 \times 10^5$ km/s
+
+**Find:** Surface temperature (from peak); radial velocity and direction (from line shift).
+
+**Solution:**
+
+**Part (a) — Wien's Law (temperature from peak):**
+
+$$T = \frac{b}{\lambda_{\text{peak}}} = \frac{2.9 \times 10^6 \text{ nm·K}}{500 \text{ nm}} = 5800 \text{ K}$$
+
+**Unit check:** $\frac{\text{nm·K}}{\text{nm}} = \text{K}$ ✓
+
+This is essentially the Sun's surface temperature. The star is a Solar-type (G-type) star.
+
+**Part (b) — Doppler Effect (radial velocity from line shift):**
+
+A shift of 0.1% toward longer wavelengths means:
+
+$$\frac{\Delta\lambda}{\lambda_0} = 0.001$$
+
+Since the shift is toward *longer* wavelengths, this is a **redshift** → the star is **receding** (moving away from us).
+
+$$v = c \times \frac{\Delta\lambda}{\lambda_0} = (3 \times 10^5 \text{ km/s}) \times 0.001 = 300 \text{ km/s}$$
+
+**Unit check:** $\text{km/s} \times \frac{\text{nm}}{\text{nm}} = \text{km/s}$ ✓
+
+**Sanity check:** 300 km/s is a large radial velocity — typical of stars in the galactic halo or in other galaxies, not typical of nearby disk stars (which usually show $v \lesssim 50$ km/s). This star may be a high-velocity halo star or part of a distant system. The Doppler formula is still valid since $v \ll c$. ✓
+
+**Answer:** (a) $T = 5800$ K — a Solar-type star. (b) $v = 300$ km/s, receding (redshifted).
+
+**What you should learn from this:** A single spectrum contains multiple layers of information. The *shape* of the continuum (where it peaks) gives temperature via Wien's Law. The *positions* of spectral lines (how they're shifted) give radial velocity via the Doppler effect. These are independent measurements from the same beam of starlight — this is the power of spectroscopy.
+
+---
+
+### Problem 3: Early Universe
+
+**Restatement:** Explain why rocky planets were unlikely in the early universe.
+
+**Answer:**
+
+Rocky planets like Earth are made primarily of **heavy elements** — iron, silicon, oxygen, magnesium, nickel, and other elements heavier than hydrogen and helium. In astronomy, all elements heavier than helium are called "metals."
+
+**The early universe had no metals.** After the Big Bang (~13.8 billion years ago), the universe contained only hydrogen (~75%), helium (~25%), and trace amounts of lithium. No carbon, no oxygen, no silicon, no iron — none of the elements that make up rock or metal.
+
+**Stars had to create the heavy elements first.** This happened through:
+
+1. **Nuclear fusion in stellar cores** — hydrogen → helium → carbon → oxygen → (up to iron for the most massive stars)
+2. **Supernova explosions** — when massive stars die, they explode, creating elements heavier than iron and scattering all their synthesized elements into space
+3. **Enrichment of the interstellar medium** — the ejected elements mix into gas clouds, which form the next generation of stars and planets
+
+**Timeline:**
+
+- The first stars (Population III) formed from pure H/He gas ~200 million years after the Big Bang
+- These massive stars lived only a few million years, then exploded as supernovae
+- Their debris enriched the surrounding gas with the first metals
+- After several generations of star birth, death, and enrichment, the interstellar medium became "metal-rich" enough (~1–2% metals by mass) to form rocky planets
+- The Sun formed ~4.6 billion years ago from gas that had been enriched by ~8 billion years of prior stellar evolution
+
+**The bottom line:** Rocky planets require heavy elements. Heavy elements require stars to make them. Stars require time to live and die. Therefore, rocky planets were impossible in the young universe — they had to wait for multiple generations of stellar nucleosynthesis.
+
+**What you should learn from this:** The elements in your body (carbon, oxygen, calcium, iron) were forged inside stars that lived and died before the Sun formed. Planetary habitability depends on cosmic chemistry, which depends on stellar evolution — connecting Module 1 directly to Module 2.
+
+---
+
+### Problem 4: Tool Identification (Synthesis)
+
+**Restatement:** Identify the Module 1 tool or law that provides each measurement.
+
+**Answer:**
+
+**(a) A star's surface temperature:**
+
+**Wien's Law** (L8) — measure the peak wavelength of the star's blackbody spectrum: $T = b / \lambda_{\text{peak}}$.
+
+**(b) Whether a star is approaching or receding:**
+
+**Doppler Effect** (L10) — measure the shift of spectral lines from their rest wavelengths: $v = c \times \Delta\lambda / \lambda_0$. Blueshift = approaching; redshift = receding.
+
+**(c) A planet's radius:**
+
+**Transit Method** (L12) — measure the transit depth (fractional brightness dip when the planet crosses the star): depth $= (R_p/R_*)^2$, so $R_p = R_* \times \sqrt{\text{depth}}$.
+
+**(d) A planet's orbital period from radial velocity data:**
+
+**Doppler/RV Method** (L10, L12) — the period of the star's radial velocity wobble equals the planet's orbital period. (The wobble repeats each orbit.)
+
+**(e) The total mass enclosed within a galaxy at a given radius:**
+
+**Newton's form of Kepler's Third Law** (L6) — measure the orbital velocity of a star at radius $r$: $M(r) = v^2 r / G$. This is exactly how galactic rotation curves reveal dark matter (L10).
+
+**What you should learn from this:** Module 1 built a connected toolkit. Each tool starts from an *observable* (brightness, position, wavelength, or timing) and uses a *physical law* to infer a property you can't measure directly. Recognizing which tool applies to which question is the core skill of observational astronomy.
+
+---
+
+## Challenge Problems
+
+### Problem 5: Full Synthesis (RV + Transit + Stellar Properties)
+
+**Restatement:** A Sun-like star has an exoplanet detected by RV (amplitude 50 m/s, period 10 days) and transit (depth 0.5%). Determine all measurable planet properties.
+
+**Given:**
+
+- Star: Sun-like ($R_* = R_\odot = 6.96 \times 10^8$ m, $M_* \approx M_\odot$)
+- RV amplitude: $K = 50$ m/s
+- RV period: $P = 10$ days
+- Transit depth: 0.5% = 0.005
+
+**Find:** All determinable planet properties.
+
+**Solution:**
+
+**From the transit depth → Planet radius:**
+
+$$\left(\frac{R_p}{R_*}\right)^2 = 0.005$$
+
+$$\frac{R_p}{R_*} = \sqrt{0.005} = 0.0707$$
+
+$$R_p = 0.0707 \times R_\odot = 0.0707 \times 6.96 \times 10^8 \text{ m} = 4.92 \times 10^7 \text{ m}$$
+
+Convert to Earth radii: $R_p = 4.92 \times 10^7 \text{ m} / 6.37 \times 10^6 \text{ m} = 7.7\,R_\oplus$
+
+**Unit check:** $\sqrt{\text{dimensionless}} \times \text{m} = \text{m}$ ✓
+
+This is roughly **Neptune-sized** (Neptune $\approx 3.9\,R_\oplus$) — actually larger, closer to a sub-Saturn.
+
+**From the RV period → Orbital period:**
+
+$P = 10$ days. The RV wobble repeats with the same period as the planet's orbit.
+
+**From the RV period → Orbital distance** (Kepler's Third Law):
+
+For a Sun-like star, $P^2 = a^3$ (with $P$ in years, $a$ in AU):
+
+$$P = 10 \text{ days} = 10/365.25 \text{ years} = 0.0274 \text{ years}$$
+
+$$a^3 = P^2 = (0.0274)^2 = 7.50 \times 10^{-4}$$
+
+$$a = (7.50 \times 10^{-4})^{1/3} = 0.091 \text{ AU}$$
+
+**Unit check:** (years)² = (AU)³ in the simplified Kepler form → AU ✓
+
+**From the transit → Orbital inclination:**
+
+Since the planet transits, the orbit must be nearly **edge-on**: $i \approx 90°$, so $\sin i \approx 1$.
+
+**From the RV amplitude → Planet mass:**
+
+For a detailed calculation, the RV semi-amplitude formula is:
+
+$$K = \frac{2\pi a}{P} \times \frac{M_p \sin i}{M_*}$$
+
+Since $\sin i \approx 1$ (transiting) and rearranging:
+
+$$M_p = K \times \frac{M_* P}{2\pi a}$$
+
+Converting: $P = 10 \times 86{,}400 = 8.64 \times 10^5$ s, $a = 0.091 \times 1.496 \times 10^{11} = 1.36 \times 10^{10}$ m
+
+$$M_p = 50 \text{ m/s} \times \frac{(2 \times 10^{30} \text{ kg})(8.64 \times 10^5 \text{ s})}{2\pi (1.36 \times 10^{10} \text{ m})}$$
+
+$$M_p = 50 \times \frac{1.73 \times 10^{36}}{8.55 \times 10^{10}} = 50 \times 2.02 \times 10^{25} = 1.01 \times 10^{27} \text{ kg}$$
+
+**Unit check:** $\frac{\text{m}}{\text{s}} \times \frac{\text{kg} \cdot \text{s}}{\text{m}} = \text{kg}$ ✓
+
+In Jupiter masses: $M_p = 1.01 \times 10^{27} / 1.90 \times 10^{27} \approx 0.53\,M_J$
+
+**From mass + radius → Density:**
+
+$$V = \frac{4}{3}\pi R_p^3 = \frac{4}{3}\pi (4.92 \times 10^7)^3 = 4.99 \times 10^{23} \text{ m}^3$$
+
+$$\rho = \frac{M_p}{V} = \frac{1.01 \times 10^{27} \text{ kg}}{4.99 \times 10^{23} \text{ m}^3} = 2020 \text{ kg/m}^3 = 2.0 \text{ g/cm}^3$$
+
+**Summary of determined properties:**
+
+| Property | Value | Method |
+|----------|-------|--------|
+| Planet radius | $7.7\,R_\oplus$ | Transit depth |
+| Orbital period | 10 days | RV (or transit timing) |
+| Orbital distance | 0.091 AU | Kepler's Third Law + period |
+| Inclination | ~90° | Transit detection |
+| Planet mass | $\sim 0.5\,M_J$ | RV amplitude + $\sin i = 1$ |
+| Density | $\sim 2.0$ g/cm³ | Mass / Volume |
+| Composition | Sub-Saturn, likely H/He envelope over rocky/icy core | Density interpretation |
+
+**Sanity check:** A sub-Jupiter mass planet at $7.7\,R_\oplus$ with density 2.0 g/cm³ is intermediate between rocky (5.5) and gas giant (1.3). This is consistent with a **sub-Saturn** — a planet with a substantial H/He envelope surrounding a rocky/icy core. Such planets are common in the Kepler sample. ✓
+
+**Answer:** Combined RV + transit gives: $R_p \approx 7.7\,R_\oplus$, $M_p \approx 0.5\,M_J$, $\rho \approx 2.0$ g/cm³, $P = 10$ days, $a = 0.091$ AU, $i \approx 90°$. The planet is a warm sub-Saturn.
+
+**What you should learn from this:** This problem uses Wien's Law (L8), Doppler (L10), Kepler's Third Law (L5–L6), transits (L12), and density (L11) — nearly the entire Module 1 toolkit. Each observable (brightness dip, velocity wobble, timing) contributes a different piece of the puzzle. No single method gives the full picture.
+
+---
+
+### Problem 6: Drake Sensitivity
+
+**Restatement:** In the "middle" Drake scenario, if $L$ increases by 10× but $f_i$ decreases by 10×, does $N$ change?
+
+**Given (middle scenario):**
+
+- $R_* = 3$, $f_p = 1$, $n_e = 0.2$
+- Original: $f_l = 0.1$, $f_i = 0.1$, $f_c = 0.1$, $L = 10{,}000$ years
+- Modified: $f_i = 0.01$, $L = 100{,}000$ years (all others unchanged)
+
+**Find:** Does $N$ change?
+
+**Solution:**
+
+**Original:**
+
+$$N = 3 \times 1 \times 0.2 \times 0.1 \times 0.1 \times 0.1 \times 10{,}000 = 6$$
+
+**Modified:**
+
+$$N = 3 \times 1 \times 0.2 \times 0.1 \times 0.01 \times 0.1 \times 100{,}000 = 6$$
+
+**$N$ is unchanged.**
+
+**Why:** The Drake Equation is a **product** of all its terms. When you multiply one term by 10 and divide another by 10, the product stays the same:
+
+$$\frac{N_{\text{new}}}{N_{\text{old}}} = \frac{f_{i,\text{new}}}{f_{i,\text{old}}} \times \frac{L_{\text{new}}}{L_{\text{old}}} = \frac{0.01}{0.1} \times \frac{100{,}000}{10{,}000} = 0.1 \times 10 = 1$$
+
+**What this tells you:** In a multiplicative equation, *every term matters equally*. Doubling any single term doubles $N$. This means $N$ is equally sensitive to all seven factors — there's no "most important" term mathematically.
+
+However, scientifically, the terms are *not* equally uncertain. The first three ($R_*$, $f_p$, $n_e$) are known to within factors of a few. The last four ($f_l$, $f_i$, $f_c$, $L$) are uncertain by orders of magnitude. This is why the Drake Equation's uncertainty spans nine orders of magnitude — the unknown biological and sociological terms dominate.
+
+**Answer:** $N$ does not change — it remains 6. This illustrates that in a multiplicative equation, a 10× increase in one factor exactly compensates a 10× decrease in another.
+
+**What you should learn from this:** The Drake Equation's structure (a product of seven terms) means that any term can dominate. Our uncertainty about $N$ is controlled by whichever terms are least constrained — currently $f_l$, $f_i$, $f_c$, and $L$.
+
+---
+
+### Problem 7: Habitable Zone + Wien's Law Integration
+
+**Restatement:** A star's spectrum peaks at 350 nm. Find its temperature, luminosity (assuming $R = R_\odot$), and habitable zone location.
+
+**Given:**
+
+- Peak wavelength: $\lambda_{\text{peak}} = 350$ nm
+- Wien's Law constant: $b = 2.9 \times 10^6$ nm·K
+- Assume $R = R_\odot$
+- Sun: $T_\odot = 5800$ K, HZ $\approx 1$ AU
+- HZ scaling: $a_{\text{HZ}} \propto \sqrt{L/L_\odot}$
+
+**Find:** (a) Surface temperature; (b) Luminosity ratio $L/L_\odot$; (c) Habitable zone distance.
+
+**Solution:**
+
+**(a) Wien's Law → Temperature:**
+
+$$T = \frac{b}{\lambda_{\text{peak}}} = \frac{2.9 \times 10^6 \text{ nm·K}}{350 \text{ nm}} = 8{,}286 \text{ K} \approx 8{,}300 \text{ K}$$
+
+**Unit check:** $\frac{\text{nm·K}}{\text{nm}} = \text{K}$ ✓
+
+This is a hot star — spectral type A, similar to Vega (~9,600 K) or Sirius (~9,900 K) but somewhat cooler.
+
+**(b) Stefan-Boltzmann → Luminosity (at fixed $R = R_\odot$):**
+
+$$\frac{L}{L_\odot} = \left(\frac{R}{R_\odot}\right)^2 \left(\frac{T}{T_\odot}\right)^4 = (1)^2 \times \left(\frac{8{,}300}{5{,}800}\right)^4$$
+
+$$\frac{T}{T_\odot} = \frac{8{,}300}{5{,}800} = 1.431$$
+
+$$\left(\frac{T}{T_\odot}\right)^4 = (1.431)^4 = 4.20$$
+
+$$\frac{L}{L_\odot} = 4.20$$
+
+**Unit check:** Ratio of temperatures → dimensionless → luminosity ratio is dimensionless. ✓
+
+**(c) Habitable Zone scaling:**
+
+$$a_{\text{HZ}} = 1 \text{ AU} \times \sqrt{\frac{L}{L_\odot}} = 1 \text{ AU} \times \sqrt{4.20} = 1 \text{ AU} \times 2.05 = 2.05 \text{ AU}$$
+
+**Unit check:** AU × (dimensionless) = AU ✓
+
+**Sanity check:** A hotter, more luminous star pushes the HZ outward — planets must orbit farther away to avoid being too hot. At 2 AU, the HZ planet's orbital period would be $P = (2.05)^{3/2} \approx 2.9$ years (from Kepler's Third Law, scaled to this star's mass which is slightly larger than Solar). ✓
+
+**Answer:** (a) $T \approx 8{,}300$ K; (b) $L \approx 4.2\,L_\odot$; (c) Habitable zone at $\sim 2$ AU.
+
+**What you should learn from this:** This problem chains three Module 1 tools: Wien's Law (L8) → Stefan-Boltzmann (L8) → Habitable Zone (L12). Each step uses the output of the previous step as input. This is how astronomers build up a picture of a distant system — one inference at a time, each grounded in physics.
+
+---
+
+### Problem 8: Fermi Paradox
+
+**Restatement:** Estimate the "head start" an alien civilization around an older star could have, and consider what they might accomplish.
+
+**Given:**
+
+- Milky Way star formation: ~13 billion years
+- Sun's age: ~4.6 billion years
+- Technological civilization on Earth: ~100 years old
+
+**Find:** Maximum head start; implications.
+
+**Solution:**
+
+**Estimating the head start:**
+
+The oldest stars in the Milky Way formed ~13 billion years ago. The Sun formed ~4.6 billion years ago. If a Sun-like star formed at the very beginning of the Milky Way's history:
+
+$$\text{Head start} = 13 \text{ Gyr} - 4.6 \text{ Gyr} = 8.4 \text{ billion years}$$
+
+However, the earliest stars were metal-poor (as discussed in Problem 3), so rocky planets — and therefore Earth-like life — were unlikely around the very first stars. A more realistic estimate might consider stars that formed after several generations of stellar nucleosynthesis, perhaps 2–3 billion years after the Milky Way began forming stars:
+
+$$\text{Realistic head start} \approx (13 - 3) - 4.6 = 5.4 \text{ billion years}$$
+
+Even conservatively, an alien civilization could have a **~5 billion year head start** on us.
+
+**Perspective on 5 billion years:**
+
+- Human technological civilization is ~100 years old
+- That's a factor of $5 \times 10^9 / 100 = 5 \times 10^7$ — **50 million times** longer
+- Consider: 100 years ago, we didn't have computers, spacecraft, or nuclear energy
+- 500 years ago, we didn't know other planets existed
+- 5,000 years ago, we were building the first cities
+- 5 billion years is an incomprehensible amount of time for technological development
+
+**The Fermi Paradox:** If such civilizations exist and have had billions of years of head start, *where are they?* Even at sub-light speeds, a civilization with millions of years could colonize the entire galaxy. The absence of obvious evidence for advanced civilizations is puzzling given the timescales involved.
+
+**Possible resolutions include:**
+
+- Intelligent life is extremely rare ($f_l \times f_i$ is tiny)
+- Civilizations tend to destroy themselves before becoming interstellar ($L$ is short)
+- Advanced civilizations exist but are not detectable by our methods
+- Interstellar travel or communication is harder than we assume
+- We haven't been looking long enough or in the right way
+
+**What you should learn from this:** The Fermi Paradox is not a paradox about physics — it's a paradox about *timescales*. The galaxy is old enough that even slow processes (interstellar travel at 1% of light speed) should have produced observable results by now. Either the biological terms in the Drake Equation are much smaller than optimists hope, or there's something about civilization lifetimes we don't understand.
