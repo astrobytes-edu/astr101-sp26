@@ -173,8 +173,8 @@ The planets divide neatly into two families with dramatically different properti
 
 | Property | Rocky (Terrestrial) | Giants |
 |----------|--------------------:|-------:|
-| Size | Small (0.4–1 R⊕) | Large (~4–11 R⊕) |
-| Mass | Low (0.06–1 M⊕) | High (~15–318 M⊕) |
+| Size | Small (0.4–1 $R_\oplus$) | Large (~4–11 $R_\oplus$) |
+| Mass | Low (0.06–1 $M_\oplus$) | High (~15–318 $M_\oplus$) |
 | Density | High (3.9–5.5 g/cm³) | Low (0.7–1.6 g/cm³) |
 | Composition | Rock, metal | H, He, ices |
 | Surface | Solid | None (gas/liquid) |
@@ -427,20 +427,32 @@ Let's apply Newton's form of Kepler's Third Law to measure Jupiter's mass.
 
 **Step 1: Convert units to SI**
 
-- a = 422,000 km = 4.22 × 10⁸ m
-- P = 1.77 days × 86,400 s/day = 1.53 × 10⁵ s
+- $a = 422{,}000 \text{ km} = 4.22 \times 10^{8} \text{ m}$
+- $P = 1.77 \text{ days} \times 86{,}400 \text{ s/day} = 1.53 \times 10^{5} \text{ s}$
 
 **Step 2: Apply Newton's version of Kepler III**
 
 $$M = \frac{4\pi^2 a^3}{GP^2}$$
 
-**Step 3: Plug in numbers**
+where $G = 6.674 \times 10^{-11} \text{ m}^3 \text{ kg}^{-1} \text{ s}^{-2}$.
 
-$$M = \frac{4\pi^2 (4.22 \times 10^8)^3}{(6.67 \times 10^{-11})(1.53 \times 10^5)^2}$$
+**Step 3: Compute numerator and denominator separately (with units!)**
 
-$$M = \frac{4\pi^2 \times 7.51 \times 10^{25}}{6.67 \times 10^{-11} \times 2.34 \times 10^{10}}$$
+*Numerator:*
 
-$$M = \frac{2.97 \times 10^{27}}{1.56} = 1.9 \times 10^{27} \text{ kg}$$
+$$4\pi^2 \, a^3 = 4\pi^2 \times (4.22 \times 10^{8} \text{ m})^3 = 39.48 \times 7.51 \times 10^{25} \text{ m}^3 = 2.96 \times 10^{27} \text{ m}^3$$
+
+*Denominator:*
+
+$$G \, P^2 = (6.674 \times 10^{-11} \text{ m}^3 \text{ kg}^{-1} \text{ s}^{-2}) \times (1.53 \times 10^{5} \text{ s})^2$$
+
+$$= 6.674 \times 10^{-11} \text{ m}^3 \text{ kg}^{-1} \text{ s}^{-2} \times 2.34 \times 10^{10} \text{ s}^2 = 1.56 \text{ m}^3 \text{ kg}^{-1}$$
+
+**Step 4: Divide — units cancel to kg**
+
+$$M = \frac{2.96 \times 10^{27} \text{ m}^3}{1.56 \text{ m}^3 \text{ kg}^{-1}} = 1.9 \times 10^{27} \text{ kg}$$
+
+The $\text{m}^3$ cancels, and dividing by $\text{kg}^{-1}$ flips to $\text{kg}$. We get **kilograms**, as expected for a mass.
 
 This is **318 Earth masses** — determined entirely by watching Io orbit! We never touched Jupiter. We just measured Io's orbit and applied Newton's gravity.
 
@@ -711,7 +723,7 @@ Beyond the frost line, ices added to the solids, allowing larger cores to form. 
 | Inside frost line | Rock, metal only | Small rocky planets |
 | Outside frost line | Rock + metal + ices | Large cores → capture H/He → gas giants |
 
-::: {.callout-check-yourself title="Check Yourself 6 — Formation"}
+::: {.callout-check-yourself title="Check Yourself 7 — Formation"}
 Why didn't Earth become a gas giant like Jupiter?
 
 - A) Earth formed before Jupiter

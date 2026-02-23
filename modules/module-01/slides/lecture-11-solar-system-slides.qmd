@@ -134,10 +134,10 @@ Part 1: Solar System Architecture
 ::: {.text-sm}
 | Planet | Distance | Size | Surface |
 |--------|----------|------|---------|
-| Mercury | 0.39 AU | 0.38 R⊕ | Cratered, no atmosphere |
-| Venus | 0.72 AU | 0.95 R⊕ | Hellscape, 735 K |
-| Earth | 1.0 AU | 1.0 R⊕ | Oceans, life |
-| Mars | 1.52 AU | 0.53 R⊕ | Cold desert |
+| Mercury | 0.39 AU | 0.38 $R_\oplus$ | Cratered, no atmosphere |
+| Venus | 0.72 AU | 0.95 $R_\oplus$ | Hellscape, 735 K |
+| Earth | 1.0 AU | 1.0 $R_\oplus$ | Oceans, life |
+| Mars | 1.52 AU | 0.53 $R_\oplus$ | Cold desert |
 :::
 
 ::: {.fragment .mt-2}
@@ -162,8 +162,8 @@ Optional planet shorts to play:
 ::: {.text-sm}
 | Planet | Distance | Size | Composition |
 |--------|----------|------|-------------|
-| Jupiter | 5.2 AU | 11 R⊕ | H/He dominated |
-| Saturn | 9.5 AU | 9.4 R⊕ | H/He, famous rings |
+| Jupiter | 5.2 AU | 11 $R_\oplus$ | H/He dominated |
+| Saturn | 9.5 AU | 9.4 $R_\oplus$ | H/He, famous rings |
 :::
 
 ::: {.fragment .mt-2}
@@ -190,8 +190,8 @@ Optional planet shorts to play:
 ::: {.text-sm}
 | Planet | Distance | Size | Composition |
 |--------|----------|------|-------------|
-| Uranus | 19.2 AU | 4.0 R⊕ | H/He + ices |
-| Neptune | 30.1 AU | 3.9 R⊕ | H/He + ices |
+| Uranus | 19.2 AU | 4.0 $R_\oplus$ | H/He + ices |
+| Neptune | 30.1 AU | 3.9 $R_\oplus$ | H/He + ices |
 :::
 
 ::: {.fragment .mt-2}
@@ -199,7 +199,7 @@ Optional planet shorts to play:
 
 - More water, ammonia, methane **ices**
 - Blue-green from **methane absorbing red light**
-- Smaller but still massive (~15-17 M⊕)
+- Smaller but still massive (~15-17 $M_\oplus$)
 :::
 
 ::: {.notes}

@@ -575,7 +575,7 @@ This means transit surveys miss most planets, but the ones they find are gold: w
 
 ### Worked Example: How Big Is the Planet?
 
-**Problem:** A star's brightness drops by 1% during transit. If the star is Sun-sized ($R_* = R_☉$), how big is the planet?
+**Problem:** A star's brightness drops by 1% during transit. If the star is Sun-sized ($R_* = R_\odot$), how big is the planet?
 
 **Solution:**
 
@@ -587,7 +587,7 @@ Solving for planet radius:
 
 $$\frac{R_p}{R_*} = \sqrt{0.01} = 0.1$$
 
-$$R_p = 0.1 \times R_☉ = 0.1 \times 696{,}000 \text{ km} = 69{,}600 \text{ km}$$
+$$R_p = 0.1 \times R_\odot = 0.1 \times 696{,}000 \text{ km} = 69{,}600 \text{ km}$$
 
 This is almost exactly **Jupiter's radius** (71,500 km). A 1% dip indicates a Jupiter-sized planet!
 
