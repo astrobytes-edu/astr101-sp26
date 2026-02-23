@@ -943,6 +943,8 @@ Before moving on, check whether you can do each of the following. If any feel sh
 
 ## Practice Problems
 
+*Solutions are available in the [Lecture 8 Solutions](lecture-08-blackbody-radiation-solutions.qmd).*
+
 ### Core (do these first)
 
 **1. Wien's Law:** A star's spectrum peaks at 580 nm. Calculate its surface temperature.
@@ -956,20 +958,6 @@ Before moving on, check whether you can do each of the following. If any feel sh
 **5. Conceptual:** Why does the Sun appear white rather than green, even though its peak wavelength is in the green part of the spectrum?
 
 **6. Star colors:** Rank these stars from coolest to hottest based on color: a red star, a blue star, a yellow star.
-
-::: {.callout-solution title="Core Problem Solutions" collapse="true"}
-**1.** $T = 2.9 \times 10^6\,\mathrm{nm\cdot K}\, / \, 580\,\mathrm{nm} = 5000\,\mathrm{K}$. Slightly cooler than the Sun.
-
-**2.** $\lambda_{\text{peak}} = 2.9 \times 10^6\,\mathrm{nm\cdot K}\, / \, 4000\,\mathrm{K} = 725\,\mathrm{nm}$. This is in the **near-infrared**, just beyond the red end of visible light (700 nm). The star would appear reddish.
-
-**3.** $L_A/L_B = (T_A/T_B)^4 = 3^4 = 81$. Star A is **81 times** more luminous.
-
-**4.** Since $L \propto R^2$ at fixed $T$: $R_A/R_B = 400^{1/2} = 20$. The brighter star has **20 times the radius**.
-
-**5.** The Sun emits broadly across all visible wavelengths (the blackbody curve is wide, not a spike). Our eyes combine all those colors into white. Only if the Sun emitted exclusively at 500 nm would we see green.
-
-**6.** Coolest to hottest: **red, yellow, blue**. Wien's Law: red peaks at longer wavelengths (lower $T$), blue peaks at shorter wavelengths (higher $T$).
-:::
 
 ### Challenge
 
@@ -987,16 +975,6 @@ $$\frac{R_{\text{Betelgeuse}}}{R_\odot} = \left(\frac{L_{\text{Betelgeuse}}}{L_\
 :::
 
 **10. Why blackbodies matter:** Explain in your own words why blackbody physics is useful for astronomy, and what additional information (beyond temperature) requires spectral lines.
-
-::: {.callout-solution title="Challenge Problem Solutions" collapse="true"}
-**7.** Wien: Star X peaks at **half** the wavelength of Star Y (since $\lambda_{\text{peak}} \propto 1/T$ and $T_X = 2T_Y$). Stefan-Boltzmann: $L_X/L_Y = (R_X/R_Y)^2 (T_X/T_Y)^4 = (1/2)^2 \times 2^4 = (1/4) \times 16 = 4$. Star X is **$4\times$ more luminous**.
-
-**8.** $\lambda_{\text{peak}} = 2.9 \times 10^6\,\mathrm{nm\cdot K}\, / \, 255\,\mathrm{K} \approx 1.14 \times 10^4\,\mathrm{nm} = 11.4\,\mu\mathrm{m}$. This is in the **thermal infrared**. Earth's thermal emission peaks far beyond visible light — this is why greenhouse gases (which absorb infrared) affect Earth's energy balance.
-
-**9.** Using the ratio method: $10^5 = (R/R_\odot)^2 \times (3500\,\mathrm{K}/5800\,\mathrm{K})^4 = (R/R_\odot)^2 \times 0.13$. So $(R/R_\odot)^2 = 10^5/0.13 \approx 7.7 \times 10^5$, giving $R/R_\odot \approx 880$. **Betelgeuse is about 880 times the Sun's radius** — roughly 4 AU, large enough to swallow Mars and the entire asteroid belt.
-
-**10.** Blackbody physics lets us remotely measure temperature (Wien's Law), luminosity (Stefan-Boltzmann), and radius (L-T-R relationship) — fundamental properties of any star. But blackbody spectra are smooth and featureless. To determine composition (what elements are present) and motion (radial velocity via Doppler shifts), we need spectral lines — discrete features caused by atoms absorbing or emitting at specific wavelengths.
-:::
 
 ---
 

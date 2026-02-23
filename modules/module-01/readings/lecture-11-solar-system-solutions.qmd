@@ -1,0 +1,420 @@
+---
+title: "Lecture 11 Solutions: Solar System Architecture & Formation"
+subtitle: "Practice Problem Solutions"
+author: "Dr. Anna Rosen"
+date: "2026-02-23"
+description: "Solutions to the Lecture 11 practice problems."
+draft: true
+course: ASTR 101
+module: "1 - Foundations"
+---
+
+::: {.callout-note}
+**Student note:** These are model solutions written to show every step, units, and checks. I do not expect your work to be this detailed; shorter solutions are fine if your setup, units, and reasoning are correct.
+
+**HW note:** Homework uses only a subset of these problems; the full set is included for future study and self checking.
+:::
+
+## Core Problems
+
+### Problem 1: Kepler Application (Mars Period)
+
+**Restatement:** Calculate Mars's orbital period given its semi-major axis.
+
+**Given:**
+
+- Semi-major axis: $a = 1.52$ AU
+
+**Find:** Period $P$ in years.
+
+**Equation (Sun units):**
+When $P$ is in **years**, $a$ is in **AU**, and the central mass is the **Sun**, Kepler's Third Law simplifies to:
+$$P^2 = a^3$$
+
+**Solution:**
+
+Step 1 — Cube the semi-major axis:
+$$a^3 = (1.52 \text{ AU})^3 = 1.52 \times 1.52 \times 1.52 = 3.512 \text{ AU}^3$$
+
+Step 2 — Since $P^2 = a^3$, we have $P^2 = 3.512 \text{ yr}^2$. Take the square root:
+$$P = \sqrt{3.512 \text{ yr}^2} = 1.87 \text{ yr}$$
+
+**Unit check:** In Sun units (years, AU), $P^2 = a^3$ returns years. ✓
+
+**Sanity check:** Mars is farther than Earth but not hugely so (1.52 AU vs 1 AU), so a period somewhat longer than 1 year is reasonable. 1.87 years ≈ 1 year and 10.5 months. ✓
+
+**Answer:** $P \approx 1.87$ years.
+
+**What you should learn from this:** In Sun units, Kepler III is a one-step calculation. The simplified form $P^2 = a^3$ works *only* when $P$ is in years and $a$ is in AU — these "natural" units absorb the constants $4\pi^2/(GM_\odot)$ that would otherwise appear. Mars oppositions (when Earth "laps" Mars) occur approximately every 2.1 years, consistent with this period.
+
+---
+
+### Problem 2: Newton Application (Saturn's Mass from Titan)
+
+**Restatement:** Use Titan's orbit to estimate Saturn's mass and compare to Jupiter.
+
+**Given:**
+
+- Titan's orbital radius: $a = 1.22 \times 10^6$ km
+- Titan's orbital period: $P = 16$ days
+- $G = 6.674 \times 10^{-11} \text{ m}^3 \text{ kg}^{-1} \text{ s}^{-2}$
+
+**Find:** Saturn's mass $M$ in kg.
+
+**Equation:**
+$$M = \frac{4\pi^2 a^3}{GP^2}$$
+
+**Solution:**
+
+Step 1 — Convert to SI units:
+
+- $a = 1.22 \times 10^6 \text{ km} \times \frac{1000 \text{ m}}{1 \text{ km}} = 1.22 \times 10^9 \text{ m}$
+- $P = 16 \text{ days} \times \frac{86{,}400 \text{ s}}{1 \text{ day}} = 1.382 \times 10^6 \text{ s}$
+
+Step 2 — Compute the numerator ($4\pi^2 a^3$):
+
+$$a^3 = (1.22 \times 10^9 \text{ m})^3 = 1.22^3 \times 10^{27} \text{ m}^3 = 1.816 \times 10^{27} \text{ m}^3$$
+
+$$4\pi^2 \times 1.816 \times 10^{27} \text{ m}^3 = 39.48 \times 1.816 \times 10^{27} \text{ m}^3 = 7.17 \times 10^{28} \text{ m}^3$$
+
+Step 3 — Compute the denominator ($GP^2$):
+
+$$P^2 = (1.382 \times 10^6 \text{ s})^2 = 1.910 \times 10^{12} \text{ s}^2$$
+
+$$GP^2 = (6.674 \times 10^{-11} \text{ m}^3 \text{ kg}^{-1} \text{ s}^{-2}) \times (1.910 \times 10^{12} \text{ s}^2) = 1.275 \times 10^{2} \text{ m}^3 \text{ kg}^{-1}$$
+
+Step 4 — Divide:
+
+$$M = \frac{7.17 \times 10^{28} \text{ m}^3}{1.275 \times 10^{2} \text{ m}^3 \text{ kg}^{-1}} = 5.6 \times 10^{26} \text{ kg}$$
+
+**Unit check:**
+
+- Numerator: $\text{m}^3$ (from $a^3$; the $4\pi^2$ is dimensionless)
+- Denominator: $\text{m}^3 \text{ kg}^{-1} \text{ s}^{-2} \times \text{s}^2 = \text{m}^3 \text{ kg}^{-1}$
+- Result: $\frac{\text{m}^3}{\text{m}^3 \text{ kg}^{-1}} = \text{kg}$ ✓
+
+**Sanity check:** Jupiter's mass (from the worked example in the reading) is $1.9 \times 10^{27}$ kg. Saturn should be less massive:
+$$\frac{M_{\text{Saturn}}}{M_{\text{Jupiter}}} = \frac{5.6 \times 10^{26}}{1.9 \times 10^{27}} \approx 0.30$$
+
+Saturn is about 30% of Jupiter's mass — roughly one-third. This matches the known value. ✓
+
+**Answer:** $M_{\text{Saturn}} \approx 5.6 \times 10^{26}$ kg, about 30% of Jupiter's mass.
+
+**What you should learn from this:** Newton's form of Kepler III lets you weigh a planet by watching its moons. The calculation follows the same template as the Jupiter worked example: convert to SI, cube $a$, square $P$, divide. Unit tracking at every step catches errors before they propagate.
+
+---
+
+### Problem 3: Wien Application (Neptune's Temperature)
+
+**Restatement:** Estimate Neptune's temperature from its thermal emission peak.
+
+**Given:**
+
+- Peak wavelength: $\lambda_{\text{peak}} = 50{,}000$ nm (= 50 μm)
+- Wien's Law constant: $b = 2.9 \times 10^6$ nm·K
+
+**Find:** Temperature $T$ in Kelvin.
+
+**Equation:**
+$$T = \frac{b}{\lambda_{\text{peak}}} = \frac{2.9 \times 10^6 \text{ nm·K}}{\lambda_{\text{peak}}}$$
+
+**Solution:**
+
+$$T = \frac{2.9 \times 10^6 \text{ nm·K}}{50{,}000 \text{ nm}} = \frac{2.9 \times 10^6}{5.0 \times 10^4} \text{ K} = 58 \text{ K}$$
+
+**Unit check:** $\frac{\text{nm·K}}{\text{nm}} = \text{K}$ ✓
+
+**Sanity check:** Neptune is at 30 AU — very far from the Sun. A temperature of 58 K ($-215°$C) is extremely cold, as expected. For comparison: Earth's equilibrium temperature is ~255 K, Jupiter's is ~110 K, and Neptune is roughly half of Jupiter's — consistent with being ~6× farther from the Sun. ✓
+
+**Answer:** $T \approx 58$ K.
+
+**What you should learn from this:** Wien's Law is a powerful thermometer. By measuring where thermal emission peaks (here, in the far-infrared at 50 μm), you can determine temperature without touching the object. The key is getting the units right: both $b$ and $\lambda_{\text{peak}}$ must use the same wavelength unit (here, nm).
+
+---
+
+### Problem 4: Formation Concept (Orbital Alignment)
+
+**Restatement:** Explain why all planets orbit the Sun in the same direction and in nearly the same plane.
+
+**Key insight:** The solar system's orderly pattern is inherited from the rotating disk of gas and dust that formed it.
+
+**Answer:**
+
+All planets formed from the same rotating disk of gas and dust (the solar nebula). Three key physics principles explain the pattern:
+
+1. **Angular momentum conservation** — The original molecular cloud had a slight rotation. As it collapsed under gravity, it spun faster (like a figure skater pulling in their arms, L5–L6 connection). This gave the entire system a single, well-defined rotation direction.
+
+2. **Collisional flattening** — The cloud started roughly spherical but flattened into a disk. Material moving *vertically* (toward the midplane) collided with material coming from the opposite direction. These inelastic collisions converted vertical kinetic energy into heat, which radiated away. But material moving *horizontally* (orbiting) was supported by angular momentum and couldn't collapse inward. Result: vertical motion was damped, horizontal motion was preserved → a thin disk.
+
+3. **Inheritance** — Planets formed within this disk by accumulating material from it. They inherited the disk's rotation direction and orbital plane.
+
+This is why we see: all planets orbiting counterclockwise (viewed from above Earth's north pole), all orbits nearly in the same plane (the ecliptic), and the Sun rotating in the same direction.
+
+**Sanity check:** If planets formed independently (not from a shared disk), we'd expect random orbital orientations — some clockwise, some inclined. The fact that they're aligned is strong evidence for a common formation disk. ✓
+
+**What you should learn from this:** The orderly pattern of the solar system is not a coincidence — it's a fossil of the disk from which everything formed. This is the Observable → Model → Inference pattern: we *observe* alignment, the *model* is a collapsing rotating cloud, and we *infer* a shared formation history.
+
+---
+
+### Problem 5: Tool Choice (Rocky vs. Gaseous)
+
+**Restatement:** Identify what measurements and Module 1 tools you need to determine whether an exoplanet is rocky or gaseous.
+
+**Key insight:** Rocky vs. gaseous is a density question, and density requires mass and radius.
+
+**Answer:**
+
+To determine rocky vs. gaseous, you need the planet's **density**: $\rho = M / V$.
+
+This requires two measurements:
+
+**Measurement 1 — Mass:** Use **Newton's version of Kepler's Third Law** (L5–L6). If the exoplanet has a moon, observe the moon's orbital period $P$ and semi-major axis $a$, then calculate $M = 4\pi^2 a^3 / (GP^2)$. Alternatively, use the **Doppler effect** (L10): measure the wobble the planet induces in its host star's radial velocity.
+
+**Measurement 2 — Radius:** Use **transit observations** (brightness + timing, L3–L4 concepts). When the planet passes in front of its star, it blocks a fraction of the starlight. The fractional brightness dip tells you the planet's cross-sectional area, and hence its radius: $\Delta F / F \approx (R_{\text{planet}} / R_{\text{star}})^2$.
+
+**Decision rule:** Calculate the volume ($V = \frac{4}{3}\pi R^3$), then the density ($\rho = M/V$). Compare:
+
+- Rocky planets: $\rho \approx 3.9$–$5.5$ g/cm³ (like Earth at 5.5 g/cm³)
+- Gas giants: $\rho \approx 0.7$–$1.6$ g/cm³ (like Jupiter at 1.33 g/cm³)
+
+**What you should learn from this:** Classifying a planet requires combining multiple tools — no single measurement is enough. This is why astronomers build multi-tool "chains of inference."
+
+---
+
+## Challenge Problems
+
+### Problem 6: Frost Line Reasoning (Luminous Sun)
+
+**Restatement:** Determine how the frost line changes if the Sun were twice as luminous, and what consequences this has for planet types.
+
+**Given:**
+
+- Current frost line: $\sim 3$ AU
+- Hypothetical luminosity: $L_{\text{new}} = 2 L_\odot$
+- Equilibrium temperature scaling: $T_{\text{eq}} \propto L^{1/4} / \sqrt{a}$
+- Ice condensation temperature: $T_{\text{frost}} \approx 150$ K
+
+**Find:** New frost line distance and consequences for planetary architecture.
+
+**Equation:**
+At the frost line, $T_{\text{eq}} = T_{\text{frost}}$. Setting the two expressions equal:
+
+$$\frac{T_{\text{eq,new}}}{T_{\text{eq,old}}} = \frac{L_{\text{new}}^{1/4}}{L_{\text{old}}^{1/4}} \times \sqrt{\frac{a_{\text{old}}}{a_{\text{new}}}} = 1$$
+
+(We set this equal to 1 because both are at the frost line temperature.)
+
+**Solution:**
+
+Solve for the ratio of frost line distances:
+
+$$\sqrt{\frac{a_{\text{old}}}{a_{\text{new}}}} = \frac{L_{\text{old}}^{1/4}}{L_{\text{new}}^{1/4}} = \frac{1}{2^{1/4}}$$
+
+$$\frac{a_{\text{old}}}{a_{\text{new}}} = \frac{1}{2^{1/2}} = \frac{1}{\sqrt{2}}$$
+
+$$a_{\text{new}} = a_{\text{old}} \times \sqrt{2} = 3 \text{ AU} \times 1.41 = 4.2 \text{ AU}$$
+
+**Unit check:** AU × (dimensionless) = AU ✓
+
+**Sanity check:** A more luminous Sun heats the disk more, so the frost line should move *outward* — it does. The change is modest (~40% farther) because temperature depends on $L^{1/4}$, a weak dependence. ✓
+
+**Answer:** The frost line moves from $\sim 3$ AU to $\sim 4.2$ AU.
+
+**Consequences:**
+
+- The **rocky planet zone extends farther out** — more room for terrestrial worlds to form
+- **Gas giants form farther from the star** — there may be less material at greater distances, so gas giants might be smaller or take longer to form
+- The entire planetary architecture **shifts outward** — a more "spread out" system
+
+**What you should learn from this:** The frost line is not a fixed property of planetary systems — it depends on the host star's luminosity. This is why different stars produce different planetary architectures, a key theme in L12.
+
+---
+
+### Problem 7: Integration Problem (Rocky Planets at 5 AU)
+
+**Restatement:** Infer properties of a host star from the extent of its rocky planet zone.
+
+**Given:**
+
+- Rocky planets extend to 5 AU in the exoplanet system
+- Our frost line: $\sim 3$ AU at $L = L_\odot$
+
+**Find:** Luminosity of the host star relative to the Sun.
+
+**Equation:**
+The frost line distance scales as:
+$$a_{\text{frost}} \propto L^{1/2}$$
+
+This comes from setting $T_{\text{eq}} = 150$ K in the relation $T_{\text{eq}} \propto L^{1/4}/\sqrt{a}$ and solving for $a$.
+
+**Solution:**
+
+$$\frac{a_{\text{frost,star}}}{a_{\text{frost,Sun}}} = \left(\frac{L_{\text{star}}}{L_\odot}\right)^{1/2}$$
+
+If rocky planets extend to 5 AU, the frost line must be at or beyond 5 AU:
+
+$$\frac{5 \text{ AU}}{3 \text{ AU}} = \left(\frac{L_{\text{star}}}{L_\odot}\right)^{1/2}$$
+
+$$\frac{L_{\text{star}}}{L_\odot} = \left(\frac{5}{3}\right)^2 = \frac{25}{9} \approx 2.8$$
+
+**Unit check:** Ratio of distances (dimensionless) squared = ratio of luminosities (dimensionless) ✓
+
+**Sanity check:** Rocky planets farther out means a hotter star — the luminosity is greater than $L_\odot$, which is consistent. A factor of 2.8 is not extreme — it corresponds to a star modestly hotter and more massive than the Sun. ✓
+
+**Answer:** The host star is roughly **2.8 times more luminous** than the Sun ($L_{\text{star}} \approx 2.8 L_\odot$).
+
+**Interpretation:** On the main sequence, this corresponds to an early F-type star (spectral type ~F2–F5), which is hotter and more massive than our G2 Sun. Different stars build different solar systems.
+
+**What you should learn from this:** The frost line is a powerful diagnostic for the host star. By observing *where* rocky planets end and giants begin, you can infer the star's luminosity — another example of Observable → Model → Inference.
+
+---
+
+### Problem 8: Frost Line from First Principles
+
+**Restatement:** Derive the frost line distance from the equilibrium temperature scaling and known values.
+
+**Given:**
+
+- $T_{\text{eq}} \propto 1/\sqrt{a}$ (for a fixed star)
+- $T_{\text{eq,Earth}} = 255$ K at $a_{\oplus} = 1$ AU
+- Ice condensation temperature: $T_{\text{frost}} = 150$ K
+
+**Find:** Frost line distance $a_{\text{frost}}$ in AU.
+
+**Equation:**
+$$T_{\text{eq}}(a) = T_{\text{eq,Earth}} \times \sqrt{\frac{a_{\oplus}}{a}}$$
+
+Set $T_{\text{eq}} = 150$ K and solve for $a$.
+
+**Solution:**
+
+Step 1 — Substitute known values:
+
+$$150 \text{ K} = 255 \text{ K} \times \sqrt{\frac{1 \text{ AU}}{a}}$$
+
+Step 2 — Isolate the square root:
+
+$$\frac{150 \text{ K}}{255 \text{ K}} = \sqrt{\frac{1 \text{ AU}}{a}}$$
+
+$$0.588 = \sqrt{\frac{1 \text{ AU}}{a}}$$
+
+Step 3 — Square both sides:
+
+$$0.588^2 = \frac{1 \text{ AU}}{a}$$
+
+$$0.346 = \frac{1 \text{ AU}}{a}$$
+
+Step 4 — Solve for $a$:
+
+$$a = \frac{1 \text{ AU}}{0.346} = 2.89 \text{ AU} \approx 3 \text{ AU}$$
+
+**Unit check:** K/K = dimensionless ✓ ; AU / (dimensionless) = AU ✓
+
+**Sanity check:** The frost line should be between Mars (1.5 AU) and Jupiter (5.2 AU) — and 2.9 AU is exactly in that range. It's beyond the asteroid belt (2–4 AU) and just inside where Jupiter formed. ✓
+
+**Answer:** $a_{\text{frost}} \approx 2.9$ AU $\approx 3$ AU.
+
+**What you should learn from this:** The frost line explains the rocky-inside, giants-outside pattern. The calculation uses only the proportionality $T_{\text{eq}} \propto 1/\sqrt{a}$ and one reference point (Earth) — a beautiful example of how a scaling relation and a single measurement can predict a structural feature of the entire solar system.
+
+---
+
+### Problem 9: Rocky or Gaseous? (Density Calculation)
+
+**Restatement:** Calculate an exoplanet's density from its mass and radius, and classify it.
+
+**Given:**
+
+- Mass: $M = 6.0 \times 10^{26}$ kg
+- Radius: $R = 6.0 \times 10^{7}$ m (about 9.4 $R_\oplus$)
+
+**Find:** Average density $\rho$ in kg/m³ and g/cm³; classify as rocky or gaseous.
+
+**Equations:**
+
+- Volume of a sphere: $V = \frac{4}{3}\pi R^3$
+- Density: $\rho = M / V$
+- Unit conversion: $1 \text{ g/cm}^3 = 1000 \text{ kg/m}^3$
+
+**Solution:**
+
+Step 1 — Calculate the volume:
+
+$$R^3 = (6.0 \times 10^{7} \text{ m})^3 = 6.0^3 \times 10^{21} \text{ m}^3 = 216 \times 10^{21} \text{ m}^3 = 2.16 \times 10^{23} \text{ m}^3$$
+
+$$V = \frac{4}{3}\pi \times 2.16 \times 10^{23} \text{ m}^3 = \frac{4}{3} \times 3.1416 \times 2.16 \times 10^{23} \text{ m}^3$$
+
+$$V = 4.189 \times 2.16 \times 10^{23} \text{ m}^3 = 9.05 \times 10^{23} \text{ m}^3$$
+
+Step 2 — Calculate the density:
+
+$$\rho = \frac{M}{V} = \frac{6.0 \times 10^{26} \text{ kg}}{9.05 \times 10^{23} \text{ m}^3} = 663 \text{ kg/m}^3$$
+
+Step 3 — Convert to g/cm³ for comparison with the table in Part 1:
+
+$$663 \text{ kg/m}^3 \times \frac{1 \text{ g/cm}^3}{1000 \text{ kg/m}^3} = 0.66 \text{ g/cm}^3$$
+
+**Unit check:**
+
+- $R^3$: $\text{m}^3$ ✓
+- $V$: $\text{m}^3$ (dimensionless × m³) ✓
+- $\rho$: $\text{kg} / \text{m}^3 = \text{kg/m}^3$ ✓
+- Conversion: $\text{kg/m}^3 \times \frac{\text{g/cm}^3}{\text{kg/m}^3} = \text{g/cm}^3$ ✓
+
+**Sanity check:** Compare to the table from Part 1 of the reading:
+
+- Rocky planets: 3.9–5.5 g/cm³
+- Gas/ice giants: 0.69–1.6 g/cm³
+
+Our planet's density (0.66 g/cm³) is below water (1.0 g/cm³) and almost identical to Saturn (0.69 g/cm³). ✓
+
+**Answer:** $\rho \approx 0.66$ g/cm³. This planet is **gaseous** — its density matches Saturn's, not Earth's. The large radius (9.4 $R_\oplus$) independently confirms this: rocky planets max out around 1–2 $R_\oplus$.
+
+**What you should learn from this:** Density is the key diagnostic for planet composition. The calculation is straightforward ($V = \frac{4}{3}\pi R^3$, then $\rho = M/V$), but unit tracking is essential — especially the kg/m³ → g/cm³ conversion (divide by 1000) needed to compare with the familiar values in the reading.
+
+---
+
+### Problem 10: Diagnosing a Mystery Planet (Multi-Tool Transfer)
+
+**Restatement:** Use Wien's Law and spectroscopy to determine whether a mystery planet is rocky or an ice giant.
+
+**Given:**
+
+- Thermal emission peak: $\lambda_{\text{peak}} = 20{,}000$ nm (20 μm)
+- Spectroscopy: strong CH₄ (methane) absorption, no CO₂
+- Wien's Law constant: $b = 2.9 \times 10^6$ nm·K
+
+**Find:** Temperature; classify using temperature + composition evidence.
+
+**Solution:**
+
+**Tool 1 — Wien's Law (L8):** Estimate the planet's temperature.
+
+$$T = \frac{2.9 \times 10^6 \text{ nm·K}}{20{,}000 \text{ nm}} = 145 \text{ K}$$
+
+**Unit check:** $\frac{\text{nm·K}}{\text{nm}} = \text{K}$ ✓
+
+This is **very cold** — much colder than any rocky planet in our solar system.
+
+**Tool 2 — Spectroscopy (L9):** Analyze the atmospheric composition.
+
+- **Strong CH₄ (methane):** Methane is abundant in the atmospheres of Uranus and Neptune. It absorbs red light, which is why those planets appear blue-green.
+- **No CO₂:** Carbon dioxide is a hallmark of rocky planet atmospheres (Venus, Earth, Mars all have CO₂).
+
+**Comparison to known planets:**
+
+| Property | Mystery Planet | Rocky Inner Planets | Ice Giants |
+|----------|:-------------:|--------------------:|----------:|
+| Temperature | 145 K | 210–730 K | 59–76 K |
+| CH₄ | Strong | Trace or absent | Strong |
+| CO₂ | Absent | Dominant (Venus, Mars) | Absent |
+
+**Unit check:** All temperatures in K; all comparisons use the same units ✓
+
+**Sanity check:** Three independent clues all point the same direction — cold temperature, methane present, no CO₂. If the clues disagreed, we'd need more data. That they agree gives us high confidence. ✓
+
+**Answer:** This is almost certainly an **ice giant**, similar to Uranus or Neptune. Three independent lines of evidence converge:
+
+1. *Temperature* (145 K) — too cold for the inner solar system, consistent with a distant planet
+2. *Methane absorption* — characteristic of ice giant atmospheres
+3. *No CO₂* — rules out a rocky planet atmosphere
+
+**What you should learn from this:** This problem demonstrates the power of combining multiple Module 1 tools. Wien's Law gives temperature, spectroscopy gives composition, and together they constrain the planet's identity far better than either tool alone. Real astronomers use exactly this approach — stacking independent lines of evidence to build a case.

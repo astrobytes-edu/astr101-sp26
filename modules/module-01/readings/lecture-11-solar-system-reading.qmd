@@ -173,6 +173,21 @@ Notice something striking: **rocky planets are close to the Sun; gas giants are 
 | **Kuiper Belt** | 30–55 AU | Pluto, dwarf planets, icy bodies | Source of short-period comets |
 | **Oort Cloud** | ~2,000–100,000 AU | Long-period comets | Spherical halo, barely bound to Sun |
 
+::: {.callout-check-yourself title="Check Yourself — Distance and Composition"}
+The inner solar system (0.4–1.5 AU) contains rocky planets; the outer solar system (5–30 AU) contains gas and ice giants. If you could magically move Jupiter to Earth's orbit (1 AU), would it remain a gas giant?
+
+- A) Yes — Jupiter would keep its hydrogen/helium atmosphere regardless of location
+- B) No — the Sun's heat would immediately boil away all the gas
+- C) It depends — Jupiter is massive enough to hold its gas *now*, but it could not have *formed* as a gas giant at 1 AU
+- D) No — rocky planets can only exist close to the Sun
+:::
+
+::: {.callout-tip title="Solution" collapse="true"}
+**C) It depends — Jupiter is massive enough to hold its gas now, but it could not have formed as a gas giant at 1 AU.**
+
+Jupiter's gravity is strong enough to retain its atmosphere today — even at 1 AU. But during formation, the inner solar system was too hot for ices to condense. Without ices, rocky cores there grew too slowly to capture gas before the solar nebula dispersed (~3–10 million years). The key insight: *where a planet forms* determines *what it becomes*. The frost line (Part 3) is a formation boundary, not a survival boundary. This is why "hot Jupiters" — gas giants orbiting very close to their host stars — are thought to have *migrated inward* after forming farther out.
+:::
+
 ---
 
 ## Rocky vs. Giant Planets: Two Families
@@ -378,6 +393,21 @@ Saturn adds the most obvious disk in the solar system: its rings.
 And moons can be worlds too — Titan has a thick atmosphere that hides its surface in visible light.
 
 {{< fig l11-titan >}}
+
+::: {.callout-check-yourself title="Check Yourself — Density Detective"}
+Jupiter's average density is 1.33 g/cm³ — slightly above water. Saturn's is 0.69 g/cm³ — below water. Both are "gas giants" made mostly of hydrogen and helium. Why is Jupiter denser than Saturn despite having similar composition?
+
+- A) Jupiter has more rock and metal in its core
+- B) Jupiter's greater mass compresses its gas to higher density
+- C) Saturn's rings remove mass, lowering its density
+- D) Jupiter is closer to the Sun, so its gas is hotter and denser
+:::
+
+::: {.callout-tip title="Solution" collapse="true"}
+**B) Jupiter's greater mass compresses its gas to higher density.**
+
+Jupiter is $\sim 3\times$ more massive than Saturn, and that extra mass creates enormous pressure in the interior. At Jupiter's core, pressures reach $\sim 70$ million atmospheres, compressing hydrogen into a metallic liquid denser than lead. More mass $\rightarrow$ more gravity $\rightarrow$ more compression $\rightarrow$ higher average density. This is a general pattern: among gas giants, the most massive ones are actually the *densest* because gravity squeezes them. (Option A contributes a small amount — Jupiter does have a larger core — but the dominant effect is gravitational compression of the envelope.)
+:::
 
 ### Ice giants and beyond: cold, distant, and still active
 
@@ -736,6 +766,21 @@ This is why:
 - The disk formed in the first place!
 :::
 
+::: {.callout-check-yourself title="Check Yourself — Angular Momentum and the Disk"}
+The solar nebula started as a roughly spherical cloud and flattened into a disk. Why didn't it collapse into a ball instead?
+
+- A) The Sun's radiation pushed material outward into a disk shape
+- B) Magnetic fields forced the gas into a plane
+- C) The cloud's rotation (angular momentum) prevented collapse perpendicular to the spin axis, but collisions removed motion parallel to the axis
+- D) Gravity only pulls material toward the center, not toward the poles
+:::
+
+::: {.callout-tip title="Solution" collapse="true"}
+**C) The cloud's rotation (angular momentum) prevented collapse perpendicular to the spin axis, but collisions removed motion parallel to the axis.**
+
+Angular momentum is conserved — the cloud's original slow rotation speeds up as it contracts. Material falling *toward* the spin axis is deflected into circular orbits by its angular momentum: it can't reach the center because it's moving too fast sideways. But material falling *toward* the midplane (parallel to the spin axis) collides with other material coming from the opposite direction. These inelastic collisions convert vertical kinetic energy into heat, which radiates away. The net result: vertical motion is damped, but rotational motion is preserved $\rightarrow$ a thin disk. Think of it as two separate processes: angular momentum prevents radial collapse, while collisions cause vertical collapse.
+:::
+
 ---
 
 ## The Frost Line: Rocky vs. Gas Giants
@@ -850,6 +895,8 @@ If the solar system formed from a rotating disk of gas and dust, which of these 
 
 ## Practice Problems
 
+*Solutions are available in the [Lecture 11 Solutions](lecture-11-solar-system-solutions.qmd).*
+
 ### Core (do these first)
 
 **1. Kepler Application:** Mars orbits the Sun at 1.52 AU. Using Kepler's Third Law ($P^2 = a^3$ in Earth years and AU), calculate Mars's orbital period.
@@ -860,19 +907,20 @@ If the solar system formed from a rotating disk of gas and dust, which of these 
 
 **4. Formation Concept:** Explain why all the planets orbit the Sun in the same direction and in nearly the same plane.
 
+**5. Tool Choice:** You want to determine whether a newly discovered exoplanet is rocky or gaseous. What two measurements would you need, and which tools from Module 1 would provide them?
+
 ### Challenge
 
-**5. Frost Line Reasoning:** If the Sun had been twice as luminous when the solar system formed, how would the frost line have been different? What consequences might this have for the distribution of planet types?
+**6. Frost Line Reasoning:** If the Sun had been twice as luminous when the solar system formed, how would the frost line have been different? What consequences might this have for the distribution of planet types?
 
-**6. Integration Problem:** You discover an exoplanet system where rocky planets extend out to 5 AU. What might this tell you about the host star compared to our Sun?
-
-**7. Tool Choice:** You want to determine whether a newly discovered exoplanet is rocky or gaseous. What two measurements would you need, and which tools from Module 1 would provide them?
+**7. Integration Problem:** You discover an exoplanet system where rocky planets extend out to 5 AU. What might this tell you about the host star compared to our Sun?
 
 **8. Frost Line from First Principles (Integration Problem):** Equilibrium temperature scales with distance as $T_{\text{eq}} \propto 1/\sqrt{a}$. Earth's equilibrium temperature is ~255 K at 1 AU. Water ice condenses at ~150 K in the low-pressure solar nebula. Estimate the frost line distance.
 
 **9. Rocky or Gaseous? (Transfer Problem):** You discover a new moon orbiting an exoplanet. From the moon's orbit, you determine the planet's mass is $6.0 \times 10^{26}$ kg. From transit observations, you estimate the planet's radius is $6.0 \times 10^{7}$ m (about 9.4 $R_\oplus$). Calculate the planet's average density. Is this planet more likely rocky or gaseous? *Hint:* Volume of a sphere = $\frac{4}{3}\pi R^3$. Density = mass/volume.
 
 **10. Diagnosing a Mystery Planet (Multi-Tool Transfer):** An infrared telescope detects thermal emission from a planet peaking at 20,000 nm (20 μm). Spectroscopy of reflected starlight reveals strong CH₄ (methane) absorption lines but no CO₂. Is this planet more likely a rocky inner planet or an ice giant? Use Wien's Law and your knowledge of atmospheric composition to justify your answer.
+
 
 ---
 

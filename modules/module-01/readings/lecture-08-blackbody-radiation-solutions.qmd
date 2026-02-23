@@ -1,0 +1,316 @@
+---
+title: "Lecture 8 Solutions: Blackbody Radiation"
+subtitle: "Practice Problem Solutions"
+author: "Dr. Anna Rosen"
+date: "2026-02-23"
+description: "Solutions to the Lecture 8 practice problems."
+draft: true
+course: ASTR 101
+module: "1 - Foundations"
+---
+
+::: {.callout-note}
+**Student note:** These are model solutions written to show every step, units, and checks. I do not expect your work to be this detailed; shorter solutions are fine if your setup, units, and reasoning are correct.
+
+**HW note:** Homework uses only a subset of these problems; the full set is included for future study and self checking.
+:::
+
+## Core Problems
+
+### Problem 1: Wien's Law (Temperature from Peak)
+
+**Restatement:** Calculate the surface temperature of a star whose spectrum peaks at 580 nm.
+
+**Given:**
+
+- Peak wavelength: $\lambda_{\text{peak}} = 580$ nm
+- Wien's Law constant: $b = 2.9 \times 10^6$ nm·K
+
+**Find:** Surface temperature $T$ in Kelvin.
+
+**Equation:**
+$$T = \frac{b}{\lambda_{\text{peak}}} = \frac{2.9 \times 10^6 \text{ nm·K}}{\lambda_{\text{peak}}}$$
+
+**Solution:**
+
+$$T = \frac{2.9 \times 10^6 \text{ nm·K}}{580 \text{ nm}} = 5000 \text{ K}$$
+
+**Unit check:** $\frac{\text{nm·K}}{\text{nm}} = \text{K}$ ✓
+
+**Sanity check:** The Sun's surface temperature is ~5800 K and it peaks at ~500 nm. A peak at 580 nm (longer wavelength, slightly redder) should correspond to a slightly cooler star — and 5000 K is indeed slightly cooler than the Sun. ✓
+
+**Answer:** $T = 5000$ K. This star is slightly cooler than the Sun.
+
+**What you should learn from this:** Wien's Law is a one-step thermometer: divide the constant by the peak wavelength. Always check that both are in the same wavelength units (here, nm).
+
+---
+
+### Problem 2: Wien's Law Reverse (Peak from Temperature)
+
+**Restatement:** Find the peak wavelength for a 4000 K star and identify the spectral region.
+
+**Given:**
+
+- Surface temperature: $T = 4000$ K
+- Wien's Law constant: $b = 2.9 \times 10^6$ nm·K
+
+**Find:** Peak wavelength $\lambda_{\text{peak}}$ in nm; spectral region.
+
+**Equation:**
+$$\lambda_{\text{peak}} = \frac{b}{T} = \frac{2.9 \times 10^6 \text{ nm·K}}{T}$$
+
+**Solution:**
+
+$$\lambda_{\text{peak}} = \frac{2.9 \times 10^6 \text{ nm·K}}{4000 \text{ K}} = 725 \text{ nm}$$
+
+**Unit check:** $\frac{\text{nm·K}}{\text{K}} = \text{nm}$ ✓
+
+**Spectral region:** Visible light spans roughly 400–700 nm. At 725 nm, this star peaks in the **near-infrared**, just beyond the red end of visible light. It would appear **reddish** to our eyes because the visible portion of its emission is dominated by red wavelengths.
+
+**Sanity check:** A cooler star (4000 K < 5800 K for the Sun) should peak at a longer wavelength — and 725 nm > 500 nm (Sun's peak). Cooler = redder. ✓
+
+**Answer:** $\lambda_{\text{peak}} = 725$ nm (near-infrared). The star would appear reddish.
+
+**What you should learn from this:** Wien's Law works both ways — temperature → wavelength or wavelength → temperature. A 4000 K star peaks just outside visible light, explaining why cool stars appear red.
+
+---
+
+### Problem 3: Stefan-Boltzmann (Luminosity Ratio)
+
+**Restatement:** Star A is 3× hotter than Star B with the same radius. How much more luminous is Star A?
+
+**Given:**
+
+- $T_A = 3 T_B$
+- $R_A = R_B$
+
+**Find:** Luminosity ratio $L_A / L_B$.
+
+**Equation:**
+$$L = 4\pi R^2 \sigma T^4 \quad \Rightarrow \quad \frac{L_A}{L_B} = \left(\frac{R_A}{R_B}\right)^2 \left(\frac{T_A}{T_B}\right)^4$$
+
+**Solution:**
+
+$$\frac{L_A}{L_B} = \left(\frac{R_A}{R_B}\right)^2 \left(\frac{T_A}{T_B}\right)^4 = (1)^2 \times (3)^4 = 1 \times 81 = 81$$
+
+**Unit check:** Ratio of luminosities — dimensionless. ✓
+
+**Sanity check:** Temperature appears to the *fourth power*, so even a modest temperature increase has a dramatic effect on luminosity. Tripling the temperature → $3^4 = 81$× more luminous. This extreme sensitivity is why temperature matters more than size for stellar luminosity. ✓
+
+**Answer:** Star A is **81 times** more luminous than Star B.
+
+**What you should learn from this:** The $T^4$ in Stefan-Boltzmann makes temperature the dominant factor in luminosity. A factor of 3 in temperature produces a factor of 81 in luminosity — temperature matters *far more* than size.
+
+---
+
+### Problem 4: L-T-R Relationship (Radius Ratio)
+
+**Restatement:** Two stars have the same temperature but one is 400× more luminous. Compare their radii.
+
+**Given:**
+
+- $T_A = T_B$
+- $L_A = 400 \, L_B$
+
+**Find:** Radius ratio $R_A / R_B$.
+
+**Equation:**
+$$\frac{L_A}{L_B} = \left(\frac{R_A}{R_B}\right)^2 \left(\frac{T_A}{T_B}\right)^4$$
+
+**Solution:**
+
+Since $T_A = T_B$, the temperature ratio is 1:
+
+$$400 = \left(\frac{R_A}{R_B}\right)^2 \times (1)^4 = \left(\frac{R_A}{R_B}\right)^2$$
+
+$$\frac{R_A}{R_B} = \sqrt{400} = 20$$
+
+**Unit check:** Ratio of radii — dimensionless. ✓
+
+**Sanity check:** At the same temperature, the only way to be more luminous is to be bigger (more surface area emitting light). $400\times$ more luminous → $\sqrt{400} = 20\times$ larger radius. This is physically reasonable — giant stars can be 10–100× the Sun's radius. ✓
+
+**Answer:** The brighter star has **20 times the radius** of the fainter star.
+
+**What you should learn from this:** At fixed temperature, $L \propto R^2$. The square root relationship means you need a large luminosity difference (400×) to imply a large radius difference (20×). This is how astronomers identify giant and supergiant stars — they're far more luminous than main-sequence stars of the same color.
+
+---
+
+### Problem 5: Why the Sun Isn't Green
+
+**Restatement:** Why does the Sun appear white, not green, even though its peak wavelength (~500 nm) is in the green?
+
+**Key insight:** The blackbody spectrum is a broad curve, not a narrow spike.
+
+**Answer:** The Sun's spectrum peaks near 500 nm (green), but this does *not* mean the Sun appears green. Here's why:
+
+1. **The blackbody curve is broad.** The Sun emits strongly across the entire visible range — violet through red. The peak at 500 nm is a gentle maximum, not a sharp spike. There is nearly as much blue and red light as green.
+
+2. **Our eyes integrate.** Human vision combines all incoming visible wavelengths. When you mix roughly equal amounts of all visible colors, the result is **white**. (This is how white LEDs work — they combine wavelengths across the visible spectrum.)
+
+3. **If the Sun emitted *only* at 500 nm** (like a laser), it would indeed appear green. But a blackbody emits at all wavelengths, with a smooth distribution.
+
+**Common misconception:** "The Sun is yellow." From space, the Sun appears white. It looks yellowish from Earth's surface because Rayleigh scattering removes some blue light from the direct beam (L7 connection).
+
+**What you should learn from this:** "Peak wavelength" does not mean "color." Color perception depends on the *entire* spectrum, not just the peak. This distinction matters whenever you use Wien's Law — it tells you where the peak is, not what color your eyes see.
+
+---
+
+### Problem 6: Star Color Ranking
+
+**Restatement:** Rank a red, blue, and yellow star from coolest to hottest.
+
+**Answer:** Coolest to hottest: **red → yellow → blue**.
+
+**Reasoning from Wien's Law:** $\lambda_{\text{peak}} = b/T$, so hotter stars peak at shorter wavelengths.
+
+- **Red star:** peaks at long wavelengths ($\sim 700$+ nm) → lowest temperature ($\sim 3000$–$4000$ K)
+- **Yellow star:** peaks at intermediate wavelengths ($\sim 500$–$600$ nm) → moderate temperature ($\sim 5000$–$6000$ K, like the Sun)
+- **Blue star:** peaks at short wavelengths ($\sim 300$–$450$ nm) → highest temperature ($\sim 10{,}000$–$30{,}000$ K)
+
+**Common misconception:** Everyday experience associates blue with cold (water faucets, ice). In astrophysics, the opposite is true: blue = hot, red = cool. This is a physics result from Wien's Law.
+
+**What you should learn from this:** Star color is a thermometer. The sequence red → orange → yellow → white → blue corresponds to increasing surface temperature. This will be essential for understanding the Hertzsprung-Russell diagram later in the course.
+
+---
+
+## Challenge Problems
+
+### Problem 7: Combined Wien + Stefan-Boltzmann
+
+**Restatement:** Star X has $T_X = 2T_Y$ and $R_X = R_Y/2$. Compare their peak wavelengths and luminosities.
+
+**Given:**
+
+- $T_X = 2T_Y$
+- $R_X = R_Y / 2$
+
+**Find:** (a) Peak wavelength ratio; (b) Luminosity ratio.
+
+**Solution:**
+
+**(a) Wien's Law:**
+$$\frac{\lambda_{\text{peak},X}}{\lambda_{\text{peak},Y}} = \frac{b/T_X}{b/T_Y} = \frac{T_Y}{T_X} = \frac{T_Y}{2T_Y} = \frac{1}{2}$$
+
+Star X peaks at **half** the wavelength of Star Y (shorter wavelength = bluer).
+
+**Unit check:** Ratio of wavelengths — dimensionless. ✓
+
+**(b) Stefan-Boltzmann Law:**
+$$\frac{L_X}{L_Y} = \left(\frac{R_X}{R_Y}\right)^2 \left(\frac{T_X}{T_Y}\right)^4 = \left(\frac{1}{2}\right)^2 \times (2)^4 = \frac{1}{4} \times 16 = 4$$
+
+**Unit check:** Ratio of luminosities — dimensionless. ✓
+
+**Sanity check:** Star X is hotter (which increases luminosity as $T^4$) but smaller (which decreases luminosity as $R^2$). The $T^4$ wins: $2^4 = 16$ vs. $(1/2)^2 = 1/4$, and $16 \times 1/4 = 4$. Temperature dominance confirmed. ✓
+
+**Answer:** Star X peaks at half the wavelength of Star Y, and is **4× more luminous**.
+
+**What you should learn from this:** This problem shows the competition between size and temperature. Even though Star X is half the radius, its double temperature makes it 4× more luminous overall. The $T^4$ dependence almost always wins.
+
+---
+
+### Problem 8: Earth as a Blackbody
+
+**Restatement:** Find Earth's thermal emission peak wavelength given its effective temperature.
+
+**Given:**
+
+- Earth's effective temperature: $T = 255$ K
+- Wien's Law constant: $b = 2.9 \times 10^6$ nm·K
+
+**Find:** Peak wavelength $\lambda_{\text{peak}}$ and spectral region.
+
+**Equation:**
+$$\lambda_{\text{peak}} = \frac{b}{T}$$
+
+**Solution:**
+
+$$\lambda_{\text{peak}} = \frac{2.9 \times 10^6 \text{ nm·K}}{255 \text{ K}} = 1.14 \times 10^4 \text{ nm} = 11.4 \text{ μm}$$
+
+**Unit check:** $\frac{\text{nm·K}}{\text{K}} = \text{nm}$ ✓ ; conversion: $1.14 \times 10^4 \text{ nm} \times \frac{1 \text{ μm}}{1000 \text{ nm}} = 11.4 \text{ μm}$ ✓
+
+**Spectral region:** This is in the **thermal infrared** — far beyond visible light (400–700 nm). Earth's thermal emission is invisible to human eyes.
+
+**Sanity check:** Earth is much cooler than stars (255 K vs. thousands of K), so it should peak at much longer wavelengths than visible light. 11.4 μm is well into the infrared, as expected. ✓
+
+**Answer:** $\lambda_{\text{peak}} \approx 11.4$ μm (thermal infrared).
+
+**Why this matters:** Greenhouse gases (CO₂, H₂O, CH₄) absorb strongly in the infrared. Earth's thermal emission peaks right where these gases absorb, which is why the greenhouse effect works — it intercepts Earth's outgoing thermal radiation. If Earth emitted in visible light, greenhouse gases wouldn't matter.
+
+**What you should learn from this:** Wien's Law works for any thermal emitter, not just stars. Earth, planets, and even human bodies emit thermal radiation — all peaking in the infrared for objects at hundreds of Kelvin.
+
+---
+
+### Problem 9: Size from L and T (Betelgeuse)
+
+**Restatement:** Estimate $R_{\text{Betelgeuse}}/R_\odot$ from its luminosity and temperature.
+
+**Given:**
+
+- Betelgeuse: $T_B = 3500$ K, $L_B = 10^5 \, L_\odot$
+- Sun: $T_\odot = 5800$ K, $L_\odot = 1 \, L_\odot$
+
+**Find:** Radius ratio $R_B / R_\odot$.
+
+**Equation:**
+From the L-T-R relationship in ratio form:
+$$\frac{L_B}{L_\odot} = \left(\frac{R_B}{R_\odot}\right)^2 \left(\frac{T_B}{T_\odot}\right)^4$$
+
+Solve for the radius ratio:
+$$\frac{R_B}{R_\odot} = \left(\frac{L_B}{L_\odot}\right)^{1/2} \times \left(\frac{T_\odot}{T_B}\right)^2$$
+
+**Solution:**
+
+Step 1 — Calculate the temperature ratio:
+$$\frac{T_B}{T_\odot} = \frac{3500 \text{ K}}{5800 \text{ K}} = 0.603$$
+
+Step 2 — Calculate the temperature factor (to the 4th power):
+$$\left(\frac{T_B}{T_\odot}\right)^4 = (0.603)^4 = 0.132$$
+
+Step 3 — Solve for the radius ratio:
+$$10^5 = \left(\frac{R_B}{R_\odot}\right)^2 \times 0.132$$
+
+$$\left(\frac{R_B}{R_\odot}\right)^2 = \frac{10^5}{0.132} = 7.58 \times 10^5$$
+
+$$\frac{R_B}{R_\odot} = \sqrt{7.58 \times 10^5} = 871 \approx 880$$
+
+**Unit check:** All ratios are dimensionless. ✓
+
+**Sanity check:** Betelgeuse is a red supergiant — it should be enormous. At 880 $R_\odot$, its radius would be:
+$$880 \times 6.96 \times 10^8 \text{ m} = 6.1 \times 10^{11} \text{ m} \approx 4.1 \text{ AU}$$
+
+This means Betelgeuse would extend past the orbit of Mars (1.5 AU) and into the asteroid belt. This is consistent with the known properties of red supergiants. ✓
+
+**Answer:** $R_{\text{Betelgeuse}} \approx 880 \, R_\odot$ (~4 AU). Betelgeuse is large enough to swallow Mercury, Venus, Earth, Mars, and the entire asteroid belt.
+
+**What you should learn from this:** The ratio method avoids needing $\sigma$ or absolute values — you only need the luminosity ratio and the temperature ratio. This is how astronomers determine stellar radii without physically measuring them.
+
+---
+
+### Problem 10: Why Blackbodies Matter
+
+**Restatement:** Explain the utility of blackbody physics for astronomy and what additional information requires spectral lines.
+
+**Answer:**
+
+**What blackbody physics provides:**
+
+Blackbody radiation is a universal property of thermal emitters. For any star (which approximates a blackbody), we can determine:
+
+- **Temperature** — from Wien's Law ($\lambda_{\text{peak}} = b/T$): measure where the spectrum peaks → get surface temperature
+- **Luminosity** — from the Stefan-Boltzmann Law ($L = 4\pi R^2 \sigma T^4$): if you know $T$ and $R$, you know total power output
+- **Radius** — from the L-T-R relationship: if you know $L$ and $T$, solve for $R$
+
+These three properties (temperature, luminosity, radius) are fundamental characteristics of any star, and they come entirely from the smooth, continuous blackbody spectrum.
+
+**What requires spectral lines:**
+
+Blackbody spectra are smooth and featureless — they look the same for any object at a given temperature, regardless of composition. To determine:
+
+- **Composition** — which elements are present in the atmosphere (L9: each element produces unique absorption/emission lines)
+- **Radial velocity** — whether the star is approaching or receding (L10: Doppler shifts of spectral lines)
+- **Rotation rate** — how fast the star spins (line broadening)
+- **Magnetic fields** — field strength (Zeeman splitting of lines)
+
+...you need the *discrete features* (spectral lines) superimposed on the smooth blackbody curve. Blackbody physics gives you the "big picture" (T, L, R); spectral lines give you the details (composition, motion, environment).
+
+**What you should learn from this:** Blackbody radiation and spectral lines are complementary tools. The smooth curve tells you about thermal properties; the lines tell you about atomic physics and motion. Together, they give a remarkably complete picture of a distant object.

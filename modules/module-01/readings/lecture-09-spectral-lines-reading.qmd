@@ -627,6 +627,8 @@ Before moving on, check your understanding. You should be able to do all of the 
 
 ## Practice Problems
 
+*Solutions are available in the [Lecture 9 Solutions](lecture-09-spectral-lines-solutions.qmd).*
+
 ### Core (do these first)
 
 **1. Kirchhoff's Laws** *(Conceptual):* What type of spectrum (continuous, emission, or absorption) would you see from a hot, thin gas cloud with no background light source?

@@ -1,0 +1,286 @@
+---
+title: "Lecture 10 Solutions: Doppler Effect & Telescopes"
+subtitle: "Practice Problem Solutions"
+author: "Dr. Anna Rosen"
+date: "2026-02-23"
+description: "Solutions to the Lecture 10 practice problems."
+draft: true
+course: ASTR 101
+module: "1 - Foundations"
+---
+
+::: {.callout-note}
+**Student note:** These are model solutions written to show every step, units, and checks. I do not expect your work to be this detailed; shorter solutions are fine if your setup, units, and reasoning are correct.
+
+**HW note:** Homework uses only a subset of these problems; the full set is included for future study and self checking.
+:::
+
+## Core Problems
+
+### Problem 1: Doppler Calculation (Sodium D Line)
+
+**Restatement:** Calculate a star's radial velocity from the shift in its sodium D line.
+
+**Given:**
+
+- Rest wavelength: $\lambda_0 = 589.0$ nm
+- Observed wavelength: $\lambda_{\text{obs}} = 589.2$ nm
+- Speed of light: $c = 3 \times 10^5$ km/s
+
+**Find:** Radial velocity $v$ in km/s; approaching or receding?
+
+**Equation:**
+$$\frac{\Delta\lambda}{\lambda_0} = \frac{v}{c}$$
+
+where $\Delta\lambda = \lambda_{\text{obs}} - \lambda_0$.
+
+**Solution:**
+
+Step 1 — Calculate the wavelength shift:
+
+$$\Delta\lambda = 589.2 \text{ nm} - 589.0 \text{ nm} = 0.2 \text{ nm}$$
+
+Since $\Delta\lambda > 0$ (wavelength increased), the light is **redshifted** → star is **receding**.
+
+Step 2 — Calculate the velocity:
+
+$$v = c \times \frac{\Delta\lambda}{\lambda_0} = (3 \times 10^5 \text{ km/s}) \times \frac{0.2 \text{ nm}}{589.0 \text{ nm}}$$
+
+$$v = (3 \times 10^5 \text{ km/s}) \times 3.40 \times 10^{-4} = 102 \text{ km/s}$$
+
+**Unit check:** $\text{km/s} \times \frac{\text{nm}}{\text{nm}} = \text{km/s}$ ✓ (the nm units cancel in the ratio)
+
+**Sanity check:** Typical stellar radial velocities range from a few km/s to a few hundred km/s. Our answer of 102 km/s is within this range. The shift (0.2 nm out of 589 nm) is small, consistent with non-relativistic motion. ✓
+
+**Answer:** $v \approx 102$ km/s, receding (redshifted).
+
+**What you should learn from this:** The Doppler formula is a ratio: $v/c = \Delta\lambda/\lambda_0$. The key is recognizing that positive $\Delta\lambda$ (longer wavelength) means redshift (receding), and negative $\Delta\lambda$ means blueshift (approaching). Always use the *rest* wavelength in the denominator.
+
+---
+
+### Problem 2: Radial vs. Transverse Motion
+
+**Restatement:** A star moves at 50 km/s entirely perpendicular to our line of sight. What Doppler shift do we measure?
+
+**Answer:** We measure **zero** Doppler shift.
+
+The Doppler effect measures only the **radial velocity** — the component of motion along the line of sight (toward or away from us). If the star moves entirely perpendicular to our line of sight (transverse motion), there is no component along the line of sight, so $v_{\text{radial}} = 0$ and $\Delta\lambda = 0$.
+
+We would detect the star's transverse motion as **proper motion** — a slow change in position on the sky over years or decades — but not as a wavelength shift.
+
+**Key distinction:**
+
+- **Radial velocity** (toward/away from us) → measured by Doppler shift
+- **Transverse velocity** (across the sky) → measured by proper motion (change in position over time)
+- **Space velocity** = total 3D velocity = $\sqrt{v_{\text{radial}}^2 + v_{\text{transverse}}^2}$
+
+The star's full space velocity is 50 km/s, but the Doppler effect sees none of it.
+
+**What you should learn from this:** The Doppler effect has a blind spot — it only detects motion along the line of sight. Two stars with identical space velocities can show very different Doppler shifts depending on their direction of motion relative to us.
+
+---
+
+### Problem 3: Telescope Comparison (Light-Collecting and Resolution)
+
+**Restatement:** Compare the light-collecting power and resolution of a 4m telescope vs. a 2m telescope.
+
+**Given:**
+
+- Telescope A: $D_A = 4$ m
+- Telescope B: $D_B = 2$ m
+
+**Find:** (a) Light-collecting ratio; (b) Resolution comparison.
+
+**Solution:**
+
+**(a) Light-collecting power** $\propto$ mirror area $\propto D^2$:
+
+$$\frac{\text{Light}_A}{\text{Light}_B} = \left(\frac{D_A}{D_B}\right)^2 = \left(\frac{4 \text{ m}}{2 \text{ m}}\right)^2 = 4$$
+
+Telescope A collects **4 times** more light than Telescope B.
+
+**Unit check:** $(\text{m}/\text{m})^2$ = dimensionless ✓
+
+**(b) Angular resolution** (ability to distinguish fine detail) $\propto \lambda/D$:
+
+$$\frac{\theta_A}{\theta_B} = \frac{\lambda/D_A}{\lambda/D_B} = \frac{D_B}{D_A} = \frac{2}{4} = \frac{1}{2}$$
+
+Telescope A has **half** the minimum angular separation — meaning it can resolve details **twice as fine** as Telescope B (at the same wavelength).
+
+**Unit check:** $\text{m}/\text{m}$ = dimensionless ✓
+
+**Sanity check:** Larger mirror → more light (obvious) and sharper images (less obvious but correct: larger aperture means less diffraction). Both scale with diameter. ✓
+
+**Answer:** Telescope A collects **4× more light** and has **2× better resolution** than Telescope B.
+
+**What you should learn from this:** Bigger telescopes win on two fronts: they see *fainter* objects (more light) and *finer* detail (better resolution). Light-collecting goes as $D^2$ (area); resolution goes as $1/D$ (diffraction limit). This is why astronomers keep building larger telescopes.
+
+---
+
+### Problem 4: Multi-Wavelength Astronomy
+
+**Restatement:** Why observe the same object at different wavelengths? Give an example of infrared vs. visible.
+
+**Answer:**
+
+**Why multiple wavelengths:** Different wavelengths reveal different physical processes and penetrate different environments. No single wavelength tells the whole story.
+
+**Example — Infrared vs. Visible:**
+
+The center of our Milky Way galaxy is invisible in optical light — dense clouds of interstellar dust along the line of sight absorb and scatter visible photons. But infrared light (longer wavelength) passes through dust much more easily, because dust grains scatter light proportional to $\sim 1/\lambda$ (or steeper). In the infrared, we can see through the dust to observe:
+
+- Millions of stars in the galactic center
+- The supermassive black hole (Sgr A*) and stars orbiting it
+- Star-forming regions hidden inside dusty molecular clouds
+
+Other examples:
+
+- **X-rays** reveal million-degree gas in galaxy clusters (invisible in optical)
+- **Radio waves** show synchrotron emission from jets and magnetic fields
+- **Ultraviolet** highlights hot, young stars that are faint in optical
+
+**What you should learn from this:** The universe looks dramatically different at each wavelength. Multi-wavelength astronomy is not redundant — each band reveals physics invisible to the others. This is why modern observatories span the entire electromagnetic spectrum.
+
+---
+
+## Synthesis Problems
+
+### Problem 5: Doppler + Wien's Law (Combined Tool)
+
+**Restatement:** A star has Hα observed at 656.50 nm (rest: 656.28 nm) and a blackbody peak at 580 nm. Find its radial velocity and temperature.
+
+**Given:**
+
+- Hα rest wavelength: $\lambda_0 = 656.28$ nm
+- Hα observed wavelength: $\lambda_{\text{obs}} = 656.50$ nm
+- Blackbody peak: $\lambda_{\text{peak}} = 580$ nm
+- $c = 3 \times 10^5$ km/s
+- Wien's Law constant: $b = 2.9 \times 10^6$ nm·K
+
+**Find:** Radial velocity $v$; surface temperature $T$.
+
+**Solution:**
+
+**Part 1 — Doppler (radial velocity):**
+
+$$\Delta\lambda = 656.50 - 656.28 = 0.22 \text{ nm}$$
+
+$$v = c \times \frac{\Delta\lambda}{\lambda_0} = (3 \times 10^5 \text{ km/s}) \times \frac{0.22 \text{ nm}}{656.28 \text{ nm}}$$
+
+$$v = (3 \times 10^5) \times 3.35 \times 10^{-4} = 101 \text{ km/s (receding)}$$
+
+**Unit check:** $\text{km/s} \times (\text{nm}/\text{nm}) = \text{km/s}$ ✓
+
+**Part 2 — Wien's Law (temperature):**
+
+$$T = \frac{2.9 \times 10^6 \text{ nm·K}}{580 \text{ nm}} = 5000 \text{ K}$$
+
+**Unit check:** $\frac{\text{nm·K}}{\text{nm}} = \text{K}$ ✓
+
+**How these use different properties of the same starlight:**
+
+- **Doppler** uses the *position* of a spectral line (Hα shifted from 656.28 to 656.50 nm). This measures *motion* — how fast the star moves along our line of sight.
+- **Wien's Law** uses the *shape* of the continuous spectrum (where it peaks). This measures *temperature* — how hot the stellar surface is.
+
+Both measurements come from the same beam of starlight, but they extract completely independent information. The line position encodes velocity; the continuum shape encodes temperature. This is why spectroscopy is so powerful — a single spectrum contains multiple layers of information.
+
+**Answer:** $v \approx 101$ km/s (receding); $T = 5000$ K. The star is slightly cooler than the Sun and moving away from us at ~100 km/s.
+
+**What you should learn from this:** A spectrum is a gold mine of information. Lines give velocities (Doppler); the continuum gives temperature (Wien). Learning to extract different physics from the same observation is the essence of observational astronomy.
+
+---
+
+## Challenge Problems
+
+### Problem 6: Exoplanet or Binary? (Radial Velocity Amplitude)
+
+**Restatement:** Spectral lines shift with amplitude ±0.005 nm around rest wavelength 500 nm with period 3 days. Calculate the velocity amplitude and determine if the companion is a planet or star.
+
+**Given:**
+
+- Rest wavelength: $\lambda_0 = 500$ nm
+- Shift amplitude: $\Delta\lambda = \pm 0.005$ nm
+- Period: 3 days
+- $c = 3 \times 10^5$ km/s
+
+**Find:** Radial velocity amplitude $v$; planet or stellar companion?
+
+**Solution:**
+
+Step 1 — Calculate the velocity amplitude:
+
+$$v = c \times \frac{\Delta\lambda}{\lambda_0} = (3 \times 10^5 \text{ km/s}) \times \frac{0.005 \text{ nm}}{500 \text{ nm}}$$
+
+$$v = (3 \times 10^5) \times 10^{-5} = 3 \text{ km/s}$$
+
+**Unit check:** $\text{km/s} \times (\text{nm}/\text{nm}) = \text{km/s}$ ✓
+
+Step 2 — Interpret: planet or stellar companion?
+
+**This is likely a stellar companion (binary star), not a planet.**
+
+- **Exoplanet-induced wobbles** are typically ~1–100 m/s (0.001–0.1 km/s). Jupiter causes the Sun to wobble at ~13 m/s; Earth causes ~0.1 m/s.
+- **Binary star wobbles** are typically ~1–100 km/s, depending on the companion mass and orbital separation.
+- Our measurement of **3 km/s** is far too large for a planet — it's ~100× the signal from a hot Jupiter.
+
+Additionally, the 3-day period with such a large velocity amplitude implies a massive companion in a tight orbit — consistent with a low-mass star or possibly a brown dwarf.
+
+**Sanity check:** The relative shift ($\Delta\lambda/\lambda_0 = 10^{-5}$) is small enough that the non-relativistic Doppler formula is valid ($v \ll c$). ✓
+
+**Answer:** $v = 3$ km/s. This is most likely a **stellar binary companion**, not a planet — the velocity amplitude is ~100× too large for a planetary signal.
+
+**What you should learn from this:** The magnitude of the Doppler wobble tells you about the companion's mass. Tiny wobbles (m/s) → planets. Large wobbles (km/s) → stars. This is how radial velocity surveys distinguish exoplanets from binary stars.
+
+---
+
+### Problem 7: Dark Matter from Rotation Curves
+
+**Restatement:** Explain how galaxy rotation curves provide evidence for dark matter.
+
+**Key insight:** Stars in galaxy outskirts orbit faster than visible matter alone can explain.
+
+**Answer:**
+
+**The prediction from visible matter:**
+
+Using Newton's gravity, if all the mass in a galaxy were in the visible stars and gas concentrated toward the center, we'd predict orbital velocity should *decrease* with distance from the galactic center beyond the main stellar disk — just like planets in the solar system orbit slower at greater distances ($v = \sqrt{GM/r}$; larger $r$ → smaller $v$).
+
+**What we actually observe:**
+
+When astronomers measure stellar orbital velocities using Doppler shifts of spectral lines, they find that orbital velocity stays **roughly constant** (or even increases slightly) far beyond where the visible matter ends. The rotation curve is **flat**, not declining.
+
+**The inference:**
+
+A flat rotation curve means that the enclosed mass $M(r)$ continues to grow linearly with $r$ even where there are few visible stars. Since $v = \sqrt{GM(r)/r}$ and $v \approx \text{constant}$, we need $M(r) \propto r$ — there must be a large amount of **unseen mass** extending far beyond the visible galaxy.
+
+This unseen mass is called **dark matter**. It doesn't emit, absorb, or reflect light (hence "dark"), but it exerts gravitational influence. Observations suggest that dark matter constitutes about 85% of all matter in the universe.
+
+**The chain of inference:**
+
+- **Observable:** Doppler shifts of stars at various distances from the galactic center
+- **Model:** Newton's gravity relates orbital velocity to enclosed mass
+- **Inference:** The mass distribution extends far beyond visible matter → dark matter exists
+
+**What you should learn from this:** Dark matter is not a speculation — it's an inference from Doppler measurements and Newtonian gravity. The same tools (Doppler effect + gravity) that weigh planets and stars also reveal the existence of an entirely new form of matter.
+
+---
+
+### Problem 8: Space Telescopes vs. Ground (JWST)
+
+**Restatement:** Why couldn't we just build a larger infrared telescope on the ground instead of JWST?
+
+**Answer:**
+
+**Earth's atmosphere blocks most infrared light.** Water vapor (H₂O) and carbon dioxide (CO₂) in the atmosphere are strong infrared absorbers. They create wide "absorption bands" that block entire wavelength ranges from reaching the ground. Only a few narrow "windows" in the near-infrared are partially transparent.
+
+**Even in the windows, the atmosphere glows.** Everything at temperature $T$ emits thermal radiation (blackbody, from L8). The atmosphere at ~250 K emits strongly in the infrared — the same wavelengths JWST observes. From the ground, an infrared telescope sees the sky *glowing* — like trying to observe faint stars while someone shines a flashlight in your face.
+
+**In space, JWST avoids both problems:**
+
+1. **No atmospheric absorption** — the full infrared spectrum is accessible
+2. **No atmospheric emission** — space is cold and dark at infrared wavelengths
+3. **JWST's sunshield** cools the telescope to ~40 K, reducing the telescope's own thermal emission to negligible levels
+
+A ground-based infrared telescope, no matter how large, cannot overcome the fundamental limitations of atmospheric absorption and emission. This is why JWST needed to be in space (at the L2 Lagrange point, 1.5 million km from Earth).
+
+**What you should learn from this:** The atmosphere is transparent at visible and radio wavelengths but opaque at most infrared, ultraviolet, X-ray, and gamma-ray wavelengths. This is why multi-wavelength astronomy requires a fleet of space telescopes, not just bigger ground-based ones.

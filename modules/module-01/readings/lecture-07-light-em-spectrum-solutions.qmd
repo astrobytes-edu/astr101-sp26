@@ -1,0 +1,249 @@
+---
+title: "Lecture 7 Solutions: Light & the Electromagnetic Spectrum"
+subtitle: "Practice Problem Solutions"
+author: "Dr. Anna Rosen"
+date: "2026-02-23"
+description: "Solutions to the Lecture 7 practice problems."
+draft: true
+course: ASTR 101
+module: "1 - Foundations"
+---
+
+::: {.callout-note}
+**Student note:** These are model solutions written to show every step, units, and checks. I do not expect your work to be this detailed; shorter solutions are fine if your setup, units, and reasoning are correct.
+
+**HW note:** Homework uses only a subset of these problems; the full set is included for future study and self checking.
+:::
+
+## Core Problems
+
+### Problem 1: Frequency of Green Light
+
+**Restatement:** Calculate the frequency of green light with wavelength 550 nm.
+
+**Given:**
+
+- Wavelength: $\lambda = 550$ nm $= 550 \times 10^{-9}$ m $= 5.50 \times 10^{-7}$ m
+- Speed of light: $c = 3 \times 10^8$ m/s
+
+**Find:** Frequency $f$ in Hz.
+
+**Equation:**
+$$c = \lambda f \quad \Rightarrow \quad f = \frac{c}{\lambda}$$
+
+**Solution:**
+
+Step 1 — Convert wavelength to meters:
+$$\lambda = 550 \text{ nm} \times \frac{10^{-9} \text{ m}}{1 \text{ nm}} = 5.50 \times 10^{-7} \text{ m}$$
+
+Step 2 — Calculate frequency:
+$$f = \frac{c}{\lambda} = \frac{3 \times 10^8 \text{ m/s}}{5.50 \times 10^{-7} \text{ m}} = 5.45 \times 10^{14} \text{ Hz}$$
+
+**Unit check:** $\frac{\text{m/s}}{\text{m}} = \frac{1}{\text{s}} = \text{Hz}$ ✓
+
+**Sanity check:** Visible light frequencies are in the range $4 \times 10^{14}$ to $7.5 \times 10^{14}$ Hz. Our answer of $5.45 \times 10^{14}$ Hz is right in the middle — correct for green light. ✓
+
+**Answer:** $f \approx 5.45 \times 10^{14}$ Hz.
+
+**What you should learn from this:** The wave equation $c = \lambda f$ connects wavelength and frequency. The key step is converting nm to meters before dividing. Visible light oscillates about 500 trillion times per second.
+
+---
+
+### Problem 2: EM Spectrum Ordering
+
+**Restatement:** Rank X-rays, visible light, radio waves, infrared, and ultraviolet from longest to shortest wavelength.
+
+**Answer:**
+
+From **longest** to **shortest** wavelength:
+
+1. **Radio waves** ($\sim$ mm to km)
+2. **Infrared** ($\sim 700$ nm to $\sim 1$ mm)
+3. **Visible light** ($\sim 400$–$700$ nm)
+4. **Ultraviolet** ($\sim 10$–$400$ nm)
+5. **X-rays** ($\sim 0.01$–$10$ nm)
+
+**Memory aid:** The EM spectrum from long to short wavelength: Radio → Microwave → Infrared → Visible → Ultraviolet → X-ray → Gamma ray. Longer wavelength = lower frequency = lower energy per photon.
+
+**What you should learn from this:** All of these are the same phenomenon — electromagnetic waves — differing only in wavelength. There are no sharp boundaries between categories; the divisions are human conventions.
+
+---
+
+### Problem 3: Rayleigh Scattering (Sky Color)
+
+**Restatement:** Explain why the sky is blue at noon but red/orange at sunset using Rayleigh scattering.
+
+**Key insight:** Rayleigh scattering strength depends on wavelength as $\propto 1/\lambda^4$ — shorter wavelengths scatter much more.
+
+**Answer:**
+
+**At noon:** Sunlight enters the atmosphere from nearly overhead and travels a short path through the air. Blue light ($\lambda \approx 450$ nm) scatters much more strongly than red light ($\lambda \approx 650$ nm) because scattering goes as $1/\lambda^4$. The scattered blue light reaches your eyes from all directions across the sky, making the sky appear blue. The direct sunlight you see has lost some blue, making the Sun appear slightly yellow.
+
+**At sunset:** Sunlight travels through a much longer path of atmosphere (entering at a low angle). Over this extended path, most of the blue light has been scattered away long before it reaches you. What remains in the direct beam is the longer-wavelength light — red and orange — that was *not* scattered out. The Sun and surrounding sky appear red/orange.
+
+**The same physics explains both:** Rayleigh scattering preferentially removes short wavelengths. Short path = some blue removed (blue sky, yellowish Sun). Long path = most blue removed (red/orange Sun, reddish sky near horizon).
+
+**What you should learn from this:** The $1/\lambda^4$ dependence is extremely steep — blue (450 nm) scatters about $(650/450)^4 \approx 4.4$ times more than red (650 nm). This single piece of physics explains both daytime sky color and sunset colors.
+
+---
+
+### Problem 4: Inverse-Square Law (Stellar Brightness)
+
+**Restatement:** A star appears 25 times fainter than an identical star nearby. How many times farther away is it?
+
+**Given:**
+
+- Stars are identical (same luminosity)
+- Brightness ratio: $b_{\text{far}} / b_{\text{near}} = 1/25$
+
+**Find:** Distance ratio.
+
+**Equation:**
+The inverse-square law for brightness:
+$$b \propto \frac{1}{d^2} \quad \Rightarrow \quad \frac{b_{\text{far}}}{b_{\text{near}}} = \left(\frac{d_{\text{near}}}{d_{\text{far}}}\right)^2$$
+
+**Solution:**
+
+$$\frac{1}{25} = \left(\frac{d_{\text{near}}}{d_{\text{far}}}\right)^2$$
+
+Take the square root:
+
+$$\frac{d_{\text{near}}}{d_{\text{far}}} = \frac{1}{5}$$
+
+$$d_{\text{far}} = 5 \times d_{\text{near}}$$
+
+**Unit check:** This is a ratio — dimensionless. ✓
+
+**Sanity check:** 25 times fainter → $\sqrt{25} = 5$ times farther. The inverse-square law means brightness drops as distance² — so to be 25× fainter, you must be 5× farther. ✓
+
+**Answer:** The fainter star is **5 times farther away**.
+
+**What you should learn from this:** The inverse-square law is the fundamental distance tool in astronomy. The pattern: $N$ times fainter → $\sqrt{N}$ times farther. This works because light spreads over an area that grows as $d^2$.
+
+---
+
+### Problem 5: Light Travel Time (Vega)
+
+**Restatement:** Vega is 25 light-years away. How long ago did the light we see tonight leave the star?
+
+**Answer:** The light left Vega **25 years ago**.
+
+This is the definition of a light-year: the distance light travels in one year. If Vega is 25 light-years away, the light we see tonight has been traveling for 25 years. We are seeing Vega as it was 25 years in the past.
+
+**What you should learn from this:** "Light-year" is a unit of *distance*, not time — but it encodes travel time directly. Looking at distant objects is literally looking back in time. This is the foundation of observational cosmology: the farther away we look, the further back in time we see.
+
+---
+
+## Challenge Problems
+
+### Problem 6: Rayleigh Scattering Ratio
+
+**Restatement:** Calculate how many times more a 400 nm (violet) photon scatters compared to a 600 nm (orange) photon.
+
+**Given:**
+
+- Violet wavelength: $\lambda_v = 400$ nm
+- Orange wavelength: $\lambda_o = 600$ nm
+- Rayleigh scattering: $\propto 1/\lambda^4$
+
+**Find:** Scattering ratio.
+
+**Equation:**
+$$\frac{\text{scattering}_v}{\text{scattering}_o} = \left(\frac{\lambda_o}{\lambda_v}\right)^4$$
+
+**Solution:**
+
+$$\frac{\text{scattering}_v}{\text{scattering}_o} = \left(\frac{600 \text{ nm}}{400 \text{ nm}}\right)^4 = \left(\frac{3}{2}\right)^4 = \frac{81}{16} = 5.06$$
+
+**Unit check:** nm/nm = dimensionless; raising to the 4th power preserves dimensionlessness. ✓
+
+**Sanity check:** Violet light should scatter *much* more than orange — a factor of 5 is consistent with the sky appearing strongly blue/violet. (We don't see the sky as violet because our eyes are less sensitive to violet than blue, and the Sun emits less violet than blue.) ✓
+
+**Answer:** Violet (400 nm) scatters about **5 times** more than orange (600 nm).
+
+**What you should learn from this:** The $\lambda^4$ dependence is dramatic — a modest wavelength ratio (3/2) produces a large scattering ratio (5×). This is why even a relatively small difference in wavelength produces striking color effects.
+
+---
+
+### Problem 7: Lunar Eclipse Color Variation
+
+**Restatement:** Why do some lunar eclipses appear darker red than others?
+
+**Key insight:** The Moon's color during a total lunar eclipse depends on Earth's atmosphere at the time.
+
+**Answer:** During a total lunar eclipse, the only light reaching the Moon has been refracted and filtered through Earth's atmosphere. This light is red for the same reason sunsets are red — Rayleigh scattering removes blue light over the long atmospheric path.
+
+The *amount* of reddening varies because **Earth's atmosphere changes**:
+
+- **Volcanic eruptions** inject aerosols and dust high into the stratosphere, which scatter and absorb even more light. After major eruptions (e.g., Pinatubo in 1991), lunar eclipses can appear very dark — nearly black — because so little light makes it through.
+- **High cloud cover** and atmospheric pollution also increase absorption.
+- **Clean atmospheres** let more red light through, producing a brighter, more copper-colored eclipse.
+
+Astronomers use the **Danjon scale** (0–4) to rate lunar eclipse darkness, from dark/invisible (0) to bright copper-red (4).
+
+**What you should learn from this:** Lunar eclipse color is a remote measurement of Earth's atmospheric state — another example of using light to learn about a distant environment without visiting it.
+
+---
+
+### Problem 8: Inverse-Square Law (Supernova Distance)
+
+**Restatement:** A supernova appears 10,000 times fainter than an identical one at 10 Mpc. Find the distance.
+
+**Given:**
+
+- Nearby supernova distance: $d_{\text{near}} = 10$ Mpc
+- Brightness ratio: $b_{\text{far}} / b_{\text{near}} = 1/10{,}000$
+
+**Find:** Distance to the far supernova.
+
+**Equation:**
+$$\frac{b_{\text{far}}}{b_{\text{near}}} = \left(\frac{d_{\text{near}}}{d_{\text{far}}}\right)^2$$
+
+**Solution:**
+
+$$\frac{1}{10{,}000} = \left(\frac{10 \text{ Mpc}}{d_{\text{far}}}\right)^2$$
+
+$$\frac{10 \text{ Mpc}}{d_{\text{far}}} = \frac{1}{\sqrt{10{,}000}} = \frac{1}{100}$$
+
+$$d_{\text{far}} = 100 \times 10 \text{ Mpc} = 1000 \text{ Mpc} = 1 \text{ Gpc}$$
+
+**Unit check:** Mpc × (dimensionless) = Mpc. ✓
+
+**Sanity check:** 10,000× fainter → $\sqrt{10{,}000} = 100$× farther → $100 \times 10 = 1000$ Mpc. At 1 Gpc, this is a cosmologically significant distance — about 3.3 billion light-years. Type Ia supernovae *are* used as "standard candles" out to these distances. ✓
+
+**Answer:** The distant galaxy is at **1000 Mpc** (1 Gpc, about 3.3 billion light-years).
+
+**What you should learn from this:** If you know an object's intrinsic luminosity (a "standard candle"), the inverse-square law directly gives you its distance. This is how astronomers measure the most distant objects in the universe.
+
+---
+
+### Problem 9: Mars's Color
+
+**Restatement:** Is Mars red because of Rayleigh scattering in its atmosphere?
+
+**Answer:** No. Mars's red color has nothing to do with Rayleigh scattering.
+
+**The real reason:** Mars's surface is covered in iron oxide (rust, Fe₂O₃) — literally rusty dirt. Iron oxide absorbs blue and green light and reflects red light. When we look at Mars, we're seeing sunlight reflected off this rusty surface.
+
+**Why not Rayleigh scattering?** Rayleigh scattering requires a thick atmosphere with molecules small compared to the wavelength of light. Mars's atmosphere is about 100 times thinner than Earth's ($\sim 6$ mbar vs. $\sim 1013$ mbar). While Mars does have a thin reddish sky (dust particles scatter light), its redness as seen from Earth is overwhelmingly due to surface minerals, not atmospheric scattering.
+
+**What you should learn from this:** Not all color in astronomy has the same cause. Rayleigh scattering explains Earth's blue sky; surface mineralogy explains Mars's red color; Wien's Law explains stellar colors (L8). Identifying *which* mechanism produces a color is a key astronomical skill.
+
+---
+
+### Problem 10: Star Color and Temperature (Preview)
+
+**Restatement:** Predict whether a red or blue star has the higher surface temperature.
+
+**Answer:** The **blue star** has the higher surface temperature.
+
+**Reasoning (preview of Wien's Law, L8):** Hotter objects emit light that peaks at shorter wavelengths. Blue light has a shorter wavelength ($\sim 450$ nm) than red light ($\sim 650$ nm). Therefore, a blue star's spectrum peaks at a shorter wavelength, meaning it has a higher surface temperature.
+
+Quantitatively (using Wien's Law, covered in L8):
+
+- A red star with $\lambda_{\text{peak}} \approx 700$ nm has $T \approx 2.9 \times 10^6 / 700 \approx 4100$ K
+- A blue star with $\lambda_{\text{peak}} \approx 400$ nm has $T \approx 2.9 \times 10^6 / 400 \approx 7300$ K
+
+**Common misconception:** "Blue = cold" (from water faucet convention). In astronomy, the opposite is true: blue = hot, red = cool. This is a physics result, not a cultural convention.
+
+**What you should learn from this:** Color is a thermometer. Hotter → bluer, cooler → redder. This pattern connects directly to Wien's Law in L8 and will be essential for understanding the Hertzsprung-Russell diagram later in the course.

@@ -426,7 +426,7 @@ $$F_g = \frac{Gm_1m_2}{r^2}$$
 
 where:
 
-- $G = 6.67 \times 10^{-11}\ \mathrm{N\,m^2/kg^2}$ (gravitational constant)
+- $G = 6.674 \times 10^{-11}\ \mathrm{N\,m^2/kg^2}$ (gravitational constant)
 - $m_1$ and $m_2$ are the two masses (kg)
 - $r$ is the distance between their centers (m)
 :::
@@ -967,9 +967,9 @@ This last point is remarkable. A satellite and a space station at the same altit
 
 - $M_{Sun} = 2 \times 10^{30}$ kg
 - $r = 1.5 \times 10^{11}$ m (1 AU)
-- $G = 6.67 \times 10^{-11}\ \mathrm{N\,m^2/kg^2}$
+- $G = 6.674 \times 10^{-11}\ \mathrm{N\,m^2/kg^2}$
 
-$$v = \sqrt{\frac{(6.67 \times 10^{-11})(2 \times 10^{30})}{1.5 \times 10^{11}}} \approx 30{,}000 \text{ m/s} = 30 \text{ km/s}$$
+$$v = \sqrt{\frac{(6.674 \times 10^{-11})(2 \times 10^{30})}{1.5 \times 10^{11}}} \approx 29{,}800 \text{ m/s} \approx 30 \text{ km/s}$$
 
 Earth travels at 30 km/s (about 67,000 mph) just to stay in orbit!
 :::
@@ -1050,6 +1050,8 @@ Every time we measure a mass in astronomy, we're using Newton's insight: **motio
 ---
 
 ## Practice Problems
+
+*Solutions are available in the [Lecture 6 Solutions](lecture-06-newtons-gravity-solutions.qmd).*
 
 ### Core (do these first)
 

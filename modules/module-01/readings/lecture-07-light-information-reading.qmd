@@ -706,6 +706,8 @@ The key insight: **hotter objects emit shorter-wavelength light**. There's a pre
 
 ## Practice Problems
 
+*Solutions are available in the [Lecture 7 Solutions](lecture-07-light-em-spectrum-solutions.qmd).*
+
 ### Core (do these first)
 
 **1. Wave equation:** Green light has a wavelength of about 550 nm. Calculate its frequency. (Remember: $c = 3 \times 10^8$ m/s, and 1 nm = $10^{-9}$ m)

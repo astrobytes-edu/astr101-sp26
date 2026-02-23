@@ -504,7 +504,7 @@ When you see a big number or a scaling question, you'll know which tool to reach
 | Constant | Symbol | Value |
 |----------|--------|-------|
 | Speed of light | $c$ | $3.00 \times 10^8$ m/s |
-| Gravitational constant | $G$ | $6.67 \times 10^{-11}$ m³/(kg·s²) |
+| Gravitational constant | $G$ | $6.674 \times 10^{-11}$ m³/(kg·s²) |
 | Stefan-Boltzmann constant | $\sigma$ | $5.67 \times 10^{-8}$ W/(m²·K⁴) |
 
 ### Astronomical Constants (SI)

@@ -1,0 +1,256 @@
+---
+title: "Lecture 9 Solutions: Spectral Lines & Stellar Fingerprints"
+subtitle: "Practice Problem Solutions"
+author: "Dr. Anna Rosen"
+date: "2026-02-23"
+description: "Solutions to the Lecture 9 practice problems."
+draft: true
+course: ASTR 101
+module: "1 - Foundations"
+---
+
+::: {.callout-note}
+**Student note:** These are model solutions written to show every step, units, and checks. I do not expect your work to be this detailed; shorter solutions are fine if your setup, units, and reasoning are correct.
+
+**HW note:** Homework uses only a subset of these problems; the full set is included for future study and self checking.
+:::
+
+## Core Problems
+
+### Problem 1: Kirchhoff's Laws (Spectrum Type)
+
+**Restatement:** What type of spectrum does a hot, thin gas cloud with no background light source produce?
+
+**Key insight:** Kirchhoff's three laws connect physical conditions to spectrum type.
+
+**Answer:** An **emission line spectrum** (bright lines on a dark background).
+
+Kirchhoff's Second Law states: a hot, low-density (thin) gas emits light at specific wavelengths — producing bright emission lines characteristic of the elements present. Since there is no background light source, there is no continuous spectrum to absorb from, so we see emission, not absorption.
+
+**The three laws for reference:**
+
+1. Hot, dense object (or hot, opaque gas) → **continuous spectrum**
+2. Hot, thin gas (no background) → **emission line spectrum**
+3. Cool, thin gas in front of a hot, continuous source → **absorption line spectrum**
+
+**What you should learn from this:** The physical conditions (density, temperature, geometry) determine which type of spectrum you see. Nebulae glow with emission lines; stars show absorption lines because their hot interiors (continuous source) shine through their cooler outer atmospheres (thin gas).
+
+---
+
+### Problem 2: Hydrogen Energy Levels (n=4 → n=2)
+
+**Restatement:** Calculate the photon energy and wavelength for a hydrogen transition from $n = 4$ to $n = 2$.
+
+**Given:**
+
+- Energy level formula: $E_n = -13.6/n^2$ eV
+- Wavelength-energy conversion: $\lambda (\text{nm}) = 1240 / E (\text{eV})$
+
+**Find:** Photon energy in eV; wavelength in nm; color.
+
+**Equation:**
+$$E_{\text{photon}} = E_{\text{upper}} - E_{\text{lower}} = E_4 - E_2$$
+
+(Energy of the photon equals the energy difference between levels.)
+
+**Solution:**
+
+Step 1 — Calculate energy of each level:
+
+$$E_4 = \frac{-13.6 \text{ eV}}{4^2} = \frac{-13.6 \text{ eV}}{16} = -0.85 \text{ eV}$$
+
+$$E_2 = \frac{-13.6 \text{ eV}}{2^2} = \frac{-13.6 \text{ eV}}{4} = -3.40 \text{ eV}$$
+
+Step 2 — Calculate the photon energy (energy released = energy difference):
+
+$$E_{\text{photon}} = E_4 - E_2 = (-0.85 \text{ eV}) - (-3.40 \text{ eV}) = +2.55 \text{ eV}$$
+
+*Note:* The photon energy is positive because the electron *loses* energy (falls to a lower level), and that energy goes into the photon.
+
+Step 3 — Convert to wavelength:
+
+$$\lambda = \frac{1240 \text{ eV·nm}}{2.55 \text{ eV}} = 486 \text{ nm}$$
+
+**Unit check:** $\frac{\text{eV·nm}}{\text{eV}} = \text{nm}$ ✓
+
+**Color:** 486 nm is in the **blue-green** part of the visible spectrum. This is the **Hβ (H-beta) line** — the second line of the Balmer series.
+
+**Sanity check:** The Balmer series (transitions to $n = 2$) produces visible light. The known Hβ wavelength is 486.1 nm — our answer matches perfectly. ✓
+
+**Answer:** $E = 2.55$ eV; $\lambda = 486$ nm (blue-green). This is the Hβ line.
+
+**What you should learn from this:** The energy level formula gives exact predictions for hydrogen line wavelengths. The key is: photon energy = upper level energy minus lower level energy (take the absolute difference, since both are negative).
+
+---
+
+### Problem 3: Spectral Types (Identifying a Star)
+
+**Restatement:** A star shows very strong hydrogen Balmer lines but no helium lines. What spectral type? Hotter or cooler than the Sun?
+
+**Key insight:** Balmer line strength peaks at ~10,000 K (A-type stars), not at the highest temperatures.
+
+**Answer:** This star is most likely spectral type **A** (surface temperature ~7500–10,000 K). It is **hotter than the Sun** (which is a G-type star at ~5800 K).
+
+**Reasoning:**
+
+- **Strong Balmer lines** require hydrogen atoms with electrons in the $n = 2$ level (the lower level of Balmer transitions). This happens most efficiently around 10,000 K — hot enough to excite hydrogen to $n = 2$, but not so hot that hydrogen is ionized.
+- **No helium lines** means the star is not hot enough to excite helium (which requires $\gtrsim 15{,}000$ K for significant absorption). This rules out O and B types.
+- The combination (strong H, no He) is the signature of **A-type stars** like Vega and Sirius.
+
+**What you should learn from this:** Line strength depends on *temperature*, not just abundance. Hydrogen is the most abundant element in every star, but its Balmer lines are only strong at the right temperature. This is why spectral classification is a temperature sequence, not a composition sequence.
+
+---
+
+### Problem 4: Ionization and Line Strength
+
+**Restatement:** Why are hydrogen absorption lines weak in both O stars and M stars, even though both contain abundant hydrogen?
+
+**Key insight:** Too hot or too cold — both suppress Balmer absorption, for different reasons.
+
+**Answer:**
+
+**In O stars (~30,000–50,000+ K):** The temperature is so high that most hydrogen atoms are **ionized** — the electron has been stripped away entirely. An ionized hydrogen atom (a bare proton) has no electron to absorb photons, so it produces no absorption lines. Hydrogen is abundant but cannot absorb.
+
+**In M stars (~2500–3500 K):** The temperature is so low that nearly all hydrogen atoms have their electrons in the **ground state** ($n = 1$). Balmer absorption requires the electron to start in $n = 2$, but at 3500 K there isn't enough thermal energy to excite electrons up to $n = 2$ in significant numbers. Hydrogen is abundant but is in the wrong state to produce Balmer lines.
+
+**The "Goldilocks zone" for Balmer lines** is A-type stars (~10,000 K): hot enough to populate $n = 2$, cool enough to avoid ionization.
+
+**What you should learn from this:** Spectral line strength reflects *physical conditions* (temperature, density), not just elemental abundance. A weak line does NOT mean the element is rare — it may mean the temperature is wrong for that particular transition.
+
+---
+
+### Problem 5: Line Identification
+
+**Restatement:** A star's spectrum shows strong absorption at 656 nm and 486 nm. What element is present?
+
+**Answer:** **Hydrogen** is definitely present.
+
+**Evidence:**
+
+- 656 nm = **Hα** (H-alpha) — the $n = 3 \to 2$ transition of hydrogen
+- 486 nm = **Hβ** (H-beta) — the $n = 4 \to 2$ transition of hydrogen
+
+These are the two strongest lines of the **Balmer series** (transitions to $n = 2$). The Balmer series is hydrogen's most recognizable fingerprint in the visible spectrum. Finding two Balmer lines at their known rest wavelengths is definitive identification.
+
+**What you should learn from this:** Spectral lines are atomic fingerprints. Each element produces a unique set of wavelengths. Hydrogen's Balmer series (656, 486, 434, 410 nm...) is the most important pattern to recognize in introductory astronomy.
+
+---
+
+## Challenge Problems
+
+### Problem 6: Balmer Series Limit
+
+**Restatement:** Find the shortest wavelength of the Balmer series ($n = \infty \to 2$) and identify the spectral region.
+
+**Given:**
+
+- $E_n = -13.6/n^2$ eV
+- $\lambda = 1240/E$ (eV → nm)
+- Transition: $n = \infty \to n = 2$
+
+**Find:** Shortest Balmer wavelength; spectral region.
+
+**Equation:**
+$$E_{\text{photon}} = E_\infty - E_2$$
+
+**Solution:**
+
+Step 1 — Calculate the energy levels:
+
+$$E_\infty = \frac{-13.6 \text{ eV}}{\infty^2} = 0 \text{ eV}$$
+
+(At $n = \infty$, the electron is just barely free — zero binding energy.)
+
+$$E_2 = \frac{-13.6 \text{ eV}}{4} = -3.40 \text{ eV}$$
+
+Step 2 — Calculate the maximum photon energy:
+
+$$E_{\text{photon}} = 0 \text{ eV} - (-3.40 \text{ eV}) = 3.40 \text{ eV}$$
+
+Step 3 — Convert to wavelength:
+
+$$\lambda = \frac{1240 \text{ eV·nm}}{3.40 \text{ eV}} = 365 \text{ nm}$$
+
+**Unit check:** $\frac{\text{eV·nm}}{\text{eV}} = \text{nm}$ ✓
+
+**Spectral region:** 365 nm is in the **near-ultraviolet**, just below the violet end of visible light (~400 nm). This is the **Balmer limit** — all Balmer series lines have wavelengths longer than 365 nm.
+
+**Sanity check:** The Balmer series lines converge: Hα (656 nm), Hβ (486 nm), Hγ (434 nm), Hδ (410 nm)... they get closer together and approach a limit. 365 nm as the limit is consistent with this convergence pattern. ✓
+
+**Answer:** The Balmer series limit is $\lambda = 365$ nm (near-ultraviolet). This is the maximum energy (shortest wavelength) a Balmer photon can have.
+
+**What you should learn from this:** Each spectral series has a limit determined by the energy of the lower level. For the Balmer series, the limit is 3.40 eV = 365 nm. Beyond this energy, the electron is ionized from $n = 2$ rather than making a bound-bound transition.
+
+---
+
+### Problem 7: Why Not Hotter? (O Stars and Hydrogen)
+
+**Restatement:** Explain why hydrogen Balmer lines are *weaker* in O stars than A stars despite O stars being hotter and hydrogen being the most abundant element.
+
+**Answer:** This is the same physics as Problem 4, but focused on the high-temperature side.
+
+At O-star temperatures (30,000–50,000+ K), hydrogen is almost completely **ionized**. The thermal energy ($kT$) far exceeds the 13.6 eV binding energy of hydrogen. When hydrogen is ionized:
+
+- There are no bound electrons to make transitions
+- No electrons in $n = 2$ means no Balmer absorption
+- The protons and free electrons produce a continuous spectrum contribution, but not discrete lines
+
+Meanwhile, A stars (~10,000 K) have the "Goldilocks" temperature: enough thermal energy to excite a significant fraction of hydrogen atoms to $n = 2$ (needed for Balmer absorption), but not enough to ionize most of them.
+
+The **Boltzmann and Saha equations** (not covered in ASTR 101, but the physics is straightforward) quantify this: the fraction of atoms in a given state depends exponentially on temperature. There's a narrow temperature range where the $n = 2$ population is maximized.
+
+**Key takeaway:** Line strength is NOT proportional to element abundance. It depends critically on the ionization and excitation state, which are set by temperature. This is why the spectral type sequence (OBAFGKM) is fundamentally a *temperature* sequence.
+
+**What you should learn from this:** "More hydrogen doesn't mean stronger hydrogen lines." Temperature controls which energy levels are populated, and therefore which transitions can occur. This principle is central to spectral classification.
+
+---
+
+### Problem 8: Lyman Series
+
+**Restatement:** The Lyman-alpha line (n=2 → 1) has $\lambda = 121.6$ nm. Identify the spectral region and explain why ground-based telescopes can't observe it.
+
+**Answer:**
+
+**Spectral region:** 121.6 nm is in the **far-ultraviolet (far-UV)** — well below the ~300 nm atmospheric cutoff.
+
+**Why ground-based telescopes can't observe it:** Earth's atmosphere is **opaque** to ultraviolet light below ~300 nm. Ozone (O₃) in the stratosphere and molecular oxygen (O₂) efficiently absorb UV radiation at these wavelengths. The Lyman-alpha photons are completely absorbed before they reach the ground.
+
+**How astronomers observe Lyman-alpha:** Using **space telescopes** (e.g., the Hubble Space Telescope, which has UV instruments) that orbit above Earth's atmosphere. From space, there is no atmospheric absorption and Lyman-alpha can be observed directly.
+
+**Why Lyman-alpha matters:** The $n = 2 \to 1$ transition is the strongest hydrogen line (it involves the most abundant energy level — the ground state). It's crucial for studying the intergalactic medium, high-redshift galaxies, and the epoch of reionization.
+
+**What you should learn from this:** Atmospheric absorption is why we need different types of telescopes (ground-based for visible and radio; space-based for UV, X-ray, and parts of the infrared). The atmosphere is a filter that blocks large portions of the EM spectrum.
+
+---
+
+## Synthesis Problem
+
+### Problem 9: Mystery Star
+
+**Restatement:** Identify a star from its spectral features: Hα at 656 nm (no shift), strong Ca H & K lines (393, 397 nm), many iron lines, no helium, moderate Balmer hydrogen lines.
+
+**Answer:**
+
+**(a) Elements identified:**
+
+- **Hydrogen** — from the Hα absorption at 656 nm and the moderate Balmer series
+- **Calcium** — from the strong H and K lines at 393 and 397 nm (these are calcium's most prominent lines)
+- **Iron** — from the many iron absorption lines
+
+**(b) Spectral type: G or early K** (~5000–6000 K)
+
+**Reasoning:**
+
+- **No helium lines** → rules out O, B, and hot A stars (need $T > 15{,}000$ K for helium absorption)
+- **Moderate hydrogen Balmer lines** → not the strongest (which would indicate A type, ~10,000 K); this suggests a cooler star where fewer atoms are excited to $n = 2$
+- **Strong calcium H & K lines** → calcium lines strengthen in F, G, K stars, peaking around G–K type ($\sim 4000$–$6000$ K)
+- **Many iron lines** → iron lines become prominent in cooler stars (G, K, M) where the lower temperatures allow complex atoms to remain un-ionized
+- **All features together:** moderate H + strong Ca + many Fe + no He = **G type** (like the Sun) or early K type
+
+This is consistent with a star very similar to our Sun (G2, 5800 K) or slightly cooler (G8–K2, ~4500–5500 K).
+
+**(c) Observable → Model → Inference summary:**
+
+*Observable:* We measure absorption lines at specific wavelengths — hydrogen at 656 nm, calcium at 393/397 nm, and numerous iron lines. *Model:* Kirchhoff's laws and atomic physics tell us that each element absorbs at unique wavelengths determined by its electron energy levels, and line strength depends on temperature and ionization state. *Inference:* The star has a solar-like atmosphere containing hydrogen, calcium, and iron, with a surface temperature of ~5000–6000 K — making it a G or early K-type star similar to our Sun.
+
+**What you should learn from this:** Spectral analysis combines multiple lines of evidence (which lines are present, how strong they are, which are absent) to classify a star. No single line tells the whole story — it's the *pattern* that matters.

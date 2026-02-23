@@ -519,7 +519,7 @@ The story of dark matter began with Doppler shifts and Newton's gravity.
 :::
 
 ::: {.callout-check-yourself title="Check Yourself 4 — Rotation Curve Math"}
-A star orbits at the edge of a galaxy at 200 km/s. Using $v_{orbit} = \sqrt{GM/r}$ with $r = 20$ kpc ($\approx 6 \times 10^{20}$ m) and $G = 6.67 \times 10^{-11}$ N m²/kg², the total mass inside the orbit is approximately:
+A star orbits at the edge of a galaxy at 200 km/s. Using $v_{orbit} = \sqrt{GM/r}$ with $r = 20$ kpc ($\approx 6 \times 10^{20}$ m) and $G = 6.674 \times 10^{-11}$ N m²/kg², the total mass inside the orbit is approximately:
 
 - A) $10^{11}$ solar masses ($\approx 2 \times 10^{41}$ kg)
 - B) $10^{8}$ solar masses ($\approx 2 \times 10^{38}$ kg)
@@ -532,7 +532,7 @@ A star orbits at the edge of a galaxy at 200 km/s. Using $v_{orbit} = \sqrt{GM/r
 
 Rearrange the orbital velocity equation: $M = v^2 r / G$
 
-$M = \frac{(200 \times 10^3)^2 \times (6 \times 10^{20})}{6.67 \times 10^{-11}} = \frac{4 \times 10^{10} \times 6 \times 10^{20}}{6.67 \times 10^{-11}} = \frac{2.4 \times 10^{31}}{6.67 \times 10^{-11}} \approx 3.6 \times 10^{41}$ kg
+$M = \frac{(200 \times 10^3)^2 \times (6 \times 10^{20})}{6.674 \times 10^{-11}} = \frac{4 \times 10^{10} \times 6 \times 10^{20}}{6.674 \times 10^{-11}} = \frac{2.4 \times 10^{31}}{6.674 \times 10^{-11}} \approx 3.6 \times 10^{41}$ kg
 
 In solar masses: $3.6 \times 10^{41} / 2 \times 10^{30} \approx 1.8 \times 10^{11}$ solar masses.
 
@@ -811,6 +811,8 @@ Next week (L11–L13) is our **capstone week**: we apply every tool to the solar
 ---
 
 ## Practice Problems
+
+*Solutions are available in the [Lecture 10 Solutions](lecture-10-doppler-telescopes-solutions.qmd).*
 
 ### Core (do these first)
 

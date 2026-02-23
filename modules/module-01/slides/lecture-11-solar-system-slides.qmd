@@ -300,7 +300,7 @@ $$M = \frac{4\pi^2 a^3}{GP^2}$$
 :::
 
 ::: {.fragment}
-$$M = \frac{4\pi^2 (4.22 \times 10^8 \text{ m})^3}{(6.67 \times 10^{-11})(1.53 \times 10^5 \text{ s})^2}$$
+$$M = \frac{4\pi^2 (4.22 \times 10^8 \text{ m})^3}{(6.674 \times 10^{-11})(1.53 \times 10^5 \text{ s})^2}$$
 :::
 
 ::: {.fragment}

@@ -552,7 +552,7 @@ A **physical constant** is a number that nature gives us — it doesn't change.
 
 ::: {.incremental}
 - **Speed of light:** $c = 3 \times 10^8$ m/s — the universe's speed limit
-- **Gravitational constant:** $G = 6.67 \times 10^{-11}$ m³/(kg·s²) — how strong gravity is
+- **Gravitational constant:** $G = 6.674 \times 10^{-11}$ m³/(kg·s²) — how strong gravity is
 - **Planck's constant:** $h = 6.63 \times 10^{-34}$ J·s — the "graininess" of energy
 :::
 
@@ -785,7 +785,7 @@ Tool 3: The Ratio Method
 ::: {.column width="55%"}
 **The hard way:** Calculate Jupiter's surface gravity.
 
-- Need: $G = 6.67 \times 10^{-11}\,\text{N}\cdot\text{m}^2/\text{kg}^2$, mass, radius...
+- Need: $G = 6.674 \times 10^{-11}\,\text{N}\cdot\text{m}^2/\text{kg}^2$, mass, radius...
 - Lots of numbers, easy to make mistakes.
 
 **The ratio way:** Compare Jupiter to Earth.

@@ -1,0 +1,359 @@
+---
+title: "Lecture 6 Solutions: Newton's Laws & Gravity"
+subtitle: "Practice Problem Solutions"
+author: "Dr. Anna Rosen"
+date: "2026-02-23"
+description: "Solutions to the Lecture 6 practice problems."
+draft: true
+course: ASTR 101
+module: "1 - Foundations"
+---
+
+::: {.callout-note}
+**Student note:** These are model solutions written to show every step, units, and checks. I do not expect your work to be this detailed; shorter solutions are fine if your setup, units, and reasoning are correct.
+
+**HW note:** Homework uses only a subset of these problems; the full set is included for future study and self checking.
+:::
+
+## Core Problems
+
+### Problem 1: Newton's First Law (Probe in Space)
+
+**Restatement:** Describe the motion of a probe coasting at 50 km/s through interstellar space with empty fuel tanks and negligible gravitational effects.
+
+**Key insight:** Newton's First Law — an object in motion stays in motion at constant velocity unless acted upon by a net force.
+
+**Answer:** The probe continues at **50 km/s in a straight line, forever**. With no fuel (no thrust force) and negligible gravity, there is no net force. Newton's First Law says an object in motion remains in uniform motion unless a force acts on it. There is no friction in space, no air resistance, and no drag — the probe does not "slow down" or "run out of steam." A million years later, it is still moving at 50 km/s in the same direction.
+
+**Common misconception:** "It will eventually slow down and stop." This is wrong — that intuition comes from Earth, where friction is always present. In space, there is nothing to provide a decelerating force.
+
+**What you should learn from this:** Newton's First Law is the default state of the universe. Forces cause *changes* in motion, not motion itself.
+
+---
+
+### Problem 2: Newton's Second Law (Car Acceleration)
+
+**Restatement:** Find the net force on a 1000 kg car accelerating at 3 m/s².
+
+**Given:**
+
+- Mass: $m = 1000$ kg
+- Acceleration: $a = 3 \text{ m/s}^2$
+
+**Find:** Net force $F$ in newtons.
+
+**Equation:**
+$$F = ma$$
+
+**Solution:**
+$$F = (1000 \text{ kg}) \times (3 \text{ m/s}^2) = 3000 \text{ kg·m/s}^2 = 3000 \text{ N}$$
+
+**Unit check:** $\text{kg} \times \text{m/s}^2 = \text{kg·m/s}^2 = \text{N}$ (the definition of a newton) ✓
+
+**Sanity check:** A typical car engine might produce a few thousand newtons of net force during modest acceleration — 3000 N is reasonable. ✓
+
+**Answer:** $F = 3000$ N (3 kN).
+
+**What you should learn from this:** Newton's Second Law ($F = ma$) is the central equation of mechanics. It says force, mass, and acceleration are linked: more mass requires more force for the same acceleration.
+
+---
+
+### Problem 3: Inverse-Square Law (Gravitational Acceleration)
+
+**Restatement:** At what distance from Earth's center is gravitational acceleration 1/4 as strong as at the surface?
+
+**Given:**
+
+- Earth's surface radius: $R_\oplus = 6370$ km
+- Gravitational acceleration at surface: $g$
+- Required: $g_{\text{new}} = g/4$
+
+**Find:** Distance $r$ from Earth's center.
+
+**Equation:**
+Gravitational acceleration: $g \propto 1/r^2$
+
+$$\frac{g_{\text{new}}}{g_{\text{surface}}} = \left(\frac{R_\oplus}{r}\right)^2$$
+
+**Solution:**
+
+$$\frac{1}{4} = \left(\frac{R_\oplus}{r}\right)^2$$
+
+Take the square root of both sides:
+
+$$\frac{1}{2} = \frac{R_\oplus}{r}$$
+
+$$r = 2 R_\oplus = 2 \times 6370 \text{ km} = 12{,}740 \text{ km}$$
+
+**Unit check:** km × (dimensionless) = km ✓
+
+**Sanity check:** The inverse-square law says gravity drops as $1/r^2$. To get 1/4 the gravity, we need $r^2$ to be 4 times larger, so $r$ must be 2 times larger. Double the distance → quarter the gravity. ✓
+
+**Answer:** $r = 2R_\oplus = 12{,}740$ km from Earth's center (i.e., 6370 km above the surface — one Earth radius of altitude).
+
+**What you should learn from this:** The inverse-square law is a powerful scaling tool. You don't need to know $G$ or $M_\oplus$ — just the ratio. Double the distance → quarter the force.
+
+---
+
+### Problem 4: Weight vs. Mass
+
+**Restatement:** Calculate your gravitational force (weight) on Earth and on the Moon. Does your mass change?
+
+**Given:**
+
+- Mass: $m = 70$ kg
+- Earth: $g_{\text{Earth}} = 9.8 \text{ m/s}^2$
+- Moon: $g_{\text{Moon}} = 1.6 \text{ m/s}^2$
+
+**Find:** Weight (gravitational force) on each body.
+
+**Equation:**
+$$W = mg$$
+
+**Solution:**
+
+On Earth:
+$$W_{\text{Earth}} = (70 \text{ kg})(9.8 \text{ m/s}^2) = 686 \text{ N}$$
+
+On the Moon:
+$$W_{\text{Moon}} = (70 \text{ kg})(1.6 \text{ m/s}^2) = 112 \text{ N}$$
+
+**Unit check:** $\text{kg} \times \text{m/s}^2 = \text{N}$ ✓
+
+**Does mass change?** No. **Mass is an intrinsic property** — it measures how much matter is in you. It is 70 kg on Earth, on the Moon, and in deep space. **Weight is a force** — it depends on the local gravitational field. Your mass is always 70 kg; your weight changes depending on where you are.
+
+**Sanity check:** The Moon's gravity is about 1/6 of Earth's ($1.6/9.8 \approx 0.16$), so your weight should be about 1/6: $686/6 \approx 114$ N. Our answer of 112 N is consistent. ✓
+
+**Answer:** $W_{\text{Earth}} = 686$ N; $W_{\text{Moon}} = 112$ N. Mass (70 kg) does not change.
+
+**What you should learn from this:** Mass and weight are different quantities with different units. Mass (kg) is constant; weight (N) depends on gravity. Astronauts are not "massless" — they are "weightless" (in free fall).
+
+---
+
+### Problem 5: Weightlessness on the ISS
+
+**Restatement:** Explain why astronauts appear weightless on the ISS even though gravity is ~90% as strong as on the surface.
+
+**Key insight:** Weightlessness is not about the absence of gravity — it is about free fall.
+
+**Answer:** The ISS orbits at about 400 km altitude, where gravity is roughly 90% of its surface value ($g \approx 8.7 \text{ m/s}^2$ vs. $9.8 \text{ m/s}^2$). Astronauts are **not** beyond gravity's reach.
+
+The reason they appear weightless is that the ISS and everything inside it — astronauts, equipment, water droplets — are all **falling toward Earth at the same rate**. The station is in free fall, but it's also moving sideways fast enough (~7.7 km/s) that it keeps missing Earth. Since astronauts and the station fall together, there is no contact force between them — no floor pushing up, no seat pressing against them. This absence of contact forces is what we perceive as "weightlessness."
+
+An analogy: if you were in an elevator and the cable snapped, you and the elevator would fall together. For those brief seconds, you'd feel weightless — not because gravity disappeared, but because nothing is pushing back against you.
+
+**Common misconception:** "There's no gravity in space." Gravity extends to infinity (though it weakens with distance). At ISS altitude, it's barely reduced.
+
+**What you should learn from this:** "Weightless" means "in free fall," not "beyond gravity." This concept is essential for understanding orbits: orbiting *is* falling, with enough sideways velocity to keep missing.
+
+---
+
+### Problem 6: Planet Mass from Moon Orbit
+
+**Restatement:** Calculate a planet's mass from its moon's orbital parameters.
+
+**Given:**
+
+- Moon orbital radius: $a = 500{,}000$ km
+- Moon orbital period: $P = 10$ days
+- $G = 6.674 \times 10^{-11} \text{ m}^3 \text{ kg}^{-1} \text{ s}^{-2}$
+- Assume circular orbit and $m_{\text{moon}} \ll M_{\text{planet}}$
+
+**Find:** Planet mass $M$ in kg.
+
+**Equation:**
+$$M = \frac{4\pi^2 a^3}{GP^2}$$
+
+**Solution:**
+
+Step 1 — Convert to SI units:
+
+- $a = 500{,}000 \text{ km} \times \frac{1000 \text{ m}}{1 \text{ km}} = 5.00 \times 10^8 \text{ m}$
+- $P = 10 \text{ days} \times \frac{86{,}400 \text{ s}}{1 \text{ day}} = 8.64 \times 10^5 \text{ s}$
+
+Step 2 — Compute the numerator ($4\pi^2 a^3$):
+
+$$a^3 = (5.00 \times 10^8 \text{ m})^3 = 1.25 \times 10^{26} \text{ m}^3$$
+
+$$4\pi^2 \times 1.25 \times 10^{26} \text{ m}^3 = 39.48 \times 1.25 \times 10^{26} \text{ m}^3 = 4.93 \times 10^{27} \text{ m}^3$$
+
+Step 3 — Compute the denominator ($GP^2$):
+
+$$P^2 = (8.64 \times 10^5 \text{ s})^2 = 7.46 \times 10^{11} \text{ s}^2$$
+
+$$GP^2 = (6.674 \times 10^{-11} \text{ m}^3 \text{ kg}^{-1} \text{ s}^{-2}) \times (7.46 \times 10^{11} \text{ s}^2) = 4.98 \times 10^{1} \text{ m}^3 \text{ kg}^{-1}$$
+
+*Check units:* $\text{m}^3 \text{ kg}^{-1} \text{ s}^{-2} \times \text{s}^2 = \text{m}^3 \text{ kg}^{-1}$ ✓
+
+Step 4 — Divide:
+
+$$M = \frac{4.93 \times 10^{27} \text{ m}^3}{4.98 \times 10^{1} \text{ m}^3 \text{ kg}^{-1}} = 9.9 \times 10^{25} \text{ kg}$$
+
+*Check units:* $\frac{\text{m}^3}{\text{m}^3 \text{ kg}^{-1}} = \text{kg}$ ✓
+
+**Sanity check:** For reference, Earth is $6 \times 10^{24}$ kg and Neptune is $1.0 \times 10^{26}$ kg. Our planet at $9.9 \times 10^{25}$ kg is about 16× Earth's mass — comparable to Neptune. The orbital parameters (500,000 km, 10 days) are similar to the outer planets' moon systems, so this is reasonable. ✓
+
+**Answer:** $M \approx 9.9 \times 10^{25}$ kg (about 16 Earth masses — similar to an ice giant like Neptune).
+
+**What you should learn from this:** This is the same technique used to "weigh" any planet or star: observe something orbiting it, measure the orbit, and apply Newton's form of Kepler III. The template is always: convert to SI → cube $a$ → square $P$ → divide.
+
+---
+
+## Challenge Problems
+
+### Problem 7: Deriving Kepler III from Newton
+
+**Restatement:** Starting from centripetal and gravitational force equations, derive $v = \sqrt{GM/r}$ and then Kepler's Third Law for circular orbits.
+
+**Key insight:** Setting gravitational force equal to centripetal force links orbital velocity to mass and distance.
+
+**Answer:**
+
+**Part 1 — Derive** $v = \sqrt{GM/r}$:
+
+For a circular orbit, gravity provides the centripetal force:
+
+$$F_{\text{gravity}} = F_{\text{centripetal}}$$
+
+$$\frac{GMm}{r^2} = \frac{mv^2}{r}$$
+
+The orbiting mass $m$ cancels (it appears on both sides):
+
+$$\frac{GM}{r^2} = \frac{v^2}{r}$$
+
+Multiply both sides by $r$:
+
+$$\frac{GM}{r} = v^2$$
+
+$$\boxed{v = \sqrt{\frac{GM}{r}}}$$
+
+*Check units:* $\sqrt{\frac{\text{m}^3 \text{ kg}^{-1} \text{ s}^{-2} \times \text{kg}}{\text{m}}} = \sqrt{\frac{\text{m}^2}{\text{s}^2}} = \text{m/s}$ ✓
+
+**Part 2 — Derive Kepler III:**
+
+For a circular orbit, $v = 2\pi r / P$ (circumference divided by period). Substitute:
+
+$$\frac{2\pi r}{P} = \sqrt{\frac{GM}{r}}$$
+
+Square both sides:
+
+$$\frac{4\pi^2 r^2}{P^2} = \frac{GM}{r}$$
+
+Multiply both sides by $r$:
+
+$$\frac{4\pi^2 r^3}{P^2} = GM$$
+
+Rearrange:
+
+$$\boxed{P^2 = \frac{4\pi^2}{GM} r^3}$$
+
+This is Kepler's Third Law: $P^2 \propto r^3$, with the proportionality constant $4\pi^2/(GM)$ depending on the central mass $M$.
+
+**What you should learn from this:** Newton *derived* Kepler's empirical law from first principles. Kepler described *what* happens; Newton explained *why*. The cancellation of $m$ is physically important — it means orbital motion doesn't depend on the orbiting object's mass.
+
+---
+
+### Problem 8: Alternative Gravity Law
+
+**Restatement:** If gravity followed $1/r^3$ instead of $1/r^2$, would orbits still be ellipses? Would $P^2 \propto a^3$ hold?
+
+**Key insight:** The $1/r^2$ law is special — it uniquely produces closed elliptical orbits.
+
+**Answer:**
+
+**Would orbits be ellipses?** No. It is a mathematical result (proved by Newton using calculus) that *only* the $1/r^2$ force law produces closed elliptical orbits. A $1/r^3$ law would produce orbits that are not closed — the path would precess (rotate) so the planet never returns to exactly the same point. The orbits would spiral inward or outward depending on initial conditions.
+
+**Would** $P^2 \propto a^3$ **hold?** No. Following the derivation from Problem 7 but with $F \propto 1/r^3$:
+
+$$\frac{GM}{r^3} = \frac{v^2}{r} \quad \Rightarrow \quad v^2 = \frac{GM}{r^2} \quad \Rightarrow \quad v = \sqrt{\frac{GM}{r^2}}$$
+
+Using $v = 2\pi r/P$:
+
+$$\frac{4\pi^2 r^2}{P^2} = \frac{GM}{r^2} \quad \Rightarrow \quad P^2 = \frac{4\pi^2}{GM} r^4$$
+
+So we'd get $P^2 \propto r^4$, not $P^2 \propto r^3$.
+
+**What you should learn from this:** The $1/r^2$ law isn't arbitrary — it's what produces stable, closed orbits and the specific $P^2 \propto a^3$ relationship. If gravity worked differently, the solar system would look fundamentally different (or might not be stable at all).
+
+---
+
+### Problem 9: Mars's Mass from Phobos
+
+**Restatement:** Calculate Mars's mass from Phobos's orbital parameters.
+
+**Given:**
+
+- Phobos orbital radius: $a = 9376$ km (from Mars's center)
+- Phobos orbital period: $P = 7.7$ hours
+- $G = 6.674 \times 10^{-11} \text{ m}^3 \text{ kg}^{-1} \text{ s}^{-2}$
+- Earth's mass (for comparison): $M_\oplus = 6 \times 10^{24}$ kg
+
+**Find:** Mars's mass $M$ in kg.
+
+**Equation:**
+$$M = \frac{4\pi^2 a^3}{GP^2}$$
+
+**Solution:**
+
+Step 1 — Convert to SI units:
+
+- $a = 9376 \text{ km} \times 1000 \text{ m/km} = 9.376 \times 10^6 \text{ m}$
+- $P = 7.7 \text{ hr} \times 3600 \text{ s/hr} = 2.772 \times 10^4 \text{ s}$
+
+Step 2 — Compute the numerator ($4\pi^2 a^3$):
+
+$$a^3 = (9.376 \times 10^6 \text{ m})^3 = 8.246 \times 10^{20} \text{ m}^3$$
+
+$$4\pi^2 \times 8.246 \times 10^{20} \text{ m}^3 = 39.48 \times 8.246 \times 10^{20} = 3.256 \times 10^{22} \text{ m}^3$$
+
+Step 3 — Compute the denominator ($GP^2$):
+
+$$P^2 = (2.772 \times 10^4 \text{ s})^2 = 7.684 \times 10^8 \text{ s}^2$$
+
+$$GP^2 = (6.674 \times 10^{-11}) \times (7.684 \times 10^8) = 5.128 \times 10^{-2} \text{ m}^3 \text{ kg}^{-1}$$
+
+*Check units:* $\text{m}^3 \text{ kg}^{-1} \text{ s}^{-2} \times \text{s}^2 = \text{m}^3 \text{ kg}^{-1}$ ✓
+
+Step 4 — Divide:
+
+$$M = \frac{3.256 \times 10^{22}}{5.128 \times 10^{-2}} = 6.3 \times 10^{23} \text{ kg}$$
+
+*Check units:* $\frac{\text{m}^3}{\text{m}^3 \text{ kg}^{-1}} = \text{kg}$ ✓
+
+**Comparison to Earth:**
+$$\frac{M_\oplus}{M_{\text{Mars}}} = \frac{6 \times 10^{24}}{6.3 \times 10^{23}} \approx 9.5$$
+
+Earth is about **9.5 times more massive** than Mars.
+
+**Sanity check:** Mars is smaller than Earth (about half the diameter), so it should be significantly less massive. A factor of ~10 is consistent with Mars's smaller size and lower density. The accepted value is $6.42 \times 10^{23}$ kg — our answer is within 2%. ✓
+
+**Answer:** $M_{\text{Mars}} \approx 6.3 \times 10^{23}$ kg. Earth is about 9.5× more massive.
+
+**What you should learn from this:** The same technique works for any central body — just plug in the moon's orbital parameters. Notice this gives nearly the same answer as the practice problem solution in `practice-problems.qmd` (which uses a different Mars satellite), providing an independent cross-check.
+
+---
+
+### Problem 10: Why Sun Units Simplify Kepler III
+
+**Restatement:** Explain why $P^2 = a^3$ works only for the Sun as the central mass, with $P$ in years and $a$ in AU.
+
+**Key insight:** The simplified form absorbs the constants $4\pi^2/(GM_\odot)$ into the choice of units.
+
+**Answer:**
+
+The full form of Kepler's Third Law is:
+
+$$P^2 = \frac{4\pi^2}{GM} a^3$$
+
+When we choose **years** for $P$ and **AU** for $a$, the constant $4\pi^2/(GM_\odot)$ happens to equal exactly 1 (by definition — the AU and year are defined relative to Earth's orbit around the Sun). So for **Sun-orbiting objects**:
+
+$$P^2 = 1 \times a^3 = a^3$$
+
+For a **different central mass** (say Jupiter), $4\pi^2/(GM_{\text{Jupiter}})$ has a different value, so the shorthand breaks. You'd need either:
+
+- The full equation with $G$ and $M$ in SI units, or
+- A new set of "Jupiter units" (e.g., $P$ in units of Io's period, $a$ in units of Io's orbit)
+
+The simplification works because **Earth's orbit defines both the AU and the year**. For any other system, the constants don't cancel so neatly.
+
+**What you should learn from this:** "Natural units" are a powerful trick: by choosing units matched to your system, equations simplify dramatically. But you must know *when* the simplification applies and *what changes* when you switch systems.
