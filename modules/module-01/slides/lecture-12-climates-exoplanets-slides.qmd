@@ -6,10 +6,12 @@ date: "2026-02-25"
 description: "Venus is a hellscape. Mars is frozen. Earth is just right. Why? The greenhouse effect. Then: how we find exoplanets and assess habitability."
 draft: true
 
+metadata-files:
+  - _metadata.yml
+
 format:
   revealjs:
     theme: [default, ../../../assets/theme/slides/theme.scss]
-    css: ../../../slides.css
     footer: "ASTR 101 • Lecture 12 • Dr. Anna Rosen"
     slide-number: true
     transition: fade
@@ -19,29 +21,10 @@ format:
     title-slide-attributes:
       data-background-image: "../../../assets/images/common/cosmic-cliffs-jwst.png"
       data-background-opacity: "0.35"
-    pointer:
-      key: "q"
-      color: "#5dbfbf"
-      pointerSize: 18
-      alwaysVisible: true
-    spotlight:
-      size: 80
-      toggleSpotlightOnMouseDown: true
-      presentingCursor: "crosshair"
-      fadeInAndOut: 100
     quiz:
       shuffleOptions: true
       defaultCorrect: "Correct!"
       defaultIncorrect: "Not quite — let's discuss."
-
-revealjs-plugins:
-  - pointer
-  - spotlight
-  - attribution
-  - quiz
-
-filters:
-  - roughnotation
 
 execute:
   echo: false
@@ -333,8 +316,12 @@ Seeing an exoplanet directly is like spotting a firefly next to a searchlight.
 **Solution:** Look for the planet's **effect on its star**.
 :::
 
+::: {.fragment .text-sm .mt-2}
+Explore every confirmed exoplanet: [eyes.nasa.gov/apps/exo](https://eyes.nasa.gov/apps/exo/)
+:::
+
 ::: {.notes}
-10–11 min. "We detect planets indirectly."
+10–11 min. "We detect planets indirectly." Mention the NASA Eyes on Exoplanets tool — students can explore after class.
 :::
 
 ---

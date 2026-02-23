@@ -51,7 +51,7 @@ If you only remember three things:
 Now for the details...
 :::
 
-::: {.callout-note title="Why Start with the Solar System?"}
+::: {.callout-roadmap title="Why Start with the Solar System?"}
 In L10, we finished building your toolkit: Kepler, Newton, blackbody, spectroscopy, Doppler, telescopes. Now we need something to *point* that toolkit at.
 
 The solar system is the perfect target. It's close enough that we have ground truth (spacecraft have visited every planet). It's diverse enough to test every tool. And its architecture tells a story about how planetary systems form — knowledge we'll need when we hunt for exoplanets in L12.
@@ -89,7 +89,7 @@ Now we apply these tools to **our own solar system** — the best practice groun
 
 ---
 
-::: {.callout-tip title="Retrieval Warm-Up: Activate Your Toolkit"}
+::: {.callout-prediction title="Retrieval Warm-Up: Activate Your Toolkit"}
 Take 2 minutes to answer these from memory (no peeking!):
 
 1. **Kepler's Third Law** relates which two quantities?
@@ -107,7 +107,7 @@ If you struggled, review the relevant lecture before continuing. This reading as
 
 ---
 
-::: {.callout-note title="Module 1 Toolkit — Now Applied to Planets"}
+::: {.callout-roadmap title="Module 1 Toolkit — Now Applied to Planets"}
 | Tool | From Lecture | Solar System Application |
 |------|--------------|-------------------------|
 | Kepler's Laws | L5 | Orbital distances, periods, predicting positions |
@@ -173,9 +173,9 @@ The planets divide neatly into two families with dramatically different properti
 
 | Property | Rocky (Terrestrial) | Giants |
 |----------|--------------------:|-------:|
-| Size | Small (0.4–1 R⊕) | Large (4–11 R⊕) |
-| Mass | Low (0.06–1 M⊕) | High (15–318 M⊕) |
-| Density | High (4–5 g/cm³) | Low (0.7–1.6 g/cm³) |
+| Size | Small (0.4–1 R⊕) | Large (~4–11 R⊕) |
+| Mass | Low (0.06–1 M⊕) | High (~15–318 M⊕) |
+| Density | High (3.9–5.5 g/cm³) | Low (0.7–1.6 g/cm³) |
 | Composition | Rock, metal | H, He, ices |
 | Surface | Solid | None (gas/liquid) |
 | Moons | Few (0–2) | Many (dozens) |
@@ -183,7 +183,7 @@ The planets divide neatly into two families with dramatically different properti
 
 The density difference is particularly striking. Earth's density is 5.5 g/cm³ — about five times denser than water. Saturn's density is just 0.69 g/cm³ — *less* than water. If you could find an ocean big enough, Saturn would float!
 
-::: {.callout-note title="Contrasting Cases: Learning Through Comparison"}
+::: {.callout-key-insight title="Contrasting Cases: Learning Through Comparison"}
 Students learn patterns faster through paired comparisons. As you read, think about these contrasts:
 
 **Mercury vs. Venus:** Both inner planets, but Mercury has no atmosphere (extreme temperature swings: 430°C day, -180°C night) while Venus has a thick atmosphere (constant 460°C everywhere). Same region, different fates.
@@ -216,13 +216,62 @@ Pictures help your intuition. As you read the rest of this lecture, keep asking 
 
 ### Rocky planets: solid surfaces, big contrasts
 
+As you tour the inner solar system, notice how atmosphere thickness determines surface conditions — even for planets in the same region.
+
 Mercury is the endmember for “no atmosphere.” Its surface is a cratered record of early impacts, and its temperature swings are extreme because there’s essentially no air to move heat around.
 
 {{< fig l11-mercury-messenger >}}
 
+::: {.callout-tip title="Video: Mercury in 60 Seconds" collapse="true"}
+<div style="width: 100%; margin: 1rem 0;">
+  <iframe
+    src="https://www.youtube.com/embed/5Bdt-hskiTc"
+    width="100%"
+    height="400px"
+    style="border: 1px solid #ddd; border-radius: 8px;"
+    loading="lazy"
+    title="Mercury in 60 Seconds"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"
+    allowfullscreen>
+  </iframe>
+</div>
+:::
+
 Venus is the opposite: in visible light we don’t see a rocky surface at all, just a bright, global cloud deck. The climate physics lives in the atmosphere.
 
 {{< fig l11-venus-mariner-10 >}}
+
+::: {.callout-tip title="Videos: Venus" collapse="true"}
+<div style="width: 100%; margin: 1rem 0;">
+  <iframe
+    src="https://www.youtube.com/embed/isDu2xJA-0I"
+    width="100%"
+    height="400px"
+    style="border: 1px solid #ddd; border-radius: 8px;"
+    loading="lazy"
+    title="Venus Overview"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"
+    allowfullscreen>
+  </iframe>
+</div>
+
+<div style="width: 100%; margin: 1rem 0;">
+  <iframe
+    src="https://www.youtube.com/embed/LQvGLy8umCQ"
+    width="100%"
+    height="400px"
+    style="border: 1px solid #ddd; border-radius: 8px;"
+    loading="lazy"
+    title="Venus in 60 Seconds"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"
+    allowfullscreen>
+  </iframe>
+</div>
+:::
+
+::: {.column-margin}
+**Mercury vs. Venus:** Both are inner planets, yet Mercury swings 600$^\circ$C between day and night while Venus holds steady at 460$^\circ$C everywhere. The key difference? Atmosphere. We’ll explore this contrast in L12.
+:::
 
 Earth is our control case — oceans, clouds, and an atmosphere thick enough to matter.
 
@@ -231,6 +280,21 @@ Earth is our control case — oceans, clouds, and an atmosphere thick enough to 
 Mars is a reminder that “rocky” doesn’t mean “Earth-like.” A thin atmosphere changes the climate story.
 
 {{< fig l11-mars >}}
+
+::: {.callout-tip title="Video: Mars in 60 Seconds" collapse="true"}
+<div style="width: 100%; margin: 1rem 0;">
+  <iframe
+    src="https://www.youtube.com/embed/8k-1HXOdxmQ"
+    width="100%"
+    height="400px"
+    style="border: 1px solid #ddd; border-radius: 8px;"
+    loading="lazy"
+    title="Mars in 60 Seconds"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"
+    allowfullscreen>
+  </iframe>
+</div>
+:::
 
 Mars also has two tiny, irregular moons — more like captured asteroids than scaled-down versions of our Moon.
 
@@ -250,9 +314,43 @@ Jupiter and Saturn are dominated by atmosphere: bands, storms, and deep fluid la
 
 {{< fig l11-jupiter >}}
 
+::: {.callout-tip title="Video: Jupiter in 60 Seconds" collapse="true"}
+<div style="width: 100%; margin: 1rem 0;">
+  <iframe
+    src="https://www.youtube.com/embed/VYH88fU0YUo"
+    width="100%"
+    height="400px"
+    style="border: 1px solid #ddd; border-radius: 8px;"
+    loading="lazy"
+    title="Jupiter in 60 Seconds"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"
+    allowfullscreen>
+  </iframe>
+</div>
+:::
+
 Saturn adds the most obvious disk in the solar system: its rings.
 
 {{< fig l11-saturn >}}
+
+::: {.callout-tip title="Video: Saturn in 60 Seconds" collapse="true"}
+<div style="width: 100%; margin: 1rem 0;">
+  <iframe
+    src="https://www.youtube.com/embed/Vtl0UUmn8v0"
+    width="100%"
+    height="400px"
+    style="border: 1px solid #ddd; border-radius: 8px;"
+    loading="lazy"
+    title="Saturn in 60 Seconds"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"
+    allowfullscreen>
+  </iframe>
+</div>
+:::
+
+::: {.column-margin}
+**Jupiter vs. Saturn:** Both are gas giants with similar composition, but Saturn's density (0.69 g/cm$^3$) is less than water while Jupiter's (1.33 g/cm$^3$) is not. Why? Saturn is less massive, so less gravitationally compressed.
+:::
 
 And moons can be worlds too — Titan has a thick atmosphere that hides its surface in visible light.
 
@@ -266,9 +364,34 @@ Uranus and Neptune are colder and smaller than Jupiter and Saturn, with differen
 
 {{< fig l11-neptune >}}
 
+::: {.callout-tip title="Video: Neptune in 60 Seconds" collapse="true"}
+<div style="width: 100%; margin: 1rem 0;">
+  <iframe
+    src="https://www.youtube.com/embed/SMR5izURl9o"
+    width="100%"
+    height="400px"
+    style="border: 1px solid #ddd; border-radius: 8px;"
+    loading="lazy"
+    title="Neptune in 60 Seconds"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"
+    allowfullscreen>
+  </iframe>
+</div>
+:::
+
+::: {.column-margin}
+**Quick question:** Uranus and Neptune appear blue-green. Using what you learned in L9 (spectroscopy), what molecule in their atmospheres might cause this color? Think about it before reading the answer in the composition section below.
+:::
+
 Pluto is a signpost: the outer solar system contains many icy worlds and dwarf planets beyond the eight planets.
 
 {{< fig l11-pluto >}}
+
+::: {.callout-the-more-you-know title="The Voyager Grand Tour" collapse="true"}
+Almost every close-up photo in this section exists because of two spacecraft: **Voyager 1** and **Voyager 2**, launched in 1977. They took advantage of a rare planetary alignment that occurs roughly once every 175 years, allowing gravity assists to slingshot from planet to planet.
+
+Voyager 2 remains the **only spacecraft ever to visit Uranus and Neptune**. Both Voyagers have now crossed into interstellar space — beyond the Sun's influence — and are still sending data back to Earth after nearly 50 years. The farthest human-made objects in the universe, carrying golden records with sounds and images of Earth.
+:::
 
 # Part 2: Applying Our Toolkit
 
@@ -369,6 +492,14 @@ $$\lambda_{\text{peak}} = \frac{2.9 \times 10^6 \text{ nm}}{T}$$
 
 We can measure a planet's peak emission wavelength and calculate its temperature. For most planets, this peak is in the infrared — invisible to our eyes but detectable by IR telescopes.
 
+::: {.callout-note title="Observable → Model → Inference: Planetary Temperatures"}
+**Observable:** A planet's thermal emission peaks at a specific infrared wavelength. (Wavelength)
+
+**Model:** Wien's Law: $\lambda_{\text{peak}} = 2.9 \times 10^6 \text{ nm} / T$
+
+**Inference:** The planet's temperature. Neptune peaks at ~50,000 nm → $T \approx 58$ K. Same physics as reading a star's temperature from its color — just shifted to infrared.
+:::
+
 ### Equilibrium Temperature: A Baseline Prediction
 
 **Equilibrium temperature** is what a planet's temperature *would be* if:
@@ -379,7 +510,7 @@ We can measure a planet's peak emission wavelength and calculate its temperature
 
 It's a baseline prediction from Stefan-Boltzmann. When the observed temperature differs from equilibrium, something interesting is happening.
 
-::: {.callout-warning title="Don't Mislearn This: Equilibrium ≠ Observed"}
+::: {.callout-misconception title="Don't Mislearn This: Equilibrium ≠ Observed"}
 **Equilibrium temperature** is a *prediction* — what physics says "should" happen with just sunlight in, thermal radiation out.
 
 **Observed temperature** is what we *measure*.
@@ -397,7 +528,7 @@ Always compare the two to diagnose what's going on!
 
 | Planet | Distance (AU) | T_equilibrium (K) | T_observed (K) | Notes |
 |--------|---------------|-------------------|----------------|-------|
-| Mercury | 0.39 | ~440 | ~90–700 | No atmosphere → extreme day/night swing |
+| Mercury | 0.39 | ~440 (subsolar) | ~90–700 | No atmosphere → extreme day/night swing |
 | Venus | 0.72 | ~230 | **735** | Runaway greenhouse! |
 | Earth | 1.0 | ~255 | 288 | Moderate greenhouse (+33 K) |
 | Mars | 1.52 | ~210 | 218 | Thin atmosphere (+8 K) |
@@ -405,7 +536,7 @@ Always compare the two to diagnose what's going on!
 
 **Mercury's extremes** illustrate what happens without an atmosphere: daytime reaches 700 K (430°C), but nighttime plunges to 90 K (-180°C). That 600°C swing would be impossible with an atmosphere to redistribute heat.
 
-::: {.callout-note title="Mercury's Exosphere: Not Quite 'No Atmosphere'" collapse="true"}
+::: {.callout-the-more-you-know title="Mercury's Exosphere: Not Quite 'No Atmosphere'" collapse="true"}
 Technically, Mercury has an **exosphere** — an extremely thin envelope of atoms (sodium, potassium, oxygen, hydrogen) that are constantly escaping to space and being replenished by solar wind bombardment, micrometeorite impacts, and outgassing from the surface.
 
 The exosphere is so thin (surface pressure < ~10⁻¹² bar, compared to Earth's 1 bar) that atoms rarely collide with each other. It provides essentially **no insulation, no heat redistribution, no greenhouse effect** — which is why Mercury's temperature swings are so extreme.
@@ -415,7 +546,7 @@ For our purposes: Mercury effectively has "no atmosphere" in the thermodynamic s
 
 **Venus** stands out: its actual temperature is **500 K hotter** than equilibrium! This is the greenhouse effect at its most extreme — and we'll explore it in L12.
 
-::: {.callout-tip title="Venus Preview: A Cautionary Tale" collapse="true"}
+::: {.callout-the-more-you-know title="Venus Preview: A Cautionary Tale" collapse="true"}
 Venus is nearly Earth's twin in size and mass. Scientists believe it may have had **Earth-like conditions early in its history** — possibly even liquid water oceans. So what went wrong?
 
 In L12, we'll trace Venus's transformation from potentially habitable world to 735 K hellscape. The culprit: a **runaway greenhouse effect** triggered by Venus being slightly too close to the Sun. It's a story with implications for understanding climate here on Earth.
@@ -451,6 +582,14 @@ By observing planets at different wavelengths and looking for spectral lines (L9
 
 The same spectroscopy that identifies elements in stars identifies molecules in planetary atmospheres! The physics is identical — just applied to different objects.
 
+::: {.callout-note title="Observable → Model → Inference: Atmospheric Composition"}
+**Observable:** Absorption lines at specific wavelengths in sunlight reflected by a planet. (Wavelength)
+
+**Model:** Each molecule absorbs at unique wavelengths — its spectral fingerprint (L9). CO$_2$ absorbs at 4.3 $\mu$m and 15 $\mu$m; CH$_4$ at 3.3 $\mu$m; H$_2$O across many IR bands.
+
+**Inference:** Venus's atmosphere is 96% CO$_2$, Jupiter is 90% H$_2$, Neptune contains CH$_4$ (explaining its blue color). Same toolkit as stellar spectroscopy — different targets.
+:::
+
 ### Color as a Clue
 
 Sometimes a planet's color hints at its composition. Neptune and Uranus appear blue-green because methane (CH₄) in their atmospheres absorbs red light, leaving the blue to be reflected back to us.
@@ -468,6 +607,19 @@ Mars appears red to our eyes. Neptune appears blue. Using concepts from L7-L9, w
 
 ::: {.callout-tip title="Solution" collapse="true"}
 **B) Neptune — methane absorbs red light, leaving blue.** Spectroscopy confirms that Neptune (and Uranus) have methane in their atmospheres. Methane absorbs red wavelengths, so the reflected sunlight appears blue. Mars is red because of iron oxide (rust) on its surface, not atmospheric absorption.
+:::
+
+::: {.callout-check-yourself title="Check Yourself 6 — Which Tool Are They Using?"}
+An alien astronomer observes Earth from 100 light-years away. They detect O$_2$ and N$_2$ in our atmosphere. Which Module 1 tool are they using?
+
+- A) Kepler's Third Law
+- B) Wien's Law
+- C) Spectroscopy
+- D) The Doppler effect
+:::
+
+::: {.callout-tip title="Solution" collapse="true"}
+**C) Spectroscopy.** Each molecule absorbs at unique wavelengths — its spectral fingerprint (L9). The alien astronomer sees sunlight that has passed through Earth's atmosphere, with absorption lines from O$_2$ and N$_2$ imprinted on the spectrum. This is exactly how we study exoplanet atmospheres (coming in L12)!
 :::
 
 ---
@@ -514,7 +666,7 @@ More solid material → bigger cores → gravitational capture of H/He → gas g
 
 ### Angular Momentum: The L5-L6 Connection
 
-::: {.callout-note title="Connection to L5-L6: Angular Momentum Conservation"}
+::: {.callout-roadmap title="Connection to L5-L6: Angular Momentum Conservation"}
 Remember the figure skater from L5? Arms out = slow spin; arms in = fast spin.
 
 The same physics explains why the solar nebula spun up as it collapsed:
@@ -542,7 +694,7 @@ The **frost line** (or snow line) is the distance from the young Sun where it wa
 - **Inside the frost line (~3 AU):** Too hot for ices; only rock and metal could condense
 - **Outside the frost line:** Ices could form, providing much more solid material
 
-::: {.callout-warning title="Model-Dependent: The Frost Line Moved"}
+::: {.callout-misconception title="Model-Dependent: The Frost Line Moved"}
 The ~3 AU value is a useful order-of-magnitude for the early solar nebula, but the snow line isn't a fixed wall. It moves over time as the disk evolves and the young Sun's luminosity changes. Early on, when the Sun was dimmer, the frost line may have been closer; as the disk heated up during active accretion, it moved outward.
 
 For ASTR 101: ~3 AU captures the essential physics. Just don't think of it as a permanent, sharp boundary.
@@ -592,15 +744,28 @@ How do we know this model is correct? The solar system shows clear signatures:
 
 {{< fig protoplanetary-disk >}}
 
-::: {.callout-warning title="Don't Mislearn This: Exceptions Exist"}
+::: {.callout-misconception title="Don't Mislearn This: Exceptions Exist"}
 Most planets orbit in the same plane and direction — but **many moons are exceptions**. Some moons are captured asteroids orbiting at odd angles (like Triton, which orbits Neptune *backwards*). Some moons formed from giant impacts (like Earth's Moon).
 
 The **planet** pattern supports the disk story. Moon orbits are messier because moons have additional formation pathways beyond the original disk.
 :::
 
+::: {.callout-check-yourself title="Check Yourself 8 — Formation Evidence"}
+If the solar system formed from a rotating disk of gas and dust, which of these would you expect to observe?
+
+- A) Planets orbit in random directions at random angles
+- B) All planets orbit in the same direction and nearly the same plane
+- C) Inner planets orbit one direction, outer planets the other
+- D) Planets don't orbit at all — they should fly away
+:::
+
+::: {.callout-tip title="Solution" collapse="true"}
+**B) All planets orbit in the same direction and nearly the same plane.** A rotating disk has a single spin direction and a flat geometry. Everything that forms from it inherits both properties. This is exactly what we observe — and it's one of the strongest pieces of evidence for the nebular hypothesis.
+:::
+
 ---
 
-::: {.callout-important title="Key Takeaways from Lecture 11"}
+::: {.callout-summary title="Key Takeaways from Lecture 11"}
 **Solar System Architecture:**
 
 1. Rocky planets (Mercury–Mars) inside ~1.5 AU

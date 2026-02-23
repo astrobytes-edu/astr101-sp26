@@ -75,7 +75,7 @@ Then we'll turn to the search for other worlds. We've found thousands of exoplan
 
 ---
 
-::: {.callout-tip title="Retrieval Warm-Up: Activate Prior Knowledge"}
+::: {.callout-prediction title="Retrieval Warm-Up: Activate Prior Knowledge"}
 Before we dive in, see if you can answer these from memory:
 
 1. **L8:** What law relates an object's temperature to the total power it radiates per unit area?
@@ -131,7 +131,7 @@ But how much solar power does a planet actually intercept?
 
 Here's a key insight: A planet doesn't absorb sunlight over its entire spherical surface. Sunlight comes from one direction (the Sun), so the planet only intercepts light across its **cross-sectional area** — the area of the "shadow" it would cast.
 
-::: {.callout-note title="Think About a Total Solar Eclipse"}
+::: {.callout-key-insight title="Think About a Total Solar Eclipse"}
 During a total solar eclipse, the Moon blocks the Sun. But the Moon's shadow on Earth isn't sphere-shaped — it's a **disk**. That's because sunlight travels in parallel rays from the distant Sun, and the Moon intercepts them with its cross-sectional area.
 
 **Cross-section of a sphere = πR²** (the area of a circle with the same radius)
@@ -168,8 +168,21 @@ If a planet reflects fraction A, it **absorbs fraction (1 - A)**.
 - Earth absorbs 70%
 - Mars absorbs 75%
 
-::: {.callout-note title="Albedo's Counterintuitive Effect"}
+::: {.callout-key-insight title="Albedo's Counterintuitive Effect"}
 Venus has the **highest** albedo of these planets — it reflects most of its sunlight! This *should* make it cooler than Earth. The fact that Venus is instead the hottest planet in the solar system (even hotter than Mercury) tells you how powerful its greenhouse effect is.
+:::
+
+::: {.callout-check-yourself title="Check Yourself — Albedo Reasoning"}
+Venus reflects 76% of incoming sunlight. Earth reflects 30%. Based only on albedo (ignoring distance), which planet absorbs more solar energy?
+
+- A) Venus — it's closer to the Sun
+- B) Earth — it absorbs 70% vs. Venus's 24%
+- C) They absorb the same amount
+- D) Can't tell without knowing their sizes
+:::
+
+::: {.callout-tip title="Solution" collapse="true"}
+**B) Earth absorbs a larger *fraction* of incident sunlight** — 70% vs. Venus's 24%. Venus absorbs only about a quarter of the sunlight hitting it, while Earth absorbs nearly three-quarters. Of course, Venus *receives* more total sunlight (closer to the Sun), so the full picture requires the equilibrium temperature formula below. But the albedo alone would make Venus cooler!
 :::
 
 #### Step 4: Putting It All Together
@@ -220,7 +233,7 @@ It does NOT depend on:
 - Whether the planet has an atmosphere (that comes later!)
 :::
 
-::: {.callout-warning title="Don't Mislearn This"}
+::: {.callout-misconception title="Don't Mislearn This"}
 **Equilibrium temperature is a model, not a measurement.**
 
 $T_{eq}$ is what a bare, airless sphere *would* have if it only balanced absorbed sunlight against blackbody emission. Real surface temperatures differ because:
@@ -260,6 +273,16 @@ Something is very wrong with our prediction for Venus. It's **500 degrees hotter
 
 {{< fig planet-temperatures-baseline-vs-reality >}}
 
+{{< fig greenhouse-comparison >}}
+
+::: {.callout-note title="Observable → Model → Inference: Diagnosing Venus"}
+**Observable:** Venus radiates thermally at 735 K in the infrared. (Wavelength + Brightness)
+
+**Model:** Equilibrium temperature from distance and albedo predicts only ~230 K.
+
+**Inference:** Something is adding +505 K beyond what sunlight alone explains. The culprit: a massive CO$_2$ greenhouse effect. The *gap* between prediction and observation is itself the evidence.
+:::
+
 ::: {.callout-check-yourself title="Check Yourself 1 — Equilibrium Temperature"}
 Based only on distance from the Sun, which planet should be warmest?
 
@@ -293,6 +316,8 @@ The equilibrium calculation assumes the planet radiates directly to space. But i
 
 {{< fig greenhouse-effect >}}
 
+{{< fig earth-energy-balance-blackbodies >}}
+
 ### Key Greenhouse Gases
 
 | Gas | Chemical Formula | Effect |
@@ -302,7 +327,7 @@ The equilibrium calculation assumes the planet radiates directly to space. But i
 | Methane | CH₄ | Potent but shorter-lived |
 | Nitrous oxide | N₂O | Long-lived, potent |
 
-::: {.callout-note title="Connection to L8: Wien's Law"}
+::: {.callout-roadmap title="Connection to L8: Wien's Law"}
 Why do greenhouse gases absorb *infrared* specifically?
 
 From Wien's Law: $\lambda_{\text{peak}} = 2.9 \times 10^6 / T$ nm
@@ -341,7 +366,13 @@ This is a **runaway greenhouse effect** — a positive feedback loop where warmi
 
 Venus's atmosphere is now 96% CO₂ with 90× Earth's surface pressure. The greenhouse effect adds over 500 K to its temperature.
 
-::: {.callout-warning title="The Sobering Lesson"}
+::: {.callout-the-more-you-know title="We've Been There: The Venera Landers" collapse="true"}
+How do we know Venus's surface conditions so precisely? Because we've landed on it. The Soviet **Venera** missions (1970s-80s) were the first spacecraft to land on another planet and return data. Venera 13 survived **127 minutes** on Venus's surface in 1982 — enduring 735 K heat and 90 atmospheres of pressure — long enough to take the first color photos of Venus's surface and analyze the soil.
+
+The photos reveal a flat, rocky landscape under an orange sky (the thick atmosphere scatters blue light away). Every Venera lander was eventually crushed by the pressure, but the data they returned confirmed the extreme greenhouse diagnosis.
+:::
+
+::: {.callout-key-insight title="The Sobering Lesson"}
 Venus shows what happens when the greenhouse effect runs away.
 
 The **same radiative physics** governs all planetary climates — but Earth and Venus occupy vastly different regimes. Earth is not on a trajectory toward Venus-style runaway; our solar flux is too low and our oceans act as a CO₂ buffer. What *is* happening: adding greenhouse gases shifts Earth's energy balance, raising surface temperatures by degrees, not hundreds of degrees. Small shifts still have large consequences.
@@ -384,6 +415,19 @@ Mars wasn't always this way. We see:
 
 Early Mars may have had a thicker atmosphere and liquid water. Climate change — going the *opposite* direction from Venus — froze and dried the planet.
 
+::: {.callout-check-yourself title="Check Yourself — Mars vs. Venus"}
+Mars has 95% CO$_2$ in its atmosphere — the same gas that makes Venus a hellscape. Why doesn't Mars have a strong greenhouse effect?
+
+- A) Mars's CO$_2$ is a different isotope that doesn't absorb IR
+- B) Mars's atmosphere is too thin — surface pressure is only 0.6% of Earth's
+- C) Mars is too far from the Sun for the greenhouse effect to work
+- D) Mars's magnetic field blocks the greenhouse effect
+:::
+
+::: {.callout-tip title="Solution" collapse="true"}
+**B) Mars's atmosphere is too thin.** The greenhouse effect depends not just on *what* gas is present but on *how much* of it there is. Mars's atmosphere is so thin (surface pressure ~6 millibars vs. Earth's 1,013 millibars) that even though it's almost pure CO$_2$, there simply aren't enough molecules to absorb significant infrared radiation. Composition matters, but so does quantity.
+:::
+
 ---
 
 ## Earth — The Goldilocks Planet
@@ -415,7 +459,7 @@ The physics is exactly what we discussed:
 
 Earth isn't becoming Venus — we're much too far from the Sun. But shifting Earth's temperature by even a few degrees has major consequences: sea level rise, extreme weather, ecosystem disruption.
 
-::: {.callout-important title="The Physics Is the Physics"}
+::: {.callout-key-insight title="The Physics Is the Physics"}
 Climate science isn't about politics — it's about radiative transfer.
 
 The greenhouse effect is the same physics that explains:
@@ -451,6 +495,16 @@ Earth's greenhouse effect raises the surface temperature about 33 K above equili
 Planets are tiny compared to stars and don't produce their own visible light — they only reflect starlight. Trying to see an exoplanet directly is like trying to see a firefly next to a searchlight from miles away.
 
 Instead of looking for planets directly, we look for their **effects on their host stars**.
+
+::: {.callout-the-more-you-know title="The Kepler Revolution" collapse="true"}
+For most of human history, we didn't know whether planets existed beyond our solar system. That changed dramatically in 2009 when NASA launched the **Kepler Space Telescope**. Kepler stared at a single patch of sky containing ~150,000 stars for four years, watching for the tiny brightness dips caused by transiting planets.
+
+The result was revolutionary: Kepler discovered **2,700+ confirmed exoplanets** and showed that planets are the rule, not the exception — most stars have at least one. NASA's **TESS** mission (launched 2018) continues the search across the entire sky, targeting the nearest and brightest stars.
+:::
+
+::: {.callout-the-more-you-know title="Explore Exoplanets Yourself" collapse="true"}
+NASA's **Eyes on Exoplanets** is a free, interactive 3D visualization of every confirmed exoplanet. You can fly to any star system, compare planet sizes, and explore habitable zones: [eyes.nasa.gov/apps/exo](https://eyes.nasa.gov/apps/exo/)
+:::
 
 ### Two Main Methods
 
@@ -492,7 +546,7 @@ When a planet passes in front of its star (from our perspective), it blocks a ti
 
 {{< fig transit-geometry >}}
 
-::: {.callout-note title="Connection to L4: Eclipses and Alignment"}
+::: {.callout-roadmap title="Connection to L4: Eclipses and Alignment"}
 Remember from L4: Eclipses only happen when the Moon crosses the plane of Earth's orbit (the ecliptic). Most months, the Moon passes above or below the Sun and no eclipse occurs.
 
 **The same geometry applies to exoplanet transits:**
@@ -537,6 +591,14 @@ $$R_p = 0.1 \times R_☉ = 0.1 \times 696{,}000 \text{ km} = 69{,}600 \text{ km}
 
 This is almost exactly **Jupiter's radius** (71,500 km). A 1% dip indicates a Jupiter-sized planet!
 
+::: {.callout-note title="Observable → Model → Inference: Planet Radius from Transit"}
+**Observable:** A star's brightness dips by 1% every 3.5 days, lasting a few hours each time. (Brightness + Timing)
+
+**Model:** Transit depth $= (R_p/R_*)^2$. The dip fraction equals the area ratio of planet to star.
+
+**Inference:** $R_p = 0.1 \, R_* \approx 69{,}600$ km — a Jupiter-sized planet. Same pattern as always: measurement → physics → knowledge.
+:::
+
 ::: {.callout-check-yourself title="Check Yourself 4 — Transit Depth"}
 An Earth-sized planet transiting a Sun-sized star would produce what transit depth? (Earth's radius is ~1% of the Sun's radius)
 
@@ -577,11 +639,32 @@ $$\text{Density} = \frac{M_p}{\frac{4}{3}\pi R_p^3}$$
 | ~1.3 g/cm³ | Gas giant (H/He) | Jupiter |
 | ~2-3 g/cm³ | Water world? Mini-Neptune? | Some super-Earths |
 
-::: {.callout-note title="Density Is a Clue, Not a Solution"}
+::: {.callout-key-insight title="Density Is a Clue, Not a Solution"}
 Intermediate densities (2–4 g/cm³) can be **degenerate**: different mixtures of rock, water, and gas can produce the same bulk density. Density is a strong clue to composition, but not a complete answer — additional constraints (atmospheric spectra, formation models) help break the degeneracy.
 :::
 
+::: {.callout-note title="Observable $\to$ Model $\to$ Inference: Planet Composition from Density"}
+**Observable:** Radial velocity gives $M_p = 5 \, M_\oplus$; transit gives $R_p = 1.5 \, R_\oplus$. (Wavelength + Brightness + Timing)
+
+**Model:** Density $= M / V = M / (\tfrac{4}{3}\pi R^3)$. Scale to Earth: $\rho \approx 5.5 \times (5 / 1.5^3) \approx 8.1$ g/cm$^3$.
+
+**Inference:** Denser than Earth (5.5 g/cm$^3$) and far denser than Jupiter (1.3 g/cm$^3$) — a rocky, likely iron-rich super-Earth. Composition diagnosed from two measurements and one formula.
+:::
+
 Density distinguishes **rocky planets** (potential for habitability) from **gas/ice worlds** (probably not habitable at the surface).
+
+::: {.callout-check-yourself title="Check Yourself — Density Diagnosis"}
+You discover a transiting planet with mass $= 5 \, M_\oplus$ and radius $= 1.5 \, R_\oplus$. Is it likely rocky or gaseous?
+
+- A) Gaseous — any planet above $1 \, M_\oplus$ must be a gas giant
+- B) Rocky — its density is higher than Earth's
+- C) Impossible to tell without atmospheric spectra
+- D) It must be a water world
+:::
+
+::: {.callout-tip title="Solution" collapse="true"}
+**B) Rocky.** Density $\approx 5.5 \times (5 / 1.5^3) \approx 8.1$ g/cm$^3$ — denser than Earth (5.5 g/cm$^3$) and far denser than Jupiter (1.3 g/cm$^3$). This planet is almost certainly rocky and iron-rich. Gas giants have densities $\lesssim 2$ g/cm$^3$; this planet is well above that threshold.
+:::
 
 ---
 
@@ -612,10 +695,10 @@ These boundaries depend on assumptions about atmospheric composition, cloud feed
 
 ### Habitable Zone ≠ Habitable
 
-::: {.callout-warning title="Important Caveat"}
+::: {.callout-misconception title="Important Caveat"}
 Being in the habitable zone doesn't guarantee a planet is habitable!
 
-**Venus** is near the inner edge and is a 735 K hellscape.
+**Venus** is inside the inner edge (0.72 AU, closer to the Sun than the HZ) and is a 735 K hellscape.
 **Mars** is near the outer edge and is a frozen desert.
 
 Habitability depends on:
@@ -626,6 +709,8 @@ Habitability depends on:
 - Perhaps: magnetic field, plate tectonics, and more
 
 The habitable zone is a starting point, not a guarantee.
+
+**Spot the assumption:** The HZ assumes life needs liquid water *on the surface*. But Jupiter's moon Europa and Saturn's moon Enceladus have subsurface oceans far outside the HZ, heated by tidal forces rather than sunlight. If life can thrive in subsurface oceans, "habitability" extends well beyond the traditional zone.
 :::
 
 ::: {.callout-check-yourself title="Check Yourself 5 — Habitable Zone"}
@@ -643,7 +728,56 @@ If a star is 4× as luminous as the Sun, how does its habitable zone compare?
 
 ---
 
-::: {.callout-important title="Key Takeaways from Lecture 12"}
+## Looking for Signs of Life
+
+Finding a planet in the habitable zone is just the beginning. The next question is: *does it show signs of life?* That's the domain of **biosignatures** — atmospheric gases or surface features that would be difficult to explain without biology.
+
+### What Are Biosignatures?
+
+Life doesn't just exist — it *transforms* its environment. Earth's atmosphere is wildly out of chemical equilibrium: oxygen ($\text{O}_2$) and methane ($\text{CH}_4$) coexist, even though they react with each other and should disappear within millions of years. The only reason both persist is that life continuously replenishes them — photosynthesis produces $\text{O}_2$, and methanogenic microbes produce $\text{CH}_4$.
+
+::: {.column-margin}
+**Chemical disequilibrium:** When reactive gases coexist in an atmosphere despite reacting with each other, something must be replenishing them. On Earth, that something is life.
+:::
+
+If we found $\text{O}_2$ and $\text{CH}_4$ together in an exoplanet's atmosphere, that **chemical disequilibrium** would be strong (though not conclusive) evidence for biology. Other potential biosignatures include ozone ($\text{O}_3$, produced from $\text{O}_2$) and certain surface reflectance signatures from pigments like chlorophyll.
+
+### How Do We Detect Exoplanet Atmospheres?
+
+::: {.callout-roadmap title="Connection to L9: Spectroscopy Returns"}
+Remember L9? Every molecule has a unique spectral fingerprint — specific wavelengths where it absorbs light. We used this to identify elements in stellar atmospheres. Now the same technique lets us read exoplanet atmospheres.
+:::
+
+The key technique is **transmission spectroscopy**: during a transit, some starlight passes *through* the planet's atmosphere before reaching us. Different wavelengths are absorbed by different atmospheric molecules, imprinting absorption lines onto the star's spectrum. By comparing the spectrum during transit to the spectrum outside transit, we can identify which gases are present.
+
+### JWST: A New Era
+
+The **James Webb Space Telescope** (launched December 2021) has the sensitivity to detect atmospheric molecules in exoplanet transit spectra. In 2022, JWST detected **carbon dioxide** ($\text{CO}_2$) in the atmosphere of WASP-39b — the first unambiguous detection of $\text{CO}_2$ in an exoplanet atmosphere. JWST has since detected $\text{SO}_2$ (sulfur dioxide, produced by photochemistry) in the same planet, demonstrating that we can study atmospheric *chemistry*, not just composition.
+
+These are giant, hot planets — not habitable — but they prove the technique works. Applying the same method to smaller, cooler, rocky planets in habitable zones is the next frontier.
+
+::: {.callout-check-yourself title="Check Yourself — Biosignatures"}
+Why would detecting $\text{O}_2$ and $\text{CH}_4$ together in an exoplanet's atmosphere be significant?
+
+- A) Both gases are common in all planetary atmospheres
+- B) They react with each other and shouldn't coexist without something replenishing them
+- C) They prove the planet has liquid water
+- D) They indicate volcanic activity
+:::
+
+::: {.callout-tip title="Solution" collapse="true"}
+**B) They react with each other and shouldn't coexist.** Oxygen and methane are chemically reactive — left alone, they'd combine and disappear within millions of years. Finding both together means something is continuously producing them. On Earth, that something is life (photosynthesis makes $\text{O}_2$; methanogens make $\text{CH}_4$). This **chemical disequilibrium** is one of the strongest potential biosignatures we could detect remotely.
+:::
+
+::: {.callout-roadmap title="Looking Ahead to L13: The Drake Equation"}
+We've now built a complete chain: find planets (transit + RV) $\to$ measure their properties (radius, mass, density) $\to$ identify habitable-zone candidates $\to$ search for biosignatures in their atmospheres.
+
+In L13, we'll zoom out and ask the biggest question of all: **How many civilizations might exist in the Galaxy?** The Drake Equation takes everything we've learned — star formation, planet frequency, habitability — and tries to estimate the answer. It's the ultimate application of the Observable $\to$ Model $\to$ Inference pattern to a question we can't yet answer definitively.
+:::
+
+---
+
+::: {.callout-summary title="Key Takeaways from Lecture 12"}
 **Planetary Climates:**
 
 1. Equilibrium temperature depends on distance from Sun and albedo
@@ -658,6 +792,7 @@ If a star is 4× as luminous as the Sun, how does its habitable zone compare?
 7. **Transit:** Brightness dip → planet radius (depth = $(R_p/R_*)^2$)
 8. **Combined:** Mass + radius → density → rocky vs. gaseous
 9. **Habitable zone:** Where liquid water *could* exist (depends on stellar luminosity)
+10. **Biosignatures:** Chemical disequilibrium (e.g., $\text{O}_2$ + $\text{CH}_4$) as evidence for life; JWST can detect atmospheric molecules via transmission spectroscopy
 :::
 
 ---

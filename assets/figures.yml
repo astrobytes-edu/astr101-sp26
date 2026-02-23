@@ -420,6 +420,20 @@ figures:
     credit: "(A. Rosen/Gemini — schematic)"
     module: 1
 
+  greenhouse-comparison:
+    path: /assets/images/module-01/lec12/greenhouse-comparison.png
+    caption: "**What to notice:** Venus, Earth, and Mars start at similar equilibrium temperatures (set by distance and albedo), but the greenhouse effect adds vastly different amounts of warming — over 500 K for Venus, 33 K for Earth, and only 8 K for Mars."
+    alt: "Bar chart comparing equilibrium temperature versus actual surface temperature for Venus, Earth, and Mars, with the greenhouse warming difference highlighted for each planet."
+    credit: "ASTR 201 (generated)"
+    module: 1
+
+  earth-energy-balance-blackbodies:
+    path: /assets/images/module-01/lec12/energy_breakdown.png
+    caption: "**What to notice:** the Sun's emission peaks in visible light (short wavelength), while Earth's emission peaks in the infrared (long wavelength). Greenhouse gases absorb selectively in the infrared, which is why the atmosphere is transparent to sunlight but opaque to Earth's thermal emission."
+    alt: "Plot showing two blackbody curves — one for the Sun peaking in the visible and one for Earth peaking in the infrared — with shaded regions indicating greenhouse gas absorption bands in the infrared."
+    credit: "NOAA JetStream"
+    module: 1
+
   # --------------------------------------------------------------
   # Module 1: Lecture 13 (Are We Alone? — Synthesis)
   # --------------------------------------------------------------

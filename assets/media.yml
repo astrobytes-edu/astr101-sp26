@@ -27,3 +27,40 @@ media:
     caption: "RR Lyrae stars (Rubin Observatory)"
     credit: "NSF-DOE Vera C. Rubin Observatory"
 
+  # ------ Module 1: Lecture 11 — Planet Videos ------
+
+  mercury-short:
+    url: "https://youtube.com/shorts/5Bdt-hskiTc"
+    caption: "Mercury in 60 seconds"
+    credit: "TBD"
+
+  venus-overview:
+    url: "https://youtu.be/isDu2xJA-0I"
+    caption: "Venus overview"
+    credit: "TBD"
+
+  venus-short:
+    url: "https://youtube.com/shorts/LQvGLy8umCQ"
+    caption: "Venus in 60 seconds"
+    credit: "TBD"
+
+  mars-short:
+    url: "https://youtube.com/shorts/8k-1HXOdxmQ"
+    caption: "Mars in 60 seconds"
+    credit: "TBD"
+
+  jupiter-short:
+    url: "https://youtube.com/shorts/VYH88fU0YUo"
+    caption: "Jupiter in 60 seconds"
+    credit: "TBD"
+
+  saturn-short:
+    url: "https://www.youtube.com/shorts/Vtl0UUmn8v0"
+    caption: "Saturn in 60 seconds"
+    credit: "TBD"
+
+  neptune-short:
+    url: "https://www.youtube.com/shorts/SMR5izURl9o"
+    caption: "Neptune in 60 seconds"
+    credit: "TBD"
+
