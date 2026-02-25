@@ -68,6 +68,7 @@ project:
     - activities/*.qmd
     - activities/_instructor/index.qmd
     - exams/*.qmd
+    - "!exams/_prep/**"
     - explore/*.qmd
     - demos/index.qmd
     - demos/*/*-station-card.qmd
