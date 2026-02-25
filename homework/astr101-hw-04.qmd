@@ -1,0 +1,103 @@
+---
+title: "ASTR 101 - Homework #4 (Lectures 10-12 Capstone)"
+subtitle: "Practice problems from Doppler/Telescopes, Solar System, and Climates/Exoplanets"
+author: "Dr. Anna Rosen"
+draft: false
+order: 4
+description: "Capstone + exam prep from Lectures 10-12 with integrated multi-tool transfer."
+solutions_due: "Tuesday, March 3 at 11:59 pm PT (Canvas)"
+memo_due: "Wednesday, March 4 at 11:59 pm PT (Canvas)"
+pdf: true
+toc: true
+format:
+  html: default
+  pdf: default
+---
+
+{{< include ../_includes/hw-submission-instructions.qmd >}}
+
+{{< include ../_includes/ai-policy.qmd >}}
+
+***Topics:** Doppler effect and radial velocity • telescope power and resolution • dark matter evidence from rotation curves • solar system architecture and planetary properties • climates and habitability • exoplanet detection • tool transfer across Module 1*
+
+**Estimated time:** ~4-5 hours
+
+## Why this homework exists (read this)
+
+_This is not busy work._ This assignment is a capstone for Lectures 10-12 and a bridge into exam prep. You are using the full Module 1 toolkit in realistic combinations: motion from Doppler shifts, temperature from thermal radiation, mass from orbits, and planet type from density.
+
+This assignment is designed to:
+
+- strengthen transfer across topics instead of treating each lecture as isolated,
+- reinforce the Observable -> Model -> Inference workflow under mixed conditions,
+- and prepare you for the Module 1 Exam on Friday, March 6.
+
+---
+
+### What to do
+
+Complete the assigned Practice Problems from the end of the following lecture readings:
+
+- **Lecture 10: Doppler Effect + Telescopes** - [Practice Problems]({{< meta params.website-url >}}/modules/module-01/readings/lecture-10-doppler-telescopes-reading.html#practice-problems)
+
+- **Lecture 11: Solar System Architecture + Formation** - [Practice Problems]({{< meta params.website-url >}}/modules/module-01/readings/lecture-11-solar-system-reading.html#practice-problems)
+
+- **Lecture 12: Climates + Exoplanets** - [Practice Problems]({{< meta params.website-url >}}/modules/module-01/readings/lecture-12-climates-exoplanets-reading.html#practice-problems)
+
+Use the lecture pages for the full problem statements (located at the end of each lecture).
+
+**Note:** This homework uses Lectures 10-12 only. No prior-lecture problem sets are reassigned.
+
+---
+
+## Problems to complete
+
+### Core problems (required - do these first)
+
+### Lecture 10 - Doppler Effect + Telescopes
+
+> 1, 2, 3, 5, 7
+
+### Lecture 11 - Solar System
+
+> 2, 5, 9
+
+### Lecture 12 - Climates + Exoplanets
+
+> 3, 5
+
+---
+
+## Exam sprint (optional, after core)
+
+If you want additional focused review before Friday's exam, use this optional set:
+
+- **Lecture 10:** 6, 8
+- **Lecture 11:** 4, 6, 8, 10
+- **Lecture 12:** 2, 4, 6, 7, 9
+
+---
+
+## How to earn full credit
+
+{{< include ../_includes/homework/how-to-earn-full-credit.qmd >}}
+
+For this homework, show unit tracking and setup clearly on all calculation problems. For the mixed-tool prompts, state what is directly observed and what is inferred.
+
+## Collaboration and resources
+
+{{< include ../_includes/homework/collaboration-and-resources.qmd >}}
+
+## Pro tips (to save time and pain)
+
+- Do one pass for setup first: write knowns, unknowns, and tool/equation choice before calculating.
+- For transfer problems, label each step with the tool you are using (for example: Doppler, Wien, Newton, transit depth).
+- Use units as your lie detector.
+- If a result feels extreme, do a quick order-of-magnitude sanity check before moving on.
+- For exam prep, finish required problems first, then do the optional sprint in order.
+
+---
+
+## Help
+
+{{< include ../_includes/homework/help.qmd >}}
