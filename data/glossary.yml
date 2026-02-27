@@ -1171,6 +1171,134 @@ runaway_greenhouse:
   module: 1
   tier: supporting
 
+equilibrium_temperature:
+  term: "Equilibrium temperature"
+  definition: "The temperature a planet would have if absorbed sunlight balanced emitted thermal radiation, ignoring atmospheric greenhouse warming."
+  context: "For a planet at distance d with albedo A: $T_{\\mathrm{eq}} \\propto [(1-A)/d^2]^{1/4}$."
+  lecture: 12
+  module: 1
+  tier: core
+
+albedo_bond:
+  term: "Bond albedo"
+  definition: "The fraction of total incoming stellar energy reflected back to space by a planet, averaged over wavelength and direction."
+  context: "Energy balance uses absorbed fraction $(1-A)$, where $A$ is Bond albedo."
+  lecture: 12
+  module: 1
+  tier: core
+
+planetary_climate:
+  term: "Planetary climate"
+  definition: "The long-term thermal and atmospheric state of a planet, set by energy input, energy loss, and atmospheric/oceanic processes."
+  context: "In this lecture: sunlight in, infrared out, plus greenhouse feedbacks."
+  lecture: 12
+  module: 1
+  tier: core
+
+planetary_atmosphere:
+  term: "Planetary atmosphere"
+  definition: "A layer of gases surrounding a planet that can absorb, emit, and transport energy."
+  context: "Atmospheric thickness and composition control greenhouse warming strength."
+  lecture: 12
+  module: 1
+  tier: core
+
+greenhouse_gas:
+  term: "Greenhouse gas"
+  definition: "A gas that absorbs and re-emits infrared radiation, tending to warm a planet's surface."
+  context: "Key examples include H$_2$O, CO$_2$, CH$_4$, and N$_2$O."
+  lecture: 12
+  module: 1
+  tier: core
+
+effective_emission_level:
+  term: "Effective emission level"
+  definition: "The characteristic altitude in an atmosphere from which most thermal radiation escapes to space."
+  context: "If greenhouse opacity increases, this level shifts higher and colder, so the surface must warm to restore balance."
+  lecture: 12
+  module: 1
+  tier: supporting
+
+transit_depth:
+  term: "Transit depth"
+  definition: "The fractional drop in stellar brightness during a transit."
+  context: "To first order, depth $\\approx (R_p/R_*)^2$, so depth constrains planet radius."
+  lecture: 12
+  module: 1
+  tier: core
+
+transit_probability:
+  term: "Transit probability"
+  definition: "The chance that an exoplanet system is aligned so a transit is visible from Earth."
+  context: "Approximately scales as $R_*/a$ for circular orbits, so close-in planets transit more often."
+  lecture: 12
+  module: 1
+  tier: supporting
+
+orbital_inclination:
+  term: "Orbital inclination (i)"
+  definition: "The tilt of an orbit relative to the observer's line of sight."
+  context: "Transits require nearly edge-on geometry ($i \\approx 90^{\\circ}$)."
+  lecture: 12
+  module: 1
+  tier: core
+
+minimum_mass_msin_i:
+  term: "Minimum mass ($M_p\\sin i$)"
+  definition: "The lower bound on planet mass measured by radial velocity when inclination is unknown."
+  context: "If a planet also transits, then $\\sin i \\approx 1$ and radial velocity gives near-true mass."
+  lecture: 12
+  module: 1
+  tier: core
+
+bulk_density:
+  term: "Bulk density"
+  definition: "Average density of a planet, computed from mass and radius."
+  context: "$\\rho = M/(\\tfrac{4}{3}\\pi R^3)$; used to infer broad composition classes (rocky vs gas-rich)."
+  lecture: 12
+  module: 1
+  tier: core
+
+insolation_flux:
+  term: "Insolation flux"
+  definition: "The stellar energy flux received by a planet at its orbit."
+  context: "Often reported in Earth-flux units to compare irradiation levels across exoplanets."
+  lecture: 12
+  module: 1
+  tier: supporting
+
+planetary_habitability:
+  term: "Planetary habitability"
+  definition: "The potential of a planet to support life, commonly evaluated first by the possibility of stable liquid water."
+  context: "Habitable zone membership is a starting screen, not a guarantee of habitability."
+  lecture: 12
+  module: 1
+  tier: core
+
+chemical_disequilibrium:
+  term: "Chemical disequilibrium"
+  definition: "A state where reactive atmospheric gases coexist away from thermodynamic equilibrium and require continuous replenishment."
+  context: "Coexisting O$_2$ and CH$_4$ is a canonical biosignature candidate."
+  lecture: 12
+  module: 1
+  tier: core
+
+transmission_spectroscopy:
+  term: "Transmission spectroscopy"
+  definition: "Measuring wavelength-dependent starlight filtering through a transiting planet's atmosphere to identify atmospheric gases."
+  context: "Compare in-transit and out-of-transit spectra to isolate atmospheric absorption features."
+  lecture: 12
+  module: 1
+  tier: core
+
+exoplanet_atmosphere:
+  term: "Exoplanet atmosphere"
+  definition: "The gaseous envelope around an exoplanet, inferred remotely through spectra and transit/eclipse observations."
+  context: "Atmospheric composition constrains climate, chemistry, and possible biosignatures."
+  lecture: 12
+  module: 1
+  tier: supporting
+
 # -------------------------------------------------------------
 # Lecture 13: Are We Alone?
 # -------------------------------------------------------------

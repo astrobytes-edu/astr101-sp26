@@ -1080,19 +1080,17 @@ local function load_glossary()
   for line in content:gmatch("[^\n]+") do
     if not line:match("^%s*#") and not line:match("^%s*$") then
       -- Top-level term ID (no indent, ends with colon)
-      local term_id = line:match("^([%w_]+):%s*$")
+      local term_id = line:match("^([%w%-_]+):%s*$")
       if term_id then
         current_id = term_id
         terms[current_id] = {}
       elseif current_id then
         -- Nested key-value (2-space indent)
-        local key, val = line:match("^  ([%w_]+):%s*\"(.-)\"$")
-        if not key then
-          key, val = line:match("^  ([%w_]+):%s*(.+)$")
+        local key, val = line:match("^  ([%w%-_]+):%s*(.+)$")
+        if key and val then
+          val = normalize_yaml_value(val)
         end
         if key and val and val ~= "" then
-          -- Remove surrounding quotes if present
-          val = val:gsub('^"(.+)"$', "%1")
           terms[current_id][key] = process_yaml_escapes(val)
         end
       end
@@ -1189,26 +1187,43 @@ end
 -- Supports: module=1, lecture=3, tier=core|supporting|all, format=alphabetical
 function glossary(args, kwargs)
   local glossary_data = get_glossary()
-  local filter_module = nil
-  local filter_lecture = nil
+  local filter_module_num = nil
+  local filter_module_str = nil
+  local filter_lecture_num = nil
+  local filter_lecture_str = nil
   local filter_tier = nil
   local format_mode = nil
 
+  local function parse_filter_value(raw)
+    if raw == nil then
+      return nil, nil
+    end
+    local s = tostring(raw):gsub("^%s+", ""):gsub("%s+$", "")
+    if s == "" then
+      return nil, nil
+    end
+    return tonumber(s), s
+  end
+
   if kwargs then
     if kwargs.module then
-      filter_module = tonumber(pandoc.utils.stringify(kwargs.module))
+      filter_module_num, filter_module_str = parse_filter_value(pandoc.utils.stringify(kwargs.module))
     end
     if kwargs.lecture then
-      filter_lecture = tonumber(pandoc.utils.stringify(kwargs.lecture))
+      filter_lecture_num, filter_lecture_str = parse_filter_value(pandoc.utils.stringify(kwargs.lecture))
     end
     if kwargs.tier then
       filter_tier = pandoc.utils.stringify(kwargs.tier)
-      if filter_tier == "all" then filter_tier = nil end
+      filter_tier = filter_tier:gsub("^%s+", ""):gsub("%s+$", "")
+      if filter_tier == "" or filter_tier == "all" then filter_tier = nil end
     end
     if kwargs.format then
       format_mode = pandoc.utils.stringify(kwargs.format)
+      format_mode = format_mode:gsub("^%s+", ""):gsub("%s+$", "")
+      if format_mode == "" then format_mode = nil end
     end
   end
+
 
   if not glossary_data or not next(glossary_data) then
     return pandoc.RawBlock("html", '<div class="callout callout-warning"><p>No glossary found.</p></div>')
@@ -1218,15 +1233,29 @@ function glossary(args, kwargs)
   local sorted = {}
   for id, entry in pairs(glossary_data) do
     local include = true
+    local entry_module_num, entry_module_str = parse_filter_value(entry.module)
+    local entry_lecture_num, entry_lecture_str = parse_filter_value(entry.lecture)
 
     -- Filter by module if specified
-    if filter_module and (not entry.module or tonumber(entry.module) ~= filter_module) then
-      include = false
+    if filter_module_num or filter_module_str then
+      if filter_module_num and entry_module_num then
+        if entry_module_num ~= filter_module_num then
+          include = false
+        end
+      elseif entry_module_str ~= filter_module_str then
+        include = false
+      end
     end
 
     -- Filter by lecture if specified
-    if include and filter_lecture and (not entry.lecture or tonumber(entry.lecture) ~= filter_lecture) then
-      include = false
+    if include and (filter_lecture_num or filter_lecture_str) then
+      if filter_lecture_num and entry_lecture_num then
+        if entry_lecture_num ~= filter_lecture_num then
+          include = false
+        end
+      elseif entry_lecture_str ~= filter_lecture_str then
+        include = false
+      end
     end
 
     -- Filter by tier if specified
@@ -1239,16 +1268,20 @@ function glossary(args, kwargs)
     end
   end
 
+
   -- Sort alphabetically by term name
   table.sort(sorted, function(a, b) return a.sort_key < b.sort_key end)
 
   if #sorted == 0 then
     local filter_desc = ""
-    if filter_lecture then filter_desc = "lecture " .. filter_lecture end
-    if filter_module then
-      if filter_desc ~= "" then filter_desc = filter_desc .. ", " end
-      filter_desc = filter_desc .. "module " .. filter_module
+    if filter_lecture_num or filter_lecture_str then
+      filter_desc = "lecture " .. (filter_lecture_num or filter_lecture_str)
     end
+    if filter_module_num or filter_module_str then
+      if filter_desc ~= "" then filter_desc = filter_desc .. ", " end
+      filter_desc = filter_desc .. "module " .. (filter_module_num or filter_module_str)
+    end
+    if filter_desc == "" then filter_desc = "current filters" end
     return pandoc.RawBlock("html", '<div class="callout callout-note"><p>No glossary terms for ' .. filter_desc .. '.</p></div>')
   end
 
