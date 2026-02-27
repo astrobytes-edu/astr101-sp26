@@ -434,6 +434,27 @@ figures:
     credit: "NOAA JetStream"
     module: 1
 
+  exoplanet-radius-vs-period:
+    path: /assets/images/module-01/lec12/nea_scatter_PS_output_pl_orbper_pl_rade_pres.png
+    caption: "**What to notice:** detected planets cluster at short periods because transits are more likely and repeat faster there. This map is powerful, but it is detection-biased rather than a complete census."
+    alt: "Scatter plot of confirmed exoplanets with orbital period in days on the x-axis and planet radius in Earth radii on the y-axis (both logarithmic), symbol-coded by discovery method, with solar-system planets marked for comparison."
+    credit: "NASA Exoplanet Archive (exported 2026-02-26)"
+    module: 1
+
+  exoplanet-insolation-vs-period:
+    path: /assets/images/module-01/lec12/nea_scatter_PS_output_pl_orbper_pl_insol_pres.png
+    caption: "**What to notice:** average stellar flux drops with orbital period, but planets at the same period can sit at very different fluxes because host stars have different luminosities."
+    alt: "Scatter plot of confirmed exoplanets with orbital period in days on the x-axis and insolation flux in Earth-flux units on the y-axis (both logarithmic), color-coded by discovery method."
+    credit: "NASA Exoplanet Archive (exported 2026-02-26)"
+    module: 1
+
+  exoplanet-radius-vs-mass:
+    path: /assets/images/module-01/lec12/nea_scatter_PS_output_pl_masse_pl_rade_pres.png
+    caption: "**What to notice:** mass plus radius constrains composition. Reference curves for iron, silicate rock, and water show why radius alone cannot uniquely identify what a planet is made of."
+    alt: "Scatter plot of confirmed exoplanets with planet mass in Earth masses on the x-axis and planet radius in Earth radii on the y-axis, including reference composition curves and solar-system planet markers."
+    credit: "NASA Exoplanet Archive (exported 2026-02-26)"
+    module: 1
+
   # --------------------------------------------------------------
   # Module 1: Lecture 13 (Are We Alone? — Synthesis)
   # --------------------------------------------------------------

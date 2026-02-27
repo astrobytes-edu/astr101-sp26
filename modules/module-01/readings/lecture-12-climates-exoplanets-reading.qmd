@@ -560,6 +560,10 @@ This means transit surveys miss most planets, but the ones they find are gold: w
 
 **Selection effect:** Because transit probability scales as $R_*/a$, transit surveys are biased toward **close-in planets** with short orbital periods. Hot Jupiters were the first transiting exoplanets discovered for exactly this reason — they're big *and* close to their stars.
 
+{{< fig exoplanet-radius-vs-period >}}
+
+This population view makes the selection effect concrete: we have many detections at short periods because those systems transit more often and are easier to confirm in finite observing campaigns.
+
 ### The Transit Light Curve
 
 {{< fig transit-light-curve >}}
@@ -639,6 +643,8 @@ $$\text{Density} = \frac{M_p}{\frac{4}{3}\pi R_p^3}$$
 | ~1.3 g/cm³ | Gas giant (H/He) | Jupiter |
 | ~2-3 g/cm³ | Water world? Mini-Neptune? | Some super-Earths |
 
+{{< fig exoplanet-radius-vs-mass >}}
+
 ::: {.callout-key-insight title="Density Is a Clue, Not a Solution"}
 Intermediate densities (2–4 g/cm³) can be **degenerate**: different mixtures of rock, water, and gas can produce the same bulk density. Density is a strong clue to composition, but not a complete answer — additional constraints (atmospheric spectra, formation models) help break the degeneracy.
 :::
@@ -675,6 +681,9 @@ You discover a transiting planet with mass $= 5 \, M_\oplus$ and radius $= 1.5 \
 The **habitable zone** is the range of distances from a star where liquid water could exist on a planet's surface — not too hot (water boils), not too cold (water freezes).
 
 {{< fig habitable-zone >}}
+{{< fig exoplanet-insolation-vs-period >}}
+
+Notice how the points slope downward overall: longer-period planets usually receive less flux. But the large vertical spread at fixed period reminds us that host-star luminosity matters just as much as orbital distance.
 
 ### What Determines the Habitable Zone?
 
