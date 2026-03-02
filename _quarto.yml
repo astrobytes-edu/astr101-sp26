@@ -259,6 +259,14 @@ website:
                 text: "Lecture 4 Solutions: Moon Geometry"
               - href: modules/module-01/readings/lecture-05-keplers-laws-solutions.qmd
                 text: "Lecture 5 Solutions: Kepler's Laws"
+              - href: modules/module-01/readings/lecture-06-newtons-gravity-solutions.qmd
+                text: "Lecture 6 Solutions: Newton's Laws & Gravity"
+              - href: modules/module-01/readings/lecture-07-light-em-spectrum-solutions.qmd
+                text: "Lecture 7 Solutions: Light & the Electromagnetic Spectrum"
+              - href: modules/module-01/readings/lecture-08-blackbody-radiation-solutions.qmd
+                text: "Lecture 8 Solutions: Blackbody Radiation"
+              - href: modules/module-01/readings/lecture-09-spectral-lines-solutions.qmd
+                text: "Lecture 9 Solutions: Spectral Lines & Stellar Fingerprints"
           - section: "Module 1 Synthesis"
             contents:
               - href: modules/module-01/synthesis/index.qmd
@@ -305,6 +313,8 @@ website:
             text: "Homework 2 (Due: Feb 9, 2026)"
           - href: homework/astr101-hw-03.qmd
             text: "Homework 3 (Due: Feb 24, 2026)"
+          - href: homework/astr101-hw-04.qmd
+            text: "Homework 4 (Due: Mar 16, 2026)"
 
       - section: "Demos"
         contents:

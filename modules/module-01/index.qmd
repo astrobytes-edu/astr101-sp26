@@ -39,13 +39,17 @@ By the end of this module, you will be able to:
 
 ## Solutions
 
-Solutions are posted for Lectures 1–5 practice problems. Homework uses a subset of these, and additional solution sets will be posted as we go.
+Solutions are posted for Lectures 1–9 practice problems. Homework uses a subset of these, and the full sets are available for extra study and self-checking.
 
 - [Lecture 1 Solutions: Spoiler Alerts]({{< meta params.website-url >}}/modules/module-01/readings/lecture-01-spoiler-alerts-solutions.html)
 - [Lecture 2 Solutions: Math Survival Kit]({{< meta params.website-url >}}/modules/module-01/readings/lecture-02-foundations-solutions.html)
 - [Lecture 3 Solutions: The Sky Is a Map]({{< meta params.website-url >}}/modules/module-01/readings/lecture-03-sky-is-a-map-solutions.html)
 - [Lecture 4 Solutions: Moon Geometry]({{< meta params.website-url >}}/modules/module-01/readings/lecture-04-moon-geometry-solutions.html)
 - [Lecture 5 Solutions: Kepler's Laws]({{< meta params.website-url >}}/modules/module-01/readings/lecture-05-keplers-laws-solutions.html)
+- [Lecture 6 Solutions: Newton's Laws & Gravity]({{< meta params.website-url >}}/modules/module-01/readings/lecture-06-newtons-gravity-solutions.html)
+- [Lecture 7 Solutions: Light & the Electromagnetic Spectrum]({{< meta params.website-url >}}/modules/module-01/readings/lecture-07-light-em-spectrum-solutions.html)
+- [Lecture 8 Solutions: Blackbody Radiation]({{< meta params.website-url >}}/modules/module-01/readings/lecture-08-blackbody-radiation-solutions.html)
+- [Lecture 9 Solutions: Spectral Lines & Stellar Fingerprints]({{< meta params.website-url >}}/modules/module-01/readings/lecture-09-spectral-lines-solutions.html)
 
 ## Lecture Slides
 

@@ -4,7 +4,7 @@ subtitle: "Practice Problem Solutions"
 author: "Dr. Anna Rosen"
 date: "2026-02-23"
 description: "Solutions to the Lecture 9 practice problems."
-draft: true
+draft: false
 course: ASTR 101
 module: "1 - Foundations"
 ---
