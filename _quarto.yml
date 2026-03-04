@@ -156,6 +156,7 @@ project:
     - "demos/**/*.json"
     - "demos/**/*.svg"
     - "assets/images/**"
+    - "exams/*.pdf"
     - "assets/images/common/iclicker-qrcode-astr101.png"
   brand: _brand.yml
 
@@ -299,6 +300,8 @@ website:
       - section: "Exams"
         contents:
           - exams/index.qmd
+          - href: exams/midterm-1-equation-sheet.pdf
+            text: "Midterm 1 Equation Sheet"
 
       - section: "Handouts"
         contents:
