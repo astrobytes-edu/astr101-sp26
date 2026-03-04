@@ -25,7 +25,7 @@ params:
   canvas-url: "https://sdsu.instructure.com"
 
   # Textbook
-  textbook: "Lecture readings and slides provided on the course website"
+  textbook: "Lecture readings provided on the course website (slides are optional archive materials through Lecture 9)"
   textbook-reference: "OpenStax *Astronomy 2e* (free online) — optional reference"
 
   # Assets (for includes)
@@ -58,7 +58,7 @@ project:
     # Module 1: render slides through Lecture 9; lectures 10+ gated while finalized.
     - modules/module-01/slides/lecture-0[1-9]-*-slides.qmd
     - modules/module-01/readings/lecture-0[1-9]*.qmd
-    - modules/module-01/readings/lecture-1[0-3]*.qmd
+    - modules/module-01/readings/lecture-1[0-3]*-reading.qmd
     # Other modules (render all)
     - modules/module-02/slides/*.qmd
     - modules/module-02/readings/*.qmd
@@ -191,7 +191,7 @@ website:
         contents:
           - href: modules/module-01/index.qmd
             text: "Module 1 Overview"
-          - section: "Slides"
+          - section: "Slides (Optional Archive)"
             contents:
               - href: modules/module-01/slides/lecture-01-spoiler-alerts-slides.qmd
                 text: "Lecture 1: Spoiler Alerts"

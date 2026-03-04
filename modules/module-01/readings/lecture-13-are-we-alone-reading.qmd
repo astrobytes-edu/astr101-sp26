@@ -536,7 +536,7 @@ Based on Module 1 content, be comfortable with:
 
 ## Practice Problems
 
-*Solutions are available in the [Lecture 13 Solutions](lecture-13-are-we-alone-solutions.qmd).*
+*Lecture 13 solutions are currently instructor draft and are not posted on the student site.*
 
 ### Core (do these first)
 

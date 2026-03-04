@@ -812,7 +812,7 @@ Next week (L11–L13) is our **capstone week**: we apply every tool to the solar
 
 ## Practice Problems
 
-*Solutions are available in the [Lecture 10 Solutions](lecture-10-doppler-telescopes-solutions.qmd).*
+*Lecture 10 solutions are currently instructor draft and are not posted on the student site.*
 
 ### Core (do these first)
 

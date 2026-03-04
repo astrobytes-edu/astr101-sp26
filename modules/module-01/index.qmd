@@ -5,11 +5,13 @@ draft: false
 page-layout: article
 listing:
   - id: module-lectures
-    contents: "slides/*.qmd"
+    contents: "slides/lecture-0[1-9]-*-slides.qmd"
     template: ../../assets/templates/lecture-card.ejs
     sort: "date"
   - id: module-readings
-    contents: "readings/*.qmd"
+    contents:
+      - "readings/lecture-*-reading.qmd"
+      - "readings/lecture-03-sky-is-a-map.qmd"
     template: ../../assets/templates/reading-card.ejs
     sort: "date"
 ---
@@ -32,6 +34,8 @@ By the end of this module, you will be able to:
 
 ## Lecture Readings
 
+These 13 lecture readings are the primary required materials for Module 1.
+
 ::: {.lecture-grid}
 ::: {#module-readings}
 :::
@@ -39,7 +43,7 @@ By the end of this module, you will be able to:
 
 ## Solutions
 
-Solutions are posted for Lectures 1–9 practice problems. Homework uses a subset of these, and the full sets are available for extra study and self-checking.
+Solutions are posted for Lectures 1-9 practice problems. Homework uses a subset of these, and the full sets are available for extra study and self-checking.
 
 - [Lecture 1 Solutions: Spoiler Alerts]({{< meta params.website-url >}}/modules/module-01/readings/lecture-01-spoiler-alerts-solutions.html)
 - [Lecture 2 Solutions: Math Survival Kit]({{< meta params.website-url >}}/modules/module-01/readings/lecture-02-foundations-solutions.html)
@@ -51,7 +55,9 @@ Solutions are posted for Lectures 1–9 practice problems. Homework uses a subse
 - [Lecture 8 Solutions: Blackbody Radiation]({{< meta params.website-url >}}/modules/module-01/readings/lecture-08-blackbody-radiation-solutions.html)
 - [Lecture 9 Solutions: Spectral Lines & Stellar Fingerprints]({{< meta params.website-url >}}/modules/module-01/readings/lecture-09-spectral-lines-solutions.html)
 
-## Lecture Slides
+## Lecture Slides (Optional Archive: Lectures 1-9)
+
+Slide decks are optional archive materials for Module 1 and can be used for review.
 
 ::: {.lecture-grid}
 ::: {#module-lectures}
