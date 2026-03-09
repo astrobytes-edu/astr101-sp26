@@ -287,7 +287,27 @@ website:
 
       - section: "Module 2: Stars & Stellar Evolution"
         href: modules/module-02/index.qmd
-        contents: []
+        contents:
+          - href: modules/module-02/index.qmd
+            text: "Module 2 Overview"
+          - section: "Readings"
+            contents:
+              - href: modules/module-02/readings/lecture-14-the-sun.qmd
+                text: "Lecture 14: Our Star: The Sun"
+              - href: modules/module-02/readings/lecture-15-measuring-the-stars.qmd
+                text: "Lecture 15: Measuring the Stars"
+              - href: modules/module-02/readings/lecture-16-hr-diagram.qmd
+                text: "Lecture 16: The H-R Diagram"
+              - href: modules/module-02/readings/lecture-17-binary-stars.qmd
+                text: "Lecture 17: Binary Stars & Stellar Masses"
+              - href: modules/module-02/readings/lecture-18-from-gas-to-stars.qmd
+                text: "Lecture 18: From Gas to Stars"
+              - href: modules/module-02/readings/lecture-19-stellar-evolution.qmd
+                text: "Lecture 19: Stellar Evolution"
+              - href: modules/module-02/readings/lecture-20-how-stars-die.qmd
+                text: "Lecture 20: How Stars Die"
+              - href: modules/module-02/readings/lecture-21-neutron-stars-black-holes.qmd
+                text: "Lecture 21: Neutron Stars and Black Holes"
 
       - section: "Module 3: Galaxies & Cosmology"
         href: modules/module-03/index.qmd

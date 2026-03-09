@@ -9,7 +9,15 @@ listing:
     template: ../../assets/templates/lecture-card.ejs
     sort: "date"
   - id: module-readings
-    contents: "readings/*.qmd"
+    contents:
+      - "readings/lecture-14-the-sun.qmd"
+      - "readings/lecture-15-measuring-the-stars.qmd"
+      - "readings/lecture-16-hr-diagram.qmd"
+      - "readings/lecture-17-binary-stars.qmd"
+      - "readings/lecture-18-from-gas-to-stars.qmd"
+      - "readings/lecture-19-stellar-evolution.qmd"
+      - "readings/lecture-20-how-stars-die.qmd"
+      - "readings/lecture-21-neutron-stars-black-holes.qmd"
     template: ../../assets/templates/reading-card.ejs
     sort: "date"
 ---
@@ -18,26 +26,34 @@ listing:
 
 Stars are not static points of light — they are dynamic nuclear furnaces held in delicate balance by gravity and pressure. This module takes you inside stars to understand how they generate energy, how we measure their properties, and how they evolve over billions of years.
 
+Module 2 is where many of astronomy's most important hidden quantities finally come into focus. We use the Sun as a nearby physics lab, learn how distance and luminosity can be inferred from light, organize stars on the H-R diagram, and then follow stellar lives from birth to death. By the end of the module, the night sky should feel less like a collection of points and more like a population with structure, history, and fate.
+
 ## Learning objectives
 
 By the end of this module, you will be able to:
 
 - Explain how the Sun generates energy through nuclear fusion
-- Calculate stellar distances using parallax and the H-R diagram
+- Distinguish apparent brightness, luminosity, and distance, and use parallax as the first rung of the distance ladder
+- Interpret the H-R diagram as an organizing map of stellar properties and evolutionary state
 - Describe how binary stars reveal stellar masses
+- Explain how stars form from interstellar clouds and why stellar mass determines lifetime and fate
 - Trace stellar evolution from birth to death for different mass stars
-
-## Lectures
-
-::: {.lecture-grid}
-::: {#module-lectures}
-:::
-:::
 
 ## Lecture Readings
 
+These 8 lecture readings are the primary required materials for Module 2.
+
 ::: {.lecture-grid}
 ::: {#module-readings}
+:::
+:::
+
+## Lecture Slides (Optional Archive / In Progress)
+
+Slide decks for Module 2 are optional archive materials and may be posted as they are finalized.
+
+::: {.lecture-grid}
+::: {#module-lectures}
 :::
 :::
 

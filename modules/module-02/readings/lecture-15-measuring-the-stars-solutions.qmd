@@ -68,7 +68,7 @@ $$\log_{10}(d) = 4.4$$
 
 $$d = 10^{4.4} = 25{,}119 \text{ pc} = 25.1 \text{ kpc}$$
 
-(This distance places the Cepheid in the Andromeda Galaxy.)
+This distance places the Cepheid in the outer Milky Way, not in Andromeda.
 
 ## Challenge Problems (Stretch your thinking)
 
@@ -94,22 +94,22 @@ $$\frac{520}{0.77} = 675$$
 **This galaxy is about 675 times farther than Andromeda.**
 
 ### Challenge 2: Gaia's Precision
-**Restatement:** Gaia measures the parallax angle of a star to be $p = 1.00 \pm 0.05$ microarcseconds. What is the distance (a) in parsecs and (b) in light-years? What is the *fractional uncertainty* in the distance?
-(a) Convert to arcseconds: $p = 1.00 \times 10^{-6}$ arcseconds
+**Restatement:** Gaia measures the parallax angle of an exceptionally favorable target to be $p = 10.0 \pm 0.5$ microarcseconds. What is the distance (a) in parsecs and (b) in light-years? What is the *fractional uncertainty* in the distance?
+(a) Convert to arcseconds: $p = 10.0 \times 10^{-6}$ arcseconds = $1.0 \times 10^{-5}$ arcseconds
 
-$$d = \frac{1}{1.00 \times 10^{-6}} = 1{,}000{,}000 \text{ pc} = 10^6 \text{ pc}$$
+$$d = \frac{1}{1.0 \times 10^{-5}} = 100{,}000 \text{ pc} = 10^5 \text{ pc}$$
 
-(b) Convert: $d = 10^6 \times 3.26 = 3.26 \times 10^6$ light-years
+(b) Convert: $d = 10^5 \times 3.26 = 3.26 \times 10^5$ light-years
 
-(c) Fractional uncertainty: The error in parallax is $\delta p = 0.05 \times 10^{-6}$. The fractional error in parallax is:
+(c) Fractional uncertainty: The error in parallax is $\delta p = 0.5 \times 10^{-6}$. The fractional error in parallax is:
 
-$$\frac{\delta p}{p} = \frac{0.05 \times 10^{-6}}{1.00 \times 10^{-6}} = 0.05 = 5\%$$
+$$\frac{\delta p}{p} = \frac{0.5 \times 10^{-6}}{10.0 \times 10^{-6}} = 0.05 = 5\%$$
 
 Since $d = 1/p$, the fractional error in distance equals the fractional error in parallax:
 
 $$\frac{\delta d}{d} = 5\%$$
 
-**The distance is 1 million parsecs with an uncertainty of ±5%, or ±50,000 pc.**
+**The distance is 100,000 parsecs with an uncertainty of ±5%, or ±5,000 pc.**
 
 ### Challenge 3: An Unseen Companion
 **Restatement:** A star has an apparent brightness $b = 1 \times 10^{-11}$ W/m² and distance 20 pc (measured via parallax). Its calculated luminosity is 2 L☉. But if you measure the star's spectrum carefully, you discover it is only about 1 L☉ bright. The discrepancy suggests the star has an unseen companion. What is the luminosity of the companion?

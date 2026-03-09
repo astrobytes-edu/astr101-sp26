@@ -40,6 +40,14 @@ This reading follows the star-formation story from interstellar clouds to protos
 **Reference mode:** Return to the summary and glossary when later lectures talk about stellar evolution as a lifecycle instead of a one-way march.
 :::
 
+## Why We Are Rewinding the Story
+
+So far in Module 2, we have mostly met stars in the middle of their lives. We used the Sun to understand stellar structure, measured distance and luminosity from light, organized stars on the H-R diagram, and used binary systems to discover that **mass is destiny**. That sequence was the right one pedagogically, because students first need a model of what stars *are* before asking where they come from.
+
+But that story leaves one crucial question hanging: if mass determines everything, where does a star's mass come from in the first place?
+
+This lecture rewinds the cosmic story on purpose. We step back from adult stars and return to the raw material between them — gas, dust, and cold molecular clouds — to see how gravity assembles the very initial conditions that later determine luminosity, lifetime, and fate. In other words, this is not a detour away from the main story of the module. It is the missing origin chapter.
+
 ## The Hidden Cosmic Nurseries
 
 Look at a photograph of the Milky Way on a clear night away from city lights. You'll see brilliant stars scattered across dark velvet, but if you look carefully, you'll notice something else: *dark lanes* cutting across the luminous band of our galaxy. Those shadowy patches seem empty, like holes torn in the star field. For centuries, astronomers were puzzled by these dark regions. Were they truly empty voids? Gaps in the stellar population?
