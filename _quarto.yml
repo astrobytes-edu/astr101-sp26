@@ -320,6 +320,10 @@ website:
       - section: "Exams"
         contents:
           - exams/index.qmd
+          - href: exams/midterm-1.qmd
+            text: "Midterm 1"
+          - href: exams/midterm-1-solutions.qmd
+            text: "Midterm 1 Solutions"
           - href: exams/midterm-1-equation-sheet.pdf
             text: "Midterm 1 Equation Sheet"
 

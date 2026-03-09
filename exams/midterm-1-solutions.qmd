@@ -1,0 +1,53 @@
+---
+title: "Midterm 1 Solutions"
+subtitle: "Released solutions for Midterm 1"
+draft: false
+page-layout: article
+toc: true
+---
+
+These brief solutions are meant to help you check both your answers and your reasoning. A recurring theme in this exam is the difference between **what astronomers directly measure** and **what they infer from models, geometry, and physical laws**.
+
+## Answer Key
+
+| Q | Ans | Q | Ans | Q | Ans | Q | Ans | Q | Ans |
+|:-:|:---:|:-:|:---:|:-:|:---:|:-:|:---:|:-:|:---:|
+| 1 | A | 6 | B | 11 | B | 16 | C | 21 | B |
+| 2 | D | 7 | D | 12 | C | 17 | D | 22 | A |
+| 3 | C | 8 | A | 13 | C | 18 | C | 23 | B |
+| 4 | B | 9 | B | 14 | D | 19 | A | 24 | D |
+| 5 | A | 10 | A | 15 | C | 20 | A | 25 | D |
+
+## Brief Solutions
+
+1. **A.** Opposite seasons in opposite hemispheres show that seasons come from Earth's axial tilt, which changes Sun angle and daylight length by hemisphere.
+2. **D.** ISS astronauts float because they and the station are in free fall together around Earth, not because gravity disappears.
+3. **C.** Wien's law says temperature is inversely proportional to peak wavelength, so a 500 nm peak means twice the temperature of a 1000 nm peak.
+4. **B.** The telescope directly records a wavelength shift in spectral lines; radial speed is inferred from that shift.
+5. **A.** The Moon's orbit is tilted, so most new Moons are not lined up precisely enough to produce a solar eclipse.
+6. **B.** For a Sun-like star, Kepler's third law gives \(P^2 = a^3\), so \(P^2 = 4^3 = 64\) and \(P = 8\) years.
+7. **D.** Doppler shift measures only motion toward or away from us, so purely sideways motion gives zero radial Doppler shift.
+8. **A.** The shorthand \(P^2 = a^3\) is a special Solar-System-style form; the full relation depends on the central mass and constants.
+9. **B.** Different elements absorb and emit at specific wavelengths, so spectral lines reveal composition.
+10. **A.** Apparent brightness follows the inverse-square law, so a star four times farther away looks \(1/4^2 = 1/16\) as bright.
+11. **B.** During a lunar eclipse, Earth's atmosphere scatters blue light more strongly and bends redder light into the shadow.
+12. **C.** Kepler described orbital patterns from observation, while Newton explained those patterns with gravity.
+13. **C.** Flat rotation curves show outer stars moving too fast for visible matter alone, implying additional unseen mass.
+14. **D.** Apparent brightness is directly measured at the telescope; temperature, mass, and distance are inferred.
+15. **C.** At the same temperature, luminosity scales as \(R^2\), so tripling the radius makes the star \(3^2 = 9\) times as luminous.
+16. **C.** Gravitational force scales with the orbiting object's mass, so a planet with \(3m\) feels three times the force at the same distance.
+17. **D.** A cool gas cloud in front of a bright continuous source produces dark absorption lines at specific wavelengths.
+18. **C.** Constellations are line-of-sight sky patterns, so their stars can lie at very different distances from Earth.
+19. **A.** Gravity follows an inverse-square law, so doubling distance reduces force to \(1/4\) of its original value.
+20. **A.** Large astronomical distances are inferred from evidence such as brightness, standard candles, or redshift, not directly seen as a ruler measurement.
+21. **B.** Using \(c = f\lambda\), the wavelength is \(\lambda = c/f = (3 \times 10^8\ \mathrm{m/s})/(3 \times 10^8\ \mathrm{Hz}) = 1\ \mathrm{m}\).
+22. **A.** With equal luminosity, \(L \propto R^2 T^4\). Doubling temperature increases \(T^4\) by \(2^4 = 16\), so \(R^2\) must decrease by 16, which means the radius becomes one-quarter as large.
+23. **B.** Moon phases are the normal changing Sun-Earth-Moon geometry, while eclipses require special alignment near the Moon's orbital nodes.
+24. **D.** Kepler's second law says a planet moves fastest when it is closest to the Sun, where it sweeps out equal areas in equal times with the shortest lever arm.
+25. **D.** Shorter wavelength means higher photon energy, so the 1 nm X-ray photon carries the most energy.
+
+## Related Materials
+
+- [Midterm 1 Exam Page](midterm-1.qmd)
+- [Midterm 1 Exam (PDF)](midterm-1-exam.pdf){target="_blank"}
+- [Exams Home](index.qmd)

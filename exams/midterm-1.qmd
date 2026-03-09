@@ -1,0 +1,41 @@
+---
+title: "Midterm 1"
+subtitle: "Module 1: Observing the Sky & Solar System"
+draft: false
+page-layout: article
+toc: false
+---
+
+Midterm 1 is now available as a released exam for review and study.
+
+This is the student version of the exam used on **Friday, March 6, 2026**. It covers the core ideas from Module 1: seasons, gravity, Moon phases and eclipses, Kepler's laws, light, blackbody radiation, spectra, Doppler shifts, and the distinction between direct observations and inferred quantities.
+
+## Exam Materials
+
+- [Midterm 1 Exam (PDF)](midterm-1-exam.pdf){target="_blank"}
+- [Midterm 1 Equation Sheet (PDF)](midterm-1-equation-sheet.pdf){target="_blank"}
+- [Midterm 1 Solutions](midterm-1-solutions.qmd)
+
+## Exam Snapshot
+
+| Item | Details |
+|------|---------|
+| Original exam date | Friday, March 6, 2026 |
+| Public release date | Monday, March 9, 2026 |
+| Format | 25 multiple-choice questions |
+| Time limit | 50 minutes |
+| Scope | Module 1: Observing the Sky & Solar System |
+
+## How to Use This Well
+
+Use the released exam as a self-check, not just an answer hunt.
+
+1. Try the exam first under realistic conditions.
+2. Use the equation sheet, but not your notes.
+3. Check your reasoning with the [solutions page](midterm-1-solutions.qmd).
+4. Revisit the Module 1 readings for any concept that still feels shaky.
+
+## Related Materials
+
+- [Module 1 Overview](../modules/module-01/index.qmd)
+- [Exams Home](index.qmd)

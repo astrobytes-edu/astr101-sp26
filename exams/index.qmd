@@ -6,9 +6,15 @@ title: "Exams"
 
 | Exam | Topics | Date | Solutions |
 |------|--------|------|-----------|
-| Midterm 1 | Module 1: Observing the Sky & Solar System | Friday, March 6, 2026 | *Posted after exam* |
+| [Midterm 1](midterm-1.qmd) | Module 1: Observing the Sky & Solar System | Friday, March 6, 2026 | [Midterm 1 Solutions](midterm-1-solutions.qmd) |
 | Midterm 2 | Module 2: Stars & Stellar Evolution | TBD | *Posted after exam* |
 | Final | Comprehensive | Finals Week | *Posted after exam* |
+
+## Released Materials
+
+- [Midterm 1 Exam Page](midterm-1.qmd)
+- [Midterm 1 Exam (PDF)](midterm-1-exam.pdf){target="_blank"}
+- [Midterm 1 Solutions](midterm-1-solutions.qmd)
 
 ## Equation Sheets
 

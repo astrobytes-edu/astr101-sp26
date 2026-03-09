@@ -10,6 +10,7 @@ _render_tmp/
 docs/instructor-resources/
 docs/instructor/
 exams/_prep/
+modules/**/_prep/
 
 # Claude Code / MCP configs
 .claude/
