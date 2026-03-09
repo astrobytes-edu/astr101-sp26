@@ -150,7 +150,9 @@ And we arrive at black holes.
 
 ## Black Holes: Where Gravity Defeats Light Itself
 
-{{< fig stellar-endpoints >}}
+::: {.callout-key-insight title="Transition from Lecture 20"}
+Lecture 20 established the endpoint logic: lower-mass stars leave white dwarfs, more massive stars can leave neutron stars, and the most extreme collapses produce black holes. This lecture zooms in on the last two cases, where gravity pushes matter and spacetime to their limits.
+:::
 
 ### The Schwarzschild Radius and the Event Horizon
 

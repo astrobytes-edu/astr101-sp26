@@ -344,7 +344,15 @@ Supernovae are the primary mechanism by which the cosmos becomes chemically enri
 
 ## Part 3: Type Ia Supernovae — The Other Explosion
 
-{{< fig stellar-endpoints >}}
+::: {.callout-key-insight title="Stellar Endpoints at a Glance"}
+| Initial mass | Typical endpoint | Main support or outcome |
+|------|------|------|
+| Less than about 8 M☉ | White dwarf | Electron degeneracy pressure |
+| About 8 to a few tens of M☉ | Neutron star | Neutron degeneracy pressure |
+| High enough that even neutron degeneracy fails | Black hole | Gravitational collapse continues past the event horizon |
+
+What to notice: the endpoint is not random. It is set mainly by the star's **initial mass**, which determines how far fusion can proceed and whether any known pressure source can still resist gravity at the end.
+:::
 
 So far, we've discussed core-collapse supernovae, which occur when a massive star's core collapses and bounces. But there's another type of supernova that doesn't require a massive star at all.
 

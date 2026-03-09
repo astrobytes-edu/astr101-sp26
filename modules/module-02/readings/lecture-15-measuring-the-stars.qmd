@@ -108,7 +108,7 @@ Parallax is the apparent shift in position of a nearby object against a distant 
 
 For nearby stars, Earth supplies the changing viewpoint. Six months apart, Earth is on opposite sides of its orbit, separated by about 2 AU. That baseline is enormous by human standards and tiny by interstellar standards, which is why the observed stellar shifts are so small.
 
-{{< fig parallax-geometry >}}
+<!-- FIGURE: Geometry of stellar parallax measurement. Show Earth on opposite sides of its orbit six months apart, a nearby star, distant background stars, the total apparent shift, and the parallax angle as half that shift. Label the 2 AU baseline and the relation d = 1/p when p is measured in arcseconds. -->
 
 The logic is:
 
