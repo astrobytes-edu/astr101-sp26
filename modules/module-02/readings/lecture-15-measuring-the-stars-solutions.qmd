@@ -1,0 +1,120 @@
+---
+title: "Lecture 15 Solutions: Measuring the Stars"
+subtitle: "Practice Problem Solutions"
+author: "Dr. Anna Rosen"
+date: "2026-03-11"
+description: "Solutions to the Lecture 15 practice problems."
+draft: true
+course: ASTR 101
+module: "2 - Stars & Stellar Evolution"
+---
+
+::: {.callout-note}
+**Student note:** These are model solutions written to show setup, units, and reasoning clearly. Your own work can be shorter as long as the physics, units, and logic are sound.
+
+**Use these after you try the problems yourself.** The point is to compare your reasoning to a worked example, not to skip the thinking step.
+:::
+
+## Core Problems (Master these before the exam)
+
+### Problem 1: Parallax and Distance
+**Restatement:** The star Betelgeuse has a measured parallax angle of 4.51 milliarcseconds. Calculate its distance (a) in parsecs and (b) in light-years. (Note: 1 milliarcsecond = 0.001 arcsecond)
+(a) Convert parallax to arcseconds: $p = 4.51 \times 10^{-3}$ arcseconds
+
+$$d = \frac{1}{4.51 \times 10^{-3}} = 221.7 \text{ pc}$$
+
+(b) Convert to light-years: $d = 221.7 \times 3.26 = 722.7$ light-years
+
+**Note:** This agrees with the parallax-based distance to Betelgeuse measured by Gaia.
+
+### Problem 2: Inverse-Square Law
+**Restatement:** Two stars have the same luminosity (L = 100 L☉). Star A is at distance 10 pc, Star B is at distance 20 pc. What is the ratio of their apparent brightnesses?
+Using $b = \frac{L}{4\pi d^2}$:
+
+$$\frac{b_A}{b_B} = \frac{d_B^2}{d_A^2} = \frac{(20)^2}{(10)^2} = \frac{400}{100} = 4$$
+
+**Star A appears 4 times brighter than Star B** (because it is half as far, and brightness scales as inverse distance-squared).
+
+### Problem 3: Magnitude Differences
+**Restatement:** Two stars have apparent magnitudes $m_1 = 1.5$ and $m_2 = 6.5$. How many times brighter (in terms of flux) is Star 1 than Star 2?
+The magnitude difference is:
+$$\Delta m = m_2 - m_1 = 6.5 - 1.5 = 5 \text{ magnitudes}$$
+
+A difference of 5 magnitudes corresponds to a brightness ratio of:
+$$\frac{b_1}{b_2} = 10^{\Delta m / 2.5} = 10^{5/2.5} = 10^2 = 100$$
+
+**Star 1 is 100 times brighter than Star 2.**
+
+### Problem 4: Luminosity from Distance and Brightness
+**Restatement:** A star has an apparent brightness of $b = 5 \times 10^{-12}$ W/m² and a parallax angle of 0.2 arcseconds. Calculate its luminosity in watts and in units of solar luminosities.
+**Find distance:** $d = 1/0.2 = 5$ pc = $5 \times 3.086 \times 10^{16}$ m = $1.543 \times 10^{17}$ m
+
+**Calculate luminosity:**
+$$L = 4\pi d^2 b = 4\pi \times (1.543 \times 10^{17})^2 \times 5 \times 10^{-12}$$
+
+$$L = 4\pi \times 2.38 \times 10^{34} \times 5 \times 10^{-12} = 1.49 \times 10^{24} \text{ W}$$
+
+**Convert to solar luminosities:** $L = \frac{1.49 \times 10^{24}}{3.8 \times 10^{26}} = 0.0039 \, L_☉$ (about 1/250 the Sun's luminosity)
+
+### Problem 5: Distance Modulus
+**Restatement:** A Cepheid variable star has absolute magnitude $M = -3.5$ and apparent magnitude $m = 13.5$. Use the distance modulus ($m - M = 5 \log_{10}(d) - 5$) to find its distance in parsecs and kiloparsecs.
+$$m - M = 13.5 - (-3.5) = 17$$
+
+$$17 = 5 \log_{10}(d) - 5$$
+
+$$22 = 5 \log_{10}(d)$$
+
+$$\log_{10}(d) = 4.4$$
+
+$$d = 10^{4.4} = 25{,}119 \text{ pc} = 25.1 \text{ kpc}$$
+
+(This distance places the Cepheid in the Andromeda Galaxy.)
+
+## Challenge Problems (Stretch your thinking)
+
+### Challenge 1: The Distance Ladder
+**Restatement:** You discover a new Type Ia supernova in a distant galaxy. Type Ia supernovae have a known absolute magnitude at peak brightness of $M = -19.3$. You measure the supernova's apparent magnitude to be $m = 19.3$.
+
+(a) Use the distance modulus to calculate the distance in megaparsecs.
+(b) How many times more distant is this galaxy than Andromeda (770 kpc)?
+(a) $$m - M = 19.3 - (-19.3) = 38.6$$
+
+$$38.6 = 5 \log_{10}(d) - 5$$
+
+$$43.6 = 5 \log_{10}(d)$$
+
+$$\log_{10}(d) = 8.72$$
+
+$$d = 10^{8.72} = 5.2 \times 10^8 \text{ pc} = 520 \text{ Mpc}$$
+
+(b) Andromeda is at 770 kpc = 0.77 Mpc.
+
+$$\frac{520}{0.77} = 675$$
+
+**This galaxy is about 675 times farther than Andromeda.**
+
+### Challenge 2: Gaia's Precision
+**Restatement:** Gaia measures the parallax angle of a star to be $p = 1.00 \pm 0.05$ microarcseconds. What is the distance (a) in parsecs and (b) in light-years? What is the *fractional uncertainty* in the distance?
+(a) Convert to arcseconds: $p = 1.00 \times 10^{-6}$ arcseconds
+
+$$d = \frac{1}{1.00 \times 10^{-6}} = 1{,}000{,}000 \text{ pc} = 10^6 \text{ pc}$$
+
+(b) Convert: $d = 10^6 \times 3.26 = 3.26 \times 10^6$ light-years
+
+(c) Fractional uncertainty: The error in parallax is $\delta p = 0.05 \times 10^{-6}$. The fractional error in parallax is:
+
+$$\frac{\delta p}{p} = \frac{0.05 \times 10^{-6}}{1.00 \times 10^{-6}} = 0.05 = 5\%$$
+
+Since $d = 1/p$, the fractional error in distance equals the fractional error in parallax:
+
+$$\frac{\delta d}{d} = 5\%$$
+
+**The distance is 1 million parsecs with an uncertainty of ±5%, or ±50,000 pc.**
+
+### Challenge 3: An Unseen Companion
+**Restatement:** A star has an apparent brightness $b = 1 \times 10^{-11}$ W/m² and distance 20 pc (measured via parallax). Its calculated luminosity is 2 L☉. But if you measure the star's spectrum carefully, you discover it is only about 1 L☉ bright. The discrepancy suggests the star has an unseen companion. What is the luminosity of the companion?
+This problem is really about bookkeeping. If the total luminosity inferred from the flux is 2 L☉, but the visible star contributes only 1 L☉, then the missing light must come from the unseen companion:
+
+$$L_{\text{companion}} = L_{\text{total}} - L_{\text{primary}} = 2 - 1 = 1 \, L_☉$$
+
+**The companion has luminosity 1 L☉.** In other words, it is contributing the same amount of light as the visible star, so this would be an equal-luminosity binary.

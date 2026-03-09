@@ -1483,6 +1483,36 @@ figures:
   # Module 2: Inferring Star Properties
   # ==============================================================
 
+  anatomy-of-the-sun:
+    path: /assets/images/module-02/anatomy-of-the-sun.png
+    caption: "What to notice: the Sun is layered because different physical jobs happen in different regions. Fusion is confined to the core, energy moves outward through radiative and convective zones, and the photosphere, chromosphere, and corona are the observable outer layers."
+    alt: "Annotated cutaway diagram of the Sun showing its interior and atmosphere, including the core, radiative zone, convective zone, photosphere, chromosphere, and corona, with labels indicating that fusion happens in the core and solar activity originates in the outer layers."
+    module: 2
+
+  solar-hydrostatic-equilibrium:
+    path: /assets/images/module-02/stellar-stability-hse.png
+    caption: "What to notice: the Sun remains stable only because inward gravity is balanced by outward pressure. Fusion keeps renewing that pressure, so the star behaves like a self-regulating thermostat rather than collapsing all at once."
+    alt: "Infographic cutaway of the Sun showing blue arrows of gravity pointing inward, orange arrows of pressure pushing outward, and labels explaining hydrostatic equilibrium and the solar thermostat."
+    module: 2
+
+  solar-mass-energy-equivalence:
+    path: /assets/images/module-02/e-mc2-infographic.png
+    caption: "What to notice: when four protons become one helium nucleus, the tiny missing mass does not vanish. It becomes energy, which is why a star can shine for billions of years."
+    alt: "Infographic showing four protons fusing into a helium nucleus, with a highlighted mass difference converted into energy according to E equals mc squared, plus notes connecting this to stellar power and human fusion research."
+    module: 2
+
+  solar-quantum-tunneling:
+    path: /assets/images/module-02/fusion-quantum-tunneling.png
+    caption: "What to notice: classically, the Sun's core is too cool for protons to fuse easily. Quantum tunneling lets some proton pairs penetrate the Coulomb barrier anyway, making stellar fusion possible."
+    alt: "Infographic comparing the Sun's core temperature to the much higher classical fusion threshold and illustrating protons tunneling through the electrostatic barrier because of quantum mechanics."
+    module: 2
+
+  solar-butterfly-diagram:
+    path: /assets/images/module-02/sporer-butterfly-diagram.png
+    caption: "What to notice: sunspots do not appear at random. Early in each cycle they emerge at mid-latitudes, then drift toward the equator, revealing the organized rhythm of the Sun's magnetic field."
+    alt: "Data-first infographic of the Sporer butterfly diagram showing sunspot latitude versus time across two solar cycles, with sunspot bands starting near plus or minus 30 to 40 degrees and drifting toward the equator; includes a small solar inset in the corner."
+    module: 2
+
   parallax-geometry:
     path: /assets/images/module-02/parallax-geometry.png
     caption: "Geometry of stellar parallax measurement"
@@ -1512,10 +1542,10 @@ figures:
     module: 3
 
   pp-chain:
-    path: /assets/images/module-03/pp-chain.png
-    caption: "The proton-proton chain converts hydrogen to helium"
-    alt: "Diagram of nuclear fusion reactions in the solar core"
-    module: 3
+    path: /assets/images/module-02/pp-chain.png
+    caption: "What to notice: the proton-proton chain gradually turns four protons into one helium nucleus, releasing photons, neutrinos, and energy that helps support the Sun against gravity."
+    alt: "Step-by-step diagram of the proton-proton chain in the solar core, showing proton fusion into deuterium, helium-3 production, helium-4 formation, and the release of positrons, neutrinos, photons, and energy."
+    module: 2
 
   stellar-endpoints:
     path: /assets/images/module-03/stellar-endpoints.png

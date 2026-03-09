@@ -1,0 +1,561 @@
+---
+title: "Lecture 16: The H-R Diagram"
+subtitle: "Organizing the Universe's Stars"
+author: "Dr. Anna Rosen"
+date: "2026-03-16"
+description: "When temperature and luminosity are plotted against each other, thousands of stars reveal hidden patterns that unlock the physics of stellar structure and evolution."
+draft: false
+categories:
+  - stellar-physics
+  - hr-diagram
+  - stellar-classification
+course: ASTR 101
+module: "2 - Stars & Stellar Evolution"
+learning-objectives:
+  - List the spectral types in order (OBAFGKM) and associate each with a temperature range and color
+  - Construct and interpret an H-R diagram with temperature on the x-axis (reversed) and luminosity on the y-axis
+  - Identify the main sequence, giant branch, supergiant region, and white dwarf region on an H-R diagram
+  - Use the Stefan-Boltzmann relation to explain why giants are luminous despite being cool
+  - Explain why the main sequence is fundamentally a mass sequence, not an evolutionary track
+math-level: algebra_only
+prerequisites: "Stellar distances and luminosity (Lecture 15), blackbody radiation and Wien's law (Lecture 8), spectral lines and absorption (Lecture 9)"
+---
+::: {.callout-key-insight #the-big-idea}
+## The Big Idea
+
+When you plot the temperature and luminosity of thousands of stars, one graph emerges that contains nearly all of stellar physics — organized by a single, hidden variable: **mass**. The Hertzsprung-Russell diagram is astronomy's most important graph.
+:::
+
+---
+
+::: {.callout-roadmap title="How to Use This Reading" collapse="true"}
+This reading builds from spectral classification (the *x*-axis) through the Stefan-Boltzmann law (the physics) to interpretation of the H-R diagram itself.
+
+**Default expectation (best):** Read the whole page before lecture, pausing at each **Check Yourself** question.
+
+**If you're short on time (~20 min):** Focus on:
+- The Big Idea above
+- Spectral Types subsection (including the reference table)
+- The H-R Diagram itself: Regions of the Diagram subsection
+- The Stefan-Boltzmann explanation
+- Then come back for Deep Dives and practice problems later
+
+**Reference mode:** Use the Spectral Type Reference Table and Glossary while studying and while working practice problems.
+:::
+
+---
+
+## Astronomy's Most Important Graph
+
+Imagine you are an astronomer in 1910. You have a list of 1,000 nearby stars. For each, you know:
+
+- **Temperature** — derived from spectral type or color
+- **Luminosity** — calculated from distance and apparent brightness
+
+You decide to make a scatter plot: temperature on the *x*-axis, luminosity on the *y*-axis. You plot each star as a single point.
+
+What would you expect to see? Random scatter? Maybe stars evenly distributed across the diagram?
+
+You would be surprised. Instead, you would see *structure*. About 90% of all stars would lie along a single diagonal band — a trend so clean it seemed almost impossible. Stars did not scatter randomly across the temperature-luminosity plane. They obeyed a hidden law.
+
+This graph — the **Hertzsprung-Russell diagram**, or **H-R diagram** — became the foundation of stellar physics. Every star, every phase of stellar evolution, every mystery about why stars shine — all of it lives on this one diagram.
+
+Today's reading has one goal: teach you to read and interpret it.
+
+---
+
+## Spectral Classification: The *x*-Axis
+
+Before we can build an H-R diagram, we need a way to *measure* stellar temperature. We can't stick a thermometer on a star (it's too far away), so we use the **spectrum** — the pattern of light emitted at different wavelengths.
+
+### Annie Jump Cannon and the Alphabet of Stars
+
+In 1901, at Harvard Observatory, a deaf astronomer named **Annie Jump Cannon** began a classification project that would change astronomy forever. She examined the spectral lines of hundreds of thousands of stars and realized that spectral patterns followed a *sequence*. This sequence correlated directly with temperature.
+
+Cannon's original classification used letters: A, B, C, D, and so on. Later, as understanding improved, the unnecessary categories were dropped, leaving the sequence we use today:
+
+**O → B → A → F → G → K → M**
+
+(Astronomers remember this with the mnemonic: **"Oh Be A Fine Girl, Kiss Me."** Or, if you prefer modern astronomy: **"Oh Be A Famous Astrophysicist, Keep Mentoring."**)
+
+Each type represents a different temperature range and a different set of dominant spectral lines.
+
+::: {.column-margin}
+**Spectral Line:** An absorption or emission line at a specific wavelength, caused by electrons jumping between energy levels in atoms.
+:::
+
+### What Each Type Tells Us
+
+The spectral type reveals which absorption lines are strongest. Different atoms produce strong absorption lines at different temperatures — hotter atoms ionize, cooler atoms do not. The spectral type is essentially a *temperature thermometer written in atoms*.
+
+Here's the physical reason:
+
+- **O and B stars** (very hot, >10,000 K): Hydrogen lines are strong. Helium ionizes and disappears. Metals are highly ionized and weak.
+- **A stars** (hot, ~10,000 K): Hydrogen lines are at *maximum* strength. Ionized calcium begins to appear.
+- **F stars** (warm, ~6,000–7,500 K): Hydrogen lines weaken. Neutral metals grow stronger.
+- **G stars** (warm, ~5,200–5,900 K): Our Sun is a G2 star. Hydrogen weaker still. Neutral metals strong.
+- **K stars** (cool, ~3,700–5,200 K): Very strong metal lines, especially calcium and iron. Hydrogen barely visible.
+- **M stars** (coolest, <3,700 K): Powerful molecular bands appear (especially titanium oxide, TiO). Stars appear deep red.
+
+Each type is subdivided into 10 subclasses (0–9). Our Sun is **G2V** — a G-type star, subclass 2, on the main sequence (we'll explain the "V" soon).
+
+<!-- FIGURE: Spectral sequence from O-type to M-type showing absorption lines, colors, and example stars. Show hydrogen alpha, calcium K, and titanium oxide bands at key points. -->
+
+### Reference: Spectral Types at a Glance
+
+| Spectral Type | Temperature (K) | Color | Dominant Lines | Example Stars |
+|---|---|---|---|---|
+| O | >30,000 | Blue | Ionized He, Weak H | Albireo A, Mintaka |
+| B | 10,000–30,000 | Blue-white | H, He | Rigel, Spica, Vega |
+| A | 7,500–10,000 | White | Strong H, Ca+ | Sirius, Altair, Vega |
+| F | 6,000–7,500 | Yellow-white | Weak H, Ca, Fe | Procyon A, Canopus |
+| G | 5,200–6,000 | Yellow | Ca, Fe, weak H | **Sun**, Alpha Centauri A |
+| K | 3,700–5,200 | Orange | Neutral Ca, Fe, strong metals | Aldebaran, Pollux |
+| M | 2,400–3,700 | Red | Molecular bands (TiO, CN) | Betelgeuse, Proxima Cen |
+
+::: {.callout-key-insight title="Key Insight"}
+The spectral type is a *temperature scale written in atoms*. As temperature drops from O to M, stronger atoms ionize away and weaker atoms appear. The sequence is not arbitrary — it directly reflects atomic physics.
+:::
+
+::: {.callout-check-yourself title="Check Yourself 1"}
+Our Sun is a G2 star with a temperature of 5,778 K. Where does that fall on the O-B-A-F-G-K-M sequence, and what color should the Sun appear?
+:::
+
+::: {.callout-tip title="Solution" collapse="true"}
+G2 is in the **G range (5,200–6,000 K)**, so 5,778 K fits perfectly. G-type stars appear **yellow** — which matches what we see from Earth. (The Sun appears yellowish-white to our eyes because Earth's atmosphere scatters blue light more than red light, but in space the Sun is pure yellow.)
+:::
+
+---
+
+## Building the H-R Diagram: The Two Axes
+
+Now we have a way to measure temperature: **spectral type** (or equivalently, color, or Wien's law temperature). But an H-R diagram needs *two* axes. The second is **luminosity**.
+
+### The Axes, Carefully Drawn
+
+**Horizontal axis (x):** Temperature
+
+Here's where we need to be careful. The temperature axis is **reversed**. Temperature increases from *right to left*, not left to right. This is a historical accident — early observers drew it this way, and the convention stuck — but it has become standard. Get used to it.
+
+- **Left side:** Hot temperatures (30,000 K and hotter)
+- **Right side:** Cool temperatures (2,400 K and cooler)
+
+We often label the x-axis with spectral type (O, B, A, F, G, K, M from left to right) to make it easier to remember.
+
+**Vertical axis (y):** Luminosity
+
+Luminosity is plotted on a **logarithmic scale** — each step up multiplies the luminosity by 10. This is essential because the range of stellar luminosities is enormous: from ~0.0001 $L_\odot$ (white dwarfs) to ~1 million $L_\odot$ (red supergiants). A linear scale would compress most stars into an illegible band.
+
+- **Bottom:** Low luminosity (faint stars)
+- **Top:** High luminosity (bright stars)
+
+<!-- FIGURE: Blank H-R diagram template showing axes with temperature (reversed) from O at left to M at right, and logarithmic luminosity from 0.0001 to 1,000,000 solar luminosities on vertical axis. Labels but no stars plotted yet. -->
+
+### Why the Reversed x-Axis Matters (And Why You'll Get It Wrong First)
+
+Your brain says: "Hot on the left, cold on the right." But the H-R diagram says the opposite. This is a common stumbling block.
+
+**Why did Hertzsprung and Russell do this?** In 1911–1913, they plotted spectral class (O, B, A, ..., M) on the horizontal axis. Since spectral class runs O → M (which corresponds to hot → cool), when you plot it left to right, temperature appears reversed. When the field adopted this convention, it stuck.
+
+**How to remember:** Think "O on the left" (O is the hottest type). Then the rest follows.
+
+::: {.callout-misconception title="Misconception"}
+**"The H-R diagram has temperature on the x-axis, so hotter is to the right."** — WRONG. Hotter is to the *left*. This single reversed axis catches half of all intro astronomy students on the first H-R diagram quiz.
+:::
+
+::: {.callout-check-yourself title="Check Yourself 2"}
+On an H-R diagram, which direction would you move to find hotter stars?
+:::
+
+::: {.callout-tip title="Solution" collapse="true"}
+**To the LEFT.** The x-axis is reversed: hot (O-type) stars are on the left, cool (M-type) stars are on the right.
+:::
+
+---
+
+## Plotting Thousands of Stars: The Pattern Emerges
+
+{{< fig hr-diagram-eso >}}
+
+Imagine Hertzsprung and Russell taking their spectroscopic data and plotting thousands of points on a temperature-luminosity graph. What would they see?
+
+If stars were randomly scattered, the diagram would be a cloud of points. But stars are not random. They follow patterns.
+
+Roughly 90% of all stars fall along a **single, clean diagonal band** running from the upper left (hot, luminous) to the lower right (cool, dim). This band is called the **main sequence**.
+
+The remaining 10% appear in other regions:
+
+- **Upper right:** Cool but *very* luminous stars — the **red giants and supergiants**
+- **Lower left:** Hot but *very* dim stars — the **white dwarfs**
+
+This clustering is not a coincidence. It reveals the *physics* of stellar structure.
+
+<!-- FIGURE: Complete H-R diagram showing main sequence (diagonal band), red giant branch (upper right), white dwarf region (lower left), and supergiants (even further upper right). Label regions clearly. Show approximately 100–200 representative stars with real names marked (Sun, Sirius, Betelgeuse, Proxima Centauri, Rigel, Aldebaran, etc.). Use different colors or symbols to distinguish the regions. -->
+
+### The Four Regions: A Map of Stellar Physics
+
+**1. The Main Sequence (Diagonal Band)**
+
+The main sequence is where ~90% of stars spend ~90% of their lives. It's a trend so strong that it had to reflect something fundamental about how stars work.
+
+Stars on the main sequence have a simple property: their energy comes from **hydrogen fusion in the core**. As long as a star burns hydrogen, it stays on the main sequence. The more massive the star, the hotter its core, the faster it burns hydrogen, and the more luminous it becomes.
+
+**Upper left:** Massive O- and B-type stars, luminous, short-lived.
+**Lower right:** Low-mass M-type stars, dim, long-lived.
+
+::: {.column-margin}
+**Main Sequence:** The diagonal band on an H-R diagram where 90% of stars lie. All main sequence stars are supported by hydrogen fusion in their cores.
+:::
+
+**2. The Red Giant Branch (Upper Right)**
+
+In the upper right, we find stars that are cool (spectral type K or M, or sometimes F) but *extraordinarily* luminous. Betelgeuse, Aldebaran, and Antares live here.
+
+How can a cool star be so bright? The answer: **size**. These stars have expanded to enormous radii — sometimes 100 times larger than the Sun. Even though each square meter of surface is cooler (hence the red color), the total surface area is so vast that the luminosity is huge.
+
+These stars have *finished* burning hydrogen in their cores and have begun a new phase of evolution. The red giant branch will be explored in detail in Lecture 19.
+
+**3. White Dwarfs (Lower Left)**
+
+The lower left corner contains hot, *dim* stars — a bizarre combination. These are **white dwarfs**: the dense, Earth-sized remnants of dead stars.
+
+A white dwarf is so hot (often >10,000 K, sometimes hotter) that it glows blue-white. But because it's only the size of Earth, its total luminosity is tiny — often less than 1% of the Sun's.
+
+White dwarfs represent the final fate of stars like our Sun (Lecture 19).
+
+**4. Supergiants (Very Upper Right)**
+
+A handful of stars are even more luminous and larger than red giants. These **supergiants** (like Betelgeuse and Rigel) are in rare, short-lived phases of stellar evolution.
+
+---
+
+## The Stefan-Boltzmann Law: Why Giants Are Luminous
+
+We've observed the H-R diagram. Now we explain it using physics.
+
+The **Stefan-Boltzmann law** (from Lecture 8) connects luminosity, temperature, and radius:
+
+$$L = 4\pi R^2 \sigma T^4$$
+
+where:
+- $L$ is luminosity (power radiated, in watts or $L_\odot$)
+- $R$ is the star's radius
+- $\sigma$ is the Stefan-Boltzmann constant
+- $T$ is the surface temperature
+
+This equation is the key to understanding the H-R diagram.
+
+::: {.column-margin}
+**Stefan-Boltzmann Law:** Luminosity is proportional to surface area times the fourth power of temperature. A star's luminosity depends on both its size and its heat.
+:::
+
+### Rearranging for Insight
+
+We can rewrite the Stefan-Boltzmann law to isolate radius:
+
+$$R^2 \propto \frac{L}{T^4}$$
+
+$$R \propto \sqrt{\frac{L}{T^4}}$$
+
+This tells us that **on an H-R diagram, lines of constant radius are diagonal lines**.
+
+Consider a star that is cool (low $T$) but luminous (high $L$). To achieve this balance, it *must* have a large radius. A red giant satisfies this: low temperature, huge radius, high luminosity.
+
+Conversely, a hot (high $T$), dim (low $L$) star must have a tiny radius. This is a white dwarf.
+
+<!-- FIGURE: H-R diagram with diagonal lines of constant radius drawn across it. Show lines for 0.01, 0.1, 1.0, 10, and 100 solar radii. Label the main sequence as occupying the intersection where radius changes smoothly with temperature. Show that red giants lie along the 100+ $R_\odot$ lines, white dwarfs along the 0.01 $R_\odot$ lines. -->
+
+### Worked Example: Why Is Betelgeuse So Luminous?
+
+**Problem:** Betelgeuse is a red supergiant with spectral type M1 (temperature ~3,500 K) and luminosity ~140,000 $L_\odot$. Our Sun is G2 (temperature ~5,800 K) and luminosity 1 $L_\odot$. Why is Betelgeuse so much more luminous despite being cooler?
+
+**Solution:**
+
+Use the Stefan-Boltzmann law in ratio form. The ratio of luminosities is:
+
+$$\frac{L_{\text{Betelgeuse}}}{L_{\odot}} = \left(\frac{R_{\text{Betelgeuse}}}{R_{\odot}}\right)^2 \left(\frac{T_{\text{Betelgeuse}}}{T_{\odot}}\right)^4$$
+
+Plug in numbers:
+
+$$\frac{140,000}{1} = \left(\frac{R_{\text{Betelgeuse}}}{R_{\odot}}\right)^2 \left(\frac{3,500}{5,800}\right)^4$$
+
+$$140,000 = \left(\frac{R_{\text{Betelgeuse}}}{R_{\odot}}\right)^2 (0.603)^4$$
+
+$$140,000 = \left(\frac{R_{\text{Betelgeuse}}}{R_{\odot}}\right)^2 \times 0.132$$
+
+$$\frac{R_{\text{Betelgeuse}}}{R_{\odot}} = \sqrt{\frac{140,000}{0.132}} = \sqrt{1,060,000} \approx 1,030$$
+
+**Interpretation:** Betelgeuse is about **1,000 times larger than the Sun**. Even though its surface is cooler (hence redder), the enormous surface area compensates, making it vastly more luminous. This is why red giants are so bright despite their cool temperatures.
+
+::: {.callout-key-insight title="Key Insight"}
+The Stefan-Boltzmann law shows that on the H-R diagram, stars of the same radius lie along diagonal lines. Red giants are luminous because they are *huge*, not because they are hot. White dwarfs are dim because they are *tiny*, despite being hot.
+:::
+
+::: {.callout-check-yourself title="Check Yourself 3"}
+Two stars have the same luminosity but different temperatures: Star A is hot (10,000 K) and Star B is cool (5,000 K). Which star must be larger?
+:::
+
+::: {.callout-tip title="Solution" collapse="true"}
+**Star B (the cool one).** Since $L \propto R^2 T^4$, and Star B has lower temperature, it must have a larger radius to achieve the same luminosity. In fact, Star B's radius is related to Star A's by:
+
+$$\frac{R_B}{R_A} = \sqrt{\left(\frac{T_A}{T_B}\right)^4} = \left(\frac{T_A}{T_B}\right)^2 = \left(\frac{10,000}{5,000}\right)^2 = 4$$
+
+Star B is **4 times larger** than Star A.
+:::
+
+---
+
+## The Main Sequence Is a Mass Sequence
+
+Here's the profound insight that makes the H-R diagram so powerful:
+
+**The position of a star on the main sequence is determined almost entirely by its *mass*.**
+
+More massive stars:
+- Burn hydrogen faster (higher core pressure and temperature)
+- Are more luminous
+- Are hotter (bluer)
+- Lie on the upper left of the main sequence
+- Have short lifetimes
+
+Less massive stars:
+- Burn hydrogen slowly
+- Are less luminous (dimmer)
+- Are cooler (redder)
+- Lie on the lower right of the main sequence
+- Have long lifetimes
+
+This is the **mass-luminosity relation** — a fundamental law of stellar physics that we'll explore in depth in Lecture 17. For now, the key insight is this:
+
+::: {.callout-note title="The Big Idea, Revisited"}
+On the main sequence, **mass determines everything**: luminosity, temperature, radius, and lifetime. The H-R diagram is fundamentally a *mass diagram*.
+:::
+
+### Lines of Constant Mass
+
+Just as the Stefan-Boltzmann law creates diagonal lines of constant radius on the H-R diagram, the physics of stellar structure creates nearly *vertical* lines of constant mass on the main sequence.
+
+Imagine following a line upward on the H-R diagram, moving along a constant-mass sequence. You move slightly left (hotter) and dramatically upward (more luminous), but your mass stays essentially constant.
+
+<!-- FIGURE: H-R diagram with main sequence. Draw several diagonal or near-vertical lines labeled with stellar masses: 0.1 $M_\odot$, 0.5 $M_\odot$, 1 $M_\odot$ (Sun), 2 $M_\odot$, 5 $M_\odot$, 10 $M_\odot$, 20 $M_\odot$. -->
+
+::: {.callout-check-yourself title="Check Yourself 4"}
+A star is exactly halfway along the main sequence (in terms of temperature) between an O-type and an M-type star. Is it halfway in mass? In luminosity?
+:::
+
+::: {.callout-tip title="Solution" collapse="true"}
+**No to both.** The main sequence is not linear in mass or luminosity. Luminosity increases steeply with mass (approximately $L \propto M^{3.5}$ for main sequence stars). So the star at the midpoint temperature is much closer to the M-type end in terms of mass and luminosity. Most main sequence stars are actually low-mass, cool, and dim — a single massive O-type star is as luminous as thousands of M-dwarfs combined.
+:::
+
+---
+
+## Common Misconceptions About the H-R Diagram
+
+::: {.callout-note title="Misconception 1: Stars Slide Along the Main Sequence as They Age"}
+WRONG. The main sequence is a snapshot of stars at different masses, *not* an evolutionary track. A star does not drift across the main sequence as it ages. During its hydrogen-burning phase, a star stays roughly in the same spot on the main sequence. Only when the core hydrogen is exhausted does a star leave the main sequence and move toward the red giant region (that's the topic of Lecture 19).
+:::
+
+::: {.callout-note title="Misconception 2: Red Means Dim"}
+WRONG. Red giants are incredibly luminous despite their cool (red) color. Red comes from low temperature, but large radius compensates. Antares is a red supergiant 16,000 times more luminous than the Sun, yet it's barely visible to the naked eye because it's so far away. Nearby, Sirius (a hot white star) appears much brighter to us, but Antares would outshine it if they were at the same distance.
+:::
+
+::: {.callout-note title="Misconception 3: The H-R Diagram Shows All Stars in One Place"}
+WRONG. Different types of stars occupy different regions. Most stars we observe are main sequence dwarfs (small, dim M-types) because they outnumber giants 100 to 1. But bright giants are *overrepresented* in naked-eye catalogs because we can see them from far away. If you list "bright stars," you're biased toward giants; if you count "nearby stars," you're biased toward low-mass dwarfs.
+:::
+
+---
+
+## Deep Dive: The Historical Discovery
+
+Independently, in 1911–1913, two astronomers — **Ejnar Hertzsprung** (a Danish chemist) and **Henry Norris Russell** (an American astrophysicist) — discovered the pattern. They did not have computers or even electronic calculators. They plotted points by hand.
+
+What they found was so striking that it seemed impossible at first. Why would a random sample of 300 stars arrange themselves into such an organized pattern? The answer had to be that luminosity and temperature were *physically connected*.
+
+Hertzsprung's interpretation was quick: the relationship must come from stellar radius and temperature. By the 1920s, astrophysicists realized that main sequence stars were fundamentally different objects from red giants — not in age, but in *structure*. Main sequence stars burn hydrogen in their cores in a self-regulating way. Red giants have different internal structures. This distinction is the foundation of stellar astrophysics.
+
+The H-R diagram unified astronomy. A single graph revealed that stars are not all the same. They have *types*, *structures*, and *lifespans* determined by a hidden variable: **mass**.
+
+---
+
+::: {.callout-key-insight title="Observable -> Model -> Inference"}
+**Observable:** We measure the brightness and spectral type of a star.
+
+**Model:** We know that luminosity comes from a star's surface area and temperature (Stefan-Boltzmann law). We infer radius from the ratio $L/(T^4)$.
+
+**Inference:** 90% of stars fall on a diagonal band (the main sequence). Using stellar structure theory, we infer that main sequence stars are powered by hydrogen fusion, and their position is determined by mass. Red giants are in a different evolutionary phase: their cores have run out of hydrogen. White dwarfs are dead stellar cores.
+:::
+
+---
+
+## A Practical Example: Reading the H-R Diagram
+
+Let's practice interpreting an H-R diagram with a concrete example.
+
+**Scenario:** You discover a new star. Spectroscopy tells you it's a G5 star (so temperature ~5,500 K). You measure its luminosity as 100 $L_\odot$. Where does it lie on the H-R diagram?
+
+**Step 1:** Plot the temperature.
+- G5 is a G-type star, so look at the G region on the x-axis (between F and K, hot → cool reversed).
+
+**Step 2:** Plot the luminosity.
+- 100 $L_\odot$ is 100 times more luminous than the Sun. On a logarithmic scale, that's two decades above the Sun. Draw a horizontal line to 100 on the y-axis.
+
+**Step 3:** Interpret.
+- This star falls in the **red giant branch**, not the main sequence. Despite being the same spectral type as the Sun (similar temperature), it's far more luminous.
+- Using Stefan-Boltzmann, its radius is about $\sqrt{100} = 10$ times the Sun's radius — a true giant.
+
+**Step 4:** Predict the future.
+- This is not a main sequence star, so it's not burning hydrogen in its core. It's an evolved star — a red giant in its death throes. In a few billion years (for Sun-like stars) or much sooner (for more massive ones), it will shed its outer layers and become a white dwarf.
+
+---
+
+## Deep Dive: Colors on the H-R Diagram
+
+We've mentioned color many times (O-type stars are blue, M-type stars are red), but let's connect it explicitly to the H-R diagram.
+
+The color of a star is determined by its temperature via **Wien's displacement law** (Lecture 8):
+
+$$\lambda_{\max} T = 2.90 \times 10^{-3} \text{ m} \cdot \text{K}$$
+
+Hotter stars peak in the blue; cooler stars peak in the red.
+
+On an H-R diagram:
+- **Left side (hot):** Stars are blue
+- **Right side (cool):** Stars are red
+
+But here's a subtlety: the *color you see* also depends on how bright the star is. A faint red dwarf looks dim and reddish. A bright red supergiant looks brilliant and deep red. The intrinsic color is the same (both determined by temperature), but the *brightness* makes a perceptual difference.
+
+In professional astronomy, we use **color indices** — the difference in brightness between two wavelength bands (e.g., blue vs. red) — to infer temperature without needing a full spectrum. The (B — V) color index (blue magnitude minus visual magnitude) is especially common. On an H-R diagram, the x-axis is sometimes labeled with (B — V) instead of spectral type.
+
+---
+
+## The More You Know: Hertzsprung Gap
+
+One peculiar feature of the H-R diagram is the **Hertzsprung gap** — a sparse region between the main sequence and the red giant branch, especially noticeable around spectral type A.
+
+Where are all the medium-mass A-type stars? Why do they seem to "jump" from the main sequence to the red giant branch?
+
+The answer is *timescales*. For stars of intermediate mass (~1.5–2 $M_\odot$), the transition from core hydrogen burning to red giant evolution happens *fast* — on a timescale of millions of years, not billions. So at any given time, very few are caught in the transition. The gap is real, but it's a selection effect: we're seeing a snapshot, and the fast-evolving stars are simply not caught in mid-transition often enough to be common.
+
+More massive stars (>3 $M_\odot$) fill the gap more readily because their evolution is even faster — they're more likely to be caught partway.
+
+This detail is less critical for an intro course but illustrates how the H-R diagram reveals the *dynamics* of stellar evolution.
+
+---
+
+## Deep Dive: Absolute Magnitude and the Distance Ladder
+
+In Lecture 15, we learned that apparent magnitude $m$ (what we see) and absolute magnitude $M$ (intrinsic brightness) are related by distance.
+
+The H-R diagram is often plotted with **absolute magnitude** on the y-axis instead of luminosity. Absolute magnitude is simply a logarithmic brightness scale:
+
+$$M = -2.5 \log_{10} L + \text{constant}$$
+
+(The constant just sets the zero point; absolute magnitude is defined so that the Sun has $M_V \approx 4.8$ in the visual band.)
+
+Higher (numerically larger) values of $M$ mean dimmer stars. Lower (more negative) values mean brighter stars.
+
+When you see an H-R diagram plotted as absolute magnitude vs. color or spectral type, it's the same diagram — just with a logarithmic brightness scale that runs *downward* instead of upward. Many professional H-R diagrams use this convention.
+
+---
+
+## Summary: Why the H-R Diagram Matters
+
+1. **It organizes stellar diversity.** Thousands of different stars reduce to a few distinct regions — revealing that stars are not random but *structured* by physics.
+
+2. **It reveals the mass-luminosity relation.** Position on the main sequence tells you a star's mass. This is the foundation of stellar astrophysics.
+
+3. **It classifies evolutionary stages.** A star's location tells you not just its properties (temperature, radius, luminosity) but also its *age* relative to its lifetime — is it a young, hydrogen-burning main sequence star, or an evolved red giant?
+
+4. **It unifies temperature and size.** The Stefan-Boltzmann law explains why giants are luminous (large size) and why white dwarfs are dim (small size), despite their extreme temperatures.
+
+5. **It is predictive.** Once we understand the physics behind the H-R diagram (next lecture: mass-luminosity relation; Lecture 19: evolution tracks), we can predict a star's past, present, and future.
+
+The H-R diagram is more than a useful plot. It's a window into stellar structure and a map of stellar evolution.
+
+---
+
+::: {.callout-key-insight title="Observable -> Model -> Inference"}
+**Observable:** For thousands of nearby stars, measure spectral type and luminosity.
+
+**Model:** Plot on a two-axis graph. Luminosity depends on both temperature and radius via Stefan-Boltzmann. Stellar structure theory connects mass to core temperature and thus luminosity.
+
+**Inference:**
+- Main sequence stars (90% of all stars) are ordered by mass, not age.
+- Red giants are evolved stars with different internal structures.
+- White dwarfs are stellar remnants.
+- Stars do not randomly scatter in temperature-luminosity space; they follow clean, physically determined sequences.
+:::
+
+---
+
+## Practice Problems
+
+### Core Problems (Start Here)
+
+**Problem 1: Spectral Type and Temperature**
+
+The star Rigel has spectral type B8. The star Betelgeuse has spectral type M1. Which is hotter? By approximately how much?
+
+**Problem 2: Reading the H-R Diagram**
+
+On an H-R diagram, you locate a star at (spectral type A5, luminosity 10 $L_\odot$). Is this star on the main sequence? How do you know?
+
+**Problem 3: Stefan-Boltzmann Reasoning**
+
+Two main sequence stars have the same luminosity. Star A is hotter than Star B. Which is larger? Justify your answer using the Stefan-Boltzmann law.
+
+**Problem 4: Giants vs. Dwarfs**
+
+Explain why a cool red giant can be much more luminous than a hot white dwarf, even though the white dwarf is hotter.
+
+**Problem 5: The Main Sequence as Mass**
+
+If you move up and to the left along the main sequence (hotter, more luminous), are you moving to more massive or less massive stars? Explain.
+
+---
+
+### Challenge Problems (Deepen Your Understanding)
+
+**Challenge 1: Radius from the H-R Diagram**
+
+Sirius A is an A1 main sequence star with luminosity 26 $L_\odot$ and temperature 9,940 K. The Sun is a G2 main sequence star with luminosity 1 $L_\odot$ and temperature 5,778 K.
+
+(a) Using the Stefan-Boltzmann law, calculate the radius of Sirius A in units of solar radii.
+
+(b) How would Sirius A appear on an H-R diagram relative to the Sun? (Move left or right? Up or down?)
+
+**Challenge 2: A Mysterious Star**
+
+An astronomer observes a star and determines: spectral type G0 (temperature ~6,000 K), luminosity 0.0001 $L_\odot$.
+
+(a) Is this star on the main sequence? How do you know?
+
+(b) What region of the H-R diagram does it occupy?
+
+(c) Estimate its radius using the Stefan-Boltzmann law. (Hint: The Sun is G2, 5,778 K, 1 $L_\odot$, and 1 $R_\odot$.)
+
+(d) What type of star might this be (main sequence dwarf, white dwarf, or red giant)?
+
+**Challenge 3: The Hertzsprung-Russell Diagram and Stellar Lifetime**
+
+Stars on the upper left of the main sequence (hot, massive, luminous) burn their fuel much faster than stars on the lower right (cool, low-mass, dim). The lifetime of a main sequence star scales roughly as $\tau \propto M/L$.
+
+(a) If a 10 $M_\odot$ star is ~10,000 times more luminous than the Sun, estimate its main sequence lifetime relative to the Sun's (~10 billion years).
+
+(b) Why does the H-R diagram show so few O and B stars relative to M dwarfs, even though they're born in similar numbers? (Hint: Think about timescales.)
+
+---
+
+## Glossary
+
+{{< glossary lecture=16 >}}
+
+---
+
+## Looking Ahead
+
+Next lecture (Lecture 17), we'll derive the **mass-luminosity relation** — the quantitative rule that connects a star's mass to its position on the main sequence. We'll see *why* more massive stars are more luminous and why this relationship is so clean.
+
+After that (Lectures 18-21), we'll explore how stars *evolve*: How stars form, what happens when a main sequence star exhausts its core hydrogen, how red giants form, and why some stars become white dwarfs while others explode.
+
+The H-R diagram is the foundation. Master it now, and the rest of stellar evolution will fall into place.

@@ -1350,3 +1350,909 @@ abiogenesis:
   lecture: 13
   module: 1
   tier: supporting
+
+# =============================================================
+# Module 2: Stars & Stellar Evolution
+# =============================================================
+
+l14-alpha-particle:
+  term: "Alpha particle"
+  definition: "A helium-4 nucleus; consists of two protons and two neutrons bound together. The final product of the proton-proton chain."
+  lecture: 14
+  module: 2
+  tier: core
+
+l14-chromosphere:
+  term: "Chromosphere"
+  definition: "The thin layer of the Sun's atmosphere above the photosphere, with a temperature of about 10,000 Kelvin. Visible as a red rim during total solar eclipses."
+  lecture: 14
+  module: 2
+  tier: core
+
+l14-convection:
+  term: "Convection"
+  definition: "The transport of energy through the bulk motion of gas or liquid. Hot material rises; cool material sinks. Dominates energy transport in the Sun's outer layers."
+  lecture: 14
+  module: 2
+  tier: core
+
+l14-coronal-mass-ejection:
+  term: "Coronal Mass Ejection (CME)"
+  definition: "A sudden eruption of plasma from the Sun's corona into interplanetary space, often associated with solar flares. Can reach speeds exceeding 1,000 km/s."
+  lecture: 14
+  module: 2
+  tier: core
+
+l14-corona:
+  term: "Corona"
+  definition: "The Sun's outer atmosphere, extending millions of kilometers into space. Temperature is 1–3 million Kelvin, much hotter than the photosphere."
+  lecture: 14
+  module: 2
+  tier: core
+
+l14-coulomb-barrier:
+  term: "Coulomb barrier"
+  definition: "The electrostatic repulsion between two positively charged nuclei. Must be overcome (through heat, pressure, or quantum tunneling) for nuclear fusion to occur."
+  lecture: 14
+  module: 2
+  tier: core
+
+l14-dynamo:
+  term: "Dynamo"
+  definition: "A mechanism by which moving conductive fluid (plasma) generates a magnetic field. The solar dynamo in the convective zone generates the Sun's magnetic field."
+  lecture: 14
+  module: 2
+  tier: core
+
+l14-fusion:
+  term: "Fusion"
+  definition: "A nuclear reaction in which two light nuclei combine to form a heavier nucleus, releasing energy. Occurs in the Sun's core via the proton-proton chain."
+  lecture: 14
+  module: 2
+  tier: core
+
+l14-granulation:
+  term: "Granulation"
+  definition: "The patchwork of bright and dark features visible on the solar photosphere, representing the tops of convection cells in the convective zone."
+  lecture: 14
+  module: 2
+  tier: core
+
+l14-helioseismology:
+  term: "Helioseismology"
+  definition: "The study of vibrations and sound waves in the Sun, used to probe the Sun's interior structure and properties."
+  lecture: 14
+  module: 2
+  tier: core
+
+l14-hydrostatic-equilibrium:
+  term: "Hydrostatic equilibrium"
+  definition: "A balance between outward pressure and inward gravitational force, maintaining a stable structure. The Sun is in hydrostatic equilibrium."
+  lecture: 14
+  module: 2
+  tier: core
+
+l14-neutrino:
+  term: "Neutrino"
+  definition: "An electrically neutral particle with extremely small mass, produced in nuclear reactions such as fusion in the Sun's core. Because it interacts only through the weak nuclear force, it can pass through matter almost unhindered and escape directly from the Sun."
+  lecture: 14
+  module: 2
+  tier: core
+
+l14-photosphere:
+  term: "Photosphere"
+  definition: "The visible surface of the Sun, about 500 km thick, where photons escape and reach Earth. Temperature about 5,800 Kelvin."
+  lecture: 14
+  module: 2
+  tier: core
+
+l14-plasma:
+  term: "Plasma"
+  definition: "A state of matter consisting of ionized gas — electrons and nuclei separated and moving freely. Most of the Sun's interior is plasma."
+  lecture: 14
+  module: 2
+  tier: core
+
+l14-proton-proton-chain:
+  term: "Proton-proton chain (PP chain)"
+  definition: "A sequence of nuclear fusion reactions that converts four hydrogen nuclei (protons) into one helium-4 nucleus, releasing energy and neutrinos. The dominant fusion process in the Sun."
+  lecture: 14
+  module: 2
+  tier: core
+
+l14-radiative-transport:
+  term: "Radiative transport"
+  definition: "Energy transport via the absorption and re-emission of photons. Dominates the Sun's core and radiative zone."
+  lecture: 14
+  module: 2
+  tier: core
+
+l14-solar-cycle:
+  term: "Solar cycle"
+  definition: "A roughly 11-year periodic variation in the number and intensity of sunspots and other solar magnetic activity."
+  lecture: 14
+  module: 2
+  tier: core
+
+l14-solar-flare:
+  term: "Solar flare"
+  definition: "A sudden, bright eruption on the solar surface, releasing as much energy as a million nuclear bombs. Powered by magnetic reconnection."
+  lecture: 14
+  module: 2
+  tier: core
+
+l14-solar-neutrino-problem:
+  term: "Solar neutrino problem"
+  definition: "The discrepancy between the predicted and observed rates of solar neutrinos arriving at Earth, resolved by the discovery of neutrino oscillations."
+  lecture: 14
+  module: 2
+  tier: core
+
+l14-solar-wind:
+  term: "Solar wind"
+  definition: "A continuous stream of charged particles flowing from the Sun's corona at about 400 km/s, carrying the Sun's magnetic field."
+  lecture: 14
+  module: 2
+  tier: core
+
+l14-sunspot:
+  term: "Sunspot"
+  definition: "A dark, magnetically intense region on the solar photosphere, typically 1,000–100,000 km across, cooler than surrounding areas."
+  lecture: 14
+  module: 2
+  tier: core
+
+l15-apparent-brightness:
+  term: "Apparent brightness"
+  definition: "Flux of light energy arriving at Earth from a star"
+  context: "Symbol: $b$; Units/context: W/m²"
+  lecture: 15
+  module: 2
+  tier: core
+
+l15-apparent-magnitude:
+  term: "Apparent magnitude"
+  definition: "Historical brightness scale (brighter = smaller number)"
+  context: "Symbol: $m$; Units/context: dimensionless"
+  lecture: 15
+  module: 2
+  tier: core
+
+l15-absolute-magnitude:
+  term: "Absolute magnitude"
+  definition: "Apparent magnitude at standard distance of 10 pc"
+  context: "Symbol: $M$; Units/context: dimensionless"
+  lecture: 15
+  module: 2
+  tier: core
+
+l15-distance-modulus:
+  term: "Distance modulus"
+  definition: "Relationship between apparent magnitude, absolute magnitude, and distance"
+  context: "Symbol: $m - M$; Units/context: dimensionless"
+  lecture: 15
+  module: 2
+  tier: core
+
+l15-luminosity:
+  term: "Luminosity"
+  definition: "Total power radiated by a star in all directions"
+  context: "Symbol: $L$; Units/context: W (watts)"
+  lecture: 15
+  module: 2
+  tier: core
+
+l15-parallax-angle:
+  term: "Parallax angle"
+  definition: "Half the total angular shift in a star's position over 6 months"
+  context: "Symbol: $p$; Units/context: arcseconds (″)"
+  lecture: 15
+  module: 2
+  tier: core
+
+l15-parsec:
+  term: "Parsec"
+  definition: "Distance unit: distance at which parallax angle = 1 arcsecond"
+  context: "Symbol: pc; Units/context: 3.086 × 10¹⁶ m"
+  lecture: 15
+  module: 2
+  tier: core
+
+l15-light-year:
+  term: "Light-year"
+  definition: "Distance light travels in one year"
+  context: "Symbol: ly; Units/context: 9.46 × 10¹⁵ m"
+  lecture: 15
+  module: 2
+  tier: core
+
+l15-inverse-square-law:
+  term: "Inverse-square law"
+  definition: "Flux decreases with distance squared"
+  context: "Symbol: $b = L / 4\\pi d^2$"
+  lecture: 15
+  module: 2
+  tier: core
+
+l15-solar-luminosity:
+  term: "Solar luminosity"
+  definition: "The Sun's luminosity; standard reference"
+  context: "Symbol: L☉; Units/context: 3.8 × 10²⁶ W"
+  lecture: 15
+  module: 2
+  tier: core
+
+l15-spectral-type:
+  term: "Spectral type"
+  definition: "Classification of stars by temperature (OBAFGKM)"
+  context: "Units/context: categorical"
+  lecture: 15
+  module: 2
+  tier: core
+
+l15-distance-ladder:
+  term: "Distance ladder"
+  definition: "Sequence of methods for measuring cosmic distances"
+  context: "Units/context: conceptual"
+  lecture: 15
+  module: 2
+  tier: core
+
+l15-gaia:
+  term: "Gaia"
+  definition: "European space mission for precise parallax measurement"
+  context: "Units/context: proper noun"
+  lecture: 15
+  module: 2
+  tier: core
+
+l16-absolute-magnitude:
+  term: "Absolute Magnitude"
+  definition: "The brightness a star would have if placed at a standard distance of 10 parsecs. A logarithmic scale (lower/more negative = brighter)."
+  lecture: 16
+  module: 2
+  tier: core
+
+l16-hertzsprung-russell-diagram:
+  term: "Hertzsprung-Russell Diagram (H-R Diagram)"
+  definition: "A scatter plot of stellar luminosity (y-axis) vs. temperature (x-axis). Reveals that stars are not randomly distributed but organized by physical processes."
+  lecture: 16
+  module: 2
+  tier: core
+
+l16-main-sequence:
+  term: "Main Sequence"
+  definition: "The diagonal band on an H-R diagram containing ~90% of all stars. Stars on the main sequence burn hydrogen in their cores; their position is determined by mass."
+  lecture: 16
+  module: 2
+  tier: core
+
+l16-red-giant:
+  term: "Red Giant"
+  definition: "A star in an advanced evolutionary phase with a huge radius (10–100 solar radii), cool surface (K or M spectral type), but enormous luminosity. Located in the upper-right region of the H-R diagram."
+  lecture: 16
+  module: 2
+  tier: core
+
+l16-red-supergiant:
+  term: "Red Supergiant"
+  definition: "An even larger and more luminous version of a red giant, with radius 100–1,000 solar radii. Examples: Betelgeuse, Antares."
+  lecture: 16
+  module: 2
+  tier: core
+
+l16-spectral-class-type:
+  term: "Spectral Class/Type"
+  definition: "A classification of stars based on the pattern of their spectral lines, which directly reflects surface temperature. Sequence: O, B, A, F, G, K, M (hot to cool)."
+  lecture: 16
+  module: 2
+  tier: core
+
+l16-stefan-boltzmann-law:
+  term: "Stefan-Boltzmann Law"
+  definition: "$L = 4\\pi R^2 \\sigma T^4$. Luminosity is proportional to surface area and the fourth power of temperature. Shows why large stars can be luminous despite being cool."
+  lecture: 16
+  module: 2
+  tier: core
+
+l16-white-dwarf:
+  term: "White Dwarf"
+  definition: "A dense stellar remnant, roughly Earth-sized, with a very hot surface (often >10,000 K) but low luminosity. Located in the lower-left region of the H-R diagram."
+  lecture: 16
+  module: 2
+  tier: core
+
+l16-wien-s-displacement-law:
+  term: "Wien's Displacement Law"
+  definition: "$\\lambda_{\\max} \\propto 1/T$. The peak wavelength of a star's thermal radiation is inversely proportional to its temperature. Hotter stars are bluer; cooler stars are redder."
+  lecture: 16
+  module: 2
+  tier: core
+
+l17-binary-star-system:
+  term: "Binary star system"
+  definition: "Two stars orbiting a shared center of mass under mutual gravity."
+  lecture: 17
+  module: 2
+  tier: core
+
+l17-visual-binary:
+  term: "Visual binary"
+  definition: "A binary system where both stars are bright and far apart enough to resolve as separate objects."
+  lecture: 17
+  module: 2
+  tier: core
+
+l17-eclipsing-binary:
+  term: "Eclipsing binary"
+  definition: "A binary system oriented edge-on, so one star periodically passes in front of the other, dimming the total light."
+  lecture: 17
+  module: 2
+  tier: core
+
+l17-spectroscopic-binary:
+  term: "Spectroscopic binary"
+  definition: "A binary system detected through Doppler shifts in stellar spectra as the stars orbit. Often too close to resolve visually."
+  lecture: 17
+  module: 2
+  tier: core
+
+l17-radial-velocity:
+  term: "Radial velocity"
+  definition: "The component of motion toward or away from the observer, measured via Doppler shift."
+  lecture: 17
+  module: 2
+  tier: core
+
+l17-center-of-mass:
+  term: "Center of mass"
+  definition: "The point that two orbiting objects both orbit. Located closer to the more massive object."
+  lecture: 17
+  module: 2
+  tier: core
+
+l17-semi-major-axis:
+  term: "Semi-major axis"
+  definition: "The long axis of an elliptical orbit, or equivalently, the average separation for a circular orbit."
+  lecture: 17
+  module: 2
+  tier: core
+
+l17-orbital-period:
+  term: "Orbital period"
+  definition: "The time it takes for two stars to complete one full orbit around their center of mass."
+  lecture: 17
+  module: 2
+  tier: core
+
+l17-mass-luminosity-relation:
+  term: "Mass-luminosity relation"
+  definition: "The empirical relationship for main-sequence stars: $L \\propto M^{3.5}$."
+  lecture: 17
+  module: 2
+  tier: core
+
+l17-main-sequence:
+  term: "Main sequence"
+  definition: "The band on the H-R diagram where stars spend ~90% of their lives fusing hydrogen to helium. The mass-luminosity relation applies here."
+  lecture: 17
+  module: 2
+  tier: core
+
+l17-kepler-s-third-law:
+  term: "Kepler's third law (Newton's form)"
+  definition: "$M_1 + M_2 = \\frac{a^3}{P^2}$ (in solar units). Relates orbital period and separation to the total mass of a binary."
+  lecture: 17
+  module: 2
+  tier: core
+
+l17-roche-lobe:
+  term: "Roche lobe"
+  definition: "The region of space around a star where its gravity dominates. If one star expands beyond its Roche lobe, mass can transfer to its companion."
+  lecture: 17
+  module: 2
+  tier: core
+
+l17-mass-transfer:
+  term: "Mass transfer"
+  definition: "The process by which material flows from one star to another in a binary system, often during the red giant phase."
+  lecture: 17
+  module: 2
+  tier: core
+
+l17-white-dwarf:
+  term: "White dwarf"
+  definition: "A stellar remnant (the core of a dead star) about the size of Earth but with the mass of the Sun. Algol B is a white dwarf-like object."
+  lecture: 17
+  module: 2
+  tier: core
+
+l18-accretion-disk:
+  term: "Accretion disk"
+  definition: "A rotating disk of gas and dust surrounding a protostar or young star, from which material falls inward onto the star."
+  lecture: 18
+  module: 2
+  tier: core
+
+l18-dark-nebula:
+  term: "Dark nebula"
+  definition: "A cloud of dust so dense and opaque that it blocks visible light from stars behind it. These are sites of active star formation."
+  lecture: 18
+  module: 2
+  tier: core
+
+l18-emission-nebula:
+  term: "Emission nebula"
+  definition: "A region of ionized hydrogen gas that glows in visible light due to radiation from nearby hot stars. Also called an H II region."
+  lecture: 18
+  module: 2
+  tier: core
+
+l18-giant-molecular-cloud:
+  term: "Giant molecular cloud (GMC)"
+  definition: "A massive, cold accumulation of molecular gas (typically ~10⁵ M☉, temperature ~10 K) in which star formation occurs."
+  lecture: 18
+  module: 2
+  tier: core
+
+l18-h-ii-region:
+  term: "H II region"
+  definition: "Ionized hydrogen gas surrounding hot O- or B-type stars, which emit ultraviolet radiation. The Roman numeral II denotes singly ionized hydrogen."
+  lecture: 18
+  module: 2
+  tier: core
+
+l18-interstellar-extinction:
+  term: "Interstellar extinction"
+  definition: "The dimming of starlight as it passes through dust clouds, caused by absorption and scattering of light by dust grains."
+  lecture: 18
+  module: 2
+  tier: core
+
+l18-interstellar-medium:
+  term: "Interstellar medium (ISM)"
+  definition: "The gas, dust, magnetic fields, and cosmic rays filling the space between stars, comprising about 1–5% of the Milky Way's mass."
+  lecture: 18
+  module: 2
+  tier: core
+
+l18-interstellar-reddening:
+  term: "Interstellar reddening"
+  definition: "The shift in the color of starlight toward the red due to preferential scattering of blue light by dust grains."
+  lecture: 18
+  module: 2
+  tier: core
+
+l18-jeans-criterion:
+  term: "Jeans criterion"
+  definition: "A cloud will undergo gravitational collapse if its mass exceeds the Jeans mass, which depends on the cloud's temperature and density."
+  lecture: 18
+  module: 2
+  tier: core
+
+l18-jeans-mass:
+  term: "Jeans mass"
+  definition: "The critical mass above which a cloud of gas becomes unstable to gravitational collapse, defined by the balance between gravity and thermal pressure."
+  lecture: 18
+  module: 2
+  tier: core
+
+l18-kelvin-helmholtz-contraction:
+  term: "Kelvin-Helmholtz contraction"
+  definition: "The gradual heating and contraction of a gas cloud under its own gravity. The process by which a protostar approaches the main sequence."
+  lecture: 18
+  module: 2
+  tier: core
+
+l18-molecular-cloud:
+  term: "Molecular cloud"
+  definition: "A region of cold (~10–100 K), dense gas in which molecules (predominantly H₂) are the dominant form of hydrogen."
+  lecture: 18
+  module: 2
+  tier: core
+
+l18-nebula:
+  term: "Nebula"
+  definition: "A cloud of gas and dust in space. The term originally referred to any fuzzy patch visible through a telescope."
+  lecture: 18
+  module: 2
+  tier: core
+
+l18-protoplanetary-disk:
+  term: "Protoplanetary disk"
+  definition: "A flat, rotating disk of gas and dust surrounding a young star, where planets form through collisions and mergers of dust grains and planetesimals."
+  lecture: 18
+  module: 2
+  tier: core
+
+l18-protostar:
+  term: "Protostar"
+  definition: "An object in the early stages of star formation, heated by gravitational contraction rather than nuclear fusion, embedded in an infalling envelope of gas and dust."
+  lecture: 18
+  module: 2
+  tier: core
+
+l18-rayleigh-scattering:
+  term: "Rayleigh scattering"
+  definition: "The preferential scattering of short-wavelength (blue) light by particles much smaller than the wavelength. This explains why the sky is blue and why reflection nebulae are blue."
+  lecture: 18
+  module: 2
+  tier: core
+
+l18-reflection-nebula:
+  term: "Reflection nebula"
+  definition: "A cloud of gas and dust that shines by reflecting the light of nearby stars. Typically blue in color due to preferential scattering of short wavelengths."
+  lecture: 18
+  module: 2
+  tier: core
+
+l18-t-tauri-star:
+  term: "T Tauri star"
+  definition: "A young star in the pre-main-sequence phase, characterized by irregular variability, intense stellar winds, and accretion from a surrounding disk. Named after the prototype T Tauri in Taurus."
+  lecture: 18
+  module: 2
+  tier: core
+
+l19-hydrostatic-equilibrium:
+  term: "Hydrostatic Equilibrium"
+  definition: "The balance between the outward pressure force and the inward gravitational force that keeps a star from collapsing or exploding. A stable star is in hydrostatic equilibrium."
+  lecture: 19
+  module: 2
+  tier: core
+
+l19-thermostat:
+  term: "Thermostat (Stellar)"
+  definition: "The self-regulating feedback mechanism in a star: if the core contracts and heats up, pressure increases and pushes back; if it expands and cools, gravity wins again. This keeps main-sequence stars stable."
+  lecture: 19
+  module: 2
+  tier: core
+
+l19-main-sequence:
+  term: "Main Sequence"
+  definition: "The diagonal band on an H-R diagram where ~90% of stars lie and ~90% of stellar lifetimes are spent. All main-sequence stars are burning hydrogen in their cores."
+  lecture: 19
+  module: 2
+  tier: core
+
+l19-main-sequence-lifetime:
+  term: "Main-Sequence Lifetime"
+  definition: "The total time a star spends burning hydrogen in its core, given by $t_{\\text{MS}} \\propto M^{-2.5}$. Massive stars have short lifetimes; low-mass stars have long lifetimes."
+  lecture: 19
+  module: 2
+  tier: core
+
+l19-shell-burning:
+  term: "Shell Burning"
+  definition: "Nuclear fusion occurring in a thin shell surrounding an inert core, rather than in the core itself. Shell-burning luminosity can exceed core-burning luminosity."
+  lecture: 19
+  module: 2
+  tier: core
+
+l19-red-giant:
+  term: "Red Giant"
+  definition: "An evolved star with a cool surface (spectral type K or M), enormous radius (10–100 $R_\\odot$), and high luminosity (100–10,000 $L_\\odot$). Powered by hydrogen shell burning around an inert helium core."
+  lecture: 19
+  module: 2
+  tier: core
+
+l19-red-giant-branch:
+  term: "Red Giant Branch (RGB)"
+  definition: "The region of the H-R diagram (upper right) where red giants lie. Stars move from the main sequence to the red giant branch when core hydrogen is exhausted."
+  lecture: 19
+  module: 2
+  tier: core
+
+l19-horizontal-branch:
+  term: "Horizontal Branch"
+  definition: "A phase in the evolution of low-mass red giants, where the helium core fuses helium stably. Appears as a nearly horizontal feature on some H-R diagrams."
+  lecture: 19
+  module: 2
+  tier: core
+
+l19-helium-flash:
+  term: "Helium Flash"
+  definition: "A thermonuclear runaway in the degenerate helium core of a low-mass red giant. The core ignites almost simultaneously, releasing vast energy in seconds. Brief but intense."
+  lecture: 19
+  module: 2
+  tier: core
+
+l19-asymptotic-giant-branch:
+  term: "Asymptotic Giant Branch (AGB)"
+  definition: "A second red giant phase in low-mass stars, where both hydrogen and helium shells are burning alternately. AGB stars are the oldest, longest-lived stars and are losing their envelopes."
+  lecture: 19
+  module: 2
+  tier: core
+
+l19-evolutionary-track:
+  term: "Evolutionary Track"
+  definition: "The path a star traces on the H-R diagram as it evolves through different stages of its life (main sequence → red giant → white dwarf, etc.). Different masses follow different tracks."
+  lecture: 19
+  module: 2
+  tier: core
+
+l19-white-dwarf:
+  term: "White Dwarf"
+  definition: "The dense, Earth-sized remnant of a dead star's core. Hot but small, hence dim. Found in the lower-left region of the H-R diagram. The final fate of stars like our Sun."
+  lecture: 19
+  module: 2
+  tier: core
+
+l19-supergiant:
+  term: "Supergiant"
+  definition: "A massive, evolved star with enormous radius (>100 $R_\\odot$) and high luminosity. High-mass stars become supergiants before exploding as supernovae."
+  lecture: 19
+  module: 2
+  tier: core
+
+l19-turnoff-point:
+  term: "Turnoff Point"
+  definition: "On the H-R diagram of a star cluster, the point where the main sequence ends — the most massive stars still burning hydrogen. Used to determine cluster age via isochrone fitting."
+  lecture: 19
+  module: 2
+  tier: core
+
+l19-isochrone:
+  term: "Isochrone"
+  definition: "A curve on the H-R diagram representing all stars of the same age but different masses. Isochrone fitting compares observed clusters to theoretical models to determine age."
+  lecture: 19
+  module: 2
+  tier: core
+
+l19-degenerate-matter:
+  term: "Degenerate Matter"
+  definition: "Matter so dense that it is supported by quantum effects (electron degeneracy pressure) rather than thermal pressure. Found in white dwarfs and low-mass red giant cores."
+  lecture: 19
+  module: 2
+  tier: core
+
+l19-stefan-boltzmann-law:
+  term: "Stefan-Boltzmann Law"
+  definition: "$L = 4\\pi R^2 \\sigma T^4$, relating luminosity to radius and surface temperature. Shows that cooler, larger stars can be as luminous as hotter, smaller stars."
+  lecture: 19
+  module: 2
+  tier: core
+
+l20-asymptotic-giant-branch:
+  term: "Asymptotic Giant Branch (AGB)"
+  definition: "Evolutionary stage of low-mass stars characterized by helium shell burning and intense mass loss via stellar winds."
+  lecture: 20
+  module: 2
+  tier: core
+
+l20-binding-energy:
+  term: "Binding energy"
+  definition: "Energy required to completely disassemble a nucleus into separate protons and neutrons."
+  lecture: 20
+  module: 2
+  tier: core
+
+l20-chandrasekhar-limit:
+  term: "Chandrasekhar limit"
+  definition: "Maximum mass (~1.4 M☉) that can be supported by electron degeneracy pressure in a white dwarf. Above this mass, electron degeneracy fails and core collapse occurs."
+  lecture: 20
+  module: 2
+  tier: core
+
+l20-core-collapse:
+  term: "Core collapse"
+  definition: "Catastrophic gravitational collapse of a massive star's iron core when degeneracy pressure fails at nuclear density. Occurs in ~0.3 seconds."
+  lecture: 20
+  module: 2
+  tier: core
+
+l20-degeneracy-pressure:
+  term: "Degeneracy pressure"
+  definition: "Quantum mechanical pressure arising from the Pauli exclusion principle. Electrons (or neutrons) resist compression by exerting outward pressure."
+  lecture: 20
+  module: 2
+  tier: core
+
+l20-ejecta:
+  term: "Ejecta"
+  definition: "Material ejected from an explosion, typically referring to supernova ejecta moving at >10,000 km/s."
+  lecture: 20
+  module: 2
+  tier: core
+
+l20-electron-capture:
+  term: "Electron capture"
+  definition: "Process in which an atomic nucleus captures an inner-shell electron, converting a proton to a neutron."
+  lecture: 20
+  module: 2
+  tier: core
+
+l20-iron-core:
+  term: "Iron core"
+  definition: "Inert core of a massive star (mass ~1.4 M☉) composed primarily of iron-56 and nickel-56. Iron fusion is endothermic and does not provide energy support."
+  lecture: 20
+  module: 2
+  tier: core
+
+l20-neutron-drip-line:
+  term: "Neutron drip line"
+  definition: "Density at which neutrons cannot be bound to nuclei and are forced to exist as free particles. Occurs at ~10^{14} g/cm³."
+  lecture: 20
+  module: 2
+  tier: core
+
+l20-nuclear-density:
+  term: "Nuclear density"
+  definition: "Density at which atomic nuclei are compressed to the point where protons and neutrons are in contact. ~10^{14}–10^{15} g/cm³."
+  lecture: 20
+  module: 2
+  tier: core
+
+l20-nucleosynthesis:
+  term: "Nucleosynthesis"
+  definition: "Process of creating atomic nuclei through nuclear reactions. Occurs in stellar cores (stellar nucleosynthesis) and in supernovae (explosive nucleosynthesis)."
+  lecture: 20
+  module: 2
+  tier: core
+
+l20-onion-shell-structure:
+  term: "Onion-shell structure"
+  definition: "Internal structure of a massive star near the end of its life, consisting of concentric shells of different fusing elements (H, He, C, O, Ne, Si, Fe)."
+  lecture: 20
+  module: 2
+  tier: core
+
+l20-pauli-exclusion-principle:
+  term: "Pauli exclusion principle"
+  definition: "Quantum mechanical principle stating that no two identical fermions (e.g., electrons) can occupy the same quantum state."
+  lecture: 20
+  module: 2
+  tier: core
+
+l20-planetary-nebula:
+  term: "Planetary nebula"
+  definition: "Glowing shell of gas ejected by a dying low-mass star, illuminated by ultraviolet radiation from the exposed white dwarf core."
+  lecture: 20
+  module: 2
+  tier: core
+
+l20-progenitor:
+  term: "Progenitor"
+  definition: "Original star that led to a given outcome (e.g., white dwarf, neutron star, supernova)."
+  lecture: 20
+  module: 2
+  tier: core
+
+l20-shock-wave:
+  term: "Shock wave"
+  definition: "Supersonic disturbance in which pressure, density, and temperature increase abruptly. In supernovae, the outward-propagating shock wave powered by core-bounce energy."
+  lecture: 20
+  module: 2
+  tier: core
+
+l20-standard-candle:
+  term: "Standard candle"
+  definition: "Astronomical object of known intrinsic brightness, used to measure distances via inverse-square law."
+  lecture: 20
+  module: 2
+  tier: core
+
+l20-thermonuclear-detonation:
+  term: "Thermonuclear detonation"
+  definition: "Uncontrolled nuclear burning propagating as a shock through stellar material. Occurs in Type Ia supernovae when the burning front reaches the speed of sound."
+  lecture: 20
+  module: 2
+  tier: core
+
+l20-type-ia-supernova:
+  term: "Type Ia supernova"
+  definition: "Thermonuclear explosion of a white dwarf in a binary system. Material accreted from a companion reaches the Chandrasekhar limit and detonates."
+  lecture: 20
+  module: 2
+  tier: core
+
+l20-type-ii-supernova:
+  term: "Type II supernova"
+  definition: "Core-collapse supernova: the catastrophic explosion of a massive star's iron core after gravitational collapse and shock wave revival."
+  lecture: 20
+  module: 2
+  tier: core
+
+l20-white-dwarf:
+  term: "White dwarf"
+  definition: "Stellar remnant of a low-mass star: the exposed, cooling core left behind after planetary nebula phase. Supported by electron degeneracy pressure."
+  lecture: 20
+  module: 2
+  tier: core
+
+l21-accretion-disk:
+  term: "Accretion Disk"
+  definition: "A rotating disk of material spiraling onto a compact object (neutron star or black hole), typically emitting high-energy radiation."
+  lecture: 21
+  module: 2
+  tier: core
+
+l21-black-hole:
+  term: "Black Hole"
+  definition: "A region of spacetime bounded by an event horizon, from which nothing, including light, can escape."
+  lecture: 21
+  module: 2
+  tier: core
+
+l21-chandrasekhar-limit:
+  term: "Chandrasekhar Limit"
+  definition: "The maximum mass (~1.4 M☉) of a white dwarf supported by electron degeneracy pressure."
+  lecture: 21
+  module: 2
+  tier: core
+
+l21-event-horizon:
+  term: "Event Horizon"
+  definition: "The boundary around a black hole defined by the Schwarzschild radius, from which escape is impossible."
+  lecture: 21
+  module: 2
+  tier: core
+
+l21-gravitational-wave:
+  term: "Gravitational Wave"
+  definition: "A ripple in the fabric of spacetime produced by accelerating masses, propagating at the speed of light."
+  lecture: 21
+  module: 2
+  tier: core
+
+l21-magnetar:
+  term: "Magnetar"
+  definition: "A neutron star with an exceptionally strong magnetic field (~10¹⁵ gauss), capable of producing giant flares."
+  lecture: 21
+  module: 2
+  tier: core
+
+l21-neutron-degeneracy-pressure:
+  term: "Neutron Degeneracy Pressure"
+  definition: "The quantum mechanical resistance of neutrons to compression, supporting a neutron star against gravity."
+  lecture: 21
+  module: 2
+  tier: core
+
+l21-neutron-star:
+  term: "Neutron Star"
+  definition: "A stellar remnant composed primarily of neutrons, ~10 km in radius, with a mass of 1.4–3 M☉."
+  lecture: 21
+  module: 2
+  tier: core
+
+l21-pulsar:
+  term: "Pulsar"
+  definition: "A rapidly rotating neutron star whose magnetic axis is tilted relative to its rotation axis, producing a periodic beam of radio emission."
+  lecture: 21
+  module: 2
+  tier: core
+
+l21-schwarzschild-radius:
+  term: "Schwarzschild Radius"
+  definition: "The radius $R_s = 2GM/c^2$ that defines the event horizon of a non-rotating black hole."
+  lecture: 21
+  module: 2
+  tier: core
+
+l21-singularity:
+  term: "Singularity"
+  definition: "The point (or region) at the center of a black hole where density becomes infinite and general relativity ceases to apply."
+  lecture: 21
+  module: 2
+  tier: core
+
+l21-spaghettification:
+  term: "Spaghettification"
+  definition: "The tidal effect near a black hole's event horizon, in which gravity is much stronger on one part of an object than another, stretching the object."
+  lecture: 21
+  module: 2
+  tier: core
+
+l21-tov-limit:
+  term: "TOV Limit"
+  definition: "The maximum mass (~2–3 M☉) of a neutron star supported by neutron degeneracy pressure; above this, collapse to a black hole occurs."
+  lecture: 21
+  module: 2
+  tier: core
+
+l21-x-ray-binary:
+  term: "X-ray Binary"
+  definition: "A binary system containing a compact object (neutron star or black hole) accreting material from a companion star, producing X-ray emission."
+  lecture: 21
+  module: 2
+  tier: core

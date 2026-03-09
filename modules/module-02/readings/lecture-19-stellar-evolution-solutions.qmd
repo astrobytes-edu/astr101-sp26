@@ -1,0 +1,163 @@
+---
+title: "Lecture 19 Solutions: Stellar Evolution"
+subtitle: "Practice Problem Solutions"
+author: "Dr. Anna Rosen"
+date: "2026-03-25"
+description: "Solutions to the Lecture 19 practice problems."
+draft: true
+course: ASTR 101
+module: "2 - Stars & Stellar Evolution"
+---
+
+::: {.callout-note}
+**Student note:** These are model solutions written to show setup, units, and reasoning clearly. Your own work can be shorter as long as the physics, units, and logic are sound.
+
+**Use these after you try the problems yourself.** The point is to compare your reasoning to a worked example, not to skip the thinking step.
+:::
+
+## Core Problems
+
+### Problem 1: Main-Sequence Lifetime Calculation
+**Restatement:** A star has a mass of 3 $M_\odot$.
+(a) What is its main-sequence lifetime?
+(b) If the star formed at the same time as the Sun (4.6 Gyr ago), what is its current evolutionary stage?
+(c) How much time remains before it exhausts its core hydrogen?
+(a) Using $t_{\text{MS}} = 10 \text{ Gyr} \times (M/1 M_\odot)^{-2.5}$:
+
+$$t_{\text{MS}} = 10 \text{ Gyr} \times (3)^{-2.5} = 10 \text{ Gyr} \times 0.0606 = 0.606 \text{ Gyr} \approx 606 \text{ Myr}$$
+
+(b) The star's total main-sequence lifetime is ~606 Myr, but it has already existed for 4.6 Gyr — much longer than its main-sequence lifetime. **It has exhausted its core hydrogen and is now in the red giant or post-main-sequence phase.**
+
+(c) **No time remains.** The star left the main sequence roughly $4.6 - 0.606 = 3.99$ billion years ago. It is well into its red giant phase now.
+
+### Problem 2: The Red Giant Sun
+**Restatement:** In approximately 5.4 billion years, our Sun will exhaust its core hydrogen and become a red giant.
+
+(a) If the Sun's luminosity increases to 2,000 $L_\odot$ and its temperature drops to 3,500 K (both realistic estimates), what will its radius be?
+
+(b) How many times larger than today will the Sun be?
+
+*Hint: Use the Stefan-Boltzmann law: $L = 4\pi R^2 \sigma T^4$. In ratio form: $\frac{L_{\text{future}}}{L_{\odot}} = (R_{\text{future}}/R_{\odot})^2 (T_{\text{future}}/T_{\odot})^4$*
+(a) Using the Stefan-Boltzmann ratio:
+
+$$\frac{2,000}{1} = \left(\frac{R_{\text{future}}}{R_{\odot}}\right)^2 \left(\frac{3,500}{5,800}\right)^4$$
+
+$$2,000 = \left(\frac{R_{\text{future}}}{R_{\odot}}\right)^2 (0.603)^4$$
+
+$$2,000 = \left(\frac{R_{\text{future}}}{R_{\odot}}\right)^2 \times 0.132$$
+
+$$\frac{R_{\text{future}}}{R_{\odot}} = \sqrt{\frac{2,000}{0.132}} = \sqrt{15,152} \approx 123 R_{\odot}$$
+
+(b) The future Sun will be approximately **123 times larger** than it is today. (For reference, the Sun's current radius is ~696,000 km, so the red giant Sun will have a radius of ~85 million km — extending past the current orbit of Venus at ~108 million km. Mercury's orbit will definitely be engulfed; Venus may be.)
+
+### Problem 3: Interpreting an H-R Diagram
+**Restatement:** You observe a star that is cooler (lower temperature, farther right) than the Sun but has the same luminosity as the Sun (~1 $L_\odot$).
+
+(a) Using the Stefan-Boltzmann law, is this star larger or smaller than the Sun? By how much?
+
+(b) What evolutionary stage is this star in?
+(a) Let's say the star has temperature $T = 4,000$ K (cooler than the Sun's 5,800 K). Using Stefan-Boltzmann in ratio form:
+
+$$\frac{L_{\text{star}}}{L_{\odot}} = \left(\frac{R_{\text{star}}}{R_{\odot}}\right)^2 \left(\frac{T_{\text{star}}}{T_{\odot}}\right)^4$$
+
+$$1 = \left(\frac{R_{\text{star}}}{R_{\odot}}\right)^2 \left(\frac{4,000}{5,800}\right)^4$$
+
+$$1 = \left(\frac{R_{\text{star}}}{R_{\odot}}\right)^2 (0.69)^4$$
+
+$$1 = \left(\frac{R_{\text{star}}}{R_{\odot}}\right)^2 \times 0.227$$
+
+$$\frac{R_{\text{star}}}{R_{\odot}} = \sqrt{\frac{1}{0.227}} = \sqrt{4.4} \approx 2.1 R_{\odot}$$
+
+**The star is larger — about 2.1 times the Sun's radius.**
+
+(b) This star is off the main sequence (the Sun is on the main sequence) and has expanded. **It is likely in an early red giant phase.** It is an evolved, old star that has exhausted its core hydrogen.
+
+### Problem 4: Cluster Age from Main-Sequence Turnoff
+**Restatement:** A globular cluster shows a main-sequence turnoff at spectral type F (temperature ~6,500 K, luminosity ~4 $L_\odot$).
+
+(a) What mass corresponds to this turnoff luminosity and temperature?
+
+(b) What is the age of the cluster?
+
+*Hint: A 1.5 $M_\odot$ star has luminosity ~5.5 $L_\odot$; a 1.4 $M_\odot$ star has luminosity ~4.2 $L_\odot$. Interpolate.*
+(a) The turnoff star has luminosity ~4 $L_\odot$. From the hint, this corresponds to a mass between 1.4 and 1.5 $M_\odot$. Interpolating, the turnoff mass is approximately **1.4 $M_\odot$**.
+
+(b) The cluster age equals the main-sequence lifetime of the turnoff mass:
+
+$$t_{\text{MS}} = 10 \text{ Gyr} \times (1.4)^{-2.5} = 10 \text{ Gyr} \times 0.286 \approx 2.9 \text{ Gyr}$$
+
+**The cluster is approximately 2.9–3 billion years old.** This is an intermediate-age globular cluster.
+
+### Problem 5: The Death Timeline of the Most Massive Star in a Cluster
+**Restatement:** A young star cluster contains a 50 $M_\odot$ star and a 1 $M_\odot$ star (like our Sun), both formed at time $t = 0$.
+
+(a) When will the 50 $M_\odot$ star leave the main sequence?
+
+(b) When will the 1 $M_\odot$ star leave the main sequence?
+
+(c) For how long will the cluster contain at least one main-sequence star?
+(a) For the 50 $M_\odot$ star:
+
+$$t_{\text{MS}} = 10 \text{ Gyr} \times (50)^{-2.5} = 10 \text{ Gyr} \times 0.000358 \approx 0.0036 \text{ Gyr} = 3.6 \text{ Myr}$$
+
+**The 50 $M_\odot$ star will leave the main sequence in ~3.6 million years.**
+
+(b) For the 1 $M_\odot$ star:
+
+$$t_{\text{MS}} = 10 \text{ Gyr}$$
+
+**The 1 $M_\odot$ star will leave the main sequence in ~10 billion years.**
+
+(c) The cluster will contain a main-sequence star as long as the lowest-mass star remains on the main sequence. The 1 $M_\odot$ star will remain for 10 Gyr, but only ~3.6 Myr remain before the 50 $M_\odot$ star leaves. Actually, the cluster will contain main-sequence stars *until the 1 $M_\odot$ star leaves the main sequence*, which is 10 Gyr. But the last main-sequence stars in the cluster will be low-mass K and M dwarfs.
+
+**For ~10 billion years, the cluster will contain at least one main-sequence star.** (In reality, clusters disperse due to gravitational interactions, so they don't survive 10 Gyr intact, but in principle, yes.)
+
+## Challenge Problems
+
+### Challenge 1: Hydrostatic Equilibrium and the Virial Theorem
+**Restatement:** A star is in hydrostatic equilibrium. The virial theorem states that for a self-gravitating body, the total gravitational potential energy $U$ and total thermal kinetic energy $K$ are related by:
+
+$$2K + U = 0$$
+
+or equivalently, $K = -U/2$.
+
+If a star contracts and loses gravitational potential energy (becomes more negative, releasing energy), what happens to its thermal energy and temperature?
+
+*Hint: Think about what happens to $U$ when the star contracts.*
+When a star contracts, its radius decreases. The gravitational potential energy $U$ becomes *more negative* (the star is more tightly bound). By the virial theorem, $K = -U/2$. If $U$ becomes more negative, then $-U/2$ becomes larger, which means $K$ increases.
+
+Thermal kinetic energy increasing means the gas heats up. **The star's temperature increases.**
+
+This is why core contraction leads to heating — it's a direct consequence of the virial theorem. Conversely, if a star expands and loses thermal energy, it cools down. This balance between contraction-heating and expansion-cooling is at the heart of stellar evolution.
+
+### Challenge 2: The Future Fate of the Galaxy
+**Restatement:** Our Milky Way contains stars of all masses, from 0.08 $M_\odot$ to ~100 $M_\odot$. In 1 trillion years (far beyond the current age of the universe):
+
+(a) Which stars will still be on the main sequence?
+
+(b) What will the H-R diagram look like? (In particular, what regions will be empty or fully occupied?)
+
+(c) Why would no cluster have a main-sequence turnoff in a trillion years?
+(a) Only the lowest-mass stars will remain on the main sequence: those with mass less than approximately **0.06 $M_\odot$**. These are the **brown dwarfs** and **M-dwarf** stars that have such long lifetimes they will barely have burned any hydrogen in a trillion years.
+
+(b) The H-R diagram will show:
+- **Empty main sequence** (all except the lowest-mass M-dwarfs have left)
+- **Crowded giant branches and AGB** (all evolved stars are here)
+- **Crowded white dwarf region** (all dead stellar cores have cooled to white dwarfs; some may be cooling further to "black dwarfs," though no cooling has occurred yet in the real universe)
+- **No supergiants** (all massive stars have exploded)
+
+(c) In any star cluster older than a trillion years, even the lowest-mass stars have left the main sequence (since the least massive star in the cluster has an age equal to the cluster age, and if the cluster is a trillion years old, even 0.06 $M_\odot$ stars are exhausted). **There is no main-sequence turnoff because there is no main sequence to turn off from.**
+
+### Challenge 3: Stellar Evolution on an Alien Exoplanet
+**Restatement:** An astronomer discovers an exoplanet orbiting a red giant star. The star has been observed in the same state (cool, luminous, on the red giant branch) for the past 10,000 years (a tiny span of time in stellar terms).
+
+(a) Is this red giant likely to remain a red giant for the next million years? Why or why not?
+
+(b) What does the timescale of stellar observations tell us about red giants in general?
+
+(c) If you observed 10,000 different red giants in the sky, what would you expect to see in terms of their lifetimes on the red giant branch?
+(a) **It depends on the red giant's mass.** Red giants are not in a "final" stage — they are in a dynamic transition. A low-mass red giant spends ~1 Gyr on the red giant branch (and then ~1 Myr on the AGB before shedding its envelope). A high-mass red giant spends only millions of years in the giant phase before evolving to a supergiant and eventually exploding. Without knowing the star's mass, we cannot predict how long it will remain a red giant.
+
+(b) **Red giants evolve rapidly compared to main-sequence stars.** A main-sequence star can remain essentially constant for billions of years, so observations over 10,000 years reveal no change. But a red giant is undergoing rapid transformation (on cosmic timescales) — its core is contracting, shells are burning, and the envelope is expanding and being lost. Over a few million years, a red giant can transform dramatically. The fact that we observe it as stable over 10,000 years just reflects that 10,000 years is tiny compared to even the shortest red giant lifetimes.
+
+(c) **You would observe a distribution of red giants at different stages of their evolution.** Some would be near the base of the red giant branch (just leaving the main sequence). Some would be further along, with higher luminosity. Some low-mass stars would be on the horizontal branch (helium core burning). Some would be on the AGB (second red giant phase). A single snapshot of the sky shows stars at different evolutionary stages because the universe is old and stars have been forming continuously. This is a triumph of stellar evolution theory: we can interpret the distribution of red giants as a fossil record of stellar life.

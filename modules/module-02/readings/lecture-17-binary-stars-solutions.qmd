@@ -1,0 +1,132 @@
+---
+title: "Lecture 17 Solutions: Binary Stars & Stellar Masses"
+subtitle: "Practice Problem Solutions"
+author: "Dr. Anna Rosen"
+date: "2026-03-18"
+description: "Solutions to the Lecture 17 practice problems."
+draft: true
+course: ASTR 101
+module: "2 - Stars & Stellar Evolution"
+---
+
+::: {.callout-note}
+**Student note:** These are model solutions written to show setup, units, and reasoning clearly. Your own work can be shorter as long as the physics, units, and logic are sound.
+
+**Use these after you try the problems yourself.** The goal is to compare your reasoning to a clean worked example, not to skip the thinking step.
+:::
+
+## Core Problems
+
+### Problem 1: Combined Mass of a Visual Binary
+
+**Given:** $P = 20$ yr, $a = 4$ AU
+
+Use Newton's form of Kepler's third law in solar units:
+
+$$M_1 + M_2 = \frac{a^3}{P^2}$$
+
+So
+
+$$M_1 + M_2 = \frac{4^3}{20^2} = \frac{64}{400} = 0.16\ M_\odot$$
+
+**Answer:** The combined mass is $0.16\,M_\odot$.
+
+### Problem 2: Spectroscopic Mass Ratio
+
+**Given:** $v_1 = 25$ km/s, $v_2 = 50$ km/s
+
+In a binary, the more massive star moves more slowly, so
+
+$$\frac{M_2}{M_1} = \frac{v_1}{v_2} = \frac{25}{50} = 0.50$$
+
+**Answer:** The secondary is half as massive as the primary.
+
+### Problem 3: Mass-Luminosity Relation
+
+**Given:** $M = 4\,M_\odot$
+
+Use
+
+$$\frac{L}{L_\odot} = \left(\frac{M}{M_\odot}\right)^{3.5} = 4^{3.5} = 4^3 \times 4^{0.5} = 64 \times 2 = 128$$
+
+**Answer:** The star is about $128$ times more luminous than the Sun.
+
+### Problem 4: Main-Sequence Lifetime
+
+**Given:** $M = 2.5\,M_\odot$
+
+Use
+
+$$t_{\rm MS} = 10\ \text{Gyr} \times M^{-2.5}$$
+
+So
+
+$$t_{\rm MS} = 10 \times (2.5)^{-2.5}\ \text{Gyr}$$
+
+Since $2.5^{2.5} \approx 9.9$,
+
+$$t_{\rm MS} \approx \frac{10}{9.9}\ \text{Gyr} \approx 1.0\ \text{Gyr}$$
+
+**Answer:** The lifetime is about **1 billion years**.
+
+### Problem 5: Infer Mass from Luminosity
+
+**Given:** $L = 200\,L_\odot$
+
+Use
+
+$$\frac{L}{L_\odot} = \left(\frac{M}{M_\odot}\right)^{3.5}$$
+
+Solve for mass:
+
+$$\frac{M}{M_\odot} = 200^{1/3.5} \approx 4.5$$
+
+**Answer:** The star's mass is about $4.5\,M_\odot$.
+
+## Challenge Problems
+
+### Challenge 1: Individual Masses in a Spectroscopic Binary
+
+**Given:**
+- $P = 5$ days $= 5/365.25 \approx 0.0137$ yr
+- $a = 0.05$ AU
+- $v_1 = 100$ km/s
+- $v_2 = 60$ km/s
+
+First find the total mass:
+
+$$M_{\rm tot} = \frac{a^3}{P^2} = \frac{(0.05)^3}{(0.0137)^2} \approx \frac{1.25 \times 10^{-4}}{1.88 \times 10^{-4}} \approx 0.67\,M_\odot$$
+
+Now use the velocity ratio:
+
+$$\frac{M_2}{M_1} = \frac{v_1}{v_2} = \frac{100}{60} = \frac{5}{3}$$
+
+So
+
+$$M_2 = \frac{5}{3}M_1,\qquad M_1 + M_2 = \frac{8}{3}M_1 = 0.67\,M_\odot$$
+
+which gives
+
+$$M_1 \approx 0.25\,M_\odot,\qquad M_2 \approx 0.42\,M_\odot$$
+
+**Answer:** The individual masses are about $0.25\,M_\odot$ and $0.42\,M_\odot$.
+
+### Challenge 2: Two Equal-Mass Stars
+
+Each star has mass $2\,M_\odot$, so each has luminosity
+
+$$\frac{L}{L_\odot} = 2^{3.5} = 2^3 \times 2^{0.5} \approx 8 \times 1.41 \approx 11.3$$
+
+For two identical stars,
+
+$$L_{\rm total} \approx 2 \times 11.3\,L_\odot \approx 22.6\,L_\odot$$
+
+**Answer:** Together they are about **23 times as luminous** as the Sun.
+
+### Challenge 3: Why Sirius B Does Not Follow the Main-Sequence Relation
+
+The mass-luminosity relation applies only to **main-sequence stars**, where luminosity is set mainly by steady core hydrogen fusion.
+
+Sirius B is a **white dwarf**, which means it is no longer generating energy by core hydrogen fusion. Its luminosity comes from residual heat, not from the same physics that sets the brightness of a main-sequence star.
+
+**Answer:** We should not expect Sirius B to follow the main-sequence mass-luminosity relation because it is an evolved stellar remnant, not a hydrogen-burning main-sequence star.

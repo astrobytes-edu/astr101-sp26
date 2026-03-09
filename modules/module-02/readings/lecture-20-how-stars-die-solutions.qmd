@@ -1,0 +1,304 @@
+---
+title: "Lecture 20 Solutions: How Stars Die"
+subtitle: "Practice Problem Solutions"
+author: "Dr. Anna Rosen"
+date: "2026-04-06"
+description: "Solutions to the Lecture 20 practice problems."
+draft: true
+course: ASTR 101
+module: "2 - Stars & Stellar Evolution"
+---
+
+::: {.callout-note}
+**Student note:** These are model solutions written to show setup, units, and reasoning clearly. Your own work can be shorter as long as the physics, units, and logic are sound.
+
+**Use these after you try the problems yourself.** The point is to compare your reasoning to a worked example, not to skip the thinking step.
+:::
+
+## Core Concepts
+
+### Problem 1: Planetary Nebula Timescale
+
+**Given:** Radius $r = 0.5$ light-years; expansion speed $v = 15$ km/s.
+
+**Find:** Approximate age $t$.
+
+**Equation:** $t = r/v$
+
+**Steps:**
+
+Convert the radius to meters:
+
+$$
+r = 0.5 \times 9.46 \times 10^{15}\,\mathrm{m} = 4.73 \times 10^{15}\,\mathrm{m}
+$$
+
+Convert the speed:
+
+$$
+v = 15\,\mathrm{km/s} = 1.5 \times 10^4\,\mathrm{m/s}
+$$
+
+Now divide:
+
+$$
+t = \frac{4.73 \times 10^{15}}{1.5 \times 10^4}
+  \approx 3.15 \times 10^{11}\,\mathrm{s}
+$$
+
+Convert seconds to years:
+
+$$
+t \approx \frac{3.15 \times 10^{11}}{3.15 \times 10^7}
+  \approx 1.0 \times 10^4\,\mathrm{yr}
+$$
+
+**Unit check:** meters divided by meters per second gives seconds.
+
+**Sanity check:** The result is about $10^4$ years, which matches the stated typical planetary-nebula lifetime.
+
+**Answer:** The nebula is about **10,000 years old**.
+
+### Problem 2: White Dwarf Density
+
+**Given:** $M_\odot = 2 \times 10^{30}\,\mathrm{kg}$; $R_\oplus = 6.4 \times 10^6\,\mathrm{m}$.
+
+**Find:** Average density $\rho = M/V$.
+
+**Equation:**
+
+$$
+V = \frac{4}{3}\pi R^3, \qquad \rho = \frac{M}{V}
+$$
+
+**Steps:**
+
+First find the volume:
+
+$$
+V = \frac{4}{3}\pi (6.4 \times 10^6)^3
+  \approx 1.10 \times 10^{21}\,\mathrm{m^3}
+$$
+
+Then find the density:
+
+$$
+\rho = \frac{2 \times 10^{30}}{1.10 \times 10^{21}}
+     \approx 1.8 \times 10^9\,\mathrm{kg/m^3}
+$$
+
+Compare to water:
+
+$$
+\frac{1.8 \times 10^9}{10^3} = 1.8 \times 10^6
+$$
+
+**Sanity check:** A white dwarf should be millions of times denser than ordinary matter, so this is the right scale.
+
+**Answer:** The average density is about **$1.8 \times 10^9\,\mathrm{kg/m^3}$**, or roughly **1.8 million times the density of water**.
+
+### Problem 3: Chandrasekhar Limit
+
+**Given:** White dwarf mass $= 1.5\,M_\odot$.
+
+**Find:** Can electron degeneracy pressure support it?
+
+**Reasoning:**
+
+The Chandrasekhar limit is about $1.4\,M_\odot$. A white dwarf above this mass is unstable: electron degeneracy pressure can no longer balance gravity.
+
+What happens next depends on the physical setting:
+
+- If the white dwarf is carbon-oxygen rich and pushed upward by accretion, carbon ignites explosively and the star can become a **Type Ia supernova**.
+- More generally, the star **cannot remain a white dwarf**. Collapse must continue once the degeneracy support fails.
+
+**Answer:** A $1.5\,M_\odot$ white dwarf is **not stable**. Electron degeneracy pressure cannot support it, so it must either collapse further or explode, depending on its composition and environment.
+
+## Working with Core Collapse
+
+### Problem 4: The Iron Catastrophe
+
+**Key idea:** Iron sits near the peak of the binding-energy-per-nucleon curve.
+
+That means:
+
+- Fusing light elements up to iron **releases** energy.
+- Fusing iron into heavier nuclei **requires** energy.
+
+So an iron core is the end of the line for ordinary stellar fusion. Once the core becomes iron rich, fusion no longer supplies the outward pressure needed to support the star.
+
+**Answer:** Iron is special because it has one of the highest binding energies per nucleon. An iron core **cannot release energy by fusing**; further fusion is endothermic, so the core loses support and collapses.
+
+### Problem 5: Collapse Timescale
+
+**Given:** Initial radius $R_i \approx 6400$ km; final radius $R_f \approx 20$ km; time $\Delta t = 0.3$ s.
+
+**Find:** Average infall speed.
+
+**Equation:**
+
+$$
+v_{\rm avg} = \frac{\Delta r}{\Delta t}
+$$
+
+**Steps:**
+
+Compute the distance fallen:
+
+$$
+\Delta r = 6400 - 20 = 6380\,\mathrm{km}
+$$
+
+Now divide by the time:
+
+$$
+v_{\rm avg} = \frac{6380}{0.3}
+          \approx 2.13 \times 10^4\,\mathrm{km/s}
+$$
+
+Compare to the speed of light:
+
+$$
+\frac{2.13 \times 10^4}{3.0 \times 10^5} \approx 0.071
+$$
+
+**Sanity check:** A core collapse should be a substantial fraction of $c$, but still less than $c$.
+
+**Answer:** The average infall speed is about **$2.1 \times 10^4\,\mathrm{km/s}$**, or about **7% of the speed of light**.
+
+### Problem 6: Neutrino Physics
+
+Neutrinos interact weakly with matter, but in a collapsing stellar core two things become enormous at once:
+
+- the **number** of neutrinos produced
+- the **density** of material behind the stalled shock
+
+Even with a tiny interaction cross section, a small fraction of an enormous neutrino flux can deposit enough energy into the surrounding matter to reheat it. That heating helps revive the shock and drive the explosion.
+
+**Answer:** Neutrino heating works because the core is so dense and the neutrino flux is so huge that even a weak interaction can transfer a meaningful amount of energy.
+
+## Nucleosynthesis and Element Origins
+
+### Problem 7: Where Did You Come From?
+
+One valid example is **iron**.
+
+- **Stellar environment:** Iron is assembled late in the life of massive stars and is also produced in supernova nucleosynthesis.
+- **Dispersal mechanism:** A core-collapse supernova ejects that material into the interstellar medium.
+- **Entry into the solar nebula:** The iron mixed into the gas and dust that later collapsed to form the Sun and planets about 4.6 billion years ago.
+
+**Observable -> model -> inference:** We measure iron lines in stellar and nebular spectra, use nucleosynthesis models, and infer that the iron in rocky planets came from earlier generations of dying stars.
+
+### Problem 8: Supernova Energy Budget
+
+**Given:** Total energy $E_{\rm tot} = 10^{46}\,\mathrm{J}$; kinetic fraction $= 1\%$.
+
+**Find:** Energy in ejecta motion.
+
+**Steps:**
+
+$$
+E_{\rm kin} = 0.01 \times 10^{46} = 10^{44}\,\mathrm{J}
+$$
+
+Compare to the Sun's lifetime output:
+
+$$
+E_\odot \approx L_\odot \times t_\odot
+       \approx (3.8 \times 10^{26})(10^{10}\,\mathrm{yr})
+$$
+
+Convert $10^{10}$ yr to seconds:
+
+$$
+10^{10}\,\mathrm{yr} \approx 3.15 \times 10^{17}\,\mathrm{s}
+$$
+
+So
+
+$$
+E_\odot \approx 3.8 \times 10^{26} \times 3.15 \times 10^{17}
+       \approx 1.2 \times 10^{44}\,\mathrm{J}
+$$
+
+**Answer:** The ejecta carry about **$10^{44}\,\mathrm{J}$** of kinetic energy, which is **of order one solar lifetime of radiated energy**.
+
+## Comparing Supernovae
+
+### Problem 9: Type Ia vs. Type II
+
+**Observable differences you would expect:**
+
+- **Light curve:** Type Ia events usually show a smoother rise and decline; Type II events often show a plateau or a broader, more diverse behavior because of their hydrogen envelopes.
+- **Spectra:** Type II supernovae show **hydrogen lines**. Type Ia supernovae do **not** show hydrogen and instead show strong features from intermediate-mass and iron-peak elements.
+- **Progenitor context:** Type II comes from a massive star core collapse; Type Ia comes from a white dwarf in a binary.
+
+**Why these differences exist:** The explosions start from very different structures. Type II includes a hydrogen-rich stellar envelope. Type Ia destroys a degenerate white dwarf with no hydrogen envelope.
+
+### Problem 10: Standard Candles
+
+Type Ia supernovae are comparatively uniform because they are triggered when a white dwarf approaches a fairly narrow mass scale near the Chandrasekhar limit. That tends to produce similar thermonuclear conditions and similar peak luminosities.
+
+Type II supernovae are harder to standardize because their brightness depends on more variable ingredients:
+
+- progenitor mass
+- envelope size
+- prior mass loss
+- exact explosion energy
+
+**Answer:** Type Ia events are standardizable because they begin from similar white-dwarf conditions; Type II events are more diverse because their progenitors are more diverse.
+
+## Challenge Problems
+
+### Problem 11: Reading a Supernova Spectrum
+
+Strong hydrogen emission is the key clue here. Type Ia supernovae are hydrogen poor, while Type II supernovae come from massive stars that still retain hydrogen in their outer layers.
+
+The absence of strong iron or nickel absorption does not override the hydrogen evidence. The hydrogen tells you the progenitor had a substantial stellar envelope.
+
+**Answer:** This spectrum is more consistent with a **Type II supernova**. The hydrogen emission implies a **massive hydrogen-rich progenitor star** rather than a white dwarf.
+
+### Problem 12: The Fate of the Sun
+
+A concise timeline is:
+
+1. **Now:** Main-sequence Sun, about $1\,L_\odot$, $5800\,\mathrm{K}$, $1\,R_\odot$.
+2. **About 5 billion years from now:** The Sun leaves the main sequence and becomes a **red giant**. Its luminosity rises by orders of magnitude, its temperature drops to roughly a few thousand kelvin, and its radius grows to tens or more than a hundred solar radii.
+3. **Late giant phases:** The Sun enters the asymptotic giant branch, loses mass, and becomes even more distended and unstable.
+4. **Planetary-nebula phase:** The outer envelope is expelled. This glowing shell lasts only about **$10^4$ years**.
+5. **White dwarf phase:** The exposed core remains, roughly Earth-sized and initially very hot. Over billions and then trillions of years it cools and fades.
+6. **Black dwarf:** In principle the final state is a black dwarf, but the universe is **not yet old enough** for any to exist.
+
+**Answer:** The Sun does not become a neutron star or black hole. It becomes a red giant, then a planetary nebula plus white dwarf, and only on enormously long timescales would it cool toward a black dwarf.
+
+### Problem 13: Galactic Chemical Enrichment
+
+**Given:** Total stars $= 2 \times 10^{11}$; Type II progenitors $= 1/300$ of that population; iron yield per supernova $= 0.1\,M_\odot$.
+
+**Steps:**
+
+Number of Type II progenitors:
+
+$$
+N_{\rm SN} = \frac{2 \times 10^{11}}{300} \approx 6.7 \times 10^8
+$$
+
+Total iron yield:
+
+$$
+M_{\rm Fe} = 6.7 \times 10^8 \times 0.1\,M_\odot
+          = 6.7 \times 10^7\,M_\odot
+$$
+
+Convert to kilograms:
+
+$$
+M_{\rm Fe} \approx 6.7 \times 10^7 \times 2 \times 10^{30}
+          \approx 1.3 \times 10^{38}\,\mathrm{kg}
+$$
+
+**Interpretation:** That is tens of millions of solar masses of iron.
+
+The last part of the question asks for a fraction of the Milky Way's total iron inventory, but that inventory is **not given**. So the exact fraction cannot be computed from the supplied information alone.
+
+**Answer:** The supernovae produce about **$6.7 \times 10^7\,M_\odot$ of iron**, or **$1.3 \times 10^{38}\,\mathrm{kg}$**. That is a very large contribution, but the exact fraction of the galaxy's iron content requires additional data.

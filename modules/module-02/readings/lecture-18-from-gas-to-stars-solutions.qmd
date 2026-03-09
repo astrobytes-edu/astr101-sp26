@@ -1,0 +1,158 @@
+---
+title: "Lecture 18 Solutions: From Gas to Stars"
+subtitle: "Practice Problem Solutions"
+author: "Dr. Anna Rosen"
+date: "2026-03-23"
+description: "Solutions to the Lecture 18 practice problems."
+draft: true
+course: ASTR 101
+module: "2 - Stars & Stellar Evolution"
+---
+
+::: {.callout-note}
+**Student note:** These are model solutions written to show setup, units, and reasoning clearly. Your own work can be shorter as long as the physics, units, and logic are sound.
+
+**Use these after you try the problems yourself.** The point is to compare your reasoning to a worked example, not to skip the thinking step.
+:::
+
+## Core Problems
+
+### Problem 1: Interstellar Extinction
+**Restatement:** A distant star has an apparent magnitude of $m = 15$ mag as observed through a nearby dust cloud. If there were no dust, the star's apparent magnitude would be $m = 10$ mag. How many magnitudes of extinction does the dust cloud introduce? (Recall that the magnitude scale is logarithmic: a change of 1 magnitude corresponds to a brightness ratio of 2.512. This is the definition of interstellar extinction.)
+**Interstellar extinction** is defined as the difference in apparent magnitudes with and without dust:
+
+$$A_V = m_{\rm observed} - m_{\rm intrinsic} = 15 - 10 = 5 \text{ magnitudes}$$
+
+The dust cloud attenuates the star's light by 5 magnitudes. In terms of brightness, the ratio of observed to intrinsic flux is:
+
+$$\frac{F_{\rm observed}}{F_{\rm intrinsic}} = (2.512)^{-5} \approx 0.01$$
+
+So the dust dims the star by a factor of 100 — the star appears 100 times fainter than it truly is.
+
+### Problem 2: The Jeans Criterion (Conceptual)
+**Restatement:** Two giant molecular clouds have identical temperature (T = 10 K) but different masses: Cloud A has $M_A = 10^5$ M☉, and Cloud B has $M_B = 10^4$ M☉. Both have the same average density. Which cloud is more likely to undergo gravitational collapse? Why?
+**Cloud A is more likely to collapse.** The Jeans criterion says a cloud will collapse if its mass exceeds the Jeans mass:
+
+$$M > M_{\rm Jeans}$$
+
+For a given temperature and density, the Jeans mass is a fixed value. Cloud A has 10 times the mass of Cloud B. If Cloud A's mass exceeds the Jeans mass, it will collapse. Cloud B's lower mass may or may not exceed the Jeans mass — it depends on the exact numbers, but the more massive cloud is always more likely to collapse (given identical temperature and density).
+
+**Intuition:** Gravity scales with mass; pressure is determined by temperature and density. More mass means stronger gravity. A more massive cloud is more unstable against its own gravity.
+
+### Problem 3: Kelvin-Helmholtz Contraction Timescale
+**Restatement:** A low-mass protostar (0.5 M☉) undergoing Kelvin-Helmholtz contraction has a timescale of roughly 10 million years to reach the main sequence. A high-mass protostar (10 M☉) has a timescale of roughly 0.1 million years (100,000 years).
+
+Using this information, explain why massive stars have much shorter lifetimes on the main sequence than low-mass stars.
+**The key insight is luminosity scaling.** A high-mass star is much more luminous than a low-mass star. The Kelvin-Helmholtz timescale is roughly:
+
+$$t_{\rm KH} \sim \frac{GM^2}{RL}$$
+
+where $G$ is the gravitational constant, $M$ is mass, $R$ is radius, and $L$ is luminosity.
+
+For a star contracting to the main sequence, luminosity depends strongly on mass: $L \propto M^3$ or steeper. So higher-mass stars contract faster (they have shorter Kelvin-Helmholtz timescales) because they are much more luminous and radiate energy — and thus cool and contract — much faster.
+
+On the main sequence, the same scaling applies: high-mass stars burn hydrogen much faster due to their higher core temperatures and pressures. The lifetime on the main sequence is roughly $t_{\rm MS} \sim M L_{\odot} / L \sim M / M^3 = M^{-2}$. So a 10 M☉ star lives roughly $(10)^{-2} = 100$ times shorter than a 1 M☉ star. A 1 M☉ star (like our Sun) lives ~10 billion years; a 10 M☉ star lives ~100 million years.
+
+This is why massive stars are rare in the galaxy despite being born frequently: they die young.
+
+### Problem 4: Protoplanetary Disk Structure
+**Restatement:** The disk around a young star has an inner radius of 0.1 AU and an outer radius of 100 AU. Assume the disk's temperature drops as $T(r) \propto r^{-0.5}$ (where $r$ is distance from the star in AU). If the inner disk (at 0.1 AU) has a temperature of 1000 K, what is the temperature at the outer edge (at 100 AU)?
+Use the scaling relation directly:
+
+$$\frac{T_{\rm outer}}{T_{\rm inner}} = \left( \frac{r_{\rm outer}}{r_{\rm inner}} \right)^{-0.5}
+= \left( \frac{100}{0.1} \right)^{-0.5}
+= (1000)^{-0.5}
+= \frac{1}{\sqrt{1000}}
+\approx 0.0316$$
+
+$$T_{\rm outer} = 1000 \, \text{K} \times 0.0316 \approx 31.6 \, \text{K}$$
+
+The outer disk is about 32 K — cold enough that water and methane remain frozen as ice, not gas. This distinction (between the hot inner disk where only rocks form and the cold outer disk where ices accumulate) is crucial for understanding why gas giants form in the outer solar system while terrestrial planets form close to the Sun.
+
+### Problem 5: Observing a Hidden Protostar
+**Restatement:** A protostar is embedded in a dense dust cloud. The dust obscures the protostar from visible-light telescopes, but a infrared observer detects thermal emission peaking at a wavelength of $\lambda_{\rm peak} = 20$ micrometers. Using Wien's law, estimate the temperature of the dust surrounding the protostar.
+
+**Recall:** Wien's displacement law: $\lambda_{\rm peak} T = 2.898 \times 10^{-3}$ m·K
+Using Wien's law,
+
+$$T = \frac{2.898 \times 10^{-3} \, \text{m}\cdot\text{K}}{\lambda_{\rm peak}}$$
+
+First convert the wavelength:
+
+$$\lambda_{\rm peak} = 20 \, \mu\text{m} = 20 \times 10^{-6} \, \text{m} = 2.0 \times 10^{-5} \, \text{m}$$
+
+Now substitute:
+
+$$T = \frac{2.898 \times 10^{-3}}{2.0 \times 10^{-5}} \approx 1.45 \times 10^2 \, \text{K} \approx 145 \, \text{K}$$
+
+The surrounding dust has a temperature of about **145 K**. That is cold by everyday standards, but it is warm enough to radiate strongly in the infrared, which is why embedded protostars are often discovered with infrared telescopes rather than visible-light ones.
+
+## Challenge Problems
+
+### Challenge 1: Star Formation Rate in the Milky Way
+**Restatement:** The Milky Way is observed to form new stars at a rate of roughly 1–3 solar masses per year (averaged over time). If the total mass of all giant molecular clouds in the Milky Way is roughly 10⁹ M☉, and if all of this mass eventually forms stars, how long would it take for the ISM to be completely converted into stars?
+**Time required** = (Total ISM mass) / (Star formation rate)
+
+$$t = \frac{10^9 \text{ M}_\odot}{2 \text{ M}_\odot/\text{year}} = 5 \times 10^8 \text{ years} = 500 \text{ million years}$$
+
+(Using the middle estimate of 2 M☉/year.)
+
+This is much shorter than the age of the Milky Way (13.6 billion years)! Yet the ISM is not depleted. Why? Because:
+
+1. **Stellar death replenishes the ISM.** When massive stars explode as supernovae and shed material through stellar winds, they return mass to the ISM.
+
+2. **The ISM is recycled many times.** Stars form, evolve, die, and enrich the ISM with newly synthesized heavy elements. New stars form from this enriched material. Over the Milky Way's lifetime, multiple generations of stars have been born and died.
+
+3. **The star formation rate varies.** The galaxy's star formation rate is higher at early times (when the ISM was more abundant) and lower now.
+
+This illustrates a profound truth: **we are made of star stuff.** The atoms in your body were forged in stellar cores, scattered back into the ISM by stellar death, and incorporated into new stars and planets. You are a child of the cosmos, assembled from the ashes of dead stars.
+
+### Challenge 2: Comparing Protostars
+**Restatement:** Two protostars have the same luminosity ($L = 10 L_\odot$) but different masses:
+- Protostar A: $M_A = 1$ M☉
+- Protostar B: $M_B = 10$ M☉
+
+Without calculating anything, predict which protostar is older (closer to the main sequence). Explain your reasoning.
+**Protostar B (10 M☉) is older.** Here's why:
+
+The Kelvin-Helmholtz timescale scales as:
+
+$$t_{\rm KH} \sim \frac{GM^2}{RL}$$
+
+At a given luminosity $L$, a more massive protostar must have either:
+- A larger radius $R$ (since $L = 4\pi R^2 \sigma T^4$, so $R \propto \sqrt{L/T^4}$), or
+- Reached a higher core temperature and advanced further toward the main sequence.
+
+Since the two protostars have identical luminosity, the more massive one must have contracted more (reached a higher temperature) to achieve that luminosity with its greater gravitational potential. The more massive protostar is therefore further along the contraction sequence — older in the pre-main-sequence sense.
+
+Once they reach the main sequence, Protostar B will have a much shorter lifetime because it will burn hydrogen much faster.
+
+### Challenge 3: Dust and Observability (Synthesis)
+**Restatement:** Imagine discovering a new star-forming region at a distance of 1000 pc. The region contains protostars embedded in a dense dust cloud with an optical extinction of $A_V = 10$ magnitudes.
+
+(a) By how many times is the starlight from these protostars dimmed by extinction?
+
+(b) Given this extinction, explain why an optical telescope would be useless for studying these protostars, but an infrared telescope could still detect them.
+
+(c) What property of dust grains — specifically, their size relative to the wavelength of light — explains this difference?
+**(a) Dimming factor:**
+
+A magnitude change of 1 corresponds to a brightness ratio of 2.512. An extinction of 10 magnitudes means:
+
+$$\text{Brightness ratio} = (2.512)^{10} \approx 10,000$$
+
+The protostars appear 10,000 times fainter than they truly are. A protostar with an intrinsic magnitude of $m = 5$ would appear as bright as $m = 15$ mag through the dust.
+
+**(b) Why optical is useless, but infrared works:**
+
+**Optical failure:** Visible light is scattered and absorbed by dust grains, which are roughly the same size as visible-light wavelengths. The dust cloud is optically thick at visible wavelengths — it is completely opaque. Optical telescopes see the dust as a solid wall and cannot penetrate to the protostars behind it.
+
+**Infrared success:** Infrared radiation has wavelengths much longer than the size of dust grains. Infrared light couples weakly to the dust, passing through with relatively little absorption or scattering. The dust cloud is optically thin (or optically transparent) at infrared wavelengths. Additionally, the protostars themselves emit infrared radiation due to their temperature (even though they are cooler than main-sequence stars). An infrared telescope can detect both the heat radiated by the protostars and the light passing through the dust.
+
+**(c) Grain size dependence:**
+
+**Rayleigh scattering** dominates when dust grains are much smaller than the wavelength of light. The scattering cross-section is proportional to $(r/\lambda)^4$, where $r$ is grain size and $\lambda$ is wavelength. For grains of size ~0.1 μm and visible light (~0.5 μm), the scattering is efficient: $(r/\lambda) \approx 0.2$, and $(0.2)^4 = 0.0016$ is significant.
+
+For infrared light at ~10 μm, the same grain now has $(r/\lambda) = 0.01$, and $(0.01)^4 = 10^{-8}$ — scattering is negligible. The dust is effectively transparent to infrared.
+
+This is why **infrared astronomy is essential for star formation research.** It lets us see through the cosmic dust that hides the birthplaces of stars.

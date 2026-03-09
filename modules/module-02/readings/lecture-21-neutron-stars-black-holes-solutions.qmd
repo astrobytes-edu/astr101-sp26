@@ -1,0 +1,330 @@
+---
+title: "Lecture 21 Solutions: Neutron Stars and Black Holes"
+subtitle: "Practice Problem Solutions"
+author: "Dr. Anna Rosen"
+date: "2026-04-08"
+description: "Solutions to the Lecture 21 practice problems."
+draft: true
+course: ASTR 101
+module: "2 - Stars & Stellar Evolution"
+---
+
+::: {.callout-note}
+**Student note:** These are model solutions written to show setup, units, and reasoning clearly. Your own work can be shorter as long as the physics, units, and logic are sound.
+
+**Use these after you try the problems yourself.** The point is to compare your reasoning to a worked example, not to skip the thinking step.
+:::
+
+## Core Problems
+
+### Problem 1: Neutron Star Density
+
+**Given:** Mass $M = 2.8 \times 10^{30}\,\mathrm{kg}$; radius $R = 10\,\mathrm{km} = 1.0 \times 10^4\,\mathrm{m}$.
+
+**Find:** Density, comparison to nuclear density, and teaspoon mass.
+
+**Equation:**
+
+$$
+V = \frac{4}{3}\pi R^3, \qquad \rho = \frac{M}{V}
+$$
+
+**Steps:**
+
+Find the volume:
+
+$$
+V = \frac{4}{3}\pi (1.0 \times 10^4)^3
+  \approx 4.19 \times 10^{12}\,\mathrm{m^3}
+$$
+
+Then the density:
+
+$$
+\rho = \frac{2.8 \times 10^{30}}{4.19 \times 10^{12}}
+     \approx 6.7 \times 10^{17}\,\mathrm{kg/m^3}
+$$
+
+Compare to nuclear density:
+
+$$
+\frac{6.7 \times 10^{17}}{2.3 \times 10^{17}} \approx 2.9
+$$
+
+So the mean density is about three times nuclear density.
+
+For a teaspoon of volume $5 \times 10^{-6}\,\mathrm{m^3}$:
+
+$$
+m = \rho V = (6.7 \times 10^{17})(5 \times 10^{-6})
+  \approx 3.4 \times 10^{12}\,\mathrm{kg}
+$$
+
+**Answer:** The density is about **$6.7 \times 10^{17}\,\mathrm{kg/m^3}$**. That is about **3 times nuclear density**, and a teaspoon would contain about **$3 \times 10^{12}\,\mathrm{kg}$** of matter.
+
+### Problem 2: Schwarzschild Radius
+
+Use the shortcut
+
+$$
+R_s \approx 2.95\,\mathrm{km}\times \left(\frac{M}{M_\odot}\right)
+$$
+
+**(a) 20-solar-mass black hole**
+
+$$
+R_s \approx 2.95 \times 20 \approx 59\,\mathrm{km}
+$$
+
+**(b) Sgr A* with $4.1 \times 10^6\,M_\odot$**
+
+$$
+R_s \approx 2.95 \times 4.1 \times 10^6
+    \approx 1.21 \times 10^7\,\mathrm{km}
+$$
+
+**(c) Earth**
+
+Earth has mass $M_\oplus \approx 5.97 \times 10^{24}\,\mathrm{kg}$, or
+
+$$
+\frac{M_\oplus}{M_\odot} \approx 3.0 \times 10^{-6}
+$$
+
+So
+
+$$
+R_s \approx 2.95 \times 3.0 \times 10^{-6}\,\mathrm{km}
+    \approx 8.9 \times 10^{-6}\,\mathrm{km}
+    = 8.9\,\mathrm{mm}
+$$
+
+**Answer:**  
+- $20\,M_\odot$: **about 59 km**  
+- Sgr A*: **about $1.2 \times 10^7$ km**  
+- Earth: **about 9 mm**
+
+### Problem 3: Pulsar Rotation
+
+**Given:** Period $P = 0.033\,\mathrm{s}$; radius $R = 10\,\mathrm{km} = 1.0 \times 10^4\,\mathrm{m}$.
+
+**(a) Rotations per second**
+
+$$
+f = \frac{1}{P} = \frac{1}{0.033} \approx 30.3\,\mathrm{s^{-1}}
+$$
+
+**(b) Equatorial speed**
+
+$$
+v = \frac{2\pi R}{P}
+  = \frac{2\pi (1.0 \times 10^4)}{0.033}
+  \approx 1.9 \times 10^6\,\mathrm{m/s}
+$$
+
+That is about $1900\,\mathrm{km/s}$.
+
+**(c) Fraction of the speed of light**
+
+$$
+\frac{v}{c} = \frac{1.9 \times 10^6}{3.0 \times 10^8}
+           \approx 6.3 \times 10^{-3}
+$$
+
+**Answer:** The Crab Pulsar rotates about **30 times per second**, its equator moves at about **$1900\,\mathrm{km/s}$**, and that is about **0.6% of the speed of light**.
+
+### Problem 4: Orbital Mechanics at the Galactic Center
+
+Use Kepler's third law in solar units:
+
+$$
+M = \frac{a^3}{P^2}
+$$
+
+with $a$ in AU, $P$ in years, and $M$ in solar masses.
+
+**Given:** $a = 1000\,\mathrm{AU}$, $P = 16\,\mathrm{yr}$.
+
+$$
+M = \frac{1000^3}{16^2}
+  = \frac{10^9}{256}
+  \approx 3.9 \times 10^6\,M_\odot
+$$
+
+**Interpretation:** That is millions of solar masses confined to a tiny region near the Galactic Center. No normal star cluster can pack that much mass into such a small volume and remain dark and stable.
+
+**Answer:** The central mass is about **$4 \times 10^6\,M_\odot$**, which is strong evidence that Sgr A* is a **supermassive black hole**.
+
+### Problem 5: Accretion Disk Power
+
+**Given:** Accretion rate $\dot{M} = 10^{-9}\,M_\odot/\mathrm{yr}$ and efficiency $\eta = 0.1$.
+
+Convert the mass rate to SI:
+
+$$
+\dot{M} = \frac{10^{-9}(2 \times 10^{30}\,\mathrm{kg})}{3.15 \times 10^7\,\mathrm{s}}
+       \approx 6.35 \times 10^{13}\,\mathrm{kg/s}
+$$
+
+Use
+
+$$
+P = \eta \dot{M} c^2
+$$
+
+so
+
+$$
+P = 0.1 \times 6.35 \times 10^{13} \times (3.0 \times 10^8)^2
+  \approx 5.7 \times 10^{29}\,\mathrm{W}
+$$
+
+Compare to the Sun:
+
+$$
+\frac{5.7 \times 10^{29}}{3.8 \times 10^{26}} \approx 1.5 \times 10^3
+$$
+
+**Answer:** The accretion disk radiates about **$5.7 \times 10^{29}\,\mathrm{W}$**, or roughly **1500 times the Sun's luminosity**.
+
+## Challenge Problems
+
+### Problem 1: Tidal Forces and Spaghettification
+
+Use
+
+$$
+a_{\rm tidal} \approx \frac{2GM\Delta r}{r^3}
+$$
+
+with $\Delta r = 1.7\,\mathrm{m}$.
+
+#### (a) At the event horizon of a $10\,M_\odot$ black hole
+
+The horizon radius is
+
+$$
+R_s \approx 29.5\,\mathrm{km} = 2.95 \times 10^4\,\mathrm{m}
+$$
+
+Then
+
+$$
+a_{\rm tidal} \approx \frac{2G(10M_\odot)(1.7)}{R_s^3}
+  \approx 1.8 \times 10^8\,\mathrm{m/s^2}
+$$
+
+That is enormously larger than Earth's gravity.
+
+#### (b) Distance where the tidal acceleration equals $9.8\,\mathrm{m/s^2}$
+
+Solve
+
+$$
+9.8 = \frac{2GM\Delta r}{r^3}
+$$
+
+so
+
+$$
+r = \left(\frac{2GM\Delta r}{9.8}\right)^{1/3}
+  \approx 7.7 \times 10^6\,\mathrm{m}
+$$
+
+That is about **7700 km** from the black hole's center.
+
+#### (c) Sgr A*
+
+For $M = 4.1 \times 10^6\,M_\odot$,
+
+$$
+r \approx \left(\frac{2GM\Delta r}{9.8}\right)^{1/3}
+  \approx 5.8 \times 10^8\,\mathrm{m}
+$$
+
+But Sgr A* has
+
+$$
+R_s \approx 1.2 \times 10^{10}\,\mathrm{m}
+$$
+
+So the radius where tidal acceleration reaches $g$ is **well inside the event horizon**.
+
+**Answer:** A stellar-mass black hole tears you apart outside or near the horizon; a supermassive black hole has much gentler tidal forces at the horizon, so you could cross it before feeling extreme stretching.
+
+### Problem 2: Neutron Star Mass Limit
+
+Use
+
+$$
+M_{\max} \approx 0.7 \frac{c^2 R_{\rm ns}}{G}
+$$
+
+with $R_{\rm ns} = 10\,\mathrm{km} = 1.0 \times 10^4\,\mathrm{m}$.
+
+$$
+M_{\max} \approx 0.7 \times \frac{(3.0 \times 10^8)^2(1.0 \times 10^4)}{6.67 \times 10^{-11}}
+$$
+
+$$
+M_{\max} \approx 9.4 \times 10^{30}\,\mathrm{kg}
+$$
+
+Convert to solar masses:
+
+$$
+\frac{9.4 \times 10^{30}}{2.0 \times 10^{30}} \approx 4.7\,M_\odot
+$$
+
+**Interpretation:** This simple model gives a maximum mass around **$4.7\,M_\odot$**, which is higher than the observed TOV limit of roughly **$2$ to $3\,M_\odot$**. That mismatch tells you the real physics of neutron matter and strong gravity is more restrictive than this toy estimate.
+
+### Problem 3: Gravitational Wave Energy
+
+**Given:** Energy released $= 3\,M_\odot c^2$ over about $0.2$ s.
+
+Compute the energy:
+
+$$
+E = 3(2.0 \times 10^{30})(3.0 \times 10^8)^2
+  \approx 5.4 \times 10^{47}\,\mathrm{J}
+$$
+
+Average power:
+
+$$
+P_{\rm avg} = \frac{E}{0.2}
+            \approx 2.7 \times 10^{48}\,\mathrm{W}
+$$
+
+Compare to the Sun:
+
+$$
+\frac{2.7 \times 10^{48}}{3.8 \times 10^{26}} \approx 7 \times 10^{21}
+$$
+
+So the average power was about $7 \times 10^{21}$ Suns.
+
+Because the inspiral accelerates rapidly near merger, the peak power must be higher than the average by at least an order-unity factor. An order-of-magnitude estimate for the peak is therefore around
+
+$$
+10^{49}\,\mathrm{W}
+$$
+
+**Answer:** The average gravitational-wave power was about **$2.7 \times 10^{48}\,\mathrm{W}$**, and the peak was plausibly of order **$10^{49}\,\mathrm{W}$**.
+
+### Problem 4: Multi-Messenger Astronomy
+
+The gravitational-wave signal sweeping from low to high frequency is the classic **chirp** of an inspiraling compact binary:
+
+- rising frequency means the orbit is shrinking
+- rising amplitude means the objects are accelerating and radiating more strongly
+
+The delay between the gravitational-wave signal and the electromagnetic signal tells us the light did not come from the inspiral itself. Instead, it came from ejecta, shocks, and radioactive material produced after merger.
+
+So the combined signal lets us infer:
+
+- the orbital inspiral dynamics from the gravitational waves
+- the production of ejecta and heavy elements from the delayed light
+- the geometry and expansion of the outflow from the time delay and spectral evolution
+
+**Answer:** The frequency evolution shows a shrinking, accelerating binary orbit. The delayed electromagnetic emission shows that the merger launched ejecta and powered a kilonova/afterglow, making GW170817 a textbook case of multi-messenger astronomy.
