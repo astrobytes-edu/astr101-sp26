@@ -5,8 +5,8 @@ author: "Dr. Anna Rosen"
 draft: false
 order: 4
 description: "Practice problems from Lectures 11–12 (Solar System Architecture + Climates/Exoplanets)"
-solutions_due: "Monday, March 16 at 11:59 pm PT (Canvas)"
-memo_due: "Wednesday, March 18 at 11:59 pm PT (Canvas)"
+solutions_due: "Tuesday, March 17 at 11:59 pm PT (Canvas)"
+memo_due: "Friday, March 20 at 11:59 pm PT (Canvas)"
 pdf: true
 toc: true
 format:
@@ -22,7 +22,11 @@ format:
 
 **Estimated time:** ~4-5 hours
 
-**Posted:** Monday, March 9, 2026
+**Posted:** Tuesday, March 10, 2026
+
+::: {.callout-note}
+For **Homework #4 only**, the self-assessment grade memo is due **Friday, March 20, 2026 at 11:59 pm PT** on Canvas.
+:::
 
 ## Why this homework exists (read this)
 
