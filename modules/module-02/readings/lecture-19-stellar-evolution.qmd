@@ -392,6 +392,28 @@ For example:
 
 This technique, called **isochrone fitting**, is essential for understanding the ages of globular clusters and the age of the Milky Way itself.
 
+::: {.callout-roadmap title="📺 Video: Building an H-R Diagram from Omega Centauri" collapse="false"}
+This short Hubble visualization is worth watching here because it shows the exact move we make in this section: start with a star cluster image, sort stars by color and brightness, and reveal the H-R diagram hidden inside the picture.
+
+<div class="demo-embed" style="width: 100%; margin: 1rem 0;">
+  <iframe
+    src="https://www.youtube-nocookie.com/embed/1JPDN8qoRjs"
+    width="100%"
+    height="520px"
+    style="border: 1px solid #ddd; border-radius: 8px;"
+    loading="lazy"
+    title="Constructing the Hertzsprung-Russell Diagram for Globular Star Cluster Omega Centauri"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen>
+  </iframe>
+  <p style="text-align: center; margin-top: 0.5rem; font-size: 0.875rem; color: #666;">
+    <a href="https://www.youtube.com/watch?v=1JPDN8qoRjs" target="_blank" style="color: #5dade2;">Open in new tab ↗</a>
+  </p>
+</div>
+
+What to notice: the H-R diagram is not abstract bookkeeping. It is a compressed picture of a stellar population, and in a globular cluster the turnoff point immediately tells us that the brightest blue stars have already evolved away.
+:::
+
 ---
 
 ## Worked Example: Putting It Together
