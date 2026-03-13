@@ -97,6 +97,10 @@ How can we understand this? A neutron star doesn't shine by nuclear fusion or he
 
 5. **As the star rotates, the beam sweeps around like a lighthouse**. If the beam points our way, we receive a pulse. If it doesn't, we see nothing.
 
+{{< fig neutron-star-types-nasa >}}
+
+This is why astronomers talk about a *neutron-star zoo*. Some neutron stars are best known as pulsars, some as magnetars, and some blur the categories. The underlying object is the same basic kind of remnant, but what we observe depends on magnetic field strength, spin, and whether the beam geometry points any signal toward Earth.
+
 ::: {.callout-key-insight title="Observable -> Model -> Inference"}
 Observable: regular radio pulses separated by precise time intervals; Doppler shifts revealing orbital motion. Model: rotating neutron star with tilted magnetic field. Inference: rotation period, magnetic field strength, mass (if in a binary orbit), distance (via dispersion measure).
 :::

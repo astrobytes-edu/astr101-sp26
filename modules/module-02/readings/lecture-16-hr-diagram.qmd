@@ -101,6 +101,10 @@ Each type is subdivided into 10 subclasses (0–9). Our Sun is **G2V** — a G-t
 
 <!-- FIGURE: Spectral sequence from O-type to M-type showing absorption lines, colors, and example stars. Show hydrogen alpha, calcium K, and titanium oxide bands at key points. -->
 
+{{< fig ngc6355-star-colors >}}
+
+Color is not cosmetic. In a crowded cluster like this one, the blue-white stars really are hotter and the orange-red stars really are cooler. You are seeing Wien's law written across the image before we ever draw a graph.
+
 ### Reference: Spectral Types at a Glance
 
 | Spectral Type | Temperature (K) | Color | Dominant Lines | Example Stars |
@@ -189,6 +193,10 @@ The remaining 10% appear in other regions:
 - **Lower left:** Hot but *very* dim stars — the **white dwarfs**
 
 This clustering is not a coincidence. It reveals the *physics* of stellar structure.
+
+{{< fig gaia-hr-diagram-module2 >}}
+
+Gaia makes this point especially powerful because it is a survey, not an illustration. When astronomers plot real stars by color and brightness, the universe still organizes itself into the same lanes. The H-R diagram is not a tidy classroom sketch; it is a pattern nature actually draws.
 
 <!-- FIGURE: Complete H-R diagram showing main sequence (diagonal band), red giant branch (upper right), white dwarf region (lower left), and supergiants (even further upper right). Label regions clearly. Show approximately 100–200 representative stars with real names marked (Sun, Sirius, Betelgeuse, Proxima Centauri, Rigel, Aldebaran, etc.). Use different colors or symbols to distinguish the regions. -->
 

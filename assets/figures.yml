@@ -1532,6 +1532,13 @@ figures:
     alt: "Theorist-style Hertzsprung-Russell diagram with effective temperature decreasing to the right, luminosity on the vertical axis, dashed lines of constant radius, and labeled regions for the main sequence, giants, supergiants, white dwarfs, and the Sun."
     module: 2
 
+  gaia-hr-diagram-module2:
+    path: /assets/images/module-02/Gaia_s_Hertzsprung-Russell_diagram.jpg
+    caption: "What to notice: this is not a cartoon. Gaia measured these stars directly, and the same structures still appear: a dense main sequence, a giant branch peeling upward, and a separate white-dwarf track. Real survey data still obey the same stellar physics."
+    alt: "Gaia color-magnitude diagram plotting Gaia color on the horizontal axis and absolute magnitude or luminosity on the vertical axis, with a bright main sequence, an upward giant branch, and a separate white dwarf sequence."
+    credit: "ESA / Gaia"
+    module: 2
+
   sirius-a-b-hubble-photo:
     path: /assets/images/module-02/Sirius_A_and_B_Hubble_photo.jpg
     caption: "What to notice: Sirius B is easy to miss next to the glare of Sirius A, but resolving the pair visually is what turns a point of light into a measurable gravitational system."
@@ -1588,10 +1595,29 @@ figures:
     alt: "Concentric onion-shell diagram of a 25-solar-mass star shortly before collapse, labeling hydrogen, helium, carbon-oxygen, neon-oxygen-magnesium, oxygen-silicon, silicon-iron burning layers, their temperatures, and approximate burning timescales."
     module: 2
 
+  eta-carinae-hubble:
+    path: /assets/images/module-02/Hubble_EtaCarinae.jpeg
+    caption: "What to notice: some very massive stars are already unstable before they explode. Eta Carinae has blown off huge lobes of gas, a reminder that the most massive stars live fast, shed mass violently, and die in dramatic ways."
+    alt: "Hubble image of Eta Carinae showing a brilliant central massive star system surrounded by two large opposing lobes of ejected gas and dust glowing red and blue."
+    credit: "NASA, ESA, and the Hubble Heritage Team (STScI/AURA)"
+    module: 2
+
+  binding-energy-iron-peak:
+    path: /assets/images/module-02/binding-energy-curve.png
+    caption: "What to notice: energy is released when fusion climbs upward toward iron on the binding-energy curve. Iron sits near the peak, so pushing beyond it no longer pays out energy. That is why an iron core is a dead end for normal stellar fusion."
+    alt: "Graph of binding energy per nucleon versus mass number, rising steeply for light nuclei, peaking near iron-56, and then slowly declining for heavier nuclei, with arrows indicating why fusion of light elements and fission of very heavy elements release energy."
+    module: 2
+
   core-collapse-sequence:
     path: /assets/images/module-02/Core_collapse.png
     caption: "What to notice: core collapse is a sequence, not a single instant. The core implodes, compresses to nuclear density, rebounds, and drives an outward shock that becomes the supernova."
     alt: "Six-panel schematic sequence of stellar core collapse showing a layered star zooming into the core, inward arrows during collapse, a compact high-density core, and later outward arrows representing rebound and explosion."
+    module: 2
+
+  typeii-core-collapse-neutrino-heating:
+    path: /assets/images/module-02/TypeII_CoreCollapse_Schematic.png
+    caption: "What to notice: the outgoing shock does not simply blast through on its own. A proto-neutron star forms at the center, neutrinos pour out, and a small fraction of that energy reheats material behind the stalled shock and helps revive the explosion."
+    alt: "Core-collapse supernova schematic showing a proto-neutron star at the center, infalling stellar material, a stalled shock front, a neutrino-cooled inner region, and a neutrino-heated region behind the shock."
     module: 2
 
   supernova-xray-fingerprints:
@@ -1611,6 +1637,13 @@ figures:
     path: /assets/images/module-02/Neutron_star_cross_section.png
     caption: "What to notice: even a neutron star is layered. The crust, outer core, and possible exotic inner core remind us that neutron stars are laboratories for matter under conditions we cannot reproduce on Earth."
     alt: "Cutaway schematic of a neutron star labeling the outer crust, inner crust, outer core, and possible inner core, with notes about ions, electrons, neutrons, and possible quark matter."
+    module: 2
+
+  neutron-star-types-nasa:
+    path: /assets/images/module-02/NASA_NeutronStars.jpeg
+    caption: "What to notice: 'neutron star' is a family name, not a single appearance. The same compact remnant can show up as a pulsar, a magnetar, or both, depending on its magnetic field, rotation, and how its beams are oriented relative to Earth."
+    alt: "NASA infographic comparing neutron star types, with panels for a magnetar, a pulsar, and an object that is both, each showing magnetic fields and radio-beam geometry."
+    credit: "NASA/JPL-Caltech"
     module: 2
 
   parallax-geometry:

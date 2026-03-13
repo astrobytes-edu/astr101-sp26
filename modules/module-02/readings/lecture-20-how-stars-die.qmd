@@ -209,6 +209,10 @@ In Lecture 19, we saw that massive stars burn through their fuel quickly, progre
 
 The answer involves an **onion-shell structure**.
 
+Some massive stars even advertise that instability before the final explosion. Eta Carinae, for example, has already blasted huge amounts of gas into space. It has not exploded yet, but it shows us that the biggest stars live in a state of violent imbalance long before core collapse finally arrives.
+
+{{< fig eta-carinae-hubble >}}
+
 Recall that stellar fusion works only when the temperature is hot enough. Hydrogen fuses at ~10 million K. Helium fuses at ~100 million K. Carbon fuses at ~600 million K, oxygen at ~1 billion K, and so on. In a massive star's core, as the temperature climbs, new fusion reactions start up.
 
 Here's the sequence:
@@ -230,6 +234,8 @@ But there's a catch — iron is the end of the line.
 ### The Iron Catastrophe
 
 Why is iron special? Look at the binding energy curve from Lecture 14. Iron-56 sits at the peak of the binding energy per nucleon. This means:
+
+{{< fig binding-energy-iron-peak >}}
 
 - Fusing *lighter* nuclei releases energy (the curve goes up as you move right).
 - Fusing *heavier* nuclei also releases energy (the curve goes down, so fusing them requires less energy than just dropping them apart).
@@ -297,6 +303,10 @@ The explosion energy is incomprehensible: $\sim 10^{44}$ joules (a "foe" or ten-
 This is a **Type II supernova** (or **core-collapse supernova**).
 
 {{< fig core-collapse-sequence >}}
+
+{{< fig typeii-core-collapse-neutrino-heating >}}
+
+The second diagram is worth comparing to the first. The sequence figure gives the timing; this schematic tells you *why the shock does not simply coast outward*. The core first makes a stalled shock, and only then does neutrino heating help turn that failed blast into a successful explosion.
 
 ::: {.callout-check-yourself title="Check Yourself — Supernova Energy"}
 A Type II supernova releases $10^{44}$ joules. The Sun's lifetime luminosity is about $L_\odot = 3.8 \times 10^{26}$ W for 10 billion years. How many Sun-lifetimes worth of energy is released in a Type II supernova?
