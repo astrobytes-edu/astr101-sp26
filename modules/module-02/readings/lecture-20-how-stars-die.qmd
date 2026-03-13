@@ -145,6 +145,8 @@ When electrons are compressed beyond a certain density, there are no more availa
 
 And it's *strong*. Strong enough to balance the crushing weight of the star's gravity. A white dwarf is supported entirely by degeneracy pressure — with no fusion whatsoever.
 
+{{< fig white-dwarf-mass-radius >}}
+
 ::: {.callout-deep-dive title="Deep Dive — The Chandrasekhar Limit" collapse="true"}
 In 1930, a young Indian physicist named **Subrahmanyan Chandrasekhar** was sailing from India to England to study at Cambridge. During the voyage, he calculated a disturbing result: there is a *maximum mass* that electron degeneracy pressure can support.
 
@@ -158,8 +160,6 @@ Chandrasekhar's result met fierce resistance. The legendary British astrophysici
 
 (Chandrasekhar's calculation assumes non-rotating white dwarfs composed of carbon and oxygen. Rotation and composition can change the limit slightly, but 1.4 M☉ is the standard reference value.)
 :::
-
-<!-- FIGURE: Schematic diagram of a white dwarf showing: (1) surface with temperature ~8000 K, (2) thin hydrogen/helium envelope, (3) carbon-oxygen core at density 10^6 g/cm^3, (4) size comparison to Earth, (5) mass comparison (0.6 M☉ typical). Show graph of mass vs. radius for white dwarfs — the inverse relationship. -->
 
 ### The Fate of Low-Mass Stars: A Summary
 
@@ -223,9 +223,9 @@ Here's the sequence:
 
 This onion has many layers because each fusion stage adds a shell of new material around the inert core of the previous stage. At any moment in the final hours before explosion, multiple fusion reactions are happening simultaneously in different shells.
 
-But there's a catch — iron is the end of the line.
+{{< fig onion-shell-burning-25msun >}}
 
-<!-- FIGURE: Cross-section of massive star iron core showing onion-shell structure. From outside in: hydrogen shell (orange), helium shell (yellow), carbon-oxygen shell (green), neon shell (cyan), oxygen shell (blue), silicon shell (purple), iron core (dark gray). Include temperatures and densities in each shell. Note that each shell has a different burning timescale (H: millions of years; He: ~1 million years; C: ~1000 years; Ne: ~1 year; O: ~1 month; Si: ~1 day; Fe core: UNSTABLE). -->
+But there's a catch — iron is the end of the line.
 
 ### The Iron Catastrophe
 
@@ -296,7 +296,7 @@ The explosion energy is incomprehensible: $\sim 10^{44}$ joules (a "foe" or ten-
 
 This is a **Type II supernova** (or **core-collapse supernova**).
 
-<!-- FIGURE: Time sequence of core collapse and supernova. Four panels: (1) Silicon-burning star with onion structure (iron core at center), timescale ~1 day. (2) Core collapse: iron core shrinking, shock forming, timescale ~0.3 seconds. (3) Shock stalling: shock wave losing energy, timescale ~0.5–1 second. (4) Neutrino-driven explosion: shock revived, material blown outward at 10,000–30,000 km/s, remnant neutron star visible. Include energy budget: total $10^{46}$ J, 99% in neutrinos, 1% in kinetic energy of ejecta. -->
+{{< fig core-collapse-sequence >}}
 
 ::: {.callout-check-yourself title="Check Yourself — Supernova Energy"}
 A Type II supernova releases $10^{44}$ joules. The Sun's lifetime luminosity is about $L_\odot = 3.8 \times 10^{26}$ W for 10 billion years. How many Sun-lifetimes worth of energy is released in a Type II supernova?
@@ -411,6 +411,8 @@ This is a **Type Ia supernova**.
 | **Frequency in galaxies** | ~few per century | ~few per century |
 
 Both types produce **nickel-56**, which decays to cobalt-56, then iron-56. This decay chain releases energy, powering the light we see for weeks after the explosion. A Type Ia supernova's light curve is often remarkably *consistent* from one event to another — they're nearly "standardizable" in brightness. This property makes Type Ia supernovae extraordinarily useful as "standard candles" for measuring cosmic distances, a tool we'll explore in Module 3.
+
+{{< fig supernova-xray-fingerprints >}}
 
 ::: {.callout-misconception title="Misconception Alert"}
 *"All supernovae are the same; it doesn't matter which type caused the explosion we observe."*
