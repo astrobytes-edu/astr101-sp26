@@ -1532,11 +1532,29 @@ figures:
     alt: "Theorist-style Hertzsprung-Russell diagram with effective temperature decreasing to the right, luminosity on the vertical axis, dashed lines of constant radius, and labeled regions for the main sequence, giants, supergiants, white dwarfs, and the Sun."
     module: 2
 
+  hr-diagram-first-look-module2:
+    path: /assets/images/module-02/HR-Diagram-Overview.jpg
+    caption: "What to notice: this is the first-look map students need. The diagonal main sequence dominates, giants and supergiants sit high on the right, and white dwarfs sit low on the left. The Sun lands near the middle of the main sequence, not at the center of the whole diagram."
+    alt: "Annotated Hertzsprung-Russell diagram with spectral class across the top, luminosity on the vertical axis, and labeled regions for bright supergiants, giants, subgiants, main sequence stars, and white dwarfs, including named stars such as the Sun, Rigel, Betelgeuse, Sirius, Procyon B, and Proxima Centauri."
+    module: 2
+
+  hr-diagram-mass-radius-lifetime-module2:
+    path: /assets/images/module-02/hr_diagram.jpeg
+    caption: "What to notice: several ideas stack on top of each other here. Constant-radius lines run diagonally, mass labels climb toward the upper left, and stellar lifetimes shrink dramatically for hot luminous stars. Moving along the main sequence mostly means changing mass, not age."
+    alt: "Hertzsprung-Russell diagram with colored stellar regions, diagonal constant-radius guide lines, labeled masses from low-mass red dwarfs to massive blue stars, and lifetime annotations showing very long lives for cool low-mass stars and short lives for hot massive stars."
+    module: 2
+
   gaia-hr-diagram-module2:
     path: /assets/images/module-02/Gaia_s_Hertzsprung-Russell_diagram.jpg
     caption: "What to notice: this is not a cartoon. Gaia measured these stars directly, and the same structures still appear: a dense main sequence, a giant branch peeling upward, and a separate white-dwarf track. Real survey data still obey the same stellar physics."
     alt: "Gaia color-magnitude diagram plotting Gaia color on the horizontal axis and absolute magnitude or luminosity on the vertical axis, with a bright main sequence, an upward giant branch, and a separate white dwarf sequence."
     credit: "ESA / Gaia"
+    module: 2
+
+  two-ways-to-be-luminous-module2:
+    path: /assets/images/module-02/two-ways-to-be-luminous.svg
+    caption: "What to notice: luminosity is not just about temperature. A star can shine intensely because it is very hot, because it has an enormous surface area, or because both effects work together."
+    alt: "Side-by-side teaching diagram comparing a small hot blue-white star and a large cool orange-red giant, with labels noting that luminosity depends on both radius squared and temperature to the fourth power."
     module: 2
 
   sirius-a-b-hubble-photo:

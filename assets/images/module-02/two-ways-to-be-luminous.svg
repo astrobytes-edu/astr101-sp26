@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="420" viewBox="0 0 1100 420" role="img" aria-labelledby="title desc">
+  <title id="title">Two Ways to Be Luminous</title>
+  <desc id="desc">A teaching diagram comparing a small hot star and a large cool star to show that luminosity depends on both radius squared and temperature to the fourth power.</desc>
+  <rect width="1100" height="420" fill="#07111f"/>
+  <rect x="25" y="25" width="1050" height="370" rx="22" fill="#0d1b2d" stroke="#274668" stroke-width="2"/>
+
+  <text x="550" y="64" fill="#f4f7fb" font-family="Arial, Helvetica, sans-serif" font-size="34" text-anchor="middle" font-weight="700">Two Ways to Be Luminous</text>
+  <text x="550" y="98" fill="#c4d4e6" font-family="Arial, Helvetica, sans-serif" font-size="20" text-anchor="middle">Luminosity depends on both surface area and temperature: L proportional to R^2 T^4</text>
+
+  <line x1="550" y1="122" x2="550" y2="360" stroke="#274668" stroke-width="2"/>
+
+  <text x="275" y="150" fill="#8fd3ff" font-family="Arial, Helvetica, sans-serif" font-size="28" text-anchor="middle" font-weight="700">Small hot star</text>
+  <circle cx="275" cy="250" r="46" fill="#cce9ff"/>
+  <circle cx="275" cy="250" r="70" fill="#6fc1ff" opacity="0.28"/>
+  <text x="275" y="328" fill="#d9ecff" font-family="Arial, Helvetica, sans-serif" font-size="20" text-anchor="middle">High T</text>
+  <text x="275" y="355" fill="#d9ecff" font-family="Arial, Helvetica, sans-serif" font-size="20" text-anchor="middle">Small R</text>
+  <text x="275" y="382" fill="#9bc7ea" font-family="Arial, Helvetica, sans-serif" font-size="18" text-anchor="middle">A compact star can shine strongly because each square meter is very bright.</text>
+
+  <text x="825" y="150" fill="#ffd39b" font-family="Arial, Helvetica, sans-serif" font-size="28" text-anchor="middle" font-weight="700">Large cool star</text>
+  <circle cx="825" cy="248" r="98" fill="#f39b59"/>
+  <circle cx="825" cy="248" r="124" fill="#ffcf8a" opacity="0.22"/>
+  <text x="825" y="328" fill="#ffe6c9" font-family="Arial, Helvetica, sans-serif" font-size="20" text-anchor="middle">Lower T</text>
+  <text x="825" y="355" fill="#ffe6c9" font-family="Arial, Helvetica, sans-serif" font-size="20" text-anchor="middle">Huge R</text>
+  <text x="825" y="382" fill="#f2c896" font-family="Arial, Helvetica, sans-serif" font-size="18" text-anchor="middle">A giant can shine strongly because it has an enormous emitting surface.</text>
+
+  <text x="550" y="176" fill="#f4f7fb" font-family="Arial, Helvetica, sans-serif" font-size="22" text-anchor="middle" font-weight="700">Same lesson, two different routes to high luminosity</text>
+</svg>
