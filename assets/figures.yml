@@ -1513,6 +1513,106 @@ figures:
     alt: "Data-first infographic of the Sporer butterfly diagram showing sunspot latitude versus time across two solar cycles, with sunspot bands starting near plus or minus 30 to 40 degrees and drifting toward the equator; includes a small solar inset in the corner."
     module: 2
 
+  parallax-geometry-cococubed:
+    path: /assets/images/module-02/parallax1-cococubed.svg
+    caption: "What to notice: the nearby star appears to shift only because Earth observes it from opposite sides of its orbit. The parallax angle is half the full swing, and more distant stars make smaller triangles."
+    alt: "Geometry diagram of stellar parallax showing Earth at two positions in its orbit, a nearby star above the orbital circle, distant background stars, and sight lines that define a small parallax angle at the star."
+    credit: "cococubed.com"
+    module: 2
+
+  hr-diagram-observer-module2:
+    path: /assets/images/module-02/hr-diagram-observer.png
+    caption: "What to notice: the observer's H-R diagram uses quantities astronomers measure most directly for many stars: color and absolute magnitude. The same four regions still appear: main sequence, giants, supergiants, and white dwarfs."
+    alt: "Observer-style Hertzsprung-Russell diagram with color index on the horizontal axis, absolute magnitude on the vertical axis, and labeled regions for main sequence, giants, supergiants, white dwarfs, and the Sun."
+    module: 2
+
+  hr-diagram-theorist-module2:
+    path: /assets/images/module-02/hr-diagram-theorist.png
+    caption: "What to notice: the theorist's H-R diagram makes the physics explicit. Dashed diagonals mark constant radius, so red giants line up with huge radii while white dwarfs sit on tiny-radius tracks."
+    alt: "Theorist-style Hertzsprung-Russell diagram with effective temperature decreasing to the right, luminosity on the vertical axis, dashed lines of constant radius, and labeled regions for the main sequence, giants, supergiants, white dwarfs, and the Sun."
+    module: 2
+
+  sirius-a-b-hubble-photo:
+    path: /assets/images/module-02/Sirius_A_and_B_Hubble_photo.jpg
+    caption: "What to notice: Sirius B is easy to miss next to the glare of Sirius A, but resolving the pair visually is what turns a point of light into a measurable gravitational system."
+    alt: "Hubble image of the Sirius binary showing the very bright primary Sirius A dominating the frame and the much fainter white dwarf Sirius B appearing as a small point offset below and left."
+    credit: "NASA/ESA/Hubble"
+    module: 2
+
+  sirius-orbit-history:
+    path: /assets/images/module-02/sirius-orbit.jpg
+    caption: "What to notice: measuring stellar masses is often slow astronomy. Decades of astrometric points trace Sirius B's orbit around Sirius A and reveal the period, separation, and center-of-mass geometry needed for the mass calculation."
+    alt: "Astrometric orbit plot for the Sirius system showing many measured positions of Sirius B over time, a fitted orbital curve, and right ascension and declination axes in arcseconds."
+    module: 2
+
+  eclipsing-binary-gemini:
+    path: /assets/images/module-02/eclipsing-binary-gemini.png
+    caption: "What to notice: the deeper dip happens when the hotter, brighter star is blocked. The shallower dip happens when the cooler star is hidden. Dip depth and width encode temperature contrast, orbital geometry, and stellar size."
+    alt: "Two-panel diagram of an eclipsing binary with four orbital phases above and a light curve below, showing a deep primary eclipse and a shallower secondary eclipse in total system brightness."
+    credit: "Gemini Observatory"
+    module: 2
+
+  mass-luminosity-relation-main-sequence:
+    path: /assets/images/module-02/mass-luminosity-relation.png
+    caption: "What to notice: along the main sequence, luminosity rises much faster than mass. Small changes in mass produce enormous changes in power output, which is why massive stars burn through their fuel so quickly."
+    alt: "Log-log plot of main-sequence stellar luminosity versus mass with colored points by spectral type, a dashed best-fit relation L proportional to M to the 3.5 power, and the Sun marked at 1 solar mass and 1 solar luminosity."
+    module: 2
+
+  hr-pre-main-sequence-tracks:
+    path: /assets/images/module-02/HR-PMS.jpg
+    caption: "What to notice: protostars do not all take the same route to adulthood. Massive protostars plunge onto the main sequence quickly, while low-mass stars spend much longer contracting and descending their pre-main-sequence tracks."
+    alt: "Hertzsprung-Russell diagram with pre-main-sequence evolutionary tracks for stars of different masses, labeled with approximate contraction times from tens of thousands of years for high-mass stars to tens of millions of years for low-mass stars."
+    module: 2
+
+  hr-post-main-sequence-tracks:
+    path: /assets/images/module-02/hrpostmainsuntrack.jpg
+    caption: "What to notice: once a Sun-like star exhausts core hydrogen, it does not drift gently. It leaves the main sequence, climbs the red giant branch, flashes helium, and later returns to the upper right on the asymptotic giant branch."
+    alt: "Hertzsprung-Russell diagram showing evolutionary tracks off the main sequence for several stellar masses, including labels for the red giant branch, horizontal branch, asymptotic giant branch, helium flash, and the Sun's approximate path."
+    module: 2
+
+  hr-massive-star-evolution:
+    path: /assets/images/module-02/MassiveStar_Evolution_HR.jpeg
+    caption: "What to notice: massive stars race across the H-R diagram. Their tracks peel away from the main sequence after only a short time and loop through supergiant phases before stellar death."
+    alt: "Hertzsprung-Russell diagram highlighting evolutionary tracks for massive stars of about 9 to 85 solar masses, starting on the hot luminous main sequence and looping through supergiant regions."
+    module: 2
+
+  white-dwarf-mass-radius:
+    path: /assets/images/module-02/wd-mass-radius.png
+    caption: "What to notice: white dwarfs obey a deeply counterintuitive rule: adding mass makes them smaller. The curve ends at the Chandrasekhar limit, where electron degeneracy can no longer hold gravity back."
+    alt: "Plot of white dwarf radius in Earth radii versus white dwarf mass in solar masses, showing radius decreasing as mass increases and marking the Chandrasekhar limit near 1.44 solar masses."
+    module: 2
+
+  onion-shell-burning-25msun:
+    path: /assets/images/module-02/onion-shell-burning.png
+    caption: "What to notice: the last stages of massive-star fusion are nested and frantic. Outer hydrogen burning lasts millions of years, but the innermost silicon-burning shell lasts only about a day before collapse."
+    alt: "Concentric onion-shell diagram of a 25-solar-mass star shortly before collapse, labeling hydrogen, helium, carbon-oxygen, neon-oxygen-magnesium, oxygen-silicon, silicon-iron burning layers, their temperatures, and approximate burning timescales."
+    module: 2
+
+  core-collapse-sequence:
+    path: /assets/images/module-02/Core_collapse.png
+    caption: "What to notice: core collapse is a sequence, not a single instant. The core implodes, compresses to nuclear density, rebounds, and drives an outward shock that becomes the supernova."
+    alt: "Six-panel schematic sequence of stellar core collapse showing a layered star zooming into the core, inward arrows during collapse, a compact high-density core, and later outward arrows representing rebound and explosion."
+    module: 2
+
+  supernova-xray-fingerprints:
+    path: /assets/images/module-02/ironfingerprints_SNe_CCvs1A.jpeg
+    caption: "What to notice: supernova remnants carry spectral fingerprints of how they exploded. Type Ia remnants peak at different iron-line energies than core-collapse remnants, so X-ray spectroscopy lets astronomers classify an explosion after the blast."
+    alt: "Infographic comparing X-ray images and iron-line spectra of several supernova remnants, with separate panels showing Type Ia white dwarf detonation remnants and core-collapse remnants with higher-energy iron features."
+    credit: "NASA / Goddard Space Flight Center"
+    module: 2
+
+  compact-object-scale-comparison:
+    path: /assets/images/module-02/compact-object-scale.png
+    caption: "What to notice: compact remnants differ more in size than in mass. A white dwarf is Earth-sized, a neutron star is city-sized, and a stellar-mass black hole's event horizon is comparably tiny."
+    alt: "Scale comparison graphic showing Earth, a white dwarf of roughly Earth size, a much smaller neutron star about 10 kilometers across, and a 3-solar-mass black hole with an event horizon under 10 kilometers."
+    module: 2
+
+  neutron-star-cross-section:
+    path: /assets/images/module-02/Neutron_star_cross_section.png
+    caption: "What to notice: even a neutron star is layered. The crust, outer core, and possible exotic inner core remind us that neutron stars are laboratories for matter under conditions we cannot reproduce on Earth."
+    alt: "Cutaway schematic of a neutron star labeling the outer crust, inner crust, outer core, and possible inner core, with notes about ions, electrons, neutrons, and possible quark matter."
+    module: 2
+
   parallax-geometry:
     path: /assets/images/module-02/parallax-geometry.png
     caption: "Geometry of stellar parallax measurement"

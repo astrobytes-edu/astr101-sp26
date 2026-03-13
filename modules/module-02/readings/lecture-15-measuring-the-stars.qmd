@@ -24,7 +24,6 @@ prerequisites: "Inverse-square law (L7), basic geometry, scientific notation (L2
 ## The Big Idea
 
 We cannot visit the stars. But two direct measurements — a parallax angle and a brightness — unlock the two most fundamental numbers in stellar astronomy: distance and luminosity. Everything else we learn about stars flows from these two quantities.
-We cannot visit the stars. But two direct observables — a star's **position shift** and its **brightness** — let us infer the two most fundamental numbers in stellar astronomy: distance and luminosity. Everything else we learn about stars flows from those inferences.
 
 :::
 
@@ -108,7 +107,7 @@ Parallax is the apparent shift in position of a nearby object against a distant 
 
 For nearby stars, Earth supplies the changing viewpoint. Six months apart, Earth is on opposite sides of its orbit, separated by about 2 AU. That baseline is enormous by human standards and tiny by interstellar standards, which is why the observed stellar shifts are so small.
 
-<!-- FIGURE: Geometry of stellar parallax measurement. Show Earth on opposite sides of its orbit six months apart, a nearby star, distant background stars, the total apparent shift, and the parallax angle as half that shift. Label the 2 AU baseline and the relation d = 1/p when p is measured in arcseconds. -->
+{{< fig parallax-geometry-cococubed >}}
 
 The logic is:
 
@@ -162,6 +161,31 @@ $$d = 10 \text{ pc} \times 3.26 \frac{\text{ly}}{\text{pc}} = 32.6 \text{ ly}$$
 The smaller parallax angle means the star is farther away.
 :::
 :::
+
+## 🔭 Demo Exploration: Parallax Distance
+
+Use the interactive below to turn the equation into geometric intuition. The goal is not just to get the right number, but to *feel* how quickly the parallax angle collapses as distance grows.
+
+<div class="demo-embed" style="width: 100%; margin: 1rem 0;">
+  <iframe
+    src="https://astrobytes-edu.github.io/astr101-sp26/demos/parallax-distance/"
+    width="100%"
+    height="620px"
+    style="border: 1px solid #ddd; border-radius: 8px;"
+    loading="lazy"
+    title="Parallax Distance Interactive Demo"
+    allow="fullscreen">
+  </iframe>
+  <p style="text-align: center; margin-top: 0.5rem; font-size: 0.875rem; color: #666;">
+    <a href="https://astrobytes-edu.github.io/astr101-sp26/demos/parallax-distance/" target="_blank" style="color: #5dade2;">Open in new tab ↗</a>
+  </p>
+</div>
+
+Try three quick checks:
+
+1. Find the setup where the parallax is 0.1 arcseconds. Does the demo agree that the distance is 10 pc?
+2. Halve the distance. What happens to the parallax angle?
+3. Push the star farther away until the shift feels almost invisible. Why does that limit matter for real observatories?
 
 ### Why Parallax Has Limits
 

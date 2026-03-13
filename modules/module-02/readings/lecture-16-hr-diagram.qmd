@@ -149,7 +149,7 @@ Luminosity is plotted on a **logarithmic scale** — each step up multiplies the
 - **Bottom:** Low luminosity (faint stars)
 - **Top:** High luminosity (bright stars)
 
-<!-- FIGURE: Blank H-R diagram template showing axes with temperature (reversed) from O at left to M at right, and logarithmic luminosity from 0.0001 to 1,000,000 solar luminosities on vertical axis. Labels but no stars plotted yet. -->
+{{< fig hr-diagram-observer-module2 >}}
 
 ### Why the Reversed x-Axis Matters (And Why You'll Get It Wrong First)
 
@@ -263,7 +263,7 @@ Consider a star that is cool (low $T$) but luminous (high $L$). To achieve this 
 
 Conversely, a hot (high $T$), dim (low $L$) star must have a tiny radius. This is a white dwarf.
 
-<!-- FIGURE: H-R diagram with diagonal lines of constant radius drawn across it. Show lines for 0.01, 0.1, 1.0, 10, and 100 solar radii. Label the main sequence as occupying the intersection where radius changes smoothly with temperature. Show that red giants lie along the 100+ $R_\odot$ lines, white dwarfs along the 0.01 $R_\odot$ lines. -->
+{{< fig hr-diagram-theorist-module2 >}}
 
 ### Worked Example: Why Is Betelgeuse So Luminous?
 
