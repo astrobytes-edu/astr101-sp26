@@ -65,7 +65,7 @@ But neutron degeneracy is *far* stronger than electron degeneracy. The neutrons 
 
 A typical neutron star is about **10 kilometers in diameter** — roughly the size of a city — yet contains between 1.4 and 3 solar masses. To grasp the density: a teaspoon of neutron star material would weigh about **a billion tons**. The density is roughly that of an atomic nucleus itself.
 
-<!-- FIGURE: Comparison illustration showing the Sun (1.4 million km diameter), Earth (12,700 km), Mount Everest (9 km), and a neutron star (10 km) stacked to scale. Include a small inset showing a teaspoon labeled "~1 billion tons." -->
+{{< fig compact-object-scale-comparison >}}
 
 ::: {.callout-key-insight title="Key Insight"}
 A neutron star is not a dead ember. It is the nucleus of the original star, exposed and laid bare — a laboratory of physics so extreme that our normal understanding of matter breaks down.
@@ -145,6 +145,8 @@ TOV Limit (Tolman–Oppenheimer–Volkoff limit) — approximately 2–3 M☉, t
 :::
 
 What happens to a stellar remnant more massive than the TOV limit? There is nothing left to hold it up. Not electron degeneracy. Not neutron degeneracy. Gravity wins completely, and the core collapses beyond any finite density.
+
+{{< fig neutron-star-cross-section >}}
 
 And we arrive at black holes.
 
