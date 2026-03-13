@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="470" viewBox="0 0 1200 470" role="img" aria-labelledby="title desc">
+  <title id="title">Magnitude and Distance Toolkit</title>
+  <desc id="desc">Two-panel infographic showing magnitude difference to brightness ratio conversions and a distance modulus visual comparing apparent and absolute magnitude at 10 parsecs.</desc>
+  <rect width="1200" height="470" fill="#07111f"/>
+  <text x="600" y="48" fill="#f2f6fb" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="700" text-anchor="middle">Magnitude and Distance Toolkit</text>
+  <line x1="600" y1="90" x2="600" y2="420" stroke="#2f4d6f" stroke-width="2"/>
+  <g font-family="Arial, Helvetica, sans-serif">
+    <text x="300" y="112" fill="#f2f6fb" font-size="26" text-anchor="middle" font-weight="700">Brightness Translation Guide</text>
+    <rect x="120" y="145" width="360" height="210" rx="16" fill="#13283f" stroke="#6aa6d8"/>
+    <text x="220" y="190" fill="#d8eaff" font-size="20" text-anchor="middle">1 mag</text>
+    <text x="390" y="190" fill="#ffd47a" font-size="20" text-anchor="middle">2.512x</text>
+    <text x="220" y="245" fill="#d8eaff" font-size="20" text-anchor="middle">2 mag</text>
+    <text x="390" y="245" fill="#ffd47a" font-size="20" text-anchor="middle">6.31x</text>
+    <text x="220" y="300" fill="#d8eaff" font-size="20" text-anchor="middle">5 mag</text>
+    <text x="390" y="300" fill="#ffd47a" font-size="20" text-anchor="middle">100x</text>
+    <text x="300" y="385" fill="#8be29f" font-size="22" text-anchor="middle" font-weight="700">Memorize this one: 5 magnitudes = factor of 100 in brightness</text>
+
+    <text x="900" y="112" fill="#f2f6fb" font-size="26" text-anchor="middle" font-weight="700">Distance Modulus Intuition</text>
+    <circle cx="710" cy="255" r="16" fill="#9ed3ff"/>
+    <text x="710" y="290" fill="#d8eaff" font-size="18" text-anchor="middle">Earth</text>
+    <circle cx="845" cy="255" r="18" fill="#ffd47a"/>
+    <text x="845" y="205" fill="#d8eaff" font-size="18" text-anchor="middle">At 10 pc</text>
+    <text x="845" y="228" fill="#8be29f" font-size="19" text-anchor="middle">Absolute magnitude M</text>
+    <circle cx="1040" cy="255" r="18" fill="#ffd47a"/>
+    <text x="1040" y="180" fill="#d8eaff" font-size="18" text-anchor="middle">Farther away</text>
+    <text x="1040" y="203" fill="#ffb9c8" font-size="19" text-anchor="middle">Apparent magnitude m</text>
+    <line x1="726" y1="255" x2="827" y2="255" stroke="#bde6ff" stroke-width="3"/>
+    <line x1="726" y1="255" x2="1022" y2="255" stroke="#bde6ff" stroke-width="3" stroke-dasharray="10 10"/>
+    <text x="780" y="245" fill="#d8eaff" font-size="18" text-anchor="middle">10 pc</text>
+    <text x="890" y="355" fill="#ffd47a" font-size="22" text-anchor="middle">m - M tells you how much dimmer the star looks than it would at 10 pc.</text>
+  </g>
+</svg>

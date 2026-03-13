@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="420" viewBox="0 0 1200 420" role="img" aria-labelledby="title desc">
+  <title id="title">The Bright-Star Problem</title>
+  <desc id="desc">Three equally bright-looking stars illustrate that apparent brightness alone cannot tell us whether a star is nearby, intrinsically luminous, or something in between.</desc>
+  <rect width="1200" height="420" fill="#07111f"/>
+  <text x="600" y="50" fill="#f2f6fb" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="700" text-anchor="middle">The Bright-Star Problem</text>
+  <text x="600" y="84" fill="#c9d7e6" font-family="Arial, Helvetica, sans-serif" font-size="20" text-anchor="middle">Three stars can look equally bright from Earth while telling three different physical stories.</text>
+  <circle cx="120" cy="210" r="20" fill="#9ed3ff"/>
+  <text x="120" y="250" fill="#d8eaff" font-family="Arial, Helvetica, sans-serif" font-size="18" text-anchor="middle">Earth</text>
+  <line x1="180" y1="210" x2="350" y2="210" stroke="#7ec8ff" stroke-width="4"/>
+  <line x1="180" y1="210" x2="650" y2="210" stroke="#7ec8ff" stroke-width="3" stroke-dasharray="10 10"/>
+  <line x1="180" y1="210" x2="940" y2="210" stroke="#7ec8ff" stroke-width="2" stroke-dasharray="8 12"/>
+  <circle cx="350" cy="210" r="18" fill="#ffd47a"/>
+  <circle cx="650" cy="210" r="28" fill="#ffd47a"/>
+  <circle cx="940" cy="210" r="42" fill="#ffd47a"/>
+  <text x="350" y="280" fill="#f2f6fb" font-family="Arial, Helvetica, sans-serif" font-size="20" text-anchor="middle">Nearby + modest</text>
+  <text x="650" y="280" fill="#f2f6fb" font-family="Arial, Helvetica, sans-serif" font-size="20" text-anchor="middle">Middle distance + brighter</text>
+  <text x="940" y="280" fill="#f2f6fb" font-family="Arial, Helvetica, sans-serif" font-size="20" text-anchor="middle">Far away + very luminous</text>
+  <text x="350" y="315" fill="#aac5de" font-family="Arial, Helvetica, sans-serif" font-size="18" text-anchor="middle">Could still look bright</text>
+  <text x="650" y="315" fill="#aac5de" font-family="Arial, Helvetica, sans-serif" font-size="18" text-anchor="middle">Could also look bright</text>
+  <text x="940" y="315" fill="#aac5de" font-family="Arial, Helvetica, sans-serif" font-size="18" text-anchor="middle">Could also look bright</text>
+  <text x="600" y="375" fill="#ffd47a" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700" text-anchor="middle">Apparent brightness alone does not separate distance from luminosity.</text>
+</svg>

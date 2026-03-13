@@ -1520,6 +1520,42 @@ figures:
     credit: "cococubed.com"
     module: 2
 
+  bright-star-problem-module2:
+    path: /assets/images/module-02/bright-star-problem.svg
+    caption: "What to notice: a bright-looking star is an ambiguous clue. It could be nearby, intrinsically powerful, or both. Astronomy becomes a science when we separate those possibilities."
+    alt: "Three-panel teaching diagram showing three stars that appear equally bright to an observer on Earth: one nearby but modest, one far away and very luminous, and one in between, emphasizing that apparent brightness alone does not reveal intrinsic power."
+    module: 2
+
+  observation-to-stellar-physics-module2:
+    path: /assets/images/module-02/observation-to-stellar-physics.svg
+    caption: "What to notice: the logic runs in stages. Position change gives parallax, parallax gives distance, brightness plus distance gives luminosity, and luminosity combined with temperature places the star on the H-R diagram."
+    alt: "Flowchart titled From Observation to Stellar Physics, showing observables feeding into parallax and inverse-square-law reasoning, then into distance and luminosity, and finally into the H-R diagram."
+    module: 2
+
+  parallax-scale-comparison-module2:
+    path: /assets/images/module-02/parallax-scale-comparison.svg
+    caption: "What to notice: stellar parallax is tiny compared with familiar sky angles. The Full Moon spans about 1800 arcseconds, while many stellar parallaxes are hundredths or thousandths of an arcsecond."
+    alt: "Scale comparison chart showing angles in arcseconds for the Full Moon, Jupiter, a typical stellar parallax, and Gaia precision, with bars shrinking dramatically toward the tiny stellar values."
+    module: 2
+
+  inverse-square-stepwise-module2:
+    path: /assets/images/module-02/inverse-square-stepwise.svg
+    caption: "What to notice: the inverse-square law is geometry, not magic. At twice the distance, the same light must cover four times the area, so the per-area brightness falls to one quarter."
+    alt: "Two-panel geometry diagram showing light from a star spreading over a sphere of radius d and then a sphere of radius 2d, with surface areas labeled 4 pi d squared and 16 pi d squared and a note that brightness drops to one fourth."
+    module: 2
+
+  magnitude-distance-toolkit-module2:
+    path: /assets/images/module-02/magnitude-distance-toolkit.svg
+    caption: "What to notice: two useful translation rules tame the magnitude system. A difference of 5 magnitudes means a factor of 100 in brightness, and the distance modulus compares how bright a star looks now to how bright it would look at 10 pc."
+    alt: "Two-panel infographic with a table converting magnitude differences to brightness ratios and a simple distance-modulus visual comparing a star at 10 parsecs to the same star farther away, labeled with M, m, and m minus M."
+    module: 2
+
+  gaia-reach-module2:
+    path: /assets/images/module-02/gaia-reach-milky-way.svg
+    caption: "What to notice: Gaia does not merely improve one nearby distance here or there. Its parallax reach extends across a large fraction of the Milky Way, turning local geometry into a three-dimensional galactic map."
+    alt: "Milky Way context diagram showing the Sun's location in the disk, a smaller nearby neighborhood, and a much larger Gaia reach region extending across a substantial fraction of the galaxy."
+    module: 2
+
   hr-diagram-observer-module2:
     path: /assets/images/module-02/hr-diagram-observer.png
     caption: "What to notice: the observer's H-R diagram uses quantities astronomers measure most directly for many stars: color and absolute magnitude. The same four regions still appear: main sequence, giants, supergiants, and white dwarfs."

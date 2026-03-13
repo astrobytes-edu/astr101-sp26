@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="450" viewBox="0 0 1200 450" role="img" aria-labelledby="title desc">
+  <title id="title">Gaia's Reach</title>
+  <desc id="desc">Milky Way context figure showing the Sun, the local neighborhood, and Gaia's parallax reach across a large fraction of the galactic disk.</desc>
+  <rect width="1200" height="450" fill="#07111f"/>
+  <text x="600" y="48" fill="#f2f6fb" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="700" text-anchor="middle">Gaia's Reach</text>
+  <text x="600" y="82" fill="#c9d7e6" font-family="Arial, Helvetica, sans-serif" font-size="19" text-anchor="middle">Parallax no longer maps only our immediate neighborhood. Gaia pushes geometric distances across a large fraction of the Milky Way.</text>
+  <ellipse cx="620" cy="250" rx="430" ry="120" fill="#0f2336" stroke="#3d6184" stroke-width="3"/>
+  <ellipse cx="620" cy="250" rx="150" ry="40" fill="#183b58" stroke="#6aa6d8" stroke-width="2"/>
+  <ellipse cx="620" cy="250" rx="320" ry="88" fill="none" stroke="#8be29f" stroke-width="4" stroke-dasharray="12 10"/>
+  <circle cx="720" cy="275" r="8" fill="#ffd47a"/>
+  <text x="755" y="281" fill="#f2f6fb" font-family="Arial, Helvetica, sans-serif" font-size="20">Sun</text>
+  <text x="620" y="247" fill="#d8eaff" font-family="Arial, Helvetica, sans-serif" font-size="20" text-anchor="middle">Local neighborhood</text>
+  <text x="620" y="165" fill="#8be29f" font-family="Arial, Helvetica, sans-serif" font-size="22" text-anchor="middle">Gaia high-precision reach</text>
+  <text x="620" y="392" fill="#ffd47a" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700" text-anchor="middle">Better parallaxes lead directly to better luminosities, cleaner H-R diagrams, and stronger stellar inferences.</text>
+</svg>

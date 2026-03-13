@@ -27,6 +27,16 @@ We cannot visit the stars. But two direct measurements — a parallax angle and 
 
 :::
 
+::: {.callout-note title="How This Investigation Works"}
+Astronomers solve the bright-star problem in three moves:
+
+1. **Geometry -> Distance:** measure parallax to determine how far away the star is.
+2. **Physics -> Luminosity:** combine distance with the inverse-square law to determine how powerful the star really is.
+3. **Astronomical bookkeeping -> Magnitudes:** translate brightness and distance into the traditional magnitude system.
+
+**Punchline:** once distance and luminosity are known, the star can be placed on the **H-R diagram**, where stellar structure becomes visible.
+:::
+
 ::: {.callout-roadmap title="How to Use This Reading" collapse="true"}
 This reading is a guided investigation into a simple-looking but surprisingly tricky question: when a star looks bright, what does that actually tell us?
 
@@ -36,6 +46,8 @@ This reading is a guided investigation into a simple-looking but surprisingly tr
 - Read the Big Idea
 - Focus on parallax, inverse-square law, and the final synthesis
 - Do not skip the inline checks
+
+**Goal after 20 minutes:** You should be able to answer three questions: How does parallax measure distance? Why does brightness fall as 1/d^2? Why must distance be known before luminosity?
 
 **After class:** Come back to the worked examples, practice problems, and glossary when you need the tools again.
 
@@ -55,7 +67,7 @@ Astronomers do not get to visit stars. We do not get to put them on scales, fly 
 
 This is the throughline for the whole reading: **first solve distance, then solve intrinsic brightness.**
 
-<!-- FIGURE: Schematic showing a single bright star above text reading "Puzzle: A star appears bright. Is it (a) intrinsically bright but far away? (b) intrinsically dim but very close? (c) Something in between?" with three arrows pointing down to silhouettes of stars at different distances and brightnesses. -->
+{{< fig bright-star-problem-module2 >}}
 
 ---
 
@@ -76,6 +88,8 @@ Those are measurable. But the quantities we actually want are hidden:
 - **Luminosity:** how much power the star is actually emitting
 
 That distinction matters. If we blur it, we end up saying things like “that star is bright, so it must be close” or “that star is faint, so it must be weak.” Astronomy gets interesting exactly where those shortcuts fail.
+
+{{< fig observation-to-stellar-physics-module2 >}}
 
 ::: {.column-margin}
 **Apparent brightness:** The light energy per unit area per unit time arriving at a detector. This is what we directly measure.
@@ -109,6 +123,8 @@ For nearby stars, Earth supplies the changing viewpoint. Six months apart, Earth
 
 {{< fig parallax-geometry-cococubed >}}
 
+{{< fig parallax-scale-comparison-module2 >}}
+
 The logic is:
 
 1. Measure the star's apparent position at one time of year.
@@ -132,6 +148,16 @@ where $d$ is the distance in parsecs and $p$ is the parallax angle in arcseconds
 
 What makes this so powerful is that it does not depend on a model of stellar physics. We do not need to know what kind of star it is, how hot it is, or how it shines. Parallax is geometry first and astrophysics second.
 
+::: {.callout-check-yourself title="Check Yourself 2"}
+If a star's parallax angle is cut in half, what happens to its distance?
+
+::: {.callout-note collapse="true"}
+## Solution
+
+The distance **doubles**. Since $d = 1/p$, halving $p$ makes $d$ twice as large.
+:::
+:::
+
 ### Worked Example: Proxima Centauri
 
 Proxima Centauri, the nearest known star beyond the Sun, has a measured parallax angle of $p = 0.768$ arcseconds.
@@ -146,7 +172,7 @@ $$d = 1.30 \text{ pc} \times 3.26 \frac{\text{ly}}{\text{pc}} = 4.24 \text{ ly}$
 
 That means the light we see from Proxima tonight left the star more than four years ago.
 
-::: {.callout-check-yourself title="Check Yourself 2"}
+::: {.callout-check-yourself title="Check Yourself 3"}
 A star has a parallax angle of 0.1 arcseconds. How far away is it (a) in parsecs and (b) in light-years?
 
 ::: {.callout-note collapse="true"}
@@ -217,6 +243,14 @@ Yes. If the more luminous star is also farther away, the extra distance can spre
 
 The relationship that connects the observable and the hidden quantity is the inverse-square law:
 
+::: {.callout-check-yourself title="Checkpoint: Think Before the Formula"}
+If a star moves **twice as far away**, what happens to the light reaching Earth?
+
+- **A)** Half as bright
+- **B)** One quarter as bright
+- **C)** One eighth as bright
+:::
+
 $$b = \frac{L}{4\pi d^2}$$
 
 where:
@@ -226,9 +260,17 @@ where:
 - $d$ is the distance from the star
 - $4\pi d^2$ is the area of a sphere centered on the star
 
+{{< fig inverse-square-stepwise-module2 >}}
+
 {{< fig light-inverse-square >}}
 
 This equation says something simple and profound: the same total light is being spread over a larger and larger sphere as distance increases. Double the distance and the same energy is spread over four times the area, so the apparent brightness falls by a factor of four.
+
+::: {.callout-note collapse="true"}
+## Prediction Check
+
+The correct answer is **B: one quarter as bright**. Twice the distance means four times the area, so the same light is diluted by a factor of 4.
+:::
 
 ### Worked Example: Same Apparent Brightness, Different Star
 
@@ -296,6 +338,8 @@ $$m_1 - m_2 = -2.5 \log_{10}\left(\frac{b_1}{b_2}\right)$$
 
 So a 5-magnitude difference corresponds to a factor of 100 in brightness.
 
+{{< fig magnitude-distance-toolkit-module2 >}}
+
 ::: {.column-margin}
 **Apparent magnitude ($m$):** A logarithmic brightness scale measured from Earth. Brighter objects have smaller magnitude numbers.
 :::
@@ -336,6 +380,16 @@ where $d$ is in parsecs.
 
 Conceptually, this is just the inverse-square law written in magnitude language. The bigger the difference between how bright a star looks and how bright it would look at 10 pc, the farther away it must be.
 
+::: {.callout-check-yourself title="Check Yourself 7"}
+What magnitude difference corresponds to a factor of 100 in brightness?
+
+::: {.callout-note collapse="true"}
+## Solution
+
+**Five magnitudes.** That is the key conversion worth memorizing.
+:::
+:::
+
 ### Worked Example: Reading a Distance Modulus
 
 Suppose a star has apparent magnitude $m = 10$ and absolute magnitude $M = 5$. Then:
@@ -354,7 +408,7 @@ $$d = 10^2 = 100 \text{ pc}$$
 
 The star appears 5 magnitudes dimmer than it would at 10 parsecs, so it must be farther away. The distance modulus turns that brightness difference back into a distance estimate.
 
-::: {.callout-check-yourself title="Check Yourself 7"}
+::: {.callout-check-yourself title="Check Yourself 8"}
 If a star has $m = 8$ and $M = 3$, what distance modulus does it have, and does that mean the star is closer than 10 pc, exactly 10 pc, or farther than 10 pc?
 
 ::: {.callout-note collapse="true"}
@@ -393,7 +447,7 @@ Each rung reaches farther, but each one depends on the reliability of the rung b
 
 <!-- FIGURE: Diagram showing a four-rung ladder. Rung 1 (bottom): "Parallax — Geometry (to ~1000 pc)". Rung 2: "Cepheids & Standard Candles — Physics (to ~30 Mpc)". Rung 3: "Supernovae — Type Ia (to ~1000 Mpc)". Rung 4 (top): "Hubble Flow — Cosmology (to edge of observable universe)". Each rung is labeled with a distance range and key method. Caption: "The Cosmic Distance Ladder. Each rung extends our reach farther, but depends on previous rungs for calibration." -->
 
-::: {.callout-check-yourself title="Check Yourself 8"}
+::: {.callout-check-yourself title="Check Yourself 9"}
 Why can't geometry alone carry us all the way to distant galaxies?
 
 ::: {.callout-note collapse="true"}
@@ -415,7 +469,9 @@ Ground-based astronomy could reach parallax precisions of roughly 0.01 arcsecond
 
 Gaia, launched by the European Space Agency in 2013, measures parallaxes for billions of stars and can reach precisions of order 10 microarcseconds for its best targets. That does not mean every star in the sky gets that precision, but it does mean the Milky Way can now be mapped in three dimensions with a level of detail that earlier generations of astronomers could barely imagine.
 
-::: {.callout-check-yourself title="Check Yourself 9"}
+{{< fig gaia-reach-module2 >}}
+
+::: {.callout-check-yourself title="Check Yourself 10"}
 If Gaia can measure a parallax as small as 10 microarcseconds for an exceptionally favorable target, what distance does that correspond to?
 
 ::: {.callout-note collapse="true"}
@@ -448,12 +504,28 @@ Even the nearest stars are so far away that Earth's orbit becomes a tiny geometr
 
 By now the detective chain should feel straightforward:
 
-1. Measure the star's changing **position** to get parallax.
-2. Use geometry to infer **distance**.
-3. Measure the arriving **flux** to get apparent brightness.
-4. Combine brightness and distance to infer **luminosity**.
+1. Measure changing **position** -> determine **parallax**
+2. Convert parallax into **distance**
+3. Measure arriving **flux** -> determine apparent brightness
+4. Apply the inverse-square law -> determine **luminosity**
+5. Combine luminosity with temperature -> place the star on the **H-R diagram**
 
 Once distance and luminosity are known, the rest of stellar astronomy opens up. We can combine luminosity with temperature to infer radius. We can place the star on the H-R diagram. Later, binary orbits will let us add mass, and then the full architecture of stellar lives comes into view.
+
+::: {.callout-check-yourself title="Checkpoint: Which Star Is Which?"}
+Two stars appear equally bright.
+
+- **Star A:** distance = 10 pc
+- **Star B:** distance = 100 pc
+
+Which star is more luminous?
+
+::: {.callout-note collapse="true"}
+## Solution
+
+**Star B** is more luminous. It is 10 times farther away, so to appear equally bright it must emit $10^2 = 100$ times more total power.
+:::
+:::
 
 ---
 
@@ -479,17 +551,17 @@ Only if they also have the same luminosity. Equal distance removes one variable,
 
 ## Summary: First Distance, Then Luminosity
 
-1. **A bright-looking star is an ambiguous clue.** It could be close, intrinsically luminous, or both.
+### Observable
 
-2. **Parallax solves the distance problem first.** Position shift becomes angle, and angle becomes distance through geometry.
+We directly measure only two crucial clues here: a star's changing **position** and the **brightness** of its light.
 
-3. **The inverse-square law solves the luminosity problem second.** Once distance is known, observed brightness can be converted into intrinsic power.
+### Model
 
-4. **Magnitudes are bookkeeping, not the core physics.** They are useful, but the real reasoning lives in flux, luminosity, and distance.
+Geometry turns parallax into distance. The inverse-square law turns brightness plus distance into luminosity. The magnitude system is the historical shorthand layered on top of the same physics.
 
-5. **Parallax anchors the entire distance ladder.** Every farther-reaching method depends on this geometric first rung.
+### Inference
 
-6. **Gaia changed the scale of stellar astronomy.** Better parallax measurements give better luminosities, cleaner H-R diagrams, and stronger inferences about stellar lives.
+A bright-looking star is not enough. First solve distance, then solve luminosity, and only then can the star be placed meaningfully on the H-R diagram and folded into the wider story of stellar structure.
 
 ::: {.callout-tip}
 ## Looking Ahead
