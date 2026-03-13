@@ -276,6 +276,8 @@ A crucial transition occurs: for the first time, the star generates its own inte
 
 The exact location on the main sequence depends on the star's mass. In our earlier lecture on the H-R diagram (L16), we learned that more massive stars burn hydrogen faster and are consequently more luminous. A 20 M☉ star reaches the main sequence hotter and brighter than a 1 M☉ star. Yet the fundamental condition is the same: hydrogen fusion in hydrostatic equilibrium.
 
+{{< fig hr-pre-main-sequence-tracks >}}
+
 ### Protoplanetary Disks and the Formation of Planets
 
 Here is a remarkable twist in the star-formation story: **the same disk that accretes material onto the protostar can form planets.**

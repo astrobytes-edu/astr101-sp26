@@ -272,7 +272,7 @@ A main-sequence star moves off the main sequence to the *upper right* of the dia
 
 Different masses follow different tracks. Low-mass stars trace one path; massive stars trace another. But all evolutionary tracks share a common feature: they move off the main sequence and toward the upper right — toward the region of red giants and supergiants.
 
-<!-- FIGURE: H-R diagram showing multiple stellar evolutionary tracks. Draw tracks for masses 0.5 $M_\odot$, 1 $M_\odot$ (Sun), 2 $M_\odot$, 5 $M_\odot$, and 10 $M_\odot$. Show each track starting on the main sequence and curving off to the upper right toward the red giant branch. Label the main sequence, red giant branch, horizontal branch (for low-mass stars), and asymptotic giant branch. Annotate key phases: "hydrogen core burning," "hydrogen shell burning," "helium core burning," etc. -->
+{{< fig hr-post-main-sequence-tracks >}}
 
 ::: {.callout-key-insight title="Observable -> Model -> Inference"}
 **Observable:** A star appears in the upper-right region of the H-R diagram: cool, but incredibly luminous.
@@ -319,6 +319,8 @@ The massive star settles into a phase of **helium-core burning**, just as the lo
 A massive star does not simply become a red giant and fade. It becomes a **supergiant** — a massive, bright star with a complex internal structure. Its core develops an **onion-shell structure**: iron core, silicon shell burning, oxygen-neon shell burning, and so on, up through the hydrogen-rich envelope.
 
 This is the preview for Lecture 20: the onion-shell structure and the fate of massive stars.
+
+{{< fig hr-massive-star-evolution >}}
 
 ---
 
