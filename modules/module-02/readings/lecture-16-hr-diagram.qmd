@@ -399,7 +399,9 @@ $$\frac{R_{\text{Betelgeuse}}}{R_{\odot}} = \sqrt{\frac{140{,}000}{\left(3{,}500
 
 **Evaluate:**
 
-$$\frac{R_{\text{Betelgeuse}}}{R_{\odot}} = \sqrt{\frac{140{,}000}{0.132}} \approx \sqrt{1.06 \times 10^6} \approx 1.03 \times 10^3$$
+$$\frac{R_{\text{Betelgeuse}}}{R_{\odot}} = \sqrt{\frac{140{,}000}{0.132}}$$
+
+$$\frac{R_{\text{Betelgeuse}}}{R_{\odot}} \approx \sqrt{1.06 \times 10^6} \approx 1.03 \times 10^3$$
 
 $$R_{\text{Betelgeuse}} \approx 1{,}030 \, R_\odot$$
 
@@ -594,6 +596,10 @@ $$\frac{L}{L_\odot} = \left(\frac{R}{R_\odot}\right)^2 \left(\frac{T}{T_\odot}\r
 $$\frac{R}{R_\odot} = \sqrt{\frac{L/L_\odot}{\left(T/T_\odot\right)^4}}$$
 
 Because $T \approx T_\odot$ for a G5 star, this simplifies to
+
+$$\frac{L}{L_\odot} \approx \left(\frac{R}{R_\odot}\right)^2$$
+
+so
 
 $$\frac{R}{R_\odot} \approx \sqrt{\frac{L}{L_\odot}}$$
 
