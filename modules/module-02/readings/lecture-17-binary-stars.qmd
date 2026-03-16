@@ -119,6 +119,10 @@ $$M_A + M_B = \frac{a^3}{P^2}$$
 
 where $M_A$ and $M_B$ are the stellar masses (in solar masses), $a$ is the orbital separation (in AU), and $P$ is the orbital period (in years). This is the **solar unit form** of Kepler's third law — a practical version that works directly with the units astronomers use. To use this form, astronomers must know the system's distance well enough to convert angular separation on the sky into actual separation in AU.
 
+::: {.callout-sanity-check title="Unit Check"}
+In the solar-unit form of Kepler's third law, $a$ must be in $\mathrm{AU}$, $P$ must be in $\mathrm{yr}$, and the resulting mass is in solar masses $\left(M_\odot\right)$.
+:::
+
 {{< fig sirius-orbit-history >}}
 
 ::: {.callout-key-insight title="Key Insight"}
@@ -127,11 +131,25 @@ Newton's form of Kepler's third law: $M_1 + M_2 = \frac{a^3}{P^2}$ (in solar uni
 This is one of the most important equations in stellar astronomy. It tells us the combined mass of any two orbiting objects if we can measure their separation $a$ and period $P$.
 :::
 
-For Sirius: the orbital separation is roughly 20 AU, and the period is 50 years. Let's calculate:
+For Sirius, the orbital separation is roughly $a = 20 \, \mathrm{AU}$ and the period is $P = 50 \, \mathrm{yr}$. We can write the calculation in full physics grammar:
 
-$$M_A + M_B = \frac{(20)^3}{(50)^2} = \frac{8000}{2500} = 3.2 \, M_\odot$$
+**General relation**
 
-This tells us the two stars together contain about 3.2 solar masses. But we need one more piece of information to find their individual masses: how far each star is from the center of mass (called the "semi-major axis" of each individual star's orbit).
+$$M_A + M_B = \frac{a^3}{P^2}
+\qquad
+\text{with } a \text{ in } \mathrm{AU},\ P \text{ in } \mathrm{yr}, \text{ and mass in } M_\odot$$
+
+**Substitute the measured values**
+
+$$M_A + M_B = \frac{(20 \, \mathrm{AU})^3}{(50 \, \mathrm{yr})^2}$$
+
+**Evaluate**
+
+$$M_A + M_B = \frac{8000}{2500} \, M_\odot = 3.2 \, M_\odot$$
+
+**Interpretation**
+
+The Sirius binary contains about $3.2 \, M_\odot$ total. But we need one more piece of information to find the individual masses: how far each star is from the center of mass (called the "semi-major axis" of each individual star's orbit).
 
 In a binary, both stars orbit the same center of mass. The more massive star orbits closer to this center; the less massive star orbits farther away. By measuring how far Sirius A is from the center of mass versus how far Sirius B is, we get the mass ratio. Combined with the total mass, this gives us individual masses: roughly 2.0 M☉ for Sirius A and 1.0 M☉ for Sirius B.
 
@@ -202,6 +220,8 @@ The radial velocity curve — a graph of velocity versus time — reveals the or
 **Radial velocity:** The component of a star's velocity along the line of sight to us (toward or away). Measured via Doppler shift.
 :::
 
+Here the **velocity amplitude** means the maximum line-of-sight speed read from the radial-velocity curve.
+
 ::: {.callout-prediction title="Predict First"}
 If one star's spectral lines swing through a much larger Doppler shift than the other's, does that star have the larger mass or the smaller mass?
 :::
@@ -210,12 +230,20 @@ Here's the key: in a binary, the velocity amplitude of each star is *inversely* 
 
 Spectroscopic binaries also teach an important caution. Radial velocities measure only motion along our line of sight, so spectroscopic data alone usually give **minimum masses** unless we also know the orbital inclination from eclipses or some other geometry.
 
+::: {.callout-summary title="Takeaway: Spectroscopic Binaries"}
+Spectroscopic binaries reveal motion through Doppler shifts, and their velocity amplitudes often give us the mass ratio even when the stars cannot be resolved.
+:::
+
 ::: {.callout-check-yourself title="Check Yourself 1"}
 In a spectroscopic binary, you measure the primary star's radial velocity amplitude to be 10 km/s and the secondary's to be 40 km/s. What is the mass ratio?
 
 > **[Solution]**
 > The mass ratio is the inverse of the velocity ratio:
-> $$\frac{M_{\text{secondary}}}{M_{\text{primary}}} = \frac{v_{\text{primary}}}{v_{\text{secondary}}} = \frac{10}{40} = 0.25$$
+> $$\frac{M_{\text{secondary}}}{M_{\text{primary}}}
+> = \frac{v_{\text{primary}}}{v_{\text{secondary}}}
+> = \frac{10 \, \mathrm{km\,s^{-1}}}{40 \, \mathrm{km\,s^{-1}}}
+> = 0.25$$
+> The velocity units cancel, leaving a dimensionless mass ratio.
 > The secondary is one-quarter as massive as the primary.
 :::
 
@@ -242,6 +270,8 @@ Binary-star astronomy works because each observable maps to a physical constrain
 ::: {.callout-worked-example title="Worked Example: A Simplified Binary Inspired by Algol"}
 This is a **toy example inspired by Algol**, using rounded numbers for teaching. The goal is to see the logic, not to memorize a specific real system.
 
+**Math grammar note:** Track both the quantity and the units on each line. The units are not decoration; they tell you whether the equation is being used correctly.
+
 **Given**
 
 - Orbital period: $P = 2.87$ days
@@ -254,23 +284,34 @@ Find the total mass, then the individual masses.
 
 **Step 1: Use the orbit to find the total mass**
 
-$$M_A + M_B = \frac{a^3}{P^2} = \frac{(0.062)^3}{(2.87 \text{ days} / 365.25 \text{ yr})^2}$$
+**General relation**
+
+$$M_A + M_B = \frac{a^3}{P^2}
+\qquad
+\text{with } a \text{ in } \mathrm{AU},\ P \text{ in } \mathrm{yr}, \text{ and mass in } M_\odot$$
 
 Convert the period to years:
 
-$$P = \frac{2.87}{365.25} = 0.00786 \text{ yr}$$
+$$P = 2.87 \, \mathrm{days} \times \frac{1 \, \mathrm{yr}}{365.25 \, \mathrm{days}} = 0.00786 \, \mathrm{yr}$$
 
-Now evaluate the expression:
+**Substitute the values**
 
-$$M_A + M_B = \frac{(0.062)^3}{(0.00786)^2} = \frac{0.000238}{0.0000618} \approx 3.85 \, M_\odot$$
+$$M_A + M_B = \frac{(0.062 \, \mathrm{AU})^3}{(0.00786 \, \mathrm{yr})^2}$$
+
+**Evaluate**
+
+$$M_A + M_B = 3.85 \, M_\odot$$
 
 So the system contains about $3.85 \, M_\odot$ total.
 
 **Step 2: Use the velocities to find the mass ratio**
 
-$$\frac{M_B}{M_A} = \frac{v_A}{v_B} = \frac{4.5}{11.0} \approx 0.41$$
+$$\frac{M_B}{M_A}
+= \frac{v_A}{v_B}
+= \frac{4.5 \, \mathrm{km\,s^{-1}}}{11.0 \, \mathrm{km\,s^{-1}}}
+\approx 0.41$$
 
-This tells us Star B is about 0.41 times the mass of Star A.
+The velocity units cancel, leaving a dimensionless mass ratio. This tells us Star B is about $0.41$ times the mass of Star A.
 
 **Step 3: Solve for the individual masses**
 
@@ -281,25 +322,27 @@ We now have two equations:
 
 Substitute equation 2 into equation 1:
 
-$$M_A + 0.41 M_A = 3.85$$
-$$1.41 M_A = 3.85$$
+$$M_A + 0.41 M_A = 3.85 \, M_\odot$$
+$$1.41 M_A = 3.85 \, M_\odot$$
 $$M_A = 2.73 \, M_\odot$$
 
 Then:
 
-$$M_B = 0.41 \times 2.73 = 1.12 \, M_\odot$$
+$$M_B = 0.41 \times 2.73 \, M_\odot = 1.12 \, M_\odot$$
 
 **Interpretation**
 
 The important idea is not memorizing the algebra. The important idea is that one measurement gives the **total mass**, while another gives the **mass ratio**. Together, those two constraints let us solve for each star separately.
+
+Since Star A has the smaller velocity amplitude, it should come out more massive — and it does.
 :::
 
 ::: {.callout-check-yourself title="Check Yourself 2"}
 A spectroscopic binary has an orbital period of 1.50 years and a semi-major axis of 2.0 AU. What is the combined mass of the system in solar masses?
 
 > **[Solution]**
-> Using $M_1 + M_2 = \frac{a^3}{P^2}$:
-> $$M_1 + M_2 = \frac{(2.0)^3}{(1.50)^2} = \frac{8.0}{2.25} = 3.56 \, M_\odot$$
+> Using $M_1 + M_2 = \frac{a^3}{P^2}$ with $a$ in $\mathrm{AU}$ and $P$ in $\mathrm{yr}$:
+> $$M_1 + M_2 = \frac{(2.0 \, \mathrm{AU})^3}{(1.50 \, \mathrm{yr})^2} = 3.56 \, M_\odot$$
 > The system contains about 3.6 solar masses total.
 :::
 
@@ -319,9 +362,13 @@ $$L \propto M^{3.5}$$
 
 This is the **mass-luminosity relation**, one of the empirical jewels of astronomy. It says that luminosity scales with mass raised to the 3.5 power.
 
+For calculations, it is cleaner to use the normalized working equation
+
+$$\frac{L}{L_\odot} \approx \left(\frac{M}{M_\odot}\right)^{3.5}$$
+
 What does this mean in practice? Consider a 10 M☉ star:
 
-$$\frac{L_{10}}{L_{\odot}} = \left(\frac{M_{10}}{M_{\odot}}\right)^{3.5} = 10^{3.5} \approx 3160$$
+$$\frac{L}{L_\odot} \approx \left(\frac{10 \, M_\odot}{M_\odot}\right)^{3.5} = 10^{3.5} \approx 3160$$
 
 A star 10 times more massive than the Sun is roughly **3000 times more luminous**. This is staggering.
 
@@ -346,6 +393,8 @@ Look at that table. The pattern is unmistakable. Massive stars are stunningly br
 The mass-luminosity relation is a **main-sequence** relation. Giants, supergiants, white dwarfs, and other evolved stars do not follow this same rule.
 :::
 
+Along the main sequence, stellar mass is the hidden physical variable that largely determines where a star sits on the H-R diagram: higher-mass stars are hotter, bluer, and more luminous.
+
 ### Why Does This Relationship Exist?
 
 The deeper reason lies in stellar physics. A more massive star has a hotter, denser core. Higher core temperature means hydrogen fuses faster — and stellar fusion rates respond very steeply to temperature, especially in the more massive stars where the CNO cycle becomes important. So a 2 M☉ star, with a hotter core, doesn't just fuse twice as fast — it fuses much faster, making it much more luminous.
@@ -363,13 +412,16 @@ We can use the mass-luminosity relation in two directions:
 **Forward:** Given a star's mass, predict its luminosity.
 
 A 3 M☉ main-sequence star has a luminosity of:
-$$L = (3)^{3.5} \approx 46 \, L_{\odot}$$
+$$\frac{L}{L_\odot} \approx \left(\frac{3 \, M_\odot}{M_\odot}\right)^{3.5} = 3^{3.5} \approx 46$$
+$$L \approx 46 \, L_\odot$$
 
 **Backward:** Given a star's luminosity (which we can measure from its apparent brightness and distance), estimate its mass.
 
 If we observe that a main-sequence star is 100 times more luminous than the Sun, we infer:
-$$100 = M^{3.5}$$
-$$M = 100^{1/3.5} = 100^{0.286} \approx 3.98 \, M_{\odot}$$
+$$\frac{100 \, L_\odot}{L_\odot} \approx \left(\frac{M}{M_\odot}\right)^{3.5}$$
+$$100 \approx \left(\frac{M}{M_\odot}\right)^{3.5}$$
+$$\frac{M}{M_\odot} \approx 100^{1/3.5} \approx 3.98$$
+$$M \approx 3.98 \, M_\odot$$
 
 This star weighs roughly 4 times as much as the Sun.
 
@@ -377,11 +429,17 @@ This star weighs roughly 4 times as much as the Sun.
 A main-sequence star has a mass of 2.5 M☉. Using the mass-luminosity relation, what is its luminosity relative to the Sun?
 
 > **[Solution]**
-> $$L = (2.5)^{3.5} = (2.5)^{7/2} = (2.5)^3 \times (2.5)^{0.5}$$
+> $$\frac{L}{L_\odot} \approx \left(\frac{2.5 \, M_\odot}{M_\odot}\right)^{3.5} = (2.5)^{3.5}$$
+> $$\frac{L}{L_\odot} \approx (2.5)^{7/2} = (2.5)^3 \times (2.5)^{0.5}$$
 > $$(2.5)^3 = 15.625$$
 > $$\sqrt{2.5} \approx 1.58$$
-> $$L \approx 15.625 \times 1.58 \approx 25 \, L_{\odot}$$
+> $$\frac{L}{L_\odot} \approx 15.625 \times 1.58 \approx 25$$
+> $$L \approx 25 \, L_\odot$$
 > A 2.5 M☉ main-sequence star is about 25 times more luminous than the Sun.
+:::
+
+::: {.callout-summary title="Takeaway: Mass-Luminosity"}
+The mass-luminosity relation makes mass the hidden variable behind main-sequence brightness.
 :::
 
 ---
@@ -409,19 +467,25 @@ Now, using $L \propto M^{3.5}$, we can substitute:
 
 $$\tau \propto \frac{M}{M^{3.5}} = M^{1-3.5} = M^{-2.5}$$
 
+For calculations, it is helpful to use the normalized working equation
+
+$$\frac{\tau}{10 \, \mathrm{Gyr}} \approx \left(\frac{M}{M_\odot}\right)^{-2.5}$$
+
 **Lifetime is inversely proportional to the 2.5 power of mass.** More massive stars live much shorter lives.
 
 Let's work out some numbers. The Sun has burned hydrogen for about 5 billion years and has about 5 billion years left, for a **total hydrogen-burning lifetime of roughly 10 billion years** (10 Gyr).
 
-A 2 M☉ star is 2 times more massive (4 times more fuel) but $(2)^{3.5} \approx 11$ times more luminous (11 times faster burning). The net effect:
+A 2 M☉ star is 2 times more massive (about twice the mass available for fusion) but $(2)^{3.5} \approx 11$ times more luminous. The net effect is
 
-$$\tau_2 = 10 \, \text{Gyr} \times \frac{1}{2^{2.5}} = 10 \text{ Gyr} \times \frac{1}{5.66} \approx 1.8 \, \text{Gyr}$$
+$$\frac{\tau}{10 \, \mathrm{Gyr}} \approx \left(\frac{2 \, M_\odot}{M_\odot}\right)^{-2.5} = 2^{-2.5} \approx \frac{1}{5.66}$$
+$$\tau \approx 10 \, \mathrm{Gyr} \times \frac{1}{5.66} \approx 1.8 \, \mathrm{Gyr}$$
 
 A 2 M☉ star lives roughly **1.8 billion years** — only about 1/5 as long as the Sun.
 
 A 10 M☉ star is even more extreme:
 
-$$\tau_{10} = 10 \, \text{Gyr} \times \frac{1}{10^{2.5}} = 10 \text{ Gyr} \times \frac{1}{316} \approx 0.032 \, \text{Gyr} = 32 \, \text{Myr}$$
+$$\frac{\tau}{10 \, \mathrm{Gyr}} \approx \left(\frac{10 \, M_\odot}{M_\odot}\right)^{-2.5} = 10^{-2.5} \approx \frac{1}{316}$$
+$$\tau \approx 10 \, \mathrm{Gyr} \times \frac{1}{316} \approx 0.032 \, \mathrm{Gyr} = 32 \, \mathrm{Myr}$$
 
 A 10 $M_\odot$ star lives only about **32 million years** — a cosmic blink of an eye compared with the Sun's roughly 10-billion-year main-sequence lifetime.
 
@@ -452,8 +516,13 @@ This is an **approximate main-sequence scaling**. Real stellar lifetimes also de
 If the Sun has a lifetime of 10 billion years, what is the lifetime of a 3 M☉ main-sequence star?
 
 > **[Solution]**
-> $$\tau_3 = 10 \text{ Gyr} \times \frac{1}{3^{2.5}} = 10 \text{ Gyr} \times \frac{1}{15.6} \approx 0.64 \text{ Gyr}$$
+> $$\frac{\tau}{10 \, \mathrm{Gyr}} \approx \left(\frac{3 \, M_\odot}{M_\odot}\right)^{-2.5} = 3^{-2.5} \approx \frac{1}{15.6}$$
+> $$\tau \approx 10 \, \mathrm{Gyr} \times \frac{1}{15.6} \approx 0.64 \, \mathrm{Gyr}$$
 > A 3 M☉ star lives about 640 million years — roughly 1/15 as long as the Sun.
+:::
+
+::: {.callout-summary title="Takeaway: Stellar Lifetimes"}
+Massive stars die young because luminosity rises faster than the available fuel supply.
 :::
 
 ---
@@ -475,6 +544,16 @@ A star's birth mass determines:
 5. **The remnant it leaves behind** — white dwarf, neutron star, or black hole — all determined by mass.
 
 In the cosmos, mass is the master variable. It shapes the appearance of stars, the colors of galaxies, the fate of civilizations built on planets orbiting aging stars. Everything traces back to mass.
+
+$$\text{birth mass}
+\rightarrow
+\text{main-sequence position}
+\rightarrow
+\text{luminosity}
+\rightarrow
+\text{lifetime}
+\rightarrow
+\text{end state}$$
 
 ::: {.callout-check-yourself title="Check Yourself 5"}
 Suppose you observe an old star cluster and find that it still contains hot, blue $10 \, M_\odot$ main-sequence stars. What would that tell you about the cluster's age?
