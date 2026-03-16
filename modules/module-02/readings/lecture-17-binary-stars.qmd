@@ -89,6 +89,14 @@ But here is the problem: **we cannot measure mass directly.** We can measure a s
 
 This is where binary stars become indispensable.
 
+::: {.callout-prediction title="Pause and Predict"}
+If stellar mass increases by a lot, which should change more dramatically: the available fuel supply or the luminosity?
+:::
+
+::: {.callout-summary title="Takeaway: Why Mass Matters"}
+**Mass is the control knob of stellar physics: it sets a star's luminosity, lifetime, and end state.**
+:::
+
 ---
 
 ## Binary Stars: Nature's Mass Measuring Tool
@@ -145,13 +153,17 @@ $$M_A + M_B = \frac{(20 \, \mathrm{AU})^3}{(50 \, \mathrm{yr})^2}$$
 
 **Evaluate**
 
-$$M_A + M_B = \frac{8000}{2500} \, M_\odot = 3.2 \, M_\odot$$
+$$M_A + M_B = \frac{(20 \, \mathrm{AU})^3}{(50 \, \mathrm{yr})^2} = 3.2 \, M_\odot$$
 
 **Interpretation**
 
 The Sirius binary contains about $3.2 \, M_\odot$ total. But we need one more piece of information to find the individual masses: how far each star is from the center of mass (called the "semi-major axis" of each individual star's orbit).
 
 In a binary, both stars orbit the same center of mass. The more massive star orbits closer to this center; the less massive star orbits farther away. By measuring how far Sirius A is from the center of mass versus how far Sirius B is, we get the mass ratio. Combined with the total mass, this gives us individual masses: roughly 2.0 M☉ for Sirius A and 1.0 M☉ for Sirius B.
+
+::: {.callout-prediction title="Check the Geometry"}
+If two stars share the same orbital period, which one must orbit farther from the center of mass: the more massive star or the less massive star?
+:::
 
 ::: {.column-margin}
 **Center of mass:** The point that both stars orbit. Located closer to the more massive star. The product $M_1 \times d_1 = M_2 \times d_2$, where $d_1$ and $d_2$ are distances from the center.
@@ -162,7 +174,7 @@ In a binary, both stars orbit the same center of mass. The more massive star orb
 :::
 
 ::: {.callout-summary title="Takeaway: Visual Binaries"}
-Visual binaries give us geometry directly: positions on the sky, orbital period, projected separation, and center-of-mass motion.
+**Visual binaries let us measure total mass from orbital geometry and individual masses from the center-of-mass ratio.**
 :::
 
 ### Eclipsing Binaries: Stars in Shadow
@@ -197,7 +209,7 @@ This is the **Algol paradox**. In a single-star picture, the more massive star s
 :::
 
 ::: {.callout-summary title="Takeaway: Eclipsing Binaries"}
-Eclipsing binaries turn timing into physics: the light curve constrains inclination, relative sizes, and surface-brightness contrast.
+**Eclipsing binaries are powerful because near-edge-on geometry sharply reduces inclination uncertainty.**
 :::
 
 ### Spectroscopic Binaries: Reading the Wobbling Light
@@ -231,7 +243,7 @@ Here's the key: in a binary, the velocity amplitude of each star is *inversely* 
 Spectroscopic binaries also teach an important caution. Radial velocities measure only motion along our line of sight, so spectroscopic data alone usually give **minimum masses** unless we also know the orbital inclination from eclipses or some other geometry.
 
 ::: {.callout-summary title="Takeaway: Spectroscopic Binaries"}
-Spectroscopic binaries reveal motion through Doppler shifts, and their velocity amplitudes often give us the mass ratio even when the stars cannot be resolved.
+**Spectroscopic binaries reveal motion through Doppler shifts and often give us the mass ratio even when the stars cannot be resolved.**
 :::
 
 ::: {.callout-check-yourself title="Check Yourself 1"}
@@ -260,7 +272,7 @@ An important reality: many binary systems are *both* visual and spectroscopic, o
 | Spectroscopic | Doppler shifts of spectral lines | Radial velocities and velocity amplitudes | Gives orbital motion and mass ratio even when the stars are unresolved |
 
 ::: {.callout-summary title="Takeaway: Observable -> Inference"}
-Binary-star astronomy works because each observable maps to a physical constraint. Positions tell us geometry, eclipses tell us inclination and size, and Doppler shifts tell us motion.
+**Binary-star astronomy works because each observable maps to a physical constraint: positions give geometry, eclipses give size and inclination, and Doppler shifts give motion.**
 :::
 
 ---
@@ -337,6 +349,10 @@ The important idea is not memorizing the algebra. The important idea is that one
 Since Star A has the smaller velocity amplitude, it should come out more massive — and it does.
 :::
 
+::: {.callout-summary title="Takeaway: Worked Example"}
+**One measurement gives the total mass, another gives the mass ratio, and together they let us solve for both stars individually.**
+:::
+
 ::: {.callout-check-yourself title="Check Yourself 2"}
 A spectroscopic binary has an orbital period of 1.50 years and a semi-major axis of 2.0 AU. What is the combined mass of the system in solar masses?
 
@@ -395,11 +411,29 @@ The mass-luminosity relation is a **main-sequence** relation. Giants, supergiant
 
 Along the main sequence, stellar mass is the hidden physical variable that largely determines where a star sits on the H-R diagram: higher-mass stars are hotter, bluer, and more luminous.
 
+That is why the main sequence is a physical sequence, not just a random band of stars on the H-R diagram.
+
 ### Why Does This Relationship Exist?
 
 The deeper reason lies in stellar physics. A more massive star has a hotter, denser core. Higher core temperature means hydrogen fuses faster — and stellar fusion rates respond very steeply to temperature, especially in the more massive stars where the CNO cycle becomes important. So a 2 M☉ star, with a hotter core, doesn't just fuse twice as fast — it fuses much faster, making it much more luminous.
 
 A more massive star can also support a hotter, denser core because of its higher gravity. The weight of all that overlying material crushes the core to higher density and temperature. This is a self-regulating process: the more massive the star, the hotter the core must be to support the weight, and the faster fusion occurs. The result is the mass-luminosity relation.
+
+::: {.callout-summary title="Causal Chain"}
+**higher mass**
+
+$\rightarrow$ **stronger gravity**
+
+$\rightarrow$ **higher core pressure and temperature**
+
+$\rightarrow$ **faster fusion**
+
+$\rightarrow$ **higher luminosity**
+:::
+
+::: {.callout-prediction title="Use the Chain"}
+If mass increases, which should respond more dramatically: the amount of fuel available or the fusion rate?
+:::
 
 ::: {.callout-key-insight title="Key Insight"}
 The mass-luminosity relation is not a law we impose; it emerges from stellar structure and the physics of nuclear fusion. A main-sequence star's luminosity is determined almost entirely by its mass. This is why mass is destiny.
@@ -439,7 +473,7 @@ A main-sequence star has a mass of 2.5 M☉. Using the mass-luminosity relation,
 :::
 
 ::: {.callout-summary title="Takeaway: Mass-Luminosity"}
-The mass-luminosity relation makes mass the hidden variable behind main-sequence brightness.
+**The mass-luminosity relation makes mass the hidden variable behind main-sequence brightness and H-R diagram position.**
 :::
 
 ---
@@ -489,6 +523,10 @@ $$\tau \approx 10 \, \mathrm{Gyr} \times \frac{1}{316} \approx 0.032 \, \mathrm{
 
 A 10 $M_\odot$ star lives only about **32 million years** — a cosmic blink of an eye compared with the Sun's roughly 10-billion-year main-sequence lifetime.
 
+::: {.callout-prediction title="Connect to Clusters"}
+If a star cluster is truly old, would you expect it to still contain hot blue high-mass main-sequence stars?
+:::
+
 | Mass (M☉) | Lifetime |
 |---|---|
 | 0.5 | ~50-100+ Gyr |
@@ -522,14 +560,14 @@ If the Sun has a lifetime of 10 billion years, what is the lifetime of a 3 M☉ 
 :::
 
 ::: {.callout-summary title="Takeaway: Stellar Lifetimes"}
-Massive stars die young because luminosity rises faster than the available fuel supply.
+**Massive stars die young because luminosity rises much faster than the available fuel supply.**
 :::
 
 ---
 
 ## Putting It Together: Mass Is Destiny
 
-We can now articulate the full power of the statement "mass is destiny."
+This section is the whole lecture in compressed form.
 
 A star's birth mass determines:
 
@@ -539,11 +577,9 @@ A star's birth mass determines:
 
 3. **Its lifetime** via the mass-lifetime relation: $\tau \propto M^{-2.5}$. That same 10 M☉ star burns out in 30 million years instead of 10 billion.
 
-4. **Its fate** (though we have not yet covered this). Massive stars cannot quietly fade like the Sun. They must explode as supernovae. The most massive collapse directly to black holes.
+4. **Its fate** (though we have not yet covered this in detail). Massive stars cannot quietly fade like the Sun. The most massive stars end in supernovae, neutron stars, or black holes.
 
-5. **The remnant it leaves behind** — white dwarf, neutron star, or black hole — all determined by mass.
-
-In the cosmos, mass is the master variable. It shapes the appearance of stars, the colors of galaxies, the fate of civilizations built on planets orbiting aging stars. Everything traces back to mass.
+5. **The remnant it leaves behind** — white dwarf, neutron star, or black hole.
 
 $$\text{birth mass}
 \rightarrow
@@ -554,6 +590,12 @@ $$\text{birth mass}
 \text{lifetime}
 \rightarrow
 \text{end state}$$
+
+::: {.callout-summary title="Takeaway: Mass Is Destiny"}
+**Birth mass sets a star's place on the main sequence, how bright it shines, how long it lives, and how it ends.**
+:::
+
+Everything in this reading points back to the same conclusion: for stars, mass is the master variable.
 
 ::: {.callout-check-yourself title="Check Yourself 5"}
 Suppose you observe an old star cluster and find that it still contains hot, blue $10 \, M_\odot$ main-sequence stars. What would that tell you about the cluster's age?
@@ -612,17 +654,28 @@ This is why binary masses are foundational: they anchor the single most importan
 
 ## Summary: From Weighing Stars to Understanding Destiny
 
-We have learned how to measure the masses of stars — the single most important property in stellar astronomy.
+We have learned how to measure stellar mass and why it matters so much.
 
-1. **Binary systems are the key.** By observing how two stars orbit each other under mutual gravity, we apply Newton's form of Kepler's third law to extract their combined mass. Additional measurements (visual positions, Doppler shifts, light curves) give us the mass ratio and thus individual masses.
+1. **Visual binaries:** positions on the sky give orbital geometry, so Newton's form of Kepler's third law gives total mass.
 
-2. **Three types of binaries reveal different information.** Visual binaries show orbital motions directly; eclipsing binaries reveal stellar sizes and masses; spectroscopic binaries are most numerous and reveal masses through radial velocity curves.
+2. **Eclipsing binaries:** light-curve depth, width, and timing constrain inclination, relative size, and surface-brightness contrast.
 
-3. **The mass-luminosity relation connects mass to brightness.** Main-sequence stars obey $L \propto M^{3.5}$ approximately: a 10-times-more-massive star is about 3000 times more luminous.
+3. **Spectroscopic binaries:** Doppler shifts reveal radial velocities, orbital periods, and often the mass ratio.
 
-4. **Massive stars live short lives.** Main-sequence lifetime scales roughly as $\tau \propto M^{-2.5}$. A 10 $M_\odot$ star lives only about 30 million years compared to the Sun's 10 billion years.
+4. **Binary mass equation:** in solar units,
+   $$
+   M_1 + M_2 = \frac{a^3}{P^2}
+   $$
+   with $a$ in $\mathrm{AU}$, $P$ in $\mathrm{yr}$, and mass in $M_\odot$.
 
-5. **Mass is destiny.** A star's birth mass determines its luminosity, lifetime, and ultimate fate. Understanding stellar mass is the master key to understanding all stars.
+5. **Main-sequence scaling laws:**
+   $$
+   \frac{L}{L_\odot} \approx \left(\frac{M}{M_\odot}\right)^{3.5},
+   \qquad
+   \frac{\tau}{10 \, \mathrm{Gyr}} \approx \left(\frac{M}{M_\odot}\right)^{-2.5}
+   $$
+
+6. **Mass is destiny:** birth mass largely sets a star's main-sequence position, luminosity, lifetime, and end state.
 
 ::: {.callout-roadmap title="Looking Ahead"}
 In Lecture 19, we will trace what happens as a main-sequence star ages. We will see why the Sun gradually brightens over its lifetime and why more massive stars cannot remain stable on the main sequence for long. The mass-lifetime relation is the skeleton key that unlocks stellar evolution.
