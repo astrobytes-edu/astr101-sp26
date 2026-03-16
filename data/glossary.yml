@@ -1762,7 +1762,7 @@ l17-mass-transfer:
 
 l17-white-dwarf:
   term: "White dwarf"
-  definition: "A stellar remnant (the core of a dead star) about the size of Earth but with the mass of the Sun. Algol B is a white dwarf-like object."
+  definition: "A stellar remnant (the core of a dead star) about the size of Earth but with roughly the mass of the Sun. Sirius B is a classic example. Algol B is not a white dwarf; it is an evolved star in a mass-transfer binary."
   lecture: 17
   module: 2
   tier: core
