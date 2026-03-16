@@ -108,7 +108,7 @@ Each type represents a different temperature range and a different set of domina
 
 ### What Each Type Tells Us
 
-The spectral type reveals which absorption lines are strongest. Different atoms produce strong absorption lines at different temperatures — hotter atoms ionize, cooler atoms do not. The spectral type is essentially a *temperature thermometer written in atoms*.
+The spectral type reveals which absorption lines are strongest. Different atoms and ions produce their strongest absorption features at different temperatures, so the spectrum is essentially a *temperature thermometer written in atoms*.
 
 Here's the physical reason:
 
@@ -141,7 +141,7 @@ Color is not cosmetic. In a crowded cluster like this one, the blue-white stars 
 | M | 2,400–3,700 | Red | Molecular bands (TiO, CN) | Betelgeuse, Proxima Centauri |
 
 ::: {.callout-key-insight title="Key Insight"}
-The spectral type is a *temperature scale written in atoms*. As temperature drops from O to M, stronger atoms ionize away and weaker atoms appear. The sequence is not arbitrary — it directly reflects atomic physics.
+The spectral type is a *temperature scale written in atoms*. As temperature drops from O to M, ionized-helium features fade, hydrogen peaks in A stars, and molecules dominate the coolest spectra. The sequence is not arbitrary — it directly reflects atomic physics.
 :::
 
 ::: {.callout-check-yourself title="Check Yourself 1"}
@@ -365,7 +365,7 @@ The larger star is **B: the cool but bright one**. If a star is cool yet still h
 
 $$\frac{L_{\text{Betelgeuse}}}{L_{\odot}} = \left(\frac{R_{\text{Betelgeuse}}}{R_{\odot}}\right)^2 \left(\frac{T_{\text{Betelgeuse}}}{T_{\odot}}\right)^4$$
 
-Solve for the radius ratio:
+**Rearranged relation:**
 
 $$\frac{R_{\text{Betelgeuse}}}{R_{\odot}} = \sqrt{\frac{L_{\text{Betelgeuse}}/L_\odot}{\left(T_{\text{Betelgeuse}}/T_\odot\right)^4}}$$
 
@@ -398,11 +398,27 @@ $$\frac{L_B}{L_A} = \left(\frac{R_B}{R_A}\right)^2 \left(\frac{T_B}{T_A}\right)^
 
 Since the luminosities are equal, $\frac{L_B}{L_A} = 1$, so
 
+**Rearranged relation:**
+
 $$1 = \left(\frac{R_B}{R_A}\right)^2 \left(\frac{T_B}{T_A}\right)^4$$
 
-$$\frac{R_B}{R_A} = \sqrt{\frac{1}{\left(T_B/T_A\right)^4}} = \sqrt{\frac{1}{(5{,}000/10{,}000)^4}} = \sqrt{\frac{1}{(0.5)^4}} = \sqrt{16} = 4$$
+$$\frac{R_B}{R_A} = \left(\frac{T_A}{T_B}\right)^2$$
+
+**Substitute:**
+
+$$\frac{R_B}{R_A} = \left(\frac{10{,}000}{5{,}000}\right)^2 = 2^2$$
+
+**Evaluate:**
+
+$$\frac{R_B}{R_A} = 4$$
 
 **Interpretation:** Star B is **4 times larger** than Star A, so it would sit farther toward the **giant region** of the H-R diagram: cooler, but still luminous.
+:::
+
+::: {.callout-summary title="Radius Logic in One Glance"}
+**high luminosity + low temperature $\Rightarrow$ large radius**
+
+**low luminosity + high temperature $\Rightarrow$ small radius**
 :::
 
 ::: {.callout-summary title="Takeaway: Stefan-Boltzmann"}
@@ -457,11 +473,11 @@ $\rightarrow$ **higher luminosity and hotter surface**
 $\rightarrow$ **position toward the upper left of the main sequence**
 :::
 
-### Lines of Constant Mass
+### Mass Sets Main-Sequence Position
 
-Just as the Stefan-Boltzmann law creates diagonal lines of constant radius on the H-R diagram, the physics of stellar structure creates nearly *vertical* lines of constant mass on the main sequence.
+On the **main sequence**, mass is the main variable that determines where a star sits. Lower-mass stars occupy the cool, dim lower-right end. Higher-mass stars occupy the hot, luminous upper-left end.
 
-Imagine following a line upward on the H-R diagram, moving along a constant-mass sequence. You move slightly left (hotter) and dramatically upward (more luminous), but your mass stays essentially constant.
+A star does **not** slide along the main sequence as it ages. During core hydrogen burning, it stays roughly in one region of the sequence. The main sequence is therefore best read as a **population of stars with different masses**, not as a path that one star traces from lower right to upper left.
 
 ::: {.callout-check-yourself title="Check Yourself 4"}
 A star is exactly halfway along the main sequence (in terms of temperature) between an O-type and an M-type star. Is it halfway in mass? In luminosity?
@@ -522,9 +538,9 @@ The H-R diagram unified astronomy. A single graph revealed that stars are not al
 ::: {.callout-key-insight title="Observable -> Model -> Inference"}
 **Observable:** We measure the brightness and spectral type of a star.
 
-**Model:** We know that luminosity comes from a star's surface area and temperature (Stefan-Boltzmann law). Since $R^2 \propto L/T^4$, we can infer stellar size from luminosity and temperature together.
+**Model:** We know that luminosity comes from a star's surface area and temperature (Stefan-Boltzmann law). Since $R^2 \propto L/T^4$, or equivalently $R \propto \sqrt{L}/T^2$, we can infer stellar size from luminosity and temperature together.
 
-**Inference:** 90% of stars fall on a diagonal band (the main sequence). Using stellar structure theory, we infer that main sequence stars are powered by hydrogen fusion, and their position is determined by mass. Red giants are in a different evolutionary phase: their cores have run out of hydrogen. White dwarfs are dead stellar cores.
+**Inference:** Most stars fall on a diagonal band (the main sequence). Using stellar structure theory, we infer that main sequence stars are powered by hydrogen fusion, and their position is determined by mass. Red giants are in a different evolutionary phase: their cores have run out of hydrogen. White dwarfs are dead stellar cores.
 :::
 
 ---
@@ -535,26 +551,37 @@ Let's practice interpreting an H-R diagram with a concrete example.
 
 **Given:** You discover a new star. Spectroscopy tells you it is a G5 star, so its temperature is about $5{,}500 \, \mathrm{K}$. You measure its luminosity as $100 \, L_\odot$. Where does it lie on the H-R diagram?
 
-**Step 1:** Plot the temperature.
+**Step 1: Plot the temperature.**
 - G5 is a G-type star, so look at the G region on the x-axis (between F and K, hot → cool reversed).
 
-**Step 2:** Plot the luminosity.
+**Step 2: Plot the luminosity.**
 - 100 $L_\odot$ is 100 times more luminous than the Sun. On a logarithmic scale, that's two decades above the Sun. Draw a horizontal line to 100 on the y-axis.
 
-**Step 3:** Interpret with the Stefan-Boltzmann law.
-- A G5 star has nearly the Sun's temperature, so the luminosity difference must come mainly from radius.
-- In solar-normalized form,
-  $$
-  \frac{L}{L_\odot} = \left(\frac{R}{R_\odot}\right)^2 \left(\frac{T}{T_\odot}\right)^4
-  $$
-  and because $T \approx T_\odot$, we get
-  $$
-  \frac{R}{R_\odot} \approx \sqrt{\frac{L}{L_\odot}} = \sqrt{100} = 10
-  $$
-- So the star's radius is about $10 \, R_\odot$.
-- This places it on the **red giant branch**, not on the main sequence.
+**Step 3: Interpret with the Stefan-Boltzmann law.**
 
-**Step 4:** Predict the future.
+**Relation:**
+
+$$\frac{L}{L_\odot} = \left(\frac{R}{R_\odot}\right)^2 \left(\frac{T}{T_\odot}\right)^4$$
+
+**Rearranged relation:**
+
+$$\frac{R}{R_\odot} = \sqrt{\frac{L/L_\odot}{\left(T/T_\odot\right)^4}}$$
+
+Because $T \approx T_\odot$ for a G5 star, this simplifies to
+
+$$\frac{R}{R_\odot} \approx \sqrt{\frac{L}{L_\odot}}$$
+
+**Substitute:**
+
+$$\frac{R}{R_\odot} \approx \sqrt{100}$$
+
+**Evaluate:**
+
+$$\frac{R}{R_\odot} \approx 10$$
+
+**Interpretation:** The star's radius is about $10 \, R_\odot$, so it belongs on the **red giant branch**, not on the main sequence.
+
+**Step 4: Predict the future.**
 - This is not a main sequence star, so it's not burning hydrogen in its core. It's an evolved star — a red giant in its death throes. In a few billion years (for Sun-like stars) or much sooner (for more massive ones), it will shed its outer layers and become a white dwarf.
 
 ::: {.callout-summary title="Takeaway: Practical Reading"}
@@ -589,9 +616,7 @@ One peculiar feature of the H-R diagram is the **Hertzsprung gap** — a sparse 
 
 Where are all the medium-mass A-type stars? Why do they seem to "jump" from the main sequence to the red giant branch?
 
-The answer is *timescales*. For stars of intermediate mass (~1.5–2 $M_\odot$), the transition from core hydrogen burning to red giant evolution happens *fast* — on a timescale of millions of years, not billions. So at any given time, very few are caught in the transition. The gap is real, but it's a selection effect: we're seeing a snapshot, and the fast-evolving stars are simply not caught in mid-transition often enough to be common.
-
-More massive stars (>3 $M_\odot$) fill the gap more readily because their evolution is even faster — they're more likely to be caught partway.
+The answer is *timescales*. For stars of intermediate mass (~1.5–2 $M_\odot$), the transition from core hydrogen burning to red giant evolution happens *fast* — on a timescale of millions of years, not billions. So at any given time, very few are caught in the transition. The gap is sparse because stars cross this part of the diagram quickly.
 
 This detail is less critical for an intro course but illustrates how the H-R diagram reveals the *dynamics* of stellar evolution.
 
@@ -627,10 +652,16 @@ The Stefan-Boltzmann law tells us that luminosity depends on **temperature and r
 
 ### Inference
 
-The main sequence is a mass sequence. Giants are cool but huge. White dwarfs are hot but tiny. The reversed x-axis is a memory trap: hotter is left, cooler is right. A single plot reveals what kind of star you are looking at and where it fits in stellar evolution.
+Use these five memory anchors:
+
+- **Hotter is left; cooler is right.**
+- **Most stars lie on the main sequence.**
+- **Giants are cool but bright because they are huge.**
+- **White dwarfs are hot but dim because they are tiny.**
+- **Along the main sequence, moving upward-left mostly means increasing mass.**
 
 ::: {.callout-summary title="Takeaway: H-R Diagram Review"}
-**Remember two anchors: hotter is left, and along the main sequence moving upward-left mostly means increasing mass.**
+**The H-R diagram is a map of stellar structure: temperature on one axis, luminosity on the other, and radius plus mass hiding underneath.**
 :::
 
 ---
@@ -641,7 +672,7 @@ The main sequence is a mass sequence. Giants are cool but huge. White dwarfs are
 **Model:** Plot on a two-axis graph. Luminosity depends on both temperature and radius via Stefan-Boltzmann. Stellar structure theory connects mass to core temperature and thus luminosity.
 
 **Inference:**
-- Main sequence stars (90% of all stars) are ordered by mass, not age.
+- Most stars lie on the main sequence, where position mainly tracks mass rather than age.
 - Red giants are evolved stars with different internal structures.
 - White dwarfs are stellar remnants.
 - Stars do not randomly scatter in temperature-luminosity space; they follow clean, physically determined sequences.
@@ -701,7 +732,7 @@ An astronomer observes a star and determines: spectral type G0 (temperature ~6,0
 
 Stars on the upper left of the main sequence (hot, massive, luminous) burn their fuel much faster than stars on the lower right (cool, low-mass, dim). The lifetime of a main sequence star scales roughly as $\tau \propto M/L$.
 
-(a) If a 10 $M_\odot$ star is ~10,000 times more luminous than the Sun, estimate its main sequence lifetime relative to the Sun's (~10 billion years).
+(a) If a 10 $M_\odot$ star is about 3,000 times more luminous than the Sun, estimate its main sequence lifetime relative to the Sun's (~10 billion years).
 
 (b) Why does the H-R diagram show so few O and B stars relative to M dwarfs, even though they're born in similar numbers? (Hint: Think about timescales.)
 
