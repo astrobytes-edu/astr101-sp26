@@ -55,6 +55,30 @@ This reading builds from spectral classification (the *x*-axis) through the Stef
 **Reference mode:** Use the Spectral Type Reference Table and Glossary while studying and while working practice problems.
 :::
 
+::: {.callout-roadmap title="Video: Omega Centauri and the H-R Diagram" collapse="false"}
+This short Hubble visualization is worth watching before the reading because it shows the exact observational move behind the H-R diagram: start with a real cluster image, sort stars by color and brightness, and reveal the structure hidden inside the population.
+
+<div class="demo-embed" style="width: 100%; margin: 1rem 0;">
+  <iframe
+    src="https://www.youtube-nocookie.com/embed/1JPDN8qoRjs"
+    width="100%"
+    height="520px"
+    style="border: 1px solid #ddd; border-radius: 8px;"
+    loading="lazy"
+    title="Constructing a Hertzsprung-Russell Diagram from Omega Centauri"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen>
+  </iframe>
+  <p style="text-align: center; margin-top: 0.5rem; font-size: 0.875rem; color: #666;">
+    <a href="https://www.youtube.com/watch?v=1JPDN8qoRjs" target="_blank" style="color: #5dade2;">Open in new tab ↗</a>
+  </p>
+</div>
+
+Caption: A Hubble Space Telescope color image of the core of the globular star cluster Omega Centauri is used to construct a Hertzsprung-Russell diagram of the stellar populations in the cluster. When stars are sorted by brightness and color they can be used to create a graph that astronomers use to trace stellar evolution.
+
+Credit: NASA, ESA, and J. Anderson, R. van der Marel, G. Bacon, and M. Estacion (STScI)
+:::
+
 ---
 
 ## Astronomy's Most Important Graph
@@ -68,7 +92,7 @@ You decide to make a scatter plot: temperature on the *x*-axis, luminosity on th
 
 What would you expect to see? Random scatter? Maybe stars evenly distributed across the diagram?
 
-You would be surprised. Instead, you would see *structure*. About 90% of all stars would lie along a single diagonal band — a trend so clean it seemed almost impossible. Stars did not scatter randomly across the temperature-luminosity plane. They obeyed a hidden law.
+You would be surprised. Instead, you would see *structure*. Most stars would lie along a single diagonal band — a trend so clean it seemed almost impossible. Stars did not scatter randomly across the temperature-luminosity plane. They obeyed a hidden law.
 
 This graph — the **Hertzsprung-Russell diagram**, or **H-R diagram** — became the foundation of stellar physics. Every star, every phase of stellar evolution, every mystery about why stars shine — all of it lives on this one diagram.
 
@@ -402,6 +426,8 @@ Since the luminosities are equal, $\frac{L_B}{L_A} = 1$, so
 
 $$1 = \left(\frac{R_B}{R_A}\right)^2 \left(\frac{T_B}{T_A}\right)^4$$
 
+$$\left(\frac{R_B}{R_A}\right)^2 = \left(\frac{T_A}{T_B}\right)^4$$
+
 $$\frac{R_B}{R_A} = \left(\frac{T_A}{T_B}\right)^2$$
 
 **Substitute:**
@@ -618,7 +644,7 @@ Where are all the medium-mass A-type stars? Why do they seem to "jump" from the 
 
 The answer is *timescales*. For stars of intermediate mass (~1.5–2 $M_\odot$), the transition from core hydrogen burning to red giant evolution happens *fast* — on a timescale of millions of years, not billions. So at any given time, very few are caught in the transition. The gap is sparse because stars cross this part of the diagram quickly.
 
-This detail is less critical for an intro course but illustrates how the H-R diagram reveals the *dynamics* of stellar evolution.
+This detail is less critical for an intro course, but it illustrates how the H-R diagram reveals the *dynamics* of stellar evolution.
 
 ---
 
