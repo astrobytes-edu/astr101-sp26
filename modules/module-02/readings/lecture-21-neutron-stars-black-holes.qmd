@@ -136,6 +136,8 @@ But here's the key: as material lands on the neutron star, it carries angular mo
 X-ray Binary — a binary star system containing a compact object (neutron star or black hole) that accretes material from a companion star, producing intense X-ray emission.*
 :::
 
+{{< fig recycled-pulsar-xray-binary >}}
+
 ::: {.callout-deep-dive title="Deep Dive" collapse="true"}
 A millisecond pulsar can reach truly extreme rotation rates. PSR J1748-2446 rotates **716 times per second**. At its equator, the surface velocity is ~one-quarter the speed of light. The centrifugal acceleration exceeds Earth's surface gravity by ~10¹¹ times. Despite this, the neutron star's gravity holds it together. Only neutron degeneracy pressure — the quantum force that fills the core — can resist such stresses. This is what makes neutron stars so interesting to astrophysicists: they let us probe physics at densities and energies we can never create in a laboratory.
 :::
@@ -196,6 +198,8 @@ The boundary at the Schwarzschild radius is called the **event horizon**. This i
 ::: {.column-margin}
 Event Horizon — the boundary around a black hole defined by the Schwarzschild radius, from which nothing, including light, can escape.*
 :::
+
+{{< fig black-hole-warped-spacetime-module2 >}}
 
 ### A Common Misconception: "Black Holes Are Cosmic Vacuums"
 

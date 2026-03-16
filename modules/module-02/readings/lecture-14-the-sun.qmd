@@ -232,6 +232,8 @@ The typical mean free path of a photon in the deep interior is only a few centim
 
 The key idea is not the exact number. It is the physical lesson: the Sun is not transparent to its own interior radiation. Because energy cannot leave quickly, transport structure matters.
 
+{{< fig photon-random-walk-solar-core >}}
+
 ::: {.callout-check-yourself title="Check Yourself 3"}
 If photons stop carrying energy outward efficiently in the outer Sun, what else could the Sun do?
 

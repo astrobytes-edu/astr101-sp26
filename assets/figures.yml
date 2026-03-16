@@ -1718,6 +1718,42 @@ figures:
     alt: "Diagram showing blueshift and redshift of spectral lines"
     module: 2
 
+  photon-random-walk-solar-core:
+    path: /assets/images/module-02/random-walk.png
+    caption: "What to notice: a photon born in the solar core does not travel straight outward. Repeated absorption and re-emission turn escape into a random walk, so radiative transport is a diffusion problem, not a direct beam."
+    alt: "Teaching infographic titled Random Walk: 2000 Scatterings, showing a tangled photon path and a side panel explaining mean free path, number of scatterings, diffusion time of about 170,000 years, and the much shorter straight-line travel time."
+    module: 2
+
+  stellar-tug-of-war-hse:
+    path: /assets/images/module-02/stellar-tug-of-war-hse.png
+    caption: "What to notice: hydrostatic equilibrium is a balance between inward gravity and outward pressure, not a frozen state. The same tug-of-war appears in the main sequence, red giant expansion, and the collapse to compact remnants."
+    alt: "Infographic cutaway of a star titled The Stellar Tug-of-War, with arrows showing gravity inward and pressure outward, labeled stellar layers, and side panels comparing the balance during the main sequence, red giant expansion, and compact-remnant formation."
+    module: 2
+
+  hydrogen-shell-burning-red-giant:
+    path: /assets/images/module-02/hshellburningsml.jpg
+    caption: "What to notice: once core hydrogen fusion ends, the action moves into a thin hydrogen-burning shell around an inert helium core. That shell produces enough energy to puff up the outer envelope and make the star a red giant."
+    alt: "Simple red-giant schematic showing a helium-rich core, a hydrogen-burning shell around it, arrows indicating increased radiation pressure, and a large expanded cool hydrogen-rich outer envelope."
+    module: 2
+
+  solar-system-element-origins-module2:
+    path: /assets/images/module-02/Chandra_PeriodicTable.jpeg
+    caption: "What to notice: the periodic table is a cosmic origin story. Hydrogen and much of helium are primordial, many common elements are forged in stars, and the heaviest elements require the most violent astrophysical events."
+    alt: "Color-coded periodic table titled Origins: Solar System Elements, with a legend for Big Bang fusion, dying low-mass stars, exploding massive stars, merging neutron stars, exploding white dwarfs, and cosmic-ray fission, plus a human silhouette showing major element fractions in the body."
+    module: 2
+
+  recycled-pulsar-xray-binary:
+    path: /assets/images/module-02/NS_heartbeatsNature.jpeg
+    caption: "What to notice: the accretion disk is not just glowing scenery. Infalling gas releases X-rays and delivers angular momentum, which can spin an old neutron star back up into a recycled pulsar."
+    alt: "Diagram of a neutron star in an accretion disk, with magnetic field lines, rotation arrows, matter accreting onto the neutron star, density fluctuations in the disk, and labeled X-ray bursts."
+    module: 2
+
+  black-hole-warped-spacetime-module2:
+    path: /assets/images/module-02/webb-STScI-blackholes-warped-spacetime.png
+    caption: "What to notice: the black hole itself stays dark. The light comes from hot gas outside the event horizon, and strong gravity bends light from the far side of the disk into the bright ring we can see."
+    alt: "Artist's concept of a black hole with a glowing accretion disk whose far side appears warped into a bright ring by gravitational lensing around the dark central shadow."
+    module: 2
+
   # ==============================================================
   # Module 3: Stellar Structure & Evolution
   # ==============================================================

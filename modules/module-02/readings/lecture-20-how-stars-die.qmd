@@ -328,7 +328,7 @@ $$\frac{10^{44} \text{ J}}{1.2 \times 10^{44} \text{ J}} \approx 0.8$$
 
 ### Nucleosynthesis: Forging the Elements
 
-<!-- FIGURE: Periodic table color-coded by origin. Show: (1) hydrogen and helium in one color (primordial), (2) light elements (C, N, O, Na, Mg, Al, Si) in another color (stellar nucleosynthesis in low/intermediate mass stars), (3) iron-peak elements (Fe, Ni, Co, Cu, Zn) in another color (core-collapse SN), (4) heavier elements (Ag, Au, Pb, U) in another color (neutron star mergers or r-process). Include caption explaining that only hydrogen and helium are primordial; everything else comes from stellar processes. -->
+{{< fig solar-system-element-origins-module2 >}}
 
 The extreme temperatures and neutron densities in the supernova explosion create a nuclear alchemy far beyond what happens in normal stellar fusion.
 

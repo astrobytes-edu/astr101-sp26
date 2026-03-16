@@ -104,7 +104,7 @@ This self-regulation is why main-sequence stars are so stable. They can burn hyd
 **Stable Equilibrium:** If the star is perturbed, forces act to restore it to its original state. This is the condition of a main-sequence star.
 :::
 
-<!-- FIGURE: Three-panel diagram showing: (1) Hydrostatic equilibrium in a star's interior — concentric shells with arrows showing gravity inward and pressure outward, labeled with temperature profile; (2) What happens if core contracts briefly — temperature rises, pressure increases, pushes back; (3) What happens if core expands — temperature falls, pressure decreases, gravity wins again. -->
+{{< fig stellar-tug-of-war-hse >}}
 
 ::: {.callout-key-insight title="Key Insight"}
 The reason main-sequence stars are stable is *not* that they are "at rest." They are stable because they have a **self-correcting feedback mechanism**. Any perturbation automatically triggers a restoring force. This is why a star like our Sun can burn hydrogen stably for 10 billion years without exploding.
@@ -236,7 +236,7 @@ The rising temperature ignites hydrogen fusion in a thin **shell** surrounding t
 
 Why? In a large volume (the core), you had a steady, slow burn. In a thin shell, you have a more concentrated, violent burn. The total luminosity of the star *increases dramatically*.
 
-<!-- FIGURE: Cross-section of a star transitioning from main sequence to red giant. Show: (1) Main sequence star with hydrogen-fusing core, stable structure; (2) Moment of core hydrogen exhaustion, helium ash core forms; (3) Core contracts, heats up; (4) Hydrogen shell burning ignites, envelope expands, star becomes red giant. Label the core, shell, and expanding envelope. Show temperature and density profiles. -->
+{{< fig hydrogen-shell-burning-red-giant >}}
 
 **Step 4: Envelope Expansion**
 
