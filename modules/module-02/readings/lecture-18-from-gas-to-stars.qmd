@@ -91,18 +91,11 @@ An **emission nebula** (also called an H II region) is a cloud of gas energized 
 - **Physical cause:** Ultraviolet radiation from those stars ionizes the surrounding hydrogen. When electrons later recombine with the ions, the gas emits light at specific wavelengths, especially hydrogen-alpha.
 - **What it tells us:** Hot, young stars are nearby, and the surrounding gas is being heated and ionized right now.
 
+{{< fig orion-nebula-hubble >}}
+
 ::: {.column-margin}
 **H II region** — ionized hydrogen produced where ultraviolet radiation from young, hot stars ionizes the surrounding gas. The Roman numeral II denotes singly ionized hydrogen (one electron removed).*
 :::
-
-<!-- FIGURE: Orion Nebula in visible light (Hubble image style). Show:
-
-- Central Trapezium stars (four bright points)
-- Pink/red H-alpha emission from ionized hydrogen
-- Dark dust lanes within the nebula
-- Surrounding fainter gas
-- Labels: "Trapezium stars", "Ionized gas (red)", "Dust lanes", "Emission extends beyond visible nebula"
-This figure demonstrates the connection between hot stars and nebular glow. -->
 
 #### Reflection Nebulae: Light Scattered by Dust
 
@@ -140,6 +133,14 @@ However, infrared radiation — with wavelengths even longer than visible red li
 Dust blocks visible light but is transparent to infrared radiation. This is why infrared observatories reveal the secrets of star formation: they let us see through the cosmic dust that hides newborn stars from visible-light telescopes.
 :::
 
+{{< fig carina-nebula-star-formation-hubble >}}
+
+::: {.callout-tip title="📺 Video: NASA on the Formation of Stars" collapse="true"}
+This short PBS LearningMedia / NASA resource is a strong visual companion to the infrared-star-formation discussion above.
+
+[Open the video in a new tab ↗](https://ca.pbslearningmedia.org/resource/npls13.sci.ess.eiu.planetevol/the-formation-of-stars-nasa-planetary-sciences/)
+:::
+
 ::: {.callout-check-yourself title="Check Yourself"}
 Two identical stars lie at the same distance, but one is seen through a dust cloud. Compared with the unobscured star, what two changes would you expect in the dusty star's appearance? Which change is **extinction**, and which is **reddening**?
 
@@ -147,16 +148,6 @@ Two identical stars lie at the same distance, but one is seen through a dust clo
 The dusty star should look **dimmer** and **redder**. The dimming is **extinction**. The shift toward red is **reddening**.
 :::
 :::
-
-<!-- FIGURE: Interstellar extinction and reddening diagram. Show:
-
-- A distant star and nearby comparison star
-- Dust cloud between them
-- Blue light scattered away; red light passing through
-- Distant star appears dimmer and redder
-- Annotations: "Blue light scattered (extinction)", "Red light penetrates", "Observed color shifted toward red (reddening)"
-- Include a spectrum bar showing how the color shifts
-This illustrates why infrared is essential for studying dust-enshrouded regions. -->
 
 ## The Giant Molecular Cloud: The Birthplace of Stars
 
@@ -321,6 +312,8 @@ T Tauri stars reveal that stellar birth is violent and chaotic. Powerful jets, a
 *"Protostars quietly contract under their own gravity until they ignite nuclear fusion."* In reality, the path to the main sequence is turbulent. Accretion disks are unstable, generating outbursts. Magnetic reconnection accelerates particles. Jets and winds can reach **hundreds of kilometers per second**. The process is not quiet; it is violent and fascinating.
 :::
 
+{{< fig star-formation-disk-jet-artist >}}
+
 ### Stage 3: The Arrival at the Main Sequence
 
 Stage 3 begins when **sustained hydrogen fusion** in the core provides the long-term pressure support of a true main-sequence star.
@@ -359,18 +352,11 @@ Why do disks form? The answer is angular momentum. If the original collapsing cl
 
 Infrared observations reveal protoplanetary disks around young stars. ALMA (the Atacama Large Millimeter Array) and JWST have imaged these disks in remarkable detail, revealing gaps and rings — the signatures of planets carving channels through the disk as they form.
 
+{{< fig hl-tauri-protoplanetary-disk-alma >}}
+
 ::: {.column-margin}
 **Protoplanetary disk (accretion disk)** — a flat, rotating disk of gas and dust surrounding a young star or protostar. Site of planetary formation. Also called an accretion disk if material is actively accreting onto the star.*
 :::
-
-<!-- FIGURE: Cross-section and overhead view of a protoplanetary disk around a young star. Show:
-
-- Central star (orange) with jets blasting outward
-- Disk in edge view (side panel): flattened structure with concentric rings
-- Disk in overhead view (top panel): spiral structure, gaps from planets, dust concentrations
-- Planets (to scale, shown as small spheres) in the gaps
-- Annotations: "Hot inner disk", "Cooler outer disk", "Planetary gaps", "Jets from protostar"
-Caption: "A protoplanetary disk around a young star. Planets form in the disk as dust grains collide and merge. Infrared observations by ALMA and JWST reveal the detailed structure." -->
 
 ::: {.callout-deep-dive title="Deep Dive" collapse="true"}
 **Why Infrared? The Dust Temperature Problem**

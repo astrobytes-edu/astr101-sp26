@@ -1619,6 +1619,40 @@ figures:
     alt: "Log-log plot of main-sequence stellar luminosity versus mass with colored points by spectral type, a dashed best-fit relation L proportional to M to the 3.5 power, and the Sun marked at 1 solar mass and 1 solar luminosity."
     module: 2
 
+  orion-nebula-hubble:
+    path: /assets/images/module-02/orion-nebula-hubble.jpg
+    caption: "What to notice: emission nebulae are not uniform glows. Bright ionized gas, embedded young stars, and dark dust lanes all appear together, so one image already tells you that star birth happens in a messy gas-and-dust environment."
+    alt: "Hubble image of the Orion Nebula showing a bright central glowing region, pink and blue ionized gas, many embedded stars, and dark dusty lanes crossing the nebula."
+    credit: "NASA/ESA/Hubble"
+    module: 2
+
+  carina-nebula-star-formation-hubble:
+    path: /assets/images/module-02/carina-nebula-star-formation-hubble.jpg
+    caption: "What to notice: visible light makes the dusty pillar look opaque, while infrared reveals stars and structure hidden inside and behind it. Same cloud, different wavelength, different information."
+    alt: "Two-panel Hubble comparison of a star-forming pillar in the Carina Nebula: the top visible-light panel shows a bright dusty pillar against glowing gas, while the bottom infrared panel reveals many stars and more internal structure through the dust."
+    credit: "NASA/ESA/Hubble"
+    module: 2
+
+  star-formation-disk-jet-artist:
+    path: /assets/images/module-02/star-formation-disk-jet-artist.jpeg
+    caption: "What to notice: outflows are not random. Material falls inward through a flattened disk while bipolar jets shoot outward along the rotation axis, showing that accretion and ejection happen together during stellar birth."
+    alt: "Artist's concept of a young forming star surrounded by a glowing flattened disk, with narrow bipolar jets emerging perpendicular to the disk."
+    module: 2
+
+  star-planet-formation-sequence:
+    path: /assets/images/module-02/star-planet-formation-american-scientist.webp
+    caption: "What to notice: star birth is a sequence, not a single moment. A dark cloud becomes a collapsing core, then a protostar with a disk and bipolar flow, then a T Tauri star, and eventually a young planetary system."
+    alt: "Six-panel schematic showing stages from a dark cloud core through gravitational collapse, a protostar with disk and bipolar flow, a T Tauri star, a pre-main-sequence star with planetary debris disk, and a young stellar system."
+    credit: "American Scientist"
+    module: 2
+
+  hl-tauri-protoplanetary-disk-alma:
+    path: /assets/images/module-02/hl-tauri-protoplanetary-disk-alma.jpg
+    caption: "What to notice: a young disk is structured, not smooth. Bright rings and dark gaps show that planet-forming disks can develop organized patterns very early."
+    alt: "ALMA image of the young star HL Tauri surrounded by an orange protoplanetary disk with multiple bright rings and dark gaps labeled around the central star."
+    credit: "ALMA"
+    module: 2
+
   hr-pre-main-sequence-tracks:
     path: /assets/images/module-02/HR-PMS.jpg
     caption: "What to notice: protostars do not all take the same route to adulthood. Massive protostars plunge onto the main sequence quickly, while low-mass stars spend much longer contracting and descending their pre-main-sequence tracks."
