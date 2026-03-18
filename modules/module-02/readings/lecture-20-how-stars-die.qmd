@@ -35,6 +35,7 @@ This reading compares the quiet death of low-mass stars with the violent deaths 
 **Default expectation (best):** Read the whole page before lecture and stop at each **Check Yourself** prompt.
 
 **If you're short on time (~25 min):**
+
 - Focus on planetary nebulae and white dwarfs, the iron-catastrophe section, and the Type Ia vs. Type II comparison.
 - Return to the full practice set after class.
 
@@ -102,14 +103,19 @@ The Ring Nebula (M57) has a radius of about 0.3 light-years and is expanding at 
 
 ::: {.callout-tip title="Solution" collapse="true"}
 Convert to consistent units:
+
 - Radius: $r = 0.3$ ly $= 0.3 \times 9.46 \times 10^{15}$ m $\approx 2.8 \times 10^{15}$ m
 - Speed: $v = 20$ km/s $= 2 \times 10^4$ m/s
 
 Time = Distance / Speed:
-$$t = \frac{2.8 \times 10^{15} \text{ m}}{2 \times 10^4 \text{ m/s}} \approx 1.4 \times 10^{11} \text{ s}$$
+$$
+t = \frac{2.8 \times 10^{15} \text{ m}}{2 \times 10^4 \text{ m/s}} \approx 1.4 \times 10^{11} \text{ s}
+$$
 
 Convert to years (use $1$ yr $\approx 3.15 \times 10^7$ s):
-$$t \approx \frac{1.4 \times 10^{11}}{3.15 \times 10^7} \approx 4400 \text{ years}$$
+$$
+t \approx \frac{1.4 \times 10^{11}}{3.15 \times 10^7} \approx 4400 \text{ years}
+$$
 
 **The Ring Nebula is roughly 4,000–5,000 years old**, ejected around the time humans were building the first cities.
 :::
@@ -158,7 +164,7 @@ This number — 1.4 solar masses — is one of the most important in astrophysic
 
 Chandrasekhar's result met fierce resistance. The legendary British astrophysicist Arthur Eddington was skeptical and famously said something like "I do not believe in the conclusion. I think there should be a law of nature to prevent a star from behaving in this absurd way." Eddington died in 1944 without accepting Chandrasekhar's result. But Chandrasekhar was right. In 1983, he won the Nobel Prize for this discovery.
 
-(Chandrasekhar's calculation assumes non-rotating white dwarfs composed of carbon and oxygen. Rotation and composition can change the limit slightly, but 1.4 M☉ is the standard reference value.)
+(Chandrasekhar's calculation assumes non-rotating white dwarfs composed of carbon and oxygen. Rotation and composition can change the limit slightly, but $1.4 \M_\odot$ is the standard reference value.)
 :::
 
 ### The Fate of Low-Mass Stars: A Summary
@@ -177,13 +183,19 @@ The Sun's surface temperature is about 5,800 K. A typical white dwarf has a surf
 ::: {.callout-tip title="Solution" collapse="true"}
 The Stefan-Boltzmann law says luminosity is proportional to surface area ($R^2$) times temperature to the fourth power ($T^4$):
 
-$$L \propto R^2 T^4$$
+$$
+L \propto R^2 T^4
+$$
 
 The white dwarf is hotter ($T_{\text{WD}} = 8000$ K vs. $T_{\text{Sun}} = 5800$ K), so the $T^4$ term favors the white dwarf. But the white dwarf is *tiny* compared to the Sun. Its radius is roughly Earth's radius ($R_{\text{WD}} \sim 6400$ km), while the Sun's radius is about 700,000 km. So:
 
-$$\frac{L_{\text{WD}}}{L_{\text{Sun}}} = \left(\frac{R_{\text{WD}}}{R_{\text{Sun}}}\right)^2 \left(\frac{T_{\text{WD}}}{T_{\text{Sun}}}\right)^4$$
+$$
+\frac{L_{\text{WD}}}{L_{\text{Sun}}} = \left(\frac{R_{\text{WD}}}{R_{\text{Sun}}}\right)^2 \left(\frac{T_{\text{WD}}}{T_{\text{Sun}}}\right)^4
+$$
 
-$$\approx \left(\frac{1}{100}\right)^2 \left(\frac{8000}{5800}\right)^4 \approx (10^{-4})(1.3)^4 \approx 2.8 \times 10^{-4}$$
+$$
+\approx \left(\frac{1}{100}\right)^2 \left(\frac{8000}{5800}\right)^4 \approx (10^{-4})(1.3)^4 \approx 2.8 \times 10^{-4}
+$$
 
 **The white dwarf is only about 0.03% as luminous as the Sun, despite being hotter.** The tiny size dominates.
 :::
@@ -217,12 +229,12 @@ Recall that stellar fusion works only when the temperature is hot enough. Hydrog
 
 Here's the sequence:
 
-1. **Hydrogen shell** (outer): Still fusing H → He
-2. **Helium shell**: Fusing He → C, O
-3. **Carbon shell**: Fusing C → Ne, Mg
-4. **Neon shell**: Fusing Ne → Mg
-5. **Oxygen shell**: Fusing O → Si, S
-6. **Silicon shell**: Fusing Si → Fe, Ni
+1. **Hydrogen shell** (outer): Still fusing H $\rightarrow$ He
+2. **Helium shell**: Fusing He $\rightarrow$ C, O
+3. **Carbon shell**: Fusing C $\rightarrow$ Ne, Mg
+4. **Neon shell**: Fusing Ne $\rightarrow$ Mg
+5. **Oxygen shell**: Fusing O $\rightarrow$ Si, S
+6. **Silicon shell**: Fusing Si $\rightarrow$ Fe, Ni
 7. **Iron core**: No fusion (the story ends here)
 
 This onion has many layers because each fusion stage adds a shell of new material around the inert core of the previous stage. At any moment in the final hours before explosion, multiple fusion reactions are happening simultaneously in different shells.
@@ -287,12 +299,16 @@ The entire process — collapse, bounce, shock revival, and explosion — takes 
 A Type II supernova explodes in about 1 second, releasing $10^{44}$ joules of energy. The Sun's luminosity is $3.8 \times 10^{26}$ W. If the Sun had been running at maximum brightness for the entire 1 second, how much energy would it have radiated? Compare to the supernova energy.
 
 ::: {.callout-tip title="Solution" collapse="true"}
-Energy = Power × Time
+Energy = Power $\times$ Time
 
-$$E_{\text{Sun}} = L_\odot \times t = (3.8 \times 10^{26} \text{ W})(1 \text{ s}) = 3.8 \times 10^{26} \text{ J}$$
+$$
+E_{\text{Sun}} = L_\odot \times t = (3.8 \times 10^{26} \text{ W})(1 \text{ s}) = 3.8 \times 10^{26} \text{ J}
+$$
 
 Ratio:
-$$\frac{E_{\text{SN}}}{E_{\text{Sun}}} = \frac{10^{44}}{3.8 \times 10^{26}} \approx 2.6 \times 10^{17}$$
+$$
+\frac{E_{\text{SN}}}{E_{\text{Sun}}} = \frac{10^{44}}{3.8 \times 10^{26}} \approx 2.6 \times 10^{17}
+$$
 
 **A Type II supernova releases about 260 quadrillion times more energy than the Sun does in an entire second.** The explosion is almost incomprehensibly violent.
 :::
@@ -313,14 +329,20 @@ A Type II supernova releases $10^{44}$ joules. The Sun's lifetime luminosity is 
 
 ::: {.callout-tip title="Solution" collapse="true"}
 **Sun's total energy output over its lifetime:**
-$$E_{\odot,\text{total}} = L_\odot \times t = (3.8 \times 10^{26} \text{ W}) \times (10^{10} \text{ yr})$$
+$$
+E_{\odot,\text{total}} = L_\odot \times t = (3.8 \times 10^{26} \text{ W}) \times (10^{10} \text{ yr})
+$$
 
 Convert years to seconds: $10^{10}$ yr $\times 3.15 \times 10^7$ s/yr $= 3.15 \times 10^{17}$ s
 
-$$E_{\odot,\text{total}} = (3.8 \times 10^{26}) \times (3.15 \times 10^{17}) \approx 1.2 \times 10^{44} \text{ J}$$
+$$
+E_{\odot,\text{total}} = (3.8 \times 10^{26}) \times (3.15 \times 10^{17}) \approx 1.2 \times 10^{44} \text{ J}
+$$
 
 **Number of Sun-lifetimes:**
-$$\frac{10^{44} \text{ J}}{1.2 \times 10^{44} \text{ J}} \approx 0.8$$
+$$
+\frac{10^{44} \text{ J}}{1.2 \times 10^{44} \text{ J}} \approx 0.8
+$$
 
 **A Type II supernova releases about as much energy as the Sun will emit over its entire 10-billion-year lifetime, but releases it in less than a second.**
 :::
@@ -357,8 +379,8 @@ Supernovae are the primary mechanism by which the cosmos becomes chemically enri
 ::: {.callout-key-insight title="Stellar Endpoints at a Glance"}
 | Initial mass | Typical endpoint | Main support or outcome |
 |------|------|------|
-| Less than about 8 M☉ | White dwarf | Electron degeneracy pressure |
-| About 8 to a few tens of M☉ | Neutron star | Neutron degeneracy pressure |
+| Less than about $8 \M_\odot$ | White dwarf | Electron degeneracy pressure |
+| About 8 to a few tens of $M\odot$ | Neutron star | Neutron degeneracy pressure |
 | High enough that even neutron degeneracy fails | Black hole | Gravitational collapse continues past the event horizon |
 
 What to notice: the endpoint is not random. It is set mainly by the star's **initial mass**, which determines how far fusion can proceed and whether any known pressure source can still resist gravity at the end.
@@ -371,15 +393,17 @@ So far, we've discussed core-collapse supernovae, which occur when a massive sta
 Remember: a white dwarf is the inert core left behind by a low-mass star. It's about the size of Earth, incredibly dense, and unbelievably hot (surface temperature ~10,000 K — hotter than the Sun's surface, but much smaller so less luminous).
 
 ::: {.callout-check-yourself title="Check Yourself — Accretion and the Chandrasekhar Limit"}
-A white dwarf has an initial mass of 1.0 M☉. It begins accreting material from a companion star at a rate of 0.01 M☉ per million years. The Chandrasekhar limit is 1.4 M☉. Approximately how long until the white dwarf reaches the Chandrasekhar limit and explodes?
+A white dwarf has an initial mass of $1.0 \M_\odot$. It begins accreting material from a companion star at a rate of $0.01 \M_\odot$ per million years. The Chandrasekhar limit is $1.4 \M_\odot$. Approximately how long until the white dwarf reaches the Chandrasekhar limit and explodes?
 
 ::: {.callout-tip title="Solution" collapse="true"}
-Mass to accrete: $\Delta M = 1.4 - 1.0 = 0.4$ M☉
+Mass to accrete: $\Delta M = 1.4 - 1.0 = 0.4$ $M\odot$
 
-Accretion rate: $\dot{M} = 0.01$ M☉ per million years $= 10^{-2}$ M☉/(Myr)
+Accretion rate: $\dot{M} = 0.01$ $M\odot$ per million years $= 10^{-2}$ $M\odot/(Myr)$
 
 Time:
-$$t = \frac{\Delta M}{\dot{M}} = \frac{0.4 \text{ M}_\odot}{0.01 \text{ M}_\odot/\text{Myr}} = 40 \text{ Myr}$$
+$$
+t = \frac{\Delta M}{\dot{M}} = \frac{0.4 \text{ M}_\odot}{0.01 \text{ M}_\odot/\text{Myr}} = 40 \text{ Myr}
+$$
 
 **The white dwarf will reach the Chandrasekhar limit and explode in approximately 40 million years.** This is a typical timescale for Type Ia supernova progenitors in binary systems.
 :::
@@ -409,11 +433,11 @@ This is a **Type Ia supernova**.
 
 | Property | Type II (Core-Collapse) | Type Ia (Thermonuclear) |
 |----------|-------------------------|------------------------|
-| **Progenitor** | Massive star (M > 8 M☉) | White dwarf in binary |
+| **Progenitor** | Massive star (M > $8 \M_\odot$) | White dwarf in binary |
 | **Trigger** | Iron core collapse | Thermonuclear runaway |
 | **Time to explosion** | ~9 million years | ~10 million years (accretion) |
 | **Duration of explosion** | ~1 second (shock-driven) | ~10 seconds (burning-driven) |
-| **Peak luminosity** | ~10^9 L☉ | ~10^9 L☉ (similar) |
+| **Peak luminosity** | ~10^$9 \L_\odot$ | ~10^$9 \L_\odot$ (similar) |
 | **Light curve shape** | Plateau, then decline | Smooth exponential decline |
 | **Ejecta composition** | Iron-peak + heavier; lots of Ni-56 | Iron-peak; similar Ni-56 yield |
 | **Ejecta velocity** | ~10,000–20,000 km/s | ~15,000–20,000 km/s |
@@ -437,6 +461,7 @@ You observe a new supernova in a distant galaxy. The light curve shows a smooth 
 **This is likely a Type Ia supernova.**
 
 **Reasoning:**
+
 - **Smooth exponential decay**: Type Ia light curves are powered by Ni-56 decay and typically show a smooth, exponential decline. Type II often shows a plateau phase.
 - **Iron and nickel features**: Both types produce these elements, but Type Ia comes from a white dwarf (made of carbon-oxygen) and accreted material (hydrogen/helium). The explosion destroys the white dwarf entirely, producing iron-peak elements. Type II comes from a massive star with iron core and hydrogen/helium layers, so Type II spectra often show hydrogen lines from the star's outer layers.
 - **No hydrogen lines**: Type II supernovae often show hydrogen absorption lines from the ejected hydrogen-rich envelope. The *absence* of hydrogen is consistent with Type Ia (white dwarf + accreted material) rather than Type II (hydrogen-rich star).
@@ -490,15 +515,15 @@ Here's the profound conclusion:
 
 **A star's mass at birth determines its entire fate — its lifetime, its final fuel, and the manner of its death.**
 
-- **Low-mass stars** (< 0.5 M☉): Burn hydrogen so slowly they outlive the current age of the universe. None have died yet.
-- **Sun-like stars** (0.5–8 M☉): Fuse hydrogen for billions of years, then gently shed their envelopes and die as white dwarfs.
-- **Intermediate-mass stars** (8–20 M☉): Burn through their fuel in millions of years. Their fate depends on whether they can ignite neon and silicon (depends on exact mass). Most become either white dwarfs or neutron stars.
-- **Massive stars** (> 20–25 M☉): Burn through their fuel in only a few million years. Build onion-shell cores. Explode as Type II supernovae and leave behind neutron stars or black holes.
+- **Low-mass stars** (< $0.5 \M_\odot$): Burn hydrogen so slowly they outlive the current age of the universe. None have died yet.
+- **Sun-like stars** (0.5–$8 \M_\odot$): Fuse hydrogen for billions of years, then gently shed their envelopes and die as white dwarfs.
+- **Intermediate-mass stars** (8–$20 \M_\odot$): Burn through their fuel in millions of years. Their fate depends on whether they can ignite neon and silicon (depends on exact mass). Most become either white dwarfs or neutron stars.
+- **Massive stars** (> 20–$25 \M_\odot$): Burn through their fuel in only a few million years. Build onion-shell cores. Explode as Type II supernovae and leave behind neutron stars or black holes.
 
 And in binary systems, a white dwarf can be rejuvenated by accretion and explode as a Type Ia supernova.
 
 ::: {.callout-key-insight title="Key Insight"}
-The diversity of stellar endpoints (white dwarfs, neutron stars, black holes) and explosion types (Type Ia and II supernovae) all stem from the initial mass of the star. This is one of the deepest insights of stellar astrophysics: initial mass → stellar structure → evolutionary path → death mode.
+The diversity of stellar endpoints (white dwarfs, neutron stars, black holes) and explosion types (Type Ia and II supernovae) all stem from the initial mass of the star. This is one of the deepest insights of stellar astrophysics: initial mass $\rightarrow$ stellar structure $\rightarrow$ evolutionary path $\rightarrow$ death mode.
 :::
 
 ---
@@ -544,10 +569,10 @@ Both explosion types scatter newly created heavy elements into the interstellar 
 **1.** **Planetary nebula timescale.** A planetary nebula has a radius of 0.5 light-years and is expanding at 15 km/s. How old is it (approximately)? Compare your answer to the typical lifetimes of planetary nebulae (~10,000 years).
 
 <!-- Conceptual / Understand / — / ⭐ -->
-**2.** **White dwarf density.** The Sun's mass is $2 \times 10^{30}$ kg and Earth's radius is $6.4 \times 10^6$ m. If the Sun became a white dwarf the size of Earth, what would be its average density? (Compare to water: $10^3$ kg/m³.)
+**2.** **White dwarf density.** The Sun's mass is $2 \times 10^{30}$ kg and Earth's radius is $6.4 \times 10^6$ m. If the Sun became a white dwarf the size of Earth, what would be its average density? (Compare to water: $10^3$ $kg/m^{3}.)$
 
 <!-- Calculation / Apply / — / ⭐⭐ -->
-**3.** **Chandrasekhar limit.** A white dwarf has a mass of 1.5 M☉. Explain what happens. Can electron degeneracy pressure support it? What must occur next?
+**3.** **Chandrasekhar limit.** A white dwarf has a mass of $1.5 \M_\odot$. Explain what happens. Can electron degeneracy pressure support it? What must occur next?
 
 ### Working with Core Collapse
 

@@ -44,6 +44,7 @@ This reading builds from spectral classification (the *x*-axis) through the Stef
 **Default expectation (best):** Read the whole page before lecture, pausing at each **Check Yourself** question.
 
 **If you're short on time (~20 min):** Focus on:
+
 - The Big Idea above
 - Spectral Types subsection (including the reference table)
 - The H-R Diagram itself: Regions of the Diagram subsection
@@ -120,7 +121,7 @@ In 1901, at Harvard Observatory, a deaf astronomer named **Annie Jump Cannon** b
 
 Cannon's original classification used letters: A, B, C, D, and so on. Later, as understanding improved, the unnecessary categories were dropped, leaving the sequence we use today:
 
-**O → B → A → F → G → K → M**
+**O $\rightarrow$ B $\rightarrow$ A $\rightarrow$ F $\rightarrow$ G $\rightarrow$ K $\rightarrow$ M**
 
 (Astronomers remember this with the mnemonic: **"Oh Be A Fine Girl, Kiss Me."** Or, if you prefer modern astronomy: **"Oh Be A Famous Astrophysicist, Keep Mentoring."**)
 
@@ -210,7 +211,7 @@ Luminosity is plotted on a **logarithmic scale** — each step up multiplies the
 
 Your brain says: "Hot on the left, cold on the right." But the H-R diagram says the opposite. This is a common stumbling block.
 
-**Why did Hertzsprung and Russell do this?** In 1911–1913, they plotted spectral class (O, B, A, ..., M) on the horizontal axis. Since spectral class runs O → M (which corresponds to hot → cool), when you plot it left to right, temperature appears reversed. When the field adopted this convention, it stuck.
+**Why did Hertzsprung and Russell do this?** In 1911–1913, they plotted spectral class (O, B, A, ..., M) on the horizontal axis. Since spectral class runs O $\rightarrow$ M (which corresponds to hot $\rightarrow$ cool), when you plot it left to right, temperature appears reversed. When the field adopted this convention, it stuck.
 
 **How to remember:** Think "O on the left" (O is the hottest type). Then the rest follows.
 
@@ -326,17 +327,24 @@ A star can be luminous because it is **hot**, because it is **large**, or becaus
 
 The **Stefan-Boltzmann law** (from Lecture 8) connects luminosity, temperature, and radius:
 
-$$L = 4\pi R^2 \sigma T^4$$
+$$
+L = 4\pi R^2 \sigma T^4
+$$
 
 For proportional reasoning, we often use
 
-$$L \propto R^2 T^4$$
+$$
+L \propto R^2 T^4
+$$
 
 For Sun-based comparisons, the cleanest working form is
 
-$$\frac{L}{L_\odot} = \left(\frac{R}{R_\odot}\right)^2 \left(\frac{T}{T_\odot}\right)^4$$
+$$
+\frac{L}{L_\odot} = \left(\frac{R}{R_\odot}\right)^2 \left(\frac{T}{T_\odot}\right)^4
+$$
 
 where:
+
 - $L$ is luminosity (power radiated, in watts or $L_\odot$)
 - $R$ is the star's radius
 - $\sigma$ is the Stefan-Boltzmann constant
@@ -361,13 +369,19 @@ Make a prediction before you do any algebra.
 
 We can rewrite the Stefan-Boltzmann law to isolate radius:
 
-$$R^2 \propto \frac{L}{T^4}$$
+$$
+R^2 \propto \frac{L}{T^4}
+$$
 
-$$R \propto \sqrt{\frac{L}{T^4}}$$
+$$
+R \propto \sqrt{\frac{L}{T^4}}
+$$
 
 equivalently,
 
-$$R \propto \frac{\sqrt{L}}{T^2}$$
+$$
+R \propto \frac{\sqrt{L}}{T^2}
+$$
 
 This tells us that **on an H-R diagram, lines of constant radius are diagonal lines**.
 
@@ -387,23 +401,35 @@ The larger star is **B: the cool but bright one**. If a star is cool yet still h
 
 **Relation:**
 
-$$\frac{L_{\text{Betelgeuse}}}{L_{\odot}} = \left(\frac{R_{\text{Betelgeuse}}}{R_{\odot}}\right)^2 \left(\frac{T_{\text{Betelgeuse}}}{T_{\odot}}\right)^4$$
+$$
+\frac{L_{\text{Betelgeuse}}}{L_{\odot}} = \left(\frac{R_{\text{Betelgeuse}}}{R_{\odot}}\right)^2 \left(\frac{T_{\text{Betelgeuse}}}{T_{\odot}}\right)^4
+$$
 
 **Rearranged relation:**
 
-$$\frac{R_{\text{Betelgeuse}}}{R_{\odot}} = \sqrt{\frac{L_{\text{Betelgeuse}}/L_\odot}{\left(T_{\text{Betelgeuse}}/T_\odot\right)^4}}$$
+$$
+\frac{R_{\text{Betelgeuse}}}{R_{\odot}} = \sqrt{\frac{L_{\text{Betelgeuse}}/L_\odot}{\left(T_{\text{Betelgeuse}}/T_\odot\right)^4}}
+$$
 
 **Substitute:**
 
-$$\frac{R_{\text{Betelgeuse}}}{R_{\odot}} = \sqrt{\frac{140{,}000}{\left(3{,}500/5{,}800\right)^4}}$$
+$$
+\frac{R_{\text{Betelgeuse}}}{R_{\odot}} = \sqrt{\frac{140{,}000}{\left(3{,}500/5{,}800\right)^4}}
+$$
 
 **Evaluate:**
 
-$$\frac{R_{\text{Betelgeuse}}}{R_{\odot}} = \sqrt{\frac{140{,}000}{0.132}}$$
+$$
+\frac{R_{\text{Betelgeuse}}}{R_{\odot}} = \sqrt{\frac{140{,}000}{0.132}}
+$$
 
-$$\frac{R_{\text{Betelgeuse}}}{R_{\odot}} \approx \sqrt{1.06 \times 10^6} \approx 1.03 \times 10^3$$
+$$
+\frac{R_{\text{Betelgeuse}}}{R_{\odot}} \approx \sqrt{1.06 \times 10^6} \approx 1.03 \times 10^3
+$$
 
-$$R_{\text{Betelgeuse}} \approx 1{,}030 \, R_\odot$$
+$$
+R_{\text{Betelgeuse}} \approx 1{,}030 \, R_\odot
+$$
 
 **Interpretation:** Betelgeuse is about **1,000 times the Sun's radius**. It is enormously luminous not because its surface is especially hot, but because its surface area is enormous.
 
@@ -420,25 +446,37 @@ Two stars have the same luminosity but different temperatures: Star A is hot (10
 
 **Relation:**
 
-$$\frac{L_B}{L_A} = \left(\frac{R_B}{R_A}\right)^2 \left(\frac{T_B}{T_A}\right)^4$$
+$$
+\frac{L_B}{L_A} = \left(\frac{R_B}{R_A}\right)^2 \left(\frac{T_B}{T_A}\right)^4
+$$
 
 Since the luminosities are equal, $\frac{L_B}{L_A} = 1$, so
 
 **Rearranged relation:**
 
-$$1 = \left(\frac{R_B}{R_A}\right)^2 \left(\frac{T_B}{T_A}\right)^4$$
+$$
+1 = \left(\frac{R_B}{R_A}\right)^2 \left(\frac{T_B}{T_A}\right)^4
+$$
 
-$$\left(\frac{R_B}{R_A}\right)^2 = \left(\frac{T_A}{T_B}\right)^4$$
+$$
+\left(\frac{R_B}{R_A}\right)^2 = \left(\frac{T_A}{T_B}\right)^4
+$$
 
-$$\frac{R_B}{R_A} = \left(\frac{T_A}{T_B}\right)^2$$
+$$
+\frac{R_B}{R_A} = \left(\frac{T_A}{T_B}\right)^2
+$$
 
 **Substitute:**
 
-$$\frac{R_B}{R_A} = \left(\frac{10{,}000}{5{,}000}\right)^2 = 2^2$$
+$$
+\frac{R_B}{R_A} = \left(\frac{10{,}000}{5{,}000}\right)^2 = 2^2
+$$
 
 **Evaluate:**
 
-$$\frac{R_B}{R_A} = 4$$
+$$
+\frac{R_B}{R_A} = 4
+$$
 
 **Interpretation:** Star B is **4 times larger** than Star A, so it would sit farther toward the **giant region** of the H-R diagram: cooler, but still luminous.
 :::
@@ -462,6 +500,7 @@ Here's the profound insight that makes the H-R diagram so powerful:
 **The position of a star on the main sequence is determined almost entirely by its *mass*.**
 
 More massive stars:
+
 - Burn hydrogen faster (higher core pressure and temperature)
 - Are more luminous
 - Are hotter (bluer)
@@ -469,6 +508,7 @@ More massive stars:
 - Have short lifetimes
 
 Less massive stars:
+
 - Burn hydrogen slowly
 - Are less luminous (dimmer)
 - Are cooler (redder)
@@ -580,40 +620,55 @@ Let's practice interpreting an H-R diagram with a concrete example.
 **Given:** You discover a new star. Spectroscopy tells you it is a G5 star, so its temperature is about $5{,}500 \, \mathrm{K}$. You measure its luminosity as $100 \, L_\odot$. Where does it lie on the H-R diagram?
 
 **Step 1: Plot the temperature.**
-- G5 is a G-type star, so look at the G region on the x-axis (between F and K, hot → cool reversed).
+
+- G5 is a G-type star, so look at the G region on the x-axis (between F and K, hot $\rightarrow$ cool reversed).
 
 **Step 2: Plot the luminosity.**
+
 - 100 $L_\odot$ is 100 times more luminous than the Sun. On a logarithmic scale, that's two decades above the Sun. Draw a horizontal line to 100 on the y-axis.
 
 **Step 3: Interpret with the Stefan-Boltzmann law.**
 
 **Relation:**
 
-$$\frac{L}{L_\odot} = \left(\frac{R}{R_\odot}\right)^2 \left(\frac{T}{T_\odot}\right)^4$$
+$$
+\frac{L}{L_\odot} = \left(\frac{R}{R_\odot}\right)^2 \left(\frac{T}{T_\odot}\right)^4
+$$
 
 **Rearranged relation:**
 
-$$\frac{R}{R_\odot} = \sqrt{\frac{L/L_\odot}{\left(T/T_\odot\right)^4}}$$
+$$
+\frac{R}{R_\odot} = \sqrt{\frac{L/L_\odot}{\left(T/T_\odot\right)^4}}
+$$
 
 Because $T \approx T_\odot$ for a G5 star, this simplifies to
 
-$$\frac{L}{L_\odot} \approx \left(\frac{R}{R_\odot}\right)^2$$
+$$
+\frac{L}{L_\odot} \approx \left(\frac{R}{R_\odot}\right)^2
+$$
 
 so
 
-$$\frac{R}{R_\odot} \approx \sqrt{\frac{L}{L_\odot}}$$
+$$
+\frac{R}{R_\odot} \approx \sqrt{\frac{L}{L_\odot}}
+$$
 
 **Substitute:**
 
-$$\frac{R}{R_\odot} \approx \sqrt{100}$$
+$$
+\frac{R}{R_\odot} \approx \sqrt{100}
+$$
 
 **Evaluate:**
 
-$$\frac{R}{R_\odot} \approx 10$$
+$$
+\frac{R}{R_\odot} \approx 10
+$$
 
 **Interpretation:** The star's radius is about $10 \, R_\odot$, so it belongs on the **red giant branch**, not on the main sequence.
 
 **Step 4: Predict the future.**
+
 - This is not a main sequence star, so it's not burning hydrogen in its core. It's an evolved star — a red giant in its death throes. In a few billion years (for Sun-like stars) or much sooner (for more massive ones), it will shed its outer layers and become a white dwarf.
 
 ::: {.callout-summary title="Takeaway: Practical Reading"}
@@ -628,11 +683,14 @@ We've mentioned color many times (O-type stars are blue, M-type stars are red), 
 
 The color of a star is determined by its temperature via **Wien's displacement law** (Lecture 8):
 
-$$\lambda_{\max} T = 2.90 \times 10^{-3} \text{ m} \cdot \text{K}$$
+$$
+\lambda_{\max} T = 2.90 \times 10^{-3} \text{ m} \cdot \text{K}
+$$
 
 Hotter stars peak in the blue; cooler stars peak in the red.
 
 On an H-R diagram:
+
 - **Left side (hot):** Stars are blue
 - **Right side (cool):** Stars are red
 
@@ -662,7 +720,9 @@ In Lecture 15, we learned that apparent magnitude $m$ (what we see) and absolute
 
 The H-R diagram is often plotted with **absolute magnitude** on the y-axis instead of luminosity. Absolute magnitude is simply a logarithmic brightness scale:
 
-$$M = -2.5 \log_{10} L + \text{constant}$$
+$$
+M = -2.5 \log_{10} L + \text{constant}
+$$
 
 (The constant just sets the zero point; absolute magnitude is defined so that the Sun has $M_V \approx 4.8$ in the visual band.)
 
@@ -704,6 +764,7 @@ Use these five memory anchors:
 **Model:** Plot on a two-axis graph. Luminosity depends on both temperature and radius via Stefan-Boltzmann. Stellar structure theory connects mass to core temperature and thus luminosity.
 
 **Inference:**
+
 - Most stars lie on the main sequence, where position mainly tracks mass rather than age.
 - Red giants are evolved stars with different internal structures.
 - White dwarfs are stellar remnants.

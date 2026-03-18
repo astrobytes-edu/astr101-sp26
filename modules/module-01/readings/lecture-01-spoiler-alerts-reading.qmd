@@ -24,7 +24,7 @@ prerequisites: Comfort reading simple algebraic symbols; familiarity with basic 
 Astronomical images are data. We decode them using physics to infer what we cannot directly measure.
 :::
 
-::: {.callout-important title="How to Use This Reading (Read → Revisit → Reuse)" collapse="true"}
+::: {.callout-important title="How to Use This Reading (Read $\rightarrow$ Revisit $\rightarrow$ Reuse)" collapse="true"}
 This page is both (1) the **assigned reading** and (2) your **reference manual** for the course. You should expect to come back to it multiple times — before lecture, after lecture, and while doing practice problems and studying.
 
 **Default expectation (best):** Read the whole page before class (including **Check Yourself**). Then return to it later when you work the **Practice Problems**.
@@ -74,7 +74,7 @@ How is any of that possible?
 
 The answer is the thesis of this course:
 
-> **Pretty pictures → measurements → models → inferences**
+> **Pretty pictures $\rightarrow$ measurements $\rightarrow$ models $\rightarrow$ inferences**
 
 Every gorgeous astronomical image you've ever seen is actually a dataset. The colors, shapes, bright spots and dark lanes — all of it encodes physical information. The job of an astronomer is to *decode* that information using physics and mathematics.
 
@@ -188,7 +188,7 @@ What follows is a tour through some of the most spectacular astronomical images 
 **You are not expected to understand all the answers yet.** That's what the rest of the semester is for. Today, we're giving you the spoilers — showing you where we're headed. By the end of the course, you'll have *earned* the right to say these things with confidence.
 
 ::: {.column-margin}
-**The pattern to watch for:** Every spoiler follows the same structure: measurement → model → inference. By the end of this course, you'll fill in the "what physics" part yourself.
+**The pattern to watch for:** Every spoiler follows the same structure: measurement $\rightarrow$ model $\rightarrow$ inference. By the end of this course, you'll fill in the "what physics" part yourself.
 :::
 
 ---
@@ -226,17 +226,19 @@ What follows is a tour through some of the most spectacular astronomical images 
 ::: {.callout-note title="Deep Dive: The Inverse-Square Law" collapse="true"}
 Light spreads out as it travels. At distance $d$, light from a source spreads over a sphere with surface area $4\pi d^2$. The same total light now covers a larger area, so the **flux** (light per unit area) decreases:
 
-$$F = \frac{L}{4\pi d^2}$$
+$$
+F = \frac{L}{4\pi d^2}
+$$
 
 where:
 
-- $F$ = flux, what we measure (W/m²)
+- $F$ = flux, what we measure $(W/m^{2})$
 - $L$ = luminosity, what the star emits (W)
 - $d$ = distance (m)
 
-**The key insight:** Flux falls off as $1/d^2$. Double the distance → quarter the brightness. If you know $L$ (from a "standard candle") and measure $F$, you can solve for $d$.
+**The key insight:** Flux falls off as $1/d^2$. Double the distance $\rightarrow$ quarter the brightness. If you know $L$ (from a "standard candle") and measure $F$, you can solve for $d$.
 
-**Quick example:** If Star B appears 4× fainter than identical Star A, Star B must be 2× farther away (because $2^2 = 4$).
+**Quick example:** If Star B appears $4\times$ fainter than identical Star A, Star B must be $2\times$ farther away (because $2^2 = 4$).
 :::
 
 ---
@@ -295,10 +297,10 @@ One measurement vs. a wealth of encoded physics.
 
 **What do we infer?** Dust strongly blocks visible light but is transparent at infrared wavelengths. The "empty" dark regions are teeming with newborn stars.
 
-**What physics makes this legal?** Dust grains (~0.01–1 μm) efficiently absorb and scatter light with comparable wavelengths. Longer wavelengths (infrared) pass through.
+**What physics makes this legal?** Dust grains (~0.01–$1 \mu\mathrm{m}$) efficiently absorb and scatter light with comparable wavelengths. Longer wavelengths (infrared) pass through.
 
 ::: {.column-margin}
-**JWST's superpower:** At ~2 μm wavelength, dust absorbs roughly 10× less light than at visible wavelengths. JWST peers through cosmic dust that blocks Hubble.
+**JWST's superpower:** At ~$2 \mu\mathrm{m}$ wavelength, dust absorbs roughly $10\times$ less light than at visible wavelengths. JWST peers through cosmic dust that blocks Hubble.
 :::
 
 **Key insight:** What you *can't see* at one wavelength might be brilliantly visible at another.
@@ -350,13 +352,13 @@ The *acceleration* was discovered in 1998 by measuring Type Ia supernovae at lar
 ::: {.callout-note title="Deep Dive: The Cosmic Distance Ladder" collapse="true"}
 The cosmic distance ladder works in steps, each rung calibrating the next:
 
-1. **Radar** (Solar System): Bounce radio waves off planets; measure round-trip time → distance directly
+1. **Radar** (Solar System): Bounce radio waves off planets; measure round-trip time $\rightarrow$ distance directly
 
-2. **Parallax** (nearby stars): Measure apparent shift as Earth orbits Sun → geometry gives distance (works to ~100 parsecs)
+2. **Parallax** (nearby stars): Measure apparent shift as Earth orbits Sun $\rightarrow$ geometry gives distance (works to ~100 parsecs)
 
-3. **Cepheid variables** (nearby galaxies): Pulsating stars whose period correlates with luminosity; measure period → infer luminosity → calculate distance
+3. **Cepheid variables** (nearby galaxies): Pulsating stars whose period correlates with luminosity; measure period $\rightarrow$ infer luminosity $\rightarrow$ calculate distance
 
-4. **Type Ia supernovae** (distant universe): Thermonuclear explosions of white dwarfs with consistent peak luminosity → visible across billions of light-years
+4. **Type Ia supernovae** (distant universe): Thermonuclear explosions of white dwarfs with consistent peak luminosity $\rightarrow$ visible across billions of light-years
 
 Each rung calibrates the next. Parallax calibrates Cepheids; Cepheids calibrate Type Ia supernovae. This is how we reach across the cosmos — one calibration at a time.
 
@@ -386,7 +388,9 @@ Everything we know about the universe beyond Earth comes from **light** — elec
 
 Light travels at a constant speed in vacuum:
 
-$$c = 300{,}000 \text{ km/s} = 3 \times 10^8 \text{ m/s}$$
+$$
+c = 300{,}000 \text{ km/s} = 3 \times 10^8 \text{ m/s}
+$$
 
 This is fast enough to circle Earth 7.5 times in one second. But it's also *finite*, and that finiteness has profound consequences.
 
@@ -405,7 +409,9 @@ A **light-year** is a unit of **distance**, not time — even though "year" is i
 
 A light-year is how far light travels in one year:
 
-$$1 \text{ light-year} \approx 9.5 \times 10^{15} \text{ m}$$
+$$
+1 \text{ light-year} \approx 9.5 \times 10^{15} \text{ m}
+$$
 
 That's about 9.5 trillion kilometers.
 
@@ -450,7 +456,7 @@ The key insight: **wavelength tells you about temperature and energy**.
 | Wavelength Range | Typical Source |
 |------------------|----------------|
 | Radio (cm – m) | Cold gas, magnetic fields |
-| Infrared (1 μm – 1 mm) | Warm dust, cool stars |
+| Infrared ($1 \mu\mathrm{m}$ – 1 mm) | Warm dust, cool stars |
 | Visible (400 – 700 nm) | Stellar surfaces |
 | Ultraviolet (10 – 400 nm) | Hot stars |
 | X-ray (0.01 – 10 nm) | Hot plasma (millions of K) |
@@ -472,7 +478,7 @@ Why do X-ray telescopes observe different objects than optical telescopes?
 
 Let's recap what we've covered:
 
-**The thesis:** Pretty pictures → measurements → models → inferences
+**The thesis:** Pretty pictures $\rightarrow$ measurements $\rightarrow$ models $\rightarrow$ inferences
 
 **The method:**
 
@@ -493,7 +499,7 @@ Let's recap what we've covered:
 
 - Speed: $c = 3 \times 10^8$ m/s (finite, constant)
 - Light-year is a *distance*, not a time
-- Finite light speed → lookback time
+- Finite light speed $\rightarrow$ lookback time
 - Different wavelengths probe different temperatures/processes
 
 ::: {.callout-important}
@@ -518,7 +524,9 @@ Today you saw the spoilers. Now we build the tools to understand them — one in
 
 ### Conceptual Questions
 
-<!-- Conceptual / Recognition / O→M→I / ⭐ -->
+<!-- Conceptual / Recognition / $O\rightarrowM
+$$
+\rightarrowI$ / ⭐ -->
 **1.** **Observable vs. Inferred.** For each quantity, state whether it is *directly measured* or *inferred*:
 
 | Quantity | Measured or Inferred? |
@@ -529,22 +537,30 @@ Today you saw the spoilers. Now we build the tools to understand them — one in
 | (d) The distance to a star | |
 | (e) The wavelength of light from a star | |
 
-<!-- Conceptual / Connection / O→M→I / ⭐⭐ -->
+<!-- Conceptual / Connection / $O\rightarrowM
+$$
+\rightarrowI$ / ⭐⭐ -->
 **2.** **The Inference Pipeline.** A student claims: “We know the Sun is made of hydrogen because we can see it.” What’s wrong with this statement? Explain what we actually measure and how we infer composition.
 
-<!-- Conceptual / Application / O→M→I / ⭐⭐ -->
+<!-- Conceptual / Application / $O\rightarrowM
+$$
+\rightarrowI$ / ⭐⭐ -->
 **3.** **Standard Candles.** Why do astronomers need “standard candles” to measure distances? What problem do they solve?
 
 <!-- Conceptual / Application / — / ⭐ -->
 **4.** **Lookback Time.** The Andromeda Galaxy is about 2.5 million light-years away. If an astronomer observes a supernova in Andromeda tonight, when did that explosion actually occur?
 
-<!-- Conceptual / Recognition / O→M→I / ⭐ -->
+<!-- Conceptual / Recognition / $O\rightarrowM
+$$
+\rightarrowI$ / ⭐ -->
 **5.** **Four Observables.** An astronomer reports: “We measured the star’s spectrum and found absorption lines shifted toward the red.” Which of the four observables (brightness, position, wavelength, timing) is being measured here? What might be inferred from this observation?
 
 ### Calculations
 
-<!-- Calculation / Application / O→M→I / ⭐⭐ -->
-**6.** **Relative Brightness.** Two identical stars are observed. Star A appears 9× brighter than Star B. Using the inverse-square law, how many times farther away is Star B compared to Star A?
+<!-- Calculation / Application / $O\rightarrowM
+$$
+\rightarrowI$ / ⭐⭐ -->
+**6.** **Relative Brightness.** Two identical stars are observed. Star A appears $9\times$ brighter than Star B. Using the inverse-square law, how many times farther away is Star B compared to Star A?
 
 <!-- Calculation / Application / — / ⭐ -->
 **7.** **Light Travel Time.** Light travels at $3 \times 10^8$ m/s. The Sun is about $1.5 \times 10^{11}$ m away from Earth. How long does light take to travel from the Sun to Earth? Give your answer in seconds, then convert to minutes.
@@ -553,24 +569,32 @@ Today you saw the spoilers. Now we build the tools to understand them — one in
 **8.** **Building a Light-Year.** Using the speed of light ($c = 3 \times 10^8$ m/s) and the fact that one year is approximately $3.15 \times 10^7$ seconds, calculate the distance light travels in one year. Express your answer in meters.
 
 <!-- Calculation / Application / — / ⭐ -->
-**9.** **Inverse-Square Reasoning.** A star moves from 10 light-years away to 40 light-years away (4× the original distance). By what factor does its apparent brightness change?
+**9.** **Inverse-Square Reasoning.** A star moves from 10 light-years away to 40 light-years away $(4\times$ the original distance). By what factor does its apparent brightness change?
 
 <!-- Calculation / Application / — / ⭐⭐ -->
 **10.** **Lookback Time Calculation.** A galaxy is 50 million light-years away. If we observe it today, when did the light we're seeing actually leave that galaxy?
 
 ### Synthesis
 
-<!-- Synthesis / Connection / O→M→I / ⭐⭐ -->
-**11.** **The Course Thesis.** In 2-3 sentences, explain the course thesis “pretty pictures → measurements → models → inferences” to a friend who has never taken astronomy.
+<!-- Synthesis / Connection / $O\rightarrowM
+$$
+\rightarrowI$ / ⭐⭐ -->
+**11.** **The Course Thesis.** In 2-3 sentences, explain the course thesis “pretty pictures $\rightarrow$ measurements $\rightarrow$ models $\rightarrow$ inferences” to a friend who has never taken astronomy.
 
-<!-- Synthesis / Connection / O→M→I / ⭐⭐ -->
+<!-- Synthesis / Connection / $O\rightarrowM
+$$
+\rightarrowI$ / ⭐⭐ -->
 **12.** **Connecting Wavelength to Physics.** Explain why observing the same galaxy at optical and radio wavelengths reveals different information. What physical components are visible at each wavelength, and why?
 
-<!-- Synthesis / Connection / O→M→I / ⭐⭐⭐ -->
+<!-- Synthesis / Connection / $O\rightarrowM
+$$
+\rightarrowI$ / ⭐⭐⭐ -->
 **13.** **Dark Matter Evidence.** A student says, “If we can’t see dark matter, how do we know it exists?” Describe one piece of observational evidence for dark matter, clearly stating what is *measured* and what is *inferred*.
 
-<!-- Synthesis / Connection / O→M→I / ⭐⭐⭐ -->
-**14.** **Observable → Model → Inference.** A star’s position on the sky changes periodically over several years. Using the Observable → Model → Inference pattern from this reading: (a) identify which observable is being measured, (b) explain what physical model connects this to unseen objects, and (c) state what you might infer about the star.
+<!-- Synthesis / Connection / $O\rightarrowM
+$$
+\rightarrowI$ / ⭐⭐⭐ -->
+**14.** **Observable $\rightarrow$ Model $\rightarrow$ Inference.** A star’s position on the sky changes periodically over several years. Using the Observable $\rightarrow$ Model $\rightarrow$ Inference pattern from this reading: (a) identify which observable is being measured, (b) explain what physical model connects this to unseen objects, and (c) state what you might infer about the star.
 
 ---
 

@@ -141,7 +141,9 @@ All electromagnetic waves — whether radio, visible light, or gamma rays — tr
 ::: {.callout-key-insight title="The Wave Equation for Light"}
 **For any electromagnetic wave:**
 
-$$c = \lambda \nu$$
+$$
+c = \lambda \nu
+$$
 
 where:
 
@@ -295,7 +297,9 @@ Even within our own solar system, light-travel time matters. Signals between Ear
 ::: {.callout-deep-dive title="What's a Light-Year?"}
 A **light-year** is the distance light travels in one year:
 
-$$1 \text{ light-year} = c \times (1 \text{ year}) \approx 9.5 \times 10^{12} \text{ km}$$
+$$
+1 \text{ light-year} = c \times (1 \text{ year}) \approx 9.5 \times 10^{12} \text{ km}
+$$
 
 It's a unit of **distance**, not time! When astronomers say a star is "10 light-years away," they mean light from that star takes 10 years to reach us.
 :::
@@ -352,7 +356,9 @@ When light encounters particles much smaller than its wavelength — like the ni
 ::: {.callout-key-insight title="Rayleigh Scattering"}
 When light interacts with particles much smaller than its wavelength (like air molecules), the amount of scattering depends on wavelength:
 
-$$\text{Scattering} \propto \frac{1}{\lambda^4}$$
+$$
+\text{Scattering} \propto \frac{1}{\lambda^4}
+$$
 
 **Shorter wavelengths scatter MUCH more than longer wavelengths.**
 :::
@@ -365,7 +371,9 @@ $$\text{Scattering} \propto \frac{1}{\lambda^4}$$
 
 Let's compare blue light ($\lambda \approx 450$ nm) and red light ($\lambda \approx 700$ nm):
 
-$$\frac{\text{Blue scattering}}{\text{Red scattering}} = \left(\frac{700}{450}\right)^4 \approx \left(1.56\right)^4 \approx 5.9$$
+$$
+\frac{\text{Blue scattering}}{\text{Red scattering}} = \left(\frac{700}{450}\right)^4 \approx \left(1.56\right)^4 \approx 5.9
+$$
 
 Blue light scatters about **6 times more** than red light! This is why the sky is blue — blue photons get scattered all over the sky, reaching your eyes from every direction. Meanwhile, red photons mostly travel straight through without scattering.
 
@@ -504,7 +512,9 @@ In Lecture 6, we learned that gravity follows an inverse-square law: $F \propto 
 ::: {.callout-key-insight title="Inverse-Square Law for Light Intensity"}
 The **intensity** (brightness) of light from a source decreases with distance squared:
 
-$$I \propto \frac{1}{r^2}$$
+$$
+I \propto \frac{1}{r^2}
+$$
 
 Double your distance from a light source $\to$ receive $1/4$ the intensity.
 :::
@@ -689,6 +699,7 @@ The key insight: **hotter objects emit shorter-wavelength light**. There's a pre
 ---
 
 ::: {.callout-key-insight title="Key Takeaways from Lecture 7"}
+
 1. **Light is an electromagnetic wave.** Wavelength ($\lambda$) and frequency ($\nu$) are related by $c = \lambda \nu$, where $c = 3 \times 10^8$ m/s.
 
 2. **The EM spectrum spans radio to gamma rays.** Visible light is a tiny sliver. Different wavelengths reveal different physics — astronomers observe across the spectrum.

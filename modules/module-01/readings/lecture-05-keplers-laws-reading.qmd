@@ -289,8 +289,12 @@ Most planets have nearly circular orbits (low eccentricity). This is why Ptolemy
 
 **Quick calculation:** Earth's eccentricity is 0.017 and its semi-major axis is 1 AU. What are its perihelion and aphelion distances?
 
-$$r_p = a(1-e) = 1 \times (1-0.017) = 0.983 \text{ AU}$$
-$$r_a = a(1+e) = 1 \times (1+0.017) = 1.017 \text{ AU}$$
+$$
+r_p = a(1-e) = 1 \times (1-0.017) = 0.983 \text{ AU}
+$$
+$$
+r_a = a(1+e) = 1 \times (1+0.017) = 1.017 \text{ AU}
+$$
 
 Earth's distance from the Sun varies by about 3.4% over the year — a small effect, but real.
 
@@ -464,7 +468,9 @@ The planet moves **faster** near perihelion and **slower** near aphelion. The eq
 ::: {.callout-important title="Kepler's Third Law: The Harmonic Law"}
 **The square of a planet's orbital period is proportional to the cube of its semi-major axis.**
 
-$$P^2 \propto a^3$$
+$$
+P^2 \propto a^3
+$$
 :::
 
 In plain English: planets farther from the Sun take *disproportionately* longer to orbit — not just because they have farther to travel, but because they also move slower.
@@ -491,7 +497,9 @@ You may see the shorthand $P^2 = a^3$ in some sources. **We won't use that form 
 
 **Form 1: Proportionality (most general)**
 
-$$P^2 \propto a^3$$
+$$
+P^2 \propto a^3
+$$
 
 This tells you the *relationship* but not the numbers.
 
@@ -499,7 +507,9 @@ This tells you the *relationship* but not the numbers.
 
 If two objects orbit the **same** central body:
 
-$$\left(\frac{P_2}{P_1}\right)^2 = \left(\frac{a_2}{a_1}\right)^3$$
+$$
+\left(\frac{P_2}{P_1}\right)^2 = \left(\frac{a_2}{a_1}\right)^3
+$$
 
 This is the safest approach — the constants cancel, and you don't need to worry about units as long as you're consistent.
 
@@ -507,7 +517,9 @@ This is the safest approach — the constants cancel, and you don't need to worr
 
 For objects orbiting the Sun, with $P$ in **years** and $a$ in **AU**:
 
-$$\left(\frac{P}{1\,\text{yr}}\right)^2 = \left(\frac{a}{1\,\text{AU}}\right)^3$$
+$$
+\left(\frac{P}{1\,\text{yr}}\right)^2 = \left(\frac{a}{1\,\text{AU}}\right)^3
+$$
 
 This works because we're implicitly comparing to Earth ($P = 1$ yr, $a = 1$ AU). **But remember:** this form only works for the Sun, in these specific units.
 
@@ -516,14 +528,24 @@ This works because we're implicitly comparing to Earth ($P = 1$ yr, $a = 1$ AU).
 **Example 1:** A planet orbits the Sun at $a = 4$ AU. What's its period?
 
 Using the Sun-only scaling:
-$$\left(\frac{P}{1\,\text{yr}}\right)^2 = \left(\frac{4\,\text{AU}}{1\,\text{AU}}\right)^3 = 64$$
-$$P = \sqrt{64} \times 1\,\text{yr} = 8 \text{ years}$$
+$$
+\left(\frac{P}{1\,\text{yr}}\right)^2 = \left(\frac{4\,\text{AU}}{1\,\text{AU}}\right)^3 = 64
+$$
+$$
+P = \sqrt{64} \times 1\,\text{yr} = 8 \text{ years}
+$$
 
 **Example 2:** A comet has orbital period $P = 27$ years. What's its semi-major axis?
 
-$$\left(\frac{27\,\text{yr}}{1\,\text{yr}}\right)^2 = \left(\frac{a}{1\,\text{AU}}\right)^3$$
-$$729 = \left(\frac{a}{1\,\text{AU}}\right)^3$$
-$$a = \sqrt[3]{729} \times 1\,\text{AU} = 9 \text{ AU}$$
+$$
+\left(\frac{27\,\text{yr}}{1\,\text{yr}}\right)^2 = \left(\frac{a}{1\,\text{AU}}\right)^3
+$$
+$$
+729 = \left(\frac{a}{1\,\text{AU}}\right)^3
+$$
+$$
+a = \sqrt[3]{729} \times 1\,\text{AU} = 9 \text{ AU}
+$$
 
 (The symbol $\sqrt[3]{\phantom{x}}$ means "cube root" — the number that, when multiplied by itself three times, gives 729. Since $9 \times 9 \times 9 = 729$, the cube root of 729 is 9.)
 
@@ -562,7 +584,9 @@ An asteroid orbits the Sun at a distance of 4 AU. What is its orbital period?
 
 ::: {.callout-tip title="Solution" collapse="true"}
 **B) 8 years.** Using the Sun-only scaling:
-$$\left(\frac{P}{1\,\text{yr}}\right)^2 = \left(\frac{4\,\text{AU}}{1\,\text{AU}}\right)^3 = 64$$
+$$
+\left(\frac{P}{1\,\text{yr}}\right)^2 = \left(\frac{4\,\text{AU}}{1\,\text{AU}}\right)^3 = 64
+$$
 So $P = \sqrt{64}\,\text{yr} = 8$ years.
 :::
 
@@ -579,7 +603,9 @@ If a planet's orbital distance $a$ increases by a factor of 4, its orbital perio
 **B) 8.** From $P^2 \propto a^3$, we get $P \propto a^{3/2}$. If $a$ increases by factor 4, then $P$ increases by factor $4^{3/2} = (4^3)^{1/2} = 64^{1/2} = 8$.
 
 Alternatively, using the ratio form:
-$$\left(\frac{P_\text{new}}{P_\text{old}}\right)^2 = \left(\frac{a_\text{new}}{a_\text{old}}\right)^3 = 4^3 = 64$$
+$$
+\left(\frac{P_\text{new}}{P_\text{old}}\right)^2 = \left(\frac{a_\text{new}}{a_\text{old}}\right)^3 = 4^3 = 64
+$$
 so $P_\text{new} = 8 \times P_\text{old}$.
 :::
 
@@ -594,7 +620,9 @@ The relationship $P^2 \propto a^3$ holds for any gravitational two-body orbit. B
 ::: {.callout-note title="Preview: Newton's Version of Kepler III" collapse="true"}
 Newton showed that Kepler's Third Law actually comes from gravity:
 
-$$P^2 = \frac{4\pi^2}{G(M + m)} a^3 \approx \frac{4\pi^2}{GM} a^3$$
+$$
+P^2 = \frac{4\pi^2}{G(M + m)} a^3 \approx \frac{4\pi^2}{GM} a^3
+$$
 
 where $M$ is the central mass and $m$ is the orbiting mass (usually negligible).
 
@@ -624,7 +652,7 @@ You've already explored the First and Second Laws in the demo above. Now let's t
 *Predict before you explore:* Earth (at 1 AU) takes 1 year to orbit. If you select a preset with a = 4 AU, what period should you see?
 
 ::: {.callout-note title="My Prediction" collapse="true"}
-Calculate first: Using $(P/1\,\text{yr})^2 = (a/1\,\text{AU})^3$, if $a = 4$ AU, then $P = $ _____ years.
+Calculate first: Using $(P/1\,\text{yr})^2 = (a/1\,\text{AU})^3$, if $a = 4$ AU, then $P =$ _____ years.
 :::
 
 **Do this:**
@@ -663,8 +691,8 @@ Write your prediction here before continuing: _______________
 **Do this:**
 
 1. Click **NEWTON MODE** at the top of the demo
-2. Note the current period at $a = 1$ AU with **Star Mass (M★)** = 1.0 M☉
-3. Drag the **Star Mass (M★)** slider to 2.0 M☉
+2. Note the current period at $a = 1$ AU with **Star Mass (M★)** = $1.0 \M_\odot$
+3. Drag the **Star Mass (M★)** slider to $2.0 \M_\odot$
 4. Observe what happens to the period
 
 ::: {.callout-tip title="What You Should Have Found" collapse="true"}
@@ -726,7 +754,9 @@ For sixty years after Kepler published his laws, the "why" questions remained un
 
 Newton showed that **all three of Kepler's laws** are consequences of a single, deeper principle: the law of universal gravitation. Ellipses, equal areas, the period-distance relation — all of them emerge naturally from one equation:
 
-$$F = \frac{Gm_1m_2}{r^2}$$
+$$
+F = \frac{Gm_1m_2}{r^2}
+$$
 
 **Kepler gave us a rulebook. Newton will give us the reason the rulebook exists.**
 
@@ -778,6 +808,7 @@ Which best describes how Kepler made his discoveries?
 ---
 
 ::: {.callout-important title="Key Takeaways from Lecture 5"}
+
 1. **Retrograde motion** is an *apparent* backward motion caused by Earth passing outer planets. Planets never actually reverse.
 
 2. **Kepler's First Law:** Orbits are ellipses with the Sun at one focus.
@@ -817,7 +848,10 @@ Which best describes how Kepler made his discoveries?
 
 8. **Ratio method (same central body):** Io orbits Jupiter at ($a_1 = 422{,}000$ km) with period ($P_1 = 1.77$ days). Callisto orbits at ($a_2 = 1{,}883{,}000$ km). Estimate Callisto's period ($P_2$) using:
 
-   $$\left(\frac{P_2}{P_1}\right)^2 = \left(\frac{a_2}{a_1}\right)^3$$
+   
+$$
+\left(\frac{P_2}{P_1}\right)^2 = \left(\frac{a_2}{a_1}\right)^3
+$$
 
 ---
 

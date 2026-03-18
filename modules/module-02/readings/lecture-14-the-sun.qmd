@@ -33,6 +33,7 @@ This reading treats the Sun as a physical problem to solve, not just a set of fa
 **Default expectation (best):** Read the whole page before lecture and pause at each **Check Yourself** prompt.
 
 **If you're short on time (~20 min):**
+
 - Focus on the opening paradoxes, hydrostatic equilibrium, the proton-proton chain, and the energy transport section.
 - Skim the deeper history and come back to the practice problems after class.
 
@@ -53,7 +54,7 @@ By the end of the reading, the answer should feel earned: the Sun is our nearest
 
 The Sun is not special because it is extreme. It is not the hottest star, the biggest star, or the most luminous star. The Sun is special because it is measurable. We can resolve its surface, monitor its activity in real time, detect particles from its core, and test our stellar models against an actual nearby example. That is why the Sun becomes the calibration object for the rest of Module 2.
 
-<!-- FIGURE: Schematic diagram showing the Sun's basic parameters annotated: radius (696,000 km), mass (1.989 × 10^30 kg, marked as "1 solar mass"), luminosity (3.828 × 10^26 W, marked as "1 solar luminosity"), surface temperature (5,778 K), and age (4.6 billion years). Include a silhouette of Earth for scale at 1 AU from the Sun's surface. -->
+<!-- FIGURE: Schematic diagram showing the Sun's basic parameters annotated: radius (696,000 km), mass (1.989 $\times$ 10^30 kg, marked as "1 solar mass"), luminosity (3.828 $\times$ 10^26 W, marked as "1 solar luminosity"), surface temperature (5,778 K), and age (4.6 billion years). Include a silhouette of Earth for scale at 1 AU from the Sun's surface. -->
 
 {{< fig anatomy-of-the-sun >}}
 
@@ -111,19 +112,27 @@ In the Sun's core, hydrogen nuclei fuse into helium through a sequence of reacti
 
 **Step 1:** Two protons collide and form deuterium, releasing a positron and a neutrino:
 
-$$p + p \rightarrow d + e^+ + \nu$$
+$$
+p + p \rightarrow d + e^+ + \nu
+$$
 
 **Step 2:** The deuterium nucleus captures another proton and produces helium-3 plus a photon:
 
-$$d + p \rightarrow ^3\text{He} + \gamma$$
+$$
+d + p \rightarrow ^3\text{He} + \gamma
+$$
 
 **Step 3:** Two helium-3 nuclei fuse to form helium-4 and return two protons:
 
-$$^3\text{He} + ^3\text{He} \rightarrow ^4\text{He} + p + p$$
+$$
+^3\text{He} + ^3\text{He} \rightarrow ^4\text{He} + p + p
+$$
 
 The net reaction is often summarized as:
 
-$$4p \rightarrow ^4\text{He} + 2e^+ + 2\nu + \gamma$$
+$$
+4p \rightarrow ^4\text{He} + 2e^+ + 2\nu + \gamma
+$$
 
 ::: {.column-margin}
 **Proton-Proton Chain (PP Chain):** The dominant fusion pathway in a Sun-like star, converting hydrogen into helium and releasing energy.
@@ -147,11 +156,15 @@ Fusion matters because the helium nucleus produced at the end has slightly less 
 
 Four protons have a combined mass of about 4.0290 amu. A helium-4 nucleus has a mass of about 4.0026 amu. The difference is:
 
-$$\Delta m = 4.0290 - 4.0026 = 0.0264 \text{ amu}$$
+$$
+\Delta m = 4.0290 - 4.0026 = 0.0264 \text{ amu}
+$$
 
 Einstein's relation tells us how to read that difference:
 
-$$E = \Delta m c^2$$
+$$
+E = \Delta m c^2
+$$
 
 What this equation is really saying is simple: if a reaction leaves behind less mass than it started with, the missing mass appears as energy. In the Sun, that energy emerges as:
 
@@ -162,7 +175,9 @@ What this equation is really saying is simple: if a reaction leaves behind less 
 ::: {.callout-the-more-you-know title="The More You Know: Why This Is Special Relativity" collapse="true"}
 Einstein's famous equation is usually written as
 
-$$E = mc^2$$
+$$
+E = mc^2
+$$
 
 In full generality, this means that **mass is a form of energy**. More precisely, an object's **rest mass** contributes to its total energy. The factor $c^2$ is enormous because the speed of light is enormous, so even a tiny amount of mass corresponds to a very large amount of energy.
 
@@ -192,7 +207,7 @@ The Sun reminds us that fusion is real. The challenge for humans is not whether 
 
 The energy released per completed PP chain is about 26.7 MeV. That is vastly larger than the energy released in an ordinary chemical reaction. The Sun converts about 600 million tons of hydrogen into helium every second, and about 4 million tons of mass per second become pure energy. That energy is what ultimately keeps the Sun from collapsing.
 
-<!-- FIGURE: Diagram of the proton-proton chain showing the three reaction steps side by side. Step 1 shows two protons fusing into deuteron, releasing positron and neutrino. Step 2 shows deuteron capturing proton to form He-3 and photon. Step 3 shows two He-3 nuclei fusing to form He-4 and release two protons. Include labels for mass numbers and atomic numbers. Draw a scale showing mass before (4 protons) and mass after (He-4) with the small mass deficit labeled and an arrow pointing to "Energy E = mc²". -->
+<!-- FIGURE: Diagram of the proton-proton chain showing the three reaction steps side by side. Step 1 shows two protons fusing into deuteron, releasing positron and neutrino. Step 2 shows deuteron capturing proton to form He-3 and photon. Step 3 shows two He-3 nuclei fusing to form He-4 and release two protons. Include labels for mass numbers and atomic numbers. Draw a scale showing mass before (4 protons) and mass after (He-4) with the small mass deficit labeled and an arrow pointing to "Energy E = $mc^{2}$". -->
 
 ### Why Fusion Needs Extreme Conditions
 
@@ -348,7 +363,7 @@ The solar cycle is the visible signature of the solar dynamo. Convection stirs t
 **Solar Cycle:** A roughly 11-year periodic variation in the number and intensity of sunspots and other solar activity features, reflecting the behavior of the Sun's magnetic dynamo.
 :::
 
-<!-- FIGURE: The Spörer butterfly diagram. Horizontal axis shows time over 2-3 solar cycles (about 22 years). Vertical axis shows solar latitude from -90 (south pole) to +90 (north pole). Show multiple sunspots as small circles or dots, distributed across the diagram. At the beginning of each cycle, dots appear at high latitudes (±30–40 degrees); as the cycle progresses, new dots appear at progressively lower latitudes, approaching the equator by the end of the cycle. The pattern should look like butterfly wings. Include labels: "solar minimum," "rising phase," "maximum," "declining phase." -->
+<!-- FIGURE: The Spörer butterfly diagram. Horizontal axis shows time over 2-3 solar cycles (about 22 years). Vertical axis shows solar latitude from -90 (south pole) to +90 (north pole). Show multiple sunspots as small circles or dots, distributed across the diagram. At the beginning of each cycle, dots appear at high latitudes $(\pm30–40$ degrees); as the cycle progresses, new dots appear at progressively lower latitudes, approaching the equator by the end of the cycle. The pattern should look like butterfly wings. Include labels: "solar minimum," "rising phase," "maximum," "declining phase." -->
 
 {{< fig solar-butterfly-diagram >}}
 
@@ -437,6 +452,7 @@ So the hidden Sun is still testable. We cannot see the core directly, but we can
 
 ::: {.callout-key-insight title="Observable -> Model -> Inference"}
 **Observables:**
+
 - Solar spectrum (photosphere temperature, composition)
 - Sunspot count and latitude (solar cycle)
 - Solar luminosity (total power output)
@@ -445,12 +461,14 @@ So the hidden Sun is still testable. We cannot see the core directly, but we can
 - Helioseismology (vibrations in the solar photosphere, revealing interior sound waves)
 
 **Model:**
+
 - Hydrostatic equilibrium (gravity balanced by pressure)
 - Nuclear fusion (proton-proton chain in the core)
 - Radiative and convective energy transport
 - Magnetic dynamo (explaining the solar cycle)
 
 **Inferences:**
+
 - Core temperature and density (to support observed fusion rate)
 - Interior structure (core, radiative zone, convective zone, photosphere, chromosphere, corona)
 - Age of the Sun (by matching models to observed properties)
@@ -514,7 +532,7 @@ The proton-proton chain in the Sun's core produces electron neutrinos. A photon 
 
 **2. Mass-Energy Conversion in the PP Chain**
 
-The proton-proton chain converts four hydrogen nuclei (mass 1.0073 amu each) into one helium-4 nucleus (mass 4.0026 amu). Calculate the mass defect (in amu) and the energy released (in MeV). Use the conversion factor: 1 amu = 931.5 MeV/c².
+The proton-proton chain converts four hydrogen nuclei (mass 1.0073 amu each) into one helium-4 nucleus (mass 4.0026 amu). Calculate the mass defect (in amu) and the energy released (in MeV). Use the conversion factor: 1 amu = 931.5 $MeV/c^{2}.$
 
 **3. The Coulomb Barrier**
 
@@ -540,7 +558,7 @@ Solar oscillations at the photosphere have different frequencies depending on th
 
 **C3. Solar Wind and Earth's Magnetosphere**
 
-The solar wind has a density of about 5 particles/cm³ and a velocity of about 400 km/s. Calculate the dynamic pressure (ram pressure) of the solar wind at Earth's orbit: $P = \frac{1}{2} \rho v^2$, where $\rho$ is the mass density and $v$ is the velocity. Compare this to Earth's magnetic pressure (about 7 nPa) and discuss why the magnetosphere has a definite boundary.
+The solar wind has a density of about 5 $particles/cm^{3}$ and a velocity of about 400 km/s. Calculate the dynamic pressure (ram pressure) of the solar wind at Earth's orbit: $P = \frac{1}{2} \rho v^2$, where $\rho$ is the mass density and $v$ is the velocity. Compare this to Earth's magnetic pressure (about 7 nPa) and discuss why the magnetosphere has a definite boundary.
 
 **C4. The Sun's Lifetime**
 

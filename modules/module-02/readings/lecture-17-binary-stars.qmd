@@ -36,6 +36,7 @@ This reading answers three questions:
 **Default expectation (best):** Read the whole page before lecture and stop at the check-yourself prompts.
 
 **If you're short on time (~20 min):**
+
 - Focus on the three binary types, Newton's version of Kepler's Third Law, and the mass-luminosity relation.
 - Return to the challenge problems after class.
 
@@ -111,6 +112,31 @@ Let's examine the three main types of binaries and what we learn from each.
 
 ::: {.callout-prediction title="Predict First"}
 If two stars orbit the same center of mass in the same period, which one must move faster: the more massive star or the less massive star? Explain why.
+:::
+
+::: {.callout-roadmap title="🖥️ Demo: Binary Orbits" collapse="false"}
+Use the interactive below to connect the reading's main idea to actual orbital motion. As you change the masses and viewing geometry, notice which star moves faster, which orbit is larger, and how the center of mass stays fixed.
+
+<div class="demo-embed" style="width: 100%; margin: 1rem 0;">
+  <iframe
+    src="../../../demos/binary-orbits/"
+    width="100%"
+    height="520px"
+    style="border: 1px solid #ddd; border-radius: 8px;"
+    loading="lazy"
+    title="Binary Orbits Interactive Demo"
+    allow="fullscreen">
+  </iframe>
+  <p style="text-align: center; margin-top: 0.5rem; font-size: 0.875rem; color: #666;">
+    <a href="https://astrobytes-edu.github.io/cosmic-playground/exhibits/binary-orbits/" target="_blank" style="color: #5dade2;">Open in new tab ↗</a>
+  </p>
+</div>
+
+Try these quick checks:
+
+1. Make one star much more massive than the other. Which orbit gets smaller, and which star moves faster?
+2. Set the two stars to equal mass. What changes about the two orbits?
+3. Change the viewing angle or turn on any radial-velocity options. Which observables would help you most: position on the sky, brightness dips, or Doppler motion?
 :::
 
 ### Visual Binaries: Seeing Both Stars Orbit
@@ -303,12 +329,14 @@ In a spectroscopic binary, you measure one star's radial velocity amplitude to b
 > The star with the **smaller** velocity amplitude is more massive, because the more massive star stays closer to the center of mass and moves more slowly.
 >
 > Using the inverse mass-velocity relation,
-> $$
+> 
+$$
 > \frac{M_2}{M_1}
 > = \frac{v_1}{v_2}
 > = \frac{10 \, \mathrm{km\,s^{-1}}}{40 \, \mathrm{km\,s^{-1}}}
 > = 0.25
-> $$
+>
+$$
 > The velocity units cancel, leaving a dimensionless mass ratio. The star with the $10 \, \mathrm{km\,s^{-1}}$ amplitude is the more massive star, and the other star has one-quarter of its mass.
 :::
 
@@ -475,13 +503,17 @@ A binary has an orbital period of $1.50 \, \mathrm{yr}$ and a semi-major axis of
 
 > **[Solution]**
 > Using
-> $$
+> 
+$$
 > M_1 + M_2 = \frac{a^3}{P^2}
-> $$
+>
+$$
 > with $a$ in $\mathrm{AU}$ and $P$ in $\mathrm{yr}$,
-> $$
+> 
+$$
 > M_1 + M_2 = \frac{(2.0 \, \mathrm{AU})^3}{(1.50 \, \mathrm{yr})^2} = 3.56 \, M_\odot
-> $$
+>
+$$
 > The equation returns the **total mass** of the binary, not the individual masses. So this system contains about $3.6 \, M_\odot$ altogether.
 :::
 
@@ -625,28 +657,40 @@ A main-sequence star has a mass of $2.5 \, M_\odot$. Using the mass-luminosity r
 
 > **[Solution]**
 > Start with
-> $$
+> 
+$$
 > \frac{L}{L_\odot} \approx \left(\frac{2.5 \, M_\odot}{M_\odot}\right)^{3.5} = (2.5)^{3.5}
-> $$
+>
+$$
 > Rewrite the exponent:
-> $$
+> 
+$$
 > (2.5)^{3.5} = (2.5)^{7/2} = (2.5)^3 \times (2.5)^{1/2}
-> $$
+>
+$$
 > Evaluate each part:
-> $$
+> 
+$$
 > (2.5)^3 = 15.625
-> $$
-> $$
+>
+$$
+> 
+$$
 > (2.5)^{1/2} = \sqrt{2.5} \approx 1.58
-> $$
+>
+$$
 > Multiply them:
-> $$
+> 
+$$
 > \frac{L}{L_\odot} \approx 15.625 \times 1.58 \approx 25
-> $$
+>
+$$
 > So
-> $$
+> 
+$$
 > L \approx 25 \, L_\odot
-> $$
+>
+$$
 > A $2.5 \, M_\odot$ main-sequence star is about 25 times more luminous than the Sun.
 :::
 
@@ -778,13 +822,17 @@ If the Sun's lifetime is $10 \, \mathrm{Gyr}$, what is the lifetime of a $3 \, M
 
 > **[Solution]**
 > Use
-> $$
+> 
+$$
 > \frac{\tau}{10 \, \mathrm{Gyr}} \approx \left(\frac{3 \, M_\odot}{M_\odot}\right)^{-2.5} = 3^{-2.5} \approx \frac{1}{15.6}
-> $$
+>
+$$
 > Then
-> $$
+> 
+$$
 > \tau \approx 10 \, \mathrm{Gyr} \times \frac{1}{15.6} \approx 0.64 \, \mathrm{Gyr}
-> $$
+>
+$$
 > So a $3 \, M_\odot$ star lives about $0.64 \, \mathrm{Gyr}$, or about 640 million years. The reason is that luminosity rises much faster than the fuel supply, so the star burns through its hydrogen far more quickly than the Sun.
 :::
 
@@ -879,19 +927,22 @@ We have learned how to measure stellar mass and why it matters so much.
 3. **Spectroscopic binaries:** Doppler shifts reveal radial velocities and often the mass ratio, but usually give minimum masses unless inclination is known.
 
 4. **Binary mass equation:** in solar units,
-   $$
-   M_1 + M_2 = \frac{a^3}{P^2}
-   $$
+   
+$$
+M_1 + M_2 = \frac{a^3}{P^2}
+$$
    with $a$ in $\mathrm{AU}$, $P$ in $\mathrm{yr}$, and mass in $M_\odot$.
 
 5. **Main-sequence scaling laws:**
-   $$
-   \frac{L}{L_\odot} \approx \left(\frac{M}{M_\odot}\right)^{3.5}
-   $$
+   
+$$
+\frac{L}{L_\odot} \approx \left(\frac{M}{M_\odot}\right)^{3.5}
+$$
    and
-   $$
-   \frac{\tau}{10 \, \mathrm{Gyr}} \approx \left(\frac{M}{M_\odot}\right)^{-2.5}
-   $$
+   
+$$
+\frac{\tau}{10 \, \mathrm{Gyr}} \approx \left(\frac{M}{M_\odot}\right)^{-2.5}
+$$
 
 6. **Mass is destiny:** birth mass largely sets a star's main-sequence position, luminosity, lifetime, and end state.
 
@@ -907,7 +958,7 @@ In Lecture 19, we will trace what happens as a main-sequence star ages. We will 
 
 **Problem 1:** A visual binary has an orbital period of 20 years and a separation of 4 AU. What is the combined mass of the two stars in solar masses? Use $P$ in years and $a$ in AU.
 
-**Problem 2:** In a spectroscopic binary, the primary star has a radial velocity amplitude of $25 \, \mathrm{km\,s^{-1}}$ and the secondary has an amplitude of $50 \, \mathrm{km\,s^{-1}}$. What is the mass ratio $M_2 / M_1$? Explain which star is more massive.
+**Problem 2:** In a spectroscopic binary, the primary star has a radial velocity amplitude of $25 \, \mathrm{km\,s^{-1}}$ and the secondary has an amplitude of $50 \, \mathrm{km\,s^{-1}}$. What is the mass ratio $M_2 /M_1$? Explain which star is more massive.
 
 **Problem 3:** A main-sequence star has a mass of $4 \, M_\odot$. Using the mass-luminosity relation, how many times more luminous is it than the Sun?
 

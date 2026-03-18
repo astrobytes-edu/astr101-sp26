@@ -68,7 +68,7 @@ Now for the details...
 
 ## The Fingerprints Move
 
-In L9, we learned to read chemical fingerprints in starlight. Hydrogen always absorbs at 656.28 nm (Hα), sodium at 589.0 nm — these patterns are as reliable as barcodes.
+In L9, we learned to read chemical fingerprints in starlight. Hydrogen always absorbs at 656.28 nm $(H\alpha),$ sodium at 589.0 nm — these patterns are as reliable as barcodes.
 
 But astronomers noticed something strange. When they observed distant stars and galaxies, the fingerprints weren't always at the expected wavelengths. Sometimes the hydrogen line appeared at 656.50 nm. Sometimes at 656.10 nm. The pattern was shifted.
 
@@ -82,7 +82,7 @@ Today we'll learn how to extract velocities from wavelength shifts. We'll discov
 In Lecture 9, we discovered how **composition is written in light**:
 
 - Kirchhoff's Laws: continuous, emission, and absorption spectra
-- Quantized energy levels → discrete spectral lines
+- Quantized energy levels $\rightarrow$ discrete spectral lines
 - Each element has a unique fingerprint
 - OBAFGKM classification orders stars by temperature
 
@@ -122,11 +122,13 @@ Sound waves from an approaching source get **compressed** — the waves pile up,
 
 Light behaves the same way:
 
-- Source moving **toward** you → wavelengths **compressed** → shifted toward **shorter** wavelengths
-- Source moving **away** from you → wavelengths **stretched** → shifted toward **longer** wavelengths
+- Source moving **toward** you $\rightarrow$ wavelengths **compressed** $\rightarrow$ shifted toward **shorter** wavelengths
+- Source moving **away** from you $\rightarrow$ wavelengths **stretched** $\rightarrow$ shifted toward **longer** wavelengths
 
 ::: {.callout-important title="The Doppler Formula (for $v \ll c$)"}
-$$\frac{\Delta\lambda}{\lambda_0} = \frac{v}{c}$$
+$$
+\frac{\Delta\lambda}{\lambda_0} = \frac{v}{c}
+$$
 
 where:
 
@@ -135,9 +137,9 @@ where:
 - $v$ = the object's **radial velocity** (along the line of sight)
 - $c = 3 \times 10^5$ km/s (speed of light)
 
-**Positive $\Delta\lambda$** (wavelength increased) → **redshift** → moving **away**
+**Positive $\Delta\lambda$** (wavelength increased) $\rightarrow$ **redshift** $\rightarrow$ moving **away**
 
-**Negative $\Delta\lambda$** (wavelength decreased) → **blueshift** → moving **toward**
+**Negative $\Delta\lambda$** (wavelength decreased) $\rightarrow$ **blueshift** $\rightarrow$ moving **toward**
 :::
 
 ::: {.column-margin}
@@ -179,16 +181,16 @@ Students often ask: "Rest wavelength relative to what?"
 
 **In practice:** We measure rest wavelengths in the **laboratory**. We take a tube of hydrogen gas, excite it with electricity, and precisely measure the wavelengths of the emission lines. These laboratory values become our reference:
 
-- Hydrogen-alpha (Hα): $\lambda_0 = 656.28$ nm
-- Hydrogen-beta (Hβ): $\lambda_0 = 486.13$ nm
+- Hydrogen-alpha $(H\alpha):$ $\lambda_0 = 656.28$ nm
+- Hydrogen-beta $(H\beta):$ $\lambda_0 = 486.13$ nm
 - Sodium D lines: $\lambda_0 = 589.0$ nm and 589.6 nm
 
-When we observe a star and see Hα at 656.50 nm instead of 656.28 nm, we know the line has been **redshifted** by $\Delta\lambda = +0.22$ nm. That shift tells us the star is moving away from us.
+When we observe a star and see $H\alpha$ at 656.50 nm instead of 656.28 nm, we know the line has been **redshifted** by $\Delta\lambda = +0.22$ nm. That shift tells us the star is moving away from us.
 
 **Key point:** The rest wavelength is our reference standard. Without knowing $\lambda_0$ precisely, we couldn't detect or measure the shift.
 
 ::: {.callout-tip title="The More You Know: Earth Moves Too!" collapse="true"}
-Here's a wrinkle: Earth itself moves! Over a year, our orbital motion around the Sun shifts spectral lines by up to ±30 km/s.
+Here's a wrinkle: Earth itself moves! Over a year, our orbital motion around the Sun shifts spectral lines by up to $\pm30$ km/s.
 
 Astronomers correct for this by converting observed velocities to a "barycentric" frame — the center of mass of the solar system. This removes Earth's orbital motion, leaving only the motion of the source relative to the solar system.
 
@@ -207,8 +209,8 @@ Here's a crucial distinction that trips up many students:
 
 The Doppler effect measures only the **radial velocity** — the component of motion along your **line of sight**:
 
-- **Radial motion:** Toward or away from you → Doppler shift detected
-- **Transverse motion:** Across your field of view → **No Doppler shift**
+- **Radial motion:** Toward or away from you $\rightarrow$ Doppler shift detected
+- **Transverse motion:** Across your field of view $\rightarrow$ **No Doppler shift**
 
 A star moving purely sideways shows **zero Doppler shift**, even if it's moving very fast!
 
@@ -270,8 +272,8 @@ But in Module 3, you'll learn about **cosmological redshift**, which is caused b
 
 **Key difference:**
 
-- **Doppler:** Object moving through space → wavelength shifted
-- **Cosmological:** Space itself expanding → wavelength stretched
+- **Doppler:** Object moving through space $\rightarrow$ wavelength shifted
+- **Cosmological:** Space itself expanding $\rightarrow$ wavelength stretched
 
 Both produce redshifts, but the physics is different!
 :::
@@ -280,24 +282,30 @@ Both produce redshifts, but the physics is different!
 
 ## Worked Example: Measuring Stellar Velocity
 
-**Problem:** A star's Hα absorption line is observed at 656.50 nm. The laboratory (rest) wavelength of Hα is 656.28 nm. Find the star's radial velocity. Is it approaching or receding?
+**Problem:** A star's $H\alpha$ absorption line is observed at 656.50 nm. The laboratory (rest) wavelength of $H\alpha$ is 656.28 nm. Find the star's radial velocity. Is it approaching or receding?
 
 **Solution:**
 
 Step 1: Calculate the wavelength shift
-$$\Delta\lambda = \lambda_{observed} - \lambda_0 = 656.50 - 656.28 = +0.22 \text{ nm}$$
+$$
+\Delta\lambda = \lambda_{observed} - \lambda_0 = 656.50 - 656.28 = +0.22 \text{ nm}
+$$
 
 Step 2: Calculate the fractional shift
-$$\frac{\Delta\lambda}{\lambda_0} = \frac{0.22}{656.28} = 3.35 \times 10^{-4}$$
+$$
+\frac{\Delta\lambda}{\lambda_0} = \frac{0.22}{656.28} = 3.35 \times 10^{-4}
+$$
 
 Step 3: Apply the Doppler formula
-$$v = c \times \frac{\Delta\lambda}{\lambda_0} = (3 \times 10^5 \text{ km/s}) \times (3.35 \times 10^{-4}) = 100 \text{ km/s}$$
+$$
+v = c \times \frac{\Delta\lambda}{\lambda_0} = (3 \times 10^5 \text{ km/s}) \times (3.35 \times 10^{-4}) = 100 \text{ km/s}
+$$
 
 Step 4: Interpret the sign
 $\Delta\lambda > 0$ means the wavelength increased (redshift), so the star is **moving away** from us at about **100 km/s**.
 
-::: {.callout-note title="Observable → Model → Inference: Stellar Radial Velocity"}
-**Observable:** A star's Hα line appears at 656.50 nm instead of the lab value 656.28 nm.
+::: {.callout-note title="Observable $\rightarrow$ Model $\rightarrow$ Inference: Stellar Radial Velocity"}
+**Observable:** A star's $H\alpha$ line appears at 656.50 nm instead of the lab value 656.28 nm.
 
 **Model:** Doppler shift: $\Delta\lambda/\lambda_0 = v/c$. Positive shift = receding.
 
@@ -413,21 +421,25 @@ This NASA animation shows how a planet's gravitational tug makes its star wobble
 
 ### Quantitative Example: Detecting a Hot Jupiter
 
-**Problem:** A star's spectral lines shift back and forth with an amplitude of $\Delta\lambda = \pm 1.2 \times 10^{-4}$ nm around the Hα rest wavelength of 656.28 nm. The shift completes one cycle every 4.2 days. What is the star's wobble velocity? What does this tell us?
+**Problem:** A star's spectral lines shift back and forth with an amplitude of $\Delta\lambda = \pm 1.2 \times 10^{-4}$ nm around the $H\alpha$ rest wavelength of 656.28 nm. The shift completes one cycle every 4.2 days. What is the star's wobble velocity? What does this tell us?
 
 **Solution:**
 
 Step 1: Calculate the velocity amplitude
-$$\frac{\Delta\lambda}{\lambda_0} = \frac{1.2 \times 10^{-4}}{656.28} = 1.8 \times 10^{-7}$$
-$$v = c \times \frac{\Delta\lambda}{\lambda_0} = (3 \times 10^5 \text{ km/s}) \times (1.8 \times 10^{-7}) = 0.056 \text{ km/s} = 56 \text{ m/s}$$
+$$
+\frac{\Delta\lambda}{\lambda_0} = \frac{1.2 \times 10^{-4}}{656.28} = 1.8 \times 10^{-7}
+$$
+$$
+v = c \times \frac{\Delta\lambda}{\lambda_0} = (3 \times 10^5 \text{ km/s}) \times (1.8 \times 10^{-7}) = 0.056 \text{ km/s} = 56 \text{ m/s}
+$$
 
 Step 2: Interpret
 
-The star wobbles at ±56 m/s with a 4.2-day period. This is larger than the Sun's ~12 m/s wobble from Jupiter (which has a 12-year period), but still tiny — about the speed of a fast jog!
+The star wobbles at $\pm56$ m/s with a 4.2-day period. This is larger than the Sun's ~12 m/s wobble from Jupiter (which has a 12-year period), but still tiny — about the speed of a fast jog!
 
 A short period (4.2 days) means the planet orbits very close to the star. Combined with the velocity amplitude, we can estimate the planet is about half a Jupiter mass.
 
-This is the signature of a **"hot Jupiter"** — a massive planet in a tight orbit. The first exoplanet around a Sun-like star, 51 Pegasi b, was discovered exactly this way in 1995 (with v ≈ 56 m/s and P = 4.2 days)!
+This is the signature of a **"hot Jupiter"** — a massive planet in a tight orbit. The first exoplanet around a Sun-like star, 51 Pegasi b, was discovered exactly this way in 1995 (with v $\approx$ 56 m/s and P = 4.2 days)!
 
 ::: {.callout-tip title="The More You Know: Spectral Precision" collapse="true"}
 Detecting a 56 m/s wobble seems impossible — but astronomers don't measure one line at that precision. Instead, they track the **centroids of many spectral lines simultaneously**, gaining statistical power. Modern spectrographs like HARPS are kept in vacuum, stabilized to hundredths of a degree, and calibrated with thorium-argon lamps or laser frequency combs.
@@ -439,9 +451,9 @@ The result: velocity precision far better than the width of a single spectral re
 
 From Doppler measurements alone, we can determine:
 
-- **Orbital period** → from the periodicity of the velocity curve
-- **Minimum planet mass** → from the velocity amplitude (minimum because we may not see the orbit edge-on)
-- **Orbital eccentricity** → from the shape of the velocity curve
+- **Orbital period** $\rightarrow$ from the periodicity of the velocity curve
+- **Minimum planet mass** $\rightarrow$ from the velocity amplitude (minimum because we may not see the orbit edge-on)
+- **Orbital eccentricity** $\rightarrow$ from the shape of the velocity curve
 
 Combined with transit observations (when a planet crosses in front of its star), we can get the planet's true mass and size.
 
@@ -478,7 +490,9 @@ What she found was shocking: **stars at the edges of galaxies move just as fast 
 
 By Newton's gravity and Kepler's Laws, the orbital velocity should depend on the mass inside the orbit:
 
-$$v_{orbit} = \sqrt{\frac{GM_{interior}}{r}}$$
+$$
+v_{orbit} = \sqrt{\frac{GM_{interior}}{r}}
+$$
 
 If most of a galaxy's mass is concentrated in the bright central region, then at large distances, $M_{interior}$ should be roughly constant, and $v_{orbit}$ should decrease as $1/\sqrt{r}$.
 
@@ -491,7 +505,7 @@ The leading explanation: there's far more matter in galaxies than the visible st
 We call it **dark matter**. It forms a huge, invisible **halo** surrounding galaxies, providing the extra gravitational pull that keeps outer stars orbiting so fast.
 
 ::: {.column-margin}
-**Dark matter:** Invisible matter that doesn't emit, absorb, or reflect light, but has gravitational effects. Makes up ~27% of the universe's mass-energy — about 5× more than ordinary matter.
+**Dark matter:** Invisible matter that doesn't emit, absorb, or reflect light, but has gravitational effects. Makes up ~27% of the universe's mass-energy — about $5\times$ more than ordinary matter.
 :::
 
 ### The Throughline: Motion Reveals Mass (Even Invisible Mass)
@@ -500,18 +514,18 @@ This is the ultimate payoff of L5-L6: **motion reveals mass**. Vera Rubin watche
 
 We've never directly detected a dark matter particle. But we know it's there because of gravity. The Doppler effect — measuring stellar velocities from spectral line shifts — was the key tool.
 
-::: {.callout-note title="Observable → Model → Inference: Dark Matter"}
+::: {.callout-note title="Observable $\rightarrow$ Model $\rightarrow$ Inference: Dark Matter"}
 **Observable:** Stars at the edges of spiral galaxies orbit at the same speed as stars near the center (flat rotation curve), measured via Doppler shifts of their spectral lines.
 
 **Model:** Newtonian gravity predicts $v_{orbit} = \sqrt{GM_{interior}/r}$. If only visible matter exists, velocity should decline at large $r$.
 
-**Inference:** The flat rotation curve requires additional unseen mass — **dark matter** — extending far beyond the visible galaxy. Galaxies contain ~5× more dark matter than ordinary matter.
+**Inference:** The flat rotation curve requires additional unseen mass — **dark matter** — extending far beyond the visible galaxy. Galaxies contain $~5\times$ more dark matter than ordinary matter.
 :::
 
 ::: {.callout-note title="We'll Return to This" collapse="false"}
 Dark matter is one of the biggest mysteries in modern astrophysics. In Module 3, when we study galaxies and cosmology, we'll explore:
 
-- How much dark matter is there? (~5× more than normal matter!)
+- How much dark matter is there? $(~5\times$ more than normal matter!)
 - What could it be made of?
 - How does it affect the structure of the universe?
 
@@ -519,7 +533,7 @@ The story of dark matter began with Doppler shifts and Newton's gravity.
 :::
 
 ::: {.callout-check-yourself title="Check Yourself 4 — Rotation Curve Math"}
-A star orbits at the edge of a galaxy at 200 km/s. Using $v_{orbit} = \sqrt{GM/r}$ with $r = 20$ kpc ($\approx 6 \times 10^{20}$ m) and $G = 6.674 \times 10^{-11}$ N m²/kg², the total mass inside the orbit is approximately:
+A star orbits at the edge of a galaxy at 200 km/s. Using $v_{orbit} = \sqrt{GM/r}$ with $r = 20$ kpc ($\approx 6 \times 10^{20}\,\mathrm{m}$) and $G = 6.674 \times 10^{-11}\,\mathrm{N\,m^2/kg^2}$, the total mass inside the orbit is approximately:
 
 - A) $10^{11}$ solar masses ($\approx 2 \times 10^{41}$ kg)
 - B) $10^{8}$ solar masses ($\approx 2 \times 10^{38}$ kg)
@@ -530,11 +544,11 @@ A star orbits at the edge of a galaxy at 200 km/s. Using $v_{orbit} = \sqrt{GM/r
 ::: {.callout-solution title="Solution" collapse="true"}
 **A) $\sim 10^{11}$ solar masses.**
 
-Rearrange the orbital velocity equation: $M = v^2 r / G$
+Rearrange the orbital velocity equation: $M = v^2 r /G$
 
 $M = \frac{(200 \times 10^3)^2 \times (6 \times 10^{20})}{6.674 \times 10^{-11}} = \frac{4 \times 10^{10} \times 6 \times 10^{20}}{6.674 \times 10^{-11}} = \frac{2.4 \times 10^{31}}{6.674 \times 10^{-11}} \approx 3.6 \times 10^{41}$ kg
 
-In solar masses: $3.6 \times 10^{41} / 2 \times 10^{30} \approx 1.8 \times 10^{11}$ solar masses.
+In solar masses: $3.6 \times 10^{41} /2 \times 10^{30} \approx 1.8 \times 10^{11}$ solar masses.
 
 But the **visible** stars in a typical spiral galaxy account for only $\sim 5 \times 10^{10}$ solar masses — about one-third of the total. The rest must be dark matter!
 :::
@@ -581,7 +595,9 @@ Telescopes have two main jobs:
 
 A telescope's ability to detect faint objects depends on how much light it collects. This is determined by the **area** of its primary mirror or lens:
 
-$$\text{Light-gathering power} \propto D^2$$
+$$
+\text{Light-gathering power} \propto D^2
+$$
 
 where $D$ is the diameter of the telescope.
 
@@ -591,7 +607,7 @@ where $D$ is the diameter of the telescope.
 
 ### Why Area Matters
 
-Double the diameter → **4× the collecting area** → 4× more photons per second.
+Double the diameter $\rightarrow$ **$4\times$ the collecting area** $\rightarrow$ $4\times$ more photons per second.
 
 This is why astronomers build ever-larger telescopes:
 
@@ -608,14 +624,14 @@ The Extremely Large Telescope (ELT) will collect 31 million times more light tha
 ::: {.callout-check-yourself title="Check Yourself 6 — Light-Gathering Power"}
 Telescope A has twice the diameter of Telescope B. How does A's light-gathering power compare to B's?
 
-- A) 2× greater
-- B) 4× greater
-- C) 8× greater
+- A) $2\times$ greater
+- B) $4\times$ greater
+- C) $8\times$ greater
 - D) The same
 :::
 
 ::: {.callout-solution title="Solution" collapse="true"}
-**B) 4× greater.** Light-gathering power scales as area, which goes as $D^2$. Twice the diameter → $2^2 = 4$ times the collecting area. This is why the push for larger telescopes is so important — each doubling of diameter quadruples the light collected.
+**B) $4\times$ greater.** Light-gathering power scales as area, which goes as $D^2$. Twice the diameter $\rightarrow$ $2^2 = 4$ times the collecting area. This is why the push for larger telescopes is so important — each doubling of diameter quadruples the light collected.
 :::
 
 ---
@@ -626,7 +642,9 @@ Telescope A has twice the diameter of Telescope B. How does A's light-gathering 
 
 Even a perfect telescope can't focus light to an infinitely sharp point. Light waves **diffract** (spread out) when passing through a finite aperture. This sets a fundamental limit on resolution called the **Rayleigh criterion**:
 
-$$\theta \approx 1.22 \frac{\lambda}{D}$$
+$$
+\theta \approx 1.22 \frac{\lambda}{D}
+$$
 
 where:
 
@@ -643,8 +661,8 @@ where:
 
 ### What This Means
 
-- **Larger telescope** → smaller $\theta$ → finer detail resolved
-- **Shorter wavelength** → smaller $\theta$ → finer detail resolved
+- **Larger telescope** $\rightarrow$ smaller $\theta$ $\rightarrow$ finer detail resolved
+- **Shorter wavelength** $\rightarrow$ smaller $\theta$ $\rightarrow$ finer detail resolved
 
 This is why radio telescopes need to be huge (radio waves have long wavelengths) while optical telescopes achieve great resolution with more modest sizes.
 
@@ -654,12 +672,16 @@ This is why radio telescopes need to be huge (radio waves have long wavelengths)
 
 **Solution:**
 
-$$\theta = 1.22 \times \frac{\lambda}{D} = 1.22 \times \frac{500 \times 10^{-9} \text{ m}}{2.4 \text{ m}} = 2.5 \times 10^{-7} \text{ rad}$$
+$$
+\theta = 1.22 \times \frac{\lambda}{D} = 1.22 \times \frac{500 \times 10^{-9} \text{ m}}{2.4 \text{ m}} = 2.5 \times 10^{-7} \text{ rad}
+$$
 
 Converting to arcseconds (1 rad = 206,265"):
-$$\theta = 2.5 \times 10^{-7} \times 206,265 \approx 0.05"$$
+$$
+\theta = 2.5 \times 10^{-7} \times 206,265 \approx 0.05"
+$$
 
-Hubble can resolve details as small as 0.05 arcseconds — about **10–20× sharper** than typical ground-based telescopes, which are limited to ~0.5–1" resolution by atmospheric blurring ("seeing").
+Hubble can resolve details as small as 0.05 arcseconds — about **$10–20\times$ sharper** than typical ground-based telescopes, which are limited to ~0.5–1" resolution by atmospheric blurring ("seeing").
 
 ::: {.callout-roadmap title="🖥️ Demo: Telescope Resolution" collapse="false"}
 See how changing telescope diameter and wavelength affects resolution. Try "observing" the same object at different wavelengths!
@@ -690,7 +712,7 @@ Which change would improve a telescope's angular resolution?
 :::
 
 ::: {.callout-solution title="Solution" collapse="true"}
-**C) Using a larger mirror.** Resolution $\theta \propto \lambda/D$. Larger D means smaller θ (finer resolution). Shorter wavelength would also help, but that wasn't an option here. Smaller mirror or longer wavelength would make resolution worse.
+**C) Using a larger mirror.** Resolution $\theta \propto \lambda/D$. Larger D means smaller $\theta$ (finer resolution). Shorter wavelength would also help, but that wasn't an option here. Smaller mirror or longer wavelength would make resolution worse.
 :::
 
 ---
@@ -781,8 +803,8 @@ To get even better resolution, multiple radio dishes work together (**interferom
 
 **Telescopes:**
 
-6. Light-gathering power ∝ $D^2$ (area)
-7. Resolution: $\theta \approx 1.22\lambda/D$ (larger D and shorter λ → finer detail)
+6. Light-gathering power $\propto$ $D^2$ (area)
+7. Resolution: $\theta \approx 1.22\lambda/D$ (larger D and shorter $\lambda$ $\rightarrow$ finer detail)
 8. Space telescopes access wavelengths blocked by atmosphere
 :::
 
@@ -796,7 +818,7 @@ With L10 complete, you now have the full astronomer's toolkit:
 |---------|-------------|-----------------|
 | L1-L2 | Scale of the universe | Our cosmic address |
 | L3-L4 | The sky as a map | Coordinates, seasons, phases, eclipses |
-| L5-L6 | Motion reveals mass | Orbits → masses (Kepler + Newton) |
+| L5-L6 | Motion reveals mass | Orbits $\rightarrow$ masses (Kepler + Newton) |
 | L7-L8 | Light reveals temperature | Blackbody, Wien, Stefan-Boltzmann |
 | L9 | Light reveals composition | Spectral lines, OBAFGKM |
 | **L10** | Light reveals motion | Doppler, exoplanets, dark matter |
@@ -826,11 +848,11 @@ Next week (L11–L13) is our **capstone week**: we apply every tool to the solar
 
 ### Synthesis
 
-**5. Doppler + Wien's Law:** A distant star has its Hα line observed at 656.50 nm (rest wavelength 656.28 nm). Separately, you measure the star's blackbody peak at $\lambda_{peak} = 580$ nm. Using Wien's Law ($\lambda_{peak} = 2.9 \times 10^6 / T$ with $\lambda$ in nm and $T$ in K), determine both the star's radial velocity **and** its surface temperature. How do these two measurements use different properties of the same starlight?
+**5. Doppler + Wien's Law:** A distant star has its $H\alpha$ line observed at 656.50 nm (rest wavelength 656.28 nm). Separately, you measure the star's blackbody peak at $\lambda_{peak} = 580$ nm. Using Wien's Law ($\lambda_{peak} = 2.9 \times 10^6 /T$ with $\lambda$ in nm and $T$ in K), determine both the star's radial velocity **and** its surface temperature. How do these two measurements use different properties of the same starlight?
 
 ### Challenge
 
-**6. Exoplanet or Binary?:** A star's spectral lines shift with amplitude ±0.005 nm around a rest wavelength of 500 nm, with a period of 3 days. Calculate the star's radial velocity amplitude. Is this likely caused by a planet or a stellar companion? Explain your reasoning.
+**6. Exoplanet or Binary?:** A star's spectral lines shift with amplitude $\pm0.005$ nm around a rest wavelength of 500 nm, with a period of 3 days. Calculate the star's radial velocity amplitude. Is this likely caused by a planet or a stellar companion? Explain your reasoning.
 
 **7. Dark Matter:** Explain in your own words how galaxy rotation curves provide evidence for dark matter. Use the concepts of orbital velocity, gravity, and mass.
 
@@ -850,8 +872,8 @@ Next week (L11–L13) is our **capstone week**: we apply every tool to the solar
 | **Redshift** | Shift to longer wavelengths (source receding) |
 | **Barycentric correction** | Correcting for Earth's orbital motion around the Sun |
 | **Dark matter** | Invisible matter that has gravity but doesn't interact with light |
-| **Light-gathering power** | A telescope's ability to collect light; ∝ D² |
-| **Angular resolution** | Ability to distinguish closely-spaced objects; ∝ λ/D |
+| **Light-gathering power** | A telescope's ability to collect light; $\propto$ $D^{2}$ |
+| **Angular resolution** | Ability to distinguish closely-spaced objects; $\propto$ $\lambda /D$ |
 | **Rayleigh criterion** | The formula $\theta = 1.22\lambda/D$ for diffraction-limited resolution |
 | **Interferometry** | Combining signals from multiple telescopes to achieve higher resolution |
 

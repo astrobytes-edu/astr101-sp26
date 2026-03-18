@@ -50,9 +50,9 @@ If you only remember three things:
 
 1. **Greenhouse effect:** Atmospheres absorb *some* outgoing infrared, warming the surface above equilibrium. Venus = extreme (+500 K), Earth = moderate (+33 K), Mars = minimal (+8 K).
 
-2. **Transits detect exoplanets:** When a planet crosses its star, brightness dips by $(R_p/R_*)^2$. Combined with radial velocity → mass + radius → density → rocky or gaseous?
+2. **Transits detect exoplanets:** When a planet crosses its star, brightness dips by $(R_p/R_*)^2$. Combined with radial velocity $\rightarrow$ mass + radius $\rightarrow$ density $\rightarrow$ rocky or gaseous?
 
-3. **Habitable zone:** Where liquid water *could* exist. Depends on stellar luminosity and planetary atmosphere. Zone ≠ guarantee!
+3. **Habitable zone:** Where liquid water *could* exist. Depends on stellar luminosity and planetary atmosphere. Zone $\ne$ guarantee!
 
 Now for the details...
 :::
@@ -63,13 +63,13 @@ Now for the details...
 
 Venus, Earth, and Mars are siblings — rocky planets that formed from the same solar nebula about 4.6 billion years ago. You might expect similar conditions. Instead, we find three radically different worlds:
 
-**Venus:** Surface temperature 735 K (462°C) — hot enough to melt lead. Crushing atmospheric pressure 90× Earth's. Sulfuric acid clouds. No liquid water. A hellscape.
+**Venus:** Surface temperature 735 K ($462^{\circ}$C) — hot enough to melt lead. Crushing atmospheric pressure $90\times$ Earth's. Sulfuric acid clouds. No liquid water. A hellscape.
 
-**Earth:** Surface temperature 288 K (15°C). Moderate atmosphere. Liquid water oceans covering 70% of the surface. Life everywhere, from deep ocean vents to Antarctic ice.
+**Earth:** Surface temperature 288 K ($15^{\circ}$C). Moderate atmosphere. Liquid water oceans covering 70% of the surface. Life everywhere, from deep ocean vents to Antarctic ice.
 
-**Mars:** Surface temperature 218 K (-55°C). Atmospheric pressure less than 1% of Earth's. Frozen polar caps. Ancient river channels, but no liquid water today. A cold desert.
+**Mars:** Surface temperature 218 K (-$55^{\circ}$C). Atmospheric pressure less than 1% of Earth's. Frozen polar caps. Ancient river channels, but no liquid water today. A cold desert.
 
-What explains these vastly different outcomes? The answer involves physics we've already learned: **blackbody radiation, thermal equilibrium, and atmospheric absorption.** Today we'll see how the greenhouse effect creates these different climates — and why adding CO₂ to Earth's atmosphere shifts the same energy balance (though in a vastly different regime than Venus).
+What explains these vastly different outcomes? The answer involves physics we've already learned: **blackbody radiation, thermal equilibrium, and atmospheric absorption.** Today we'll see how the greenhouse effect creates these different climates — and why adding $\mathrm{CO_{2}}$ to Earth's atmosphere shifts the same energy balance (though in a vastly different regime than Venus).
 
 Then we'll turn to the search for other worlds. We've found thousands of exoplanets, some in "habitable zones" where liquid water could exist. How do we find them? And what determines if they're actually habitable?
 
@@ -85,10 +85,11 @@ Before we dive in, see if you can answer these from memory:
 :::
 
 ::: {.callout-tip title="Answers" collapse="true"}
+
 1. Stefan-Boltzmann Law
-2. 16× (since P ∝ T⁴)
+2. $16\times$ (since P $\propto$ $T^{4})$
 3. Blueshifted
-4. Moon's orbit is tilted ~5° relative to the ecliptic — alignment is rare
+4. Moon's orbit is tilted ~$5^{\circ}$ relative to the ecliptic — alignment is rare
 :::
 
 ---
@@ -99,7 +100,9 @@ Before we dive in, see if you can answer these from memory:
 
 In L8, we learned that objects in thermal equilibrium absorb and emit energy at equal rates. For a planet absorbing sunlight:
 
-$$\text{Energy absorbed} = \text{Energy emitted}$$
+$$
+\text{Energy absorbed} = \text{Energy emitted}
+$$
 
 This gives an **equilibrium temperature** — what the planet's temperature *should* be if it's just balancing incoming sunlight against outgoing thermal radiation.
 
@@ -115,11 +118,15 @@ Let's work through the calculation step by step.
 
 At equilibrium, energy in equals energy out:
 
-$$\text{Power absorbed from Sun} = \text{Power radiated to space}$$
+$$
+\text{Power absorbed from Sun} = \text{Power radiated to space}
+$$
 
 We already know the right side from L8: a blackbody radiates power according to the **Stefan-Boltzmann Law**:
 
-$$P_{out} = \sigma T^4 \times (\text{surface area})$$
+$$
+P_{out} = \sigma T^4 \times (\text{surface area})
+$$
 
 ::: {.column-margin}
 **This is the key connection!** The Stefan-Boltzmann Law from L8 tells us how much power a planet radiates at temperature T. Setting this equal to absorbed sunlight gives us the equilibrium temperature.
@@ -127,16 +134,16 @@ $$P_{out} = \sigma T^4 \times (\text{surface area})$$
 
 But how much solar power does a planet actually intercept?
 
-#### Step 2: Why πR², Not 4πR²? — The Disk Approximation
+#### Step 2: Why $\pi R^2$, Not $4\pi R^2$? — The Disk Approximation
 
 Here's a key insight: A planet doesn't absorb sunlight over its entire spherical surface. Sunlight comes from one direction (the Sun), so the planet only intercepts light across its **cross-sectional area** — the area of the "shadow" it would cast.
 
 ::: {.callout-key-insight title="Think About a Total Solar Eclipse"}
 During a total solar eclipse, the Moon blocks the Sun. But the Moon's shadow on Earth isn't sphere-shaped — it's a **disk**. That's because sunlight travels in parallel rays from the distant Sun, and the Moon intercepts them with its cross-sectional area.
 
-**Cross-section of a sphere = πR²** (the area of a circle with the same radius)
+**Cross-section of a sphere = $\pi R^2$** (the area of a circle with the same radius)
 
-The planet intercepts sunlight like a disk (πR²) but radiates from its entire spherical surface (4πR²). This factor of 4 difference is crucial for the calculation!
+The planet intercepts sunlight like a disk $(\pi R^2)$ but radiates from its entire spherical surface $(4\pi R^2)$. This factor of 4 difference is crucial for the calculation!
 :::
 
 {{< fig disk-approximation >}}
@@ -145,8 +152,8 @@ The planet intercepts sunlight like a disk (πR²) but radiates from its entire 
 
 Not all sunlight that hits a planet gets absorbed — some reflects back into space. **Albedo** (A) is the fraction of incoming light that reflects away.
 
-- Albedo = 0 → perfectly absorbing (all light absorbed)
-- Albedo = 1 → perfectly reflecting (all light bounces off)
+- Albedo = 0 $\rightarrow$ perfectly absorbing (all light absorbed)
+- Albedo = 1 $\rightarrow$ perfectly reflecting (all light bounces off)
 - Real planets: somewhere in between
 
 These are **Bond albedos** — the fraction of total incoming energy reflected, averaged over all wavelengths and angles. (Geometric albedo, which you may see elsewhere, measures reflectivity at a single viewing angle.)
@@ -191,40 +198,54 @@ Now we can set up the full energy balance:
 
 **Power absorbed:**
 
-$$P_{in} = (\text{Solar flux at planet}) \times (\text{cross-section}) \times (1 - A)$$
+$$
+P_{in} = (\text{Solar flux at planet}) \times (\text{cross-section}) \times (1 - A)
+$$
 
 The solar flux at distance $d$ from the Sun is:
 
-$$F = \frac{L_\odot}{4\pi d^2}$$
+$$
+F = \frac{L_\odot}{4\pi d^2}
+$$
 
 So:
 
-$$P_{in} = \frac{L_\odot}{4\pi d^2} \times \pi R^2 \times (1 - A)$$
+$$
+P_{in} = \frac{L_\odot}{4\pi d^2} \times \pi R^2 \times (1 - A)
+$$
 
 **Power radiated:**
 
-$$P_{out} = \sigma T_{eq}^4 \times 4\pi R^2$$
+$$
+P_{out} = \sigma T_{eq}^4 \times 4\pi R^2
+$$
 
 **Setting them equal:**
 
-$$\frac{L_\odot}{4\pi d^2} \times \pi R^2 \times (1 - A) = \sigma T_{eq}^4 \times 4\pi R^2$$
+$$
+\frac{L_\odot}{4\pi d^2} \times \pi R^2 \times (1 - A) = \sigma T_{eq}^4 \times 4\pi R^2
+$$
 
 Notice that $\pi R^2$ appears on both sides — the planet's size cancels out! This is why equilibrium temperature doesn't depend on planet size.
 
 Solving for $T_{eq}$:
 
-$$T_{eq} = \left[ \frac{(1-A) L_\odot}{16\pi \sigma d^2} \right]^{1/4}$$
+$$
+T_{eq} = \left[ \frac{(1-A) L_\odot}{16\pi \sigma d^2} \right]^{1/4}
+$$
 
 ::: {.callout-important title="What Equilibrium Temperature Depends On"}
 Looking at the formula:
 
-$$T_{eq} = \left[ \frac{(1-A) L_\odot}{16\pi \sigma d^2} \right]^{1/4}$$
+$$
+T_{eq} = \left[ \frac{(1-A) L_\odot}{16\pi \sigma d^2} \right]^{1/4}
+$$
 
 The equilibrium temperature depends on:
 
-1. **Distance (d):** Farther → lower T_eq (goes as $d^{-1/2}$)
-2. **Albedo (A):** Higher albedo → lower T_eq (absorbs less)
-3. **Stellar luminosity (L):** Brighter star → higher T_eq
+1. **Distance (d):** Farther $\rightarrow$ lower T_eq (goes as $d^{-1/2}$)
+2. **Albedo (A):** Higher albedo $\rightarrow$ lower T_eq (absorbs less)
+3. **Stellar luminosity (L):** Brighter star $\rightarrow$ higher T_eq
 
 It does NOT depend on:
 
@@ -249,15 +270,21 @@ When you see a planet's "temperature" in the news, ask: *equilibrium, effective,
 
 For a **perfectly absorbing planet** (A = 0) orbiting the Sun:
 
-$$T_{eq} \approx 279\text{ K} \times \left(\frac{1\text{ AU}}{d}\right)^{1/2}$$
+$$
+T_{eq} \approx 279\text{ K} \times \left(\frac{1\text{ AU}}{d}\right)^{1/2}
+$$
 
 To correct for albedo, multiply by $(1-A)^{1/4}$:
 
-$$T_{eq} \approx 279\text{ K} \times (1-A)^{1/4} \times \left(\frac{1\text{ AU}}{d}\right)^{1/2}$$
+$$
+T_{eq} \approx 279\text{ K} \times (1-A)^{1/4} \times \left(\frac{1\text{ AU}}{d}\right)^{1/2}
+$$
 
-**Sanity check for Earth** (d = 1 AU, A ≈ 0.30):
+**Sanity check for Earth** (d = 1 AU, A $\approx$ 0.30):
 
-$$T_{eq} \approx 279 \times (0.70)^{1/4} \approx 279 \times 0.91 \approx 255\text{ K}$$
+$$
+T_{eq} \approx 279 \times (0.70)^{1/4} \approx 279 \times 0.91 \approx 255\text{ K}
+$$
 
 That matches the table below — and it's about 33 K colder than Earth's actual surface temperature. The difference? The greenhouse effect.
 
@@ -275,7 +302,7 @@ Something is very wrong with our prediction for Venus. It's **500 degrees hotter
 
 {{< fig greenhouse-comparison >}}
 
-::: {.callout-note title="Observable → Model → Inference: Diagnosing Venus"}
+::: {.callout-note title="Observable $\rightarrow$ Model $\rightarrow$ Inference: Diagnosing Venus"}
 **Observable:** Venus radiates thermally at 735 K in the infrared. (Wavelength + Brightness)
 
 **Model:** Equilibrium temperature from distance and albedo predicts only ~230 K.
@@ -322,18 +349,18 @@ The equilibrium calculation assumes the planet radiates directly to space. But i
 
 | Gas | Chemical Formula | Effect |
 |-----|-----------------|--------|
-| Water vapor | H₂O | Strong absorber; amplifies other effects |
-| Carbon dioxide | CO₂ | Primary driver; very long-lived |
-| Methane | CH₄ | Potent but shorter-lived |
-| Nitrous oxide | N₂O | Long-lived, potent |
+| Water vapor | $\mathrm{H_{2}O}$ | Strong absorber; amplifies other effects |
+| Carbon dioxide | $\mathrm{CO_{2}}$ | Primary driver; very long-lived |
+| Methane | $\mathrm{CH_{4}}$ | Potent but shorter-lived |
+| Nitrous oxide | $\mathrm{N_{2}O}$ | Long-lived, potent |
 
 ::: {.callout-roadmap title="Connection to L8: Wien's Law"}
 Why do greenhouse gases absorb *infrared* specifically?
 
-From Wien's Law: $\lambda_{\text{peak}} = 2.9 \times 10^6 / T$ nm
+From Wien's Law: $\lambda_{\text{peak}} = 2.9 \times 10^6 /T$ nm
 
-- **Sun (5800 K):** Peak at ~500 nm (visible) → passes through atmosphere
-- **Earth (288 K):** Peak at ~10,000 nm (infrared) → absorbed by greenhouse gases
+- **Sun (5800 K):** Peak at ~500 nm (visible) $\rightarrow$ passes through atmosphere
+- **Earth (288 K):** Peak at ~10,000 nm (infrared) $\rightarrow$ absorbed by greenhouse gases
 
 The atmosphere is largely transparent to incoming visible light but selectively absorbs outgoing infrared in key wavelength bands. That's the essence of the greenhouse effect!
 :::
@@ -346,25 +373,25 @@ The atmosphere is largely transparent to incoming visible light but selectively 
 
 Venus may have started with conditions similar to Earth — perhaps even with liquid water oceans. But it was closer to the Sun, so it was warmer. Here's what may have happened:
 
-1. **Higher temperature → more water evaporates**
+1. **Higher temperature $\rightarrow$ more water evaporates**
 
-2. **Water vapor is a greenhouse gas → temperature rises further**
+2. **Water vapor is a greenhouse gas $\rightarrow$ temperature rises further**
 
-3. **More evaporation → more water vapor → more warming** (positive feedback!)
+3. **More evaporation $\rightarrow$ more water vapor $\rightarrow$ more warming** (positive feedback!)
 
 4. **Eventually: oceans boil completely**
 
-5. **UV light breaks apart water vapor → hydrogen escapes to space**
+5. **UV light breaks apart water vapor $\rightarrow$ hydrogen escapes to space**
 
-6. **CO₂ from volcanoes accumulates** (no oceans to dissolve it, no life to sequester it)
+6. **$\mathrm{CO_{2}}$ from volcanoes accumulates** (no oceans to dissolve it, no life to sequester it)
 
-7. **Result: 96% CO₂ atmosphere, 735 K surface**
+7. **Result: 96% $\mathrm{CO_{2}}$ atmosphere, 735 K surface**
 
 ### The Runaway Greenhouse
 
 This is a **runaway greenhouse effect** — a positive feedback loop where warming causes more warming until a new, much hotter equilibrium is reached.
 
-Venus's atmosphere is now 96% CO₂ with 90× Earth's surface pressure. The greenhouse effect adds over 500 K to its temperature.
+Venus's atmosphere is now 96% $\mathrm{CO_{2}}$ with $90\times$ Earth's surface pressure. The greenhouse effect adds over 500 K to its temperature.
 
 ::: {.callout-the-more-you-know title="We've Been There: The Venera Landers" collapse="true"}
 How do we know Venus's surface conditions so precisely? Because we've landed on it. The Soviet **Venera** missions (1970s-80s) were the first spacecraft to land on another planet and return data. Venera 13 survived **127 minutes** on Venus's surface in 1982 — enduring 735 K heat and 90 atmospheres of pressure — long enough to take the first color photos of Venus's surface and analyze the soil.
@@ -375,20 +402,20 @@ The photos reveal a flat, rocky landscape under an orange sky (the thick atmosph
 ::: {.callout-key-insight title="The Sobering Lesson"}
 Venus shows what happens when the greenhouse effect runs away.
 
-The **same radiative physics** governs all planetary climates — but Earth and Venus occupy vastly different regimes. Earth is not on a trajectory toward Venus-style runaway; our solar flux is too low and our oceans act as a CO₂ buffer. What *is* happening: adding greenhouse gases shifts Earth's energy balance, raising surface temperatures by degrees, not hundreds of degrees. Small shifts still have large consequences.
+The **same radiative physics** governs all planetary climates — but Earth and Venus occupy vastly different regimes. Earth is not on a trajectory toward Venus-style runaway; our solar flux is too low and our oceans act as a $\mathrm{CO_{2}}$ buffer. What *is* happening: adding greenhouse gases shifts Earth's energy balance, raising surface temperatures by degrees, not hundreds of degrees. Small shifts still have large consequences.
 :::
 
 ::: {.callout-check-yourself title="Check Yourself 2 — Venus"}
 Venus is hotter than Mercury, even though Mercury is closer to the Sun. Why?
 
 - A) Venus has a stronger magnetic field
-- B) Venus has a thick CO₂ atmosphere causing a strong greenhouse effect
+- B) Venus has a thick $\mathrm{CO_{2}}$ atmosphere causing a strong greenhouse effect
 - C) Venus rotates more slowly
 - D) Venus has active volcanoes
 :::
 
 ::: {.callout-tip title="Solution" collapse="true"}
-**B) Venus has a thick CO₂ atmosphere causing a strong greenhouse effect.** Mercury has almost no atmosphere, so it experiences huge day–night temperature swings (~700 K dayside, ~100 K nightside) with no greenhouse warming. Venus's thick CO₂ atmosphere traps heat uniformly, raising the surface to ~735 K everywhere — hotter than Mercury's dayside despite being farther from the Sun.
+**B) Venus has a thick $\mathrm{CO_{2}}$ atmosphere causing a strong greenhouse effect.** Mercury has almost no atmosphere, so it experiences huge day–night temperature swings (~700 K dayside, ~100 K nightside) with no greenhouse warming. Venus's thick $\mathrm{CO_{2}}$ atmosphere traps heat uniformly, raising the surface to ~735 K everywhere — hotter than Mercury's dayside despite being farther from the Sun.
 :::
 
 ---
@@ -400,7 +427,7 @@ Venus is hotter than Mercury, even though Mercury is closer to the Sun. Why?
 Mars has the opposite problem: its atmosphere is too thin to trap much heat.
 
 - **Surface pressure:** 0.6% of Earth's
-- **Composition:** 95% CO₂, but so thin it barely matters
+- **Composition:** 95% $CO_{2},$ but so thin it barely matters
 - **Result:** Only ~8 K of greenhouse warming
 
 Mars also lost much of its early atmosphere. With weak gravity (38% of Earth's) and no global magnetic field, the solar wind stripped away atmospheric gases over billions of years.
@@ -411,7 +438,7 @@ Mars wasn't always this way. We see:
 
 - Ancient river channels and lake beds
 - Minerals that only form in liquid water
-- Polar ice caps (CO₂ and water ice)
+- Polar ice caps $(CO_{2}$ and water ice)
 
 Early Mars may have had a thicker atmosphere and liquid water. Climate change — going the *opposite* direction from Venus — froze and dried the planet.
 
@@ -440,7 +467,7 @@ Earth sits in a sweet spot:
 
 2. **Right atmosphere:** Enough greenhouse effect (~33 K) to avoid freezing, not too much
 
-3. **Carbon cycle:** CO₂ dissolves in oceans, gets locked in rocks, volcanoes release it — a natural thermostat
+3. **Carbon cycle:** $\mathrm{CO_{2}}$ dissolves in oceans, gets locked in rocks, volcanoes release it — a natural thermostat
 
 4. **Plate tectonics:** Recycles carbon, renews atmosphere
 
@@ -450,11 +477,11 @@ Earth sits in a sweet spot:
 
 Here's where this matters for us today:
 
-Burning fossil fuels releases CO₂ that was locked in rocks for millions of years. Humanity currently emits ~40 GtCO₂/yr (order-of-magnitude; exact values vary by year and accounting method); about half is absorbed by the ocean and biosphere, with the rest accumulating in the atmosphere.
+Burning fossil fuels releases $\mathrm{CO_{2}}$ that was locked in rocks for millions of years. Humanity currently emits ~40 $GtCO_{2}/yr$ (order-of-magnitude; exact values vary by year and accounting method); about half is absorbed by the ocean and biosphere, with the rest accumulating in the atmosphere.
 
 The physics is exactly what we discussed:
 
-- More CO₂ → more infrared absorption → less heat escapes → surface warms
+- More $\mathrm{CO_{2}}$ $\rightarrow$ more infrared absorption $\rightarrow$ less heat escapes $\rightarrow$ surface warms
 - This is not speculation; it's the same physics that explains Venus
 
 Earth isn't becoming Venus — we're much too far from the Sun. But shifting Earth's temperature by even a few degrees has major consequences: sea level rise, extreme weather, ecosystem disruption.
@@ -472,16 +499,16 @@ Adding greenhouse gases changes the energy balance. That's Stefan-Boltzmann and 
 :::
 
 ::: {.callout-check-yourself title="Check Yourself 3 — Earth's Climate"}
-Earth's greenhouse effect raises the surface temperature about 33 K above equilibrium. If CO₂ levels increase, what happens?
+Earth's greenhouse effect raises the surface temperature about 33 K above equilibrium. If $\mathrm{CO_{2}}$ levels increase, what happens?
 
-- A) Temperature decreases because CO₂ reflects sunlight
+- A) Temperature decreases because $\mathrm{CO_{2}}$ reflects sunlight
 - B) Temperature stays the same because equilibrium is fixed
 - C) Temperature increases because more infrared is absorbed
 - D) Temperature increases only at night
 :::
 
 ::: {.callout-tip title="Solution" collapse="true"}
-**C) Temperature increases because more infrared is absorbed.** More CO₂ means the atmosphere absorbs more outgoing infrared radiation. To restore energy balance, the surface must warm up to radiate more energy. This is the basic physics of climate change.
+**C) Temperature increases because more infrared is absorbed.** More $\mathrm{CO_{2}}$ means the atmosphere absorbs more outgoing infrared radiation. To restore energy balance, the surface must warm up to radiate more energy. This is the basic physics of climate change.
 :::
 
 ---
@@ -522,15 +549,15 @@ We'll focus on the two most successful techniques:
 
 From L10: A planet orbiting a star causes the star to wobble around the system's center of mass. This wobble creates a periodic Doppler shift in the star's spectral lines.
 
-- Star moves toward us → blueshift
-- Star moves away → redshift
+- Star moves toward us $\rightarrow$ blueshift
+- Star moves away $\rightarrow$ redshift
 - Pattern repeats with planet's orbital period
 
 ### What We Learn
 
 | Observable | What It Tells Us |
 |-----------|------------------|
-| Period of velocity variation | Orbital period (→ distance via Kepler III) |
+| Period of velocity variation | Orbital period $(\rightarrow$ distance via Kepler III) |
 | Amplitude of velocity variation | Minimum planet mass |
 | Shape of velocity curve | Orbital eccentricity |
 
@@ -553,7 +580,7 @@ Remember from L4: Eclipses only happen when the Moon crosses the plane of Earth'
 
 - We only see a transit if the planet's orbit is **edge-on** to our line of sight
 - Most exoplanets DON'T transit — their orbits are tilted relative to us
-- Transit probability: roughly $R_{\text{star}}/a$ (larger star or closer planet → more likely)
+- Transit probability: roughly $R_{\text{star}}/a$ (larger star or closer planet $\rightarrow$ more likely)
 
 This means transit surveys miss most planets, but the ones they find are gold: we know exactly how the orbit is tilted (edge-on)!
 :::
@@ -572,10 +599,10 @@ This population view makes the selection effect concrete: we have many detection
 
 | Observable | What It Tells Us |
 |-----------|------------------|
-| **Transit depth** | Planet radius: depth ≈ $(R_p/R_*)^2$ |
+| **Transit depth** | Planet radius: depth $\approx$ $(R_p/R_*)^2$ |
 | **Transit duration** | Orbital distance (combined with period, stellar mass, and transit geometry) |
 | **Orbital period** | Time between transits |
-| **Orbital inclination** | Must be nearly edge-on (~90°) to transit |
+| **Orbital inclination** | Must be nearly edge-on (~$90^{\circ}$) to transit |
 
 ### Worked Example: How Big Is the Planet?
 
@@ -585,22 +612,28 @@ This population view makes the selection effect concrete: we have many detection
 
 The transit depth is the fraction of starlight blocked:
 
-$$\text{depth} = \left(\frac{R_p}{R_*}\right)^2 = 0.01$$
+$$
+\text{depth} = \left(\frac{R_p}{R_*}\right)^2 = 0.01
+$$
 
 Solving for planet radius:
 
-$$\frac{R_p}{R_*} = \sqrt{0.01} = 0.1$$
+$$
+\frac{R_p}{R_*} = \sqrt{0.01} = 0.1
+$$
 
-$$R_p = 0.1 \times R_\odot = 0.1 \times 696{,}000 \text{ km} = 69{,}600 \text{ km}$$
+$$
+R_p = 0.1 \times R_\odot = 0.1 \times 696{,}000 \text{ km} = 69{,}600 \text{ km}
+$$
 
 This is almost exactly **Jupiter's radius** (71,500 km). A 1% dip indicates a Jupiter-sized planet!
 
-::: {.callout-note title="Observable → Model → Inference: Planet Radius from Transit"}
+::: {.callout-note title="Observable $\rightarrow$ Model $\rightarrow$ Inference: Planet Radius from Transit"}
 **Observable:** A star's brightness dips by 1% every 3.5 days, lasting a few hours each time. (Brightness + Timing)
 
 **Model:** Transit depth $= (R_p/R_*)^2$. The dip fraction equals the area ratio of planet to star.
 
-**Inference:** $R_p = 0.1 \, R_* \approx 69{,}600$ km — a Jupiter-sized planet. Same pattern as always: measurement → physics → knowledge.
+**Inference:** $R_p = 0.1 \, R_* \approx 69{,}600$ km — a Jupiter-sized planet. Same pattern as always: measurement $\rightarrow$ physics $\rightarrow$ knowledge.
 :::
 
 ::: {.callout-check-yourself title="Check Yourself 4 — Transit Depth"}
@@ -633,26 +666,28 @@ When a planet **both** transits **and** shows radial velocity variations, we hit
 
 With both mass and radius:
 
-$$\text{Density} = \frac{M_p}{\frac{4}{3}\pi R_p^3}$$
+$$
+\text{Density} = \frac{M_p}{\frac{4}{3}\pi R_p^3}
+$$
 
 ### What Density Tells Us
 
 | Density | Composition | Example |
 |---------|-------------|---------|
-| ~5.5 g/cm³ | Rocky (iron + silicate) | Earth |
-| ~1.3 g/cm³ | Gas giant (H/He) | Jupiter |
-| ~2-3 g/cm³ | Water world? Mini-Neptune? | Some super-Earths |
+| ~5.5 $g/cm^{3}$ | Rocky (iron + silicate) | Earth |
+| ~1.3 $g/cm^{3}$ | Gas giant (H/He) | Jupiter |
+| ~2-3 $g/cm^{3}$ | Water world? Mini-Neptune? | Some super-Earths |
 
 {{< fig exoplanet-radius-vs-mass >}}
 
 ::: {.callout-key-insight title="Density Is a Clue, Not a Solution"}
-Intermediate densities (2–4 g/cm³) can be **degenerate**: different mixtures of rock, water, and gas can produce the same bulk density. Density is a strong clue to composition, but not a complete answer — additional constraints (atmospheric spectra, formation models) help break the degeneracy.
+Intermediate densities (2–4 $g/cm^{3})$ can be **degenerate**: different mixtures of rock, water, and gas can produce the same bulk density. Density is a strong clue to composition, but not a complete answer — additional constraints (atmospheric spectra, formation models) help break the degeneracy.
 :::
 
 ::: {.callout-note title="Observable $\to$ Model $\to$ Inference: Planet Composition from Density"}
 **Observable:** Radial velocity gives $M_p = 5 \, M_\oplus$; transit gives $R_p = 1.5 \, R_\oplus$. (Wavelength + Brightness + Timing)
 
-**Model:** Density $= M / V = M / (\tfrac{4}{3}\pi R^3)$. Scale to Earth: $\rho \approx 5.5 \times (5 / 1.5^3) \approx 8.1$ g/cm$^3$.
+**Model:** Density $= M /V = M /(\tfrac{4}{3}\pi R^3)$. Scale to Earth: $\rho \approx 5.5 \times (5 /1.5^3) \approx 8.1$ g/cm$^3$.
 
 **Inference:** Denser than Earth (5.5 g/cm$^3$) and far denser than Jupiter (1.3 g/cm$^3$) — a rocky, likely iron-rich super-Earth. Composition diagnosed from two measurements and one formula.
 :::
@@ -669,7 +704,7 @@ You discover a transiting planet with mass $= 5 \, M_\oplus$ and radius $= 1.5 \
 :::
 
 ::: {.callout-tip title="Solution" collapse="true"}
-**B) Rocky.** Density $\approx 5.5 \times (5 / 1.5^3) \approx 8.1$ g/cm$^3$ — denser than Earth (5.5 g/cm$^3$) and far denser than Jupiter (1.3 g/cm$^3$). This planet is almost certainly rocky and iron-rich. Gas giants have densities $\lesssim 2$ g/cm$^3$; this planet is well above that threshold.
+**B) Rocky.** Density $\approx 5.5 \times (5 /1.5^3) \approx 8.1$ g/cm$^3$ — denser than Earth (5.5 g/cm$^3$) and far denser than Jupiter (1.3 g/cm$^3$). This planet is almost certainly rocky and iron-rich. Gas giants have densities $\lesssim 2$ g/cm$^3$; this planet is well above that threshold.
 :::
 
 ---
@@ -689,11 +724,11 @@ Notice how the points slope downward overall: longer-period planets usually rece
 
 The habitable zone depends on:
 
-1. **Stellar luminosity:** More luminous star → HZ is farther out (Stefan-Boltzmann callback!)
+1. **Stellar luminosity:** More luminous star $\rightarrow$ HZ is farther out (Stefan-Boltzmann callback!)
 
-2. **Atmospheric greenhouse effect:** Strong greenhouse → HZ extends farther out
+2. **Atmospheric greenhouse effect:** Strong greenhouse $\rightarrow$ HZ extends farther out
 
-3. **Planetary albedo:** More reflective → needs to be closer to absorb enough heat
+3. **Planetary albedo:** More reflective $\rightarrow$ needs to be closer to absorb enough heat
 
 For the Sun (approximate, model-dependent):
 
@@ -702,7 +737,7 @@ For the Sun (approximate, model-dependent):
 
 These boundaries depend on assumptions about atmospheric composition, cloud feedbacks, and planetary rotation. Different climate models give different estimates — the numbers above span "conservative" to "optimistic" 1-D models.
 
-### Habitable Zone ≠ Habitable
+### Habitable Zone $\ne$ Habitable
 
 ::: {.callout-misconception title="Important Caveat"}
 Being in the habitable zone doesn't guarantee a planet is habitable!
@@ -723,7 +758,7 @@ The habitable zone is a starting point, not a guarantee.
 :::
 
 ::: {.callout-check-yourself title="Check Yourself 5 — Habitable Zone"}
-If a star is 4× as luminous as the Sun, how does its habitable zone compare?
+If a star is $4\times$ as luminous as the Sun, how does its habitable zone compare?
 
 - A) Same location as the Sun's
 - B) Closer to the star
@@ -790,16 +825,16 @@ In L13, we'll zoom out and ask the biggest question of all: **How many civilizat
 **Planetary Climates:**
 
 1. Equilibrium temperature depends on distance from Sun and albedo
-2. **Greenhouse effect:** Atmosphere absorbs IR → surface warms above equilibrium
-3. **Venus:** Runaway greenhouse → 735 K hellscape
-4. **Mars:** Too little atmosphere → 218 K frozen desert
-5. **Earth:** Moderate greenhouse, liquid water, life — adding CO₂ shifts the balance
+2. **Greenhouse effect:** Atmosphere absorbs IR $\rightarrow$ surface warms above equilibrium
+3. **Venus:** Runaway greenhouse $\rightarrow$ 735 K hellscape
+4. **Mars:** Too little atmosphere $\rightarrow$ 218 K frozen desert
+5. **Earth:** Moderate greenhouse, liquid water, life — adding $\mathrm{CO_{2}}$ shifts the balance
 
 **Exoplanet Detection:**
 
-6. **Radial velocity:** Star wobble → minimum planet mass
-7. **Transit:** Brightness dip → planet radius (depth = $(R_p/R_*)^2$)
-8. **Combined:** Mass + radius → density → rocky vs. gaseous
+6. **Radial velocity:** Star wobble $\rightarrow$ minimum planet mass
+7. **Transit:** Brightness dip $\rightarrow$ planet radius (depth = $(R_p/R_*)^2$)
+8. **Combined:** Mass + radius $\rightarrow$ density $\rightarrow$ rocky vs. gaseous
 9. **Habitable zone:** Where liquid water *could* exist (depends on stellar luminosity)
 10. **Biosignatures:** Chemical disequilibrium (e.g., $\text{O}_2$ + $\text{CH}_4$) as evidence for life; JWST can detect atmospheric molecules via transmission spectroscopy
 :::
@@ -828,11 +863,11 @@ In L13, we'll zoom out and ask the biggest question of all: **How many civilizat
 
 **7. Habitable Zone Width:** The Sun's habitable zone extends from roughly 0.95 AU to 1.4 AU. A red dwarf star with luminosity $L = 0.01\,L_\odot$ has its habitable zone scaled inward by $\sqrt{L/L_\odot}$. Calculate the inner and outer edges. How does the *width* of this habitable zone compare to the Sun's?
 
-**8. Biosignature Reasoning:** Earth's atmosphere contains both O₂ (produced by photosynthesis) and CH₄ (produced by biology and geology). These two gases react with each other and would disappear without continuous replenishment. Explain why detecting *both* O₂ and CH₄ in an exoplanet atmosphere would be more compelling evidence for life than detecting either one alone.
+**8. Biosignature Reasoning:** Earth's atmosphere contains both $\mathrm{O_{2}}$ (produced by photosynthesis) and $\mathrm{CH_{4}}$ (produced by biology and geology). These two gases react with each other and would disappear without continuous replenishment. Explain why detecting *both* $\mathrm{O_{2}}$ and $\mathrm{CH_{4}}$ in an exoplanet atmosphere would be more compelling evidence for life than detecting either one alone.
 
-**9. Venus's History:** Explain in your own words how Venus went from possibly habitable to its current state. Include the role of distance from the Sun, water vapor feedback, and CO₂ accumulation.
+**9. Venus's History:** Explain in your own words how Venus went from possibly habitable to its current state. Include the role of distance from the Sun, water vapor feedback, and $\mathrm{CO_{2}}$ accumulation.
 
-**10. Density Interpretation:** You discover a planet with the same mass as Neptune ($1.02 \times 10^{26}$ kg) but the same radius as Earth ($6.37 \times 10^6$ m). Calculate its average density and compare to Earth (5.5 g/cm³) and Neptune (1.6 g/cm³). What might this planet be made of?
+**10. Density Interpretation:** You discover a planet with the same mass as Neptune ($1.02 \times 10^{26}$ kg) but the same radius as Earth ($6.37 \times 10^6$ m). Calculate its average density and compare to Earth (5.5 $g/cm^{3})$ and Neptune (1.6 $g/cm^{3}).$ What might this planet be made of?
 
 ---
 

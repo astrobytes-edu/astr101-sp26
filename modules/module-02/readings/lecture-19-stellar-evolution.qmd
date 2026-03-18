@@ -36,6 +36,7 @@ This reading traces the life story of stars from birth on the main sequence thro
 **Default expectation (best):** Read the whole page before lecture, pausing at each **Check Yourself** question.
 
 **If you're short on time (~25 min):** Focus on:
+
 - The Big Idea above
 - Hydrostatic Equilibrium subsection (the physics engine)
 - Main-Sequence Lifetimes subsection (why massive stars die first)
@@ -81,7 +82,9 @@ Why? Because the *pressure* inside the star pushes outward. The gas in the stell
 
 In mathematical language, at each point inside a star:
 
-$$\text{Pressure force (outward)} = \text{Gravity force (inward)}$$
+$$
+\text{Pressure force (outward)} = \text{Gravity force (inward)}
+$$
 
 This balance is precise. If pressure exceeds gravity, the star expands. If gravity exceeds pressure, the star contracts. Most of the time, the star self-regulates: any small disturbance triggers a restoring force that returns it to equilibrium.
 
@@ -124,7 +127,9 @@ Here is one of the most profound asymmetries in the universe: **a star's lifetim
 
 Recall the mass-luminosity relation from Lecture 17:
 
-$$L \propto M^{3.5}$$
+$$
+L \propto M^{3.5}
+$$
 
 (More precisely, $L \approx M^{3.5}$ for stars between about 0.5 and 50 solar masses.)
 
@@ -132,11 +137,15 @@ A massive star is far more luminous than a low-mass star. Why? Because the highe
 
 The main-sequence lifetime is the total amount of fuel divided by the rate of fuel consumption:
 
-$$t_{\text{MS}} \propto \frac{\text{Fuel supply}}{\text{Burning rate}} \propto \frac{M}{L} \propto \frac{M}{M^{3.5}} = M^{-2.5}$$
+$$
+t_{\text{MS}} \propto \frac{\text{Fuel supply}}{\text{Burning rate}} \propto \frac{M}{L} \propto \frac{M}{M^{3.5}} = M^{-2.5}
+$$
 
 This is the **main-sequence lifetime formula**:
 
-$$t_{\text{MS}} \propto M^{-2.5}$$
+$$
+t_{\text{MS}} \propto M^{-2.5}
+$$
 
 More massive stars have *shorter* lifetimes. The dependence is dramatic.
 
@@ -146,7 +155,9 @@ The Sun (1 $M_\odot$) will burn hydrogen for approximately **10 billion years** 
 
 For a star of mass $M$ (in solar masses):
 
-$$t_{\text{MS}} = 10 \text{ Gyr} \times \left(\frac{M}{1 M_\odot}\right)^{-2.5}$$
+$$
+t_{\text{MS}} = 10 \text{ Gyr} \times \left(\frac{M}{1 M_\odot}\right)^{-2.5}
+$$
 
 Let's compute some lifetimes:
 
@@ -185,11 +196,15 @@ The star Betelgeuse has a mass of approximately 16 $M_\odot$. How long will it s
 ::: {.callout-tip title="Solution" collapse="true"}
 Using the lifetime formula:
 
-$$t_{\text{MS}} = 10 \text{ Gyr} \times \left(\frac{16}{1}\right)^{-2.5} = 10 \times 16^{-2.5}$$
+$$
+t_{\text{MS}} = 10 \text{ Gyr} \times \left(\frac{16}{1}\right)^{-2.5} = 10 \times 16^{-2.5}
+$$
 
 We calculate $16^{-2.5} = (2^4)^{-2.5} = 2^{-10} = \frac{1}{1024} \approx 0.000977$.
 
-$$t_{\text{MS}} = 10 \times 0.000977 \approx 0.01 \text{ Gyr} = 10 \text{ Myr}$$
+$$
+t_{\text{MS}} = 10 \times 0.000977 \approx 0.01 \text{ Gyr} = 10 \text{ Myr}
+$$
 
 **Betelgeuse will live for only about 10 million years on the main sequence.** In fact, Betelgeuse is so massive that it has probably already *left* the main sequence (it appears to be a red supergiant now). This means Betelgeuse is in the final stages of its life and could explode as a supernova at any moment in the next million years or so (astronomically speaking, "any moment").
 :::
@@ -428,7 +443,9 @@ The turnoff point tells us the mass of the most evolved star still undergoing co
 
 The main-sequence lifetime of a 1.2 $M_\odot$ star is:
 
-$$t_{\text{MS}} = 10 \text{ Gyr} \times (1.2)^{-2.5} = 10 \times 0.325 \approx 3.25 \text{ Gyr}$$
+$$
+t_{\text{MS}} = 10 \text{ Gyr} \times (1.2)^{-2.5} = 10 \times 0.325 \approx 3.25 \text{ Gyr}
+$$
 
 Therefore, **the cluster is approximately 3–3.5 billion years old**. (The turnoff mass marks the oldest stars still on the main sequence, so the cluster age equals the main-sequence lifetime of the turnoff star.)
 
@@ -475,7 +492,6 @@ A star has a mass of 3 $M_\odot$.
 (b) If the star formed at the same time as the Sun (4.6 Gyr ago), what is its current evolutionary stage?
 (c) How much time remains before it exhausts its core hydrogen?
 
-
 ---
 
 **Problem 2: The Red Giant Sun**
@@ -488,7 +504,6 @@ In approximately 5.4 billion years, our Sun will exhaust its core hydrogen and b
 
 *Hint: Use the Stefan-Boltzmann law: $L = 4\pi R^2 \sigma T^4$. In ratio form: $\frac{L_{\text{future}}}{L_{\odot}} = (R_{\text{future}}/R_{\odot})^2 (T_{\text{future}}/T_{\odot})^4$*
 
-
 ---
 
 **Problem 3: Interpreting an H-R Diagram**
@@ -498,7 +513,6 @@ You observe a star that is cooler (lower temperature, farther right) than the Su
 (a) Using the Stefan-Boltzmann law, is this star larger or smaller than the Sun? By how much?
 
 (b) What evolutionary stage is this star in?
-
 
 ---
 
@@ -512,7 +526,6 @@ A globular cluster shows a main-sequence turnoff at spectral type F (temperature
 
 *Hint: A 1.5 $M_\odot$ star has luminosity ~5.5 $L_\odot$; a 1.4 $M_\odot$ star has luminosity ~4.2 $L_\odot$. Interpolate.*
 
-
 ---
 
 **Problem 5: The Death Timeline of the Most Massive Star in a Cluster**
@@ -525,7 +538,6 @@ A young star cluster contains a 50 $M_\odot$ star and a 1 $M_\odot$ star (like o
 
 (c) For how long will the cluster contain at least one main-sequence star?
 
-
 ---
 
 ### Challenge Problems
@@ -534,14 +546,15 @@ A young star cluster contains a 50 $M_\odot$ star and a 1 $M_\odot$ star (like o
 
 A star is in hydrostatic equilibrium. The virial theorem states that for a self-gravitating body, the total gravitational potential energy $U$ and total thermal kinetic energy $K$ are related by:
 
-$$2K + U = 0$$
+$$
+2K + U = 0
+$$
 
 or equivalently, $K = -U/2$.
 
 If a star contracts and loses gravitational potential energy (becomes more negative, releasing energy), what happens to its thermal energy and temperature?
 
 *Hint: Think about what happens to $U$ when the star contracts.*
-
 
 ---
 
@@ -555,7 +568,6 @@ Our Milky Way contains stars of all masses, from 0.08 $M_\odot$ to ~100 $M_\odot
 
 (c) Why would no cluster have a main-sequence turnoff in a trillion years?
 
-
 ---
 
 **Challenge 3: Stellar Evolution on an Alien Exoplanet**
@@ -568,7 +580,6 @@ An astronomer discovers an exoplanet orbiting a red giant star. The star has bee
 
 (c) If you observed 10,000 different red giants in the sky, what would you expect to see in terms of their lifetimes on the red giant branch?
 
-
 ---
 
 ## Glossary
@@ -577,6 +588,6 @@ An astronomer discovers an exoplanet orbiting a red giant star. The star has bee
 
 ---
 
-*This reading is designed to support the Observable → Model → Inference pedagogy of ASTR 101. As you move through the lecture and problem sets, ask yourself: What do I observe in the night sky and in H-R diagrams? What physical models explain those observations? What can I infer about stellar lives, ages, and fates?*
+*This reading is designed to support the Observable $\rightarrow$ Model $\rightarrow$ Inference pedagogy of ASTR 101. As you move through the lecture and problem sets, ask yourself: What do I observe in the night sky and in H-R diagrams? What physical models explain those observations? What can I infer about stellar lives, ages, and fates?*
 
 *For further exploration, see OpenStax Chapter 22 (Stars from Adolescence to Old Age) and the companion interactive demo on the Cosmic Playground.*

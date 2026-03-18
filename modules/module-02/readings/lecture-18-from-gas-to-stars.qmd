@@ -34,6 +34,7 @@ This reading follows the star-formation story from interstellar clouds to protos
 **Default expectation (best):** Read the whole page before lecture, pausing for each check-yourself prompt.
 
 **If you're short on time (~20 min):**
+
 - Focus on the three kinds of nebulae, the Jeans criterion, and the protostar-to-main-sequence sequence.
 - Come back later for the observational signatures and challenge problems.
 
@@ -93,6 +94,7 @@ The Orion Nebula is perhaps the most famous example: a region of ionized hydroge
 :::
 
 <!-- FIGURE: Orion Nebula in visible light (Hubble image style). Show:
+
 - Central Trapezium stars (four bright points)
 - Pink/red H-alpha emission from ionized hydrogen
 - Dark dust lanes within the nebula
@@ -129,6 +131,7 @@ Dust blocks visible light but is transparent to infrared radiation. This is why 
 :::
 
 <!-- FIGURE: Interstellar extinction and reddening diagram. Show:
+
 - A distant star and nearby comparison star
 - Dust cloud between them
 - Blue light scattered away; red light passing through
@@ -140,10 +143,10 @@ This illustrates why infrared is essential for studying dust-enshrouded regions.
 ## The Giant Molecular Cloud: The Birthplace of Stars
 
 ::: {.column-margin}
-**Giant molecular cloud (GMC)** — a massive accumulation of cold, dense molecular gas. Typical properties: mass ~10⁵ M☉, temperature ~10 K, diameter ~50–300 light-years. Sites of vigorous star formation.*
+**Giant molecular cloud (GMC)** — a massive accumulation of cold, dense molecular gas. Typical properties: mass $~10^{5}$ $M\odot,$ temperature ~10 K, diameter ~50–300 light-years. Sites of vigorous star formation.*
 :::
 
-Not all regions of the ISM are equal. While some regions are hot and diffuse, others are remarkably cold and dense — so cold that hydrogen atoms bind together into molecular hydrogen (H₂) molecules. These are **giant molecular clouds**, the cosmic incubators where star formation occurs.
+Not all regions of the ISM are equal. While some regions are hot and diffuse, others are remarkably cold and dense — so cold that hydrogen atoms bind together into molecular hydrogen $(H_{2})$ molecules. These are **giant molecular clouds**, the cosmic incubators where star formation occurs.
 
 A typical GMC is a colossus: perhaps 100 light-years in diameter, with a mass of 100,000 to a million solar masses, and a temperature of only 10 K — colder than the coldest places on Earth. Inside a GMC, gravity's inward pull is stronger than the outward pressure of the gas, so the cloud tends to contract. Yet it doesn't collapse all at once. Instead, turbulent motions and magnetic fields provide support, creating a delicate tension between gravity and pressure. This equilibrium is fragile. If something disturbs the balance — if the cloud cools further, becomes denser, or is struck by a shock wave — the balance tips. Gravity wins. And when gravity wins, stars are born.
 
@@ -166,6 +169,7 @@ Several mechanisms can trigger star formation in a GMC:
 :::
 
 <!-- FIGURE: Three panels showing star formation triggers:
+
 - Panel 1: Supernova shockwave hitting a molecular cloud; compressed gas glowing
 - Panel 2: Two molecular clouds colliding; region of overlap highlighted
 - Panel 3: A cloud passing through a spiral density wave; compression shown
@@ -184,7 +188,9 @@ In a hot cloud, atoms move faster, generating higher pressure. In a cold cloud, 
 
 The **Jeans criterion** gives us a rule: a cloud will undergo gravitational collapse if it is sufficiently *massive* and sufficiently *cold*. Specifically, gravity wins when:
 
-$$\text{Cloud mass} > \text{Jeans mass}$$
+$$
+\text{Cloud mass} > \text{Jeans mass}
+$$
 
 ::: {.column-margin}
 **Jeans criterion** — a cloud of gas will undergo gravitational collapse if its mass exceeds the Jeans mass, defined by the balance between gravity and thermal pressure. Conceptually: massive and cold clouds collapse; low-mass and hot clouds remain in equilibrium.*
@@ -195,7 +201,7 @@ We don't need to derive the Jeans mass equation (that requires calculus), but th
 - **Temperature:** Colder clouds have a *lower* Jeans mass (lower pressure means gravity can overcome it more easily).
 - **Density:** Denser clouds have a *lower* Jeans mass (gravity is stronger, so it more easily overwhelms the pressure).
 
-**Practical example:** A typical GMC with a mass of ~10⁵ M☉, a temperature of ~10 K, and a density of ~10³ particles/cm³ has a Jeans mass of roughly 100–1000 M☉. Since the cloud's mass exceeds its Jeans mass, the cloud is unstable against gravity. It will collapse.
+**Practical example:** A typical GMC with a mass of $~10^{5}$ $M\odot,$ a temperature of ~10 K, and a density of $~10^{3}$ $particles/cm^{3}$ has a Jeans mass of roughly 100–$1000 \M_\odot$. Since the cloud's mass exceeds its Jeans mass, the cloud is unstable against gravity. It will collapse.
 
 As the cloud collapses, something important happens: **the collapsing cloud fragments.** The cloud breaks apart into smaller pieces, each with its own mass and temperature. Some fragments exceed their own Jeans mass and collapse further; others don't. The fragments that do collapse become the seeds of new stars.
 
@@ -216,7 +222,8 @@ Different regions within the original GMC collapse at different rates, creating 
 This explains one of the most striking features of star formation: young stars are almost never born in isolation. They emerge in clusters embedded within the remnants of the molecular cloud that birthed them.
 
 <!-- FIGURE: Fragmentation of a giant molecular cloud. Show:
-- Panel 1: Large, cool GMC (labeled "T = 10 K, M_Jeans ~ 100 M☉")
+
+- Panel 1: Large, cool GMC (labeled "T = 10 K, M_Jeans ~ $100 \M_\odot$")
 - Panel 2: Cloud begins to collapse; Jeans mass drops as density increases (labeled "As density rises, T drops, M_Jeans decreases")
 - Panel 3: Fragmentation into progressively smaller clumps (show 5–6 fragments of different sizes)
 - Panel 4: Final result: star cluster emerging from dust (show ~20 stars of varying brightness)
@@ -234,8 +241,8 @@ As material falls inward, gravitational potential energy is converted to heat. T
 
 The timescale for Kelvin-Helmholtz contraction depends on mass:
 
-- **For a low-mass protostar** (~0.5 M☉): contraction takes ~10 million years.
-- **For a high-mass protostar** (~20 M☉): contraction takes ~100,000 years.
+- **For a low-mass protostar** (~$0.5 \M_\odot$): contraction takes ~10 million years.
+- **For a high-mass protostar** (~$20 \M_\odot$): contraction takes ~100,000 years.
 
 This dramatic difference in timescale arises because massive protostars have higher luminosity; they radiate energy much faster, cooling and contracting more quickly. A massive protostar can reach main-sequence conditions in just a few hundred thousand years, while a low-mass star takes tens of millions of years to do so. This has profound implications: massive stars finish their lives (roughly 10 million years on the main sequence) in less time than it takes a low-mass star to be born!
 
@@ -274,7 +281,7 @@ After millions of years of contraction and chaotic accretion, the core temperatu
 
 A crucial transition occurs: for the first time, the star generates its own internal heat through fusion. The inward pull of gravity is now balanced by the outward pressure of the hot fusion-powered gas. The star reaches **hydrostatic equilibrium** — a state in which gravitational forces and pressure forces exactly balance. The star stops contracting (or contracts very slowly). It has reached the main sequence.
 
-The exact location on the main sequence depends on the star's mass. In our earlier lecture on the H-R diagram (L16), we learned that more massive stars burn hydrogen faster and are consequently more luminous. A 20 M☉ star reaches the main sequence hotter and brighter than a 1 M☉ star. Yet the fundamental condition is the same: hydrogen fusion in hydrostatic equilibrium.
+The exact location on the main sequence depends on the star's mass. In our earlier lecture on the H-R diagram (L16), we learned that more massive stars burn hydrogen faster and are consequently more luminous. A $20 \M_\odot$ star reaches the main sequence hotter and brighter than a $1 \M_\odot$ star. Yet the fundamental condition is the same: hydrogen fusion in hydrostatic equilibrium.
 
 {{< fig hr-pre-main-sequence-tracks >}}
 
@@ -295,6 +302,7 @@ Infrared observations reveal protoplanetary disks around young stars. ALMA (the 
 :::
 
 <!-- FIGURE: Cross-section and overhead view of a protoplanetary disk around a young star. Show:
+
 - Central star (orange) with jets blasting outward
 - Disk in edge view (side panel): flattened structure with concentric rings
 - Disk in overhead view (top panel): spiral structure, gaps from planets, dust concentrations
@@ -310,13 +318,13 @@ A protoplanetary disk around a young star can extend from near the stellar surfa
 
 ## Observable Signatures: How We Know Star Formation Is Happening
 
-How do we actually observe star formation? The ISM, young protostars, and protoplanetary disks don't announce themselves in visible light. We must be detectives, using the tools of OMI: Observable → Model → Inference.
+How do we actually observe star formation? The ISM, young protostars, and protoplanetary disks don't announce themselves in visible light. We must be detectives, using the tools of OMI: Observable $\rightarrow$ Model $\rightarrow$ Inference.
 
 ### Observable: Infrared Emission and Molecular Lines
 
 The primary observable is **infrared thermal radiation** from warm dust heated by the protostar. A protostar embedded in an infalling envelope of dust and gas produces a characteristic infrared spectrum: cool dust far from the star (at 10–50 K) glowing in the far-infrared; warmer dust near the star (at 100–500 K) glowing in the near-infrared.
 
-Additionally, molecular gas in collapsing clouds emits in **molecular spectral lines** — the rotational and vibrational energy transitions of molecules like CO (carbon monoxide), HCO⁺ (formyl cation), and others. A radio telescope tuned to the 2.6 mm wavelength of CO's 1→0 rotational transition can map the density structure of a giant molecular cloud.
+Additionally, molecular gas in collapsing clouds emits in **molecular spectral lines** — the rotational and vibrational energy transitions of molecules like CO (carbon monoxide), $\mathrm{HCO^{+}}$ (formyl cation), and others. A radio telescope tuned to the 2.6 mm wavelength of CO's $1\rightarrow0$ rotational transition can map the density structure of a giant molecular cloud.
 
 ### Model: Theoretical Predictions
 
@@ -335,11 +343,12 @@ By comparing observations to models, we infer the properties of unseen objects. 
 :::
 
 <!-- FIGURE: Observed spectrum of a young protostar (similar to VLA 1623 or IRAS 16253–2429). Show:
+
 - X-axis: Wavelength from 0.1 microns (visible) to 1 millimeter (radio)
 - Y-axis: Log flux
 - Bright bump in infrared (1–100 microns) from warm dust
 - Fainter bump in millimeter from cool outer envelope
-- Molecular line peaks (CO, H₂O) overlaid
+- Molecular line peaks (CO, $H_{2}O)$ overlaid
 - Comparison curve: blackbody at 150 K (dust temperature)
 - Annotations: "Visible (no light)", "Infrared (dust emission)", "Millimeter (cool envelope)"
 Caption: "The spectrum of a young protostar. Visible light is blocked by dust; infrared reveals the hidden infant star." -->
@@ -370,18 +379,15 @@ The same collapse that births stars also births planets. The rotation of the inf
 
 A distant star has an apparent magnitude of $m = 15$ mag as observed through a nearby dust cloud. If there were no dust, the star's apparent magnitude would be $m = 10$ mag. How many magnitudes of extinction does the dust cloud introduce? (Recall that the magnitude scale is logarithmic: a change of 1 magnitude corresponds to a brightness ratio of 2.512. This is the definition of interstellar extinction.)
 
-
 **Problem 2: The Jeans Criterion (Conceptual)**
 
-Two giant molecular clouds have identical temperature (T = 10 K) but different masses: Cloud A has $M_A = 10^5$ M☉, and Cloud B has $M_B = 10^4$ M☉. Both have the same average density. Which cloud is more likely to undergo gravitational collapse? Why?
-
+Two giant molecular clouds have identical temperature (T = 10 K) but different masses: Cloud A has $M_A = 10^5$ $M\odot,$ and Cloud B has $M_B = 10^4$ $M\odot.$ Both have the same average density. Which cloud is more likely to undergo gravitational collapse? Why?
 
 **Problem 3: Kelvin-Helmholtz Contraction Timescale**
 
-A low-mass protostar (0.5 M☉) undergoing Kelvin-Helmholtz contraction has a timescale of roughly 10 million years to reach the main sequence. A high-mass protostar (10 M☉) has a timescale of roughly 0.1 million years (100,000 years).
+A low-mass protostar ($0.5 \M_\odot$) undergoing Kelvin-Helmholtz contraction has a timescale of roughly 10 million years to reach the main sequence. A high-mass protostar ($10 \M_\odot$) has a timescale of roughly 0.1 million years (100,000 years).
 
 Using this information, explain why massive stars have much shorter lifetimes on the main sequence than low-mass stars.
-
 
 **Problem 4: Protoplanetary Disk Structure**
 
@@ -391,23 +397,22 @@ The disk around a young star has an inner radius of 0.1 AU and an outer radius o
 
 A protostar is embedded in a dense dust cloud. The dust obscures the protostar from visible-light telescopes, but a infrared observer detects thermal emission peaking at a wavelength of $\lambda_{\rm peak} = 20$ micrometers. Using Wien's law, estimate the temperature of the dust surrounding the protostar.
 
-**Recall:** Wien's displacement law: $\lambda_{\rm peak} T = 2.898 \times 10^{-3}$ m·K
+**Recall:** Wien's displacement law: $\lambda_{\rm peak} T = 2.898 \times 10^{-3}$ $m\cdot K$
 
 ### Challenge Problems
 
 **Challenge 1: Star Formation Rate in the Milky Way**
 
-The Milky Way is observed to form new stars at a rate of roughly 1–3 solar masses per year (averaged over time). If the total mass of all giant molecular clouds in the Milky Way is roughly 10⁹ M☉, and if all of this mass eventually forms stars, how long would it take for the ISM to be completely converted into stars?
-
+The Milky Way is observed to form new stars at a rate of roughly 1–3 solar masses per year (averaged over time). If the total mass of all giant molecular clouds in the Milky Way is roughly $10^{9}$ $M\odot,$ and if all of this mass eventually forms stars, how long would it take for the ISM to be completely converted into stars?
 
 **Challenge 2: Comparing Protostars**
 
 Two protostars have the same luminosity ($L = 10 L_\odot$) but different masses:
-- Protostar A: $M_A = 1$ M☉
-- Protostar B: $M_B = 10$ M☉
+
+- Protostar A: $M_A = 1$ $M\odot$
+- Protostar B: $M_B = 10$ $M\odot$
 
 Without calculating anything, predict which protostar is older (closer to the main sequence). Explain your reasoning.
-
 
 **Challenge 3: Dust and Observability (Synthesis)**
 
@@ -418,7 +423,6 @@ Imagine discovering a new star-forming region at a distance of 1000 pc. The regi
 (b) Given this extinction, explain why an optical telescope would be useless for studying these protostars, but an infrared telescope could still detect them.
 
 (c) What property of dust grains — specifically, their size relative to the wavelength of light — explains this difference?
-
 
 ## Glossary
 

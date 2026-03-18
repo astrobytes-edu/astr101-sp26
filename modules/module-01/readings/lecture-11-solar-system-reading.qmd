@@ -46,7 +46,7 @@ If you only remember three things:
 
 2. **We know all this remotely:** Masses from moon orbits (Newton), temperatures from infrared (Wien), compositions from spectra (L9). Same toolkit as stars!
 
-3. **Formation explains the pattern:** The frost line (~3 AU) separated where ices could form from where they couldn't. More solid material beyond the frost line → bigger cores → gas giants.
+3. **Formation explains the pattern:** The frost line (~3 AU) separated where ices could form from where they couldn't. More solid material beyond the frost line $\rightarrow$ bigger cores $\rightarrow$ gas giants.
 
 Now for the details...
 :::
@@ -72,11 +72,11 @@ Here are facts that sound like science fiction but aren't:
 
 {{< fig planetary-portraits >}}
 
-**Saturn** would float in water — its density is about 0.69 g/cm³, less than water's 1.0 g/cm³.
+**Saturn** would float in water — its density is about 0.69 $g/cm^{3},$ less than water's 1.0 $g/cm^{3}.$
 
 **Jupiter** outweighs all the other planets *combined* — about 318 Earth masses.
 
-**Venus** is hotter than Mercury, even though it's farther from the Sun — about 460°C at the surface, hot enough to melt lead.
+**Venus** is hotter than Mercury, even though it's farther from the Sun — about $460^{\circ}$C at the surface, hot enough to melt lead.
 
 **Neptune** has the fastest winds in the solar system — roughly 2,000 km/h, several times faster than the strongest hurricanes on Earth.
 
@@ -100,6 +100,7 @@ If you struggled, review the relevant lecture before continuing. This reading as
 :::
 
 ::: {.callout-tip title="Answers" collapse="true"}
+
 1. Period and semi-major axis ($P^2 \propto a^3$)
 2. Radial (line-of-sight)
 3. Temperature from peak wavelength
@@ -198,32 +199,32 @@ The planets divide neatly into two families with dramatically different properti
 |----------|--------------------:|-------:|
 | Size | Small (0.4–1 $R_\oplus$) | Large (~4–11 $R_\oplus$) |
 | Mass | Low (0.06–1 $M_\oplus$) | High (~15–318 $M_\oplus$) |
-| Density | High (3.9–5.5 g/cm³) | Low (0.69–1.6 g/cm³) |
+| Density | High (3.9–5.5 $g/cm^{3})$ | Low (0.69–1.6 $g/cm^{3})$ |
 | Composition | Rock, metal | H, He, ices |
 | Surface | Solid | None (gas/liquid) |
 | Moons | Few (0–2) | Many (dozens) |
 | Rings | None | Yes |
 
-The density difference is particularly striking. Earth's density is 5.5 g/cm³ — about five times denser than water. Saturn's density is just 0.69 g/cm³ — *less* than water. If you could find an ocean big enough, Saturn would float!
+The density difference is particularly striking. Earth's density is 5.5 $g/cm^{3}$ — about five times denser than water. Saturn's density is just 0.69 $g/cm^{3}$ — *less* than water. If you could find an ocean big enough, Saturn would float!
 
 ::: {.callout-key-insight title="Contrasting Cases: Learning Through Comparison"}
 Students learn patterns faster through paired comparisons. As you read, think about these contrasts:
 
-**Mercury vs. Venus:** Both inner planets, but Mercury has no atmosphere (extreme temperature swings: 430°C day, -180°C night) while Venus has a thick atmosphere (constant 460°C everywhere). Same region, different fates.
+**Mercury vs. Venus:** Both inner planets, but Mercury has no atmosphere (extreme temperature swings: $430^{\circ}$C day, -$180^{\circ}$C night) while Venus has a thick atmosphere (constant $460^{\circ}$C everywhere). Same region, different fates.
 
-**Venus vs. Earth:** Nearly the same size, but Venus receives ~2× Earth's sunlight (0.72 AU vs. 1.0 AU) and is 450°C hotter. Why so extreme? (Answer in L12: runaway greenhouse effect.)
+**Venus vs. Earth:** Nearly the same size, but Venus receives $~2\times$ Earth's sunlight (0.72 AU vs. 1.0 AU) and is $450^{\circ}$C hotter. Why so extreme? (Answer in L12: runaway greenhouse effect.)
 
-**Jupiter vs. Saturn:** Both gas giants with similar composition, but Saturn's density (0.69 g/cm³) is lower than water's. Why? Saturn is less massive, so less compressed.
+**Jupiter vs. Saturn:** Both gas giants with similar composition, but Saturn's density (0.69 $g/cm^{3})$ is lower than water's. Why? Saturn is less massive, so less compressed.
 
 These comparisons reveal what physics is doing.
 :::
 
-::: {.callout-misconception title="Don't Mislearn This: Closest ≠ Hottest"}
-It's tempting to think "closer to the Sun = hotter planet." Mercury is closest, so it must be the hottest, right? Wrong. Venus (at 0.72 AU) is 460°C — hotter than Mercury's dayside (430°C) — even though Venus is almost twice as far from the Sun. The reason: Venus has a massive CO₂ atmosphere that traps heat (greenhouse effect). Distance sets the *baseline*, but atmosphere determines the *outcome*. We'll quantify this in L12.
+::: {.callout-misconception title="Don't Mislearn This: Closest $\ne$ Hottest"}
+It's tempting to think "closer to the Sun = hotter planet." Mercury is closest, so it must be the hottest, right? Wrong. Venus (at 0.72 AU) is $460^{\circ}$C — hotter than Mercury's dayside ($430^{\circ}$C) — even though Venus is almost twice as far from the Sun. The reason: Venus has a massive $\mathrm{CO_{2}}$ atmosphere that traps heat (greenhouse effect). Distance sets the *baseline*, but atmosphere determines the *outcome*. We'll quantify this in L12.
 :::
 
 ::: {.callout-check-yourself title="Check Yourself 1 — Planet Classification"}
-Saturn has a density of 0.69 g/cm³ — less than water. What does this tell you about its composition?
+Saturn has a density of 0.69 $g/cm^{3}$ — less than water. What does this tell you about its composition?
 
 - A) It must be made of rock and metal
 - B) It must be made primarily of lightweight gases (hydrogen, helium)
@@ -232,7 +233,7 @@ Saturn has a density of 0.69 g/cm³ — less than water. What does this tell you
 :::
 
 ::: {.callout-tip title="Solution" collapse="true"}
-**B) It must be made primarily of lightweight gases (hydrogen, helium).** Rocky planets have densities of 4-5 g/cm³. Saturn's low density tells us it's dominated by hydrogen and helium, the lightest elements. If you could find a big enough ocean, Saturn would float!
+**B) It must be made primarily of lightweight gases (hydrogen, helium).** Rocky planets have densities of 4-5 $g/cm^{3}.$ Saturn's low density tells us it's dominated by hydrogen and helium, the lightest elements. If you could find a big enough ocean, Saturn would float!
 :::
 
 ---
@@ -332,10 +333,10 @@ Mars also has two tiny, irregular moons — more like captured asteroids than sc
 ::: {.callout-tip title="Checkpoint: Rocky Planets — What Did You Notice?"}
 You've now seen the four rocky planets. Before moving on, notice the pattern:
 
-- **Mercury:** No atmosphere → extreme temperature swings, cratered surface
-- **Venus:** Thick atmosphere → uniform extreme heat, cloud-covered
-- **Earth:** Moderate atmosphere → habitable conditions, oceans
-- **Mars:** Thin atmosphere → cold, dry, some evidence of past water
+- **Mercury:** No atmosphere $\rightarrow$ extreme temperature swings, cratered surface
+- **Venus:** Thick atmosphere $\rightarrow$ uniform extreme heat, cloud-covered
+- **Earth:** Moderate atmosphere $\rightarrow$ habitable conditions, oceans
+- **Mars:** Thin atmosphere $\rightarrow$ cold, dry, some evidence of past water
 
 **The key variable is atmosphere.** Same region of space, same rocky composition, but wildly different outcomes depending on atmospheric thickness. Keep this pattern in mind as we tour the outer solar system.
 :::
@@ -395,7 +396,7 @@ And moons can be worlds too — Titan has a thick atmosphere that hides its surf
 {{< fig l11-titan >}}
 
 ::: {.callout-check-yourself title="Check Yourself — Density Detective"}
-Jupiter's average density is 1.33 g/cm³ — slightly above water. Saturn's is 0.69 g/cm³ — below water. Both are "gas giants" made mostly of hydrogen and helium. Why is Jupiter denser than Saturn despite having similar composition?
+Jupiter's average density is 1.33 $g/cm^{3}$ — slightly above water. Saturn's is 0.69 $g/cm^{3}$ — below water. Both are "gas giants" made mostly of hydrogen and helium. Why is Jupiter denser than Saturn despite having similar composition?
 
 - A) Jupiter has more rock and metal in its core
 - B) Jupiter's greater mass compresses its gas to higher density
@@ -464,7 +465,7 @@ This is the power of remote sensing. Light carries information across billions o
 | **Orbital period** | Observation over time | Track position against stars |
 | **Mass (with moons)** | Moon orbits + Newton | $M = \frac{4\pi^2 a^3}{GP^2}$ |
 | **Mass (no moons)** | Spacecraft tracking | Gravity bends spacecraft path |
-| **Temperature** | IR spectrum + Wien | Peak wavelength → temperature |
+| **Temperature** | IR spectrum + Wien | Peak wavelength $\rightarrow$ temperature |
 | **Composition** | Spectral lines | Absorption/emission fingerprints |
 | **Rotation rate** | Repeated imaging + Doppler | Track patterns; measure broadening |
 | **Wind speeds** | Doppler + cloud tracking | Line-of-sight speeds; pattern motion |
@@ -485,7 +486,9 @@ Let's apply Newton's form of Kepler's Third Law to measure Jupiter's mass.
 
 **Step 2: Apply Newton's version of Kepler III**
 
-$$M = \frac{4\pi^2 a^3}{GP^2}$$
+$$
+M = \frac{4\pi^2 a^3}{GP^2}
+$$
 
 where $G = 6.674 \times 10^{-11} \text{ m}^3 \text{ kg}^{-1} \text{ s}^{-2}$.
 
@@ -493,43 +496,51 @@ where $G = 6.674 \times 10^{-11} \text{ m}^3 \text{ kg}^{-1} \text{ s}^{-2}$.
 
 *Numerator:*
 
-$$4\pi^2 \, a^3 = 4\pi^2 \times (4.22 \times 10^{8} \text{ m})^3 = 39.48 \times 7.51 \times 10^{25} \text{ m}^3 = 2.96 \times 10^{27} \text{ m}^3$$
+$$
+4\pi^2 \, a^3 = 4\pi^2 \times (4.22 \times 10^{8} \text{ m})^3 = 39.48 \times 7.51 \times 10^{25} \text{ m}^3 = 2.96 \times 10^{27} \text{ m}^3
+$$
 
 *Denominator:*
 
-$$G \, P^2 = (6.674 \times 10^{-11} \text{ m}^3 \text{ kg}^{-1} \text{ s}^{-2}) \times (1.53 \times 10^{5} \text{ s})^2$$
+$$
+G \, P^2 = (6.674 \times 10^{-11} \text{ m}^3 \text{ kg}^{-1} \text{ s}^{-2}) \times (1.53 \times 10^{5} \text{ s})^2
+$$
 
-$$= 6.674 \times 10^{-11} \text{ m}^3 \text{ kg}^{-1} \text{ s}^{-2} \times 2.34 \times 10^{10} \text{ s}^2 = 1.56 \text{ m}^3 \text{ kg}^{-1}$$
+$$
+= 6.674 \times 10^{-11} \text{ m}^3 \text{ kg}^{-1} \text{ s}^{-2} \times 2.34 \times 10^{10} \text{ s}^2 = 1.56 \text{ m}^3 \text{ kg}^{-1}
+$$
 
 **Step 4: Divide — units cancel to kg**
 
-$$M = \frac{2.96 \times 10^{27} \text{ m}^3}{1.56 \text{ m}^3 \text{ kg}^{-1}} = 1.9 \times 10^{27} \text{ kg}$$
+$$
+M = \frac{2.96 \times 10^{27} \text{ m}^3}{1.56 \text{ m}^3 \text{ kg}^{-1}} = 1.9 \times 10^{27} \text{ kg}
+$$
 
 The $\text{m}^3$ cancels, and dividing by $\text{kg}^{-1}$ flips to $\text{kg}$. We get **kilograms**, as expected for a mass.
 
 This is **318 Earth masses** — determined entirely by watching Io orbit! We never touched Jupiter. We just measured Io's orbit and applied Newton's gravity.
 
-::: {.callout-note title="Observable → Model → Inference: Planetary Masses"}
+::: {.callout-note title="Observable $\rightarrow$ Model $\rightarrow$ Inference: Planetary Masses"}
 **Observable:** Io orbits Jupiter at 422,000 km with period 1.77 days. (Position + Timing)
 
-**Model:** Newton's form of Kepler III: $M = 4\pi^2 a^3 / (GP^2)$
+**Model:** Newton's form of Kepler III: $M = 4\pi^2 a^3 /(GP^2)$
 
 **Inference:** Jupiter's mass is $1.9 \times 10^{27}$ kg = 318 Earth masses.
 
-Same pattern as always: measurement → physics → knowledge.
+Same pattern as always: measurement $\rightarrow$ physics $\rightarrow$ knowledge.
 :::
 
 ::: {.callout-check-yourself title="Check Yourself 2 — Applying Newton"}
 If a planet has a moon orbiting at twice the distance but with the same orbital period, what can you conclude about the planet's mass compared to another planet with the original moon orbit?
 
 - A) The same mass
-- B) 2× the mass
-- C) 4× the mass
-- D) 8× the mass
+- B) $2\times$ the mass
+- C) $4\times$ the mass
+- D) $8\times$ the mass
 :::
 
 ::: {.callout-tip title="Solution" collapse="true"}
-**D) 8× the mass.** From $M = 4\pi^2 a^3 / (GP^2)$, if $a$ doubles and $P$ stays the same, $M$ must increase by $2^3 = 8$ times. Larger orbits at the same period require stronger gravity → more mass.
+**D) $8\times$ the mass.** From $M = 4\pi^2 a^3 /(GP^2)$, if $a$ doubles and $P$ stays the same, $M$ must increase by $2^3 = 8$ times. Larger orbits at the same period require stronger gravity $\rightarrow$ more mass.
 :::
 
 ::: {.callout-check-yourself title="Check Yourself 3 — Which Tool? (Transfer Question)"}
@@ -553,16 +564,18 @@ Which tool would you use to measure Jupiter's mass if it had NO moons?
 
 Every planet emits thermal radiation. Using Wien's Law from L8:
 
-$$\lambda_{\text{peak}} = \frac{2.9 \times 10^6 \text{ nm·K}}{T}$$
+$$
+\lambda_{\text{peak}} = \frac{2.9 \times 10^6 \text{ nm\cdot K}}{T}
+$$
 
 We can measure a planet's peak emission wavelength and calculate its temperature. For most planets, this peak is in the infrared — invisible to our eyes but detectable by IR telescopes.
 
-::: {.callout-note title="Observable → Model → Inference: Planetary Temperatures"}
+::: {.callout-note title="Observable $\rightarrow$ Model $\rightarrow$ Inference: Planetary Temperatures"}
 **Observable:** A planet's thermal emission peaks at a specific infrared wavelength. (Wavelength)
 
-**Model:** Wien's Law: $\lambda_{\text{peak}} = 2.9 \times 10^6 \text{ nm·K} / T$
+**Model:** Wien's Law: $\lambda_{\text{peak}} = 2.9 \times 10^6 \text{ nm\cdot K} /T$
 
-**Inference:** The planet's temperature. Neptune peaks at ~50,000 nm → $T \approx 58$ K. Same physics as reading a star's temperature from its color — just shifted to infrared.
+**Inference:** The planet's temperature. Neptune peaks at ~50,000 nm $\rightarrow$ $T \approx 58$ K. Same physics as reading a star's temperature from its color — just shifted to infrared.
 :::
 
 ### Equilibrium Temperature: A Baseline Prediction
@@ -575,16 +588,16 @@ We can measure a planet's peak emission wavelength and calculate its temperature
 
 The idea comes straight from Stefan-Boltzmann (L8): the Sun pours energy onto the planet, and the planet radiates energy back to space. When energy in = energy out, you get a steady temperature — the equilibrium value. It's a baseline prediction. When the observed temperature differs from equilibrium, something interesting is happening.
 
-::: {.callout-misconception title="Don't Mislearn This: Equilibrium ≠ Observed"}
+::: {.callout-misconception title="Don't Mislearn This: Equilibrium $\ne$ Observed"}
 **Equilibrium temperature** is a *prediction* — what physics says "should" happen with just sunlight in, thermal radiation out.
 
 **Observed temperature** is what we *measure*.
 
 When they differ, something interesting is happening:
 
-- **Venus:** Observed >> Equilibrium → massive greenhouse effect
-- **Jupiter:** Observed > Equilibrium → internal heat source
-- **Mercury:** Observed ≈ Equilibrium (on average) → no atmosphere
+- **Venus:** Observed >> Equilibrium $\rightarrow$ massive greenhouse effect
+- **Jupiter:** Observed > Equilibrium $\rightarrow$ internal heat source
+- **Mercury:** Observed $\approx$ Equilibrium (on average) $\rightarrow$ no atmosphere
 
 Always compare the two to diagnose what's going on!
 :::
@@ -595,7 +608,7 @@ Always compare the two to diagnose what's going on!
 
 | Planet | Distance (AU) | T_equilibrium (K) | T_observed (K) | Notes |
 |--------|---------------|-------------------|----------------|-------|
-| Mercury | 0.39 | ~440 | ~90–700 | No atmosphere → extreme day/night swing |
+| Mercury | 0.39 | ~440 | ~90–700 | No atmosphere $\rightarrow$ extreme day/night swing |
 | Venus | 0.72 | ~230 | **735** | Runaway greenhouse! |
 | Earth | 1.0 | ~255 | 288 | Moderate greenhouse (+33 K) |
 | Mars | 1.52 | ~210 | 218 | Thin atmosphere (+8 K) |
@@ -603,12 +616,12 @@ Always compare the two to diagnose what's going on!
 
 *Mercury never actually reaches ~440 K uniformly — with no atmosphere to redistribute heat, the dayside soars to ~700 K while the nightside plunges to ~90 K. The equilibrium value is a useful theoretical baseline, not a real surface temperature.*
 
-**Mercury's extremes** illustrate what happens without an atmosphere: daytime reaches 700 K (430°C), but nighttime plunges to 90 K (-180°C). That 610°C swing would be impossible with an atmosphere to redistribute heat.
+**Mercury's extremes** illustrate what happens without an atmosphere: daytime reaches 700 K ($430^{\circ}$C), but nighttime plunges to 90 K (-$180^{\circ}$C). That $610^{\circ}$C swing would be impossible with an atmosphere to redistribute heat.
 
 ::: {.callout-the-more-you-know title="Mercury's Exosphere: Not Quite 'No Atmosphere'" collapse="true"}
 Technically, Mercury has an **exosphere** — an extremely thin envelope of atoms (sodium, potassium, oxygen, hydrogen) that are constantly escaping to space and being replenished by solar wind bombardment, micrometeorite impacts, and outgassing from the surface.
 
-The exosphere is so thin (surface pressure < ~10⁻¹² bar, compared to Earth's 1 bar) that atoms rarely collide with each other. It provides essentially **no insulation, no heat redistribution, no greenhouse effect** — which is why Mercury's temperature swings are so extreme.
+The exosphere is so thin (surface pressure $< \sim 10^{-12}\,\mathrm{bar}$, compared to Earth's 1 bar) that atoms rarely collide with each other. It provides essentially **no insulation, no heat redistribution, no greenhouse effect** — which is why Mercury's temperature swings are so extreme.
 
 For our purposes: Mercury effectively has "no atmosphere" in the thermodynamic sense that matters for climate.
 :::
@@ -644,14 +657,14 @@ Mercury and Venus are both "hot" planets. Which tool would help you distinguish 
 
 By observing planets at different wavelengths and looking for spectral lines (L9), we determine atmospheric compositions. Each molecule absorbs at specific wavelengths — its spectral fingerprint.
 
-- **Venus:** CO₂ (96%), N₂ (3.5%), sulfuric acid clouds
-- **Earth:** N₂ (78%), O₂ (21%), trace CO₂, H₂O
-- **Mars:** CO₂ (95%), N₂ (2.7%), thin atmosphere
-- **Jupiter:** H₂ (~90%), He (~10%), traces of CH₄, NH₃, H₂O
+- **Venus:** $\mathrm{CO_{2}}$ (96%), $\mathrm{N_{2}}$ (3.5%), sulfuric acid clouds
+- **Earth:** $\mathrm{N_{2}}$ (78%), $\mathrm{O_{2}}$ (21%), trace $CO_{2},$ $\mathrm{H_{2}O}$
+- **Mars:** $\mathrm{CO_{2}}$ (95%), $\mathrm{N_{2}}$ (2.7%), thin atmosphere
+- **Jupiter:** $\mathrm{H_{2}}$ (~90%), He (~10%), traces of $CH_{4},$ $NH_{3},$ $\mathrm{H_{2}O}$
 
 The same spectroscopy that identifies elements in stars identifies molecules in planetary atmospheres! The physics is identical — just applied to different objects.
 
-::: {.callout-note title="Observable → Model → Inference: Atmospheric Composition"}
+::: {.callout-note title="Observable $\rightarrow$ Model $\rightarrow$ Inference: Atmospheric Composition"}
 **Observable:** Absorption lines at specific wavelengths in sunlight reflected by a planet. (Wavelength)
 
 **Model:** Each molecule absorbs at unique wavelengths — its spectral fingerprint (L9). CO$_2$ absorbs at 4.3 $\mu$m and 15 $\mu$m; CH$_4$ at 3.3 $\mu$m; H$_2$O across many IR bands.
@@ -663,16 +676,16 @@ Here's the key for L12: we can do this for planets orbiting *other* stars. When 
 
 ### Color as a Clue
 
-Sometimes a planet's color hints at its composition. Neptune and Uranus appear blue-green because methane (CH₄) in their atmospheres absorbs red light, leaving the blue to be reflected back to us.
+Sometimes a planet's color hints at its composition. Neptune and Uranus appear blue-green because methane $(CH_{4})$ in their atmospheres absorbs red light, leaving the blue to be reflected back to us.
 
 Mars appears red for a different reason — not atmospheric absorption, but iron oxide (rust!) on its surface.
 
-::: {.callout-misconception title="Don't Mislearn This: Blue ≠ Cold"}
+::: {.callout-misconception title="Don't Mislearn This: Blue $\ne$ Cold"}
 In everyday life, blue often means cold (ice, cold water). But in astronomy, a planet's *color* has nothing to do with its *temperature* in any simple way. Neptune is blue because methane absorbs red light — it's a chemistry effect, not a temperature effect. Meanwhile, a blue *star* (like Rigel) is blue because it's extremely *hot* — the opposite of the everyday association. Always ask: what physical process produces this color?
 :::
 
 ::: {.callout-check-yourself title="Check Yourself 5 — Applying L8 and L9"}
-Mars appears red to our eyes. Neptune appears blue. Using concepts from L7-L9, which planet likely has methane (CH₄) in its atmosphere?
+Mars appears red to our eyes. Neptune appears blue. Using concepts from L7-L9, which planet likely has methane $(CH_{4})$ in its atmosphere?
 
 - A) Mars — red color means methane
 - B) Neptune — methane absorbs red light, leaving blue
@@ -709,20 +722,20 @@ This isn't random. It's the preserved record of what happened 4.6 billion years 
 
 How did the solar system form? The leading model — the **nebular hypothesis** — explains why the solar system looks the way it does.
 
-The solar system formed ~4.6 billion years ago from a collapsing cloud of gas and dust called the **solar nebula**. Here's the cause → effect chain:
+The solar system formed ~4.6 billion years ago from a collapsing cloud of gas and dust called the **solar nebula**. Here's the cause $\rightarrow$ effect chain:
 
 {{< fig l11-young-solar-nebula-disk >}}
 
 ::: {.callout-important title="Formation: The Causal Ladder"}
-**1. Gravity → Collapse**
+**1. Gravity $\rightarrow$ Collapse**
 
 A region of a molecular cloud becomes dense enough to collapse under its own gravity.
 
-**2. Collapse → Spin-up** (Angular momentum conservation)
+**2. Collapse $\rightarrow$ Spin-up** (Angular momentum conservation)
 
 As the cloud shrinks, it spins faster — just like a figure skater pulling in their arms.
 
-**3. Spin-up + Collisions → Disk**
+**3. Spin-up + Collisions $\rightarrow$ Disk**
 
 Rotation + collisions damp vertical motions, so material settles into a thin disk while continuing to orbit the center.
 
@@ -730,13 +743,13 @@ Rotation + collisions damp vertical motions, so material settles into a thin dis
 **Why a disk, not a sphere?** Collisions between particles are inelastic — they convert kinetic energy into heat. Random motions (up, down, sideways) lose energy and die out. But angular momentum is conserved, so the rotation can't stop. The lowest-energy state consistent with conservation of angular momentum is a thin disk.
 :::
 
-**4. Temperature gradient → Condensation sequence**
+**4. Temperature gradient $\rightarrow$ Condensation sequence**
 
 Inner disk is hot (only rock/metal condenses); outer disk is cold (ices also condense).
 
-**5. Core growth outside snow line → Gas capture**
+**5. Core growth outside snow line $\rightarrow$ Gas capture**
 
-More solid material → bigger cores → gravitational capture of H/He → gas giants.
+More solid material $\rightarrow$ bigger cores $\rightarrow$ gravitational capture of H/He $\rightarrow$ gas giants.
 
 **But there's a deadline.** The hydrogen and helium gas in the nebula doesn't last forever — radiation and winds from the young Sun blow it away within roughly 3–10 million years. Cores that grow massive enough *before* the gas disappears capture thick atmospheres and become gas giants. Cores that are still too small when the gas dissipates become ice giants (like Uranus and Neptune) or stay rocky. It's a race against time.
 
@@ -754,7 +767,9 @@ Remember the figure skater from L5? Arms out = slow spin; arms in = fast spin.
 
 The same physics explains why the solar nebula spun up as it collapsed:
 
-$$L = mvr = \text{constant} \quad \text{(for each parcel of gas)}$$
+$$
+L = mvr = \text{constant} \quad \text{(for each parcel of gas)}
+$$
 
 As $r$ decreases (cloud shrinks), $v$ must increase (faster rotation). Each parcel of gas in the cloud carries its own angular momentum. As the cloud shrinks, each parcel speeds up — the whole cloud spins faster. This is the same principle as the figure skater, applied to trillions of gas parcels simultaneously.
 
@@ -804,12 +819,12 @@ For ASTR 101: ~3 AU captures the essential physics. Just don't think of it as a 
 
 Rocky planets formed close to the Sun because only rock/metal was available as solid building blocks.
 
-Beyond the frost line, ices added to the solids, allowing larger cores to form. These massive cores could gravitationally capture hydrogen and helium from the nebula → gas giants!
+Beyond the frost line, ices added to the solids, allowing larger cores to form. These massive cores could gravitationally capture hydrogen and helium from the nebula $\rightarrow$ gas giants!
 
 | Region | Solid Material Available | Result |
 |--------|-------------------------|--------|
 | Inside frost line | Rock, metal only | Small rocky planets |
-| Outside frost line | Rock + metal + ices | Large cores → capture H/He → gas giants |
+| Outside frost line | Rock + metal + ices | Large cores $\rightarrow$ capture H/He $\rightarrow$ gas giants |
 
 The frost line isn't unique to our solar system — every protoplanetary disk has one. But its location depends on the luminosity of the central star: a dimmer star has a closer frost line, and a brighter star pushes it farther out. This means different stars should produce different planetary architectures — rocky planets closer or farther, gas giants in different locations. In L12, we'll see how exoplanet discoveries confirm (and sometimes challenge) this prediction.
 
@@ -886,7 +901,7 @@ If the solar system formed from a rotating disk of gas and dust, which of these 
 
 **Formation (The Causal Chain):**
 
-9. Collapse → spin-up → disk → temperature gradient → condensation
+9. Collapse $\rightarrow$ spin-up $\rightarrow$ disk $\rightarrow$ temperature gradient $\rightarrow$ condensation
 10. Angular momentum conservation explains disk formation and orbital patterns
 11. Frost line (~3 AU, model-dependent) explains rocky vs. gas giant distribution
 :::
@@ -903,7 +918,7 @@ If the solar system formed from a rotating disk of gas and dust, which of these 
 
 **2. Newton Application:** Saturn's moon Titan orbits at 1.22 million km with a period of 16 days. Estimate Saturn's mass. (Compare to Jupiter's mass from the worked example.)
 
-**3. Wien Application:** Neptune's thermal emission peaks at about 50 μm (50,000 nm). Estimate Neptune's temperature using Wien's Law.
+**3. Wien Application:** Neptune's thermal emission peaks at about $50 \mu\mathrm{m}$ (50,000 nm). Estimate Neptune's temperature using Wien's Law.
 
 **4. Formation Concept:** Explain why all the planets orbit the Sun in the same direction and in nearly the same plane.
 
@@ -919,8 +934,7 @@ If the solar system formed from a rotating disk of gas and dust, which of these 
 
 **9. Rocky or Gaseous? (Transfer Problem):** You discover a new moon orbiting an exoplanet. From the moon's orbit, you determine the planet's mass is $6.0 \times 10^{26}$ kg. From transit observations, you estimate the planet's radius is $6.0 \times 10^{7}$ m (about 9.4 $R_\oplus$). Calculate the planet's average density. Is this planet more likely rocky or gaseous? *Hint:* Volume of a sphere = $\frac{4}{3}\pi R^3$. Density = mass/volume.
 
-**10. Diagnosing a Mystery Planet (Multi-Tool Transfer):** An infrared telescope detects thermal emission from a planet peaking at 20,000 nm (20 μm). Spectroscopy of reflected starlight reveals strong CH₄ (methane) absorption lines but no CO₂. Is this planet more likely a rocky inner planet or an ice giant? Use Wien's Law and your knowledge of atmospheric composition to justify your answer.
-
+**10. Diagnosing a Mystery Planet (Multi-Tool Transfer):** An infrared telescope detects thermal emission from a planet peaking at 20,000 nm ($20 \mu\mathrm{m}$). Spectroscopy of reflected starlight reveals strong $\mathrm{CH_{4}}$ (methane) absorption lines but no $CO_{2}.$ Is this planet more likely a rocky inner planet or an ice giant? Use Wien's Law and your knowledge of atmospheric composition to justify your answer.
 
 ---
 

@@ -43,6 +43,7 @@ This reading is a guided investigation into a simple-looking but surprisingly tr
 **Best use:** Read the whole page before class and stop at every **Check Yourself** question.
 
 **If you're short on time (~20 min):**
+
 - Read the Big Idea
 - Focus on parallax, inverse-square law, and the final synthesis
 - Do not skip the inline checks
@@ -134,7 +135,9 @@ The logic is:
 
 Astronomers package this geometry into one beautifully compact rule:
 
-$$d_{\text{parsec}} = \frac{1}{p_{\text{arcseconds}}}$$
+$$
+d_{\text{parsec}} = \frac{1}{p_{\text{arcseconds}}}
+$$
 
 where $d$ is the distance in parsecs and $p$ is the parallax angle in arcseconds.
 
@@ -164,11 +167,15 @@ Proxima Centauri, the nearest known star beyond the Sun, has a measured parallax
 
 Distance in parsecs:
 
-$$d = \frac{1}{0.768} = 1.30 \text{ pc}$$
+$$
+d = \frac{1}{0.768} = 1.30 \text{ pc}
+$$
 
 Convert to light-years:
 
-$$d = 1.30 \text{ pc} \times 3.26 \frac{\text{ly}}{\text{pc}} = 4.24 \text{ ly}$$
+$$
+d = 1.30 \text{ pc} \times 3.26 \frac{\text{ly}}{\text{pc}} = 4.24 \text{ ly}
+$$
 
 That means the light we see from Proxima tonight left the star more than four years ago.
 
@@ -179,10 +186,14 @@ A star has a parallax angle of 0.1 arcseconds. How far away is it (a) in parsecs
 ## Solution
 
 (a) Using $d = 1/p$:
-$$d = \frac{1}{0.1} = 10 \text{ pc}$$
+$$
+d = \frac{1}{0.1} = 10 \text{ pc}
+$$
 
 (b) Converting to light-years:
-$$d = 10 \text{ pc} \times 3.26 \frac{\text{ly}}{\text{pc}} = 32.6 \text{ ly}$$
+$$
+d = 10 \text{ pc} \times 3.26 \frac{\text{ly}}{\text{pc}} = 32.6 \text{ ly}
+$$
 
 The smaller parallax angle means the star is farther away.
 :::
@@ -251,7 +262,9 @@ If a star moves **twice as far away**, what happens to the light reaching Earth?
 - **C)** One eighth as bright
 :::
 
-$$b = \frac{L}{4\pi d^2}$$
+$$
+b = \frac{L}{4\pi d^2}
+$$
 
 where:
 
@@ -281,15 +294,19 @@ Consider two stars:
 
 Using the inverse-square law, compare their apparent brightnesses:
 
-$$b_A \propto \frac{10}{10^2} = \frac{10}{100} = 0.10$$
+$$
+b_A \propto \frac{10}{10^2} = \frac{10}{100} = 0.10
+$$
 
-$$b_B \propto \frac{40}{20^2} = \frac{40}{400} = 0.10$$
+$$
+b_B \propto \frac{40}{20^2} = \frac{40}{400} = 0.10
+$$
 
 They appear equally bright. Star B is four times more luminous, but it is also twice as far away, so its light is spread over four times the area.
 
 That is why the detective strategy has to come in the right order. **First solve distance. Then solve luminosity.**
 
-<!-- FIGURE: Comparative diagram showing two stars at different distances and luminosities. Star A is shown as smaller (lower luminosity) and close. Star B is shown as larger (higher luminosity) and far. Light rays converge toward an observer position. Caption: "Same Apparent Brightness, Different Luminosity. Star B is more luminous (4×) but farther away (2×), so its light is spread over 4× more area. Both stars appear equally bright from Earth." -->
+<!-- FIGURE: Comparative diagram showing two stars at different distances and luminosities. Star A is shown as smaller (lower luminosity) and close. Star B is shown as larger (higher luminosity) and far. Light rays converge toward an observer position. Caption: "Same Apparent Brightness, Different Luminosity. Star B is more luminous $(4\times)$ but farther away $(2\times),$ so its light is spread over $4\times$ more area. Both stars appear equally bright from Earth." -->
 
 ::: {.callout-check-yourself title="Check Yourself 4"}
 Star X appears 4 times brighter than Star Y. Both stars have the same luminosity. Which is closer, and by what factor?
@@ -310,13 +327,19 @@ A star is measured to have an apparent brightness of $b = 8 \times 10^{-9}$ W/m$
 ## Solution
 
 From parallax,
-$$d = \frac{1}{0.05} = 20 \text{ pc} = 6.17 \times 10^{17} \text{ m}$$
+$$
+d = \frac{1}{0.05} = 20 \text{ pc} = 6.17 \times 10^{17} \text{ m}
+$$
 
 If $L = 100 L_\odot$, then
-$$L = 3.8 \times 10^{28} \text{ W}$$
+$$
+L = 3.8 \times 10^{28} \text{ W}
+$$
 
 Predict the apparent brightness:
-$$b = \frac{L}{4\pi d^2} = \frac{3.8 \times 10^{28}}{4\pi (6.17 \times 10^{17})^2} \approx 7.95 \times 10^{-9} \text{ W/m}^2$$
+$$
+b = \frac{L}{4\pi d^2} = \frac{3.8 \times 10^{28}}{4\pi (6.17 \times 10^{17})^2} \approx 7.95 \times 10^{-9} \text{ W/m}^2
+$$
 
 That agrees well with the measured value of $8 \times 10^{-9}$ W/m$^2$. So yes, the measurements are **roughly consistent**.
 :::
@@ -334,7 +357,9 @@ The magnitude system is historical bookkeeping. It survives because astronomers 
 
 Apparent magnitude $m$ is a logarithmic way to record how bright a star appears from Earth. The awkward part is that the scale runs backward: smaller numbers mean brighter objects.
 
-$$m_1 - m_2 = -2.5 \log_{10}\left(\frac{b_1}{b_2}\right)$$
+$$
+m_1 - m_2 = -2.5 \log_{10}\left(\frac{b_1}{b_2}\right)
+$$
 
 So a 5-magnitude difference corresponds to a factor of 100 in brightness.
 
@@ -374,7 +399,9 @@ That lets magnitudes do the same job luminosity does, but in the older notation 
 
 The standard relation connecting apparent magnitude, absolute magnitude, and distance is the distance modulus:
 
-$$m - M = 5\log_{10}(d) - 5$$
+$$
+m - M = 5\log_{10}(d) - 5
+$$
 
 where $d$ is in parsecs.
 
@@ -394,17 +421,27 @@ What magnitude difference corresponds to a factor of 100 in brightness?
 
 Suppose a star has apparent magnitude $m = 10$ and absolute magnitude $M = 5$. Then:
 
-$$m - M = 10 - 5 = 5$$
+$$
+m - M = 10 - 5 = 5
+$$
 
 Use the distance modulus:
 
-$$5 = 5\log_{10}(d) - 5$$
+$$
+5 = 5\log_{10}(d) - 5
+$$
 
-$$10 = 5\log_{10}(d)$$
+$$
+10 = 5\log_{10}(d)
+$$
 
-$$2 = \log_{10}(d)$$
+$$
+2 = \log_{10}(d)
+$$
 
-$$d = 10^2 = 100 \text{ pc}$$
+$$
+d = 10^2 = 100 \text{ pc}
+$$
 
 The star appears 5 magnitudes dimmer than it would at 10 parsecs, so it must be farther away. The distance modulus turns that brightness difference back into a distance estimate.
 
@@ -415,7 +452,9 @@ If a star has $m = 8$ and $M = 3$, what distance modulus does it have, and does 
 ## Solution
 
 The distance modulus is
-$$m - M = 8 - 3 = 5$$
+$$
+m - M = 8 - 3 = 5
+$$
 
 A positive distance modulus means the star appears dimmer than it would at 10 pc, so it must be **farther than 10 parsecs**. In fact, a modulus of 5 corresponds to 100 pc.
 :::
@@ -478,10 +517,14 @@ If Gaia can measure a parallax as small as 10 microarcseconds for an exceptional
 ## Solution
 
 Convert 10 microarcseconds to arcseconds:
-$$10 \, \mu\text{as} = 10 \times 10^{-6} \text{ arcseconds} = 10^{-5} \text{ arcseconds}$$
+$$
+10 \, \mu\text{as} = 10 \times 10^{-6} \text{ arcseconds} = 10^{-5} \text{ arcseconds}
+$$
 
 Then use $d = 1/p$:
-$$d = \frac{1}{10^{-5}} = 100{,}000 \text{ pc}$$
+$$
+d = \frac{1}{10^{-5}} = 100{,}000 \text{ pc}
+$$
 
 That is about 326,000 light-years. So in the best cases, Gaia can reach across the Milky Way and into the nearest galactic neighborhood, but not to Andromeda as a whole.
 :::
@@ -582,7 +625,7 @@ The star Betelgeuse has a measured parallax angle of 4.51 milliarcseconds. Calcu
 
 **Problem 2: Inverse-Square Law**
 
-Two stars have the same luminosity (L = 100 L☉). Star A is at distance 10 pc, Star B is at distance 20 pc. What is the ratio of their apparent brightnesses?
+Two stars have the same luminosity (L = $100 \L_\odot$). Star A is at distance 10 pc, Star B is at distance 20 pc. What is the ratio of their apparent brightnesses?
 
 **Problem 3: Magnitude Differences**
 
@@ -590,7 +633,7 @@ Two stars have apparent magnitudes $m_1 = 1.5$ and $m_2 = 6.5$. How many times b
 
 **Problem 4: Luminosity from Distance and Brightness**
 
-A star has an apparent brightness of $b = 5 \times 10^{-12}$ W/m² and a parallax angle of 0.2 arcseconds. Calculate its luminosity in watts and in units of solar luminosities.
+A star has an apparent brightness of $b = 5 \times 10^{-12}$ $W/m^{2}$ and a parallax angle of 0.2 arcseconds. Calculate its luminosity in watts and in units of solar luminosities.
 
 **Problem 5: Distance Modulus**
 
@@ -611,7 +654,7 @@ Gaia measures the parallax angle of an exceptionally favorable target to be $p =
 
 **Challenge 3: An Unseen Companion**
 
-A star has an apparent brightness $b = 1 \times 10^{-11}$ W/m² and distance 20 pc (measured via parallax). Its calculated luminosity is 2 L☉. But if you measure the star's spectrum carefully, you discover it is only about 1 L☉ bright. The discrepancy suggests the star has an unseen companion. What is the luminosity of the companion?
+A star has an apparent brightness $b = 1 \times 10^{-11}$ $W/m^{2}$ and distance 20 pc (measured via parallax). Its calculated luminosity is $2 \L_\odot$. But if you measure the star's spectrum carefully, you discover it is only about $1 \L_\odot$ bright. The discrepancy suggests the star has an unseen companion. What is the luminosity of the companion?
 
 ---
 

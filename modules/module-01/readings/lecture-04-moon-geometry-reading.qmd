@@ -24,7 +24,7 @@ prerequisites: Lecture 3 sky geometry; basic comfort with angles and spatial rea
 Moon phases and eclipses are geometry problems, not mysteries. Once you see them as different viewing angles of illuminated spheres, you can predict what the Moon will look like — and when rare alignments will produce eclipses.
 :::
 
-::: {.callout-important title="How to Use This Reading (Read → Revisit → Reuse)" collapse="true"}
+::: {.callout-important title="How to Use This Reading (Read $\rightarrow$ Revisit $\rightarrow$ Reuse)" collapse="true"}
 This page is both (1) the **assigned reading** and (2) your **reference manual** for lunar geometry. You should expect to come back to it multiple times — before lecture, after lecture, and while doing practice problems.
 
 **Default expectation (best):** Read the whole page before class (including **Check Yourself**). Then return to it later when you work the **Practice Problems**.
@@ -96,27 +96,27 @@ The Moon doesn't produce its own light. It shines by reflecting sunlight. At any
 ::: {.callout-note appearance="minimal"}
 ### Main takeaway (do **not** memorize the details)
 
-Phases are about the Moon’s alignment with the **Sun-direction**, not its position relative to the background stars. Because Earth moves around the Sun while the Moon orbits Earth, the phase cycle (new → new) takes a little **longer** than one Moon orbit.
+Phases are about the Moon’s alignment with the **Sun-direction**, not its position relative to the background stars. Because Earth moves around the Sun while the Moon orbits Earth, the phase cycle (new $\rightarrow$ new) takes a little **longer** than one Moon orbit.
 :::
 
 ::: {.callout-tip title="If you want the numbers (optional)" collapse="true"}
 There are two useful “months”:
 
 - **Sidereal month**: the Moon’s orbital period relative to the distant stars, about **27.3 days**
-- **Synodic month**: the phase cycle (new moon → new moon), about **29.5 days**
+- **Synodic month**: the phase cycle (new moon $\rightarrow$ new moon), about **29.5 days**
 
 Here’s the geometric reason the synodic month is longer:
 
-Earth moves around the Sun by about **1° per day**, so during ~27.3 days Earth moves about **27°** along its orbit. That changes the Sun-direction. To get back to **new moon** (Moon lined up with the Sun again), the Moon has to go a little **farther** than 360° around Earth.
+Earth moves around the Sun by about **$1^{\circ}$ per day**, so during ~27.3 days Earth moves about **$27^{\circ}$** along its orbit. That changes the Sun-direction. To get back to **new moon** (Moon lined up with the Sun again), the Moon has to go a little **farther** than $360^{\circ}$ around Earth.
 
-The Moon moves about \(360^\circ/27.3\text{ d}\approx 13.2^\circ\)/day, so catching up ~27° takes about \(27^\circ/(13.2^\circ/\text{day})\approx 2.1\) days.
+The Moon moves about $360^\circ/27.3\text{ d}\approx 13.2^\circ$/day, so catching up ~$27^{\circ}$ takes about $27^\circ/(13.2^\circ/\text{day})\approx 2.1$ days.
 
-So \(27.3\text{ d} + 2.1\text{ d} \approx 29.4\text{ d}\), which is why the synodic month is about **29.5 days**.
+So $27.3\text{ d} + 2.1\text{ d} \approx 29.4\text{ d}$, which is why the synodic month is about **29.5 days**.
 
-Compact form (same idea): if \(P_{\text{syn}}\) is the synodic month, \(P_{\text{sid}}\) is the sidereal month, and \(P_{\text{year}}\) is 1 year, then
-\[
+Compact form (same idea): if $P_{\text{syn}}$ is the synodic month, $P_{\text{sid}}$ is the sidereal month, and $P_{\text{year}}$ is 1 year, then
+$$
 \frac{1}{P_{\text{syn}}}=\frac{1}{P_{\text{sid}}}-\frac{1}{P_{\text{year}}}.
-\]
+$$
 You do not need to memorize this equation — use it only if you like it as a clean “motion accounting” statement.
 :::
 
@@ -151,6 +151,7 @@ During a full moon, the portion of the Moon that is illuminated by the Sun is:
 
 ::: {.callout-note title="✏️ Sketch It: Phases Geometry" collapse="true"}
 Draw the Sun on the left side of your page (or just an arrow showing sunlight direction). Draw Earth in the center. Now draw the Moon in four positions:
+
 1. Between Earth and Sun (New Moon)
 2. To the right of Earth (First Quarter)
 3. Opposite the Sun from Earth (Full Moon)
@@ -168,6 +169,7 @@ For each Moon position, shade the half facing *away* from the Sun. Then ask: fro
 This interactive demo lets you connect the Moon's position in its orbit to what it looks like from Earth. You can drag the Moon and watch the phase change in real-time.
 
 **What you'll see in the demo:**
+
 - **Draggable Moon** that you can move around Earth
 - **Phase** readout showing the current phase name
 - **Illumination** percentage showing how much of the Moon's face is lit (from Earth's perspective)
@@ -186,6 +188,7 @@ Write your prediction here before continuing: _______________
 :::
 
 **Do this:**
+
 1. Turn on **Show Earth's Shadow**
 2. Drag the Moon to create a **First Quarter** phase
 3. Observe where Earth's shadow is located
@@ -194,19 +197,20 @@ Write your prediction here before continuing: _______________
 
 ::: {.callout-tip title="What You Should Have Found" collapse="true"}
 
-Earth's shadow is nowhere near the Moon during first quarter (or crescent, or gibbous phases). The shadow points directly away from the Sun — and during first quarter, the Moon is 90° away from that shadow line.
+Earth's shadow is nowhere near the Moon during first quarter (or crescent, or gibbous phases). The shadow points directly away from the Sun — and during first quarter, the Moon is $90^{\circ}$ away from that shadow line.
 
 **Claim:** Phases have nothing to do with Earth's shadow.
 
-**Evidence:** The demo's shadow overlay shows Earth's shadow pointing in the anti-solar direction, while the Moon at first quarter is 90° away from that line. The shadow and Moon don't even come close during normal phases.
+**Evidence:** The demo's shadow overlay shows Earth's shadow pointing in the anti-solar direction, while the Moon at first quarter is $90^{\circ}$ away from that line. The shadow and Moon don't even come close during normal phases.
 :::
 The shadow only matters during the rare alignment of a lunar eclipse.
 
 ---
 
-**Demo Mission 2: Position → Appearance**
+**Demo Mission 2: Position $\rightarrow$ Appearance**
 
 **Do this:**
+
 1. Drag the Moon to the position directly between Earth and Sun
 2. Note the **Phase** reading
 3. Drag the Moon to the position directly opposite the Sun from Earth
@@ -217,22 +221,22 @@ The shadow only matters during the rare alignment of a lunar eclipse.
 |---------------|-------|
 | Between Earth and Sun | |
 | Opposite Sun from Earth | |
-| 90° east of Sun | |
-| 90° west of Sun | |
+| $90^{\circ}$ east of Sun | |
+| $90^{\circ}$ west of Sun | |
 
 **The pattern:** How does the Moon's position in its orbit determine what we see?
 
 ::: {.callout-tip title="Explanation" collapse="true"}
 
-- **Between Earth and Sun (**conjunction**):** We see the Moon's unlit side → **New Moon**
-- **Opposite Sun from Earth (**opposition**):** We see the Moon's fully lit side → **Full Moon**
-- **90° east of Sun:** Half lit, growing → **First Quarter**
-- **90° west of Sun:** Half lit, shrinking → **Third Quarter**
+- **Between Earth and Sun (**conjunction**):** We see the Moon's unlit side $\rightarrow$ **New Moon**
+- **Opposite Sun from Earth (**opposition**):** We see the Moon's fully lit side $\rightarrow$ **Full Moon**
+- **$90^{\circ}$ east of Sun:** Half lit, growing $\rightarrow$ **First Quarter**
+- **$90^{\circ}$ west of Sun:** Half lit, shrinking $\rightarrow$ **Third Quarter**
 
 ::: {.column-margin}
 **Conjunction:** Two objects appear in the same direction on the sky; here, the Moon is (nearly) in the same direction as the Sun.
 
-**Opposition:** Two objects appear 180° apart on the sky; here, the Moon is opposite the Sun.
+**Opposition:** Two objects appear $180^{\circ}$ apart on the sky; here, the Moon is opposite the Sun.
 :::
 
 **Claim:** The Moon's position in its orbit completely determines its phase.
@@ -245,6 +249,7 @@ The shadow only matters during the rare alignment of a lunar eclipse.
 **Demo Mission 3: Challenge Mode**
 
 **Do this:**
+
 1. Open the **🎯 Challenges** panel
 2. Try to create each of these phases:
    - New Moon
@@ -259,9 +264,9 @@ For each challenge, position the Moon correctly, then check your answer.
 ::: {.callout-note title="Hints If You're Stuck" collapse="true"}
 
 - **New Moon:** Moon between Earth and Sun (sunward side)
-- **First Quarter:** Moon 90° east of Sun (right side if Sun is up)
+- **First Quarter:** Moon $90^{\circ}$ east of Sun (right side if Sun is up)
 - **Full Moon:** Moon opposite from Sun (anti-sunward side)
-- **Third Quarter:** Moon 90° west of Sun (left side if Sun is down)
+- **Third Quarter:** Moon $90^{\circ}$ west of Sun (left side if Sun is down)
 
 The "quarter" in quarter moon refers to the orbital position (¼ of the way around), not the illumination (which is half).
 
@@ -271,13 +276,13 @@ The "quarter" in quarter moon refers to the orbital position (¼ of the way arou
 To go from new moon to full moon, the Moon must:
 
 - A) Move closer to Earth
-- B) Move about 180° around its orbit
+- B) Move about $180^{\circ}$ around its orbit
 - C) Enter Earth's shadow
 - D) Wait for the Sun to move
 :::
 
 ::: {.callout-tip title="Solution" collapse="true"}
-**B) Move about 180° around its orbit.** At new moon, the Moon is on the sunward side of Earth. At full moon, it's on the anti-sunward side — exactly opposite. That's a 180° journey around the orbit. Since the full lunar cycle takes about 29.5 days, this journey from new to full takes about 14.75 days (approximately two weeks).
+**B) Move about $180^{\circ}$ around its orbit.** At new moon, the Moon is on the sunward side of Earth. At full moon, it's on the anti-sunward side — exactly opposite. That's a $180^{\circ}$ journey around the orbit. Since the full lunar cycle takes about 29.5 days, this journey from new to full takes about 14.75 days (approximately two weeks).
 :::
 
 ---
@@ -293,8 +298,8 @@ The lunar cycle is traditionally divided into eight named phases:
 ::: {.column-margin}
 **Phase vocabulary (decode the name):**
 
-- **Waxing** = getting brighter (new → full)
-- **Waning** = getting dimmer (full → new)
+- **Waxing** = getting brighter (new $\rightarrow$ full)
+- **Waning** = getting dimmer (full $\rightarrow$ new)
 - **Crescent** = less than half of the visible disk looks lit
 - **Gibbous** = more than half (but not full) looks lit
 - **Quarter** = about half looks lit (the “quarter” refers to the Moon being about ¼ or ¾ of the way around its orbit)
@@ -304,11 +309,11 @@ The lunar cycle is traditionally divided into eight named phases:
 |-------|------------------------------|----------|-------------|--------------|
 | **New Moon** | ~0% | Between Earth & Sun | ~Sunrise | ~Sunset |
 | **Waxing Crescent** | 1-49% | Moving toward first quarter | Morning | Evening |
-| **First Quarter** | ~50% (right half*) | 90° from Sun, ~1 week after new | ~Noon | ~Midnight |
+| **First Quarter** | ~50% (right half*) | $90^{\circ}$ from Sun, ~1 week after new | ~Noon | ~Midnight |
 | **Waxing Gibbous** | 51-99% | Moving toward full | Afternoon | After midnight |
 | **Full Moon** | ~100% of visible disk | Opposite the Sun | ~Sunset | ~Sunrise |
 | **Waning Gibbous** | 99-51% | Moving toward third quarter | Evening | Morning |
-| **Third Quarter** | ~50% (left half*) | 90° from Sun, ~1 week after full | ~Midnight | ~Noon |
+| **Third Quarter** | ~50% (left half*) | $90^{\circ}$ from Sun, ~1 week after full | ~Midnight | ~Noon |
 | **Waning Crescent** | 49-1% | Moving toward new | After midnight | Afternoon |
 
 *(\*As seen from the Northern Hemisphere; reversed in the Southern Hemisphere.)*
@@ -317,9 +322,9 @@ The lunar cycle is traditionally divided into eight named phases:
 
 {{< fig moon-phases-synodic-month >}}
 
-> **Waxing:** Growing in illumination (new → full). From Old English *weaxan*, "to grow."
+> **Waxing:** Growing in illumination (new $\rightarrow$ full). From Old English *weaxan*, "to grow."
 >
-> **Waning:** Shrinking in illumination (full → new). From Old English *wanian*, "to lessen."
+> **Waning:** Shrinking in illumination (full $\rightarrow$ new). From Old English *wanian*, "to lessen."
 >
 > **Gibbous:** More than half but less than fully illuminated. From Latin *gibbosus*, "humpbacked."
 
@@ -343,13 +348,13 @@ Understanding phases gives you a superpower: predicting when the Moon is visible
 
 The Moon's position relative to the Sun determines not just its appearance, but when it rises and sets:
 
-**New Moon:** Near the Sun → rises with the Sun, sets with the Sun, lost in daytime glare
+**New Moon:** Near the Sun $\rightarrow$ rises with the Sun, sets with the Sun, lost in daytime glare
 
-**First Quarter:** About a week after new → rises around noon, highest at sunset, sets around midnight
+**First Quarter:** About a week after new $\rightarrow$ rises around noon, highest at sunset, sets around midnight
 
-**Full Moon:** Opposite the Sun → rises at sunset, highest at midnight, sets at sunrise (visible all night!)
+**Full Moon:** Opposite the Sun $\rightarrow$ rises at sunset, highest at midnight, sets at sunrise (visible all night!)
 
-**Third Quarter:** About a week after full → rises around midnight, highest at sunrise, sets around noon
+**Third Quarter:** About a week after full $\rightarrow$ rises around midnight, highest at sunrise, sets around noon
 
 {{< fig moon-as-a-clock >}}
 
@@ -421,7 +426,7 @@ Here's the puzzle: If solar eclipses happen at new moon, and lunar eclipses happ
 
 The answer is the **tilt of the Moon's orbit**.
 
-The Moon's orbit around Earth is tilted about **5.1°** relative to the ecliptic (the plane of Earth's orbit around the Sun). This might sound small, but it's enough to change everything.
+The Moon's orbit around Earth is tilted about **$5.1^{\circ}$** relative to the ecliptic (the plane of Earth's orbit around the Sun). This might sound small, but it's enough to change everything.
 
 Because of this tilt, at most new moons, the Moon passes **above or below** the Sun as seen from Earth — no solar eclipse. At most full moons, the Moon passes **above or below** Earth's shadow — no lunar eclipse.
 
@@ -449,7 +454,7 @@ Eclipses don't occur every month because:
 :::
 
 ::: {.callout-tip title="Solution" collapse="true"}
-**B) The Moon's orbit is tilted relative to Earth's orbital plane.** The ~5° tilt means the Moon usually passes above or below the direct line between Sun and Earth (at new moon) or above/below Earth's shadow (at full moon). Only when the alignment is nearly perfect — which requires the Moon to be near a node — can eclipses occur.
+**B) The Moon's orbit is tilted relative to Earth's orbital plane.** The ~$5^{\circ}$ tilt means the Moon usually passes above or below the direct line between Sun and Earth (at new moon) or above/below Earth's shadow (at full moon). Only when the alignment is nearly perfect — which requires the Moon to be near a node — can eclipses occur.
 :::
 
 ---
@@ -461,16 +466,17 @@ Eclipses don't occur every month because:
 This interactive demo lets you see *why* eclipses don't happen every month — and when they do.
 
 **What you'll see in the demo:**
+
 - **NO ECLIPSE / SOLAR ECLIPSE / LUNAR ECLIPSE** status indicator
-- **"Moon is X° above/below ecliptic plane"** readout
-- **Orbital Tilt** slider (normally 5.1°)
+- **"Moon is $X^{\circ}$ above/below ecliptic plane"** readout
+- **Orbital Tilt** slider (normally $5.1^{\circ}$)
 - **Current Phase** indicator
 - **Node markers** showing where the Moon's orbit crosses the ecliptic
 - **Long-Term Simulation** controls
 
 ---
 
-**Demo Mission 1: Break the Universe (Tilt = 0°)**
+**Demo Mission 1: Break the Universe (Tilt = $0^{\circ}$)**
 
 *Predict before you explore:* If the Moon's orbital tilt were zero, how often would eclipses occur?
 
@@ -479,7 +485,8 @@ Write your prediction here before continuing: _______________
 :::
 
 **Do this:**
-1. Set **Orbital Tilt** to **0° (eclipse every month!)**
+
+1. Set **Orbital Tilt** to **$0^{\circ}$ (eclipse every month!)**
 2. Drag the Moon to the new moon position
 3. Check the eclipse status
 4. Drag to the full moon position
@@ -489,40 +496,44 @@ Write your prediction here before continuing: _______________
 
 ::: {.callout-tip title="What You Should Have Found" collapse="true"}
 
-With 0° tilt, you get an eclipse every time:
-- New moon → SOLAR ECLIPSE (every time!)
-- Full moon → LUNAR ECLIPSE (every time!)
+With $0^{\circ}$ tilt, you get an eclipse every time:
+
+- New moon $\rightarrow$ SOLAR ECLIPSE (every time!)
+- Full moon $\rightarrow$ LUNAR ECLIPSE (every time!)
 
 **Claim:** Orbital tilt is the ONLY reason eclipses aren't monthly events.
 
-**Evidence:** Setting the demo's Orbital Tilt to 0° produces eclipses at every new moon and every full moon. The status indicator confirms "SOLAR ECLIPSE" and "LUNAR ECLIPSE" at those phases. The 5.1° tilt is what breaks the monthly alignment.
+**Evidence:** Setting the demo's Orbital Tilt to $0^{\circ}$ produces eclipses at every new moon and every full moon. The status indicator confirms "SOLAR ECLIPSE" and "LUNAR ECLIPSE" at those phases. The $5.1^{\circ}$ tilt is what breaks the monthly alignment.
 
 :::
 
 ---
 
-**Demo Mission 2: Restore Reality (Tilt = 5.1°)**
+**Demo Mission 2: Restore Reality (Tilt = $5.1^{\circ}$)**
 
 **Do this:**
-1. Set **Orbital Tilt** back to **5.1°**
+
+1. Set **Orbital Tilt** back to **$5.1^{\circ}$**
 2. Drag the Moon slowly around its orbit
-3. Watch the **"Moon is X° above/below ecliptic plane"** readout
+3. Watch the **"Moon is $X^{\circ}$ above/below ecliptic plane"** readout
 4. Try to find positions where eclipses ARE possible
 
 **Key observations:**
+
 - What does the readout say during most new moons?
 - Where are the only positions that allow eclipses?
 
 ::: {.callout-tip title="Explanation" collapse="true"}
 
-With realistic tilt (5.1°):
-- At most orbital positions, the Moon is above or below the ecliptic plane by 1–5°
+With realistic tilt ($5.1^{\circ}$):
+
+- At most orbital positions, the Moon is above or below the ecliptic plane by $1^{\circ}$--$5^{\circ}$
 - Eclipse status shows **NO ECLIPSE** even at new/full moon phases
 - Eclipses only become possible when the Moon is near a **node** — where its orbit crosses the ecliptic plane
 
 **Claim:** Most new/full moons don't produce eclipses because the Moon is above or below the ecliptic plane.
 
-**Evidence:** The demo's readout shows "Moon is 3° above ecliptic plane" (or similar) during most new/full moons, and the status indicator shows "NO ECLIPSE." Only near the nodes does the readout approach 0° and eclipses become possible.
+**Evidence:** The demo's readout shows "Moon is $3^{\circ}$ above ecliptic plane" (or similar) during most new/full moons, and the status indicator shows "NO ECLIPSE." Only near the nodes does the readout approach $0^{\circ}$ and eclipses become possible.
 
 :::
 
@@ -531,6 +542,7 @@ With realistic tilt (5.1°):
 **Demo Mission 3: Finding the Nodes**
 
 **Do this:**
+
 1. Look for the **Node markers** in the orbit view
 2. Position the Moon at a node during new moon phase
 3. Check if a solar eclipse is possible
@@ -542,6 +554,7 @@ With realistic tilt (5.1°):
 ::: {.callout-tip title="Explanation" collapse="true"}
 
 The **nodes** are the two points where the Moon's tilted orbit crosses the ecliptic plane:
+
 - **Ascending node:** Moon crosses from below to above the ecliptic
 - **Descending node:** Moon crosses from above to below the ecliptic
 
@@ -554,6 +567,7 @@ Only when the Moon is near a node AND at the right phase (new or full) can an ec
 **Demo Mission 4: Long-Term Eclipse Statistics**
 
 **Do this:**
+
 1. Find the **Long-Term Simulation** controls
 2. Set **Simulate Years = 10** and click **Run Simulation**
 3. Count total solar eclipses and lunar eclipses
@@ -569,6 +583,7 @@ Only when the Moon is near a node AND at the right phase (new or full) can an ec
 ::: {.callout-tip title="What You Should Have Found" collapse="true"}
 
 Over long periods, you should see:
+
 - About 2–5 solar eclipses per year (average ~2.4)
 - Lunar eclipses also occur a few times per year globally (some are subtle penumbral eclipses; if you count only the darker **umbral** lunar eclipses, there can be 0–3 per year)
 
@@ -607,7 +622,7 @@ The nodes aren't fixed — they slowly drift (regress) around the ecliptic with 
 
 ::: {.callout-note title="Optional: The Saros Cycle" collapse="true"}
 
-The **Saros cycle** (~**18 years, 11 days, 8 hours**) is a different kind of eclipse repetition. After one Saros, the Sun–Earth–Moon geometry repeats closely enough that a **similar** eclipse occurs again (though usually shifted in location by about 120° in longitude due to the extra 8 hours). The Saros results from multiple lunar month-periods lining up, not from nodal precession alone.
+The **Saros cycle** (~**18 years, 11 days, 8 hours**) is a different kind of eclipse repetition. After one Saros, the Sun–Earth–Moon geometry repeats closely enough that a **similar** eclipse occurs again (though usually shifted in location by about $120^{\circ}$ in longitude due to the extra 8 hours). The Saros results from multiple lunar month-periods lining up, not from nodal precession alone.
 
 Ancient astronomers discovered the Saros empirically and used it to predict eclipses centuries in advance!
 
@@ -620,10 +635,11 @@ Ancient astronomers discovered the Saros empirically and used it to predict ecli
 Because there are two nodes on opposite sides of the Moon's orbit, eclipses tend to occur in pairs roughly 6 months apart. These periods are called **eclipse seasons**.
 
 During an eclipse season:
-- If a new moon occurs while the Sun is near a node → **solar eclipse possible**
-- If a full moon occurs while the Sun is near a node → **lunar eclipse possible**
 
-Each eclipse season lasts about **34–35 days** (≈34.5 days on average) — long enough that at least one new moon or full moon typically occurs within it. Eclipse seasons occur about twice per year, roughly 6 months apart, and each season can produce up to three eclipses (solar, lunar, solar) if the timing is right.
+- If a new moon occurs while the Sun is near a node $\rightarrow$ **solar eclipse possible**
+- If a full moon occurs while the Sun is near a node $\rightarrow$ **lunar eclipse possible**
+
+Each eclipse season lasts about **34–35 days** $(\approx34.5$ days on average) — long enough that at least one new moon or full moon typically occurs within it. Eclipse seasons occur about twice per year, roughly 6 months apart, and each season can produce up to three eclipses (solar, lunar, solar) if the timing is right.
 
 ::: {.callout-check-yourself title="Check Yourself 10 — Eclipse Seasons Timing"}
 If a solar eclipse occurs on March 15, when might the next lunar eclipse occur?
@@ -703,6 +719,7 @@ Lunar eclipses also come in varieties:
 
 ::: {.callout-note title="✏️ Sketch It: Shadow Geometry" collapse="true"}
 Draw the Sun on the left (large circle). Draw Earth in the middle (small circle). Now draw Earth's shadow extending to the right:
+
 - The **umbra** is the dark inner cone where the Sun is completely blocked
 - The **penumbra** is the lighter outer region where only part of the Sun is blocked
 
@@ -738,6 +755,7 @@ Lunar eclipses are visible from anywhere on Earth's night side — potentially b
 Total solar eclipses? The **path of totality** (where the Moon fully covers the Sun) is typically only about 100-250 km wide and traces a narrow path across Earth's surface. Outside this path, observers see only a partial eclipse.
 
 **The numbers:**
+
 - Total eclipse path width: ~100-250 km
 - Total eclipse path length: ~10,000-15,000 km
 - Duration of totality at any location: typically 2-7 minutes
@@ -749,15 +767,17 @@ This is why eclipse chasers travel around the world — you often have to go to 
 
 ## Angular Size Revisited: Total vs. Annular
 
-Remember from Lecture 3: the Sun and Moon have nearly the same angular size (~0.5°). This is the key to understanding total vs. annular solar eclipses.
+Remember from Lecture 3: the Sun and Moon have nearly the same angular size (~$0.5^{\circ}$). This is the key to understanding total vs. annular solar eclipses.
 
 **The Moon's distance varies:**
-- At **perigee** (closest): ~356,500 km → angular size ~0.56°
-- At **apogee** (farthest): ~406,700 km → angular size ~0.49°
+
+- At **perigee** (closest): ~356,500 km $\rightarrow$ angular size ~$0.56^{\circ}$
+- At **apogee** (farthest): ~406,700 km $\rightarrow$ angular size ~$0.49^{\circ}$
 
 **The Sun's angular size also varies slightly:**
-- At **perihelion** (Earth closest to Sun): ~0.54°
-- At **aphelion** (Earth farthest from Sun): ~0.52°
+
+- At **perihelion** (Earth closest to Sun): ~$0.54^{\circ}$
+- At **aphelion** (Earth farthest from Sun): ~$0.52^{\circ}$
 
 When the Moon's angular size **exceeds** the Sun's, total eclipses are possible.
 
@@ -773,7 +793,7 @@ If the Moon were 20% farther from Earth than it is now, solar eclipses would be:
 :::
 
 ::: {.callout-tip title="Solution" collapse="true"}
-**C) Always annular (never total).** If the Moon were 20% farther away, its angular size would be about 20% smaller — roughly 0.4° instead of 0.5°. Since the Sun's angular size is about 0.5°, the Moon would never appear large enough to completely cover the Sun. Every solar eclipse would be annular, with a ring of sunlight visible.
+**C) Always annular (never total).** If the Moon were 20% farther away, its angular size would be about 20% smaller — roughly $0.4^{\circ}$ instead of $0.5^{\circ}$. Since the Sun's angular size is about $0.5^{\circ}$, the Moon would never appear large enough to completely cover the Sun. Every solar eclipse would be annular, with a ring of sunlight visible.
 :::
 
 ---
@@ -785,6 +805,7 @@ Here's an extraordinary fact: total solar eclipses are a temporary gift from the
 The Moon is receding from Earth at about **3.8 cm per year**. We measure this directly by bouncing laser beams off retroreflectors left on the Moon by Apollo astronauts (and Soviet Lunokhod rovers). Lunar laser ranging measures the Moon's distance to centimeter precision, confirming the Moon is slowly drifting away.
 
 **What this means:**
+
 - In the distant past, the Moon was much closer and appeared much larger in the sky
 - Total solar eclipses lasted longer
 - Eventually (in ~600 million years), the Moon will be too far away to ever fully cover the Sun
@@ -815,11 +836,11 @@ Lunar laser ranging experiments show that the Moon is:
 
 Let's synthesize everything from today:
 
-**Moon phases** result from geometry, not shadows. The Sun always illuminates half the Moon; what changes is how much of that lit half we can see from Earth. Position in orbit → angle of view → phase appearance.
+**Moon phases** result from geometry, not shadows. The Sun always illuminates half the Moon; what changes is how much of that lit half we can see from Earth. Position in orbit $\rightarrow$ angle of view $\rightarrow$ phase appearance.
 
 **Eclipses** happen when shadows actually align. Solar eclipses require the Moon to be directly between Sun and Earth (new moon); lunar eclipses require Earth to be directly between Sun and Moon (full moon).
 
-**Why not monthly?** The Moon's orbit is tilted 5.1° from the ecliptic. This tilt causes most new moons to pass above or below the Sun, and most full moons to miss Earth's shadow. Only near the nodes — where the Moon's orbit crosses the ecliptic — can eclipses occur.
+**Why not monthly?** The Moon's orbit is tilted $5.1^{\circ}$ from the ecliptic. This tilt causes most new moons to pass above or below the Sun, and most full moons to miss Earth's shadow. Only near the nodes — where the Moon's orbit crosses the ecliptic — can eclipses occur.
 
 **Total vs. annular** depends on angular size. The Moon's elliptical orbit means its angular size varies. When the Moon appears larger than the Sun, totality is possible. When it appears smaller, we get an annular eclipse.
 
@@ -858,7 +879,7 @@ Let's synthesize everything from today:
 **6.** **Synodic Month.** The Moon takes 29.5 days to go from new moon to new moon (the synodic period). If new moon occurs on January 1, on approximately what date will the next full moon occur?
 
 <!-- Calculation / Application / — / ⭐⭐ -->
-**7.** **Angular Size Comparison.** The Moon's average angular diameter is 0.52°. Jupiter's largest moon, Ganymede, has an angular diameter of about 1.7 arcseconds when viewed from Earth. How many times larger does our Moon appear than Ganymede? (Hint: 1° = 3600 arcseconds)
+**7.** **Angular Size Comparison.** The Moon's average angular diameter is $0.52^{\circ}$. Jupiter's largest moon, Ganymede, has an angular diameter of about 1.7 arcseconds when viewed from Earth. How many times larger does our Moon appear than Ganymede? (Hint: $1^{\circ}$ = 3600 arcseconds)
 
 <!-- Calculation / Application / — / ⭐⭐ -->
 **8.** **Eclipse Frequency.** If there are about 2.4 solar eclipses per year on average, and a given location on Earth experiences a total solar eclipse roughly once every 375 years, what does this tell you about what fraction of Earth's surface the path of totality covers for a typical eclipse?
@@ -874,8 +895,10 @@ Let's synthesize everything from today:
 
 ### Synthesis
 
-<!-- Synthesis / Connection / O→M→I / ⭐⭐ -->
-**11.** **Observable → Model → Inference.** An ancient astronomer notices that the Moon's angular size varies slightly from week to week. Following the Observable → Model → Inference pattern:
+<!-- Synthesis / Connection / $O\rightarrowM
+$$
+\rightarrowI$ / ⭐⭐ -->
+**11.** **Observable $\rightarrow$ Model $\rightarrow$ Inference.** An ancient astronomer notices that the Moon's angular size varies slightly from week to week. Following the Observable $\rightarrow$ Model $\rightarrow$ Inference pattern:
 
 - (a) What is being measured? (Which of the four observables?)
 - (b) What physical model could explain this observation?

@@ -24,7 +24,7 @@ prerequisites: Basic geometry; comfort with angles, ratios, and units
 The sky is a direction-finder, not a depth-gauge. Every position on the sky is an *angle*, not a distance — and understanding this geometric framework unlocks seasons, eclipses, and the entire toolbox of positional astronomy.
 :::
 
-::: {.callout-important title="How to Use This Reading (Read → Revisit → Reuse)" collapse="true"}
+::: {.callout-important title="How to Use This Reading (Read $\rightarrow$ Revisit $\rightarrow$ Reuse)" collapse="true"}
 This page is both (1) the **assigned reading** and (2) your **reference manual** for celestial geometry. You should expect to come back to it multiple times — before lecture, after lecture, while doing practice problems and assignments, and studying for exams.
 
 **Default expectation (best):** Read the whole page before class (including **Check Yourself**). Then return to it later when you work the **Practice Problems**.
@@ -91,8 +91,6 @@ This imaginary sphere is the **celestial sphere** — and it's one of astronomy'
 
 **Key insight:** The celestial sphere doesn't represent where things *are* — it represents where to *look*. It's a direction-finder, not a distance-finder.
 
-
-
 ::: {.callout-check-yourself title="Check Yourself 2 — What the Celestial Sphere Is For"}
 The celestial sphere tells us:
 
@@ -131,11 +129,11 @@ The celestial sphere has special points and circles that help us navigate. Here 
 
 | Coordinate | What It Means | Earth Analog |
 |------------|---------------|--------------|
-| **Declination (Dec)** | Celestial latitude: angle north/south of the celestial equator (−90° to +90°) | **Latitude** |
+| **Declination (Dec)** | Celestial latitude: angle north/south of the celestial equator (−$90^{\circ}$ to +$90^{\circ}$) | **Latitude** |
 | **Right ascension (RA)** | Celestial longitude: position along the celestial equator measured from a fixed zero point; often given in hours (0–24h) | **Longitude** |
 
 ::: {.column-margin}
-**RA in hours:** 24 hours = 360°, so 1 hour = 15°. Astronomers often use hours for RA because the sky appears to rotate once per day.
+**RA in hours:** 24 hours = $360^{\circ}$, so 1 hour = $15^{\circ}$. Astronomers often use hours for RA because the sky appears to rotate once per day.
 :::
 
 ::: {.column-margin}
@@ -185,7 +183,7 @@ For understanding seasons and eclipses, two circles are essential:
 
 {{< fig celestial-sphere-ecliptic >}}
 
-**The crucial point:** These two circles are *not* aligned. They're tilted relative to each other by about **23.5°** — and this tilt is the entire reason we have seasons.
+**The crucial point:** These two circles are *not* aligned. They're tilted relative to each other by about **$23.5^{\circ}$** — and this tilt is the entire reason we have seasons.
 
 ::: {.column-margin}
 **Ecliptic:** The apparent path of the Sun across the celestial sphere over the course of a year, corresponding to the plane of Earth's orbit around the Sun.
@@ -194,7 +192,7 @@ For understanding seasons and eclipses, two circles are essential:
 ---
 
 ::: {.callout-note title="✏️ Sketch It: Ecliptic vs. Celestial Equator" collapse="true"}
-Draw a circle (the celestial equator). Now draw another circle tilted 23.5° relative to the first (the ecliptic). Mark the two points where they intersect.
+Draw a circle (the celestial equator). Now draw another circle tilted $23.5^{\circ}$ relative to the first (the ecliptic). Mark the two points where they intersect.
 
 **Label:** What happens at those intersection points? (Hint: The Sun is on the celestial equator at these moments.)
 :::
@@ -211,7 +209,7 @@ The ecliptic is:
 :::
 
 ::: {.callout-tip title="Solution" collapse="true"}
-**B) The Sun's apparent path across the sky over the course of a year.** As Earth orbits the Sun, the Sun appears to move against the background stars, tracing out a great circle called the ecliptic. This corresponds to the plane of Earth's orbit. The ecliptic is tilted 23.5° relative to the celestial equator — that's why seasons exist.
+**B) The Sun's apparent path across the sky over the course of a year.** As Earth orbits the Sun, the Sun appears to move against the background stars, tracing out a great circle called the ecliptic. This corresponds to the plane of Earth's orbit. The ecliptic is tilted $23.5^{\circ}$ relative to the celestial equator — that's why seasons exist.
 :::
 
 ::: {.callout-check-yourself title="Check Yourself 4 — Why the Ecliptic Is Tilted"}
@@ -224,7 +222,7 @@ The celestial equator and ecliptic are tilted relative to each other because:
 :::
 
 ::: {.callout-tip title="Solution" collapse="true"}
-**B) Earth's rotation axis is tilted relative to its orbital plane.** Earth's equator is perpendicular to its rotation axis. Earth's orbit defines the ecliptic plane. Since the rotation axis is tilted 23.5° from the perpendicular to the orbital plane, the celestial equator and ecliptic are tilted by the same amount.
+**B) Earth's rotation axis is tilted relative to its orbital plane.** Earth's equator is perpendicular to its rotation axis. Earth's orbit defines the ecliptic plane. Since the rotation axis is tilted $23.5^{\circ}$ from the perpendicular to the orbital plane, the celestial equator and ecliptic are tilted by the same amount.
 :::
 
 ---
@@ -252,6 +250,7 @@ The time it takes Earth to orbit the Sun (the year that keeps the seasons lined 
 **The fix:** We add **leap days** to keep the calendar aligned with Earth’s orbit and the seasons.
 
 **The rule (Gregorian calendar):**
+
 - Most years divisible by 4 are leap years (we add February 29).
 - Century years (divisible by 100) are *not* leap years…
 - …unless they are also divisible by 400 (then they *are* leap years).
@@ -302,7 +301,7 @@ If Earth's distance from the Sun caused the seasons, what would we observe?
 
 ### The Real Mechanism: Geometry of Illumination
 
-Seasons result from **two geometric effects**, both caused by Earth's 23.5° axial tilt:
+Seasons result from **two geometric effects**, both caused by Earth's $23.5^{\circ}$ axial tilt:
 
 **Effect 1: Sunlight Angle**
 
@@ -316,13 +315,15 @@ Think of it this way: shine a flashlight straight down on a table — you get a 
 
 When your hemisphere is tilted toward the Sun, the Sun takes a longer path across your sky. More hours of daylight means more hours of heating.
 
-At the summer solstice in San Diego (~32°N latitude):
+At the summer solstice in San Diego (~$32^{\circ}$N latitude):
+
 - The Sun is up for about **14 hours**
-- It reaches a maximum altitude of about **81°** above the southern horizon
+- It reaches a maximum altitude of about **$81^{\circ}$** above the southern horizon
 
 At the winter solstice:
+
 - The Sun is up for only about **10 hours**
-- It reaches a maximum altitude of only about **35°**
+- It reaches a maximum altitude of only about **$35^{\circ}$**
 
 That's 4 extra hours of daylight AND much more direct sunlight. The combination is powerful.
 
@@ -368,6 +369,7 @@ During summer in your hemisphere, the Sun:
 This interactive demo lets you see *why* tilt — not distance — causes seasons. You'll observe how day length, Sun altitude, and Earth-Sun distance change throughout the year.
 
 **What you'll see in the demo:**
+
 - **Season Presets:** Jump to solstices and equinoxes
 - **Readouts:** Day Length, Sun Altitude, Earth-Sun Distance for the selected date
 - **Display Overlays:** Celestial Equator, Ecliptic, Day/Night Terminator
@@ -384,7 +386,8 @@ Write your prediction here before continuing: _______________
 :::
 
 **Do this:**
-1. Click **Season Presets** and select each season in order: March Equinox → June Solstice → September Equinox → December Solstice
+
+1. Click **Season Presets** and select each season in order: March Equinox $\rightarrow$ June Solstice $\rightarrow$ September Equinox $\rightarrow$ December Solstice
 2. For each, record the **Earth-Sun Distance** reading
 
 | Season | Earth-Sun Distance |
@@ -413,6 +416,7 @@ The distance varies by only about 3%, which creates about a 7% difference in tot
 **Demo Mission 2: The Real Mechanism**
 
 **Do this:**
+
 1. Turn on **Display Overlays**: Celestial Equator, Ecliptic, and Day/Night Terminator
 2. Go to **June Solstice** and observe the Day/Night Terminator position
 3. Go to **December Solstice** and observe how it changes
@@ -428,10 +432,12 @@ The distance varies by only about 3%, which creates about a 7% difference in tot
 ::: {.callout-tip title="Explanation" collapse="true"}
 
 In June (Northern summer):
+
 - Day length is much longer (more hours of heating)
 - Sun altitude is much higher (more concentrated energy per square meter)
 
 In December (Northern winter):
+
 - Day length is much shorter
 - Sun altitude is much lower (energy spread over larger area)
 
@@ -446,23 +452,25 @@ In December (Northern winter):
 **Demo Mission 3: Latitude Matters**
 
 **Do this:**
+
 1. Stay on **June Solstice**
-2. Change **Observer Latitude** from the Equator (0°) to mid-latitudes (40°N) to near the pole (66.5°N, the Arctic Circle)
+2. Change **Observer Latitude** from the Equator ($0^{\circ}$) to mid-latitudes ($40^{\circ}$N) to near the pole ($66.5^{\circ}$N, the Arctic Circle)
 3. Watch what happens to **Day Length**
 
 | Latitude | Day Length (June Solstice) |
 |----------|---------------------------|
-| 0° (Equator) | |
-| 40°N | |
-| 66.5°N (Arctic Circle) | |
+| $0^{\circ}$ (Equator) | |
+| $40^{\circ}$N | |
+| $66.5^{\circ}$N (Arctic Circle) | |
 
 **What pattern do you see?** Why do high-latitude regions experience such extreme seasons?
 
 ::: {.callout-tip title="Explanation" collapse="true"}
 
 At higher latitudes, the seasonal variation in day length becomes more extreme:
+
 - At the Equator: Day length is nearly 12 hours year-round
-- At 40°N: Day length varies from about 9 hours (winter) to 15 hours (summer)
+- At $40^{\circ}$N: Day length varies from about 9 hours (winter) to 15 hours (summer)
 - At the Arctic Circle: On the summer solstice, the Sun never sets (24-hour day!)
 
 **Claim:** Higher latitudes experience more extreme seasons because day length variation is greater.
@@ -494,12 +502,12 @@ The seasons are marked by four special configurations:
 
 | Event | Date (approx.) | What's Special |
 |-------|---------------|----------------|
-| **March Equinox** | March 20 | Sun crosses celestial equator going north; day ≈ night everywhere* |
+| **March Equinox** | March 20 | Sun crosses celestial equator going north; day $\approx$ night everywhere* |
 | **June Solstice** | June 21 | Sun reaches farthest north; longest day in N. Hemisphere |
-| **September Equinox** | Sept. 22 | Sun crosses celestial equator going south; day ≈ night everywhere* |
+| **September Equinox** | Sept. 22 | Sun crosses celestial equator going south; day $\approx$ night everywhere* |
 | **December Solstice** | Dec. 21 | Sun reaches farthest south; shortest day in N. Hemisphere |
 
-*\*"Day ≈ night" is approximate. Atmospheric refraction bends sunlight, making the Sun visible slightly before it geometrically rises and after it geometrically sets. This adds a few minutes of daylight. The Sun's finite angular size also contributes — sunrise is defined as when the Sun's edge (not center) crosses the horizon.*
+*\*"Day $\approx$ night" is approximate. Atmospheric refraction bends sunlight, making the Sun visible slightly before it geometrically rises and after it geometrically sets. This adds a few minutes of daylight. The Sun's finite angular size also contributes — sunrise is defined as when the Sun's edge (not center) crosses the horizon.*
 
 ::: {.column-margin}
 **Solstice:** From Latin *sol* (sun) + *sistere* (to stand still). The Sun reaches its most extreme northern or southern position and appears to "pause" before reversing direction.
@@ -532,44 +540,48 @@ Here's a question that seems simple but isn't: How big is the Moon?
 
 Your instinct might be to answer in kilometers (the Moon's diameter is about 3,474 km). But that's not what you *see*. What you see is how much of your field of view the Moon occupies — its **angular size**.
 
-The Moon's angular size is about **0.5°** (half a degree). Hand-based “sky ruler” estimates vary by person, so treat them as rough: the Moon is about **half the width of your pinky finger** at arm’s length (approximately).
+The Moon's angular size is about **$0.5^{\circ}$** (half a degree). Hand-based “sky ruler” estimates vary by person, so treat them as rough: the Moon is about **half the width of your pinky finger** at arm’s length (approximately).
 
 ::: {.callout-note title="Optional: Measuring the Sky With Your Hand" collapse="true"}
 These are approximate (your mileage will vary depending on hand size and arm length):
 
-- Pinky width at arm’s length: ~1–1.5°
-- Thumb width at arm’s length: ~2°
-- Fist width at arm’s length: ~10°
-- Thumb-to-pinky span (outstretched hand): ~20–25°
+- Pinky width at arm’s length: ~$1^{\circ}$--$1.5^{\circ}$
+- Thumb width at arm’s length: ~$2^{\circ}$
+- Fist width at arm’s length: ~$10^{\circ}$
+- Thumb-to-pinky span (outstretched hand): ~$20^{\circ}$--$25^{\circ}$
 
 Use these as *order-of-magnitude* checks, not precision tools.
 :::
 
 ::: {.column-margin}
-**Angular size:** The angle an object subtends (spans) as seen from the observer. Measured in degrees, arcminutes (1° = 60'), or arcseconds (1' = 60").
+**Angular size:** The angle an object subtends (spans) as seen from the observer. Measured in degrees, arcminutes ($1^{\circ}$ = 60'), or arcseconds (1' = 60").
 :::
 
 ::: {.callout-important title="Quick Reference: Angular Units"}
 | Unit | Relation | Example |
 |------|----------|---------|
-| 1 degree (°) | Base unit | Thumb width at arm's length ≈ 2° |
-| 1 arcminute (') | 1° = 60' | Human eye resolution ≈ 1' |
-| 1 arcsecond (") | 1' = 60" (so 1° = 3600") | Telescope resolution territory |
+| 1 degree $(^{\circ})$ | Base unit | Thumb width at arm's length $\approx$ $2^{\circ}$ |
+| 1 arcminute (') | $1^{\circ}$ = 60' | Human eye resolution $\approx$ 1' |
+| 1 arcsecond (") | 1' = 60" (so $1^{\circ}$ = 3600") | Telescope resolution territory |
 
-**Useful conversion:** 0.5° = 30' = 1800"
+**Useful conversion:** $0.5^{\circ}$ = 30' = 1800"
 
-**Worked example:** Convert 0.5° into arcminutes and arcseconds.
+**Worked example:** Convert $0.5^{\circ}$ into arcminutes and arcseconds.
 
 - $0.5^\circ \times \frac{60\ \text{arcmin}}{1^\circ} = 30\ \text{arcmin}$
 - $30\ \text{arcmin} \times \frac{60\ \text{arcsec}}{1\ \text{arcmin}} = 1800\ \text{arcsec}$
 
 **Radians (why they show up in formulas):** A radian is defined so that
 
-$$\theta\ (\text{radians}) = \frac{\text{arc length}}{\text{radius}}$$
+$$
+\theta\ (\text{radians}) = \frac{\text{arc length}}{\text{radius}}
+$$
 
 That’s why radians are sometimes described as “unitless” — it’s a length ratio. In degrees, a full circle is $360^\circ$; in radians, a full circle is $2\pi$:
 
-$$360^\circ = 2\pi\ \text{rad} \quad \text{and} \quad 1\ \text{rad} \approx 57.3^\circ$$
+$$
+360^\circ = 2\pi\ \text{rad} \quad \text{and} \quad 1\ \text{rad} \approx 57.3^\circ
+$$
 
 {{< fig unit-circle-radians >}}
 
@@ -578,7 +590,7 @@ $$360^\circ = 2\pi\ \text{rad} \quad \text{and} \quad 1\ \text{rad} \approx 57.3
 
 **The key insight:** Angular size depends on **both** physical size **and** distance.
 
-A large object far away can have the same angular size as a small object nearby. This is why the Sun and Moon appear nearly the same size in our sky — despite the Sun being about 400× larger. The Sun is also about 400× farther away, and the two effects almost perfectly cancel.
+A large object far away can have the same angular size as a small object nearby. This is why the Sun and Moon appear nearly the same size in our sky — despite the Sun being about $400\times$ larger. The Sun is also about $400\times$ farther away, and the two effects almost perfectly cancel.
 
 {{< fig angular-size-tradeoff >}}
 
@@ -604,7 +616,8 @@ Two planets have the same angular size as seen from Earth. This means:
 This demo lets you explore how angular size depends on both physical size and distance.
 
 **What you'll see in the demo:**
-- **Angular Size** readout (auto units: ° / ′ / ″)
+
+- **Angular Size** readout (auto units: $^{\circ}$ / ′ / ″)
 - **Physical Size** and **Distance** sliders/values
 - **Presets:** Everyday Objects and Astronomical Objects
 - **Time Evolution (for Moon):** See how the Moon's angular size changes as its distance varies
@@ -615,18 +628,20 @@ This demo lets you explore how angular size depends on both physical size and di
 **Demo Mission 1: Building Intuition**
 
 **Do this:**
+
 1. In **Presets**, choose **Everyday Objects**
 2. Select an object (like a basketball)
 3. Change the **Distance** slider and watch the **Angular Size** change
 
 **Questions to answer:**
+
 - When you double the distance, what happens to angular size? (Halves? Doubles? Stays same?)
 - When you double the physical size at the same distance, what happens to angular size?
 
 ::: {.callout-tip title="What You Should Have Found" collapse="true"}
 
-- **Doubling distance → halves angular size** (inverse relationship)
-- **Doubling physical size → doubles angular size** (direct relationship)
+- **Doubling distance $\rightarrow$ halves angular size** (inverse relationship)
+- **Doubling physical size $\rightarrow$ doubles angular size** (direct relationship)
 
 **Claim:** Angular size is proportional to physical size and inversely proportional to distance.
 
@@ -639,6 +654,7 @@ This demo lets you explore how angular size depends on both physical size and di
 **Demo Mission 2: Astronomical Objects**
 
 **Do this:**
+
 1. Switch to **Astronomical Objects** presets
 2. Select **Sun** and note its angular size
 3. Select **Moon (Today)** and note its angular size
@@ -647,11 +663,11 @@ This demo lets you explore how angular size depends on both physical size and di
 
 ::: {.callout-tip title="What You Should Have Found" collapse="true"}
 
-Both the Sun and Moon have angular sizes of approximately **0.5°** (half a degree). This is a remarkable cosmic coincidence! The Sun is about 400× larger than the Moon but also about 400× farther away, so they appear almost exactly the same size.
+Both the Sun and Moon have angular sizes of approximately **$0.5^{\circ}$** (half a degree). This is a remarkable cosmic coincidence! The Sun is about $400\times$ larger than the Moon but also about $400\times$ farther away, so they appear almost exactly the same size.
 
 **Claim:** The Sun and Moon have nearly identical angular sizes despite vastly different physical sizes.
 
-**Evidence:** The demo's Angular Size readout shows ~0.5° for both objects. This coincidence is why we can have **total solar eclipses** — the Moon can *just barely* cover the Sun completely.
+**Evidence:** The demo's Angular Size readout shows ~$0.5^{\circ}$ for both objects. This coincidence is why we can have **total solar eclipses** — the Moon can *just barely* cover the Sun completely.
 
 :::
 
@@ -660,6 +676,7 @@ Both the Sun and Moon have angular sizes of approximately **0.5°** (half a degr
 **Demo Mission 3: The Moon's Changing Angular Size**
 
 **Do this:**
+
 1. Keep **Moon** selected
 2. Use the **Time Evolution** feature to see how the Moon's distance (and therefore angular size) changes over its orbit
 3. Note the range of angular sizes
@@ -668,11 +685,11 @@ Both the Sun and Moon have angular sizes of approximately **0.5°** (half a degr
 
 ::: {.callout-tip title="Explanation" collapse="true"}
 
-The Moon's angular size varies from about **0.49°** (at apogee, farthest) to about **0.56°** (at perigee, closest). The Sun's angular size also varies slightly (about 0.52° to 0.54°).
+The Moon's angular size varies from about **$0.49^{\circ}$** (at apogee, farthest) to about **$0.56^{\circ}$** (at perigee, closest). The Sun's angular size also varies slightly (about $0.52^{\circ}$ to $0.54^{\circ}$).
 
 **Claim:** The Moon's angular size varies enough to determine whether a solar eclipse is total or annular.
 
-**Evidence:** The demo's Time Evolution shows the Moon's angular size ranging from smaller than the Sun's (~0.49°) to larger than the Sun's (~0.56°). When the Moon appears larger, total eclipses are possible; when smaller, only annular eclipses occur. We'll explore this more in Lecture 4!
+**Evidence:** The demo's Time Evolution shows the Moon's angular size ranging from smaller than the Sun's (~$0.49^{\circ}$) to larger than the Sun's (~$0.56^{\circ}$). When the Moon appears larger, total eclipses are possible; when smaller, only annular eclipses occur. We'll explore this more in Lecture 4!
 
 :::
 
@@ -681,35 +698,43 @@ The Moon appears about the same angular size as the Sun because:
 
 - A) They are the same physical size
 - B) They are at the same distance from Earth
-- C) The Moon is ~400× smaller but also ~400× closer
-- D) The Moon is ~400× larger but also ~400× farther
+- C) The Moon is $~400\times$ smaller but also $~400\times$ closer
+- D) The Moon is $~400\times$ larger but also $~400\times$ farther
 :::
 
 ::: {.callout-tip title="Solution" collapse="true"}
-**C) The Moon is ~400× smaller but also ~400× closer.** The Sun's diameter is about 1.4 million km; the Moon's is about 3,500 km — a ratio of 400:1. The Sun is about 150 million km away; the Moon is about 380,000 km away — also a ratio of roughly 400:1. These factors cancel, giving nearly equal angular sizes.
+**C) The Moon is $~400\times$ smaller but also $~400\times$ closer.** The Sun's diameter is about 1.4 million km; the Moon's is about 3,500 km — a ratio of 400:1. The Sun is about 150 million km away; the Moon is about 380,000 km away — also a ratio of roughly 400:1. These factors cancel, giving nearly equal angular sizes.
 :::
 
 ::: {.callout-note title="Deep Dive: The Small-Angle Formula" collapse="false"}
 For objects whose angular size is small (less than a few degrees), there's a simple relationship:
 
-**Why radians first?** The small-angle relationship comes from basic circle geometry (arc length = radius × angle) and trigonometry, and those relationships are simplest and most “natural” when the angle is measured in **radians**. We often *report* angles in degrees/arcminutes/arcseconds because they’re easier to interpret, so we convert at the end.
+**Why radians first?** The small-angle relationship comes from basic circle geometry (arc length = radius $\times$ angle) and trigonometry, and those relationships are simplest and most “natural” when the angle is measured in **radians**. We often *report* angles in degrees/arcminutes/arcseconds because they’re easier to interpret, so we convert at the end.
 
-$$\theta = \frac{D}{d}$$
+$$
+\theta = \frac{D}{d}
+$$
 
 where:
+
 - $\theta$ is the angular size in **radians**
 - $D$ is the object's physical diameter
 - $d$ is the distance to the object
 
-To convert to degrees, multiply by 57.3 (since 1 radian ≈ 57.3°):
+To convert to degrees, multiply by 57.3 (since 1 radian $\approx$ $57.3^{\circ}$):
 
-$$\theta_{\text{degrees}} = 57.3^\circ \times \frac{D}{d}$$
+$$
+\theta_{\text{degrees}} = 57.3^\circ \times \frac{D}{d}
+$$
 
 **Example:** What's the angular size of the Moon?
+
 - Moon's diameter: $D = 3474$ km
 - Moon's distance: $d = 384000$ km
 
-$$\theta = 57.3^\circ \times \frac{3474~\text{km}}{384000~\text{km}} = 57.3^\circ \times 0.00905 = 0.52^\circ$$
+$$
+\theta = 57.3^\circ \times \frac{3474~\text{km}}{384000~\text{km}} = 57.3^\circ \times 0.00905 = 0.52^\circ
+$$
 
 That's about half a degree — roughly ¼ of your thumb width at arm's length.
 :::
@@ -755,7 +780,7 @@ Let's step back and see how today's concepts fit together:
 
 **The celestial sphere** is our map for tracking directions in the sky. It's defined by projecting Earth's features (equator, poles) outward and tracking the Sun's apparent motion (the ecliptic).
 
-**Seasons** result from the 23.5° tilt between Earth's rotation axis and its orbital plane. This tilt causes the Sun's path across the sky to change throughout the year, varying both the directness of sunlight and the length of each day. Seasons are ultimately about **solar energy per square meter per day**.
+**Seasons** result from the $23.5^{\circ}$ tilt between Earth's rotation axis and its orbital plane. This tilt causes the Sun's path across the sky to change throughout the year, varying both the directness of sunlight and the length of each day. Seasons are ultimately about **solar energy per square meter per day**.
 
 **Angular size** reminds us that what we see depends on geometry — both the object's true size and its distance. The Sun and Moon having nearly equal angular sizes is a coincidence that enables total solar eclipses.
 
@@ -776,7 +801,7 @@ Here's a preview of what's coming in Lecture 4:
 
 **Eclipses** require a special alignment — the Moon must be near the points where its orbit crosses the ecliptic. This happens only about twice a year, which is why eclipses are relatively rare events.
 
-**Why not monthly?** The Moon's orbit is tilted about 5° relative to the ecliptic. Usually, the Moon passes above or below the Sun (at new moon) or above or below Earth's shadow (at full moon). Only when the Moon is near a "node" — where its orbit crosses the ecliptic — can eclipses occur.
+**Why not monthly?** The Moon's orbit is tilted about $5^{\circ}$ relative to the ecliptic. Usually, the Moon passes above or below the Sun (at new moon) or above or below Earth's shadow (at full moon). Only when the Moon is near a "node" — where its orbit crosses the ecliptic — can eclipses occur.
 :::
 
 ---
@@ -806,15 +831,17 @@ Here's a preview of what's coming in Lecture 4:
 
 ### Challenge Problems
 
-**8.** **Angular Size Practice.** Mars has a diameter of $D=6,792$ km. When Mars is at its closest approach to Earth (about $d=55$ million km), what is its angular size in arcseconds? *(Use the small-angle formula: $\theta = 57.3^{\circ} \times D/d$, then convert to arcseconds using 1° = 3600".)*
+**8.** **Angular Size Practice.** Mars has a diameter of $D=6,792$ km. When Mars is at its closest approach to Earth (about $d=55$ million km), what is its angular size in arcseconds? *(Use the small-angle formula: $\theta = 57.3^{\circ} \times D/d$, then convert to arcseconds using $1^{\circ}$ = 3600".)*
 
 **9.** **Angular Size Scaling.** A satellite appears to have an angular size of 2 arcminutes when at 400 km altitude. What would its angular size be if it moved to 800 km altitude? *Hint:* Use the ratio method.
 
-**10.** **Day Length.** At a latitude of 45°N, the day length on the summer solstice is about 15.5 hours. How many more hours of sunlight does this provide compared to a 12-hour equinox day? Over a 90-day summer, approximately how many extra hours of sunlight does this location receive compared to the equator (assuming 12-hour days at the equator year-round)?
+**10.** **Day Length.** At a latitude of $45^{\circ}$N, the day length on the summer solstice is about 15.5 hours. How many more hours of sunlight does this provide compared to a 12-hour equinox day? Over a 90-day summer, approximately how many extra hours of sunlight does this location receive compared to the equator (assuming 12-hour days at the equator year-round)?
 
 **11.** **Sun Altitude (Noon Altitude Formula).** At local noon, the Sun reaches its **maximum altitude** for the day. Use:
 
-$$h_{\text{noon}} = 90^\circ - \left|\phi - \delta\right|$$
+$$
+h_{\text{noon}} = 90^\circ - \left|\phi - \delta\right|
+$$
 
 where $\phi$ is your latitude and $\delta$ is the Sun’s declination (both in degrees). **Absolute value** just means “take the positive angular separation” between $\phi$ and $\delta$.
 
@@ -829,7 +856,7 @@ Then, in 1–2 sentences: which noon altitude is higher, and what geometric reas
 
 ### Bridge Problems (Connects to Future Topics)
 
-**12.** **Observable → Model → Inference.** An astronomer measures that a star's position in the sky shifts by 0.5 arcseconds over 6 months. Following the _Observable → Model → Inference_ pattern from Lecture 1:
+**12.** **Observable $\rightarrow$ Model $\rightarrow$ Inference.** An astronomer measures that a star's position in the sky shifts by 0.5 arcseconds over 6 months. Following the _Observable $\rightarrow$ Model $\rightarrow$ Inference_ pattern from Lecture 1:
 
 - (a) What is being measured? (Which of the four observables?)
 - (b) What physical model connects this measurement to distance?

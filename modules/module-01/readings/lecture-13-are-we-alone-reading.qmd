@@ -20,7 +20,7 @@ prerequisites: Lectures 1-12 (this is the Module 1 capstone)
 ::: {.callout-important #the-big-idea}
 ## The Big Idea
 
-You voted this your favorite NASA science question: **Are we alone?** Today we take it seriously — not as philosophy, but as astronomy. The Drake Equation provides a framework for estimating how many civilizations might exist in our galaxy. (We'll zoom out to the observable universe later just for perspective — the numbers are staggering: up to ~10²⁴ stars.) But the physics matters too: the earliest universe was metal-poor, so Earth-like rocky planets were unlikely at first. After the first generations of stars enriched the cosmos, rocky planets became possible. Stars had to create the ingredients first. This is why Module 2 — stellar evolution — is essential for understanding our place in the cosmos.
+You voted this your favorite NASA science question: **Are we alone?** Today we take it seriously — not as philosophy, but as astronomy. The Drake Equation provides a framework for estimating how many civilizations might exist in our galaxy. (We'll zoom out to the observable universe later just for perspective — the numbers are staggering: up to $\sim 10^{24}$ stars.) But the physics matters too: the earliest universe was metal-poor, so Earth-like rocky planets were unlikely at first. After the first generations of stars enriched the cosmos, rocky planets became possible. Stars had to create the ingredients first. This is why Module 2 — stellar evolution — is essential for understanding our place in the cosmos.
 :::
 
 ::: {.callout-important title="How to Use This Reading" collapse="true"}
@@ -44,7 +44,7 @@ If you only remember three things:
 
 1. **Drake Equation:** $N = R_* \times f_p \times n_e \times f_l \times f_i \times f_c \times L$. The first three terms are now reasonably constrained; the last four remain complete mysteries.
 
-2. **The numbers are staggering:** The Drake Equation applies to the Milky Way, but zooming out: up to ~10²⁴ stars in the observable universe. Even tiny probabilities yield huge expected numbers — or, if we're alone, the probability of life must be extraordinarily small.
+2. **The numbers are staggering:** The Drake Equation applies to the Milky Way, but zooming out: up to $\sim 10^{24}$ stars in the observable universe. Even tiny probabilities yield huge expected numbers — or, if we're alone, the probability of life must be extraordinarily small.
 
 3. **Stars made the ingredients:** The early universe was metal-poor. Rocky planets require heavy elements that stars created through fusion and dispersed through supernovae. Life requires stellar evolution.
 
@@ -79,6 +79,7 @@ Before we dive in, see if you can answer these from memory:
 :::
 
 ::: {.callout-tip title="Answers" collapse="true"}
+
 1. Distance from the star and stellar luminosity — where liquid water could exist
 2. The star wobbles due to the planet's gravity, causing periodic Doppler shifts
 3. Transit depth = $(R_p/R_*)^2$ — it tells us the planet's radius relative to the star
@@ -94,7 +95,9 @@ Before we dive in, see if you can answer these from memory:
 In 1961, radio astronomer Frank Drake convened a meeting to discuss the search for extraterrestrial intelligence (SETI). He wanted to organize the discussion, so he wrote down an equation that breaks the question into factors:
 
 ::: {.callout-important title="The Drake Equation"}
-$$N = R_* \times f_p \times n_e \times f_l \times f_i \times f_c \times L$$
+$$
+N = R_* \times f_p \times n_e \times f_l \times f_i \times f_c \times L
+$$
 
 where $N$ = the number of communicating civilizations in our galaxy right now
 :::
@@ -275,9 +278,9 @@ The Drake Equation is applied to the Milky Way. But to appreciate scale, let's z
 
 | Scale | Number |
 |-------|--------|
-| Stars in Milky Way | order 10¹¹ (roughly 100–400 billion) |
+| Stars in Milky Way | order $10^{11}$ (roughly 100–400 billion) |
 | Galaxies in observable universe | hundreds of billions to ~2 trillion |
-| **Total stars** | up to ~10²⁴ (a septillion!) |
+| **Total stars** | up to $\sim 10^{24}$ (a septillion!) |
 
 That's more stars than grains of sand on all of Earth's beaches.
 
@@ -285,7 +288,7 @@ That's more stars than grains of sand on all of Earth's beaches.
 
 If only one in a trillion trillion stars has intelligent life, the *expected* number would be ~1 — meaning the universe might have none, or it might have more; expectation doesn't guarantee outcomes.
 
-But if one in a *billion* has intelligent life, we'd expect ~10¹⁵ civilizations.
+But if one in a *billion* has intelligent life, we'd expect $\sim 10^{15}$ civilizations.
 
 The universe is so vast that even tiny probabilities yield huge expected numbers. Or, if we're truly alone, it means $f_l \times f_i \times f_c \times L$ is *extraordinarily* small.
 :::
@@ -341,9 +344,9 @@ Where did the metals come from? **Stars made them.**
 
 Stars fuse light elements into heavier ones:
 
-- **Hydrogen → Helium** (main sequence stars, like the Sun)
-- **Helium → Carbon, Oxygen** (red giant stars)
-- **Carbon, Oxygen → ... → Iron** (massive stars)
+- **Hydrogen $\rightarrow$ Helium** (main sequence stars, like the Sun)
+- **Helium $\rightarrow$ Carbon, Oxygen** (red giant stars)
+- **Carbon, Oxygen $\rightarrow$ ... $\rightarrow$ Iron** (massive stars)
 - **Elements heavier than iron** (supernovae and neutron star mergers)
 
 When stars die — especially massive stars that explode as supernovae — they scatter these elements into space. The next generation of stars (and planets) forms from this enriched material.
@@ -425,29 +428,29 @@ Everything we've learned connects to the search for life:
 
 **LIGHT (L7-L10)**
 
-- Continuous spectrum → Blackbody → **TEMPERATURE** (L8)
-  - Stefan-Boltzmann → Luminosity
-  - Wien's Law → Peak wavelength
-- Spectral lines → **COMPOSITION** (L9)
+- Continuous spectrum $\rightarrow$ Blackbody $\rightarrow$ **TEMPERATURE** (L8)
+  - Stefan-Boltzmann $\rightarrow$ Luminosity
+  - Wien's Law $\rightarrow$ Peak wavelength
+- Spectral lines $\rightarrow$ **COMPOSITION** (L9)
   - Kirchhoff's Laws
   - Quantum energy levels
-- Doppler shift → **MOTION** (L10)
+- Doppler shift $\rightarrow$ **MOTION** (L10)
   - Radial velocity
   - Exoplanet detection
 
 **GRAVITY (L5-L6)**
 
-- Kepler's Laws → Orbital periods, distances
-- Newton → **MASS** from orbits
+- Kepler's Laws $\rightarrow$ Orbital periods, distances
+- Newton $\rightarrow$ **MASS** from orbits
   - Planet masses
   - Dark matter
 
 **GEOMETRY (L3-L4)**
 
-- Celestial coordinates → Positions
-- Moon phases, eclipses → Transit detection
+- Celestial coordinates $\rightarrow$ Positions
+- Moon phases, eclipses $\rightarrow$ Transit detection
 
-**ALL TOGETHER → Solar system (L11), Climate (L12), Drake equation (L13)**
+**ALL TOGETHER $\rightarrow$ Solar system (L11), Climate (L12), Drake equation (L13)**
 
 ---
 
@@ -455,26 +458,42 @@ Everything we've learned connects to the search for life:
 
 ::: {.callout-important title="Module 1 Key Equations"}
 **Kepler's Third Law:**
-$$P^2 = a^3 \quad \text{(years, AU)}$$
-$$P^2 = \frac{4\pi^2}{GM} a^3 \quad \text{(Newton's form)}$$
+$$
+P^2 = a^3 \quad \text{(years, AU)}
+$$
+$$
+P^2 = \frac{4\pi^2}{GM} a^3 \quad \text{(Newton's form)}
+$$
 
 **Stefan-Boltzmann Law:**
-$$L = 4\pi R^2 \sigma T^4$$
+$$
+L = 4\pi R^2 \sigma T^4
+$$
 
 **Wien's Law:**
-$$\lambda_{peak} = \frac{2.9 \times 10^6 \text{ nm}}{T}$$
+$$
+\lambda_{peak} = \frac{2.9 \times 10^6 \text{ nm}}{T}
+$$
 
 **Doppler Effect:**
-$$\frac{\Delta\lambda}{\lambda_0} = \frac{v}{c}$$
+$$
+\frac{\Delta\lambda}{\lambda_0} = \frac{v}{c}
+$$
 
 **Hydrogen Energy Levels:**
-$$E_n = -\frac{13.6 \text{ eV}}{n^2}$$
+$$
+E_n = -\frac{13.6 \text{ eV}}{n^2}
+$$
 
 **Transit Depth:**
-$$\text{depth} = \left(\frac{R_p}{R_*}\right)^2$$
+$$
+\text{depth} = \left(\frac{R_p}{R_*}\right)^2
+$$
 
 **Equilibrium Temperature:**
-$$T_{eq} = \left[ \frac{(1-A) L_\odot}{16\pi \sigma d^2} \right]^{1/4}$$
+$$
+T_{eq} = \left[ \frac{(1-A) L_\odot}{16\pi \sigma d^2} \right]^{1/4}
+$$
 :::
 
 ---
@@ -498,9 +517,10 @@ Based on Module 1 content, be comfortable with:
 - Using Wien's Law to find temperature
 - Using Doppler formula to find velocity
 - Using Stefan-Boltzmann conceptually (relative comparisons)
-- Transit depth → planet size
+- Transit depth $\rightarrow$ planet size
 
 ::: {.callout-tip title="How to Study"}
+
 1. **Work practice problems** — understanding comes from doing
 2. **Explain concepts out loud** — if you can't explain it, you don't understand it
 3. **Connect the dots** — how does L6 connect to L10? How does L8 connect to L12?
@@ -514,7 +534,7 @@ Based on Module 1 content, be comfortable with:
 
 1. $N = R_* \times f_p \times n_e \times f_l \times f_i \times f_c \times L$
 2. First three terms now reasonably known; last four remain uncertain
-3. Numbers are staggering: up to ~10²⁴ stars in observable universe
+3. Numbers are staggering: up to $\sim 10^{24}$ stars in observable universe
 4. Fermi Paradox: If life is common, where is everybody?
 
 **Cosmic Context:**
@@ -554,7 +574,7 @@ Based on Module 1 content, be comfortable with:
 
 **6. Drake Sensitivity:** In the Drake Equation, the "middle" scenario uses $f_l = f_i = f_c = 0.1$ and $L = 10{,}000$ years (with $R_* = 3$, $f_p = 1$, $n_e = 0.2$), giving $N \approx 6$. If civilizations last $10\times$ longer ($L = 100{,}000$ years) but intelligence is $10\times$ rarer ($f_i = 0.01$), does $N$ change? What does this tell you about the structure of the Drake Equation?
 
-**7. Habitable Zone + Wien's Law Integration:** A star's spectrum peaks at 350 nm. (a) Use Wien's Law ($b = 2.9 \times 10^6$ nm·K) to find its surface temperature. (b) Assuming the star has the same radius as the Sun, use $L \propto T^4$ to estimate its luminosity relative to the Sun ($T_\odot = 5800$ K). (c) The habitable zone scales as $\sqrt{L/L_\odot}$ in AU — where is this star's habitable zone compared to Earth's orbit?
+**7. Habitable Zone + Wien's Law Integration:** A star's spectrum peaks at 350 nm. (a) Use Wien's Law ($b = 2.9 \times 10^6$ $nm\cdot K)$ to find its surface temperature. (b) Assuming the star has the same radius as the Sun, use $L \propto T^4$ to estimate its luminosity relative to the Sun ($T_\odot = 5800$ K). (c) The habitable zone scales as $\sqrt{L/L_\odot}$ in AU — where is this star's habitable zone compared to Earth's orbit?
 
 **8. Fermi Paradox:** The Milky Way has been forming stars for ~13 billion years; the Sun formed ~4.6 billion years ago. Estimate how much "head start" an alien civilization around an older star could have on us. What might they have accomplished in that time?
 
