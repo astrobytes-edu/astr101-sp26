@@ -1811,7 +1811,7 @@ l18-interstellar-extinction:
 
 l18-interstellar-medium:
   term: "Interstellar medium (ISM)"
-  definition: "The gas, dust, magnetic fields, and cosmic rays filling the space between stars, comprising about 1–5% of the Milky Way's mass."
+  definition: "The gas, dust, magnetic fields, and cosmic rays filling the space between stars. It makes up only a few percent of the Milky Way's mass, but it is the raw material for new stars."
   lecture: 18
   module: 2
   tier: core
@@ -1825,14 +1825,14 @@ l18-interstellar-reddening:
 
 l18-jeans-criterion:
   term: "Jeans criterion"
-  definition: "A cloud will undergo gravitational collapse if its mass exceeds the Jeans mass, which depends on the cloud's temperature and density."
+  definition: "The rule that a cloud collapses when its mass exceeds the Jeans mass, so gravity beats thermal pressure."
   lecture: 18
   module: 2
   tier: core
 
 l18-jeans-mass:
   term: "Jeans mass"
-  definition: "The critical mass above which a cloud of gas becomes unstable to gravitational collapse, defined by the balance between gravity and thermal pressure."
+  definition: "The threshold mass needed for a region of gas to collapse. Colder, denser regions have lower Jeans masses."
   lecture: 18
   module: 2
   tier: core
@@ -1867,7 +1867,7 @@ l18-protoplanetary-disk:
 
 l18-protostar:
   term: "Protostar"
-  definition: "An object in the early stages of star formation, heated by gravitational contraction rather than nuclear fusion, embedded in an infalling envelope of gas and dust."
+  definition: "A forming star whose energy comes mainly from gravitational contraction, not sustained hydrogen fusion, while it remains embedded in infalling gas and dust."
   lecture: 18
   module: 2
   tier: core
@@ -1881,7 +1881,7 @@ l18-rayleigh-scattering:
 
 l18-reflection-nebula:
   term: "Reflection nebula"
-  definition: "A cloud of gas and dust that shines by reflecting the light of nearby stars. Typically blue in color due to preferential scattering of short wavelengths."
+  definition: "A cloud of dust and gas that shines by scattering nearby starlight. It often looks blue because dust scatters shorter wavelengths more efficiently."
   lecture: 18
   module: 2
   tier: core
