@@ -119,7 +119,7 @@ Use the interactive below to connect the reading's main idea to actual orbital m
 
 <div class="demo-embed" style="width: 100%; margin: 1rem 0;">
   <iframe
-    src="../../../demos/binary-orbits/"
+    src="https://astrobytes-edu.github.io/cosmic-playground/exhibits/binary-orbits/"
     width="100%"
     height="520px"
     style="border: 1px solid #ddd; border-radius: 8px;"
