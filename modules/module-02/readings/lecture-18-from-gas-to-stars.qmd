@@ -51,6 +51,22 @@ Then return later for the observational signatures, summary, and challenge probl
 
 The Pillars of Creation are a perfect opening image for this lecture. In visible light, the pillars look like dark, opaque columns. In infrared, many hidden young stars appear. One famous region already shows the central lesson of star formation: what looks dark or empty in ordinary images can be an active stellar nursery when we observe it at the right wavelength.
 
+<div class="demo-embed" style="width: 100%; margin: 1rem 0;">
+  <iframe
+    src="https://www.youtube-nocookie.com/embed/dXJWQ6IE2aE"
+    width="100%"
+    height="520px"
+    style="border: 1px solid #ddd; border-radius: 8px;"
+    loading="lazy"
+    title="Pillars of Creation video"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen>
+  </iframe>
+  <p style="text-align: center; margin-top: 0.5rem; font-size: 0.875rem; color: #666;">
+    <a href="https://www.youtube.com/watch?v=dXJWQ6IE2aE" target="_blank" style="color: #5dade2;">Open in new tab ↗</a>
+  </p>
+</div>
+
 ## Why We Are Rewinding the Story
 
 So far in Module 2, we have mostly studied stars in the middle of their lives. We used the Sun to understand stellar structure, measured stellar properties from light, organized stars on the H-R diagram, and saw in binary systems that stellar mass is a powerful predictor of luminosity, lifetime, and fate.
@@ -60,6 +76,22 @@ But that leaves an important question unanswered:
 **If mass matters so much, where does a star's mass come from?**
 
 This lecture rewinds the story to the raw material between the stars. We step away from adult stars and look at the cold gas and dust from which stars form. This is not a side topic. It is the missing origin chapter of stellar evolution.
+
+<div class="demo-embed" style="width: 100%; margin: 1rem 0;">
+  <iframe
+    src="https://www.youtube-nocookie.com/embed/kr93yrnecjI"
+    width="100%"
+    height="520px"
+    style="border: 1px solid #ddd; border-radius: 8px;"
+    loading="lazy"
+    title="Introduction to star formation video"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen>
+  </iframe>
+  <p style="text-align: center; margin-top: 0.5rem; font-size: 0.875rem; color: #666;">
+    <a href="https://www.youtube.com/watch?v=kr93yrnecjI" target="_blank" style="color: #5dade2;">Open in new tab ↗</a>
+  </p>
+</div>
 
 By the end of the lecture, you should be able to explain:
 
@@ -326,6 +358,22 @@ This process is called **fragmentation**.
 
 That is why star formation usually produces a **cluster** of stars rather than a single giant star. A large cloud can break into many self-gravitating pieces, and each piece can form a star or a small multiple-star system.
 
+<div class="demo-embed" style="width: 100%; margin: 1rem 0;">
+  <iframe
+    src="https://www.youtube-nocookie.com/embed/LeX5e51UkzI"
+    width="100%"
+    height="520px"
+    style="border: 1px solid #ddd; border-radius: 8px;"
+    loading="lazy"
+    title="Fragmentation and star cluster formation video"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen>
+  </iframe>
+  <p style="text-align: center; margin-top: 0.5rem; font-size: 0.875rem; color: #666;">
+    <a href="https://www.youtube.com/watch?v=LeX5e51UkzI" target="_blank" style="color: #5dade2;">Open in new tab ↗</a>
+  </p>
+</div>
+
 ::: {.callout-summary title="Takeaway"}
 One cloud usually makes many stars because different dense parts of the cloud can collapse independently.
 :::
@@ -376,8 +424,8 @@ As material falls inward, gravitational potential energy is converted to heat. T
 
 The timescale for Kelvin-Helmholtz contraction depends on mass:
 
-- **For a low-mass protostar** (~$0.5 \M_\odot$): contraction takes ~10 million years.
-- **For a high-mass protostar** (~$20 \M_\odot$): contraction takes ~100,000 years.
+- **For a low-mass protostar** (~$0.5\,M_\odot$): contraction takes ~10 million years.
+- **For a high-mass protostar** (~$20\,M_\odot$): contraction takes ~100,000 years.
 
 This dramatic difference in timescale arises because massive protostars have higher luminosity; they radiate away gravitational energy and contract more quickly. A massive protostar can reach main-sequence conditions in just a few hundred thousand years, while a low-mass star takes tens of millions of years to do so. This has profound implications: massive stars finish their lives (roughly 10 million years on the main sequence) in less time than it takes a low-mass star to be born!
 
@@ -413,6 +461,8 @@ Protostars do **not** simply contract in silence until fusion begins. The path t
 ::: {.callout-summary title="How to Read This Figure"}
 This is an artist's concept showing the geometry of the system, not a direct visible-light photograph. It is useful because it helps us visualize a structure that is difficult to see directly in ordinary visible light.
 :::
+
+{{< fig jwst-protostar-outflows >}}
 
 ### Stage 3: The Arrival at the Main Sequence
 
@@ -582,7 +632,7 @@ Two giant molecular clouds have identical temperature ($T = 10\ \text{K}$) but d
 
 **Problem 3: Kelvin-Helmholtz Contraction Timescale**
 
-A low-mass protostar ($0.5 \M_\odot$) undergoing Kelvin-Helmholtz contraction has a timescale of roughly 10 million years to reach the main sequence. A high-mass protostar ($10 \M_\odot$) has a timescale of roughly 0.1 million years (100,000 years).
+A low-mass protostar ($0.5\,M_\odot$) undergoing Kelvin-Helmholtz contraction has a timescale of roughly 10 million years to reach the main sequence. A high-mass protostar ($10\,M_\odot$) has a timescale of roughly 0.1 million years (100,000 years).
 
 Using this information, explain why massive stars have much shorter lifetimes on the main sequence than low-mass stars.
 

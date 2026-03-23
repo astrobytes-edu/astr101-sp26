@@ -1665,6 +1665,12 @@ figures:
     alt: "Artist's concept of a young forming star surrounded by a glowing flattened disk, with narrow bipolar jets emerging perpendicular to the disk."
     module: 2
 
+  jwst-protostar-outflows:
+    path: /assets/images/module-02/jwst-protostar-outflows.jpg
+    caption: "What to notice: this is the observational version of the outflow story. A young star at the center is launching bipolar flows into the surrounding gas, so star birth involves both infall and ejection."
+    alt: "JWST image of a young protostar with a bright central source and two opposing lobes of glowing gas, with an orange-red outflow extending upward and a blue-white outflow extending downward."
+    module: 2
+
   star-planet-formation-sequence:
     path: /assets/images/module-02/star-planet-formation-american-scientist.webp
     caption: "What to notice: star birth is a sequence, not a single moment. A dark cloud becomes a collapsing core, then a protostar with a disk and bipolar flow, then a T Tauri star, and eventually a young planetary system."
