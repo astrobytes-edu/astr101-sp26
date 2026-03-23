@@ -25,55 +25,82 @@ prerequisites: "Blackbody radiation and Wien's law (L8), spectral lines (L9), gr
 ::: {.callout-key-insight #the-big-idea}
 ## The Big Idea
 
-Stars are born from the gravitational collapse of cold, dense clouds of gas and dust — the same material enriched by previous generations of dying stars.
+Stars form when cold, dense regions of gas and dust collapse under gravity. Those collapsing regions produce protostars, disks, and eventually the next generation of stars and planets.
+
+This lecture asks a deeper question than "what is a star?" It asks: **where does a star's mass come from in the first place?** The answer begins in the interstellar medium — the thin gas and dust between the stars — and ends with the birth of new stellar systems.
+
+As you read, keep one throughline in mind:
+
+**cloud conditions $\rightarrow$ collapse or stability $\rightarrow$ protostar formation $\rightarrow$ disk formation $\rightarrow$ main-sequence star**
 :::
 
 ::: {.callout-roadmap title="How to Use This Reading" collapse="true"}
-This reading follows the star-formation story from interstellar clouds to protostars and disks.
+Default expectation (best): Read the whole page before lecture, pausing for each check-yourself prompt.
 
-**Default expectation (best):** Read the whole page before lecture, pausing for each check-yourself prompt.
+If you're short on time (about 20 minutes), focus on:
 
-**If you're short on time (~20 min):**
+- the three kinds of nebulae
+- why infrared observations matter
+- the Jeans criterion in words
+- the sequence from protostar to main sequence
 
-- Focus on the three kinds of nebulae, the Jeans criterion, and the protostar-to-main-sequence sequence.
-- Come back later for the observational signatures and challenge problems.
-
-**Reference mode:** Return to the summary and glossary when later lectures talk about stellar evolution as a lifecycle instead of a one-way march.
+Then return later for the observational signatures, summary, and challenge problems.
 :::
 
 ## Why We Are Rewinding the Story
 
-So far in Module 2, we have mostly met stars in the middle of their lives. We used the Sun to understand stellar structure, measured distance and luminosity from light, organized stars on the H-R diagram, and used binary systems to discover that **mass is destiny**. That sequence was the right one pedagogically, because students first need a model of what stars *are* before asking where they come from.
+So far in Module 2, we have mostly studied stars in the middle of their lives. We used the Sun to understand stellar structure, measured stellar properties from light, organized stars on the H-R diagram, and saw in binary systems that stellar mass is a powerful predictor of luminosity, lifetime, and fate.
 
-But that story leaves one crucial question hanging: if mass determines everything, where does a star's mass come from in the first place?
+But that leaves an important question unanswered:
 
-This lecture rewinds the cosmic story on purpose. We step back from adult stars and return to the raw material between them — gas, dust, and cold molecular clouds — to see how gravity assembles the very initial conditions that later determine luminosity, lifetime, and fate. In other words, this is not a detour away from the main story of the module. It is the missing origin chapter.
+**If mass matters so much, where does a star's mass come from?**
+
+This lecture rewinds the story to the raw material between the stars. We step away from adult stars and look at the cold gas and dust from which stars form. This is not a side topic. It is the missing origin chapter of stellar evolution.
+
+By the end of the lecture, you should be able to explain:
+
+- what kinds of interstellar clouds are associated with star formation
+- why some clouds collapse while others do not
+- why star formation usually produces many stars, not just one
+- how protostars, disks, and planets emerge from collapsing gas
 
 ## The Hidden Cosmic Nurseries
 
-Look at a photograph of the Milky Way on a clear night away from city lights. You'll see brilliant stars scattered across dark velvet, but if you look carefully, you'll notice something else: *dark lanes* cutting across the luminous band of our galaxy. Those shadowy patches seem empty, like holes torn in the star field. For centuries, astronomers were puzzled by these dark regions. Were they truly empty voids? Gaps in the stellar population?
+If you look at the Milky Way on a dark, clear night, you see bright bands of starlight crossed by dark lanes. Those dark patches might look like empty gaps, but they are not empty at all. They are clouds of gas and dust blocking the light from stars behind them.
 
-The answer is far more interesting — and far more important to understanding where stars come from.
+That matters because these clouds are not just debris. They are the places where new stars are born.
 
-Those dark lanes are not empty at all. They are vast clouds of cold gas and microscopic dust particles, so thick and opaque that they block the light of the stars behind them. We call this material the **interstellar medium** (ISM), and it is where stars are born. In the previous lectures of this module, we studied stars in their adulthood — their properties on the H-R diagram (L16), their behavior in binary systems (L17), and the mass patterns that organize stellar lives. But now we ask: where do stars originate? How does the thin, cold gas scattered between the stars transform into the massive, brilliant objects we observe today?
+This gives us our first Observable $\rightarrow$ Model $\rightarrow$ Inference chain for the lecture:
 
-The journey from interstellar cloud to star is one of the great transformations in the cosmos. It connects the death of old stars (which we'll encounter in L20) to the birth of new ones. It explains the dark lanes we see, the glowing nebulae that grace photographs, and the infrared glow that modern telescopes like the James Webb Space Telescope are revealing in unprecedented detail. Understanding star formation is essential not just for knowing how stars are made, but for understanding the life cycle of matter itself — how the iron in your blood and the carbon in your cells were forged in the cores of stars, scattered back into the ISM by stellar death, and then assembled into new stars and planets.
+- **Observable:** dark lanes, glowing nebulae, and hidden infrared sources in the Milky Way
+- **Model:** the galaxy contains gas and dust clouds with different temperatures, densities, and interactions with light
+- **Inference:** some of those clouds are active stellar nurseries
 
-Today, we enter the cosmic nurseries.
+So the big problem of this lecture becomes:
+
+**How does diffuse interstellar material become stars?**
+
+To answer that, we first need to understand the interstellar medium itself.
 
 ## The Interstellar Medium: Anatomy of the Galaxy Between the Stars
 
 ::: {.column-margin}
-**Interstellar medium (ISM)** — the gas (mostly hydrogen and helium), dust, magnetic fields, and cosmic rays that fill the space between stars. Only a few percent of the Milky Way's mass, but fundamentally important for star formation and galaxy chemistry.*
+**Interstellar medium (ISM)** — the gas and dust between the stars. It is very sparse, but it is the raw material from which new stars and planetary systems form.*
 :::
 
-The space between stars is not a vacuum. It contains a thin but pervasive mixture of gas and dust — the building blocks of new stars and planetary systems.
+The space between stars is not empty. It contains a thin mixture of gas and dust spread across enormous distances.
 
 ### Composition and Scale
 
-The ISM is approximately 99% by mass of gas (mostly hydrogen and helium, with traces of heavier elements created in prior stellar generations) and 1% of dust — tiny solid grains of silicate and carbon with sizes ranging from roughly 0.1 to 1 micrometer (smaller than the width of a human hair). Despite its name, the ISM is *very* sparse. The density of gas between stars is roughly 1 particle per cubic centimeter — about 10 billion times less dense than the air you're breathing right now. If you could somehow compress all the gas in a volume the size of Earth, it would weigh only as much as a few asteroids. Yet across the vast distances of the galaxy, this thin material adds up: the ISM makes up only a few percent of the Milky Way's total mass, and that modest fraction is the raw material for future stars.
+Most of the ISM is gas, mainly hydrogen and helium. A much smaller fraction is dust: tiny solid grains made mostly of silicates and carbon-rich material. By mass, the ISM is about 99% gas and 1% dust.
 
-The ISM is not uniform. Some regions are hot and rarefied (temperature ~10,000 K); others are cold and dense (temperature ~10 K), collapsing under their own gravity. These cold, dense regions are the birthplaces of stars.
+Even though the ISM fills the galaxy, it is extremely thin. A typical region may contain only about 1 particle per cubic centimeter. That is far less dense than the air around you. But over distances of many light-years, even this thin material adds up to an enormous reservoir of star-forming matter.
+
+The ISM is not the same everywhere. Some regions are hot and diffuse. Others are cold and dense. Those cold, dense regions are the ones most important for star formation.
+
+::: {.callout-summary title="Takeaway"}
+The interstellar medium is not empty space. It is a thin but important mixture of gas and dust, and the coldest, densest parts of it are where stars form.
+:::
 
 ::: {.column-margin}
 **Nebula** (plural, *nebulae*) — a cloud of gas and dust in space. The term historically applied to any fuzzy patch visible in a telescope, but modern astronomy distinguishes based on physical properties and observable signatures.*
@@ -81,17 +108,25 @@ The ISM is not uniform. Some regions are hot and rarefied (temperature ~10,000 K
 
 ### Three Types of Nebulae: Reading the Cosmic Palette
 
-The ISM reveals itself through its interaction with light. A good habit is to ask three questions each time: **What do I observe? What physical process produces it? What does that observation tell me?**
+Astronomers learn about interstellar clouds by asking a simple question:
+
+**How is this cloud interacting with light?**
+
+That question helps us classify three common kinds of nebulae.
 
 #### Emission Nebulae: The Glowing Clouds
 
-An **emission nebula** (also called an H II region) is a cloud of gas energized by nearby hot stars — typically young, massive O- or B-type stars.
+An **emission nebula** is a cloud of gas energized by nearby hot, young stars.
 
-- **What you observe:** A glowing cloud, often pink or red in images, wrapped around hot young stars. The Orion Nebula is the classic example.
-- **Physical cause:** Ultraviolet radiation from those stars ionizes the surrounding hydrogen. When electrons later recombine with the ions, the gas emits light at specific wavelengths, especially hydrogen-alpha.
-- **What it tells us:** Hot, young stars are nearby, and the surrounding gas is being heated and ionized right now.
+**What you observe:** A glowing cloud, often pink or red in images, around young massive stars. The Orion Nebula is a classic example.
+
+**Physical cause:** Ultraviolet light from hot stars ionizes the surrounding hydrogen gas. When electrons recombine with the ions, the gas emits light at specific wavelengths.
+
+**What we infer:** Hot young stars are nearby, and the surrounding gas is being energized right now.
 
 {{< fig orion-nebula-hubble >}}
+
+{{< fig bubble-nebula-emission >}}
 
 ::: {.column-margin}
 **H II region** — ionized hydrogen produced where ultraviolet radiation from young, hot stars ionizes the surrounding gas. The Roman numeral II denotes singly ionized hydrogen (one electron removed).*
@@ -99,23 +134,35 @@ An **emission nebula** (also called an H II region) is a cloud of gas energized 
 
 #### Reflection Nebulae: Light Scattered by Dust
 
-A **reflection nebula** is a cloud of gas and dust that shines by reflected starlight rather than by its own emission.
+A **reflection nebula** shines by scattered starlight rather than by glowing on its own.
 
-- **What you observe:** A hazy, often bluish glow around nearby stars. The Pleiades are a famous example.
-- **Physical cause:** Dust scatters shorter-wavelength light more efficiently than longer-wavelength light, so reflected light often appears blue.
-- **What it tells us:** Dust is present and being illuminated by nearby stars, but the gas is not strongly ionized the way it is in an emission nebula.
+**What you observe:** A hazy glow, often bluish, around nearby stars. The Pleiades are a famous example.
+
+**Physical cause:** Dust scatters shorter-wavelength light more efficiently than longer-wavelength light, so reflected light often looks blue.
+
+**What we infer:** Dust is present and illuminated by nearby stars, but the gas is not strongly ionized.
+
+{{< fig m78-reflection-nebula >}}
 
 #### Dark Nebulae: The Cosmic Veil
 
-A **dark nebula** is a cloud of dust so thick that it blocks the light of stars behind it.
+A **dark nebula** is a dense dust cloud that blocks the light of stars behind it.
 
-- **What you observe:** A dark lane or silhouette in front of a brighter star field or glowing nebula. The Horsehead Nebula is the iconic example.
-- **Physical cause:** Dense dust absorbs and scatters background visible light, while the cloud itself emits little visible light.
-- **What it tells us:** The cloud is cold, dusty, and dense enough to hide what lies behind it. These are often promising star-forming regions.
+**What you observe:** A dark lane or silhouette in front of a brighter background. The Horsehead Nebula is a famous example.
 
-This presents an observational challenge: *how do we study star formation if dust blocks our view?* The answer lies in the infrared.
+**Physical cause:** Dust absorbs and scatters background visible light, while the cloud itself emits little visible light.
 
-**Physics takeaway:** Emission nebulae glow because gas is energized, reflection nebulae shine because dust scatters starlight, and dark nebulae look dark because dust blocks background light. Same galaxy, same basic ingredients — different appearance tells you how the cloud is interacting with light.
+**What we infer:** The cloud is cold, dusty, and dense enough to hide what lies behind it. These are often promising star-forming regions.
+
+{{< fig horsehead-nebula-dark >}}
+
+::: {.callout-summary title="What These Three Nebulae Teach Us"}
+The same basic ingredients — gas, dust, and starlight — can produce very different appearances. A nebula's appearance is a clue to what physical process is happening there.
+:::
+
+::: {.callout-misconception title="Misconception Check"}
+A dark nebula is **not** an empty region. It looks dark because dust is blocking background visible light.
+:::
 
 ::: {.column-margin}
 **Dark nebula** — an interstellar cloud dense and opaque enough to block visible light from stars behind it. The darkness reveals itself through absorption rather than emission or reflection.*
@@ -123,144 +170,191 @@ This presents an observational challenge: *how do we study star formation if dus
 
 ### Interstellar Extinction and Reddening: Why Infrared Eyes See Farther
 
-Dust affects starlight in two related but distinct ways. **Interstellar extinction** is the overall dimming of the light. **Interstellar reddening** is the color shift that happens because dust removes blue light more efficiently than red light.
+Dust affects starlight in two related ways.
 
-Imagine you're looking at a distant star across a dust-filled region of the ISM. Blue light from that star is scattered away by dust grains. Red light, with its longer wavelength, passes through more easily. The result is that the star appears both dimmer and redder than it truly is — a double punishment that makes it harder for visible-light telescopes to see through dusty regions.
+- **Interstellar extinction** is the overall dimming of the light.
+- **Interstellar reddening** is the shift toward redder colors because dust removes blue light more effectively than red light.
 
-However, infrared radiation — with wavelengths even longer than visible red light — penetrates dust clouds far more effectively. Infrared light can pass through the dust that blocks visible light, revealing the "hidden" stellar nurseries where stars are actively forming. This is why infrared observatories like NASA's Spitzer Space Telescope (1995–2020) and the James Webb Space Telescope (launched 2021) have been revolutionary for studying star formation. They let us see inside dark nebulae to watch protostars being born.
+Imagine looking at a distant star through a dusty cloud. Shorter-wavelength blue light is scattered and absorbed more strongly than longer-wavelength red light. As a result, the star appears both dimmer and redder than it really is.
 
-::: {.callout-key-insight title="Key Insight"}
-Dust blocks visible light but is transparent to infrared radiation. This is why infrared observatories reveal the secrets of star formation: they let us see through the cosmic dust that hides newborn stars from visible-light telescopes.
-:::
+This creates a major observational problem: visible light can hide star-forming regions from us.
+
+Infrared light, however, passes through dusty regions **more effectively** than visible light. That is why infrared telescopes can reveal stars and structures hidden inside dusty nebulae.
 
 {{< fig carina-nebula-star-formation-hubble >}}
 
-::: {.callout-tip title="📺 Video: NASA on the Formation of Stars" collapse="true"}
+This gives us another Observable $\rightarrow$ Model $\rightarrow$ Inference chain:
+
+- **Observable:** a region looks dark in visible light but reveals stars in infrared
+- **Model:** dust blocks visible light much more strongly than infrared light
+- **Inference:** stars can be forming inside regions that look opaque in ordinary images
+
+::: {.callout-key-insight title="Takeaway"}
+Visible light does not show us everything. To study star formation, astronomers often need infrared observations to see through dusty clouds.
+:::
+
+::: {.callout-check-yourself title="Check Yourself"}
+Two identical stars lie at the same distance, but one is seen through a dust cloud.
+
+Before reading the answer, predict:
+
+1. Which star will look dimmer?
+2. Which star will look redder?
+3. Which effect is extinction, and which is reddening?
+
+::: {.callout-tip title="Solution" collapse="true"}
+The star behind the dust cloud will look dimmer and redder. The dimming is **extinction**. The color shift toward red is **reddening**.
+:::
+:::
+
+::: {.callout-tip title="Video: NASA on the Formation of Stars" collapse="true"}
 This short PBS LearningMedia / NASA resource is a strong visual companion to the infrared-star-formation discussion above.
 
 [Open the video in a new tab ↗](https://ca.pbslearningmedia.org/resource/npls13.sci.ess.eiu.planetevol/the-formation-of-stars-nasa-planetary-sciences/)
 :::
 
-::: {.callout-check-yourself title="Check Yourself"}
-Two identical stars lie at the same distance, but one is seen through a dust cloud. Compared with the unobscured star, what two changes would you expect in the dusty star's appearance? Which change is **extinction**, and which is **reddening**?
-
-::: {.callout-tip title="Solution" collapse="true"}
-The dusty star should look **dimmer** and **redder**. The dimming is **extinction**. The shift toward red is **reddening**.
-:::
-:::
-
 ## The Giant Molecular Cloud: The Birthplace of Stars
 
 ::: {.column-margin}
-**Giant molecular cloud (GMC)** — a massive accumulation of cold, dense molecular gas. Typical properties: mass $~10^{5}$ $M\odot,$ temperature ~10 K, diameter ~50–300 light-years. Sites of vigorous star formation.*
+**Giant molecular cloud (GMC)** — a massive accumulation of cold, dense molecular gas. These clouds are among the coldest places in the galaxy and are the main sites of star formation.*
 :::
 
-Not all regions of the ISM are equal. While some regions are hot and diffuse, others are remarkably cold and dense — so cold that hydrogen atoms bind together into molecular hydrogen $(H_{2})$ molecules. These are **giant molecular clouds**, the cosmic incubators where star formation occurs.
+Not all parts of the interstellar medium form stars. Star formation happens mainly in the coldest and densest clouds, called **giant molecular clouds**.
 
-A typical GMC is a colossus: perhaps 100 light-years in diameter, with a mass of 100,000 to a million solar masses, and a temperature of only 10 K — colder than the coldest places on Earth. Inside a GMC, gravity is strong enough that if support weakens locally, contraction can begin. But a GMC does not collapse all at once. Turbulent motions and magnetic fields provide partial support, creating a delicate tension between gravity and pressure. This equilibrium is fragile. If something disturbs the balance — if the cloud cools further, becomes denser, or is struck by a shock wave — the balance tips. Gravity wins. And when gravity wins, stars are born.
+A giant molecular cloud is a huge, cold cloud made mostly of molecular hydrogen, along with dust and other molecules. Typical temperatures are about $10\ \text{K}$, so these clouds are among the coldest places in the galaxy.
 
-### What Triggers Collapse? The Awakening of Giant Molecular Clouds
+Why are these clouds important? Because star formation requires conditions where gravity can begin to overpower the internal support of the gas.
 
-GMCs are scattered throughout the disk of the Milky Way. Most are not currently forming stars; they are in a state of dynamic equilibrium, held in balance by magnetic fields and turbulent pressure support. What tips them into collapse?
+A giant molecular cloud does not usually collapse all at once. Turbulent motions, magnetic effects, and internal pressure can help support the cloud for a time. But that balance can be disturbed.
 
-Several mechanisms can trigger star formation in a GMC:
+## What Triggers Collapse?
 
-1. **Shock waves from supernovae.** When a massive star dies in a supernova explosion, it sends out a shockwave that plows through the surrounding ISM. If that shockwave collides with a nearby GMC, it can compress the cloud and trigger gravitational collapse.
+Several processes can compress a giant molecular cloud and help push parts of it toward collapse:
 
-2. **Collision between clouds.** GMCs drift slowly through the galaxy. If two clouds collide, the impact can compress both, initiating collapse in each.
+- a shock wave from a nearby supernova
+- a collision with another cloud
+- compression as the cloud moves through a spiral arm
+- winds and radiation from nearby young massive stars
 
-3. **Compression by spiral density waves.** As we'll discuss in Module 3, the Milky Way's spiral arms are density waves that rotate slowly through the disk. As a GMC orbits through the galaxy and passes through a spiral arm, it experiences compression that can trigger star formation.
+The big idea is simple:
 
-4. **Stellar winds and radiation.** Hot, massive stars shed strong stellar winds and emit intense ultraviolet radiation. If a young star cluster forms in the heart of a GMC, the radiation and winds can compress surrounding gas, triggering a cascade of star formation in nearby regions.
+**Star formation often begins when a cloud is compressed enough that gravity starts to win locally.**
 
-::: {.callout-misconception title="Misconception Alert"}
-*"Stars form randomly in isolated clouds."* In reality, star formation is often triggered by external events — a supernova shockwave, a cloud collision, or encounter with a density wave. The ISM is dynamic, not static. Most GMCs form stars in response to some disturbance.
+::: {.callout-misconception title="Misconception Check"}
+Stars do **not** usually form because an isolated cloud just "decides" to collapse on its own. Star formation is often triggered by changes in the cloud's environment.
 :::
-
-<!-- FIGURE: Three panels showing star formation triggers:
-
-- Panel 1: Supernova shockwave hitting a molecular cloud; compressed gas glowing
-- Panel 2: Two molecular clouds colliding; region of overlap highlighted
-- Panel 3: A cloud passing through a spiral density wave; compression shown
-Each panel should show the cloud before and after compression. Label: "Star formation triggers: Shockwaves, collisions, and spiral compression" -->
 
 ## The Jeans Criterion: When Does Gravity Win?
 
-Here's a fundamental question: given a cloud of gas under pressure, when will gravity overcome that pressure and cause the cloud to collapse into a star?
+Now we can ask the key physics question of the lecture:
 
-The answer is a competition between two effects:
+**When will a cloud actually collapse?**
 
-- **Inward:** Gravity, pulling the cloud's mass toward the center.
-- **Outward:** Thermal pressure, the random motions of gas atoms pushing outward.
+A gas cloud is a competition between two effects:
 
-For intro astronomy, the most useful reasoning ladder is:
+- **gravity**, which pulls matter inward
+- **pressure**, which resists compression
 
-1. **Hotter gas** $\rightarrow$ particles move faster $\rightarrow$ stronger outward pressure.
-2. **Colder gas** $\rightarrow$ weaker pressure support.
-3. **Denser gas** $\rightarrow$ more mass packed into a region $\rightarrow$ stronger self-gravity there.
+For ASTR 101, the most important reasoning is:
 
-The **Jeans criterion** packages that tug-of-war into a threshold called the **Jeans mass**. For a given temperature and density, the Jeans mass is the minimum mass a region needs in order for gravity to beat thermal pressure. Collapse begins when:
+- hotter gas $\rightarrow$ faster particle motion $\rightarrow$ stronger pressure support
+- colder gas $\rightarrow$ weaker pressure support
+- denser gas $\rightarrow$ stronger self-gravity in that region
+
+Astronomers summarize this competition with the **Jeans criterion**.
+
+A region of gas will collapse if its mass is greater than the **Jeans mass**, the threshold above which gravity can overcome pressure.
 
 $$
-\text{Cloud mass} > \text{Jeans mass}
+\text{cloud mass} > \text{Jeans mass}
 $$
 
 ::: {.column-margin}
 **Jeans criterion** — a cloud of gas will undergo gravitational collapse if its mass exceeds the Jeans mass, the threshold set by the balance between gravity and thermal pressure. Conceptually: colder, denser regions are easier to collapse.*
 :::
 
-We do not need the full Jeans equation here. Conceptually, the key is that **the Jeans mass depends strongly on temperature and density**:
+You do **not** need the full equation here. What matters is the pattern:
 
-- **Temperature:** Colder clouds have a *lower* Jeans mass (lower pressure means gravity can overcome it more easily).
-- **Density:** Denser clouds have a *lower* Jeans mass (gravity is stronger, so it more easily overwhelms the pressure).
+- colder regions are easier to collapse
+- denser regions are easier to collapse
+- hotter regions are harder to collapse
 
-That is why a **lower Jeans mass means collapse is easier**: the region does not need as much mass for gravity to win. More clouds, and more subregions inside clouds, can cross the threshold.
-
-**Practical example:** A typical GMC with a mass of $~10^{5}$ $M\odot,$ a temperature of ~10 K, and a density of $~10^{3}$ particles/cm$^{3}$ has a Jeans mass of roughly 100–$1000 \M_\odot$. Since the cloud's mass exceeds its Jeans mass, the cloud is unstable against gravity and can begin to collapse.
-
-**Physics takeaway:** Collapse is easiest in regions that are cold, dense, and massive enough to lie above the local Jeans-mass threshold.
-
-As the cloud collapses, something important happens: **the collapsing cloud fragments.** The cloud breaks apart into smaller pieces, each with its own mass and temperature. Some fragments exceed their own Jeans mass and collapse further; others don't. The fragments that do collapse become the seeds of new stars.
+::: {.callout-summary title="Takeaway"}
+Star formation is most likely in regions that are cold, dense, and massive enough for gravity to overpower pressure.
+:::
 
 ::: {.callout-check-yourself title="Check Yourself"}
-At fixed cloud mass and density, what happens if the temperature drops? Does collapse become easier or harder?
+Suppose two clouds have the same mass, but one is colder.
+
+Before looking at the answer, predict:
+
+- In which cloud do particles move more slowly?
+- In which cloud is pressure weaker?
+- Which cloud should be easier to collapse?
 
 ::: {.callout-tip title="Solution" collapse="true"}
-Collapse becomes **easier**. Lower temperature means weaker thermal pressure, so the **Jeans mass decreases** and the same cloud is more likely to satisfy $\text{cloud mass} > \text{Jeans mass}$.
+The colder cloud has slower particle motion and weaker pressure support, so it is easier for gravity to win. That means the colder cloud is more likely to collapse.
 :::
 :::
 
 ::: {.callout-check-yourself title="Check Yourself"}
-At fixed temperature, what happens if the cloud becomes denser? Does the Jeans mass go up or down?
+Suppose two clouds have the same temperature, but one is denser.
+
+Before looking at the answer, predict:
+
+- In which cloud is gravity stronger within a given region?
+- Which cloud should be easier to collapse?
 
 ::: {.callout-tip title="Solution" collapse="true"}
-The **Jeans mass goes down**. Higher density strengthens self-gravity in that region, so a smaller amount of mass is enough to become unstable and collapse.
+The denser cloud has stronger self-gravity in the region, so it is easier for gravity to overcome pressure. That means the denser cloud is more likely to collapse.
 :::
 :::
 
 ### Fragmentation: From One Cloud to Many Stars
 
-The Jeans criterion also explains why GMCs do not collapse into a single giant star. As a cloud contracts, its density rises. That change matters because the **local Jeans mass can decrease** inside smaller subregions of the cloud. A clump that was previously too low-mass to collapse may later become unstable because the local threshold has dropped. In other words, collapse changes the local conditions, and those new conditions can make still smaller regions unstable.
+If a giant molecular cloud begins to collapse, it usually does **not** make just one star.
 
-Different regions within the original GMC therefore collapse at different rates, creating a hierarchical structure. The result is not one star, but a *star cluster* — dozens, hundreds, or even thousands of new stars born from the fragmentation of a single giant molecular cloud.
+As parts of the cloud contract, some subregions become denser than others. Those denser subregions can become unstable on their own and begin collapsing separately. In other words, one collapsing cloud can produce many collapsing clumps.
+
+This process is called **fragmentation**.
+
+That is why star formation usually produces a **cluster** of stars rather than a single giant star. A large cloud can break into many self-gravitating pieces, and each piece can form a star or a small multiple-star system.
+
+::: {.callout-summary title="Takeaway"}
+One cloud usually makes many stars because different dense parts of the cloud can collapse independently.
+:::
 
 ::: {.callout-check-yourself title="Check Yourself"}
 Why does a giant molecular cloud usually form a cluster of stars instead of one enormous star?
 
 ::: {.callout-tip title="Solution" collapse="true"}
-Because collapse raises the density in smaller parts of the cloud, the **local Jeans mass drops** and many subregions become unstable. The cloud breaks into many collapsing fragments, each of which can form a star or small multiple-star system.
+Because different dense regions inside the cloud can become unstable and collapse on their own. The cloud does not collapse as one perfectly uniform object.
 :::
 :::
 
-This explains one of the most striking features of star formation: young stars are almost never born in isolation. They emerge in clusters embedded within the remnants of the molecular cloud that birthed them.
+::: {.callout-misconception title="Misconception Check"}
+A cloud does not fragment because it is "breaking like glass." It fragments because different regions become dense enough to collapse independently under gravity.
+:::
 
-<!-- FIGURE: Fragmentation of a giant molecular cloud. Show:
+## Process Map: From Cloud to Star
 
-- Panel 1: Large, cool GMC (labeled "T = 10 K, M_Jeans ~ $100 \M_\odot$")
-- Panel 2: Cloud begins to collapse; Jeans mass drops as density increases (labeled "As density rises, T drops, M_Jeans decreases")
-- Panel 3: Fragmentation into progressively smaller clumps (show 5–6 fragments of different sizes)
-- Panel 4: Final result: star cluster emerging from dust (show ~20 stars of varying brightness)
-Caption: "Hierarchical fragmentation: A single GMC breaks into progressively smaller pieces, ultimately forming a star cluster." -->
+It can be easy to lose the thread in a long story like star formation, so here is the sequence in one place:
+
+1. A cold, dense region exists inside a giant molecular cloud.
+2. Compression or changing conditions push part of the cloud toward collapse.
+3. Gravity overcomes pressure in that region.
+4. The cloud fragments into multiple collapsing clumps.
+5. A protostar forms inside one collapsing clump.
+6. A disk forms around the young star.
+7. Accretion, winds, and jets shape the young system.
+8. Sustained hydrogen fusion begins.
+9. The star reaches the main sequence, while planets may continue forming in the disk.
+
+{{< fig star-planet-formation-sequence >}}
+
+::: {.callout-summary title="What to Notice"}
+This is not a random list of events. Each stage sets up the next one.
+:::
 
 ## From Protostar to the Main Sequence: The Journey to Stellar Adulthood
 
@@ -291,38 +385,41 @@ This dramatic difference in timescale arises because massive protostars have hig
 
 ### Stage 2: The T Tauri Phase — Accretion and Outflows
 
-Stage 2 is still an active growth phase: the young star is **accreting from a disk, magnetically active, and driving outflows**.
+After the protostar forms, the system is still young and active. Material continues to fall inward from the surrounding disk, while strong magnetic activity helps drive winds and narrow jets outward.
 
-As a protostar contracts, it develops some surprising behavior. Rather than a smooth infall of material, **accretion** becomes chaotic. Hot gas close to the protostar rises in convective currents; cooler infalling gas from above sinks inward. Magnetic fields wound up by the protostar's rotation channel some of the infalling material into powerful jets that blast outward perpendicular to the accretion disk.
+This stage is called the **T Tauri phase**.
 
-This stage of stellar birth is called the **T Tauri phase**, named after the prototype star T Tauri, a young star in Taurus roughly 400 light-years away. T Tauri stars are characterized by:
+T Tauri stars are young stars that have not fully settled onto the main sequence. They are often characterized by:
 
-- **Intense stellar winds:** flows of gas escaping the star at speeds of 100–300 km/s, clearing away some of the remaining infalling material.
-- **Accretion:** Material still falling inward from the disk, heating the stellar surface.
-- **Irregular variability:** The luminosity and spectrum changing unpredictably on timescales of days to months as clumps of material rain down onto the surface.
-- **Powerful jets:** Narrow, collimated streams of material squirting outward from the protostar, extending light-years into space.
+- ongoing accretion from a surrounding disk
+- strong stellar winds
+- irregular changes in brightness
+- narrow bipolar jets flowing away from the star
 
-T Tauri stars are visible in the infrared and in optical light (if not too deeply embedded). They represent a transition stage between "buried protostar" and "main-sequence star." The age of the T Tauri phase is typically a few million years — long enough for the core to keep heating while accretion and outflows continue.
+This tells us that star birth is not a quiet process. Even before long-term hydrogen fusion begins, the young system can be highly dynamic.
 
-::: {.callout-key-insight title="Key Insight"}
-T Tauri stars reveal that stellar birth is violent and chaotic. Powerful jets, accretion bursts, and intense winds characterize this phase. It is not a gentle descent to the main sequence, but a dynamic interplay of inflow and outflow, attraction and repulsion.
-:::
-
-::: {.callout-misconception title="Misconception Alert"}
-*"Protostars quietly contract under their own gravity until they ignite nuclear fusion."* In reality, the path to the main sequence is turbulent. Accretion disks are unstable, generating outbursts. Magnetic reconnection accelerates particles. Jets and winds can reach **hundreds of kilometers per second**. The process is not quiet; it is violent and fascinating.
+::: {.callout-misconception title="Misconception Check"}
+Protostars do **not** simply contract in silence until fusion begins. The path to the main sequence includes accretion, winds, jets, and changing brightness.
 :::
 
 {{< fig star-formation-disk-jet-artist >}}
 
+::: {.callout-summary title="How to Read This Figure"}
+This is an artist's concept showing the geometry of the system, not a direct visible-light photograph. It is useful because it helps us visualize a structure that is difficult to see directly in ordinary visible light.
+:::
+
 ### Stage 3: The Arrival at the Main Sequence
 
-Stage 3 begins when **sustained hydrogen fusion** in the core provides the long-term pressure support of a true main-sequence star.
+Eventually, the core of the forming star becomes hot enough for sustained hydrogen fusion to begin.
 
-After millions of years of contraction and chaotic accretion, the core temperature reaches approximately 10 million Kelvin. At this temperature, hydrogen nuclei (protons) have enough thermal energy to overcome their mutual electrical repulsion and fuse into helium. The **pp-chain** reaction (proton-proton fusion) ignites, releasing enormous energy.
+At that point, the object makes the transition from a protostar to a true **main-sequence star**. The star now has a long-term internal energy source: fusion in its core.
 
-A crucial transition occurs: for the first time, the star generates its own internal heat through fusion. The inward pull of gravity is now balanced by the outward pressure of the hot fusion-powered gas. The star reaches **hydrostatic equilibrium** — a state in which gravitational forces and pressure forces exactly balance. The star stops contracting (or contracts very slowly). It has reached the main sequence.
+The main idea is:
 
-The exact location on the main sequence depends on the star's mass. In our earlier lecture on the H-R diagram (L16), we learned that more massive stars burn hydrogen faster and are consequently more luminous. A $20 \M_\odot$ star reaches the main sequence hotter and brighter than a $1 \M_\odot$ star. Yet the fundamental condition is the same: hydrogen fusion in hydrostatic equilibrium.
+- before this stage, the object is powered mainly by gravitational contraction
+- after this stage, it is powered mainly by hydrogen fusion
+
+This is the transition that places the star on the main sequence.
 
 {{< fig hr-pre-main-sequence-tracks >}}
 
@@ -330,94 +427,140 @@ The exact location on the main sequence depends on the star's mass. In our earli
 Match each process to the correct stage of early stellar evolution:
 
 - gravitational contraction as the main power source
-- chaotic accretion plus outflows
+- accretion plus strong outflows
 - sustained hydrogen fusion
 
 ::: {.callout-tip title="Solution" collapse="true"}
 - **Stage 1:** gravitational contraction
-- **Stage 2:** chaotic accretion plus outflows
+- **Stage 2:** accretion plus strong outflows
 - **Stage 3:** sustained hydrogen fusion
 :::
 :::
 
+::: {.callout-misconception title="Misconception Check"}
+A protostar is **not** yet a normal hydrogen-fusing star. Its main energy source is gravitational contraction until sustained fusion begins.
+:::
+
 ### Protoplanetary Disks and the Formation of Planets
 
-Here is a remarkable twist in the star-formation story: **the same disk that accretes material onto the protostar can form planets.**
+The same collapse that forms a star also leaves behind a rotating disk of gas and dust around the young system.
 
-As the original cloud collapses and fragments, conservation of angular momentum — one of the fundamental laws of physics — ensures that the collapsing material doesn't fall straight inward. Instead, it swirls around the forming protostar, forming a flattened, rotating disk analogous to a kitchen sink drain (but vastly larger and hotter). This is the **protoplanetary disk** or **accretion disk**.
+This happens because the collapsing material usually has at least a small amount of rotation. As it contracts, that rotation becomes more important, so material does not fall straight inward from every direction. Instead, it settles into a flattened disk around the forming star.
 
-In this disk, dust grains collide and stick together, forming pebbles. Pebbles collide and stick, forming kilometer-sized planetesimals. Planetesimals collide and merge, forming planets. The process takes a few million to tens of millions of years — fast on astronomical timescales, but slow compared to human lifespans.
+That disk is called a **protoplanetary disk**.
 
-Why do disks form? The answer is angular momentum. If the original collapsing cloud had even the tiniest amount of rotation, conservation of angular momentum would cause it to spin faster and faster as it contracts, just as an ice skater spins faster when pulling their arms inward. The centrifugal effect of rotation must be balanced by inward gravity; this balance creates a disk.
+Inside the disk:
 
-Infrared observations reveal protoplanetary disks around young stars. ALMA (the Atacama Large Millimeter Array) and JWST have imaged these disks in remarkable detail, revealing gaps and rings — the signatures of planets carving channels through the disk as they form.
+- tiny dust grains collide and stick
+- larger particles grow into planetesimals
+- planetesimals merge into planets
+
+So stars and planets are part of the same story. The star forms at the center, and planets form from leftover material in the surrounding disk.
 
 {{< fig hl-tauri-protoplanetary-disk-alma >}}
 
 ::: {.column-margin}
-**Protoplanetary disk (accretion disk)** — a flat, rotating disk of gas and dust surrounding a young star or protostar. Site of planetary formation. Also called an accretion disk if material is actively accreting onto the star.*
+**Protoplanetary disk** — a flat, rotating disk of gas and dust surrounding a young star or protostar. It is the environment in which planets can form.*
 :::
 
-::: {.callout-deep-dive title="Deep Dive" collapse="true"}
-**Why Infrared? The Dust Temperature Problem**
+::: {.callout-key-insight title="Takeaway"}
+Planets do not form in a separate process disconnected from star formation. They form from the disk of gas and dust left around a young star.
+:::
 
-A protoplanetary disk around a young star can extend from near the stellar surface (at a few million Kelvin) to cool outer regions (at tens of Kelvin). The inner regions are hot enough to evaporate volatile compounds like water and methane — the so-called "snowline" separates the hot inner disk (where planets are rocky) from the cool outer disk (where planets can retain ices and become gas giants). The dust and gas emit radiation corresponding to their temperature: the hot inner disk shines in visible and near-infrared light, while the cool outer disk shines in far-infrared and millimeter wavelengths. Only infrared telescopes can see the full structure. Visible-light telescopes are mostly blind to disks because they are too cool to emit much visible light. This is why ALMA (a millimeter-wavelength observatory) and JWST (an infrared observatory) have revolutionized our understanding of planet formation.
+::: {.callout-misconception title="Misconception Check"}
+A protoplanetary disk is not just decorative leftover material. It is the environment in which planets can form.
 :::
 
 ## Observable Signatures: How We Know Star Formation Is Happening
 
-How do we actually observe star formation? The ISM, young protostars, and protoplanetary disks don't announce themselves in visible light. We must be detectives, using the tools of OMI: Observable $\rightarrow$ Model $\rightarrow$ Inference.
+A core question in astronomy is not just **what happens**, but **how we know**.
 
-### Observable: Infrared Emission and Molecular Lines
+Star formation is a perfect example because many of its earliest stages are hidden inside dusty clouds. Astronomers must combine observations with physical models to infer what is happening.
 
-The primary observable is **infrared thermal radiation** from warm dust heated by the protostar. A protostar embedded in an infalling envelope of dust and gas produces a characteristic infrared spectrum: cool dust far from the star (at 10–50 K) glowing in the far-infrared; warmer dust near the star (at 100–500 K) glowing in the near-infrared.
+### Observable
 
-Additionally, molecular gas in collapsing clouds emits in **molecular spectral lines** — the rotational and vibrational energy transitions of molecules like CO (carbon monoxide), $\mathrm{HCO^{+}}$ (formyl cation), and others. A radio telescope tuned to the 2.6 mm wavelength of CO's $1\rightarrow0$ rotational transition can map the density structure of a giant molecular cloud.
+We detect warm dust around young objects through **infrared emission**. We also detect gas in star-forming clouds through **molecular spectral lines**, especially from molecules such as carbon monoxide (CO).
 
-### Model: Theoretical Predictions
+### Model
 
-Once we observe the infrared spectrum and molecular lines, we build models. We assume a density structure for the collapsing cloud and calculate the expected radiation it would emit. We assume a Jeans criterion and predict whether a fragment will collapse. We simulate the Kelvin-Helmholtz contraction and predict the luminosity and temperature evolution of a protostar. These models tell us what we *should* observe if our understanding is correct.
+We use models of collapsing clouds, dusty envelopes, disks, and outflows to predict what kinds of light those systems should emit.
 
-### Inference: Properties of Protostars and Disks
+### Inference
 
-By comparing observations to models, we infer the properties of unseen objects. From the infrared spectrum, we infer the protostar's luminosity, the dust temperature at different distances from the star, and the rate at which material is accreting. From molecular lines, we infer the cloud's density and bulk motion. From the morphology (shape) of the infrared emission, we infer whether a disk or bipolar outflow is present, and therefore the object's approximate evolutionary stage.
+By comparing the observations to the models, astronomers can infer:
+
+- whether a protostar is present
+- whether a disk is present
+- whether gas is flowing inward or outward
+- how warm the dust is
+- which stage of star formation the object is in
 
 ::: {.callout-key-insight title="Observable -> Model -> Inference"}
-**Observable:** Infrared continuum emission (thermal radiation from dust at 100 K near protostar), CO molecular lines mapping the collapsing envelope.
-
-**Model:** Thermal radiation from dust heated by a forming star; line-emission models for a collapsing cloud, disk, and outflow.
-
-**Inference:** Protostar luminosity, dust temperature, accretion rate, cloud density and motion, presence of a disk or bipolar outflow, and approximate evolutionary stage.
+- **Observable:** infrared glow from dust, molecular line emission from gas
+- **Model:** collapsing cloud, protostar, disk, and outflow models
+- **Inference:** the physical properties and evolutionary stage of the hidden young system
 :::
 
-<!-- FIGURE: Observed spectrum of a young protostar (similar to VLA 1623 or IRAS 16253–2429). Show:
+::: {.callout-check-yourself title="Check Yourself"}
+Why can astronomers infer the presence of a forming star even when they cannot see the object directly in visible light?
 
-- X-axis: Wavelength from 0.1 microns (visible) to 1 millimeter (radio)
-- Y-axis: Log flux
-- Bright bump in infrared (1–100 microns) from warm dust
-- Fainter bump in millimeter from cool outer envelope
-- Molecular line peaks (CO, $H_{2}O)$ overlaid
-- Comparison curve: blackbody at 150 K (dust temperature)
-- Annotations: "Visible (no light)", "Infrared (dust emission)", "Millimeter (cool envelope)"
-Caption: "The spectrum of a young protostar. Visible light is blocked by dust; infrared reveals the hidden infant star." -->
+::: {.callout-tip title="Solution" collapse="true"}
+Because the hidden object still affects its environment. Warm dust emits infrared light, and surrounding gas produces spectral lines. Those observables can be matched to physical models of star formation.
+:::
+:::
 
 ## Summary
 
-The interstellar medium — gas and dust between the stars — is not an empty void but a dynamic reservoir of material from which new stars emerge. Giant molecular clouds, the coldest and densest regions of the ISM, undergo gravitational collapse when disturbed by external triggers or when they cool and densify enough for their mass to exceed the local Jeans mass. The collapse fragments the cloud, creating a stellar cluster.
+The interstellar medium is the thin gas and dust between the stars. It is not empty space; it is the raw material from which new stars and planets form.
 
-Individual fragments collapse under gravity, heating the core into a protostar. Through millions of years of Kelvin-Helmholtz contraction, the protostar is powered by gravitational contraction while its core temperature rises. A T Tauri phase of chaotic accretion and powerful jets follows. Finally, when the core reaches about 10 million Kelvin, hydrogen fusion ignites, hydrostatic equilibrium is established, and the star has reached the main sequence.
+Different nebulae look different because gas and dust interact with light in different ways. Emission nebulae glow because gas is energized by hot stars. Reflection nebulae shine by scattered starlight. Dark nebulae appear dark because dust blocks background visible light.
 
-The same collapse that births stars also births planets. The rotation of the infalling material creates a protoplanetary disk where dust grains collide and merge into planets. Modern infrared and millimeter observatories let us peer through the dust that hides these cosmic nurseries, revealing the violent births of stars and planetary systems.
+The coldest and densest clouds in the interstellar medium are giant molecular clouds. Star formation begins when parts of these clouds become unstable and gravity overcomes internal support. That is the basic idea behind the Jeans criterion.
+
+A collapsing cloud usually fragments into many dense clumps, so star formation often produces clusters rather than isolated stars. Individual collapsing clumps form protostars. As the young system evolves, accretion, winds, and jets appear, and a surrounding disk forms. When sustained hydrogen fusion begins in the core, the object becomes a main-sequence star.
+
+The surrounding disk can also form planets. In this way, the birth of stars and the birth of planetary systems are part of the same larger process.
+
+Modern astronomy studies star formation by combining observations and models. Infrared and radio observations let us detect hidden protostars, dusty disks, and molecular clouds even when visible light cannot penetrate the dust.
+
+::: {.callout-key-insight title="Big-Picture Takeaway"}
+Star formation is the process that connects the gas between the stars to the next generation of stars and planets. It is one of the main ways matter cycles through the galaxy.
+:::
 
 ## Self-Assessment Checklist
 
-- [ ] I can name the main components of the interstellar medium and describe their relative abundances.
-- [ ] I can distinguish between emission nebulae, reflection nebulae, and dark nebulae and explain what produces each.
-- [ ] I can explain why dust causes interstellar extinction and reddening, and why this makes infrared observations essential for studying star formation.
-- [ ] I can describe the Jeans criterion conceptually: when is a cloud massive and cold enough to collapse?
-- [ ] I can outline the stages of star formation: collapse, protostar, Kelvin-Helmholtz contraction, T Tauri phase, main sequence.
-- [ ] I can explain why protostars are surrounded by disks and how planets form in those disks.
-- [ ] I can apply the observable-model-inference framework to star formation observations.
+- [ ] I can explain why the interstellar medium is important for star formation.
+- [ ] I can distinguish between emission, reflection, and dark nebulae by describing how each interacts with light.
+- [ ] I can explain why dust makes visible-light observations incomplete and why infrared observations are often necessary.
+- [ ] I can describe the Jeans criterion in words: star formation begins when gravity overcomes internal support.
+- [ ] I can explain why one giant molecular cloud usually forms many stars instead of only one.
+- [ ] I can outline the sequence: cloud $\rightarrow$ protostar $\rightarrow$ active young star with disk and outflows $\rightarrow$ main-sequence star.
+- [ ] I can explain how protoplanetary disks connect star formation to planet formation.
+- [ ] I can use Observable $\rightarrow$ Model $\rightarrow$ Inference reasoning to explain how astronomers study hidden star-forming regions.
+
+## Misconception Review
+
+Before moving on, check these common mistakes:
+
+::: {.callout-misconception title="Misconception 1: Dark Regions in Space Are Empty"}
+No. Many dark regions are dense dust clouds blocking the light from stars behind them.
+:::
+
+::: {.callout-misconception title="Misconception 2: If We Cannot See Something in Visible Light, It Is Not There"}
+No. Dust can hide star-forming regions in visible light while infrared observations still reveal them.
+:::
+
+::: {.callout-misconception title="Misconception 3: Every Cloud Automatically Turns into a Star"}
+No. A cloud forms stars only when gravity can overcome internal support in part of the cloud.
+:::
+
+::: {.callout-misconception title="Misconception 4: One Cloud Makes One Star"}
+No. Giant molecular clouds usually fragment and form many stars.
+:::
+
+::: {.callout-misconception title="Misconception 5: Planets Form Separately from Stars"}
+No. Planets form from the disk of gas and dust left around a young star.
+:::
 
 ## Practice Problems
 
@@ -429,7 +572,7 @@ A distant star has an apparent magnitude of $m = 15$ mag as observed through a n
 
 **Problem 2: The Jeans Criterion (Conceptual)**
 
-Two giant molecular clouds have identical temperature (T = 10 K) but different masses: Cloud A has $M_A = 10^5$ $M\odot,$ and Cloud B has $M_B = 10^4$ $M\odot.$ Both have the same average density. Which cloud is more likely to undergo gravitational collapse? Why?
+Two giant molecular clouds have identical temperature ($T = 10\ \text{K}$) but different masses: Cloud A has $M_A = 10^5\,M_\odot$ and Cloud B has $M_B = 10^4\,M_\odot$. Both have the same average density. Which cloud is more likely to undergo gravitational collapse? Why?
 
 **Problem 3: Kelvin-Helmholtz Contraction Timescale**
 
@@ -443,22 +586,22 @@ The disk around a young star has an inner radius of 0.1 AU and an outer radius o
 
 **Problem 5: Observing a Hidden Protostar**
 
-A protostar is embedded in a dense dust cloud. The dust obscures the protostar from visible-light telescopes, but an infrared observer detects thermal emission peaking at a wavelength of $\lambda_{\rm peak} = 20$ micrometers. Using Wien's law, estimate the temperature of the dust surrounding the protostar.
+A protostar is embedded in a dense dust cloud. The dust obscures the protostar from visible-light telescopes, but an infrared observer detects thermal emission peaking at a wavelength of $\lambda_{\rm peak} = 20\,\mu\text{m}$. Using Wien's law, estimate the temperature of the dust surrounding the protostar.
 
-**Recall:** Wien's displacement law: $\lambda_{\rm peak} T = 2.898 \times 10^{-3}$ $m\cdot K$
+**Recall:** Wien's displacement law: $\lambda_{\rm peak} T = 2.898 \times 10^{-3}\,\mathrm{m\cdot K}$
 
 ### Challenge Problems
 
 **Challenge 1: Star Formation Rate in the Milky Way**
 
-The Milky Way is observed to form new stars at a rate of roughly 1–3 solar masses per year (averaged over time). If the total mass of all giant molecular clouds in the Milky Way is roughly $10^{9}$ $M\odot,$ and if all of this mass eventually forms stars, how long would it take for the ISM to be completely converted into stars?
+The Milky Way is observed to form new stars at a rate of roughly 1–3 solar masses per year (averaged over time). If the total mass of all giant molecular clouds in the Milky Way is roughly $10^{9}\,M_\odot$, and if all of this mass eventually forms stars, how long would it take for the ISM to be completely converted into stars?
 
 **Challenge 2: Comparing Protostars**
 
-Two protostars have the same luminosity ($L = 10 L_\odot$) but different masses:
+Two protostars have the same luminosity ($L = 10\,L_\odot$) but different masses:
 
-- Protostar A: $M_A = 1$ $M\odot$
-- Protostar B: $M_B = 10$ $M\odot$
+- Protostar A: $M_A = 1\,M_\odot$
+- Protostar B: $M_B = 10\,M_\odot$
 
 Without calculating anything, predict which protostar is older (closer to the main sequence). Explain your reasoning.
 

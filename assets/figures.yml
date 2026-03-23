@@ -1626,6 +1626,26 @@ figures:
     credit: "NASA/ESA/Hubble"
     module: 2
 
+  bubble-nebula-emission:
+    path: /assets/images/module-02/Bubble-Nebula-emission-nebula.webp
+    caption: "What to notice: an emission nebula can trace a shell or bubble rather than a fuzzy uniform cloud. The glowing rim marks gas being energized by hot stars, so the shape still tells you how starlight is affecting the surrounding gas."
+    alt: "Color image of the Bubble Nebula showing a large blue spherical shell of glowing gas surrounded by darker space and warmer orange clouds, with bright stars embedded nearby."
+    module: 2
+
+  m78-reflection-nebula:
+    path: /assets/images/module-02/M78_JaredBowens_reflection_nebula.webp
+    caption: "What to notice: the brightest parts of a reflection nebula appear as a blue glow around nearby stars, while the dark lanes show dust mixed through the region. The dust is scattering starlight rather than emitting strongly on its own."
+    alt: "Wide-field image of the reflection nebula M78 showing two bright blue glowing patches around embedded stars, crossed by dark dusty lanes against a star-filled background."
+    credit: "Jared Bowens"
+    module: 2
+
+  horsehead-nebula-dark:
+    path: /assets/images/module-02/horsehead-nebula-eso.webp
+    caption: "What to notice: a dark nebula stands out because it blocks the bright background behind it. The Horsehead's silhouette shows that the cloud is dense enough to absorb and scatter visible light rather than glow brightly itself."
+    alt: "Image of the Horsehead Nebula showing a dark horse-head-shaped dust cloud silhouetted against a bright pink glowing background, with stars scattered around it."
+    credit: "ESO"
+    module: 2
+
   carina-nebula-star-formation-hubble:
     path: /assets/images/module-02/carina-nebula-star-formation-hubble.jpg
     caption: "What to notice: visible light makes the dusty pillar look opaque, while infrared reveals stars and structure hidden inside and behind it. Same cloud, different wavelength, different information."
