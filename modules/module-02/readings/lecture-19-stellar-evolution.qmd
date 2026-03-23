@@ -375,15 +375,15 @@ The key lesson: the H-R diagram shows a star's *current state*, but determining 
 
 ## Common Misconceptions About Stellar Evolution
 
-::: {.callout-note title="Misconception Alert 1: "Stars Move Along the Main Sequence as They Age""}
+::: {.callout-note title="Misconception Alert 1: Stars Move Along the Main Sequence as They Age"}
 WRONG. The main sequence is a *locus of stars at different masses*, not an evolutionary track. As a star ages and exhausts its core hydrogen, it does not slowly drift along the main sequence. Instead, it *leaves* the main sequence abruptly and moves toward the red giant region. The Sun has been roughly constant in luminosity and temperature for 4.6 billion years — it will suddenly leave the main sequence once (in ~5.4 billion years) and never return.
 :::
 
-::: {.callout-note title="Misconception Alert 2: "Red Giants Are a Different Type of Star""}
+::: {.callout-note title="Misconception Alert 2: Red Giants Are a Different Type of Star"}
 WRONG. A red giant is *not* a different type; it is an *evolutionary phase*. The red giant you see tonight may have been a main-sequence A-type star a few million years ago (if it was massive) or billions of years ago (if it was low-mass). The red giant is the old, evolved version of what was once a normal hydrogen-burning star. Over time, all stars (except the lowest-mass ones) become red giants.
 :::
 
-::: {.callout-note title="Misconception Alert 3: "The Sun Will Never Become a Red Giant""}
+::: {.callout-note title="Misconception Alert 3: The Sun Will Never Become a Red Giant"}
 WRONG. In about 5 billion years, the Sun will exhaust its core hydrogen, collapse, ignite hydrogen shell burning, and expand to a red giant. It will grow to roughly 200 times its current radius — large enough to engulf the orbit of Venus and possibly Mercury. It is inevitable. The only question is the exact timeline.
 :::
 

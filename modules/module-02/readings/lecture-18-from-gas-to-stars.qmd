@@ -47,6 +47,10 @@ If you're short on time (about 20 minutes), focus on:
 Then return later for the observational signatures, summary, and challenge problems.
 :::
 
+{{< fig pillars-hubble-jwst >}}
+
+The Pillars of Creation are a perfect opening image for this lecture. In visible light, the pillars look like dark, opaque columns. In infrared, many hidden young stars appear. One famous region already shows the central lesson of star formation: what looks dark or empty in ordinary images can be an active stellar nursery when we observe it at the right wavelength.
+
 ## Why We Are Rewinding the Story
 
 So far in Module 2, we have mostly studied stars in the middle of their lives. We used the Sun to understand stellar structure, measured stellar properties from light, organized stars on the H-R diagram, and saw in binary systems that stellar mass is a powerful predictor of luminosity, lifetime, and fate.
@@ -69,6 +73,8 @@ By the end of the lecture, you should be able to explain:
 If you look at the Milky Way on a dark, clear night, you see bright bands of starlight crossed by dark lanes. Those dark patches might look like empty gaps, but they are not empty at all. They are clouds of gas and dust blocking the light from stars behind them.
 
 That matters because these clouds are not just debris. They are the places where new stars are born.
+
+{{< fig cosmic-cliffs-jwst >}}
 
 This gives us our first Observable $\rightarrow$ Model $\rightarrow$ Inference chain for the lecture:
 

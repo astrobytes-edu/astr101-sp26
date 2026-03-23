@@ -532,6 +532,12 @@ figures:
     credit: "Illustration: NASA, ESA, CSA"
     module: 1
 
+  cosmic-cliffs-jwst:
+    path: /assets/images/common/cosmic-cliffs-jwst.png
+    caption: "**What to notice:** the ridge is not a quiet landscape. It is a wall of gas and dust inside a star-forming region, and infrared imaging reveals dense structure plus many young stars that visible light would not show as clearly."
+    alt: "JWST image of the Cosmic Cliffs showing a long jagged ridge of glowing orange-brown gas and dust below a blue star-filled background, with many bright young stars embedded around the ridge."
+    module: 2
+
   # Spoiler 8: Crab Nebula multiwavelength
   crab-multiwavelength:
     path: /assets/images/module-01/crab-multiwavelength-chandra.jpg

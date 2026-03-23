@@ -108,9 +108,10 @@ Observable: regular radio pulses separated by precise time intervals; Doppler sh
 
 ::: {.callout-check-yourself title="Check Yourself"}
 If a pulsar has a period of 0.5 seconds, how many times per second does the neutron star rotate?
+:::
+
 ::: {.callout-tip title="Solution" collapse="true"}
 The period is 0.5 seconds, so the rotation frequency is 1 / 0.5 = **2 rotations per second**. This is one of the slower pulsars; millisecond pulsars can rotate 100–1000 times per second.
-:::
 :::
 
 **Why was the discovery of pulsars so important?** First, it provided the first direct evidence that neutron stars actually exist — no longer merely a theoretical prediction. Second, pulsars are extraordinarily stable timekeepers. The Crab Pulsar (remnant of a supernova observed in 1054 CE) rotates 30 times per second with remarkable steadiness. Over decades, its timing is as reliable as an atomic clock. Astronomers now use pulsars for:
@@ -194,12 +195,13 @@ A 10-solar-mass black hole fits within a sphere the size of a metropolitan area.
 ::: {.callout-check-yourself title="Check Yourself"}
 Calculate the Schwarzschild radius for the Sun (if it were somehow compressed into a black hole).
 Mass of the Sun: $M_{\odot} = 2 \times 10^{30}$ kg.
+:::
+
 ::: {.callout-tip title="Solution" collapse="true"}
 $$
 R_s = \frac{2 \times (6.67 \times 10^{-11}) \times (2 \times 10^{30})}{(3 \times 10^8)^2} \approx 3 \text{ km}
 $$
 The Sun, if collapsed to a black hole, would be about 3 km in radius — smaller than many cities but much larger than a neutron star would be. Of course, the Sun will never actually collapse to a black hole; it lacks the mass.
-:::
 :::
 
 The boundary at the Schwarzschild radius is called the **event horizon**. This is the most famous property of a black hole: *nothing escapes past the event horizon*. Not because the black hole "sucks" things in — gravity at a distance works just like gravity around any other object of the same mass — but because light itself cannot outrun the spacetime curvature.
@@ -259,6 +261,8 @@ No object other than a black hole could confine such enormous mass to so small a
 
 ::: {.callout-check-yourself title="Check Yourself"}
 S0-2 has an orbital period of 16 years and an average separation of about 1000 AU from Sgr A*. Using Kepler's third law ($P^2 = \frac{4\pi^2}{GM} a^3$, rearranged to solve for M), estimate the mass of Sgr A*.
+:::
+
 ::: {.callout-tip title="Solution" collapse="true"}
 Rearranging: $M = \frac{4\pi^2 a^3}{G P^2}$
 
@@ -271,7 +275,6 @@ $M \approx \frac{4 \pi^2 \times (1.5 \times 10^{13})^3}{6.67 \times 10^{-11} \ti
 $M \approx 4 \times 10^6 M_{\odot}$
 
 This matches the observed 4.1 million solar masses, confirming the black hole's presence.
-:::
 :::
 
 #### Evidence 3: The Event Horizon Telescope and the Shadow of a Black Hole
@@ -316,9 +319,10 @@ The gravitational wave from GW170817 revealed something profound: it arrived at 
 
 ::: {.callout-check-yourself title="Check Yourself"}
 GW150914 lasted about 0.2 seconds and swept from ~35 Hz to ~250 Hz. What does the increasing frequency tell you about what was happening to the two black holes?
+:::
+
 ::: {.callout-tip title="Solution" collapse="true"}
 As the frequency increases, the orbital period decreases. The two black holes were orbiting faster and faster — they were spiraling *inward* toward each other, losing energy by radiating gravitational waves. The cascade toward merger was accelerating. The final "ring-down" at ~250 Hz represents the moment of merger and the oscillations of the newly formed black hole as it settles into equilibrium.
-:::
 :::
 
 ## Cosmic Recycling: The Circle Closes
