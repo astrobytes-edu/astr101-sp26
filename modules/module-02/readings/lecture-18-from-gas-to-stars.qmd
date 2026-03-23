@@ -513,6 +513,25 @@ Inside the disk:
 
 So stars and planets are part of the same story. The star forms at the center, and planets form from leftover material in the surrounding disk.
 
+<div class="demo-embed" style="width: 100%; margin: 1rem 0;">
+  <iframe
+    src="https://www.youtube-nocookie.com/embed/M47bUtZG6mQ"
+    width="100%"
+    height="520px"
+    style="border: 1px solid #ddd; border-radius: 8px;"
+    loading="lazy"
+    title="Disk formation in a star cluster simulation"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen>
+  </iframe>
+  <p style="text-align: center; margin-top: 0.5rem; font-size: 0.875rem; color: #666;">
+    <a href="https://www.youtube.com/watch?v=M47bUtZG6mQ" target="_blank" style="color: #5dade2;">Open in new tab ↗</a>
+  </p>
+</div>
+
+This simulation follows the most massive star forming inside a $50\,M_\odot$ molecular cloud. What to notice: the disk is not a decorative add-on. It grows as the star accretes, can fragment, and can be reshaped by nearby stars in the crowded environment where star clusters form.  
+*Credit: Mike Grudic; reproduced from the classic Bate, Bonnell, and Bromm (2003) cluster-formation setup with the GIZMO code.*
+
 {{< fig hl-tauri-protoplanetary-disk-alma >}}
 
 ::: {.column-margin}
