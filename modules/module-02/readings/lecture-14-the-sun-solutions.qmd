@@ -125,14 +125,16 @@ Convert the consumption rate:
 
 $$600\ \text{million metric tons/s} = 6.0 \times 10^8\ \text{tons/s} = 6.0 \times 10^{11}\ \text{kg/s}$$
 
-If we literally use the stated hydrogen mass of $10^{51}\ \text{kg}$, then
+Now estimate the available fusion mass. If about $10\%$ of the Sun's total mass can participate in long-term core hydrogen fusion, then
 
-$$t = \frac{10^{51}}{6.0 \times 10^{11}} \approx 1.7 \times 10^{39}\ \text{s} \approx 5 \times 10^{31}\ \text{yr}$$
+$$M_{\text{available}} \sim 0.1 \times 2 \times 10^{30}\ \text{kg} = 2 \times 10^{29}\ \text{kg}$$
 
-That is physically impossible because it is far larger than the Sun's total mass. So the prompt almost certainly has a typo in the available hydrogen mass.
+Use the consumption rate to estimate the timescale:
 
-Using the intended astrophysical idea instead: only a fraction of the Sun's mass is in the core and available for fusion, which gives a lifetime of order
+$$t \sim \frac{2 \times 10^{29}\ \text{kg}}{6.0 \times 10^{11}\ \text{kg/s}} \approx 3.3 \times 10^{17}\ \text{s}$$
 
-$$10^{10}\ \text{yr}$$
+Convert seconds to years:
 
-**Answer:** Using the number as written gives an unphysical lifetime, so the physically meaningful conclusion is that the Sun's main-sequence lifetime is of order **10 billion years**.
+$$t \sim \frac{3.3 \times 10^{17}\ \text{s}}{3.15 \times 10^7\ \text{s/yr}} \approx 1.0 \times 10^{10}\ \text{yr}$$
+
+**Answer:** The Sun's main-sequence lifetime is of order **10 billion years**, which is why "billions of years" is the right timescale rather than millions or trillions.

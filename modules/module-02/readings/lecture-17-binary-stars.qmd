@@ -954,6 +954,8 @@ In Lecture 19, we will trace what happens as a main-sequence star ages. We will 
 
 ## Practice Problems
 
+*Lecture 17 solutions are currently instructor draft and are not posted on the student site.*
+
 ### Core Problems
 
 **Problem 1:** A visual binary has an orbital period of 20 years and a separation of 4 AU. What is the combined mass of the two stars in solar masses? Use $P$ in years and $a$ in AU.

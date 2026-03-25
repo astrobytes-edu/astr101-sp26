@@ -28,7 +28,7 @@ $$d = \frac{1}{4.51 \times 10^{-3}} = 221.7 \text{ pc}$$
 **Note:** This agrees with the parallax-based distance to Betelgeuse measured by Gaia.
 
 ### Problem 2: Inverse-Square Law
-**Restatement:** Two stars have the same luminosity (L = 100 L☉). Star A is at distance 10 pc, Star B is at distance 20 pc. What is the ratio of their apparent brightnesses?
+**Restatement:** Two stars have the same luminosity ($L = 100\,L_\odot$). Star A is at distance 10 pc, Star B is at distance 20 pc. What is the ratio of their apparent brightnesses?
 Using $b = \frac{L}{4\pi d^2}$:
 
 $$\frac{b_A}{b_B} = \frac{d_B^2}{d_A^2} = \frac{(20)^2}{(10)^2} = \frac{400}{100} = 4$$
@@ -54,7 +54,7 @@ $$L = 4\pi d^2 b = 4\pi \times (1.543 \times 10^{17})^2 \times 5 \times 10^{-12}
 
 $$L = 4\pi \times 2.38 \times 10^{34} \times 5 \times 10^{-12} = 1.49 \times 10^{24} \text{ W}$$
 
-**Convert to solar luminosities:** $L = \frac{1.49 \times 10^{24}}{3.8 \times 10^{26}} = 0.0039 \, L_☉$ (about 1/250 the Sun's luminosity)
+**Convert to solar luminosities:** $L = \frac{1.49 \times 10^{24}}{3.8 \times 10^{26}} = 0.0039 \, L_\odot$ (about 1/250 the Sun's luminosity)
 
 ### Problem 5: Distance Modulus
 **Restatement:** A Cepheid variable star has absolute magnitude $M = -3.5$ and apparent magnitude $m = 13.5$. Use the distance modulus ($m - M = 5 \log_{10}(d) - 5$) to find its distance in parsecs and kiloparsecs.
@@ -112,9 +112,9 @@ $$\frac{\delta d}{d} = 5\%$$
 **The distance is 100,000 parsecs with an uncertainty of ±5%, or ±5,000 pc.**
 
 ### Challenge 3: An Unseen Companion
-**Restatement:** A star has an apparent brightness $b = 1 \times 10^{-11}$ W/m² and distance 20 pc (measured via parallax). Its calculated luminosity is 2 L☉. But if you measure the star's spectrum carefully, you discover it is only about 1 L☉ bright. The discrepancy suggests the star has an unseen companion. What is the luminosity of the companion?
-This problem is really about bookkeeping. If the total luminosity inferred from the flux is 2 L☉, but the visible star contributes only 1 L☉, then the missing light must come from the unseen companion:
+**Restatement:** A star has an apparent brightness $b = 1 \times 10^{-11}$ W/m² and distance 20 pc (measured via parallax). Its calculated luminosity is $2\,L_\odot$. But if you measure the star's spectrum carefully, you discover it is only about $1\,L_\odot$ bright. The discrepancy suggests the star has an unseen companion. What is the luminosity of the companion?
+This problem is really about bookkeeping. If the total luminosity inferred from the flux is $2\,L_\odot$, but the visible star contributes only $1\,L_\odot$, then the missing light must come from the unseen companion:
 
-$$L_{\text{companion}} = L_{\text{total}} - L_{\text{primary}} = 2 - 1 = 1 \, L_☉$$
+$$L_{\text{companion}} = L_{\text{total}} - L_{\text{primary}} = 2 - 1 = 1 \, L_\odot$$
 
-**The companion has luminosity 1 L☉.** In other words, it is contributing the same amount of light as the visible star, so this would be an equal-luminosity binary.
+**The companion has luminosity $1\,L_\odot$.** In other words, it is contributing the same amount of light as the visible star, so this would be an equal-luminosity binary.

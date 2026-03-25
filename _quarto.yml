@@ -166,7 +166,7 @@ website:
   announcement:
     icon: info-circle
     dismissable: true
-    content: "**Homework 3** will be assigned Monday Feb 16 | Try the **[Cosmic Playground](https://astrobytes-edu.github.io/cosmic-playground/){target='_blank'}** interactive demos"
+    content: "**Homework 5** is now posted | Spring Break next week | HW due **Tuesday, April 7** and grade memo due **Friday, April 10**"
     type: primary
     position: below-navbar
   navbar:
@@ -314,7 +314,6 @@ website:
                 text: "Lecture 20: How Stars Die"
               - href: modules/module-02/readings/lecture-21-neutron-stars-black-holes.qmd
                 text: "Lecture 21: Neutron Stars and Black Holes"
-
       - section: "Module 3: Galaxies & Cosmology"
         href: modules/module-03/index.qmd
         contents: []
@@ -348,6 +347,8 @@ website:
             text: "Homework 3 (Due: Feb 24, 2026)"
           - href: homework/astr101-hw-04.qmd
             text: "Homework 4 (Due: Mar 17, 2026)"
+          - href: homework/astr101-hw-05.qmd
+            text: "Homework 5 (Due: Apr 7, 2026)"
 
       - section: "Demos"
         contents:

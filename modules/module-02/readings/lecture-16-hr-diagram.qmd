@@ -775,6 +775,8 @@ Use these five memory anchors:
 
 ## Practice Problems
 
+*Lecture 16 solutions are currently instructor draft and are not posted on the student site.*
+
 ### Core Problems (Start Here)
 
 **Problem 1: Spectral Type and Temperature**

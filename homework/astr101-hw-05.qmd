@@ -1,0 +1,111 @@
+---
+title: "ASTR 101 — Homework #5 (Lectures 14–17)"
+subtitle: "Practice problems from The Sun, Measuring the Stars, the H-R Diagram, and Binary Stars"
+author: "Dr. Anna Rosen"
+draft: false
+order: 5
+description: "Practice problems from Lectures 14–17 (The Sun, Measuring the Stars, the H-R Diagram, Binary Stars)"
+solutions_due: "Tuesday, April 7 at 11:59 pm PT (Canvas)"
+memo_due: "Friday, April 10 at 11:59 pm PT (Canvas)"
+pdf: true
+toc: true
+format:
+  html: default
+  pdf: default
+---
+
+{{< include ../_includes/hw-submission-instructions.qmd >}}
+
+{{< include ../_includes/ai-policy.qmd >}}
+
+***Topics:** solar structure and fusion • distance, brightness, and luminosity • H-R diagram interpretation • binary stars, stellar mass, and stellar lifetimes*
+
+**Estimated time:** ~4-6 hours
+
+**Posted:** Wednesday, March 25, 2026
+
+::: {.callout-note}
+For **Homework #5 only**, the homework problem set is assigned **Wednesday, March 25, 2026** and your worked solutions are due **Tuesday, April 7, 2026 at 11:59 pm PT** on Canvas. The self-assessment grade memo is due **Friday, April 10, 2026 at 11:59 pm PT** on Canvas. This longer window accounts for Spring Break.
+:::
+
+## Why this homework exists (read this)
+
+_This is not busy work._ This assignment is the first big checkpoint in Module 2. We begin with the Sun as a nearby physics lab, then move outward to the tools astronomers use to infer hidden stellar properties from light and orbital evidence.
+
+This assignment is designed to:
+
+- reinforce the Observable -> Model -> Inference chain for stars,
+- connect distance, brightness, luminosity, radius, and mass instead of treating them as separate topics,
+- and prepare you for the second half of Module 2, where stellar evolution starts to matter.
+
+---
+
+### What to do
+
+Complete the assigned Practice Problems from the end of the following lecture readings:
+
+- **Lecture 14:** Our Star: The Sun — [Practice Problems]({{< meta params.website-url >}}/modules/module-02/readings/lecture-14-the-sun.html#practice-problems)
+
+- **Lecture 15:** Measuring the Stars — [Practice Problems]({{< meta params.website-url >}}/modules/module-02/readings/lecture-15-measuring-the-stars.html#practice-problems)
+
+- **Lecture 16:** The H-R Diagram — [Practice Problems]({{< meta params.website-url >}}/modules/module-02/readings/lecture-16-hr-diagram.html#practice-problems)
+
+- **Lecture 17:** Binary Stars & Stellar Masses — [Practice Problems]({{< meta params.website-url >}}/modules/module-02/readings/lecture-17-binary-stars.html#practice-problems)
+
+Use the lecture pages for the full problem statements (located at the end of each lecture).
+
+**Important:** Do the assigned problems in the order listed below. The last four are designed as a synthesis cluster.
+
+**Notation:** `P` = core problem, `C` = challenge problem in the lecture reading.
+
+---
+
+## Problems to complete
+
+1. **Lecture 14:** `P4` — Radiative vs. Convective Energy Transport
+2. **Lecture 15:** `P5` — Distance Modulus
+3. **Lecture 15:** `P4` — Luminosity from Distance and Brightness
+4. **Lecture 15:** `C3` — An Unseen Companion
+5. **Lecture 16:** `P2` — Reading the H-R Diagram
+6. **Lecture 16:** `P4` — Giants vs. Dwarfs
+7. **Lecture 17:** `P1` — Combined Mass of a Visual Binary
+8. **Lecture 17:** `P5` — Infer Mass from Luminosity
+9. **Lecture 16:** `C2` — A Mysterious Star
+10. **Lecture 17:** `C4` — Why Binary-Star Masses Calibrate Single Stars
+
+---
+
+## Optional extra practice (not collected, strongly recommended)
+
+If you want additional review after the required set:
+
+- **Lecture 14:** `P2`, `P3`, `P5`
+- **Lecture 15:** `P1`, `P3`, `C1`
+- **Lecture 16:** `P3`, `P5`, `C1`
+- **Lecture 17:** `P4`, `P6`, `C2`
+
+---
+
+## How to earn full credit
+
+{{< include ../_includes/homework/how-to-earn-full-credit.qmd >}}
+
+For this homework, separate what is **directly observed** from what is **inferred** whenever you are reasoning from brightness, spectra, H-R diagram position, or binary motion. On any problem using logs, powers, or ratios, show the setup line before you press buttons on a calculator.
+
+## Collaboration and resources
+
+{{< include ../_includes/homework/collaboration-and-resources.qmd >}}
+
+## Pro tips (to save time and pain)
+
+- Do the required problems in order. They are scaffolded on purpose.
+- When you use a relation like distance modulus, Stefan-Boltzmann, or mass-luminosity, write the symbolic equation first and then substitute numbers.
+- On H-R diagram problems, ask four questions in order: What do we know about temperature? luminosity? radius? mass?
+- If a result feels extreme, do a quick sanity check before moving on: are the units right, and does the conclusion make sense for a **main-sequence** star or an **evolved** star?
+- The final two problems are meant to feel like a capstone. Take them slowly and explain your reasoning in sentences, not just equations.
+
+---
+
+## Help
+
+{{< include ../_includes/homework/help.qmd >}}
