@@ -6,7 +6,7 @@ draft: false
 order: 4
 description: "Practice problems from Lectures 11–12 (Solar System Architecture + Climates/Exoplanets)"
 solutions_due: "Tuesday, March 17 at 11:59 pm PT (Canvas)"
-memo_due: "Friday, March 20 at 11:59 pm PT (Canvas)"
+memo_due: "Friday, March 27 at 11:59 pm PT (Canvas)"
 pdf: true
 toc: true
 format:
@@ -25,7 +25,7 @@ format:
 **Posted:** Tuesday, March 10, 2026
 
 ::: {.callout-note}
-For **Homework #4 only**, the self-assessment grade memo is due **Friday, March 20, 2026 at 11:59 pm PT** on Canvas.
+For **Homework #4 only**, the self-assessment grade memo is assigned **Wednesday, March 25, 2026** and due **Friday, March 27, 2026 at 11:59 pm PT** on Canvas.
 :::
 
 ## Why this homework exists (read this)
