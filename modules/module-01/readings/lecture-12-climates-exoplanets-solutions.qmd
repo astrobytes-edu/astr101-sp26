@@ -4,7 +4,7 @@ subtitle: "Practice Problem Solutions"
 author: "Dr. Anna Rosen"
 date: "2026-02-25"
 description: "Solutions to the Lecture 12 practice problems."
-draft: true
+draft: false
 course: ASTR 101
 module: "1 - Foundations"
 ---
@@ -12,7 +12,7 @@ module: "1 - Foundations"
 ::: {.callout-note}
 **Student note:** These are model solutions written to show every step, units, and checks. I do not expect your work to be this detailed; shorter solutions are fine if your setup, units, and reasoning are correct.
 
-**HW note:** Homework uses only a subset of these problems; the full set is included for future study and self checking.
+**HW note:** Homework uses only a subset of these problems; the full set is included for future study and self-checking.
 :::
 
 ## Core Problems
@@ -229,7 +229,7 @@ $$T_2 = 255 \text{ K} \times 0.962 = 245 \text{ K}$$
 
 **What does the 4.2-day period mean?** This is a very short orbital period — the planet orbits extremely close to the star. Using Kepler's Third Law (qualitatively): short period → small orbital distance. At 4.2 days, the planet is roughly 0.05 AU from the star — about 10 stellar radii.
 
-This is a **"hot Jupiter"** — a gas giant in a very tight orbit. Hot Jupiters were the first exoplanets discovered by the RV method precisely because they produce large, short-period signals that are easy to detect.
+This is most consistent with a **hot Jupiter or other close-in giant planet** — a massive planet in a very tight orbit. Hot Jupiters were the first exoplanets discovered by the RV method precisely because they produce large, short-period signals that are easy to detect.
 
 **Sanity check:** The first exoplanet around a Sun-like star (51 Pegasi b, discovered 1995) had an RV amplitude of ~55 m/s and a period of 4.23 days — almost identical to our problem! This is consistent with a hot Jupiter. ✓
 
@@ -299,7 +299,7 @@ O₂ and CH₄ are **thermodynamically incompatible** — they react with each o
 
 $$\text{CH}_4 + 2\,\text{O}_2 \rightarrow \text{CO}_2 + 2\,\text{H}_2\text{O}$$
 
-In a lifeless atmosphere, this reaction would proceed to completion, consuming whichever gas is less abundant. Within a few million years (geologically fast), one or both would disappear.
+In a lifeless atmosphere, this reaction would proceed toward completion, consuming whichever gas is less abundant. On **geologically short timescales**, one or both gases would be driven down unless something kept replenishing them.
 
 **Why either gas alone is ambiguous:**
 
@@ -312,7 +312,7 @@ If both O₂ and CH₄ are present *simultaneously* in significant quantities, s
 
 The **simultaneous presence** of two reactive gases that should destroy each other is called **chemical disequilibrium**. It's a signature of an active biosphere maintaining the atmosphere far from its equilibrium state.
 
-**Sanity check:** Earth's atmosphere is wildly out of chemical equilibrium — O₂ at 21% and CH₄ at ~1.8 ppm coexist only because life continually replenishes both. Remove life, and Earth's atmosphere would relax to a CO₂/N₂ mixture within millions of years. ✓
+**Sanity check:** Earth's atmosphere is wildly out of chemical equilibrium — O₂ at 21% and CH₄ at ~1.8 ppm coexist only because life continually replenishes both. Remove the replenishing source, and that disequilibrium would not persist. ✓
 
 **What you should learn from this:** Biosignature detection isn't about finding a single "life molecule." It's about finding combinations that shouldn't coexist without an active source. Chemical disequilibrium — the simultaneous presence of reactive pairs like O₂ + CH₄ — is the most robust atmospheric biosignature concept.
 
@@ -320,11 +320,11 @@ The **simultaneous presence** of two reactive gases that should destroy each oth
 
 ### Problem 9: Venus's History
 
-**Restatement:** Describe how Venus transitioned from possibly habitable to a 735 K hellscape.
+**Restatement:** Describe how Venus transitioned from possibly habitable to its present extreme greenhouse state.
 
 **Answer:**
 
-**Step 1 — Early Venus may have been habitable.** Venus is only 28% closer to the Sun than Earth. Early in solar system history, the young Sun was ~30% dimmer than today (the "faint young Sun"). With less solar energy, Venus may have had surface temperatures cool enough for liquid water — possibly oceans.
+**Step 1 — Early Venus may have been habitable.** Venus is only 28% closer to the Sun than Earth. Early in solar system history, the young Sun was ~30% dimmer than today (the "faint young Sun"). With less solar energy, Venus may have had surface temperatures cool enough for liquid water — possibly even shallow oceans, though that part remains uncertain.
 
 **Step 2 — Water vapor feedback began.** As the Sun gradually brightened over billions of years, Venus's surface warmed. Warmer temperatures evaporated more water into the atmosphere. Water vapor is a powerful greenhouse gas, which raised temperatures further, evaporating more water — a **positive feedback loop**.
 
@@ -336,7 +336,7 @@ The **simultaneous presence** of two reactive gases that should destroy each oth
 
 **Step 6 — Present-day Venus.** Surface temperature: 735 K (462°C). Atmospheric pressure: 90 atm. No liquid water. Dense sulfuric acid clouds. The greenhouse warming ($\Delta T = 505$ K) is the most extreme in the solar system.
 
-**The sobering lesson:** Venus shows that a planet at a "reasonable" distance from its star can become uninhabitable through atmospheric feedback. The difference between Earth and Venus may be as simple as Earth being *just far enough* from the Sun to avoid the runaway threshold.
+**The sobering lesson:** Venus shows that a planet at a "reasonable" distance from its star can become uninhabitable through atmospheric feedback. Distance matters, but atmospheric evolution matters too: Earth stayed on the temperate side of the runaway threshold, while Venus appears to have crossed it.
 
 **What you should learn from this:** Planetary habitability is not just about distance from the star — it depends critically on atmospheric feedback loops. Small initial differences (Earth is 28% farther from the Sun than Venus) can lead to vastly different outcomes through the greenhouse effect.
 
@@ -386,8 +386,8 @@ $$\rho = 9.42 \times 10^4 \text{ kg/m}^3 \times \frac{1 \text{ g/cm}^3}{1000 \te
 | **This planet** | **94** |
 | Osmium (densest natural element) | 22.6 |
 
-**Interpretation:** This density (94 g/cm³) is absurdly high — more than 4× the density of osmium, the densest naturally occurring element. No known material has this density under normal conditions. This tells us that **this combination of mass and radius is physically unrealistic** for a planet made of ordinary matter.
+**Interpretation:** This density (94 g/cm³) is extraordinarily high — far above Earth, Neptune, iron, or any ordinary planet as a whole-body average. The safest conclusion is that **this would not be a normal planet made of familiar rock, metal, ice, or gas**.
 
-In reality, if you tried to pack Neptune's mass into Earth's radius, the material would need to be compressed to densities far beyond what normal matter supports (without extreme pressures like those inside neutron stars). This is why exoplanet scientists plot mass vs. radius diagrams — not all combinations are physically achievable.
+If both measurements were correct, the object would have to be made of extremely compressed heavy material. In practice, astronomers would first suspect that the mass or radius estimate is wrong, or that the object is not an ordinary planet at all. This is why exoplanet scientists use mass-radius diagrams: not every mass-and-radius combination is physically plausible.
 
-**What you should learn from this:** Density = mass/volume is a powerful diagnostic, but it must be physically plausible. Real planets follow mass-radius relationships that depend on composition. A density of 94 g/cm³ would require exotic physics — this exercise shows why astronomers care about getting *both* mass and radius right, and why mass-radius diagrams are essential for classifying exoplanets.
+**What you should learn from this:** Density = mass/volume is a powerful diagnostic, but it must be physically plausible. Real planets follow mass-radius relationships tied to composition. When a calculation gives an absurd density, that is not a failure — it is evidence that the "planet" is either unusual or that one of the measurements needs to be rechecked.

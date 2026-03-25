@@ -43,7 +43,7 @@ These 13 lecture readings are the primary required materials for Module 1.
 
 ## Solutions
 
-Solutions are posted for Lectures 1-9 practice problems. Homework uses a subset of these, and the full sets are available for extra study and self-checking.
+Solutions are posted for Lectures 1-12 practice problems. Homework uses a subset of these, and the full sets are available for extra study and self-checking.
 
 - [Lecture 1 Solutions: Spoiler Alerts]({{< meta params.website-url >}}/modules/module-01/readings/lecture-01-spoiler-alerts-solutions.html)
 - [Lecture 2 Solutions: Math Survival Kit]({{< meta params.website-url >}}/modules/module-01/readings/lecture-02-foundations-solutions.html)
@@ -54,6 +54,9 @@ Solutions are posted for Lectures 1-9 practice problems. Homework uses a subset 
 - [Lecture 7 Solutions: Light & the Electromagnetic Spectrum]({{< meta params.website-url >}}/modules/module-01/readings/lecture-07-light-em-spectrum-solutions.html)
 - [Lecture 8 Solutions: Blackbody Radiation]({{< meta params.website-url >}}/modules/module-01/readings/lecture-08-blackbody-radiation-solutions.html)
 - [Lecture 9 Solutions: Spectral Lines & Stellar Fingerprints]({{< meta params.website-url >}}/modules/module-01/readings/lecture-09-spectral-lines-solutions.html)
+- [Lecture 10 Solutions: Doppler Effect & Telescopes]({{< meta params.website-url >}}/modules/module-01/readings/lecture-10-doppler-telescopes-solutions.html)
+- [Lecture 11 Solutions: Solar System Architecture & Formation]({{< meta params.website-url >}}/modules/module-01/readings/lecture-11-solar-system-solutions.html)
+- [Lecture 12 Solutions: Planetary Climates & Finding Other Worlds]({{< meta params.website-url >}}/modules/module-01/readings/lecture-12-climates-exoplanets-solutions.html)
 
 ## Lecture Slides (Optional Archive: Lectures 1-9)
 

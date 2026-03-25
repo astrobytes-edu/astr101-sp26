@@ -55,10 +55,10 @@ project:
     - homework/astr101-hw-*.qmd
     - modules/index.qmd
     - modules/module-*/index.qmd
-    # Module 1: render slides through Lecture 9; lectures 10+ gated while finalized.
+    # Module 1: render slides through Lecture 9; render readings/solutions through Lecture 13.
     - modules/module-01/slides/lecture-0[1-9]-*-slides.qmd
     - modules/module-01/readings/lecture-0[1-9]*.qmd
-    - modules/module-01/readings/lecture-1[0-3]*-reading.qmd
+    - modules/module-01/readings/lecture-1[0-3]*.qmd
     # Other modules (render all)
     - modules/module-02/slides/*.qmd
     - modules/module-02/readings/*.qmd
@@ -268,6 +268,12 @@ website:
                 text: "Lecture 8 Solutions: Blackbody Radiation"
               - href: modules/module-01/readings/lecture-09-spectral-lines-solutions.qmd
                 text: "Lecture 9 Solutions: Spectral Lines & Stellar Fingerprints"
+              - href: modules/module-01/readings/lecture-10-doppler-telescopes-solutions.qmd
+                text: "Lecture 10 Solutions: Doppler Effect & Telescopes"
+              - href: modules/module-01/readings/lecture-11-solar-system-solutions.qmd
+                text: "Lecture 11 Solutions: Solar System Architecture & Formation"
+              - href: modules/module-01/readings/lecture-12-climates-exoplanets-solutions.qmd
+                text: "Lecture 12 Solutions: Planetary Climates & Finding Other Worlds"
           - section: "Module 1 Synthesis"
             contents:
               - href: modules/module-01/synthesis/index.qmd

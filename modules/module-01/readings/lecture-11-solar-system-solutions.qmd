@@ -4,7 +4,7 @@ subtitle: "Practice Problem Solutions"
 author: "Dr. Anna Rosen"
 date: "2026-02-23"
 description: "Solutions to the Lecture 11 practice problems."
-draft: true
+draft: false
 course: ASTR 101
 module: "1 - Foundations"
 ---
@@ -12,7 +12,7 @@ module: "1 - Foundations"
 ::: {.callout-note}
 **Student note:** These are model solutions written to show every step, units, and checks. I do not expect your work to be this detailed; shorter solutions are fine if your setup, units, and reasoning are correct.
 
-**HW note:** Homework uses only a subset of these problems; the full set is included for future study and self checking.
+**HW note:** Homework uses only a subset of these problems; the full set is included for future study and self-checking.
 :::
 
 ## Core Problems
@@ -168,16 +168,16 @@ To determine rocky vs. gaseous, you need the planet's **density**: $\rho = M / V
 
 This requires two measurements:
 
-**Measurement 1 — Mass:** Use **Newton's version of Kepler's Third Law** (L5–L6). If the exoplanet has a moon, observe the moon's orbital period $P$ and semi-major axis $a$, then calculate $M = 4\pi^2 a^3 / (GP^2)$. Alternatively, use the **Doppler effect** (L10): measure the wobble the planet induces in its host star's radial velocity.
+**Measurement 1 — Mass:** For exoplanets, the most practical Module 1 tool is the **Doppler effect** (L10): measure the wobble the planet induces in its host star's radial velocity. A larger wobble means a more massive planet. In principle, **Newton's version of Kepler's Third Law** (L5–L6) could also weigh a planet if you observed a moon orbiting it, but for most exoplanets the Doppler method is the realistic route.
 
-**Measurement 2 — Radius:** Use **transit observations** (brightness + timing, L3–L4 concepts). When the planet passes in front of its star, it blocks a fraction of the starlight. The fractional brightness dip tells you the planet's cross-sectional area, and hence its radius: $\Delta F / F \approx (R_{\text{planet}} / R_{\text{star}})^2$.
+**Measurement 2 — Radius:** Use **transit observations**. When the planet passes in front of its star, it blocks a fraction of the starlight. The fractional brightness dip tells you the planet's cross-sectional area, and hence its radius: $\Delta F / F \approx (R_{\text{planet}} / R_{\text{star}})^2$.
 
 **Decision rule:** Calculate the volume ($V = \frac{4}{3}\pi R^3$), then the density ($\rho = M/V$). Compare:
 
 - Rocky planets: $\rho \approx 3.9$–$5.5$ g/cm³ (like Earth at 5.5 g/cm³)
 - Gas giants: $\rho \approx 0.7$–$1.6$ g/cm³ (like Jupiter at 1.33 g/cm³)
 
-**What you should learn from this:** Classifying a planet requires combining multiple tools — no single measurement is enough. This is why astronomers build multi-tool "chains of inference."
+**What you should learn from this:** Classifying a planet requires combining multiple tools — no single measurement is enough. Transit gives radius, Doppler gives mass, and together they give density. This is why astronomers build multi-tool chains of inference.
 
 ---
 
@@ -250,7 +250,7 @@ This comes from setting $T_{\text{eq}} = 150$ K in the relation $T_{\text{eq}} \
 
 $$\frac{a_{\text{frost,star}}}{a_{\text{frost,Sun}}} = \left(\frac{L_{\text{star}}}{L_\odot}\right)^{1/2}$$
 
-If rocky planets extend to 5 AU, the frost line must be at or beyond 5 AU:
+If we assume that the outer edge of the rocky-planet region is set mainly by the frost line (rather than migration or later reshuffling), then the frost line must be at or beyond 5 AU:
 
 $$\frac{5 \text{ AU}}{3 \text{ AU}} = \left(\frac{L_{\text{star}}}{L_\odot}\right)^{1/2}$$
 
@@ -260,11 +260,11 @@ $$\frac{L_{\text{star}}}{L_\odot} = \left(\frac{5}{3}\right)^2 = \frac{25}{9} \a
 
 **Sanity check:** Rocky planets farther out means a hotter star — the luminosity is greater than $L_\odot$, which is consistent. A factor of 2.8 is not extreme — it corresponds to a star modestly hotter and more massive than the Sun. ✓
 
-**Answer:** The host star is roughly **2.8 times more luminous** than the Sun ($L_{\text{star}} \approx 2.8 L_\odot$).
+**Answer:** Under that assumption, the host star is roughly **2.8 times more luminous** than the Sun ($L_{\text{star}} \approx 2.8 L_\odot$).
 
-**Interpretation:** On the main sequence, this corresponds to an early F-type star (spectral type ~F2–F5), which is hotter and more massive than our G2 Sun. Different stars build different solar systems.
+**Interpretation:** The main physical takeaway is that the star would need to be **more luminous than the Sun**, so its disk would stay warm farther out. That pushes the frost line outward and gives rocky material more room before ices can condense.
 
-**What you should learn from this:** The frost line is a powerful diagnostic for the host star. By observing *where* rocky planets end and giants begin, you can infer the star's luminosity — another example of Observable → Model → Inference.
+**What you should learn from this:** The frost line is a powerful diagnostic for the host star. By observing *where* rocky planets end and giants begin, you can estimate the star's luminosity — as long as you remember the key assumption that the system has not been strongly rearranged by migration.
 
 ---
 
@@ -309,7 +309,7 @@ $$a = \frac{1 \text{ AU}}{0.346} = 2.89 \text{ AU} \approx 3 \text{ AU}$$
 
 **Unit check:** K/K = dimensionless ✓ ; AU / (dimensionless) = AU ✓
 
-**Sanity check:** The frost line should be between Mars (1.5 AU) and Jupiter (5.2 AU) — and 2.9 AU is exactly in that range. It's beyond the asteroid belt (2–4 AU) and just inside where Jupiter formed. ✓
+**Sanity check:** The frost line should be between Mars (1.5 AU) and Jupiter (5.2 AU) — and 2.9 AU is exactly in that range. It sits **within the asteroid-belt region** and well outside Mars, which is the usual rough picture for our solar system's early frost line. ✓
 
 **Answer:** $a_{\text{frost}} \approx 2.9$ AU $\approx 3$ AU.
 
@@ -392,29 +392,29 @@ $$T = \frac{2.9 \times 10^6 \text{ nm·K}}{20{,}000 \text{ nm}} = 145 \text{ K}$
 
 **Unit check:** $\frac{\text{nm·K}}{\text{nm}} = \text{K}$ ✓
 
-This is **very cold** — much colder than any rocky planet in our solar system.
+This is **very cold** — much more typical of an outer planet than of a warm inner rocky world.
 
 **Tool 2 — Spectroscopy (L9):** Analyze the atmospheric composition.
 
 - **Strong CH₄ (methane):** Methane is abundant in the atmospheres of Uranus and Neptune. It absorbs red light, which is why those planets appear blue-green.
-- **No CO₂:** Carbon dioxide is a hallmark of rocky planet atmospheres (Venus, Earth, Mars all have CO₂).
+- **No CO₂:** This means the spectrum does **not** look Venus-like or Mars-like. By itself, the absence of CO₂ is not a proof, but paired with the low temperature and strong methane it pushes us away from a warm rocky-world interpretation.
 
 **Comparison to known planets:**
 
-| Property | Mystery Planet | Rocky Inner Planets | Ice Giants |
-|----------|:-------------:|--------------------:|----------:|
-| Temperature | 145 K | 210–730 K | 59–76 K |
-| CH₄ | Strong | Trace or absent | Strong |
-| CO₂ | Absent | Dominant (Venus, Mars) | Absent |
+| Clue | Mystery Planet | Rocky Inner Planet? | Ice Giant? |
+|------|:--------------:|--------------------:|-----------:|
+| Temperature | 145 K | Too cold for a typical inner rocky world | Consistent with a cold outer planet |
+| CH₄ | Strong | Usually weak or absent | Common |
+| CO₂ | Absent | Not the usual Venus/Mars pattern | Often weak or absent |
 
 **Unit check:** All temperatures in K; all comparisons use the same units ✓
 
 **Sanity check:** Three independent clues all point the same direction — cold temperature, methane present, no CO₂. If the clues disagreed, we'd need more data. That they agree gives us high confidence. ✓
 
-**Answer:** This is almost certainly an **ice giant**, similar to Uranus or Neptune. Three independent lines of evidence converge:
+**Answer:** Between the two choices in the prompt, this is much more likely to be an **ice giant** than a rocky inner planet. Three clues point the same way:
 
 1. *Temperature* (145 K) — too cold for the inner solar system, consistent with a distant planet
 2. *Methane absorption* — characteristic of ice giant atmospheres
-3. *No CO₂* — rules out a rocky planet atmosphere
+3. *No CO₂* — not decisive by itself, but consistent with a methane-rich outer planet rather than a Venus-like or Mars-like rocky world
 
 **What you should learn from this:** This problem demonstrates the power of combining multiple Module 1 tools. Wien's Law gives temperature, spectroscopy gives composition, and together they constrain the planet's identity far better than either tool alone. Real astronomers use exactly this approach — stacking independent lines of evidence to build a case.

@@ -910,7 +910,7 @@ If the solar system formed from a rotating disk of gas and dust, which of these 
 
 ## Practice Problems
 
-*Lecture 11 solutions are currently instructor draft and are not posted on the student site.*
+*Solutions are available in the [Lecture 11 Solutions](lecture-11-solar-system-solutions.qmd).*
 
 ### Core (do these first)
 

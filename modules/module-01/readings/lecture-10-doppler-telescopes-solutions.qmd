@@ -4,7 +4,7 @@ subtitle: "Practice Problem Solutions"
 author: "Dr. Anna Rosen"
 date: "2026-02-23"
 description: "Solutions to the Lecture 10 practice problems."
-draft: true
+draft: false
 course: ASTR 101
 module: "1 - Foundations"
 ---
@@ -12,7 +12,7 @@ module: "1 - Foundations"
 ::: {.callout-note}
 **Student note:** These are model solutions written to show every step, units, and checks. I do not expect your work to be this detailed; shorter solutions are fine if your setup, units, and reasoning are correct.
 
-**HW note:** Homework uses only a subset of these problems; the full set is included for future study and self checking.
+**HW note:** Homework uses only a subset of these problems; the full set is included for future study and self-checking.
 :::
 
 ## Core Problems
@@ -253,7 +253,7 @@ When astronomers measure stellar orbital velocities using Doppler shifts of spec
 
 A flat rotation curve means that the enclosed mass $M(r)$ continues to grow linearly with $r$ even where there are few visible stars. Since $v = \sqrt{GM(r)/r}$ and $v \approx \text{constant}$, we need $M(r) \propto r$ — there must be a large amount of **unseen mass** extending far beyond the visible galaxy.
 
-This unseen mass is called **dark matter**. It doesn't emit, absorb, or reflect light (hence "dark"), but it exerts gravitational influence. Observations suggest that dark matter constitutes about 85% of all matter in the universe.
+This unseen mass is called **dark matter**. It doesn't emit, absorb, or reflect light (hence "dark"), but it exerts gravitational influence. Multiple lines of evidence suggest that most of the matter in the universe is in this dark form.
 
 **The chain of inference:**
 
@@ -261,7 +261,7 @@ This unseen mass is called **dark matter**. It doesn't emit, absorb, or reflect 
 - **Model:** Newton's gravity relates orbital velocity to enclosed mass
 - **Inference:** The mass distribution extends far beyond visible matter → dark matter exists
 
-**What you should learn from this:** Dark matter is not a speculation — it's an inference from Doppler measurements and Newtonian gravity. The same tools (Doppler effect + gravity) that weigh planets and stars also reveal the existence of an entirely new form of matter.
+**What you should learn from this:** Dark matter is not just an ad hoc guess — it is an inference from Doppler measurements and Newtonian gravity. The same tools (Doppler effect + gravity) that weigh planets and stars also reveal the need for an additional, unseen mass component in galaxies.
 
 ---
 
