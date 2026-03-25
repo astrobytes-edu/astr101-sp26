@@ -3,7 +3,7 @@ title: "Lecture 19: Stellar Evolution"
 subtitle: "Life on the Main Sequence and Beyond"
 author: "Dr. Anna Rosen"
 date: "2026-03-25"
-description: "A star's life is a battle between gravity pulling in and pressure pushing out. When the fuel runs out, gravity wins — and what happens next depends entirely on mass."
+description: "A star's life is a battle between gravity pulling in and pressure pushing out. When the fuel runs out, the balance changes, and what happens next depends primarily on mass."
 draft: false
 categories:
   - stellar-evolution
@@ -25,42 +25,62 @@ prerequisites: "The H-R diagram and its regions (Lecture 16), stellar spectral c
 ::: {.callout-key-insight #the-big-idea}
 ## The Big Idea
 
-A star's life is a battle between **gravity pulling inward** and **pressure pushing outward**. While the star has fuel to burn, this balance holds and the star is stable. But when the fuel runs out, gravity always wins — and the resulting explosion or collapse depends entirely on the star's mass. The H-R diagram is a map of stellar lives: stars move across it as they evolve, and their path is written by their initial mass and nothing else.
+A star's life is a long contest between **gravity pulling inward** and **pressure pushing outward**. While a star has fuel to burn in its core, that balance can hold and the star remains stable. But stars do not live forever. Once the core fuel changes, the balance changes too, and what happens next depends primarily on the star's mass.
+
+The H-R diagram is one of astronomy's most powerful life maps. It lets us connect what we observe - a star's temperature and luminosity - to a physical model of what is happening inside the star, and from that to an inference about the star's evolutionary stage.
+
+This reading traces the life story of stars from the main sequence into later phases such as red giants. The goal is not to memorize a long list of stages. The goal is to understand the physical logic: why stars are stable, why massive stars die sooner, and how astronomers infer stellar life stories from populations of stars rather than from watching one star age in real time.
 :::
 
 ---
 
-::: {.callout-roadmap title="How to Use This Reading" collapse="true"}
-This reading traces the life story of stars from birth on the main sequence through their eventual death. You'll learn the physics that keeps stars stable, why massive stars die young, and why the red giants you see in the sky are actually old, dying stars — not a different "type" of star.
+::: {.callout-roadmap title="How to Read This Page" collapse="false"}
+Best approach: read straight through once, pausing at each **Check Yourself** prompt to make a prediction before reading on.
 
-**Default expectation (best):** Read the whole page before lecture, pausing at each **Check Yourself** question.
-
-**If you're short on time (~25 min):** Focus on:
+If you are short on time, focus on:
 
 - The Big Idea above
-- Hydrostatic Equilibrium subsection (the physics engine)
-- Main-Sequence Lifetimes subsection (why massive stars die first)
-- Post-Main-Sequence Evolution: The Red Giant Phase subsection
-- Then return for Deep Dives and practice problems after lecture
-
-**Reference mode:** Use the Evolutionary Timescales table and the **Check Yourself** questions while working problems.
+- **Hydrostatic Equilibrium** - what keeps a star stable
+- **Why Massive Stars Die Faster Than Low-Mass Stars** - the key lifetime idea
+- **Post-Main-Sequence Evolution: The Red Giant Phase** - what changes when core hydrogen runs out
+- **Deep Dive: The H-R Diagram and Stellar Clusters** - how astronomers know stars evolve
 :::
 
 ---
 
 ## Stars Are Not Forever: The Opening Hook
 
-Imagine the night sky as a photograph taken today. Now imagine the same photograph taken 100 million years ago. Would it look the same?
+If you could compare the night sky today with the night sky 100 million years ago, most constellations would look familiar - but not identical. Some bright stars we see now would not yet have formed, and some bright stars from that older sky would already be gone.
 
-The answer is: mostly yes — but not entirely. A handful of bright stars visible tonight will have vanished. In their place, new stars will have taken their spots. Some of the brightest stars you see — Betelgeuse, Rigel, Antares — will be gone, transformed into something unrecognizable.
+That is one of the central ideas of stellar astronomy: stars are not permanent. They are born, they change, and they eventually die.
 
-This is not poetic exaggeration. It is literal astronomy.
+This raises a scientific question:
 
-A star like Betelgeuse, visible to the naked eye, is not stable. It will explode — perhaps next century, perhaps next year, perhaps tonight. When it does, it will briefly outshine all of the billions of stars in the Andromeda galaxy combined. Then it will fade to nothing.
+**How can astronomers know that stars evolve, when a human lifetime is far too short to watch most of a star's life directly?**
 
-Why do stars die? And why do some die young while others live for billions of years?
+The answer is not that we watch one star live out its entire life. We cannot. Instead, astronomers do three things:
 
-The answer lies in a concept you've encountered before: **hydrostatic equilibrium** — the balance between gravity and pressure. This is where we truly understand stellar physics.
+1. We observe **many stars at different stages** of life.
+2. We study **star clusters**, where stars formed at about the same time.
+3. We use **physics models** to connect those snapshots into a coherent story.
+
+::: {.callout-note title="Observable -> Model -> Inference"}
+- **Observable:** We see young stars, main-sequence stars, red giants, white dwarfs, and supernova remnants.
+- **Model:** Stellar structure and fusion physics tell us how stars change when core conditions change.
+- **Inference:** These different stellar populations are snapshots of stellar evolution at different stages.
+:::
+
+<!-- TODO FIGURE: "How Astronomers Know Stars Evolve"
+Type: Observable -> Model -> Inference schematic
+Show: stellar populations, H-R diagram, cluster turnoff, inference chain
+Goal: answer the opening epistemic question explicitly
+Generation: vector schematic / Figma / Illustrator / PowerPoint -->
+
+Betelgeuse is a good example. It is a red supergiant, which tells us it is already in a late evolutionary stage. That does **not** mean it is about to explode on a human timetable. It means that, compared with the Sun, its total lifetime is very short and its life is already far advanced.
+
+Why do some stars live for billions of years while others race through their lives and die young?
+
+The answer begins with the same idea that explains why stars can exist at all: **hydrostatic equilibrium**.
 
 ---
 
@@ -117,349 +137,385 @@ The reason main-sequence stars are stable is *not* that they are "at rest." They
 
 ## The Main Sequence: 90% of Stellar Life
 
-All the stars you see in the night sky that are listed in a typical astronomy textbook — Sirius, Vega, Altair, Procyon, and the Sun — are on the **main sequence**. They are all burning hydrogen in their cores. They are all in hydrostatic equilibrium. They are all stable.
+A star spends most of its life on the main sequence, steadily fusing hydrogen into helium in its core. While this lasts, the star remains in hydrostatic equilibrium and is structurally stable.
 
-But they will not stay that way forever. The clock began the moment they formed.
+But not all main-sequence stars live equally long.
 
 ### Why Massive Stars Die Faster Than Low-Mass Stars
 
-Here is one of the most profound asymmetries in the universe: **a star's lifetime depends entirely on its mass**.
+A star's main-sequence lifetime depends on two things:
 
-Recall the mass-luminosity relation from Lecture 17:
+- how much fuel it has
+- how fast it burns that fuel
 
-$$
-L \propto M^{3.5}
-$$
+A more massive star does have more hydrogen available. But it also has a much hotter, denser core, so fusion runs much faster. The increase in burning rate wins.
 
-(More precisely, $L \approx M^{3.5}$ for stars between about 0.5 and 50 solar masses.)
-
-A massive star is far more luminous than a low-mass star. Why? Because the higher mass creates higher core pressure and temperature, which *accelerates* nuclear fusion. The star burns through its fuel supply much faster.
-
-The main-sequence lifetime is the total amount of fuel divided by the rate of fuel consumption:
+For many ordinary main-sequence stars, a useful rule of thumb is
 
 $$
-t_{\text{MS}} \propto \frac{\text{Fuel supply}}{\text{Burning rate}} \propto \frac{M}{L} \propto \frac{M}{M^{3.5}} = M^{-2.5}
+L \propto M^{3.5},
 $$
 
-This is the **main-sequence lifetime formula**:
+where $L$ is luminosity and $M$ is mass, both measured relative to the Sun.
+
+If lifetime is roughly
 
 $$
-t_{\text{MS}} \propto M^{-2.5}
+t_{\rm MS} \propto \frac{\text{fuel supply}}{\text{burning rate}},
 $$
 
-More massive stars have *shorter* lifetimes. The dependence is dramatic.
-
-### Worked Example: Lifetimes at Different Masses
-
-The Sun (1 $M_\odot$) will burn hydrogen for approximately **10 billion years** (10 Gyr). We can use this as a reference to calculate lifetimes for other stars.
-
-For a star of mass $M$ (in solar masses):
+then
 
 $$
-t_{\text{MS}} = 10 \text{ Gyr} \times \left(\frac{M}{1 M_\odot}\right)^{-2.5}
+t_{\rm MS} \propto \frac{M}{L} \propto M^{-2.5}.
 $$
 
-Let's compute some lifetimes:
+Here $t_{\rm MS}$ is the time a star spends burning hydrogen in its core.
 
-- **0.5 $M_\odot$ star:** $t_{\text{MS}} = 10 \times (0.5)^{-2.5} = 10 \times 5.66 \approx \mathbf{57 \text{ Gyr}}$
-  - (This star is still on the main sequence today! It will live longer than the current age of the universe.)
+The most important idea is the trend: increasing mass makes the lifetime drop steeply.
 
-- **1 $M_\odot$ star (the Sun):** $t_{\text{MS}} = 10 \times (1)^{-2.5} = \mathbf{10 \text{ Gyr}}$
-  - The Sun is currently ~4.6 Gyr old, so it has ~5.4 Gyr remaining.
-
-- **5 $M_\odot$ star:** $t_{\text{MS}} = 10 \times (5)^{-2.5} = 10 \times 0.0358 \approx \mathbf{358 \text{ Myr}}$
-  - (358 million years — the age of dinosaurs!)
-
-- **10 $M_\odot$ star:** $t_{\text{MS}} = 10 \times (10)^{-2.5} = 10 \times 0.0100 \approx \mathbf{100 \text{ Myr}}$
-  - (100 million years — the extinction of the dinosaurs.)
-
-- **50 $M_\odot$ star:** $t_{\text{MS}} = 10 \times (50)^{-2.5} = 10 \times 0.000358 \approx \mathbf{3.6 \text{ Myr}}$
-  - (3.6 million years — the age of our species on Earth.)
-
-| Star Mass | Lifetime | Age of Universe When Star Dies | Human Analogy |
-|---|---|---|---|
-| 0.5 $M_\odot$ | 57 Gyr | Not yet | Still living (star outlives universe) |
-| 1 $M_\odot$ (Sun) | 10 Gyr | 24 Gyr | Mid-life |
-| 2 $M_\odot$ | 1.8 Gyr | 15 Gyr | Child |
-| 5 $M_\odot$ | 358 Myr | 14.2 Gyr | Newborn |
-| 10 $M_\odot$ | 100 Myr | 13.9 Gyr | Premature infant |
-| 50 $M_\odot$ | 3.6 Myr | 13.8 Gyr | Miscarriage |
-
-::: {.callout-misconception title="Misconception Alert"}
-**"Massive stars are bigger and have more fuel, so they should live longer."** — This seems logical, but it is WRONG. Yes, massive stars have more hydrogen. But they burn it so much faster that the effect is reversed. A 10 $M_\odot$ star consumes its fuel roughly **100,000 times faster** than the Sun, even though it has only ~1,000 times more fuel. The result: massive stars die young.
+::: {.callout-key-insight title="Takeaway"}
+More massive stars do have more fuel, but they burn through it much faster. That is why massive stars live **shorter**, not longer, lives.
 :::
 
-::: {.callout-check-yourself title="Check Yourself 1"}
-The star Betelgeuse has a mass of approximately 16 $M_\odot$. How long will it survive on the main sequence?
+::: {.callout-check-yourself title="Check Yourself"}
+A star with twice the Sun's mass has about twice as much fuel. Before calculating anything, would you expect it to live longer than the Sun, about the same time, or much less time? Explain your reasoning in one sentence.
 :::
 
-::: {.callout-tip title="Solution" collapse="true"}
-Using the lifetime formula:
+### Worked Example: Main-Sequence Lifetimes
+
+A common ASTR 101 estimate is
 
 $$
-t_{\text{MS}} = 10 \text{ Gyr} \times \left(\frac{16}{1}\right)^{-2.5} = 10 \times 16^{-2.5}
+t_{\rm MS} \approx 10\ \text{Gyr}\left(\frac{M}{M_\odot}\right)^{-2.5}.
 $$
 
-We calculate $16^{-2.5} = (2^4)^{-2.5} = 2^{-10} = \frac{1}{1024} \approx 0.000977$.
+This is a **rule of thumb**, not an exact law. It is most useful for seeing the trend.
+
+For a $0.5\,M_\odot$ star,
 
 $$
-t_{\text{MS}} = 10 \times 0.000977 \approx 0.01 \text{ Gyr} = 10 \text{ Myr}
+t_{\rm MS} \approx 10(0.5)^{-2.5}\ \text{Gyr} \approx 57\ \text{Gyr}.
 $$
 
-**Betelgeuse will live for only about 10 million years on the main sequence.** In fact, Betelgeuse is so massive that it has probably already *left* the main sequence (it appears to be a red supergiant now). This means Betelgeuse is in the final stages of its life and could explode as a supernova at any moment in the next million years or so (astronomically speaking, "any moment").
+This is longer than the current age of the universe, so such stars have not had time to die yet.
+
+For a $1\,M_\odot$ star,
+
+$$
+t_{\rm MS} \approx 10(1)^{-2.5}\ \text{Gyr} = 10\ \text{Gyr}.
+$$
+
+This is the Sun's approximate main-sequence lifetime.
+
+For a $2\,M_\odot$ star,
+
+$$
+t_{\rm MS} \approx 10(2)^{-2.5}\ \text{Gyr} \approx 1.8\ \text{Gyr}.
+$$
+
+For a $5\,M_\odot$ star,
+
+$$
+t_{\rm MS} \approx 10(5)^{-2.5}\ \text{Gyr} \approx 0.18\ \text{Gyr} = 180\ \text{Myr}.
+$$
+
+| Mass | Approximate main-sequence lifetime | What to notice |
+|---|---:|---|
+| $0.5\,M_\odot$ | $57$ Gyr | Longer than the universe has existed |
+| $1\,M_\odot$ | $10$ Gyr | Sun-like lifetime |
+| $2\,M_\odot$ | $1.8$ Gyr | A modest mass increase gives a much shorter life |
+| $5\,M_\odot$ | $180$ Myr | Massive stars live very briefly |
+
+::: {.callout-misconception title="Misconception Check"}
+"Massive stars have more fuel, so they should live longer."
+
+That sounds reasonable, but it is wrong. Massive stars do have more fuel, but their fusion rates rise even faster than their fuel supply does. They live **shorter**, not longer, lives.
 :::
+
+Betelgeuse likely began with a mass of roughly $15$ - $20\,M_\odot$. If we use $16\,M_\odot$ as a rough estimate,
+
+$$
+t_{\rm MS} \approx 10(16)^{-2.5}\ \text{Gyr} \approx 0.01\ \text{Gyr} = 10\ \text{Myr}.
+$$
+
+That does **not** mean Betelgeuse will explode this year or this century. It means that stars this massive live only about ten million years in total, which is extremely short compared with the Sun's lifetime.
 
 ---
 
 ### The Universe Is Frozen in Time for Low-Mass Stars
 
-Here is a remarkable cosmic fact: **the universe is only 13.8 billion years old**. This is much younger than the lifetime of a star with mass less than about **0.8 $M_\odot$**.
+The universe is about $13.8$ billion years old. That is younger than the main-sequence lifetime of stars less massive than about $0.8\,M_\odot$.
 
-This means: **All low-mass stars ever born are still alive and still on the main sequence.**
+So when astronomers look at very low-mass stars today, they are almost always seeing stars that are still in their long hydrogen-burning stage. In that sense, the universe is not old enough for us to have watched the full life cycle of the smallest true stars.
 
-There are no old, dead low-mass stars in the current universe. We cannot observe what happens after a 0.5 $M_\odot$ star leaves the main sequence because no such star has had time to evolve beyond that point.
+How, then, do astronomers study stellar evolution?
 
-We infer what happens to low-mass stars by:
-
-1. Observing low-mass stars that were born in clusters of different ages
-2. Using stellar evolution theory (detailed calculations of hydrostatic equilibrium and nuclear reactions)
-3. Watching the rare low-mass stars that *did* evolve, because they were born in the distant past (older clusters)
+- We compare star clusters of different ages.
+- We use physical models of stellar structure and fusion.
+- We observe stars at many different stages and connect them into a consistent evolutionary story.
 
 ---
 
 ## Post-Main-Sequence Evolution: The Red Giant Phase
 
-Now comes the great transformation. Imagine our Sun: it has been burning hydrogen in its core for 4.6 billion years, and it has another 5.4 billion years remaining. Then, one day, the last hydrogen atom in the core fuses. What happens?
+What changes first when a Sun-like star runs out of hydrogen in its core?
+
+Not the surface. The crucial change happens deep inside the star.
 
 ### The Core Exhaustion Crisis
 
-The moment the core hydrogen is depleted, fusion stops. The core is now pure helium ash — inert, cold (by stellar standards), and dead.
+During the main sequence, hydrogen fusion in the core supplies the energy that helps maintain the star's structure. When the core hydrogen is used up, the core is left mostly helium and no longer produces much energy by hydrogen fusion.
 
-But the surrounding layers of the star still contain hydrogen. And they are now much closer to the hot regions that can ignite fusion.
+Gravity then has the advantage.
 
-**Step 1: Contraction**
+1. **The core contracts.**  
+   Without core hydrogen fusion to support it, the central region shrinks.
 
-With no fusion to support it, the helium core cannot resist gravity. It contracts. Gravity wins, at least temporarily.
+2. **The contracting core heats up.**  
+   Gravitational contraction turns gravitational energy into thermal energy, raising the temperature of the core and the layer just outside it.
 
-**Step 2: Heating**
+3. **A hydrogen-burning shell turns on.**  
+   There is still hydrogen outside the helium core. As that layer is heated, hydrogen fusion begins in a thin shell around the core.
 
-The contraction compresses the helium core and heats it. More importantly, the gravitational collapse converts the potential energy of falling material into thermal energy — the core temperature *rises*.
+4. **The outer envelope expands.**  
+   The increased energy flowing outward causes the star's outer layers to swell dramatically.
 
-**Step 3: Shell Burning Ignites**
-
-The rising temperature ignites hydrogen fusion in a thin **shell** surrounding the inert helium core. This shell burning releases enormous amounts of energy — *more* energy than was released by core hydrogen burning.
-
-Why? In a large volume (the core), you had a steady, slow burn. In a thin shell, you have a more concentrated, violent burn. The total luminosity of the star *increases dramatically*.
+The result is a **red giant**: a star with a very large radius, a cooler surface, and a much higher luminosity than it had on the main sequence.
 
 {{< fig hydrogen-shell-burning-red-giant >}}
 
-**Step 4: Envelope Expansion**
-
-Here is the remarkable part: the *total luminosity of the star increases* (as we just noted), but what happens at the surface?
-
-The increased energy from shell burning has nowhere to go. It must flow outward. But because the star is no longer in hydrostatic equilibrium in its core, the outer layers respond by *expanding*. A massive, cool envelope surrounds the hot shell.
-
-As the star expands, its surface area increases enormously. Even though the *surface temperature drops* (because energy is spread over a larger area), the *total luminosity* (energy radiated per second) is so high that the star becomes extraordinarily bright.
-
-Using the Stefan-Boltzmann law ($L = 4\pi R^2 \sigma T^4$), a star can maintain or *increase* its luminosity even as its temperature drops, if its radius grows large enough.
-
-::: {.column-margin}
-**Red Giant:** An evolved star with a cool surface (spectral type K or M), enormous radius (typically 10–100 solar radii), and high luminosity (typically 100–10,000 $L_\odot$). Red giants are powered by hydrogen shell burning, not core fusion.
+::: {.callout-note title="What to Notice"}
+Once core hydrogen fusion ends, the main energy source shifts into a thin shell around an inert helium-rich core. That shell can produce enough outward energy flow to puff up the outer envelope and make the star a red giant.
 :::
 
-::: {.callout-key-insight title="Key Insight"}
-The counterintuitive physics: when a star exhausts its core fuel and the core *collapses*, the star's *envelope expands*. The star becomes larger, cooler at the surface (hence redder), but *more luminous*. This is the red giant transformation. It happens because a thin shell burning produces more power than a big core burning, even though the core had more fuel.
+The surface gets cooler while the interior problem gets hotter. A red giant is **not** a star whose whole interior cooled down. It is a star whose core contracted and heated up while its outer layers expanded and cooled.
+
+Using the Stefan-Boltzmann law,
+
+$$
+L = 4\pi R^2 \sigma T^4,
+$$
+
+we can see why red giants are bright. Even if the surface temperature $T$ drops, the luminosity $L$ can still rise if the radius $R$ becomes large enough.
+
+That is why red giants sit in the upper-right part of the H-R diagram: cool surface, but high luminosity.
+
+::: {.callout-check-yourself title="Check Yourself"}
+If two stars have the same surface temperature, but one is much more luminous, what must be true about its radius?
 :::
+
+::: {.callout-misconception title="Misconception Check"}
+A cooler surface does **not** mean the whole star cooled down. In a red giant, the core becomes hotter while the outer envelope expands and cools.
+:::
+
+<!-- TODO FIGURE: "Same Temperature, Different Luminosity Means Different Radius"
+Type: side-by-side schematic or mini H-R diagram
+Show: two equally cool stars with different radii/luminosities
+Goal: support Stefan-Boltzmann reasoning for red giants
+Generation: Python/Matplotlib or schematic diagram -->
+
+### Red Giant
+
+A red giant is an evolved star whose outer layers have expanded after core hydrogen is exhausted. In the first red-giant phase, the star is powered mainly by **hydrogen shell burning** around a helium-rich core.
 
 ### The Asymptotic Giant Branch (AGB)
 
-The story becomes more complex for low-mass stars. After a brief stable phase (the **horizontal branch**, where helium fusion occurs in the core), the star again exhausts its core fuel. The core collapses, the envelope expands, and the star becomes a *second* red giant — the **asymptotic giant branch (AGB)** phase.
+Later, after helium burning in the core is over, a low-mass star can expand again into a second giant phase called the **asymptotic giant branch**.
 
-AGB stars are among the most complex objects in astrophysics. Helium and hydrogen shells burn alternately in thin layers, producing violent outbursts of energy. The star pulsates, losing its outer layers in a slow wind. Eventually, the entire envelope is shed into space, and the exposed helium core is left behind: a white dwarf.
+In this stage, hydrogen and helium burn in shells around a compact core. The star becomes unstable, loses mass in a strong wind, and eventually sheds its outer layers. The hot core left behind will become a white dwarf.
 
 ---
 
 ### The H-R Diagram as an Evolutionary Map
 
-All of this — the contraction, the shell burning, the envelope expansion — is visible on the H-R diagram.
+The H-R diagram is not just a catalog of star types. It is also a map of stellar evolution.
 
-A main-sequence star moves off the main sequence to the *upper right* of the diagram: higher luminosity (it moved up), lower temperature (it moved right). This path — from main sequence toward the red giant branch — is called an **evolutionary track**.
+For a Sun-like star, the first major move after the main sequence is toward the upper right of the diagram:
 
-Different masses follow different tracks. Low-mass stars trace one path; massive stars trace another. But all evolutionary tracks share a common feature: they move off the main sequence and toward the upper right — toward the region of red giants and supergiants.
+- upward, because the star becomes more luminous
+- to the right, because the surface becomes cooler
+
+That motion corresponds to the red-giant phase.
+
+A star's full evolutionary track depends **primarily** on its mass. Composition and binary interactions can matter too, but for ASTR 101 the most important controlling idea is mass.
+
+::: {.callout-key-insight title="Takeaway"}
+The H-R diagram lets astronomers connect observable quantities - temperature and luminosity - to physical ideas such as radius, energy source, and evolutionary stage.
+:::
 
 {{< fig hr-post-main-sequence-tracks >}}
 
-::: {.callout-key-insight title="Observable -> Model -> Inference"}
-**Observable:** A star appears in the upper-right region of the H-R diagram: cool, but incredibly luminous.
-
-**Model:** Using the Stefan-Boltzmann law and stellar structure theory, we know that such a star must be very large. Using hydrostatic equilibrium, we can infer that the core is no longer fusing hydrogen; instead, a thin shell around an inert core is burning hydrogen.
-
-**Inference:** This star is a red giant — an evolved star in the late stages of its life. By measuring its luminosity and spectral type, we can estimate its mass (using evolutionary models). We can even estimate how much time remains before the star dies.
+::: {.callout-note title="What to Notice"}
+Once a Sun-like star exhausts core hydrogen, it does not slide gently along the main sequence. It leaves the main sequence, climbs the red giant branch, later ignites helium, and eventually reaches later giant stages.
 :::
+
+::: {.callout-key-insight title="Observable -> Model -> Inference"}
+**Observable:** A star appears cool but very luminous, so it sits in the upper-right part of the H-R diagram.
+
+**Model:** The Stefan-Boltzmann law says a cool star can be very luminous only if its radius is large. Stellar-structure models then tell us that such a large star is usually in an evolved stage with shell burning and an expanded envelope.
+
+**Inference:** The star is likely a red giant or supergiant, not a main-sequence star.
+:::
+
+### Figure Reading Check
+
+A star is plotted farther right than the Sun on an H-R diagram, but much higher up. What can you infer about its surface temperature, luminosity, and radius?
+
+What makes the H-R diagram so powerful is that it lets astronomers move from **what we measure** to **what we infer about the star's internal physics**.
 
 ---
 
 ## The Difference Between Low-Mass and High-Mass Post-Main-Sequence Evolution
 
-The fate of a star after the main sequence depends *entirely* on its mass. Let's distinguish the two pathways.
+Once stars leave the main sequence, mass still controls what happens next.
 
-### Low-Mass Stars (< ~2 $M_\odot$): The Degenerate Helium Core
+For ASTR 101, the most important idea is not every detailed stage name. The key point is that **low-mass and high-mass stars do not evolve in exactly the same way after the red-giant phase**.
 
-For a low-mass star, the core is so dense that **electron degeneracy pressure** becomes important. This is a quantum effect: electrons cannot be compressed arbitrarily; there is a limit set by the Pauli exclusion principle.
+### Low-Mass Stars ($\lesssim 2\,M_\odot$): Degeneracy and the Helium Flash
 
-In the horizontal branch phase, the helium core is so dense and so cool that it is *degenerate* — supported by degeneracy pressure, not thermal pressure. This has a dramatic consequence: when the shell-burning luminosity reaches a certain threshold, the core is heated suddenly to the temperature at which helium fusion begins.
+In low-mass red giants, the helium core becomes extremely dense. Under those conditions, **electron degeneracy pressure** becomes important. That means the core pressure is no longer controlled mainly by temperature.
 
-Because the core is degenerate, it *cannot expand* to cool off (expansion would require thermal pressure, which doesn't exist in a degenerate core). Instead, the fusion rate *skyrockets*. In a few seconds, the entire core ignites in a thermonuclear runaway: the **helium flash**.
+When the core becomes hot enough to start helium fusion, the first ignition can happen in a runaway event called the **helium flash**. After that, the star settles into a quieter phase of helium-core burning.
 
-The helium flash is violent but brief. It releases enormous energy, but the energy heats the core, raising its temperature and density. Within seconds, the degeneracy lifts, the core expands, and the fusion rate returns to normal.
+In star clusters, this helium-burning stage appears as the **horizontal branch** or, in many populations, the **red clump**.
 
-::: {.column-margin}
-**Helium Flash:** A thermonuclear runaway in the degenerate helium core of a low-mass red giant. The entire core ignites nearly simultaneously, releasing vast energy in seconds. It is violent but brief.
+::: {.callout-note title="Deep Idea"}
+In an ordinary gas, heating raises the pressure and causes expansion, which helps stabilize the gas. In a degenerate core, pressure depends much less on temperature, so the usual stabilizing feedback is weakened.
 :::
 
-::: {.callout-deep-dive title="Deep Dive: Why Does a Degenerate Core Behave Differently?" collapse="true"}
-In a normal (non-degenerate) core, if fusion heats the gas, the pressure increases, the gas expands, and the reaction rate slows down. This is self-limiting. But in a degenerate core, the pressure is *independent of temperature*. Heat the core, and the pressure does not change. The gas cannot expand. The reaction rate continues to accelerate. This is a runaway — the helium flash. Once the core heats enough to become non-degenerate, normal feedback takes over and the flash ends. This is why the helium flash, while violent, is ultimately self-limiting.
-:::
+Later, after the star sheds its outer layers, the hot compact core left behind becomes a **white dwarf**.
 
-After the helium flash, the low-mass star settles into stable helium-core burning on the **horizontal branch** — a brief (~1 Gyr for a solar-mass star) period of stable fusion.
+A white dwarf is not producing energy by core fusion. It is the leftover core of a low- or intermediate-mass star, packed into a size roughly comparable to Earth and supported by electron degeneracy pressure.
 
-Then the core helium is exhausted, and the star becomes an AGB star — a second red giant, with both hydrogen and helium shells burning. This phase lasts millions of years, during which the star loses its envelope into space through a slow wind.
+### High-Mass Stars ($\gtrsim 2\,M_\odot$): Smooth Helium Ignition
 
-### High-Mass Stars (> ~2 $M_\odot$): Smooth Ignition and Beyond
+In more massive stars, the core is not as strongly degenerate when helium ignition begins. Helium fusion therefore starts more smoothly.
 
-For a high-mass star, the core pressure is much higher. The helium core does *not* become degenerate. When the shell-burning temperature rises, helium fusion begins *smoothly* — no flash.
-
-The massive star settles into a phase of **helium-core burning**, just as the low-mass star does (after the flash). But then something remarkable happens: when the helium core is exhausted, the temperature in the collapsing core rises so high that it ignites *carbon* fusion. Then oxygen. Then silicon. Then iron.
-
-A massive star does not simply become a red giant and fade. It becomes a **supergiant** — a massive, bright star with a complex internal structure. Its core develops an **onion-shell structure**: iron core, silicon shell burning, oxygen-neon shell burning, and so on, up through the hydrogen-rich envelope.
-
-This is the preview for Lecture 20: the onion-shell structure and the fate of massive stars.
-
-{{< fig hr-massive-star-evolution >}}
-
----
+After helium is exhausted, a massive star can keep igniting heavier fuels in its core and shells. These stars become supergiants and eventually reach the dramatic end stages discussed in the next lecture.
 
 ## A Cosmic Perspective: Reading Lives in the H-R Diagram
 
-The H-R diagram is now complete as a map of stellar *lives*, not just a snapshot of current properties.
+You do not need to memorize every stage label on a first pass. The key point is that the H-R diagram lets us recognize several major evolutionary stages:
 
-Here is what we see:
+- **Main sequence:** stars burning hydrogen in their cores. Stars spend most of their lives here.
+- **Red giant branch:** stars with hydrogen shell burning around a helium-rich core.
+- **Horizontal branch / red clump:** stars burning helium in the core.
+- **Asymptotic giant branch:** late giant stars with shell burning and strong mass loss.
+- **White dwarfs:** compact stellar remnants left behind after low- and intermediate-mass stars shed their outer layers.
 
-- **Main sequence (diagonal band):** Stars of various masses, all burning hydrogen in their cores. A star spends ~90% of its total lifetime here. The more massive, the less time spent.
+::: {.callout-misconception title="Misconception Check"}
+The main sequence is **not** a path that a single star slowly slides along as it ages.
 
-- **Red giant branch (upper right):** Stars that have exhausted core hydrogen and are burning hydrogen in a shell. These are intermediate-age to old stars (depending on mass). A star spends ~10% of its total lifetime here.
-
-- **Horizontal branch (a step to the left):** Low-mass stars burning helium in the core (briefly). Only low-mass stars reach this phase because only their cores are degenerate enough to trigger the helium flash.
-
-- **Asymptotic giant branch (upper right, above the red giant branch):** Low-mass stars in a second red giant phase, with both hydrogen and helium shells burning. These are the oldest, longest-lived stars. AGB stars are visible in some clusters as the "tip" of the red giant branch.
-
-- **White dwarfs (lower left):** Dead stellar cores, the final remnants after the star has shed its envelope. These are incredibly old, evolved stars.
-
-The path a star traces on the H-R diagram is its **evolutionary track** — its personal history, written by hydrostatic equilibrium and nuclear physics.
-
-::: {.callout-check-yourself title="Check Yourself 2"}
-You observe two red giants on the H-R diagram. Star A is more luminous and hotter than Star B. Which star is more massive? Which star is closer to its death?
+It is a band containing stars of many different masses that are all in the same basic phase: hydrogen fusion in the core.
 :::
 
-::: {.callout-tip title="Solution" collapse="true"}
-This is subtle.
+## Worked Example: Interpreting Two Red Giants
 
-**Which is more massive?** Without additional information, you *cannot tell from the H-R diagram alone*. Both could be massive stars (e.g., 5 $M_\odot$ and 10 $M_\odot$, both in the giant phase) or both could be low-mass stars (e.g., 0.5 $M_\odot$ and 1 $M_\odot$, both in the giant phase). However, *if you assume they are at the same evolutionary stage* (e.g., both on the red giant branch at the same point in their evolution), then Star A is likely more massive because it has a larger core mass (higher core pressure and temperature produce higher luminosity).
+You observe two stars in the upper-right part of the H-R diagram. Star A is more luminous than Star B. Both are clearly cooler than the Sun.
 
-**Which is closer to death?** This depends on mass. If both are low-mass, then Star B is closer to death (it has burned more fuel to reach the giant phase). If both are massive, then both are close to death (high-mass stars have short total lifetimes). In general, *lower-mass stars have longer total lifetimes*, so they die later. But once on the red giant branch, both are in the final phases of life.
+What can you say with confidence?
 
-The key lesson: the H-R diagram shows a star's *current state*, but determining its exact age and remaining lifetime requires additional information (spectrum, cluster age, stellar models).
-:::
+**What you can infer:** Both stars are large, evolved stars. Their cool temperatures and high luminosities place them in the giant region, so neither is an ordinary main-sequence star.
+
+**What you cannot infer from the H-R diagram alone:** Their exact masses or exact ages. Different stars can pass through the giant region at different times in their lives, and stars of different masses can overlap there.
+
+**Best conclusion for ASTR 101:** The H-R diagram is powerful, but not all questions can be answered from temperature and luminosity alone. Sometimes astronomers need more information, such as spectra, cluster membership, or stellar models.
 
 ---
 
 ## Common Misconceptions About Stellar Evolution
 
-::: {.callout-note title="Misconception Alert 1: Stars Move Along the Main Sequence as They Age"}
-WRONG. The main sequence is a *locus of stars at different masses*, not an evolutionary track. As a star ages and exhausts its core hydrogen, it does not slowly drift along the main sequence. Instead, it *leaves* the main sequence abruptly and moves toward the red giant region. The Sun has been roughly constant in luminosity and temperature for 4.6 billion years — it will suddenly leave the main sequence once (in ~5.4 billion years) and never return.
+::: {.callout-misconception title="Misconception Alert 1: Stars move along the main sequence as they age"}
+**Wrong.** The main sequence is a band of stars with different masses that are all in the same basic phase: hydrogen fusion in the core. A star does not slowly crawl along the main sequence as it ages. Once core hydrogen is exhausted, it leaves the main sequence and moves toward later evolutionary stages.
 :::
 
-::: {.callout-note title="Misconception Alert 2: Red Giants Are a Different Type of Star"}
-WRONG. A red giant is *not* a different type; it is an *evolutionary phase*. The red giant you see tonight may have been a main-sequence A-type star a few million years ago (if it was massive) or billions of years ago (if it was low-mass). The red giant is the old, evolved version of what was once a normal hydrogen-burning star. Over time, all stars (except the lowest-mass ones) become red giants.
+::: {.callout-misconception title="Misconception Alert 2: Red giants are a different type of star"}
+**Wrong.** A red giant is not a completely different category of object. It is an evolutionary phase. A star that is a red giant today was once a normal main-sequence star. For example, a massive red giant or supergiant was once a hot blue O- or B-type main-sequence star. More generally, all stars massive enough, given enough time, pass through giant phases.
 :::
 
-::: {.callout-note title="Misconception Alert 3: The Sun Will Never Become a Red Giant"}
-WRONG. In about 5 billion years, the Sun will exhaust its core hydrogen, collapse, ignite hydrogen shell burning, and expand to a red giant. It will grow to roughly 200 times its current radius — large enough to engulf the orbit of Venus and possibly Mercury. It is inevitable. The only question is the exact timeline.
+::: {.callout-misconception title="Misconception Alert 3: Cooler stars must be smaller"}
+**Wrong.** Temperature alone does not determine luminosity. A star can be cool but still very luminous if its radius is large enough. That is why red giants are cool at the surface but still bright.
+:::
+
+::: {.callout-misconception title="Misconception Alert 4: The Sun will never become a red giant"}
+**Wrong.** In about 5 billion years, the Sun will exhaust its core hydrogen, develop hydrogen shell burning, and expand into a red giant. It may grow to roughly $200\,R_\odot$, large enough to engulf Mercury and perhaps Venus, depending on the details of orbital evolution and solar mass loss.
 :::
 
 ---
 
 ## Deep Dive: The H-R Diagram and Stellar Clusters
 
-One of the most powerful applications of evolutionary tracks is the study of **star clusters** — groups of stars that formed together and are the same age.
+Star clusters are especially valuable because their stars formed at about the same time and at about the same distance from us. That means differences along the cluster H-R diagram mostly reflect **mass**, not distance or age differences from star to star.
 
-If all stars in a cluster formed at the same time, then the *most massive* stars will have exhausted their hydrogen and moved off the main sequence, while the *least massive* stars will still be on the main sequence.
+As a cluster ages, its most massive stars leave the main sequence first. The point where stars are just beginning to peel away is called the **main-sequence turnoff**.
 
-By observing where the main sequence *ends* in a cluster (the **turnoff point**), astronomers can determine the cluster's age. More massive stars leave the main sequence earlier, so the location of the turnoff is a clock.
+This gives astronomers a clock:
 
-For example:
+- In a **young** cluster, the turnoff is high and blue because even massive hot stars are still on the main sequence.
+- In an **older** cluster, the turnoff is lower and redder because only less-massive stars remain on the main sequence.
 
-- **Young clusters** (a few million years old): Even 10 $M_\odot$ stars are still on the main sequence. The turnoff is at high luminosity and high temperature (blue stars).
+So the turnoff tells us the lifetime of the most massive stars that are still in the hydrogen-burning phase, which in turn tells us the cluster age.
 
-- **Intermediate clusters** (a few billion years old): Low-mass stars are becoming red giants. The turnoff is at lower luminosity and lower temperature (yellow or orange stars).
+::: {.callout-key-insight title="Observable -> Model -> Inference"}
+**Observable:** The cluster H-R diagram shows where the main sequence ends.
 
-- **Old clusters** (>10 billion years old): Only very low-mass stars remain on the main sequence. The turnoff is at very low luminosity and low temperature (red stars).
+**Model:** More-massive stars have shorter main-sequence lifetimes.
 
-This technique, called **isochrone fitting**, is essential for understanding the ages of globular clusters and the age of the Milky Way itself.
-
-::: {.callout-roadmap title="📺 Video: Building an H-R Diagram from Omega Centauri" collapse="false"}
-This short Hubble visualization is worth watching here because it shows the exact move we make in this section: start with a star cluster image, sort stars by color and brightness, and reveal the H-R diagram hidden inside the picture.
-
-<div class="demo-embed" style="width: 100%; margin: 1rem 0;">
-  <iframe
-    src="https://www.youtube-nocookie.com/embed/1JPDN8qoRjs"
-    width="100%"
-    height="520px"
-    style="border: 1px solid #ddd; border-radius: 8px;"
-    loading="lazy"
-    title="Constructing the Hertzsprung-Russell Diagram for Globular Star Cluster Omega Centauri"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-    allowfullscreen>
-  </iframe>
-  <p style="text-align: center; margin-top: 0.5rem; font-size: 0.875rem; color: #666;">
-    <a href="https://www.youtube.com/watch?v=1JPDN8qoRjs" target="_blank" style="color: #5dade2;">Open in new tab ↗</a>
-  </p>
-</div>
-
-What to notice: the H-R diagram is not abstract bookkeeping. It is a compressed picture of a stellar population, and in a globular cluster the turnoff point immediately tells us that the brightest blue stars have already evolved away.
+**Inference:** The turnoff mass gives the cluster's age.
 :::
+
+This short Hubble visualization is worth watching because it shows the exact move astronomers make in this section: start with a star-cluster image, sort stars by color and brightness, and reveal the H-R diagram hidden inside the picture.
+
+[Open in new tab ↗](https://www.youtube.com/watch?v=1JPDN8qoRjs)
+
+::: {.callout-note title="What to Notice"}
+The H-R diagram is not abstract bookkeeping. It is a compressed picture of a stellar population, and in a globular cluster the turnoff point tells us that the brightest blue main-sequence stars have already evolved away.
+:::
+
+<!-- TODO FIGURE: "Cluster Turnoff as a Clock"
+Type: side-by-side H-R diagrams for young vs old clusters
+Show: turnoff moving downward/rightward with age
+Goal: make age inference visually obvious
+Generation: Python/Matplotlib schematic -->
 
 ---
 
-## Worked Example: Putting It Together
+### Worked Example: Estimating a Cluster Age
 
-**Scenario:** You observe a star cluster with a Hertzsprung-Russell diagram. The main sequence turnoff (the point where stars begin to leave the main sequence) occurs at spectral type K (temperature ~4,500 K, luminosity ~0.3 $L_\odot$).
+Suppose a cluster has a main-sequence turnoff near spectral type F, with temperature about $6500\ \text{K}$ and luminosity about $4\,L_\odot$.
 
-What is the age of this cluster?
+A star near that turnoff has a mass of about $1.4\,M_\odot$.
 
-**Solution:**
-
-The turnoff point tells us the mass of the most evolved star still undergoing core hydrogen burning. From stellar models and the mass-luminosity relation, a star with luminosity ~0.3 $L_\odot$ and temperature ~4,500 K has a mass of approximately **1.2 $M_\odot$** (slightly more massive than the Sun).
-
-The main-sequence lifetime of a 1.2 $M_\odot$ star is:
+Using the rough lifetime relation,
 
 $$
-t_{\text{MS}} = 10 \text{ Gyr} \times (1.2)^{-2.5} = 10 \times 0.325 \approx 3.25 \text{ Gyr}
+t_{\rm MS} \approx 10\left(\frac{M}{M_\odot}\right)^{-2.5}\ \text{Gyr},
 $$
 
-Therefore, **the cluster is approximately 3–3.5 billion years old**. (The turnoff mass marks the oldest stars still on the main sequence, so the cluster age equals the main-sequence lifetime of the turnoff star.)
+we get
+
+$$
+t_{\rm MS} \approx 10(1.4)^{-2.5}\ \text{Gyr} \approx 4.3\ \text{Gyr}.
+$$
+
+So the cluster age is about $4$ billion years.
+
+The exact age would come from more detailed stellar models, but the turnoff already tells us the main physical story: the cluster is old enough that stars a little more massive than the Sun have already evolved off the main sequence.
 
 ---
 
 ## Summary
 
-Stars are not eternal. They are born with a finite supply of hydrogen fuel, and the rate at which they consume that fuel is set by their mass. Massive stars live fast and die young; low-mass stars live slow and die old.
+Stars are not eternal. They are born with a finite fuel supply, and the rate at which they use that fuel depends strongly on mass. Low-mass stars burn slowly and live for tens of billions of years. Massive stars burn rapidly and live much shorter lives.
 
-A stable star is in hydrostatic equilibrium — gravity and pressure perfectly balanced. This balance is maintained by a self-regulating thermostat: if the core contracts, it heats up, pressure increases, and the star expands. This feedback keeps main-sequence stars stable for billions of years.
+A main-sequence star is stable because it is in hydrostatic equilibrium: gravity pulls inward while pressure pushes outward. This balance is self-correcting. If the core contracts, it heats up, pressure rises, and the star pushes back.
 
-But when the hydrogen runs out, the core collapses. The collapse heats the surrounding layers enough to ignite hydrogen shell burning, which is more energetic than core burning. The star's envelope expands, its surface cools, and the star becomes a red giant — cool, red, and incredibly luminous.
+When core hydrogen is exhausted, the structure changes. The core contracts, the region around the core heats up, hydrogen fusion continues in a shell, and the star's outer layers expand. The star becomes a red giant: cooler at the surface, but larger and usually more luminous.
 
-On the H-R diagram, this entire story is written as a track from the main sequence into the red giant region. Different masses follow different tracks, but all move the same direction: off the main sequence and toward the upper right. The H-R diagram is a map of stellar evolution, and every star is tracing a path across it.
+The H-R diagram lets astronomers connect what they observe - temperature and luminosity - to what they infer about a star's size, internal energy source, and evolutionary stage. In star clusters, the main-sequence turnoff acts as a clock because the most massive stars leave the main sequence first.
+
+The big lesson is that stellar evolution is not random. A star's mass largely determines the path it follows and how long it spends in each stage.
 
 ---
 
@@ -468,16 +524,16 @@ On the H-R diagram, this entire story is written as a track from the main sequen
 After reading this lecture, you should be able to check off the following:
 
 - [ ] I can explain hydrostatic equilibrium and why it is essential for stellar stability.
-- [ ] I can describe the feedback mechanism that regulates the core temperature of a main-sequence star (the thermostat).
+- [ ] I can describe the feedback mechanism that regulates the core temperature of a main-sequence star.
 - [ ] I can explain why massive stars have shorter main-sequence lifetimes than low-mass stars.
-- [ ] I can calculate the main-sequence lifetime of a star given its mass, using the formula $t_{\text{MS}} \propto M^{-2.5}$.
+- [ ] I can estimate the main-sequence lifetime of a star from its mass using a rough scaling relation.
 - [ ] I can describe what happens when a star exhausts its core hydrogen: core contraction, heating, shell burning, and envelope expansion.
-- [ ] I can explain the Stefan-Boltzmann law and use it to understand why red giants are luminous despite being cool.
-- [ ] I can trace the path of a star on the H-R diagram as it evolves from the main sequence through the red giant phase.
-- [ ] I can distinguish the evolutionary pathways of low-mass vs. high-mass stars (helium flash vs. smooth ignition).
-- [ ] I can identify the red giant branch, horizontal branch, and asymptotic giant branch on an H-R diagram.
-- [ ] I can explain what a white dwarf is and why it is so small and dense.
+- [ ] I can use the Stefan-Boltzmann law qualitatively to explain why red giants are luminous despite being cool.
+- [ ] I can trace the path of a Sun-like star on an H-R diagram from the main sequence to the red-giant phase.
+- [ ] I can explain the broad difference between low-mass and high-mass post-main-sequence evolution.
+- [ ] I can describe what a white dwarf is in simple physical terms.
 - [ ] I can use cluster turnoff points to estimate the age of a star cluster.
+- [ ] I can distinguish between what astronomers directly observe and what they infer using stellar models.
 
 ---
 
@@ -518,13 +574,11 @@ You observe a star that is cooler (lower temperature, farther right) than the Su
 
 **Problem 4: Cluster Age from Main-Sequence Turnoff**
 
-A globular cluster shows a main-sequence turnoff at spectral type F (temperature ~6,500 K, luminosity ~4 $L_\odot$).
+An **open cluster** shows a main-sequence turnoff near spectral type F, with temperature about $6500\ \text{K}$ and luminosity about $4\,L_\odot$.
 
-(a) What mass corresponds to this turnoff luminosity and temperature?
-
-(b) What is the age of the cluster?
-
-*Hint: A 1.5 $M_\odot$ star has luminosity ~5.5 $L_\odot$; a 1.4 $M_\odot$ star has luminosity ~4.2 $L_\odot$. Interpolate.*
+1. Estimate the mass of the turnoff star.
+2. Use $t_{\rm MS} \approx 10(M/M_\odot)^{-2.5}\ \text{Gyr}$ to estimate the cluster age.
+3. Explain in one sentence why the turnoff point acts like a clock.
 
 ---
 
@@ -560,13 +614,14 @@ If a star contracts and loses gravitational potential energy (becomes more negat
 
 **Challenge 2: The Future Fate of the Galaxy**
 
-Our Milky Way contains stars of all masses, from 0.08 $M_\odot$ to ~100 $M_\odot$. In 1 trillion years (far beyond the current age of the universe):
+The Milky Way contains stars with many different masses, from barely above the hydrogen-burning limit to very massive short-lived stars.
 
-(a) Which stars will still be on the main sequence?
+Imagine the universe 1 trillion years from now.
 
-(b) What will the H-R diagram look like? (In particular, what regions will be empty or fully occupied?)
-
-(c) Why would no cluster have a main-sequence turnoff in a trillion years?
+1. Which stars would still remain on the main sequence?
+2. Where would the main-sequence turnoff lie on the H-R diagram?
+3. Which regions of the H-R diagram would be much less populated than they are today?
+4. Why would the turnoff be much harder to observe than it is in present-day star clusters?
 
 ---
 

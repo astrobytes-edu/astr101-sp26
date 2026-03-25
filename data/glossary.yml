@@ -1930,7 +1930,7 @@ l19-shell-burning:
 
 l19-red-giant:
   term: "Red Giant"
-  definition: "An evolved star with a cool surface (spectral type K or M), enormous radius (10–100 $R_\\odot$), and high luminosity (100–10,000 $L_\\odot$). Powered by hydrogen shell burning around an inert helium core."
+  definition: "An evolved star whose outer layers have expanded after core hydrogen is exhausted. Red giants have cool surfaces, large radii, and high luminosities, and are powered mainly by shell burning around a compact core."
   lecture: 19
   module: 2
   tier: core
@@ -1944,21 +1944,21 @@ l19-red-giant-branch:
 
 l19-horizontal-branch:
   term: "Horizontal Branch"
-  definition: "A phase in the evolution of low-mass red giants, where the helium core fuses helium stably. Appears as a nearly horizontal feature on some H-R diagrams."
+  definition: "A phase of stable helium-core burning that follows the red-giant phase in many low-mass stars. In some stellar populations, similar helium-burning stars appear as the red clump."
   lecture: 19
   module: 2
   tier: core
 
 l19-helium-flash:
   term: "Helium Flash"
-  definition: "A thermonuclear runaway in the degenerate helium core of a low-mass red giant. The core ignites almost simultaneously, releasing vast energy in seconds. Brief but intense."
+  definition: "A thermonuclear runaway in the degenerate helium core of a low-mass red giant. The energy release is enormous, but it mainly restructures the core rather than producing a dramatic visible explosion of the star."
   lecture: 19
   module: 2
   tier: core
 
 l19-asymptotic-giant-branch:
   term: "Asymptotic Giant Branch (AGB)"
-  definition: "A second red giant phase in low-mass stars, where both hydrogen and helium shells are burning alternately. AGB stars are the oldest, longest-lived stars and are losing their envelopes."
+  definition: "A late evolutionary phase of low- and intermediate-mass stars in which hydrogen and helium burn in shells around a compact core. The star becomes very luminous, unstable, and loses mass through a strong wind."
   lecture: 19
   module: 2
   tier: core
@@ -1972,7 +1972,7 @@ l19-evolutionary-track:
 
 l19-white-dwarf:
   term: "White Dwarf"
-  definition: "The dense, Earth-sized remnant of a dead star's core. Hot but small, hence dim. Found in the lower-left region of the H-R diagram. The final fate of stars like our Sun."
+  definition: "The compact remnant left behind after a low- or intermediate-mass star loses its outer layers. A white dwarf is small, dense, and no longer powered by core fusion; it is supported mainly by electron degeneracy pressure."
   lecture: 19
   module: 2
   tier: core
@@ -1986,7 +1986,7 @@ l19-supergiant:
 
 l19-turnoff-point:
   term: "Turnoff Point"
-  definition: "On the H-R diagram of a star cluster, the point where the main sequence ends — the most massive stars still burning hydrogen. Used to determine cluster age via isochrone fitting."
+  definition: "On the H-R diagram of a star cluster, the point where the main sequence ends — the most massive stars still burning hydrogen in their cores. Because massive stars leave the main sequence first, the turnoff point can be used to estimate cluster age."
   lecture: 19
   module: 2
   tier: core

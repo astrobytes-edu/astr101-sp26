@@ -22,9 +22,9 @@ module: "2 - Stars & Stellar Evolution"
 (a) What is its main-sequence lifetime?
 (b) If the star formed at the same time as the Sun (4.6 Gyr ago), what is its current evolutionary stage?
 (c) How much time remains before it exhausts its core hydrogen?
-(a) Using $t_{\text{MS}} = 10 \text{ Gyr} \times (M/1 M_\odot)^{-2.5}$:
+(a) Using $t_{\rm MS} = 10 \text{ Gyr} \times (M/1 M_\odot)^{-2.5}$:
 
-$$t_{\text{MS}} = 10 \text{ Gyr} \times (3)^{-2.5} = 10 \text{ Gyr} \times 0.0606 = 0.606 \text{ Gyr} \approx 606 \text{ Myr}$$
+$$t_{\rm MS} = 10 \text{ Gyr} \times (3)^{-2.5} = 10 \text{ Gyr} \times 0.0606 = 0.606 \text{ Gyr} \approx 606 \text{ Myr}$$
 
 (b) The star's total main-sequence lifetime is ~606 Myr, but it has already existed for 4.6 Gyr — much longer than its main-sequence lifetime. **It has exhausted its core hydrogen and is now in the red giant or post-main-sequence phase.**
 
@@ -73,20 +73,25 @@ $$\frac{R_{\text{star}}}{R_{\odot}} = \sqrt{\frac{1}{0.227}} = \sqrt{4.4} \appro
 (b) This star is off the main sequence (the Sun is on the main sequence) and has expanded. **It is likely in an early red giant phase.** It is an evolved, old star that has exhausted its core hydrogen.
 
 ### Problem 4: Cluster Age from Main-Sequence Turnoff
-**Restatement:** A globular cluster shows a main-sequence turnoff at spectral type F (temperature ~6,500 K, luminosity ~4 $L_\odot$).
+**Restatement:** An open cluster shows a main-sequence turnoff near spectral type F, with temperature about $6500\ \text{K}$ and luminosity about $4\,L_\odot$.
 
-(a) What mass corresponds to this turnoff luminosity and temperature?
+(a) Estimate the mass of the turnoff star.
 
-(b) What is the age of the cluster?
+(b) Use $t_{\rm MS} \approx 10(M/M_\odot)^{-2.5}\ \text{Gyr}$ to estimate the cluster age.
 
-*Hint: A 1.5 $M_\odot$ star has luminosity ~5.5 $L_\odot$; a 1.4 $M_\odot$ star has luminosity ~4.2 $L_\odot$. Interpolate.*
-(a) The turnoff star has luminosity ~4 $L_\odot$. From the hint, this corresponds to a mass between 1.4 and 1.5 $M_\odot$. Interpolating, the turnoff mass is approximately **1.4 $M_\odot$**.
+(c) Explain in one sentence why the turnoff point acts like a clock.
+
+(a) A turnoff near spectral type F with luminosity about $4\,L_\odot$ corresponds to a star a little more massive than the Sun, about **$1.4\,M_\odot$**.
 
 (b) The cluster age equals the main-sequence lifetime of the turnoff mass:
 
-$$t_{\text{MS}} = 10 \text{ Gyr} \times (1.4)^{-2.5} = 10 \text{ Gyr} \times 0.286 \approx 2.9 \text{ Gyr}$$
+$$
+t_{\rm MS} \approx 10(1.4)^{-2.5}\ \text{Gyr} \approx 4.3\ \text{Gyr}
+$$
 
-**The cluster is approximately 2.9–3 billion years old.** This is an intermediate-age globular cluster.
+**The cluster is approximately 4.3 billion years old.** That makes it an intermediate-age open cluster, not a globular cluster.
+
+(c) The turnoff acts like a clock because it marks the most massive stars that are still on the main sequence, and more-massive stars have shorter main-sequence lifetimes.
 
 ### Problem 5: The Death Timeline of the Most Massive Star in a Cluster
 **Restatement:** A young star cluster contains a 50 $M_\odot$ star and a 1 $M_\odot$ star (like our Sun), both formed at time $t = 0$.
@@ -98,13 +103,13 @@ $$t_{\text{MS}} = 10 \text{ Gyr} \times (1.4)^{-2.5} = 10 \text{ Gyr} \times 0.2
 (c) For how long will the cluster contain at least one main-sequence star?
 (a) For the 50 $M_\odot$ star:
 
-$$t_{\text{MS}} = 10 \text{ Gyr} \times (50)^{-2.5} = 10 \text{ Gyr} \times 0.000358 \approx 0.0036 \text{ Gyr} = 3.6 \text{ Myr}$$
+$$t_{\rm MS} = 10 \text{ Gyr} \times (50)^{-2.5} = 10 \text{ Gyr} \times 0.000358 \approx 0.0036 \text{ Gyr} = 3.6 \text{ Myr}$$
 
 **The 50 $M_\odot$ star will leave the main sequence in ~3.6 million years.**
 
 (b) For the 1 $M_\odot$ star:
 
-$$t_{\text{MS}} = 10 \text{ Gyr}$$
+$$t_{\rm MS} = 10 \text{ Gyr}$$
 
 **The 1 $M_\odot$ star will leave the main sequence in ~10 billion years.**
 
@@ -131,22 +136,23 @@ Thermal kinetic energy increasing means the gas heats up. **The star's temperatu
 This is why core contraction leads to heating — it's a direct consequence of the virial theorem. Conversely, if a star expands and loses thermal energy, it cools down. This balance between contraction-heating and expansion-cooling is at the heart of stellar evolution.
 
 ### Challenge 2: The Future Fate of the Galaxy
-**Restatement:** Our Milky Way contains stars of all masses, from 0.08 $M_\odot$ to ~100 $M_\odot$. In 1 trillion years (far beyond the current age of the universe):
+**Restatement:** The Milky Way contains stars with many different masses, from barely above the hydrogen-burning limit to very massive short-lived stars. Imagine the universe 1 trillion years from now.
 
-(a) Which stars will still be on the main sequence?
+(a) Which stars would still remain on the main sequence?
 
-(b) What will the H-R diagram look like? (In particular, what regions will be empty or fully occupied?)
+(b) Where would the main-sequence turnoff lie on the H-R diagram?
 
-(c) Why would no cluster have a main-sequence turnoff in a trillion years?
-(a) Only the lowest-mass stars will remain on the main sequence: those with mass less than approximately **0.06 $M_\odot$**. These are the **brown dwarfs** and **M-dwarf** stars that have such long lifetimes they will barely have burned any hydrogen in a trillion years.
+(c) Which regions of the H-R diagram would be much less populated than they are today?
 
-(b) The H-R diagram will show:
-- **Empty main sequence** (all except the lowest-mass M-dwarfs have left)
-- **Crowded giant branches and AGB** (all evolved stars are here)
-- **Crowded white dwarf region** (all dead stellar cores have cooled to white dwarfs; some may be cooling further to "black dwarfs," though no cooling has occurred yet in the real universe)
-- **No supergiants** (all massive stars have exploded)
+(d) Why would the turnoff be much harder to observe than it is in present-day star clusters?
 
-(c) In any star cluster older than a trillion years, even the lowest-mass stars have left the main sequence (since the least massive star in the cluster has an age equal to the cluster age, and if the cluster is a trillion years old, even 0.06 $M_\odot$ stars are exhausted). **There is no main-sequence turnoff because there is no main sequence to turn off from.**
+(a) Only the lowest-mass **true stars** would still be on the main sequence - the coolest, faintest red dwarfs just above the hydrogen-burning limit. Brown dwarfs would not count because they never sustain ordinary hydrogen fusion in the first place.
+
+(b) The turnoff would lie at the very faint, cool end of the main sequence, near the lower-right part of the H-R diagram.
+
+(c) The bright upper main sequence, the blue giant and supergiant regions, and other high-luminosity short-lived phases would be much less populated than they are today, because massive and Sun-like stars would have evolved away long before then.
+
+(d) The turnoff would be much harder to observe because it would involve extremely dim, cool stars. Measuring the exact point where such faint stars start to leave the main sequence is much harder than identifying a bright blue turnoff in a younger cluster.
 
 ### Challenge 3: Stellar Evolution on an Alien Exoplanet
 **Restatement:** An astronomer discovers an exoplanet orbiting a red giant star. The star has been observed in the same state (cool, luminous, on the red giant branch) for the past 10,000 years (a tiny span of time in stellar terms).
