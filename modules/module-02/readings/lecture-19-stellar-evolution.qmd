@@ -70,11 +70,7 @@ The answer is not that we watch one star live out its entire life. We cannot. In
 - **Inference:** These different stellar populations are snapshots of stellar evolution at different stages.
 :::
 
-<!-- TODO FIGURE: "How Astronomers Know Stars Evolve"
-Type: Observable -> Model -> Inference schematic
-Show: stellar populations, H-R diagram, cluster turnoff, inference chain
-Goal: answer the opening epistemic question explicitly
-Generation: vector schematic / Figma / Illustrator / PowerPoint -->
+{{< fig stellar-evolution-inference-flow >}}
 
 Betelgeuse is a good example. It is a red supergiant, which tells us it is already in a late evolutionary stage. That does **not** mean it is about to explode on a human timetable. It means that, compared with the Sun, its total lifetime is very short and its life is already far advanced.
 
@@ -301,6 +297,8 @@ we can see why red giants are bright. Even if the surface temperature $T$ drops,
 
 That is why red giants sit in the upper-right part of the H-R diagram: cool surface, but high luminosity.
 
+{{< fig same-temperature-different-luminosity-radius >}}
+
 ::: {.callout-check-yourself title="Check Yourself"}
 If two stars have the same surface temperature, but one is much more luminous, what must be true about its radius?
 :::
@@ -308,12 +306,6 @@ If two stars have the same surface temperature, but one is much more luminous, w
 ::: {.callout-misconception title="Misconception Check"}
 A cooler surface does **not** mean the whole star cooled down. In a red giant, the core becomes hotter while the outer envelope expands and cools.
 :::
-
-<!-- TODO FIGURE: "Same Temperature, Different Luminosity Means Different Radius"
-Type: side-by-side schematic or mini H-R diagram
-Show: two equally cool stars with different radii/luminosities
-Goal: support Stefan-Boltzmann reasoning for red giants
-Generation: Python/Matplotlib or schematic diagram -->
 
 ### Red Giant
 
@@ -473,11 +465,7 @@ This short Hubble visualization is worth watching because it shows the exact mov
 The H-R diagram is not abstract bookkeeping. It is a compressed picture of a stellar population, and in a globular cluster the turnoff point tells us that the brightest blue main-sequence stars have already evolved away.
 :::
 
-<!-- TODO FIGURE: "Cluster Turnoff as a Clock"
-Type: side-by-side H-R diagrams for young vs old clusters
-Show: turnoff moving downward/rightward with age
-Goal: make age inference visually obvious
-Generation: Python/Matplotlib schematic -->
+{{< fig cluster-turnoff-clock >}}
 
 ---
 

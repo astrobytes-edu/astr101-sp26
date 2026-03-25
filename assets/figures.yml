@@ -1802,6 +1802,27 @@ figures:
     alt: "Simple red-giant schematic showing a helium-rich core, a hydrogen-burning shell around it, arrows indicating increased radiation pressure, and a large expanded cool hydrogen-rich outer envelope."
     module: 2
 
+  stellar-evolution-inference-flow:
+    path: /assets/images/module-02/stellar-evolution-inference-flow.svg
+    caption: "What to notice: astronomers do not watch one star age from birth to death. They compare many stellar populations, organize those observations with the H-R diagram, and use stellar physics to infer a coherent life story."
+    alt: "Three-card teaching diagram labeled Observable, Model, and Inference. The Observable panel shows young clusters, main-sequence stars, red giants, and white dwarfs. The Model panel shows a miniature H-R diagram with physics cues for equilibrium, fusion, and mass. The Inference panel shows a simple evolutionary path from main sequence to red giant and then to either white dwarf or supernova remnant."
+    credit: "Illustration: A. Rosen (Python/Matplotlib)"
+    module: 2
+
+  same-temperature-different-luminosity-radius:
+    path: /assets/images/module-02/same-temperature-different-luminosity-radius.svg
+    caption: "What to notice: if two stars have the same surface temperature, the more luminous one must have the larger radius. That is the key inference behind why red giants can be cool but bright."
+    alt: "Side-by-side teaching figure showing two orange stars with the same labeled surface temperature of 4,500 kelvin but very different sizes. The larger star is labeled as having higher luminosity because of its larger radius. A mini H-R diagram on the right shows two same-temperature points at different luminosities along a vertical line."
+    credit: "Illustration: A. Rosen (Python/Matplotlib)"
+    module: 2
+
+  cluster-turnoff-clock:
+    path: /assets/images/module-02/cluster-turnoff-clock.svg
+    caption: "What to notice: as a cluster ages, the main-sequence turnoff moves downward and to the right. That shift lets astronomers estimate the cluster's age."
+    alt: "Paired H-R diagrams comparing a young cluster and an older cluster. The young cluster has a hot blue turnoff high on the main sequence, while the older cluster has a cooler, lower turnoff farther to the right, with giant stars above the main-sequence end."
+    credit: "Illustration: A. Rosen (Python/Matplotlib)"
+    module: 2
+
   solar-system-element-origins-module2:
     path: /assets/images/module-02/Chandra_PeriodicTable.jpeg
     caption: "What to notice: the periodic table is a cosmic origin story. Hydrogen and much of helium are primordial, many common elements are forged in stars, and the heaviest elements require the most violent astrophysical events."
