@@ -29,6 +29,12 @@ jobs:
         with:
           python-version: '3.11'
 
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.2'
+          bundler-cache: false
+
       - name: Generate tokens from brand
         run: |
           pip install pyyaml
@@ -54,28 +60,8 @@ jobs:
         run: |
           python3 scripts/normalize_html_for_proofer.py _site
 
-      - name: Validate HTML + check links/images
-        uses: anishathalye/proof-html@v2
-        with:
-          directory: _site
-          # Quarto generates non-standard attributes (append-hash) and duplicate IDs
-          # (quarto-bootstrap, quarto-search) for light/dark theme handling.
-          # Disable strict HTML validation but keep link checking.
-          check_html: false
-          # Quarto uses <a> tags as UI toggles (sidebar/theme) without href attributes.
-          # These are not broken content links; allow them so CI focuses on real link rot.
-          allow_missing_href: true
-          # Allow empty/missing alt for decorative images (logos, icons)
-          ignore_empty_alt: true
-          ignore_missing_alt: true
-          # RevealJS vendor pages (e.g. speaker view) don't include the site favicon.
-          check_favicon: false
-          # External URLs that block automated access (return 403 to bots)
-          # RevealJS internal slide navigation uses #/slide-id format which doesn't
-          # match element IDs directly (IDs are slide-id without the /)
-          ignore_url_re: |
-            ^https://docs\.google\.com/.*
-            ^https://www\.cambridge\.org/9781009618007.*$
-            ^https://shopaztecs\.com/.*$
-            ^https://viewspace\.org(/.*)?$
-            ^#/.*$
+      - name: Install HTMLProofer
+        run: gem install html-proofer -v 5.2.0
+
+      - name: Validate links/images/scripts
+        run: ruby scripts/run_htmlproofer.rb _site
