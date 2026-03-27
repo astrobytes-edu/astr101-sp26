@@ -7,6 +7,7 @@ directory = ARGV.fetch(0, "_site")
 
 ignore_urls = [
   %r{\Ahttps://docs\.google\.com/.*},
+  %r{\Ahttps://(?:www\.)?astrobites\.org(?:/.*)?\z},
   %r{\Ahttps://www\.cambridge\.org/9781009618007.*\z},
   %r{\Ahttps://shopaztecs\.com/.*},
   %r{\Ahttps://viewspace\.org(?:/.*)?\z},
