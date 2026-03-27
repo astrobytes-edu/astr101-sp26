@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" role="img" aria-labelledby="title desc">
+  <title id="title">Red giant causal chain</title>
+  <desc id="desc">A four-step teaching diagram showing core hydrogen exhaustion, core contraction and heating, hydrogen shell burning, and expansion into a red giant.</desc>
+  <defs>
+    <linearGradient id="panelBg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f8fbff"/>
+    </linearGradient>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#697b96"/>
+    </marker>
+  </defs>
+
+  <rect width="960" height="540" fill="#f4f8fd"/>
+  <text x="480" y="48" text-anchor="middle" font-size="30" font-family="Inter, Arial, sans-serif" font-weight="700" fill="#22344c">How A Sun-Like Star Becomes A Red Giant</text>
+  <text x="480" y="80" text-anchor="middle" font-size="16" font-family="Inter, Arial, sans-serif" fill="#4c5e76">The key change is not "the star got old." The key change is where fusion happens.</text>
+
+  <g stroke="#d5deea" stroke-width="2" fill="url(#panelBg)">
+    <rect x="36" y="120" width="192" height="250" rx="24"/>
+    <rect x="268" y="120" width="192" height="250" rx="24"/>
+    <rect x="500" y="120" width="192" height="250" rx="24"/>
+    <rect x="732" y="120" width="192" height="250" rx="24"/>
+  </g>
+
+  <g stroke="#697b96" stroke-width="4" marker-end="url(#arrow)">
+    <line x1="228" y1="245" x2="268" y2="245"/>
+    <line x1="460" y1="245" x2="500" y2="245"/>
+    <line x1="692" y1="245" x2="732" y2="245"/>
+  </g>
+
+  <g font-family="Inter, Arial, sans-serif" fill="#22344c">
+    <text x="132" y="160" text-anchor="middle" font-size="22" font-weight="700">1. Core Hydrogen</text>
+    <text x="132" y="186" text-anchor="middle" font-size="22" font-weight="700">Is Exhausted</text>
+    <circle cx="132" cy="250" r="44" fill="#ffd45c" stroke="#f0a52a" stroke-width="6"/>
+    <circle cx="132" cy="250" r="18" fill="#d7dce6" stroke="#9aa6b8" stroke-width="4"/>
+    <text x="132" y="328" text-anchor="middle" font-size="14" fill="#4c5e76">The center is now mostly helium,</text>
+    <text x="132" y="348" text-anchor="middle" font-size="14" fill="#4c5e76">so core hydrogen fusion fades.</text>
+
+    <text x="364" y="160" text-anchor="middle" font-size="22" font-weight="700">2. The Core</text>
+    <text x="364" y="186" text-anchor="middle" font-size="22" font-weight="700">Contracts And Heats</text>
+    <circle cx="364" cy="250" r="42" fill="#ffe4a3" stroke="#f0a52a" stroke-width="6"/>
+    <circle cx="364" cy="250" r="16" fill="#fff4d1" stroke="#e1694d" stroke-width="6"/>
+    <g stroke="#cf4d4d" stroke-width="5" stroke-linecap="round">
+      <line x1="314" y1="250" x2="336" y2="250"/>
+      <line x1="414" y1="250" x2="392" y2="250"/>
+      <line x1="364" y1="200" x2="364" y2="222"/>
+      <line x1="364" y1="300" x2="364" y2="278"/>
+    </g>
+    <text x="364" y="328" text-anchor="middle" font-size="14" fill="#4c5e76">Gravity squeezes the core,</text>
+    <text x="364" y="348" text-anchor="middle" font-size="14" fill="#4c5e76">raising its temperature.</text>
+
+    <text x="596" y="160" text-anchor="middle" font-size="22" font-weight="700">3. Hydrogen Shell</text>
+    <text x="596" y="186" text-anchor="middle" font-size="22" font-weight="700">Burning Turns On</text>
+    <circle cx="596" cy="250" r="20" fill="#d7dce6" stroke="#9aa6b8" stroke-width="4"/>
+    <circle cx="596" cy="250" r="42" fill="none" stroke="#e06e53" stroke-width="12" stroke-dasharray="10 10"/>
+    <circle cx="596" cy="250" r="62" fill="none" stroke="#ffe9c5" stroke-width="8"/>
+    <text x="596" y="328" text-anchor="middle" font-size="14" fill="#4c5e76">Fusion shifts into a thin shell</text>
+    <text x="596" y="348" text-anchor="middle" font-size="14" fill="#4c5e76">wrapped around the core.</text>
+
+    <text x="828" y="160" text-anchor="middle" font-size="22" font-weight="700">4. The Envelope</text>
+    <text x="828" y="186" text-anchor="middle" font-size="22" font-weight="700">Expands</text>
+    <circle cx="828" cy="250" r="66" fill="#f5a07d" stroke="#d86a4b" stroke-width="8"/>
+    <circle cx="828" cy="250" r="18" fill="#fff3e6" stroke="#d7dce6" stroke-width="4"/>
+    <circle cx="828" cy="250" r="34" fill="none" stroke="#fbe9d8" stroke-width="10" stroke-dasharray="10 10"/>
+    <text x="828" y="328" text-anchor="middle" font-size="14" fill="#4c5e76">The star swells into a cool,</text>
+    <text x="828" y="348" text-anchor="middle" font-size="14" fill="#4c5e76">luminous red giant.</text>
+  </g>
+
+  <rect x="58" y="418" width="844" height="76" rx="20" fill="#ffffff" stroke="#d5deea"/>
+  <text x="480" y="448" text-anchor="middle" font-size="18" font-family="Inter, Arial, sans-serif" font-weight="700" fill="#22344c">What to notice</text>
+  <text x="480" y="474" text-anchor="middle" font-size="14" font-family="Inter, Arial, sans-serif" fill="#4c5e76">The red-giant phase is a causal chain: core hydrogen runs out, the core contracts and heats, fusion moves into a shell, and the outer envelope expands.</text>
+</svg>

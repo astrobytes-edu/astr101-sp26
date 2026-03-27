@@ -1809,6 +1809,20 @@ figures:
     credit: "Illustration: A. Rosen (Python/Matplotlib)"
     module: 2
 
+  stellar-evolution-hero:
+    path: /assets/images/module-02/stellar-evolution-hero.svg
+    caption: "What to notice: the red-giant stage is the structural turning point. Once the core fuel changes, the star leaves the main sequence, and mass determines which broad fate follows."
+    alt: "Overview diagram showing a main-sequence star evolving into a red giant, then branching toward a white dwarf path for lower-mass stars and a supernova path for higher-mass stars."
+    credit: "Illustration: A. Rosen (SVG)"
+    module: 2
+
+  red-giant-causal-chain:
+    path: /assets/images/module-02/red-giant-causal-chain.svg
+    caption: "What to notice: the red-giant phase is not just 'the star got old.' It is the structural consequence of core hydrogen exhaustion, core contraction, shell burning, and envelope expansion."
+    alt: "Four-step process diagram showing core hydrogen exhaustion, core contraction and heating, hydrogen shell burning, and outer-envelope expansion into a red giant."
+    credit: "Illustration: A. Rosen (SVG)"
+    module: 2
+
   same-temperature-different-luminosity-radius:
     path: /assets/images/module-02/same-temperature-different-luminosity-radius.svg
     caption: "What to notice: if two stars have the same surface temperature, the more luminous one must have the larger radius. That is the key inference behind why red giants can be cool but bright."
