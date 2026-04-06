@@ -1722,6 +1722,20 @@ figures:
     credit: "NASA, ESA, and the Hubble Heritage Team (STScI/AURA)"
     module: 2
 
+  jwst-ring-nebula:
+    path: /assets/images/module-02/jwst-ring-nebula.png
+    caption: "What to notice: a planetary nebula is not a fuzzy cloud with no structure. JWST resolves the shell, knots, and central cavity, making it easier to see that we are looking at gas recently shed by a dying low-mass star and lit by its hot remnant."
+    alt: "JWST image of the Ring Nebula showing a bright oval shell with intricate filamentary structure, a dimmer outer halo, and a small hot central star inside the nebula."
+    credit: "NASA, ESA, CSA, STScI"
+    module: 2
+
+  jwst-wr124:
+    path: /assets/images/module-02/jwst-wr124-miri.png
+    caption: "What to notice: some massive stars shed matter violently even before the final explosion. WR 124 is a Wolf-Rayet star surrounded by previously ejected gas, showing that mass loss is already reshaping the environment before core collapse."
+    alt: "JWST infrared image of the Wolf-Rayet star WR 124 surrounded by a bright irregular shell of ejected gas and dust, with clumpy structure and a luminous central star."
+    credit: "NASA, ESA, CSA, STScI, Webb ERO Production Team"
+    module: 2
+
   binding-energy-iron-peak:
     path: /assets/images/module-02/binding-energy-curve.png
     caption: "What to notice: energy is released when fusion climbs upward toward iron on the binding-energy curve. Iron sits near the peak, so pushing beyond it no longer pays out energy. That is why an iron core is a dead end for normal stellar fusion."

@@ -62,120 +62,166 @@ In this lecture, you'll learn how stars die. You'll discover why the fate of a s
 
 ### When a Star Runs Out of Time
 
-In Lecture 19, we traced the evolution of a star like the Sun along the Hertzsprung-Russell diagram. After billions of years burning hydrogen in its core, the Sun will eventually exhaust its fuel. But the universe doesn't simply switch off.
+A Sun-like star does not explode when it runs out of core hydrogen. Instead, its internal structure changes in stages, and that sequence matters.
 
-When hydrogen fusion ends in the core, gravity immediately wins. The core contracts and heats up. The outer layers of the star, suddenly deprived of the outward push from fusion, begin to fall inward and heat up. When the temperature reaches about 100 million Kelvin, a new kind of fusion kicks in: **helium fusion** — the next stage after the core hydrogen-burning story we introduced earlier in Module 2.
+After core hydrogen is exhausted, the core contracts and heats up while hydrogen continues fusing in a shell around the core. The outer layers expand, and the star becomes a red giant. Later, helium fusion begins in the core. After core helium is exhausted, the star enters the **asymptotic giant branch (AGB)**, with an inert carbon-oxygen core surrounded by helium- and hydrogen-burning shells.
 
-But helium burning is unstable. The core oscillates — heating and cooling — sending pulses of energy outward. These thermal pulses drive powerful stellar winds that rip the star's atmosphere apart.
+In the AGB phase, the helium-burning shell is unstable. It flares up in repeated thermal pulses, and the star loses mass through strong stellar winds. Over time, those winds remove much of the outer envelope and expose the hot core underneath.
+
+{{< fig hr-post-main-sequence-tracks >}}
+
+This is one of the reasons it is worth repeating the H-R diagram here. The low-mass death pathway is not a separate story from Lecture 19. It is the continuation of that same track into the star's final stages.
 
 ::: {.column-margin}
-**Asymptotic Giant Branch (AGB) star**: A low-mass star in its final evolutionary stage, characterized by repeated pulses of helium shell burning and intense mass loss via stellar winds. Most stars between 0.5 and 8 solar masses pass through an AGB phase lasting a few hundred thousand to a few million years.
+**Asymptotic Giant Branch (AGB) star**: A low- to intermediate-mass star in a late evolutionary stage, with shell burning and strong mass loss. Stars that begin with roughly $0.5$–$8\,M_\odot$ pass through an AGB phase before ending as white dwarfs.
 :::
 
-During this **AGB phase**, a single solar-mass star can lose half or more of its mass — ejected into space at speeds of 10–20 km/s. As the star sheds its outer envelope, the hot inner core is gradually exposed.
+::: {.callout-key-insight title="Takeaway"}
+For low-mass stars, the decisive end-of-life process is **mass loss**, not explosion. The star peels away its outer layers and leaves its hot core behind.
+:::
 
-Within about 10,000 years (a blink of an eye in cosmic time), the entire envelope is gone. What remains: a small, incredibly dense remnant surrounded by a glowing shell of ejected gas, still energized by radiation from the hot core.
+::: {.callout-misconception title="Misconception Check"}
+**Misconception:** The red giant phase, core helium burning, and the AGB phase are all basically the same event.
 
-This is a **planetary nebula**.
+**Correction:** They happen in sequence. The planetary nebula comes near the end, after the star has already spent time as a red giant, ignited helium in its core, and then undergone strong AGB mass loss.
+:::
 
 <!-- FIGURE: Planetary nebula showing shell structure. Show the Ring Nebula (M57) or Helix Nebula (NGC 7293). Include labels for: hot central star (white dwarf), ejected envelope glowing in emission (hydrogen-alpha in red, oxygen in blue-green), shell expanding at ~15 km/s, distance ~1000 light-years. Include scale bar and spectrum of emission lines (H-alpha, O-III). -->
 
 ### The Planetary Nebula: Stellar Poetry
 
-The term *planetary nebula* is a historical misnomer. William Herschel, observing with 18th-century telescopes, thought these objects looked like planets. They don't. But the name stuck.
+The term *planetary nebula* is a historical misnomer. William Herschel thought these objects looked like planets in small telescopes. They do not. What we are actually seeing is a glowing, expanding shell of gas that a dying low-mass star has recently shed.
 
-What you're actually seeing is:
+What astronomers observe is a hot compact star at the center, a shell of expanding gas around it, and bright emission lines from specific atoms and ions. The model is that ultraviolet light from the exposed hot core ionizes the surrounding gas. When electrons fall back into lower-energy states, the gas emits light at particular wavelengths, which is why planetary nebulae glow so strongly in emission lines.
 
-- **A glowing shell** of gas (mostly hydrogen and helium) ejected by the dying star
-- **A hot stellar remnant** (the white dwarf) at the center, whose ultraviolet radiation ionizes the surrounding gas
-- **Complex filamentary structures** created by instabilities in the ejected envelope — often beautiful and intricate
+{{< fig jwst-ring-nebula >}}
 
-The ejected material glows because high-energy photons from the hot core knock electrons loose from atoms, ionizing them. When electrons recombine with ions, they emit light — the same process that makes neon signs glow. Hydrogen emits red light (H-alpha at 656 nm). Oxygen emits blue-green light. Nitrogen adds red. The result is often stunningly colorful.
+Hydrogen often contributes red emission. Doubly ionized oxygen contributes blue-green emission. The colors in telescope images are not random decoration. They trace the atoms in the gas and the physical conditions there.
 
-::: {.callout-key-insight title="Key Insight"}
-Planetary nebulae are not long-lived. Within about 10,000–20,000 years, the expanding shell becomes so diffuse that it's no longer visible. The gas disperses into the interstellar medium. Eventually, it will become part of a new cloud, and collapse to form new stars and planets.
+::: {.callout-key-insight title="What To Notice"}
+Planetary nebulae are brief. As the shell expands, its density drops. After roughly $10^4$ years, the gas becomes too diffuse to glow brightly, so this phase is only a short final snapshot of a star that lived for billions of years.
 :::
 
-How old is the planetary nebula in the photo? We can calculate it: measure the angular size (how big it appears on the sky) and the expansion speed (from Doppler shift). Divide size by speed. Many planetary nebulae we see today ejected their material 5,000–10,000 years ago. Some are younger, some older. Each one is a snapshot of a star's final breath.
+::: {.callout-summary title="Observable -> Model -> Inference"}
+**Observable:** We image the shell, measure its angular size, and use spectra to measure its expansion speed.
+
+**Model:** The shell is moving outward after being ejected by the star.
+
+**Inference:** Age is approximately size divided by speed, so planetary nebulae let us estimate when the star lost its envelope.
+:::
 
 ::: {.callout-check-yourself title="Check Yourself — Nebular Timescale"}
-The Ring Nebula (M57) has a radius of about 0.3 light-years and is expanding at roughly 20 km/s. How old is it (approximately)?
+The Ring Nebula (M57) has a radius of about $0.3$ light-years and is expanding at roughly $20~\mathrm{km/s}$. How old is it approximately?
 
 ::: {.callout-tip title="Solution" collapse="true"}
 Convert to consistent units:
 
-- Radius: $r = 0.3$ ly $= 0.3 \times 9.46 \times 10^{15}$ m $\approx 2.8 \times 10^{15}$ m
-- Speed: $v = 20$ km/s $= 2 \times 10^4$ m/s
+- Radius: $r = 0.3~\mathrm{ly} \approx 0.3 \times 9.46 \times 10^{15}~\mathrm{m} \approx 2.8 \times 10^{15}~\mathrm{m}$
+- Speed: $v = 20~\mathrm{km/s} = 2.0 \times 10^4~\mathrm{m/s}$
 
-Time = Distance / Speed:
-$$
-t = \frac{2.8 \times 10^{15} \text{ m}}{2 \times 10^4 \text{ m/s}} \approx 1.4 \times 10^{11} \text{ s}
-$$
+Then
 
-Convert to years (use $1$ yr $\approx 3.15 \times 10^7$ s):
 $$
-t \approx \frac{1.4 \times 10^{11}}{3.15 \times 10^7} \approx 4400 \text{ years}
+t \approx \frac{r}{v} \approx \frac{2.8 \times 10^{15}~\mathrm{m}}{2.0 \times 10^4~\mathrm{m/s}} \approx 1.4 \times 10^{11}~\mathrm{s}
 $$
 
-**The Ring Nebula is roughly 4,000–5,000 years old**, ejected around the time humans were building the first cities.
+Convert seconds to years:
+
+$$
+t \approx \frac{1.4 \times 10^{11}~\mathrm{s}}{3.15 \times 10^7~\mathrm{s/yr}} \approx 4.4 \times 10^3~\mathrm{yr}
+$$
+
+So the Ring Nebula is about $4{,}000$–$5{,}000$ years old, which is very young on stellar timescales.
 :::
 :::
 
 ### The White Dwarf: Stellar Corpse
 
-At the center of every planetary nebula is a white dwarf — the exposed core of the dying star. It's a stellar zombie: no fusion, no nuclear power, just a cooling ember that will slowly fade over trillions of years.
+At the center of a planetary nebula is a **white dwarf**: the exposed carbon-oxygen core left behind after a low-mass star loses its envelope. No fusion is powering it. It shines because it is still hot, and then it slowly cools.
 
-What makes a white dwarf so strange? Almost everything.
-
-A white dwarf is *unimaginably dense*. A teaspoon of white dwarf material would weigh as much as an elephant — or rather, about **1 million kilograms** per cubic centimeter. To visualize this: imagine compressing the entire mass of Earth into an object the size of Earth's Moon. Or pack the mass of the Sun into a sphere the size of Earth.
-
-How is this possible? Where's the pressure that prevents collapse?
-
-The answer is quantum mechanics: **electron degeneracy pressure**.
+White dwarfs are about the size of Earth but can contain a mass comparable to the Sun's. That makes them extraordinarily dense.
 
 ::: {.column-margin}
-**Degeneracy pressure**: A quantum mechanical pressure that arises from the Pauli exclusion principle. Electrons cannot all occupy the same quantum state; as they are compressed, they resist further compression by exerting enormous pressure.
+**Degeneracy pressure**: A quantum-mechanical pressure that arises from the Pauli exclusion principle. Electrons cannot all occupy the same quantum state, so matter resists further compression even when ordinary thermal pressure is small.
 :::
 
-::: {.callout-misconception title="Misconception Alert"}
-*"Degeneracy pressure is just the electrons pushing against each other, like a gas."*
-
-**Not really.** In a normal gas, pressure arises from particles colliding and bouncing around. In a degenerate gas, electrons are stationary (they've given up all their kinetic energy). The pressure arises purely from quantum mechanics: electrons are forbidden by the Pauli exclusion principle from occupying the same state, so compressing them further requires doing work against this quantum constraint. It's not a physical force; it's a consequence of quantum mechanics.
+::: {.callout-key-insight title="Key Insight"}
+A white dwarf is supported not by ordinary gas pressure and not by ongoing fusion, but by **electron degeneracy pressure**.
 :::
 
-In normal matter, atoms are mostly empty space. The electron clouds surround the nucleus with lots of room between them. But in a white dwarf, gravity has crushed all that emptiness out. The electrons are packed so densely that the laws of quantum mechanics take over.
+::: {.callout-misconception title="Misconception Check"}
+**Misconception:** Degeneracy pressure is just electrons behaving like a very hot gas.
 
-The **Pauli exclusion principle** (named after physicist Wolfgang Pauli) states: *No two electrons can occupy the same quantum state simultaneously.* Electrons are fermions — they have intrinsic angular momentum ("spin") that can point "up" or "down." Each energy level can hold only a certain number of electrons.
+**Correction:** Degeneracy pressure is different from thermal gas pressure. A white dwarf can remain supported even without fusion because this pressure comes from quantum mechanics, not from high temperature alone.
+:::
 
-When electrons are compressed beyond a certain density, there are no more available quantum states at low energies. To add more electrons, they must jump to higher energy levels — which requires work. This work shows up as an outward pressure: **degeneracy pressure**. It's not a physical force pushing atoms apart; it's a quantum consequence of the exclusion principle.
+In a white dwarf, gravity has crushed out most of the empty space inside atoms. The electrons are packed so tightly that the Pauli exclusion principle becomes the main source of support. No two electrons can occupy the same quantum state simultaneously, so forcing the matter into a smaller volume requires electrons to occupy higher and higher momentum states. That quantum rule shows up macroscopically as pressure.
 
-And it's *strong*. Strong enough to balance the crushing weight of the star's gravity. A white dwarf is supported entirely by degeneracy pressure — with no fusion whatsoever.
+Conceptually, the key idea is this: gravity tries to squeeze the star into a smaller volume, but quantum mechanics refuses to let all the electrons pile into the same low-energy state. The result is not a "push" from fusion or heat. It is a limit on how tightly matter can be packed before the electrons must occupy higher-momentum states, and that limit behaves like pressure on the scale of the whole star.
 
 {{< fig white-dwarf-mass-radius >}}
+
+We can summarize the white-dwarf mass-radius trend with a simple scaling relation:
+
+$$
+R_{\mathrm{WD}} \propto M_{\mathrm{WD}}^{-1/3}
+$$
+
+Let's unpack what that means:
+
+- **$R_{\mathrm{WD}}$** is the white dwarf's radius
+- **$M_{\mathrm{WD}}$** is the white dwarf's mass
+
+What this relation is really saying: if you add mass to a white dwarf, gravity squeezes it harder, so the radius gets **smaller** rather than larger. The important lesson is the direction of the trend, not the exact coefficient.
+
+There is a useful parallel for neutron stars. In a very simple degeneracy-supported model, you again expect the radius to shrink as mass increases:
+
+$$
+R_{\mathrm{NS}} \propto M_{\mathrm{NS}}^{-1/3}
+$$
+
+Pedagogically, the point is not that white dwarfs and neutron stars are identical. They are not. White dwarfs are supported mainly by **electron** degeneracy pressure, while neutron stars are supported mainly by **neutron** degeneracy pressure plus strong-interaction effects in ultradense matter. But both share the same big-picture trend: for compact remnants supported by degeneracy, **more mass generally means stronger squeezing and a smaller radius**.
+
+::: {.callout-summary title="How To Read These Equations"}
+Do not memorize these as plug-and-chug formulas. Read them as compressed physical stories:
+
+- ordinary stars: more mass often means a larger star
+- degeneracy-supported remnants: more mass means a **smaller** remnant
+
+That reversal is one of the clearest signs that compact objects obey a different kind of physics from ordinary stars.
+:::
 
 ::: {.callout-deep-dive title="Deep Dive — The Chandrasekhar Limit" collapse="true"}
 In 1930, a young Indian physicist named **Subrahmanyan Chandrasekhar** was sailing from India to England to study at Cambridge. During the voyage, he calculated a disturbing result: there is a *maximum mass* that electron degeneracy pressure can support.
 
 Above this mass, degeneracy pressure fails. Gravity wins, and the white dwarf collapses further.
 
-**The Chandrasekhar limit**: $M_{\text{Ch}} \approx 1.4 \, M_\odot$ (solar masses)
+**The Chandrasekhar limit**: $M_{\text{Ch}} \approx 1.4\,M_\odot$
 
 This number — 1.4 solar masses — is one of the most important in astrophysics. It marks the boundary between a gently fading white dwarf and catastrophic collapse.
 
 Chandrasekhar's result met fierce resistance. The legendary British astrophysicist Arthur Eddington was skeptical and famously said something like "I do not believe in the conclusion. I think there should be a law of nature to prevent a star from behaving in this absurd way." Eddington died in 1944 without accepting Chandrasekhar's result. But Chandrasekhar was right. In 1983, he won the Nobel Prize for this discovery.
 
-(Chandrasekhar's calculation assumes non-rotating white dwarfs composed of carbon and oxygen. Rotation and composition can change the limit slightly, but $1.4 \M_\odot$ is the standard reference value.)
+(Chandrasekhar's calculation assumes non-rotating white dwarfs composed of carbon and oxygen. Rotation and composition can change the limit slightly, but $1.4\,M_\odot$ is the standard reference value.)
+:::
+
+This leads to a counterintuitive rule: for white dwarfs, adding mass makes the star **smaller**, not larger. The added gravity squeezes the matter harder.
+
+::: {.callout-summary title="Important Limit"}
+Electron degeneracy pressure can support a white dwarf only up to about $1.4\,M_\odot$, the Chandrasekhar limit. Above that, a stable white dwarf is no longer possible.
 :::
 
 ### The Fate of Low-Mass Stars: A Summary
 
-For a star less than about 8 solar masses (including our Sun):
+For a star less than about $8\,M_\odot$ (including our Sun), the broad sequence is:
 
-1. **AGB phase** (100,000–few million years): The star oscillates, losing mass via stellar winds.
-2. **Planetary nebula phase** (10,000–20,000 years): The ejected envelope glows, illuminated by the hot core.
-3. **White dwarf cooling** (trillions of years): The exposed core cools slowly, without ever fusing again.
+1. red giant after core hydrogen runs out
+2. core helium burning
+3. AGB evolution with shell burning and mass loss
+4. planetary nebula as the hot core illuminates the shed gas
+5. white dwarf cooling over extremely long times
 
-The Sun will reach its white dwarf phase in about 5 billion years. At that point, Mercury and Venus will have been vaporized. Earth will be a charred, lifeless rock orbiting at the edge of the Sun's expanded atmosphere. The white dwarf that remains will be about the size of Earth and roughly the mass of the current Sun — a slow, cold ember, eventually fading to a black dwarf (though the universe isn't old enough yet for any black dwarfs to exist).
+The Sun will probably reach its white-dwarf phase in about 5 billion years. The remnant will be about the size of Earth and will cool for far longer than the present age of the universe. A true black dwarf is still hypothetical because the universe is not yet old enough for any to exist.
 
 ::: {.callout-check-yourself title="Check Yourself — White Dwarf vs. Normal Star"}
 The Sun's surface temperature is about 5,800 K. A typical white dwarf has a surface temperature of about 8,000 K. Yet the white dwarf appears much dimmer than the Sun. Using the Stefan-Boltzmann law ($L \propto R^2 T^4$), explain why.
@@ -201,7 +247,7 @@ $$
 :::
 :::
 
-::: {.callout-key-insight title="Observable -> Model -> Inference"}
+::: {.callout-summary title="Observable -> Model -> Inference"}
 **Observable:** We see glowing shells of gas (planetary nebulae) and hot, faint stars (white dwarfs) scattered throughout the galaxy.
 
 **Model:** Low-mass stars shed their envelopes in AGB winds. The ejected gas glows under ionizing radiation from the hot core. The remaining core is a white dwarf supported by electron degeneracy pressure.
@@ -220,6 +266,14 @@ Stars more massive than about 8 solar masses follow a radically different evolut
 In Lecture 19, we saw that massive stars burn through their fuel quickly, progressing through the H-R diagram in only a few million years. But what happens at the end?
 
 The answer involves an **onion-shell structure**.
+
+{{< fig hr-massive-star-evolution >}}
+
+For massive stars, the H-R diagram tells the same high-level story as before but at a much faster pace: they leave the main sequence quickly, cross through supergiant phases, and arrive at stellar death with much less time to spare than Sun-like stars.
+
+{{< fig jwst-wr124 >}}
+
+WR 124 is a useful bridge figure here because it reminds us that massive-star death does not begin only at the instant of explosion. Some massive stars enter violent mass-losing phases before core collapse, already surrounding themselves with material that records their unstable late lives.
 
 Some massive stars even advertise that instability before the final explosion. Eta Carinae, for example, has already blasted huge amounts of gas into space. It has not exploded yet, but it shows us that the biggest stars live in a state of violent imbalance long before core collapse finally arrives.
 
@@ -245,64 +299,73 @@ But there's a catch — iron is the end of the line.
 
 ### The Iron Catastrophe
 
-Why is iron special? Look at the binding energy curve from Lecture 14. Iron-56 sits at the peak of the binding energy per nucleon. This means:
+Why is iron special? Look at the binding-energy curve from Lecture 14. Nuclei near iron sit near the peak of binding energy per nucleon. That means moving **toward iron** releases energy, but moving away from iron does not help power a star.
 
 {{< fig binding-energy-iron-peak >}}
 
-- Fusing *lighter* nuclei releases energy (the curve goes up as you move right).
-- Fusing *heavier* nuclei also releases energy (the curve goes down, so fusing them requires less energy than just dropping them apart).
-- But fusing iron *consumes* energy.
+- Fusion of light elements up to iron can release energy.
+- Fission of very heavy nuclei can release energy.
+- But **fusion of iron or heavier nuclei does not power a star**.
 
-::: {.callout-key-insight title="Key Insight"}
-Iron fusion is endothermic. It absorbs energy rather than releasing it. When the core reaches temperatures hot enough to start fusing iron, the core loses energy instead of gaining it. Gravity immediately wins.
+::: {.callout-misconception title="Misconception Check"}
+**Misconception:** All fusion releases energy if the temperature is high enough.
+
+**Correction:** Not all fusion releases energy. In stellar cores, iron is the dead end for energy-producing fusion.
 :::
 
-In a silicon-burning shell just outside the iron core, silicon is still fusing into iron and nickel. New iron rains down onto the iron core. The core grows heavier and heavier. And as it grows, it contracts under gravity. The density climbs toward nuclear density — the density at which atomic nuclei are crushed together.
+Once a massive star builds an iron-rich core, fusion can no longer provide the pressure needed to resist gravity. The core is then living on borrowed time.
 
-At nuclear density — roughly $10^{14}$ grams per cubic centimeter, or about the density inside an atomic nucleus — the rules change. The neutrons and protons are no longer bound into nuclei separated by empty space. They touch. They merge. This is the **neutron drip line**: electrons are forced into protons, converting them to neutrons.
+As silicon burning continues in a shell outside the core, more iron-group material is added to the center. The core gets denser and hotter. Electron captures reduce the number of free electrons available to provide pressure support. Then the collapse begins.
 
-The electrons have nowhere left to hide. Their degeneracy pressure — the only thing that could potentially support the core against gravity — fails.
+::: {.callout-key-insight title="Takeaway"}
+The catastrophe is not that the star suddenly runs out of atoms. It is that the core reaches a composition for which normal fusion no longer helps support the star against gravity.
+:::
 
-The core collapses.
+::: {.callout-check-yourself title="Check Yourself — Why Iron Changes the Story"}
+If a stellar core is already extremely hot, why does that still not guarantee that iron fusion can keep the star alive?
 
-::: {.callout-misconception title="Misconception Alert"}
-*"All the electrons in the core get smashed into protons at once, creating a single giant nucleus."*
-
-**Not quite.** The core doesn't become a single nucleus. Rather, the distinction between what counts as a "nucleus" and what counts as "the space between nuclei" breaks down. The matter transitions into a state where neutrons, protons, and electrons are crushed together into a nearly incompressible fluid at nuclear density. It's more like a giant atomic nucleus, but extremely large (city-sized) rather than a single, tiny nucleus.
+::: {.callout-tip title="Solution" collapse="true"}
+Temperature alone is not enough. A star stays supported only if fusion releases energy that helps maintain pressure against gravity. Iron is near the peak of binding energy per nucleon, so fusing iron does **not** provide the energy payoff needed to support the core. Once the core becomes iron-rich, the star loses its last normal fusion-powered support channel.
+:::
 :::
 
 ::: {.column-margin}
-**Core collapse**: The catastrophic gravitational collapse of a massive star's iron core when degeneracy pressure fails at nuclear density. The collapse happens in less than 1 second.
+**Core collapse**: The rapid gravitational implosion of a massive star's iron core after pressure support fails. The collapse continues until the inner core reaches nuclear density, where it stiffens abruptly.
 :::
 
 ---
 
 ### The Bounce: Core-Collapse Supernova
 
-What happens next is almost impossible to visualize, but here's the sequence:
+Once the iron core loses pressure support, it collapses catastrophically. In less than a second, the core shrinks from roughly Earth-sized to a neutron-star-sized object only a few tens of kilometers across.
 
-**The collapse accelerates.** In about 0.3 seconds, a core the size of Earth (radius ~6,400 km) collapses to a sphere about 20 km across — roughly the size of a city. The density skyrockets. The infalling material is moving at speeds approaching 30% the speed of light.
+When the collapsing core reaches nuclear density, the innermost region stiffens abruptly. That launches a shock wave outward. But the shock does **not** simply blast through the star on its own. It loses energy while tearing apart infalling nuclei.
 
-At nuclear density, a new force takes over: the **nuclear strong force**. This is the force that binds protons and neutrons inside atomic nuclei. It's incredibly strong — but only at very short range (a few femtometers). At nuclear density, the infalling material hits this barrier and can't compress further.
+Current models show that neutrinos are crucial. The newborn proto-neutron star emits an enormous flood of neutrinos. Most escape, carrying away most of the collapse energy, but a small fraction deposits energy behind the stalled shock and helps revive it.
 
-**The core bounces.** The material at the center suddenly stiffens (it becomes "incompressible"). The infalling material piles up and bounces off like a ball dropped on concrete — except this bounce happens at nuclear density, with energies beyond anything we can create on Earth.
+::: {.callout-summary title="Energy Ledger"}
+For ASTR 101, keep these buckets separate:
 
-**A shock wave forms and races outward.** The bounce sends a shockwave — a supersonic disturbance — plowing through the onion-shell structure of the star. This shock wave carries an enormous amount of energy: about $10^{46}$ joules, enough to blow the entire star apart.
+- **Total gravitational energy released in core collapse:** about $10^{46}~\mathrm{J}$
+- **Most of that energy:** carried away by neutrinos
+- **Kinetic energy of the ejecta:** about $10^{44}~\mathrm{J}$
+- **Visible light:** only a small fraction of the total energy budget
+:::
 
-But there's a problem: as the shock wave plows through the layers, it loses energy by dissociating nuclei (tearing them apart). About 99% of the energy is locked up in the shock. It nearly stalls.
+::: {.callout-misconception title="Misconception Check"}
+**Misconception:** A supernova is just the star blowing up because fusion got stronger.
 
-**Neutrinos save the day.** The core is now so hot (~$10^{11}$ K) that neutrinos are copiously produced. These ghostly particles barely interact with normal matter — trillions pass through your body every second from the Sun without hitting anything. But in the core of a collapsing star, the density is so high that even neutrinos occasionally scatter off nucleons. This "neutrino heating" transfers about 1% of the neutrino energy (which carries away 99% of the collapse energy) to the material behind the shock. This small fraction is enough to revive the stalling shock wave and blow the star apart.
-
-The entire process — collapse, bounce, shock revival, and explosion — takes about **1 second**.
+**Correction:** In a core-collapse supernova, the trigger is **gravitational collapse of the core** after fusion has already failed as a support mechanism.
+:::
 
 ::: {.callout-check-yourself title="Check Yourself — Explosion Timescales"}
-A Type II supernova explodes in about 1 second, releasing $10^{44}$ joules of energy. The Sun's luminosity is $3.8 \times 10^{26}$ W. If the Sun had been running at maximum brightness for the entire 1 second, how much energy would it have radiated? Compare to the supernova energy.
+A core-collapse supernova ejecta carry about $10^{44}$ joules of kinetic energy. The Sun's luminosity is $3.8 \times 10^{26}~\mathrm{W}$. How much energy does the Sun radiate in one second, and how does that compare with the ejecta energy?
 
 ::: {.callout-tip title="Solution" collapse="true"}
-Energy = Power $\times$ Time
+Energy equals power times time:
 
 $$
-E_{\text{Sun}} = L_\odot \times t = (3.8 \times 10^{26} \text{ W})(1 \text{ s}) = 3.8 \times 10^{26} \text{ J}
+E_{\text{Sun}} = L_\odot t = (3.8 \times 10^{26}~\mathrm{W})(1~\mathrm{s}) = 3.8 \times 10^{26}~\mathrm{J}
 $$
 
 Ratio:
@@ -310,22 +373,18 @@ $$
 \frac{E_{\text{SN}}}{E_{\text{Sun}}} = \frac{10^{44}}{3.8 \times 10^{26}} \approx 2.6 \times 10^{17}
 $$
 
-**A Type II supernova releases about 260 quadrillion times more energy than the Sun does in an entire second.** The explosion is almost incomprehensibly violent.
+So even the outward kinetic energy alone is about $2.6 \times 10^{17}$ times the energy the Sun radiates in one second.
 :::
 :::
-
-The explosion energy is incomprehensible: $\sim 10^{44}$ joules (a "foe" or ten-to-the-Fifty-One Ergs, in the jargon). For a few weeks, the explosion outshines all the other stars in a galaxy of 100 billion stars *combined*. You can see it from across the universe with a small telescope.
-
-This is a **Type II supernova** (or **core-collapse supernova**).
 
 {{< fig core-collapse-sequence >}}
 
 {{< fig typeii-core-collapse-neutrino-heating >}}
 
-The second diagram is worth comparing to the first. The sequence figure gives the timing; this schematic tells you *why the shock does not simply coast outward*. The core first makes a stalled shock, and only then does neutrino heating help turn that failed blast into a successful explosion.
+The sequence figure gives the timing. The neutrino-heating schematic shows why the shock does not simply coast outward. The core first makes a stalled shock, and only then does neutrino heating help turn that failed blast into a successful explosion.
 
 ::: {.callout-check-yourself title="Check Yourself — Supernova Energy"}
-A Type II supernova releases $10^{44}$ joules. The Sun's lifetime luminosity is about $L_\odot = 3.8 \times 10^{26}$ W for 10 billion years. How many Sun-lifetimes worth of energy is released in a Type II supernova?
+A core-collapse event releases about $10^{46}$ joules in total. The Sun's lifetime luminosity is about $L_\odot = 3.8 \times 10^{26}~\mathrm{W}$ over $10$ billion years. How many Sun-lifetimes of radiated energy is that total collapse energy?
 
 ::: {.callout-tip title="Solution" collapse="true"}
 **Sun's total energy output over its lifetime:**
@@ -341,36 +400,45 @@ $$
 
 **Number of Sun-lifetimes:**
 $$
-\frac{10^{44} \text{ J}}{1.2 \times 10^{44} \text{ J}} \approx 0.8
+\frac{10^{46} \text{ J}}{1.2 \times 10^{44} \text{ J}} \approx 83
 $$
 
-**A Type II supernova releases about as much energy as the Sun will emit over its entire 10-billion-year lifetime, but releases it in less than a second.**
+The total collapse energy is about $80$ times the Sun's entire $10$-billion-year radiated output, although almost all of that supernova energy leaves as neutrinos, not visible light.
 :::
 :::
 
 ### Nucleosynthesis: Forging the Elements
 
+Before reading the whole periodic table, focus on four big buckets:
+
+- Hydrogen and much of helium: Big Bang
+- Carbon, oxygen, nitrogen: stars
+- Iron peak: supernova environments
+- Gold, uranium, and similar very heavy elements: rapid neutron-capture events
+
+That is the pattern to look for in the figure below.
+
 {{< fig solar-system-element-origins-module2 >}}
 
-The extreme temperatures and neutron densities in the supernova explosion create a nuclear alchemy far beyond what happens in normal stellar fusion.
+Normal stellar fusion can build elements up to roughly iron. To make many elements heavier than iron, nature needs additional processes such as neutron capture in extreme environments.
 
-In the onion shells, silicon briefly fuses to iron. But in the explosion's fireball, temperatures briefly exceed a billion Kelvin. Iron nuclei are smashed together. Neutrons bombard everything. New nuclei are forged: manganese, cobalt, nickel, copper, zinc, and beyond — all the way up to lead and bismuth.
+Core-collapse supernovae help enrich space in several ways. They eject the elements the star already made during its life, they synthesize additional iron-peak nuclei during the explosion, and they seed the interstellar medium with heavy elements that later become part of new stars and planets.
 
-More importantly: iron-peak elements and beyond — cobalt, nickel, zinc, and heavier elements — are created in copious amounts. These are dispersed into space at speeds of 10,000–30,000 km/s.
+::: {.callout-misconception title="Misconception Check"}
+**Misconception:** All elements heavier than iron come from supernovae.
 
-::: {.callout-misconception title="Misconception Alert"}
-*"All elements heavier than iron come from supernovae."*
-
-**Not quite.** Some elements heavier than iron (cobalt, nickel, zinc, copper) are made in core-collapse supernovae. But many are made in a different process: **neutron capture** in the late stages of massive star evolution or in a separate explosion type (neutron star mergers). The full picture is more complex, but the key point is: **you cannot make elements heavier than iron in the normal core burning of stars.**
+**Correction:** Some do, but many of the heaviest r-process elements are strongly linked to neutron-star mergers. The important ASTR 101 idea is that normal core fusion does **not** build those elements efficiently.
 :::
 
-The ejected material cools over months and years, forming dust grains and molecules. This enriched material — now containing iron, nickel, and other heavy elements created in the explosion — disperses into the interstellar medium.
+::: {.callout-summary title="Observable -> Model -> Inference"}
+**Observable:** We measure spectra of supernovae, supernova remnants, old stars, and kilonovae.
 
-Billions of years later, this enriched material becomes part of a new cloud. The cloud collapses to form new stars and planets. The iron that makes up the blood in your veins, the calcium in your bones, the copper that carries oxygen through your cells — all of it was forged in the explosion of a massive star and dispersed by the supernova.
+**Model:** Nuclear reactions in stars, supernovae, and neutron-star mergers produce different element patterns.
 
-::: {.callout-key-insight title="Key Insight"}
-Supernovae are the primary mechanism by which the cosmos becomes chemically enriched. Without supernovae, the universe would contain only hydrogen and helium. Supernovae write the periodic table.
+**Inference:** From those abundance patterns, astronomers reconstruct where elements were made and how galaxies became chemically enriched over time.
 :::
+
+This is why stellar death matters so much in astronomy. Stars do not just shine. They recycle the universe.
 
 ---
 
@@ -379,8 +447,8 @@ Supernovae are the primary mechanism by which the cosmos becomes chemically enri
 ::: {.callout-key-insight title="Stellar Endpoints at a Glance"}
 | Initial mass | Typical endpoint | Main support or outcome |
 |------|------|------|
-| Less than about $8 \M_\odot$ | White dwarf | Electron degeneracy pressure |
-| About 8 to a few tens of $M\odot$ | Neutron star | Neutron degeneracy pressure |
+| Less than about $8\,M_\odot$ | White dwarf | Electron degeneracy pressure |
+| About $8$ to a few tens of $M_\odot$ | Neutron star | Neutron degeneracy pressure |
 | High enough that even neutron degeneracy fails | Black hole | Gravitational collapse continues past the event horizon |
 
 What to notice: the endpoint is not random. It is set mainly by the star's **initial mass**, which determines how far fusion can proceed and whether any known pressure source can still resist gravity at the end.
@@ -390,41 +458,43 @@ So far, we've discussed core-collapse supernovae, which occur when a massive sta
 
 ### A White Dwarf in a Binary System
 
-Remember: a white dwarf is the inert core left behind by a low-mass star. It's about the size of Earth, incredibly dense, and unbelievably hot (surface temperature ~10,000 K — hotter than the Sun's surface, but much smaller so less luminous).
+Remember: a white dwarf is the exposed remnant of a low-mass star. In a binary system, its fate can change because it can gain matter from a companion star.
 
 ::: {.callout-check-yourself title="Check Yourself — Accretion and the Chandrasekhar Limit"}
-A white dwarf has an initial mass of $1.0 \M_\odot$. It begins accreting material from a companion star at a rate of $0.01 \M_\odot$ per million years. The Chandrasekhar limit is $1.4 \M_\odot$. Approximately how long until the white dwarf reaches the Chandrasekhar limit and explodes?
+A white dwarf has an initial mass of $1.0\,M_\odot$. In one simple accretion model, it gains matter from a companion at a rate of $0.01\,M_\odot$ per million years. If it had to reach $1.4\,M_\odot$, how long would that take?
 
 ::: {.callout-tip title="Solution" collapse="true"}
-Mass to accrete: $\Delta M = 1.4 - 1.0 = 0.4$ $M\odot$
+Mass to accrete: $\Delta M = 1.4 - 1.0 = 0.4\,M_\odot$
 
-Accretion rate: $\dot{M} = 0.01$ $M\odot$ per million years $= 10^{-2}$ $M\odot/(Myr)$
+Accretion rate: $\dot{M} = 0.01\,M_\odot/\mathrm{Myr}$
 
 Time:
 $$
-t = \frac{\Delta M}{\dot{M}} = \frac{0.4 \text{ M}_\odot}{0.01 \text{ M}_\odot/\text{Myr}} = 40 \text{ Myr}
+t = \frac{\Delta M}{\dot{M}} = \frac{0.4\,M_\odot}{0.01\,M_\odot/\mathrm{Myr}} = 40~\mathrm{Myr}
 $$
 
-**The white dwarf will reach the Chandrasekhar limit and explode in approximately 40 million years.** This is a typical timescale for Type Ia supernova progenitors in binary systems.
+This gives a timescale of about $40$ million years in this one simplified channel. It does **not** mean all Type Ia supernovae follow the same path or the same delay time.
 :::
 :::
 
-Now imagine a white dwarf in a binary system — orbiting another star. If the companion star is a normal main-sequence star, the two stars orbit their common center of gravity. Usually, they're far enough apart that they don't interact.
+Sometimes the newly accreted surface layer ignites and produces a **nova**: a surface thermonuclear flash that ejects the accreted gas while the white dwarf survives.
 
-But sometimes, the companion star evolves. If it expands into a red giant, its outer atmosphere may extend all the way to the white dwarf. Material from the red giant's atmosphere falls onto the white dwarf's surface.
+A **Type Ia supernova** is different. It is a thermonuclear destruction of the white dwarf itself.
 
-This material is mostly hydrogen and helium — the composition of the red giant's envelope. As it falls onto the white dwarf, gravity does work on it, heating it up. The material accumulates in a thin shell on the white dwarf's surface.
-
-Eventually — after perhaps a million years of steady accretion — the pressure and temperature in the accumulated shell reach a critical point: hydrogen fusion ignites. A thermonuclear explosion tears through the shell.
-
-This explosion is violent but not catastrophic. The shell flies off, and some mass-transfer continues. The process repeats: accrete, ignite, explode, repeat.
-
-But something strange can happen. The explosion doesn't just blow off the outermost layer — under the right conditions, a runaway thermonuclear chain reaction can propagate inward, engulfing the entire white dwarf. The temperature soars. Carbon and oxygen in the white dwarf's interior begin to fuse. The entire star explodes.
-
-This is a **Type Ia supernova**.
+Astronomers now think there is more than one route to a Type Ia event. In some systems, a white dwarf may grow toward the Chandrasekhar limit by accreting from a non-degenerate companion. In other systems, two white dwarfs may interact or merge, and some explosions may occur below the Chandrasekhar limit. The exact mix of channels is still an active research problem.
 
 ::: {.column-margin}
-**Type Ia supernova**: A thermonuclear explosion of a white dwarf in a binary system. Material accreted from a companion star ignites on the white dwarf's surface. Under certain conditions, a runaway chain reaction consumes the entire star.
+**Type Ia supernova**: A thermonuclear explosion that disrupts a white dwarf in a binary system. The exact progenitor channel is still under active study.
+:::
+
+::: {.callout-misconception title="Misconception Check"}
+**Misconception:** A nova is just a small Type Ia supernova.
+
+**Correction:** In a nova, the white dwarf survives. In a Type Ia supernova, the white dwarf is disrupted.
+:::
+
+::: {.callout-summary title="Important Simplification"}
+The classic near-Chandrasekhar accretion picture is still useful in ASTR 101 because it captures the basic idea of thermonuclear runaway in a white dwarf. But it is not the whole modern story.
 :::
 
 <!-- FIGURE: Schematic binary system showing: (1) White dwarf (small, dense, at center), (2) Red giant companion (large, extended), (3) Material stream flowing from red giant to white dwarf (forming an accretion disk), (4) Explosion from white dwarf. Include timeline: accretion over ~10^6 years, explosion in seconds. -->
@@ -433,25 +503,27 @@ This is a **Type Ia supernova**.
 
 | Property | Type II (Core-Collapse) | Type Ia (Thermonuclear) |
 |----------|-------------------------|------------------------|
-| **Progenitor** | Massive star (M > $8 \M_\odot$) | White dwarf in binary |
+| **Progenitor** | Massive star with a collapsing core | White dwarf in a binary system |
 | **Trigger** | Iron core collapse | Thermonuclear runaway |
-| **Time to explosion** | ~9 million years | ~10 million years (accretion) |
-| **Duration of explosion** | ~1 second (shock-driven) | ~10 seconds (burning-driven) |
-| **Peak luminosity** | ~10^$9 \L_\odot$ | ~10^$9 \L_\odot$ (similar) |
-| **Light curve shape** | Plateau, then decline | Smooth exponential decline |
-| **Ejecta composition** | Iron-peak + heavier; lots of Ni-56 | Iron-peak; similar Ni-56 yield |
-| **Ejecta velocity** | ~10,000–20,000 km/s | ~15,000–20,000 km/s |
-| **Progenitor remnant** | Neutron star or black hole | (complete disruption) |
-| **Frequency in galaxies** | ~few per century | ~few per century |
+| **Hydrogen in spectrum** | Usually present | Usually absent |
+| **What is left behind?** | Neutron star or black hole in many cases | No intact white dwarf remnant |
+| **Delay after star formation** | Usually a few to tens of millions of years | Can range from hundreds of millions to billions of years |
+| **What it tells astronomers** | Death of massive stars and chemical enrichment | Distance scale and thermonuclear explosion physics |
 
-Both types produce **nickel-56**, which decays to cobalt-56, then iron-56. This decay chain releases energy, powering the light we see for weeks after the explosion. A Type Ia supernova's light curve is often remarkably *consistent* from one event to another — they're nearly "standardizable" in brightness. This property makes Type Ia supernovae extraordinarily useful as "standard candles" for measuring cosmic distances, a tool we'll explore in Module 3.
+Both types can produce **nickel-56**, whose radioactive decay helps power the light we see after the explosion. Type Ia light curves are more uniform and can be standardized for distance measurements. Type II events are more diverse because massive stars arrive at explosion with a wider range of envelopes and environments.
 
 {{< fig supernova-xray-fingerprints >}}
 
-::: {.callout-misconception title="Misconception Alert"}
-*"All supernovae are the same; it doesn't matter which type caused the explosion we observe."*
+::: {.callout-key-insight title="What To Notice"}
+Astronomers classify supernovae from **observable evidence**: spectra, light-curve shape, and host-galaxy environment. The label is an inference from the data, not something we see written on the explosion itself.
+:::
 
-**Not true.** The progenitor system, the mechanism, the ejecta composition, and the light curve shape are all different for Type Ia and Type II supernovae. Astronomers measure the light curve shape, spectral features, and other properties to classify the supernova. Type Ia are used for distance measurements (Module 3). Type II tell us about massive star populations and element production.
+::: {.callout-summary title="Observable -> Model -> Inference"}
+**Observable:** We look for hydrogen lines, compare light-curve shapes, and note what kind of galaxy or stellar population hosted the explosion.
+
+**Model:** Core-collapse supernovae come from massive stars with collapsing cores, while Type Ia supernovae come from thermonuclear disruption of white dwarfs in binaries.
+
+**Inference:** From those observables, astronomers infer the likely explosion mechanism and the kind of progenitor system that produced it.
 :::
 
 ::: {.callout-check-yourself title="Check Yourself — Supernova Classification"}
@@ -462,9 +534,9 @@ You observe a new supernova in a distant galaxy. The light curve shows a smooth 
 
 **Reasoning:**
 
-- **Smooth exponential decay**: Type Ia light curves are powered by Ni-56 decay and typically show a smooth, exponential decline. Type II often shows a plateau phase.
-- **Iron and nickel features**: Both types produce these elements, but Type Ia comes from a white dwarf (made of carbon-oxygen) and accreted material (hydrogen/helium). The explosion destroys the white dwarf entirely, producing iron-peak elements. Type II comes from a massive star with iron core and hydrogen/helium layers, so Type II spectra often show hydrogen lines from the star's outer layers.
-- **No hydrogen lines**: Type II supernovae often show hydrogen absorption lines from the ejected hydrogen-rich envelope. The *absence* of hydrogen is consistent with Type Ia (white dwarf + accreted material) rather than Type II (hydrogen-rich star).
+- A smooth decline is characteristic of Type Ia light curves.
+- No hydrogen lines argues against the usual Type II case.
+- Strong iron-peak signatures fit a thermonuclear white-dwarf explosion.
 :::
 :::
 
@@ -474,37 +546,23 @@ You observe a new supernova in a distant galaxy. The light curve shows a smooth 
 
 ### The Elements in Your Body
 
-Every atom in your body except hydrogen was made inside a star. Most were made by stellar fusion. The heaviest and rarest came from supernovae.
+Nearly every atom in your body heavier than hydrogen has a stellar origin.
 
-Consider the atoms that make you:
+- **Hydrogen** was made mostly in the Big Bang.
+- **Carbon, nitrogen, and oxygen** were made inside stars.
+- **Iron** was made in supernova environments, especially Type Ia supernovae, with additional contributions from core-collapse supernovae.
+- Many of the heaviest elements were made in extreme neutron-capture events, including neutron-star mergers.
 
-- **Oxygen** (65% by mass): Made in the cores of massive stars, synthesized from carbon and neon fusion.
-- **Carbon** (18%): Made in helium fusion and carbon burning in massive stars.
-- **Hydrogen** (10%): Primordial; made in the first seconds after the Big Bang. Every hydrogen atom in your body has been floating in space for 13.8 billion years.
-- **Nitrogen** (3%): Made in low-mass stars via a slow neutron-capture process during helium burning.
-- **Iron** (0.007%): Made in iron-peak synthesis during supernova explosions.
-- **Calcium, phosphorus, sulfur, etc.**: Made by explosive nucleosynthesis in supernovae.
+The point is not to memorize which star made which atom. The deeper lesson is that the chemistry of planets, oceans, air, and life depends on earlier generations of stars that lived and died before the Sun formed.
 
-All of these atoms were created inside stars. All were dispersed into the interstellar medium by stellar winds (AGB stars) or supernovae (Type II explosions). The solar nebula — the cloud of gas and dust from which our Sun and planets formed 4.6 billion years ago — was enriched with these elements by countless generations of stars that had lived and died before the Sun was born.
-
-::: {.callout-key-insight title="Observable -> Model -> Inference"}
-**Observable:** The Sun has certain relative abundances of elements (measured from the solar spectrum). The cosmos has a certain distribution of elements (measured from stellar spectra, galaxies, and the cosmic microwave background).
-
-**Model:** Low-mass stars produce carbon, oxygen, and nitrogen via nuclear fusion. Massive stars produce iron-peak and heavier elements. Supernovae disperse these elements. Over billions of years, galaxies become enriched.
-
-**Inference:** By measuring the elemental abundances in a star, we can infer how many generations of stars have lived and died in that galaxy. A star with very low heavy-element abundance is old (formed when the galaxy was young and hadn't been enriched yet). A star with high heavy-element abundance is young (formed from already-enriched material).
+::: {.callout-summary title="Takeaway"}
+When astronomers measure the chemical composition of stars and gas clouds, they are reading a record of earlier stellar generations. Chemistry is one of the main ways we reconstruct cosmic history.
 :::
 
-::: {.callout-deep-dive title="Deep Dive — The r-process and Neutron Star Mergers" collapse="true"}
-We've discussed how core-collapse supernovae produce iron-peak elements and *some* elements heavier than iron (through neutron capture). But many of the heaviest elements — like gold, platinum, uranium — require an intense neutron flux to be created.
+::: {.callout-misconception title="Misconception Check"}
+**Misconception:** “We are star stuff” means every element came from one kind of explosion.
 
-For decades, astronomers thought all these heavy elements came from the **r-process** (rapid neutron capture) in supernovae. But recent observations suggest that most come from a *different* source: **neutron star mergers**.
-
-When two neutron stars (remnants of massive stars) spiral into each other due to gravitational wave radiation, they collide in a violent event. The extreme densities and temperatures create conditions ripe for rapid neutron capture. A single neutron star merger can produce enormous quantities of heavy elements — enough to account for much of the gold, platinum, and uranium in the galaxy.
-
-The first confirmed neutron star merger was detected by LIGO on August 17, 2017. Gravitational waves confirmed the collision. Electromagnetic observations (from gamma-ray telescopes, infrared observers, etc.) detected the light from the merger, including the telltale signatures of heavy element synthesis.
-
-This is a frontier of modern astrophysics: connecting mergers of exotic stellar remnants to the cosmic origin of the heaviest elements.
+**Correction:** Different elements come from different astrophysical sites. Stellar death matters because it enriches the universe through several channels, not just one.
 :::
 
 ---
@@ -515,32 +573,32 @@ Here's the profound conclusion:
 
 **A star's mass at birth determines its entire fate — its lifetime, its final fuel, and the manner of its death.**
 
-- **Low-mass stars** (< $0.5 \M_\odot$): Burn hydrogen so slowly they outlive the current age of the universe. None have died yet.
-- **Sun-like stars** (0.5–$8 \M_\odot$): Fuse hydrogen for billions of years, then gently shed their envelopes and die as white dwarfs.
-- **Intermediate-mass stars** (8–$20 \M_\odot$): Burn through their fuel in millions of years. Their fate depends on whether they can ignite neon and silicon (depends on exact mass). Most become either white dwarfs or neutron stars.
-- **Massive stars** (> 20–$25 \M_\odot$): Burn through their fuel in only a few million years. Build onion-shell cores. Explode as Type II supernovae and leave behind neutron stars or black holes.
+- **Very low-mass stars** (below about $0.5\,M_\odot$): live longer than the current age of the universe, so none have finished evolving yet.
+- **Low- and intermediate-mass stars** (roughly $0.5$–$8\,M_\odot$): end as white dwarfs after red giant and AGB evolution.
+- **Massive stars** (above about $8\,M_\odot$): undergo core collapse and usually leave neutron stars or black holes.
+- **White dwarfs in binaries**: can sometimes produce Type Ia supernovae through binary interaction.
 
-And in binary systems, a white dwarf can be rejuvenated by accretion and explode as a Type Ia supernova.
+::: {.callout-summary title="Important Simplification"}
+The $8\,M_\odot$ dividing line is approximate, not exact. Real stellar deaths depend on more than mass alone, especially in binaries, and details such as composition, mass loss, and rotation can shift the boundary.
+:::
 
-::: {.callout-key-insight title="Key Insight"}
-The diversity of stellar endpoints (white dwarfs, neutron stars, black holes) and explosion types (Type Ia and II supernovae) all stem from the initial mass of the star. This is one of the deepest insights of stellar astrophysics: initial mass $\rightarrow$ stellar structure $\rightarrow$ evolutionary path $\rightarrow$ death mode.
+::: {.callout-key-insight title="Final Takeaway"}
+Stellar death is not random. A star's mass and environment determine what pressure can support it, what fuels it can burn, and how it returns matter to space.
 :::
 
 ---
 
 ## Summary
 
-Stars die in diverse ways depending on their mass:
+Stars do not all die the same way.
 
-**Low-mass stars** drift off the main sequence, shed their envelopes in an AGB phase, and leave behind **white dwarfs** — dense stellar cores supported by electron degeneracy pressure. The ejected envelope creates a brief, beautiful **planetary nebula**. White dwarfs cool over trillions of years.
+Low- and intermediate-mass stars lose their outer layers late in life. Their exposed cores become white dwarfs, supported by electron degeneracy pressure. The brief glowing shell around them is a planetary nebula.
 
-**Massive stars** burn through their fuel in millions of years, building an onion-shell structure of increasing atomic number. When iron fusion begins to consume energy, the core loses support, collapses, bounces, and sends a shock wave through the star. **Neutrino heating** revives the shock, and a **Type II supernova** explosion tears the star apart. A **neutron star** or **black hole** is left behind.
+Massive stars build up iron-rich cores that can no longer gain energy from fusion. Their cores collapse, form proto-neutron stars, and can drive core-collapse supernovae in which neutrinos play a crucial role. These explosions disperse newly made elements and can leave behind neutron stars or black holes.
 
-**White dwarfs in binary systems** can accrete material from a companion star, reach the Chandrasekhar limit, and explode as **Type Ia supernovae** — thermonuclear detonations that consume the entire white dwarf.
+Type Ia supernovae are different. They are thermonuclear disruptions of white dwarfs in binary systems. They are not the same as novae, and modern evidence suggests that more than one binary pathway can produce them.
 
-Both explosion types scatter newly created heavy elements into the interstellar medium, enriching future generations of stars and planets. **Chemical enrichment is the legacy of stellar death.** The carbon in your DNA, the oxygen in your blood, the iron in your hemoglobin — all were forged in stellar cores or supernovae and dispersed by dying stars.
-
-**We are made of star stuff, literally and directly.**
+The big scientific idea is that stellar death links the life cycle of stars to the chemical evolution of galaxies. The material in future stars, planets, and living things is enriched by earlier generations of stellar death.
 
 ---
 
@@ -553,10 +611,10 @@ Both explosion types scatter newly created heavy elements into the interstellar 
 - [ ] I can explain the Chandrasekhar limit and what happens if a white dwarf exceeds it.
 - [ ] I can describe the onion-shell structure of a massive star's core.
 - [ ] I understand why iron fusion is the end of the line for nuclear burning.
-- [ ] I can explain the core-collapse mechanism in simple terms (collapse, bounce, shock revival).
-- [ ] I understand the role of neutrinos in reviving the stalling shock wave.
-- [ ] I can distinguish Type Ia and Type II supernovae by mechanism and progenitor.
-- [ ] I can explain how nucleosynthesis in supernovae produces iron-peak and heavier elements.
+- [ ] I can explain the core-collapse mechanism in simple terms (collapse, stalled shock, neutrino-assisted revival).
+- [ ] I understand the role of neutrinos in the supernova energy budget and shock revival.
+- [ ] I can distinguish nova, Type Ia supernova, and Type II supernova.
+- [ ] I can explain why elements heavier than iron require more than normal stellar core fusion.
 - [ ] I understand the connection between stellar death and chemical enrichment of the galaxy.
 
 ---
@@ -569,10 +627,10 @@ Both explosion types scatter newly created heavy elements into the interstellar 
 **1.** **Planetary nebula timescale.** A planetary nebula has a radius of 0.5 light-years and is expanding at 15 km/s. How old is it (approximately)? Compare your answer to the typical lifetimes of planetary nebulae (~10,000 years).
 
 <!-- Conceptual / Understand / — / ⭐ -->
-**2.** **White dwarf density.** The Sun's mass is $2 \times 10^{30}$ kg and Earth's radius is $6.4 \times 10^6$ m. If the Sun became a white dwarf the size of Earth, what would be its average density? (Compare to water: $10^3$ $kg/m^{3}.)$
+**2.** **White dwarf density.** The Sun's mass is $2 \times 10^{30}$ kg and Earth's radius is $6.4 \times 10^6$ m. If the Sun became a white dwarf the size of Earth, what would be its average density? Compare to water, which has density about $10^3~\mathrm{kg/m^3}$.
 
 <!-- Calculation / Apply / — / ⭐⭐ -->
-**3.** **Chandrasekhar limit.** A white dwarf has a mass of $1.5 \M_\odot$. Explain what happens. Can electron degeneracy pressure support it? What must occur next?
+**3.** **Chandrasekhar limit.** A white dwarf has a mass of $1.5\,M_\odot$. Explain what happens. Can electron degeneracy pressure support it? What must occur next?
 
 ### Working with Core Collapse
 
@@ -591,7 +649,7 @@ Both explosion types scatter newly created heavy elements into the interstellar 
 **7.** **Where did you come from?** Pick an element in your body from the list: carbon, oxygen, nitrogen, iron, calcium. Trace its origin: In what stellar environment was it created (normal fusion or supernova)? How was it dispersed into the interstellar medium? When did it enter the solar nebula?
 
 <!-- Calculation / Apply / OMI / ⭐⭐ -->
-**8.** **Supernova energy budget.** A Type II supernova releases about $10^{46}$ joules of energy. About 99% is carried away by neutrinos; 1% goes into kinetic energy of the ejecta. How much energy goes into motion of the ejected material? (Give answer in joules and in solar lifetime equivalents.)
+**8.** **Supernova energy budget.** A core-collapse supernova releases about $10^{46}$ joules of energy. About 99% is carried away by neutrinos, while about 1% goes into kinetic energy of the ejecta. How much energy goes into the motion of the ejected material? Give your answer in joules, then compare that kinetic energy to the Sun's total lifetime output.
 
 ### Comparing Supernovae
 
@@ -610,7 +668,7 @@ Both explosion types scatter newly created heavy elements into the interstellar 
 **12.** **The fate of the Sun — detailed timeline.** Construct a timeline for the Sun's death, from the present to 10 trillion years in the future. Include: (a) when the Sun becomes a red giant, (b) when planetary nebula phase begins/ends, (c) the white dwarf cooling curve, (d) whether the Sun will ever become a black dwarf. At each stage, what is the Sun's approximate luminosity, temperature, and size?
 
 <!-- Synthesis / Evaluate / OMI / ⭐⭐⭐ -->
-**13.** **Galactic chemical enrichment.** The Milky Way contains about $2 \times 10^{11}$ stars. Roughly 1 in 300 is a Type II supernova progenitor. Assume each supernova produces $0.1 M_\odot$ of iron. Over 10 billion years of galactic history, how much total iron was produced by supernovae? Compare to the Sun's mass ($2 \times 10^{30}$ kg). What fraction of the galaxy's iron content do these supernovae account for?
+**13.** **Galactic chemical enrichment (toy model).** Treat this as a back-of-the-envelope estimate for **one** enrichment channel, not the whole iron budget of the Milky Way. The Milky Way contains about $2 \times 10^{11}$ stars. Roughly 1 in 300 is a Type II supernova progenitor. Assume each such supernova produces $0.1\,M_\odot$ of iron. Over 10 billion years of galactic history, how much iron would this channel contribute? Compare your result to the Sun's mass ($2 \times 10^{30}$ kg), and explain why this estimate should not be treated as the galaxy's complete iron inventory.
 
 ---
 
