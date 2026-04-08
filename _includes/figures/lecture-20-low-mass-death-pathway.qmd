@@ -1,0 +1,12 @@
+```mermaid
+flowchart LR
+  A["Main-sequence star"] --> B["Core hydrogen runs out"]
+  B --> C["Red giant"]
+  C --> D["Core helium burning"]
+  D --> E["AGB star"]
+  E --> F["Outer layers ejected"]
+  F --> G["Planetary nebula"]
+  G --> H["White dwarf"]
+```
+
+*What to notice: low-mass stars die through structural change and mass loss, not explosion.*
