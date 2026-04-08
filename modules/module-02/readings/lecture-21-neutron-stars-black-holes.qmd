@@ -24,347 +24,373 @@ prerequisites: "How stars die (Lecture 20), stellar evolution (Lecture 19), grav
 ::: {.callout-key-insight #the-big-idea}
 ## The Big Idea
 
-When gravity wins completely, even light cannot escape — and the universe rewards our curiosity with gravitational waves that let us hear the cosmos for the first time.
+Neutron stars and black holes matter because they force astronomers to do what astronomy always does best: reason from evidence. We detect pulses of radio waves, X-rays from hot accretion disks, the motion of stars, and ripples in spacetime. From those observables, we infer the existence of some of the most extreme objects in the universe.
 :::
 
 ::: {.callout-roadmap title="How to Use This Reading" collapse="true"}
 This reading is the capstone for Module 2: the compact remnants left behind when stellar evolution reaches its limit.
 
-**Default expectation (best):** Read the whole page before lecture, pausing at each **Check Yourself** prompt.
+**Default expectation (best):** Read the whole page before lecture and stop at each **Check Yourself** prompt.
 
 **If you're short on time (~20 min):**
 
-- Focus on the neutron-star section, the Schwarzschild-radius section, and the observational evidence for black holes.
-- Return to the gravitational-wave discussion and challenge problems after class.
+- Focus on neutron stars and pulsars, the Schwarzschild-radius section, and the evidence for black holes.
+- Return to gravitational waves and the practice problems after class.
 
-**Reference mode:** Use the summary and glossary when later modules revisit black holes at galactic scales.
+**Reference mode:** Use this page later when Module 3 revisits supermassive black holes in galaxies.
 :::
+
+## Learning Outcomes
+
+By the end of this reading, you should be able to say:
+
+- [ ] I can explain what supports a neutron star against gravity and why neutron stars are so much smaller than white dwarfs.
+- [ ] I can describe the lighthouse model of a pulsar and connect the pulses we observe to a rotating neutron star.
+- [ ] I can calculate or estimate the Schwarzschild radius for a given mass and explain what an event horizon is.
+- [ ] I can describe at least three independent lines of evidence for black holes and explain what each one lets astronomers infer.
+- [ ] I can explain, at a qualitative level, what LIGO measures when it detects gravitational waves.
+- [ ] I can connect neutron stars and black holes to the larger story of stellar evolution and cosmic recycling.
+
+---
 
 ## What Happens When Stars Run Out of Tricks?
 
-In Lecture 20, we left our star in crisis: its core has collapsed under its own gravity, triggering a catastrophic explosion. But what survives? For a Sun-like star, the answer was straightforward — a white dwarf, supported by electron degeneracy pressure. Yet for more massive stars, the story doesn't end there. The gravitational vice tightens.
+In Lecture 20, we saw that once nuclear fusion can no longer provide enough pressure, gravity takes over and the core collapses. For lower-mass stars, that collapse stops at a white dwarf, supported by electron degeneracy pressure. For more massive stellar cores, the compression goes further.
 
-Imagine yourself squeezing harder and harder on a tennis ball. First, the rubber resists. Then the air inside. Then the rubber begins to yield. Now imagine squeezing with the weight of a star. What if even the electrons — those quantum particles we've relied on to hold up white dwarfs — can no longer resist? What if the protons and electrons are forced together, merging into neutrons? And what if even *that* doesn't stop the collapse?
+This lecture asks the next question:
 
-This is not speculation. We observe these objects in the night sky. We detect their radio pulses. We've watched them spiral inward toward doom, ripping spacetime itself and generating the gravitational waves we can now measure with extraordinary precision. This reading takes us to the edge — and beyond — of what physics can describe.
+> **When gravity keeps winning, what kinds of objects does nature produce, and how do we know they are really there?**
 
-## Neutron Stars: The Strongest Stuff in the Universe
+That question matters because neutron stars and black holes are not just strange leftovers. They are places where matter reaches extraordinary density, gravity becomes extremely strong, and new kinds of evidence become available, including gravitational waves.
+
+::: {.callout-summary title="How to Read This Lecture"}
+Keep asking the same three questions:
+
+- **What do astronomers actually observe?**
+- **What physical model explains that observation?**
+- **What can we infer from that model?**
+:::
+
+## Neutron Stars: Matter Pushed to the Limit
 
 ### When Degeneracy Meets Its Match
 
-Recall that in a white dwarf, electron degeneracy pressure — the quantum resistance of electrons to being squeezed into the same quantum state — holds up the star against gravity. But there's a limit. In 1930, Subrahmanyan Chandrasekhar calculated this limit: approximately **1.4 solar masses** ($1.4 \M_\odot$). If a white dwarf is any more massive, the electrons simply cannot hold it up.
+A white dwarf is supported by **electron degeneracy pressure**, the quantum-mechanical resistance of electrons to being squeezed into the same state. But that support has a limit. Subrahmanyan Chandrasekhar showed that a white dwarf cannot remain stable above about $1.4\,M_\odot$.
 
 ::: {.column-margin}
-Chandrasekhar Limit — approximately $1.4 \M_\odot$, the maximum mass of a white dwarf. Above this mass, electron degeneracy pressure fails, and collapse continues.*
+**Chandrasekhar limit**: about $1.4\,M_\odot$, the maximum mass a white dwarf can support using electron degeneracy pressure alone.
 :::
 
-What happens next? Under crushing pressure, electrons are forced into protons, creating neutrons and releasing ghostly neutrinos. The core becomes a ball of neutrons, held up by a different kind of degeneracy pressure: **neutron degeneracy pressure**. Neutrons, like electrons, obey the Pauli exclusion principle — no two neutrons can occupy the same quantum state. They resist compression with fierce quantum stubbornness.
+If a collapsing core is more massive than this, electron degeneracy pressure is no longer enough. Under the enormous pressure, electrons and protons are forced together to form neutrons, and the remnant becomes a neutron star.
 
-But neutron degeneracy is *far* stronger than electron degeneracy. The neutrons can pack much more densely. The result is astonishing.
+Now a different support mechanism matters: **neutron degeneracy pressure**. Neutrons, like electrons, obey the Pauli exclusion principle, so they also resist being squeezed into the same quantum state.
 
-### The Neutron Star: A City Compressed to an Orange
+### The Neutron Star: A City Compressed to Nuclear Density
 
-A typical neutron star is about **10 kilometers in diameter** — roughly the size of a city — yet contains between 1.4 and 3 solar masses. To grasp the density: a teaspoon of neutron star material would weigh about **a billion tons**. The density is roughly that of an atomic nucleus itself.
+A typical neutron star has a **radius of about $10$ to $12$ km** and a mass of roughly $1.4$ to about $2\,M_\odot$ in most observed systems. That means an object only about **$20$ to $25$ km across** can contain more mass than the Sun.
+
+Its average density is comparable to the density inside an atomic nucleus. That is why neutron stars are not just "small stars." They are stellar cores compressed so much that ordinary atomic structure no longer survives.
 
 {{< fig compact-object-scale-comparison >}}
 
-::: {.callout-key-insight title="Key Insight"}
-A neutron star is not a dead ember. It is the nucleus of the original star, exposed and laid bare — a laboratory of physics so extreme that our normal understanding of matter breaks down.
+::: {.callout-misconception title="Misconception Check"}
+The main difference among white dwarfs, neutron stars, and black holes is **not** simply mass. The key difference is how much mass is compressed into how little space.
 :::
 
-To picture this, imagine compressing the entire mass of the Sun — $2 \times 10^{30}\,\mathrm{kg}$ — into a sphere the size of San Francisco. Every atom is crushed. The electron shells vanish. Electrons and protons merge into neutrons. The neutrons themselves may be partially crushed into even stranger states of matter — perhaps quarks flowing freely, or pion condensates — we don't fully know. We are at the edge of our understanding.
+::: {.callout-key-insight title="What to Notice"}
+A neutron star is the collapsed core of a once-massive star. It is not an ordinary star scaled down. It is matter pushed into a regime where density, pressure, and gravity all become extreme.
+:::
 
 ::: {.column-margin}
-Neutron Star — a stellar remnant composed primarily of neutrons, supported by neutron degeneracy pressure, typically with a radius of ~10 km and a mass of ~$1.4$–$3\,M_\odot$.*
+**Neutron star**: a stellar remnant composed mostly of neutrons, supported primarily by neutron degeneracy pressure. Its radius is typically about $10$ km, and its mass is usually around $1$ to $2\,M_\odot$.
 :::
 
-### Pulsars: The Universe's Most Precise Clocks
-
-On November 28, 1967, a graduate student named **Jocelyn Bell Burnell** detected something peculiar in the radio data: a regular pulse of radio emission, repeating every 1.3 seconds, so regular that it seemed artificial. She and her advisor Antony Hewish initially called it "LGM-1" — for "Little Green Men" — half-jokingly, because it looked so much like a signal from aliens.
-
-Of course, it wasn't aliens. It was something far more remarkable: a neutron star, rotating so rapidly that its beam of radio emission swept past Earth like a lighthouse beam. Each rotation produced a pulse. They named these objects **pulsars**.
-
-How can we understand this? A neutron star doesn't shine by nuclear fusion or heat. Instead, its *rotation* combined with a powerful *magnetic field* produces radio emission. Here's the mechanism:
-
-<!-- FIGURE: Diagram of a pulsar showing a rotating neutron star with rotation axis (vertical), magnetic axis (tilted), and a sweeping cone of radio emission. Include Earth at the end of the cone, receiving pulses as the cone sweeps past. Label: "Lighthouse Model of a Pulsar." -->
-
-1. **The neutron star rotates rapidly** (many times per second). Some rotate hundreds of times per second — *millisecond pulsars*.
-
-2. **The star carries a powerful magnetic field**, often $\sim 10^{12}$ gauss (compare: Earth's field is ~0.5 gauss; a refrigerator magnet is ~100 gauss). Some exotic neutron stars, called **magnetars**, have fields 1000 times stronger still.
-
-3. **The magnetic axis is tilted relative to the rotation axis** — just as Earth's magnetic pole is tilted relative to its rotation axis.
-
-4. **Charged particles (electrons and ions) are accelerated along the magnetic field lines**, creating a beam of radio waves that beams outward from the magnetic poles.
-
-5. **As the star rotates, the beam sweeps around like a lighthouse**. If the beam points our way, we receive a pulse. If it doesn't, we see nothing.
-
-{{< fig neutron-star-types-nasa >}}
-
-This is why astronomers talk about a *neutron-star zoo*. Some neutron stars are best known as pulsars, some as magnetars, and some blur the categories. The underlying object is the same basic kind of remnant, but what we observe depends on magnetic field strength, spin, and whether the beam geometry points any signal toward Earth.
-
-::: {.callout-key-insight title="Observable -> Model -> Inference"}
-Observable: regular radio pulses separated by precise time intervals; Doppler shifts revealing orbital motion. Model: rotating neutron star with tilted magnetic field. Inference: rotation period, magnetic field strength, mass (if in a binary orbit), distance (via dispersion measure).
-:::
-
-::: {.callout-check-yourself title="Check Yourself"}
-If a pulsar has a period of 0.5 seconds, how many times per second does the neutron star rotate?
+::: {.callout-check-yourself title="Check Yourself — White Dwarf vs. Neutron Star"}
+If a neutron star and a white dwarf can have somewhat similar masses, why is the neutron star so much smaller?
 :::
 
 ::: {.callout-tip title="Solution" collapse="true"}
-The period is 0.5 seconds, so the rotation frequency is 1 / 0.5 = **2 rotations per second**. This is one of the slower pulsars; millisecond pulsars can rotate 100–1000 times per second.
+Because the support mechanism is different. A neutron star is held up by neutron degeneracy pressure, which allows matter to be packed much more tightly than in a white dwarf, where electron degeneracy pressure sets the structure.
 :::
 
-**Why was the discovery of pulsars so important?** First, it provided the first direct evidence that neutron stars actually exist — no longer merely a theoretical prediction. Second, pulsars are extraordinarily stable timekeepers. The Crab Pulsar (remnant of a supernova observed in 1054 CE) rotates 30 times per second with remarkable steadiness. Over decades, its timing is as reliable as an atomic clock. Astronomers now use pulsars for:
+## Pulsars: Timing as Evidence
 
-- Measuring cosmic distances (via the dispersion of radio waves in the interstellar medium)
-- Detecting planets around other stars (timing variations in the pulsar signal reveal the gravitational tug of an orbiting planet)
-- Testing general relativity in the strong-gravity regime (orbiting pulsars show gravitational effects that confirm Einstein's predictions)
+In 1967, Jocelyn Bell Burnell discovered a source of radio emission that produced pulses at extremely regular intervals. At first, the signal was so regular that it seemed almost artificial. It was not an alien beacon. It was the first clear observational evidence of a neutron star.
 
-<!-- FIGURE: A historical photograph or artistic rendering of Jocelyn Bell Burnell (with appropriate caption crediting her). Include a small inset showing the periodic radio signal pattern she discovered. -->
+A **pulsar** is a rapidly rotating neutron star whose magnetic axis is tilted relative to its rotation axis. Radiation is emitted in beams near the magnetic poles. As the star rotates, those beams sweep through space like lighthouse beams. If one beam crosses Earth, we detect a pulse.
 
-::: {.callout-misconception title="Misconception Alert"}
-Many people think pulsars are very young objects that spin down quickly. Actually, young pulsars (like the Crab Pulsar) slow down over time — but *very* slowly. The Crab Pulsar slows by only ~0.01 seconds per year. **Millisecond pulsars** are actually *old* — they've been spun back up by accreting material from a companion star in a binary system. We call these "recycled" pulsars.
+::: {.callout-summary title="Observable -> Model -> Inference"}
+**Observable:** regular pulses of radio emission
+
+**Model:** a rotating neutron star with a tilted magnetic field and beamed emission
+
+**Inference:** the source is a compact, rapidly rotating stellar remnant with a strong magnetic field
 :::
+
+The logic matters here. We do not see a neutron star "blinking" on and off. We infer rotation from the pulse timing and the lighthouse geometry.
+
+{{< fig neutron-star-types-nasa >}}
+
+::: {.callout-key-insight title="What to Notice"}
+"Neutron star" names the physical object. "Pulsar" and "magnetar" describe how some neutron stars behave observationally.
+:::
+
+::: {.callout-check-yourself title="Check Yourself — Pulsar Period"}
+If a pulsar has a period of $0.5$ seconds, how many times per second does it rotate?
+:::
+
+::: {.callout-tip title="Solution" collapse="true"}
+The period is the time for one rotation, so the rotation frequency is
+
+$$
+f = \frac{1}{P} = \frac{1}{0.5\ \text{s}} = 2\ \text{rotations per second}.
+$$
+
+So the neutron star rotates $2$ times each second.
+:::
+
+Pulsars are valuable because their timing is extraordinarily regular. Astronomers use that regularity to test gravity, measure binary orbits, detect companion objects, and probe the gas between stars through pulse dispersion.
+
+::: {.callout-misconception title="Misconception Check"}
+A pulsar is **not** a star that turns its light on and off. The pulse happens because the star rotates and its beam sweeps across our line of sight.
+:::
+
+Young pulsars gradually slow down as they lose rotational energy, but the slowdown is very gradual. Older neutron stars in binary systems can be spun up again if they accrete matter from a companion. These are called **recycled pulsars**.
 
 ### Recycled Pulsars and Binary Companions
 
-Some of the most fascinating neutron stars live in **binary systems** — paired with a normal star or another compact object. Matter from the companion star can be pulled onto the neutron star, forming an **accretion disk**. As material spirals inward, it releases gravitational energy, heating to millions of degrees and shining in X-rays.
-
-These systems are known as **X-ray binaries**. The accretion disk funnels material toward the magnetic poles, where it crashes onto the neutron star's surface at near-light speeds. The impact heats the poles to hundreds of millions of degrees.
-
-But here's the key: as material lands on the neutron star, it carries angular momentum, slowly spinning the star faster. Over millions of years, a relatively slow pulsar (spinning a few times per second) can be spun up to a millisecond pulsar (100–1000 rotations per second). These are the "recycled" pulsars — old neutron stars given a second wind.
-
-::: {.column-margin}
-X-ray Binary — a binary star system containing a compact object (neutron star or black hole) that accretes material from a companion star, producing intense X-ray emission.*
-:::
+Some neutron stars live in binary systems with ordinary stars. If gas from the companion flows toward the neutron star, it usually forms an **accretion disk**. As the gas spirals inward, gravitational energy is converted into heat, and the system often becomes a strong source of X-rays.
 
 {{< fig recycled-pulsar-xray-binary >}}
 
-::: {.callout-deep-dive title="Deep Dive" collapse="true"}
-A millisecond pulsar can reach truly extreme rotation rates. PSR J1748-2446 rotates **716 times per second**. At its equator, the surface velocity is ~one-quarter the speed of light. The centrifugal acceleration exceeds Earth's surface gravity by $\sim 10^{11}$ times. Despite this, the neutron star's gravity holds it together. Only neutron degeneracy pressure — the quantum force that fills the core — can resist such stresses. This is what makes neutron stars so interesting to astrophysicists: they let us probe physics at densities and energies we can never create in a laboratory.
-:::
-
-### The Tolman–Oppenheimer–Volkoff Limit
-
-Just as there is a maximum mass for a white dwarf (the Chandrasekhar limit), there is a maximum mass for a neutron star. In 1939, J. Robert Oppenheimer and George Volkoff calculated this limit: roughly **2–3 solar masses** (the exact value depends on the equation of state — how densely neutrons can pack).
+This infalling gas does two important things at once. It releases energy, making the system bright in X-rays, and it brings angular momentum, which can spin the neutron star up. That is why some old neutron stars rotate hundreds of times per second: they were gradually recycled by accretion from a companion star.
 
 ::: {.column-margin}
-TOV Limit (Tolman–Oppenheimer–Volkoff limit) — approximately 2–$3 \M_\odot$, the maximum mass a neutron star can support before collapsing into a black hole.*
+**X-ray binary**: a binary system in which a neutron star or black hole accretes matter from a companion star, producing hot gas that emits strongly in X-rays.
 :::
 
-What happens to a stellar remnant more massive than the TOV limit? There is nothing left to hold it up. Not electron degeneracy. Not neutron degeneracy. Gravity wins completely, and the core collapses beyond any finite density.
+::: {.callout-check-yourself title="Check Yourself — Accretion"}
+Why does accretion both heat the gas and change the neutron star's spin?
+:::
+
+::: {.callout-tip title="Solution" collapse="true"}
+As gas falls inward, it loses gravitational potential energy, which is converted into heat. Because the gas is orbiting, it also carries angular momentum; when that material lands on or interacts with the neutron star, it can transfer angular momentum and spin the star up.
+:::
+
+## The Tolman–Oppenheimer–Volkoff Limit
+
+A neutron star also has a maximum possible mass. Just as electron degeneracy pressure cannot support an arbitrarily massive white dwarf, neutron degeneracy pressure cannot support an arbitrarily massive neutron star.
+
+The maximum stable neutron-star mass is called the **Tolman–Oppenheimer–Volkoff limit**, or **TOV limit**. Its exact value depends on the physics of ultra-dense matter, but for ASTR 101 the key idea is the logic:
+
+- below the white-dwarf limit, a collapsed core can become a white dwarf
+- above that, a more massive collapsed core may become a neutron star
+- if even neutron pressure cannot hold the core up, collapse continues to a black hole
+
+::: {.column-margin}
+**TOV limit**: the approximate maximum mass a neutron star can have before gravity overwhelms neutron pressure and collapse continues to a black hole.
+:::
 
 {{< fig neutron-star-cross-section >}}
 
-And we arrive at black holes.
-
-## Black Holes: Where Gravity Defeats Light Itself
-
-::: {.callout-key-insight title="Transition from Lecture 20"}
-Lecture 20 established the endpoint logic: lower-mass stars leave white dwarfs, more massive stars can leave neutron stars, and the most extreme collapses produce black holes. This lecture zooms in on the last two cases, where gravity pushes matter and spacetime to their limits.
+::: {.callout-key-insight title="What to Notice"}
+Even neutron stars are not simple solid balls. Their interiors are layered, and the deepest regions probe matter under conditions we still do not fully understand.
 :::
+
+At the greatest depths, matter may enter forms we still do not fully understand, which is one reason neutron stars are important laboratories for modern physics.
+
+## Black Holes: When Gravity Wins Completely
+
+If collapse goes so far that no known pressure can stop it, the remnant becomes a black hole. In general relativity, a black hole is a region of spacetime from which nothing can escape once it passes a certain boundary.
+
+That boundary is called the **event horizon**.
 
 ### The Schwarzschild Radius and the Event Horizon
 
-What is a black hole? Classically, it is a region of spacetime from which nothing — not even light — can escape. But how do we define this region precisely?
-
-In 1916, Karl Schwarzschild derived an exact solution to Einstein's equations of general relativity, describing the spacetime around a non-rotating massive object. This solution contains a special radius: the **Schwarzschild radius**, given by
+For a non-rotating black hole, the size of the event horizon is described by the **Schwarzschild radius**:
 
 $$
 R_s = \frac{2GM}{c^2}
 $$
 
-where $G$ is the gravitational constant, $M$ is the mass, and $c$ is the speed of light.
+This equation tells us the radius at which the escape speed equals the speed of light.
 
 ::: {.callout-key-insight title="Key Insight"}
-The Schwarzschild radius is not a physical surface. It is a boundary in spacetime — the point where the escape velocity equals the speed of light. Inside this boundary, escape is impossible.
+The Schwarzschild radius is not a solid surface. It marks the radius of the event horizon for a non-rotating black hole.
 :::
 
-Let's compute an example. For a 10-solar-mass black hole:
+For a $10\,M_\odot$ black hole, the Schwarzschild radius is about $30$ km. So a stellar-mass black hole can contain several Suns' worth of mass inside a region only a few tens of kilometers across.
 
-$$
-R_s = \frac{2 \times (6.674 \times 10^{-11} \text{ m}^3 \text{ kg}^{-1} \text{ s}^{-2}) \times (10 \times 2 \times 10^{30} \text{ kg})}{(3 \times 10^8 \text{ m s}^{-1})^2}
-$$
-
-$$
-R_s \approx 30 \text{ km}
-$$
-
-A 10-solar-mass black hole fits within a sphere the size of a metropolitan area.
-
-::: {.callout-check-yourself title="Check Yourself"}
-Calculate the Schwarzschild radius for the Sun (if it were somehow compressed into a black hole).
-Mass of the Sun: $M_{\odot} = 2 \times 10^{30}$ kg.
+::: {.callout-check-yourself title="Check Yourself — The Sun as a Black Hole"}
+Calculate the Schwarzschild radius for the Sun if it were somehow compressed into a black hole. Use $M_{\odot} = 2 \times 10^{30}\,\mathrm{kg}$.
 :::
 
 ::: {.callout-tip title="Solution" collapse="true"}
 $$
-R_s = \frac{2 \times (6.67 \times 10^{-11}) \times (2 \times 10^{30})}{(3 \times 10^8)^2} \approx 3 \text{ km}
+R_s = \frac{2 \times (6.67 \times 10^{-11}) \times (2 \times 10^{30})}{(3 \times 10^8)^2} \approx 3\ \text{km}
 $$
-The Sun, if collapsed to a black hole, would be about 3 km in radius — smaller than many cities but much larger than a neutron star would be. Of course, the Sun will never actually collapse to a black hole; it lacks the mass.
-:::
 
-The boundary at the Schwarzschild radius is called the **event horizon**. This is the most famous property of a black hole: *nothing escapes past the event horizon*. Not because the black hole "sucks" things in — gravity at a distance works just like gravity around any other object of the same mass — but because light itself cannot outrun the spacetime curvature.
-
-::: {.column-margin}
-Event Horizon — the boundary around a black hole defined by the Schwarzschild radius, from which nothing, including light, can escape.*
+So the Sun, if it could become a black hole, would have an event-horizon radius of only about $3$ km. That is **smaller** than a typical neutron-star radius. Of course, the real Sun does not have enough mass to collapse into a black hole.
 :::
 
 {{< fig black-hole-warped-spacetime-module2 >}}
 
+::: {.column-margin}
+**Event horizon**: the boundary around a black hole from which no signal can escape to the outside universe.
+:::
+
 ### A Common Misconception: "Black Holes Are Cosmic Vacuums"
 
-::: {.callout-misconception title="Misconception Alert"}
-People often imagine black holes as ravenous objects that suck up everything nearby. This is misleading. The gravitational force at a distance from a black hole is identical to the force around any object of the same mass. If the Sun were somehow replaced by a black hole of equal mass, Earth's orbit would not change — we would continue to orbit peacefully at 150 million kilometers away. What makes black holes dangerous is only if you get very close to them, where tidal forces (the difference in gravity between your head and feet) become lethal.
+Far from a black hole, gravity behaves just as it would for **any other object with the same mass**. If the Sun were magically replaced by a black hole of exactly the same mass, Earth would still orbit at roughly the same distance. The difference would be that sunlight and heat were gone, not that gravity at Earth's orbit suddenly became stronger.
+
+::: {.callout-misconception title="Misconception Check"}
+Black holes do **not** suck everything in from far away. What makes them dangerous is getting very close, where spacetime curvature and tidal forces become extreme.
 :::
 
 ### Falling Into a Black Hole: Tidal Forces and Spaghettification
 
-Near the event horizon, the gravitational gradient becomes extreme. A person falling feet-first into a black hole would experience a tidal force: the gravity pulling on their feet would be enormously stronger than the gravity pulling on their head. The difference would stretch them — a process astrophysicists whimsically call "spaghettification." They would be torn apart before crossing the event horizon.
+A tidal force happens because gravity is stronger at one part of an object than another. Near a compact object, the difference in gravity between your feet and your head can become enormous.
 
-However — and this is crucial — for *supermassive* black holes (millions or billions of solar masses), the tidal forces at the event horizon are surprisingly gentle. A person falling into the supermassive black hole at the center of the Milky Way could cross the event horizon without feeling excessive tidal stress. Only once inside, in the infinite density region called the **singularity**, would physics break down entirely.
+Near a **stellar-mass** black hole, these tidal forces can become lethal before or around the time you reach the event horizon. Near a **supermassive** black hole, the event horizon is much larger, so the tidal-force difference at the horizon can be much smaller.
 
-::: {.column-margin}
-Singularity — the theoretical point (or region) at the center of a black hole where density becomes infinite and general relativity ceases to apply.*
+::: {.callout-key-insight title="Key Idea"}
+Whether the event horizon is violently destructive at the moment you cross it depends on the **mass of the black hole**. Small black holes have stronger tidal gradients near the horizon than supermassive black holes do.
 :::
 
-<!-- FIGURE: A diagram showing tidal forces. On the left, a person standing far from a black hole (arrows showing equal gravitational pull on head and feet). On the right, a person near the event horizon (arrows showing the feet experiencing much stronger gravity than the head, causing the body to stretch). Include a humorous label: "Spaghettification Zone." -->
+We often say that a black hole contains a **singularity**, meaning that general relativity predicts a breakdown of the theory in the deepest interior. For this course, the important point is not to imagine a literal tiny object we fully understand, but to recognize that our current physics is incomplete there.
 
-### Observable Evidence for Black Holes
+## How Astronomers Know
 
-Black holes don't shine. They don't emit light. So how do we know they exist? We infer their presence from the dramatic effects they have on their surroundings. Here are three lines of evidence:
+Black holes are a perfect test of astronomical reasoning because we usually do **not** detect the black hole itself directly. Instead, we detect what happens around it.
 
-#### Evidence 1: X-ray Binaries and Accretion Disks
+Keep the chain in mind:
 
-When a black hole orbits a normal star, material from that star is pulled onto the black hole, forming an accretion disk. As material spirals inward, gravitational potential energy is converted to heat. The disk reaches temperatures of millions of Kelvin and shines in X-rays.
+> **observation $\to$ physical model $\to$ inference**
 
-Notable systems include:
+## Observable Evidence for Black Holes
 
-- **Cygnus X-1** (discovered 1964): A black hole orbiting a blue supergiant. Periodic X-ray flares betray the black hole's presence.
-- **GRS 1915+105**: A black hole that violently ejects material in jets, producing radio emission visible across the sky.
+Black holes do not emit light from inside the event horizon, so astronomers infer them from their effects on nearby matter, light, and orbits.
 
-By measuring the orbital motion of the companion star using Doppler shift, we can estimate the mass of the compact object. The masses inferred — typically 5–20 solar masses — exceed the maximum neutron star mass, confirming that these are indeed black holes.
+### Evidence 1: X-ray Binaries and Accretion Disks
 
-::: {.callout-key-insight title="Observable -> Model -> Inference"}
-Observable: X-ray flares, periodic Doppler shifts in the companion star's spectrum. Model: Accretion disk physics, orbital mechanics. Inference: Compact object mass, accretion rate, rotation.
+In some binary systems, a compact object pulls gas from a companion star. That gas forms an accretion disk, heats up enormously, and emits X-rays.
+
+If measurements of the companion star's orbit show that the unseen compact object has too much mass to be a neutron star, the best explanation is a black hole.
+
+::: {.callout-summary title="Observable -> Model -> Inference"}
+**Observable:** X-rays from hot gas plus orbital motion of the visible companion star
+
+**Model:** gas accretes onto a compact object in a binary system
+
+**Inference:** the unseen object is extremely compact, and if its mass is too large for a neutron star, it is a black hole
 :::
 
-#### Evidence 2: The Galactic Center and Stellar Orbits
+### Evidence 2: The Galactic Center and Stellar Orbits
 
-The clearest evidence for black holes comes from our own galaxy's center, a region called **Sagittarius A*** (Sgr A*). Over the past 30 years, telescopes have tracked individual stars orbiting this invisible object.
+At the center of the Milky Way, astronomers have tracked stars orbiting an invisible object called **Sagittarius A\***, or **Sgr A\***.
 
-The most famous is **S0-2**, a star on a highly elongated orbit. Astronomers have watched it complete a full orbit around Sgr A*, measuring its position and Doppler shift at regular intervals. Using Kepler's third law (relating orbital period and separation to central mass), they calculated that Sgr A* contains approximately **4.1 million solar masses** — all compressed into a volume smaller than our solar system.
+The star S0-2 is especially important because astronomers have watched it complete a full orbit. Its path shows that about **$4$ million solar masses** are concentrated into a very small region.
 
-No object other than a black hole could confine such enormous mass to so small a region.
+That much mass in such a small volume cannot be explained by a normal star cluster or any ordinary stellar object. The best explanation is a **supermassive black hole**.
 
-<!-- FIGURE: A plot showing the orbits of S-stars around Sgr A*. The orbits should be shown as ellipses in a plane, with the brightest star (presumably S0-2) labeled. Include a scale bar and note the 16-year orbit period of S0-2. -->
-
-::: {.callout-check-yourself title="Check Yourself"}
-S0-2 has an orbital period of 16 years and an average separation of about 1000 AU from Sgr A*. Using Kepler's third law ($P^2 = \frac{4\pi^2}{GM} a^3$, rearranged to solve for M), estimate the mass of Sgr A*.
-:::
-
-::: {.callout-tip title="Solution" collapse="true"}
-Rearranging: $M = \frac{4\pi^2 a^3}{G P^2}$
-
-$a = 1000 \text{ AU} \approx 1.5 \times 10^{13} \text{ m}$
-$P = 16 \text{ years} \approx 5 \times 10^8 \text{ s}$
-$G = 6.67 \times 10^{-11} \text{ m}^3 \text{ kg}^{-1} \text{ s}^{-2}$
-
-$M \approx \frac{4 \pi^2 \times (1.5 \times 10^{13})^3}{6.67 \times 10^{-11} \times (5 \times 10^8)^2}$
-
-$M \approx 4 \times 10^6 M_{\odot}$
-
-This matches the observed 4.1 million solar masses, confirming the black hole's presence.
-:::
-
-#### Evidence 3: The Event Horizon Telescope and the Shadow of a Black Hole
-
-In April 2019, the **Event Horizon Telescope** (EHT) — a global network of radio telescopes — released the first direct image of a black hole's shadow: the supermassive black hole M87*, located at the center of the galaxy M87, about 55 million light-years away.
-
-The image shows a dark central region (the "shadow" of the event horizon) surrounded by a glowing ring (the edge of the accretion disk, where light bends around the black hole due to gravitational lensing). The ring is not perfectly circular; its asymmetry tells us about the black hole's rotation and the inclination of the disk.
-
-In 2022, the EHT released a second image: the black hole at our *own* galactic center, Sgr A*. The shadow is smaller (because Sgr A* is smaller than M87*) but unmistakably a black hole.
-
-<!-- FIGURE: The EHT image of M87* (actual or high-quality illustration), showing the dark shadow and the glowing ring. Include labels: "Event Horizon," "Accretion Disk," "Gravitational Lensing." Include a caption crediting the Event Horizon Telescope Collaboration. -->
-
-::: {.callout-misconception title="Misconception Alert"}
-Some people misunderstand the EHT image, thinking it shows the black hole itself. Actually, the dark region is the *shadow* of the black hole — the absence of light where the event horizon blocks our view. The glowing ring is the accretion disk just outside the horizon, magnified and brightened by gravitational lensing. We are seeing light that was bent around the black hole, not light from the black hole itself (which is impossible).
-:::
-
-### Gravitational Waves: Hearing the Cosmos
-
-In 1916, Einstein predicted that accelerating masses would produce "gravitational waves" — ripples in the fabric of spacetime itself. A shaking star, a colliding pair of neutron stars, or two merging black holes would produce waves that propagate outward at the speed of light.
-
-For a century, these remained theoretical. Then, on September 14, 2015, the Laser Interferometer Gravitational-Wave Observatory (**LIGO**) detected the first confirmed gravitational wave: **GW150914**.
-
-What had LIGO observed? Two black holes — one of 36 solar masses, one of 29 solar masses — orbiting each other and merging in less than a second. As they spiraled together, they warped spacetime so violently that LIGO's mirrors — separated by 4 km — shifted position by approximately **$10^{-18}\,\mathrm{m}$** — about one ten-thousandth the width of a proton.
-
-::: {.column-margin}
-Gravitational Wave — a ripple in spacetime produced by accelerating masses, propagating at the speed of light.*
-:::
-
-How does LIGO detect something so minuscule? LIGO uses laser light split into two perpendicular beams that bounce between mirrors and recombine. A passing gravitational wave stretches space in one direction and compresses it in another, causing the two beams to travel different distances. The shift in their arrival times produces an interference pattern that can be measured.
-
-Since 2015, LIGO and its European partner **Virgo** have detected dozens of gravitational wave events:
-
-- **Black hole mergers**: 10+ events, revealing the existence of a population of stellar-mass black holes in the universe
-- **Neutron star mergers**: Most notably **GW170817** (August 17, 2017), a pair of neutron stars spiraling together, which produced not only gravitational waves but also X-rays, gamma rays, and an optical explosion (a "kilonova") visible to telescopes worldwide
-- **Mixed mergers**: Black hole — neutron star systems
-
-<!-- FIGURE: A schematic diagram of the LIGO detector, showing the laser source, the two perpendicular 4-km arms with mirrors, the recombination point, and a detector. Include an inset showing a passing gravitational wave as a grid being stretched and compressed. Label the effects. -->
-
-::: {.callout-deep-dive title="Deep Dive" collapse="true"}
-The gravitational wave from GW170817 revealed something profound: it arrived at LIGO alongside light from the kilonova. This confirmed that gravitational waves travel at the speed of light — no faster. But it also enabled **multi-messenger astronomy**: the ability to observe a single event using both gravitational waves and electromagnetic radiation. Scientists could triangulate the location of the neutron star merger and point telescopes worldwide toward it, gathering data across the electromagnetic spectrum. This single event revealed that neutron star mergers are the primary source of **r-process elements** — heavy elements like gold and platinum. The 70 earth-masses of gold produced in that merger would be worth a sextillion dollars at current prices. We are literally watching the cosmic forge create precious metals.
-:::
-
-::: {.callout-check-yourself title="Check Yourself"}
-GW150914 lasted about 0.2 seconds and swept from ~35 Hz to ~250 Hz. What does the increasing frequency tell you about what was happening to the two black holes?
+::: {.callout-check-yourself title="Check Yourself — Sgr A*"}
+S0-2 has an orbital period of about 16 years and a semi-major axis of about 1000 AU. If you use Kepler's third law to estimate the central mass, what general conclusion do you reach?
 :::
 
 ::: {.callout-tip title="Solution" collapse="true"}
-As the frequency increases, the orbital period decreases. The two black holes were orbiting faster and faster — they were spiraling *inward* toward each other, losing energy by radiating gravitational waves. The cascade toward merger was accelerating. The final "ring-down" at ~250 Hz represents the moment of merger and the oscillations of the newly formed black hole as it settles into equilibrium.
+The estimate comes out to roughly a few million solar masses concentrated into a very small region. Once so much mass is packed into such a tiny volume, ordinary stars and star clusters stop being plausible explanations. A supermassive black hole becomes the best model.
+:::
+
+### Evidence 3: The Event Horizon Telescope
+
+The Event Horizon Telescope does not show light coming from inside a black hole. Instead, it images hot material just outside the black hole and the dark central region produced by strong gravity and the black hole's shadow.
+
+The famous images of **M87\*** and **Sgr A\*** are powerful because they match what general relativity predicts for matter orbiting very close to a black hole.
+
+::: {.callout-misconception title="Misconception Check"}
+The EHT did **not** photograph the black hole itself as a glowing object. The bright ring is hot gas outside the event horizon, and the dark center is the black hole's shadow.
+:::
+
+::: {.callout-key-insight title="What to Notice"}
+The three strongest lines of evidence for black holes are not redundant:
+
+- accretion and X-rays test how matter behaves near a compact object
+- stellar orbits test the concentration of mass in a tiny region
+- EHT images test strong-gravity predictions for light near the event horizon
+:::
+
+## Gravitational Waves: Hearing the Cosmos
+
+Einstein's general theory of relativity predicts that accelerating masses can produce **gravitational waves**, ripples in spacetime that travel outward at the speed of light.
+
+For many years, gravitational waves were only a prediction. That changed in 2015, when LIGO made the first confirmed detection from a merging pair of black holes.
+
+::: {.column-margin}
+**Gravitational wave**: a ripple in spacetime produced by accelerating masses, especially by massive objects moving rapidly in changing orbits.
+:::
+
+LIGO detects these waves using laser interferometers. A passing gravitational wave slightly stretches space in one direction and compresses it in the perpendicular direction. That tiny change alters the travel time of laser beams in the detector's two arms.
+
+### What did LIGO actually observe?
+
+LIGO did not see a black hole in visible light. It measured an extremely small change in distance between mirrors. The signal changed in a very characteristic way: the wave frequency and amplitude increased rapidly just before merger. This kind of signal is called a **chirp**.
+
+::: {.callout-summary title="Observable -> Model -> Inference"}
+**Observable:** a changing interference signal in LIGO, corresponding to a rising-frequency gravitational-wave chirp
+
+**Model:** two massive compact objects spiraling inward and merging
+
+**Inference:** the system contained merging black holes or neutron stars, and the signal reveals their masses and orbital evolution
+:::
+
+The increasing frequency matters physically. It tells us the orbit was shrinking. As the two objects lost orbital energy by radiating gravitational waves, they spiraled inward, moved faster, and merged.
+
+GW170817, a neutron-star merger detected in 2017, was especially important because it was observed both in gravitational waves and in ordinary electromagnetic light. That gave astronomers two kinds of evidence from the same event and helped establish **multi-messenger astronomy**.
+
+::: {.callout-misconception title="Misconception Check"}
+Gravitational waves are not light waves. LIGO does not work like a telescope camera. It measures tiny distortions of space itself.
+:::
+
+::: {.callout-check-yourself title="Check Yourself — Chirp Signal"}
+If the gravitational-wave frequency rises with time, what must be happening to the orbit of the two compact objects?
+:::
+
+::: {.callout-tip title="Solution" collapse="true"}
+Their orbital period must be decreasing, which means the objects are spiraling closer together and moving faster. The rising frequency is evidence that the system is losing orbital energy and approaching merger.
 :::
 
 ## Cosmic Recycling: The Circle Closes
 
-### From Stellar Death to Stellar Birth
+We began Module 2 by asking what stars are and how they shine. We end by asking what remains after stars exhaust their fuel and gravity takes over.
 
-We opened Module 2 with a simple question: *What is a star?* We explored the Sun, that ordinary middle-aged ball of hydrogen and helium, fusing elements in its core. We watched as that core changed — as heavier elements accumulated, as the star aged, as its fate was sealed by its mass.
+That ending is not really an ending. Stellar death reshapes the universe.
 
-But now we've come full circle. We've followed the story to its end — and discovered that it's not an ending at all, but a transition.
+When massive stars explode, they return newly made elements to space. Some of those elements were forged in stellar cores; others are produced in the most violent events, including supernovae and neutron-star mergers. That enriched material becomes part of interstellar clouds, from which new stars and planets later form.
 
-When a massive star explodes in a core-collapse supernova, it doesn't disappear. Its energy disperses into the interstellar medium. Its atoms — iron, oxygen, silicon, nickel, and dozens of other elements forged in its core — are scattered across light-years of space. Heavy elements sink into dust grains. Shockwaves compress nearby clouds, triggering gravitational collapse.
-
-New stars are born from the ashes of old ones.
-
-The carbon in your body — forged in the cores of massive stars that died billions of years ago. The oxygen you breathe — synthesized in supernovae. The iron in your blood — created in iron cores that collapsed to form neutron stars or black holes. Even the gold in a wedding ring — formed in the collision of two neutron stars, detected as gravitational waves by LIGO.
-
-::: {.callout-key-insight title="Key Insight"}
-We are made of stardust. Not metaphorically — literally. Every atom heavier than hydrogen in your body was forged in a star or ejected in a supernova. And those stars were born from earlier generations of stars. Life, consciousness, the universe's ability to know itself — all emerge from this cycle of stellar death and rebirth.
+::: {.callout-key-insight title="Module 2 Takeaway"}
+Stellar remnants are not side notes. They are evidence that stellar evolution has consequences for the whole galaxy: for matter, for energy, and for the next generation of stars.
 :::
-
-### What We've Learned in Module 2
-
-In three weeks, you've traced the life story of a star from birth to death:
-
-- **Lecture 18**: Stars form when gravity compresses a molecular cloud and ignites nuclear fusion.
-- **Lecture 19**: Stars spend most of their lives on the main sequence, fusing hydrogen into helium, in a delicate equilibrium between gravity and pressure.
-- **Lecture 20**: As stars age, they exhaust their fuel. More massive stars evolve into red giants, fuse heavier elements, and eventually collapse catastrophically.
-- **Lecture 21** (today): The stellar remnants — white dwarfs, neutron stars, black holes — reveal the limits of physics and the cosmos's most extreme environments.
 
 ### Looking Forward: Module 3 — Galaxies and Cosmology
 
-In Module 3, you'll step back from individual stars and see the big picture. Where do stars live? In galaxies — vast cities of hundreds of billions of stars, bound together by gravity. And at the heart of nearly every galaxy lurks a supermassive black hole, millions or billions of times more massive than the Sun, exerting gravitational influence over the entire galactic structure.
+In Module 3, we zoom out. Instead of asking how individual stars live and die, we ask how stars are organized into galaxies and how galaxies fit into the larger universe.
 
-You'll learn how galaxies collide and merge. How the universe expands. How it was born in a Big Bang and may end in one of several possible futures. You'll encounter dark matter — the invisible stuff that holds galaxies together. And you'll grapple with cosmological questions: *Where did the universe come from? What is it made of? Where is it going?*
-
-The journey from a single star to the fate of the entire cosmos awaits.
+You will see that black holes are not only stellar remnants. At the centers of galaxies, including our own, supermassive black holes influence the environments around them. You will also encounter dark matter, galaxy evolution, cosmic expansion, and the history of the universe as a whole.
 
 ---
 
 ## Summary
 
-Neutron stars and black holes are the most extreme objects in the universe — laboratories where gravity defeats all other forces and where our understanding of physics reaches its limits. Neutron stars, supported by neutron degeneracy pressure, harbor densities rivaling atomic nuclei. Some neutron stars rotate hundreds of times per second and emit beams of radio waves — pulsars, the universe's most precise clocks. Black holes are regions where even light cannot escape, bounded by an event horizon at the Schwarzschild radius. We infer the existence of black holes from X-ray binaries, from the orbital motion of stars around Sgr A* at the galactic center, and from the direct EHT images of black hole shadows. Gravitational waves — ripples in spacetime itself — are now detected by LIGO and Virgo, opening a revolutionary window on the universe. Ultimately, the death of stars enriches the interstellar medium with heavy elements, enabling the birth of new stars and planets, and all life within them.
+Neutron stars and black holes are the extreme endpoints of stellar evolution, but the deeper lesson of this lecture is about reasoning from evidence.
+
+- **Neutron stars** are ultra-dense stellar remnants supported by neutron degeneracy pressure.
+- Some neutron stars appear as **pulsars**, whose regular pulses are explained by the lighthouse model.
+- If collapse continues beyond the neutron-star limit, a **black hole** forms, bounded by an **event horizon**.
+- Astronomers infer black holes from **X-ray binaries**, **stellar orbits**, and **EHT images of hot gas and the black hole shadow**.
+- **Gravitational waves** reveal compact-object mergers and let us study the universe in a completely new way.
+- Stellar death also enriches interstellar space, helping seed the next generation of stars and planets.
+
+Astronomy does not require us to touch these objects directly. It requires us to connect observation to model and model to inference with care.
 
 ---
 
@@ -392,7 +418,7 @@ Neutron stars and black holes are the most extreme objects in the universe — l
 
 2. **Schwarzschild Radius**: Calculate the Schwarzschild radius for each of the following:
    - (a) A 20 solar-mass black hole
-   - (b) The supermassive black hole Sgr A* (4.1 million solar masses)
+   - (b) The supermassive black hole Sgr A\* ($4.1 \times 10^6\,M_\odot$)
    - (c) Earth (if hypothetically compressed into a black hole)
 
 3. **Pulsar Rotation**: The Crab Pulsar has a period of 0.033 seconds.
@@ -400,10 +426,10 @@ Neutron stars and black holes are the most extreme objects in the universe — l
    - (b) What is the equatorial velocity if the radius is 10 km?
    - (c) Express this as a fraction of the speed of light.
 
-4. **Orbital Mechanics at the Galactic Center**: S0-2 orbits Sgr A* with a period of 16 years and a semi-major axis of 1000 AU.
+4. **Orbital Mechanics at the Galactic Center**: S0-2 orbits Sgr A\* with a period of 16 years and a semi-major axis of 1000 AU.
    - (a) Use Kepler's third law to calculate the central mass.
    - (b) Express this in solar masses.
-   - (c) What does this mass, confined to such a small volume, tell you about the nature of Sgr A*?
+   - (c) What does this mass, confined to such a small volume, tell you about the nature of Sgr A\*?
 
 5. **Accretion Disk Power**: An X-ray binary black hole accretes material at a rate of $10^{-9}\,M_\odot/\mathrm{year}$. How much energy per second is released (assume 10% of the rest-mass energy is radiated; $E = mc^2$)?
    - (a) Express the answer in watts.
@@ -413,12 +439,12 @@ Neutron stars and black holes are the most extreme objects in the universe — l
 
 1. **Tidal Forces and Spaghettification**: Near the event horizon of a black hole, the gravitational acceleration varies strongly with distance. For a non-rotating (Schwarzschild) black hole, the tidal acceleration (difference in gravity between two points separated by distance $\Delta r$) is approximately $a_{\text{tidal}} \approx \frac{2 GM \Delta r}{r^3}$. Consider a human falling feet-first into a 10 solar-mass black hole.
    - (a) Calculate the tidal acceleration between head and feet (assume $\Delta r \approx 1.7$ m) at the event horizon.
-   - (b) At what distance from the black hole would this tidal acceleration equal Earth's surface gravity (9.8 $m/s^{2})$?
-   - (c) Now consider the same calculation for the supermassive black hole Sgr A* (4.1 million $M\odot).$ At what distance from Sgr A* would the tidal acceleration equal 9.8 $m/s^{2}$? What does this tell you about falling into a supermassive black hole?
+   - (b) At what distance from the black hole would this tidal acceleration equal Earth's surface gravity ($9.8\,\mathrm{m/s^2}$)?
+   - (c) Now consider the same calculation for the supermassive black hole Sgr A\* ($4.1 \times 10^6\,M_\odot$). At what distance from Sgr A\* would the tidal acceleration equal $9.8\,\mathrm{m/s^2}$? What does this tell you about falling into a supermassive black hole?
 
-2. **Neutron Star Mass Limit**: The Tolman–Oppenheimer–Volkoff (TOV) limit depends on the equation of state of neutron matter. For a simple model, assume that the maximum mass is $M_{\text{max}} \approx 0.7 \frac{c^2 R_{\text{ns}}}{G}$, where $R_{\text{ns}}$ is the neutron star radius (~10 km). Calculate $M_{\text{max}}$ and compare it to the stated TOV limit of ~2–$3 \M_\odot$. (This simple model gives a rough estimate.)
+2. **Neutron Star Mass Limit**: The Tolman–Oppenheimer–Volkoff (TOV) limit depends on the equation of state of neutron matter. For a simple model, assume that the maximum mass is $M_{\text{max}} \approx 0.7 \frac{c^2 R_{\text{ns}}}{G}$, where $R_{\text{ns}}$ is the neutron star radius (~10 km). Calculate $M_{\text{max}}$ and compare it to the stated TOV limit of about $2$–$3\,M_\odot$. (This simple model gives a rough estimate.)
 
-3. **Gravitational Wave Energy**: The black hole merger GW150914 released about $3 \M_\odot$ of energy in gravitational waves (via $E = M c^2$). The event lasted approximately 0.2 seconds.
+3. **Gravitational Wave Energy**: The black hole merger GW150914 released about $3\,M_\odot$ of energy in gravitational waves (via $E = M c^2$). The event lasted approximately 0.2 seconds.
    - (a) Calculate the average power radiated (in watts).
    - (b) Compare to the power radiated by the Sun ($\sim 3.8 \times 10^{26}\,\mathrm{W}$).
    - (c) The two black holes spiraled together faster and faster. Toward the end, the power output spiked. Estimate what the peak power might have been (order of magnitude).
