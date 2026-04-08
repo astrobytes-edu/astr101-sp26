@@ -4,7 +4,7 @@ subtitle: "Practice Problem Solutions"
 author: "Dr. Anna Rosen"
 date: "2026-03-18"
 description: "Solutions to the Lecture 17 practice problems."
-draft: true
+draft: false
 course: ASTR 101
 module: "2 - Stars & Stellar Evolution"
 ---
@@ -19,132 +19,279 @@ module: "2 - Stars & Stellar Evolution"
 
 ### Problem 1: Combined Mass of a Visual Binary
 
-**Given:** $P = 20$ yr, $a = 4$ AU
+**Given:**
+- $P = 20\ \text{yr}$
+- $a = 4\ \text{AU}$
 
-Use Newton's form of Kepler's third law in solar units:
+**Find:** $M_1 + M_2$ in solar masses
 
-$$M_1 + M_2 = \frac{a^3}{P^2}$$
+**Equation:**
+$$
+M_1 + M_2 = \frac{a^3}{P^2}
+$$
+
+This solar-unit form works when $a$ is in AU, $P$ is in years, and mass is in $M_\odot$.
+
+**Solution:**
+
+$$
+M_1 + M_2 = \frac{4^3}{20^2} = \frac{64}{400} = 0.16
+$$
 
 So
 
-$$M_1 + M_2 = \frac{4^3}{20^2} = \frac{64}{400} = 0.16\ M_\odot$$
+$$
+M_1 + M_2 = 0.16\,M_\odot
+$$
 
-**Answer:** The combined mass is $0.16\,M_\odot$.
+**Unit check:** Because we used AU and years in the solar-unit form of Kepler's law, the answer comes out directly in solar masses.
+
+**Sanity check:** A wide binary with a fairly long period can easily have a low combined mass, so a value well below $1\,M_\odot$ is plausible.
+
+**Answer:** The combined mass is **$0.16\,M_\odot$**.
 
 ### Problem 2: Spectroscopic Mass Ratio
 
-**Given:** $v_1 = 25$ km/s, $v_2 = 50$ km/s
+**Restatement:** We know the radial velocity amplitudes of both stars and want the mass ratio.
 
-In a binary, the more massive star moves more slowly, so
+**Key insight:** In a binary, the more massive star moves more slowly around the center of mass.
 
-$$\frac{M_2}{M_1} = \frac{v_1}{v_2} = \frac{25}{50} = 0.50$$
+**Answer:** The mass ratio follows the inverse speed ratio:
 
-**Answer:** The secondary is half as massive as the primary.
+$$
+\frac{M_2}{M_1} = \frac{v_1}{v_2} = \frac{25}{50} = 0.50.
+$$
+
+So the second star has half the mass of the first, which means **Star 1 is more massive**.
+
+**Common misconception:** The faster-moving star is not the more massive one. In binaries, the faster-moving star is the **less** massive one.
 
 ### Problem 3: Mass-Luminosity Relation
 
 **Given:** $M = 4\,M_\odot$
 
-Use
+**Find:** $L/L_\odot$
 
-$$\frac{L}{L_\odot} = \left(\frac{M}{M_\odot}\right)^{3.5} = 4^{3.5} = 4^3 \times 4^{0.5} = 64 \times 2 = 128$$
+**Equation:**
+$$
+\frac{L}{L_\odot} = \left(\frac{M}{M_\odot}\right)^{3.5}
+$$
 
-**Answer:** The star is about $128$ times more luminous than the Sun.
+**Solution:**
+
+$$
+\frac{L}{L_\odot} = 4^{3.5} = 4^3 \times 4^{0.5}
+$$
+
+$$
+= 64 \times 2 = 128
+$$
+
+**Unit check:** This is a ratio of luminosities, so the result is dimensionless.
+
+**Sanity check:** A $4\,M_\odot$ main-sequence star should be much brighter than the Sun, so a factor of more than 100 is reasonable.
+
+**Answer:** The star is about **$128$ times more luminous than the Sun**.
 
 ### Problem 4: Main-Sequence Lifetime
 
 **Given:** $M = 2.5\,M_\odot$
 
-Use
+**Find:** $t_{\rm MS}$
 
-$$\frac{t_{\rm MS}}{10\ \text{Gyr}} \approx \left(\frac{M}{M_\odot}\right)^{-2.5}$$
+**Equation:**
+$$
+\frac{t_{\rm MS}}{10\ \text{Gyr}} \approx \left(\frac{M}{M_\odot}\right)^{-2.5}
+$$
 
-So
+**Solution:**
 
-$$t_{\rm MS} \approx 10 \times (2.5)^{-2.5}\ \text{Gyr}$$
+$$
+t_{\rm MS} \approx 10 \times (2.5)^{-2.5}\ \text{Gyr}
+$$
 
-Since $2.5^{2.5} \approx 9.9$,
+Since
 
-$$t_{\rm MS} \approx \frac{10}{9.9}\ \text{Gyr} \approx 1.0\ \text{Gyr}$$
+$$
+2.5^{2.5} \approx 9.9,
+$$
 
-**Answer:** The lifetime is about **1 billion years**.
+we get
+
+$$
+t_{\rm MS} \approx \frac{10}{9.9}\ \text{Gyr} \approx 1.0\ \text{Gyr}
+$$
+
+**Unit check:** The mass ratio is dimensionless, so the final unit stays in gigayears.
+
+**Sanity check:** A star more massive than the Sun should live a shorter time, so about $1$ Gyr is consistent with stellar-evolution trends.
+
+**Answer:** The main-sequence lifetime is about **$1\ \text{Gyr}$**, or **1 billion years**.
 
 ### Problem 5: Infer Mass from Luminosity
 
 **Given:** $L = 200\,L_\odot$
 
-Use
+**Find:** $M/M_\odot$
 
-$$\frac{L}{L_\odot} = \left(\frac{M}{M_\odot}\right)^{3.5}$$
+**Equation:**
+$$
+\frac{L}{L_\odot} = \left(\frac{M}{M_\odot}\right)^{3.5}
+$$
 
-Solve for mass:
+So
 
-$$\frac{M}{M_\odot} = 200^{1/3.5} \approx 4.5$$
+$$
+\frac{M}{M_\odot} = \left(\frac{L}{L_\odot}\right)^{1/3.5}
+$$
 
-**Answer:** The star's mass is about $4.5\,M_\odot$.
+**Solution:**
+
+$$
+\frac{M}{M_\odot} = 200^{1/3.5} \approx 4.5
+$$
+
+**Unit check:** Because we are solving for a mass ratio, the result is dimensionless.
+
+**Sanity check:** A star that is 200 times as luminous as the Sun should be several times more massive than the Sun, not just slightly more massive.
+
+**Answer:** The star's mass is about **$4.5\,M_\odot$**.
 
 ### Problem 6: Eclipse Depths in an Eclipsing Binary
 
-**Restatement:** What does one deep eclipse and one shallow eclipse tell us, and what extra measurement do we want for precise masses?
+**Restatement:** One eclipse is deep and the other is shallow. We want to interpret what that says about the stars and identify what extra data would let us measure precise masses.
 
-Two different eclipse depths tell us the stars do **not** have the same surface brightness. The deeper eclipse happens when the hotter, brighter star is being blocked, so the system loses more light. The shallower eclipse happens when the cooler, dimmer star is being blocked.
+**Key insight:** Different eclipse depths mean the two stars do not contribute equal amounts of light. The light curve also tells us the system is nearly edge-on, but masses still need orbital-speed information.
 
-An eclipsing light curve also tells us the orbit is viewed close to edge-on, which is very helpful. But to determine **precise stellar masses**, we still want **radial velocity measurements** from spectroscopy so we can measure the stars' orbital speeds and combine them with the inclination information from the eclipses.
+**Answer:** Unequal eclipse depths tell us the stars have **different surface brightnesses**, which usually means different temperatures and luminosities. The deeper eclipse happens when the brighter star is blocked, because the total light drops more.
 
-**Answer:** Unequal eclipse depths tell us the two stars have different temperatures and luminosities. For precise masses, we want radial velocity curves in addition to the light curve.
+To get **precise masses**, we also want **radial velocity measurements**. Those give the orbital speeds, and when combined with the nearly edge-on geometry from eclipses, they let us determine the stellar masses much more accurately.
+
+**Common misconception:** An eclipsing light curve by itself is not enough to get precise masses. It gives geometry, but not the full dynamical information.
 
 ## Challenge Problems
 
 ### Challenge 1: Individual Masses in a Spectroscopic Binary
 
 **Given:**
-- $P = 5$ days $= 5/365.25 \approx 0.0137$ yr
-- $a = 0.05$ AU
-- $v_1 = 100$ km/s
-- $v_2 = 60$ km/s
+- $P = 5$ days $= \dfrac{5}{365.25} \approx 0.0137\ \text{yr}$
+- $a = 0.074\ \text{AU}$
+- $v_1 = 100\ \text{km/s}$
+- $v_2 = 60\ \text{km/s}$
 
-First find the total mass:
+**Find:** The individual masses $M_1$ and $M_2$
 
-$$M_{\rm tot} = \frac{a^3}{P^2} = \frac{(0.05)^3}{(0.0137)^2} \approx \frac{1.25 \times 10^{-4}}{1.88 \times 10^{-4}} \approx 0.67\,M_\odot$$
+**Equation:**
+$$
+M_{\rm tot} = \frac{a^3}{P^2}, \qquad \frac{M_2}{M_1} = \frac{v_1}{v_2}
+$$
+
+**Solution:**
+
+First compute the total mass:
+
+$$
+M_{\rm tot} = \frac{(0.074)^3}{(0.0137)^2}
+$$
+
+$$
+M_{\rm tot} \approx \frac{4.05 \times 10^{-4}}{1.88 \times 10^{-4}} \approx 2.16\,M_\odot
+$$
 
 Now use the velocity ratio:
 
-$$\frac{M_2}{M_1} = \frac{v_1}{v_2} = \frac{100}{60} = \frac{5}{3}$$
+$$
+\frac{M_2}{M_1} = \frac{100}{60} = \frac{5}{3}
+$$
 
 So
 
-$$M_2 = \frac{5}{3}M_1,\qquad M_1 + M_2 = \frac{8}{3}M_1 = 0.67\,M_\odot$$
+$$
+M_2 = \frac{5}{3}M_1
+$$
 
-which gives
+and
 
-$$M_1 \approx 0.25\,M_\odot,\qquad M_2 \approx 0.42\,M_\odot$$
+$$
+M_1 + M_2 = M_1 + \frac{5}{3}M_1 = \frac{8}{3}M_1 = 2.16\,M_\odot
+$$
 
-**Answer:** The individual masses are about $0.25\,M_\odot$ and $0.42\,M_\odot$.
+Solve for $M_1$:
+
+$$
+M_1 = 2.16 \times \frac{3}{8} \approx 0.81\,M_\odot
+$$
+
+Then
+
+$$
+M_2 = 2.16 - 0.81 \approx 1.35\,M_\odot
+$$
+
+**Unit check:** The solar-unit form of Kepler's law returns the total mass in $M_\odot$, and the velocity ratio is dimensionless.
+
+**Sanity check:** The star moving faster should be less massive. Here the star with $100\ \text{km/s}$ ends up less massive than the star with $60\ \text{km/s}$, which is exactly what we expect.
+
+**Answer:** The individual masses are about **$0.81\,M_\odot$** and **$1.35\,M_\odot$**.
 
 ### Challenge 2: Two Equal-Mass Stars
 
-Each star has mass $2\,M_\odot$, so each has luminosity
+**Given:** Each star has $M = 2\,M_\odot$
 
-$$\frac{L}{L_\odot} = 2^{3.5} = 2^3 \times 2^{0.5} \approx 8 \times 1.41 \approx 11.3$$
+**Find:** The combined luminosity relative to the Sun
+
+**Equation:**
+$$
+\frac{L}{L_\odot} = \left(\frac{M}{M_\odot}\right)^{3.5}
+$$
+
+**Solution:**
+
+Each star has luminosity
+
+$$
+\frac{L}{L_\odot} = 2^{3.5} = 2^3 \times 2^{0.5} \approx 8 \times 1.41 \approx 11.3
+$$
 
 For two identical stars,
 
-$$L_{\rm total} \approx 2 \times 11.3\,L_\odot \approx 22.6\,L_\odot$$
+$$
+L_{\rm total} \approx 2 \times 11.3\,L_\odot \approx 22.6\,L_\odot
+$$
 
-**Answer:** Together they are about **23 times as luminous** as the Sun.
+**Unit check:** Luminosity ratios are dimensionless, so the total remains in units of $L_\odot$.
+
+**Sanity check:** Two equal stars should produce exactly twice the luminosity of one star, so doubling $11.3$ to get about $22.6$ is consistent.
+
+**Answer:** Together the two stars are about **23 times as luminous as the Sun**.
 
 ### Challenge 3: Why Sirius B Does Not Follow the Main-Sequence Relation
 
-The mass-luminosity relation applies only to **main-sequence stars**, where luminosity is set mainly by steady core hydrogen fusion.
+**Restatement:** We want to explain why the mass-luminosity relation cannot be applied to Sirius B.
 
-Sirius B is a **white dwarf**, which means it is no longer generating energy by core hydrogen fusion. Its luminosity comes from residual heat, not from the same physics that sets the brightness of a main-sequence star.
+**Key insight:** The mass-luminosity relation is an empirical rule for **main-sequence** stars, whose luminosities are set by steady hydrogen fusion in their cores.
 
-**Answer:** We should not expect Sirius B to follow the main-sequence mass-luminosity relation because it is an evolved stellar remnant, not a hydrogen-burning main-sequence star.
+**Answer:** Sirius B is a **white dwarf**, not a main-sequence star. It is no longer powered by core hydrogen fusion. Its luminosity comes from leftover thermal energy, not from the same fusion-controlled physics that determines the luminosities of main-sequence stars.
+
+So we should **not** expect Sirius B to follow the main-sequence mass-luminosity relation.
+
+**Common misconception:** Students sometimes treat the mass-luminosity relation as universal. It is not. It applies only to main-sequence stars.
 
 ### Challenge 4: Why Binary-Star Masses Calibrate Single Stars
 
-Binary stars matter because they give us the most direct way to measure stellar masses. From orbital periods, separations, and radial velocities, we can use Newton's version of Kepler's third law to infer stellar mass dynamically rather than guessing it from appearance alone.
+**Restatement:** We want to connect binary-star measurements to the mass estimates astronomers make for single stars.
 
-Once astronomers have reliable masses for many **main-sequence** stars in binaries, they can compare those masses to the stars' luminosities and build the empirical mass-luminosity relation. After that calibration is established, we can estimate the masses of **single** main-sequence stars from their luminosities or H-R diagram positions.
+**Key insight:** Binary stars are the systems where stellar mass can be measured dynamically rather than inferred indirectly.
 
-**Answer:** Binary stars provide the direct mass measurements that calibrate the mass-luminosity relation. That calibration is what lets us estimate the masses of single main-sequence stars.
+**Answer:** In binary systems, astronomers can combine orbital period, separation, and radial velocities to determine stellar masses using Newton's version of Kepler's third law. Those are the most direct mass measurements we can usually get for stars.
+
+Once astronomers have reliable masses for many **main-sequence** stars in binaries, they can compare those masses with the stars' luminosities and build the empirical mass-luminosity relation. After that calibration is established, the luminosities of **single** main-sequence stars can be used to estimate their masses.
+
+So binary stars are foundational because they provide the **calibration sample** that makes the mass-luminosity relation possible.
+
+In Observable $\to$ Model $\to$ Inference form:
+- **Observable:** binary periods, separations, and radial velocities
+- **Model:** Newtonian gravity applied to orbital motion
+- **Inference:** stellar masses, which then calibrate the mass-luminosity relation for single stars
+
+**Common misconception:** Astronomers do not start by assuming the mass-luminosity relation. They first calibrate it using stars whose masses can be measured directly in binaries.

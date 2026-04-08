@@ -4,7 +4,7 @@ subtitle: "Practice Problem Solutions"
 author: "Dr. Anna Rosen"
 date: "2026-03-11"
 description: "Solutions to the Lecture 15 practice problems."
-draft: true
+draft: false
 course: ASTR 101
 module: "2 - Stars & Stellar Evolution"
 ---
@@ -18,103 +18,364 @@ module: "2 - Stars & Stellar Evolution"
 ## Core Problems (Master these before the exam)
 
 ### Problem 1: Parallax and Distance
-**Restatement:** The star Betelgeuse has a measured parallax angle of 4.51 milliarcseconds. Calculate its distance (a) in parsecs and (b) in light-years. (Note: 1 milliarcsecond = 0.001 arcsecond)
-(a) Convert parallax to arcseconds: $p = 4.51 \times 10^{-3}$ arcseconds
 
-$$d = \frac{1}{4.51 \times 10^{-3}} = 221.7 \text{ pc}$$
+**Restatement:** Betelgeuse has parallax $4.51$ milliarcseconds. We want its distance in parsecs and in light-years.
 
-(b) Convert to light-years: $d = 221.7 \times 3.26 = 722.7$ light-years
+**Given:**
+- $p = 4.51$ milliarcseconds
+- $1$ milliarcsecond $= 0.001$ arcsecond
+- $1\ \text{pc} \approx 3.26\ \text{ly}$
 
-**Note:** This agrees with the parallax-based distance to Betelgeuse measured by Gaia.
+**Find:**
+- (a) $d$ in parsecs
+- (b) $d$ in light-years
+
+**Equation:**
+$$
+d(\text{pc}) = \frac{1}{p(\text{arcsec})}
+$$
+
+**Solution:**
+
+First convert the parallax to arcseconds:
+
+$$
+p = 4.51\ \text{mas} = 4.51 \times 10^{-3}\ \text{arcsec}
+$$
+
+Now compute the distance:
+
+$$
+d = \frac{1}{4.51 \times 10^{-3}} \approx 221.7\ \text{pc}
+$$
+
+Convert parsecs to light-years:
+
+$$
+d = 221.7 \times 3.26 \approx 722.7\ \text{ly}
+$$
+
+**Unit check:** The parallax formula is defined so that arcseconds map directly to parsecs, so the output unit is parsecs. Multiplying parsecs by $\text{ly/pc}$ gives light-years.
+
+**Sanity check:** A parallax of only a few milliarcseconds should correspond to a large distance, so a few hundred parsecs is reasonable.
+
+**Answer:** Betelgeuse is about **$222\ \text{pc}$**, or about **$723\ \text{light-years}$**, away.
 
 ### Problem 2: Inverse-Square Law
-**Restatement:** Two stars have the same luminosity ($L = 100\,L_\odot$). Star A is at distance 10 pc, Star B is at distance 20 pc. What is the ratio of their apparent brightnesses?
-Using $b = \frac{L}{4\pi d^2}$:
 
-$$\frac{b_A}{b_B} = \frac{d_B^2}{d_A^2} = \frac{(20)^2}{(10)^2} = \frac{400}{100} = 4$$
+**Restatement:** Two stars have the same luminosity, but one is twice as far away. We want the ratio of their apparent brightnesses.
 
-**Star A appears 4 times brighter than Star B** (because it is half as far, and brightness scales as inverse distance-squared).
+**Key insight:** If luminosity is fixed, apparent brightness depends only on distance through the inverse-square law. Doubling the distance makes the star four times dimmer.
+
+**Answer:** Using
+
+$$
+b = \frac{L}{4\pi d^2},
+$$
+
+the brightness ratio is
+
+$$
+\frac{b_A}{b_B} = \frac{d_B^2}{d_A^2} = \frac{20^2}{10^2} = 4.
+$$
+
+So **Star A appears 4 times brighter than Star B**.
+
+**Common misconception:** Students often think "twice as far means twice as dim." The inverse-square law says it becomes **four** times dimmer, not two.
 
 ### Problem 3: Magnitude Differences
-**Restatement:** Two stars have apparent magnitudes $m_1 = 1.5$ and $m_2 = 6.5$. How many times brighter (in terms of flux) is Star 1 than Star 2?
-The magnitude difference is:
-$$\Delta m = m_2 - m_1 = 6.5 - 1.5 = 5 \text{ magnitudes}$$
 
-A difference of 5 magnitudes corresponds to a brightness ratio of:
-$$\frac{b_1}{b_2} = 10^{\Delta m / 2.5} = 10^{5/2.5} = 10^2 = 100$$
+**Restatement:** Two stars differ by 5 magnitudes. We want the corresponding flux ratio.
 
-**Star 1 is 100 times brighter than Star 2.**
+**Key insight:** The magnitude scale is logarithmic, not linear. A difference of 5 magnitudes corresponds to a factor of 100 in brightness.
+
+**Answer:** The magnitude difference is
+
+$$
+\Delta m = m_2 - m_1 = 6.5 - 1.5 = 5.
+$$
+
+Use the magnitude-flux relation:
+
+$$
+\frac{b_1}{b_2} = 10^{\Delta m / 2.5} = 10^{5/2.5} = 10^2 = 100.
+$$
+
+So **Star 1 is 100 times brighter than Star 2**.
+
+**Common misconception:** A larger magnitude means a brighter star. The astronomical magnitude scale runs backward: larger magnitude means **fainter**.
 
 ### Problem 4: Luminosity from Distance and Brightness
-**Restatement:** A star has an apparent brightness of $b = 5 \times 10^{-12}$ W/m² and a parallax angle of 0.2 arcseconds. Calculate its luminosity in watts and in units of solar luminosities.
-**Find distance:** $d = 1/0.2 = 5$ pc = $5 \times 3.086 \times 10^{16}$ m = $1.543 \times 10^{17}$ m
 
-**Calculate luminosity:**
-$$L = 4\pi d^2 b = 4\pi \times (1.543 \times 10^{17})^2 \times 5 \times 10^{-12}$$
+**Restatement:** We know the star's apparent brightness and parallax, and we want its luminosity in watts and in solar luminosities.
 
-$$L = 4\pi \times 2.38 \times 10^{34} \times 5 \times 10^{-12} = 1.49 \times 10^{24} \text{ W}$$
+**Given:**
+- Apparent brightness: $b = 5 \times 10^{-12}\ \text{W/m}^2$
+- Parallax: $p = 0.2$ arcseconds
+- $1\ \text{pc} = 3.086 \times 10^{16}\ \text{m}$
+- $L_\odot = 3.8 \times 10^{26}\ \text{W}$
 
-**Convert to solar luminosities:** $L = \frac{1.49 \times 10^{24}}{3.8 \times 10^{26}} = 0.0039 \, L_\odot$ (about 1/250 the Sun's luminosity)
+**Find:** $L$ in watts and in units of $L_\odot$
+
+**Equation:**
+$$
+d(\text{pc}) = \frac{1}{p(\text{arcsec})}, \qquad
+b = \frac{L}{4\pi d^2} \Rightarrow L = 4\pi d^2 b
+$$
+
+**Solution:**
+
+First find the distance:
+
+$$
+d = \frac{1}{0.2} = 5\ \text{pc}
+$$
+
+Convert to meters:
+
+$$
+d = 5 \times 3.086 \times 10^{16}\ \text{m} = 1.543 \times 10^{17}\ \text{m}
+$$
+
+Now compute the luminosity:
+
+$$
+L = 4\pi d^2 b
+$$
+
+$$
+L = 4\pi (1.543 \times 10^{17}\ \text{m})^2 (5 \times 10^{-12}\ \text{W/m}^2)
+$$
+
+$$
+L = 4\pi (2.38 \times 10^{34}\ \text{m}^2)(5 \times 10^{-12}\ \text{W/m}^2)
+$$
+
+$$
+L \approx 1.49 \times 10^{24}\ \text{W}
+$$
+
+Convert to solar luminosities:
+
+$$
+\frac{L}{L_\odot} = \frac{1.49 \times 10^{24}}{3.8 \times 10^{26}} \approx 3.9 \times 10^{-3}
+$$
+
+So
+
+$$
+L \approx 0.0039\,L_\odot
+$$
+
+**Unit check:** $\text{m}^2 \times \text{W/m}^2 = \text{W}$, so the luminosity comes out in watts as expected.
+
+**Sanity check:** This star is nearby but quite faint, so a luminosity much smaller than the Sun's is reasonable.
+
+**Answer:** The star's luminosity is about **$1.5 \times 10^{24}\ \text{W}$**, which is about **$0.0039\,L_\odot$**.
 
 ### Problem 5: Distance Modulus
-**Restatement:** A Cepheid variable star has absolute magnitude $M = -3.5$ and apparent magnitude $m = 13.5$. Use the distance modulus ($m - M = 5 \log_{10}(d) - 5$) to find its distance in parsecs and kiloparsecs.
-$$m - M = 13.5 - (-3.5) = 17$$
 
-$$17 = 5 \log_{10}(d) - 5$$
+**Restatement:** A Cepheid's absolute and apparent magnitudes are given. We want its distance in parsecs and kiloparsecs.
 
-$$22 = 5 \log_{10}(d)$$
+**Given:**
+- $M = -3.5$
+- $m = 13.5$
 
-$$\log_{10}(d) = 4.4$$
+**Find:** $d$ in parsecs and kiloparsecs
 
-$$d = 10^{4.4} = 25{,}119 \text{ pc} = 25.1 \text{ kpc}$$
+**Equation:**
+$$
+m - M = 5\log_{10}(d) - 5
+$$
 
-This distance places the Cepheid in the outer Milky Way, not in Andromeda.
+**Solution:**
+
+First compute the distance modulus:
+
+$$
+m - M = 13.5 - (-3.5) = 17
+$$
+
+Substitute into the equation:
+
+$$
+17 = 5\log_{10}(d) - 5
+$$
+
+Add 5 to both sides:
+
+$$
+22 = 5\log_{10}(d)
+$$
+
+Divide by 5:
+
+$$
+\log_{10}(d) = 4.4
+$$
+
+Raise 10 to both sides:
+
+$$
+d = 10^{4.4} \approx 25{,}119\ \text{pc}
+$$
+
+Convert to kiloparsecs:
+
+$$
+d \approx 25.1\ \text{kpc}
+$$
+
+**Unit check:** The distance modulus formula is calibrated so that $d$ comes out in parsecs.
+
+**Sanity check:** A bright Cepheid with apparent magnitude $13.5$ should be quite far away. A distance of tens of kiloparsecs places it in the outer Milky Way, which is plausible.
+
+**Answer:** The Cepheid is about **$2.5 \times 10^4\ \text{pc}$**, or **$25.1\ \text{kpc}$**, away.
 
 ## Challenge Problems (Stretch your thinking)
 
 ### Challenge 1: The Distance Ladder
-**Restatement:** You discover a new Type Ia supernova in a distant galaxy. Type Ia supernovae have a known absolute magnitude at peak brightness of $M = -19.3$. You measure the supernova's apparent magnitude to be $m = 19.3$.
 
-(a) Use the distance modulus to calculate the distance in megaparsecs.
-(b) How many times more distant is this galaxy than Andromeda (770 kpc)?
-(a) $$m - M = 19.3 - (-19.3) = 38.6$$
+**Restatement:** We observe a Type Ia supernova, use its known absolute magnitude to find the distance, and then compare that distance to Andromeda's.
 
-$$38.6 = 5 \log_{10}(d) - 5$$
+**Given:**
+- $M = -19.3$
+- $m = 19.3$
+- Andromeda distance $= 770\ \text{kpc} = 0.77\ \text{Mpc}$
 
-$$43.6 = 5 \log_{10}(d)$$
+**Find:**
+- (a) $d$ in megaparsecs
+- (b) how many times farther than Andromeda
 
-$$\log_{10}(d) = 8.72$$
+**Equation:**
+$$
+m - M = 5\log_{10}(d) - 5
+$$
 
-$$d = 10^{8.72} = 5.2 \times 10^8 \text{ pc} = 520 \text{ Mpc}$$
+**Solution:**
 
-(b) Andromeda is at 770 kpc = 0.77 Mpc.
+First compute the distance modulus:
 
-$$\frac{520}{0.77} = 675$$
+$$
+m - M = 19.3 - (-19.3) = 38.6
+$$
 
-**This galaxy is about 675 times farther than Andromeda.**
+Substitute:
+
+$$
+38.6 = 5\log_{10}(d) - 5
+$$
+
+$$
+43.6 = 5\log_{10}(d)
+$$
+
+$$
+\log_{10}(d) = 8.72
+$$
+
+$$
+d = 10^{8.72}\ \text{pc} \approx 5.2 \times 10^8\ \text{pc}
+$$
+
+Convert to megaparsecs:
+
+$$
+d \approx 520\ \text{Mpc}
+$$
+
+Now compare with Andromeda:
+
+$$
+\frac{520}{0.77} \approx 675
+$$
+
+**Unit check:** The distance modulus returns parsecs; dividing Mpc by Mpc gives a unitless ratio.
+
+**Sanity check:** Type Ia supernovae are used precisely because they can be seen at enormous distances, so hundreds of megaparsecs is reasonable.
+
+**Answer:** The galaxy is about **$520\ \text{Mpc}$** away, which is about **675 times farther than Andromeda**.
 
 ### Challenge 2: Gaia's Precision
-**Restatement:** Gaia measures the parallax angle of an exceptionally favorable target to be $p = 10.0 \pm 0.5$ microarcseconds. What is the distance (a) in parsecs and (b) in light-years? What is the *fractional uncertainty* in the distance?
-(a) Convert to arcseconds: $p = 10.0 \times 10^{-6}$ arcseconds = $1.0 \times 10^{-5}$ arcseconds
 
-$$d = \frac{1}{1.0 \times 10^{-5}} = 100{,}000 \text{ pc} = 10^5 \text{ pc}$$
+**Restatement:** We want the distance corresponding to a tiny parallax and the fractional uncertainty in that distance.
 
-(b) Convert: $d = 10^5 \times 3.26 = 3.26 \times 10^5$ light-years
+**Given:**
+- $p = 10.0 \pm 0.5$ microarcseconds
+- $1\ \text{microarcsecond} = 10^{-6}\ \text{arcseconds}$
+- $1\ \text{pc} \approx 3.26\ \text{ly}$
 
-(c) Fractional uncertainty: The error in parallax is $\delta p = 0.5 \times 10^{-6}$. The fractional error in parallax is:
+**Find:**
+- (a) $d$ in parsecs
+- (b) $d$ in light-years
+- (c) fractional uncertainty in $d$
 
-$$\frac{\delta p}{p} = \frac{0.5 \times 10^{-6}}{10.0 \times 10^{-6}} = 0.05 = 5\%$$
+**Equation:**
+$$
+d(\text{pc}) = \frac{1}{p(\text{arcsec})}
+$$
 
-Since $d = 1/p$, the fractional error in distance equals the fractional error in parallax:
+**Solution:**
 
-$$\frac{\delta d}{d} = 5\%$$
+Convert the parallax to arcseconds:
 
-**The distance is 100,000 parsecs with an uncertainty of ±5%, or ±5,000 pc.**
+$$
+p = 10.0 \times 10^{-6}\ \text{arcsec} = 1.0 \times 10^{-5}\ \text{arcsec}
+$$
+
+Compute the distance:
+
+$$
+d = \frac{1}{1.0 \times 10^{-5}} = 100{,}000\ \text{pc} = 10^5\ \text{pc}
+$$
+
+Convert to light-years:
+
+$$
+d = 10^5 \times 3.26 = 3.26 \times 10^5\ \text{ly}
+$$
+
+Now compute the fractional parallax uncertainty:
+
+$$
+\frac{\delta p}{p} = \frac{0.5 \times 10^{-6}}{10.0 \times 10^{-6}} = 0.05 = 5\%
+$$
+
+Because $d = 1/p$, the fractional uncertainty in distance is approximately the same:
+
+$$
+\frac{\delta d}{d} \approx 5\%
+$$
+
+So the absolute distance uncertainty is
+
+$$
+\delta d \approx 0.05 \times 100{,}000\ \text{pc} = 5{,}000\ \text{pc}
+$$
+
+**Unit check:** A ratio like $\delta p/p$ is unitless, so the percentage uncertainty is unitless too.
+
+**Sanity check:** A tiny parallax should correspond to a huge distance, so $10^5$ pc is sensible.
+
+**Answer:** The distance is about **$100{,}000\ \text{pc}$** or **$326{,}000\ \text{ly}$**, with a fractional uncertainty of **$5\%$**.
 
 ### Challenge 3: An Unseen Companion
-**Restatement:** A star has an apparent brightness $b = 1 \times 10^{-11}$ W/m² and distance 20 pc (measured via parallax). Its calculated luminosity is $2\,L_\odot$. But if you measure the star's spectrum carefully, you discover it is only about $1\,L_\odot$ bright. The discrepancy suggests the star has an unseen companion. What is the luminosity of the companion?
-This problem is really about bookkeeping. If the total luminosity inferred from the flux is $2\,L_\odot$, but the visible star contributes only $1\,L_\odot$, then the missing light must come from the unseen companion:
 
-$$L_{\text{companion}} = L_{\text{total}} - L_{\text{primary}} = 2 - 1 = 1 \, L_\odot$$
+**Restatement:** The total luminosity inferred from the system is larger than the luminosity of the visible star, so we want the missing luminosity.
 
-**The companion has luminosity $1\,L_\odot$.** In other words, it is contributing the same amount of light as the visible star, so this would be an equal-luminosity binary.
+**Key insight:** If the observed total light is the sum of two stars, then any mismatch between the total luminosity and the visible star's luminosity must come from the unseen companion.
+
+**Answer:** The companion's luminosity is
+
+$$
+L_{\text{companion}} = L_{\text{total}} - L_{\text{primary}} = 2\,L_\odot - 1\,L_\odot = 1\,L_\odot.
+$$
+
+So the unseen companion has luminosity **$1\,L_\odot$**.
+
+In Observable $\to$ Model $\to$ Inference form:
+- **Observable:** the total flux implies $2\,L_\odot$
+- **Model:** luminosities in a binary system add
+- **Inference:** the unseen companion must contribute the missing $1\,L_\odot$
+
+**Common misconception:** Students sometimes think the companion must be dark because it is "unseen." Here "unseen" means it is not separately resolved, not that it contributes no light.

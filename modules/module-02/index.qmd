@@ -50,7 +50,12 @@ These 8 lecture readings are the primary required materials for Module 2.
 
 ## Solutions
 
-Lecture 14-17 solutions are currently instructor draft and are not posted on the student site. They will be posted after Homework #5 is due on Tuesday, April 7, 2026.
+Lecture 14-17 solutions are now posted on the student site:
+
+- [Lecture 14 Solutions]({{< meta params.website-url >}}/modules/module-02/readings/lecture-14-the-sun-solutions.html)
+- [Lecture 15 Solutions]({{< meta params.website-url >}}/modules/module-02/readings/lecture-15-measuring-the-stars-solutions.html)
+- [Lecture 16 Solutions]({{< meta params.website-url >}}/modules/module-02/readings/lecture-16-hr-diagram-solutions.html)
+- [Lecture 17 Solutions]({{< meta params.website-url >}}/modules/module-02/readings/lecture-17-binary-stars-solutions.html)
 
 ## Lecture Slides (Optional Archive / In Progress)
 

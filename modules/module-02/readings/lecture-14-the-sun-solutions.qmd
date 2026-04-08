@@ -4,7 +4,7 @@ subtitle: "Practice Problem Solutions"
 author: "Dr. Anna Rosen"
 date: "2026-03-09"
 description: "Solutions to the Lecture 14 practice problems."
-draft: true
+draft: false
 course: ASTR 101
 module: "2 - Stars & Stellar Evolution"
 ---
@@ -21,11 +21,15 @@ module: "2 - Stars & Stellar Evolution"
 
 **Restatement:** Explain why neutrinos escape the Sun in minutes while photons take about 170,000 years to random-walk out.
 
+**Key insight:** The crucial difference is not their speed through empty space. It is how strongly each particle interacts with solar matter.
+
 Neutrinos interact only through the weak force, so the Sun is almost transparent to them. A neutrino produced in the core travels nearly straight out of the Sun and then takes about 8 minutes to cross the space from the Sun to Earth.
 
 Photons are different. In the dense solar interior they are repeatedly absorbed, re-emitted, and scattered by charged particles. Their motion becomes a random walk with an enormous number of tiny steps rather than one straight path. Even though each step happens at light speed, the total escape time becomes very long.
 
 **Answer:** The huge time difference comes from interaction rate, not intrinsic speed. Neutrinos barely interact; photons interact constantly.
+
+**Common misconception:** Photons do not take a long time because light is "slow" inside the Sun. The long escape time comes from the huge number of interactions.
 
 ### Problem 2: Mass-Energy Conversion in the PP Chain
 
@@ -33,6 +37,13 @@ Photons are different. In the dense solar interior they are repeatedly absorbed,
 - Four protons: $4 \times 1.0073 = 4.0292$ amu
 - One helium-4 nucleus: $4.0026$ amu
 - Conversion: $1\ \text{amu} = 931.5\ \text{MeV}/c^2$
+
+**Find:** The mass defect and released energy per helium nucleus
+
+**Equation:**
+$$
+\Delta m = m_{\rm initial} - m_{\rm final}, \qquad E = \Delta m c^2
+$$
 
 The mass defect is
 
@@ -42,11 +53,17 @@ The released energy is
 
 $$E = \Delta m c^2 = 0.0266 \times 931.5 \approx 24.8\ \text{MeV}$$
 
+**Unit check:** Multiplying amu by $\text{MeV}/c^2$ and then by $c^2$ leaves energy in MeV.
+
+**Sanity check:** Nuclear reactions typically release energies of order MeV per reaction, so a value around $25$ MeV is reasonable.
+
 **Answer:** The PP chain loses $0.0266$ amu of mass and releases about $24.8$ MeV per helium nucleus produced.
 
 ### Problem 3: The Coulomb Barrier
 
 **Restatement:** Why can protons in the Sun fuse even though their average thermal energy is below the Coulomb barrier?
+
+**Key insight:** Average energy is not the whole story. The Sun has a distribution of particle energies, and quantum tunneling lets some protons fuse even when they are classically under the barrier.
 
 Two ideas matter.
 
@@ -56,9 +73,13 @@ Second, quantum tunneling allows protons to pass through the Coulomb barrier eve
 
 **Answer:** Fusion in the Sun is possible because rare high-energy collisions occur and quantum tunneling lets some protons penetrate the barrier.
 
+**Common misconception:** Students sometimes think all particles in the core have exactly the same energy. In reality, there is a whole distribution of energies.
+
 ### Problem 4: Radiative vs. Convective Energy Transport
 
 **Restatement:** Why does the Sun switch from radiative transport to convective transport in its outer layers?
+
+**Key insight:** The change happens because the outer gas becomes more opaque, so radiation becomes less efficient at carrying energy.
 
 Farther from the core, the gas becomes cooler and less fully ionized. That increases the opacity, so photons are absorbed and scattered more easily. Radiative transport becomes inefficient at carrying the outward energy flux.
 
@@ -66,9 +87,13 @@ When radiation can no longer move the energy efficiently, bulk motion takes over
 
 **Answer:** The key changing property is the gas opacity. Higher opacity suppresses radiative transport and favors convection.
 
+**Common misconception:** Convection is not the Sun "running out of radiation." It is a different energy-transport mechanism that becomes more efficient when opacity rises.
+
 ### Problem 5: The Solar Cycle and Sunspots
 
 **Restatement:** Explain why sunspots are linked to strong magnetic fields and why they appear dark.
+
+**Key insight:** Strong magnetic fields interfere with convection, which reduces the heat reaching the surface there.
 
 Sunspots are regions where the magnetic field is especially strong and tangled. Strong magnetic fields inhibit convection, so less hot material from below reaches the surface there.
 
@@ -76,11 +101,15 @@ Because the sunspot region is cooler than the surrounding photosphere, it emits 
 
 **Answer:** Sunspots trace intense magnetic fields, and they look dark because magnetic suppression of convection makes them cooler than their surroundings.
 
+**Common misconception:** Sunspots are not truly dark in an absolute sense. They are bright, hot gas, but they look dark compared with the even hotter surrounding photosphere.
+
 ## Challenge Problems
 
 ### Challenge 1: Hydrostatic Equilibrium
 
 **Restatement:** What happens if the solar core temperature drops from 15 million K to 10 million K?
+
+**Key insight:** A star is self-regulating. If the core cools, pressure drops, contraction begins, and that contraction reheats the core.
 
 Lower temperature means lower gas pressure in the core. That weakens the outward pressure force, so gravity temporarily wins and the core contracts.
 
@@ -88,13 +117,19 @@ As the core contracts, it heats up. The temperature rise increases both the pres
 
 **Answer:** The Sun would contract until the core reheated enough to restore pressure support. This is the stellar thermostat.
 
+**Common misconception:** A lower core temperature does not mean the Sun simply shuts off immediately. The star responds dynamically and tends to restore equilibrium.
+
 ### Challenge 2: Helioseismology and the Interior
 
 **Restatement:** How should p-mode frequencies that penetrate deep into the core compare with modes confined to the outer layers?
 
+**Key insight:** The hotter core has a higher sound speed, so waves sampling that region propagate faster.
+
 The sound speed is higher in the hot, dense core than in the cooler outer layers. A pressure wave that samples higher sound-speed regions can complete its travel path more quickly than a comparable mode trapped only in slower outer material.
 
-**Answer:** Deep-penetrating p-modes generally have higher characteristic frequencies than otherwise similar modes confined to the outer layers, because sound travels faster in the core.
+**Answer:** P-modes that sample deeper, higher-sound-speed regions will show different oscillation properties from modes confined to the outer layers. The key inference is that those differences let astronomers diagnose conditions in the solar interior, because sound travels faster in the hot core than in the cooler envelope.
+
+**Common misconception:** Helioseismology is not direct visual imaging of the interior. It is inference from wave behavior.
 
 ### Challenge 3: Solar Wind and Earth's Magnetosphere
 
@@ -102,6 +137,13 @@ The sound speed is higher in the hot, dense core than in the cooler outer layers
 - Number density: $n \approx 5\ \text{cm}^{-3} = 5 \times 10^6\ \text{m}^{-3}$
 - Assume proton mass: $m_p = 1.67 \times 10^{-27}\ \text{kg}$
 - Velocity: $v = 400\ \text{km/s} = 4.0 \times 10^5\ \text{m/s}$
+
+**Find:** The solar-wind ram pressure
+
+**Equation:**
+$$
+\rho = nm_p, \qquad P = \frac{1}{2}\rho v^2
+$$
 
 The mass density is
 
@@ -115,11 +157,27 @@ $$P \approx 6.7 \times 10^{-10}\ \text{Pa} = 0.67\ \text{nPa}$$
 
 Earth's magnetic pressure is about $7\ \text{nPa}$, about an order of magnitude larger than this typical solar-wind value.
 
+**Unit check:** $\text{kg/m}^3 \times \text{m}^2/\text{s}^2 = \text{kg}/(\text{m}\cdot\text{s}^2) = \text{Pa}$.
+
+**Sanity check:** Typical solar-wind pressures near Earth are indeed of order nanopascals, so this value is realistic.
+
 **Answer:** The solar wind pressure is about $0.7\ \text{nPa}$. The magnetosphere has a definite boundary because it sits where the outward magnetic pressure balances the incoming solar-wind pressure.
 
 ### Challenge 4: The Sun's Lifetime
 
 **Restatement:** Estimate how long the Sun can shine at its current rate if it converts hydrogen at $600$ million metric tons per second.
+
+**Given:**
+- Hydrogen consumption rate: $600$ million metric tons/s
+- Solar mass: $M_\odot \approx 2 \times 10^{30}\ \text{kg}$
+- Approximate fraction available for core hydrogen fusion: $\sim 10\%$
+
+**Find:** The Sun's main-sequence lifetime
+
+**Equation:**
+$$
+t \sim \frac{M_{\rm available}}{\dot M}
+$$
 
 Convert the consumption rate:
 
@@ -136,5 +194,9 @@ $$t \sim \frac{2 \times 10^{29}\ \text{kg}}{6.0 \times 10^{11}\ \text{kg/s}} \ap
 Convert seconds to years:
 
 $$t \sim \frac{3.3 \times 10^{17}\ \text{s}}{3.15 \times 10^7\ \text{s/yr}} \approx 1.0 \times 10^{10}\ \text{yr}$$
+
+**Unit check:** $\text{kg}/(\text{kg/s}) = \text{s}$, so the timescale comes out in seconds before conversion to years.
+
+**Sanity check:** Stellar lifetimes for Sun-like stars are known to be billions of years, so a result of order $10^{10}$ years is exactly the right scale.
 
 **Answer:** The Sun's main-sequence lifetime is of order **10 billion years**, which is why "billions of years" is the right timescale rather than millions or trillions.

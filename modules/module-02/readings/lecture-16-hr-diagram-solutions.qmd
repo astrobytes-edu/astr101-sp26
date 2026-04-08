@@ -4,7 +4,7 @@ subtitle: "Practice Problem Solutions"
 author: "Dr. Anna Rosen"
 date: "2026-03-16"
 description: "Solutions to the Lecture 16 practice problems."
-draft: true
+draft: false
 course: ASTR 101
 module: "2 - Stars & Stellar Evolution"
 ---
@@ -19,114 +19,243 @@ module: "2 - Stars & Stellar Evolution"
 
 ### Problem 1: Spectral Type and Temperature
 
-**Restatement:** Rigel is B8 and Betelgeuse is M1. Which is hotter?
+**Restatement:** Rigel is B8 and Betelgeuse is M1. We want to identify which is hotter and estimate the temperature difference.
 
-B-type stars are much hotter than M-type stars. A B8 star is typically around $1.1 \times 10^4$ to $1.2 \times 10^4$ K, while an M1 supergiant is around $3.5 \times 10^3$ K.
+**Key insight:** Spectral type is a temperature sequence. B stars are very hot; M stars are cool.
 
-**Answer:** Rigel is hotter by roughly
+**Answer:** Rigel is hotter. A B8 star is typically about $1.1 \times 10^4$ to $1.2 \times 10^4\ \text{K}$, while an M1 supergiant is about $3.5 \times 10^3\ \text{K}$.
 
-$$12{,}000 - 3{,}500 \approx 8{,}500\ \text{K}$$
+So the temperature difference is roughly
 
-so the temperature difference is on the order of $8{,}000$ to $9{,}000$ K.
+$$
+12{,}000 - 3{,}500 \approx 8{,}500\ \text{K}.
+$$
+
+That means Rigel is hotter by about **$8{,}000$ to $9{,}000\ \text{K}$**.
+
+**Common misconception:** Students sometimes read spectral letters alphabetically and assume M comes "later" because it is hotter. The sequence is historical, not alphabetical.
 
 ### Problem 2: Reading the H-R Diagram
 
-**Restatement:** Is an A5 star with luminosity $10\,L_\odot$ on the main sequence?
+**Restatement:** A star has spectral type A5 and luminosity $10\,L_\odot$. We want to decide whether that location lies on the main sequence.
 
-Yes. A-type stars are hot, white stars, and a luminosity around $10\,L_\odot$ is entirely reasonable for a mid-A main-sequence star. Its location would be above and to the left of the Sun, but still on the main-sequence band.
+**Key insight:** On the H-R diagram, a star belongs on the main sequence only if its temperature and luminosity are consistent with the main-sequence band.
 
-**Answer:** Yes, that point is consistent with the main sequence.
+**Answer:** Yes, this point is consistent with the main sequence. An A5 star is hotter than the Sun, and a luminosity of about $10\,L_\odot$ is reasonable for a mid-A main-sequence star. On the diagram it would lie **above and to the left of the Sun**, but still within the main-sequence band.
+
+**Common misconception:** Students sometimes think "above the Sun" automatically means giant. On an H-R diagram, you have to consider **both** temperature and luminosity together.
 
 ### Problem 3: Stefan-Boltzmann Reasoning
 
-**Restatement:** Two main-sequence stars have the same luminosity. The hotter one is Star A. Which is larger?
+**Restatement:** Two main-sequence stars have the same luminosity, but Star A is hotter. We want to know which star has the larger radius.
 
-From the Stefan-Boltzmann law,
+**Key insight:** Luminosity depends on both temperature and radius. If two stars have the same luminosity, the hotter one must compensate with a smaller surface area.
 
-$$L = 4\pi R^2 \sigma T^4$$
+**Answer:** Start with the Stefan-Boltzmann law:
+
+$$
+L = 4\pi R^2 \sigma T^4
+$$
 
 If $L$ is fixed, then
 
-$$R^2 \propto \frac{L}{T^4}$$
+$$
+R^2 \propto \frac{1}{T^4}.
+$$
 
-So a hotter star must have a smaller radius to keep the luminosity the same.
+So as temperature increases, radius must decrease to keep the luminosity the same.
 
-**Answer:** Star A is smaller.
+Therefore **Star A is smaller**.
+
+**Common misconception:** "Hotter" does not automatically mean "larger." Radius and temperature both matter.
 
 ### Problem 4: Giants vs. Dwarfs
 
-**Restatement:** Why can a cool red giant outshine a hot white dwarf?
+**Restatement:** We want to explain how a cool red giant can outshine a hot white dwarf.
 
-Temperature matters, but radius matters too. A red giant has an enormous radius, so its surface area is huge. A white dwarf is very hot but tiny, roughly Earth-sized.
+**Key insight:** Temperature matters, but total luminosity depends on surface area too. A huge cool star can emit more total energy than a tiny hot one.
 
-Because luminosity scales as $R^2 T^4$, the giant's huge area can outweigh the white dwarf's higher temperature.
+**Answer:** Use the Stefan-Boltzmann relation:
 
-**Answer:** A cool red giant can be more luminous because its enormous radius gives it far more emitting surface area.
+$$
+L \propto R^2 T^4.
+$$
+
+A red giant has a very large radius, so its emitting area is enormous. A white dwarf is much hotter, but it is tiny, roughly Earth-sized. The giant's huge $R^2$ term can outweigh the white dwarf's larger $T^4$ term.
+
+So a cool red giant can still be **much more luminous** than a hot white dwarf because it has far more surface area.
+
+**Common misconception:** "Hotter means brighter" is only true if size stays the same. Here size changes enormously.
 
 ### Problem 5: The Main Sequence as Mass
 
-**Restatement:** What happens to stellar mass if you move up and to the left along the main sequence?
+**Restatement:** If you move up and to the left along the main sequence, what happens to stellar mass?
 
-Up and left means hotter and more luminous. Along the main sequence, that corresponds to larger stellar mass.
+**Key insight:** Along the main sequence, hotter and more luminous stars are generally more massive.
 
-**Answer:** You are moving toward more massive stars.
+**Answer:** You are moving toward **more massive stars**. On the main sequence, the upper-left region contains stars that are hotter, brighter, and more massive than stars lower down and to the right.
+
+**Common misconception:** The H-R diagram is not a map of physical position in space. "Up" and "left" describe temperature and luminosity, not location.
 
 ## Challenge Problems
 
 ### Challenge 1: Radius from the H-R Diagram
 
 **Given:**
-- Sirius A: $L = 26\,L_\odot$, $T = 9940$ K
-- Sun: $L_\odot$, $T_\odot = 5778$ K
+- Sirius A: $L = 26\,L_\odot$, $T = 9940\ \text{K}$
+- Sun: $L_\odot$, $T_\odot = 5778\ \text{K}$
 
-Use the ratio form of the Stefan-Boltzmann law:
+**Find:**
+- (a) $R/R_\odot$
+- (b) Sirius A's location relative to the Sun on the H-R diagram
 
-$$\frac{L}{L_\odot} = \left(\frac{R}{R_\odot}\right)^2 \left(\frac{T}{T_\odot}\right)^4$$
+**Equation:**
+$$
+\frac{L}{L_\odot} = \left(\frac{R}{R_\odot}\right)^2 \left(\frac{T}{T_\odot}\right)^4
+$$
 
 Solve for radius:
 
-$$\frac{R}{R_\odot} = \frac{\sqrt{26}}{(9940/5778)^2}$$
+$$
+\frac{R}{R_\odot} = \frac{\sqrt{L/L_\odot}}{(T/T_\odot)^2}
+$$
 
-$$\sqrt{26} \approx 5.10,\qquad \frac{9940}{5778} \approx 1.72$$
+**Solution:**
 
-$$\frac{R}{R_\odot} \approx \frac{5.10}{(1.72)^2} \approx \frac{5.10}{2.96} \approx 1.7$$
+Substitute the given values:
 
-**Answer:** Sirius A has radius about $1.7\,R_\odot$. On the H-R diagram it sits **left** of the Sun because it is hotter and **above** the Sun because it is more luminous.
+$$
+\frac{R}{R_\odot} = \frac{\sqrt{26}}{(9940/5778)^2}
+$$
+
+Now evaluate the pieces:
+
+$$
+\sqrt{26} \approx 5.10, \qquad \frac{9940}{5778} \approx 1.72
+$$
+
+$$
+\left(\frac{9940}{5778}\right)^2 \approx (1.72)^2 \approx 2.96
+$$
+
+So
+
+$$
+\frac{R}{R_\odot} \approx \frac{5.10}{2.96} \approx 1.7
+$$
+
+For the H-R diagram position: Sirius A is hotter than the Sun, so it sits **to the left**. It is also more luminous, so it sits **above** the Sun.
+
+**Unit check:** The ratio form uses only dimensionless quantities, so $R/R_\odot$ is dimensionless as it should be.
+
+**Sanity check:** Sirius A is hotter and much more luminous than the Sun, so a radius modestly larger than the Sun's is reasonable.
+
+**Answer:** Sirius A has radius about **$1.7\,R_\odot$**. On an H-R diagram it lies **left of the Sun** and **above the Sun**.
 
 ### Challenge 2: A Mysterious Star
 
-**Given:** $T \approx 6000$ K and $L = 10^{-4}L_\odot$
+**Restatement:** A star has temperature around $6000\ \text{K}$ but luminosity only $10^{-4}L_\odot$. We want to identify what kind of star it is and estimate its radius.
 
-At 6000 K, a main-sequence star should have luminosity of order $1\,L_\odot$, not $10^{-4}L_\odot$. So this star is not on the main sequence.
+**Given:**
+- $T \approx 6000\ \text{K}$
+- $L = 10^{-4}L_\odot$
+- $T_\odot = 5778\ \text{K}$
 
-It sits in the **white dwarf region**: relatively hot, but very dim.
+**Find:**
+- (a) whether it is on the main sequence
+- (b) what region of the H-R diagram it occupies
+- (c) its radius
+- (d) a likely stellar type
 
-Estimate the radius from
-
-$$\frac{L}{L_\odot} = \left(\frac{R}{R_\odot}\right)^2 \left(\frac{T}{T_\odot}\right)^4$$
+**Equation:**
+$$
+\frac{L}{L_\odot} = \left(\frac{R}{R_\odot}\right)^2 \left(\frac{T}{T_\odot}\right)^4
+$$
 
 so
 
-$$\frac{R}{R_\odot} = \frac{\sqrt{10^{-4}}}{(6000/5778)^2} \approx \frac{0.01}{1.08} \approx 9 \times 10^{-3}$$
+$$
+\frac{R}{R_\odot} = \frac{\sqrt{L/L_\odot}}{(T/T_\odot)^2}
+$$
 
-**Answer:** The radius is about $0.01\,R_\odot$, which is roughly Earth-sized. This object is most likely a **white dwarf**.
+**Solution:**
+
+At about $6000\ \text{K}$, a main-sequence star would have luminosity of order $1\,L_\odot$, not $10^{-4}L_\odot$. So this object is **not** on the main sequence.
+
+A star that is relatively hot but extremely dim belongs in the **white dwarf region** of the H-R diagram.
+
+Now estimate the radius:
+
+$$
+\frac{R}{R_\odot} = \frac{\sqrt{10^{-4}}}{(6000/5778)^2}
+$$
+
+$$
+\sqrt{10^{-4}} = 0.01, \qquad \frac{6000}{5778} \approx 1.04
+$$
+
+$$
+\left(\frac{6000}{5778}\right)^2 \approx 1.08
+$$
+
+So
+
+$$
+\frac{R}{R_\odot} \approx \frac{0.01}{1.08} \approx 9 \times 10^{-3}
+$$
+
+This is about $0.01\,R_\odot$, which is roughly Earth-sized.
+
+**Unit check:** Again, the ratio form leaves us with a dimensionless radius ratio.
+
+**Sanity check:** White dwarfs are supposed to be hot, faint, and very small, so this result fits that picture well.
+
+**Answer:** This star is **not** on the main sequence. It lies in the **white dwarf region**, has radius about **$0.01\,R_\odot$**, and is most likely a **white dwarf**.
 
 ### Challenge 3: The H-R Diagram and Stellar Lifetime
 
-**Restatement:** Estimate the lifetime of a $10\,M_\odot$ star if it is about 10,000 times as luminous as the Sun.
+**Restatement:** A $10\,M_\odot$ star is about $10{,}000$ times more luminous than the Sun. We want its main-sequence lifetime and the physical reason massive stars are rare.
 
-The scaling is
+**Given:**
+- $M = 10\,M_\odot$
+- $L = 10{,}000\,L_\odot$
+- $\tau_\odot \approx 10^{10}\ \text{yr}$
 
-$$\tau \propto \frac{M}{L}$$
+**Find:**
+- (a) the main-sequence lifetime
+- (b) why O and B stars are rare compared with M dwarfs
+
+**Equation:**
+$$
+\tau \propto \frac{M}{L}
+$$
 
 So relative to the Sun,
 
-$$\frac{\tau}{\tau_\odot} = \frac{10}{10{,}000} = 10^{-3}$$
+$$
+\frac{\tau}{\tau_\odot} = \frac{M/M_\odot}{L/L_\odot}
+$$
 
-If the Sun lives about $10^{10}$ years, then
+**Solution:**
 
-$$\tau \approx 10^{-3} \times 10^{10}\ \text{yr} = 10^7\ \text{yr}$$
+Substitute the given values:
 
-**Answer:** A $10\,M_\odot$ star lives about **10 million years** on the main sequence.
+$$
+\frac{\tau}{\tau_\odot} = \frac{10}{10{,}000} = 10^{-3}
+$$
 
-For part (b), the H-R diagram shows few O and B stars because they burn through their fuel extremely quickly. M dwarfs are dim and low-mass, but they live for enormous spans of time, so they accumulate in the stellar population.
+Now multiply by the Sun's lifetime:
+
+$$
+\tau = 10^{-3} \times 10^{10}\ \text{yr} = 10^7\ \text{yr}
+$$
+
+So the star lives about ten million years on the main sequence.
+
+For part (b): O and B stars are rare because they burn through their fuel extremely quickly. Even though they are bright and easy to notice, they do not stay around long. M dwarfs are much less luminous but live for enormous spans of time, so they accumulate in the Galaxy.
+
+**Unit check:** The ratio $M/L$ is being compared to the Sun's value, so the units cancel and the final lifetime stays in years.
+
+**Sanity check:** Massive stars are known to live much shorter lives than the Sun, so a lifetime millions of years long rather than billions is reasonable.
+
+**Answer:** A $10\,M_\odot$ star lives about **$10^7$ years**, or **10 million years**, on the main sequence. O and B stars are rare because they live fast and die young, while M dwarfs survive for far longer.

@@ -972,7 +972,7 @@ In Lecture 19, we will trace what happens as a main-sequence star ages. We will 
 
 ### Challenge Problems
 
-**Challenge 1:** A spectroscopic binary has an orbital period of 5 days, a semi-major axis of $0.05 \, \mathrm{AU}$, and radial velocity curves showing velocity amplitudes of $100 \, \mathrm{km\,s^{-1}}$ for the primary and $60 \, \mathrm{km\,s^{-1}}$ for the secondary. Calculate the individual masses of both stars. Convert the period to years before using the solar-unit form of Kepler's law.
+**Challenge 1:** A spectroscopic binary has an orbital period of 5 days, a semi-major axis of $0.074 \, \mathrm{AU}$, and radial velocity curves showing velocity amplitudes of $100 \, \mathrm{km\,s^{-1}}$ for the primary and $60 \, \mathrm{km\,s^{-1}}$ for the secondary. Calculate the individual masses of both stars. Convert the period to years before using the solar-unit form of Kepler's law.
 
 **Challenge 2:** A binary star system consists of two equal-mass main-sequence stars, each with a mass of $2 \, M_\odot$. How many times more luminous are the two stars combined compared to the Sun? Use the mass-luminosity relation for each star separately, then add.
 
