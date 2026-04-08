@@ -26,7 +26,19 @@ prerequisites: "Stellar evolution (L19), H-R diagram (L16), nuclear fusion (L14)
 ::: {.callout-key-insight #the-big-idea}
 ## The Big Idea
 
-A star's mass at birth determines its fate — a gentle death that creates cosmic art, or a catastrophic explosion that reshapes the galaxy and scatters the building blocks of life.
+A star's mass at birth largely determines how it dies — but this is not just a fact to memorize.
+
+This lecture answers a deeper question:
+
+> **Why does mass control stellar death, and how do astronomers know?**
+
+We will follow a consistent reasoning pattern:
+
+- **Observable:** What do we actually see in the sky?
+- **Model:** What physical picture explains those observations?
+- **Inference:** What does that tell us about how stars live and die?
+
+By the end, you should be able to explain — not just recall — why stars end as white dwarfs, neutron stars, or black holes, and how those outcomes shape the chemical universe.
 :::
 
 ::: {.callout-roadmap title="How to Use This Reading" collapse="true"}
@@ -46,27 +58,92 @@ This reading compares the quiet death of low-mass stars with the violent deaths 
 
 ## Every Atom in Your Body Has a Story
 
-Stop and think about this: the carbon in your DNA, the oxygen in your blood, the iron in your hemoglobin — none of these elements existed at the beginning of the universe. They were created inside stars. And if they're here in your body right now, on Earth, it's because a star — somewhere, sometime — *died* and gave them to you.
+Stop and think:
 
-We've spent the last two lectures watching stars burn their way through the periodic table, fusing hydrogen into helium, then helium into carbon and oxygen, building heavier and heavier elements as they age. But every star's fuel runs out eventually. What happens next?
+- The carbon in your DNA
+- The oxygen you breathe
+- The iron in your blood
 
-The answer, surprisingly, depends almost entirely on *how much the star weighed when it was born*. A low-mass star — like our Sun — will drift into old age gently, shedding its outer layers in a beautiful, slow release that astronomers call a *planetary nebula*. The exposed core left behind, called a *white dwarf*, will cool over billions of years, slowly fading to black.
+**None of these elements existed right after the Big Bang.**
 
-But a massive star — anything above about 8 solar masses — faces a different fate. It will burn through its fuel faster and faster, building layer upon layer of heavier elements in a cosmic onion. Then, in the space of a single second, its core will collapse to nuclear density and bounce outward in a violent explosion called a *core-collapse supernova*. For a few weeks, this single explosion outshines an entire galaxy containing a hundred billion stars.
+So where did they come from?
 
-In this lecture, you'll learn how stars die. You'll discover why the fate of a star is sealed the moment it forms. And you'll see how the death of stars — brutal or beautiful — has written the chemical story of the cosmos, and of us.
+### Observable
+
+Astronomers observe:
+
+- stars with different compositions
+- glowing gas clouds enriched with heavy elements
+- supernova explosions ejecting material into space
+
+### Model
+
+Stars act as **nuclear furnaces**:
+
+- fusion builds heavier elements in their interiors
+- stellar winds and explosions release those elements into space
+
+### Inference
+
+The atoms in your body were created in earlier generations of stars.
+
+> **Stellar death is not just an ending — it is how the universe builds complexity.**
+
+::: {.callout-why-this-matters title="Guiding Question for This Lecture"}
+What determines whether a star dies quietly or violently?
+
+We will show that the answer is **mass**, and we will explain why.
+:::
 
 ---
 
 ## Part 1: The Gentle Death — Low-Mass Stars
 
+### Why are we starting here?
+
+Most stars in the universe are low-mass stars. If we want to understand stellar death in general, this is the most common pathway.
+
+### What question are we answering?
+
+> What happens when a Sun-like star runs out of fuel — and why doesn't it explode?
+
 ### When a Star Runs Out of Time
 
-A Sun-like star does not explode when it runs out of core hydrogen. Instead, its internal structure changes in stages, and that sequence matters.
+A key idea:
 
-After core hydrogen is exhausted, the core contracts and heats up while hydrogen continues fusing in a shell around the core. The outer layers expand, and the star becomes a red giant. Later, helium fusion begins in the core. After core helium is exhausted, the star enters the **asymptotic giant branch (AGB)**, with an inert carbon-oxygen core surrounded by helium- and hydrogen-burning shells.
+> **A star does not "die" instantly — it evolves through a sequence of structural changes.**
 
-In the AGB phase, the helium-burning shell is unstable. It flares up in repeated thermal pulses, and the star loses mass through strong stellar winds. Over time, those winds remove much of the outer envelope and expose the hot core underneath.
+### Observable
+
+From star clusters and stellar populations, astronomers see:
+
+- stars leaving the main sequence
+- stars becoming red giants
+- stars shedding material late in life
+
+### Model
+
+As core hydrogen runs out:
+
+1. The core contracts and heats up
+2. Hydrogen fusion continues in a shell
+3. The outer layers expand, and the star becomes a red giant
+
+Later:
+
+- helium fusion begins in the core
+- eventually, the star reaches the **asymptotic giant branch (AGB)**
+- repeated thermal pulses and strong winds remove the outer envelope
+
+### Inference
+
+A low-mass star's death is driven by:
+
+- **core contraction**
+- **shell burning**
+- **mass loss**
+
+not by explosion.
 
 {{< fig hr-post-main-sequence-tracks >}}
 
@@ -76,38 +153,51 @@ This is one of the reasons it is worth repeating the H-R diagram here. The low-m
 **Asymptotic Giant Branch (AGB) star**: A low- to intermediate-mass star in a late evolutionary stage, with shell burning and strong mass loss. Stars that begin with roughly $0.5$–$8\,M_\odot$ pass through an AGB phase before ending as white dwarfs.
 :::
 
-::: {.callout-key-insight title="Takeaway"}
-For low-mass stars, the decisive end-of-life process is **mass loss**, not explosion. The star peels away its outer layers and leaves its hot core behind.
-:::
-
 ::: {.callout-misconception title="Misconception Check"}
-**Misconception:** The red giant phase, core helium burning, and the AGB phase are all basically the same event.
+**Misconception:** "Running out of fuel" means the star stops doing anything.
 
-**Correction:** They happen in sequence. The planetary nebula comes near the end, after the star has already spent time as a red giant, ignited helium in its core, and then undergone strong AGB mass loss.
+**Correction:** Running out of *core* fuel triggers **new stages of evolution**, not immediate death.
 :::
 
 <!-- FIGURE: Planetary nebula showing shell structure. Show the Ring Nebula (M57) or Helix Nebula (NGC 7293). Include labels for: hot central star (white dwarf), ejected envelope glowing in emission (hydrogen-alpha in red, oxygen in blue-green), shell expanding at ~15 km/s, distance ~1000 light-years. Include scale bar and spectrum of emission lines (H-alpha, O-III). -->
 
-### The Planetary Nebula: Stellar Poetry
+### The Planetary Nebula: What Are We Actually Seeing?
 
-The term *planetary nebula* is a historical misnomer. William Herschel thought these objects looked like planets in small telescopes. They do not. What we are actually seeing is a glowing, expanding shell of gas that a dying low-mass star has recently shed.
+### Observable
 
-What astronomers observe is a hot compact star at the center, a shell of expanding gas around it, and bright emission lines from specific atoms and ions. The model is that ultraviolet light from the exposed hot core ionizes the surrounding gas. When electrons fall back into lower-energy states, the gas emits light at particular wavelengths, which is why planetary nebulae glow so strongly in emission lines.
+Astronomers observe:
+
+- a hot, compact star at the center
+- an expanding shell of glowing gas
+- bright emission lines from specific elements
+
+### Model
+
+- the star has **ejected its outer layers**
+- ultraviolet light from the hot core **ionizes the gas**
+- electrons recombine and emit light at specific wavelengths
 
 {{< fig jwst-ring-nebula >}}
 
 Hydrogen often contributes red emission. Doubly ionized oxygen contributes blue-green emission. The colors in telescope images are not random decoration. They trace the atoms in the gas and the physical conditions there.
 
-::: {.callout-key-insight title="What To Notice"}
-Planetary nebulae are brief. As the shell expands, its density drops. After roughly $10^4$ years, the gas becomes too diffuse to glow brightly, so this phase is only a short final snapshot of a star that lived for billions of years.
+### Inference
+
+A planetary nebula is:
+
+> **not a cloud forming a star, but the debris of a star that has already lost its outer layers**
+
+::: {.callout-prediction title="Think First"}
+If the gas is expanding outward, what must have happened earlier to put it in motion?
+
+- Was it always there?
+- Or did something eject it?
+
+Commit to an answer before reading on.
 :::
 
-::: {.callout-summary title="Observable -> Model -> Inference"}
-**Observable:** We image the shell, measure its angular size, and use spectra to measure its expansion speed.
-
-**Model:** The shell is moving outward after being ejected by the star.
-
-**Inference:** Age is approximately size divided by speed, so planetary nebulae let us estimate when the star lost its envelope.
+::: {.callout-key-insight title="Takeaway"}
+A planetary nebula is direct evidence that low-mass stars **lose their outer layers late in life**.
 :::
 
 ::: {.callout-check-yourself title="Check Yourself — Nebular Timescale"}
@@ -135,29 +225,44 @@ So the Ring Nebula is about $4{,}000$–$5{,}000$ years old, which is very young
 :::
 :::
 
-### The White Dwarf: Stellar Corpse
+### The White Dwarf: What Supports the Star Now?
 
-At the center of a planetary nebula is a **white dwarf**: the exposed carbon-oxygen core left behind after a low-mass star loses its envelope. No fusion is powering it. It shines because it is still hot, and then it slowly cools.
+### Observable
 
-White dwarfs are about the size of Earth but can contain a mass comparable to the Sun's. That makes them extraordinarily dense.
+Astronomers detect:
+
+- very hot but faint stars
+- extremely high densities
+- no signs of ongoing fusion
 
 ::: {.column-margin}
 **Degeneracy pressure**: A quantum-mechanical pressure that arises from the Pauli exclusion principle. Electrons cannot all occupy the same quantum state, so matter resists further compression even when ordinary thermal pressure is small.
 :::
 
-::: {.callout-key-insight title="Key Insight"}
-A white dwarf is supported not by ordinary gas pressure and not by ongoing fusion, but by **electron degeneracy pressure**.
-:::
+### Model
+
+A white dwarf is:
+
+- the exposed **carbon-oxygen core**
+- supported by **electron degeneracy pressure**
+
+### What is degeneracy pressure?
+
+- electrons cannot occupy the same quantum state (Pauli exclusion principle)
+- compressing matter forces electrons into higher-energy states
+- this creates pressure **without requiring heat or fusion**
+
+### Inference
+
+A white dwarf can remain stable **without fusion**, because:
+
+> **quantum mechanics replaces thermal pressure as the support mechanism**
 
 ::: {.callout-misconception title="Misconception Check"}
-**Misconception:** Degeneracy pressure is just electrons behaving like a very hot gas.
+**Misconception:** Pressure in stars always comes from heat.
 
-**Correction:** Degeneracy pressure is different from thermal gas pressure. A white dwarf can remain supported even without fusion because this pressure comes from quantum mechanics, not from high temperature alone.
+**Correction:** In white dwarfs, pressure comes from **quantum mechanics**, not temperature.
 :::
-
-In a white dwarf, gravity has crushed out most of the empty space inside atoms. The electrons are packed so tightly that the Pauli exclusion principle becomes the main source of support. No two electrons can occupy the same quantum state simultaneously, so forcing the matter into a smaller volume requires electrons to occupy higher and higher momentum states. That quantum rule shows up macroscopically as pressure.
-
-Conceptually, the key idea is this: gravity tries to squeeze the star into a smaller volume, but quantum mechanics refuses to let all the electrons pile into the same low-energy state. The result is not a "push" from fusion or heat. It is a limit on how tightly matter can be packed before the electrons must occupy higher-momentum states, and that limit behaves like pressure on the scale of the whole star.
 
 {{< fig white-dwarf-mass-radius >}}
 
@@ -223,16 +328,46 @@ For a star less than about $8\,M_\odot$ (including our Sun), the broad sequence 
 
 The Sun will probably reach its white-dwarf phase in about 5 billion years. The remnant will be about the size of Earth and will cool for far longer than the present age of the universe. A true black dwarf is still hypothetical because the universe is not yet old enough for any to exist.
 
-::: {.callout-check-yourself title="Check Yourself — White Dwarf vs. Normal Star"}
-The Sun's surface temperature is about 5,800 K. A typical white dwarf has a surface temperature of about 8,000 K. Yet the white dwarf appears much dimmer than the Sun. Using the Stefan-Boltzmann law ($L \propto R^2 T^4$), explain why.
+### Why Are White Dwarfs Dim Even Though They Are Hot?
 
-::: {.callout-tip title="Solution" collapse="true"}
-The Stefan-Boltzmann law says luminosity is proportional to surface area ($R^2$) times temperature to the fourth power ($T^4$):
+We use the Stefan-Boltzmann relation:
 
 $$
 L \propto R^2 T^4
 $$
 
+Let's unpack each piece:
+
+- **$L$** is luminosity, the total energy output
+- **$R$** is radius
+- **$T$** is surface temperature
+
+What this equation is really saying: luminosity increases with surface area and rises steeply with temperature.
+
+### Reasoning
+
+- White dwarfs are **hotter** than the Sun, so the $T^4$ term helps
+- But they are **much smaller**, so the $R^2$ term shrinks dramatically
+
+### Inference
+
+The tiny size dominates:
+
+> **White dwarfs are dim because they have very little surface area, even though they are hot.**
+
+::: {.callout-prediction title="Think First"}
+Which matters more for luminosity here?
+
+- a modest increase in temperature?
+- or a huge decrease in size?
+
+Explain your reasoning before calculating.
+:::
+
+::: {.callout-check-yourself title="Check Yourself — White Dwarf vs. Normal Star"}
+The Sun's surface temperature is about 5,800 K. A typical white dwarf has a surface temperature of about 8,000 K. Yet the white dwarf appears much dimmer than the Sun. Use the Stefan-Boltzmann law to explain why.
+
+::: {.callout-tip title="Solution" collapse="true"}
 The white dwarf is hotter ($T_{\text{WD}} = 8000$ K vs. $T_{\text{Sun}} = 5800$ K), so the $T^4$ term favors the white dwarf. But the white dwarf is *tiny* compared to the Sun. Its radius is roughly Earth's radius ($R_{\text{WD}} \sim 6400$ km), while the Sun's radius is about 700,000 km. So:
 
 $$
@@ -254,6 +389,23 @@ $$
 
 **Inference:** From the size and expansion speed of a nebula, we infer its age. From the temperature and luminosity of the white dwarf, we infer its composition and mass. From the abundance of white dwarfs, we infer how many stars have reached the end of their lives.
 :::
+
+## Transition: From Gentle Death to Catastrophe
+
+So far, we have seen:
+
+- low-mass stars lose mass gradually
+- their cores remain stable as white dwarfs
+
+Now we ask:
+
+> What changes when a star is much more massive?
+
+The answer will involve:
+
+- higher temperatures
+- faster fusion
+- and ultimately, a failure of pressure support
 
 ---
 
@@ -297,20 +449,34 @@ This onion has many layers because each fusion stage adds a shell of new materia
 
 But there's a catch — iron is the end of the line.
 
-### The Iron Catastrophe
+### The Iron Catastrophe: Why Fusion Fails
 
-Why is iron special? Look at the binding-energy curve from Lecture 14. Nuclei near iron sit near the peak of binding energy per nucleon. That means moving **toward iron** releases energy, but moving away from iron does not help power a star.
+### Observable
+
+Astronomers infer from supernova remnants and stellar models:
+
+- massive stars develop iron-rich cores
+- collapse follows shortly afterward
 
 {{< fig binding-energy-iron-peak >}}
 
-- Fusion of light elements up to iron can release energy.
-- Fission of very heavy nuclei can release energy.
-- But **fusion of iron or heavier nuclei does not power a star**.
+### Model
+
+Fusion releases energy only when moving **toward iron** on the binding-energy curve.
+
+- light elements fuse and release energy
+- iron does **not** release energy when fused further
+
+### Inference
+
+Once a core becomes iron-rich:
+
+> **fusion can no longer support the star against gravity**
 
 ::: {.callout-misconception title="Misconception Check"}
-**Misconception:** All fusion releases energy if the temperature is high enough.
+**Misconception:** If a star is hot enough, fusion will always support it.
 
-**Correction:** Not all fusion releases energy. In stellar cores, iron is the dead end for energy-producing fusion.
+**Correction:** Fusion must **release energy** to help provide pressure support, and iron fusion does not.
 :::
 
 Once a massive star builds an iron-rich core, fusion can no longer provide the pressure needed to resist gravity. The core is then living on borrowed time.
@@ -335,13 +501,40 @@ Temperature alone is not enough. A star stays supported only if fusion releases 
 
 ---
 
-### The Bounce: Core-Collapse Supernova
+### Core Collapse: What Actually Happens?
 
-Once the iron core loses pressure support, it collapses catastrophically. In less than a second, the core shrinks from roughly Earth-sized to a neutron-star-sized object only a few tens of kilometers across.
+### Observable
 
-When the collapsing core reaches nuclear density, the innermost region stiffens abruptly. That launches a shock wave outward. But the shock does **not** simply blast through the star on its own. It loses energy while tearing apart infalling nuclei.
+Supernovae:
 
-Current models show that neutrinos are crucial. The newborn proto-neutron star emits an enormous flood of neutrinos. Most escape, carrying away most of the collapse energy, but a small fraction deposits energy behind the stalled shock and helps revive it.
+- brighten dramatically
+- eject material at high speeds
+- leave behind compact remnants
+
+### Model
+
+1. Iron core builds up
+2. Fusion stops providing support
+3. Gravity causes rapid collapse
+4. Core reaches nuclear density
+5. Inner core stiffens and rebounds
+6. A shock wave forms
+
+### Key complication
+
+The shock initially **stalls**.
+
+Neutrinos from the core:
+
+- carry away most of the energy
+- but a small fraction reheats material behind the shock
+- helps revive the explosion
+
+### Inference
+
+A core-collapse supernova is:
+
+> **a gravitational collapse followed by rebound and energy transfer — not a fusion explosion**
 
 ::: {.callout-summary title="Energy Ledger"}
 For ASTR 101, keep these buckets separate:
@@ -356,6 +549,10 @@ For ASTR 101, keep these buckets separate:
 **Misconception:** A supernova is just the star blowing up because fusion got stronger.
 
 **Correction:** In a core-collapse supernova, the trigger is **gravitational collapse of the core** after fusion has already failed as a support mechanism.
+:::
+
+::: {.callout-key-insight title="Takeaway"}
+The trigger is **collapse**, not runaway fusion.
 :::
 
 ::: {.callout-check-yourself title="Check Yourself — Explosion Timescales"}
@@ -442,19 +639,23 @@ This is why stellar death matters so much in astronomy. Stars do not just shine.
 
 ---
 
-## Part 3: Type Ia Supernovae — The Other Explosion
+## Part 3: Type Ia Supernovae — A Different Kind of Explosion
 
-::: {.callout-key-insight title="Stellar Endpoints at a Glance"}
-| Initial mass | Typical endpoint | Main support or outcome |
-|------|------|------|
-| Less than about $8\,M_\odot$ | White dwarf | Electron degeneracy pressure |
-| About $8$ to a few tens of $M_\odot$ | Neutron star | Neutron degeneracy pressure |
-| High enough that even neutron degeneracy fails | Black hole | Gravitational collapse continues past the event horizon |
+### Why is this a separate category?
 
-What to notice: the endpoint is not random. It is set mainly by the star's **initial mass**, which determines how far fusion can proceed and whether any known pressure source can still resist gravity at the end.
+So far, massive stars have died through core collapse.
+
+Now ask a different question:
+
+> Can a **low-mass stellar remnant** still explode?
+
+The answer is yes, but through a completely different mechanism.
+
+::: {.callout-misconception title="Misconception Check"}
+**Misconception:** All supernovae come from massive stars.
+
+**Correction:** Type Ia supernovae come from **white dwarfs in binary systems**.
 :::
-
-So far, we've discussed core-collapse supernovae, which occur when a massive star's core collapses and bounces. But there's another type of supernova that doesn't require a massive star at all.
 
 ### A White Dwarf in a Binary System
 
@@ -567,23 +768,54 @@ When astronomers measure the chemical composition of stars and gas clouds, they 
 
 ---
 
-## Part 5: The Big Picture — How Mass Determines Fate
+## The Big Picture — Why Mass Determines Fate
 
-Here's the profound conclusion:
+### Observable
 
-**A star's mass at birth determines its entire fate — its lifetime, its final fuel, and the manner of its death.**
+Astronomers see three broad outcomes:
 
-- **Very low-mass stars** (below about $0.5\,M_\odot$): live longer than the current age of the universe, so none have finished evolving yet.
-- **Low- and intermediate-mass stars** (roughly $0.5$–$8\,M_\odot$): end as white dwarfs after red giant and AGB evolution.
-- **Massive stars** (above about $8\,M_\odot$): undergo core collapse and usually leave neutron stars or black holes.
-- **White dwarfs in binaries**: can sometimes produce Type Ia supernovae through binary interaction.
+- white dwarfs
+- neutron stars
+- black holes
+
+### Model
+
+The outcome depends on whether any known pressure can resist gravity:
+
+- thermal pressure from fusion
+- electron degeneracy pressure
+- neutron degeneracy pressure
+
+### Inference
+
+A star's initial mass determines:
+
+- how far fusion can proceed
+- what kind of pressure can support the core
+- whether collapse stops or continues
 
 ::: {.callout-summary title="Important Simplification"}
 The $8\,M_\odot$ dividing line is approximate, not exact. Real stellar deaths depend on more than mass alone, especially in binaries, and details such as composition, mass loss, and rotation can shift the boundary.
 :::
 
-::: {.callout-key-insight title="Final Takeaway"}
-Stellar death is not random. A star's mass and environment determine what pressure can support it, what fuels it can burn, and how it returns matter to space.
+### Final Takeaway
+
+> **Stellar death is a competition between gravity and pressure.**
+
+Mass determines who wins.
+
+- Low mass: gravity is weaker, so the star ends as a white dwarf
+- Higher mass: collapse continues farther, so the remnant becomes a neutron star
+- Extreme mass: nothing stops collapse, so a black hole forms
+
+::: {.callout-check-yourself title="Synthesis Check — Explain the Whole Story"}
+In your own words:
+
+1. What do astronomers observe when stars die?
+2. What physical models explain those observations?
+3. What do we infer about how the universe builds elements?
+
+If you can answer all three clearly, you understand this lecture.
 :::
 
 ---
