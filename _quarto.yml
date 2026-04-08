@@ -166,7 +166,7 @@ website:
   announcement:
     icon: info-circle
     dismissable: true
-    content: "**Homework 6** is now posted | HW due **Tuesday, April 14** | Grade memo due **Friday, April 17** | **Exam 2** is **Monday, April 20**"
+    content: "**[Homework 6](/homework/astr101-hw-06.html)** is now posted | HW due **Tuesday, April 14** | Grade memo due **Friday, April 17** | **Exam 2** is **Monday, April 20**"
     type: primary
     position: below-navbar
   navbar:
