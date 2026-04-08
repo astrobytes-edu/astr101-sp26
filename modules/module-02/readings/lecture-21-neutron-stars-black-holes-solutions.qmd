@@ -64,6 +64,10 @@ $$
 
 ### Problem 2: Schwarzschild Radius
 
+**Given:** $R_s \approx 2.95\,\mathrm{km}\,(M/M_\odot)$
+
+**Find:** The Schwarzschild radius for a stellar black hole, Sgr A*, and Earth
+
 Use the shortcut
 
 $$
@@ -98,6 +102,10 @@ R_s \approx 2.95 \times 3.0 \times 10^{-6}\,\mathrm{km}
     \approx 8.9 \times 10^{-6}\,\mathrm{km}
     = 8.9\,\mathrm{mm}
 $$
+
+**Unit check:** The mass ratio is dimensionless, so the output keeps the kilometer units built into the shortcut.
+
+**Sanity check:** Schwarzschild radius scales linearly with mass, so a supermassive black hole should have a much larger event horizon than a stellar black hole, while Earth's would be tiny.
 
 **Answer:**  
 - $20\,M_\odot$: **about 59 km**  
@@ -314,6 +322,13 @@ $$
 
 ### Problem 4: Multi-Messenger Astronomy
 
+**Restatement:** We want to interpret what the gravitational-wave chirp and delayed electromagnetic emission reveal about the merger.
+
+**Key elements:**
+- what the rising frequency means
+- what the time delay means
+- what we infer about ejecta and the merger aftermath
+
 The gravitational-wave signal sweeping from low to high frequency is the classic **chirp** of an inspiraling compact binary:
 
 - rising frequency means the orbit is shrinking
@@ -326,5 +341,10 @@ So the combined signal lets us infer:
 - the orbital inspiral dynamics from the gravitational waves
 - the production of ejecta and heavy elements from the delayed light
 - the geometry and expansion of the outflow from the time delay and spectral evolution
+
+**Observable -> model -> inference:**
+- **Observable:** gravitational-wave chirp followed by delayed light across the spectrum
+- **Model:** inspiral and merger of two neutron stars, plus radioactive ejecta and afterglow emission
+- **Inference:** the event produced both compact-object dynamics and matter-rich outflows, including the conditions needed for heavy-element production
 
 **Answer:** The frequency evolution shows a shrinking, accelerating binary orbit. The delayed electromagnetic emission shows that the merger launched ejecta and powered a kilonova/afterglow, making GW170817 a textbook case of multi-messenger astronomy.

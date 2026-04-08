@@ -223,6 +223,10 @@ $$
 
 **Answer:** The ejecta carry about **$10^{44}\,\mathrm{J}$** of kinetic energy, which is **of order one solar lifetime of radiated energy**.
 
+**Unit check:** A percentage of a quantity in joules is still measured in joules.
+
+**Sanity check:** Since only 1% of the total supernova energy goes into ejecta motion, the answer should be two orders of magnitude below $10^{46}\,\mathrm{J}$, which it is.
+
 ## Comparing Supernovae
 
 ### Problem 9: Type Ia vs. Type II
@@ -234,6 +238,13 @@ $$
 - **Progenitor context:** Type II comes from a massive star core collapse; Type Ia comes from a white dwarf in a binary.
 
 **Why these differences exist:** The explosions start from very different structures. Type II includes a hydrogen-rich stellar envelope. Type Ia destroys a degenerate white dwarf with no hydrogen envelope.
+
+**Observable -> model -> inference:**
+- **Observable:** hydrogen lines versus no hydrogen, plateau-like versus smoother light curves
+- **Model:** hydrogen-rich core-collapse star versus hydrogen-poor thermonuclear white dwarf
+- **Inference:** the two supernovae came from fundamentally different progenitors and explosion mechanisms
+
+**Answer:** Type II supernovae are identified by hydrogen-rich spectra and envelope-influenced light curves, while Type Ia supernovae lack hydrogen and show more uniform thermonuclear behavior because they come from exploding white dwarfs.
 
 ### Problem 10: Standard Candles
 
@@ -297,8 +308,14 @@ M_{\rm Fe} \approx 6.7 \times 10^7 \times 2 \times 10^{30}
           \approx 1.3 \times 10^{38}\,\mathrm{kg}
 $$
 
-**Interpretation:** That is tens of millions of solar masses of iron.
+Compare this to the Sun's mass:
 
-The last part of the question asks for a fraction of the Milky Way's total iron inventory, but that inventory is **not given**. So the exact fraction cannot be computed from the supplied information alone.
+$$
+\frac{M_{\rm Fe}}{M_\odot} = 6.7 \times 10^7
+$$
 
-**Answer:** The supernovae produce about **$6.7 \times 10^7\,M_\odot$ of iron**, or **$1.3 \times 10^{38}\,\mathrm{kg}$**. That is a very large contribution, but the exact fraction of the galaxy's iron content requires additional data.
+So this toy model gives an iron yield equal to about **67 million Suns worth of mass**.
+
+**Interpretation:** That is a huge amount of iron, but this is only a back-of-the-envelope estimate for one enrichment channel. It should not be treated as the Milky Way's complete iron inventory because Type Ia supernovae also make iron, some iron remains locked in stars and remnants, and the assumed progenitor fraction is only approximate.
+
+**Answer:** This channel contributes about **$6.7 \times 10^7\,M_\odot$ of iron**, or **$1.3 \times 10^{38}\,\mathrm{kg}$**. That is about **67 million times the Sun's mass**, but it is only a toy-model estimate for one enrichment pathway, not the Galaxy's full iron budget.

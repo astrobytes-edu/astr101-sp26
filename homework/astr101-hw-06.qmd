@@ -1,0 +1,111 @@
+---
+title: "ASTR 101 — Homework #6 (Lectures 18–21)"
+subtitle: "Practice problems from star formation, stellar evolution, stellar death, and compact remnants"
+author: "Dr. Anna Rosen"
+draft: false
+order: 6
+description: "Practice problems from Lectures 18–21 (From Gas to Stars, Stellar Evolution, How Stars Die, Neutron Stars and Black Holes)"
+solutions_due: "Tuesday, April 14 at 11:59 pm PT (Canvas)"
+memo_due: "Friday, April 17 at 11:59 pm PT (Canvas)"
+pdf: true
+toc: true
+format:
+  html: default
+  pdf: default
+---
+
+{{< include ../_includes/hw-submission-instructions.qmd >}}
+
+{{< include ../_includes/ai-policy.qmd >}}
+
+***Topics:** star formation and dust • main-sequence lifetime and stellar evolution • white dwarfs and supernovae • neutron stars, black holes, and modern observational evidence*
+
+**Estimated time:** ~5-6 hours
+
+**Posted:** Wednesday, April 8, 2026
+
+::: {.callout-note}
+Your worked solutions are due **Tuesday, April 14, 2026 at 11:59 pm PT** on Canvas, and the self-assessment grade memo is due **Friday, April 17, 2026 at 11:59 pm PT** on Canvas.
+:::
+
+## Why this homework exists (read this)
+
+_This is not busy work._ This assignment is designed as a full-lifecycle review of stars: how they form, how they evolve, how they die, and what remnants they leave behind.
+
+This assignment is designed to:
+
+- connect Lectures 18-21 into one coherent story instead of four isolated topics,
+- reinforce the Observable -> Model -> Inference chain under mixed conceptual and quantitative conditions,
+- and prepare you for cumulative thinking about stellar populations, stellar remnants, and astrophysical evidence.
+
+---
+
+### What to do
+
+Complete the assigned Practice Problems from the end of the following lecture readings:
+
+- **Lecture 18:** From Gas to Stars — [Practice Problems]({{< meta params.website-url >}}/modules/module-02/readings/lecture-18-from-gas-to-stars.html#practice-problems)
+
+- **Lecture 19:** Stellar Evolution — [Practice Problems]({{< meta params.website-url >}}/modules/module-02/readings/lecture-19-stellar-evolution.html#practice-problems)
+
+- **Lecture 20:** How Stars Die — [Practice Problems]({{< meta params.website-url >}}/modules/module-02/readings/lecture-20-how-stars-die.html#practice-problems)
+
+- **Lecture 21:** Neutron Stars and Black Holes — [Practice Problems]({{< meta params.website-url >}}/modules/module-02/readings/lecture-21-neutron-stars-black-holes.html#practice-problems)
+
+Use the lecture pages for the full problem statements (located at the end of each lecture).
+
+**Important:** Do the assigned problems in the order listed below. They are intentionally sequenced from stellar birth to stellar death and compact remnants. The final two are designed as synthesis capstones.
+
+**Notation:** `P` = core problem, `C` = challenge problem in the lecture reading.
+
+---
+
+## Problems to complete
+
+1. **Lecture 18:** `P2` — The Jeans Criterion
+2. **Lecture 18:** `P5` — Observing a Hidden Protostar
+3. **Lecture 19:** `P1` — Main-Sequence Lifetime Calculation
+4. **Lecture 19:** `P2` — The Red-Giant Sun
+5. **Lecture 19:** `P4` — Cluster Age from Main-Sequence Turnoff
+6. **Lecture 20:** `P3` — Chandrasekhar Limit
+7. **Lecture 20:** `P8` — Supernova Energy Budget
+8. **Lecture 20:** `P9` — Type Ia vs. Type II: Observable Differences
+9. **Lecture 21:** `P2` — Schwarzschild Radius
+10. **Lecture 21:** `C4` — Multi-Messenger Astronomy
+
+---
+
+## Optional extra practice (not collected, strongly recommended)
+
+If you want additional review after the required set:
+
+- **Lecture 18:** `P1`, `P3`, `P4`, `C2`
+- **Lecture 19:** `P3`, `P5`, `C1`
+- **Lecture 20:** `P1`, `P4`, `P6`, `P10`
+- **Lecture 21:** `P1`, `P3`, `P4`, `P5`
+
+---
+
+## How to earn full credit
+
+{{< include ../_includes/homework/how-to-earn-full-credit.qmd >}}
+
+For this homework, clearly separate what is **observed** from what is **inferred** whenever you are reasoning from dust extinction, H-R diagram position, supernova signatures, gravitational evidence, or multi-messenger timing. On calculation problems, write the symbolic equation first, then substitute numbers, then do a unit or sanity check.
+
+## Collaboration and resources
+
+{{< include ../_includes/homework/collaboration-and-resources.qmd >}}
+
+## Pro tips (to save time and pain)
+
+- Treat this homework as one story: cloud collapse -> stellar lifetimes -> stellar death -> compact remnants.
+- On star-formation problems, ask whether the key issue is **temperature**, **dust**, or **gravity**.
+- On stellar-evolution problems, use mass as your organizing variable.
+- On supernova and remnant problems, keep track of what astronomers actually observe before jumping to the physical interpretation.
+- For the final capstone, write in sentences first and equations second. That problem is primarily about reasoning, not button pressing.
+
+---
+
+## Help
+
+{{< include ../_includes/homework/help.qmd >}}

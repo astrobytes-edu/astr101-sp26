@@ -31,13 +31,17 @@ So the dust dims the star by a factor of 100 — the star appears 100 times fain
 
 ### Problem 2: The Jeans Criterion (Conceptual)
 **Restatement:** Two giant molecular clouds have identical temperature (T = 10 K) but different masses: Cloud A has $M_A = 10^5$ M☉, and Cloud B has $M_B = 10^4$ M☉. Both have the same average density. Which cloud is more likely to undergo gravitational collapse? Why?
-**Cloud A is more likely to collapse.** The Jeans criterion says a cloud will collapse if its mass exceeds the Jeans mass:
+**Key insight:** With the same temperature and density, both clouds have the same Jeans mass. The more massive cloud is therefore more likely to exceed the collapse threshold.
+
+**Answer:** **Cloud A is more likely to collapse.** The Jeans criterion says a cloud will collapse if its mass exceeds the Jeans mass:
 
 $$M > M_{\rm Jeans}$$
 
-For a given temperature and density, the Jeans mass is a fixed value. Cloud A has 10 times the mass of Cloud B. If Cloud A's mass exceeds the Jeans mass, it will collapse. Cloud B's lower mass may or may not exceed the Jeans mass — it depends on the exact numbers, but the more massive cloud is always more likely to collapse (given identical temperature and density).
+For a given temperature and density, the Jeans mass is a fixed value. Cloud A has 10 times the mass of Cloud B. That means gravity is stronger in Cloud A relative to the same thermal support, so Cloud A is more likely to exceed the collapse threshold.
 
-**Intuition:** Gravity scales with mass; pressure is determined by temperature and density. More mass means stronger gravity. A more massive cloud is more unstable against its own gravity.
+**Intuition:** Gravity scales with mass; pressure support is set by temperature and density. More mass means stronger self-gravity. A more massive cloud is therefore more unstable against collapse.
+
+**Common misconception:** Students sometimes think temperature alone determines collapse. In reality, collapse depends on the balance among mass, temperature, and density.
 
 ### Problem 3: Kelvin-Helmholtz Contraction Timescale
 **Restatement:** A low-mass protostar (0.5 M☉) undergoing Kelvin-Helmholtz contraction has a timescale of roughly 10 million years to reach the main sequence. A high-mass protostar (10 M☉) has a timescale of roughly 0.1 million years (100,000 years).
@@ -72,7 +76,17 @@ The outer disk is about 32 K — cold enough that water and methane remain froze
 ### Problem 5: Observing a Hidden Protostar
 **Restatement:** A protostar is embedded in a dense dust cloud. The dust obscures the protostar from visible-light telescopes, but a infrared observer detects thermal emission peaking at a wavelength of $\lambda_{\rm peak} = 20$ micrometers. Using Wien's law, estimate the temperature of the dust surrounding the protostar.
 
-**Recall:** Wien's displacement law: $\lambda_{\rm peak} T = 2.898 \times 10^{-3}$ m·K
+**Given:**
+- $\lambda_{\rm peak} = 20\,\mu\text{m}$
+- Wien's displacement law: $\lambda_{\rm peak} T = 2.898 \times 10^{-3}\,\mathrm{m\cdot K}$
+
+**Find:** Dust temperature $T$
+
+**Equation:**
+$$
+T = \frac{2.898 \times 10^{-3}\,\mathrm{m\cdot K}}{\lambda_{\rm peak}}
+$$
+
 Using Wien's law,
 
 $$T = \frac{2.898 \times 10^{-3} \, \text{m}\cdot\text{K}}{\lambda_{\rm peak}}$$
@@ -85,7 +99,11 @@ Now substitute:
 
 $$T = \frac{2.898 \times 10^{-3}}{2.0 \times 10^{-5}} \approx 1.45 \times 10^2 \, \text{K} \approx 145 \, \text{K}$$
 
-The surrounding dust has a temperature of about **145 K**. That is cold by everyday standards, but it is warm enough to radiate strongly in the infrared, which is why embedded protostars are often discovered with infrared telescopes rather than visible-light ones.
+**Unit check:** $(\mathrm{m\cdot K})/\mathrm{m} = \mathrm{K}$, so the units work out correctly.
+
+**Sanity check:** Mid-infrared emission should come from cool dust, not a hot stellar photosphere, so a temperature of order $10^2$ K is reasonable.
+
+**Answer:** The surrounding dust has a temperature of about **145 K**. That is cold by everyday standards, but it is warm enough to radiate strongly in the infrared, which is why embedded protostars are often discovered with infrared telescopes rather than visible-light ones.
 
 ## Challenge Problems
 
@@ -113,19 +131,17 @@ This illustrates a profound truth: **we are made of star stuff.** The atoms in y
 - Protostar B: $M_B = 10$ M☉
 
 Without calculating anything, predict which protostar is older (closer to the main sequence). Explain your reasoning.
-**Protostar B (10 M☉) is older.** Here's why:
+**Protostar B (10 M☉) is more likely to be closer to the main sequence.** Here's why:
 
 The Kelvin-Helmholtz timescale scales as:
 
 $$t_{\rm KH} \sim \frac{GM^2}{RL}$$
 
-At a given luminosity $L$, a more massive protostar must have either:
-- A larger radius $R$ (since $L = 4\pi R^2 \sigma T^4$, so $R \propto \sqrt{L/T^4}$), or
-- Reached a higher core temperature and advanced further toward the main sequence.
+Massive protostars move through the pre-main-sequence phase much more quickly than low-mass protostars. So if you compare two protostars at the same luminosity, the higher-mass object is typically the one that is further along its contraction toward the main sequence.
 
-Since the two protostars have identical luminosity, the more massive one must have contracted more (reached a higher temperature) to achieve that luminosity with its greater gravitational potential. The more massive protostar is therefore further along the contraction sequence — older in the pre-main-sequence sense.
+That does **not** necessarily mean it has existed for a longer absolute time. It means its evolutionary clock runs faster.
 
-Once they reach the main sequence, Protostar B will have a much shorter lifetime because it will burn hydrogen much faster.
+Once they reach the main sequence, Protostar B will also have a much shorter hydrogen-burning lifetime because it consumes fuel much faster.
 
 ### Challenge 3: Dust and Observability (Synthesis)
 **Restatement:** Imagine discovering a new star-forming region at a distance of 1000 pc. The region contains protostars embedded in a dense dust cloud with an optical extinction of $A_V = 10$ magnitudes.

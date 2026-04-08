@@ -166,7 +166,7 @@ website:
   announcement:
     icon: info-circle
     dismissable: true
-    content: "**Homework 5** is now posted | Spring Break next week | HW due **Tuesday, April 7** and grade memo due **Friday, April 10**"
+    content: "**Homework 6** is now posted | HW due **Tuesday, April 14** | Grade memo due **Friday, April 17** | **Exam 2** is **Monday, April 20**"
     type: primary
     position: below-navbar
   navbar:
