@@ -1781,15 +1781,22 @@ figures:
     module: 2
 
   compact-object-scale-comparison:
-    path: /assets/images/module-02/compact-object-scale.png
-    caption: "What to notice: compact remnants differ more in size than in mass. A white dwarf is Earth-sized, a neutron star is city-sized, and a stellar-mass black hole's event horizon is comparably tiny."
-    alt: "Scale comparison graphic showing Earth, a white dwarf of roughly Earth size, a much smaller neutron star about 10 kilometers across, and a 3-solar-mass black hole with an event horizon under 10 kilometers."
+    path: /assets/images/module-02/compact-object-scale.svg
+    caption: "What to notice: compact remnants differ most dramatically in radius, not just in mass. Earth and a white dwarf are similar in size, while neutron stars and stellar-mass black holes are hundreds of times smaller. The right-hand pair is magnified so you can actually see them, and the black-hole marker shows the event horizon radius rather than a solid surface."
+    alt: "Clean two-panel comparison showing Earth and a white dwarf at the same displayed scale on the left, and a 600-times zoomed panel on the right showing a neutron star and the event horizon radius of a 3-solar-mass black hole as true circles."
+    credit: "Illustration: A. Rosen (SVG)"
     module: 2
 
   neutron-star-cross-section:
     path: /assets/images/module-02/Neutron_star_cross_section.png
     caption: "What to notice: even a neutron star is layered. The crust, outer core, and possible exotic inner core remind us that neutron stars are laboratories for matter under conditions we cannot reproduce on Earth."
     alt: "Cutaway schematic of a neutron star labeling the outer crust, inner crust, outer core, and possible inner core, with notes about ions, electrons, neutrons, and possible quark matter."
+    module: 2
+
+  stellar-graveyard-gwtc4:
+    path: /assets/images/module-02/Stellar_Graveyard_GWTC-4_mass_gap_26Aug2025-1-scaled.png
+    caption: "What to notice: stellar remnants do not all land at one mass. White dwarfs, neutron stars, and stellar-mass black holes occupy different parts of the compact-object graveyard, and the transitions between them are tied to which pressure support fails."
+    alt: "Mass-distribution plot of compact stellar remnants showing white dwarfs, neutron stars, and stellar-mass black holes across different mass ranges, with highlighted transition regions and merger detections from gravitational-wave observations."
     module: 2
 
   neutron-star-types-nasa:
