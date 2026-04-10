@@ -1754,11 +1754,30 @@ figures:
     alt: "Core-collapse supernova schematic showing a proto-neutron star at the center, infalling stellar material, a stalled shock front, a neutrino-cooled inner region, and a neutrino-heated region behind the shock."
     module: 2
 
+  crab-nebula-jwst:
+    path: /assets/images/module-02/crab-nebula-jwst.jpg
+    caption: "What to notice: centuries after the explosion, the Crab Nebula still preserves the wreckage of a core-collapse supernova. JWST resolves tangled filaments, dust, and synchrotron-emitting structures, reminding us that a supernova does not just produce a flash of light. It leaves behind expanding, chemically enriched debris and a compact remnant at the center."
+    alt: "JWST image of the Crab Nebula showing a broad web of blue, pink, and green filamentary supernova debris spread across space, with labeled filter information and a scale bar indicating the remnant is a few light-years across."
+    credit: "NASA, ESA, CSA, STScI"
+    module: 2
+
   supernova-xray-fingerprints:
     path: /assets/images/module-02/ironfingerprints_SNe_CCvs1A.jpeg
     caption: "What to notice: supernova remnants carry spectral fingerprints of how they exploded. Type Ia remnants peak at different iron-line energies than core-collapse remnants, so X-ray spectroscopy lets astronomers classify an explosion after the blast."
     alt: "Infographic comparing X-ray images and iron-line spectra of several supernova remnants, with separate panels showing Type Ia white dwarf detonation remnants and core-collapse remnants with higher-energy iron features."
     credit: "NASA / Goddard Space Flight Center"
+    module: 2
+
+  snr-fingerprint-remnant:
+    path: /assets/images/module-02/snr_fingerprint.webp
+    caption: "What to notice: even after the bright supernova is gone, a remnant can keep X-ray spectral fingerprints of the explosion. Differences in iron-line emission and abundance patterns help astronomers distinguish thermonuclear Type Ia remnants from core-collapse remnants."
+    alt: "Comparison graphic of supernova remnants highlighting differing X-ray spectral fingerprints and iron-line behavior for thermonuclear Type Ia remnants versus core-collapse remnants."
+    module: 2
+
+  snr-chart-large-remnant:
+    path: /assets/images/module-02/snr_chart_large.webp
+    caption: "What to notice: remnant classification uses the same evidence habit as supernova classification more generally. Astronomers compare spectral features and inferred element patterns to decide whether the original explosion was thermonuclear or core collapse."
+    alt: "Summary chart comparing supernova-remnant spectral or elemental signatures used to infer whether the original explosion was a Type Ia or a core-collapse supernova."
     module: 2
 
   compact-object-scale-comparison:

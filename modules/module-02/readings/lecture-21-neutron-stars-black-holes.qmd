@@ -205,6 +205,28 @@ If collapse goes so far that no known pressure can stop it, the remnant becomes 
 
 That boundary is called the **event horizon**.
 
+::: {.callout-roadmap title="Video: What Black-Hole Formation Looks Like" collapse="false"}
+This ScienceClic video works well here because it gives a visual bridge from stellar collapse to general relativity. Watch for the big ideas we need in this section: how collapse can continue past the neutron-star stage, what an event horizon means, and why black holes are about spacetime geometry, not just about "very strong gravity."
+
+<div class="demo-embed" style="width: 100%; margin: 1rem 0;">
+  <iframe
+    src="https://www.youtube-nocookie.com/embed/oRSmMDH11Ss"
+    width="100%"
+    height="520px"
+    style="border: 1px solid #ddd; border-radius: 8px;"
+    loading="lazy"
+    title="ScienceClic video on what black-hole formation looks like"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen>
+  </iframe>
+  <p style="text-align: center; margin-top: 0.5rem; font-size: 0.875rem; color: #666;">
+    <a href="https://www.youtube.com/watch?v=oRSmMDH11Ss" target="_blank" style="color: #5dade2;">Open in new tab ↗</a>
+  </p>
+</div>
+
+Caption: Use this as a conceptual preview, not as something to memorize frame-by-frame. The goal is to build intuition for how continued collapse leads from a massive stellar remnant to an event horizon, and why black holes are best understood through general relativity rather than through ordinary Newtonian pictures alone.
+:::
+
 ### The Schwarzschild Radius and the Event Horizon
 
 For a non-rotating black hole, the size of the event horizon is described by the **Schwarzschild radius**:
