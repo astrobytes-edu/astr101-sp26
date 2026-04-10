@@ -498,7 +498,7 @@ These remnants also matter because they are part of the larger cycle of cosmic e
 
 ### Core Problems
 
-1. **Neutron Star Density**: A neutron star has a mass of $1.4\,M_\odot$ ($= 2.8 \times 10^{30}\,\mathrm{kg}$) and a radius of 10 km.
+1. **Neutron Star Density**: A neutron star has a mass of $1.4\,M_\odot$ ($= 2.8 \times 10^{30}\,\mathrm{kg}$) and a radius of $10$ km.
    - (a) Calculate the density (mass per unit volume) in $\mathrm{kg/m^3}$.
    - (b) Compare this to nuclear density ($\sim 2.3 \times 10^{17}\,\mathrm{kg/m^3}$). How many times denser is the neutron star?
    - (c) A teaspoon is roughly 5 mL $= 5 \times 10^{-6}\,\mathrm{m^3}$. How much mass would a teaspoon of neutron star material contain?
@@ -508,9 +508,9 @@ These remnants also matter because they are part of the larger cycle of cosmic e
    - (b) The supermassive black hole Sgr A\* ($4.1 \times 10^6\,M_\odot$)
    - (c) Earth (if hypothetically compressed into a black hole)
 
-3. **Pulsar Rotation**: The Crab Pulsar has a period of 0.033 seconds.
+3. **Pulsar Rotation**: The Crab Pulsar has a period of $0.033$ seconds.
    - (a) How many rotations per second does it make?
-   - (b) What is the equatorial velocity if the radius is 10 km?
+   - (b) What is the equatorial velocity if the radius is $10$ km?
    - (c) Express this as a fraction of the speed of light.
 
 4. **Orbital Mechanics at the Galactic Center**: S0-2 orbits Sgr A\* with a period of 16 years and a semi-major axis of 1000 AU.
@@ -524,7 +524,11 @@ These remnants also matter because they are part of the larger cycle of cosmic e
 
 ### Challenge Problems
 
-1. **Tidal Forces and Spaghettification**: Near the event horizon of a black hole, the gravitational acceleration varies strongly with distance. For a non-rotating (Schwarzschild) black hole, the tidal acceleration (difference in gravity between two points separated by distance $\Delta r$) is approximately $a_{\text{tidal}} \approx \frac{2 GM \Delta r}{r^3}$. Consider a human falling feet-first into a 10 solar-mass black hole.
+1. **Tidal Forces and Spaghettification**: Near the event horizon of a black hole, the gravitational acceleration varies strongly with distance. For a non-rotating (Schwarzschild) black hole, the tidal acceleration (difference in gravity between two points separated by distance $\Delta r$) is approximately
+   $$
+   a_{\text{tidal}} \approx \frac{2GM\Delta r}{r^3}.
+   $$
+   Consider a human falling feet-first into a $10\,M_\odot$ black hole.
    - (a) Calculate the tidal acceleration between head and feet (assume $\Delta r \approx 1.7$ m) at the event horizon.
    - (b) At what distance from the black hole would this tidal acceleration equal Earth's surface gravity ($9.8\,\mathrm{m/s^2}$)?
    - (c) Now consider the same calculation for the supermassive black hole Sgr A\* ($4.1 \times 10^6\,M_\odot$). At what distance from Sgr A\* would the tidal acceleration equal $9.8\,\mathrm{m/s^2}$? What does this tell you about falling into a supermassive black hole?
@@ -535,12 +539,12 @@ These remnants also matter because they are part of the larger cycle of cosmic e
    $$
    where $R_{\mathrm{ns}}$ is the neutron star radius (about $10$ km). Calculate $M_{\mathrm{max}}$ and compare it to the stated TOV limit of about $2$–$3\,M_\odot$. (This simple model gives only a rough estimate.)
 
-3. **Gravitational Wave Energy**: The black hole merger GW150914 released about $3\,M_\odot$ of energy in gravitational waves (using $E = Mc^2$). The event lasted approximately $0.2$ seconds.
+3. **Gravitational Wave Energy**: The black hole merger GW150914 released about $3\,M_\odot$ of energy in gravitational waves (using $E = mc^2$). The event lasted approximately $0.2$ seconds.
    - (a) Calculate the average power radiated (in watts).
    - (b) Compare to the power radiated by the Sun ($\sim 3.8 \times 10^{26}\,\mathrm{W}$).
    - (c) The two black holes spiraled together faster and faster. Toward the end, the power output spiked. Estimate what the peak power might have been (order of magnitude).
 
-4. **Multi-Messenger Astronomy**: The neutron star merger GW170817 was observed in gravitational waves and across the electromagnetic spectrum (X-rays, visible light, infrared, radio). The gravitational wave signal swept from ~40 Hz to ~250 Hz over about 100 seconds; the electromagnetic signal followed hours later. What does the time delay and the frequency evolution tell you about the physics of the event?
+4. **Multi-Messenger Astronomy**: The neutron star merger GW170817 was observed in gravitational waves and across the electromagnetic spectrum (X-rays, visible light, infrared, radio). The gravitational wave signal swept from about $40\,\mathrm{Hz}$ to about $250\,\mathrm{Hz}$ over about $100$ seconds; the electromagnetic signal followed hours later. What does the time delay and the frequency evolution tell you about the physics of the event?
 
 ---
 
