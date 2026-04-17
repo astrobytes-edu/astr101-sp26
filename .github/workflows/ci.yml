@@ -63,5 +63,10 @@ jobs:
       - name: Install HTMLProofer
         run: gem install html-proofer -v 5.2.0
 
-      - name: Validate links/images/scripts
-        run: ruby scripts/run_htmlproofer.rb _site
+      - name: Validate links/images/scripts (merge-gating)
+        if: github.event_name != 'schedule' && github.event_name != 'workflow_dispatch'
+        run: CI_CHECK_EXTERNAL_LINKS=0 ruby scripts/run_htmlproofer.rb _site
+
+      - name: Validate links/images/scripts (full external patrol)
+        if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+        run: CI_CHECK_EXTERNAL_LINKS=1 ruby scripts/run_htmlproofer.rb _site

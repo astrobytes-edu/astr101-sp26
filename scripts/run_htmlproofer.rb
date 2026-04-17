@@ -1,29 +1,14 @@
 #!/usr/bin/env ruby
 # frozen_string_literal: true
 
-require "html-proofer"
+require_relative "htmlproofer_options"
 
-directory = ARGV.fetch(0, "_site")
+if $PROGRAM_NAME == __FILE__
+  require "html-proofer"
 
-ignore_urls = [
-  %r{\Ahttps://docs\.google\.com/.*},
-  %r{\Ahttps://(?:www\.)?astrobites\.org(?:/.*)?\z},
-  %r{\Ahttps://www\.cambridge\.org/9781009618007.*\z},
-  %r{\Ahttps://shopaztecs\.com/.*},
-  %r{\Ahttps://viewspace\.org(?:/.*)?\z},
-  %r{\A#/.*}
-]
+  directory = ARGV.fetch(0, "_site")
+  check_external = ENV.fetch("CI_CHECK_EXTERNAL_LINKS", "1") == "1"
+  options = build_htmlproofer_options(check_external: check_external)
 
-options = {
-  # Quarto uses <a> tags as UI toggles (sidebar/theme) without href attributes.
-  allow_missing_href: true,
-  # Allow decorative images to omit alt text while we keep link/image integrity checks.
-  ignore_empty_alt: true,
-  ignore_missing_alt: true,
-  # Match the previous proof-html behavior of checking rendered pages plus Open Graph assets.
-  checks: %w[Links Images Scripts OpenGraph],
-  # External URLs that block automated access or use RevealJS-only hash navigation.
-  ignore_urls: ignore_urls
-}
-
-HTMLProofer.check_directory(directory, options).run
+  HTMLProofer.check_directory(directory, options).run
+end
