@@ -43,7 +43,8 @@ No prior physics or astronomy background is required, just curiosity and a willi
 
 1. Read the [Syllabus](course-info/syllabus.qmd) to understand course policies and expectations.
 2. Check the [Schedule](course-info/schedule.qmd) each week for lectures, readings, and due dates.
-3. Submit homework on [Canvas](https://sdsu.instructure.com) — readings are on this website.
+3. Use the [Homework hub](homework/index.qmd) to find every released assignment and the linked reading solution pages.
+4. Submit homework on [Canvas](https://sdsu.instructure.com) - readings and homework pages are on this website.
 :::
 
 ::: {.callout-tip appearance="simple" icon=false}
@@ -64,6 +65,10 @@ Explore astronomy concepts hands-on with our custom interactive simulations. Adj
 
 ::: {.dashboard-tile}
 [<i class="bi bi-calendar3 dashboard-tile-icon"></i>[Schedule]{.dashboard-tile-title}](course-info/schedule.qmd){.dashboard-tile-link}
+:::
+
+::: {.dashboard-tile}
+[<i class="bi bi-journal-check dashboard-tile-icon"></i>[Homework]{.dashboard-tile-title}](homework/index.qmd){.dashboard-tile-link}
 :::
 
 ::: {.dashboard-tile}

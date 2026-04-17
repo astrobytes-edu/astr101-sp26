@@ -187,6 +187,23 @@ website:
           - course-info/why-astr101-is-different.qmd
           - course-info/schedule.qmd
 
+      - section: "Homework"
+        contents:
+          - href: homework/index.qmd
+            text: "Homework Hub: Assignments + Solutions"
+          - href: homework/astr101-hw-01.qmd
+            text: "Homework 1 (Due: Feb 2, 2026)"
+          - href: homework/astr101-hw-02.qmd
+            text: "Homework 2 (Due: Feb 9, 2026)"
+          - href: homework/astr101-hw-03.qmd
+            text: "Homework 3 (Due: Feb 24, 2026)"
+          - href: homework/astr101-hw-04.qmd
+            text: "Homework 4 (Due: Mar 17, 2026)"
+          - href: homework/astr101-hw-05.qmd
+            text: "Homework 5 (Due: Apr 7, 2026)"
+          - href: homework/astr101-hw-06.qmd
+            text: "Homework 6 (Due: Apr 14, 2026)"
+
       - section: "Module 1: Observing the Sky & Solar System"
         href: modules/module-01/index.qmd
         contents:
@@ -335,22 +352,6 @@ website:
       - section: "Handouts"
         contents:
           - handouts/index.qmd
-
-      - section: "Homework"
-        contents:
-          - homework/index.qmd
-          - href: homework/astr101-hw-01.qmd
-            text: "Homework 1 (Due: Feb 2, 2026)"
-          - href: homework/astr101-hw-02.qmd
-            text: "Homework 2 (Due: Feb 9, 2026)"
-          - href: homework/astr101-hw-03.qmd
-            text: "Homework 3 (Due: Feb 24, 2026)"
-          - href: homework/astr101-hw-04.qmd
-            text: "Homework 4 (Due: Mar 17, 2026)"
-          - href: homework/astr101-hw-05.qmd
-            text: "Homework 5 (Due: Apr 7, 2026)"
-          - href: homework/astr101-hw-06.qmd
-            text: "Homework 6 (Due: Apr 14, 2026)"
 
       - section: "Demos"
         contents:

@@ -20,9 +20,21 @@ listing:
 
 {{< include ../_includes/hw-submission-instructions.qmd >}}
 
+Homework is the central place to find every released assignment and the reading solution pages that go with those assignments.
+
+::: {.callout-note appearance="simple"}
+## Start Here
+
+- Need the assignment itself? Use the table below to open any released homework page.
+- Need worked reading solutions? Jump to [Solution links](#solution-links) for the lecture-by-lecture pages tied to each homework.
+- Need to submit? Upload your worked solutions and grade memo in [Canvas](https://sdsu.instructure.com).
+:::
+
+## Released Homework
+
 Homework is one of the main ways you build the skills you need for exams: clear reasoning, careful units, and honest self-assessment.
 
-## Solutions
+## Solution Links {#solution-links}
 
 Homework assignments use a **subset** of the practice problems from the lecture readings. Full solutions for all practice problems (including ones not assigned) are linked below.
 
