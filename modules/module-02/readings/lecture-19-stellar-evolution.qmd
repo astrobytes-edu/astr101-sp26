@@ -715,6 +715,8 @@ After reading this lecture, you should be able to say **yes** to each of the fol
 
 ## Practice Problems
 
+*Solutions are available in the [Lecture 19 Solutions](lecture-19-stellar-evolution-solutions.qmd).*
+
 ### Core Problems
 
 #### Problem 1: Main-Sequence Lifetime Calculation

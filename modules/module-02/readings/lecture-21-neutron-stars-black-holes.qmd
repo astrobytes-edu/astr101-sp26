@@ -496,6 +496,8 @@ These remnants also matter because they are part of the larger cycle of cosmic e
 
 ## Practice Problems
 
+*Solutions are available in the [Lecture 21 Solutions](lecture-21-neutron-stars-black-holes-solutions.qmd).*
+
 ### Core Problems
 
 1. **Neutron Star Density**: A neutron star has a mass of $1.4\,M_\odot$ ($= 2.8 \times 10^{30}\,\mathrm{kg}$) and a radius of $10$ km.

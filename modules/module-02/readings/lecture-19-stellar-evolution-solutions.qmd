@@ -4,7 +4,7 @@ subtitle: "Practice Problem Solutions"
 author: "Dr. Anna Rosen"
 date: "2026-03-25"
 description: "Solutions to the Lecture 19 practice problems."
-draft: true
+draft: false
 course: ASTR 101
 module: "2 - Stars & Stellar Evolution"
 ---
@@ -33,15 +33,17 @@ $$
 
 1. Using $t_{\rm MS} = 10 \text{ Gyr} \times (M/1 M_\odot)^{-2.5}$:
 
-$$t_{\rm MS} = 10 \text{ Gyr} \times (3)^{-2.5} = 10 \text{ Gyr} \times 0.0606 = 0.606 \text{ Gyr} \approx 606 \text{ Myr}$$
+$$t_{\rm MS} = 10 \text{ Gyr} \times (3)^{-2.5} = 10 \text{ Gyr} \times 0.064 = 0.64 \text{ Gyr} \approx 640 \text{ Myr}$$
 
-2. No. The star's total main-sequence lifetime is about 606 Myr, but it has already existed for 4.6 Gyr, which is much longer than its main-sequence lifetime.
+2. No. The star's total main-sequence lifetime is about 640 Myr, but it has already existed for 4.6 Gyr, which is much longer than its main-sequence lifetime.
 
 3. It has already exhausted its core hydrogen and must be in a post-main-sequence stage, most plausibly a giant or later evolved phase.
 
 **Unit check:** The mass ratio is dimensionless, so the result stays in units of time.
 
 **Sanity check:** A star more massive than the Sun should live far less than 10 Gyr, so a lifetime of a few hundred million years is sensible.
+
+**Answer:** A $3\,M_\odot$ star stays on the main sequence for about **$0.64\ \text{Gyr}$**, so it would no longer be a main-sequence star today if it formed when the Sun did.
 
 ### Problem 2: The Red-Giant Sun
 **Restatement:** In about 5 billion years, the Sun will exhaust its core hydrogen and become a red giant.
@@ -69,7 +71,7 @@ $$\frac{R_{\text{future}}}{R_{\odot}} = \sqrt{\frac{2,000}{0.132}} = \sqrt{15,15
 
 **Sanity check:** Red giants are known to reach radii tens to hundreds of times the Sun's, so about $10^2\,R_\odot$ is the right scale.
 
-### Problem 3: Interpreting An H-R Diagram
+### Problem 3: Interpreting an H-R Diagram
 **Restatement:** You observe a star that is cooler (lower temperature, farther right) than the Sun but has the same luminosity as the Sun (~1 $L_\odot$).
 
 1. Using $L \propto R^2 T^4$, is this star larger or smaller than the Sun?

@@ -4,7 +4,7 @@ subtitle: "Practice Problem Solutions"
 author: "Dr. Anna Rosen"
 date: "2026-04-08"
 description: "Solutions to the Lecture 21 practice problems."
-draft: true
+draft: false
 course: ASTR 101
 module: "2 - Stars & Stellar Evolution"
 ---
@@ -258,7 +258,7 @@ $$
 
 So the radius where tidal acceleration reaches $g$ is **well inside the event horizon**.
 
-**Answer:** A stellar-mass black hole tears you apart outside or near the horizon; a supermassive black hole has much gentler tidal forces at the horizon, so you could cross it before feeling extreme stretching.
+**Answer:** A stellar-mass black hole tears you apart **well outside** the horizon, while a supermassive black hole has much gentler tidal forces at the horizon, so you could cross it before feeling extreme stretching.
 
 ### Problem 2: Neutron Star Mass Limit
 

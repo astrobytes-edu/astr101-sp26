@@ -639,6 +639,8 @@ No. Planets form from the disk of gas and dust left around a young star.
 
 ## Practice Problems
 
+*Solutions are available in the [Lecture 18 Solutions](lecture-18-from-gas-to-stars-solutions.qmd).*
+
 ### Core Problems
 
 **Problem 1: Interstellar Extinction**

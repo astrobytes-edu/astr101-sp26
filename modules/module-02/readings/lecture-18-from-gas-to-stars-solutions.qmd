@@ -4,7 +4,7 @@ subtitle: "Practice Problem Solutions"
 author: "Dr. Anna Rosen"
 date: "2026-03-23"
 description: "Solutions to the Lecture 18 practice problems."
-draft: true
+draft: false
 course: ASTR 101
 module: "2 - Stars & Stellar Evolution"
 ---
@@ -28,6 +28,8 @@ The dust cloud attenuates the star's light by 5 magnitudes. In terms of brightne
 $$\frac{F_{\rm observed}}{F_{\rm intrinsic}} = (2.512)^{-5} \approx 0.01$$
 
 So the dust dims the star by a factor of 100 — the star appears 100 times fainter than it truly is.
+
+**Answer:** The extinction is **$A_V = 5$ magnitudes**, which means the dust makes the star about **100 times fainter**.
 
 ### Problem 2: The Jeans Criterion (Conceptual)
 **Restatement:** Two giant molecular clouds have identical temperature (T = 10 K) but different masses: Cloud A has $M_A = 10^5$ M☉, and Cloud B has $M_B = 10^4$ M☉. Both have the same average density. Which cloud is more likely to undergo gravitational collapse? Why?
@@ -59,6 +61,8 @@ On the main sequence, the same scaling applies: high-mass stars burn hydrogen mu
 
 This is why massive stars are rare in the galaxy despite being born frequently: they die young.
 
+**Answer:** Massive protostars contract to the main sequence quickly because they are very luminous, and that same high luminosity means they burn through core hydrogen quickly once they get there. Their whole evolutionary clock runs faster.
+
 ### Problem 4: Protoplanetary Disk Structure
 **Restatement:** The disk around a young star has an inner radius of 0.1 AU and an outer radius of 100 AU. Assume the disk's temperature drops as $T(r) \propto r^{-0.5}$ (where $r$ is distance from the star in AU). If the inner disk (at 0.1 AU) has a temperature of 1000 K, what is the temperature at the outer edge (at 100 AU)?
 Use the scaling relation directly:
@@ -73,8 +77,10 @@ $$T_{\rm outer} = 1000 \, \text{K} \times 0.0316 \approx 31.6 \, \text{K}$$
 
 The outer disk is about 32 K — cold enough that water and methane remain frozen as ice, not gas. This distinction (between the hot inner disk where only rocks form and the cold outer disk where ices accumulate) is crucial for understanding why gas giants form in the outer solar system while terrestrial planets form close to the Sun.
 
+**Answer:** The temperature at the outer edge is about **$32\ \text{K}$**.
+
 ### Problem 5: Observing a Hidden Protostar
-**Restatement:** A protostar is embedded in a dense dust cloud. The dust obscures the protostar from visible-light telescopes, but a infrared observer detects thermal emission peaking at a wavelength of $\lambda_{\rm peak} = 20$ micrometers. Using Wien's law, estimate the temperature of the dust surrounding the protostar.
+**Restatement:** A protostar is embedded in a dense dust cloud. The dust obscures the protostar from visible-light telescopes, but an infrared observer detects thermal emission peaking at a wavelength of $\lambda_{\rm peak} = 20$ micrometers. Using Wien's law, estimate the temperature of the dust surrounding the protostar.
 
 **Given:**
 - $\lambda_{\rm peak} = 20\,\mu\text{m}$

@@ -1169,6 +1169,8 @@ Stellar death matters because it returns processed material to space. The chemic
 
 ## Practice Problems
 
+*Solutions are available in the [Lecture 20 Solutions](lecture-20-how-stars-die-solutions.qmd).*
+
 ### Core Concepts
 
 <!-- Conceptual / Understand / — / ⭐ -->

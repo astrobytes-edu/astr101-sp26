@@ -954,7 +954,7 @@ In Lecture 19, we will trace what happens as a main-sequence star ages. We will 
 
 ## Practice Problems
 
-*Lecture 17 solutions are currently instructor draft and are not posted on the student site.*
+*Solutions are available in the [Lecture 17 Solutions](lecture-17-binary-stars-solutions.qmd).*
 
 ### Core Problems
 

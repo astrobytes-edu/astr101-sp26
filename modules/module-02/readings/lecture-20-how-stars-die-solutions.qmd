@@ -4,7 +4,7 @@ subtitle: "Practice Problem Solutions"
 author: "Dr. Anna Rosen"
 date: "2026-04-06"
 description: "Solutions to the Lecture 20 practice problems."
-draft: true
+draft: false
 course: ASTR 101
 module: "2 - Stars & Stellar Evolution"
 ---
@@ -235,16 +235,17 @@ $$
 
 - **Light curve:** Type Ia events usually show a smoother rise and decline; Type II events often show a plateau or a broader, more diverse behavior because of their hydrogen envelopes.
 - **Spectra:** Type II supernovae show **hydrogen lines**. Type Ia supernovae do **not** show hydrogen and instead show strong features from intermediate-mass and iron-peak elements.
+- **Ejecta velocity:** Both kinds are fast, but the measured line widths and how they evolve differ because Type Ia ejecta come from a compact white dwarf while Type II ejecta expand through an extended hydrogen envelope.
 - **Progenitor context:** Type II comes from a massive star core collapse; Type Ia comes from a white dwarf in a binary.
 
 **Why these differences exist:** The explosions start from very different structures. Type II includes a hydrogen-rich stellar envelope. Type Ia destroys a degenerate white dwarf with no hydrogen envelope.
 
 **Observable -> model -> inference:**
-- **Observable:** hydrogen lines versus no hydrogen, plateau-like versus smoother light curves
+- **Observable:** hydrogen lines versus no hydrogen, plateau-like versus smoother light curves, and different line-width velocity evolution
 - **Model:** hydrogen-rich core-collapse star versus hydrogen-poor thermonuclear white dwarf
 - **Inference:** the two supernovae came from fundamentally different progenitors and explosion mechanisms
 
-**Answer:** Type II supernovae are identified by hydrogen-rich spectra and envelope-influenced light curves, while Type Ia supernovae lack hydrogen and show more uniform thermonuclear behavior because they come from exploding white dwarfs.
+**Answer:** Type II supernovae are identified by hydrogen-rich spectra, envelope-influenced light curves, and velocity signatures shaped by a massive star's extended outer layers. Type Ia supernovae lack hydrogen and show more uniform thermonuclear behavior because they come from exploding white dwarfs.
 
 ### Problem 10: Standard Candles
 
