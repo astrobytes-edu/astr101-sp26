@@ -30,6 +30,16 @@ prerequisites: "White dwarfs and degeneracy pressure (Lecture 20), Chandrasekhar
 A white dwarf is a stellar corpse held up by quantum-mechanical electron degeneracy pressure. If a carbon-oxygen white dwarf in a binary is pushed into unstable conditions — often near the **Chandrasekhar limit** of about 1.4 solar masses — it can detonate in a runaway thermonuclear explosion: a **Type Ia supernova**. Because Type Ia explosions come from the same kind of compact stellar remnant and can be corrected using their light-curve shapes, they become the brightest reliable standardizable candles in the universe, visible to billions of light-years. When we use them to build the Hubble diagram at high redshift, we find something no one expected: distant galaxies are *dimmer* than a decelerating expansion would predict. The universe is not slowing down. It is speeding up. Something is driving it — and we call that something **dark energy**.
 :::
 
+::: {.callout-key-insight title="Evidence Chain: Hidden Acceleration"}
+**Observable:** Distant Type Ia supernovae are dimmer than a matter-dominated, decelerating universe predicts at the same redshift.
+
+**Model:** Type Ia SNe are standardizable candles, and cosmological models predict how luminosity distance should depend on redshift for different expansion histories.
+
+**Inference:** The expansion has accelerated in the recent universe, requiring a component with negative pressure: dark energy.
+
+**Main uncertainty:** The acceleration inference is robust, but the physical identity of dark energy is not. A cosmological constant, evolving field, or modified gravity could leave similar first-order signatures.
+:::
+
 ::: {.callout-roadmap title="Cognitive Map: Four Questions"}
 This page answers four questions:
 
@@ -168,6 +178,8 @@ They expected to measure the **deceleration** of the expansion. Until 1998, ever
 <!-- FIGURE: High-z Hubble diagram showing distance modulus vs. redshift for Type Ia SNe, with three model curves: matter-dominated deceleration, flat Λ=0 reference, and best-fit accelerating (Ω_m ≈ 0.3, Ω_Λ ≈ 0.7); emphasize that high-z SNe lie above the matter-only prediction -->
 
 What they actually found was the opposite. Distant Type Ia SNe at $z \sim 0.5$ were systematically **dimmer** than they should be in *any* decelerating model. Dimmer means farther. Farther than expected means the universe has been *expanding faster* now than it was in the past — the expansion has been **accelerating**.
+
+Here "farther" means **luminosity distance**, not distance in a static Euclidean space. In an expanding universe, distance is a model-dependent concept, so the supernova result is really a statement about the relationship between observed brightness, redshift, and the history of expansion.
 
 This was announced in 1998 (Riess et al.) and 1999 (Perlmutter et al.). It won the 2011 Nobel Prize in Physics. And it required a radical revision of cosmology.
 

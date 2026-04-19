@@ -30,6 +30,16 @@ prerequisites: "Hubble's law and cosmic expansion (Lecture 24), dark matter (Lec
 The universe today is cold, dilute, and nearly empty. Run the clock backward using Hubble's law and every point in the universe gets closer to every other point; the universe gets hotter and denser. Far enough back, it was a smoldering plasma too hot for atoms to exist. We can see that epoch directly: the **cosmic microwave background** is its fading thermal glow, stretched to millimeter wavelengths by 13.8 Gyr of expansion. In the first three minutes of this hot, dense universe, the light nuclei — hydrogen, helium, and a trace of lithium — were cooked out of protons and neutrons. *Everything heavier* — the carbon in your bones, the oxygen in your lungs, the iron in your blood, the silicon in your phone — came later, forged in stars and their deaths. The Big Bang made the canvas. Stars painted the picture.
 :::
 
+::: {.callout-key-insight title="Evidence Chain: A Hot, Dense Beginning"}
+**Observable:** The universe is expanding, the sky is filled with a 2.725 K blackbody background, and pristine gas has a characteristic H/He/Li abundance pattern.
+
+**Model:** An expanding universe cools with time; nuclear physics predicts which light nuclei form during the first few minutes; recombination physics predicts when the universe becomes transparent.
+
+**Inference:** The universe passed through a hot, dense early state with a specific thermal history: expansion, Big Bang nucleosynthesis, recombination, structure formation, stars, and galaxies.
+
+**Main uncertainty:** The evidence strongly supports a hot Big Bang, but not a complete theory of $t = 0$. Inflation, quantum gravity, and the origin of the initial conditions remain frontier questions.
+:::
+
 ::: {.callout-roadmap title="Cognitive Map: Four Questions"}
 This page answers four questions:
 
@@ -432,10 +442,27 @@ Write a one-page essay (your prose, no quote-marks needed) explaining the role o
 
 ---
 
+## Final Capstone: The Evidence Chain
+
+::: {.callout-check-yourself #cy-final-evidence-chain}
+Choose one major Module 3 claim — dark matter, dark energy, the Big Bang, the CMB, or the origin of the elements. Explain the evidence chain without using the phrase "scientists discovered." Your answer should name:
+
+1. the observable,
+2. the model or physical law,
+3. the inference,
+4. one uncertainty or alternative that still matters.
+
+::: {.callout-solution collapse="true" title="Example"}
+For dark matter: the observable is that stars and gas in spiral galaxies orbit too quickly at large radii. The model is gravity applied to circular orbits, where $M_{\text{enc}} = v^2 r/G$. The inference is that mass keeps increasing beyond the visible disk, so galaxies sit inside extended halos of non-luminous matter. The remaining uncertainty is the identity of the substance; modified-gravity ideas must also be tested against clusters, lensing, the CMB, and structure formation.
+:::
+:::
+
+---
+
 ## Looking Back — A Course in One Paragraph
 
 ::: {.callout-key-insight title="The Arc of the Course"}
-We began, 26 lectures ago, with a handful of simple questions — What is the Sun? What are the stars? How big is the universe? — and we walked through them one by one, using physics you can check with algebra. In Module 1 we looked up at the sky and made sense of motion, light, and the Solar System. In Module 2 we zoomed in on stars — how they fuse, how we measure them, how they evolve, and how they die. In Module 3 we zoomed out again and found that we live on a small rocky remnant of a stellar corpse, orbiting an average star, in a spiral galaxy among trillions, in a universe that is mostly dark, was born from a hot dense state 13.8 Gyr ago, is expanding at a rate we still cannot fully explain, and is made of recycled stardust that was cooked in generations of stellar lives and deaths before becoming us.
+We began, 26 lectures ago, with a handful of simple questions — What is the Sun? What are the stars? How big is the universe? — and we walked through them one by one, using physics you can check with algebra. In Module 1 we looked up at the sky and made sense of motion, light, and the Solar System. In Module 2 we zoomed in on stars — how they fuse, how we measure them, how they evolve, and how they die. In Module 3 we zoomed out again and found that we live on a rocky planet built from recycled stellar material, orbiting an average star, in a spiral galaxy among trillions, in a universe that is mostly dark, was born from a hot dense state 13.8 Gyr ago, is expanding at a rate we still cannot fully explain, and is made of recycled stardust that was cooked in generations of stellar lives and deaths before becoming us.
 
 The distance ladder is the thread that ran through everything. Stars are the reason we can climb it. Dark matter, dark energy, and the origin of the elements are the three hidden things we met. You now have a rough map of the universe, and more importantly, you have the tools to keep updating that map as new evidence comes in. The next discovery — the resolution of the Hubble tension, the identity of dark matter, the nature of dark energy, the detection of primordial gravitational waves — is out there waiting, and the physics you have learned this semester is the language it will be written in.
 

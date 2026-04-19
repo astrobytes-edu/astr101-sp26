@@ -28,6 +28,16 @@ prerequisites: "Kepler's third law (Lecture 5), gravity (Lecture 6), Doppler eff
 Our galaxy is a rotating stellar system whose visible stars do not contain enough mass to hold it together. The flatness of its rotation curve — measured with the light of stars and hydrogen gas — forces us to conclude that most of the Milky Way is made of something we cannot see directly. That *something* is the first of Module 3's three hidden things.
 :::
 
+::: {.callout-key-insight title="Evidence Chain: Hidden Mass"}
+**Observable:** Stars and neutral hydrogen orbit the Milky Way at roughly constant speed far from the center.
+
+**Model:** Circular orbits in a gravitational potential connect speed and enclosed mass through $M_{\text{enc}} = v^2 r/G$.
+
+**Inference:** The enclosed mass keeps growing beyond the visible disk, so the galaxy contains a large halo of non-luminous matter.
+
+**Main uncertainty:** The rotation curve tells us that extra gravity is present; it does not, by itself, identify the particle or prove which microscopic substance causes the extra gravity.
+:::
+
 ::: {.callout-roadmap title="Cognitive Map: Three Questions"}
 This page answers three questions:
 
@@ -215,6 +225,8 @@ The dark matter halo is inferred to be roughly spherical, to extend well beyond 
 **Inference:** Either the Milky Way contains a large halo of non-luminous matter ("dark matter"), or the law of gravity we are applying is wrong on galactic scales. The weight of evidence — including, as we will see in Lectures 24 – 26, evidence at much larger scales — favors dark matter.
 :::
 
+What would change our mind? A direct particle detection would not be required to justify the gravitational inference, but it would identify the substance. A modified-gravity theory would have to do more than fit one rotation curve: it would need to explain galaxy rotation curves, galaxy clusters, gravitational lensing, the CMB, and the growth of the cosmic web with one coherent model. That is why dark matter is not a single-observation guess; it is the simplest explanation that survives many independent tests.
+
 ::: {.callout-check-yourself title="Check Yourself 3: Flat Means More Mass"}
 Suppose two galaxies both have flat rotation curves, but Galaxy A stays flat at 150 km/s while Galaxy B stays flat at 300 km/s. At the same radius, which galaxy has more enclosed mass? By what factor?
 
@@ -291,7 +303,7 @@ $$
 **What else could this be?** A four-million-solar-mass cluster of ordinary stars inside that volume would be so dense that internal collisions would disperse it on timescales *much* shorter than the age of the galaxy. A cluster of neutron stars or stellar-mass black holes of that total mass runs into the same problems. The only thing we know that can pack 4 × 10⁶ M☉ into a volume smaller than our solar system is a supermassive black hole.
 
 ::: {.column-margin}
-**Supermassive black hole (SMBH):** A black hole with mass of 10⁵ – 10¹⁰ M☉. Every galaxy we have examined carefully has one at its center.
+**Supermassive black hole (SMBH):** A black hole with mass of 10⁵ – 10¹⁰ M☉. Most massive galaxies examined carefully appear to host one near their center.
 :::
 
 In May 2022, the Event Horizon Telescope released the first direct image of Sgr A\*'s shadow. The angular size of that shadow matches, to within measurement uncertainty, the size predicted by the orbit-derived mass and the Schwarzschild-radius formula from Lecture 21.

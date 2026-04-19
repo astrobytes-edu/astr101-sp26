@@ -29,6 +29,16 @@ prerequisites: "Doppler effect (Lecture 10), parallax and distances (Lecture 15)
 On sufficiently large scales, galaxy redshifts obey a simple rule: the farther a galaxy is, the faster it recedes from us. Nearby galaxies can have their own local motions — Andromeda is the famous blueshifted exception — but once cosmic expansion dominates over local gravity, the pattern is unmistakable. That rule, **Hubble's law**, is not a statement about motion *through* space; it is a statement about the expansion *of* space itself. Combined with a cosmic distance ladder built rung by rung from parallax to Cepheid variables to Type Ia supernovae, Hubble's law gives us an age and size for the observable universe. And the fact that two different ways of measuring $H_0$ disagree tells us we may not understand the expansion as well as we thought.
 :::
 
+::: {.callout-key-insight title="Evidence Chain: Turning Redshift into Cosmology"}
+**Observable:** Galaxies have redshifted spectral lines, and standard candles give distances to some of those galaxies.
+
+**Model:** The distance ladder calibrates luminosities, while expanding-space cosmology connects redshift, distance, and expansion rate.
+
+**Inference:** The universe is expanding, and the present-day expansion rate $H_0$ sets a rough age and distance scale for the observable universe.
+
+**Main uncertainty:** The local ladder depends on calibrated astrophysical rungs; the CMB value depends on fitting an early-universe model. The Hubble tension asks whether one side has hidden systematics or whether the model is incomplete.
+:::
+
 ::: {.callout-roadmap title="Cognitive Map: Four Questions"}
 This page answers four questions:
 
@@ -307,6 +317,8 @@ Here is the current problem. We have **two independent ways** to measure $H_0$:
 1. **Local distance ladder:** Parallax → Cepheids → Type Ia SNe → Hubble's law fit. Current value: $H_0 \approx 73 \pm 1$ km/s/Mpc (SH0ES collaboration, 2022 – 2024 results).
 
 2. **CMB-based:** Fit the cosmological model to the detailed pattern of temperature fluctuations in the cosmic microwave background (Lecture 26). Current value: $H_0 \approx 67.4 \pm 0.5$ km/s/Mpc (Planck, 2018 – 2020 results).
+
+The two methods are independent in a very specific way. The local ladder is an astrophysical calibration chain: parallax calibrates Cepheids, Cepheids calibrate Type Ia SNe, and Type Ia SNe calibrate the low-redshift Hubble diagram. The CMB route is an early-universe inference: the acoustic pattern in the CMB gives a value of $H_0$ only after assuming a cosmological model. That is what makes the tension interesting. The disagreement is not just two teams measuring the same thing badly; it is two different inference machines failing to meet.
 
 These two values disagree by about 5σ — a statistical significance that in most fields would be considered a discovery. And yet it persists after years of increasingly careful measurements. It is called the **Hubble tension**.
 

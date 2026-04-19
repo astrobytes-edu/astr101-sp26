@@ -30,6 +30,16 @@ prerequisites: "Light and the EM spectrum (Lectures 7 – 10), stellar populatio
 The Milky Way is one member of a vast population of galaxies that comes in a small number of recognizable shapes. Those shapes are not arbitrary — they trace the star-formation history, gas content, and dynamical state of each galaxy. Many galaxies host a supermassive black hole at their center, and when that black hole is fed, it becomes one of the brightest objects in the universe — a **quasar**. On the largest scales, galaxies are not scattered randomly but arranged in a **cosmic web** of filaments and voids. To make sense of any of this, we need distances — which is the problem Lecture 24 will solve.
 :::
 
+::: {.callout-key-insight title="Evidence Chain: Galaxies as Population Data"}
+**Observable:** Galaxies have different shapes, colors, gas contents, spectra, central activity, and clustering patterns.
+
+**Model:** Stellar populations, gas dynamics, black-hole accretion, and gravitational instability connect those observables to physical histories.
+
+**Inference:** A galaxy's appearance is not just a picture; it is a record of star formation, mergers, central black-hole growth, and dark-matter-guided structure formation.
+
+**Main uncertainty:** Classification is a starting point, not a full history. Galaxies can merge, quench, reignite star formation, or host active nuclei for only part of their lives.
+:::
+
 ::: {.callout-roadmap title="Cognitive Map: Four Questions"}
 This page answers four questions:
 
@@ -93,6 +103,8 @@ Galaxies come in three broad morphological classes:
 <!-- FIGURE: Hubble tuning fork classification diagram showing E0→E7 on left arm, S0 at fork, Sa→Sc along top branch and SBa→SBc along bottom branch, with Irr at end -->
 
 The three classes are not just aesthetic — they are *stellar-population* classes. An elliptical is a galaxy that stopped making stars long ago. A spiral is a galaxy that is still making them. An irregular is often a galaxy in a disturbed dynamical state, where a recent interaction has stirred things up and triggered new star formation.
+
+One important warning: the Hubble sequence is a **classification scheme**, not an evolutionary path. Ellipticals do not automatically turn into spirals, and spirals do not naturally march along the tuning fork from one subtype to another. The sequence helps us sort what galaxies look like today; the physical history has to be inferred from stellar populations, gas, dynamics, and environment.
 
 ::: {.callout-roadmap title="Structure Reference Box: Galaxy Types"}
 | Type | Shape | Dominant stars | Gas/dust | Star formation |
@@ -236,7 +248,9 @@ with $\alpha \approx 4 - 5$ from observations. A galaxy with a more massive bulg
 
 This is strange. The bulge contains $\sim 10^{11}$ stars and extends over ~kiloparsecs. The SMBH sits at the center and is, by galactic standards, tiny — $R_S \sim 10$ AU even for the biggest SMBHs. The SMBH's *direct* gravitational influence extends only over parsecs, not kiloparsecs. Yet they grow in lockstep.
 
-The leading explanation is **AGN feedback**: when a SMBH becomes active, its radiation and jets heat and expel gas from the host galaxy, quenching both further star formation *and* further SMBH accretion. The SMBH is a thermostat for its bulge. This is a very active research frontier, and it is one reason AGN matter for more than just being extremely bright point sources — they are *regulators* of galaxy evolution.
+The leading explanation is **AGN feedback**: when a SMBH becomes active, its radiation and jets heat and expel gas from the host galaxy, quenching both further star formation *and* further SMBH accretion. The SMBH is a thermostat for its bulge. But be careful: the correlation alone does not prove the mechanism. AGN feedback is compelling because it connects the correlation to a plausible energy source and to observed outflows, not because one plot can settle causality by itself.
+
+This is a very active research frontier, and it is one reason AGN matter for more than just being extremely bright point sources — they are possible *regulators* of galaxy evolution.
 
 ::: {.callout-why-this-matters title="Why Stars Matter Here"}
 We measure a galaxy's bulge mass using — you guessed it — **stars**. Bulge velocity dispersion σ comes from spectroscopy of the integrated stellar light: Doppler-broadened absorption lines reveal the range of stellar velocities. Bulge mass comes from dynamical modeling using stellar orbits. Every point on the M–σ diagram is anchored in stellar kinematics.
