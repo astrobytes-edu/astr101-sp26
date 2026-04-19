@@ -140,6 +140,8 @@ If you know the H-R diagram (Lecture 16) and you know how stellar lifetimes depe
 **Globular cluster:** A densely packed, roughly spherical collection of 10⁴ – 10⁶ stars bound by their mutual gravity. Globulars are among the oldest structures in the Milky Way, with ages of ~10 – 13 Gyr.
 :::
 
+{{< fig globular-cluster-47-tuc >}}
+
 ::: {.callout-check-yourself title="Check Yourself 1"}
 Two stars have identical spectra consistent with a K5 dwarf. One orbits in the thin disk on a nearly circular path; the other orbits in the halo on a highly elongated, tilted path. Which was more likely born recently, and which was likely born in the galaxy's first few billion years?
 :::
@@ -162,9 +164,9 @@ How do you map the inside of something you cannot leave? With *two* great advant
 
 The Milky Way's disk contains interstellar dust: micron-sized grains that absorb and scatter visible light. Toward the Galactic Center, the dust is so dense that *no* visible light from the center reaches us. Early-20th-century astronomers did not know this, which is why they initially thought the Sun was near the middle of our Galaxy. It isn't.
 
-<!-- FIGURE: Comparison of the Galactic Center viewed in visible light (heavily obscured, mostly dark) vs. near-infrared (thousands of stars suddenly visible). -->
+{{< fig galactic-center-multiwavelength-eso >}}
 
-Dust is a problem for visible light specifically because visible wavelengths (~0.5 μm) are comparable to the size of dust grains. At longer wavelengths, the grains are less effective at blocking light. This means the solution is to *change the wavelength we observe at*.
+Dust is a problem for visible light specifically because visible wavelengths (~0.5 μm) are comparable to the size of dust grains. At longer wavelengths, the grains are less effective at blocking light. This means the solution is to *change the wavelength we observe at*. In practice, "mapping the Milky Way" always begins with the question: what tracer can get through the material between us and the part of the Galaxy we want to study?
 
 ### The 21-cm Line: Hydrogen as Our Native Guide
 
@@ -172,11 +174,15 @@ Neutral hydrogen in the interstellar medium emits a faint but characteristic pho
 
 At 21 cm, dust is utterly transparent. The galaxy's HI gas lights up like a map of itself.
 
+{{< fig hi4pi-milky-way-map >}}
+
 Even better: because HI is moving, we can Doppler-shift the 21-cm line (callback to Lecture 10) to measure its velocity along our line of sight. This gives us a *three-dimensional* kinematic map of the Milky Way's neutral hydrogen, including the parts of the disk hidden behind dust from our position.
 
 ### Infrared: Seeing Through Dust with Thermal Light
 
 Infrared photons also pass through dust far more easily than visible ones. The Spitzer Space Telescope and, more recently, JWST have revealed the Galactic Center's dense stellar cluster in detail that optical images cannot achieve. Infrared is how we *see the stars* behind the dust; 21-cm is how we *see the gas* behind the dust.
+
+{{< fig galactic-center-great-observatories >}}
 
 {{< fig gaia-reach-module2 >}}
 
@@ -232,17 +238,19 @@ For the Milky Way, the naive expectation is similar: out past the visible stars 
 
 That prediction fails — not subtly, but dramatically.
 
-{{< fig galaxy-rotation-curve >}}
+{{< fig rotation-curve-observed-expected >}}
 
 When we measure the velocity of stars and 21-cm HI gas as a function of radius in the Milky Way (and in every other spiral galaxy we have checked carefully), we find the rotation velocity stays *roughly flat* out to the edge of detectable gas. Typical disk rotation speeds are ~200 – 250 km/s, and they do not drop off in the way a mass-at-the-center model predicts.
+
+{{< fig milky-way-rotation-curve-data >}}
+
+The Milky Way version matters because it is not one instrument, one star, or one modeling choice. The same story appears when astronomers use many tracers — stars, masers, globular clusters, Gaia motions, and gas — to measure circular speed at different radii. The scatter and error bars are real; the central pattern is still clear.
 
 ### The Inference
 
 A flat rotation curve means $M_{\text{enclosed}}(r)$ keeps *growing* with radius — linearly, in fact — out past where we can see stars. There is mass out there. It does not emit light. It does not absorb light. It does not scatter light. But it has gravity.
 
 This is the minimal inference from rotation curves. We call the extra mass **dark matter**, but that name is a placeholder for the observation, not a description of the physics.
-
-{{< fig rotation-curve >}}
 
 The dark matter halo is inferred to be roughly spherical, to extend well beyond the visible disk, and to contain several times more mass than all the stars, gas, and dust combined. In the Milky Way specifically, current estimates place the total mass (dark matter included) at ~10¹² M☉, of which only ~5 – 10% is baryonic.
 
@@ -295,7 +303,7 @@ If you look toward the constellation Sagittarius with a radio telescope, you fin
 
 What lives there? The answer came from *stellar orbits*.
 
-<!-- FIGURE: Near-infrared image or animation showing the S-stars orbiting Sgr A* at the Galactic Center, with labeled orbital tracks. -->
+{{< fig s-star-orbits-keck-ucla >}}
 
 ::: {.callout-roadmap title="ViewSpace Interactive: Sagittarius A*" collapse="false"}
 Use the slider to watch the Galactic Center observations build up from 1998 to 2009. Before you move the slider, predict what kind of pattern would convince you that the stars are orbiting one compact central mass rather than drifting randomly.
@@ -357,6 +365,10 @@ $$
 :::
 
 In May 2022, the Event Horizon Telescope released the first direct image of Sgr A\*'s shadow. The angular size of that shadow matches, to within measurement uncertainty, the size predicted by the orbit-derived mass and the Schwarzschild-radius formula from Lecture 21.
+
+{{< fig sgr-a-eht-polarized >}}
+
+The polarized-light view shown here is a later EHT result, so keep the chronology straight: the *mass* of Sgr A\* came first from stellar orbits, the 2022 image checked the predicted shadow scale, and the polarized image adds information about magnetic fields near the event horizon.
 
 ::: {.callout-check-yourself title="Check Yourself 4"}
 Using the Schwarzschild-radius formula from Lecture 21, $R_S = 2GM/c^2$, estimate the Schwarzschild radius of Sgr A* in AU. For $M = 4 \times 10^6 \, M_\odot$, $R_S$ in meters is about $2 \times (6.67 \times 10^{-11}) \times (4 \times 10^6 \times 2 \times 10^{30}) / (3 \times 10^8)^2$. Convert the final answer to AU using $1\,\text{AU} \approx 1.5 \times 10^{11}$ m.
@@ -420,6 +432,10 @@ Rotation curves are the classic evidence students meet first. They are not the o
 - **Gravitational lensing:** mass bends light. Maps of the total mass in clusters, inferred from lensing of background galaxies, disagree dramatically with maps of the visible mass. The famous "Bullet Cluster" image shows the separation between the two.
 - **Structure formation in cosmological simulations:** the pattern of galaxy clustering we see today requires a dominant cold, non-baryonic matter component to form on the right timescale. Baryons alone cannot do it.
 - **The cosmic microwave background:** (Lecture 26) the CMB's acoustic-peak structure independently constrains the ratio of dark matter to baryons and agrees with the galactic evidence.
+
+{{< fig ugc11455-rotation-curve-lensing >}}
+
+This figure previews how the argument scales up. The inner points are rotation-curve measurements, like the ones we just discussed. The far-out weak-lensing points ask a different question: how much total mass bends background light around the galaxy? The two methods do not measure the same thing in the same way, but they point toward the same conclusion: baryonic matter alone is not enough.
 
 ::: {.callout-roadmap title="ViewSpace Interactive: Bullet Cluster" collapse="false"}
 Use the wavelength controls to compare the visible galaxies, the X-ray-emitting gas, and the lensing-based mass map. This is the cleanest place in the module to see why dark matter is not just "stuff we forgot to count."

@@ -113,6 +113,8 @@ What to notice: "empty sky" is often an exposure-time statement, not a physical 
 
 What you would notice looking at those galaxies is that they are not random. Most of them fall into a small number of shape categories that were first systematized by Edwin Hubble in 1926 — the so-called **Hubble sequence**, or *Hubble tuning fork*.
 
+{{< fig galaxy-types-visual-vocabulary >}}
+
 ### The Hubble Sequence
 
 Galaxies come in three broad morphological classes:
@@ -121,7 +123,7 @@ Galaxies come in three broad morphological classes:
 - **Spirals (S):** Disk galaxies with a central bulge and spiral arms tracing out from the center. Classed from Sa (tightly wound arms, large bulge, less gas) to Sc/Sd (open arms, small bulge, gas-rich, active star formation). The Milky Way is a barred spiral (SBb or SBc). Spirals host a mix of old bulge stars and young disk stars.
 - **Irregulars (Irr):** Galaxies with no clear symmetry. Often small and gas-rich. The Large Magellanic Cloud is a classic example.
 
-<!-- FIGURE: Hubble tuning fork classification diagram showing E0→E7 on left arm, S0 at fork, Sa→Sc along top branch and SBa→SBc along bottom branch, with Irr at end -->
+{{< fig hubble-tuning-fork-kingfish >}}
 
 The three classes are not just aesthetic — they are *stellar-population* classes. An elliptical is a galaxy that stopped making stars long ago. A spiral is a galaxy that is still making them. An irregular is often a galaxy in a disturbed dynamical state, where a recent interaction has stirred things up and triggered new star formation.
 

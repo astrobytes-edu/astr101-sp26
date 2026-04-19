@@ -1924,6 +1924,93 @@ figures:
     credit: "Course illustration"
     module: 3
 
+  globular-cluster-47-tuc:
+    path: /assets/images/module-03/eso1302a-gc-47-tuc.jpg
+    caption: "What to notice: a globular cluster is not a loose patch of random stars. It is a dense, old, gravitationally bound stellar population, exactly the kind of object that helps trace the Milky Way's halo."
+    alt: "Wide-field image of the globular cluster 47 Tucanae. A dense bright core of many stars sits slightly left of center, surrounded by a gradually thinning halo of stars against a dark background."
+    credit: "ESO/M.-R. Cioni/VISTA Magellanic Cloud survey"
+    license: "CC-BY-4.0"
+    source: "https://www.eso.org/public/images/eso1302a/"
+    module: 3
+
+  galactic-center-multiwavelength-eso:
+    path: /assets/images/module-03/eso1606e-multiwavelength-MW-galactic-center.jpg
+    caption: "What to notice: the same Galactic Center looks almost opaque in visible light but becomes richly structured at infrared and submillimeter wavelengths. Changing wavelength changes which physical component you can see."
+    alt: "Four horizontal views of the central Milky Way at different wavelengths. From top to bottom the panels show APEX plus Planck submillimeter emission, Spitzer infrared emission, VISTA near-infrared light, and an optical view by S. Guisard, with the Galactic Centre marked in each panel."
+    credit: "ESO/ATLASGAL consortium/NASA/GLIMPSE consortium/VVV Survey/ESA/Planck/D. Minniti/S. Guisard"
+    license: "CC-BY-4.0"
+    source: "https://www.eso.org/public/images/eso1606e/"
+    module: 3
+
+  hi4pi-milky-way-map:
+    path: /assets/images/module-03/HI4PI-MW-map.jpg
+    caption: "What to notice: 21-cm radio emission turns neutral hydrogen into an all-sky map. The bright band is the Milky Way's gas-rich disk, and the colors encode velocity information as well as column density."
+    alt: "All-sky HI4PI map of neutral hydrogen in the Milky Way shown in a Mollweide projection. A bright horizontal band traces the Galactic plane, with color indicating line-of-sight velocity and brightness indicating hydrogen column density."
+    credit: "Benjamin Winkel and the HI4PI Collaboration"
+    source: "https://www.icrar.org/hi4pi/"
+    module: 3
+
+  galactic-center-great-observatories:
+    path: /assets/images/module-03/nasa-mw-gc.jpg
+    caption: "What to notice: the Galactic Center is not one picture. Spitzer infrared, Hubble near-infrared, and Chandra X-ray observations reveal dust, stars, hot gas, and compact high-energy sources in the same crowded region."
+    alt: "NASA Great Observatories composite of the center of the Milky Way. A large false-color panel combines infrared and X-ray views, with smaller panels below labeled Spitzer infrared, Hubble near infrared, and Chandra X-ray."
+    credit: "NASA, ESA, SSC, CXC, and STScI"
+    source: "https://science.nasa.gov/asset/hubble/views-of-the-galactic-center-region-from-nasas-great-observatories/"
+    module: 3
+
+  rotation-curve-observed-expected:
+    path: /assets/images/module-03/rotation-curve-dark-matter1.jpg
+    caption: "What to notice: the observed rotation curve stays high at large radius, while the curve expected from the observed luminosity alone falls. The gap between those two curves is the dark-matter inference in one picture."
+    alt: "Plot over a galaxy image comparing rotational velocity with radius. A red observed curve remains high across the disk, while a blue expected curve from observed luminosity rises near the center and then declines at larger radius."
+    credit: "Course-provided figure"
+    module: 3
+
+  milky-way-rotation-curve-data:
+    path: /assets/images/module-03/Rotation_curve_Milky_Way.png
+    caption: "What to notice: many independent tracers of the Milky Way's rotation stay near the same circular speed even far from the Galactic Center. The baryonic-mass curve falls, so the measured speeds require additional mass."
+    alt: "Plot titled Rotation curve of the Milky Way showing circular velocity in kilometers per second versus radius from the galactic center in kiloparsecs. Multiple data sets, including K giant stars, globular clusters, Gaia DR3, BHB stars, masers, McClure-Griffiths, VVV survey, and Wang, remain near 200 to 250 kilometers per second, while the baryonic mass curve declines at large radius."
+    credit: "Course-provided figure"
+    module: 3
+
+  ugc11455-rotation-curve-lensing:
+    path: /assets/images/module-03/Rotation_Curve_UGC11455.png
+    caption: "What to notice: UGC 11455 rotates faster than its baryonic mass can explain, and weak lensing extends the same mass discrepancy to much larger radii. Dark matter is not just a Milky Way bookkeeping problem."
+    alt: "Plot titled Rotation curve of UGC11455 extended by weak lensing using the matching KiDS mass bin. Blue points, triangles, and squares show stellar, hydrogen gas, and weak-lensing rotation-curve measurements. Black baryonic mass curves lie well below the observed velocities, and red arrows mark the velocity gap that dark matter can explain."
+    credit: "Course-provided figure"
+    module: 3
+
+  hubble-tuning-fork-kingfish:
+    path: /assets/images/module-03/Interactive_Hubble_Tuning_Fork.jpg
+    caption: "What to notice: the Hubble tuning fork is a classification map, not an evolutionary conveyor belt. The images here are infrared views of dust in nearby galaxies, so morphology is being connected to interstellar material and star formation."
+    alt: "Hubble tuning fork diagram populated with infrared images of nearby galaxies. Elliptical galaxies appear on the left handle, spirals and intermediate spirals follow the upper branch, barred spirals follow the lower branch, and irregular galaxies sit below the handle."
+    credit: "C. North, M. Galametz & the KINGFISH Team"
+    license: "ESA Standard Licence"
+    source: "https://www.esa.int/ESA_Multimedia/Images/2012/11/Interactive_Hubble_Tuning_Fork"
+    module: 3
+
+  galaxy-types-visual-vocabulary:
+    path: /assets/images/module-03/types-of-galaxies-2.webp
+    caption: "What to notice: these labels are visual starting points. A galaxy's type is a clue about stars, gas, dust, and interaction history, not a complete biography by itself."
+    alt: "Six-panel visual guide titled Types of Galaxies. The panels show examples labeled spiral, barred spiral, elliptical, irregular, lenticular, and peculiar."
+    credit: "Course-provided figure"
+    module: 3
+
+  s-star-orbits-keck-ucla:
+    path: /assets/images/module-03/S-stars-Orbits.png
+    caption: "What to notice: the stars do not drift randomly. They trace closed, high-speed orbits around a common focus, which lets astronomers weigh the compact object at the Galactic Center with Kepler's third law."
+    alt: "Keck UCLA Galactic Center Group image showing colored orbital paths of S-stars around the Galactic Center from 1995 to 2020. The legend labels stars S0-2, S0-3, S0-5, S0-16, S0-19, S0-20, S0-49, S0-38, and S0-102."
+    credit: "Keck/UCLA Galactic Center Group"
+    module: 3
+
+  sgr-a-eht-polarized:
+    path: /assets/images/module-03/eso2406a-EHT-SagAstar-polarized.jpg
+    caption: "What to notice: this is a horizon-scale radio image of Sgr A* in polarized light. The bright ring surrounds the black-hole shadow, and the fine lines trace polarization directions related to magnetic fields near the event horizon."
+    alt: "Event Horizon Telescope image of Sagittarius A star in polarized light. A bright orange ring surrounds a dark central shadow, with many fine curved line segments overlaid around the ring to mark polarization orientation."
+    credit: "EHT Collaboration"
+    license: "CC-BY-4.0"
+    source: "https://www.eso.org/public/images/eso2406a/"
+    module: 3
+
   module-3-evidence-chain-concept-map:
     path: /assets/images/module-03/module-3-evidence-chain-concept-map.svg
     caption: "What to notice: Module 3 uses the same evidence chain over and over. Observables such as motions, spectra, standard candles, supernova brightness, the CMB, and element abundances become physical claims only after a model translates them."

@@ -158,6 +158,29 @@ The CMB is an astonishingly rich data source. From its properties we can read:
 - **The first stars formed ~100 – 400 Myr after the Big Bang.** (The optical depth to reionization, measured from CMB polarization, dates this.)
 - **The Hubble constant is ~67 km/s/Mpc.** (From the geometry of the acoustic peaks — giving the CMB leg of the Hubble tension, Lecture 24.)
 
+::: {.callout-roadmap title="Video: Baryon Acoustic Oscillations" collapse="false"}
+This NASA SVS animation shows how sound waves in the early plasma became a frozen-in pattern after recombination. Watch for the full evidence chain: tiny density fluctuations make pressure waves, recombination freezes the wave pattern, expansion stretches that pattern, and galaxy surveys later measure the BAO scale as a standard ruler.
+
+<div class="demo-embed" style="width: 100%; margin: 1rem 0;">
+  <video
+    controls
+    preload="metadata"
+    poster="https://svs.gsfc.nasa.gov/vis/a010000/a013700/a013768/BAO_Still_2.jpg"
+    aria-label="NASA animation explaining baryon acoustic oscillations and their imprint on galaxy clustering."
+    style="width: 100%; border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; background: #0a0a14;">
+    <source src="https://svs.gsfc.nasa.gov/vis/a010000/a013700/a013768/13768_BAO_Narr_1080.mp4" type="video/mp4">
+    <source src="https://svs.gsfc.nasa.gov/vis/a010000/a013700/a013768/13768_BAO_Narr_1080_Best.webm" type="video/webm">
+    <track kind="subtitles" label="English" srclang="en-US" src="https://svs.gsfc.nasa.gov/vis/a010000/a013700/a013768/13768_BAO_Narr_SRT_Captions.en_US.vtt">
+    This NASA animation explains how baryon acoustic oscillations arose in the early universe and left a measurable imprint on galaxy clustering.
+  </video>
+  <p style="text-align: center; margin-top: 0.5rem; font-size: 0.875rem; color: #666;">
+    <a href="https://svs.gsfc.nasa.gov/13768/#media_group_318435" target="_blank" rel="noopener" style="color: #5dade2;">Open the NASA SVS source page in a new tab</a> (Credit: NASA's Goddard Space Flight Center)
+  </p>
+</div>
+
+The key point is subtle but powerful: BAOs are not a separate fourth pillar of the Big Bang. They are the fossil sound-wave pattern predicted by the same early-plasma physics that produces the CMB acoustic peaks, later stretched by cosmic expansion and measured in galaxy clustering.
+:::
+
 ::: {.callout-roadmap title="Video: Flying Through the Cosmic Web" collapse="false"}
 This artist's concept animation imagines flying through the vast web of galaxies that fill the visible universe. Treat it as a model picture, not as the evidence itself: the evidence is the pattern of CMB fluctuations, galaxy positions, and large-scale clustering; the animation helps you picture the structure that those measurements describe.
 
