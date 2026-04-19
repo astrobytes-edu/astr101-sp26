@@ -26,10 +26,10 @@ prerequisites: "Doppler effect (Lecture 10), parallax and distances (Lecture 15)
 ::: {.callout-key-insight #the-big-idea}
 ## The Big Idea
 
-Every galaxy redshift we have ever measured obeys a simple rule: the farther a galaxy is, the faster it recedes from us. That rule — **Hubble's law** — is not a statement about motion *through* space; it is a statement about the expansion *of* space itself. Combined with a cosmic distance ladder built rung by rung from parallax to Cepheid variables to Type Ia supernovae, Hubble's law gives us an age and size for the observable universe. And the fact that two different ways of measuring $H_0$ disagree tells us we may not understand the expansion as well as we thought.
+On sufficiently large scales, galaxy redshifts obey a simple rule: the farther a galaxy is, the faster it recedes from us. Nearby galaxies can have their own local motions — Andromeda is the famous blueshifted exception — but once cosmic expansion dominates over local gravity, the pattern is unmistakable. That rule, **Hubble's law**, is not a statement about motion *through* space; it is a statement about the expansion *of* space itself. Combined with a cosmic distance ladder built rung by rung from parallax to Cepheid variables to Type Ia supernovae, Hubble's law gives us an age and size for the observable universe. And the fact that two different ways of measuring $H_0$ disagree tells us we may not understand the expansion as well as we thought.
 :::
 
-::: {.callout-note title="Cognitive Map: Four Questions"}
+::: {.callout-roadmap title="Cognitive Map: Four Questions"}
 This page answers four questions:
 
 1. **How do we measure distances to galaxies?**
@@ -148,7 +148,7 @@ You observe a Cepheid in a nearby galaxy. Its pulsation period is 30 days and it
 (a) The Cepheid's luminosity $L$ in solar units.
 (b) The distance $d$ to the host galaxy in Mpc (1 Mpc = $3.09 \times 10^{22}$ m).
 
-::: {.callout-tip collapse="true" title="Answer"}
+::: {.callout-solution collapse="true" title="Answer"}
 (a) Using $L \approx 335 \, L_\odot \times (P/\text{day})^{1.15}$ with $P = 30$:
 $L \approx 335 \times 30^{1.15} \, L_\odot \approx 335 \times 49 \, L_\odot \approx 1.6 \times 10^4 \, L_\odot.$
 Convert: $L \approx 1.6 \times 10^4 \times 3.8 \times 10^{26}$ W $\approx 6 \times 10^{30}$ W.
@@ -175,7 +175,7 @@ Lecture 25 gives the full stellar-physics story — what explodes, why, and why 
 
 Once we have distances out to a few hundred Mpc, a new relation becomes usable. It is the subject of the rest of this reading.
 
-::: {.callout-note title="Reference Box: The Distance Ladder"}
+::: {.callout-roadmap title="Reference Box: The Distance Ladder"}
 
 | Rung | Method | Reach | Calibrator |
 |------|--------|-------|------------|
@@ -187,6 +187,16 @@ Once we have distances out to a few hundred Mpc, a new relation becomes usable. 
 | 6 | Hubble's law (redshift → distance) | cosmological | Rungs 4 – 5 |
 
 *Each rung calibrates the rung above it. Break any rung and the upper ones wobble.*
+:::
+
+::: {.callout-check-yourself #cy-ladder-calibration}
+## Check Yourself 2: Which Rung Is Doing the Work?
+
+Suppose a Type Ia supernova goes off in a galaxy that also contains Cepheid variables. Which object gives the distance to the galaxy directly, and which object gets calibrated so it can be used much farther away?
+
+::: {.callout-solution collapse="true" title="Answer"}
+The **Cepheids** give the distance to the nearby host galaxy because their period-luminosity relation has already been calibrated by lower rungs such as parallax. The **Type Ia supernova** is then calibrated: once we know its host distance, we can infer its corrected peak luminosity and use similar Type Ias in much more distant galaxies.
+:::
 :::
 
 ---
@@ -224,11 +234,11 @@ Imagine dots painted on the surface of a balloon. As the balloon inflates, every
 The redshift is not really a Doppler shift (though for small distances the math is the same). It is a **cosmological redshift** — light stretched by the expansion of space during its travel from source to us.
 
 ::: {.callout-check-yourself #cy-hubble-law}
-## Check Yourself 2: Applying Hubble's Law
+## Check Yourself 3: Applying Hubble's Law
 
 A galaxy has a measured recession velocity of $v = 15,000$ km/s. Use $H_0 = 70$ km/s/Mpc to estimate its distance.
 
-::: {.callout-tip collapse="true" title="Answer"}
+::: {.callout-solution collapse="true" title="Answer"}
 $d = v / H_0 = 15,000 / 70 \approx 214$ Mpc. This is roughly the distance at which Type Ia supernovae become essential (Cepheids alone cannot reach this far), and well within the Hubble flow regime where peculiar velocities from local gravitational effects are small compared to the Hubble velocity.
 :::
 :::
@@ -248,11 +258,11 @@ So $t_H = 1 / H_0 \approx 4.4 \times 10^{17}$ s $\approx 14$ Gyr.
 This is a rough estimate. The *actual* age of the universe — 13.8 Gyr — differs from $t_H$ by a small factor that depends on whether the expansion has been speeding up or slowing down (Lecture 25). But the order of magnitude is right.
 
 ::: {.callout-check-yourself #cy-hubble-time}
-## Check Yourself 3: Another Hubble Time
+## Check Yourself 4: Another Hubble Time
 
 Repeat the calculation with $H_0 = 67$ km/s/Mpc (the CMB-based value; Lecture 26) and $H_0 = 73$ km/s/Mpc (the Cepheid-SNIa local value). What are the two estimates of $t_H$?
 
-::: {.callout-tip collapse="true" title="Answer"}
+::: {.callout-solution collapse="true" title="Answer"}
 $H_0 = 67$ km/s/Mpc = $2.17 \times 10^{-18}$ s⁻¹, so $t_H \approx 4.6 \times 10^{17}$ s ≈ 14.6 Gyr.
 $H_0 = 73$ km/s/Mpc = $2.37 \times 10^{-18}$ s⁻¹, so $t_H \approx 4.2 \times 10^{17}$ s ≈ 13.4 Gyr.
 
@@ -262,7 +272,7 @@ Both are within ~1 Gyr of the best-fit age (13.8 Gyr), and the two values differ
 
 ### Worked Example: From Redshift to a Distance
 
-::: {.callout-note title="Worked Example: Converting a Redshift into a Distance (Low-z Limit)"}
+::: {.callout-worked-example title="Worked Example: Converting a Redshift into a Distance (Low-z Limit)"}
 **Given:** A galaxy's spectrum shows a hydrogen line at $\lambda_{\text{obs}} = 670$ nm. Its laboratory (rest-frame) wavelength is $\lambda_0 = 656.3$ nm (Hα). Use $H_0 = 70$ km/s/Mpc.
 
 **Relation:** For $v \ll c$, the cosmological redshift reduces to a Doppler-like form:
@@ -331,11 +341,11 @@ Without stars, we have no cosmology. This is one of Module 3's core threads, and
 
 ## Deep Dives (Optional)
 
-::: {.callout-note title="Deep Dive: Why Are Cepheids on an Instability Strip?" collapse="true"}
+::: {.callout-deep-dive title="Deep Dive: Why Are Cepheids on an Instability Strip?" collapse="true"}
 Cepheid variables are giants crossing a narrow region of the H-R diagram called the *instability strip*. In this region, partially ionized helium in the stellar envelope acts as a heat valve: when the star compresses, helium becomes more ionized, which makes the envelope more opaque, trapping heat and causing re-expansion; when the star expands and cools, helium recombines, the envelope becomes more transparent, heat escapes, and the envelope contracts again. The result is a self-sustaining radial pulsation. The period is set by the star's mean density, which in turn is set by its mass and radius — and radius plus temperature sets luminosity. That is why $L$ and $P$ are tightly linked.
 :::
 
-::: {.callout-note title="Deep Dive: Why Hubble's Law Doesn't Put Us at the Center" collapse="true"}
+::: {.callout-deep-dive title="Deep Dive: Why Hubble's Law Doesn't Put Us at the Center" collapse="true"}
 If every pair of points in a uniformly expanding space recedes from every other pair at a rate proportional to their separation, then *every observer* measures Hubble's law and sees themselves at the center. There is no special center, just as there is no special point on the surface of an expanding balloon. This is sometimes called the Copernican principle: we are not in a privileged location, we just see a universe that is isotropic and homogeneous on large scales.
 :::
 
@@ -343,15 +353,15 @@ If every pair of points in a uniformly expanding space recedes from every other 
 
 ## Misconceptions
 
-::: {.callout-note title="Misconception: Hubble's Law Means Galaxies Are Flying Away From Us"}
+::: {.callout-misconception title="Misconception: Hubble's Law Means Galaxies Are Flying Away From Us"}
 WRONG. Hubble's law describes the expansion of **space itself**. Galaxies are not moving through a fixed space; the space between them is stretching. This is why galaxies on the *opposite* side of the sky also recede from us — if galaxies were literally flying through space from some center, we would be at that center, and some galaxies would be moving toward us.
 :::
 
-::: {.callout-note title="Misconception: $H_0$ Has Units of 1/Time Because the Universe Is Slowing Down"}
+::: {.callout-misconception title="Misconception: $H_0$ Has Units of 1/Time Because the Universe Is Slowing Down"}
 WRONG. $H_0$ has units of 1/time because $[v / d] = [\text{km/s / km}] = [1/s]$. It is a *rate of expansion*, not a deceleration. In fact, as of Lecture 25 you'll see that the expansion is currently *accelerating*, not slowing down.
 :::
 
-::: {.callout-note title="Misconception: We Can See All of the Universe"}
+::: {.callout-misconception title="Misconception: We Can See All of the Universe"}
 WRONG. We can only see the part from which light has had time to reach us in 13.8 Gyr. The **observable universe** is ~46 billion light-years in comoving radius — less than the true universe, which could be much larger or even infinite.
 :::
 

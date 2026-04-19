@@ -15,8 +15,8 @@ categories:
 course: ASTR 101
 module: "3 - Galaxies & Cosmology"
 learning-objectives:
-  - Explain what a Type Ia supernova is, identify the white-dwarf progenitor, and describe the Chandrasekhar limit as the explosion trigger
-  - Articulate why Type Ia SNe have a nearly universal peak luminosity and therefore serve as standard candles
+  - Explain what a Type Ia supernova is, identify the white-dwarf progenitor, and describe the Chandrasekhar limit as the natural mass scale for the clean introductory explosion model
+  - Articulate why Type Ia SNe have a calibratable peak luminosity and therefore serve as standardizable candles
   - Read a modern Hubble diagram and identify the signature of accelerating expansion at high redshift
   - Describe dark energy as the inferred cause of acceleration and interpret the Ω-budget of the universe (matter, dark matter, dark energy)
   - Discuss why dark energy is an open frontier and name at least two proposed physical explanations
@@ -27,14 +27,14 @@ prerequisites: "White dwarfs and degeneracy pressure (Lecture 20), Chandrasekhar
 ::: {.callout-key-insight #the-big-idea}
 ## The Big Idea
 
-A white dwarf is a stellar corpse held up by quantum-mechanical electron degeneracy pressure. If it ever grows past the **Chandrasekhar limit** (1.4 solar masses), it cannot support itself and detonates in a runaway thermonuclear explosion — a **Type Ia supernova**. Because every Type Ia explodes from (approximately) the same threshold mass, every Type Ia releases (approximately) the same peak luminosity. That makes them the brightest reliable standard candles in the universe, visible to billions of light-years. When we use them to build the Hubble diagram at high redshift, we find something no one expected: distant galaxies are *dimmer* than a decelerating expansion would predict. The universe is not slowing down. It is speeding up. Something is driving it — and we call that something **dark energy**.
+A white dwarf is a stellar corpse held up by quantum-mechanical electron degeneracy pressure. If a carbon-oxygen white dwarf in a binary is pushed into unstable conditions — often near the **Chandrasekhar limit** of about 1.4 solar masses — it can detonate in a runaway thermonuclear explosion: a **Type Ia supernova**. Because Type Ia explosions come from the same kind of compact stellar remnant and can be corrected using their light-curve shapes, they become the brightest reliable standardizable candles in the universe, visible to billions of light-years. When we use them to build the Hubble diagram at high redshift, we find something no one expected: distant galaxies are *dimmer* than a decelerating expansion would predict. The universe is not slowing down. It is speeding up. Something is driving it — and we call that something **dark energy**.
 :::
 
-::: {.callout-note title="Cognitive Map: Four Questions"}
+::: {.callout-roadmap title="Cognitive Map: Four Questions"}
 This page answers four questions:
 
 1. **What is a Type Ia supernova, and why does it explode?**
-2. **Why is it a standard candle — specifically, why does every Type Ia release almost the same peak luminosity?**
+2. **Why is it a standardizable candle — specifically, why can we calibrate its peak luminosity?**
 3. **What did Type Ia observations in 1998 reveal about the expansion of the universe?**
 4. **What is dark energy?**
 
@@ -53,7 +53,7 @@ This page answers four questions:
 - Why Type Ias Are Standard Candles
 - The 1998 Discovery and the Ω-Budget
 
-**Goal after 20 minutes:** You should be able to describe the physical mechanism of a Type Ia supernova, explain why it is a standard candle, and articulate what dark energy is (and is not).
+**Goal after 20 minutes:** You should be able to describe the physical mechanism of a Type Ia supernova, explain why it is a standardizable candle, and articulate what dark energy is (and is not).
 
 **Reference mode:** The Type Ia Mechanism Box and the Ω-Budget Box are the long-term study references.
 :::
@@ -64,8 +64,8 @@ This page answers four questions:
 
 By the end of this reading, you should be able to say:
 
-- [ ] I can describe the physical mechanism of a Type Ia supernova: a white dwarf accretes mass, crosses the Chandrasekhar limit, and undergoes runaway carbon-oxygen fusion.
-- [ ] I can explain why the Chandrasekhar limit makes Type Ia peak luminosities nearly universal and thus standard-candle-like.
+- [ ] I can describe the physical mechanism of a Type Ia supernova: a carbon-oxygen white dwarf in a binary enters unstable conditions and undergoes runaway carbon-oxygen fusion.
+- [ ] I can explain why white-dwarf physics makes Type Ia peak luminosities calibratable and thus standardizable-candle-like.
 - [ ] I can read a Hubble diagram at high redshift and identify the signature of accelerating expansion (distant SNe are *dimmer* than a decelerating model predicts).
 - [ ] I can state the cosmic energy budget: ~5% ordinary matter, ~27% dark matter, ~68% dark energy.
 - [ ] I can describe dark energy as a cause of acceleration and name at least two possible physical explanations (cosmological constant, quintessence, modified gravity).
@@ -86,23 +86,25 @@ A single, isolated white dwarf just cools for the age of the universe. But if a 
 
 ## The Type Ia Mechanism
 
-There are two main channels for a white dwarf to exceed the Chandrasekhar limit, both involving binaries:
+There are two main channels for a white dwarf to become unstable enough to explode, both involving binaries:
 
 1. **Single-degenerate channel:** A white dwarf orbits a companion (a main-sequence star, red giant, or subgiant) close enough to accrete matter from the companion's envelope. Mass trickles onto the white dwarf over millions of years, raising the WD's mass toward $M_{\text{Ch}}$.
 
-2. **Double-degenerate channel:** Two white dwarfs in a close binary system spiral inward (via gravitational-wave emission, over ~Gyr) and eventually merge. The combined mass exceeds $M_{\text{Ch}}$.
+2. **Double-degenerate channel:** Two white dwarfs in a close binary system spiral inward (via gravitational-wave emission, over ~Gyr) and eventually merge. The combined system may exceed $M_{\text{Ch}}$, or it may detonate through a related sub-Chandrasekhar pathway before the merged object settles.
 
 <!-- FIGURE: Two-panel Type Ia progenitor schematic showing single-degenerate (WD + main-sequence companion with accretion stream) and double-degenerate (two WDs in a close binary, merging) channels -->
 
-In either case, the outcome is the same: the white dwarf's mass approaches $M_{\text{Ch}}$, the central density and temperature rise catastrophically, and carbon-oxygen fusion ignites at the core. Because degeneracy pressure is almost independent of temperature, the initial fusion does *not* cause the star to expand and cool (as it would in a normal star). Instead, the temperature skyrockets, fusion accelerates runaway, and the fusion front sweeps through the entire white dwarf in a few seconds. The star detonates — a **Type Ia supernova**.
+The clean introductory model is the near-Chandrasekhar case: the white dwarf's mass approaches $M_{\text{Ch}}$, the central density and temperature rise catastrophically, and carbon-oxygen fusion ignites. Because degeneracy pressure is almost independent of temperature, the initial fusion does *not* cause the star to expand and cool (as it would in a normal star). Instead, the temperature skyrockets, fusion accelerates runaway, and the fusion front sweeps through the white dwarf in seconds. The star detonates — a **Type Ia supernova**.
+
+Real Type Ia progenitors are an active research area, and not every event is literally a white dwarf that quietly reaches exactly $1.4 \, M_\odot$. For this course, the important physical point is narrower and safer: Type Ia SNe are thermonuclear explosions of carbon-oxygen white dwarfs in binaries, and their explosion physics produces a much tighter peak-luminosity family than core-collapse supernovae do.
 
 The energy released in fusing ~1.4 $M_\odot$ of carbon and oxygen to nickel-56 (and then to iron-56 via radioactive decay) is about $10^{44}$ J — enough to completely unbind the star and fling it into the interstellar medium at ~10,000 km/s.
 
-::: {.callout-note title="Structure Reference Box: Type Ia vs. Type II"}
+::: {.callout-roadmap title="Structure Reference Box: Type Ia vs. Type II"}
 
 |   | Type Ia | Type II (core-collapse) |
 |---|---------|-------------------------|
-| Progenitor | White dwarf (~1.4 $M_\odot$) in binary | Massive star ($> 8 \, M_\odot$) |
+| Progenitor | Carbon-oxygen white dwarf in binary | Massive star ($> 8 \, M_\odot$) |
 | Mechanism | Thermonuclear detonation | Core collapse + neutrino heating |
 | Peak luminosity | $\sim 5 \times 10^9 \, L_\odot$ | $\sim 10^8 - 10^9 \, L_\odot$ |
 | Peak luminosity scatter | Small (~15%, reducible with light-curve shape) | Large (order of magnitude) |
@@ -119,7 +121,7 @@ A supernova is observed in an elliptical galaxy with almost no ongoing star form
 
 Which type of supernova is this — Type Ia or Type II? Explain your reasoning from the host galaxy and the spectrum.
 
-::: {.callout-tip collapse="true" title="Answer"}
+::: {.callout-solution collapse="true" title="Answer"}
 This is a **Type Ia**. Two clues confirm it:
 
 1. **Host galaxy:** Elliptical galaxies have old stellar populations and no massive stars. Type II supernovae require massive progenitors ($> 8 \, M_\odot$) with lifetimes of tens of Myr — impossible in an elliptical. Type Ia progenitors are white dwarfs in binaries, which can be billions of years old. So the host type rules out Type II.
@@ -133,14 +135,14 @@ This is why Type Ias are observed in all galaxy types, while Type IIs are only s
 
 ## Why a Standard Candle?
 
-Here is the cosmologically important fact: because every Type Ia explosion comes from a white dwarf *at (essentially) the same mass* ($M_{\text{Ch}} \approx 1.4 \, M_\odot$), and because the explosion mechanism converts a comparable fraction of that mass to nickel-56, **every Type Ia has (approximately) the same peak luminosity**. The intrinsic scatter is about 30 – 40%, and the **Phillips relation** further tightens this: brighter Type Ias have slower-decaying light curves, so the light-curve shape can be used to standardize the peak luminosity to about 7 – 10%.
+Here is the cosmologically important fact: Type Ia explosions come from the same kind of compact object — a carbon-oxygen white dwarf — and their thermonuclear runaway produces broadly similar amounts of radioactive nickel-56. That makes Type Ias **standardizable candles**: not identical explosions, but a family whose differences can be measured and corrected. The intrinsic scatter is about 30 – 40%, and the **Phillips relation** further tightens this: brighter Type Ias have slower-decaying light curves, so the light-curve shape can be used to standardize the peak luminosity to about 7 – 10%.
 
 {{< fig standard-candles >}}
 
 That is good enough. A 10% uncertainty in $L$ gives a 5% uncertainty in distance. At cosmological distances, that is extraordinary precision.
 
 ::: {.callout-key-insight title="The Stellar Argument, Made Explicit"}
-This is the payoff of Lectures 20 and 23. The reason Type Ia SNe are standard candles is a stellar physics fact: the Chandrasekhar mass is a universal constant, set by the balance between electron degeneracy pressure and relativistic kinematics. Every white dwarf in the universe, no matter where it formed, obeys the same $M_{\text{Ch}}$. **The Chandrasekhar limit is the reason we can measure cosmology.** Stars are the rung we climb on — and this particular stellar rung stretches to the edge of the observable universe.
+This is the payoff of Lectures 20 and 23. The reason Type Ia SNe can be standardized is a stellar physics fact: white dwarfs are compact, degenerate carbon-oxygen objects with a narrow range of explosion conditions, and the Chandrasekhar mass provides the natural scale. **White-dwarf physics is the reason we can use Type Ias to measure cosmology.** Stars are the rung we climb on — and this particular stellar rung stretches to the edge of the observable universe.
 :::
 
 ::: {.callout-check-yourself #cy-brightness-depth}
@@ -148,7 +150,7 @@ This is the payoff of Lectures 20 and 23. The reason Type Ia SNe are standard ca
 
 A Type Ia supernova has peak luminosity $L \approx 5 \times 10^9 \, L_\odot \approx 2 \times 10^{36}$ W. If a modern survey can detect a flux of $F = 10^{-17}$ W/m², estimate the maximum distance (in Gpc) at which a Type Ia can be discovered.
 
-::: {.callout-tip collapse="true" title="Answer"}
+::: {.callout-solution collapse="true" title="Answer"}
 $d = \sqrt{L / (4\pi F)} = \sqrt{2 \times 10^{36} / (4\pi \times 10^{-17})}$ m $= \sqrt{1.6 \times 10^{52}}$ m $\approx 1.3 \times 10^{26}$ m.
 
 Convert to Gpc: $1 \text{ Gpc} = 3.09 \times 10^{25}$ m, so $d \approx 4$ Gpc. This is comparable to the Hubble distance — Type Ias can be found across most of the observable universe, which is exactly the reach we need for cosmology.
@@ -174,7 +176,7 @@ This was announced in 1998 (Riess et al.) and 1999 (Perlmutter et al.). It won t
 
 Explain, in one paragraph, why observing that distant Type Ia SNe are *dimmer than expected* at a given redshift implies that the universe has been expanding *faster* recently than in the past. Use $F = L / (4\pi d^2)$ in your reasoning.
 
-::: {.callout-tip collapse="true" title="Answer"}
+::: {.callout-solution collapse="true" title="Answer"}
 A Type Ia has a known peak luminosity $L$. The observed flux $F$ tells us the distance $d = \sqrt{L/(4\pi F)}$. If the SN is dimmer than expected at a given redshift, $F$ is smaller, which means $d$ is larger — the light had to travel farther to reach us. In a decelerating universe, a galaxy at a given redshift is at a smaller distance (because the expansion was faster in the past, so light covered less space in getting here). Observing *farther* distances at a given redshift is therefore the signature of an expansion that was *slower* in the past and has been *speeding up* since — i.e., acceleration.
 :::
 :::
@@ -189,7 +191,7 @@ Combining the Type Ia data with the CMB (Lecture 26) and galaxy clustering (cosm
 
 {{< fig universe-contents-nasa >}}
 
-::: {.callout-note title="The Ω-Budget"}
+::: {.callout-summary title="The Ω-Budget"}
 
 | Component | Fraction | Evidence |
 |-----------|----------|----------|
@@ -200,11 +202,21 @@ Combining the Type Ia data with the CMB (Lecture 26) and galaxy clustering (cosm
 *The universe is mostly dark — about 95% is stuff we cannot see directly.*
 :::
 
+::: {.callout-check-yourself #cy-budget-effects}
+## Check Yourself 4: Same Word, Different Physics
+
+Dark matter and dark energy are both "dark." Name one observation that reveals each one, and state whether each component clumps under gravity or smooths/accelerates the expansion.
+
+::: {.callout-solution collapse="true" title="Answer"}
+Dark matter is revealed by gravity on bound structures: galaxy rotation curves, cluster lensing, and the cosmic web. It clumps under gravity and helps structure form. Dark energy is revealed by the expansion history, especially Type Ia supernovae showing acceleration; it behaves much more smoothly and drives the expansion to accelerate. The shared word "dark" means "not directly seen with light," not "same physical substance."
+:::
+:::
+
 Dark energy dominates the modern universe. But it did not always. In the early universe, matter (both ordinary and dark) had much higher density, and the expansion was decelerating. Only in the past few billion years has dark energy's (roughly constant) density come to dominate, flipping the expansion from decelerating to accelerating. We live in the **dark-energy-dominated era**.
 
 ### Worked Example: Type Ia Peak Magnitude → Distance
 
-::: {.callout-note title="Worked Example: Pulling a Distance Out of a Type Ia Peak"}
+::: {.callout-worked-example title="Worked Example: Pulling a Distance Out of a Type Ia Peak"}
 **Given:** A Type Ia supernova is observed at peak with flux $F = 5 \times 10^{-16}$ W/m². The (light-curve-corrected) peak luminosity of a Type Ia is $L_{\text{peak}} \approx 5 \times 10^9 \, L_\odot = 5 \times 10^9 \times 3.8 \times 10^{26}$ W $\approx 1.9 \times 10^{36}$ W.
 
 **Relation:** For any standard candle, apparent flux and intrinsic luminosity are related by the inverse-square law,
@@ -253,17 +265,17 @@ We have now climbed the full ladder:
 - Rung 5: **Type Ia supernovae (~Gpc) — exploding white dwarfs**
 - Rung 6: Hubble's law + Ω-budget (cosmological)
 
-At every rung that reaches beyond the Milky Way, the measurement is made with a specific kind of star. Lecture 25 is the payoff of Module 2: the Chandrasekhar limit, a stellar-structure result, is what makes Type Ia SNe standard candles, which is what tells us the universe is accelerating, which is what tells us dark energy exists. **Stars are the reason we know 68% of the universe is dark energy.**
+At every rung that reaches beyond the Milky Way, the measurement is made with a specific kind of star. Lecture 25 is the payoff of Module 2: white-dwarf physics makes Type Ia SNe standardizable candles, which is what tells us the universe is accelerating, which is what tells us dark energy exists. **Stars are the reason we know 68% of the universe is dark energy.**
 
 ---
 
 ## Deep Dives (Optional)
 
-::: {.callout-note title="Deep Dive: How Nickel-56 Powers the Light Curve" collapse="true"}
+::: {.callout-deep-dive title="Deep Dive: How Nickel-56 Powers the Light Curve" collapse="true"}
 The fusion in a Type Ia explosion produces about 0.6 $M_\odot$ of radioactive nickel-56. $^{56}$Ni decays (half-life 6.1 days) to $^{56}$Co, which in turn decays (half-life 77 days) to $^{56}$Fe. Each decay produces gamma rays that thermalize in the expanding ejecta and leak out as optical light. The light curve's rise and fall — peaking ~20 days after explosion, declining over months — is set by this radioactive decay chain. The Phillips relation (brighter Type Ias decline more slowly) arises because brighter SNe produce more $^{56}$Ni, whose diffusion time out of the ejecta is longer.
 :::
 
-::: {.callout-note title="Deep Dive: The Cosmological Constant Problem" collapse="true"}
+::: {.callout-deep-dive title="Deep Dive: The Cosmological Constant Problem" collapse="true"}
 If dark energy is vacuum energy (the cosmological constant $\Lambda$), then quantum field theory predicts a density set by the scale of particle physics — roughly $\rho_\Lambda \sim 10^{97}$ kg/m³. The observed value is $\rho_\Lambda \sim 10^{-26}$ kg/m³. The ratio is about $10^{120}$ — arguably the largest discrepancy between theory and observation in the history of physics. This is called the **cosmological constant problem**, and it remains unsolved. Most physicists suspect either that supersymmetry or some other cancellation mechanism makes the bare vacuum energy smaller, or that we are deeply confused about how to calculate vacuum energy in general relativity.
 :::
 
@@ -271,15 +283,15 @@ If dark energy is vacuum energy (the cosmological constant $\Lambda$), then quan
 
 ## Misconceptions
 
-::: {.callout-note title="Misconception: Dark Energy Is a Force"}
+::: {.callout-misconception title="Misconception: Dark Energy Is a Force"}
 MOSTLY WRONG. Dark energy is an **energy density with negative pressure**. In general relativity, negative pressure sources repulsive gravity — so the effect is gravitational, not a new fundamental force. Dark energy is best thought of as a property of space itself, not an entity pushing on other entities.
 :::
 
-::: {.callout-note title="Misconception: All White Dwarfs Become Type Ia Supernovae"}
+::: {.callout-misconception title="Misconception: All White Dwarfs Become Type Ia Supernovae"}
 WRONG. Most white dwarfs are **isolated** (or in binaries where no significant mass transfer occurs) and simply cool for the age of the universe. Only the small fraction in close binaries that either accrete or merge ever approach $M_{\text{Ch}}$. Type Ia SNe are rare events — about one per galaxy per century.
 :::
 
-::: {.callout-note title="Misconception: Dark Energy Is the Same as Dark Matter"}
+::: {.callout-misconception title="Misconception: Dark Energy Is the Same as Dark Matter"}
 WRONG. **Dark matter** is non-luminous *matter* (L22) — it clusters under gravity and helps galaxies form. **Dark energy** is non-luminous *energy with negative pressure* (L25) — it pushes the universe apart. They have very different physical effects and observational signatures, and their inferred densities are measured separately. Despite the similar names, they are unrelated in our best models.
 :::
 
@@ -312,7 +324,7 @@ State the fractional contributions of ordinary matter, dark matter, and dark ene
 Electron degeneracy pressure depends on fundamental constants (Planck's constant $\hbar$, electron mass $m_e$, proton mass $m_p$) and on the number of electrons per baryon. Explain qualitatively why the Chandrasekhar mass is a universal constant that does not depend on where (or when) the white dwarf formed.
 
 **Challenge 2: Decelerating to Accelerating.**
-In a universe with matter and a cosmological constant, the expansion starts out decelerating (matter dominates) and switches to accelerating once $\Lambda$ takes over. Estimate the redshift at which the transition happens, given $\Omega_m \approx 0.3$ and $\Omega_\Lambda \approx 0.7$ today. (Hint: matter density scales as $(1+z)^3$; $\Lambda$ density is constant. Equate them.)
+In a universe with matter and a cosmological constant, the expansion starts out decelerating (matter dominates) and switches to accelerating once the repulsive effect of $\Lambda$ wins over matter's gravitational pull. Estimate the redshift at which the transition happens, given $\Omega_m \approx 0.3$ and $\Omega_\Lambda \approx 0.7$ today. (Hint: matter density scales as $(1+z)^3$; $\Lambda$ density is constant; acceleration begins when $\rho_m < 2\rho_\Lambda$, not merely when the two densities are equal.)
 
 **Challenge 3: What Would We Expect If There Were No Dark Energy?**
 Sketch a Hubble diagram of distance modulus vs. redshift for (a) a matter-only decelerating universe, (b) an empty (coasting) universe, (c) our universe with dark energy. Which curve is highest at $z = 1$, and why?
@@ -322,12 +334,12 @@ Sketch a Hubble diagram of distance modulus vs. redshift for (a) a matter-only d
 ## Reading Summary
 
 ::: {.callout-summary title="Lecture 25 in One Screen"}
-- A **Type Ia supernova** is a white dwarf pushed across the Chandrasekhar limit ($\approx 1.4\,M_\odot$) in a binary, detonating in runaway carbon-oxygen fusion. Because the progenitor mass is always ~$M_{\text{Ch}}$, the peak luminosity is nearly universal — a **standard candle**.
+- A **Type Ia supernova** is a thermonuclear explosion of a carbon-oxygen white dwarf in a binary. The Chandrasekhar mass gives the natural scale for the explosion, but real Type Ia channels are diverse; that is why Type Ias are best described as **standardizable candles**, not perfectly identical ones.
 - Type Ia SNe reach ~$5 \times 10^9 \, L_\odot$ at peak and are visible across most of the observable universe. They are the fifth rung of the distance ladder and the tool that took the Hubble diagram to $z \sim 0.5 - 1$ in the 1990s.
 - **The 1998 discovery** (Riess, Perlmutter et al., Nobel 2011) was that distant Type Ias are *dimmer than any decelerating model predicts* — the universe has been **accelerating**.
 - Acceleration requires an energy density with **negative pressure**: **dark energy**. Combined with the CMB (Lecture 26) and galaxy clustering (Lecture 23), this gives the cosmic Ω-budget: ~5% baryons, ~27% dark matter, ~68% dark energy.
 - Candidate physical explanations include the cosmological constant $\Lambda$ (with a ~$10^{120}$ mismatch to naïve vacuum-energy predictions), evolving quintessence fields, and modified gravity. DESI/Euclid/LSST/Roman are designed to measure $w$ and its evolution.
-- The Chandrasekhar limit — a stellar-structure result from Module 2 — is the reason we know 68% of the universe is dark energy. **Stars anchor cosmology.**
+- White-dwarf physics — a stellar-structure result from Module 2 — is the reason Type Ia SNe can reveal dark energy. **Stars anchor cosmology.**
 :::
 
 ---

@@ -30,7 +30,7 @@ prerequisites: "Light and the EM spectrum (Lectures 7 – 10), stellar populatio
 The Milky Way is one member of a vast population of galaxies that comes in a small number of recognizable shapes. Those shapes are not arbitrary — they trace the star-formation history, gas content, and dynamical state of each galaxy. Many galaxies host a supermassive black hole at their center, and when that black hole is fed, it becomes one of the brightest objects in the universe — a **quasar**. On the largest scales, galaxies are not scattered randomly but arranged in a **cosmic web** of filaments and voids. To make sense of any of this, we need distances — which is the problem Lecture 24 will solve.
 :::
 
-::: {.callout-note title="Cognitive Map: Four Questions"}
+::: {.callout-roadmap title="Cognitive Map: Four Questions"}
 This page answers four questions:
 
 1. **What kinds of galaxies are there, and what do their shapes tell us?**
@@ -78,7 +78,7 @@ By the end of this reading, you should be able to say:
 
 Lecture 22 ended at the Galactic Center, 8 kpc from Earth. Step outward. At 50 kpc you reach the Large Magellanic Cloud, a small companion of the Milky Way. At ~780 kpc (~2.5 million light-years) you reach Andromeda (M31), our nearest large neighbor. Beyond that, the universe opens up: somewhere between a few hundred billion and a few trillion galaxies lie within the observable universe. The exact count depends on how you model the faint end of the galaxy luminosity function, and recent measurements of the cosmic optical background (e.g., New Horizons' LORRI data) have pushed the estimate toward the lower end of that range. Either way: *a lot*.
 
-<!-- FIGURE: Hubble Ultra Deep Field or a comparable extragalactic deep-field image -->
+{{< fig lsst-cosmic-treasure-chest >}}
 
 What you would notice looking at those galaxies is that they are not random. Most of them fall into a small number of shape categories that were first systematized by Edwin Hubble in 1926 — the so-called **Hubble sequence**, or *Hubble tuning fork*.
 
@@ -94,7 +94,7 @@ Galaxies come in three broad morphological classes:
 
 The three classes are not just aesthetic — they are *stellar-population* classes. An elliptical is a galaxy that stopped making stars long ago. A spiral is a galaxy that is still making them. An irregular is often a galaxy in a disturbed dynamical state, where a recent interaction has stirred things up and triggered new star formation.
 
-::: {.callout-note title="Structure Reference Box: Galaxy Types"}
+::: {.callout-roadmap title="Structure Reference Box: Galaxy Types"}
 | Type | Shape | Dominant stars | Gas/dust | Star formation |
 |------|-------|----------------|----------|----------------|
 | Elliptical (E) | Smooth, ellipsoidal | Old, red | Little | Very low |
@@ -111,7 +111,7 @@ You look at two galaxies. Galaxy A is a smooth red ellipsoid with almost no cold
 
 Which galaxy is forming stars today? Which has the older average stellar population? What is the key observational clue that distinguishes the two?
 
-::: {.callout-tip collapse="true" title="Answer"}
+::: {.callout-solution collapse="true" title="Answer"}
 Galaxy B is forming stars today. The **pink H II regions** are ionized hydrogen around young, hot, massive O/B stars — a direct signature of ongoing star formation. The **blue tint** of the light also points to young, hot stars dominating the integrated light. Galaxy A, by contrast, is red because it is dominated by old cool K/M stars, and has no cold gas left to form new stars from. The key observational clue is the *color* (blue = young and hot; red = old and cool) plus the *H II region signature* (ongoing ionization requires young massive stars). This is the Module 2 H-R diagram applied at the galactic scale.
 :::
 :::
@@ -144,7 +144,7 @@ Both of these are stellar objects. *Stars are what let us measure cosmic distanc
 
 Why must a standard candle have a reliable, predictable luminosity $L$? What happens if two objects that look like the same kind of standard candle actually have luminosities that differ by a factor of 4?
 
-::: {.callout-tip collapse="true" title="Answer"}
+::: {.callout-solution collapse="true" title="Answer"}
 From $d = \sqrt{L/(4\pi F)}$, a factor-of-4 error in $L$ makes a factor-of-2 error in $d$ (since the square root of 4 is 2). Every derived quantity — size, mass, velocity — then inherits that error. A *standard* candle must have small intrinsic scatter in $L$, and its scatter has to be calibratable, so that the distance uncertainty is bounded. "Reliable" here means *small and well-characterized dispersion*, not "literally identical every time."
 :::
 :::
@@ -177,10 +177,10 @@ A quasar can outshine its entire host galaxy of $\sim 10^{11}$ stars — from a 
 
 A typical luminous quasar has $L \sim 10^{13} \, L_\odot$. Observationally, quasars show flux variations on timescales as short as hours to days, which constrains the emitting region to be at most $\sim 1$ light-day ($\sim 2.6 \times 10^{13}$ m) — smaller than the outer Solar System. Using **energy-reservoir reasoning** (not luminosity density), explain why fusion cannot sustain this luminosity from such a small region, and why accretion onto a supermassive black hole can.
 
-::: {.callout-tip collapse="true" title="Answer"}
+::: {.callout-solution collapse="true" title="Answer"}
 The argument is about **total energy available per gram of fuel**, combined with the small size of the emitting region.
 
-- **Fusion** converts at most ~0.7% of rest-mass energy ($E = 0.007 \, mc^2$) into radiation. To produce $L \sim 10^{13} \, L_\odot \approx 4 \times 10^{39}$ W via fusion, the mass-consumption rate would be $\dot{m} = L / (0.007 \, c^2) \approx 600 \, M_\odot$/yr. Sustaining that for even ~1 Myr requires ~$10^8 \, M_\odot$ of hydrogen to be packed into a region smaller than the Solar System — a gravitationally self-destructive configuration. Stars that massive do not exist and could not sustainably fuse.
+- **Fusion** converts at most ~0.7% of rest-mass energy ($E = 0.007 \, mc^2$) into radiation. To produce $L \sim 10^{13} \, L_\odot \approx 4 \times 10^{39}$ W via fusion, the mass-consumption rate would be $\dot{m} = L / (0.007 \, c^2) \approx 100 \, M_\odot$/yr. Sustaining that for even ~1 Myr requires ~$10^8 \, M_\odot$ of hydrogen to be packed into a region smaller than the Solar System — a gravitationally self-destructive configuration. Stars that massive do not exist and could not sustainably fuse.
 - **Accretion onto a supermassive black hole** converts up to ~10% of rest-mass energy. The required mass-consumption rate drops to $\sim 1 - 10 \, M_\odot$/yr. A $10^9 \, M_\odot$ SMBH occupies a Schwarzschild radius of only $\sim 20$ AU, naturally fitting inside a ~1-lightday region, and can plausibly accrete this much material from the surrounding galaxy over Myr – Gyr timescales.
 - **Rapid variability** ($\Delta t \sim $ hours) implies the emitting region cannot be larger than $c \, \Delta t \sim$ a few light-hours, which is consistent with the size of an accretion disk around a $10^9 \, M_\odot$ SMBH but inconsistent with any stellar-fusion engine.
 
@@ -194,11 +194,17 @@ A feeding SMBH cannot be arbitrarily luminous. As the accretion luminosity rises
 
 $$L_{\text{Edd}} \approx 1.3 \times 10^{31} \, \text{W} \times \left( \frac{M}{M_\odot} \right) \approx 3.3 \times 10^4 \, L_\odot \times \left( \frac{M}{M_\odot} \right)$$
 
-For a $10^9 \, M_\odot$ SMBH, $L_{\text{Edd}} \sim 3 \times 10^{13} \, L_\odot$ — close to the luminosity of bright quasars. That is not a coincidence: the brightest quasars are radiating at or near their Eddington limits. This gives us a *lower* bound on the SMBH mass for any quasar we see: a quasar of luminosity $L$ must be powered by a SMBH of at least $M \gtrsim L / L_{\text{Edd}}$.
+For a $10^9 \, M_\odot$ SMBH, $L_{\text{Edd}} \sim 3 \times 10^{13} \, L_\odot$ — close to the luminosity of bright quasars. That is not a coincidence: the brightest quasars are radiating at or near their Eddington limits. This gives us a *lower* bound on the SMBH mass for any quasar we see. Since $L_{\text{Edd}}$ scales linearly with mass, a quasar of luminosity $L$ must have
+
+$$
+\frac{M}{M_\odot} \gtrsim \frac{L}{1.3 \times 10^{31}\,\text{W}}.
+$$
+
+The units matter: the right-hand side is a pure number, and multiplying by $M_\odot$ gives the minimum mass.
 
 ### Worked Example: Minimum SMBH Mass from Eddington
 
-::: {.callout-note title="Worked Example: Eddington-Limited Quasar"}
+::: {.callout-worked-example title="Worked Example: Eddington-Limited Quasar"}
 **Given:** A quasar with bolometric luminosity $L \approx 10^{40}$ W (about $3 \times 10^{13}\,L_\odot$).
 
 **Relation:** A source cannot radiate above its Eddington luminosity for long without blowing itself apart, so $L \le L_{\text{Edd}}(M)$ with
@@ -232,8 +238,18 @@ This is strange. The bulge contains $\sim 10^{11}$ stars and extends over ~kilop
 
 The leading explanation is **AGN feedback**: when a SMBH becomes active, its radiation and jets heat and expel gas from the host galaxy, quenching both further star formation *and* further SMBH accretion. The SMBH is a thermostat for its bulge. This is a very active research frontier, and it is one reason AGN matter for more than just being extremely bright point sources — they are *regulators* of galaxy evolution.
 
-::: {.callout-note title="Why Stars Matter Here"}
+::: {.callout-why-this-matters title="Why Stars Matter Here"}
 We measure a galaxy's bulge mass using — you guessed it — **stars**. Bulge velocity dispersion σ comes from spectroscopy of the integrated stellar light: Doppler-broadened absorption lines reveal the range of stellar velocities. Bulge mass comes from dynamical modeling using stellar orbits. Every point on the M–σ diagram is anchored in stellar kinematics.
+:::
+
+::: {.callout-check-yourself #cy-msigma-inference}
+## Check Yourself 4: What Is Being Measured?
+
+The M–σ relation connects a central black-hole mass to the velocity dispersion of bulge stars. Which part is the observable, which part is the model-dependent inference, and why does that distinction matter?
+
+::: {.callout-solution collapse="true" title="Answer"}
+The observable is the broadening of stellar absorption lines, which tells us the range of stellar line-of-sight velocities in the bulge. The model-dependent inference is the bulge's dynamical state and mass, plus the SMBH mass inferred from stellar or gas motions near the center. The distinction matters because the relation is not based on "seeing" a black hole grow with a galaxy; it is built by translating light into velocities, then velocities into gravitational mass.
+:::
 :::
 
 ---
@@ -275,11 +291,11 @@ Rungs 4 – 6 are the subject of Lectures 24 – 26. By the end of Module 3, we 
 
 ## Deep Dives (Optional)
 
-::: {.callout-note title="Deep Dive: AGN Types and the Unified Model" collapse="true"}
+::: {.callout-deep-dive title="Deep Dive: AGN Types and the Unified Model" collapse="true"}
 AGN come with a confusing zoo of historical names — Seyferts (Type 1 and 2), radio galaxies, quasars, BL Lacs, blazars. The **Unified Model** proposes that most of these differences come from *viewing angle*: the same basic object (SMBH + accretion disk + torus + jets) looks different depending on whether you see it face-on (quasar, blazar), edge-on through the torus (Type 2 Seyfert), or somewhere in between (Type 1 Seyfert). Some differences are real (e.g., radio-loud vs. radio-quiet AGN differ in jet power), but orientation does much of the zoological work.
 :::
 
-::: {.callout-note title="Deep Dive: Why Cepheids Specifically?" collapse="true"}
+::: {.callout-deep-dive title="Deep Dive: Why Cepheids Specifically?" collapse="true"}
 Cepheid variables are pulsating giants whose pulsation period is set by their mean density, which is in turn set by their luminosity. More luminous Cepheids pulsate more slowly. This is why $L$ can be read off from the period $P$ — an extraordinary fact that was discovered empirically by Henrietta Leavitt in 1912 and later understood theoretically as a consequence of stellar structure. Lecture 24 develops this argument in detail.
 :::
 
@@ -287,15 +303,15 @@ Cepheid variables are pulsating giants whose pulsation period is set by their me
 
 ## Misconceptions
 
-::: {.callout-note title="Misconception: Quasars Are Powered by Nuclear Fusion"}
+::: {.callout-misconception title="Misconception: Quasars Are Powered by Nuclear Fusion"}
 WRONG. A quasar's luminosity comes from **accretion** onto a supermassive black hole — gravitational potential energy converted to heat and light as gas spirals inward. Fusion is far too inefficient and would require an impossible amount of mass in an impossibly small volume to explain quasar luminosities.
 :::
 
-::: {.callout-note title="Misconception: Elliptical Galaxies Are 'Old' Because They Formed First"}
+::: {.callout-misconception title="Misconception: Elliptical Galaxies Are 'Old' Because They Formed First"}
 MOSTLY WRONG. Ellipticals are dominated by old stars *today*, but they often reached that state via mergers of spiral galaxies, which turned disks into ellipsoids and used up available gas. Many giant ellipticals are *dynamically* young even if their stars are old. Morphology is a *current* state, not a birth certificate.
 :::
 
-::: {.callout-note title="Misconception: The Cosmic Web Is Made of Galaxies"}
+::: {.callout-misconception title="Misconception: The Cosmic Web Is Made of Galaxies"}
 WRONG. The cosmic web is primarily a **dark matter** structure. Galaxies are tracers — they form along dark-matter filaments like frost condensing along the lines of a window's temperature gradient. The bulk of the mass in the web is dark matter, not galaxies or hot gas.
 :::
 

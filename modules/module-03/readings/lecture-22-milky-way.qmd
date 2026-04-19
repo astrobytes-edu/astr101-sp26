@@ -28,7 +28,7 @@ prerequisites: "Kepler's third law (Lecture 5), gravity (Lecture 6), Doppler eff
 Our galaxy is a rotating stellar system whose visible stars do not contain enough mass to hold it together. The flatness of its rotation curve — measured with the light of stars and hydrogen gas — forces us to conclude that most of the Milky Way is made of something we cannot see directly. That *something* is the first of Module 3's three hidden things.
 :::
 
-::: {.callout-note title="Cognitive Map: Three Questions"}
+::: {.callout-roadmap title="Cognitive Map: Three Questions"}
 This page answers three questions:
 
 1. **What does the Milky Way actually look like, and how do we know?**
@@ -117,7 +117,7 @@ If you know the H-R diagram (Lecture 16) and you know how stellar lifetimes depe
 Two stars have identical spectra consistent with a K5 dwarf. One orbits in the thin disk on a nearly circular path; the other orbits in the halo on a highly elongated, tilted path. Which was more likely born recently, and which was likely born in the galaxy's first few billion years?
 :::
 
-::: {.callout-tip title="Solution" collapse="true"}
+::: {.callout-solution title="Solution" collapse="true"}
 **The disk star is more likely to be younger; the halo star is more likely to be ancient.** This is a *kinematic* inference that rests on how the Milky Way built itself: the disk is where ongoing star formation happens (gas is still there), and its stars inherit the disk's orderly, near-circular orbits. The halo formed early from accreted material and early collapse; its stars are old and their orbits retained the disorderly motions of that era. Stellar spectral type alone (K5) does not tell you an age — but kinematics plus location does.
 :::
 
@@ -157,6 +157,14 @@ Gaia, by contrast, works at visible wavelengths and measures precise stellar par
 
 ::: {.callout-summary title="Takeaway: Mapping"}
 **To map a dusty galaxy, change your wavelength: 21-cm HI traces the gas, infrared traces the stars, and Gaia parallaxes build precise 3-D maps where dust allows.**
+:::
+
+::: {.callout-check-yourself title="Check Yourself 2"}
+You want to study the stars packed around the Galactic Center, but visible-light images are mostly dark because dust blocks the view. Which wavelength regime should you choose — visible, infrared, or 21-cm radio — and what would that choice let you measure?
+
+::: {.callout-solution title="Solution" collapse="true"}
+Use **infrared** if your goal is to see the stars. Infrared light passes through dust much more effectively than visible light, so it reveals the dense stellar cluster near the Galactic Center. Use **21-cm radio** if your goal is to map neutral hydrogen gas and measure its Doppler shifts. The key move is matching the wavelength to the observable you need.
+:::
 :::
 
 ---
@@ -205,6 +213,14 @@ The dark matter halo is inferred to be roughly spherical, to extend well beyond 
 **Model:** Newtonian gravity applied to a rotating system: $v_{\text{circ}}^2 = G M_{\text{enclosed}}(r) / r$. A constant $v_{\text{circ}}$ requires $M_{\text{enclosed}} \propto r$ — more mass than the stars, gas, and dust contain.
 
 **Inference:** Either the Milky Way contains a large halo of non-luminous matter ("dark matter"), or the law of gravity we are applying is wrong on galactic scales. The weight of evidence — including, as we will see in Lectures 24 – 26, evidence at much larger scales — favors dark matter.
+:::
+
+::: {.callout-check-yourself title="Check Yourself 3: Flat Means More Mass"}
+Suppose two galaxies both have flat rotation curves, but Galaxy A stays flat at 150 km/s while Galaxy B stays flat at 300 km/s. At the same radius, which galaxy has more enclosed mass? By what factor?
+
+::: {.callout-solution title="Solution" collapse="true"}
+Galaxy B has more enclosed mass. From $M_{\text{enc}} = v^2 r/G$, mass scales as $v^2$ at fixed radius. Doubling the circular speed from 150 km/s to 300 km/s means $2^2 = 4$ times more enclosed mass. The observable is velocity; the inference is gravitational mass.
+:::
 :::
 
 ::: {.callout-misconception title="Misconception: Dark Matter Is Dark Dust"}
@@ -280,11 +296,11 @@ $$
 
 In May 2022, the Event Horizon Telescope released the first direct image of Sgr A\*'s shadow. The angular size of that shadow matches, to within measurement uncertainty, the size predicted by the orbit-derived mass and the Schwarzschild-radius formula from Lecture 21.
 
-::: {.callout-check-yourself title="Check Yourself 2"}
+::: {.callout-check-yourself title="Check Yourself 4"}
 Using the Schwarzschild-radius formula from Lecture 21, $R_S = 2GM/c^2$, estimate the Schwarzschild radius of Sgr A* in AU. For $M = 4 \times 10^6 \, M_\odot$, $R_S$ in meters is about $2 \times (6.67 \times 10^{-11}) \times (4 \times 10^6 \times 2 \times 10^{30}) / (3 \times 10^8)^2$. Convert the final answer to AU using $1\,\text{AU} \approx 1.5 \times 10^{11}$ m.
 :::
 
-::: {.callout-tip title="Solution" collapse="true"}
+::: {.callout-solution title="Solution" collapse="true"}
 **Given:** $M = 4 \times 10^6 M_\odot = 8 \times 10^{36}$ kg.
 
 **Evaluate the formula:**
@@ -349,15 +365,15 @@ No single observation proves dark matter. The case is built from many independen
 
 ## Misconceptions
 
-::: {.callout-note title="Misconception: The Milky Way Is the Whole Universe"}
+::: {.callout-misconception title="Misconception: The Milky Way Is the Whole Universe"}
 WRONG. Until the 1920s, many astronomers believed the Milky Way *was* the universe, and that "spiral nebulae" were just nearby objects. Edwin Hubble's 1924 measurement of the distance to the Andromeda Nebula (M31) showed it was hundreds of times farther than the edge of the Milky Way — that is, it was *another galaxy*. We are one of hundreds of billions.
 :::
 
-::: {.callout-note title="Misconception: We Can't Map the Milky Way Because We Live Inside It"}
+::: {.callout-misconception title="Misconception: We Can't Map the Milky Way Because We Live Inside It"}
 WRONG. We cannot see the Milky Way from the outside, but we can build its map using 21-cm HI kinematics, infrared star counts, Gaia parallaxes and proper motions, and stellar spectroscopy. The map is incomplete and will improve with Rubin and next-generation radio surveys, but it is not blind.
 :::
 
-::: {.callout-note title="Misconception: The Sun Is at the Center of the Galaxy"}
+::: {.callout-misconception title="Misconception: The Sun Is at the Center of the Galaxy"}
 WRONG (but common in 1915). The Sun is ~8 kpc from the center, in the disk, roughly halfway out. The interstellar dust hid this fact from early optical astronomers. Harlow Shapley established the Sun's off-center position in the 1910s using globular-cluster distances — a beautiful early example of using stellar populations to map galactic structure.
 :::
 
@@ -387,7 +403,7 @@ A star is observed to orbit the Galactic Center with period 30 years and semi-ma
 ### Challenge Problems (Deepen Your Understanding)
 
 **Challenge 1: Schwarzschild Radius Scaling.**
-Show that for a black hole of mass $M$, the Schwarzschild radius $R_S = 2GM/c^2$ scales linearly with mass. If a 10 $M_\odot$ stellar-mass black hole has $R_S \approx 30$ km, what is $R_S$ for Sgr A* (4 × 10⁶ M☉)? Compare to your answer from Check Yourself 2.
+Show that for a black hole of mass $M$, the Schwarzschild radius $R_S = 2GM/c^2$ scales linearly with mass. If a 10 $M_\odot$ stellar-mass black hole has $R_S \approx 30$ km, what is $R_S$ for Sgr A* (4 × 10⁶ M☉)? Compare to your answer from Check Yourself 4.
 
 **Challenge 2: Dark Matter vs. MOND.**
 Write a one-paragraph argument explaining why a single well-measured rotation curve is not, by itself, enough to distinguish dark matter from MOND. What *additional* observations would help?
