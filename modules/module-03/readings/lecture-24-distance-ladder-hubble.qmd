@@ -1,0 +1,416 @@
+---
+title: "Lecture 24: The Distance Ladder and Hubble's Law"
+subtitle: "How We Measure the Universe, and Why It's Expanding"
+author: "Dr. Anna Rosen"
+date: "2026-04-27"
+description: "The full cosmic distance ladder — parallax, Cepheids, Type Ia supernovae — and the velocity-distance relation that launched modern cosmology. Ends with the Hubble tension, one of the field's hottest open problems."
+draft: false
+categories:
+  - cosmology
+  - distance-ladder
+  - cepheid-variables
+  - hubble-law
+  - hubble-tension
+course: ASTR 101
+module: "3 - Galaxies & Cosmology"
+learning-objectives:
+  - Construct the cosmic distance ladder from parallax through Cepheids to Type Ia supernovae, identifying which rung calibrates which
+  - Explain the Cepheid period-luminosity relation and use it to infer distances to nearby galaxies
+  - State Hubble's law in the form $v = H_0 d$ and use it to convert redshift into distance and vice versa
+  - Estimate the age and size of the observable universe from $H_0$
+  - Describe the Hubble tension and articulate why the disagreement between local and CMB-based measurements of $H_0$ is a frontier problem
+math-level: algebra_only
+prerequisites: "Doppler effect (Lecture 10), parallax and distances (Lecture 15), standard candles (Lecture 23), Type Ia preview (Lecture 23; full treatment Lecture 25)"
+---
+
+::: {.callout-key-insight #the-big-idea}
+## The Big Idea
+
+Every galaxy redshift we have ever measured obeys a simple rule: the farther a galaxy is, the faster it recedes from us. That rule — **Hubble's law** — is not a statement about motion *through* space; it is a statement about the expansion *of* space itself. Combined with a cosmic distance ladder built rung by rung from parallax to Cepheid variables to Type Ia supernovae, Hubble's law gives us an age and size for the observable universe. And the fact that two different ways of measuring $H_0$ disagree tells us we may not understand the expansion as well as we thought.
+:::
+
+::: {.callout-note title="Cognitive Map: Four Questions"}
+This page answers four questions:
+
+1. **How do we measure distances to galaxies?**
+2. **What is the relation between a galaxy's distance and its redshift?**
+3. **What does that relation tell us about the age and size of the universe?**
+4. **Why do two different measurements of the expansion rate disagree — and what could that mean?**
+
+**Punchline:** Standard candles tell us how far. Redshifts tell us how fast. Together they give us $H_0$, the age of the universe, and the observable horizon. Stars are the rung we climb on.
+:::
+
+---
+
+::: {.callout-roadmap title="How to Use This Reading" collapse="true"}
+This reading is the most important quantitative section of Module 3. If you understand the distance ladder and Hubble's law, the rest of cosmology (Lectures 25 and 26) is a refinement on this foundation.
+
+**Default expectation (best):** Read the whole page before lecture. Work all the Check Yourself problems with pencil and paper.
+
+**If you're short on time (~25 min):** Focus on:
+
+- The Big Idea above
+- The Distance Ladder section (all five rungs)
+- Cepheid Variables and the Leavitt Relation
+- Hubble's Law
+- The Hubble Tension
+
+**Goal after 25 minutes:** You should be able to (a) name each rung of the distance ladder and what it calibrates, (b) state Hubble's law, and (c) explain why it says the universe is expanding, not that galaxies are flying through space.
+
+**Reference mode:** The Distance Ladder Reference Box and the $H_0$ table are the long-term study references.
+:::
+
+<!-- FIGURE: module-3-concept-map (placeholder) — one-page visual of how this reading's ideas connect to the Module 3 spine: parallax → MS fitting → Cepheids → Type Ia SNe → Hubble's law; why each rung calibrates the next; and where dark energy (Lecture 25) and the CMB (Lecture 26) plug into $H_0$. -->
+
+## Learning Outcomes
+
+By the end of this reading, you should be able to say:
+
+- [ ] I can name each rung of the distance ladder (parallax → spectroscopic parallax → Cepheids → Type Ia SNe → Hubble flow) and describe the reach and calibration of each.
+- [ ] I can explain the Cepheid period-luminosity relation and use it to estimate a galaxy's distance.
+- [ ] I can state Hubble's law, apply it to convert between redshift and distance, and explain why it describes the expansion of space.
+- [ ] I can estimate the age of the universe from $H_0$ using the Hubble time $t_H = 1/H_0$.
+- [ ] I can describe the Hubble tension and explain why it is a frontier problem.
+
+---
+
+## The Problem That Will Not Go Away
+
+Every galaxy in the sky is some distance from us. That distance is what converts what we measure (apparent flux, apparent size, apparent angular extent) into what we want to know (luminosity, physical size, physical mass). Without a distance, we are looking at a projection — a two-dimensional sky with a third dimension hidden behind it.
+
+Lecture 23 introduced **standard candles** — objects of known luminosity $L$ whose apparent brightness $F$ lets us solve for distance via
+
+$$d = \sqrt{\frac{L}{4\pi F}}.$$
+
+But what makes an object "standard"? And how do we calibrate its $L$ in the first place? The answer is that we do not do it all at once. We build a **distance ladder**, where each rung is calibrated by the one below it.
+
+---
+
+## The Cosmic Distance Ladder
+
+{{< fig cosmic-distance-ladder >}}
+
+### Rung 1 — Radar Ranging (Solar System)
+
+Inside the Solar System, we measure distances directly by bouncing radar off planets. We know the time light takes to travel out and back, and we know $c$, so $d = c \, t / 2$. This fixes the **astronomical unit (AU)** to very high precision: $1 \text{ AU} = 1.496 \times 10^{11}$ m. This rung is essentially exact and anchors everything above it.
+
+### Rung 2 — Stellar Parallax
+
+For stars within ~1 kpc, we use **parallax**: the apparent shift of a nearby star against more distant background stars as Earth orbits the Sun. A star at distance $d$ in parsecs has a parallax angle of
+
+$$p \text{ (arcsec)} = \frac{1}{d \text{ (pc)}}.$$
+
+Gaia's astrometric mission has measured parallaxes for nearly a billion stars, reaching usefully to distances ~3 – 5 kpc for the brightest stars but ~1 kpc for reliable precision on most individual stars.
+
+{{< fig gaia-reach-module2 >}}
+
+Parallax is the first truly distance-calibrated rung. It depends only on geometry and the size of Earth's orbit (Rung 1).
+
+### Rung 3 — Spectroscopic Parallax and Main-Sequence Fitting
+
+Beyond Gaia parallax, we use the H-R diagram itself (Lecture 16). If we know a star's spectral type (from its spectrum) and can locate it on the H-R diagram, we know its absolute luminosity $L$ to within a factor of ~2. Apparent brightness then gives distance.
+
+For **star clusters**, this idea sharpens: a cluster's main sequence has a fixed shape (calibrated from nearby clusters via parallax), and its *apparent* main sequence is shifted vertically by the cluster's distance modulus. This is called **main-sequence fitting** and reaches ~100 kpc.
+
+### Rung 4 — Cepheid Variables
+
+Here is where stars begin to do the real cosmological work. The discovery of the Cepheid period-luminosity relation is a short story worth knowing.
+
+In 1912, Henrietta Leavitt — a "computer" at Harvard College Observatory — noticed that a class of pulsating stars in the Small Magellanic Cloud (SMC) had a remarkable property: their **period of brightness variation was tightly correlated with their mean brightness**. Because every star in the SMC is at essentially the same distance from us, differences in *apparent* brightness were differences in *intrinsic* luminosity. Leavitt had found a relation between period and luminosity:
+
+$$\log_{10} L = a \log_{10} P + b$$
+
+with $P$ measured in days. Longer-period Cepheids are intrinsically more luminous. Modern calibrations give (approximately):
+
+$$L \approx 335 \, L_\odot \times \left( \frac{P}{1 \text{ day}} \right)^{1.15}$$
+
+for classical Cepheids. A 10-day Cepheid is about ~4,700 $L_\odot$. A 100-day Cepheid is about ~65,000 $L_\odot$.
+
+::: {.callout-note title="About these coefficients"}
+The numerical coefficients in the Leavitt relation (here 335 and 1.15) depend on wavelength band, zero-point calibration, and metallicity corrections. Modern calibrations in the literature (Madore & Freedman; Riess et al.; the Hubble Space Telescope Key Project) agree within a few tens of percent but are not identical. The relation we use here is a representative bolometric form suitable for order-of-magnitude distance estimates. For actual distance-ladder work, astronomers use carefully calibrated near-infrared relations with explicit metallicity corrections.
+:::
+
+<!-- FIGURE: Leavitt's period-luminosity relation showing log(L) vs. log(P) with Cepheid data points and best-fit line -->
+
+This is the key move: **the period, which we can measure from a distant galaxy, tells us the luminosity, which lets us compute distance.** The calibration comes from nearby Cepheids whose distances we know from parallax (Rung 2) or cluster fitting (Rung 3).
+
+Cepheids are bright (supergiants, $10^3 - 10^5 \, L_\odot$), so they are visible out to ~30 Mpc with Hubble Space Telescope. This is far enough to reach the Virgo Cluster (~16 Mpc) and dozens of nearby galaxies, including ones that have hosted Type Ia supernovae.
+
+::: {.callout-key-insight title="Why This Is a Stellar Argument"}
+Cepheids are specific kinds of stars in a specific evolutionary phase — giants on an instability strip where their envelopes pulsate due to ionization-recombination of helium. The very physics of the pulsation (you can think of it as helium acting as a valve) sets the period-luminosity relation. **Without stellar physics, we would have no cosmic distance ladder beyond parallax.**
+:::
+
+::: {.callout-check-yourself #cy-cepheid}
+## Check Yourself 1: Using the Leavitt Relation
+
+You observe a Cepheid in a nearby galaxy. Its pulsation period is 30 days and its apparent flux is $F = 10^{-14}$ W/m². Estimate:
+
+(a) The Cepheid's luminosity $L$ in solar units.
+(b) The distance $d$ to the host galaxy in Mpc (1 Mpc = $3.09 \times 10^{22}$ m).
+
+::: {.callout-tip collapse="true" title="Answer"}
+(a) Using $L \approx 335 \, L_\odot \times (P/\text{day})^{1.15}$ with $P = 30$:
+$L \approx 335 \times 30^{1.15} \, L_\odot \approx 335 \times 49 \, L_\odot \approx 1.6 \times 10^4 \, L_\odot.$
+Convert: $L \approx 1.6 \times 10^4 \times 3.8 \times 10^{26}$ W $\approx 6 \times 10^{30}$ W.
+
+(b) From $d = \sqrt{L / (4\pi F)}$:
+$d = \sqrt{6 \times 10^{30} / (4\pi \times 10^{-14})} \approx \sqrt{4.8 \times 10^{43}}$ m $\approx 7 \times 10^{21}$ m.
+In Mpc: $d \approx 7 \times 10^{21} / 3.09 \times 10^{22} \approx 0.2$ Mpc ≈ 230 kpc.
+
+This is *beyond* the Large and Small Magellanic Clouds (~50 – 60 kpc) and at roughly the distance scale of the Local Group's outer dwarf galaxies. For reference: a Cepheid of this same luminosity at the SMC distance (~60 kpc) would produce $F \sim 1.5 \times 10^{-13}$ W/m² — about 15× brighter than the flux given in this problem.
+:::
+:::
+
+### Rung 5 — Type Ia Supernovae (Preview)
+
+Cepheids peter out at ~30 Mpc. To go farther we need something *brighter*. **Type Ia supernovae** are our tool. They reach peak luminosities of $\sim 5 \times 10^9 \, L_\odot$ — comparable to an entire small galaxy — and can be seen out to thousands of Mpc.
+
+Crucially, they are **approximately** standard: they all explode from (roughly) the same physical configuration, so their peak luminosities fall in a narrow range that can be further tightened using the *shape* of their light curve (the Phillips relation).
+
+Type Ia SNe are calibrated on Cepheids — we measure Cepheids in nearby galaxies that have also hosted Type Ia SNe, which fixes the Type Ia peak luminosity. That calibrated Type Ia luminosity is then applied to very distant SNe to measure cosmic distances.
+
+Lecture 25 gives the full stellar-physics story — what explodes, why, and why the peak luminosity is (nearly) universal. For now, we use them as "ultra-bright Cepheids."
+
+### Rung 6 — Hubble's Law
+
+Once we have distances out to a few hundred Mpc, a new relation becomes usable. It is the subject of the rest of this reading.
+
+::: {.callout-note title="Reference Box: The Distance Ladder"}
+
+| Rung | Method | Reach | Calibrator |
+|------|--------|-------|------------|
+| 1 | Radar ranging | ~AU | Physical constants |
+| 2 | Parallax | ~1 – 5 kpc | Rung 1 (Earth orbit) |
+| 3 | Spectroscopic parallax / main-sequence fitting | ~100 kpc | Rung 2 |
+| 4 | **Cepheid variables** | ~30 Mpc | Rung 2 – 3 |
+| 5 | **Type Ia supernovae** | ~10³ Mpc | Rung 4 |
+| 6 | Hubble's law (redshift → distance) | cosmological | Rungs 4 – 5 |
+
+*Each rung calibrates the rung above it. Break any rung and the upper ones wobble.*
+:::
+
+---
+
+## Hubble's Law
+
+### Hubble's Discovery
+
+In 1929, Edwin Hubble published a plot of galaxy recession velocities (measured from Doppler-shifted absorption lines) against distances (estimated from Cepheids in those galaxies). The result: a roughly linear relation. Farther galaxies recede faster.
+
+{{< fig hubble-diagram >}}
+
+The relation is written
+
+$$v = H_0 \, d$$
+
+where:
+
+- $v$ is the galaxy's recession velocity (inferred from its redshift),
+- $d$ is the distance,
+- $H_0$ is the **Hubble constant**, the slope of the line.
+
+The best current values of $H_0$ cluster around 67 – 73 km/s/Mpc, depending on the method. A galaxy 100 Mpc away recedes at roughly 7,000 km/s. A galaxy 1 Gpc away recedes at roughly 70,000 km/s, about a quarter of the speed of light.
+
+### What Hubble's Law Is *Not*
+
+Hubble's law is not a statement that galaxies are flying outward through space from some special center. If it were, we would be at the center of a cosmic explosion, which is implausible — and worse, galaxies in *every* direction recede. Instead:
+
+**Hubble's law says space itself is expanding.**
+
+Imagine dots painted on the surface of a balloon. As the balloon inflates, every dot sees every other dot move away, and more-distant dots move away faster. No dot is at the center. Space is doing the expanding; the dots are carried along.
+
+<!-- FIGURE: Balloon analogy showing dots on an inflating balloon; alternatively, raisin bread analogy showing raisins moving apart as dough rises -->
+
+The redshift is not really a Doppler shift (though for small distances the math is the same). It is a **cosmological redshift** — light stretched by the expansion of space during its travel from source to us.
+
+::: {.callout-check-yourself #cy-hubble-law}
+## Check Yourself 2: Applying Hubble's Law
+
+A galaxy has a measured recession velocity of $v = 15,000$ km/s. Use $H_0 = 70$ km/s/Mpc to estimate its distance.
+
+::: {.callout-tip collapse="true" title="Answer"}
+$d = v / H_0 = 15,000 / 70 \approx 214$ Mpc. This is roughly the distance at which Type Ia supernovae become essential (Cepheids alone cannot reach this far), and well within the Hubble flow regime where peculiar velocities from local gravitational effects are small compared to the Hubble velocity.
+:::
+:::
+
+### The Hubble Time and Age of the Universe
+
+If the universe has been expanding at a constant rate, then the time since it was all at one point is
+
+$$t_H = \frac{1}{H_0}.$$
+
+This is called the **Hubble time**. Let's convert units for $H_0 = 70$ km/s/Mpc:
+
+$$H_0 = 70 \, \frac{\text{km/s}}{\text{Mpc}} = 70 \, \frac{\text{km/s}}{3.09 \times 10^{19} \text{ km}} = 2.27 \times 10^{-18} \, \text{s}^{-1}$$
+
+So $t_H = 1 / H_0 \approx 4.4 \times 10^{17}$ s $\approx 14$ Gyr.
+
+This is a rough estimate. The *actual* age of the universe — 13.8 Gyr — differs from $t_H$ by a small factor that depends on whether the expansion has been speeding up or slowing down (Lecture 25). But the order of magnitude is right.
+
+::: {.callout-check-yourself #cy-hubble-time}
+## Check Yourself 3: Another Hubble Time
+
+Repeat the calculation with $H_0 = 67$ km/s/Mpc (the CMB-based value; Lecture 26) and $H_0 = 73$ km/s/Mpc (the Cepheid-SNIa local value). What are the two estimates of $t_H$?
+
+::: {.callout-tip collapse="true" title="Answer"}
+$H_0 = 67$ km/s/Mpc = $2.17 \times 10^{-18}$ s⁻¹, so $t_H \approx 4.6 \times 10^{17}$ s ≈ 14.6 Gyr.
+$H_0 = 73$ km/s/Mpc = $2.37 \times 10^{-18}$ s⁻¹, so $t_H \approx 4.2 \times 10^{17}$ s ≈ 13.4 Gyr.
+
+Both are within ~1 Gyr of the best-fit age (13.8 Gyr), and the two values differ from each other by about 1.2 Gyr — which brings us to the Hubble tension.
+:::
+:::
+
+### Worked Example: From Redshift to a Distance
+
+::: {.callout-note title="Worked Example: Converting a Redshift into a Distance (Low-z Limit)"}
+**Given:** A galaxy's spectrum shows a hydrogen line at $\lambda_{\text{obs}} = 670$ nm. Its laboratory (rest-frame) wavelength is $\lambda_0 = 656.3$ nm (Hα). Use $H_0 = 70$ km/s/Mpc.
+
+**Relation:** For $v \ll c$, the cosmological redshift reduces to a Doppler-like form:
+$$z = \frac{\lambda_{\text{obs}} - \lambda_0}{\lambda_0}, \qquad v \approx c\,z, \qquad d = \frac{v}{H_0}.$$
+
+**Rearrange** for distance directly in terms of redshift:
+$$d = \frac{c\,z}{H_0}.$$
+
+**Substitute:**
+$$z = \frac{670 - 656.3}{656.3} = 0.0209, \qquad v \approx (3 \times 10^{5}\,\text{km/s}) \times 0.0209 \approx 6{,}270\,\text{km/s}.$$
+
+**Evaluate:**
+$$d = \frac{6{,}270}{70}\,\text{Mpc} \approx 90\,\text{Mpc}.$$
+
+**Interpret:** The galaxy is ~90 Mpc away — well beyond the reach of Cepheids alone and deep in the Hubble flow, so its peculiar velocity is a small correction. Notice that the entire calibration of this answer traces back through Type Ia SNe → Cepheids → parallax: without stars, the Hubble constant we just used would have no numerical value at all. (This calculation is the low-redshift limit; for $z \gtrsim 0.1$, relativistic corrections and the time-dependence of $H$ make $d(z)$ more complicated.)
+:::
+
+### The Observable Universe
+
+Because the universe has a finite age, there is a finite distance from which light has had time to reach us. This is the **observable horizon**. Its rough scale is the **Hubble distance**:
+
+$$d_H = c / H_0 \approx 4.3 \text{ Gpc}$$
+
+for $H_0 = 70$ km/s/Mpc. The *actual* comoving radius of the observable universe (accounting for expansion during the light's travel) is larger, ~14 Gpc or ~46 billion light-years. But the Hubble distance sets the scale: the observable universe is tens of billions of light-years across.
+
+---
+
+## The Hubble Tension
+
+Here is the current problem. We have **two independent ways** to measure $H_0$:
+
+1. **Local distance ladder:** Parallax → Cepheids → Type Ia SNe → Hubble's law fit. Current value: $H_0 \approx 73 \pm 1$ km/s/Mpc (SH0ES collaboration, 2022 – 2024 results).
+
+2. **CMB-based:** Fit the cosmological model to the detailed pattern of temperature fluctuations in the cosmic microwave background (Lecture 26). Current value: $H_0 \approx 67.4 \pm 0.5$ km/s/Mpc (Planck, 2018 – 2020 results).
+
+These two values disagree by about 5σ — a statistical significance that in most fields would be considered a discovery. And yet it persists after years of increasingly careful measurements. It is called the **Hubble tension**.
+
+What could cause it?
+
+- **Systematic errors on one side.** Perhaps a distance-ladder calibration is off (Cepheid metallicity corrections? Dust extinction? Type Ia progenitor systematics?). Or perhaps a CMB analysis assumes a cosmological model that is subtly wrong.
+- **New physics.** Perhaps the early universe had additional relativistic species (more neutrino flavors; "dark radiation") that changed the sound horizon and shifted the CMB-derived $H_0$. Perhaps dark energy is not a cosmological constant but something evolving. Perhaps the Hubble constant itself changed around recombination.
+
+We do not know. The tension is one of the three or four hottest open problems in cosmology right now. It matters for everyone in Module 3 because every claim we make about the age and size of the universe depends on $H_0$, and if the tension is real, our standard cosmological model has a crack in it.
+
+::: {.callout-frontier}
+- **Is the Hubble tension real or systematic?** Local and CMB measurements of $H_0$ disagree by ~5σ. Years of increasingly careful measurements have not resolved it.
+- **Does the answer require new physics?** Candidate explanations include early dark energy, varying dark-energy equation of state, extra neutrino species, or interactions between dark matter and dark radiation. None is confirmed.
+- **Which is the "right" $H_0$?** If the local value is correct, the universe is younger (~13.4 Gyr) and expanding faster today than the standard cosmological model predicts.
+:::
+
+---
+
+## Distance Ladder Check-In
+
+All five rungs of the ladder from Lecture 22 onward involve **stars**:
+
+- Rung 2 (parallax) — individual stars in the solar neighborhood.
+- Rung 3 (main-sequence fitting) — stars in clusters.
+- Rung 4 (Cepheids) — pulsating supergiant stars in nearby galaxies.
+- Rung 5 (Type Ia SNe) — exploding white dwarf *stellar* remnants in more distant galaxies.
+- Rung 6 (Hubble's law) — calibrated on rungs 4 and 5.
+
+Without stars, we have no cosmology. This is one of Module 3's core threads, and it keeps accumulating evidence.
+
+---
+
+## Deep Dives (Optional)
+
+::: {.callout-note title="Deep Dive: Why Are Cepheids on an Instability Strip?" collapse="true"}
+Cepheid variables are giants crossing a narrow region of the H-R diagram called the *instability strip*. In this region, partially ionized helium in the stellar envelope acts as a heat valve: when the star compresses, helium becomes more ionized, which makes the envelope more opaque, trapping heat and causing re-expansion; when the star expands and cools, helium recombines, the envelope becomes more transparent, heat escapes, and the envelope contracts again. The result is a self-sustaining radial pulsation. The period is set by the star's mean density, which in turn is set by its mass and radius — and radius plus temperature sets luminosity. That is why $L$ and $P$ are tightly linked.
+:::
+
+::: {.callout-note title="Deep Dive: Why Hubble's Law Doesn't Put Us at the Center" collapse="true"}
+If every pair of points in a uniformly expanding space recedes from every other pair at a rate proportional to their separation, then *every observer* measures Hubble's law and sees themselves at the center. There is no special center, just as there is no special point on the surface of an expanding balloon. This is sometimes called the Copernican principle: we are not in a privileged location, we just see a universe that is isotropic and homogeneous on large scales.
+:::
+
+---
+
+## Misconceptions
+
+::: {.callout-note title="Misconception: Hubble's Law Means Galaxies Are Flying Away From Us"}
+WRONG. Hubble's law describes the expansion of **space itself**. Galaxies are not moving through a fixed space; the space between them is stretching. This is why galaxies on the *opposite* side of the sky also recede from us — if galaxies were literally flying through space from some center, we would be at that center, and some galaxies would be moving toward us.
+:::
+
+::: {.callout-note title="Misconception: $H_0$ Has Units of 1/Time Because the Universe Is Slowing Down"}
+WRONG. $H_0$ has units of 1/time because $[v / d] = [\text{km/s / km}] = [1/s]$. It is a *rate of expansion*, not a deceleration. In fact, as of Lecture 25 you'll see that the expansion is currently *accelerating*, not slowing down.
+:::
+
+::: {.callout-note title="Misconception: We Can See All of the Universe"}
+WRONG. We can only see the part from which light has had time to reach us in 13.8 Gyr. The **observable universe** is ~46 billion light-years in comoving radius — less than the true universe, which could be much larger or even infinite.
+:::
+
+---
+
+## Practice Problems
+
+*Solutions are available in the Lecture 24 Solutions.*
+
+### Core Problems (Start Here)
+
+**Problem 1: Ladder Calibration.**
+List each rung of the distance ladder (parallax, spectroscopic parallax, Cepheids, Type Ia SNe, Hubble's law) and name the rung that calibrates it. Explain why you cannot skip a rung.
+
+**Problem 2: Cepheid Distance.**
+A Cepheid has pulsation period $P = 50$ days. Using $L \approx 335 \, L_\odot \times (P/\text{day})^{1.15}$, compute $L$. If its apparent flux is $F = 5 \times 10^{-14}$ W/m², estimate its distance in Mpc.
+
+**Problem 3: Hubble's Law.**
+A galaxy has recession velocity $v = 28,000$ km/s. With $H_0 = 70$ km/s/Mpc, estimate its distance.
+
+**Problem 4: Age of the Universe.**
+Compute the Hubble time $t_H = 1/H_0$ for $H_0 = 70$ km/s/Mpc. Convert your answer to Gyr.
+
+**Problem 5: Scale of the Observable Universe.**
+Compute the Hubble distance $d_H = c / H_0$ for $H_0 = 70$ km/s/Mpc. Express in Mpc and in Gly (billion light-years). Why is this only a rough estimate of the observable universe's size?
+
+### Challenge Problems (Deepen Your Understanding)
+
+**Challenge 1: Hubble Tension in Age.**
+The local ladder gives $H_0 \approx 73$ km/s/Mpc; the CMB gives $H_0 \approx 67$ km/s/Mpc. Compute $t_H$ for each. By how much (in Gyr) do the two inferred ages disagree? Is this difference bigger or smaller than the formal statistical uncertainty on either value (~0.5 – 1%)?
+
+**Challenge 2: When Does Hubble's Law Fail?**
+Andromeda (M31) is 780 kpc away but is *blueshifted* — moving toward us at ~110 km/s. Does this contradict Hubble's law? Use $H_0 = 70$ km/s/Mpc and compare the expected Hubble recession velocity at 780 kpc to the peculiar velocity.
+
+**Challenge 3: Distance Ladder Fragility.**
+Suppose new measurements find that Cepheid luminosities have been systematically overestimated by 10%. How does this shift the inferred local $H_0$? (Hint: think about how a wrong Cepheid $L$ propagates through the Type Ia calibration to the Hubble diagram.)
+
+---
+
+## Reading Summary
+
+::: {.callout-summary title="Lecture 24 in One Screen"}
+- Extragalactic distances are built on a **ladder of methods**: radar (AU) → parallax (kpc) → MS fitting (~100 kpc) → Cepheid P-L relation (~30 Mpc) → Type Ia SNe (~$10^3$ Mpc) → Hubble's law (cosmological). Each rung calibrates the next — break one, wobble the rest.
+- **Cepheid variables** are the linchpin of the rungs between the Milky Way and the Hubble flow. Leavitt's period–luminosity relation converts an *observed* pulsation period directly into an intrinsic luminosity.
+- **Hubble's law** $v = H_0 \, d$ is a statement about the expansion *of space itself*, not about galaxies moving through a pre-existing space. Every observer sees the same law; there is no center.
+- The **Hubble time** $t_H = 1/H_0$ is within ~1 Gyr of the true age of the universe (13.8 Gyr); the small correction encodes the history of acceleration (Lecture 25).
+- The **Hubble tension** — local ladder ($H_0 \approx 73$) vs. CMB-inferred ($H_0 \approx 67$) — is a real ~5σ discrepancy and one of the most important open problems in modern cosmology.
+:::
+
+---
+
+## Glossary
+
+{{< glossary lecture=24 >}}
+
+---
+
+## Looking Ahead
+
+Next lecture (Lecture 25) returns to the Type Ia supernovae we used as Rung 5 and gives them the full stellar-physics treatment: what is exploding, how a white dwarf can become a nuclear bomb, and why the peak luminosity is (nearly) the same every time. Then we push the Hubble diagram to higher redshift and discover something extraordinary — the universe is not just expanding, it is **accelerating**. That discovery in 1998 gave us **dark energy**, the second of Module 3's three hidden things.
+
+Lecture 26 closes the module with the cosmic microwave background, the first three minutes, and Big Bang nucleosynthesis — the origin of the chemical elements that make you, me, and every star in the sky. The third hidden thing will be the origin of matter itself.

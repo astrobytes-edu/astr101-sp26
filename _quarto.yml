@@ -333,7 +333,21 @@ website:
                 text: "Lecture 21: Neutron Stars and Black Holes"
       - section: "Module 3: Galaxies & Cosmology"
         href: modules/module-03/index.qmd
-        contents: []
+        contents:
+          - href: modules/module-03/index.qmd
+            text: "Module 3 Overview"
+          - section: "Readings"
+            contents:
+              - href: modules/module-03/readings/lecture-22-milky-way.qmd
+                text: "Lecture 22: The Milky Way and the First Hidden Thing"
+              - href: modules/module-03/readings/lecture-23-galaxy-zoo.qmd
+                text: "Lecture 23: The Galaxy Zoo"
+              - href: modules/module-03/readings/lecture-24-distance-ladder-hubble.qmd
+                text: "Lecture 24: The Distance Ladder and Hubble's Law"
+              - href: modules/module-03/readings/lecture-25-dark-energy.qmd
+                text: "Lecture 25: Type Ia Supernovae and Dark Energy"
+              - href: modules/module-03/readings/lecture-26-big-bang-cmb.qmd
+                text: "Lecture 26: The Big Bang, the CMB, and the First Three Minutes"
 
       - section: "Activities"
         contents:

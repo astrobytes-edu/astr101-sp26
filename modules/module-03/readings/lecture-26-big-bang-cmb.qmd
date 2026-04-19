@@ -1,0 +1,433 @@
+---
+title: "Lecture 26: The Big Bang, the CMB, and the First Three Minutes"
+subtitle: "How the Universe Began — and Where the Atoms in Your Body Came From"
+author: "Dr. Anna Rosen"
+date: "2026-05-04"
+description: "The cosmic microwave background, Big Bang nucleosynthesis, and the complete cosmic recycling loop that ties the origin of the elements to the distance ladder and the life cycles of stars."
+draft: false
+categories:
+  - cosmology
+  - big-bang
+  - cosmic-microwave-background
+  - nucleosynthesis
+  - origin-of-elements
+  - cosmic-recycling
+course: ASTR 101
+module: "3 - Galaxies & Cosmology"
+learning-objectives:
+  - Explain the Big Bang model as the history of an expanding, cooling universe, and identify the key observational evidence that supports it
+  - Describe the cosmic microwave background (CMB) as a snapshot of the universe at 380,000 years old, and interpret its blackbody spectrum and tiny temperature fluctuations
+  - Trace the temperature-time history of the universe through the first three minutes, identifying the key epochs (inflation, quark-gluon, nucleosynthesis, recombination)
+  - Describe Big Bang nucleosynthesis (BBN) and explain why the universe is ~75% hydrogen and ~25% helium by mass
+  - Close the cosmic recycling loop: identify where every element in your body was produced, and articulate why stars are the reason heavy elements exist
+math-level: algebra_only
+prerequisites: "Hubble's law and cosmic expansion (Lecture 24), dark matter (Lecture 22), dark energy (Lecture 25), stellar nucleosynthesis (Lecture 19), supernova nucleosynthesis (Lecture 20), neutron-star mergers (Lecture 21)"
+---
+
+::: {.callout-key-insight #the-big-idea}
+## The Big Idea
+
+The universe today is cold, dilute, and nearly empty. Run the clock backward using Hubble's law and every point in the universe gets closer to every other point; the universe gets hotter and denser. Far enough back, it was a smoldering plasma too hot for atoms to exist. We can see that epoch directly: the **cosmic microwave background** is its fading thermal glow, stretched to millimeter wavelengths by 13.8 Gyr of expansion. In the first three minutes of this hot, dense universe, the light nuclei — hydrogen, helium, and a trace of lithium — were cooked out of protons and neutrons. *Everything heavier* — the carbon in your bones, the oxygen in your lungs, the iron in your blood, the silicon in your phone — came later, forged in stars and their deaths. The Big Bang made the canvas. Stars painted the picture.
+:::
+
+::: {.callout-note title="Cognitive Map: Four Questions"}
+This page answers four questions:
+
+1. **What is the evidence that the universe had a hot, dense early state?**
+2. **What is the cosmic microwave background, and what does it tell us?**
+3. **What happened in the first three minutes, and why is the universe mostly hydrogen and helium?**
+4. **Where did every element in your body come from?**
+
+**Punchline:** The Big Bang is not a theory of origins in the metaphysical sense — it is a theory of the universe's **thermal history**. The CMB is a photograph of a specific moment in that history. Stars and stellar explosions are the rest of the story, and they are what made us possible.
+:::
+
+---
+
+::: {.callout-roadmap title="How to Use This Reading" collapse="true"}
+This reading is the finale of Module 3 and the finale of the course. It closes the cosmic recycling loop that has been open since Lecture 20, and it makes explicit the "why stars matter" thread that has run through all of Module 3.
+
+**Default expectation (best):** Read the whole page carefully. This one deserves a slow read, especially the timeline.
+
+**If you're short on time (~25 min):** Focus on:
+
+- The Big Idea above
+- Three Pillars of the Big Bang (evidence)
+- The CMB (what it is and what it tells us)
+- The First Three Minutes (temperature-time timeline)
+- Where Your Atoms Came From (the recycling diagram)
+
+**Goal after 25 minutes:** You should be able to state the evidence for the Big Bang, describe the CMB, summarize what BBN produced, and identify where each element on the periodic table was made.
+
+**Reference mode:** The Timeline Box, the BBN Box, and the Periodic Table Origins figure are the study references.
+:::
+
+<!-- FIGURE: module-3-concept-map (placeholder) — one-page visual of how this reading's ideas connect to the Module 3 spine: Hubble expansion (L24) + CMB + primordial abundances = three pillars of the Big Bang; BBN sets H/He; recombination → CMB; structure growth → cosmic web (L23) → galaxies (L22); stellar nucleosynthesis (Module 2) → the rest of the periodic table. -->
+
+## Learning Outcomes
+
+By the end of this reading, you should be able to say:
+
+- [ ] I can name the three pillars of Big Bang evidence (Hubble expansion, CMB, primordial abundances) and describe each in one sentence.
+- [ ] I can describe what the CMB *is* (thermal radiation from recombination at z~1100), what its temperature is (2.725 K), and what its fluctuations tell us (initial density perturbations that seeded the cosmic web).
+- [ ] I can sketch the temperature-time timeline of the universe from inflation through recombination, marking the key epochs.
+- [ ] I can explain Big Bang nucleosynthesis and predict the primordial hydrogen-to-helium ratio.
+- [ ] I can identify the astrophysical origin of every element in my body — and explain why stars are the reason those elements exist.
+
+---
+
+## Running the Clock Backward
+
+Lecture 24 taught us that the universe is expanding: distant galaxies recede at rates proportional to their distance, and the rate of expansion is set by $H_0$. That is a statement about *today*. But Hubble's law has a past: if every pair of galaxies is moving apart today, then they used to be closer together. Farther back in time, everything was closer. At some finite time in the past, everything was crushed into an arbitrarily small volume at arbitrarily high density. The **Big Bang** is not an explosion in space — it is the statement that space itself was once in a hot, dense state, and that the expansion has been stretching and cooling it ever since.
+
+This is not speculation. It is what the equations of general relativity do when you feed in the observed expansion. The question is whether we have *evidence* that the universe actually was hot and dense in the past — not just mathematically convenient, but physically real.
+
+We do. Three separate lines of evidence fit together into what is often called the **three pillars of the Big Bang**.
+
+### Pillar 1: Hubble's Law
+
+We have this one already (Lecture 24). The observed $v = H_0 d$ relation out to cosmological distances says the universe is expanding. Winding the clock back gives hotter, denser conditions.
+
+### Pillar 2: The Cosmic Microwave Background
+
+In 1964, Arno Penzias and Robert Wilson at Bell Labs were trying to use a horn antenna for radio astronomy. No matter which direction they pointed it, they picked up a persistent microwave hiss at about 3 K that would not go away. They cleaned the antenna. They evicted nesting pigeons. The hiss remained.
+
+<!-- FIGURE: Penzias-Wilson horn antenna photo, or equivalent historical image of the original CMB detection -->
+
+Meanwhile, at Princeton, Robert Dicke's group was theoretically predicting exactly this: a ~3 K thermal background left over from a hot early universe. A phone call connected the two groups. The "hiss" was the **cosmic microwave background**, and it was the most direct possible confirmation that the universe had indeed been in a hot, dense state. Penzias and Wilson won the 1978 Nobel Prize.
+
+{{< fig cmb-map >}}
+
+The CMB is extraordinary:
+
+- **It is thermal.** Its spectrum is a near-perfect blackbody at $T = 2.725$ K. This is the smoothest blackbody spectrum ever measured, anywhere in the universe.
+- **It is everywhere.** It comes from every direction with almost exactly the same intensity. Its uniformity is ~1 part in 100,000 after removing the Doppler effect from our motion through it.
+- **It has tiny fluctuations.** Those 1-in-100,000 temperature bumps encode the initial density perturbations that, under gravity, grew into the cosmic web (Lecture 23), galaxy clusters, and ultimately the Milky Way.
+
+### Pillar 3: Primordial Element Abundances
+
+When we measure the chemistry of pristine gas (e.g., the intergalactic medium, the atmospheres of ancient stars), we find it is roughly **75% hydrogen and 25% helium by mass**, with traces of deuterium, helium-3, and lithium-7. These ratios are exactly what a hot, dense early universe predicts from Big Bang nucleosynthesis (BBN). This is the topic of the last two major sections of this reading.
+
+::: {.callout-check-yourself #cy-three-pillars}
+## Check Yourself 1: The Pillars
+
+In one sentence each, state what each pillar tells us — Hubble expansion, CMB, primordial abundances — and what each one *individually* could not prove on its own.
+
+::: {.callout-tip collapse="true" title="Answer"}
+- **Hubble expansion** says the universe is expanding today and was denser in the past. By itself, it cannot tell us whether the early universe was *hot* — it could have been cold and dense.
+- **The CMB** says the universe was hot and dense at some point — specifically, hot enough to be a radiating plasma at temperatures of thousands of kelvin. By itself, it does not tell us *when* this happened or what chemistry that plasma had.
+- **Primordial abundances** say the universe spent a specific window of time at temperatures of ~10⁹ K in a radiation-dominated state, which matches the Big Bang model's first 3 minutes. By itself, it does not tell us about the universe on scales larger than nuclear physics.
+
+Each pillar constrains one aspect; together they uniquely pick out a hot, dense, expanding early universe with a specific thermal history — i.e., the Big Bang.
+:::
+:::
+
+---
+
+## What Is the CMB, Physically?
+
+The CMB is the light from a specific moment in cosmic history: **recombination**, about 380,000 years after the Big Bang.
+
+Before recombination, the universe was a plasma — free electrons and free nuclei (mostly protons and helium-4 nuclei). Photons scattered off the free electrons every few millimeters, so the universe was opaque, like the interior of a thick fog. No light could travel more than a short distance without being redirected.
+
+As the universe expanded and cooled, it eventually reached $T \approx 3000$ K, cool enough for electrons and protons to combine into neutral hydrogen. (This is called *recombination*, though the electrons and protons had never actually been combined before — the name is a historical accident.) Once the plasma neutralized, photons could travel freely. **The universe became transparent.** The photons that decoupled at recombination have been streaming through space ever since.
+
+But space has expanded by a factor of ~1100 since recombination. Space-stretching stretches the wavelengths of light (cosmological redshift), so those 3000 K photons have been cooled to 2.725 K today. The CMB is **the afterglow of recombination**, redshifted from near-infrared to microwave.
+
+<!-- FIGURE: Recombination epoch schematic showing opaque plasma giving way to transparent universe, with photons streaming through the "last scattering surface" -->
+
+Equivalently: when you measure the CMB, you are looking at the moment the universe first became transparent. You are seeing all the way to the surface of the primordial fog — the **surface of last scattering**. No telescope, however powerful, can see earlier light directly. (We can, in principle, see earlier through gravitational waves and through neutrinos — both are active research frontiers.)
+
+### What the CMB Tells Us
+
+The CMB is an astonishingly rich data source. From its properties we can read:
+
+- **The universe was hot and dense 380,000 years after the Big Bang.** (Existence of CMB + its blackbody spectrum.)
+- **The universe is very nearly uniform on large scales.** (Temperature is the same in every direction to 1 part in 10⁵.)
+- **The universe has tiny initial density fluctuations.** (Those 1-in-10⁵ variations encode the seeds of all later structure.)
+- **The universe is geometrically flat, contains ~5% ordinary matter, ~27% dark matter, and ~68% dark energy.** (The precise angular pattern of CMB fluctuations — the "acoustic peaks" — encodes all these numbers.)
+- **The first stars formed ~100 – 400 Myr after the Big Bang.** (The optical depth to reionization, measured from CMB polarization, dates this.)
+- **The Hubble constant is ~67 km/s/Mpc.** (From the geometry of the acoustic peaks — giving the CMB leg of the Hubble tension, Lecture 24.)
+
+The CMB is one of the most information-rich measurements in physics. Missions like COBE (1989), WMAP (2001), and Planck (2009 – 2013) have measured it in progressively finer detail.
+
+::: {.callout-note title="Reference Box: The Three CMB Missions"}
+
+| Mission | Years | Resolution | Key results |
+|---------|-------|------------|-------------|
+| COBE | 1989 – 1993 | ~7° | Confirmed blackbody spectrum ($T = 2.725$ K); discovered the 1-in-10⁵ fluctuations (Nobel 2006) |
+| WMAP | 2001 – 2010 | ~0.2° | Mapped the acoustic peaks; nailed Ω-budget to ~5% |
+| Planck | 2009 – 2013 | ~0.08° | High-precision cosmology: $H_0$, $\Omega_m$, $\Omega_\Lambda$, spectral index of initial fluctuations |
+
+*Each generation multiplied the CMB's information content by orders of magnitude.*
+:::
+
+::: {.callout-check-yourself #cy-cmb-temperature}
+## Check Yourself 2: Why Is the CMB So Cold?
+
+At recombination ($z \approx 1100$), the CMB had a temperature of ~3000 K. Today it is 2.725 K. Check that these numbers are consistent with the redshift relation $T_{\text{now}} = T_{\text{then}} / (1 + z)$.
+
+::: {.callout-tip collapse="true" title="Answer"}
+$T_{\text{now}} = 3000 \text{ K} / (1 + 1100) = 3000 / 1101 \approx 2.72$ K.
+
+This matches the measured CMB temperature of 2.725 K to high precision. The cooling is entirely due to cosmic expansion stretching photon wavelengths: Wien's law says peak wavelength $\lambda_{\text{peak}} \propto 1/T$, and expansion stretches wavelengths by $(1+z)$, so $T$ drops by $(1+z)$.
+:::
+:::
+
+---
+
+## The First Three Minutes
+
+Now the dramatic part — the full temperature-time timeline of the very early universe. This is a story about **thermal physics**: the universe's temperature dropped in predictable ways as it expanded, and at specific temperature thresholds, specific particle-physics events happened. We are going to walk backward from today to the first fraction of a second.
+
+::: {.callout-note title="The Universe's Temperature-Time Timeline"}
+
+| Time | Redshift $z$ | Temperature | Event |
+|------|--------------|-------------|-------|
+| Today | 0 | 2.7 K | Dark-energy-dominated era; stars form, galaxies evolve |
+| ~0.5 Gyr | ~6 | ~20 K | Reionization — first stars reionize the neutral hydrogen |
+| ~380,000 yr | ~1100 | ~3000 K | **Recombination** — electrons + protons → H atoms; CMB released |
+| ~50,000 yr | ~3400 | ~10⁴ K | Matter-radiation equality |
+| ~3 min | ~10⁸ | ~10⁹ K | **Big Bang nucleosynthesis** — H and He formed from p, n |
+| ~1 sec | ~10⁹ | ~10¹⁰ K | Neutrino decoupling — the cosmic neutrino background |
+| ~10⁻⁶ sec | ~10¹² | ~10¹² K | Quark-gluon → hadron transition — protons and neutrons form |
+| ~10⁻¹² sec | — | ~10¹⁵ K | Electroweak symmetry breaking |
+| ~10⁻³² sec | — | ~10²⁷ K | End of inflation (cosmic exponential expansion) |
+| $t = 0$ | — | ∞? | Initial singularity (?) |
+
+*Higher rows = earlier, hotter, denser. We observe all the way back to recombination directly (via the CMB); earlier epochs we infer from their downstream consequences.*
+:::
+
+### Inflation: ~$10^{-36} - 10^{-32}$ seconds
+
+The leading model for the *very* early universe is **inflation**: a brief period of exponential expansion driven by an inflaton field, stretching a microscopic patch of space to a macroscopic scale in a fraction of a second. Inflation was proposed (Alan Guth, Andrei Linde, and others) in the 1980s to solve several puzzles — notably why the universe is so uniform (inflation stretched any initial non-uniformities beyond the horizon) and why it is geometrically flat. The quantum fluctuations of the inflaton field become the seed density perturbations that eventually grow into galaxies. Those perturbations are the same 1-in-10⁵ bumps we see in the CMB.
+
+Inflation is strongly supported by observations but not yet confirmed — the "smoking gun" would be the direct detection of primordial gravitational waves, which experiments like BICEP/Keck and LiteBIRD are searching for.
+
+### The Quark Era to Proton-Neutron Freeze-Out: $\sim10^{-6}$ to $\sim1$ second
+
+At the highest relevant temperatures ($T > 10^{12}$ K, above the proton rest-mass energy), matter exists as a **quark-gluon plasma** — quarks and gluons are not yet bound into protons and neutrons. As the universe cooled below $\sim 10^{12}$ K, quarks condensed into protons and neutrons.
+
+Between $\sim 10^{-4}$ and $\sim 1$ second, the universe was a hot bath of protons, neutrons, electrons, positrons, photons, and neutrinos, all in thermal equilibrium. Reactions like $p + e^- \leftrightarrow n + \nu_e$ kept the proton-to-neutron ratio set by temperature. As the temperature dropped, neutrons became "energetically expensive" to maintain, and the $n/p$ ratio dropped. At $T \sim 10^{10}$ K (~1 second), weak interactions could no longer keep up with expansion and the $n/p$ ratio **froze out** at roughly 1:7.
+
+Neutrons are unstable in isolation (half-life ~10 minutes). So the clock was ticking: every second, more neutrons decayed into protons, and the supply of neutrons for nucleosynthesis dwindled.
+
+### Big Bang Nucleosynthesis: 3 – 20 Minutes
+
+At ~$T \sim 10^9$ K (a few minutes after the Big Bang), the universe cooled enough that protons and neutrons could stick together via the strong force to form nuclei. This is **Big Bang nucleosynthesis (BBN)**.
+
+Here is the rough sequence:
+
+1. **Deuterium ($^2$H):** A proton fuses with a neutron: $p + n \to {}^2\text{H} + \gamma$. Deuterium is the gateway. Once a neutron is safely inside a deuterium nucleus, it is stable against decay.
+2. **Helium-3 and Tritium:** $^2$H fuses with more protons or neutrons to form $^3$He and $^3$H.
+3. **Helium-4:** These fuse further to form $^4$He — a tightly bound nucleus with 2 protons and 2 neutrons. About **essentially all** the available neutrons end up in $^4$He.
+4. **A trace of lithium-7** is made by further fusion. The reaction chain stalls there because there are no stable nuclei of mass 5 or 8.
+
+The outcome after about 20 minutes (when the universe cooled below the nuclear-fusion threshold): roughly **75% hydrogen and 25% helium by mass**, with trace deuterium (~10⁻⁵), $^3$He (~10⁻⁵), and lithium-7 (~10⁻¹⁰). Every heavier element is absent. The universe has no carbon, no oxygen, no iron — and it will not for another ~200 Myr, when the first stars form and begin making them.
+
+::: {.callout-note title="Why 25% Helium? A Back-of-Envelope Argument"}
+
+The $n/p$ freeze-out ratio is ~1:7. Every 2 neutrons ends up inside one $^4$He nucleus, using 2 neutrons + 2 protons = 4 nucleons. If we have 2 neutrons, there are $2 \times 7 = 14$ protons total. Two of those protons go into the $^4$He, leaving 12 as free hydrogen.
+
+Total mass in $^4$He: 4 units. Total mass in H: 12 units. Helium fraction: $4/(4+12) = 25\%$.
+
+This is approximate but robust: the 25% helium fraction is **essentially a prediction from particle physics and thermal equilibrium**, and it has been confirmed by observation. It is one of the crown-jewel successes of the Big Bang model.
+:::
+
+::: {.callout-check-yourself #cy-bbn}
+## Check Yourself 3: BBN Sanity Check
+
+Why didn't the universe fuse hydrogen all the way up to iron during Big Bang nucleosynthesis, the way the cores of massive stars do? What physical factor stops the chain at helium?
+
+::: {.callout-tip collapse="true" title="Answer"}
+Two factors stop BBN at helium:
+
+1. **No stable nuclei at mass 5 or 8.** Even if BBN had more time, it would have to cross these gaps. Stars get past mass 8 via the *triple-alpha process* (three $^4$He nuclei combining to form $^{12}$C), but this requires much higher densities than the expanding universe had at 3 – 20 minutes.
+
+2. **Expansion cooled the universe too fast.** Stars fuse for millions to billions of years. BBN had *minutes*. The universe expanded and cooled below the fusion threshold before heavier elements could be assembled.
+
+The result: the early universe is limited to H, He, and a trace of Li. Everything heavier must wait for stars.
+:::
+:::
+
+### Worked Example: Cooling the CMB by Cosmic Expansion
+
+::: {.callout-note title="Worked Example: The CMB Temperature Today"}
+**Given:** Recombination occurs at redshift $z \approx 1100$, when the universe's temperature was $T_{\text{rec}} \approx 3000$ K.
+
+**Relation:** Cosmic expansion stretches photon wavelengths by a factor $(1+z)$. Because Wien's law gives $\lambda_{\text{peak}} \propto 1/T$, a blackbody whose wavelengths are stretched by $(1+z)$ has its temperature scaled as
+$$T_{\text{now}} = \frac{T_{\text{then}}}{1+z}.$$
+
+**Rearrange:** already solved for $T_{\text{now}}$.
+
+**Substitute:**
+$$T_{\text{now}} = \frac{3000\,\text{K}}{1 + 1100} = \frac{3000\,\text{K}}{1101}.$$
+
+**Evaluate:**
+$$T_{\text{now}} \approx 2.72\,\text{K}.$$
+
+**Interpret:** The prediction — 2.72 K — matches the measured CMB temperature of **2.725 K** to within the precision of the input numbers. The agreement is not a fitted result; it is a consistency check between an observation today (the CMB spectrum, from COBE and Planck) and two independent numbers from earlier (the recombination temperature from atomic physics and the redshift from the CMB's thermal spectrum). Three independent physical measurements landing on the same answer is one reason the Big Bang model is so robust.
+:::
+
+### Recombination at 380,000 Years — the CMB Era
+
+We covered this above. At $T \sim 3000$ K, electrons combined with nuclei into neutral atoms, the universe became transparent, and the CMB photons streamed free. This is the earliest epoch we can see directly with telescopes.
+
+### The Dark Ages — ~380,000 Years to ~200 Million Years
+
+After recombination, the universe was full of neutral hydrogen and helium gas. No stars existed yet, so there was no new visible light being made. This era is called the **Dark Ages**, and it was dark both literally (no visible light sources) and scientifically (hard to observe).
+
+### First Stars and Reionization — 100 – 500 Million Years
+
+Dark-matter overdensities pulled baryonic gas into dense clumps. Those clumps cooled and collapsed into the first stars — Population III stars — made of essentially pure H and He. They were massive (hundreds of solar masses, by current models), extremely luminous, short-lived, and they ended in supernovae that seeded the early universe with the first heavy elements.
+
+The UV radiation from the first stars (and later the first AGN) **reionized** the intergalactic hydrogen, returning it to a plasma state — though by this time the universe was so dilute that photons could still travel freely. Reionization is observed in CMB polarization data and in the absorption spectra of very high-redshift quasars.
+
+### Galaxy Assembly, Star Formation, and Us — 500 Myr to 13.8 Gyr
+
+From here on, the universe is doing what we have studied throughout the course: forming galaxies, forming stars, enriching the interstellar medium with heavier elements made in stellar nucleosynthesis, forming new generations of stars from that enriched material. The Sun formed 4.6 Gyr ago in a galaxy that had been recycling material for ~9 Gyr already. Earth condensed from a disk of that enriched gas. Life arose on Earth using elements that had been through stars for generations.
+
+---
+
+## Closing the Recycling Loop: Where Your Atoms Came From
+
+Here is where Module 2 and Module 3 fuse together. In Lectures 19 – 21, you learned how stars synthesize elements:
+
+- **Big Bang (first 3 minutes):** H, He, tiny amount of Li.
+- **Stellar fusion in main-sequence and giant stars:** C, N, O (via the CNO cycle and red-giant He burning).
+- **Massive-star cores (> 8 $M_\odot$):** Elements from O through Fe (via onion-shell burning).
+- **Core-collapse supernovae:** Elements heavier than Fe (via rapid neutron capture in the shock wave and neutron-rich ejecta) — partially. And they eject all the fusion products of the progenitor into the ISM.
+- **Type Ia supernovae:** Major producers of iron-peak elements (Fe, Ni, Co) via thermonuclear runaway.
+- **Neutron-star mergers:** Rapid neutron-capture (r-process) elements — gold, platinum, uranium, the heaviest stable nuclei. Confirmed observationally by GW170817 (a gravitational-wave + electromagnetic binary neutron-star merger, 2017).
+
+{{< fig periodic-table-origins >}}
+
+Every element on the periodic table has a cosmic origin story. Hydrogen and helium are primordial. Carbon, nitrogen, oxygen were made in stellar interiors. Iron comes from Type Ia SNe and core-collapse SNe. Gold and uranium come from neutron-star mergers.
+
+**Every atom in your body heavier than hydrogen was made in a star or a stellar explosion.** The calcium in your bones was fused in the core of a massive star. The iron in your blood was expelled from a supernova. The heaviest trace elements in your body (iodine, molybdenum) came from neutron-star mergers that happened before the Sun was born.
+
+This is the cosmic recycling loop. The Big Bang made the hydrogen. Stars and their deaths made everything else. Galaxies and the cosmic web are the stages on which this recycling happens. Dark matter provides the gravitational scaffolding; dark energy sets the expansion rate; the CMB records the initial conditions. All of it is held together by the same physics that governs a candle flame, a falling apple, and a white dwarf at the Chandrasekhar limit.
+
+{{< fig stars-make-elements >}}
+
+::: {.callout-key-insight title="The Closing of the Loop"}
+You — and everyone you have ever met, and every planet you will ever visit — are made of *recycled stardust*. The atoms in your body have been through at least one stellar generation (usually several) before arriving on Earth. The Big Bang set the stage with H, He, and the seed fluctuations. Stars made everything else. That is not a metaphor — it is the literal content of Lectures 15 – 26.
+:::
+
+---
+
+## Distance Ladder Check-In (Final)
+
+The distance ladder — parallax, main-sequence fitting, Cepheids, Type Ia SNe, Hubble's law, CMB — has taken us all the way from Earth to the surface of last scattering. Every rung except the first was calibrated with stars. The CMB is the final observational frontier: light from *before* any stars existed, redshifted by a factor of 1100 into the microwave band. Beyond the CMB we cannot see with telescopes. We rely on BBN abundances (which constrain the first 3 minutes) and, in the future, on primordial gravitational waves (which would constrain inflation itself).
+
+Module 3 opened with the Milky Way and a missing 90% of its mass. It closes with a complete cosmic history. Between the two endpoints, every observation — every measurement of distance, every measurement of mass, every measurement of composition — has been made with light from stars. That is why stars matter.
+
+---
+
+## Deep Dives (Optional)
+
+::: {.callout-note title="Deep Dive: The Horizon and Flatness Problems, and Why Inflation Helps" collapse="true"}
+Before inflation, cosmology had two nagging puzzles:
+
+- **The horizon problem.** The CMB is uniform to ~1 part in 10⁵ in every direction. But regions of sky separated by more than ~2° have not, in standard Big Bang cosmology, had time to exchange information (light signals cannot have passed between them since the Big Bang). How did they end up the same temperature?
+- **The flatness problem.** The universe is observed to be geometrically flat (Ω_total ≈ 1). But in a decelerating universe, any deviation from perfect flatness grows with time, so the early universe must have been *extraordinarily* close to flat — fine-tuned to approximately 1 part in 10⁶⁰ at the Planck epoch (the exact figure depends on the extrapolation back to Planck-scale physics, but it is vanishingly small by any account). Why?
+
+Inflation solves both elegantly: exponential expansion stretched a small, causally connected, approximately flat patch to a size much larger than the observable universe. Any initial non-uniformities or curvature were smoothed out to undetectable levels. This is why inflation, despite being unobservable directly, is considered the leading model for the earliest universe.
+:::
+
+::: {.callout-note title="Deep Dive: The Sound of the Early Universe" collapse="true"}
+The pre-recombination plasma behaved as a fluid, and density perturbations in it oscillated as **sound waves**. These "baryon acoustic oscillations" are frozen in at the moment of recombination, leaving a characteristic angular scale in the CMB fluctuations — the famous **acoustic peaks** — and a characteristic distance scale in the galaxy distribution (the BAO standard ruler). Measuring the acoustic peaks and the BAO scale is how modern cosmology determines Ω_m, Ω_Λ, and $H_0$ with percent-level precision. The universe literally *rang* with sound waves for 380,000 years, and we can still hear the echo.
+:::
+
+---
+
+## Misconceptions
+
+::: {.callout-note title="Misconception: The Big Bang Was an Explosion Into Existing Space"}
+WRONG. The Big Bang is not an explosion of matter into a pre-existing empty space. It is the rapid expansion *of space itself*, starting from an extremely hot, dense state. Every point in the universe was there at the Big Bang — there is no "center" and no "outside."
+:::
+
+::: {.callout-note title="Misconception: The CMB Is the Farthest Thing We Can See"}
+PARTIALLY WRONG. The CMB is the earliest *electromagnetic* signal we can observe directly, because the universe was opaque before recombination. But it is not the "farthest" in the sense of being "older" than anything else — in principle, gravitational waves and neutrinos can carry information from earlier epochs. Primordial gravitational waves from inflation are a major target of current experiments.
+:::
+
+::: {.callout-note title="Misconception: All the Elements Were Made in the Big Bang"}
+WRONG. Only H, He, and a trace of Li were made in the Big Bang. **Every element heavier than lithium was made in stars or stellar explosions.** This is the content of Lectures 19 – 21 (Module 2) and a central result of 20th-century astrophysics.
+:::
+
+::: {.callout-note title="Misconception: If the Universe Is Expanding, It Must Have a Boundary"}
+WRONG. The expansion of space does not require a boundary. Space can be infinite and still expand — every pair of points moves apart, with no "edge" involved. The *observable* universe has a boundary (our light-travel horizon), but the universe itself may not.
+:::
+
+---
+
+## Practice Problems
+
+*Solutions are available in the Lecture 26 Solutions.*
+
+### Core Problems (Start Here)
+
+**Problem 1: Three Pillars.**
+State the three main pieces of evidence for the Big Bang. For each, explain in one sentence what it tells us.
+
+**Problem 2: CMB Temperature.**
+The CMB was released at $T \approx 3000$ K at redshift $z \approx 1100$. Using $T_{\text{now}} = T_{\text{then}} / (1 + z)$, compute the expected CMB temperature today and compare to the measured 2.725 K.
+
+**Problem 3: Why Mostly Hydrogen and Helium?**
+Explain in 3 – 4 sentences why Big Bang nucleosynthesis made the universe ~75% H and ~25% He by mass, and why it did not make significant amounts of heavier elements.
+
+**Problem 4: Origin of Elements Scavenger Hunt.**
+For each of the following elements in your body, identify the astrophysical origin:
+(a) Hydrogen (in water, DNA)
+(b) Carbon (in organic molecules)
+(c) Oxygen (in blood, air, water)
+(d) Iron (in hemoglobin)
+(e) Iodine (in thyroid hormones)
+
+**Problem 5: The Temperature-Time Timeline.**
+Put these events in chronological order (earliest first), and give the approximate temperature at each:
+(a) Recombination and CMB release
+(b) Big Bang nucleosynthesis
+(c) Inflation
+(d) Formation of the Sun
+(e) Formation of the first stars
+
+### Challenge Problems (Deepen Your Understanding)
+
+**Challenge 1: The 25% Helium Argument.**
+Starting from a neutron-to-proton ratio of $n/p = 1/7$ at freeze-out, derive the primordial helium mass fraction assuming all available neutrons end up in $^4$He nuclei. Show that $Y = 2 n / (n + p) \approx 0.25$.
+
+**Challenge 2: Why Transparency at 3000 K?**
+At what temperature would you expect hydrogen to ionize (i.e., electrons escape from protons)? A useful reference: the Lyman-alpha transition has energy ~10.2 eV ≈ 13.6 eV × 0.75. Why does recombination happen at ~3000 K rather than at the temperature corresponding to 13.6 eV?
+
+**Challenge 3: The Stellar Distance Ladder, Fully Written.**
+Write a one-page essay (your prose, no quote-marks needed) explaining the role of stars at every rung of the cosmic distance ladder from Lecture 15 to Lecture 26. For each rung, identify the specific type of star involved and why that type is useful. Conclude with one sentence about what Module 3 has taught you about why stars matter.
+
+---
+
+## Reading Summary
+
+::: {.callout-summary title="Lecture 26 in One Screen"}
+- The **Big Bang** is the statement that space was once in a hot, dense state and has been expanding and cooling ever since. Three independent pillars support it: Hubble expansion (Lecture 24), the CMB, and primordial light-element abundances.
+- The **CMB** is the afterglow of recombination at $z \approx 1100$, when the universe cooled to ~3000 K and became transparent. Expansion has redshifted that 3000 K blackbody down to **2.725 K** today, with ~1-in-10⁵ fluctuations encoding the seeds of all later structure.
+- The CMB's acoustic-peak pattern pins down Ω_b ≈ 5%, Ω_DM ≈ 27%, Ω_Λ ≈ 68% — independently confirming the L22 dark-matter inference and the L25 dark-energy result.
+- **BBN** (3 – 20 minutes) produced ~75% H and ~25% He by mass (plus trace D, $^3$He, $^7$Li). A 1:7 $n/p$ freeze-out ratio, followed by all available neutrons funneling into $^4$He, gives the 25% helium fraction as a back-of-envelope prediction from particle physics.
+- Every element heavier than lithium was made in **stars or stellar explosions** (Module 2). Your atoms are recycled stardust, and the three hidden things of Module 3 — dark matter, dark energy, and the origin of the elements — are inferences we can only make because starlight carries them.
+:::
+
+---
+
+## Glossary
+
+{{< glossary lecture=26 >}}
+
+---
+
+## Looking Back — A Course in One Paragraph
+
+::: {.callout-key-insight title="The Arc of the Course"}
+We began, 26 lectures ago, with a handful of simple questions — What is the Sun? What are the stars? How big is the universe? — and we walked through them one by one, using physics you can check with algebra. In Module 1 we looked up at the sky and made sense of motion, light, and the Solar System. In Module 2 we zoomed in on stars — how they fuse, how we measure them, how they evolve, and how they die. In Module 3 we zoomed out again and found that we live on a small rocky remnant of a stellar corpse, orbiting an average star, in a spiral galaxy among trillions, in a universe that is mostly dark, was born from a hot dense state 13.8 Gyr ago, is expanding at a rate we still cannot fully explain, and is made of recycled stardust that was cooked in generations of stellar lives and deaths before becoming us.
+
+The distance ladder is the thread that ran through everything. Stars are the reason we can climb it. Dark matter, dark energy, and the origin of the elements are the three hidden things we met. You now have a rough map of the universe, and more importantly, you have the tools to keep updating that map as new evidence comes in. The next discovery — the resolution of the Hubble tension, the identity of dark matter, the nature of dark energy, the detection of primordial gravitational waves — is out there waiting, and the physics you have learned this semester is the language it will be written in.
+
+Thank you for being part of this journey. Good luck on the final.
+:::

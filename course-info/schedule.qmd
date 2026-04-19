@@ -11,8 +11,8 @@ format:
 
 ## How to use this schedule
 
-- **Lectures:** Mon & Wed (new content)
-- **Fridays:** Most weeks include an in-class activity; reviews before exams
+- **Lectures:** Mon & Wed (new content; ~2 lecture readings per week)
+- **Fridays:** Catchup and review; occasional in-class activity
 - **Homework:** ~10 assignments due Mondays via Canvas (two-stage: solutions → grade memo); lowest dropped
 - **Readings:** Lecture readings on course website
 
@@ -60,9 +60,11 @@ format:
 
 | Week | Dates | Topics | Readings | Slides | Demos |
 |:-----|:------|:-------|:---------|:-------|:------|
-| 14 | Apr 20-24 | **Mon: MODULE 2 EXAM**; Milky Way structure, dark matter | — | — | — |
-| 15 | Apr 27 – May 1 | Galaxies, active galaxies, quasars; Cosmology, Big Bang | — | — | — |
-| 16 | May 4-6 | Early universe, dark energy; **Wed: Review** | — | — | — |
+| 14 | Apr 20-24 | **Mon: MODULE 2 EXAM**; Wed: Milky Way structure & dark matter (L22); **Fri: Galaxy zoo, AGN/quasars, cosmic web (L23)** | [L22](/modules/module-03/readings/lecture-22-milky-way.qmd), [L23](/modules/module-03/readings/lecture-23-galaxy-zoo.qmd) | — | — |
+| 15 | Apr 27 – May 1 | Mon: Distance ladder & Hubble's law (L24); Wed: Type Ia SNe & dark energy (L25) | [L24](/modules/module-03/readings/lecture-24-distance-ladder-hubble.qmd), [L25](/modules/module-03/readings/lecture-25-dark-energy.qmd) | — | — |
+| 16 | May 4-6 | Mon: Big Bang, CMB, BBN & course wrap (L26); **Wed: Final-exam review** | [L26](/modules/module-03/readings/lecture-26-big-bang-cmb.qmd) | — | — |
+
+*Fri Apr 24 is a lecture day this week (exception to the usual Friday catchup pattern) to make room for all five Module 3 readings while preserving a final-exam review on the last day of class.*
 
 ---
 

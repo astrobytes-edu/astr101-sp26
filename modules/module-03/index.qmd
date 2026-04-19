@@ -1,58 +1,74 @@
 ---
 title: "Module 3: Galaxies & Cosmology"
-subtitle: "Weeks 14–16 | The large-scale universe"
+subtitle: "Weeks 14–16 | Zooming out from our galaxy to the whole universe"
 draft: false
 page-layout: article
 listing:
-  - id: module-lectures
-    contents: "slides/*.qmd"
-    template: ../../assets/templates/lecture-card.ejs
-    sort: "date"
   - id: module-readings
-    contents: "readings/*.qmd"
+    contents:
+      - "readings/lecture-22-milky-way.qmd"
+      - "readings/lecture-23-galaxy-zoo.qmd"
+      - "readings/lecture-24-distance-ladder-hubble.qmd"
+      - "readings/lecture-25-dark-energy.qmd"
+      - "readings/lecture-26-big-bang-cmb.qmd"
     template: ../../assets/templates/reading-card.ejs
     sort: "date"
 ---
 
 ## Why this module matters
 
-We've studied individual stars, but stars are just building blocks. In this final module, we zoom out to the largest scales: the Milky Way, billions of external galaxies, and the universe as a whole. We'll see how galaxy motions reveal dark matter, and how the expansion of space tells us about cosmic origins.
+Module 2 took us inside individual stars. Module 3 pulls the camera back to the largest scales: the Milky Way we live in, the hundreds of billions of galaxies we live among, and the 13.8-Gyr-old universe that contains them. Along the way we meet the **three hidden things** that define modern cosmology — **dark matter**, **dark energy**, and the **origin of the elements** — and we climb the **cosmic distance ladder** from parallax out to the cosmic microwave background.
+
+Every rung of the ladder, and every inference we make about dark matter and dark energy, is read from the light of stars. This module is the payoff of Module 2: the stellar physics you learned is what lets you measure the universe.
 
 ## Learning objectives
 
 By the end of this module, you will be able to:
 
-- Explain the structure of the Milky Way and evidence for dark matter
-- Classify galaxies and describe how we measure their distances
-- Apply the Hubble law to describe cosmic expansion
-- Describe the Big Bang model and evidence from the cosmic microwave background
-
-## Lectures
-
-::: {.lecture-grid}
-::: {#module-lectures}
-:::
-:::
+- Describe the structure of the Milky Way and explain how flat rotation curves imply **dark matter**
+- Use stellar orbits around Sgr A\* to weigh a supermassive black hole with Kepler's third law
+- Classify galaxies on the Hubble sequence and explain active galactic nuclei as SMBH-accretion signatures, bounded by the Eddington limit
+- Climb the **cosmic distance ladder** — parallax → main-sequence fitting → Cepheid variables → Type Ia supernovae → Hubble's law — and state which kind of star anchors each rung
+- Apply Hubble's law $v = H_0 \, d$ to convert redshifts into distances and estimate the Hubble time
+- Explain how the 1998 Type Ia supernova results established cosmic acceleration and the existence of **dark energy**
+- Describe the three pillars of Big Bang evidence (Hubble expansion, the CMB, and primordial H/He/Li abundances from BBN) and state the cosmic Ω-budget (~5% baryons, ~27% dark matter, ~68% dark energy)
+- Identify the astrophysical origin of every element in your body
 
 ## Lecture Readings
+
+These five lecture readings are the primary required materials for Module 3. Each one corresponds to one class session (Mon or Wed); dates are in the [course schedule](../../course-info/schedule.qmd).
 
 ::: {.lecture-grid}
 ::: {#module-readings}
 :::
 :::
 
+## Module 3 Schedule at a Glance
+
+| Date | Reading | Topic |
+|:-----|:--------|:------|
+| Wed Apr 22 | [L22](readings/lecture-22-milky-way.qmd) | The Milky Way and the First Hidden Thing (dark matter) |
+| Fri Apr 24 | [L23](readings/lecture-23-galaxy-zoo.qmd) | The Galaxy Zoo, quasars, and the cosmic web |
+| Mon Apr 27 | [L24](readings/lecture-24-distance-ladder-hubble.qmd) | The distance ladder and Hubble's law |
+| Wed Apr 29 | [L25](readings/lecture-25-dark-energy.qmd) | Type Ia supernovae and dark energy |
+| Mon May 4 | [L26](readings/lecture-26-big-bang-cmb.qmd) | Big Bang, CMB, BBN, and the first three minutes |
+| Wed May 6 | — | **Final-exam review** (no new reading) |
+
+*Mon Apr 20 is the Module 2 exam. Fri Apr 24 is a lecture day this week (exception to the usual Mon/Wed pattern) so that Wed May 6 can be reserved for final-exam review. Fri May 8 is the comprehensive final exam (10:30 AM – 12:30 PM).*
+
 ## Optional Reference (OpenStax Astronomy 2e)
 
 Lecture readings are provided on this website. For additional depth, see the free [OpenStax Astronomy 2e](https://openstax.org/details/books/astronomy-2e):
 
 - Chapters 25–26: The Milky Way Galaxy; Galaxies
-- Chapters 27–28: Active Galaxies; The Evolution of Galaxies
+- Chapters 27–28: Active Galaxies and Quasars; The Evolution of Galaxies
 - Chapter 29: The Big Bang
 
 ::: {.callout-frontier}
-- **What is dark matter?** It makes up ~27% of the universe, but we've never detected a dark matter particle directly.
+- **What is dark matter?** It makes up ~27% of the universe, but no direct detection has confirmed a candidate particle.
+- **What is dark energy?** ~68% of the universe by energy density. Cosmological constant, quintessence, or modified gravity? DESI/Euclid/Roman/LSST aim to pin it down.
+- **Is the Hubble tension real?** Local and CMB-derived values of $H_0$ disagree by ~5σ. Systematic error or new physics?
 - **Why is there more matter than antimatter?** The Big Bang should have made equal amounts — where did the antimatter go?
-- **Is the Hubble tension real?** Local and CMB measurements of H₀ disagree by ~5σ. Systematic error or new physics?
 :::
 
 
