@@ -68,7 +68,7 @@ This page answers four questions:
 **Reference mode:** The Type Ia Mechanism Box and the Ω-Budget Box are the long-term study references.
 :::
 
-<!-- FIGURE: module-3-concept-map (placeholder) — one-page visual of how this reading's ideas connect to the Module 3 spine: white dwarf + Chandrasekhar limit (Module 2) → Type Ia standard candle (rung 5) → high-z Hubble diagram → acceleration → dark energy; and how the 5/27/68 Ω-budget ties L22 (dark matter), L25 (dark energy), and L26 (CMB) together. -->
+{{< fig module-3-evidence-chain-concept-map >}}
 
 ## Learning Outcomes
 

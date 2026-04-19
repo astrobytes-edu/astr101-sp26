@@ -67,7 +67,7 @@ This reading moves from the Milky Way's visible structure to the invisible mass 
 **Reference mode:** Use the Structure Reference Box, the Rotation Curve figure, and the Glossary as a study reference through the rest of Module 3.
 :::
 
-<!-- FIGURE: module-3-concept-map (placeholder) — one-page visual of how this reading's ideas connect to the Module 3 spine: Milky Way structure → rotation curves → dark matter; and S-star orbits → Sgr A* mass → supermassive black holes (to be reused in later lectures). -->
+{{< fig module-3-evidence-chain-concept-map >}}
 
 ## Learning Outcomes
 
@@ -268,6 +268,27 @@ What lives there? The answer came from *stellar orbits*.
 
 <!-- FIGURE: Near-infrared image or animation showing the S-stars orbiting Sgr A* at the Galactic Center, with labeled orbital tracks. -->
 
+::: {.callout-roadmap title="ViewSpace Interactive: Sagittarius A*" collapse="false"}
+Use the slider to watch the Galactic Center observations build up from 1998 to 2009. Before you move the slider, predict what kind of pattern would convince you that the stars are orbiting one compact central mass rather than drifting randomly.
+
+What to notice: the observable is not the black hole itself. It is the changing positions of nearby stars. The model is orbital motion under gravity. The inference is that millions of solar masses must be packed inside the shared focus of those orbits.
+
+<div class="demo-embed" style="width: 100%; margin: 1rem 0;">
+  <iframe
+    src="https://viewspace.org/interactives/unveiling_invisible_universe/black_holes/sagittarius_a"
+    width="100%"
+    height="560px"
+    style="border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; background: #0a0a14;"
+    loading="lazy"
+    title="ViewSpace: Sagittarius A* Interactive"
+    allow="fullscreen">
+  </iframe>
+  <p style="text-align: center; margin-top: 0.5rem; font-size: 0.875rem; color: #666;">
+    <a href="https://viewspace.org/interactives/unveiling_invisible_universe/black_holes/sagittarius_a" target="_blank" rel="noopener" style="color: #5dade2;">Open the ViewSpace interactive in a new tab</a> (NASA/STScI ViewSpace)
+  </p>
+</div>
+:::
+
 ### The S-Stars
 
 Over two decades, groups led by Andrea Ghez (UCLA) and Reinhard Genzel (MPI) tracked a small cluster of stars — the **S-stars** — orbiting something at the Galactic Center. One of them, **S2** (also called S0-2), has an orbital period of about 16 years and a closest approach of ~120 AU. It was observed across a full orbit. Ghez and Genzel shared the 2020 Nobel Prize in Physics for this work.
@@ -370,6 +391,27 @@ Rotation curves are the classic evidence students meet first. They are not the o
 - **Gravitational lensing:** mass bends light. Maps of the total mass in clusters, inferred from lensing of background galaxies, disagree dramatically with maps of the visible mass. The famous "Bullet Cluster" image shows the separation between the two.
 - **Structure formation in cosmological simulations:** the pattern of galaxy clustering we see today requires a dominant cold, non-baryonic matter component to form on the right timescale. Baryons alone cannot do it.
 - **The cosmic microwave background:** (Lecture 26) the CMB's acoustic-peak structure independently constrains the ratio of dark matter to baryons and agrees with the galactic evidence.
+
+::: {.callout-roadmap title="ViewSpace Interactive: Bullet Cluster" collapse="false"}
+Use the wavelength controls to compare the visible galaxies, the X-ray-emitting gas, and the lensing-based mass map. This is the cleanest place in the module to see why dark matter is not just "stuff we forgot to count."
+
+What to notice: the hot ordinary gas slows down during the cluster collision, while the lensing mass map is displaced from that gas. The separation between normal matter and gravitational mass is why the Bullet Cluster is such an important independent line of evidence.
+
+<div class="demo-embed" style="width: 100%; margin: 1rem 0;">
+  <iframe
+    src="https://viewspace.org/interactives/unveiling_invisible_universe/dark_matter/bullet_cluster"
+    width="100%"
+    height="560px"
+    style="border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; background: #0a0a14;"
+    loading="lazy"
+    title="ViewSpace: Bullet Cluster Interactive"
+    allow="fullscreen">
+  </iframe>
+  <p style="text-align: center; margin-top: 0.5rem; font-size: 0.875rem; color: #666;">
+    <a href="https://viewspace.org/interactives/unveiling_invisible_universe/dark_matter/bullet_cluster" target="_blank" rel="noopener" style="color: #5dade2;">Open the ViewSpace interactive in a new tab</a> (NASA/STScI ViewSpace)
+  </p>
+</div>
+:::
 
 No single observation proves dark matter. The case is built from many independent observations at very different scales pointing to the same conclusion.
 

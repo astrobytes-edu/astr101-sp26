@@ -1917,6 +1917,13 @@ figures:
     alt: "Chart showing white dwarf, neutron star, and black hole formation by mass"
     module: 3
 
+  module-3-evidence-chain-concept-map:
+    path: /assets/images/module-03/module-3-evidence-chain-concept-map.svg
+    caption: "What to notice: Module 3 uses the same evidence chain over and over. Observables such as motions, spectra, standard candles, supernova brightness, the CMB, and element abundances become physical claims only after a model translates them."
+    alt: "Three-column concept map for Module 3. The left column lists observables such as stellar positions, orbital velocities, galaxy spectra, standard candles, supernova brightness, the CMB, and primordial abundances. The middle column lists models such as gravity, stellar populations, the distance ladder, expanding space, recombination physics, and nuclear reactions. The right column lists inferences including Milky Way structure, dark matter halos, supermassive black holes, cosmic expansion, dark energy, the hot Big Bang, and recycled elements."
+    credit: "Illustration: A. Rosen (SVG)"
+    module: 3
+
   # ==============================================================
   # Module 4: Galaxies & Cosmology
   # ==============================================================

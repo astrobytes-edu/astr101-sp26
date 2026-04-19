@@ -70,7 +70,7 @@ This reading is the most important quantitative section of Module 3. If you unde
 **Reference mode:** The Distance Ladder Reference Box and the $H_0$ table are the long-term study references.
 :::
 
-<!-- FIGURE: module-3-concept-map (placeholder) — one-page visual of how this reading's ideas connect to the Module 3 spine: parallax → MS fitting → Cepheids → Type Ia SNe → Hubble's law; why each rung calibrates the next; and where dark energy (Lecture 25) and the CMB (Lecture 26) plug into $H_0$. -->
+{{< fig module-3-evidence-chain-concept-map >}}
 
 ## Learning Outcomes
 
@@ -307,6 +307,27 @@ Because the universe has a finite age, there is a finite distance from which lig
 $$d_H = c / H_0 \approx 4.3 \text{ Gpc}$$
 
 for $H_0 = 70$ km/s/Mpc. The *actual* comoving radius of the observable universe (accounting for expansion during the light's travel) is larger, ~14 Gpc or ~46 billion light-years. But the Hubble distance sets the scale: the observable universe is tens of billions of light-years across.
+
+::: {.callout-roadmap title="ViewSpace Interactive: Chandra Deep Field-South" collapse="false"}
+Use the wavelength buttons to compare infrared, visible, ultraviolet, X-ray, and multiwavelength views of the same deep field. This is the observational version of the phrase "lookback time": distant galaxies are not just far away; their light left when the universe was younger.
+
+What to notice: each wavelength selects a different physical process. Infrared highlights dust and old/redshifted starlight, ultraviolet highlights star formation, X-rays reveal actively growing black holes, and the composite turns one patch of sky into a timeline of galaxy evolution.
+
+<div class="demo-embed" style="width: 100%; margin: 1rem 0;">
+  <iframe
+    src="https://viewspace.org/interactives/unveiling_invisible_universe/seeing_farther/chandra_deep_field"
+    width="100%"
+    height="560px"
+    style="border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; background: #0a0a14;"
+    loading="lazy"
+    title="ViewSpace: Chandra Deep Field-South Interactive"
+    allow="fullscreen">
+  </iframe>
+  <p style="text-align: center; margin-top: 0.5rem; font-size: 0.875rem; color: #666;">
+    <a href="https://viewspace.org/interactives/unveiling_invisible_universe/seeing_farther/chandra_deep_field" target="_blank" rel="noopener" style="color: #5dade2;">Open the ViewSpace interactive in a new tab</a> (NASA/STScI ViewSpace)
+  </p>
+</div>
+:::
 
 ---
 

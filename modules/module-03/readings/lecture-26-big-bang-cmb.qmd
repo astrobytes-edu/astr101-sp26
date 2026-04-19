@@ -71,7 +71,7 @@ This reading is the finale of Module 3 and the finale of the course. It closes t
 **Reference mode:** The Timeline Box, the BBN Box, and the Periodic Table Origins figure are the study references.
 :::
 
-<!-- FIGURE: module-3-concept-map (placeholder) — one-page visual of how this reading's ideas connect to the Module 3 spine: Hubble expansion (L24) + CMB + primordial abundances = three pillars of the Big Bang; BBN sets H/He; recombination → CMB; structure growth → cosmic web (L23) → galaxies (L22); stellar nucleosynthesis (Module 2) → the rest of the periodic table. -->
+{{< fig module-3-evidence-chain-concept-map >}}
 
 ## Learning Outcomes
 

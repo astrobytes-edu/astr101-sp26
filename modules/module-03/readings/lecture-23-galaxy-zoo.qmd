@@ -70,7 +70,7 @@ This reading is a guided tour of the galaxy population and its central engines.
 **Reference mode:** The Galaxy Reference Box and the Glossary are the study references.
 :::
 
-<!-- FIGURE: module-3-concept-map (placeholder) — one-page visual of how this reading's ideas connect to the Module 3 spine: Hubble sequence → stellar populations, quasars → SMBH accretion, M–σ relation → co-evolution, cosmic web → dark matter skeleton that Lectures 24 – 26 will quantify. -->
+{{< fig module-3-evidence-chain-concept-map >}}
 
 ## Learning Outcomes
 
@@ -90,6 +90,27 @@ Lecture 22 ended at the Galactic Center, 8 kpc from Earth. Step outward. At 50 k
 
 {{< fig lsst-cosmic-treasure-chest >}}
 
+::: {.callout-roadmap title="ViewSpace Interactive: Hubble Ultra Deep Field" collapse="false"}
+Use the exposure-time slider to watch a dark patch of sky turn into a field of galaxies. Start at the shortest exposure and ask: which specks would you trust as real? Then move right and notice how repeated exposures separate faint sources from noise.
+
+What to notice: "empty sky" is often an exposure-time statement, not a physical statement. Deep fields are why we know the galaxy population includes faint, distant systems whose light has been traveling for most of cosmic history.
+
+<div class="demo-embed" style="width: 100%; margin: 1rem 0;">
+  <iframe
+    src="https://viewspace.org/interactives/unveiling_invisible_universe/gathering_light/hubble_ultra_deep_field"
+    width="100%"
+    height="560px"
+    style="border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; background: #0a0a14;"
+    loading="lazy"
+    title="ViewSpace: Hubble Ultra Deep Field Interactive"
+    allow="fullscreen">
+  </iframe>
+  <p style="text-align: center; margin-top: 0.5rem; font-size: 0.875rem; color: #666;">
+    <a href="https://viewspace.org/interactives/unveiling_invisible_universe/gathering_light/hubble_ultra_deep_field" target="_blank" rel="noopener" style="color: #5dade2;">Open the ViewSpace interactive in a new tab</a> (NASA/STScI ViewSpace)
+  </p>
+</div>
+:::
+
 What you would notice looking at those galaxies is that they are not random. Most of them fall into a small number of shape categories that were first systematized by Edwin Hubble in 1926 — the so-called **Hubble sequence**, or *Hubble tuning fork*.
 
 ### The Hubble Sequence
@@ -105,6 +126,69 @@ Galaxies come in three broad morphological classes:
 The three classes are not just aesthetic — they are *stellar-population* classes. An elliptical is a galaxy that stopped making stars long ago. A spiral is a galaxy that is still making them. An irregular is often a galaxy in a disturbed dynamical state, where a recent interaction has stirred things up and triggered new star formation.
 
 One important warning: the Hubble sequence is a **classification scheme**, not an evolutionary path. Ellipticals do not automatically turn into spirals, and spirals do not naturally march along the tuning fork from one subtype to another. The sequence helps us sort what galaxies look like today; the physical history has to be inferred from stellar populations, gas, dynamics, and environment.
+
+::: {.callout-roadmap title="ViewSpace Interactive: Future of the Milky Way" collapse="true"}
+Use this as a corrective to the tempting but wrong idea that galaxy type is a fixed identity. Follow the projected Milky Way-Andromeda interaction from separate spirals to a merged elliptical-like remnant.
+
+What to notice: the stars mostly pass by one another, but the gas does not. Gas compression triggers star formation, and later gas depletion helps leave behind a more mature, less star-forming system.
+
+<div class="demo-embed" style="width: 100%; margin: 1rem 0;">
+  <iframe
+    src="https://viewspace.org/interactives/unveiling_invisible_universe/interacting_galaxies/future_of_the_milky_way"
+    width="100%"
+    height="560px"
+    style="border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; background: #0a0a14;"
+    loading="lazy"
+    title="ViewSpace: Future of the Milky Way Interactive"
+    allow="fullscreen">
+  </iframe>
+  <p style="text-align: center; margin-top: 0.5rem; font-size: 0.875rem; color: #666;">
+    <a href="https://viewspace.org/interactives/unveiling_invisible_universe/interacting_galaxies/future_of_the_milky_way" target="_blank" rel="noopener" style="color: #5dade2;">Open the ViewSpace interactive in a new tab</a> (NASA/STScI ViewSpace)
+  </p>
+</div>
+:::
+
+::: {.callout-roadmap title="ViewSpace Interactive: Star Cluster NGC 602" collapse="true"}
+NGC 602 is a star-forming region in the Small Magellanic Cloud, a satellite galaxy of the Milky Way. Use the exposure-time slider to connect two ideas at once: longer exposures reveal fainter structure, and young massive stars sculpt the gas around them.
+
+What to notice: the same image is both a galaxy-population clue and a stellar-lifecycle clue. The blue young stars, glowing gas, and dusty pillars are the local evidence behind the phrase "gas-rich galaxies are still forming stars."
+
+<div class="demo-embed" style="width: 100%; margin: 1rem 0;">
+  <iframe
+    src="https://viewspace.org/interactives/unveiling_invisible_universe/gathering_light/ngc_602"
+    width="100%"
+    height="560px"
+    style="border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; background: #0a0a14;"
+    loading="lazy"
+    title="ViewSpace: Star Cluster NGC 602 Interactive"
+    allow="fullscreen">
+  </iframe>
+  <p style="text-align: center; margin-top: 0.5rem; font-size: 0.875rem; color: #666;">
+    <a href="https://viewspace.org/interactives/unveiling_invisible_universe/gathering_light/ngc_602" target="_blank" rel="noopener" style="color: #5dade2;">Open the ViewSpace interactive in a new tab</a> (NASA/STScI ViewSpace)
+  </p>
+</div>
+:::
+
+::: {.callout-roadmap title="ViewSpace Interactive: The Antennae" collapse="true"}
+Use the wavelength buttons to inspect a real galaxy collision in radio, infrared, visible, and X-ray light. This is a better mental model for galaxy evolution than a static tuning fork.
+
+What to notice: different wavelengths reveal different stages of the same physical event. Radio and infrared trace gas and dust; visible light traces stars and star-forming regions; X-rays reveal compact remnants and hot gas from earlier waves of massive-star evolution.
+
+<div class="demo-embed" style="width: 100%; margin: 1rem 0;">
+  <iframe
+    src="https://viewspace.org/interactives/unveiling_invisible_universe/interacting_galaxies/the_antennae"
+    width="100%"
+    height="560px"
+    style="border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; background: #0a0a14;"
+    loading="lazy"
+    title="ViewSpace: The Antennae Interactive"
+    allow="fullscreen">
+  </iframe>
+  <p style="text-align: center; margin-top: 0.5rem; font-size: 0.875rem; color: #666;">
+    <a href="https://viewspace.org/interactives/unveiling_invisible_universe/interacting_galaxies/the_antennae" target="_blank" rel="noopener" style="color: #5dade2;">Open the ViewSpace interactive in a new tab</a> (NASA/STScI ViewSpace)
+  </p>
+</div>
+:::
 
 ::: {.callout-roadmap title="Structure Reference Box: Galaxy Types"}
 | Type | Shape | Dominant stars | Gas/dust | Star formation |
@@ -170,6 +254,27 @@ Lecture 22 ended with a supermassive black hole at the center of our Galaxy — 
 *Most* SMBHs in the local universe are like Sgr A* — dormant. But in some galaxies, the central black hole is actively feeding on surrounding gas, and when it does, it produces one of the most extreme sources of light in the universe. These galaxies are called **active galactic nuclei (AGN)**, and their most luminous members are **quasars**.
 
 <!-- FIGURE: AGN schematic showing central SMBH, accretion disk, dusty torus, broad-line region, narrow-line region, and bipolar jets -->
+
+::: {.callout-roadmap title="ViewSpace Interactive: Centaurus A" collapse="false"}
+Use the wavelength buttons to build a multiwavelength picture of an active galaxy. First look in visible light and ask what is hidden; then compare radio, infrared, and X-ray views.
+
+What to notice: the active SMBH is not just a bright point. Radio and X-ray light reveal jets tens of thousands of light-years long, while infrared and visible light reveal dust and stars from a merger history. This is the AGN engine embedded in a real galaxy.
+
+<div class="demo-embed" style="width: 100%; margin: 1rem 0;">
+  <iframe
+    src="https://viewspace.org/interactives/unveiling_invisible_universe/black_holes/centaurus_a"
+    width="100%"
+    height="560px"
+    style="border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; background: #0a0a14;"
+    loading="lazy"
+    title="ViewSpace: Centaurus A Interactive"
+    allow="fullscreen">
+  </iframe>
+  <p style="text-align: center; margin-top: 0.5rem; font-size: 0.875rem; color: #666;">
+    <a href="https://viewspace.org/interactives/unveiling_invisible_universe/black_holes/centaurus_a" target="_blank" rel="noopener" style="color: #5dade2;">Open the ViewSpace interactive in a new tab</a> (NASA/STScI ViewSpace)
+  </p>
+</div>
+:::
 
 An AGN has four components:
 
