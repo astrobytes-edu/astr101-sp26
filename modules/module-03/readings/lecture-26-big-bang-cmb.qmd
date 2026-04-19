@@ -158,6 +158,24 @@ The CMB is an astonishingly rich data source. From its properties we can read:
 - **The first stars formed ~100 – 400 Myr after the Big Bang.** (The optical depth to reionization, measured from CMB polarization, dates this.)
 - **The Hubble constant is ~67 km/s/Mpc.** (From the geometry of the acoustic peaks — giving the CMB leg of the Hubble tension, Lecture 24.)
 
+::: {.callout-roadmap title="Video: Flying Through the Cosmic Web" collapse="false"}
+This artist's concept animation imagines flying through the vast web of galaxies that fill the visible universe. Treat it as a model picture, not as the evidence itself: the evidence is the pattern of CMB fluctuations, galaxy positions, and large-scale clustering; the animation helps you picture the structure that those measurements describe.
+
+<div class="demo-embed" style="width: 100%; margin: 1rem 0;">
+  <video
+    controls
+    preload="metadata"
+    poster="https://svs.gsfc.nasa.gov/vis/a010000/a014900/a014950/14950_Galaxies_FlyThrough_Still.jpg"
+    style="width: 100%; border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; background: #0a0a14;">
+    <source src="https://svs.gsfc.nasa.gov/vis/a010000/a014900/a014950/14950_Galaxies_FlyThrough_1080.mp4" type="video/mp4">
+    This artist's concept animation imagines flying through the vast web of galaxies that fill the visible universe.
+  </video>
+  <p style="text-align: center; margin-top: 0.5rem; font-size: 0.875rem; color: #666;">
+    <a href="https://svs.gsfc.nasa.gov/14950/" target="_blank" rel="noopener" style="color: #5dade2;">Open the NASA SVS source page in a new tab</a> (Credit: NASA's Goddard Space Flight Center/Conceptual Image Lab)
+  </p>
+</div>
+:::
+
 The CMB is one of the most information-rich measurements in physics. Missions like COBE (1989), WMAP (2001), and Planck (2009 – 2013) have measured it in progressively finer detail.
 
 ::: {.callout-roadmap title="Reference Box: The Three CMB Missions"}

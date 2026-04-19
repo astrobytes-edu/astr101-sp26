@@ -48,6 +48,25 @@ This page answers three questions:
 **Punchline:** A galaxy's rotation curve is a stellar-kinematics measurement that demands dark matter, and the stars near Sgr A* are a stellar-kinematics measurement that demands a supermassive black hole.
 :::
 
+::: {.callout-roadmap title="Video: Our Interstellar Medium" collapse="false"}
+Our Milky Way galaxy is home to more than 100 billion stars that are often separated by trillions of miles. The spaces in between, called the interstellar medium, are not empty; they are sprinkled with gas and dust that are both the seeds of new stars and the leftover crumbs from stars long dead. Studying the interstellar medium with observatories like NASA's upcoming Nancy Grace Roman Space Telescope will reveal new insight into the galactic dust recycling system.
+
+<div class="demo-embed" style="width: 100%; margin: 1rem 0;">
+  <video
+    controls
+    preload="metadata"
+    poster="https://svs.gsfc.nasa.gov/vis/a010000/a014800/a014897/Our_Interstellar_Medium_Thumbnail.jpg"
+    style="width: 100%; border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; background: #0a0a14;">
+    <source src="https://svs.gsfc.nasa.gov/vis/a010000/a014800/a014897/14897_-_Our_Interstellar_Medium.mp4" type="video/mp4">
+    <track kind="subtitles" label="English" srclang="en-US" src="https://svs.gsfc.nasa.gov/vis/a010000/a014800/a014897/Our_Interstellar_Medium.en_US.vtt">
+    Our Milky Way galaxy is home to more than 100 billion stars, with gas and dust in the interstellar medium acting as both raw material for new stars and leftovers from dead stars.
+  </video>
+  <p style="text-align: center; margin-top: 0.5rem; font-size: 0.875rem; color: #666;">
+    <a href="https://svs.gsfc.nasa.gov/14897/#media_group_378868" target="_blank" rel="noopener" style="color: #5dade2;">Open the NASA SVS source page in a new tab</a> (Credit: NASA's Goddard Space Flight Center)
+  </p>
+</div>
+:::
+
 ---
 
 ::: {.callout-roadmap title="How to Use This Reading" collapse="true"}
@@ -101,7 +120,7 @@ The question for today is: *what does this galaxy actually look like, and what i
 
 Imagine you could fly far above the Milky Way and look down. What you would see is a **barred spiral galaxy** with four distinguishable components:
 
-{{< fig milky-way-structure >}}
+{{< fig milky-way-anatomy >}}
 
 **1. The Disk.** A thin, rotating pancake of stars and gas, ~30 kpc across and only ~0.3 kpc thick. The disk hosts most of the galaxy's young and intermediate-age stars and almost all of its star-forming gas. The Sun lives in the disk, about 8 kpc from the center.
 
@@ -110,8 +129,6 @@ Imagine you could fly far above the Milky Way and look down. What you would see 
 **3. The Stellar Halo.** A sparse, roughly spherical distribution of very old stars and **globular clusters** that surrounds the disk and bulge. Halo stars were born early in the galaxy's history and have been orbiting on elongated, randomly oriented paths ever since.
 
 **4. The Spiral Arms.** Bright, wound patterns within the disk traced by young, hot O- and B-type stars (callback to Lecture 16) and by the glowing gas of H II regions where those stars were recently born. Spiral arms are not fixed lanes of material; they are density waves that stars and gas flow through.
-
-<!-- FIGURE: Face-on and edge-on schematic of the Milky Way with labeled components (disk, bulge, bar, halo, globular clusters, spiral arms, Sun's position at ~8 kpc). -->
 
 ### Populations: Reading the Galaxy with Stellar Physics
 
@@ -164,6 +181,18 @@ Infrared photons also pass through dust far more easily than visible ones. The S
 {{< fig gaia-reach-module2 >}}
 
 Gaia, by contrast, works at visible wavelengths and measures precise stellar parallaxes (callback to Lecture 15). It cannot see through dust toward the Galactic Center, but within the parts of the disk it can reach, it has measured the three-dimensional positions and velocities of well over a billion stars — a transformational dataset that has, for example, revealed the imprint of past minor mergers in the stellar halo.
+
+::: {.callout-roadmap title="Video: Mapping the Milky Way with Gaia"}
+<div class="ratio ratio-16x9">
+  <video controls preload="metadata" aria-label="Animation showing a Gaia-based map of the Milky Way.">
+    <source src="../../../assets/videos/esa-milky-way-gaia.mp4" type="video/mp4">
+    Your browser does not support embedded video. Open the course asset at
+    <a href="../../../assets/videos/esa-milky-way-gaia.mp4">assets/videos/esa-milky-way-gaia.mp4</a>.
+  </video>
+</div>
+
+As you watch, keep the evidence chain in mind: Gaia measures positions, parallaxes, and motions for individual stars; the map appears only after those measurements are stitched together into a model of the Galaxy.
+:::
 
 ::: {.callout-summary title="Takeaway: Mapping"}
 **To map a dusty galaxy, change your wavelength: 21-cm HI traces the gas, infrared traces the stars, and Gaia parallaxes build precise 3-D maps where dust allows.**

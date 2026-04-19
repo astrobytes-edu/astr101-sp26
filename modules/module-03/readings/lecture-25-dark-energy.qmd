@@ -183,6 +183,27 @@ Here "farther" means **luminosity distance**, not distance in a static Euclidean
 
 This was announced in 1998 (Riess et al.) and 1999 (Perlmutter et al.). It won the 2011 Nobel Prize in Physics. And it required a radical revision of cosmology.
 
+::: {.callout-roadmap title="Video: Accelerating Expansion" collapse="false"}
+This NASA SVS animation is a useful visual bridge between the supernova observation and the phrase **accelerating expansion**. As you watch, keep the evidence chain straight: the animation is not the evidence itself. The evidence is the Type Ia Hubble diagram; the animation is a model picture of what that evidence says about cosmic history.
+
+What to notice: in a matter-only universe, gravity should make the expansion slow down with time. The Type Ia result says the opposite happened in the recent universe: expansion was slower in the past and is faster now.
+
+<div class="demo-embed" style="width: 100%; margin: 1rem 0;">
+  <video
+    controls
+    preload="metadata"
+    poster="https://svs.gsfc.nasa.gov/vis/a020000/a020200/a020246/WFirstExpansion_00599_print.jpg"
+    style="width: 100%; border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; background: #0a0a14;">
+    <source src="https://svs.gsfc.nasa.gov/vis/a020000/a020200/a020246/WFIRST_Dark_Energy_Expansion_H264_1080p.webm" type="video/webm">
+    <source src="https://svs.gsfc.nasa.gov/vis/a020000/a020200/a020246/WFIRST_Dark_Energy_Expansion_H264_1080p.mov" type="video/quicktime">
+    Animation illustrating the accelerating expansion of the universe.
+  </video>
+  <p style="text-align: center; margin-top: 0.5rem; font-size: 0.875rem; color: #666;">
+    <a href="https://svs.gsfc.nasa.gov/20246/" target="_blank" rel="noopener" style="color: #5dade2;">Open the NASA SVS source page in a new tab</a> (Credit: NASA's Goddard Space Flight Center Conceptual Image Lab)
+  </p>
+</div>
+:::
+
 ::: {.callout-check-yourself #cy-dimmer-farther}
 ## Check Yourself 3: Dimmer Means Farther
 

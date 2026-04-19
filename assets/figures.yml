@@ -1917,6 +1917,13 @@ figures:
     alt: "Chart showing white dwarf, neutron star, and black hole formation by mass"
     module: 3
 
+  milky-way-anatomy:
+    path: /assets/images/module-03/Milky_Way_Anatomy_Infographic_Simple_Final.jpg
+    caption: "What to notice: the Milky Way is not just a flat spiral disk. It has a thin disk, thick disk, central bar and bulge, spiral arms, interstellar medium, stellar halo, and extended dark-matter halo."
+    alt: "Infographic titled Milky Way Anatomy showing a face-on and edge-on view of the galaxy. Labels identify the interstellar medium, central bar, spiral arms, Sun, disk, thin disk, thick disk, bulge, dark matter halo, and stellar halo, with approximate sizes for several components."
+    credit: "Course illustration"
+    module: 3
+
   module-3-evidence-chain-concept-map:
     path: /assets/images/module-03/module-3-evidence-chain-concept-map.svg
     caption: "What to notice: Module 3 uses the same evidence chain over and over. Observables such as motions, spectra, standard candles, supernova brightness, the CMB, and element abundances become physical claims only after a model translates them."
