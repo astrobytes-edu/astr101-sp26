@@ -2102,6 +2102,13 @@ figures:
     credit: "NASA"
     module: 3
 
+  m-sigma-smbh-relation:
+    path: /assets/images/module-03/Mass-Sigma-SMBH-relationship-Astronomy-Magazine.jpg
+    caption: "What to notice: central black-hole mass increases with the random motions of stars in the galaxy bulge. The plot is not saying the black hole directly controls the whole bulge; it is showing that the black hole and bulge somehow grew in linked ways."
+    alt: "Astronomy magazine plot titled Mass relationships, showing black-hole mass in solar masses on the vertical axis versus stellar velocity dispersion in kilometers per second on the horizontal axis. Elliptical, lenticular, and spiral galaxies cluster along an upward trend, with labeled points including the Milky Way, Andromeda, M87, M60, NGC 1277, and Circinus."
+    credit: "Astronomy: Roen Kelly, after Kayhan Gultekin et al."
+    module: 3
+
   agn-types-unified-model:
     path: /assets/images/module-03/NASA-types-of-AGN.jpg
     caption: "What to notice: many AGN names partly encode viewing angle. The same basic engine can look like a Seyfert galaxy, quasar, or blazar depending on how the disk, torus, and jets point toward us."

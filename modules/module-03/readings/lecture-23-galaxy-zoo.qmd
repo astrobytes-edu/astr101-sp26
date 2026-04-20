@@ -389,7 +389,9 @@ $$M_{\text{SMBH}} \propto \sigma^{\alpha}$$
 
 with $\alpha \approx 4 - 5$ from observations. A galaxy with a more massive bulge has a more massive black hole, and the correlation is so tight (scatter of only a factor of ~2 – 3) that it cannot be an accident.
 
-<!-- FIGURE: M-sigma plot showing SMBH mass vs. bulge velocity dispersion with power-law fit; include Milky Way, M31, and NGC 1277 as labeled points -->
+{{< fig m-sigma-smbh-relation >}}
+
+Read this as an evidence plot, not as a magic rule. The x-axis is a stellar measurement: the random speeds of stars in the bulge, inferred from Doppler broadening. The y-axis is a black-hole mass inferred from stellar or gas dynamics near the center. The trend says those two measurements know about each other.
 
 This is strange. The bulge contains $\sim 10^{11}$ stars and extends over ~kiloparsecs. The SMBH sits at the center and is, by galactic standards, tiny — $R_S \sim 10$ AU even for the biggest SMBHs. The SMBH's *direct* gravitational influence extends only over parsecs, not kiloparsecs. Yet they grow in lockstep.
 
