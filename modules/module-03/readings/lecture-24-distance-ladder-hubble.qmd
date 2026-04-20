@@ -128,6 +128,8 @@ Here is where stars begin to do the real cosmological work. The discovery of the
 
 In 1912, Henrietta Leavitt — a "computer" at Harvard College Observatory — noticed that a class of pulsating stars in the Small Magellanic Cloud (SMC) had a remarkable property: their **period of brightness variation was tightly correlated with their mean brightness**. Because every star in the SMC is at essentially the same distance from us, differences in *apparent* brightness were differences in *intrinsic* luminosity. Leavitt had found a relation between period and luminosity:
 
+{{< fig cepheid-light-curve-m31 >}}
+
 $$\log_{10} L = a \log_{10} P + b$$
 
 with $P$ measured in days. Longer-period Cepheids are intrinsically more luminous. Modern calibrations give (approximately):
@@ -140,7 +142,7 @@ for classical Cepheids. A 10-day Cepheid is about ~4,700 $L_\odot$. A 100-day Ce
 The numerical coefficients in the Leavitt relation (here 335 and 1.15) depend on wavelength band, zero-point calibration, and metallicity corrections. Modern calibrations in the literature (Madore & Freedman; Riess et al.; the Hubble Space Telescope Key Project) agree within a few tens of percent but are not identical. The relation we use here is a representative bolometric form suitable for order-of-magnitude distance estimates. For actual distance-ladder work, astronomers use carefully calibrated near-infrared relations with explicit metallicity corrections.
 :::
 
-<!-- FIGURE: Leavitt's period-luminosity relation showing log(L) vs. log(P) with Cepheid data points and best-fit line -->
+{{< fig cepheid-period-luminosity-plot >}}
 
 This is the key move: **the period, which we can measure from a distant galaxy, tells us the luminosity, which lets us compute distance.** The calibration comes from nearby Cepheids whose distances we know from parallax (Rung 2) or cluster fitting (Rung 3).
 
@@ -178,6 +180,8 @@ Cepheids peter out at ~30 Mpc. To go farther we need something *brighter*. **Typ
 Crucially, they are **approximately** standard: they all explode from (roughly) the same physical configuration, so their peak luminosities fall in a narrow range that can be further tightened using the *shape* of their light curve (the Phillips relation).
 
 Type Ia SNe are calibrated on Cepheids — we measure Cepheids in nearby galaxies that have also hosted Type Ia SNe, which fixes the Type Ia peak luminosity. That calibrated Type Ia luminosity is then applied to very distant SNe to measure cosmic distances.
+
+{{< fig hubble-sne-host-galaxies >}}
 
 Lecture 25 gives the full stellar-physics story — what explodes, why, and why the peak luminosity is (nearly) universal. For now, we use them as "ultra-bright Cepheids."
 
@@ -242,6 +246,26 @@ Imagine dots painted on the surface of a balloon. As the balloon inflates, every
 <!-- FIGURE: Balloon analogy showing dots on an inflating balloon; alternatively, raisin bread analogy showing raisins moving apart as dough rises -->
 
 The redshift is not really a Doppler shift (though for small distances the math is the same). It is a **cosmological redshift** — light stretched by the expansion of space during its travel from source to us.
+
+::: {.callout-roadmap title="Video: Redshift from Expanding Space" collapse="false"}
+This NASA SVS animation shows the key physical idea behind cosmological redshift: as the universe expands, the wavelength of traveling light stretches along with space. Watch for the evidence-chain distinction: the animation is a model picture, while the observable is the shift of known spectral features to longer wavelengths.
+
+<div class="demo-embed" style="width: 100%; margin: 1rem 0;">
+  <video
+    controls
+    preload="metadata"
+    poster="https://svs.gsfc.nasa.gov/vis/a010000/a012800/a012856/Universe_Redshift.jpg"
+    aria-label="NASA animation showing expanding space stretching light to longer wavelengths, producing cosmological redshift."
+    style="width: 100%; border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; background: #0a0a14;">
+    <source src="https://svs.gsfc.nasa.gov/vis/a010000/a012800/a012856/Redshift_Expansion_v3_1.mp4" type="video/mp4">
+    <source src="https://svs.gsfc.nasa.gov/vis/a010000/a012800/a012856/Redshift_Expansion_v3_1.webm" type="video/webm">
+    As the universe expands, it stretches the wavelengths of light along with it, a process called redshift.
+  </video>
+  <p style="text-align: center; margin-top: 0.5rem; font-size: 0.875rem; color: #666;">
+    <a href="https://svs.gsfc.nasa.gov/12856/#media_group_317867" target="_blank" rel="noopener" style="color: #5dade2;">Open the NASA SVS source page in a new tab</a> (Credit: NASA/JPL-Caltech/R. Hurt, Caltech-IPAC)
+  </p>
+</div>
+:::
 
 ::: {.callout-check-yourself #cy-hubble-law}
 ## Check Yourself 3: Applying Hubble's Law
@@ -342,6 +366,8 @@ Here is the current problem. We have **two independent ways** to measure $H_0$:
 The two methods are independent in a very specific way. The local ladder is an astrophysical calibration chain: parallax calibrates Cepheids, Cepheids calibrate Type Ia SNe, and Type Ia SNe calibrate the low-redshift Hubble diagram. The CMB route is an early-universe inference: the acoustic pattern in the CMB gives a value of $H_0$ only after assuming a cosmological model. That is what makes the tension interesting. The disagreement is not just two teams measuring the same thing badly; it is two different inference machines failing to meet.
 
 These two values disagree by about 5σ — a statistical significance that in most fields would be considered a discovery. And yet it persists after years of increasingly careful measurements. It is called the **Hubble tension**.
+
+{{< fig measuring-hubble-constant-three-ways >}}
 
 What could cause it?
 

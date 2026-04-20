@@ -1995,6 +1995,27 @@ figures:
     credit: "Course-provided figure"
     module: 3
 
+  sombrero-galaxy-hubble:
+    path: /assets/images/module-03/sombrero-galaxy-hubble.jpg
+    caption: "What to notice: the Sombrero Galaxy mixes a bright bulge with a thin dust-rich disk. Real galaxies often sit between tidy textbook categories, so classification is a starting point for physical interpretation."
+    alt: "Hubble image of the Sombrero Galaxy seen nearly edge-on, with a large bright central bulge and a thin dark dust lane across the disk."
+    credit: "NASA/ESA/Hubble"
+    module: 3
+
+  whirlpool-galaxy-merger:
+    path: /assets/images/module-03/whirlpool-galaxy-merger.jpg
+    caption: "What to notice: the Whirlpool Galaxy turns interaction into structure. Its companion helps organize spiral arms, dust lanes, and star-forming regions, reminding us that morphology records environment."
+    alt: "Hubble image of the Whirlpool Galaxy with a bright spiral disk, pink star-forming regions, dark dust lanes, and a smaller companion galaxy connected by tidal structure."
+    credit: "NASA/ESA/Hubble"
+    module: 3
+
+  starburst-m82:
+    path: /assets/images/module-03/starburst-M82.jpg
+    caption: "What to notice: starburst galaxies convert gas into stars at an extreme rate. The red outflowing material in M82 is feedback: young massive stars and supernovae pushing gas out of the galaxy."
+    alt: "Image of the starburst galaxy M82 showing a bright blue-white disk crossed by dust lanes and red glowing gas streaming out above and below the galaxy."
+    credit: "NASA/ESA/Hubble"
+    module: 3
+
   s-star-orbits-keck-ucla:
     path: /assets/images/module-03/S-stars-Orbits.png
     caption: "What to notice: the stars do not drift randomly. They trace closed, high-speed orbits around a common focus, which lets astronomers weigh the compact object at the Galactic Center with Kepler's third law."
@@ -2032,10 +2053,31 @@ figures:
     credit: "Course-provided figure"
     module: 3
 
+  galactic-disk-warp:
+    path: /assets/images/module-03/galactic-disk-warp.jpg
+    caption: "What to notice: galactic disks are not perfectly flat plates. Dust lanes, warps, and tilted outer gas layers show that a galaxy is a dynamical system shaped by gravity, accretion, and interactions."
+    alt: "Edge-on spiral galaxy with a bright central bulge and a dark dust lane cutting across a thin disk whose outer regions appear warped or tilted."
+    credit: "Course-provided figure"
+    module: 3
+
   milky-way-new-dwarf-galaxies:
     path: /assets/images/module-03/mw-newdwarfgalaxies.jpg
     caption: "What to notice: the Milky Way's halo is still being mapped. Known dwarf galaxies, globular clusters, and newly identified faint companions show that the Galaxy's environment extends far beyond the bright disk."
     alt: "All-sky map centered on the Milky Way plane. The Large and Small Magellanic Clouds are labeled, known globular clusters are shown in blue, known dwarf galaxies in green, and newly discovered dwarf-galaxy candidates in red."
+    credit: "Course-provided figure"
+    module: 3
+
+  hubble-galactic-center:
+    path: /assets/images/module-03/hubble-galactic-center.jpg
+    caption: "What to notice: the Galactic Center is crowded, dusty, and multiwavelength by necessity. Near-infrared and high-energy views turn an apparently hidden region into a map of stars, gas, and compact sources."
+    alt: "False-color panoramic image of the Milky Way's Galactic Center, with blue and purple high-energy emission mixed with reddish and golden dust and star-forming structures."
+    credit: "Course-provided figure"
+    module: 3
+
+  milky-way-outflow-quasar-probes:
+    path: /assets/images/module-03/mw-outflow-hubble-probed-by-quasars.jpg
+    caption: "What to notice: background quasars can act like flashlights shining through the Milky Way's halo. Absorption lines in their spectra reveal otherwise invisible gas flowing above and below the Galactic disk."
+    alt: "Illustration of the Milky Way seen edge-on with red and blue outflow lobes above and below the disk, a distant quasar used as a background light source, and a small absorption-spectrum inset."
     credit: "Course-provided figure"
     module: 3
 
@@ -2074,6 +2116,27 @@ figures:
     credit: "Course-provided figure"
     module: 3
 
+  andromeda-panoramic-hubble:
+    path: /assets/images/module-03/andromeda-panoramic-hubble.jpg
+    caption: "What to notice: Andromeda is close enough for Hubble to resolve enormous numbers of individual stars. That makes it both a neighboring galaxy and a bridge between stellar astronomy and galaxy astronomy."
+    alt: "Long panoramic Hubble image of the Andromeda galaxy showing a bright yellow-white bulge, blue star-forming disk regions, dust lanes, and a wide field of resolved stars."
+    credit: "NASA/ESA/Hubble"
+    module: 3
+
+  lsst-cosmic-treasure-chest-module3:
+    path: /assets/images/module-03/lsst-cosmic-treasure-chest.webp
+    caption: "What to notice: a deep survey image is a population sample. Each galaxy is both an object with a morphology and a distance marker waiting for the ladder to place it in three-dimensional space."
+    alt: "Deep Rubin Observatory field showing thousands of galaxies and stars, including many small spiral and elliptical galaxies at different apparent sizes and colors."
+    credit: "Rubin Observatory/NSF/AURA"
+    module: 3
+
+  hubble-ultra-deep-field-hst:
+    path: /assets/images/module-03/hubble-ultra-deep-field-hst.jpg
+    caption: "What to notice: nearly every tiny smudge is a galaxy. A deep field turns an apparently empty patch of sky into evidence for a universe filled with galaxies at many distances and lookback times."
+    alt: "Hubble Ultra Deep Field image showing a dark patch of sky filled with hundreds of tiny galaxies of many colors and shapes, plus a few foreground stars."
+    credit: "NASA/ESA/Hubble"
+    module: 3
+
   agn-structure-basic:
     path: /assets/images/module-03/agn_structure_illustration.png
     caption: "What to notice: the AGN engine is compact. A black hole plus accretion disk sits inside a dusty torus, and some systems launch jets perpendicular to the disk."
@@ -2086,6 +2149,13 @@ figures:
     caption: "What to notice: an active nucleus is embedded inside a host galaxy. Dust can hide the central engine in some directions while jets carry energy far beyond the black hole's immediate surroundings."
     alt: "Artist's impression of an active galactic nucleus inside a galaxy, with a bright central source, dark dust lane, and a jet or outflow extending from the nucleus."
     credit: "ESO"
+    module: 3
+
+  quasar-agn-artist-impression:
+    path: /assets/images/module-03/quasar-agn-artist-impression.jpg
+    caption: "What to notice: a quasar is an accretion engine, not a star. The bright disk and jets are powered by gravitational energy released near a supermassive black hole."
+    alt: "Artist's impression of a quasar or active galactic nucleus with a dark dusty disk around a brilliant central source and blue-white jets emerging in opposite directions."
+    credit: "Course-provided figure"
     module: 3
 
   agn-nustar-accretion-artist:
@@ -2163,6 +2233,34 @@ figures:
     caption: "What to notice: every point is a galaxy with a measured redshift. The cosmic web is not a drawing; it is the pattern that appears when distances are added to sky positions."
     alt: "Three-dimensional galaxy redshift-survey map made of colored points, with a wedge-shaped survey volume and a zoomed inset showing filamentary structure."
     credit: "NSF NOIRLab/DESI Collaboration"
+    module: 3
+
+  cepheid-light-curve-m31:
+    path: /assets/images/module-03/cepheid-light-curve-eso.jpg
+    caption: "What to notice: a Cepheid's period is directly observable. Repeated brightness measurements turn a distant unresolved star into a clock, and that clock predicts the star's luminosity."
+    alt: "Light curve of a Cepheid variable star labeled V1 in galaxy M31, with brightness on the vertical axis, dates on the horizontal axis, and a repeating sawtooth-like blue curve over a background image of Andromeda."
+    credit: "ESO"
+    module: 3
+
+  cepheid-period-luminosity-plot:
+    path: /assets/images/module-03/cepheids-P-L-plot.jpg
+    caption: "What to notice: longer-period Cepheids are intrinsically brighter. This plot is the ladder step: period is easy to measure, luminosity follows from the relation, and flux then gives distance."
+    alt: "Calibrated period-luminosity relation plot for Cepheids, showing luminosity or absolute magnitude versus period of variability. Cepheids in the Milky Way and Large Magellanic Cloud lie along a tight diagonal trend, with arrows indicating brighter and longer period."
+    credit: "NASA/IPAC Extragalactic Database"
+    module: 3
+
+  hubble-sne-host-galaxies:
+    path: /assets/images/module-03/hubble-host-sne-galaxies-galaxy-zoo.jpg
+    caption: "What to notice: Type Ia supernova calibration is a host-galaxy problem. Cepheids in nearby galaxies set the distance to the host, and that distance calibrates any Type Ia supernova that appeared there."
+    alt: "Montage of many Hubble galaxy images used as Type Ia supernova host galaxies, showing spirals, inclined disks, and irregular-looking systems in small panels."
+    credit: "NASA/ESA/Hubble"
+    module: 3
+
+  measuring-hubble-constant-three-ways:
+    path: /assets/images/module-03/measuring-hubble-constant-3ways.jpg
+    caption: "What to notice: $H_0$ is not one measurement. Local distance ladders, supernova calibration, and early-universe inferences are different routes to the same expansion rate, which is why disagreement between them matters."
+    alt: "Infographic titled Three Steps to Measuring the Hubble Constant, showing parallax calibration, Cepheid variables, Type Ia supernova host galaxies, and the cosmic microwave background as linked measurements."
+    credit: "Course-provided figure"
     module: 3
 
   black-hole-schematic-eso:

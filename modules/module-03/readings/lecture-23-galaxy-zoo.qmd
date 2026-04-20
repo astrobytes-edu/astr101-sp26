@@ -92,6 +92,10 @@ Lecture 22 ended at the Galactic Center, 8 kpc from Earth. Step outward. At 50 k
 
 The Local Group is the first place where "galaxy" stops meaning only "the Milky Way" and starts meaning a population. It contains a few large galaxies, a handful of intermediate companions, and many small dwarf galaxies whose faintness makes them hard to census completely.
 
+Andromeda is the nearest large spiral in that neighborhood. Because it is close enough for Hubble to resolve individual stars across its disk, it lets us connect the stellar-population tools from Module 2 to the galaxy-scale questions of Module 3.
+
+{{< fig andromeda-panoramic-hubble >}}
+
 ::: {.callout-deep-dive title="Scale Check: The Nearby Galaxy Neighborhood" collapse="true"}
 Before we jump to deep fields, pause on the nearby universe. The Local Group is not a representative sample of all galaxies, but it is the place where distances, sizes, and morphology are easiest to compare directly.
 
@@ -100,7 +104,9 @@ Before we jump to deep fields, pause on the nearby universe. The Local Group is 
 {{< fig local-group-nearest-galaxies-map >}}
 :::
 
-{{< fig lsst-cosmic-treasure-chest >}}
+{{< fig lsst-cosmic-treasure-chest-module3 >}}
+
+{{< fig hubble-ultra-deep-field-hst >}}
 
 ::: {.callout-roadmap title="ViewSpace Interactive: Hubble Ultra Deep Field" collapse="false"}
 Use the exposure-time slider to watch a dark patch of sky turn into a field of galaxies. Start at the shortest exposure and ask: which specks would you trust as real? Then move right and notice how repeated exposures separate faint sources from noise.
@@ -143,6 +149,8 @@ Galaxies come in three broad morphological classes:
 
 The three classes are not just aesthetic — they are *stellar-population* classes. An elliptical is a galaxy that stopped making stars long ago. A spiral is a galaxy that is still making them. An irregular is often a galaxy in a disturbed dynamical state, where a recent interaction has stirred things up and triggered new star formation.
 
+{{< fig sombrero-galaxy-hubble >}}
+
 One important warning: the Hubble sequence is a **classification scheme**, not an evolutionary path. Ellipticals do not automatically turn into spirals, and spirals do not naturally march along the tuning fork from one subtype to another. The sequence helps us sort what galaxies look like today; the physical history has to be inferred from stellar populations, gas, dynamics, and environment.
 
 ::: {.callout-roadmap title="ViewSpace Interactive: Future of the Milky Way" collapse="true"}
@@ -166,6 +174,10 @@ What to notice: the stars mostly pass by one another, but the gas does not. Gas 
 </div>
 :::
 
+The Whirlpool Galaxy is a concrete example of why morphology is historical evidence. Its spiral structure and companion are not independent facts; the interaction helps shape the very pattern we classify.
+
+{{< fig whirlpool-galaxy-merger >}}
+
 ::: {.callout-roadmap title="ViewSpace Interactive: Star Cluster NGC 602" collapse="true"}
 NGC 602 is a star-forming region in the Small Magellanic Cloud, a satellite galaxy of the Milky Way. Use the exposure-time slider to connect two ideas at once: longer exposures reveal fainter structure, and young massive stars sculpt the gas around them.
 
@@ -186,6 +198,10 @@ What to notice: the same image is both a galaxy-population clue and a stellar-li
   </p>
 </div>
 :::
+
+M82 pushes the same idea into the extreme. It is a starburst galaxy: gas is being converted into stars so rapidly that feedback from massive stars and supernovae drives material out of the disk.
+
+{{< fig starburst-m82 >}}
 
 ::: {.callout-roadmap title="ViewSpace Interactive: The Antennae" collapse="true"}
 Use the wavelength buttons to inspect a real galaxy collision in radio, infrared, visible, and X-ray light. This is a better mental model for galaxy evolution than a static tuning fork.
@@ -276,6 +292,8 @@ From $d = \sqrt{L/(4\pi F)}$, a factor-of-4 error in $L$ makes a factor-of-2 err
 Lecture 22 ended with a supermassive black hole at the center of our Galaxy — Sagittarius A*, weighing about $4 \times 10^6 \, M_\odot$. It is quiet. It barely shines.
 
 *Most* SMBHs in the local universe are like Sgr A* — dormant. But in some galaxies, the central black hole is actively feeding on surrounding gas, and when it does, it produces one of the most extreme sources of light in the universe. These galaxies are called **active galactic nuclei (AGN)**, and their most luminous members are **quasars**.
+
+{{< fig quasar-agn-artist-impression >}}
 
 {{< fig agn-eso-artist-impression >}}
 

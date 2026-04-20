@@ -122,6 +122,10 @@ Imagine you could fly far above the Milky Way and look down. What you would see 
 
 {{< fig milky-way-anatomy >}}
 
+Real galactic disks are not rigid plates. Gas can warp, dust lanes can trace tilted structures, and the outer disk responds to the gravity of companions and the surrounding dark-matter halo.
+
+{{< fig galactic-disk-warp >}}
+
 **1. The Disk.** A thin, rotating pancake of stars and gas, ~30 kpc across and only ~0.3 kpc thick. The disk hosts most of the galaxy's young and intermediate-age stars and almost all of its star-forming gas. The Sun lives in the disk, about 8 kpc from the center.
 
 **2. The Bulge and Bar.** A denser, roughly ellipsoidal concentration of stars at the center of the disk. In the Milky Way specifically, this central region is elongated into a **bar** that rotates with the disk. Stars in the bulge are typically older than disk stars.
@@ -174,6 +178,8 @@ The Milky Way's disk contains interstellar dust: micron-sized grains that absorb
 
 {{< fig galactic-center-multiwavelength-eso >}}
 
+{{< fig hubble-galactic-center >}}
+
 Dust is a problem for visible light specifically because visible wavelengths (~0.5 μm) are comparable to the size of dust grains. At longer wavelengths, the grains are less effective at blocking light. This means the solution is to *change the wavelength we observe at*. In practice, "mapping the Milky Way" always begins with the question: what tracer can get through the material between us and the part of the Galaxy we want to study?
 
 ### The 21-cm Line: Hydrogen as Our Native Guide
@@ -215,6 +221,10 @@ Gaia, by contrast, works at visible wavelengths and measures precise stellar par
 
 As you watch, keep the evidence chain in mind: Gaia measures positions, parallaxes, and motions for individual stars; the map appears only after those measurements are stitched together into a model of the Galaxy.
 :::
+
+There is one more clever mapping trick: use objects *behind* the Milky Way as flashlights. A distant quasar can shine through gas in our halo, and absorption lines in the quasar spectrum reveal gas that would otherwise be nearly invisible.
+
+{{< fig milky-way-outflow-quasar-probes >}}
 
 ::: {.callout-summary title="Takeaway: Mapping"}
 **To map a dusty galaxy, change your wavelength: 21-cm HI traces the gas, infrared traces the stars, and Gaia parallaxes build precise 3-D maps where dust allows.**
