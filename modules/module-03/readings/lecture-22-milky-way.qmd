@@ -130,6 +130,10 @@ Imagine you could fly far above the Milky Way and look down. What you would see 
 
 **4. The Spiral Arms.** Bright, wound patterns within the disk traced by young, hot O- and B-type stars (callback to Lecture 16) and by the glowing gas of H II regions where those stars were recently born. Spiral arms are not fixed lanes of material; they are density waves that stars and gas flow through.
 
+The visible disk is only the beginning of the Milky Way's gravitational footprint. Faint companion galaxies orbit far outside the bright spiral structure, and they are part of the same story as the stellar halo: small systems are continually being pulled into, stretched by, and sometimes absorbed by the larger Galaxy.
+
+{{< fig milky-way-satellite-galaxies-map >}}
+
 ### Populations: Reading the Galaxy with Stellar Physics
 
 One of the major payoffs of Module 2 is that each of these four components has a *recognizable stellar population*. Young blue disk stars, old red halo stars, and intermediate-age bulge stars tell different parts of the Milky Way's history.
@@ -141,6 +145,10 @@ If you know the H-R diagram (Lecture 16) and you know how stellar lifetimes depe
 :::
 
 {{< fig globular-cluster-47-tuc >}}
+
+Modern surveys keep finding faint companions around the Milky Way, especially in the halo. That matters because dwarf galaxies and globular clusters are not just "extra objects." They are dynamical tracers. Their positions and motions help astronomers map the mass distribution of the Milky Way far beyond the region where the disk's stars dominate the light.
+
+{{< fig milky-way-new-dwarf-galaxies >}}
 
 ::: {.callout-check-yourself title="Check Yourself 1"}
 Two stars have identical spectra consistent with a K5 dwarf. One orbits in the thin disk on a nearly circular path; the other orbits in the halo on a highly elongated, tilted path. Which was more likely born recently, and which was likely born in the galaxy's first few billion years?
@@ -176,6 +184,10 @@ At 21 cm, dust is utterly transparent. The galaxy's HI gas lights up like a map 
 
 {{< fig hi4pi-milky-way-map >}}
 
+Radio astronomy is not limited to the 21-cm hydrogen line. Continuum maps can trace ionized gas, energetic particles, and feedback structures around star-forming regions. The point is the same: when visible light is incomplete, changing the wavelength changes the physical question we can ask.
+
+{{< fig carina-radio-continuum-map >}}
+
 Even better: because HI is moving, we can Doppler-shift the 21-cm line (callback to Lecture 10) to measure its velocity along our line of sight. This gives us a *three-dimensional* kinematic map of the Milky Way's neutral hydrogen, including the parts of the disk hidden behind dust from our position.
 
 ### Infrared: Seeing Through Dust with Thermal Light
@@ -183,6 +195,10 @@ Even better: because HI is moving, we can Doppler-shift the 21-cm line (callback
 Infrared photons also pass through dust far more easily than visible ones. The Spitzer Space Telescope and, more recently, JWST have revealed the Galactic Center's dense stellar cluster in detail that optical images cannot achieve. Infrared is how we *see the stars* behind the dust; 21-cm is how we *see the gas* behind the dust.
 
 {{< fig galactic-center-great-observatories >}}
+
+The same logic works in nearby star-forming regions. A dusty nebula can look confusing or opaque in visible light, but infrared light turns the dust and embedded young stars into a readable map of where star formation is happening.
+
+{{< fig cats-paw-nebula-jwst >}}
 
 {{< fig gaia-reach-module2 >}}
 
@@ -370,6 +386,10 @@ In May 2022, the Event Horizon Telescope released the first direct image of Sgr 
 
 The polarized-light view shown here is a later EHT result, so keep the chronology straight: the *mass* of Sgr A\* came first from stellar orbits, the 2022 image checked the predicted shadow scale, and the polarized image adds information about magnetic fields near the event horizon.
 
+Polarization is also a nice example of the course throughline at work. We do not see magnetic fields directly. We infer their geometry from how light is polarized by plasma near the black hole and by dust grains across the Milky Way.
+
+{{< fig milky-way-polarization-context >}}
+
 ::: {.callout-check-yourself title="Check Yourself 4"}
 Using the Schwarzschild-radius formula from Lecture 21, $R_S = 2GM/c^2$, estimate the Schwarzschild radius of Sgr A* in AU. For $M = 4 \times 10^6 \, M_\odot$, $R_S$ in meters is about $2 \times (6.67 \times 10^{-11}) \times (4 \times 10^6 \times 2 \times 10^{30}) / (3 \times 10^8)^2$. Convert the final answer to AU using $1\,\text{AU} \approx 1.5 \times 10^{11}$ m.
 :::
@@ -436,6 +456,14 @@ Rotation curves are the classic evidence students meet first. They are not the o
 {{< fig ugc11455-rotation-curve-lensing >}}
 
 This figure previews how the argument scales up. The inner points are rotation-curve measurements, like the ones we just discussed. The far-out weak-lensing points ask a different question: how much total mass bends background light around the galaxy? The two methods do not measure the same thing in the same way, but they point toward the same conclusion: baryonic matter alone is not enough.
+
+The Bullet Cluster is the same kind of evidence, but with an even cleaner separation. In a galaxy-cluster collision, most of the ordinary matter is hot gas. The gas collides, slows down, and glows in X-rays. The galaxies and dark matter mostly pass through. Gravitational lensing then shows where the mass went.
+
+{{< fig bullet-cluster-composite >}}
+
+The newer multi-observatory view below makes the same point with a richer field. Do not try to memorize the colors; ask what each layer is tracing. Galaxies mark where stars are, X-rays mark hot gas, and lensing marks total gravitating mass.
+
+{{< fig bullet-cluster-jwst-chandra >}}
 
 ::: {.callout-roadmap title="ViewSpace Interactive: Bullet Cluster" collapse="false"}
 Use the wavelength controls to compare the visible galaxies, the X-ray-emitting gas, and the lensing-based mass map. This is the cleanest place in the module to see why dark matter is not just "stuff we forgot to count."

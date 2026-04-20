@@ -89,6 +89,22 @@ By the end of this reading, you should be able to say:
 
 Lecture 24 taught us that the universe is expanding: distant galaxies recede at rates proportional to their distance, and the rate of expansion is set by $H_0$. That is a statement about *today*. But Hubble's law has a past: if every pair of galaxies is moving apart today, then they used to be closer together. Farther back in time, the observable universe was smaller, hotter, and denser. If we extrapolate classical general relativity all the way back, the equations point toward a singularity; that is a warning sign that our tested physics has reached its limit. The **Big Bang** we can support observationally is not an explosion in space — it is the statement that space itself was once in a hot, dense state, and that the expansion has been stretching and cooling it ever since.
 
+{{< fig early-universe-redshift-schematic >}}
+
+Treat this figure as a conceptual map, not a scoreboard of the current "farthest galaxy." The record holders change as observations improve. The stable idea is that higher redshift means we are seeing light from earlier cosmic time.
+
+{{< fig jwst-cosmological-redshift >}}
+
+This is the physical reason high-redshift observations are often infrared observations. The light may have started in the visible or ultraviolet, but expansion stretches it toward longer wavelengths while it travels.
+
+{{< fig jwst-mom-z14-field >}}
+
+This is what that evidence looks like in practice: the visually modest smudge is not persuasive by itself. It becomes cosmological evidence only when photometry and spectroscopy connect that light to an extreme redshift.
+
+Individual high-redshift galaxies are only one part of the story. Surveys also ask a population question: when did the universe form stars most rapidly? Treat any compact star-formation-history graphic as a model summary, not as a number to memorize, because the inferred curve depends on dust corrections, wavelength coverage, and how faint a survey can go.
+
+{{< fig star-formation-across-cosmic-time >}}
+
 This is not speculation. It is what the equations of general relativity do when you feed in the observed expansion. The question is whether we have *evidence* that the universe actually was hot and dense in the past — not just mathematically convenient, but physically real.
 
 We do. Three separate lines of evidence fit together into what is often called the **three pillars of the Big Bang**.

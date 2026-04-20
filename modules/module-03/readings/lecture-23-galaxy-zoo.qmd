@@ -88,6 +88,18 @@ By the end of this reading, you should be able to say:
 
 Lecture 22 ended at the Galactic Center, 8 kpc from Earth. Step outward. At 50 kpc you reach the Large Magellanic Cloud, a small companion of the Milky Way. At ~780 kpc (~2.5 million light-years) you reach Andromeda (M31), our nearest large neighbor. Beyond that, the universe opens up: somewhere between a few hundred billion and a few trillion galaxies lie within the observable universe. The exact count depends on how you model the faint end of the galaxy luminosity function, and recent measurements of the cosmic optical background (e.g., New Horizons' LORRI data) have pushed the estimate toward the lower end of that range. Either way: *a lot*.
 
+{{< fig local-group-map >}}
+
+The Local Group is the first place where "galaxy" stops meaning only "the Milky Way" and starts meaning a population. It contains a few large galaxies, a handful of intermediate companions, and many small dwarf galaxies whose faintness makes them hard to census completely.
+
+::: {.callout-deep-dive title="Scale Check: The Nearby Galaxy Neighborhood" collapse="true"}
+Before we jump to deep fields, pause on the nearby universe. The Local Group is not a representative sample of all galaxies, but it is the place where distances, sizes, and morphology are easiest to compare directly.
+
+{{< fig local-group-size-comparison >}}
+
+{{< fig local-group-nearest-galaxies-map >}}
+:::
+
 {{< fig lsst-cosmic-treasure-chest >}}
 
 ::: {.callout-roadmap title="ViewSpace Interactive: Hubble Ultra Deep Field" collapse="false"}
@@ -110,6 +122,10 @@ What to notice: "empty sky" is often an exposure-time statement, not a physical 
   </p>
 </div>
 :::
+
+Deep-field galaxies are also multiwavelength objects. A galaxy that looks like a faint blob in visible light may reveal hidden star formation at radio wavelengths, where dust is less of an obstacle.
+
+{{< fig distant-star-forming-galaxies-hudf >}}
 
 What you would notice looking at those galaxies is that they are not random. Most of them fall into a small number of shape categories that were first systematized by Edwin Hubble in 1926 — the so-called **Hubble sequence**, or *Hubble tuning fork*.
 
@@ -192,6 +208,12 @@ What to notice: different wavelengths reveal different stages of the same physic
 </div>
 :::
 
+{{< fig antennae-hubble-alma >}}
+
+Galaxy interactions are not just visual distortions in starlight. They also move the cold molecular gas that will make the next generation of stars. In a merger, the gas can be driven into the center, pulled into tidal features, or compressed into off-center star-forming knots.
+
+{{< fig merging-galaxies-molecular-gas-maps >}}
+
 ::: {.callout-roadmap title="Structure Reference Box: Galaxy Types"}
 | Type | Shape | Dominant stars | Gas/dust | Star formation |
 |------|-------|----------------|----------|----------------|
@@ -255,7 +277,17 @@ Lecture 22 ended with a supermassive black hole at the center of our Galaxy — 
 
 *Most* SMBHs in the local universe are like Sgr A* — dormant. But in some galaxies, the central black hole is actively feeding on surrounding gas, and when it does, it produces one of the most extreme sources of light in the universe. These galaxies are called **active galactic nuclei (AGN)**, and their most luminous members are **quasars**.
 
-<!-- FIGURE: AGN schematic showing central SMBH, accretion disk, dusty torus, broad-line region, narrow-line region, and bipolar jets -->
+{{< fig agn-eso-artist-impression >}}
+
+The key idea is compactness. The galaxy can be tens of thousands of light-years across, but the power source sits in the central light-hours to light-days.
+
+{{< fig agn-structure-basic >}}
+
+::: {.callout-deep-dive title="Reference: Black-Hole Engine Vocabulary" collapse="true"}
+This schematic is useful as a vocabulary map. Read it with one caution: the event horizon, disk, photon sphere, and jets are physically meaningful regions, while the singularity marks where our classical theory stops being enough.
+
+{{< fig black-hole-schematic-eso >}}
+:::
 
 ::: {.callout-roadmap title="ViewSpace Interactive: Centaurus A" collapse="false"}
 Use the wavelength buttons to build a multiwavelength picture of an active galaxy. First look in visible light and ask what is hidden; then compare radio, infrared, and X-ray views.
@@ -278,6 +310,10 @@ What to notice: the active SMBH is not just a bright point. Radio and X-ray ligh
 </div>
 :::
 
+The same lesson shows up in Hercules A. In visible light, the host galaxy does not announce the scale of the engine. Radio and X-ray views reveal the enormous structures inflated by the active nucleus.
+
+{{< fig hercules-a-multiwavelength-agn >}}
+
 An AGN has four components:
 
 1. **The supermassive black hole** — usually $10^6$ to $10^{10} \, M_\odot$.
@@ -288,6 +324,8 @@ An AGN has four components:
 ### Where the Light Comes From
 
 The energy source of a quasar is not nuclear fusion. It is **gravitational potential energy** released as matter falls toward the SMBH. As gas spirals inward through the accretion disk, viscous friction converts its gravitational energy into heat, and the heat radiates away. Up to ~10% of the rest-mass energy ($E = mc^2$) of the infalling material can be converted into light for a non-rotating (Schwarzschild) black hole, rising to ~30 – 40% for a maximally rotating (Kerr) black hole. Compare this to hydrogen fusion in a star, which converts only ~0.7% of mass-energy into light. Accretion onto a black hole is, pound for pound, the *most efficient* known sustained power source in astrophysics.
+
+{{< fig agn-nustar-accretion-artist >}}
 
 A quasar can outshine its entire host galaxy of $\sim 10^{11}$ stars — from a region roughly the size of our Solar System.
 
@@ -357,6 +395,8 @@ This is strange. The bulge contains $\sim 10^{11}$ stars and extends over ~kilop
 
 The leading explanation is **AGN feedback**: when a SMBH becomes active, its radiation and jets heat and expel gas from the host galaxy, quenching both further star formation *and* further SMBH accretion. The SMBH is a thermostat for its bulge. But be careful: the correlation alone does not prove the mechanism. AGN feedback is compelling because it connects the correlation to a plausible energy source and to observed outflows, not because one plot can settle causality by itself.
 
+{{< fig agn-feedback-flows >}}
+
 This is a very active research frontier, and it is one reason AGN matter for more than just being extremely bright point sources — they are possible *regulators* of galaxy evolution.
 
 ::: {.callout-why-this-matters title="Why Stars Matter Here"}
@@ -383,7 +423,9 @@ Between the clusters are vast **voids** — regions tens of megaparsecs across w
 
 Together, this arrangement is called the **cosmic web**.
 
-{{< fig desi-3d-map >}}
+{{< fig antlia-cluster-noirlab >}}
+
+{{< fig desi-noirlab-3d-map >}}
 
 The cosmic web is what dark matter looks like, traced by galaxies. In the early universe, tiny density fluctuations (seen as temperature fluctuations in the CMB; Lecture 26) grew under gravity. Regions with slightly more dark matter attracted more gas, which cooled, formed stars, and became galaxies. Regions with slightly less dark matter emptied into voids. The web is the gravitational sedimentation of the early universe's initial conditions. We will see how those initial conditions are encoded in the CMB in Lecture 26.
 
@@ -414,6 +456,8 @@ Rungs 4 – 6 are the subject of Lectures 24 – 26. By the end of Module 3, we 
 
 ::: {.callout-deep-dive title="Deep Dive: AGN Types and the Unified Model" collapse="true"}
 AGN come with a confusing zoo of historical names — Seyferts (Type 1 and 2), radio galaxies, quasars, BL Lacs, blazars. The **Unified Model** proposes that most of these differences come from *viewing angle*: the same basic object (SMBH + accretion disk + torus + jets) looks different depending on whether you see it face-on (quasar, blazar), edge-on through the torus (Type 2 Seyfert), or somewhere in between (Type 1 Seyfert). Some differences are real (e.g., radio-loud vs. radio-quiet AGN differ in jet power), but orientation does much of the zoological work.
+
+{{< fig agn-types-unified-model >}}
 :::
 
 ::: {.callout-deep-dive title="Deep Dive: Why Cepheids Specifically?" collapse="true"}

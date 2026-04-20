@@ -2011,11 +2011,193 @@ figures:
     source: "https://www.eso.org/public/images/eso2406a/"
     module: 3
 
+  milky-way-polarization-context:
+    path: /assets/images/module-03/Milky_Way_polarization-ENG.webp
+    caption: "What to notice: polarization is a magnetic-field tracer across enormous scale ranges. The same technique links plasma near Sgr A*, dust near the Galactic Center, and polarized dust emission across the Milky Way."
+    alt: "Composite teaching graphic comparing polarized emission from plasma around Sagittarius A star, polarized emission from dust at the center of the Milky Way, and polarized dust emission across the full Milky Way sky map."
+    credit: "Event Horizon Telescope Collaboration; NASA/SOFIA; NASA/Hubble Space Telescope/NICMOS; ESA and the Planck Collaboration"
+    module: 3
+
   module-3-evidence-chain-concept-map:
     path: /assets/images/module-03/module-3-evidence-chain-concept-map.svg
     caption: "What to notice: Module 3 uses the same evidence chain over and over. Observables such as motions, spectra, standard candles, supernova brightness, the CMB, and element abundances become physical claims only after a model translates them."
     alt: "Three-column concept map for Module 3. The left column lists observables such as stellar positions, orbital velocities, galaxy spectra, standard candles, supernova brightness, the CMB, and primordial abundances. The middle column lists models such as gravity, stellar populations, the distance ladder, expanding space, recombination physics, and nuclear reactions. The right column lists inferences including Milky Way structure, dark matter halos, supermassive black holes, cosmic expansion, dark energy, the hot Big Bang, and recycled elements."
     credit: "Illustration: A. Rosen (SVG)"
+    module: 3
+
+  milky-way-satellite-galaxies-map:
+    path: /assets/images/module-03/map_milky_way_1000_1000_0.jpg
+    caption: "What to notice: the Milky Way is surrounded by faint satellite galaxies, not just by isolated stars. These companions help trace the Galaxy's larger gravitational environment and its extended dark-matter halo."
+    alt: "Three-dimensional schematic of the Milky Way and nearby satellite galaxies. Labels identify the Large and Small Magellanic Clouds, Sagittarius, Sculptor, Fornax, Carina, Leo V, Sextans, Segue 1, Ursa Minor, Draco, Hercules, and other dwarf companions, with a 100,000 light-year scale bar."
+    credit: "Course-provided figure"
+    module: 3
+
+  milky-way-new-dwarf-galaxies:
+    path: /assets/images/module-03/mw-newdwarfgalaxies.jpg
+    caption: "What to notice: the Milky Way's halo is still being mapped. Known dwarf galaxies, globular clusters, and newly identified faint companions show that the Galaxy's environment extends far beyond the bright disk."
+    alt: "All-sky map centered on the Milky Way plane. The Large and Small Magellanic Clouds are labeled, known globular clusters are shown in blue, known dwarf galaxies in green, and newly discovered dwarf-galaxy candidates in red."
+    credit: "Course-provided figure"
+    module: 3
+
+  bullet-cluster-composite:
+    path: /assets/images/module-03/bullet-cluster-composite.jpg
+    caption: "What to notice: the pink X-ray gas marks much of the ordinary matter, while the blue lensing map marks where most of the gravitating mass is. Their separation is why the Bullet Cluster is a clean dark-matter test."
+    alt: "Composite image of the Bullet Cluster showing galaxies in visible light, pink X-ray emitting gas, and blue regions marking the gravitational-lensing mass distribution offset from the gas."
+    credit: "NASA/CXC/CfA/STScI/ESO/Magellan"
+    module: 3
+
+  bullet-cluster-jwst-chandra:
+    path: /assets/images/module-03/bullet-cluster-jwst-chandra.png
+    caption: "What to notice: multi-observatory images separate luminous galaxies, hot gas, and lensing mass. The dark-matter argument is strongest because different messengers point to different physical components."
+    alt: "Wide multiwavelength image of the Bullet Cluster field with many galaxies and foreground stars, overlaid by blue, purple, and pink emission across the merging cluster."
+    credit: "Course-provided figure"
+    module: 3
+
+  local-group-map:
+    path: /assets/images/module-03/06-Local_Group.png
+    caption: "What to notice: the Milky Way is one member of a small gravitational neighborhood. Andromeda, Triangulum, the Magellanic Clouds, and many dwarf galaxies together make up the Local Group."
+    alt: "Map of the Local Group showing the Milky Way, Andromeda, Triangulum, the Large and Small Magellanic Clouds, and many dwarf galaxies with approximate distances."
+    credit: "Course-provided figure"
+    module: 3
+
+  local-group-size-comparison:
+    path: /assets/images/module-03/Local_Group_Galaxies_Comparison.png
+    caption: "What to notice: the Local Group contains a few large galaxies and many much smaller companions. Galaxy size varies enormously even before we leave our own neighborhood."
+    alt: "Size comparison of Local Group galaxies, including the Small Magellanic Cloud, Large Magellanic Cloud, NGC 3109, Triangulum, the Milky Way, and Andromeda, with approximate diameters labeled."
+    credit: "Course-provided figure"
+    module: 3
+
+  local-group-nearest-galaxies-map:
+    path: /assets/images/module-03/Local_Group_and_nearest_galaxies.jpg
+    caption: "What to notice: the Local Group is the nearby knot in a larger galactic neighborhood. The next galaxies are already millions of light-years away, so distance changes the scale of the story quickly."
+    alt: "Map of the Local Group and nearest galaxies with circular distance markers at about 2, 4, 6, and 8 million light-years. The Milky Way, Andromeda, Triangulum, Magellanic Clouds, and nearby dwarf and spiral galaxies are labeled."
+    credit: "Course-provided figure"
+    module: 3
+
+  agn-structure-basic:
+    path: /assets/images/module-03/agn_structure_illustration.png
+    caption: "What to notice: the AGN engine is compact. A black hole plus accretion disk sits inside a dusty torus, and some systems launch jets perpendicular to the disk."
+    alt: "Labeled illustration of an active galactic nucleus showing a central black hole, surrounding accretion disk, dusty torus of neutral gas and dust, and a jet emerging perpendicular to the disk."
+    credit: "Course-provided figure"
+    module: 3
+
+  agn-eso-artist-impression:
+    path: /assets/images/module-03/Active-Galactic-Nucleus-ESO.jpg
+    caption: "What to notice: an active nucleus is embedded inside a host galaxy. Dust can hide the central engine in some directions while jets carry energy far beyond the black hole's immediate surroundings."
+    alt: "Artist's impression of an active galactic nucleus inside a galaxy, with a bright central source, dark dust lane, and a jet or outflow extending from the nucleus."
+    credit: "ESO"
+    module: 3
+
+  agn-nustar-accretion-artist:
+    path: /assets/images/module-03/agn-nustar-artist-rendition.jpg
+    caption: "What to notice: the light source is not fusion in stars. Gas releases gravitational energy as it spirals through a hot accretion disk close to a supermassive black hole."
+    alt: "Artist's rendition of a black hole with a glowing accretion disk and a jet, illustrating gas falling inward and producing high-energy radiation."
+    credit: "NASA/JPL-Caltech"
+    module: 3
+
+  agn-feedback-flows:
+    path: /assets/images/module-03/NASA_AGN-SupermassiveBlackHoles-PinpointingFlows-01.jpg
+    caption: "What to notice: AGN energy does not stay near the event horizon. Jets, winds, and cavities connect light-hour scales near the black hole to galaxy-scale environments."
+    alt: "NASA infographic titled Supermassive Black Holes: Pinpointing the Flows, showing a galaxy, winds, jets, and cavities across scales from light-hours near the black hole to hundreds of thousands of light-years in the galaxy environment."
+    credit: "NASA"
+    module: 3
+
+  agn-types-unified-model:
+    path: /assets/images/module-03/NASA-types-of-AGN.jpg
+    caption: "What to notice: many AGN names partly encode viewing angle. The same basic engine can look like a Seyfert galaxy, quasar, or blazar depending on how the disk, torus, and jets point toward us."
+    alt: "NASA infographic comparing types of active galactic nuclei, including Seyfert galaxies, quasars, and blazars, with cones showing how the observer's viewing angle changes the classification."
+    credit: "NASA"
+    module: 3
+
+  hercules-a-multiwavelength-agn:
+    path: /assets/images/module-03/NASA_Hercules_A-composite.jpg
+    caption: "What to notice: visible light alone makes Hercules A look fairly ordinary, but radio and X-ray views reveal enormous jets and lobes powered by the central AGN."
+    alt: "Multiwavelength image of the galaxy Hercules A with panels for a combined composite, visible light, X-ray emission, and radio emission. The radio view shows large lobes extending far beyond the visible galaxy."
+    credit: "NASA, ESA, NRAO, and STScI"
+    module: 3
+
+  antlia-cluster-noirlab:
+    path: /assets/images/module-03/noirlab2501a-antlia-cluster.jpg
+    caption: "What to notice: a galaxy cluster is not a single object but a gravitational city of galaxies. The Antlia Cluster lets students see the step from individual galaxies to environments where galaxies live together."
+    alt: "Wide-field image of the Antlia Cluster showing many stars and galaxies, including several large diffuse elliptical galaxies and numerous smaller galaxies across the field."
+    credit: "NSF NOIRLab"
+    module: 3
+
+  carina-radio-continuum-map:
+    path: /assets/images/module-03/carina_1-3radiocontinuum-scaled.webp
+    caption: "What to notice: radio maps reveal gas structures that optical light can miss or confuse. In the Carina region, shells, fronts, and plumes trace how massive stars reshape the surrounding interstellar medium."
+    alt: "False-color radio-continuum map of the Carina region in Galactic longitude and latitude, with labels for plumes, north fronts, north shell, south fronts, Gum 31, and PMN J1032-5917, plus a 20 parsec scale bar."
+    credit: "Course-provided figure"
+    module: 3
+
+  cats-paw-nebula-jwst:
+    path: /assets/images/module-03/cats-paw-nebula-jwst.jpg
+    caption: "What to notice: infrared light turns dusty star-forming gas from an obstacle into evidence. The same dust that hides visible light can outline where new stars are forming."
+    alt: "JWST infrared image of the Cat's Paw Nebula showing a bright blue-white cavity, orange and brown dust clouds, embedded young stars, and darker dusty lanes."
+    credit: "Course-provided figure"
+    module: 3
+
+  merging-galaxies-molecular-gas-maps:
+    path: /assets/images/module-03/distribution-molecular-gas-merging-galaxies.webp
+    caption: "What to notice: galaxy interactions rearrange cold molecular gas in many different ways. The gas distribution is the clue to where future star formation can be triggered, suppressed, or concentrated."
+    alt: "Grid of false-color molecular-gas maps for many interacting or merging galaxies. Each small panel shows a different galaxy pair or merger with gas concentrated in irregular, offset, or extended structures."
+    credit: "Course-provided figure"
+    module: 3
+
+  antennae-hubble-alma:
+    path: /assets/images/module-03/eso1137a-antennae-merging-galaxies-hubble-alma.jpg
+    caption: "What to notice: the Antennae collision is both a stellar event and a gas event. Blue starlight shows young populations, while the radio and submillimeter gas overlay marks where compressed material can fuel new star formation."
+    alt: "Composite image of the Antennae Galaxies merger with blue stellar light and bright red, pink, and yellow gas emission concentrated along the overlap region and tidal structures."
+    credit: "ESO/ALMA/Hubble"
+    module: 3
+
+  desi-noirlab-3d-map:
+    path: /assets/images/module-03/desi-noirlab2512aa-scaled.jpg
+    caption: "What to notice: every point is a galaxy with a measured redshift. The cosmic web is not a drawing; it is the pattern that appears when distances are added to sky positions."
+    alt: "Three-dimensional galaxy redshift-survey map made of colored points, with a wedge-shaped survey volume and a zoomed inset showing filamentary structure."
+    credit: "NSF NOIRLab/DESI Collaboration"
+    module: 3
+
+  black-hole-schematic-eso:
+    path: /assets/images/module-03/eso1907h-blackhole-schematic.jpg
+    caption: "What to notice: the event horizon, accretion disk, photon sphere, and jets are different physical regions. The singularity label is a signpost for where classical general relativity reaches its limit, not something directly observed."
+    alt: "Wide annotated schematic of a black hole with an accretion disk and relativistic jet. Labels identify the event horizon, photon sphere, innermost stable orbit, accretion disc, relativistic jet, and singularity, with explanatory text."
+    credit: "ESO"
+    module: 3
+
+  early-universe-redshift-schematic:
+    path: /assets/images/module-03/expansion-universe-galaxies-schematic.jpeg
+    caption: "What to notice: redshift is a lookback-time coordinate. Use this as a schematic for how distant galaxies probe earlier cosmic epochs, not as a current record-holder table because the farthest-known objects change."
+    alt: "Timeline-style schematic from present-day modern galaxies at redshift 0 back toward the Big Bang, marking redshifts 8, 12, and 30, the reionization era, cosmic dark ages, first stars, and example farthest-galaxy labels."
+    credit: "Course-provided figure"
+    module: 3
+
+  jwst-cosmological-redshift:
+    path: /assets/images/module-03/jwst-cosmological-redshift.png
+    caption: "What to notice: cosmological redshift is expansion written onto light. Space stretches while the photon travels, so the received wavelength is longer than the emitted wavelength."
+    alt: "Infographic titled What Is Cosmological Redshift, showing expanding space stretching light to longer wavelengths, a visible-to-infrared wavelength scale, and telescope lookback limits from modern galaxies toward the first galaxies."
+    credit: "Course-provided figure"
+    module: 3
+
+  distant-star-forming-galaxies-hudf:
+    path: /assets/images/module-03/distant-star-forming-galaxies-alma-vla-HST.jpg
+    caption: "What to notice: distant galaxies are often multiwavelength measurements, not simple photographs. Visible light shows the stellar body, while radio emission can flag dust-obscured star formation."
+    alt: "Four-panel image titled Distant Star-Forming Galaxies in the Hubble Ultra-Deep Field. Each panel shows a distant galaxy with a red radio overlay and a labeled light-travel distance of 9.0, 9.4, 10.9, or 11.2 billion light-years."
+    credit: "Hubble Space Telescope and Karl G. Jansky Very Large Array"
+    module: 3
+
+  star-formation-across-cosmic-time:
+    path: /assets/images/module-03/star-formation-across-cosmic-time-nas.jpg
+    caption: "What to notice: star formation is a history, not a constant background process. Treat this as a model summary to read critically: modern course language places the broad high-star-formation era, cosmic noon, about 2-3 billion years after the Big Bang."
+    alt: "NASA timeline graphic showing star formation across cosmic time, with star birth beginning after the dark era, peaking within the first billion years in a new model, then declining toward the present."
+    credit: "NASA"
+    module: 3
+
+  jwst-mom-z14-field:
+    path: /assets/images/module-03/MoM-z14-jwst.jpg
+    caption: "What to notice: an extremely high-redshift galaxy can look like a tiny smudge in a deep JWST field. The scientific weight comes from the measured spectrum and redshift, not from how dramatic the image looks."
+    alt: "JWST deep-field image filled with many small galaxies and foreground stars, with an inset zoom labeling a faint yellow-green source as MoM-z14."
+    credit: "Course-provided figure"
     module: 3
 
   # ==============================================================
