@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" role="img" aria-labelledby="title desc" data-theme="dark" data-palette="aurora">
+  <title id="title">Cosmic microwave background schematic</title>
+  <desc id="desc">A schematic all-sky oval map of the cosmic microwave background with small warm and cool patches. Labels emphasize the average 2.725 kelvin glow and tiny one part in one hundred thousand fluctuations.</desc>
+  <defs>
+    <style>
+      :root {
+        --bg: #0b0b0f;
+        --panel: #13162a;
+        --fg: #eef0ff;
+        --muted: #c9cbe5;
+        --faint: #8f92ad;
+        --grid: #24263a;
+        --teal: #028391;
+        --teal-bright: #41A2AC;
+        --teal-pale: #A6D4D8;
+        --pink: #BE5A83;
+        --pink-bright: #CE83A2;
+        --violet: #7077A1;
+        --violet-bright: #9499B8;
+        --gold: #D9A441;
+      }
+      .bg { fill: var(--bg); }
+      .panel { fill: var(--panel); stroke: var(--violet); stroke-width: 2; rx: 16; }
+      .sky { fill: #14182e; stroke: var(--violet-bright); stroke-width: 2.5; }
+      .meridian { stroke: #303652; stroke-width: 1.1; fill: none; opacity: 0.75; }
+      .warm { fill: #d9a441; opacity: 0.88; }
+      .hot { fill: #be5a83; opacity: 0.82; }
+      .cool { fill: #41a2ac; opacity: 0.86; }
+      .deep { fill: #7077a1; opacity: 0.78; }
+      .label { fill: var(--fg); font: 700 22px system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+      .small { fill: var(--muted); font: 500 17px system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+      .tiny { fill: var(--faint); font: 500 14px system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+      .callout { fill: var(--fg); font: 700 18px system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+      .outline { paint-order: stroke; stroke: var(--bg); stroke-width: 6px; stroke-linejoin: round; }
+    </style>
+    <clipPath id="oval">
+      <ellipse cx="480" cy="250" rx="340" ry="168"/>
+    </clipPath>
+  </defs>
+
+  <rect class="bg" width="960" height="540"/>
+
+  <text x="480" y="46" text-anchor="middle" class="label">Cosmic Microwave Background</text>
+  <text x="480" y="76" text-anchor="middle" class="small">An all-sky fossil glow from the early hot universe</text>
+
+  <ellipse class="sky" cx="480" cy="250" rx="340" ry="168"/>
+
+  <g clip-path="url(#oval)">
+    <rect x="140" y="82" width="680" height="336" fill="#151930"/>
+    <path class="meridian" d="M480 82 C430 150 430 350 480 418"/>
+    <path class="meridian" d="M480 82 C530 150 530 350 480 418"/>
+    <path class="meridian" d="M480 82 C350 145 350 355 480 418"/>
+    <path class="meridian" d="M480 82 C610 145 610 355 480 418"/>
+    <path class="meridian" d="M148 250 H812"/>
+    <path class="meridian" d="M176 180 C350 210 610 210 784 180"/>
+    <path class="meridian" d="M176 320 C350 290 610 290 784 320"/>
+
+    <ellipse class="warm" cx="248" cy="184" rx="66" ry="34" transform="rotate(-15 248 184)"/>
+    <ellipse class="cool" cx="342" cy="214" rx="72" ry="38" transform="rotate(22 342 214)"/>
+    <ellipse class="hot" cx="420" cy="162" rx="58" ry="30" transform="rotate(18 420 162)"/>
+    <ellipse class="deep" cx="506" cy="216" rx="84" ry="42" transform="rotate(-18 506 216)"/>
+    <ellipse class="warm" cx="598" cy="162" rx="66" ry="34" transform="rotate(-8 598 162)"/>
+    <ellipse class="cool" cx="684" cy="220" rx="76" ry="36" transform="rotate(14 684 220)"/>
+    <ellipse class="hot" cx="260" cy="292" rx="72" ry="34" transform="rotate(16 260 292)"/>
+    <ellipse class="deep" cx="382" cy="326" rx="74" ry="36" transform="rotate(-20 382 326)"/>
+    <ellipse class="warm" cx="484" cy="300" rx="88" ry="42" transform="rotate(8 484 300)"/>
+    <ellipse class="cool" cx="602" cy="328" rx="74" ry="36" transform="rotate(-14 602 328)"/>
+    <ellipse class="hot" cx="718" cy="300" rx="68" ry="34" transform="rotate(20 718 300)"/>
+
+    <circle class="warm" cx="214" cy="246" r="16"/>
+    <circle class="cool" cx="312" cy="146" r="15"/>
+    <circle class="hot" cx="386" cy="260" r="14"/>
+    <circle class="cool" cx="552" cy="258" r="16"/>
+    <circle class="warm" cx="650" cy="258" r="14"/>
+    <circle class="deep" cx="734" cy="170" r="15"/>
+  </g>
+
+  <ellipse cx="480" cy="250" rx="340" ry="168" fill="none" stroke="#9499B8" stroke-width="2.5"/>
+
+  <g>
+    <rect x="72" y="118" width="160" height="88" class="panel"/>
+    <text x="152" y="150" text-anchor="middle" class="callout">2.725 K</text>
+    <text x="96" y="178" class="tiny">nearly uniform</text>
+    <text x="96" y="196" class="tiny">thermal glow</text>
+  </g>
+
+  <g>
+    <rect x="728" y="334" width="164" height="96" class="panel"/>
+    <text x="810" y="366" text-anchor="middle" class="callout">Tiny bumps</text>
+    <text x="752" y="394" class="tiny">about 1 part in</text>
+    <text x="752" y="412" class="tiny">100,000 seed later</text>
+    <text x="752" y="430" class="tiny">cosmic structure</text>
+  </g>
+
+  <rect x="120" y="454" width="720" height="52" class="panel"/>
+  <text x="480" y="486" text-anchor="middle" class="small">What to notice: the CMB is smooth enough to show a hot origin, but not perfectly smooth.</text>
+</svg>

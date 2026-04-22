@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" role="img" aria-labelledby="title desc" data-theme="dark" data-palette="aurora">
+  <title id="title">Hubble's law diagram</title>
+  <desc id="desc">A teaching plot showing galaxy recession velocity increasing approximately linearly with distance. A highlighted straight trend line is labeled v equals H sub zero times d.</desc>
+  <defs>
+    <style>
+      :root {
+        --bg: #0b0b0f;
+        --panel: #13162a;
+        --fg: #eef0ff;
+        --muted: #c9cbe5;
+        --faint: #8f92ad;
+        --grid: #24263a;
+        --teal: #028391;
+        --teal-bright: #41A2AC;
+        --teal-pale: #A6D4D8;
+        --pink: #BE5A83;
+        --pink-bright: #CE83A2;
+        --violet: #7077A1;
+        --violet-bright: #9499B8;
+        --gold: #D9A441;
+      }
+      .bg { fill: var(--bg); }
+      .panel { fill: var(--panel); stroke: var(--violet); stroke-width: 2; rx: 16; }
+      .grid { stroke: var(--grid); stroke-width: 1.4; }
+      .axis { stroke: var(--muted); stroke-width: 3; }
+      .trend { stroke: var(--gold); stroke-width: 5; fill: none; stroke-linecap: round; }
+      .scatter { fill: var(--teal-bright); stroke: var(--bg); stroke-width: 3; }
+      .scatter2 { fill: var(--pink-bright); stroke: var(--bg); stroke-width: 3; }
+      .label { fill: var(--fg); font: 700 22px system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+      .small { fill: var(--muted); font: 500 17px system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+      .tiny { fill: var(--faint); font: 500 14px system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+      .math { fill: var(--fg); font: 700 28px system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+      .outline { paint-order: stroke; stroke: var(--bg); stroke-width: 6px; stroke-linejoin: round; }
+    </style>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#c9cbe5"/>
+    </marker>
+  </defs>
+
+  <rect class="bg" width="960" height="540"/>
+
+  <text x="480" y="46" text-anchor="middle" class="label">Hubble's Law</text>
+  <text x="480" y="76" text-anchor="middle" class="small">Farther galaxies have larger recession velocities</text>
+
+  <rect x="92" y="106" width="690" height="328" class="panel"/>
+
+  <g>
+    <path class="grid" d="M180 132 V386"/>
+    <path class="grid" d="M270 132 V386"/>
+    <path class="grid" d="M360 132 V386"/>
+    <path class="grid" d="M450 132 V386"/>
+    <path class="grid" d="M540 132 V386"/>
+    <path class="grid" d="M630 132 V386"/>
+    <path class="grid" d="M720 132 V386"/>
+    <path class="grid" d="M136 342 H738"/>
+    <path class="grid" d="M136 298 H738"/>
+    <path class="grid" d="M136 254 H738"/>
+    <path class="grid" d="M136 210 H738"/>
+    <path class="grid" d="M136 166 H738"/>
+  </g>
+
+  <path class="axis" marker-end="url(#arrow)" d="M136 386 H744"/>
+  <path class="axis" marker-end="url(#arrow)" d="M136 386 V128"/>
+
+  <text x="440" y="424" text-anchor="middle" class="small">Distance d</text>
+  <text x="56" y="264" text-anchor="middle" class="small" transform="rotate(-90 56 264)">Recession velocity v</text>
+
+  <path class="trend" d="M158 370 L724 146"/>
+  <text x="610" y="154" class="math outline">v = H<tspan baseline-shift="-28%" font-size="70%">0</tspan>d</text>
+
+  <circle class="scatter" cx="170" cy="364" r="8"/>
+  <circle class="scatter" cx="214" cy="342" r="8"/>
+  <circle class="scatter" cx="256" cy="334" r="8"/>
+  <circle class="scatter2" cx="312" cy="308" r="8"/>
+  <circle class="scatter" cx="346" cy="292" r="8"/>
+  <circle class="scatter" cx="398" cy="270" r="8"/>
+  <circle class="scatter2" cx="438" cy="246" r="8"/>
+  <circle class="scatter" cx="486" cy="230" r="8"/>
+  <circle class="scatter" cx="532" cy="214" r="8"/>
+  <circle class="scatter2" cx="578" cy="184" r="8"/>
+  <circle class="scatter" cx="624" cy="178" r="8"/>
+  <circle class="scatter" cx="686" cy="150" r="8"/>
+
+  <g>
+    <rect x="806" y="128" width="110" height="236" class="panel"/>
+    <text x="861" y="162" text-anchor="middle" class="label">Read it</text>
+    <text x="826" y="200" class="tiny">The slope</text>
+    <text x="826" y="220" class="tiny">is the present</text>
+    <text x="826" y="240" class="tiny">expansion rate.</text>
+    <text x="826" y="282" class="tiny">Scatter is real:</text>
+    <text x="826" y="302" class="tiny">nearby galaxies</text>
+    <text x="826" y="322" class="tiny">also have local</text>
+    <text x="826" y="342" class="tiny">motions.</text>
+  </g>
+
+  <rect x="120" y="454" width="720" height="52" class="panel"/>
+  <text x="480" y="486" text-anchor="middle" class="small">What to notice: redshift plus distance reveals expansion of space, not an explosion from a center.</text>
+</svg>

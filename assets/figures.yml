@@ -2323,14 +2323,15 @@ figures:
     module: 4
 
   hubble-diagram:
-    path: /assets/images/module-04/hubble-diagram.png
-    caption: "Hubble's law relates distance to recession velocity"
-    alt: "Plot showing linear relationship between galaxy distance and redshift"
+    path: /assets/images/module-04/hubble-diagram.svg
+    caption: "What to notice: Hubble's law is a slope on a velocity-distance plot. The trend is the expansion rate; the scatter reminds us that nearby galaxies also have local motions."
+    alt: "Teaching plot of Hubble's law showing galaxy recession velocity increasing approximately linearly with distance, with a highlighted line labeled v equals H sub zero times d."
+    credit: "Illustration: A. Rosen (SVG)"
     module: 4
 
   cmb-map:
-    path: /assets/images/module-04/cmb-map.png
-    caption: "Cosmic microwave background temperature fluctuations"
-    alt: "All-sky map showing tiny temperature variations in the CMB"
-    credit: "ESA/Planck"
+    path: /assets/images/module-04/cmb-map.svg
+    caption: "What to notice: the CMB is almost perfectly uniform, but the tiny temperature fluctuations are the seeds that later grow into cosmic structure."
+    alt: "Schematic all-sky oval map of the cosmic microwave background with small warm and cool patches, labeled as a nearly uniform 2.725 kelvin glow with tiny fluctuations."
+    credit: "Illustration: A. Rosen (SVG), concept after CMB all-sky maps"
     module: 4

@@ -211,15 +211,18 @@ The same logic works in nearby star-forming regions. A dusty nebula can look con
 Gaia, by contrast, works at visible wavelengths and measures precise stellar parallaxes (callback to Lecture 15). It cannot see through dust toward the Galactic Center, but within the parts of the disk it can reach, it has measured the three-dimensional positions and velocities of well over a billion stars — a transformational dataset that has, for example, revealed the imprint of past minor mergers in the stellar halo.
 
 ::: {.callout-roadmap title="Video: Mapping the Milky Way with Gaia"}
-<div class="ratio ratio-16x9">
-  <video controls preload="metadata" aria-label="Animation showing a Gaia-based map of the Milky Way.">
-    <source src="../../../assets/videos/esa-milky-way-gaia.mp4" type="video/mp4">
-    Your browser does not support embedded video. Open the course asset at
-    <a href="../../../assets/videos/esa-milky-way-gaia.mp4">assets/videos/esa-milky-way-gaia.mp4</a>.
-  </video>
+<div class="ratio ratio-16x9" style="margin-bottom: 0.75rem;">
+  <iframe
+    src="https://www.youtube-nocookie.com/embed/wEZBNsU4dMU?rel=0"
+    title="ESA animation showing a Gaia-based map of the Milky Way"
+    allow="encrypted-media; picture-in-picture"
+    allowfullscreen>
+  </iframe>
 </div>
 
 As you watch, keep the evidence chain in mind: Gaia measures positions, parallaxes, and motions for individual stars; the map appears only after those measurements are stitched together into a model of the Galaxy.
+
+Source: [ESA, *The best Milky Way animation, by Gaia*](https://www.esa.int/ESA_Multimedia/Videos/2025/01/The_best_Milky_Way_animation_by_Gaia). Credit: ESA/Gaia/DPAC, Stefan Payne-Wardenaar.
 :::
 
 There is one more clever mapping trick: use objects *behind* the Milky Way as flashlights. A distant quasar can shine through gas in our halo, and absorption lines in the quasar spectrum reveal gas that would otherwise be nearly invisible.
