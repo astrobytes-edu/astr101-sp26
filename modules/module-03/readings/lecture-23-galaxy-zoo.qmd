@@ -18,83 +18,118 @@ learning-objectives:
   - Classify galaxies using the Hubble sequence (elliptical, spiral, irregular) and connect morphology to stellar populations and gas content
   - Explain why galaxy distances are hard to measure and preview the role of standard candles in the distance ladder
   - Describe active galactic nuclei (AGN) and quasars, and identify the supermassive black hole (SMBH) engine that powers them
-  - Articulate the M–σ relation (and the bulge-SMBH mass link) as evidence that galaxies and their central black holes co-evolve
+  - Articulate the M-sigma relation (and the bulge-SMBH mass link) as evidence that galaxies and their central black holes co-evolve
   - Describe the cosmic web as the large-scale arrangement of galaxies and explain why it matters for Module 3's big picture
 math-level: algebra_only
-prerequisites: "Light and the EM spectrum (Lectures 7 – 10), stellar populations (Lectures 16, 19 – 21), Milky Way structure and Sgr A* (Lecture 22), Kepler's third law (Lecture 5)"
+prerequisites: "Light and the EM spectrum (Lectures 7-10), stellar populations (Lectures 16, 19-21), Milky Way structure and Sgr A* (Lecture 22), Kepler's third law (Lecture 5)"
 ---
 
-::: {.callout-key-insight #the-big-idea}
 ## The Big Idea
 
-The Milky Way is one member of a vast population of galaxies that comes in a small number of recognizable shapes. Those shapes are not arbitrary — they trace the star-formation history, gas content, and dynamical state of each galaxy. Many galaxies host a supermassive black hole at their center, and when that black hole is fed, it becomes one of the brightest objects in the universe — a **quasar**. On the largest scales, galaxies are not scattered randomly but arranged in a **cosmic web** of filaments and voids. To make sense of any of this, we need distances — which is the problem Lecture 24 will solve.
-:::
+The Milky Way is not special because it is the only galaxy. It is special because it is the galaxy we can study from the inside.
 
-::: {.callout-key-insight title="Evidence Chain: Galaxies as Population Data"}
+Once we look beyond the Milky Way, astronomy becomes a classification-and-inference problem. Galaxies come in recognizable shapes, but those shapes are not just labels. They are clues.
+
 **Observable:** Galaxies have different shapes, colors, gas contents, spectra, central activity, and clustering patterns.
 
-**Model:** Stellar populations, gas dynamics, black-hole accretion, and gravitational instability connect those observables to physical histories.
+**Model:** Stars, gas, dust, black-hole accretion, gravity, and dark matter connect those observables to physical histories.
 
-**Inference:** A galaxy's appearance is not just a picture; it is a record of star formation, mergers, central black-hole growth, and dark-matter-guided structure formation.
+**Inference:** A galaxy image is not just a picture. It is evidence for star formation, gas supply, mergers, central black-hole growth, and the large-scale structure of the universe.
 
-**Main uncertainty:** Classification is a starting point, not a full history. Galaxies can merge, quench, reignite star formation, or host active nuclei for only part of their lives.
+::: {.callout-key-insight title="The throughline"}
+This lecture is about learning to read galaxies as evidence.
+
+1. **Galaxy shapes** tell us about stars, gas, and recent history.
+2. **Galaxy distances** tell us how big, bright, and massive galaxies really are.
+3. **Active galactic nuclei** reveal feeding supermassive black holes.
+4. **Galaxy maps** reveal the cosmic web traced by dark matter.
 :::
 
-::: {.callout-roadmap title="Cognitive Map: Four Questions"}
 This page answers four questions:
 
-1. **What kinds of galaxies are there, and what do their shapes tell us?**
-2. **How do we know galaxies are far away — and why is that measurement hard?**
-3. **What are quasars, and why do they matter?**
-4. **How are galaxies arranged in space on the largest scales?**
+1. What kinds of galaxies are there, and what do their shapes tell us?
+2. Why is measuring galaxy distances hard?
+3. What are quasars, and why are they not stars?
+4. How are galaxies arranged on the largest scales?
 
-**Punchline:** Galaxy morphology is a stellar-population readout. Quasars are SMBH accretion signatures. The cosmic web is the shape of the matter distribution, and stars are how we see all of it.
+**Punchline:** Galaxy morphology is a stellar-population clue. Quasars are accretion signatures from supermassive black holes. The cosmic web is the large-scale pattern of matter, with galaxies acting as the visible tracers.
+
+::: {.callout-tip title="How to read this page"}
+Focus less on memorizing names and more on the reasoning pattern:
+
+**What do we observe?**
+
+**What physical model explains it?**
+
+**What can we infer from that model?**
 :::
 
----
-
-::: {.callout-roadmap title="How to Use This Reading" collapse="true"}
-This reading is a guided tour of the galaxy population and its central engines.
-
-**Default expectation (best):** Read the whole page before lecture. Pause at each **Check Yourself** prompt.
-
-**If you're short on time (~20 min):** Focus on:
-
-- The Big Idea above
-- The Hubble Sequence section (three morphologies, three stellar stories)
-- The Quasar section (SMBH + accretion + Eddington limit)
-- The Distance Problem preview
-
-**Goal after 20 minutes:** You should be able to describe the three main galaxy types, explain what a quasar is and where its energy comes from, and articulate why measuring galaxy distances is central to the rest of Module 3.
-
-**Reference mode:** The Galaxy Reference Box and the Glossary are the study references.
+::: {.callout-roadmap title="Interactive warm-up: Rubin's Tour of Galaxies"}
+Before you settle into the reading, open [Rubin's Tour of Galaxies](https://skyviewer.app/tours/gallery-of-galaxies). Treat it like a first-pass observing exercise: choose a few galaxies, describe what you notice about their shapes and colors, then ask what physical histories those appearances might imply.
 :::
+
+If you are short on time, focus on:
+
+- the Hubble Sequence section,
+- the Distance Problem section,
+- the Active Galactic Nuclei section,
+- the Cosmic Web section.
+
+After 20 minutes, you should be able to classify the three main galaxy types, explain what a quasar is, and describe why distances are essential for turning galaxy images into physical knowledge.
 
 {{< fig module-3-evidence-chain-concept-map >}}
+
+::: {.callout-note title="What to notice"}
+The same reasoning loop appears across the module. Observables become physical claims only after a model connects light, motion, and distance to real properties.
+:::
 
 ## Learning Outcomes
 
 By the end of this reading, you should be able to say:
 
-- [ ] I can classify a galaxy as elliptical, spiral, or irregular from a picture, and link the classification to its stellar population and gas content.
-- [ ] I can explain why measuring galaxy distances is hard, and identify why a **standard candle** is the key idea that fixes the problem.
-- [ ] I can describe an active galactic nucleus, name its components (SMBH, accretion disk, jets), and explain where its luminosity comes from.
-- [ ] I can state the M–σ relation in plain English and explain why it suggests SMBHs and galaxies grow together.
-- [ ] I can describe the cosmic web and explain why galaxies cluster into filaments, walls, and voids.
+- I can classify a galaxy as elliptical, spiral, barred spiral, or irregular from an image.
+- I can connect a galaxy's color and structure to its stellar population, gas content, and star-formation activity.
+- I can explain why apparent brightness alone does not tell us distance.
+- I can describe why standard candles are needed to measure distances beyond the Milky Way.
+- I can explain what an active galactic nucleus is and why its energy comes from accretion, not fusion.
+- I can describe the basic evidence for a connection between supermassive black holes and their host galaxies.
+- I can explain what the cosmic web is and why galaxies trace the underlying dark-matter distribution.
 
 ---
 
 ## Beyond the Milky Way
 
-Lecture 22 ended at the Galactic Center, 8 kpc from Earth. Step outward. At 50 kpc you reach the Large Magellanic Cloud, a small companion of the Milky Way. At ~780 kpc (~2.5 million light-years) you reach Andromeda (M31), our nearest large neighbor. Beyond that, the universe opens up: somewhere between a few hundred billion and a few trillion galaxies lie within the observable universe. The exact count depends on how you model the faint end of the galaxy luminosity function, and recent measurements of the cosmic optical background (e.g., New Horizons' LORRI data) have pushed the estimate toward the lower end of that range. Either way: *a lot*.
+Lecture 22 ended at the Galactic Center, about $8\ {\rm kpc}$ from Earth. Now we step outward.
+
+At about $50\ {\rm kpc}$, we reach the Large Magellanic Cloud, a small companion galaxy of the Milky Way. At about $780\ {\rm kpc}$, or about $2.5$ million light-years, we reach Andromeda, the nearest large spiral galaxy.
+
+Beyond that, the universe opens into a population of galaxies. The exact number of galaxies in the observable universe is not a directly counted fact. It depends on how we model the faintest galaxies that current telescopes cannot individually detect. A safe ASTR 101 statement is:
+
+**The observable universe contains at least hundreds of billions of galaxies, and possibly more depending on how many faint galaxies exist below current detection limits.**
+
+::: {.callout-key-insight title="Observable -> Model -> Inference"}
+**Observable:** Deep images show thousands of galaxies in tiny patches of sky.
+
+**Model:** We estimate how many faint galaxies are missed by the image.
+
+**Inference:** The observable universe contains an enormous galaxy population, but the exact number depends on the model for faint galaxies.
+:::
+
+The Local Group is the first place where the word "galaxy" stops meaning only "the Milky Way" and starts meaning a population. It contains a few large galaxies, several intermediate companions, and many dwarf galaxies whose faintness makes them hard to census completely.
 
 {{< fig local-group-map >}}
 
-The Local Group is the first place where "galaxy" stops meaning only "the Milky Way" and starts meaning a population. It contains a few large galaxies, a handful of intermediate companions, and many small dwarf galaxies whose faintness makes them hard to census completely.
+::: {.callout-note title="What to notice"}
+The Local Group is not one galaxy plus empty space. It is a gravitational neighborhood, with the Milky Way, Andromeda, Triangulum, the Magellanic Clouds, and many faint dwarf galaxies.
+:::
 
 Andromeda is the nearest large spiral in that neighborhood. Because it is close enough for Hubble to resolve individual stars across its disk, it lets us connect the stellar-population tools from Module 2 to the galaxy-scale questions of Module 3.
 
 {{< fig andromeda-panoramic-hubble >}}
+
+::: {.callout-note title="What to notice"}
+Andromeda is a galaxy, but it is also a resolved stellar population. Its disk, dust lanes, blue star-forming regions, and older bulge show how galaxy morphology is built from stars and gas.
+:::
 
 ::: {.callout-deep-dive title="Scale Check: The Nearby Galaxy Neighborhood" collapse="true"}
 Before we jump to deep fields, pause on the nearby universe. The Local Group is not a representative sample of all galaxies, but it is the place where distances, sizes, and morphology are easiest to compare directly.
@@ -102,11 +137,23 @@ Before we jump to deep fields, pause on the nearby universe. The Local Group is 
 {{< fig local-group-size-comparison >}}
 
 {{< fig local-group-nearest-galaxies-map >}}
+
+::: {.callout-note title="What to notice"}
+Galaxy size and galaxy spacing are different ideas. The Local Group contains a few large galaxies and many small companions spread across millions of light-years.
+:::
 :::
 
 {{< fig lsst-cosmic-treasure-chest-module3 >}}
 
+::: {.callout-note title="What to notice"}
+A deep survey field is already a population sample. Each small galaxy-like smudge has a morphology, a color, and a distance that must be inferred.
+:::
+
 {{< fig hubble-ultra-deep-field-hst >}}
+
+::: {.callout-note title="What to notice"}
+Nearly every faint smudge is a galaxy. The image turns apparently empty sky into evidence for a universe filled with galaxies at many distances and lookback times.
+:::
 
 ::: {.callout-roadmap title="ViewSpace Interactive: Hubble Ultra Deep Field" collapse="false"}
 Use the exposure-time slider to watch a dark patch of sky turn into a field of galaxies. Start at the shortest exposure and ask: which specks would you trust as real? Then move right and notice how repeated exposures separate faint sources from noise.
@@ -133,25 +180,71 @@ Deep-field galaxies are also multiwavelength objects. A galaxy that looks like a
 
 {{< fig distant-star-forming-galaxies-hudf >}}
 
-What you would notice looking at those galaxies is that they are not random. Most of them fall into a small number of shape categories that were first systematized by Edwin Hubble in 1926 — the so-called **Hubble sequence**, or *Hubble tuning fork*.
+::: {.callout-note title="What to notice"}
+Visible light and radio light can reveal different parts of the same galaxy. The physical inference depends on wavelength: stars, dust, gas, and star formation do not all advertise themselves in the same band.
+:::
+
+What you would notice looking at those galaxies is that they are not random. Most of them fall into a small number of shape categories that were first systematized by Edwin Hubble in 1926: the so-called **Hubble sequence**, or *Hubble tuning fork*.
 
 {{< fig galaxy-types-visual-vocabulary >}}
 
-### The Hubble Sequence
+::: {.callout-note title="What to notice"}
+The visual categories are starting points. A galaxy's type is a clue about stars, gas, dust, and interaction history, not a complete biography.
+:::
 
-Galaxies come in three broad morphological classes:
+## The Hubble Sequence
 
-- **Ellipticals (E):** Smooth, featureless, football-shaped systems ranging from nearly round (E0) to elongated (E7). Dominated by old red and yellow stars. Little cold gas, little ongoing star formation. The most massive galaxies in the universe are giant ellipticals, sitting at the centers of galaxy clusters.
-- **Spirals (S):** Disk galaxies with a central bulge and spiral arms tracing out from the center. Classed from Sa (tightly wound arms, large bulge, less gas) to Sc/Sd (open arms, small bulge, gas-rich, active star formation). The Milky Way is a barred spiral (SBb or SBc). Spirals host a mix of old bulge stars and young disk stars.
-- **Irregulars (Irr):** Galaxies with no clear symmetry. Often small and gas-rich. The Large Magellanic Cloud is a classic example.
+Galaxies come in a few broad visual categories. This classification system is called the **Hubble sequence**.
+
+The important idea is not that galaxies have names. The important idea is that **appearance is evidence**.
+
+A galaxy's shape, color, dust, gas, and star-forming regions help us infer its physical state.
+
+### The three main galaxy families
+
+**Elliptical galaxies** are smooth, rounded or football-shaped systems. They are usually dominated by older, redder stars and contain relatively little cold gas and dust. Because cold gas is the raw material for star formation, most ellipticals have little ongoing star formation.
+
+**Spiral galaxies** have disks, central bulges, and spiral arms. Their arms often contain gas, dust, young blue stars, and pink H II regions. These are signs of ongoing star formation. The Milky Way is a barred spiral.
+
+**Irregular galaxies** do not have a clean spiral or elliptical shape. Many are small, gas-rich, and actively forming stars. Some look irregular because gravitational interactions have disturbed them.
+
+::: {.callout-misconception title="Misconception check: The tuning fork is not an evolutionary ladder"}
+The Hubble tuning fork is a classification diagram, not a life cycle.
+
+Ellipticals do not automatically turn into spirals, and spirals do not simply move along the fork from one subtype to another. A galaxy's type can change through mergers, gas loss, gas accretion, and changes in star formation.
+:::
 
 {{< fig hubble-tuning-fork-kingfish >}}
 
-The three classes are not just aesthetic — they are *stellar-population* classes. An elliptical is a galaxy that stopped making stars long ago. A spiral is a galaxy that is still making them. An irregular is often a galaxy in a disturbed dynamical state, where a recent interaction has stirred things up and triggered new star formation.
+::: {.callout-note title="What to notice"}
+The diagram sorts galaxies by appearance. To turn appearance into physics, ask:
+
+- Is there a disk?
+- Are there spiral arms?
+- Is there dust or gas?
+- Are there blue stars or pink H II regions?
+- Is the galaxy smooth, red, and mostly featureless?
+:::
+
+### Galaxy morphology as physical evidence
+
+| Type | What it looks like | Typical stellar population | Gas and dust | Star formation |
+|---|---|---|---|---|
+| Elliptical | Smooth, round to elongated | Mostly old, red stars | Little cold gas | Usually low |
+| Spiral / barred spiral | Disk, bulge, arms, sometimes a bar | Old bulge stars plus young disk stars | Organized gas and dust | Ongoing, especially in arms |
+| Irregular | No clean symmetry | Often young and blue | Often gas-rich | Often active or bursty |
+
+A better mnemonic is:
+
+**Ellipticals are usually gas-poor. Spirals are still building stars. Irregulars are often dynamically messy.**
+
+This is less catchy than "ellipticals are done," but it is more scientifically honest.
 
 {{< fig sombrero-galaxy-hubble >}}
 
-One important warning: the Hubble sequence is a **classification scheme**, not an evolutionary path. Ellipticals do not automatically turn into spirals, and spirals do not naturally march along the tuning fork from one subtype to another. The sequence helps us sort what galaxies look like today; the physical history has to be inferred from stellar populations, gas, dynamics, and environment.
+::: {.callout-note title="What to notice"}
+The Sombrero Galaxy does not fit a cartoon category perfectly. Its bright bulge and thin dusty disk are a reminder that classification is a first inference, not the whole physical story.
+:::
 
 ::: {.callout-roadmap title="ViewSpace Interactive: Future of the Milky Way" collapse="true"}
 Use this as a corrective to the tempting but wrong idea that galaxy type is a fixed identity. Follow the projected Milky Way-Andromeda interaction from separate spirals to a merged elliptical-like remnant.
@@ -174,9 +267,18 @@ What to notice: the stars mostly pass by one another, but the gas does not. Gas 
 </div>
 :::
 
-The Whirlpool Galaxy is a concrete example of why morphology is historical evidence. Its spiral structure and companion are not independent facts; the interaction helps shape the very pattern we classify.
+## Deep Dive: Galaxy Interactions as Morphology in Motion
+
+::: {.callout-deep-dive title="Galaxy interactions as morphology in motion" collapse="true"}
+The Hubble sequence is a snapshot. Interacting galaxies show why snapshots are not the same as histories.
+
+The Whirlpool Galaxy is a concrete example. Its spiral structure and companion are not independent facts; the interaction helps shape the very pattern we classify.
 
 {{< fig whirlpool-galaxy-merger >}}
+
+::: {.callout-note title="What to notice"}
+The companion, spiral arms, dust lanes, and pink star-forming regions belong to one dynamical story. The observable shape is evidence for gravitational interaction.
+:::
 
 ::: {.callout-roadmap title="ViewSpace Interactive: Star Cluster NGC 602" collapse="true"}
 NGC 602 is a star-forming region in the Small Magellanic Cloud, a satellite galaxy of the Milky Way. Use the exposure-time slider to connect two ideas at once: longer exposures reveal fainter structure, and young massive stars sculpt the gas around them.
@@ -203,6 +305,10 @@ M82 pushes the same idea into the extreme. It is a starburst galaxy: gas is bein
 
 {{< fig starburst-m82 >}}
 
+::: {.callout-note title="What to notice"}
+The red outflow is feedback made visible. Massive stars and supernovae are pushing gas out of the galaxy, so morphology is tied to star formation and gas motion.
+:::
+
 ::: {.callout-roadmap title="ViewSpace Interactive: The Antennae" collapse="true"}
 Use the wavelength buttons to inspect a real galaxy collision in radio, infrared, visible, and X-ray light. This is a better mental model for galaxy evolution than a static tuning fork.
 
@@ -226,85 +332,208 @@ What to notice: different wavelengths reveal different stages of the same physic
 
 {{< fig antennae-hubble-alma >}}
 
+::: {.callout-note title="What to notice"}
+The Antennae collision is both a stellar event and a gas event. The blue starlight and gas overlay reveal where the merger is compressing material and triggering star formation.
+:::
+
 Galaxy interactions are not just visual distortions in starlight. They also move the cold molecular gas that will make the next generation of stars. In a merger, the gas can be driven into the center, pulled into tidal features, or compressed into off-center star-forming knots.
 
 {{< fig merging-galaxies-molecular-gas-maps >}}
 
-::: {.callout-roadmap title="Structure Reference Box: Galaxy Types"}
-| Type | Shape | Dominant stars | Gas/dust | Star formation |
-|------|-------|----------------|----------|----------------|
-| Elliptical (E) | Smooth, ellipsoidal | Old, red | Little | Very low |
-| Spiral (S/SB) | Disk + bulge, arms | Mixed (old bulge, young disk) | Moderate, organized | Ongoing in arms |
-| Irregular (Irr) | Disorganized | Often young, blue | Gas-rich | Often high, bursty |
-
-*Mnemonic: Ellipticals are done. Spirals are working. Irregulars are messy.*
+::: {.callout-note title="What to notice"}
+The gas maps show where future stars can form. In mergers, cold molecular gas can be concentrated, displaced, stretched, or compressed, so the next generation of stars is written into the gas distribution before it appears in starlight.
+:::
 :::
 
-::: {.callout-check-yourself #cy-morphology}
-## Check Yourself 1: Reading a Galaxy
+::: {.callout-check-yourself title="Check Yourself 1 — Reading a Galaxy"}
 
-You look at two galaxies. Galaxy A is a smooth red ellipsoid with almost no cold gas detected in 21-cm. Galaxy B is a blue-tinged pinwheel with prominent pink H II regions along its arms.
+You observe two galaxies.
 
-Which galaxy is forming stars today? Which has the older average stellar population? What is the key observational clue that distinguishes the two?
+**Galaxy A** is a smooth red ellipsoid with almost no cold gas detected at 21 cm.
 
-::: {.callout-solution collapse="true" title="Answer"}
-Galaxy B is forming stars today. The **pink H II regions** are ionized hydrogen around young, hot, massive O/B stars — a direct signature of ongoing star formation. The **blue tint** of the light also points to young, hot stars dominating the integrated light. Galaxy A, by contrast, is red because it is dominated by old cool K/M stars, and has no cold gas left to form new stars from. The key observational clue is the *color* (blue = young and hot; red = old and cool) plus the *H II region signature* (ongoing ionization requires young massive stars). This is the Module 2 H-R diagram applied at the galactic scale.
+**Galaxy B** is a blue-tinged pinwheel with pink H II regions along its arms.
+
+Before reading the answer, predict:
+
+1. Which galaxy is forming stars today?
+2. Which galaxy has the older average stellar population?
+3. What observable clues support your answer?
 :::
+
+::: {.callout-tip title="Solution" collapse="true"}
+Galaxy B is forming stars today.
+
+The key clues are the blue color and the pink H II regions. Blue light often comes from young, hot, massive stars. H II regions are clouds of ionized hydrogen around young massive stars, so they are direct evidence of recent star formation.
+
+Galaxy A has the older average stellar population. Its red color, smooth structure, and lack of cold gas suggest that it is dominated by older stars and has little raw material available for new star formation.
+
+This is the Module 2 H-R diagram applied at the scale of an entire galaxy.
 :::
 
 ---
 
 ## The Distance Problem
 
-The Hubble sequence is easy enough to see. What is not easy is to know *how far away* each galaxy is. And without distance, we cannot convert what we see (apparent brightness, apparent size) into what we want (luminosity, physical size, mass).
+Classifying a galaxy from an image is the easy part. The harder question is:
 
-Recall the situation for stars (Lecture 15): within ~100 pc, parallax gives distance directly. Beyond that, parallax fails, and we have to use **standard candles** — objects whose true luminosity $L$ is known. From the inverse-square law,
+**How far away is it?**
 
-$$F = \frac{L}{4\pi d^2} \quad \Rightarrow \quad d = \sqrt{\frac{L}{4\pi F}}$$
+Distance matters because the sky gives us **apparent** properties, but astronomy often needs **physical** properties.
 
-so measuring flux $F$ gives distance $d$ if we know $L$.
+A galaxy that looks faint could be:
+
+- nearby and intrinsically dim, or
+- far away and intrinsically bright.
+
+A galaxy that looks small could be:
+
+- physically small, or
+- physically large but far away.
+
+Without distance, we cannot reliably convert apparent brightness into luminosity, apparent size into physical size, or observed motion into mass.
+
+::: {.callout-misconception title="Misconception check: Brighter does not always mean closer"}
+A bright object is not necessarily nearby, and a faint object is not necessarily far away.
+
+Brightness on the sky depends on both intrinsic luminosity and distance.
+:::
+
+For stars, parallax gives direct distances nearby. But parallax becomes too small to measure for most extragalactic objects. Andromeda is about $780\ {\rm kpc}$ away, far beyond the range where ordinary stellar parallax can map the galaxy as a whole.
+
+So astronomers use **standard candles**.
+
+A standard candle is an object whose true luminosity $L$ can be estimated from its physics. If we know $L$ and measure the received flux $F$, then the inverse-square law gives the distance.
+
+$$
+F = \frac{L}{4\pi d^2}
+$$
+
+Solving for distance gives:
+
+$$
+d = \sqrt{\frac{L}{4\pi F}}
+$$
+
+where:
+
+- $F$ is the measured flux at Earth, in ${\rm W\,m^{-2}}$,
+- $L$ is the object's intrinsic luminosity, in ${\rm W}$,
+- $d$ is the distance to the object, in ${\rm m}$ if SI units are used.
+
+::: {.callout-note title="Physical meaning"}
+Light spreads out as it travels. At twice the distance, the same light is spread over four times the area. That is why flux decreases as $1/d^2$.
+:::
+
+::: {.callout-sanity-check title="Unit check"}
+The quantity $L/F$ has units:
+
+$$
+\frac{{\rm W}}{{\rm W\,m^{-2}}} = {\rm m^2}
+$$
+
+The square root therefore has units of meters, which is what a distance should have.
+:::
+
+For galaxies, the key standard candles are stellar objects:
+
+- **Cepheid variables:** pulsating stars whose pulsation period tells us their luminosity.
+- **Type Ia supernovae:** exploding white dwarfs with calibratable peak luminosities.
 
 {{< fig cosmic-distance-ladder >}}
 
-For galaxies, the nearest are at ~1 Mpc (a million parsecs), a thousand times farther than any star we can parallax. We need a standard candle that is *bright enough* to be seen at that distance and *reliable enough* that its luminosity does not vary much from object to object. That is the distance-ladder problem, and Lecture 24 is dedicated to it. For now, note:
-
-- **Henrietta Leavitt's Cepheid variables** (discovered in the 1910s) are our first rung beyond parallax — they obey a period-luminosity relation that lets us read their $L$ from their pulsation period.
-- **Type Ia supernovae** (Lecture 25) take us further — they are so bright that we can see them across billions of light-years.
+::: {.callout-note title="What to notice"}
+The distance ladder is built rung by rung. Nearby geometric distances calibrate stellar tools, and those stellar tools eventually calibrate galaxy distances.
+:::
 
 {{< fig standard-candles >}}
 
-Both of these are stellar objects. *Stars are what let us measure cosmic distances.* Keep this thread in mind through the rest of the module — every distance beyond the Milky Way ultimately traces back to a star whose luminosity we have calibrated.
-
-::: {.callout-check-yourself #cy-candle}
-## Check Yourself 2: Why "Standard"?
-
-Why must a standard candle have a reliable, predictable luminosity $L$? What happens if two objects that look like the same kind of standard candle actually have luminosities that differ by a factor of 4?
-
-::: {.callout-solution collapse="true" title="Answer"}
-From $d = \sqrt{L/(4\pi F)}$, a factor-of-4 error in $L$ makes a factor-of-2 error in $d$ (since the square root of 4 is 2). Every derived quantity — size, mass, velocity — then inherits that error. A *standard* candle must have small intrinsic scatter in $L$, and its scatter has to be calibratable, so that the distance uncertainty is bounded. "Reliable" here means *small and well-characterized dispersion*, not "literally identical every time."
+::: {.callout-note title="What to notice"}
+Standard candles are not "standard" because they all look equally bright from Earth. They are useful because their intrinsic luminosities can be calibrated, letting measured flux become distance.
 :::
+
+This is the central lesson of the distance ladder:
+
+**Stars are the tools we use to measure the scale of the universe.**
+
+::: {.callout-check-yourself title="Check Yourself 2 — Why Standard?"}
+
+A standard candle must have a reliable luminosity $L$.
+
+Suppose two objects look like the same kind of standard candle, but one is actually $4$ times more luminous than the other.
+
+Predict before reading:
+
+1. If you assumed the wrong luminosity, would the distance error be a factor of $4$?
+2. Or would it be smaller than that?
+3. Why?
+:::
+
+::: {.callout-tip title="Solution" collapse="true"}
+The distance error would be a factor of $2$, not $4$.
+
+The distance formula is:
+
+$$
+d = \sqrt{\frac{L}{4\pi F}}
+$$
+
+Distance depends on the square root of luminosity. So if the luminosity is wrong by a factor of $4$, the distance is wrong by:
+
+$$
+\sqrt{4} = 2
+$$
+
+This is why standard candles must be reliable. If their luminosities vary too much, every distance estimate becomes uncertain.
 :::
 
 ---
 
 ## Active Galactic Nuclei
 
-Lecture 22 ended with a supermassive black hole at the center of our Galaxy — Sagittarius A*, weighing about $4 \times 10^6 \, M_\odot$. It is quiet. It barely shines.
+Lecture 22 ended with a supermassive black hole at the center of the Milky Way: Sagittarius A*, with a mass of about $4 \times 10^6\ M_\odot$.
 
-*Most* SMBHs in the local universe are like Sgr A* — dormant. But in some galaxies, the central black hole is actively feeding on surrounding gas, and when it does, it produces one of the most extreme sources of light in the universe. These galaxies are called **active galactic nuclei (AGN)**, and their most luminous members are **quasars**.
+Sagittarius A* is mostly quiet today. It is massive, but it is not currently feeding rapidly.
+
+In some galaxies, the central supermassive black hole is actively accreting gas. As gas spirals inward, it forms a hot accretion disk and releases enormous energy. The bright central region is called an **active galactic nucleus**, or **AGN**.
+
+The most luminous AGN are called **quasars**.
+
+::: {.callout-key-insight title="Key distinction"}
+A quasar is not a star.
+
+It is the bright central engine of a galaxy, powered by gas falling toward a supermassive black hole.
+:::
 
 {{< fig quasar-agn-artist-impression >}}
 
+::: {.callout-note title="What to notice"}
+The galaxy can be tens of thousands of light-years across, but the main power source is concentrated near the center. That compactness is one of the clues that the source is not ordinary starlight.
+:::
+
 {{< fig agn-eso-artist-impression >}}
 
-The key idea is compactness. The galaxy can be tens of thousands of light-years across, but the power source sits in the central light-hours to light-days.
+::: {.callout-note title="What to notice"}
+An active nucleus is embedded inside a host galaxy. Dust can hide the central engine from some viewing angles while jets and outflows carry energy outward.
+:::
 
 {{< fig agn-structure-basic >}}
+
+::: {.callout-note title="What to notice"}
+This schematic separates the central engine into parts: black hole, accretion disk, dusty torus, and sometimes jets. Each part leaves different observational signatures.
+:::
 
 ::: {.callout-deep-dive title="Reference: Black-Hole Engine Vocabulary" collapse="true"}
 This schematic is useful as a vocabulary map. Read it with one caution: the event horizon, disk, photon sphere, and jets are physically meaningful regions, while the singularity marks where our classical theory stops being enough.
 
 {{< fig black-hole-schematic-eso >}}
+
+::: {.callout-note title="What to notice"}
+The schematic is a vocabulary map, not a scale drawing. Use it to identify which physical regions produce different signals: disk emission, dust absorption, and jets.
+:::
+:::
+
+::: {.callout-prediction title="Pause and predict"}
+If visible light shows mostly stars, which wavelength would you expect to be more useful for detecting jets from an active galactic nucleus: radio, infrared, or visible? Explain your reasoning before opening the interactive.
 :::
 
 ::: {.callout-roadmap title="ViewSpace Interactive: Centaurus A" collapse="false"}
@@ -332,172 +561,316 @@ The same lesson shows up in Hercules A. In visible light, the host galaxy does n
 
 {{< fig hercules-a-multiwavelength-agn >}}
 
-An AGN has four components:
+::: {.callout-note title="What to notice"}
+The radio structure extends far beyond the visible galaxy. That is why multiwavelength evidence is essential for recognizing AGN jets.
+:::
 
-1. **The supermassive black hole** — usually $10^6$ to $10^{10} \, M_\odot$.
-2. **The accretion disk** — gas spiraling into the black hole, heated by viscous friction to temperatures of $10^5$ K or more, radiating across the ultraviolet and X-ray.
-3. **The dusty torus** — a ring of colder gas and dust surrounding the disk, responsible for much of the infrared emission.
-4. **Relativistic jets** (in some AGN) — collimated streams of plasma launched perpendicular to the disk at nearly the speed of light.
+An AGN has four useful components:
 
-### Where the Light Comes From
+1. **Supermassive black hole:** the central compact object, usually millions to billions of solar masses.
+2. **Accretion disk:** hot gas spiraling inward and radiating strongly, especially in ultraviolet and X-ray light.
+3. **Dusty torus:** colder gas and dust around the central disk, which can hide the engine from some viewing angles.
+4. **Jets:** in some AGN, narrow streams of fast-moving plasma launched away from the central region.
 
-The energy source of a quasar is not nuclear fusion. It is **gravitational potential energy** released as matter falls toward the SMBH. As gas spirals inward through the accretion disk, viscous friction converts its gravitational energy into heat, and the heat radiates away. Up to ~10% of the rest-mass energy ($E = mc^2$) of the infalling material can be converted into light for a non-rotating (Schwarzschild) black hole, rising to ~30 – 40% for a maximally rotating (Kerr) black hole. Compare this to hydrogen fusion in a star, which converts only ~0.7% of mass-energy into light. Accretion onto a black hole is, pound for pound, the *most efficient* known sustained power source in astrophysics.
+::: {.callout-misconception title="Misconception check: Black holes are not cosmic vacuum cleaners"}
+An active black hole is bright only when gas is available to fall inward. A supermassive black hole can be massive but quiet if it is not being fed.
+:::
+
+## Where the Light Comes From
+
+The energy source of a quasar is **not nuclear fusion**.
+
+Stars shine because fusion converts a small fraction of mass into energy. Hydrogen fusion converts about $0.7\%$ of the fuel's rest-mass energy into light.
+
+Quasars shine because of **accretion**. Gas falling toward a black hole loses gravitational potential energy. In the accretion disk, that energy becomes heat and radiation.
+
+For black-hole accretion, the efficiency can be much higher than fusion:
+
+- hydrogen fusion: about $0.7\%$ efficient,
+- accretion onto a non-rotating black hole: about $6\%$ efficient,
+- accretion onto a rapidly rotating black hole: up to tens of percent efficient.
+
+The exact efficiency depends on black-hole spin and accretion-disk physics, but the ASTR 101 takeaway is simple:
+
+**Accretion can release far more energy per kilogram of fuel than fusion.**
 
 {{< fig agn-nustar-accretion-artist >}}
 
-A quasar can outshine its entire host galaxy of $\sim 10^{11}$ stars — from a region roughly the size of our Solar System.
-
-::: {.callout-check-yourself #cy-quasar-luminosity}
-## Check Yourself 3: A Solar-System-Sized Lighthouse
-
-A typical luminous quasar has $L \sim 10^{13} \, L_\odot$. Observationally, quasars show flux variations on timescales as short as hours to days, which constrains the emitting region to be at most $\sim 1$ light-day ($\sim 2.6 \times 10^{13}$ m) — smaller than the outer Solar System. Using **energy-reservoir reasoning** (not luminosity density), explain why fusion cannot sustain this luminosity from such a small region, and why accretion onto a supermassive black hole can.
-
-::: {.callout-solution collapse="true" title="Answer"}
-The argument is about **total energy available per gram of fuel**, combined with the small size of the emitting region.
-
-- **Fusion** converts at most ~0.7% of rest-mass energy ($E = 0.007 \, mc^2$) into radiation. To produce $L \sim 10^{13} \, L_\odot \approx 4 \times 10^{39}$ W via fusion, the mass-consumption rate would be $\dot{m} = L / (0.007 \, c^2) \approx 100 \, M_\odot$/yr. Sustaining that for even ~1 Myr requires ~$10^8 \, M_\odot$ of hydrogen to be packed into a region smaller than the Solar System — a gravitationally self-destructive configuration. Stars that massive do not exist and could not sustainably fuse.
-- **Accretion onto a supermassive black hole** converts up to ~10% of rest-mass energy. The required mass-consumption rate drops to $\sim 1 - 10 \, M_\odot$/yr. A $10^9 \, M_\odot$ SMBH occupies a Schwarzschild radius of only $\sim 20$ AU, naturally fitting inside a ~1-lightday region, and can plausibly accrete this much material from the surrounding galaxy over Myr – Gyr timescales.
-- **Rapid variability** ($\Delta t \sim $ hours) implies the emitting region cannot be larger than $c \, \Delta t \sim$ a few light-hours, which is consistent with the size of an accretion disk around a $10^9 \, M_\odot$ SMBH but inconsistent with any stellar-fusion engine.
-
-The combination of small size, enormous luminosity, and high variability is exactly what accreting SMBHs produce and what no fusion-powered source can match.
-:::
+::: {.callout-note title="What to notice"}
+The bright source is the hot accretion flow near the black hole. The energy source is gravitational infall, not nuclear burning in stars.
 :::
 
-### The Eddington Limit
+That is why a quasar can outshine an entire galaxy of stars from a region only light-hours to light-days across.
 
-A feeding SMBH cannot be arbitrarily luminous. As the accretion luminosity rises, radiation pressure pushes gas *outward*, opposing gravity. When the outward radiation force equals the inward gravitational force, further inflow stalls. This critical luminosity is the **Eddington luminosity**:
+::: {.callout-check-yourself title="Check Yourself 3 — A Compact Cosmic Lighthouse"}
 
-$$L_{\text{Edd}} \approx 1.3 \times 10^{31} \, \text{W} \times \left( \frac{M}{M_\odot} \right) \approx 3.3 \times 10^4 \, L_\odot \times \left( \frac{M}{M_\odot} \right)$$
+Quasars can vary in brightness over hours to days.
 
-For a $10^9 \, M_\odot$ SMBH, $L_{\text{Edd}} \sim 3 \times 10^{13} \, L_\odot$ — close to the luminosity of bright quasars. That is not a coincidence: the brightest quasars are radiating at or near their Eddington limits. This gives us a *lower* bound on the SMBH mass for any quasar we see. Since $L_{\text{Edd}}$ scales linearly with mass, a quasar of luminosity $L$ must have
+That matters because no object can change brightness coherently faster than light can cross it. If a quasar changes noticeably in one day, then the region producing that change cannot be much larger than one light-day across.
+
+Before reading the answer, predict:
+
+1. Why does rapid variability imply a compact source?
+2. Why is a compact, extremely luminous source hard to explain with ordinary stars?
+3. Why does accretion onto a supermassive black hole solve the problem?
+:::
+
+::: {.callout-tip title="Solution" collapse="true"}
+Rapid variability means the emitting region must be compact. If different parts of the region were separated by many light-days, they could not coordinate a brightness change in only hours or days.
+
+A dense cluster of ordinary stars cannot easily explain this. Fusion is not efficient enough, and packing enough stars into such a small region would create an unstable system.
+
+Accretion onto a supermassive black hole solves both problems. It is compact, because the energy is released close to the black hole, and it is efficient, because falling gas can convert a large fraction of gravitational energy into radiation.
+:::
+
+## The Eddington Limit
+
+A feeding black hole cannot increase its luminosity without limit.
+
+As gas falls inward, it releases energy. That radiation pushes outward on the surrounding gas. If the radiation pressure becomes strong enough, it can push gas away and reduce the inflow.
+
+The luminosity where outward radiation pressure balances inward gravity is called the **Eddington luminosity**.
+
+For ionized gas around a black hole, the approximate scaling is:
 
 $$
-\frac{M}{M_\odot} \gtrsim \frac{L}{1.3 \times 10^{31}\,\text{W}}.
+L_{\rm Edd} \approx 1.3 \times 10^{31}\ {\rm W}\left(\frac{M}{M_\odot}\right)
 $$
 
-The units matter: the right-hand side is a pure number, and multiplying by $M_\odot$ gives the minimum mass.
+The important part is the scaling:
 
-### Worked Example: Minimum SMBH Mass from Eddington
+$$
+L_{\rm Edd} \propto M
+$$
 
-::: {.callout-worked-example title="Worked Example: Eddington-Limited Quasar"}
-**Given:** A quasar with bolometric luminosity $L \approx 10^{40}$ W (about $3 \times 10^{13}\,L_\odot$).
+A more massive black hole has stronger gravity, so it can support a higher accretion luminosity before radiation pressure pushes the gas away.
 
-**Relation:** A source cannot radiate above its Eddington luminosity for long without blowing itself apart, so $L \le L_{\text{Edd}}(M)$ with
-$$L_{\text{Edd}} \approx 1.3 \times 10^{31}\,\text{W} \times (M/M_\odot).$$
+::: {.callout-note title="ASTR 101 takeaway"}
+If we observe an extremely luminous quasar, the Eddington limit gives a minimum black-hole mass. The brightness alone tells us the black hole must be very massive.
+:::
 
-**Rearrange** to isolate the minimum SMBH mass:
-$$M_{\min} \gtrsim \frac{L}{1.3 \times 10^{31}\,\text{W}} \, M_\odot.$$
+## Worked Example: Minimum SMBH Mass from Eddington
 
-**Substitute:**
-$$M_{\min} \gtrsim \frac{10^{40}}{1.3 \times 10^{31}} \, M_\odot.$$
+Suppose a quasar has luminosity:
 
-**Evaluate:**
-$$M_{\min} \gtrsim 7.7 \times 10^{8} \, M_\odot \approx 10^9 \, M_\odot.$$
+$$
+L \approx 10^{40}\ {\rm W}
+$$
 
-**Interpret:** A galaxy hosting a $10^{40}$ W quasar must have at its center a SMBH of at least ~$10^9 \, M_\odot$ — two to three orders of magnitude more massive than Sgr A*. This is how distant quasars anchor the high-mass end of the SMBH census: the *brightness alone*, independent of any direct orbit measurement, sets a floor on the black hole mass.
+Use the Eddington scaling:
+
+$$
+L_{\rm Edd} \approx 1.3 \times 10^{31}\ {\rm W}\left(\frac{M}{M_\odot}\right)
+$$
+
+For the quasar to shine at this luminosity without radiation pressure shutting off the inflow, we need:
+
+$$
+L \lesssim L_{\rm Edd}
+$$
+
+So the black hole mass must satisfy:
+
+$$
+\frac{M}{M_\odot} \gtrsim \frac{10^{40}\ {\rm W}}{1.3 \times 10^{31}\ {\rm W}}
+$$
+
+The units cancel, leaving:
+
+$$
+\frac{M}{M_\odot} \gtrsim 7.7 \times 10^8
+$$
+
+So:
+
+$$
+M \gtrsim 8 \times 10^8\ M_\odot
+$$
+
+**Interpretation:** A quasar with luminosity $10^{40}\ {\rm W}$ requires a black hole of roughly a billion solar masses if it is radiating near the Eddington limit.
+
+::: {.callout-misconception title="Do not overinterpret this"}
+This is a lower-limit argument. It does not measure the black-hole mass exactly. It says the black hole must be massive enough for gravity to hold onto gas against the outward push of radiation.
 :::
 
 ---
 
-## The SMBH–Galaxy Connection
+## The SMBH-Galaxy Connection
 
-Here is a surprising observational fact: the mass of a galaxy's central SMBH is tightly correlated with the mass (or more precisely, the velocity dispersion σ) of its central *bulge*. This correlation is the **M–σ relation**:
+Supermassive black holes live in galaxy centers. But they do not grow in isolation.
 
-$$M_{\text{SMBH}} \propto \sigma^{\alpha}$$
+A major observational clue is that the mass of a galaxy's central supermassive black hole is correlated with the random speeds of stars in the galaxy's central bulge. This is called the **$M$-$\sigma$ relation**.
 
-with $\alpha \approx 4 - 5$ from observations. A galaxy with a more massive bulge has a more massive black hole, and the correlation is so tight (scatter of only a factor of ~2 – 3) that it cannot be an accident.
+Here:
+
+- $M$ means the mass of the central black hole.
+- $\sigma$ means the velocity dispersion of bulge stars, or how widely their speeds vary.
+
+In plain English:
+
+**Galaxies with more dynamically massive bulges tend to host more massive central black holes.**
 
 {{< fig m-sigma-smbh-relation >}}
 
-Read this as an evidence plot, not as a magic rule. The x-axis is a stellar measurement: the random speeds of stars in the bulge, inferred from Doppler broadening. The y-axis is a black-hole mass inferred from stellar or gas dynamics near the center. The trend says those two measurements know about each other.
+::: {.callout-note title="What to notice"}
+The plot connects two different kinds of inference:
 
-This is strange. The bulge contains $\sim 10^{11}$ stars and extends over ~kiloparsecs. The SMBH sits at the center and is, by galactic standards, tiny — $R_S \sim 10$ AU even for the biggest SMBHs. The SMBH's *direct* gravitational influence extends only over parsecs, not kiloparsecs. Yet they grow in lockstep.
+- black-hole mass, inferred from motions of stars or gas near the center,
+- bulge velocity dispersion, inferred from Doppler-broadened stellar absorption lines.
 
-The leading explanation is **AGN feedback**: when a SMBH becomes active, its radiation and jets heat and expel gas from the host galaxy, quenching both further star formation *and* further SMBH accretion. The SMBH is a thermostat for its bulge. But be careful: the correlation alone does not prove the mechanism. AGN feedback is compelling because it connects the correlation to a plausible energy source and to observed outflows, not because one plot can settle causality by itself.
+This is not a direct movie of black holes and galaxies growing together. It is an evidence pattern built from measurements of light and motion.
+:::
+
+This correlation is surprising because the black hole is tiny compared with the galaxy. Even a billion-solar-mass black hole directly dominates gravity only in the central region. The galaxy bulge extends across thousands of light-years.
+
+One leading explanation is **AGN feedback**. When the black hole accretes gas, radiation, winds, and jets can heat or expel gas from the galaxy. That can reduce both star formation and further black-hole feeding.
+
+But the correlation alone does not prove the mechanism. It tells us that black-hole growth and galaxy growth are linked. Explaining the link requires a physical model.
 
 {{< fig agn-feedback-flows >}}
 
-This is a very active research frontier, and it is one reason AGN matter for more than just being extremely bright point sources — they are possible *regulators* of galaxy evolution.
-
-::: {.callout-why-this-matters title="Why Stars Matter Here"}
-We measure a galaxy's bulge mass using — you guessed it — **stars**. Bulge velocity dispersion σ comes from spectroscopy of the integrated stellar light: Doppler-broadened absorption lines reveal the range of stellar velocities. Bulge mass comes from dynamical modeling using stellar orbits. Every point on the M–σ diagram is anchored in stellar kinematics.
+::: {.callout-note title="What to notice"}
+AGN feedback is a galaxy-scale claim about energy flow. Jets, winds, and cavities are evidence that the central engine can affect gas far beyond the immediate black-hole environment.
 :::
 
-::: {.callout-check-yourself #cy-msigma-inference}
-## Check Yourself 4: What Is Being Measured?
+::: {.callout-check-yourself title="Check Yourself 4 — What Is Being Measured?"}
 
-The M–σ relation connects a central black-hole mass to the velocity dispersion of bulge stars. Which part is the observable, which part is the model-dependent inference, and why does that distinction matter?
+The $M$-$\sigma$ relation connects black-hole mass to the velocity dispersion of bulge stars.
 
-::: {.callout-solution collapse="true" title="Answer"}
-The observable is the broadening of stellar absorption lines, which tells us the range of stellar line-of-sight velocities in the bulge. The model-dependent inference is the bulge's dynamical state and mass, plus the SMBH mass inferred from stellar or gas motions near the center. The distinction matters because the relation is not based on "seeing" a black hole grow with a galaxy; it is built by translating light into velocities, then velocities into gravitational mass.
+Before reading the answer, identify:
+
+1. What do astronomers directly observe?
+2. What requires a model?
+3. Why does that distinction matter?
 :::
+
+::: {.callout-tip title="Solution" collapse="true"}
+Astronomers directly observe light.
+
+For the bulge, they observe broadened stellar absorption lines. The broadening tells us that stars in the bulge have a range of line-of-sight velocities.
+
+The velocity dispersion $\sigma$ is inferred from those spectra. The bulge mass and black-hole mass require dynamical models that connect motion to gravity.
+
+This distinction matters because the $M$-$\sigma$ relation is not based on directly seeing a black hole "control" a galaxy. It is based on translating light into velocities, and velocities into gravitational mass.
 :::
 
 ---
 
 ## The Cosmic Web
 
-Zoom out one more time. Beyond individual galaxies is *galaxy clustering*. Galaxies are not scattered uniformly. They cluster into groups (like our Local Group of ~80 galaxies), then into *clusters* of hundreds to thousands of galaxies (like Virgo, Coma), and then into *superclusters* stretching tens of megaparsecs.
+Now zoom out again.
 
-Between the clusters are vast **voids** — regions tens of megaparsecs across with very few galaxies. Connecting clusters are **filaments** — long, thin structures of galaxies and gas.
+Galaxies are not scattered randomly through space. They collect into:
 
-Together, this arrangement is called the **cosmic web**.
+- **groups**, like the Local Group,
+- **clusters**, containing hundreds to thousands of galaxies,
+- **filaments**, long chains of galaxies and gas,
+- **walls**, broad sheet-like structures,
+- **voids**, large regions with relatively few galaxies.
 
-{{< fig antlia-cluster-noirlab >}}
+Together, this pattern is called the **cosmic web**.
 
 {{< fig desi-noirlab-3d-map >}}
 
-The cosmic web is what dark matter looks like, traced by galaxies. In the early universe, tiny density fluctuations (seen as temperature fluctuations in the CMB; Lecture 26) grew under gravity. Regions with slightly more dark matter attracted more gas, which cooled, formed stars, and became galaxies. Regions with slightly less dark matter emptied into voids. The web is the gravitational sedimentation of the early universe's initial conditions. We will see how those initial conditions are encoded in the CMB in Lecture 26.
+::: {.callout-note title="What to notice"}
+A cosmic-web map is not just a sky image. Each point is a galaxy with a measured position and distance. The web appears only when astronomers add distance information to sky position.
+:::
 
-::: {.callout-key-insight title="Hidden Thing #1, Continued"}
-Dark matter is not just a Milky Way problem. It shapes the entire cosmic web. The filaments and voids you see in maps like the Sloan Digital Sky Survey and DESI are the tracks left by dark matter as it gravitationally collapsed into structure over 13.8 billion years. Galaxies are the luminous decoration on a dark-matter skeleton.
+{{< fig antlia-cluster-noirlab >}}
+
+::: {.callout-note title="What to notice"}
+A cluster is a dense node in the web. Many galaxies occupy the same gravitational environment, so the cluster is evidence for a large concentration of underlying mass.
+:::
+
+The physical model is gravitational growth.
+
+In the early universe, matter was almost uniform, but not perfectly uniform. Some regions were slightly denser than average. Gravity amplified those small differences over time.
+
+- Dense regions pulled in more matter and became clusters.
+- Connecting regions became filaments.
+- Underdense regions emptied out and became voids.
+
+Dark matter is essential here. Most of the matter shaping the cosmic web is not in stars. Galaxies are bright tracers of a larger dark-matter structure.
+
+::: {.callout-key-insight title="Observable -> Model -> Inference"}
+**Observable:** Galaxies form filaments, clusters, walls, and voids.
+
+**Model:** Gravity amplifies small early density differences, with dark matter providing most of the mass.
+
+**Inference:** The cosmic web is the large-scale structure of matter in the universe, traced by galaxies.
+:::
+
+::: {.callout-misconception title="Misconception check: The cosmic web is not made only of galaxies"}
+Galaxies show us where the web is, but they are not most of the mass. The web is primarily a dark-matter structure, with galaxies acting as visible tracers.
 :::
 
 ---
 
 ## Distance Ladder Check-In
 
-Where are we in the distance ladder?
+This lecture introduced the distance problem. The rest of Module 3 builds the solution.
 
-| Rung | Method | Reach |
-|------|--------|-------|
-| 1 | Radar ranging (Solar System) | ~AU |
-| 2 | Stellar parallax (Gaia) | ~1 kpc |
-| 3 | Spectroscopic parallax, main-sequence fitting | ~100 kpc |
-| 4 | **Cepheid variables** | ~30 Mpc |
-| 5 | **Type Ia supernovae** | ~thousands of Mpc |
-| 6 | Hubble's law (redshift → distance) | cosmological |
+| Rung | Method | What it measures | Approximate reach |
+|---|---|---|---|
+| 1 | Radar ranging | Solar System distances | AU scale |
+| 2 | Stellar parallax | Nearby stellar distances | kpc scale for useful cases |
+| 3 | Main-sequence fitting | Star-cluster distances | Milky Way and nearby satellites |
+| 4 | Cepheid variables | Distances to nearby galaxies | tens of Mpc |
+| 5 | Type Ia supernovae | Distances to far galaxies | thousands of Mpc |
+| 6 | Hubble's law | Cosmological expansion distances | largest scales |
 
-Rungs 4 – 6 are the subject of Lectures 24 – 26. By the end of Module 3, we will see how stars — specific, carefully calibrated kinds of stars — anchor the entire cosmic distance scale, and how that scale lets us measure the age, size, and expansion rate of the universe.
+::: {.callout-summary title="Concept summary"}
+The distance ladder works because each rung calibrates the next.
+
+Nearby geometry calibrates stars.
+
+Stars calibrate galaxies.
+
+Galaxies reveal cosmic expansion.
+:::
+
+Lectures 24-26 will use this ladder to connect galaxy distances to Hubble's law, dark energy, and the early universe.
 
 ---
 
 ## Deep Dives (Optional)
 
 ::: {.callout-deep-dive title="Deep Dive: AGN Types and the Unified Model" collapse="true"}
-AGN come with a confusing zoo of historical names — Seyferts (Type 1 and 2), radio galaxies, quasars, BL Lacs, blazars. The **Unified Model** proposes that most of these differences come from *viewing angle*: the same basic object (SMBH + accretion disk + torus + jets) looks different depending on whether you see it face-on (quasar, blazar), edge-on through the torus (Type 2 Seyfert), or somewhere in between (Type 1 Seyfert). Some differences are real (e.g., radio-loud vs. radio-quiet AGN differ in jet power), but orientation does much of the zoological work.
+AGN come with a confusing zoo of historical names: Seyferts (Type 1 and 2), radio galaxies, quasars, BL Lacs, blazars. The **Unified Model** proposes that most of these differences come from *viewing angle*: the same basic object (SMBH + accretion disk + torus + jets) looks different depending on whether you see it face-on (quasar, blazar), edge-on through the torus (Type 2 Seyfert), or somewhere in between (Type 1 Seyfert). Some differences are real (e.g., radio-loud vs. radio-quiet AGN differ in jet power), but orientation does much of the zoological work.
 
 {{< fig agn-types-unified-model >}}
+
+::: {.callout-note title="What to notice"}
+The unified model connects names to viewing angle. The same central engine can look different depending on whether the disk, torus, and jet point toward us.
+:::
 :::
 
 ::: {.callout-deep-dive title="Deep Dive: Why Cepheids Specifically?" collapse="true"}
-Cepheid variables are pulsating giants whose pulsation period is set by their mean density, which is in turn set by their luminosity. More luminous Cepheids pulsate more slowly. This is why $L$ can be read off from the period $P$ — an extraordinary fact that was discovered empirically by Henrietta Leavitt in 1912 and later understood theoretically as a consequence of stellar structure. Lecture 24 develops this argument in detail.
+Cepheid variables are pulsating giants whose pulsation period is set by their mean density, which is in turn set by their luminosity. More luminous Cepheids pulsate more slowly. This is why $L$ can be read off from the period $P$, an extraordinary fact that was discovered empirically by Henrietta Leavitt in 1912 and later understood theoretically as a consequence of stellar structure. Lecture 24 develops this argument in detail.
 :::
 
 ---
 
 ## Misconceptions
 
-::: {.callout-misconception title="Misconception: Quasars Are Powered by Nuclear Fusion"}
-WRONG. A quasar's luminosity comes from **accretion** onto a supermassive black hole — gravitational potential energy converted to heat and light as gas spirals inward. Fusion is far too inefficient and would require an impossible amount of mass in an impossibly small volume to explain quasar luminosities.
+::: {.callout-misconception title="Misconception: The Hubble sequence is a galaxy life cycle"}
+The Hubble sequence is a classification system, not an evolutionary timeline. Galaxies can change type through mergers, gas loss, gas accretion, and star-formation shutdown, but they do not simply move along the tuning fork in order.
 :::
 
-::: {.callout-misconception title="Misconception: Elliptical Galaxies Are 'Old' Because They Formed First"}
-MOSTLY WRONG. Ellipticals are dominated by old stars *today*, but they often reached that state via mergers of spiral galaxies, which turned disks into ellipsoids and used up available gas. Many giant ellipticals are *dynamically* young even if their stars are old. Morphology is a *current* state, not a birth certificate.
+::: {.callout-misconception title="Misconception: Brighter galaxies are always closer"}
+Apparent brightness depends on both luminosity and distance. A faraway quasar can look bright because it is intrinsically enormous in luminosity. A nearby dwarf galaxy can look faint because it is intrinsically dim.
 :::
 
-::: {.callout-misconception title="Misconception: The Cosmic Web Is Made of Galaxies"}
-WRONG. The cosmic web is primarily a **dark matter** structure. Galaxies are tracers — they form along dark-matter filaments like frost condensing along the lines of a window's temperature gradient. The bulk of the mass in the web is dark matter, not galaxies or hot gas.
+::: {.callout-misconception title="Misconception: A quasar is a giant star"}
+A quasar is not powered by fusion. It is powered by accretion onto a supermassive black hole in the center of a galaxy.
+:::
+
+::: {.callout-misconception title="Misconception: Visible light shows the whole galaxy"}
+Visible light is only one window. Radio, infrared, ultraviolet, and X-ray observations reveal gas, dust, star formation, jets, hot plasma, and black-hole activity that visible light alone can miss.
+:::
+
+::: {.callout-misconception title="Misconception: The cosmic web is mostly stars and galaxies"}
+Galaxies trace the cosmic web, but most of the matter shaping the web is dark matter. The galaxies are the visible markers of a larger gravitational structure.
 :::
 
 ---
@@ -508,63 +881,200 @@ WRONG. The cosmic web is primarily a **dark matter** structure. Galaxies are tra
 
 ### Core Problems (Start Here)
 
-**Problem 1: Classify It.**
-You are handed three galaxy images. Galaxy X is a smooth ellipsoid, red, with no visible dust lanes or H II regions. Galaxy Y has tightly wound spiral arms, a large central bulge, and some pink H II regions along the arms. Galaxy Z has no symmetry, is blue, and is full of bright knots of young stars.
+#### Problem 1: Classify It
 
-Classify each as E, S(a/b/c), or Irr, and predict which has the most ongoing star formation.
+You are handed four galaxy images.
 
-**Problem 2: Why Is Parallax Not Enough?**
-The nearest large galaxy (Andromeda) is at ~780 kpc. Gaia parallax reaches a useful precision out to ~1 kpc. Explain, in two sentences, why Cepheid variables (and not parallax) are the tool for the Andromeda distance.
+- Galaxy X is a smooth red ellipsoid with no visible dust lanes or H II regions.
+- Galaxy Y has tightly wound spiral arms, a large central bulge, and some pink H II regions along the arms.
+- Galaxy Z has no clear symmetry, is blue, and is full of bright knots of young stars.
+- Galaxy W has a straight bright bar through its center, with spiral arms beginning near the ends of the bar and many pink H II regions along the arms.
 
-**Problem 3: Quasar Luminosity.**
-A quasar has an observed flux of $F = 10^{-12}$ W/m² and (by redshift distance) is at $d = 3$ Gpc ($\approx 9 \times 10^{25}$ m). Compute its luminosity $L$ and compare to $L_\odot = 3.8 \times 10^{26}$ W. How many Suns is that?
+Classify each galaxy as elliptical, spiral, barred spiral, or irregular. Then rank, or group, the galaxies from most to least ongoing star formation based on the evidence given.
 
-**Problem 4: Eddington Mass Lower Bound.**
-The quasar from Problem 3 has $L \approx 10^{39}$ W (check this once you've computed it). Using $L_{\text{Edd}} \approx 1.3 \times 10^{31} \times (M/M_\odot)$ W, estimate the minimum SMBH mass required to power it.
+#### Problem 2: Why Parallax Is Not Enough
 
-**Problem 5: Reading a Cosmic Web Map.**
-Look at a survey map like SDSS or DESI (use the reference figure in class). Identify (a) a galaxy cluster, (b) a void, and (c) a filament. In 1 – 2 sentences, describe the dark-matter distribution you would expect in each region.
+Andromeda is about $780\ {\rm kpc}$ away. Ordinary stellar parallax becomes extremely difficult at such distances.
+
+In two or three sentences, explain why Cepheid variables are useful for measuring Andromeda's distance.
+
+Your answer should mention:
+
+- what we observe,
+- what we infer,
+- why a standard candle helps.
+
+#### Problem 3: Quasar Luminosity
+
+A quasar has observed flux:
+
+$$
+F = 10^{-14}\ {\rm W\,m^{-2}}
+$$
+
+Its distance is:
+
+$$
+d = 3\ {\rm Gpc} \approx 9 \times 10^{25}\ {\rm m}
+$$
+
+Use:
+
+$$
+L = 4\pi d^2 F
+$$
+
+to estimate its luminosity.
+
+Then compare your answer to the Sun's luminosity:
+
+$$
+L_\odot = 3.8 \times 10^{26}\ {\rm W}
+$$
+
+How many Suns is the quasar equivalent to?
+
+#### Problem 4: Eddington Mass Lower Bound
+
+Use your answer from Problem 3. It should be close to:
+
+$$
+L \sim 10^{39}\ {\rm W}
+$$
+
+The Eddington luminosity is approximately:
+
+$$
+L_{\rm Edd} \approx 1.3 \times 10^{31}\ {\rm W}\left(\frac{M}{M_\odot}\right)
+$$
+
+Estimate the minimum black-hole mass needed to power this quasar if it is radiating near the Eddington limit.
+
+#### Problem 5: Reading a Cosmic-Web Map
+
+Return to the DESI redshift-survey map in the Cosmic Web section above, or use an equivalent SDSS/DESI galaxy survey map.
+
+Identify:
+
+1. a cluster,
+2. a filament,
+3. a void.
+
+For each one, write one sentence explaining what you infer about the underlying dark-matter distribution.
 
 ### Challenge Problems (Deepen Your Understanding)
 
-**Challenge 1: Fusion vs. Accretion Efficiency.**
-Hydrogen fusion converts ~0.7% of rest mass to energy. SMBH accretion can reach ~10%. Compute how much mass per second a star must fuse to sustain $L_\odot = 3.8 \times 10^{26}$ W. Then compute how much mass per second a SMBH must accrete to sustain $L = 10^{13} \, L_\odot$. Compare.
+#### Challenge 1: Fusion vs. Accretion Efficiency
 
-**Challenge 2: M–σ Scaling — and an Outlier.**
-If $M_{\text{SMBH}} \propto \sigma^4$, and one galaxy has σ = 100 km/s while another has σ = 200 km/s, what is the ratio of their SMBH masses?
+Hydrogen fusion converts about $0.7\%$ of mass energy into radiation. Black-hole accretion can convert several percent to tens of percent.
 
-Now apply the scaling to the Milky Way (σ ~ 100 km/s, $M_{\text{SMBH}} \approx 4 \times 10^6 \, M_\odot$) and predict the expected SMBH mass in M87 (σ ~ 380 km/s). Compare to the observed value, $M_{\text{SMBH}} \approx 6 \times 10^9 \, M_\odot$.
+In one paragraph, explain why this efficiency difference matters for quasars.
 
-You will find that the prediction *undershoots* the observed M87 mass by roughly an order of magnitude. M87 is a well-known **outlier** on the M–σ relation — giant ellipticals at the centers of galaxy clusters tend to host overmassive SMBHs relative to their bulge σ. In 1 – 2 sentences, propose a physical reason this might be (think about how a galaxy ends up at the center of a cluster).
+Your answer should address:
 
-**Challenge 3: Feedback as a Thermostat.**
-Write a one-paragraph argument explaining why AGN feedback could naturally produce a tight M–σ relation. What happens if a SMBH tries to grow faster than the bulge? What happens if a bulge tries to grow faster than its SMBH?
+- why quasars need an extremely efficient power source,
+- why ordinary stars cannot explain rapid quasar variability,
+- why accretion onto a supermassive black hole is a better model.
+
+#### Challenge 2: Reading the $M$-$\sigma$ Relation
+
+Suppose the approximate trend is:
+
+$$
+M_{\rm SMBH} \propto \sigma^4
+$$
+
+Galaxy A has:
+
+$$
+\sigma_A = 100\ {\rm km\,s^{-1}}
+$$
+
+Galaxy B has:
+
+$$
+\sigma_B = 200\ {\rm km\,s^{-1}}
+$$
+
+By what factor would you expect Galaxy B's black hole mass to exceed Galaxy A's?
+
+Then explain why this kind of relation is evidence for linked galaxy and black-hole growth, but not by itself proof of AGN feedback.
+
+#### Challenge 3: Feedback as a Thermostat
+
+Write one paragraph explaining the idea of AGN feedback as a thermostat.
+
+Use this structure:
+
+1. If the black hole accretes rapidly, then...
+2. This affects the surrounding gas by...
+3. That changes star formation because...
+4. Therefore black-hole growth and galaxy growth may become linked because...
 
 ---
 
 ## Reading Summary
 
-::: {.callout-summary title="Lecture 23 in One Screen"}
-- Galaxies fall on the **Hubble sequence** (E, S/SB, Irr); morphology is a stellar-population readout encoding star-formation history and gas content.
-- Measuring extragalactic distances is hard because parallax runs out at ~1 kpc. The fix is **standard candles** — objects of known $L$ whose observed flux $F$ gives $d$ via $L = 4\pi d^2 F$. Cepheid variables (Lecture 24) and Type Ia SNe (Lecture 25) are the key ones.
-- **Quasars and AGN** are powered by accretion onto supermassive black holes, not fusion. Accretion reaches ~10 – 40% rest-mass efficiency (Schwarzschild vs. maximally rotating Kerr); fusion maxes out at ~0.7%. Rapid variability plus enormous $L$ is uniquely consistent with an accreting SMBH.
-- The **Eddington limit** $L_{\text{Edd}} \propto M$ sets a lower bound on SMBH mass from observed luminosity alone; the brightest quasars need $M \gtrsim 10^9 \, M_\odot$.
-- The **M–σ relation** ties central SMBH mass to host-bulge velocity dispersion, implying co-evolution (most plausibly via AGN feedback). M87 and other brightest cluster galaxies are known overmassive outliers.
-- Galaxies are arranged in a **cosmic web** of filaments, walls, and voids — the visible decoration on a dark-matter skeleton whose initial conditions we will read from the CMB in Lecture 26.
-:::
+Galaxies are not just distant smudges. Their shapes, colors, spectra, gas content, and environments are evidence.
+
+- **Galaxy morphology** sorts galaxies into ellipticals, spirals, barred spirals, and irregulars. These categories are clues about stellar populations, gas content, star formation, and interaction history.
+
+- **Distance is the central measurement problem.** Without distance, apparent brightness and apparent size cannot be converted into luminosity and physical size.
+
+- **Standard candles solve the distance problem.** If we know an object's luminosity $L$ and measure its flux $F$, we can infer distance using the inverse-square law.
+
+- **Quasars and AGN are powered by accretion, not fusion.** Gas falling toward a supermassive black hole can release energy far more efficiently than ordinary stellar fusion.
+
+- **The Eddington limit links luminosity to black-hole mass.** Extremely luminous quasars require very massive black holes.
+
+- **The $M$-$\sigma$ relation suggests co-evolution.** Black-hole mass is correlated with the motions of stars in the host galaxy's bulge, implying that galaxy growth and black-hole growth are connected.
+
+- **The cosmic web is the large-scale structure of matter.** Galaxies trace filaments, clusters, walls, and voids shaped primarily by dark matter and gravity.
+
+The main skill from this lecture is not memorizing galaxy names. It is learning how astronomers turn images and spectra into physical histories.
 
 ---
 
 ## Glossary
 
-{{< glossary lecture=23 >}}
+**Accretion:** The process of gas falling onto a compact object, such as a black hole. In an accretion disk, gravitational energy is converted into heat and light.
+
+**Active galactic nucleus (AGN):** A bright central region of a galaxy powered by gas accreting onto a supermassive black hole.
+
+**Barred spiral:** A spiral galaxy with a straight bar-shaped structure through its center.
+
+**Cosmic web:** The large-scale pattern of galaxies, gas, and dark matter arranged into filaments, clusters, walls, and voids.
+
+**Dark matter:** Matter that does not emit or absorb light but has gravity. It shapes galaxy rotation, galaxy clusters, and the cosmic web.
+
+**Elliptical galaxy:** A smooth, rounded or elongated galaxy usually dominated by older stars and relatively little cold gas.
+
+**Flux:** The amount of energy received per second per square meter at a detector. Flux depends on both luminosity and distance.
+
+**H II region:** A cloud of ionized hydrogen around young, hot stars. H II regions are evidence of recent star formation.
+
+**Hubble sequence:** A galaxy classification system based on visual morphology, including ellipticals, spirals, barred spirals, and irregulars.
+
+**Irregular galaxy:** A galaxy without a clear spiral or elliptical structure, often gas-rich and actively forming stars.
+
+**Luminosity:** The total power emitted by an object. Luminosity is intrinsic; it does not depend on distance.
+
+**Quasar:** An extremely luminous AGN powered by accretion onto a supermassive black hole.
+
+**Spiral galaxy:** A disk galaxy with spiral arms, gas, dust, and ongoing star formation.
+
+**Standard candle:** An object whose luminosity can be estimated from its physics, allowing astronomers to infer distance from observed flux.
+
+**Supermassive black hole:** A black hole with a mass of millions to billions of solar masses, usually found in the centers of galaxies.
+
+**Velocity dispersion:** A measure of how widely stellar speeds vary in a system such as a galaxy bulge.
 
 ---
 
 ## Looking Ahead
 
-Next lecture (Lecture 24) is where we close the distance-ladder gap that this reading opened. We will walk through Cepheid variables in detail (Henrietta Leavitt's period-luminosity relation), connect them to the Type Ia supernovae that will appear in Lecture 25, and use them to derive **Hubble's law** — the relation between a galaxy's distance and its recession velocity that is the observational foundation of modern cosmology. We will also meet the **Hubble tension**, one of the most interesting open problems in modern astrophysics.
+Next lecture (Lecture 24) is where we close the distance-ladder gap that this reading opened. We will walk through Cepheid variables in detail (Henrietta Leavitt's period-luminosity relation), connect them to the Type Ia supernovae that will appear in Lecture 25, and use them to derive **Hubble's law**, the relation between a galaxy's distance and its recession velocity that is the observational foundation of modern cosmology. We will also meet the **Hubble tension**, one of the most interesting open problems in modern astrophysics.
 
 After that, Type Ia supernovae give us the *accelerating* universe and dark energy (Lecture 25), and the cosmic microwave background takes us all the way back to 380,000 years after the Big Bang (Lecture 26).
 
-Dark matter is the first of three hidden things (Lecture 22, and already showing up in the cosmic web here). Dark energy is the second (Lecture 25). The origin of the elements — including the ones in your body — is the third (Lecture 26). Every one of them depends on stars.
+Dark matter is the first of three hidden things (Lecture 22, and already showing up in the cosmic web here). Dark energy is the second (Lecture 25). The origin of the elements, including the ones in your body, is the third (Lecture 26). Every one of them depends on stars.

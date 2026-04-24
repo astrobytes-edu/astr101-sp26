@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" role="img" aria-labelledby="title desc" data-theme="dark" data-palette="aurora">
   <title id="title">Module 3 Evidence Chain Concept Map</title>
-  <desc id="desc">Concept map for ASTR 101 Module 3 showing how observations of galaxies, stellar distances, supernovae, the CMB, and element abundances connect through physical models to inferences about dark matter, dark energy, the Big Bang, and the origin of elements.</desc>
+  <desc id="desc">Concept map for ASTR 101 Module 3 with five evidence chains. Galaxy shapes, standard-candle measurements, galaxy redshifts, AGN signatures, CMB anisotropies, and light-element abundances are translated by physical models into inferences about galaxy histories, distances, cosmic expansion, the cosmic web, quasars, and the hot Big Bang.</desc>
   <defs>
     <style>
       :root {
@@ -9,126 +9,145 @@
         --panel2: #181c34;
         --fg: #eef0ff;
         --muted: #c9cbe5;
-        --faint: #8f92ad;
         --grid: #24263a;
         --teal: #028391;
         --teal-bright: #41A2AC;
-        --teal-pale: #A6D4D8;
         --pink: #BE5A83;
         --pink-bright: #CE83A2;
-        --pink-pale: #E8C5D4;
         --violet: #7077A1;
         --violet-bright: #9499B8;
-        --violet-pale: #CDCFDE;
         --gold: #D9A441;
       }
       .bg { fill: var(--bg); }
-      .grid { stroke: var(--grid); stroke-width: 1; opacity: 0.45; }
+      .grid { stroke: var(--grid); stroke-width: 1; opacity: 0.34; }
       .title { fill: var(--fg); font: 700 30px system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
-      .subtitle { fill: var(--muted); font: 500 17px system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
-      .label { fill: var(--fg); font: 700 18px system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
-      .small { fill: var(--muted); font: 500 14px system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
-      .tiny { fill: var(--faint); font: 500 12px system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
-      .box { fill: var(--panel); stroke: var(--violet); stroke-width: 2; rx: 16; }
-      .obs { fill: rgba(2, 131, 145, 0.24); stroke: var(--teal-bright); }
-      .model { fill: rgba(112, 119, 161, 0.24); stroke: var(--violet-bright); }
-      .inf { fill: rgba(190, 90, 131, 0.24); stroke: var(--pink-bright); }
-      .spine { fill: var(--panel2); stroke: var(--gold); stroke-width: 2.4; rx: 18; }
-      .connector { stroke: var(--violet-bright); stroke-width: 3; fill: none; marker-end: url(#arrow); }
-      .connector2 { stroke: var(--teal-bright); stroke-width: 2.4; fill: none; marker-end: url(#arrowTeal); }
-      .connector3 { stroke: var(--pink-bright); stroke-width: 2.4; fill: none; marker-end: url(#arrowPink); }
-      .outline { paint-order: stroke; stroke: var(--bg); stroke-width: 5px; stroke-linejoin: round; }
+      .subtitle { fill: var(--muted); font: 500 18px system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+      .header { fill: var(--fg); font: 700 21px system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+      .body { fill: var(--fg); font: 600 18px system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+      .body-muted { fill: var(--muted); font: 600 18px system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+      .prompt { fill: var(--fg); font: 700 18px system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+      .footer { fill: var(--muted); font: 600 18px system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+      .col { fill: var(--panel); stroke-width: 2.4; rx: 18; }
+      .obs { stroke: var(--teal-bright); }
+      .model { stroke: var(--violet-bright); }
+      .inf { stroke: var(--pink-bright); }
+      .obs-row { fill: rgba(2, 131, 145, 0.22); stroke: rgba(65, 162, 172, 0.72); }
+      .model-row { fill: rgba(112, 119, 161, 0.22); stroke: rgba(148, 153, 184, 0.72); }
+      .inf-row { fill: rgba(190, 90, 131, 0.22); stroke: rgba(206, 131, 162, 0.72); }
+      .row { stroke-width: 1.4; rx: 11; }
+      .prompt-box { fill: rgba(217, 164, 65, 0.16); stroke: var(--gold); stroke-width: 2; rx: 18; }
+      .footer-box { fill: var(--panel2); stroke: var(--gold); stroke-width: 2.4; rx: 18; }
+      .arrow-teal { stroke: var(--teal-bright); stroke-width: 3; fill: none; marker-end: url(#arrowTeal); }
+      .arrow-pink { stroke: var(--pink-bright); stroke-width: 3; fill: none; marker-end: url(#arrowPink); }
     </style>
-    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
-      <path d="M 0 0 L 10 5 L 0 10 z" fill="#9499B8"/>
-    </marker>
-    <marker id="arrowTeal" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+    <marker id="arrowTeal" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto">
       <path d="M 0 0 L 10 5 L 0 10 z" fill="#41A2AC"/>
     </marker>
-    <marker id="arrowPink" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+    <marker id="arrowPink" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto">
       <path d="M 0 0 L 10 5 L 0 10 z" fill="#CE83A2"/>
     </marker>
   </defs>
 
   <rect class="bg" x="0" y="0" width="960" height="540"/>
-  <g opacity="0.7">
-    <path class="grid" d="M80 106 H880"/>
-    <path class="grid" d="M80 184 H880"/>
-    <path class="grid" d="M80 262 H880"/>
-    <path class="grid" d="M80 340 H880"/>
-    <path class="grid" d="M80 418 H880"/>
-    <path class="grid" d="M220 100 V430"/>
-    <path class="grid" d="M480 100 V430"/>
-    <path class="grid" d="M740 100 V430"/>
+  <g>
+    <path class="grid" d="M62 126 H898"/>
+    <path class="grid" d="M62 227 H898"/>
+    <path class="grid" d="M62 328 H898"/>
+    <path class="grid" d="M62 429 H898"/>
+    <path class="grid" d="M320 118 V460"/>
+    <path class="grid" d="M640 118 V460"/>
   </g>
 
-  <text x="480" y="44" text-anchor="middle" class="title">Module 3 Evidence Chain</text>
-  <text x="480" y="72" text-anchor="middle" class="subtitle">Galaxies and cosmology as observable signals translated by physical models</text>
+  <text x="480" y="42" text-anchor="middle" class="title">Module 3 Evidence Chain</text>
+  <text x="480" y="70" text-anchor="middle" class="subtitle">Galaxies and cosmology turn limited signals into physical histories</text>
 
   <g>
-    <rect x="54" y="102" width="220" height="310" class="box obs"/>
-    <text x="164" y="132" text-anchor="middle" class="label">Observables</text>
-    <text x="82" y="166" class="small">Stellar positions</text>
-    <text x="82" y="191" class="small">Orbital velocities</text>
-    <text x="82" y="216" class="small">Galaxy spectra</text>
-    <text x="82" y="241" class="small">Standard candles</text>
-    <text x="82" y="266" class="small">Supernova brightness</text>
-    <text x="82" y="291" class="small">CMB blackbody map</text>
-    <text x="82" y="316" class="small">H, He, Li abundances</text>
-    <text x="82" y="354" class="tiny">What arrives at the telescope:</text>
-    <text x="82" y="374" class="tiny">light, position, wavelength,</text>
-    <text x="82" y="394" class="tiny">timing, and motion.</text>
+    <rect x="105" y="84" width="750" height="38" class="prompt-box"/>
+    <text x="480" y="109" text-anchor="middle" class="prompt">Ask every time: What do we observe? What model translates it? What claim follows?</text>
   </g>
 
   <g>
-    <rect x="370" y="102" width="220" height="310" class="box model"/>
-    <text x="480" y="132" text-anchor="middle" class="label">Models</text>
-    <text x="398" y="166" class="small">Gravity and orbits</text>
-    <text x="398" y="191" class="small">Stellar populations</text>
-    <text x="398" y="216" class="small">Distance ladder</text>
-    <text x="398" y="241" class="small">Expanding space</text>
-    <text x="398" y="266" class="small">Supernova light curves</text>
-    <text x="398" y="291" class="small">Recombination physics</text>
-    <text x="398" y="316" class="small">Nuclear reactions</text>
-    <text x="398" y="354" class="tiny">Physics converts measurements</text>
-    <text x="398" y="374" class="tiny">into distances, masses, ages,</text>
-    <text x="398" y="394" class="tiny">and histories.</text>
+    <rect x="36" y="136" width="270" height="318" class="col obs"/>
+    <rect x="345" y="136" width="270" height="318" class="col model"/>
+    <rect x="654" y="136" width="270" height="318" class="col inf"/>
+    <text x="171" y="164" text-anchor="middle" class="header">Observables</text>
+    <text x="480" y="164" text-anchor="middle" class="header">Models</text>
+    <text x="789" y="164" text-anchor="middle" class="header">Inferences</text>
   </g>
 
   <g>
-    <rect x="686" y="102" width="220" height="310" class="box inf"/>
-    <text x="796" y="132" text-anchor="middle" class="label">Inferences</text>
-    <text x="714" y="166" class="small">Milky Way structure</text>
-    <text x="714" y="191" class="small">Dark matter halos</text>
-    <text x="714" y="216" class="small">SMBHs and quasars</text>
-    <text x="714" y="241" class="small">Cosmic expansion</text>
-    <text x="714" y="266" class="small">Dark energy</text>
-    <text x="714" y="291" class="small">Hot Big Bang</text>
-    <text x="714" y="316" class="small">Recycled elements</text>
-    <text x="714" y="354" class="tiny">The hidden universe is not</text>
-    <text x="714" y="374" class="tiny">guessed. It is inferred from</text>
-    <text x="714" y="394" class="tiny">many independent chains.</text>
-  </g>
-
-  <path class="connector2" d="M274 202 C316 202 328 202 370 202"/>
-  <path class="connector3" d="M590 202 C632 202 644 202 686 202"/>
-  <path class="connector2" d="M274 292 C316 292 328 292 370 292"/>
-  <path class="connector3" d="M590 292 C632 292 644 292 686 292"/>
-
-  <g>
-    <rect x="132" y="438" width="696" height="70" class="spine"/>
-    <text x="480" y="466" text-anchor="middle" class="label">Course spine</text>
-    <text x="480" y="492" text-anchor="middle" class="small">Stars calibrate the ladder; gravity reveals hidden mass; expansion reveals cosmic history; stellar lives make the atoms.</text>
+    <rect x="54" y="178" width="234" height="46" class="row obs-row"/>
+    <rect x="363" y="178" width="234" height="46" class="row model-row"/>
+    <rect x="672" y="178" width="234" height="46" class="row inf-row"/>
+    <text x="72" y="198" class="body">Shapes, colors,</text>
+    <text x="72" y="217" class="body">gas, and dust</text>
+    <text x="381" y="198" class="body">Stellar populations</text>
+    <text x="381" y="217" class="body">and gas physics</text>
+    <text x="690" y="198" class="body">Star-formation</text>
+    <text x="690" y="217" class="body">histories</text>
+    <path class="arrow-teal" d="M288 201 H358"/>
+    <path class="arrow-pink" d="M597 201 H667"/>
   </g>
 
   <g>
-    <path class="connector" d="M220 436 C238 426 257 418 274 408"/>
-    <path class="connector" d="M480 436 V414"/>
-    <path class="connector" d="M740 436 C722 426 703 418 686 408"/>
+    <rect x="54" y="232" width="234" height="46" class="row obs-row"/>
+    <rect x="363" y="232" width="234" height="46" class="row model-row"/>
+    <rect x="672" y="232" width="234" height="46" class="row inf-row"/>
+    <text x="72" y="252" class="body">Cepheid periods</text>
+    <text x="72" y="271" class="body">and SN brightness</text>
+    <text x="381" y="252" class="body">Distance ladder</text>
+    <text x="381" y="271" class="body">and flux law</text>
+    <text x="690" y="252" class="body">Galaxy distances,</text>
+    <text x="690" y="271" class="body">sizes, luminosities</text>
+    <path class="arrow-teal" d="M288 255 H358"/>
+    <path class="arrow-pink" d="M597 255 H667"/>
   </g>
 
   <g>
-    <rect x="294" y="90" width="372" height="36" rx="18" fill="rgba(217, 164, 65, 0.16)" stroke="#D9A441" stroke-width="1.6"/>
-    <text x="480" y="114" text-anchor="middle" class="small outline">Ask every time: What do we observe? What model translates it? What claim follows?</text>
+    <rect x="54" y="286" width="234" height="46" class="row obs-row"/>
+    <rect x="363" y="286" width="234" height="46" class="row model-row"/>
+    <rect x="672" y="286" width="234" height="46" class="row inf-row"/>
+    <text x="72" y="306" class="body">Galaxy positions</text>
+    <text x="72" y="325" class="body">and redshifts</text>
+    <text x="381" y="306" class="body">Expanding space</text>
+    <text x="381" y="325" class="body">plus gravity</text>
+    <text x="690" y="306" class="body">Cosmic expansion</text>
+    <text x="690" y="325" class="body">and cosmic web</text>
+    <path class="arrow-teal" d="M288 309 H358"/>
+    <path class="arrow-pink" d="M597 309 H667"/>
+  </g>
+
+  <g>
+    <rect x="54" y="340" width="234" height="46" class="row obs-row"/>
+    <rect x="363" y="340" width="234" height="46" class="row model-row"/>
+    <rect x="672" y="340" width="234" height="46" class="row inf-row"/>
+    <text x="72" y="360" class="body">AGN spectra, jets,</text>
+    <text x="72" y="379" class="body">and variability</text>
+    <text x="381" y="360" class="body">Black-hole</text>
+    <text x="381" y="379" class="body">accretion</text>
+    <text x="690" y="360" class="body">Feeding SMBHs</text>
+    <text x="690" y="379" class="body">and quasars</text>
+    <path class="arrow-teal" d="M288 363 H358"/>
+    <path class="arrow-pink" d="M597 363 H667"/>
+  </g>
+
+  <g>
+    <rect x="54" y="394" width="234" height="46" class="row obs-row"/>
+    <rect x="363" y="394" width="234" height="46" class="row model-row"/>
+    <rect x="672" y="394" width="234" height="46" class="row inf-row"/>
+    <text x="72" y="414" class="body">CMB anisotropies</text>
+    <text x="72" y="433" class="body">and light elements</text>
+    <text x="381" y="414" class="body">Recombination</text>
+    <text x="381" y="433" class="body">and nuclear reactions</text>
+    <text x="690" y="414" class="body">Hot Big Bang</text>
+    <text x="690" y="433" class="body">and recycled atoms</text>
+    <path class="arrow-teal" d="M288 417 H358"/>
+    <path class="arrow-pink" d="M597 417 H667"/>
+  </g>
+
+  <g>
+    <rect x="76" y="474" width="808" height="46" class="footer-box"/>
+    <text x="480" y="493" text-anchor="middle" class="footer">Module 3 skill: read the sky as evidence.</text>
+    <text x="480" y="513" text-anchor="middle" class="footer">A picture becomes physics only after a model and a distance scale.</text>
   </g>
 </svg>

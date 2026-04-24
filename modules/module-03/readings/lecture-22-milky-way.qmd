@@ -154,11 +154,11 @@ Modern surveys keep finding faint companions around the Milky Way, especially in
 
 {{< fig milky-way-new-dwarf-galaxies >}}
 
-::: {.callout-check-yourself title="Check Yourself 1"}
+::: {.callout-check-yourself title="Check Yourself 1 — Structure and Stellar Populations"}
 Two stars have identical spectra consistent with a K5 dwarf. One orbits in the thin disk on a nearly circular path; the other orbits in the halo on a highly elongated, tilted path. Which was more likely born recently, and which was likely born in the galaxy's first few billion years?
 :::
 
-::: {.callout-solution title="Solution" collapse="true"}
+::: {.callout-tip title="Solution" collapse="true"}
 **The disk star is more likely to be younger; the halo star is more likely to be ancient.** This is a *kinematic* inference that rests on how the Milky Way built itself: the disk is where ongoing star formation happens (gas is still there), and its stars inherit the disk's orderly, near-circular orbits. The halo formed early from accreted material and early collapse; its stars are old and their orbits retained the disorderly motions of that era. Stellar spectral type alone (K5) does not tell you an age — but kinematics plus location does.
 :::
 
@@ -176,6 +176,16 @@ How do you map the inside of something you cannot leave? With *two* great advant
 
 The Milky Way's disk contains interstellar dust: micron-sized grains that absorb and scatter visible light. Toward the Galactic Center, the dust is so dense that *no* visible light from the center reaches us. Early-20th-century astronomers did not know this, which is why they initially thought the Sun was near the middle of our Galaxy. It isn't.
 
+::: {.callout-prediction title="Pause and predict"}
+Before comparing the wavelength views below, predict which kind of light is most useful for each target:
+
+- stars hidden behind dust,
+- neutral hydrogen gas,
+- hot or high-energy structures near the Galactic Center.
+
+Then check whether the figures support your prediction.
+:::
+
 {{< fig galactic-center-multiwavelength-eso >}}
 
 {{< fig hubble-galactic-center >}}
@@ -184,7 +194,7 @@ Dust is a problem for visible light specifically because visible wavelengths (~0
 
 ### The 21-cm Line: Hydrogen as Our Native Guide
 
-Neutral hydrogen in the interstellar medium emits a faint but characteristic photon at a wavelength of 21 cm — in the radio part of the spectrum (callback to Lecture 7). This emission comes from a quantum-mechanical transition (the "hyperfine" flip of the electron's spin relative to the proton's) and happens to any hydrogen atom, everywhere, all the time.
+Neutral hydrogen in the interstellar medium can emit a faint but characteristic photon at a wavelength of 21 cm — in the radio part of the spectrum (callback to Lecture 7). This emission comes from a quantum-mechanical transition: the "hyperfine" flip of the electron's spin relative to the proton's spin. Any one hydrogen atom emits this photon only rarely, but the Galaxy contains so much neutral hydrogen that the combined signal is detectable and map-like.
 
 At 21 cm, dust is utterly transparent. The galaxy's HI gas lights up like a map of itself.
 
@@ -233,12 +243,12 @@ There is one more clever mapping trick: use objects *behind* the Milky Way as fl
 **To map a dusty galaxy, change your wavelength: 21-cm HI traces the gas, infrared traces the stars, and Gaia parallaxes build precise 3-D maps where dust allows.**
 :::
 
-::: {.callout-check-yourself title="Check Yourself 2"}
+::: {.callout-check-yourself title="Check Yourself 2 — Choosing a Wavelength"}
 You want to study the stars packed around the Galactic Center, but visible-light images are mostly dark because dust blocks the view. Which wavelength regime should you choose — visible, infrared, or 21-cm radio — and what would that choice let you measure?
-
-::: {.callout-solution title="Solution" collapse="true"}
-Use **infrared** if your goal is to see the stars. Infrared light passes through dust much more effectively than visible light, so it reveals the dense stellar cluster near the Galactic Center. Use **21-cm radio** if your goal is to map neutral hydrogen gas and measure its Doppler shifts. The key move is matching the wavelength to the observable you need.
 :::
+
+::: {.callout-tip title="Solution" collapse="true"}
+Use **infrared** if your goal is to see the stars. Infrared light passes through dust much more effectively than visible light, so it reveals the dense stellar cluster near the Galactic Center. Use **21-cm radio** if your goal is to map neutral hydrogen gas and measure its Doppler shifts. The key move is matching the wavelength to the observable you need.
 :::
 
 ---
@@ -293,12 +303,12 @@ The dark matter halo is inferred to be roughly spherical, to extend well beyond 
 
 What would change our mind? A direct particle detection would not be required to justify the gravitational inference, but it would identify the substance. A modified-gravity theory would have to do more than fit one rotation curve: it would need to explain galaxy rotation curves, galaxy clusters, gravitational lensing, the CMB, and the growth of the cosmic web with one coherent model. That is why dark matter is not a single-observation guess; it is the simplest explanation that survives many independent tests.
 
-::: {.callout-check-yourself title="Check Yourself 3: Flat Means More Mass"}
+::: {.callout-check-yourself title="Check Yourself 3 — Flat Means More Mass"}
 Suppose two galaxies both have flat rotation curves, but Galaxy A stays flat at 150 km/s while Galaxy B stays flat at 300 km/s. At the same radius, which galaxy has more enclosed mass? By what factor?
-
-::: {.callout-solution title="Solution" collapse="true"}
-Galaxy B has more enclosed mass. From $M_{\text{enc}} = v^2 r/G$, mass scales as $v^2$ at fixed radius. Doubling the circular speed from 150 km/s to 300 km/s means $2^2 = 4$ times more enclosed mass. The observable is velocity; the inference is gravitational mass.
 :::
+
+::: {.callout-tip title="Solution" collapse="true"}
+Galaxy B has more enclosed mass. From $M_{\text{enc}} = v^2 r/G$, mass scales as $v^2$ at fixed radius. Doubling the circular speed from 150 km/s to 300 km/s means $2^2 = 4$ times more enclosed mass. The observable is velocity; the inference is gravitational mass.
 :::
 
 ::: {.callout-misconception title="Misconception: Dark Matter Is Dark Dust"}
@@ -385,12 +395,12 @@ $$
 \frac{M_{\text{Sgr A*}}}{M_\odot} \approx \frac{9.1 \times 10^8}{256} \approx 3.6 \times 10^6
 $$
 
-**Interpretation:** Sgr A\* has a mass of roughly $4 \times 10^6$ M☉ (the current best value is $4.3 \times 10^6$ M☉). The mass is concentrated inside a region small enough that S2 can swing within ~120 AU without running into it.
+**Interpretation:** Sgr A\* has a mass of roughly $4 \times 10^6\ M_\odot$ (the current best value is $4.3 \times 10^6\ M_\odot$). The mass is concentrated inside a region small enough that S2 can swing within ~120 AU without running into it.
 
-**What else could this be?** A four-million-solar-mass cluster of ordinary stars inside that volume would be so dense that internal collisions would disperse it on timescales *much* shorter than the age of the galaxy. A cluster of neutron stars or stellar-mass black holes of that total mass runs into the same problems. The only thing we know that can pack 4 × 10⁶ M☉ into a volume smaller than our solar system is a supermassive black hole.
+**What else could this be?** A four-million-solar-mass cluster of ordinary stars inside that volume would be so dense that internal collisions would disperse it on timescales *much* shorter than the age of the galaxy. A cluster of neutron stars or stellar-mass black holes of that total mass runs into the same problems. The only thing we know that can pack $4 \times 10^6\ M_\odot$ into a volume smaller than our solar system is a supermassive black hole.
 
 ::: {.column-margin}
-**Supermassive black hole (SMBH):** A black hole with mass of 10⁵ – 10¹⁰ M☉. Most massive galaxies examined carefully appear to host one near their center.
+**Supermassive black hole (SMBH):** A black hole with mass of $10^5$ to $10^{10}\ M_\odot$. Most massive galaxies examined carefully appear to host one near their center.
 :::
 
 In May 2022, the Event Horizon Telescope released the first direct image of Sgr A\*'s shadow. The angular size of that shadow matches, to within measurement uncertainty, the size predicted by the orbit-derived mass and the Schwarzschild-radius formula from Lecture 21.
@@ -403,11 +413,11 @@ Polarization is also a nice example of the course throughline at work. We do not
 
 {{< fig milky-way-polarization-context >}}
 
-::: {.callout-check-yourself title="Check Yourself 4"}
+::: {.callout-check-yourself title="Check Yourself 4 — Event Horizon Scale"}
 Using the Schwarzschild-radius formula from Lecture 21, $R_S = 2GM/c^2$, estimate the Schwarzschild radius of Sgr A* in AU. For $M = 4 \times 10^6 \, M_\odot$, $R_S$ in meters is about $2 \times (6.67 \times 10^{-11}) \times (4 \times 10^6 \times 2 \times 10^{30}) / (3 \times 10^8)^2$. Convert the final answer to AU using $1\,\text{AU} \approx 1.5 \times 10^{11}$ m.
 :::
 
-::: {.callout-solution title="Solution" collapse="true"}
+::: {.callout-tip title="Solution" collapse="true"}
 **Given:** $M = 4 \times 10^6 M_\odot = 8 \times 10^{36}$ kg.
 
 **Evaluate the formula:**
@@ -422,7 +432,7 @@ $$
 :::
 
 ::: {.callout-summary title="Takeaway: Sgr A*"}
-**The orbits of a few stars, combined with Kepler's third law, weigh Sgr A* at ~4 × 10⁶ M☉ and pack that mass into a region small enough to be nothing but a supermassive black hole.**
+**The orbits of a few stars, combined with Kepler's third law, weigh Sgr A* at $\sim 4 \times 10^6\ M_\odot$ and pack that mass into a region small enough to be nothing but a supermassive black hole.**
 :::
 
 ---
@@ -535,21 +545,21 @@ You want to map gas in the Galactic disk behind the dense dust of the Galactic C
 You observe a spiral galaxy whose rotation curve rises from the center out to 3 kpc, then stays flat at 220 km/s out to at least 15 kpc. Sketch the visible-mass prediction and the observed curve on the same axes, and mark where "extra mass" is required.
 
 **Problem 4: Enclosed Mass from a Rotation Curve.**
-The Milky Way's rotation curve is roughly flat at $v \approx 220$ km/s. At a radius $r = 20$ kpc, estimate the enclosed mass in solar masses using $M_{\text{enc}} = v^2 r / G$. Useful conversions: $G \approx 4.3 \times 10^{-6}$ kpc·(km/s)²/M☉.
+The Milky Way's rotation curve is roughly flat at $v \approx 220\ {\rm km\,s^{-1}}$. At a radius $r = 20\ {\rm kpc}$, estimate the enclosed mass in solar masses using $M_{\text{enc}} = v^2 r / G$. Useful conversion: $G \approx 4.3 \times 10^{-6}\ {\rm kpc}\,({\rm km\,s^{-1}})^2\,M_\odot^{-1}$.
 
-**Problem 5: Weighing Sgr A*.**
-A star is observed to orbit the Galactic Center with period 30 years and semi-major axis 2,000 AU. Using Kepler's third law in solar units, estimate the central mass.
+**Problem 5: Weighing Sgr A\*.**
+Star S2 is observed to orbit the Galactic Center with period $P \approx 16\ {\rm yr}$ and semi-major axis $a \approx 970\ {\rm AU}$. Using Kepler's third law in solar units, estimate the central mass. Your answer should be close to the mass of Sgr A\* from the worked example.
 
 ### Challenge Problems (Deepen Your Understanding)
 
 **Challenge 1: Schwarzschild Radius Scaling.**
-Show that for a black hole of mass $M$, the Schwarzschild radius $R_S = 2GM/c^2$ scales linearly with mass. If a 10 $M_\odot$ stellar-mass black hole has $R_S \approx 30$ km, what is $R_S$ for Sgr A* (4 × 10⁶ M☉)? Compare to your answer from Check Yourself 4.
+Show that for a black hole of mass $M$, the Schwarzschild radius $R_S = 2GM/c^2$ scales linearly with mass. If a $10\ M_\odot$ stellar-mass black hole has $R_S \approx 30\ {\rm km}$, what is $R_S$ for Sgr A* ($4 \times 10^6\ M_\odot$)? Compare to your answer from Check Yourself 4.
 
 **Challenge 2: Dark Matter vs. MOND.**
 Write a one-paragraph argument explaining why a single well-measured rotation curve is not, by itself, enough to distinguish dark matter from MOND. What *additional* observations would help?
 
 **Challenge 3: What Fraction Is Baryonic?**
-Suppose all the stars in the Milky Way total $\sim 6 \times 10^{10}$ M☉, and all the gas totals another $\sim 10^{10}$ M☉. If the total mass enclosed within 100 kpc is $\sim 10^{12}$ M☉ (dominated by dark matter), what fraction of the Milky Way's mass is luminous?
+Suppose all the stars in the Milky Way total $\sim 6 \times 10^{10}\ M_\odot$, and all the gas totals another $\sim 10^{10}\ M_\odot$. If the total mass enclosed within $100\ {\rm kpc}$ is $\sim 10^{12}\ M_\odot$ (dominated by dark matter), what fraction of the Milky Way's mass is luminous?
 
 ---
 
@@ -567,7 +577,35 @@ Suppose all the stars in the Milky Way total $\sim 6 \times 10^{10}$ M☉, and a
 
 ## Glossary
 
-{{< glossary lecture=22 >}}
+**21-cm line:** Radio emission from neutral hydrogen produced by the hyperfine spin transition. It lets astronomers map HI gas through dust.
+
+**Bulge/bar:** The dense central stellar region of the Milky Way. In our galaxy, the inner bulge is elongated into a rotating bar.
+
+**Dark matter:** Matter inferred from gravity that does not emit, absorb, or scatter light detectably. In this lecture, the key evidence is the Milky Way's flat rotation curve.
+
+**Disk:** The flattened, rotating component of the Milky Way containing most of its gas, dust, young stars, and spiral arms.
+
+**HI:** Neutral atomic hydrogen. The notation means hydrogen whose electron is still bound to the proton, rather than ionized.
+
+**Infrared:** Light with wavelengths longer than visible red light. Infrared observations can reveal stars and warm dust in regions where visible light is blocked.
+
+**Interstellar dust:** Tiny solid grains mixed with gas between stars. Dust absorbs and scatters visible light, especially toward the Galactic Center.
+
+**Milky Way:** Our home galaxy, a barred spiral galaxy containing the Sun, stars, gas, dust, dark matter, and Sagittarius A* at its center.
+
+**Modified Newtonian Dynamics (MOND):** A class of alternatives to dark matter that modifies gravity or inertia at very low accelerations.
+
+**Rotation curve:** A plot of orbital speed versus distance from a galaxy's center. A flat rotation curve means orbital speed stays roughly constant at large radius.
+
+**Sagittarius A\*:** The compact radio source at the center of the Milky Way associated with the galaxy's central supermassive black hole.
+
+**Schwarzschild radius:** The event-horizon radius of a non-rotating black hole, given by $R_S = 2GM/c^2$.
+
+**Spiral arm:** A density-wave pattern in a galactic disk, traced by gas, dust, young massive stars, and H II regions.
+
+**S-stars:** Stars on tight orbits around Sagittarius A*. Their motions provide the strongest stellar-orbit evidence for the Milky Way's central black hole.
+
+**Stellar halo:** The sparse, roughly spherical population of old stars, globular clusters, and dwarf-galaxy debris surrounding the Milky Way's disk.
 
 ---
 
