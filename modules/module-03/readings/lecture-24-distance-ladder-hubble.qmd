@@ -76,7 +76,7 @@ This reading is the most important quantitative section of Module 3. If you unde
 
 By the end of this reading, you should be able to say:
 
-- [ ] I can name each rung of the distance ladder (parallax → spectroscopic parallax → Cepheids → Type Ia SNe → Hubble flow) and describe the reach and calibration of each.
+- [ ] I can name each rung of the distance ladder (parallax $\to$ spectroscopic parallax $\to$ Cepheids $\to$ Type Ia SNe $\to$ Hubble flow) and describe the reach and calibration of each.
 - [ ] I can explain the Cepheid period-luminosity relation and use it to estimate a galaxy's distance.
 - [ ] I can state Hubble's law, apply it to convert between redshift and distance, and explain why it describes the expansion of space.
 - [ ] I can estimate the age of the universe from $H_0$ using the Hubble time $t_H = 1/H_0$.
@@ -90,7 +90,9 @@ Every galaxy in the sky is some distance from us. That distance is what converts
 
 Lecture 23 introduced **standard candles** — objects of known luminosity $L$ whose apparent brightness $F$ lets us solve for distance via
 
-$$d = \sqrt{\frac{L}{4\pi F}}.$$
+$$
+d = \sqrt{\frac{L}{4\pi F}}
+$$
 
 But what makes an object "standard"? And how do we calibrate its $L$ in the first place? The answer is that we do not do it all at once. We build a **distance ladder**, where each rung is calibrated by the one below it.
 
@@ -102,15 +104,17 @@ But what makes an object "standard"? And how do we calibrate its $L$ in the firs
 
 ### Rung 1 — Radar Ranging (Solar System)
 
-Inside the Solar System, we measure distances directly by bouncing radar off planets. We know the time light takes to travel out and back, and we know $c$, so $d = c \, t / 2$. This fixes the **astronomical unit (AU)** to very high precision: $1 \text{ AU} = 1.496 \times 10^{11}$ m. This rung is essentially exact and anchors everything above it.
+Inside the Solar System, we measure distances directly by bouncing radar off planets. We know the time light takes to travel out and back, and we know $c$, so $d = c \, t / 2$. This fixes the **astronomical unit (AU)** to very high precision: $1\ {\rm AU} = 1.496 \times 10^{11}\ {\rm m}$. This rung is essentially exact and anchors everything above it.
 
 ### Rung 2 — Stellar Parallax
 
-For stars within ~1 kpc, we use **parallax**: the apparent shift of a nearby star against more distant background stars as Earth orbits the Sun. A star at distance $d$ in parsecs has a parallax angle of
+For stars within about $1\ {\rm kpc}$, we use **parallax**: the apparent shift of a nearby star against more distant background stars as Earth orbits the Sun. A star at distance $d$ in parsecs has a parallax angle of
 
-$$p \text{ (arcsec)} = \frac{1}{d \text{ (pc)}}.$$
+$$
+p\ {\rm (arcsec)} = \frac{1}{d\ {\rm (pc)}}
+$$
 
-Gaia's astrometric mission has measured parallaxes for nearly a billion stars, reaching usefully to distances ~3 – 5 kpc for the brightest stars but ~1 kpc for reliable precision on most individual stars.
+Gaia's astrometric mission has measured parallaxes for nearly a billion stars, reaching usefully to distances of about $3$ to $5\ {\rm kpc}$ for the brightest stars but about $1\ {\rm kpc}$ for reliable precision on most individual stars.
 
 {{< fig gaia-reach-module2 >}}
 
@@ -118,9 +122,9 @@ Parallax is the first truly distance-calibrated rung. It depends only on geometr
 
 ### Rung 3 — Spectroscopic Parallax and Main-Sequence Fitting
 
-Beyond Gaia parallax, we use the H-R diagram itself (Lecture 16). If we know a star's spectral type (from its spectrum) and can locate it on the H-R diagram, we know its absolute luminosity $L$ to within a factor of ~2. Apparent brightness then gives distance.
+Beyond Gaia parallax, we use the H-R diagram itself (Lecture 16). If we know a star's spectral type (from its spectrum) and can locate it on the H-R diagram, we know its absolute luminosity $L$ to within about a factor of $2$. Apparent brightness then gives distance.
 
-For **star clusters**, this idea sharpens: a cluster's main sequence has a fixed shape (calibrated from nearby clusters via parallax), and its *apparent* main sequence is shifted vertically by the cluster's distance modulus. This is called **main-sequence fitting** and reaches ~100 kpc.
+For **star clusters**, this idea sharpens: a cluster's main sequence has a fixed shape (calibrated from nearby clusters via parallax), and its *apparent* main sequence is shifted vertically by the cluster's distance modulus. This is called **main-sequence fitting** and reaches about $100\ {\rm kpc}$.
 
 ### Rung 4 — Cepheid Variables
 
@@ -130,13 +134,17 @@ In 1912, Henrietta Leavitt — a "computer" at Harvard College Observatory — n
 
 {{< fig cepheid-light-curve-m31 >}}
 
-$$\log_{10} L = a \log_{10} P + b$$
+$$
+\log_{10} L = a \log_{10} P + b
+$$
 
 with $P$ measured in days. Longer-period Cepheids are intrinsically more luminous. Modern calibrations give (approximately):
 
-$$L \approx 335 \, L_\odot \times \left( \frac{P}{1 \text{ day}} \right)^{1.15}$$
+$$
+L \approx 335\,L_\odot \left( \frac{P}{1\ {\rm day}} \right)^{1.15}
+$$
 
-for classical Cepheids. A 10-day Cepheid is about ~4,700 $L_\odot$. A 100-day Cepheid is about ~65,000 $L_\odot$.
+for classical Cepheids. A $10$-day Cepheid is about $4{,}700\ L_\odot$. A $100$-day Cepheid is about $65{,}000\ L_\odot$.
 
 ::: {.callout-note title="About these coefficients"}
 The numerical coefficients in the Leavitt relation (here 335 and 1.15) depend on wavelength band, zero-point calibration, and metallicity corrections. Modern calibrations in the literature (Madore & Freedman; Riess et al.; the Hubble Space Telescope Key Project) agree within a few tens of percent but are not identical. The relation we use here is a representative bolometric form suitable for order-of-magnitude distance estimates. For actual distance-ladder work, astronomers use carefully calibrated near-infrared relations with explicit metallicity corrections.
@@ -146,36 +154,53 @@ The numerical coefficients in the Leavitt relation (here 335 and 1.15) depend on
 
 This is the key move: **the period, which we can measure from a distant galaxy, tells us the luminosity, which lets us compute distance.** The calibration comes from nearby Cepheids whose distances we know from parallax (Rung 2) or cluster fitting (Rung 3).
 
-Cepheids are bright (supergiants, $10^3 - 10^5 \, L_\odot$), so they are visible out to ~30 Mpc with Hubble Space Telescope. This is far enough to reach the Virgo Cluster (~16 Mpc) and dozens of nearby galaxies, including ones that have hosted Type Ia supernovae.
+Cepheids are bright (supergiants, $10^3$ to $10^5\,L_\odot$), so they are visible out to about $30\ {\rm Mpc}$ with Hubble Space Telescope. This is far enough to reach the Virgo Cluster (about $16\ {\rm Mpc}$) and dozens of nearby galaxies, including ones that have hosted Type Ia supernovae.
 
 ::: {.callout-key-insight title="Why This Is a Stellar Argument"}
 Cepheids are specific kinds of stars in a specific evolutionary phase — giants on an instability strip where their envelopes pulsate due to ionization-recombination of helium. The very physics of the pulsation (you can think of it as helium acting as a valve) sets the period-luminosity relation. **Without stellar physics, we would have no cosmic distance ladder beyond parallax.**
 :::
 
-::: {.callout-check-yourself #cy-cepheid}
-## Check Yourself 1: Using the Leavitt Relation
+::: {.callout-check-yourself #cy-cepheid title="Check Yourself 1 — Using the Leavitt Relation"}
 
-You observe a Cepheid in a nearby galaxy. Its pulsation period is 30 days and its apparent flux is $F = 10^{-14}$ W/m². Estimate:
+You observe a Cepheid in a nearby galaxy. Its pulsation period is $30\ {\rm days}$ and its apparent flux is $F = 10^{-14}\ {\rm W\,m^{-2}}$. Estimate:
 
 (a) The Cepheid's luminosity $L$ in solar units.
-(b) The distance $d$ to the host galaxy in Mpc (1 Mpc = $3.09 \times 10^{22}$ m).
+(b) The distance $d$ to the host galaxy in Mpc ($1\ {\rm Mpc} = 3.09 \times 10^{22}\ {\rm m}$).
+:::
 
-::: {.callout-solution collapse="true" title="Answer"}
-(a) Using $L \approx 335 \, L_\odot \times (P/\text{day})^{1.15}$ with $P = 30$:
-$L \approx 335 \times 30^{1.15} \, L_\odot \approx 335 \times 49 \, L_\odot \approx 1.6 \times 10^4 \, L_\odot.$
-Convert: $L \approx 1.6 \times 10^4 \times 3.8 \times 10^{26}$ W $\approx 6 \times 10^{30}$ W.
+::: {.callout-tip title="Solution" collapse="true"}
+(a) Using $L \approx 335\,L_\odot (P/{\rm day})^{1.15}$ with $P = 30$:
+
+$$
+L \approx 335 \times 30^{1.15}\,L_\odot \approx 335 \times 49\,L_\odot \approx 1.6 \times 10^4\,L_\odot
+$$
+
+Convert:
+
+$$
+L \approx 1.6 \times 10^4 \times 3.8 \times 10^{26}\ {\rm W} \approx 6 \times 10^{30}\ {\rm W}
+$$
 
 (b) From $d = \sqrt{L / (4\pi F)}$:
-$d = \sqrt{6 \times 10^{30} / (4\pi \times 10^{-14})} \approx \sqrt{4.8 \times 10^{43}}$ m $\approx 7 \times 10^{21}$ m.
-In Mpc: $d \approx 7 \times 10^{21} / 3.09 \times 10^{22} \approx 0.2$ Mpc ≈ 230 kpc.
 
-This is *beyond* the Large and Small Magellanic Clouds (~50 – 60 kpc) and at roughly the distance scale of the Local Group's outer dwarf galaxies. For reference: a Cepheid of this same luminosity at the SMC distance (~60 kpc) would produce $F \sim 1.5 \times 10^{-13}$ W/m² — about 15× brighter than the flux given in this problem.
-:::
+$$
+d = \sqrt{\frac{6 \times 10^{30}}{4\pi \times 10^{-14}}}\ {\rm m}
+\approx \sqrt{4.8 \times 10^{43}}\ {\rm m}
+\approx 7 \times 10^{21}\ {\rm m}
+$$
+
+In Mpc:
+
+$$
+d \approx \frac{7 \times 10^{21}}{3.09 \times 10^{22}} \approx 0.2\ {\rm Mpc}
+$$
+
+This is about $230\ {\rm kpc}$, beyond the Large and Small Magellanic Clouds and at roughly the distance scale of the Local Group's outer dwarf galaxies. For reference: a Cepheid of this same luminosity at the SMC distance, about $60\ {\rm kpc}$, would produce $F \sim 1.5 \times 10^{-13}\ {\rm W\,m^{-2}}$, about $15\times$ brighter than the flux given in this problem.
 :::
 
 ### Rung 5 — Type Ia Supernovae (Preview)
 
-Cepheids peter out at ~30 Mpc. To go farther we need something *brighter*. **Type Ia supernovae** are our tool. They reach peak luminosities of $\sim 5 \times 10^9 \, L_\odot$ — comparable to an entire small galaxy — and can be seen out to thousands of Mpc.
+Cepheids peter out at about $30\ {\rm Mpc}$. To go farther we need something *brighter*. **Type Ia supernovae** are our tool. They reach peak luminosities of $\sim 5 \times 10^9\,L_\odot$ — comparable to an entire small galaxy — and can be seen out to thousands of Mpc.
 
 Crucially, they are **approximately** standard: they all explode from (roughly) the same physical configuration, so their peak luminosities fall in a narrow range that can be further tightened using the *shape* of their light curve (the Phillips relation).
 
@@ -194,23 +219,22 @@ Once we have distances out to a few hundred Mpc, a new relation becomes usable. 
 | Rung | Method | Reach | Calibrator |
 |------|--------|-------|------------|
 | 1 | Radar ranging | ~AU | Physical constants |
-| 2 | Parallax | ~1 – 5 kpc | Rung 1 (Earth orbit) |
-| 3 | Spectroscopic parallax / main-sequence fitting | ~100 kpc | Rung 2 |
-| 4 | **Cepheid variables** | ~30 Mpc | Rung 2 – 3 |
-| 5 | **Type Ia supernovae** | ~10³ Mpc | Rung 4 |
-| 6 | Hubble's law (redshift → distance) | cosmological | Rungs 4 – 5 |
+| 2 | Parallax | about $1$ to $5\ {\rm kpc}$ | Rung 1 (Earth orbit) |
+| 3 | Spectroscopic parallax / main-sequence fitting | about $100\ {\rm kpc}$ | Rung 2 |
+| 4 | **Cepheid variables** | about $30\ {\rm Mpc}$ | Rungs 2 to 3 |
+| 5 | **Type Ia supernovae** | about $10^3\ {\rm Mpc}$ | Rung 4 |
+| 6 | Hubble's law (redshift $\to$ distance) | cosmological | Rungs 4 to 5 |
 
 *Each rung calibrates the rung above it. Break any rung and the upper ones wobble.*
 :::
 
-::: {.callout-check-yourself #cy-ladder-calibration}
-## Check Yourself 2: Which Rung Is Doing the Work?
+::: {.callout-check-yourself #cy-ladder-calibration title="Check Yourself 2 — Which Rung Is Doing the Work?"}
 
 Suppose a Type Ia supernova goes off in a galaxy that also contains Cepheid variables. Which object gives the distance to the galaxy directly, and which object gets calibrated so it can be used much farther away?
-
-::: {.callout-solution collapse="true" title="Answer"}
-The **Cepheids** give the distance to the nearby host galaxy because their period-luminosity relation has already been calibrated by lower rungs such as parallax. The **Type Ia supernova** is then calibrated: once we know its host distance, we can infer its corrected peak luminosity and use similar Type Ias in much more distant galaxies.
 :::
+
+::: {.callout-tip title="Solution" collapse="true"}
+The **Cepheids** give the distance to the nearby host galaxy because their period-luminosity relation has already been calibrated by lower rungs such as parallax. The **Type Ia supernova** is then calibrated: once we know its host distance, we can infer its corrected peak luminosity and use similar Type Ias in much more distant galaxies.
 :::
 
 ---
@@ -233,7 +257,7 @@ where:
 - $d$ is the distance,
 - $H_0$ is the **Hubble constant**, the slope of the line.
 
-The best current values of $H_0$ cluster around 67 – 73 km/s/Mpc, depending on the method. A galaxy 100 Mpc away recedes at roughly 7,000 km/s. A galaxy 1 Gpc away recedes at roughly 70,000 km/s, about a quarter of the speed of light.
+Representative recent values of $H_0$ cluster around $67$ to $73\ {\rm km\,s^{-1}\,Mpc^{-1}}$, depending on the method. A galaxy $100\ {\rm Mpc}$ away recedes at roughly $7{,}000\ {\rm km\,s^{-1}}$. A galaxy $1\ {\rm Gpc}$ away recedes at roughly $70{,}000\ {\rm km\,s^{-1}}$, about a quarter of the speed of light.
 
 ### What Hubble's Law Is *Not*
 
@@ -243,7 +267,13 @@ Hubble's law is not a statement that galaxies are flying outward through space f
 
 Imagine dots painted on the surface of a balloon. As the balloon inflates, every dot sees every other dot move away, and more-distant dots move away faster. No dot is at the center. Space is doing the expanding; the dots are carried along.
 
-<!-- FIGURE: Balloon analogy showing dots on an inflating balloon; alternatively, raisin bread analogy showing raisins moving apart as dough rises -->
+::: {.callout-prediction title="Pause and predict"}
+Imagine three galaxies painted on an expanding balloon: A and B are close together, while A and C are twice as far apart.
+
+If the balloon doubles in size, which separation grows by the larger amount: A-B or A-C? Which pair has the larger recession speed?
+
+Use this to explain why Hubble's law is a slope: more distance means more expanding space between galaxies.
+:::
 
 The redshift is not really a Doppler shift (though for small distances the math is the same). It is a **cosmological redshift** — light stretched by the expansion of space during its travel from source to us.
 
@@ -267,70 +297,100 @@ This NASA SVS animation shows the key physical idea behind cosmological redshift
 </div>
 :::
 
-::: {.callout-check-yourself #cy-hubble-law}
-## Check Yourself 3: Applying Hubble's Law
+::: {.callout-check-yourself #cy-hubble-law title="Check Yourself 3 — Applying Hubble's Law"}
 
-A galaxy has a measured recession velocity of $v = 15,000$ km/s. Use $H_0 = 70$ km/s/Mpc to estimate its distance.
-
-::: {.callout-solution collapse="true" title="Answer"}
-$d = v / H_0 = 15,000 / 70 \approx 214$ Mpc. This is roughly the distance at which Type Ia supernovae become essential (Cepheids alone cannot reach this far), and well within the Hubble flow regime where peculiar velocities from local gravitational effects are small compared to the Hubble velocity.
+A galaxy has a measured recession velocity of $v = 15{,}000\ {\rm km\,s^{-1}}$. Use $H_0 = 70\ {\rm km\,s^{-1}\,Mpc^{-1}}$ to estimate its distance.
 :::
+
+::: {.callout-tip title="Solution" collapse="true"}
+$$
+d = \frac{v}{H_0} = \frac{15{,}000}{70}\ {\rm Mpc} \approx 214\ {\rm Mpc}
+$$
+
+This is roughly the distance at which Type Ia supernovae become essential, because Cepheids alone cannot reach this far. It is also well within the Hubble flow regime where peculiar velocities from local gravitational effects are small compared to the Hubble velocity.
 :::
 
 ### The Hubble Time and Age of the Universe
 
 If the universe has been expanding at a constant rate, then the time since it was all at one point is
 
-$$t_H = \frac{1}{H_0}.$$
+$$
+t_H = \frac{1}{H_0}
+$$
 
-This is called the **Hubble time**. Let's convert units for $H_0 = 70$ km/s/Mpc:
+This is called the **Hubble time**. Let's convert units for $H_0 = 70\ {\rm km\,s^{-1}\,Mpc^{-1}}$:
 
-$$H_0 = 70 \, \frac{\text{km/s}}{\text{Mpc}} = 70 \, \frac{\text{km/s}}{3.09 \times 10^{19} \text{ km}} = 2.27 \times 10^{-18} \, \text{s}^{-1}$$
+$$
+H_0 = 70 \frac{{\rm km\,s^{-1}}}{{\rm Mpc}}
+= 70 \frac{{\rm km\,s^{-1}}}{3.09 \times 10^{19}\ {\rm km}}
+= 2.27 \times 10^{-18}\ {\rm s^{-1}}
+$$
 
 So $t_H = 1 / H_0 \approx 4.4 \times 10^{17}$ s $\approx 14$ Gyr.
 
 This is a rough estimate. The *actual* age of the universe — 13.8 Gyr — differs from $t_H$ by a small factor that depends on whether the expansion has been speeding up or slowing down (Lecture 25). But the order of magnitude is right.
 
-::: {.callout-check-yourself #cy-hubble-time}
-## Check Yourself 4: Another Hubble Time
+::: {.callout-check-yourself #cy-hubble-time title="Check Yourself 4 — Another Hubble Time"}
 
-Repeat the calculation with $H_0 = 67$ km/s/Mpc (the CMB-based value; Lecture 26) and $H_0 = 73$ km/s/Mpc (the Cepheid-SNIa local value). What are the two estimates of $t_H$?
+Repeat the calculation with $H_0 = 67\ {\rm km\,s^{-1}\,Mpc^{-1}}$ (the CMB-based value; Lecture 26) and $H_0 = 73\ {\rm km\,s^{-1}\,Mpc^{-1}}$ (the Cepheid-SNIa local value). What are the two estimates of $t_H$?
+:::
 
-::: {.callout-solution collapse="true" title="Answer"}
-$H_0 = 67$ km/s/Mpc = $2.17 \times 10^{-18}$ s⁻¹, so $t_H \approx 4.6 \times 10^{17}$ s ≈ 14.6 Gyr.
-$H_0 = 73$ km/s/Mpc = $2.37 \times 10^{-18}$ s⁻¹, so $t_H \approx 4.2 \times 10^{17}$ s ≈ 13.4 Gyr.
+::: {.callout-tip title="Solution" collapse="true"}
+$H_0 = 67\ {\rm km\,s^{-1}\,Mpc^{-1}} = 2.17 \times 10^{-18}\ {\rm s^{-1}}$, so $t_H \approx 4.6 \times 10^{17}\ {\rm s} \approx 14.6\ {\rm Gyr}$.
+
+$H_0 = 73\ {\rm km\,s^{-1}\,Mpc^{-1}} = 2.37 \times 10^{-18}\ {\rm s^{-1}}$, so $t_H \approx 4.2 \times 10^{17}\ {\rm s} \approx 13.4\ {\rm Gyr}$.
 
 Both are within ~1 Gyr of the best-fit age (13.8 Gyr), and the two values differ from each other by about 1.2 Gyr — which brings us to the Hubble tension.
-:::
 :::
 
 ### Worked Example: From Redshift to a Distance
 
 ::: {.callout-worked-example title="Worked Example: Converting a Redshift into a Distance (Low-z Limit)"}
-**Given:** A galaxy's spectrum shows a hydrogen line at $\lambda_{\text{obs}} = 670$ nm. Its laboratory (rest-frame) wavelength is $\lambda_0 = 656.3$ nm (Hα). Use $H_0 = 70$ km/s/Mpc.
+**Given:** A galaxy's spectrum shows a hydrogen line at $\lambda_{\text{obs}} = 670\ {\rm nm}$. Its laboratory (rest-frame) wavelength is $\lambda_0 = 656.3\ {\rm nm}$ (H$\alpha$). Use $H_0 = 70\ {\rm km\,s^{-1}\,Mpc^{-1}}$.
 
 **Relation:** For $v \ll c$, the cosmological redshift reduces to a Doppler-like form:
-$$z = \frac{\lambda_{\text{obs}} - \lambda_0}{\lambda_0}, \qquad v \approx c\,z, \qquad d = \frac{v}{H_0}.$$
+$$
+z = \frac{\lambda_{\text{obs}} - \lambda_0}{\lambda_0}, \qquad
+v \approx c\,z, \qquad
+d = \frac{v}{H_0}
+$$
 
 **Rearrange** for distance directly in terms of redshift:
-$$d = \frac{c\,z}{H_0}.$$
+$$
+d = \frac{c\,z}{H_0}
+$$
 
 **Substitute:**
-$$z = \frac{670 - 656.3}{656.3} = 0.0209, \qquad v \approx (3 \times 10^{5}\,\text{km/s}) \times 0.0209 \approx 6{,}270\,\text{km/s}.$$
+$$
+z = \frac{670 - 656.3}{656.3} = 0.0209, \qquad
+v \approx (3 \times 10^5\ {\rm km\,s^{-1}}) \times 0.0209 \approx 6{,}270\ {\rm km\,s^{-1}}
+$$
 
 **Evaluate:**
-$$d = \frac{6{,}270}{70}\,\text{Mpc} \approx 90\,\text{Mpc}.$$
+$$
+d = \frac{6{,}270}{70}\ {\rm Mpc} \approx 90\ {\rm Mpc}
+$$
 
-**Interpret:** The galaxy is ~90 Mpc away — well beyond the reach of Cepheids alone and deep in the Hubble flow, so its peculiar velocity is a small correction. Notice that the entire calibration of this answer traces back through Type Ia SNe → Cepheids → parallax: without stars, the Hubble constant we just used would have no numerical value at all. (This calculation is the low-redshift limit; for $z \gtrsim 0.1$, relativistic corrections and the time-dependence of $H$ make $d(z)$ more complicated.)
+**Interpret:** The galaxy is about $90\ {\rm Mpc}$ away — well beyond the reach of Cepheids alone and deep in the Hubble flow, so its peculiar velocity is a small correction. Notice that the entire calibration of this answer traces back through Type Ia SNe $\to$ Cepheids $\to$ parallax: without stars, the Hubble constant we just used would have no numerical value at all. This calculation is the low-redshift limit; for $z \gtrsim 0.1$, relativistic corrections and the time-dependence of $H$ make $d(z)$ more complicated.
 :::
 
 ### The Observable Universe
 
 Because the universe has a finite age, there is a finite distance from which light has had time to reach us. This is the **observable horizon**. Its rough scale is the **Hubble distance**:
 
-$$d_H = c / H_0 \approx 4.3 \text{ Gpc}$$
+$$
+d_H = \frac{c}{H_0} \approx 4.3\ {\rm Gpc}
+$$
 
-for $H_0 = 70$ km/s/Mpc. The *actual* comoving radius of the observable universe (accounting for expansion during the light's travel) is larger, ~14 Gpc or ~46 billion light-years. But the Hubble distance sets the scale: the observable universe is tens of billions of light-years across.
+for $H_0 = 70\ {\rm km\,s^{-1}\,Mpc^{-1}}$. This is about $14$ billion light-years.
+
+Do not confuse three related scales:
+
+- **Hubble distance:** about $14\ {\rm Gly}$, from $c/H_0$.
+- **Observable-universe comoving radius:** about $46\ {\rm Gly}$, because space expanded while the light traveled.
+- **Observable-universe comoving diameter:** about $92\ {\rm Gly}$.
+
+The Hubble distance is therefore a scale marker, not the radius of everything we can observe.
 
 ::: {.callout-roadmap title="ViewSpace Interactive: Chandra Deep Field-South" collapse="false"}
 Use the wavelength buttons to compare infrared, visible, ultraviolet, X-ray, and multiwavelength views of the same deep field. This is the observational version of the phrase "lookback time": distant galaxies are not just far away; their light left when the universe was younger.
@@ -359,13 +419,13 @@ What to notice: each wavelength selects a different physical process. Infrared h
 
 Here is the current problem. We have **two independent ways** to measure $H_0$:
 
-1. **Local distance ladder:** Parallax → Cepheids → Type Ia SNe → Hubble's law fit. Current value: $H_0 \approx 73 \pm 1$ km/s/Mpc (SH0ES collaboration, 2022 – 2024 results).
+1. **Local distance ladder:** Parallax $\to$ Cepheids $\to$ Type Ia SNe $\to$ Hubble's law fit. Representative recent value: $H_0 \approx 73 \pm 1\ {\rm km\,s^{-1}\,Mpc^{-1}}$, consistent with recent SH0ES/Webb-Hubble summaries from [NASA](https://science.nasa.gov/missions/webb/nasas-webb-hubble-telescopes-affirm-universes-expansion-rate-puzzle-persists/).
 
-2. **CMB-based:** Fit the cosmological model to the detailed pattern of temperature fluctuations in the cosmic microwave background (Lecture 26). Current value: $H_0 \approx 67.4 \pm 0.5$ km/s/Mpc (Planck, 2018 – 2020 results).
+2. **CMB-based:** Fit the cosmological model to the detailed pattern of temperature fluctuations in the cosmic microwave background (Lecture 26). Representative Planck-based value: $H_0 \approx 67.4 \pm 0.5\ {\rm km\,s^{-1}\,Mpc^{-1}}$, consistent with [ESA Planck summaries](https://www.esa.int/ESA_Multimedia/Images/2018/07/Measurements_of_the_Hubble_constant).
 
 The two methods are independent in a very specific way. The local ladder is an astrophysical calibration chain: parallax calibrates Cepheids, Cepheids calibrate Type Ia SNe, and Type Ia SNe calibrate the low-redshift Hubble diagram. The CMB route is an early-universe inference: the acoustic pattern in the CMB gives a value of $H_0$ only after assuming a cosmological model. That is what makes the tension interesting. The disagreement is not just two teams measuring the same thing badly; it is two different inference machines failing to meet.
 
-These two values disagree by about 5σ — a statistical significance that in most fields would be considered a discovery. And yet it persists after years of increasingly careful measurements. It is called the **Hubble tension**.
+These two values disagree at roughly the $5\sigma$ level in many local-ladder versus Planck comparisons. The exact significance depends on which datasets and assumptions are compared, but the mismatch has persisted after years of increasingly careful measurements. It is called the **Hubble tension**.
 
 {{< fig measuring-hubble-constant-three-ways >}}
 
@@ -377,9 +437,9 @@ What could cause it?
 We do not know. The tension is one of the three or four hottest open problems in cosmology right now. It matters for everyone in Module 3 because every claim we make about the age and size of the universe depends on $H_0$, and if the tension is real, our standard cosmological model has a crack in it.
 
 ::: {.callout-frontier}
-- **Is the Hubble tension real or systematic?** Local and CMB measurements of $H_0$ disagree by ~5σ. Years of increasingly careful measurements have not resolved it.
+- **Is the Hubble tension real or systematic?** Local and CMB measurements of $H_0$ disagree at roughly the $5\sigma$ level in many comparisons. Years of increasingly careful measurements have not resolved it.
 - **Does the answer require new physics?** Candidate explanations include early dark energy, varying dark-energy equation of state, extra neutrino species, or interactions between dark matter and dark radiation. None is confirmed.
-- **Which is the "right" $H_0$?** If the local value is correct, the universe is younger (~13.4 Gyr) and expanding faster today than the standard cosmological model predicts.
+- **Which is the "right" $H_0$?** If the local value is correct, the Hubble-time estimate is younger, about $13.4\ {\rm Gyr}$, and the universe is expanding faster today than the standard cosmological model predicts.
 :::
 
 ---
@@ -430,30 +490,37 @@ WRONG. We can only see the part from which light has had time to reach us in 13.
 
 *Solutions are available in the Lecture 24 Solutions.*
 
+For the quantitative problems, use:
+
+- $1\ {\rm Mpc} = 3.09 \times 10^{19}\ {\rm km} = 3.09 \times 10^{22}\ {\rm m}$,
+- $1\ {\rm Gyr} = 3.16 \times 10^{16}\ {\rm s}$,
+- $c = 3.0 \times 10^5\ {\rm km\,s^{-1}}$,
+- $L_\odot = 3.8 \times 10^{26}\ {\rm W}$.
+
 ### Core Problems (Start Here)
 
 **Problem 1: Ladder Calibration.**
 List each rung of the distance ladder (parallax, spectroscopic parallax, Cepheids, Type Ia SNe, Hubble's law) and name the rung that calibrates it. Explain why you cannot skip a rung.
 
 **Problem 2: Cepheid Distance.**
-A Cepheid has pulsation period $P = 50$ days. Using $L \approx 335 \, L_\odot \times (P/\text{day})^{1.15}$, compute $L$. If its apparent flux is $F = 5 \times 10^{-14}$ W/m², estimate its distance in Mpc.
+A Cepheid has pulsation period $P = 50\ {\rm days}$. Using $L \approx 335\,L_\odot(P/{\rm day})^{1.15}$, compute $L$. If its apparent flux is $F = 1 \times 10^{-17}\ {\rm W\,m^{-2}}$, estimate its distance in Mpc.
 
 **Problem 3: Hubble's Law.**
-A galaxy has recession velocity $v = 28,000$ km/s. With $H_0 = 70$ km/s/Mpc, estimate its distance.
+A galaxy has recession velocity $v = 28{,}000\ {\rm km\,s^{-1}}$. With $H_0 = 70\ {\rm km\,s^{-1}\,Mpc^{-1}}$, estimate its distance.
 
 **Problem 4: Age of the Universe.**
-Compute the Hubble time $t_H = 1/H_0$ for $H_0 = 70$ km/s/Mpc. Convert your answer to Gyr.
+Compute the Hubble time $t_H = 1/H_0$ for $H_0 = 70\ {\rm km\,s^{-1}\,Mpc^{-1}}$. Convert your answer to Gyr.
 
 **Problem 5: Scale of the Observable Universe.**
-Compute the Hubble distance $d_H = c / H_0$ for $H_0 = 70$ km/s/Mpc. Express in Mpc and in Gly (billion light-years). Why is this only a rough estimate of the observable universe's size?
+Compute the Hubble distance $d_H = c/H_0$ for $H_0 = 70\ {\rm km\,s^{-1}\,Mpc^{-1}}$. Express in Mpc and in Gly (billion light-years). Why is this smaller than the observable-universe comoving radius of about $46\ {\rm Gly}$?
 
 ### Challenge Problems (Deepen Your Understanding)
 
 **Challenge 1: Hubble Tension in Age.**
-The local ladder gives $H_0 \approx 73$ km/s/Mpc; the CMB gives $H_0 \approx 67$ km/s/Mpc. Compute $t_H$ for each. By how much (in Gyr) do the two inferred ages disagree? Is this difference bigger or smaller than the formal statistical uncertainty on either value (~0.5 – 1%)?
+The local ladder gives $H_0 \approx 73\ {\rm km\,s^{-1}\,Mpc^{-1}}$; the CMB gives $H_0 \approx 67\ {\rm km\,s^{-1}\,Mpc^{-1}}$. Compute $t_H$ for each. By how much, in Gyr, do the two inferred Hubble times disagree? Is this difference bigger or smaller than the formal statistical uncertainty on either value, about $0.5$ to $1\%$?
 
 **Challenge 2: When Does Hubble's Law Fail?**
-Andromeda (M31) is 780 kpc away but is *blueshifted* — moving toward us at ~110 km/s. Does this contradict Hubble's law? Use $H_0 = 70$ km/s/Mpc and compare the expected Hubble recession velocity at 780 kpc to the peculiar velocity.
+Andromeda (M31) is $780\ {\rm kpc}$ away but is *blueshifted* — moving toward us at about $110\ {\rm km\,s^{-1}}$. Does this contradict Hubble's law? Use $H_0 = 70\ {\rm km\,s^{-1}\,Mpc^{-1}}$ and compare the expected Hubble recession velocity at $780\ {\rm kpc}$ to the peculiar velocity.
 
 **Challenge 3: Distance Ladder Fragility.**
 Suppose new measurements find that Cepheid luminosities have been systematically overestimated by 10%. How does this shift the inferred local $H_0$? (Hint: think about how a wrong Cepheid $L$ propagates through the Type Ia calibration to the Hubble diagram.)
@@ -463,18 +530,42 @@ Suppose new measurements find that Cepheid luminosities have been systematically
 ## Reading Summary
 
 ::: {.callout-summary title="Lecture 24 in One Screen"}
-- Extragalactic distances are built on a **ladder of methods**: radar (AU) → parallax (kpc) → MS fitting (~100 kpc) → Cepheid P-L relation (~30 Mpc) → Type Ia SNe (~$10^3$ Mpc) → Hubble's law (cosmological). Each rung calibrates the next — break one, wobble the rest.
+- Extragalactic distances are built on a **ladder of methods**: radar (AU) $\to$ parallax (kpc) $\to$ MS fitting (about $100\ {\rm kpc}$) $\to$ Cepheid P-L relation (about $30\ {\rm Mpc}$) $\to$ Type Ia SNe (about $10^3\ {\rm Mpc}$) $\to$ Hubble's law (cosmological). Each rung calibrates the next — break one, wobble the rest.
 - **Cepheid variables** are the linchpin of the rungs between the Milky Way and the Hubble flow. Leavitt's period–luminosity relation converts an *observed* pulsation period directly into an intrinsic luminosity.
 - **Hubble's law** $v = H_0 \, d$ is a statement about the expansion *of space itself*, not about galaxies moving through a pre-existing space. Every observer sees the same law; there is no center.
-- The **Hubble time** $t_H = 1/H_0$ is within ~1 Gyr of the true age of the universe (13.8 Gyr); the small correction encodes the history of acceleration (Lecture 25).
-- The **Hubble tension** — local ladder ($H_0 \approx 73$) vs. CMB-inferred ($H_0 \approx 67$) — is a real ~5σ discrepancy and one of the most important open problems in modern cosmology.
+- The **Hubble time** $t_H = 1/H_0$ is within about $1\ {\rm Gyr}$ of the true age of the universe ($13.8\ {\rm Gyr}$); the small correction encodes the history of acceleration (Lecture 25).
+- The **Hubble tension** — local ladder ($H_0 \approx 73$) vs. CMB-inferred ($H_0 \approx 67$) — is a roughly $5\sigma$ discrepancy in many comparisons and one of the most important open problems in modern cosmology.
 :::
 
 ---
 
 ## Glossary
 
-{{< glossary lecture=24 >}}
+**Cepheid variable:** A pulsating supergiant star whose period tells us its luminosity through the Leavitt relation.
+
+**Cosmological redshift:** The stretching of light to longer wavelengths as space expands while the light travels.
+
+**Distance ladder:** A sequence of distance-measurement methods in which each rung calibrates the next more distant rung.
+
+**Hubble constant ($H_0$):** The present-day expansion rate of the universe, measured in ${\rm km\,s^{-1}\,Mpc^{-1}}$.
+
+**Hubble distance:** The scale $d_H = c/H_0$, about $14\ {\rm Gly}$ for $H_0 \approx 70\ {\rm km\,s^{-1}\,Mpc^{-1}}$.
+
+**Hubble flow:** The large-scale recession pattern in which galaxies farther away recede faster because space is expanding.
+
+**Hubble tension:** The mismatch between local distance-ladder measurements of $H_0$ and early-universe, CMB-based inferences of $H_0$.
+
+**Hubble time:** The time scale $t_H = 1/H_0$, about $14\ {\rm Gyr}$ for $H_0 \approx 70\ {\rm km\,s^{-1}\,Mpc^{-1}}$.
+
+**Leavitt relation:** The period-luminosity relation for Cepheid variables: longer-period Cepheids are intrinsically brighter.
+
+**Observable universe:** The part of the universe from which light has had time to reach us. Its comoving radius is about $46\ {\rm Gly}$.
+
+**Parallax:** The apparent shift of a nearby star against distant background stars as Earth orbits the Sun.
+
+**Standard candle:** An object whose luminosity can be estimated from physics, allowing distance to be inferred from measured flux.
+
+**Type Ia supernova:** A thermonuclear supernova used as a bright standardizable candle for measuring distances far beyond Cepheids.
 
 ---
 

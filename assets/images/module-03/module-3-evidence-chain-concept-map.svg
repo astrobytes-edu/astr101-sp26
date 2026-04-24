@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" role="img" aria-labelledby="title desc" data-theme="dark" data-palette="aurora">
   <title id="title">Module 3 Evidence Chain Concept Map</title>
-  <desc id="desc">Concept map for ASTR 101 Module 3 with five evidence chains. Galaxy shapes, standard-candle measurements, galaxy redshifts, AGN signatures, CMB anisotropies, and light-element abundances are translated by physical models into inferences about galaxy histories, distances, cosmic expansion, the cosmic web, quasars, and the hot Big Bang.</desc>
+  <desc id="desc">Concept map for ASTR 101 Module 3 with five evidence chains. Dust maps, 21-cm emission, S-star orbits, galaxy shapes, standard-candle measurements, redshifts, AGN signatures, CMB anisotropies, and light-element abundances are translated by physical models into inferences about the Milky Way, dark matter, Sgr A star, galaxy histories, cosmic expansion, quasars, and the hot Big Bang.</desc>
   <defs>
     <style>
       :root {
@@ -59,7 +59,7 @@
   </g>
 
   <text x="480" y="42" text-anchor="middle" class="title">Module 3 Evidence Chain</text>
-  <text x="480" y="70" text-anchor="middle" class="subtitle">Galaxies and cosmology turn limited signals into physical histories</text>
+  <text x="480" y="70" text-anchor="middle" class="subtitle">Maps, galaxies, and cosmology turn limited signals into physical histories</text>
 
   <g>
     <rect x="105" y="84" width="750" height="38" class="prompt-box"/>
@@ -79,12 +79,12 @@
     <rect x="54" y="178" width="234" height="46" class="row obs-row"/>
     <rect x="363" y="178" width="234" height="46" class="row model-row"/>
     <rect x="672" y="178" width="234" height="46" class="row inf-row"/>
-    <text x="72" y="198" class="body">Shapes, colors,</text>
-    <text x="72" y="217" class="body">gas, and dust</text>
-    <text x="381" y="198" class="body">Stellar populations</text>
-    <text x="381" y="217" class="body">and gas physics</text>
-    <text x="690" y="198" class="body">Star-formation</text>
-    <text x="690" y="217" class="body">histories</text>
+    <text x="72" y="198" class="body">Dust, 21-cm gas,</text>
+    <text x="72" y="217" class="body">and S-star orbits</text>
+    <text x="381" y="198" class="body">Mapping plus</text>
+    <text x="381" y="217" class="body">Newtonian gravity</text>
+    <text x="690" y="198" class="body">Milky Way structure,</text>
+    <text x="690" y="217" class="body">dark matter, Sgr A*</text>
     <path class="arrow-teal" d="M288 201 H358"/>
     <path class="arrow-pink" d="M597 201 H667"/>
   </g>
@@ -93,12 +93,12 @@
     <rect x="54" y="232" width="234" height="46" class="row obs-row"/>
     <rect x="363" y="232" width="234" height="46" class="row model-row"/>
     <rect x="672" y="232" width="234" height="46" class="row inf-row"/>
-    <text x="72" y="252" class="body">Cepheid periods</text>
-    <text x="72" y="271" class="body">and SN brightness</text>
-    <text x="381" y="252" class="body">Distance ladder</text>
-    <text x="381" y="271" class="body">and flux law</text>
-    <text x="690" y="252" class="body">Galaxy distances,</text>
-    <text x="690" y="271" class="body">sizes, luminosities</text>
+    <text x="72" y="252" class="body">Shapes, colors,</text>
+    <text x="72" y="271" class="body">gas, and dust</text>
+    <text x="381" y="252" class="body">Stellar populations</text>
+    <text x="381" y="271" class="body">and gas physics</text>
+    <text x="690" y="252" class="body">Star formation</text>
+    <text x="690" y="271" class="body">and merger histories</text>
     <path class="arrow-teal" d="M288 255 H358"/>
     <path class="arrow-pink" d="M597 255 H667"/>
   </g>
@@ -107,11 +107,11 @@
     <rect x="54" y="286" width="234" height="46" class="row obs-row"/>
     <rect x="363" y="286" width="234" height="46" class="row model-row"/>
     <rect x="672" y="286" width="234" height="46" class="row inf-row"/>
-    <text x="72" y="306" class="body">Galaxy positions</text>
+    <text x="72" y="306" class="body">Cepheids, SNe,</text>
     <text x="72" y="325" class="body">and redshifts</text>
-    <text x="381" y="306" class="body">Expanding space</text>
-    <text x="381" y="325" class="body">plus gravity</text>
-    <text x="690" y="306" class="body">Cosmic expansion</text>
+    <text x="381" y="306" class="body">Distance ladder</text>
+    <text x="381" y="325" class="body">and Hubble law</text>
+    <text x="690" y="306" class="body">Distances, expansion,</text>
     <text x="690" y="325" class="body">and cosmic web</text>
     <path class="arrow-teal" d="M288 309 H358"/>
     <path class="arrow-pink" d="M597 309 H667"/>
@@ -125,8 +125,8 @@
     <text x="72" y="379" class="body">and variability</text>
     <text x="381" y="360" class="body">Black-hole</text>
     <text x="381" y="379" class="body">accretion</text>
-    <text x="690" y="360" class="body">Feeding SMBHs</text>
-    <text x="690" y="379" class="body">and quasars</text>
+    <text x="690" y="360" class="body">Quasars and</text>
+    <text x="690" y="379" class="body">SMBH growth</text>
     <path class="arrow-teal" d="M288 363 H358"/>
     <path class="arrow-pink" d="M597 363 H667"/>
   </g>
@@ -148,6 +148,6 @@
   <g>
     <rect x="76" y="474" width="808" height="46" class="footer-box"/>
     <text x="480" y="493" text-anchor="middle" class="footer">Module 3 skill: read the sky as evidence.</text>
-    <text x="480" y="513" text-anchor="middle" class="footer">A picture becomes physics only after a model and a distance scale.</text>
+    <text x="480" y="513" text-anchor="middle" class="footer">A signal becomes physics only after a model, a scale, and a check against alternatives.</text>
   </g>
 </svg>

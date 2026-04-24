@@ -29,7 +29,7 @@
       .label { fill: var(--fg); font: 700 22px system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
       .small { fill: var(--muted); font: 500 17px system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
       .tiny { fill: var(--faint); font: 500 14px system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
-      .math { fill: var(--fg); font: 700 28px system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+      .math { fill: var(--fg); font: 700 26px system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
       .outline { paint-order: stroke; stroke: var(--bg); stroke-width: 6px; stroke-linejoin: round; }
     </style>
     <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto">
@@ -66,7 +66,7 @@
   <text x="56" y="264" text-anchor="middle" class="small" transform="rotate(-90 56 264)">Recession velocity v</text>
 
   <path class="trend" d="M158 370 L724 146"/>
-  <text x="610" y="154" class="math outline">v = H<tspan baseline-shift="-28%" font-size="70%">0</tspan>d</text>
+  <text x="526" y="158" class="math outline">v = H<tspan baseline-shift="-28%" font-size="70%">0</tspan>d</text>
 
   <circle class="scatter" cx="170" cy="364" r="8"/>
   <circle class="scatter" cx="214" cy="342" r="8"/>
@@ -82,17 +82,18 @@
   <circle class="scatter" cx="686" cy="150" r="8"/>
 
   <g>
-    <rect x="806" y="128" width="110" height="236" class="panel"/>
-    <text x="861" y="162" text-anchor="middle" class="label">Read it</text>
-    <text x="826" y="200" class="tiny">The slope</text>
-    <text x="826" y="220" class="tiny">is the present</text>
-    <text x="826" y="240" class="tiny">expansion rate.</text>
-    <text x="826" y="282" class="tiny">Scatter is real:</text>
-    <text x="826" y="302" class="tiny">nearby galaxies</text>
-    <text x="826" y="322" class="tiny">also have local</text>
-    <text x="826" y="342" class="tiny">motions.</text>
+    <rect x="802" y="128" width="130" height="236" class="panel"/>
+    <text x="867" y="162" text-anchor="middle" class="label">Read it</text>
+    <text x="820" y="200" class="tiny">Slope gives</text>
+    <text x="820" y="220" class="tiny">the present</text>
+    <text x="820" y="240" class="tiny">expansion rate.</text>
+    <text x="820" y="282" class="tiny">Scatter is real:</text>
+    <text x="820" y="302" class="tiny">nearby galaxies</text>
+    <text x="820" y="322" class="tiny">also have local</text>
+    <text x="820" y="342" class="tiny">motions.</text>
   </g>
 
-  <rect x="120" y="454" width="720" height="52" class="panel"/>
-  <text x="480" y="486" text-anchor="middle" class="small">What to notice: redshift plus distance reveals expansion of space, not an explosion from a center.</text>
+  <rect x="120" y="454" width="720" height="56" class="panel"/>
+  <text x="480" y="477" text-anchor="middle" class="small">What to notice: redshift plus distance reveals expansion of space.</text>
+  <text x="480" y="501" text-anchor="middle" class="small">It is not an explosion from a center.</text>
 </svg>

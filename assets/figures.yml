@@ -2041,8 +2041,15 @@ figures:
 
   module-3-evidence-chain-concept-map:
     path: /assets/images/module-03/module-3-evidence-chain-concept-map.svg
-    caption: "What to notice: Module 3 uses the same evidence chain over and over. Galaxy shapes, Cepheid periods, supernova brightness, galaxy redshifts, AGN jets, CMB anisotropies, and light-element abundances become physical claims only after a model translates them."
-    alt: "Concept map for Module 3 organized as five observable-to-model-to-inference chains. Galaxy shapes, colors, gas, and dust connect through stellar populations and gas physics to star-formation histories. Cepheid periods and supernova brightness connect through the distance ladder and flux law to galaxy distances, sizes, and luminosities. Galaxy positions and redshifts connect through expanding space and gravity to cosmic expansion and the cosmic web. AGN spectra, jets, and variability connect through black-hole accretion to feeding supermassive black holes and quasars. CMB anisotropies and light elements connect through recombination and nuclear reactions to the hot Big Bang and recycled atoms."
+    caption: "What to notice: Module 3 uses the same evidence chain over and over. Dust, 21-cm emission, S-star orbits, galaxy shapes, Cepheid periods, supernova brightness, redshifts, AGN jets, CMB anisotropies, and light-element abundances become physical claims only after a model translates them."
+    alt: "Concept map for Module 3 organized as five observable-to-model-to-inference chains. Dust, 21-cm gas, and S-star orbits connect through mapping and Newtonian gravity to Milky Way structure, dark matter, and Sagittarius A star. Galaxy shapes, colors, gas, and dust connect through stellar populations and gas physics to star formation and merger histories. Cepheids, supernovae, and redshifts connect through the distance ladder and Hubble law to distances, expansion, and the cosmic web. AGN spectra, jets, and variability connect through black-hole accretion to quasars and supermassive black-hole growth. CMB anisotropies and light elements connect through recombination and nuclear reactions to the hot Big Bang and recycled atoms."
+    credit: "Illustration: A. Rosen (SVG)"
+    module: 3
+
+  keplerian-rotation-curve-solar-system:
+    path: /assets/images/module-03/keplerian-rotation-curve-solar-system.svg
+    caption: "What to notice: in a central-mass system like the Solar System, orbital speed decreases with distance. This is the prediction that fails for spiral galaxies with flat rotation curves."
+    alt: "Teaching plot of Solar System orbital speed decreasing with distance from the Sun. A side note explains that the Sun contains nearly all the enclosed mass, so farther planets orbit more slowly."
     credit: "Illustration: A. Rosen (SVG)"
     module: 3
 

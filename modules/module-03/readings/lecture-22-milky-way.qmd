@@ -267,7 +267,7 @@ $$
 
 If almost all the mass is concentrated at the center (as in the solar system), then the enclosed mass $M_{\text{enclosed}}$ is effectively constant as you go farther out, and the circular velocity *falls* as $v \propto r^{-1/2}$.
 
-{{< fig cococubed-rotation-curve-solar-system >}}
+{{< fig keplerian-rotation-curve-solar-system >}}
 
 The solar system's rotation curve is exactly this: Mercury is fast, Neptune is slow, and the pattern is Keplerian.
 

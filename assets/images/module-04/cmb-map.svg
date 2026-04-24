@@ -85,11 +85,12 @@
   </g>
 
   <g>
-    <rect x="728" y="334" width="164" height="96" class="panel"/>
-    <text x="810" y="366" text-anchor="middle" class="callout">Tiny bumps</text>
-    <text x="752" y="394" class="tiny">about 1 part in</text>
-    <text x="752" y="412" class="tiny">100,000 seed later</text>
-    <text x="752" y="430" class="tiny">cosmic structure</text>
+    <rect x="728" y="318" width="164" height="116" class="panel"/>
+    <text x="810" y="350" text-anchor="middle" class="callout">Tiny bumps</text>
+    <text x="752" y="376" class="tiny">about 1 part in</text>
+    <text x="752" y="394" class="tiny">100,000</text>
+    <text x="752" y="412" class="tiny">become seeds for</text>
+    <text x="752" y="426" class="tiny">later structure</text>
   </g>
 
   <rect x="120" y="454" width="720" height="52" class="panel"/>
