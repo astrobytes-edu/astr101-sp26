@@ -18,7 +18,7 @@ learning-objectives:
   - Explain what a Type Ia supernova is, identify the white-dwarf progenitor, and describe the Chandrasekhar limit as the natural mass scale for the clean introductory explosion model
   - Articulate why Type Ia SNe have a calibratable peak luminosity and therefore serve as standardizable candles
   - Read a modern Hubble diagram and identify the signature of accelerating expansion at high redshift
-  - Describe dark energy as the inferred cause of acceleration and interpret the Ω-budget of the universe (matter, dark matter, dark energy)
+  - Describe dark energy as the inferred cause of acceleration and interpret the $\Omega$-budget of the universe (matter, dark matter, dark energy)
   - Discuss why dark energy is an open frontier and name at least two proposed physical explanations
 math-level: algebra_only
 prerequisites: "White dwarfs and degeneracy pressure (Lecture 20), Chandrasekhar limit (Lecture 20), standard candles (Lectures 23 – 24), Hubble's law (Lecture 24)"
@@ -61,11 +61,11 @@ This page answers four questions:
 - The Big Idea above
 - What a Type Ia Is and the Chandrasekhar Limit
 - Why Type Ias Are Standard Candles
-- The 1998 Discovery and the Ω-Budget
+- The 1998 Discovery and the $\Omega$-Budget
 
 **Goal after 20 minutes:** You should be able to describe the physical mechanism of a Type Ia supernova, explain why it is a standardizable candle, and articulate what dark energy is (and is not).
 
-**Reference mode:** The Type Ia Mechanism Box and the Ω-Budget Box are the long-term study references.
+**Reference mode:** The Type Ia Mechanism Box and the $\Omega$-Budget Box are the long-term study references.
 :::
 
 {{< fig module-3-evidence-chain-concept-map >}}
@@ -152,18 +152,18 @@ Here is the cosmologically important fact: Type Ia explosions come from the same
 That is good enough. A 10% uncertainty in $L$ gives a 5% uncertainty in distance. At cosmological distances, that is extraordinary precision.
 
 ::: {.callout-key-insight title="The Stellar Argument, Made Explicit"}
-This is the payoff of Lectures 20 and 23. The reason Type Ia SNe can be standardized is a stellar physics fact: white dwarfs are compact, degenerate carbon-oxygen objects with a narrow range of explosion conditions, and the Chandrasekhar mass provides the natural scale. **White-dwarf physics is the reason we can use Type Ias to measure cosmology.** Stars are the rung we climb on — and this particular stellar rung stretches to the edge of the observable universe.
+This is the payoff of Lectures 20 and 23. The reason Type Ia SNe can be standardized is a stellar physics fact: white dwarfs are compact, degenerate carbon-oxygen objects with a narrow range of explosion conditions, and the Chandrasekhar mass provides the natural scale. **White-dwarf physics is the reason we can use Type Ias to measure cosmology.** Stars are the rung we climb on — and this particular stellar rung stretches deep into the cosmological universe.
 :::
 
 ::: {.callout-check-yourself #cy-brightness-depth}
 ## Check Yourself 2: Type Ia Reach
 
-A Type Ia supernova has peak luminosity $L \approx 5 \times 10^9 \, L_\odot \approx 2 \times 10^{36}$ W. If a modern survey can detect a flux of $F = 10^{-17}$ W/m², estimate the maximum distance (in Gpc) at which a Type Ia can be discovered.
+A Type Ia supernova has peak luminosity $L \approx 5 \times 10^9 \, L_\odot \approx 2 \times 10^{36}\ {\rm W}$. If a modern survey can detect a flux of $F = 10^{-17}\ {\rm W\,m^{-2}}$, estimate the maximum distance (in Gpc) at which a Type Ia can be discovered.
 
 ::: {.callout-solution collapse="true" title="Answer"}
 $d = \sqrt{L / (4\pi F)} = \sqrt{2 \times 10^{36} / (4\pi \times 10^{-17})}$ m $= \sqrt{1.6 \times 10^{52}}$ m $\approx 1.3 \times 10^{26}$ m.
 
-Convert to Gpc: $1 \text{ Gpc} = 3.09 \times 10^{25}$ m, so $d \approx 4$ Gpc. This is comparable to the Hubble distance — Type Ias can be found across most of the observable universe, which is exactly the reach we need for cosmology.
+Convert to Gpc: $1 \text{ Gpc} = 3.09 \times 10^{25}$ m, so $d \approx 4$ Gpc. This is a genuinely cosmological distance — far beyond Cepheids and large enough to probe how the expansion rate has changed over much of cosmic history. In real cosmology we would use luminosity distance rather than this flat inverse-square estimate, but the scale is the point.
 :::
 :::
 
@@ -175,7 +175,7 @@ In the late 1990s, two independent teams — the **High-Z Supernova Search Team*
 
 They expected to measure the **deceleration** of the expansion. Until 1998, everyone assumed the universe's expansion was slowing down because gravity pulls matter together. The question was only *how much* — enough to eventually halt and reverse the expansion (closed universe) or not (open universe)?
 
-<!-- FIGURE: High-z Hubble diagram showing distance modulus vs. redshift for Type Ia SNe, with three model curves: matter-dominated deceleration, flat Λ=0 reference, and best-fit accelerating (Ω_m ≈ 0.3, Ω_Λ ≈ 0.7); emphasize that high-z SNe lie above the matter-only prediction -->
+{{< fig type-ia-dark-energy-hubble-diagram >}}
 
 What they actually found was the opposite. Distant Type Ia SNe at $z \sim 0.5$ were systematically **dimmer** than they should be in *any* decelerating model. Dimmer means farther. Farther than expected means the universe has been *expanding faster* now than it was in the past — the expansion has been **accelerating**.
 
@@ -224,7 +224,7 @@ Combining the Type Ia data with the CMB (Lecture 26) and galaxy clustering (cosm
 
 {{< fig universe-contents-nasa >}}
 
-::: {.callout-summary title="The Ω-Budget"}
+::: {.callout-summary title="The Omega-Budget"}
 
 | Component | Fraction | Evidence |
 |-----------|----------|----------|
@@ -247,10 +247,10 @@ Dark matter is revealed by gravity on bound structures: galaxy rotation curves, 
 
 Dark energy dominates the modern universe. But it did not always. In the early universe, matter (both ordinary and dark) had much higher density, and the expansion was decelerating. Only in the past few billion years has dark energy's (roughly constant) density come to dominate, flipping the expansion from decelerating to accelerating. We live in the **dark-energy-dominated era**.
 
-### Worked Example: Type Ia Peak Magnitude → Distance
+### Worked Example: Type Ia Peak Magnitude to Distance
 
-::: {.callout-worked-example title="Worked Example: Pulling a Distance Out of a Type Ia Peak"}
-**Given:** A Type Ia supernova is observed at peak with flux $F = 5 \times 10^{-16}$ W/m². The (light-curve-corrected) peak luminosity of a Type Ia is $L_{\text{peak}} \approx 5 \times 10^9 \, L_\odot = 5 \times 10^9 \times 3.8 \times 10^{26}$ W $\approx 1.9 \times 10^{36}$ W.
+::: {.callout-worked-example title="Worked Example: Pulling a Distance Out of a Type Ia Peak" collapse="true"}
+**Given:** A Type Ia supernova is observed at peak with flux $F = 5 \times 10^{-16}\ {\rm W\,m^{-2}}$. The (light-curve-corrected) peak luminosity of a Type Ia is $L_{\text{peak}} \approx 5 \times 10^9 \, L_\odot = 5 \times 10^9 \times 3.8 \times 10^{26}\ {\rm W} \approx 1.9 \times 10^{36}\ {\rm W}$.
 
 **Relation:** For any standard candle, apparent flux and intrinsic luminosity are related by the inverse-square law,
 $$F = \frac{L}{4\pi d^2}.$$
@@ -296,7 +296,7 @@ We have now climbed the full ladder:
 - Rung 3: Spectroscopic parallax (~100 kpc)
 - Rung 4: Cepheid variables (~30 Mpc) — *pulsating giant stars*
 - Rung 5: **Type Ia supernovae (~Gpc) — exploding white dwarfs**
-- Rung 6: Hubble's law + Ω-budget (cosmological)
+- Rung 6: Hubble's law + $\Omega$-budget (cosmological)
 
 At every rung that reaches beyond the Milky Way, the measurement is made with a specific kind of star. Lecture 25 is the payoff of Module 2: white-dwarf physics makes Type Ia SNe standardizable candles, which is what tells us the universe is accelerating, which is what tells us dark energy exists. **Stars are the reason we know 68% of the universe is dark energy.**
 
@@ -309,7 +309,7 @@ The fusion in a Type Ia explosion produces about 0.6 $M_\odot$ of radioactive ni
 :::
 
 ::: {.callout-deep-dive title="Deep Dive: The Cosmological Constant Problem" collapse="true"}
-If dark energy is vacuum energy (the cosmological constant $\Lambda$), then quantum field theory predicts a density set by the scale of particle physics — roughly $\rho_\Lambda \sim 10^{97}$ kg/m³. The observed value is $\rho_\Lambda \sim 10^{-26}$ kg/m³. The ratio is about $10^{120}$ — arguably the largest discrepancy between theory and observation in the history of physics. This is called the **cosmological constant problem**, and it remains unsolved. Most physicists suspect either that supersymmetry or some other cancellation mechanism makes the bare vacuum energy smaller, or that we are deeply confused about how to calculate vacuum energy in general relativity.
+If dark energy is vacuum energy (the cosmological constant $\Lambda$), then quantum field theory predicts a density set by the scale of particle physics — roughly $\rho_\Lambda \sim 10^{97}\ {\rm kg\,m^{-3}}$. The observed value is $\rho_\Lambda \sim 10^{-26}\ {\rm kg\,m^{-3}}$. The ratio is about $10^{120}$ — arguably the largest discrepancy between theory and observation in the history of physics. This is called the **cosmological constant problem**, and it remains unsolved. Most physicists suspect either that supersymmetry or some other cancellation mechanism makes the bare vacuum energy smaller, or that we are deeply confused about how to calculate vacuum energy in general relativity.
 :::
 
 ---
@@ -343,12 +343,12 @@ In one paragraph, describe the progenitor and mechanism of a Type Ia supernova. 
 Explain in 2 – 3 sentences why Type Ia supernovae are better standard candles than core-collapse (Type II) supernovae.
 
 **Problem 3: Using a Type Ia as a Distance Indicator.**
-A Type Ia supernova is observed at peak brightness with a flux of $F = 10^{-13}$ W/m². Using $L \approx 5 \times 10^9 \, L_\odot \approx 2 \times 10^{36}$ W, estimate the distance in Mpc.
+A Type Ia supernova is observed at peak brightness with a flux of $F = 10^{-13}\ {\rm W\,m^{-2}}$. Using $L \approx 5 \times 10^9 \, L_\odot \approx 2 \times 10^{36}\ {\rm W}$, estimate the distance in Mpc.
 
 **Problem 4: Reading the Hubble Diagram.**
 On a Hubble diagram of distance modulus vs. redshift, distant Type Ia SNe lie *above* the line predicted by a matter-only (decelerating) universe. What does "above the line" mean in terms of brightness? What does it imply about the expansion history?
 
-**Problem 5: The Ω-Budget.**
+**Problem 5: The $\Omega$-Budget.**
 State the fractional contributions of ordinary matter, dark matter, and dark energy to the current energy budget. Which component dominated in the early universe, and which dominates now?
 
 ### Challenge Problems (Deepen Your Understanding)
@@ -368,9 +368,9 @@ Sketch a Hubble diagram of distance modulus vs. redshift for (a) a matter-only d
 
 ::: {.callout-summary title="Lecture 25 in One Screen"}
 - A **Type Ia supernova** is a thermonuclear explosion of a carbon-oxygen white dwarf in a binary. The Chandrasekhar mass gives the natural scale for the explosion, but real Type Ia channels are diverse; that is why Type Ias are best described as **standardizable candles**, not perfectly identical ones.
-- Type Ia SNe reach ~$5 \times 10^9 \, L_\odot$ at peak and are visible across most of the observable universe. They are the fifth rung of the distance ladder and the tool that took the Hubble diagram to $z \sim 0.5 - 1$ in the 1990s.
+- Type Ia SNe reach ~$5 \times 10^9 \, L_\odot$ at peak and are visible deep into cosmological distances. They are the fifth rung of the distance ladder and the tool that took the Hubble diagram to $z \sim 0.5 - 1$ in the 1990s.
 - **The 1998 discovery** (Riess, Perlmutter et al., Nobel 2011) was that distant Type Ias are *dimmer than any decelerating model predicts* — the universe has been **accelerating**.
-- Acceleration requires an energy density with **negative pressure**: **dark energy**. Combined with the CMB (Lecture 26) and galaxy clustering (Lecture 23), this gives the cosmic Ω-budget: ~5% baryons, ~27% dark matter, ~68% dark energy.
+- Acceleration requires an energy density with **negative pressure**: **dark energy**. Combined with the CMB (Lecture 26) and galaxy clustering (Lecture 23), this gives the cosmic $\Omega$-budget: ~5% baryons, ~27% dark matter, ~68% dark energy.
 - Candidate physical explanations include the cosmological constant $\Lambda$ (with a ~$10^{120}$ mismatch to naïve vacuum-energy predictions), evolving quintessence fields, and modified gravity. DESI/Euclid/LSST/Roman are designed to measure $w$ and its evolution.
 - White-dwarf physics — a stellar-structure result from Module 2 — is the reason Type Ia SNe can reveal dark energy. **Stars anchor cosmology.**
 :::

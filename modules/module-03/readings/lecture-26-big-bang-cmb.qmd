@@ -97,6 +97,10 @@ Treat this figure as a conceptual map, not a scoreboard of the current "farthest
 
 This is the physical reason high-redshift observations are often infrared observations. The light may have started in the visible or ultraviolet, but expansion stretches it toward longer wavelengths while it travels.
 
+{{< fig seeing-the-past-infrared layout="aside" width="42%" >}}
+
+The same idea powers "lookback time": when we observe very distant galaxies, we are not seeing them as they are now. We are seeing light that left when the universe was much younger, then was stretched into infrared wavelengths on its way to us.
+
 {{< fig jwst-mom-z14-field >}}
 
 This is what that evidence looks like in practice: the visually modest smudge is not persuasive by itself. It becomes cosmological evidence only when photometry and spectroscopy connect that light to an extreme redshift.
@@ -131,7 +135,7 @@ The CMB is extraordinary:
 
 ### Pillar 3: Primordial Element Abundances
 
-When we measure the chemistry of pristine gas (e.g., the intergalactic medium, the atmospheres of ancient stars), we find it is roughly **75% hydrogen and 25% helium by mass**, with traces of deuterium, helium-3, and lithium-7. These ratios are exactly what a hot, dense early universe predicts from Big Bang nucleosynthesis (BBN). This is the topic of the last two major sections of this reading.
+When we measure the chemistry of pristine gas (e.g., the intergalactic medium, the atmospheres of ancient stars), we find it is roughly **75% hydrogen and 25% helium by mass**, with traces of deuterium, helium-3, and lithium-7. The hydrogen, helium, and deuterium abundances are major successes of Big Bang nucleosynthesis (BBN). Lithium-7 is the important caveat: standard BBN predicts a trace abundance, but old metal-poor stars show less lithium than expected. The honest claim is not "perfect match"; it is "multiple light-element abundances point to a hot, dense early universe, with one famous remaining tension." This is the topic of the last two major sections of this reading.
 
 ::: {.callout-check-yourself #cy-three-pillars}
 ## Check Yourself 1: The Pillars
@@ -141,7 +145,7 @@ In one sentence each, state what each pillar tells us — Hubble expansion, CMB,
 ::: {.callout-solution collapse="true" title="Answer"}
 - **Hubble expansion** says the universe is expanding today and was denser in the past. By itself, it cannot tell us whether the early universe was *hot* — it could have been cold and dense.
 - **The CMB** says the universe was hot and dense at some point — specifically, hot enough to be a radiating plasma at temperatures of thousands of kelvin. By itself, it does not tell us *when* this happened or what chemistry that plasma had.
-- **Primordial abundances** say the universe spent a specific window of time at temperatures of ~10⁹ K in a radiation-dominated state, which matches the Big Bang model's first 3 minutes. By itself, it does not tell us about the universe on scales larger than nuclear physics.
+- **Primordial abundances** say the universe spent a specific window of time at temperatures of $\sim 10^9$ K in a radiation-dominated state, which matches the Big Bang model's first 3 minutes. By itself, it does not tell us about the universe on scales larger than nuclear physics.
 
 Each pillar constrains one aspect; together they uniquely pick out a hot, dense, expanding early universe with a specific thermal history — i.e., the Big Bang.
 :::
@@ -168,8 +172,8 @@ Equivalently: when you measure the CMB, you are looking at the moment the univer
 The CMB is an astonishingly rich data source. From its properties we can read:
 
 - **The universe was hot and dense 380,000 years after the Big Bang.** (Existence of CMB + its blackbody spectrum.)
-- **The universe is very nearly uniform on large scales.** (Temperature is the same in every direction to 1 part in 10⁵.)
-- **The universe has tiny initial density fluctuations.** (Those 1-in-10⁵ variations encode the seeds of all later structure.)
+- **The universe is very nearly uniform on large scales.** (Temperature is the same in every direction to 1 part in $10^5$.)
+- **The universe has tiny initial density fluctuations.** (Those 1-in-$10^5$ variations encode the seeds of all later structure.)
 - **The universe is geometrically flat, contains ~5% ordinary matter, ~27% dark matter, and ~68% dark energy.** (The precise angular pattern of CMB fluctuations — the "acoustic peaks" — encodes all these numbers.)
 - **The first stars formed ~100 – 400 Myr after the Big Bang.** (The optical depth to reionization, measured from CMB polarization, dates this.)
 - **The Hubble constant is ~67 km/s/Mpc.** (From the geometry of the acoustic peaks — giving the CMB leg of the Hubble tension, Lecture 24.)
@@ -221,9 +225,9 @@ The CMB is one of the most information-rich measurements in physics. Missions li
 
 | Mission | Years | Resolution | Key results |
 |---------|-------|------------|-------------|
-| COBE | 1989 – 1993 | ~7° | Confirmed blackbody spectrum ($T = 2.725$ K); discovered the 1-in-10⁵ fluctuations (Nobel 2006) |
-| WMAP | 2001 – 2010 | ~0.2° | Mapped the acoustic peaks; nailed Ω-budget to ~5% |
-| Planck | 2009 – 2013 | ~0.08° | High-precision cosmology: $H_0$, $\Omega_m$, $\Omega_\Lambda$, spectral index of initial fluctuations |
+| COBE | 1989 – 1993 | ~$7^{\circ}$ | Confirmed blackbody spectrum ($T = 2.725$ K); discovered the 1-in-$10^5$ fluctuations (Nobel 2006) |
+| WMAP | 2001 – 2010 | ~$0.2^{\circ}$ | Mapped the acoustic peaks; nailed $\Omega$-budget to ~5% |
+| Planck | 2009 – 2013 | ~$0.08^{\circ}$ | High-precision cosmology: $H_0$, $\Omega_m$, $\Omega_\Lambda$, spectral index of initial fluctuations |
 
 *Each generation multiplied the CMB's information content by orders of magnitude.*
 :::
@@ -246,19 +250,21 @@ This matches the measured CMB temperature of 2.725 K to high precision. The cool
 
 Now the dramatic part — the full temperature-time timeline of the very early universe. This is a story about **thermal physics**: the universe's temperature dropped in predictable ways as it expanded, and at specific temperature thresholds, specific particle-physics events happened. We are going to walk backward from today to the first fraction of a second.
 
+{{< fig universe-history-module3 >}}
+
 ::: {.callout-roadmap title="The Universe's Temperature-Time Timeline"}
 
 | Time | Redshift $z$ | Temperature | Event |
 |------|--------------|-------------|-------|
 | Today | 0 | 2.7 K | Dark-energy-dominated era; stars form, galaxies evolve |
 | ~0.5 Gyr | ~6 | ~20 K | Reionization — first stars reionize the neutral hydrogen |
-| ~380,000 yr | ~1100 | ~3000 K | **Recombination** — electrons + protons → H atoms; CMB released |
-| ~50,000 yr | ~3400 | ~10⁴ K | Matter-radiation equality |
-| ~3 min | ~10⁸ | ~10⁹ K | **Big Bang nucleosynthesis** — H and He formed from p, n |
-| ~1 sec | ~10⁹ | ~10¹⁰ K | Neutrino decoupling — the cosmic neutrino background |
-| ~10⁻⁶ sec | ~10¹² | ~10¹² K | Quark-gluon → hadron transition — protons and neutrons form |
-| ~10⁻¹² sec | — | ~10¹⁵ K | Electroweak symmetry breaking |
-| ~10⁻³² sec | — | ~10²⁷ K | End of inflation (cosmic exponential expansion) |
+| ~380,000 yr | ~1100 | ~3000 K | **Recombination** — electrons + protons $\to$ H atoms; CMB released |
+| ~50,000 yr | ~3400 | $\sim 10^4$ K | Matter-radiation equality |
+| ~3 min | $\sim 10^8$ | $\sim 10^9$ K | **Big Bang nucleosynthesis** — H and He formed from p, n |
+| ~1 sec | $\sim 10^9$ | $\sim 10^{10}$ K | Neutrino decoupling — the cosmic neutrino background |
+| $\sim 10^{-6}$ sec | $\sim 10^{12}$ | $\sim 10^{12}$ K | Quark-gluon $\to$ hadron transition — protons and neutrons form |
+| $\sim 10^{-12}$ sec | — | $\sim 10^{15}$ K | Electroweak symmetry breaking |
+| $\sim 10^{-32}$ sec | — | $\sim 10^{27}$ K | End of inflation (cosmic exponential expansion) |
 | Classical extrapolation to $t = 0$ | — | unknown | Classical singularity; quantum gravity needed |
 
 *Lower rows = earlier, hotter, denser. We observe all the way back to recombination directly (via the CMB); earlier epochs we infer from their downstream consequences.*
@@ -266,7 +272,7 @@ Now the dramatic part — the full temperature-time timeline of the very early u
 
 ### Inflation: ~$10^{-36} - 10^{-32}$ seconds
 
-The leading model for the *very* early universe is **inflation**: a brief period of exponential expansion driven by an inflaton field, stretching a microscopic patch of space to a macroscopic scale in a fraction of a second. Inflation was proposed (Alan Guth, Andrei Linde, and others) in the 1980s to solve several puzzles — notably why the universe is so uniform (inflation stretched any initial non-uniformities beyond the horizon) and why it is geometrically flat. The quantum fluctuations of the inflaton field become the seed density perturbations that eventually grow into galaxies. Those perturbations are the same 1-in-10⁵ bumps we see in the CMB.
+The leading model for the *very* early universe is **inflation**: a brief period of exponential expansion driven by an inflaton field, stretching a microscopic patch of space to a macroscopic scale in a fraction of a second. Inflation was proposed (Alan Guth, Andrei Linde, and others) in the 1980s to solve several puzzles — notably why the universe is so uniform (inflation stretched any initial non-uniformities beyond the horizon) and why it is geometrically flat. The quantum fluctuations of the inflaton field become the seed density perturbations that eventually grow into galaxies. Those perturbations are the same 1-in-$10^5$ bumps we see in the CMB.
 
 Inflation is strongly supported by observations but not yet confirmed — the "smoking gun" would be the direct detection of primordial gravitational waves, which experiments like BICEP/Keck and LiteBIRD are searching for.
 
@@ -289,9 +295,9 @@ Here is the rough sequence:
 3. **Helium-4:** These fuse further to form $^4$He — a tightly bound nucleus with 2 protons and 2 neutrons. About **essentially all** the available neutrons end up in $^4$He.
 4. **A trace of lithium-7** is made by further fusion. The reaction chain stalls there because there are no stable nuclei of mass 5 or 8.
 
-The outcome after about 20 minutes (when the universe cooled below the nuclear-fusion threshold): roughly **75% hydrogen and 25% helium by mass**, with trace deuterium (~10⁻⁵), $^3$He (~10⁻⁵), and lithium-7 (~10⁻¹⁰). Every heavier element is absent. The universe has no carbon, no oxygen, no iron — and it will not for another ~200 Myr, when the first stars form and begin making them.
+The outcome after about 20 minutes (when the universe cooled below the nuclear-fusion threshold): roughly **75% hydrogen and 25% helium by mass**, with trace deuterium ($\sim 10^{-5}$), $^3$He ($\sim 10^{-5}$), and lithium-7 ($\sim 10^{-10}$). Every heavier element is absent. The universe has no carbon, no oxygen, no iron — and it will not for another ~200 Myr, when the first stars form and begin making them.
 
-::: {.callout-worked-example title="Why 25% Helium? A Back-of-Envelope Argument"}
+::: {.callout-worked-example title="Why 25% Helium? A Back-of-Envelope Argument" collapse="true"}
 
 The $n/p$ freeze-out ratio is ~1:7. Every 2 neutrons ends up inside one $^4$He nucleus, using 2 neutrons + 2 protons = 4 nucleons. If we have 2 neutrons, there are $2 \times 7 = 14$ protons total. Two of those protons go into the $^4$He, leaving 12 as free hydrogen.
 
@@ -318,7 +324,7 @@ The result: the early universe is limited to H, He, and a trace of Li. Everythin
 
 ### Worked Example: Cooling the CMB by Cosmic Expansion
 
-::: {.callout-worked-example title="Worked Example: The CMB Temperature Today"}
+::: {.callout-worked-example title="Worked Example: The CMB Temperature Today" collapse="true"}
 **Given:** Recombination occurs at redshift $z \approx 1100$, when the universe's temperature was $T_{\text{rec}} \approx 3000$ K.
 
 **Relation:** Cosmic expansion stretches photon wavelengths by a factor $(1+z)$. Because Wien's law gives $\lambda_{\text{peak}} \propto 1/T$, a blackbody whose wavelengths are stretched by $(1+z)$ has its temperature scaled as
@@ -359,18 +365,18 @@ From here on, the universe is doing what we have studied throughout the course: 
 
 Here is where Module 2 and Module 3 fuse together. In Lectures 19 – 21, you learned how stars synthesize elements:
 
-- **Big Bang (first 3 minutes):** H, He, tiny amount of Li.
+- **Big Bang (first 3 minutes):** H, He, trace deuterium, helium-3, and lithium. Lithium remains the one famous abundance tension.
 - **Stellar fusion in main-sequence and giant stars:** C, N, O (via the CNO cycle and red-giant He burning).
-- **Massive-star cores (> 8 $M_\odot$):** Elements from O through Fe (via onion-shell burning).
-- **Core-collapse supernovae:** Elements heavier than Fe (via rapid neutron capture in the shock wave and neutron-rich ejecta) — partially. And they eject all the fusion products of the progenitor into the ISM.
+- **Massive-star cores (> 8 $M_\odot$):** Many alpha and intermediate-mass elements, plus material up through the iron-group, via onion-shell burning before collapse.
+- **Core-collapse supernovae:** Eject the progenitor's fusion products and synthesize additional elements in explosive burning. Some neutron-rich ejecta may contribute to lighter r-process elements, but core-collapse supernovae are not the whole heavy-element story.
 - **Type Ia supernovae:** Major producers of iron-peak elements (Fe, Ni, Co) via thermonuclear runaway.
-- **Neutron-star mergers:** Rapid neutron-capture (r-process) elements — gold, platinum, uranium, the heaviest stable nuclei. Confirmed observationally by GW170817 (a gravitational-wave + electromagnetic binary neutron-star merger, 2017).
+- **Neutron-star mergers:** A major confirmed site for many heavy rapid neutron-capture (r-process) elements — including gold, platinum, uranium, and other very heavy nuclei — supported by GW170817 (a gravitational-wave + electromagnetic binary neutron-star merger, 2017). Some r-process contributions from other sites remain under study.
 
 {{< fig periodic-table-origins >}}
 
-Every element on the periodic table has a cosmic origin story. Hydrogen and helium are primordial. Carbon, nitrogen, oxygen were made in stellar interiors. Iron comes from Type Ia SNe and core-collapse SNe. Gold and uranium come from neutron-star mergers.
+Every element on the periodic table has a cosmic origin story. Hydrogen and most helium are primordial. Carbon, nitrogen, and oxygen were made in stellar interiors. Iron comes from Type Ia SNe and core-collapse SNe. Much of the gold and uranium inventory points to neutron-star mergers and other neutron-rich r-process sites.
 
-**Every atom in your body heavier than hydrogen was made in a star or a stellar explosion.** The calcium in your bones was fused in the core of a massive star. The iron in your blood was expelled from a supernova. The heaviest trace elements in your body (iodine, molybdenum) came from neutron-star mergers that happened before the Sun was born.
+**Every atom in your body heavier than helium was made in a star, a stellar explosion, or a stellar-remnant merger.** The calcium in your bones was fused in the core of a massive star. The iron in your blood was expelled from supernovae. The heaviest trace elements in your body, such as iodine and molybdenum, come from neutron-capture processes in earlier generations of stars and stellar remnants, including neutron-star mergers and other sites still being studied.
 
 This is the cosmic recycling loop. The Big Bang made the hydrogen. Stars and their deaths made everything else. Galaxies and the cosmic web are the stages on which this recycling happens. Dark matter provides the gravitational scaffolding; dark energy sets the expansion rate; the CMB records the initial conditions. All of it is held together by the same physics that governs a candle flame, a falling apple, and a white dwarf at the Chandrasekhar limit.
 
@@ -386,7 +392,7 @@ You — and everyone you have ever met, and every planet you will ever visit —
 Pick one element in your body heavier than helium — carbon, oxygen, calcium, iron, or iodine. Was it made in the Big Bang, in stellar fusion, in a supernova, or in a neutron-star merger? What observation or model from this course supports that answer?
 
 ::: {.callout-solution collapse="true" title="Answer"}
-Answers vary by element. Carbon and oxygen are made mainly in stellar interiors; calcium and much iron are produced by supernovae, with Type Ia SNe especially important for iron-peak elements; iodine and many very heavy elements require neutron-rich environments such as neutron-star mergers. The supporting evidence is not a single photograph: it is the combination of stellar-evolution models, spectra of stars and supernova remnants, gravitational-wave events such as GW170817, and the fact that Big Bang nucleosynthesis stops at H, He, and trace Li.
+Answers vary by element. Carbon and oxygen are made mainly in stellar interiors; calcium and much iron are produced by supernovae, with Type Ia SNe especially important for iron-peak elements; iodine and many very heavy elements require neutron-rich environments such as neutron-star mergers and other r-process sites. The supporting evidence is not a single photograph: it is the combination of stellar-evolution models, spectra of stars and supernova remnants, gravitational-wave events such as GW170817, and the fact that Big Bang nucleosynthesis stops at H, He, and trace Li.
 :::
 :::
 
@@ -405,14 +411,14 @@ Module 3 opened with the Milky Way and a missing 90% of its mass. It closes with
 ::: {.callout-deep-dive title="Deep Dive: The Horizon and Flatness Problems, and Why Inflation Helps" collapse="true"}
 Before inflation, cosmology had two nagging puzzles:
 
-- **The horizon problem.** The CMB is uniform to ~1 part in 10⁵ in every direction. But regions of sky separated by more than ~2° have not, in standard Big Bang cosmology, had time to exchange information (light signals cannot have passed between them since the Big Bang). How did they end up the same temperature?
-- **The flatness problem.** The universe is observed to be geometrically flat (Ω_total ≈ 1). But in a decelerating universe, any deviation from perfect flatness grows with time, so the early universe must have been *extraordinarily* close to flat — fine-tuned to approximately 1 part in 10⁶⁰ at the Planck epoch (the exact figure depends on the extrapolation back to Planck-scale physics, but it is vanishingly small by any account). Why?
+- **The horizon problem.** The CMB is uniform to ~1 part in $10^5$ in every direction. But regions of sky separated by more than $\sim 2^{\circ}$ have not, in standard Big Bang cosmology, had time to exchange information (light signals cannot have passed between them since the Big Bang). How did they end up the same temperature?
+- **The flatness problem.** The universe is observed to be geometrically flat ($\Omega_{\text{total}} \approx 1$). But in a decelerating universe, any deviation from perfect flatness grows with time, so the early universe must have been *extraordinarily* close to flat — fine-tuned to approximately 1 part in $10^{60}$ at the Planck epoch (the exact figure depends on the extrapolation back to Planck-scale physics, but it is vanishingly small by any account). Why?
 
 Inflation solves both elegantly: exponential expansion stretched a small, causally connected, approximately flat patch to a size much larger than the observable universe. Any initial non-uniformities or curvature were smoothed out to undetectable levels. This is why inflation, despite being unobservable directly, is considered the leading model for the earliest universe.
 :::
 
 ::: {.callout-deep-dive title="Deep Dive: The Sound of the Early Universe" collapse="true"}
-The pre-recombination plasma behaved as a fluid, and density perturbations in it oscillated as **sound waves**. These "baryon acoustic oscillations" are frozen in at the moment of recombination, leaving a characteristic angular scale in the CMB fluctuations — the famous **acoustic peaks** — and a characteristic distance scale in the galaxy distribution (the BAO standard ruler). Measuring the acoustic peaks and the BAO scale is how modern cosmology determines Ω_m, Ω_Λ, and $H_0$ with percent-level precision. The universe literally *rang* with sound waves for 380,000 years, and we can still hear the echo.
+The pre-recombination plasma behaved as a fluid, and density perturbations in it oscillated as **sound waves**. These "baryon acoustic oscillations" are frozen in at the moment of recombination, leaving a characteristic angular scale in the CMB fluctuations — the famous **acoustic peaks** — and a characteristic distance scale in the galaxy distribution (the BAO standard ruler). Measuring the acoustic peaks and the BAO scale is how modern cosmology determines $\Omega_m$, $\Omega_\Lambda$, and $H_0$ with percent-level precision. The universe literally *rang* with sound waves for 380,000 years, and we can still hear the echo.
 :::
 
 ---
@@ -474,7 +480,7 @@ Put these events in chronological order (earliest first), and give the approxima
 Starting from a neutron-to-proton ratio of $n/p = 1/7$ at freeze-out, derive the primordial helium mass fraction assuming all available neutrons end up in $^4$He nuclei. Show that $Y = 2 n / (n + p) \approx 0.25$.
 
 **Challenge 2: Why Transparency at 3000 K?**
-At what temperature would you expect hydrogen to ionize (i.e., electrons escape from protons)? A useful reference: the Lyman-alpha transition has energy ~10.2 eV ≈ 13.6 eV × 0.75. Why does recombination happen at ~3000 K rather than at the temperature corresponding to 13.6 eV?
+At what temperature would you expect hydrogen to ionize (i.e., electrons escape from protons)? A useful reference: the Lyman-alpha transition has energy $\sim 10.2\ {\rm eV} \approx 13.6\ {\rm eV} \times 0.75$. Why does recombination happen at ~3000 K rather than at the temperature corresponding to $13.6\ {\rm eV}$?
 
 **Challenge 3: The Stellar Distance Ladder, Fully Written.**
 Write a one-page essay (your prose, no quote-marks needed) explaining the role of stars at every rung of the cosmic distance ladder from Lecture 15 to Lecture 26. For each rung, identify the specific type of star involved and why that type is useful. Conclude with one sentence about what Module 3 has taught you about why stars matter.
@@ -485,8 +491,8 @@ Write a one-page essay (your prose, no quote-marks needed) explaining the role o
 
 ::: {.callout-summary title="Lecture 26 in One Screen"}
 - The **Big Bang** is the statement that space was once in a hot, dense state and has been expanding and cooling ever since. Three independent pillars support it: Hubble expansion (Lecture 24), the CMB, and primordial light-element abundances.
-- The **CMB** is the afterglow of recombination at $z \approx 1100$, when the universe cooled to ~3000 K and became transparent. Expansion has redshifted that 3000 K blackbody down to **2.725 K** today, with ~1-in-10⁵ fluctuations encoding the seeds of all later structure.
-- The CMB's acoustic-peak pattern pins down Ω_b ≈ 5%, Ω_DM ≈ 27%, Ω_Λ ≈ 68% — independently confirming the L22 dark-matter inference and the L25 dark-energy result.
+- The **CMB** is the afterglow of recombination at $z \approx 1100$, when the universe cooled to ~3000 K and became transparent. Expansion has redshifted that 3000 K blackbody down to **2.725 K** today, with ~1-in-$10^5$ fluctuations encoding the seeds of all later structure.
+- The CMB's acoustic-peak pattern pins down $\Omega_b \approx 5\%$, $\Omega_{\rm DM} \approx 27\%$, $\Omega_\Lambda \approx 68\%$ — independently confirming the L22 dark-matter inference and the L25 dark-energy result.
 - **BBN** (3 – 20 minutes) produced ~75% H and ~25% He by mass (plus trace D, $^3$He, $^7$Li). A 1:7 $n/p$ freeze-out ratio, followed by all available neutrons funneling into $^4$He, gives the 25% helium fraction as a back-of-envelope prediction from particle physics.
 - Every element heavier than lithium was made in **stars or stellar explosions** (Module 2). Your atoms are recycled stardust, and the three hidden things of Module 3 — dark matter, dark energy, and the origin of the elements — are inferences we can only make because starlight carries them.
 :::

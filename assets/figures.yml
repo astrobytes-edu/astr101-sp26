@@ -2270,6 +2270,48 @@ figures:
     credit: "Course-provided figure"
     module: 3
 
+  hubble-law-module3:
+    path: /assets/images/module-03/hubble-diagram-chatgpt.png
+    caption: "What to notice: Hubble's law is a slope. Redshift gives recession velocity, independent distance measurements set the horizontal axis, and the best-fit line gives $H_0$."
+    alt: "Teaching infographic for Hubble's law. A scatter plot of recession velocity versus distance shows observed galaxies lying near a straight best-fit line labeled v equals H zero d, with side notes explaining that farther galaxies recede faster as space expands."
+    credit: "Course-provided figure"
+    module: 3
+
+  hubble-redshifted-spectrum:
+    path: /assets/images/module-03/hubble-redshifted-spectrum-nasa.webp
+    caption: "What to notice: redshift is measured by matching spectral fingerprints. The same absorption-line pattern appears at longer wavelengths in the observed spectrum, so the shift is a measurement, not a color impression."
+    alt: "Black-background spectrum graphic comparing an upper rest-frame rainbow spectrum with dark absorption lines to a lower spectrum shifted toward red wavelengths, labeled redshifted with an arrow."
+    credit: "NASA"
+    module: 3
+
+  when-space-expands:
+    path: /assets/images/module-03/whenspaceexpands-nasa.webp
+    caption: "What to notice: expanding space stretches traveling light. Bound objects such as galaxies keep their size, while the space between galaxies grows and increases the wavelength of light in transit."
+    alt: "NASA-style infographic titled When Space Expands, Light Stretches. It shows galaxies embedded in expanding space and a light wave stretched to longer wavelength as it travels from the Big Bang side toward the present."
+    credit: "NASA"
+    module: 3
+
+  seeing-the-past-infrared:
+    path: /assets/images/module-03/seeing-the-past-nasa.webp
+    caption: "What to notice: infrared telescopes let us look farther back because expansion shifts ancient visible and ultraviolet light into infrared wavelengths before it reaches us."
+    alt: "NASA-style infographic titled Seeing the Past. A time axis points into the past from present day through first galaxies and first stars to the cosmic dark ages, with Hubble and Webb limits marked and a side scale from visible light through infrared to microwave."
+    credit: "NASA"
+    module: 3
+
+  universe-history-module3:
+    path: /assets/images/module-03/Universe_History_NASA.png
+    caption: "What to notice: cosmic history is a sequence of physical transitions. Inflation, particle formation, first nuclei, first light, first stars, galaxy growth, dark-energy domination, and today are separated by enormous changes in temperature and density."
+    alt: "Wide infographic titled History of the Universe, showing a timeline from inflation at about 10^-32 seconds through first particles, first nuclei at 3 minutes, first light at 380,000 years, first stars at 200 million years, galaxy and dark matter structure at 400 million years, dark energy at 10 billion years, and today at 13.8 billion years."
+    credit: "NASA"
+    module: 3
+
+  type-ia-dark-energy-hubble-diagram:
+    path: /assets/images/module-03/type-ia-dark-energy-hubble-diagram.svg
+    caption: "What to notice: in a Type Ia Hubble diagram, 'above the line' means a larger distance modulus at the same redshift. The supernova appears dimmer, so its luminosity distance is larger than a matter-only decelerating universe predicts."
+    alt: "Teaching schematic of a Type Ia supernova Hubble diagram. The vertical axis is distance modulus and the horizontal axis is redshift. A lower gray curve is labeled matter-only decelerating universe, and a higher blue curve is labeled accelerating universe with dark energy. A highlighted high-redshift supernova lies above the matter-only curve with an arrow labeled dimmer, farther."
+    credit: "Illustration: A. Rosen"
+    module: 3
+
   black-hole-schematic-eso:
     path: /assets/images/module-03/eso1907h-blackhole-schematic.jpg
     caption: "What to notice: the event horizon, accretion disk, photon sphere, and jets are different physical regions. The singularity label is a signpost for where classical general relativity reaches its limit, not something directly observed."

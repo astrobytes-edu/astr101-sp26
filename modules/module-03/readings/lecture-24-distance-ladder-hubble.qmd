@@ -168,7 +168,7 @@ You observe a Cepheid in a nearby galaxy. Its pulsation period is $30\ {\rm days
 (b) The distance $d$ to the host galaxy in Mpc ($1\ {\rm Mpc} = 3.09 \times 10^{22}\ {\rm m}$).
 :::
 
-::: {.callout-tip title="Solution" collapse="true"}
+::: {.callout-solution collapse="true" title="Answer"}
 (a) Using $L \approx 335\,L_\odot (P/{\rm day})^{1.15}$ with $P = 30$:
 
 $$
@@ -233,7 +233,7 @@ Once we have distances out to a few hundred Mpc, a new relation becomes usable. 
 Suppose a Type Ia supernova goes off in a galaxy that also contains Cepheid variables. Which object gives the distance to the galaxy directly, and which object gets calibrated so it can be used much farther away?
 :::
 
-::: {.callout-tip title="Solution" collapse="true"}
+::: {.callout-solution collapse="true" title="Answer"}
 The **Cepheids** give the distance to the nearby host galaxy because their period-luminosity relation has already been calibrated by lower rungs such as parallax. The **Type Ia supernova** is then calibrated: once we know its host distance, we can infer its corrected peak luminosity and use similar Type Ias in much more distant galaxies.
 :::
 
@@ -245,7 +245,7 @@ The **Cepheids** give the distance to the nearby host galaxy because their perio
 
 In 1929, Edwin Hubble published a plot of galaxy recession velocities (measured from Doppler-shifted absorption lines) against distances (estimated from Cepheids in those galaxies). The result: a roughly linear relation. Farther galaxies recede faster.
 
-{{< fig hubble-diagram >}}
+{{< fig hubble-law-module3 >}}
 
 The relation is written
 
@@ -277,6 +277,12 @@ Use this to explain why Hubble's law is a slope: more distance means more expand
 
 The redshift is not really a Doppler shift (though for small distances the math is the same). It is a **cosmological redshift** — light stretched by the expansion of space during its travel from source to us.
 
+{{< fig hubble-redshifted-spectrum layout="aside" width="42%" >}}
+
+The observable is the pattern of spectral lines. If the whole fingerprint appears shifted to longer wavelengths, we infer that space expanded while the light was traveling.
+
+{{< fig when-space-expands >}}
+
 ::: {.callout-roadmap title="Video: Redshift from Expanding Space" collapse="false"}
 This NASA SVS animation shows the key physical idea behind cosmological redshift: as the universe expands, the wavelength of traveling light stretches along with space. Watch for the evidence-chain distinction: the animation is a model picture, while the observable is the shift of known spectral features to longer wavelengths.
 
@@ -302,7 +308,7 @@ This NASA SVS animation shows the key physical idea behind cosmological redshift
 A galaxy has a measured recession velocity of $v = 15{,}000\ {\rm km\,s^{-1}}$. Use $H_0 = 70\ {\rm km\,s^{-1}\,Mpc^{-1}}$ to estimate its distance.
 :::
 
-::: {.callout-tip title="Solution" collapse="true"}
+::: {.callout-solution collapse="true" title="Answer"}
 $$
 d = \frac{v}{H_0} = \frac{15{,}000}{70}\ {\rm Mpc} \approx 214\ {\rm Mpc}
 $$
@@ -335,7 +341,7 @@ This is a rough estimate. The *actual* age of the universe — 13.8 Gyr — diff
 Repeat the calculation with $H_0 = 67\ {\rm km\,s^{-1}\,Mpc^{-1}}$ (the CMB-based value; Lecture 26) and $H_0 = 73\ {\rm km\,s^{-1}\,Mpc^{-1}}$ (the Cepheid-SNIa local value). What are the two estimates of $t_H$?
 :::
 
-::: {.callout-tip title="Solution" collapse="true"}
+::: {.callout-solution collapse="true" title="Answer"}
 $H_0 = 67\ {\rm km\,s^{-1}\,Mpc^{-1}} = 2.17 \times 10^{-18}\ {\rm s^{-1}}$, so $t_H \approx 4.6 \times 10^{17}\ {\rm s} \approx 14.6\ {\rm Gyr}$.
 
 $H_0 = 73\ {\rm km\,s^{-1}\,Mpc^{-1}} = 2.37 \times 10^{-18}\ {\rm s^{-1}}$, so $t_H \approx 4.2 \times 10^{17}\ {\rm s} \approx 13.4\ {\rm Gyr}$.
@@ -345,7 +351,7 @@ Both are within ~1 Gyr of the best-fit age (13.8 Gyr), and the two values differ
 
 ### Worked Example: From Redshift to a Distance
 
-::: {.callout-worked-example title="Worked Example: Converting a Redshift into a Distance (Low-z Limit)"}
+::: {.callout-worked-example title="Worked Example: Converting a Redshift into a Distance (Low-z Limit)" collapse="true"}
 **Given:** A galaxy's spectrum shows a hydrogen line at $\lambda_{\text{obs}} = 670\ {\rm nm}$. Its laboratory (rest-frame) wavelength is $\lambda_0 = 656.3\ {\rm nm}$ (H$\alpha$). Use $H_0 = 70\ {\rm km\,s^{-1}\,Mpc^{-1}}$.
 
 **Relation:** For $v \ll c$, the cosmological redshift reduces to a Doppler-like form:
