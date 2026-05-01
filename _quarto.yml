@@ -166,7 +166,7 @@ website:
   announcement:
     icon: info-circle
     dismissable: true
-    content: "**[Homework 6](/homework/astr101-hw-06.html)** is now posted | HW due **Tuesday, April 14** | Grade memo due **Friday, April 17** | **Exam 2** is **Monday, April 20**"
+    content: "**[Homework 7](/homework/astr101-hw-07.html)** is now posted | HW due **Wednesday, May 6** | Solutions public **Thursday morning, May 7** | **Final Exam** is **Friday, May 8**"
     type: primary
     position: below-navbar
   navbar:
@@ -203,6 +203,8 @@ website:
             text: "Homework 5 (Due: Apr 7, 2026)"
           - href: homework/astr101-hw-06.qmd
             text: "Homework 6 (Due: Apr 14, 2026)"
+          - href: homework/astr101-hw-07.qmd
+            text: "Homework 7 (Due: May 6, 2026)"
 
       - section: "Module 1: Observing the Sky & Solar System"
         href: modules/module-01/index.qmd

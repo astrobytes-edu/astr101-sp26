@@ -1,0 +1,122 @@
+---
+title: "ASTR 101 — Homework #7 (Module 3 Review + Cosmology Capstone)"
+subtitle: "Practice problems from galaxies, the distance ladder, dark energy, and the early universe"
+author: "Dr. Anna Rosen"
+draft: false
+order: 7
+description: "Practice problems from Module 3 (Galaxies & Cosmology)"
+solutions_due: "Wednesday, May 6 at 11:59 pm PT (Canvas)"
+memo_due: "No grade memo; solutions public Thursday morning, May 7"
+pdf: true
+toc: true
+format:
+  html: default
+  pdf: default
+---
+
+::: {.callout-important}
+## Final Homework Submission
+
+Submit your worked solutions on Canvas as **one single, readable PDF** by **Wednesday, May 6, 2026 at 11:59 pm PT**.
+
+For Homework #7, there is **no grade memo**. Solutions will be made public **Thursday morning, May 7, 2026**, so late work cannot be accepted.
+:::
+
+{{< include ../_includes/ai-policy.qmd >}}
+
+***Topics:** Milky Way structure and dark matter • galaxy classification and quasars • the cosmic distance ladder • Hubble's law • Type Ia supernovae and dark energy • the CMB and the early universe*
+
+**Estimated time:** ~5-6 hours
+
+**Posted:** Friday, May 1, 2026
+
+::: {.callout-note}
+This is the final homework assignment and is designed as both **Module 3 practice** and **final-exam review**. Your worked solutions are due **Wednesday, May 6, 2026 at 11:59 pm PT** on Canvas. There is **no grade memo** for this assignment; solutions will be made public **Thursday morning, May 7, 2026**.
+:::
+
+## Why this homework exists (read this)
+
+_This is not busy work._ Module 3 asks you to reason from limited light to very large claims: hidden mass, cosmic distance, cosmic expansion, dark energy, and the early universe.
+
+This assignment is designed to:
+
+- connect Lectures 22-26 into one evidence story instead of five isolated topics,
+- rehearse the quantitative tools most likely to matter for the final exam,
+- and help you practice explaining how astronomers move from **observable** evidence to **model-based** inference.
+
+---
+
+### What to do
+
+Complete the assigned Practice Problems from the end of the following lecture readings:
+
+- **Lecture 22:** The Milky Way and the First Hidden Thing — [Practice Problems]({{< meta params.website-url >}}/modules/module-03/readings/lecture-22-milky-way.html#practice-problems)
+
+- **Lecture 23:** The Galaxy Zoo — [Practice Problems]({{< meta params.website-url >}}/modules/module-03/readings/lecture-23-galaxy-zoo.html#practice-problems)
+
+- **Lecture 24:** The Distance Ladder and Hubble's Law — [Practice Problems]({{< meta params.website-url >}}/modules/module-03/readings/lecture-24-distance-ladder-hubble.html#practice-problems)
+
+- **Lecture 25:** Type Ia Supernovae and Dark Energy — [Practice Problems]({{< meta params.website-url >}}/modules/module-03/readings/lecture-25-dark-energy.html#practice-problems)
+
+- **Lecture 26:** The Big Bang, the CMB, and the First Three Minutes — [Practice Problems]({{< meta params.website-url >}}/modules/module-03/readings/lecture-26-big-bang-cmb.html#practice-problems)
+
+Use the lecture pages for the full problem statements.
+
+**Important:** Do the assigned problems in the order listed below. They are intentionally sequenced from galactic evidence to cosmic-scale inference. The final problem is a capstone evidence chain.
+
+**Notation:** `P` = core problem, `C` = challenge problem in the lecture reading.
+
+---
+
+## Problems to complete
+
+1. **Lecture 22:** `P3` — Reading a Rotation Curve
+2. **Lecture 22:** `P4` — Enclosed Mass from a Rotation Curve
+3. **Lecture 23:** `P1` — Classify It
+4. **Lecture 23:** `P3` — Quasar Luminosity
+5. **Lecture 24:** `P1` — Ladder Calibration
+6. **Lecture 24:** `P3` — Hubble's Law
+7. **Lecture 25:** `P3` — Using a Type Ia as a Distance Indicator
+8. **Lecture 25:** `P4` — Reading the Hubble Diagram
+9. **Lecture 26:** `P2` — CMB Temperature
+10. **Lecture 26:** Final Capstone — The Evidence Chain
+
+For Problem 10, use the **Final Capstone: The Evidence Chain** prompt near the end of Lecture 26. Choose one major Module 3 claim: dark matter, dark energy, the Big Bang, the CMB, or the origin of the elements.
+
+---
+
+## Optional extra practice (not collected, strongly recommended)
+
+If you want additional review after the required set:
+
+- **Lecture 22:** `P5`, `C3`
+- **Lecture 23:** `P4`, `P5`, `C1`
+- **Lecture 24:** `P4`, `C2`
+- **Lecture 25:** `P5`, `C3`
+- **Lecture 26:** `P1`, `P3`, `P4`, `C3`
+
+---
+
+## How to earn full credit
+
+{{< include ../_includes/homework/how-to-earn-full-credit.qmd >}}
+
+For this homework, clearly separate what is **observed** from what is **inferred** whenever you are reasoning from galaxy rotation, morphology, flux, redshift, standard candles, the Hubble diagram, or the CMB. On calculation problems, write the symbolic equation first, substitute numbers with units, and include a unit or sanity check.
+
+## Collaboration and resources
+
+{{< include ../_includes/homework/collaboration-and-resources.qmd >}}
+
+## Pro tips (to save time and pain)
+
+- Treat this homework as one story: galaxies reveal hidden mass, stellar physics builds the distance ladder, and cosmic expansion turns distances into cosmology.
+- For every problem, ask: what was directly observed, what model connects the observation to physics, and what is inferred?
+- On luminosity, distance, and Hubble-law problems, write the equation before you calculate.
+- On dark matter and dark energy problems, avoid "scientists discovered..." explanations. Name the observable and the inference.
+- For the final capstone, write in sentences first and equations second. The goal is an evidence chain, not a pile of vocabulary words.
+
+---
+
+## Help
+
+{{< include ../_includes/homework/help.qmd >}}

@@ -15,7 +15,7 @@ listing:
     title: "Assignment"
     description: "Focus"
     solutions_due: "Solutions due"
-    memo_due: "Grade memo due"
+    memo_due: "Grade memo / notes"
 ---
 
 {{< include ../_includes/hw-submission-instructions.qmd >}}
@@ -27,7 +27,7 @@ Homework is the central place to find every released assignment and the reading 
 
 - Need the assignment itself? Use the table below to open any released homework page.
 - Need worked reading solutions? Jump to [Solution links](#solution-links) for the lecture-by-lecture pages tied to each homework.
-- Need to submit? Upload your worked solutions and grade memo in [Canvas](https://sdsu.instructure.com).
+- Need to submit? Upload your worked solutions, and the grade memo when assigned, in [Canvas](https://sdsu.instructure.com).
 :::
 
 ## Released Homework
@@ -46,3 +46,4 @@ Homework assignments use a **subset** of the practice problems from the lecture 
 | [HW 4]({{< meta params.website-url >}}/homework/astr101-hw-04.html) (L11–12) | Solar System, Climates, Exoplanets | [L11]({{< meta params.website-url >}}/modules/module-01/readings/lecture-11-solar-system-solutions.html), [L12]({{< meta params.website-url >}}/modules/module-01/readings/lecture-12-climates-exoplanets-solutions.html) |
 | [HW 5]({{< meta params.website-url >}}/homework/astr101-hw-05.html) (L14–17) | Sun, stellar measurements, H-R diagram, binary stars | [L14]({{< meta params.website-url >}}/modules/module-02/readings/lecture-14-the-sun-solutions.html), [L15]({{< meta params.website-url >}}/modules/module-02/readings/lecture-15-measuring-the-stars-solutions.html), [L16]({{< meta params.website-url >}}/modules/module-02/readings/lecture-16-hr-diagram-solutions.html), [L17]({{< meta params.website-url >}}/modules/module-02/readings/lecture-17-binary-stars-solutions.html) |
 | [HW 6]({{< meta params.website-url >}}/homework/astr101-hw-06.html) (L18–21) | Star formation, stellar evolution, stellar death, compact remnants | [L18]({{< meta params.website-url >}}/modules/module-02/readings/lecture-18-from-gas-to-stars-solutions.html), [L19]({{< meta params.website-url >}}/modules/module-02/readings/lecture-19-stellar-evolution-solutions.html), [L20]({{< meta params.website-url >}}/modules/module-02/readings/lecture-20-how-stars-die-solutions.html), [L21]({{< meta params.website-url >}}/modules/module-02/readings/lecture-21-neutron-stars-black-holes-solutions.html) |
+| [HW 7]({{< meta params.website-url >}}/homework/astr101-hw-07.html) (L22–26) | Galaxies, cosmology, and the Module 3 evidence-chain capstone | Solutions public Thursday morning, May 7 |
