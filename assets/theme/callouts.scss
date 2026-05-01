@@ -1,10 +1,9 @@
-/*-- scss:defaults --*/
 // ASTR 101 Callouts
-// Design tokens: brand colors from generated file, design decisions from hand-authored file
-
+/*-- scss:uses --*/
 @import 'tokens_generated';
 @import 'design_tokens';
 
+/*-- scss:defaults --*/
 // Override Quarto's callout colors
 $callout-color-note: $indigo-light;
 $callout-color-tip: $teal-light;

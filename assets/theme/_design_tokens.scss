@@ -5,8 +5,7 @@
 // Brand colors/typography come from _tokens_generated.scss
 // This file must be @imported AFTER tokens_generated.scss
 
-@use 'sass:color';
-
+/*-- scss:defaults --*/
 // ---- Spacing & Radius ----
 $radius-sm: 6px;
 $radius-md: 10px;
@@ -21,8 +20,9 @@ $callout-label-size: 1.2em;
 // ---- Focus Ring ----
 $focus-ring-width: 2px;
 
-// Note: focus-ring mixin uses $rose-light from tokens_generated (must be imported first)
-@mixin focus-ring($focus-color: $rose-light) {
+/*-- scss:mixins --*/
+// Keep the default literal so this token module can be loaded independently.
+@mixin focus-ring($focus-color: #9a7b7f) {
   outline: none;
-  box-shadow: 0 0 0 $focus-ring-width color.scale($focus-color, $alpha: -35%);
+  box-shadow: 0 0 0 $focus-ring-width rgba($focus-color, 0.65);
 }
