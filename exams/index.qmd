@@ -7,18 +7,28 @@ title: "Exams"
 | Exam | Topics | Date | Solutions |
 |------|--------|------|-----------|
 | [Midterm 1](midterm-1.qmd) | Module 1: Observing the Sky & Solar System | Friday, March 6, 2026 | [Midterm 1 Solutions](midterm-1-solutions.qmd) |
-| Midterm 2 | Module 2: Stars & Stellar Evolution | TBD | *Posted after exam* |
-| Final | Comprehensive | Finals Week | *Posted after exam* |
+| [Midterm 2](midterm-2.qmd) | Module 2: Stars & Stellar Evolution | Monday, April 20, 2026 | [Midterm 2 Solutions](midterm-2-solutions.qmd) |
+| Final | Comprehensive (Modules 1, 2, 3) | Friday, May 8, 2026 | *Posted after exam* |
 
 ## Released Materials
+
+### Midterm 1
 
 - [Midterm 1 Exam Page](midterm-1.qmd)
 - [Midterm 1 Exam (PDF)](midterm-1-exam.pdf){target="_blank"}
 - [Midterm 1 Solutions](midterm-1-solutions.qmd)
 
+### Midterm 2
+
+- [Midterm 2 Exam Page](midterm-2.qmd)
+- [Midterm 2 Exam (PDF)](midterm-2-exam.pdf){target="_blank"}
+- [Midterm 2 Solutions](midterm-2-solutions.qmd)
+
 ## Equation Sheets
 
 - [Midterm 1 Equation Sheet (PDF)](midterm-1-equation-sheet.pdf){target="_blank"}
+- [Midterm 2 Equation Sheet (PDF)](midterm-2-equation-sheet.pdf){target="_blank"}
+- [Final Exam Equation Sheet (PDF)](final-exam-equation-sheet.pdf){target="_blank"} — cumulative across Modules 1, 2, 3
 
 ## Exam Policies
 

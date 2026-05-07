@@ -1,0 +1,53 @@
+---
+title: "Midterm 2 Solutions"
+subtitle: "Released solutions for Midterm 2"
+draft: false
+page-layout: article
+toc: true
+---
+
+These brief solutions are meant to help you check both your answers and your reasoning. Module 2 emphasizes how observable quantities (parallax, brightness, spectral lines, Doppler shifts) translate into inferred stellar properties (distances, luminosities, temperatures, masses, and eventually a star's life history).
+
+## Answer Key
+
+| Q | Ans | Q | Ans | Q | Ans | Q | Ans | Q | Ans |
+|:-:|:---:|:-:|:---:|:-:|:---:|:-:|:---:|:-:|:---:|
+| 1 | A | 6 | D | 11 | A | 16 | A | 21 | D |
+| 2 | D | 7 | A | 12 | D | 17 | D | 22 | C |
+| 3 | B | 8 | B | 13 | B | 18 | B | 23 | C |
+| 4 | B | 9 | D | 14 | C | 19 | C | 24 | A |
+| 5 | C | 10 | C | 15 | D | 20 | A | 25 | B |
+
+## Brief Solutions
+
+1. **A.** Hot, ionized hydrogen near a young O-type star is an emission nebula (an H II region). The O star's UV photons ionize the surrounding gas, which then re-emits at characteristic wavelengths.
+2. **D.** A 1 $M_\odot$ star like the Sun is too low-mass to produce a core-collapse supernova or a neutron star/black hole. It ends as a planetary nebula leaving behind a white dwarf.
+3. **B.** Only nuclear fusion can sustain the Sun's luminosity for billions of years. Hydrogen fusing to helium converts a tiny fraction of mass to energy via $E = mc^2$. Chemical fuels would last $\sim 10^4$ years, not $10^9$.
+4. **B.** Inverse-square law: $F \propto 1/d^2$. At three times the distance, brightness is $1/3^2 = 1/9$.
+5. **C.** Once core hydrogen runs out, the inert helium core contracts and heats up, hydrogen-shell burning ignites just outside the core, and the outer envelope expands and cools — the star becomes a red giant.
+6. **D.** Stefan-Boltzmann at fixed radius: $L \propto T^4$. Doubling $T$ multiplies $L$ by $2^4 = 16$.
+7. **A.** Only stars more massive than $\sim 8\,M_\odot$ build inert iron cores and undergo core collapse. A 25 $M_\odot$ O-type star is the natural Type II progenitor.
+8. **B.** Kepler's third law in solar units: $M_1 + M_2 = a^3/P^2 = 2^3/2^2 = 2\,M_\odot$.
+9. **D.** Wien's law: $\lambda_\mathrm{peak} \propto 1/T$. Halving $T$ (6000 K → 3000 K) doubles $\lambda_\mathrm{peak}$.
+10. **C.** $R_s = 2GM/c^2 \propto M$. A 10 $M_\odot$ black hole has a Schwarzschild radius about ten times the Sun's value, $\sim 30$ km.
+11. **A.** Interstellar dust scatters blue light more strongly than red, and absorbs/dims the through-light. A background star seen through dust appears both *dimmer* and *redder* — interstellar reddening.
+12. **D.** Mass-luminosity relation: $L \propto M^{3.5}$. For $M = 4\,M_\odot$, $L \approx 4^{3.5} = 4^3 \cdot 4^{0.5} = 64 \cdot 2 = 128\,L_\odot$.
+13. **B.** Direct chain: parallax → distance; apparent brightness measured at the telescope; combining with the inverse-square law gives the intrinsic luminosity. Mass and temperature alone cannot give luminosity directly.
+14. **C.** Stefan-Boltzmann: $L = 4\pi R^2 \sigma T^4$. Even at low surface temperature, an enormous radius makes a red giant extremely luminous.
+15. **D.** Mass-lifetime: $t_\mathrm{MS} \propto M^{-2.5}$. For $M = 4\,M_\odot$, $t_\mathrm{MS} \approx 10^{10}/4^{2.5} = 10^{10}/32 \approx 3 \times 10^8$ yr ≈ 0.3 Gyr.
+16. **A.** Bulk motion of hot plasma rising and cooler plasma sinking is *convection*, which dominates energy transport in the Sun's outer convective zone.
+17. **D.** When a star leaves the main sequence, its envelope expands and cools while its luminosity rises — it moves into the upper-right (cool, luminous) region of the H-R diagram.
+18. **B.** Same apparent brightness, but Star B is 10× farther (parallax is 10× smaller). Inverse-square: 10× farther means 100× more luminous to look the same.
+19. **C.** The Chandrasekhar limit ($\approx 1.4\,M_\odot$) is the maximum mass an electron-degenerate white dwarf can support. Above it, electron degeneracy pressure cannot resist gravity.
+20. **A.** Newton's law of gravity depends only on mass and distance. Replacing the Sun with a 1 $M_\odot$ black hole at the same location leaves Earth's orbit unchanged — the gravitational pull at 1 AU is identical.
+21. **D.** The main sequence is a *snapshot* of stars of different masses simultaneously fusing hydrogen in their cores — not an evolutionary track that a single star follows.
+22. **C.** Iron sits at the peak of the binding-energy-per-nucleon curve, so fusing iron *absorbs* energy rather than releasing it. The core can no longer support itself against gravity, and collapse begins.
+23. **C.** Elements heavier than iron are forged in the extreme temperatures and densities of supernova explosions (and neutron-star mergers), through rapid neutron capture (the r-process).
+24. **A.** O-type stars are very massive and short-lived ($\sim$ Myr). If a cluster has G-type main-sequence stars but no surviving O stars, the cluster must be old enough that all its O stars have already evolved off the main sequence.
+25. **B.** Neutron-star mergers produce *both* a chirp of gravitational waves during inspiral and a brilliant electromagnetic counterpart from the colliding matter (kilonova) — first observed together as GW170817 in 2017.
+
+## Related Materials
+
+- [Midterm 2 Exam Page](midterm-2.qmd)
+- [Midterm 2 Exam (PDF)](midterm-2-exam.pdf){target="_blank"}
+- [Exams Home](index.qmd)

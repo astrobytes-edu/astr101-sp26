@@ -1,0 +1,40 @@
+---
+title: "Midterm 2"
+subtitle: "Module 2: Stars & Stellar Evolution"
+draft: false
+page-layout: article
+toc: false
+---
+
+Midterm 2 is now available as a released exam for review and study.
+
+This is the student version of the exam used on **Monday, April 20, 2026**. It covers the core ideas from Module 2: the Sun and stellar fusion, parallax and stellar distances, the Hertzsprung-Russell diagram, binary stars and stellar masses, star formation, stellar evolution, and how stars die — including white dwarfs, neutron stars, and black holes.
+
+## Exam Materials
+
+- [Midterm 2 Exam (PDF)](midterm-2-exam.pdf){target="_blank"}
+- [Midterm 2 Equation Sheet (PDF)](midterm-2-equation-sheet.pdf){target="_blank"}
+- [Midterm 2 Solutions](midterm-2-solutions.qmd)
+
+## Exam Snapshot
+
+| Item | Details |
+|------|---------|
+| Original exam date | Monday, April 20, 2026 |
+| Format | 25 multiple-choice questions |
+| Time limit | 50 minutes |
+| Scope | Module 2: Stars & Stellar Evolution |
+
+## How to Use This Well
+
+Use the released exam as a self-check, not just an answer hunt.
+
+1. Try the exam first under realistic conditions.
+2. Use the equation sheet, but not your notes.
+3. Check your reasoning with the [solutions page](midterm-2-solutions.qmd).
+4. Revisit the Module 2 readings for any concept that still feels shaky.
+
+## Related Materials
+
+- [Module 2 Overview](../modules/module-02/index.qmd)
+- [Exams Home](index.qmd)

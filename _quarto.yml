@@ -364,6 +364,14 @@ website:
             text: "Midterm 1 Solutions"
           - href: exams/midterm-1-equation-sheet.pdf
             text: "Midterm 1 Equation Sheet"
+          - href: exams/midterm-2.qmd
+            text: "Midterm 2"
+          - href: exams/midterm-2-solutions.qmd
+            text: "Midterm 2 Solutions"
+          - href: exams/midterm-2-equation-sheet.pdf
+            text: "Midterm 2 Equation Sheet"
+          - href: exams/final-exam-equation-sheet.pdf
+            text: "Final Exam Equation Sheet"
 
       - section: "Handouts"
         contents:
